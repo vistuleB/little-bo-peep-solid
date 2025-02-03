@@ -68,11 +68,9 @@ const Article = () => {
         <MathBlock>
           $$\sqrt&#123;(-2)^2&#125; = 2$$
           <ImageRight
-            use_squiggle_on_mobile={false}
-            padding="40px"
-            offset_x="-3rem"
-            offset_y="-1rem"
-            src="/images/svg_cloud_minus_two_squared.svg" />
+            offset_x="9em"
+            offset_y="0em"
+            src="/images/svg_ch1_ch_minus_two_squared_cloud.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -721,16 +719,16 @@ const Article = () => {
         <Pause />
         <MathBlock>
           $$(a + b)(C + D) \,=\, aC + bC + aD + bD$$
+          <ImageLeft
+            offset_x="2em"
+            offset_y="-0.5em"
+            src="/images/325.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>
           that come from multiplying every term of the first 
           parenthesis with every term of the second 
           parenthesis. Indeed,
-          <ImageLeft
-            offset_y="-10px"
-            line={1.5}
-            src="/images/325.svg" />
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -1711,7 +1709,7 @@ const Article = () => {
             <MathBlock>
               $$10^&#123;9&#125;\fw\te&#123;km&#125;$$
               <ImageRight
-                use_squiggle_on_mobile={false}
+                squiggle={false}
                 offset_y="-1rem"
                 offset_x="-4rem"
                 src="/images/svg_ch1_ex_104.svg" />
@@ -2427,7 +2425,7 @@ const Article = () => {
             <MathBlock>
               $$&#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;$$
               <ImageRight
-                use_squiggle_on_mobile={false}
+                squiggle={false}
                 src="/images/svg_ch1_ex_25.svg"
                 offset_y="1.2rem"
                 offset_x="-6rem" />
@@ -2440,7 +2438,7 @@ const Article = () => {
             <MathBlock>
               $$&#123;1 \over n^2&#125;$$
               <ImageRight
-                use_squiggle_on_mobile={false}
+                squiggle={false}
                 src="/images/ch1_ex_26.svg"
                 offset_y="1.2rem"
                 offset_x="-6rem" />

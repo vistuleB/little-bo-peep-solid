@@ -859,18 +859,14 @@ const Article = () => {
           <tbody>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $n$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $\,\,10^n$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
                 name
@@ -878,163 +874,121 @@ const Article = () => {
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $0$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   one
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $10$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   ten
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $2$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $100$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   hundred
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $3$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1000$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   thousand
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $6$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1\,000\,000$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   million
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $9$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1\,000\,000\,000$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   billion
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $12$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1\,000\,000\,000\,000$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   trillion
                 </i>
-                {" "}{" "}
               </td>
             </tr>
           </tbody>
@@ -1070,28 +1024,34 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
+          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
           and
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
+          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
           and also (while we're at it)
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight src="/images/svg_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
+          <ImageRight src="/images/svg_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
           as can be seen, for example, by replacing “billion”
           with “thousand million” in the previous sentence and
           then further replacing “thousand thousand” with “million”

@@ -668,18 +668,16 @@ const Article = () => {
         </VerticalChunk>
         <ul>
           <li>
-            <VerticalChunk>
-              seconds on the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}axis, meters on the 
-              {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "}axis
-            </VerticalChunk>
+            seconds on the{" "}
+            <Math>
+              $x$
+            </Math>
+            {" "}axis, meters on the 
+            {" "}
+            <Math>
+              $y$
+            </Math>
+            {" "}axis
           </li>
         </ul>
         <ImageRight src="/images/svg_ch4_units1_cloud.svg" />
@@ -688,18 +686,16 @@ const Article = () => {
         </VerticalChunk>
         <ul>
           <li>
-            <VerticalChunk>
-              seconds on the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}axis, meters per
-              second on the{" "}
-              <Math>
-                $y$
-              </Math>
-              {" "}axis
-            </VerticalChunk>
+            seconds on the{" "}
+            <Math>
+              $x$
+            </Math>
+            {" "}axis, meters per
+            second on the{" "}
+            <Math>
+              $y$
+            </Math>
+            {" "}axis
           </li>
         </ul>
         <VerticalChunk>
@@ -707,18 +703,16 @@ const Article = () => {
         </VerticalChunk>
         <ul>
           <li>
-            <VerticalChunk>
-              years on the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}axis, dollars on the
-              {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "}axis
-            </VerticalChunk>
+            years on the{" "}
+            <Math>
+              $x$
+            </Math>
+            {" "}axis, dollars on the
+            {" "}
+            <Math>
+              $y$
+            </Math>
+            {" "}axis
           </li>
         </ul>
         <ImageLeft src="/images/svg_ch4_units2_cloud.svg" />
@@ -727,18 +721,16 @@ const Article = () => {
         </VerticalChunk>
         <ul>
           <li>
-            <VerticalChunk>
-              years on the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}axis, dollars per
-              year on the{" "}
-              <Math>
-                $y$
-              </Math>
-              {" "}axis
-            </VerticalChunk>
+            years on the{" "}
+            <Math>
+              $x$
+            </Math>
+            {" "}axis, dollars per
+            year on the{" "}
+            <Math>
+              $y$
+            </Math>
+            {" "}axis
           </li>
         </ul>
         <VerticalChunk>
@@ -969,8 +961,11 @@ const Article = () => {
           <Pause />
           <CentralDisplayItalic>
             ~ the second derivative of an affine function is zero ~
-            <ImageLeft src="/images/svg_ch4_adding_statements_cloud.svg" />
           </CentralDisplayItalic>
+          <Pause />
+          <VerticalChunk>
+            <ImageLeft src="/images/svg_ch4_adding_statements_cloud.svg" />
+          </VerticalChunk>
         </Example>
       </Section>
       <Pause />
@@ -3104,7 +3099,7 @@ const Article = () => {
               arrow to the head of the arrow.)
               <ImageRight src="/images/svg_ch4_cosine_curves_vector_illustration_cloud.svg" />
             </VerticalChunk>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
               Due to the 90° rotations and uniform 
               lengths of{" "}
               <NoBreak>
@@ -3713,7 +3708,7 @@ const Article = () => {
                 </span>
               </ImageLeft>
             </VerticalChunk>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
               In any case [take two] the point is that
               whether or not you are one of the wizards,
               you can
@@ -4154,11 +4149,13 @@ const Article = () => {
             <Pause />
             <CentralDisplayItalic>
               the whole is simpler than the parts
-              <ImageLeft src="/images/svg_ch4_5_euler_hearts_left.svg" />
-              <ImageRight src="/images/svg_ch4_5_euler_hearts_right.svg" />
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
+              <ImageLeft src="/images/svg_ch4_5_euler_hearts_left.svg" />
+              <ImageRight src="/images/svg_ch4_5_euler_hearts_right.svg" />
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
               in that you would never spot the symmetry
               at play, or have a chance of eyeballing
               the long-term evolution of the system, if
@@ -4455,22 +4452,18 @@ const Article = () => {
             </VerticalChunk>
             <ul style="margin:20px 20px 0px 50px">
               <li>
-                <VerticalChunk>
-                  the red arrows indicate which particle
-                  takes its velocity from the position
-                  of which other particle; for example,
-                  particle 1 has velocity equal to the
-                  position of particle 5
-                </VerticalChunk>
+                the red arrows indicate which particle
+                takes its velocity from the position
+                of which other particle; for example,
+                particle 1 has velocity equal to the
+                position of particle 5
               </li>
               <li>
-                <VerticalChunk>
-                  particles that occupy the same starting
-                  position on the unit circle appear
-                  stacked together, as a representation
-                  device; for example, particle 2 has the
-                  same starting position as particle 5
-                </VerticalChunk>
+                particles that occupy the same starting
+                position on the unit circle appear
+                stacked together, as a representation
+                device; for example, particle 2 has the
+                same starting position as particle 5
               </li>
             </ul>
             <VerticalChunk>
@@ -4529,41 +4522,37 @@ const Article = () => {
             </VerticalChunk>
             <ul style="margin:1em 1em 0em 2.5em">
               <li>
-                <VerticalChunk>
-                  in{" "}
-                  <span style="border:1px solid blue">
-                    blue
-                  </span>
-                  , particle 1, the last particle
-                  to be (noticeably*) “peeled off” from
-                  the circle (*all particles are 
-                  instantaneously peeled off from the 
-                  circle to{" "}
-                  <i>
-                    some
-                  </i>
-                  {" "}degree, as one 
-                  particle's slight deviation affects
-                  the next, that affects the next, etc)
-                </VerticalChunk>
+                in{" "}
+                <span style="border:1px solid blue">
+                  blue
+                </span>
+                , particle 1, the last particle
+                to be (noticeably*) “peeled off” from
+                the circle (*all particles are 
+                instantaneously peeled off from the 
+                circle to{" "}
+                <i>
+                  some
+                </i>
+                {" "}degree, as one 
+                particle's slight deviation affects
+                the next, that affects the next, etc)
               </li>
               <li>
-                <VerticalChunk>
-                  in{" "}
-                  <span style="border:1px solid red">
-                    red
-                  </span>
-                  , particle 14, the{" "}
-                  <i>
-                    first
-                  </i>
-                  {" "}particle
-                  to leave the circle—but because its
-                  velocity vector is given by particle 1,
-                  which itself starts by going around in
-                  a circle, it, too, starts out by going
-                  around in a circle!
-                </VerticalChunk>
+                in{" "}
+                <span style="border:1px solid red">
+                  red
+                </span>
+                , particle 14, the{" "}
+                <i>
+                  first
+                </i>
+                {" "}particle
+                to leave the circle—but because its
+                velocity vector is given by particle 1,
+                which itself starts by going around in
+                a circle, it, too, starts out by going
+                around in a circle!
               </li>
             </ul>
             <VerticalChunk>
@@ -4742,8 +4731,7 @@ const Article = () => {
               $$f'(x)$$
             </MathBlock>
             <Pause />
-            <VerticalChunk />
-            <VerticalChunk indent={true}>
+            <VerticalChunk>
               because the secant approaches the tangent,
               in that case, and the slope of the secant
               is also, perforce, approaching the slope
@@ -4933,69 +4921,63 @@ const Article = () => {
           </VerticalChunk>
           <ol style="margin:0 1.5em 1em 2em">
             <li style="margin-top:0.5em">
-              <VerticalChunk>
-                when{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}and{" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "}are both still at{" "}
-                <Math>
-                  $t_0$
-                </Math>
-              </VerticalChunk>
+              when{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}and{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}are both still at{" "}
+              <Math>
+                $t_0$
+              </Math>
             </li>
             <li style="margin-top:0.5em">
-              <VerticalChunk>
-                when{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}has made it to{" "}
-                <Math>
-                  $t_0 + \Delta&#123;&#125;t$
-                </Math>
-                ,
-                and{" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "}is still at{" "}
-                <Math>
-                  $t_0$
-                </Math>
-              </VerticalChunk>
+              when{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}has made it to{" "}
+              <Math>
+                $t_0 + \Delta&#123;&#125;t$
+              </Math>
+              ,
+              and{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}is still at{" "}
+              <Math>
+                $t_0$
+              </Math>
             </li>
             <li style="margin-top:0.5em">
-              <VerticalChunk>
-                <del>
-                  when{" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    's
-                  </NoBreak>
-                  {" "}tail is sticking out of the
-                  cat's mouth, and
-                </del>
-                &ensp;when{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}and{" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "}have both made it
-                to{" "}
-                <Math>
-                  $t_0 + \Delta&#123;&#125;t$
-                </Math>
-              </VerticalChunk>
+              <del>
+                when{" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "}tail is sticking out of the
+                cat's mouth, and
+              </del>
+              &ensp;when{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}and{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}have both made it
+              to{" "}
+              <Math>
+                $t_0 + \Delta&#123;&#125;t$
+              </Math>
             </li>
           </ol>
           <VerticalChunk>
@@ -5203,12 +5185,12 @@ const Article = () => {
               .
               <ImageLeft src="/images/svg_ch4_RATS_for_f_equals_AB_cloud.svg" />
             </VerticalChunk>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
               The first term on the right-hand side, for
               its part, approaches
               <ImageRight src="/images/svg_ch4_RATS_first_term_cloud.svg" />
             </VerticalChunk>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
               as{" "}
               <Math>
                 $\Delta&#123;&#125;t$
@@ -10304,7 +10286,7 @@ const Article = () => {
               .
               <ImageRight src="/images/svg_ch4_circle_at_2_4_with_some_vectors_cloud.svg" />
             </VerticalChunk>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
               For{" "}
               <Math>
                 $t &lt; 0$
@@ -10469,10 +10451,12 @@ const Article = () => {
             <Pause />
             <CentralDisplayItalic>
               length of the position vector
-              <ImageRight src="/images/svg_ch4_circle_at_2_4_position_equals_velocity_cloud.svg" />
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
+              <ImageRight src="/images/svg_ch4_circle_at_2_4_position_equals_velocity_cloud.svg" />
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
               of said particles, is equal to the
             </VerticalChunk>
             <Pause />
@@ -10536,7 +10520,7 @@ const Article = () => {
               (!!)
               <ImageLeft src="/images/svg_ch4_circle_at_2_4_sqrt_20_cloud.svg" />
             </VerticalChunk>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
               This describes an “understandable”
               behavior of the black and white particles.
             </VerticalChunk>
@@ -12299,29 +12283,19 @@ const Article = () => {
           </VerticalChunk>
           <ul style="margin:1em 0 0 2.5em">
             <li>
-              <VerticalChunk>
-                associativity of function composition
-              </VerticalChunk>
+              associativity of function composition
             </li>
             <li>
-              <VerticalChunk>
-                associativity of function kmultiplication
-              </VerticalChunk>
+              associativity of function kmultiplication
             </li>
             <li>
-              <VerticalChunk>
-                associativity of function addition&lt;/li&gt;
-              </VerticalChunk>
+              associativity of function addition&lt;/li&gt;
             </li>
             <li>
-              <VerticalChunk>
-                commutativity of function multiplication&lt;/li&gt;
-              </VerticalChunk>
+              commutativity of function multiplication&lt;/li&gt;
             </li>
             <li>
-              <VerticalChunk>
-                commutativity of function addition&lt;/li&gt;
-              </VerticalChunk>
+              commutativity of function addition&lt;/li&gt;
             </li>
           </ul>
           <VerticalChunk>
@@ -12329,24 +12303,16 @@ const Article = () => {
           </VerticalChunk>
           <ul style="margin:1em 0 0 2.5em">
             <li>
-              <VerticalChunk>
-                associativity of real number multiplication
-              </VerticalChunk>
+              associativity of real number multiplication
             </li>
             <li>
-              <VerticalChunk>
-                associativity of real number addition
-              </VerticalChunk>
+              associativity of real number addition
             </li>
             <li>
-              <VerticalChunk>
-                commutativity of real number multiplication
-              </VerticalChunk>
+              commutativity of real number multiplication
             </li>
             <li>
-              <VerticalChunk>
-                commutativity of real number addition
-              </VerticalChunk>
+              commutativity of real number addition
             </li>
           </ul>
           <VerticalChunk>
@@ -12359,144 +12325,134 @@ const Article = () => {
             </VerticalChunk>
             <ul style="margin:1em 0 0 2.5em">
               <li>
-                <VerticalChunk>
-                  <i>
-                    the associativity of function multiplication is
-                    the fact that{" "}
+                <i>
+                  the associativity of function multiplication is
+                  the fact that{" "}
+                  <Math>
+                    $(f \circ g) \circ h = f \circ (g \circ h)$
+                  </Math>
+                  {" "}
+                  for all functions{" "}
+                  <NoBreak>
                     <Math>
-                      $(f \circ g) \circ h = f \circ (g \circ h)$
+                      $f$
                     </Math>
-                    {" "}
-                    for all functions{" "}
-                    <NoBreak>
-                      <Math>
-                        $f$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "}{" "}
-                    <NoBreak>
-                      <Math>
-                        $g$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "}{" "}
+                    ,
+                  </NoBreak>
+                  {" "}{" "}
+                  <NoBreak>
                     <Math>
-                      $h$
+                      $g$
                     </Math>
-                    {" "}such that 
-                    {" "}
-                    <NoBreak>
-                      <Math>
-                        $h : D \ra C$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "}{" "}
-                    <NoBreak>
-                      <Math>
-                        $g : C \ra B$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "}{" "}
+                    ,
+                  </NoBreak>
+                  {" "}{" "}
+                  <Math>
+                    $h$
+                  </Math>
+                  {" "}such that 
+                  {" "}
+                  <NoBreak>
                     <Math>
-                      $f : B \ra A$
+                      $h : D \ra C$
                     </Math>
-                    {" "}
-                    [for arbitrary sets{" "}
-                    <NoBreak>
-                      <Math>
-                        $A$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "}{" "}
-                    <NoBreak>
-                      <Math>
-                        $B$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "}{" "}
-                    <NoBreak>
-                      <Math>
-                        $C$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "}{" "}
+                    ,
+                  </NoBreak>
+                  {" "}{" "}
+                  <NoBreak>
                     <Math>
-                      $D$
+                      $g : C \ra B$
                     </Math>
-                    ]
-                  </i>
-                </VerticalChunk>
+                    ,
+                  </NoBreak>
+                  {" "}{" "}
+                  <Math>
+                    $f : B \ra A$
+                  </Math>
+                  {" "}
+                  [for arbitrary sets{" "}
+                  <NoBreak>
+                    <Math>
+                      $A$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "}{" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "}{" "}
+                  <NoBreak>
+                    <Math>
+                      $C$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "}{" "}
+                  <Math>
+                    $D$
+                  </Math>
+                  ]
+                </i>
               </li>
               <li>
-                <VerticalChunk>
-                  <i>
-                    the associativity of function multiplication is
-                    the fact that{" "}
-                    <Math>
-                      $f(gh) = (fg)h$
-                    </Math>
-                    {" "}for all{" "}
-                    <Math>
-                      $f, g, h : \rr \ra \rr$
-                    </Math>
-                    {" "}{" "}
-                  </i>
-                </VerticalChunk>
+                <i>
+                  the associativity of function multiplication is
+                  the fact that{" "}
+                  <Math>
+                    $f(gh) = (fg)h$
+                  </Math>
+                  {" "}for all{" "}
+                  <Math>
+                    $f, g, h : \rr \ra \rr$
+                  </Math>
+                  {" "}{" "}
+                </i>
               </li>
               <li>
-                <VerticalChunk>
-                  <i>
-                    the associativity of function addition is
-                    the fact that{" "}
-                    <Math>
-                      $f + (g + h) = (f + g) + h$
-                    </Math>
-                    {" "}for all{" "}
-                    <Math>
-                      $f, g, h : \rr \ra \rr$
-                    </Math>
-                    {" "}{" "}
-                  </i>
-                </VerticalChunk>
+                <i>
+                  the associativity of function addition is
+                  the fact that{" "}
+                  <Math>
+                    $f + (g + h) = (f + g) + h$
+                  </Math>
+                  {" "}for all{" "}
+                  <Math>
+                    $f, g, h : \rr \ra \rr$
+                  </Math>
+                  {" "}{" "}
+                </i>
               </li>
               <li>
-                <VerticalChunk>
-                  <i>
-                    the commutativity of function multiplication is
-                    the fact that{" "}
-                    <Math>
-                      $fg = gf$
-                    </Math>
-                    {" "}for all{" "}
-                    <Math>
-                      $f, g : \rr \ra \rr$
-                    </Math>
-                    {" "}{" "}
-                  </i>
-                </VerticalChunk>
+                <i>
+                  the commutativity of function multiplication is
+                  the fact that{" "}
+                  <Math>
+                    $fg = gf$
+                  </Math>
+                  {" "}for all{" "}
+                  <Math>
+                    $f, g : \rr \ra \rr$
+                  </Math>
+                  {" "}{" "}
+                </i>
               </li>
               <li>
-                <VerticalChunk>
-                  <i>
-                    the commutativity of function addition is
-                    the fact that{" "}
-                    <Math>
-                      $f + g = g + f$
-                    </Math>
-                    {" "}for all{" "}
-                    <Math>
-                      $f, g : \rr \ra \rr$
-                    </Math>
-                    {" "}{" "}
-                  </i>
-                </VerticalChunk>
+                <i>
+                  the commutativity of function addition is
+                  the fact that{" "}
+                  <Math>
+                    $f + g = g + f$
+                  </Math>
+                  {" "}for all{" "}
+                  <Math>
+                    $f, g : \rr \ra \rr$
+                  </Math>
+                  {" "}{" "}
+                </i>
               </li>
             </ul>
             <ImageLeft src="/images/svg_ch4_express_the_f_g_h_A_B_C_D_cloud.svg" />
@@ -12505,68 +12461,60 @@ const Article = () => {
             </VerticalChunk>
             <ul style="margin:1em 0 0 2.5em">
               <li>
-                <VerticalChunk>
-                  <i>
-                    the associativity of [real number] multiplication is
-                    the fact that{" "}
-                    <Math>
-                      $a(bc) = (ab)c$
-                    </Math>
-                    {" "}for all{" "}
-                    <Math>
-                      $a, b, c \in \rr$
-                    </Math>
-                    {" "}{" "}
-                  </i>
-                </VerticalChunk>
+                <i>
+                  the associativity of [real number] multiplication is
+                  the fact that{" "}
+                  <Math>
+                    $a(bc) = (ab)c$
+                  </Math>
+                  {" "}for all{" "}
+                  <Math>
+                    $a, b, c \in \rr$
+                  </Math>
+                  {" "}{" "}
+                </i>
               </li>
               <li>
-                <VerticalChunk>
-                  <i>
-                    the associativity of [real number] addition is
-                    the fact that{" "}
-                    <Math>
-                      $a + (b + c) = (a + b) + c$
-                    </Math>
-                    {" "}for all{" "}
-                    <Math>
-                      $a, b, c \in \rr$
-                    </Math>
-                    {" "}{" "}
-                  </i>
-                </VerticalChunk>
+                <i>
+                  the associativity of [real number] addition is
+                  the fact that{" "}
+                  <Math>
+                    $a + (b + c) = (a + b) + c$
+                  </Math>
+                  {" "}for all{" "}
+                  <Math>
+                    $a, b, c \in \rr$
+                  </Math>
+                  {" "}{" "}
+                </i>
               </li>
               <li>
-                <VerticalChunk>
-                  <i>
-                    the commutativity of [real number] multiplication is
-                    the fact that{" "}
-                    <Math>
-                      $ab = ba$
-                    </Math>
-                    {" "}for all{" "}
-                    <Math>
-                      $a, b \in \rr$
-                    </Math>
-                    {" "}{" "}
-                  </i>
-                </VerticalChunk>
+                <i>
+                  the commutativity of [real number] multiplication is
+                  the fact that{" "}
+                  <Math>
+                    $ab = ba$
+                  </Math>
+                  {" "}for all{" "}
+                  <Math>
+                    $a, b \in \rr$
+                  </Math>
+                  {" "}{" "}
+                </i>
               </li>
               <li>
-                <VerticalChunk>
-                  <i>
-                    the commutativity of [real number] addition is
-                    the fact that{" "}
-                    <Math>
-                      $a + b = b + a$
-                    </Math>
-                    {" "}for all{" "}
-                    <Math>
-                      $a, b \in \rr$
-                    </Math>
-                    {" "}{" "}
-                  </i>
-                </VerticalChunk>
+                <i>
+                  the commutativity of [real number] addition is
+                  the fact that{" "}
+                  <Math>
+                    $a + b = b + a$
+                  </Math>
+                  {" "}for all{" "}
+                  <Math>
+                    $a, b \in \rr$
+                  </Math>
+                  {" "}{" "}
+                </i>
               </li>
             </ul>
             <Pause />

@@ -70,6 +70,17 @@ i {
   margin-inline: auto;
 }
 
+.mathblock {
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.star-divider {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 table  {
   margin-inline: auto;
 }

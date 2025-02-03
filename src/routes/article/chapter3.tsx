@@ -1073,7 +1073,7 @@ const Article = () => {
         <Pause />
         <Image src="/images/svg_ch3_circle.svg" />
         <ImageRight
-          use_squiggle_on_mobile={false}
+          squiggle={false}
           src="/images/svg_ch3_crossing_cloud_circle.svg" />
         <VerticalChunk>
           ...is not the graph of any function, because 
@@ -1586,7 +1586,7 @@ const Article = () => {
           $$\begin&#123;array&#125;&#123;c|c|c&#125;
           \,\,\,\,\te&#123;degree&#125;\,\,\,\, & \te&#123;name&#125; & \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
           -\infty & \te&#123;zero&#125; & 0\Rule&#123;0pt&#125;&#123;1.1em&#125;&#123;0.0em&#125;\\
-          \te&#123;0&#125; & \te&#123;constant&#125; & 1 + \sqrt&#123;5^&#123;\color&#123;white&#125;*\!\!\!&#125;&#125;\\
+          \te&#123;0&#125; & \te&#123;constant&#125; & 1 + \sqrt&#123;5&#125;\\
           \te&#123;1&#125; & \te&#123;affine&#125; & 10x - 1\\
           \te&#123;2&#125; & \,\,\,\,\te&#123;quadratic&#125;\,\,\,\, & x^2 - 1\\
           \te&#123;3&#125; & \te&#123;cubic&#125; & x^3 - 1\\
@@ -1637,7 +1637,9 @@ const Article = () => {
           !
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch3_affine_linear_cloud.svg" />
+        <Image
+          src="/images/svg_ch3_ch_affine_linear_cloud.svg"
+          style="margin-top:-0.6em;margin-bottom:-0.4em" />
       </Section>
       <Pause />
       <Section>
@@ -1681,7 +1683,7 @@ const Article = () => {
         <Pause />
         <MathBlock>
           $$a_7x^7 + a_6x^6 + a_5x^5 + a_4x^4 + a_3x^3 - a_2x^2 + a_1x + a_0$$
-          <ImageRight src="/images/svg_ch3_quadratic_linear_constant_cloud.svg" />
+          <ImageRight src="/images/svg_ch3_ch_quadratic_linear_constant_cloud.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2740,8 +2742,7 @@ const Article = () => {
               horizontal dilation by a factor 1000
             </CentralDisplayItalic>
             <Pause />
-            <VerticalChunk />
-            <VerticalChunk indent={true}>
+            <VerticalChunk>
               maps the first graph onto the second graph—i.e.,
               a point
             </VerticalChunk>
@@ -2904,7 +2905,7 @@ const Article = () => {
                 popup={true}
                 src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg" />
             </VerticalChunk>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
                   $$(f \circ (g \circ h))(x) = \f((g \circ h)(x))$$
@@ -3237,10 +3238,12 @@ const Article = () => {
             <Pause />
             <CentralDisplayItalic>
               associativity
-              <ImageRight src="/images/svg_ch3_associativity_cloud.svg" />
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
+              <ImageRight src="/images/svg_ch3_associativity_cloud.svg" />
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
               of function composition.
             </VerticalChunk>
             <Pause />
@@ -3628,12 +3631,12 @@ const Article = () => {
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
-              because the set of ordered pairs is the 
-              underlying “thing” that the function is. In 
-              particular, there is no notion of a “formula” 
-              or of a “procedure” being attached to a 
-              function, that might cause two functions to 
-              be considered unequal even if they produce the 
+              because the set of ordered pairs is the
+              underlying “thing” that the function is. In
+              particular, there is no notion of a “formula”
+              or of a “procedure” being attached to a
+              function, that might cause two functions to
+              be considered unequal even if they produce the
               same output on every input—producing the same
               output on every input implies that the{" "}
               <del>

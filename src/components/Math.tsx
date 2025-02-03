@@ -50,5 +50,5 @@ export const MathBlock = (props: ParentProps) => {
   //   (window as any).MathJax.typesetPromise([math]);
   // });
 
-  return <LazyMath>{props.children}</LazyMath>;
+  return <LazyMath class="mathblock">{props.children}</LazyMath>;
 };

@@ -1,4 +1,4 @@
-import desugarers/add_attributes
+// import desugarers/add_attributes
 import gleam/option.{Some, None}
 import desugarers/absorb_next_sibling_while.{absorb_next_sibling_while}
 import desugarers/add_before_tags_but_not_first_child_tags.{add_before_tags_but_not_first_child_tags}
@@ -15,10 +15,10 @@ import desugarers/fold_tags_into_text.{fold_tags_into_text}
 import desugarers/free_children.{free_children}
 import desugarers/generate_lbp_table_of_contents.{generate_lbp_table_of_contents}
 import desugarers/group_consecutive_children_avoiding.{group_consecutive_children_avoiding}
-import desugarers/group_siblings_not_separated_by_blank_lines.{group_siblings_not_separated_by_blank_lines}
+// import desugarers/group_siblings_not_separated_by_blank_lines.{group_siblings_not_separated_by_blank_lines}
 import desugarers/insert_bookend_tags.{insert_bookend_tags}
 import desugarers/insert_indent.{insert_indent}
-import desugarers/lbp_distribute_slices.{lbp_distribute_slices}
+// import desugarers/lbp_distribute_slices.{lbp_distribute_slices}
 import desugarers/pair_bookends.{pair_bookends}
 import desugarers/remove_attributes.{remove_attributes}
 import desugarers/remove_empty_chunks.{remove_empty_chunks}
@@ -26,11 +26,12 @@ import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/remove_vertical_chunks_with_no_text_child.{remove_vertical_chunks_with_no_text_child}
 import desugarers/remove_starting_and_ending_empty_lines.{remove_starting_and_ending_empty_lines}
 import desugarers/remove_starting_and_ending_spaces.{remove_starting_and_ending_spaces}
-import desugarers/rename_tag.{rename_tag}
+// import desugarers/rename_tag.{rename_tag}
 import desugarers/rename_when_child_of.{rename_when_child_of}
-import desugarers/surround_elements_by.{surround_elements_by}
+// import desugarers/surround_elements_by.{surround_elements_by}
 import desugarers/split_by_indexed_regexes.{split_by_indexed_regexes}
 import desugarers/unwrap_tags.{unwrap_tags}
+import desugarers/unwrap_tags_if_descendants_of.{unwrap_tags_if_descendants_of}
 import desugarers/wrap_math_with_no_break.{wrap_math_with_no_break}
 import infrastructure.{type Pipe} as infra
 
@@ -142,11 +143,17 @@ pub fn our_pipeline() -> List(Pipe) {
           "ul",
           "ol",
           "table",
+          "colgroup",
+          "thead",
+          "tbody",
+          "tr",
+          "td",
+          "section",
         ],
         ["MathBlock", "VerticalChunk"],
       )
     ),
-    unwrap_tags(["WriterlyBlakLine"]),
+    unwrap_tags(["WriterlyBlankLine"]),
     // surround_elements_by(#(
     //   [
     //     "MathBlock", "Image", "Table", "Exercises", "Solution", "Example",
@@ -284,9 +291,7 @@ pub fn our_pipeline() -> List(Pipe) {
     // ************************
     // misc *******************
     // ************************
-    remove_empty_chunks(),
     wrap_math_with_no_break(),
-    insert_indent(),
     counter_desugarer(),
     counter_handles_desugarer(),
     add_exercise_labels(),
@@ -317,6 +322,14 @@ pub fn our_pipeline() -> List(Pipe) {
     ]),
     change_attribute_value([#("src", "/()")]),
     // ************************
+    // VerticalChunk cleanup
+    // ************************
+    remove_starting_and_ending_spaces(["VerticalChunk"]),
+    remove_starting_and_ending_empty_lines(["VerticalChunk"]),
+    unwrap_tags_if_descendants_of([#("VerticalChunk", ["td", "li"])]),
+    remove_empty_chunks(),
+    insert_indent(),
+    // ************************
     // Add spacers
     // ************************
     add_between_tags([
@@ -346,8 +359,6 @@ pub fn our_pipeline() -> List(Pipe) {
       #("Solution", "Pause", []),
       #("List", "Pause", []),
     ]),
-    remove_starting_and_ending_spaces(["VerticalChunk"]),
-    remove_starting_and_ending_empty_lines(["VerticalChunk"]),
     remove_attributes(["counter", "handle", "type"]),
     // lbp_distribute_slices(),
     // rename_tag(#("VerticalChunk", "p")),
