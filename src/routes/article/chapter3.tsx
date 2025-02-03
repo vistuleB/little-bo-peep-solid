@@ -1071,10 +1071,12 @@ const Article = () => {
           graph...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch3_circle.svg" />
-        <ImageRight
-          squiggle={false}
-          src="/images/svg_ch3_crossing_cloud_circle.svg" />
+        <Image src="/images/svg_ch3_circle.svg">
+          <ImageRight
+            squiggle={false}
+            src="/images/svg_ch3_crossing_cloud_circle.svg" />
+        </Image>
+        <Pause />
         <VerticalChunk>
           ...is not the graph of any function, because 
           some vertical lines intersect the graph more 

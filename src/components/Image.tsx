@@ -69,6 +69,7 @@ const Image = (props: ImageProps) => {
           onClick={() => {
             // if on_mobile.get() && !margin_mode.get() {
             if (on_mobile()) {
+              console.log("heard click");
               set_scaled_down(!scaled_down());
             } else {
               set_scaled_down(false);

@@ -129,12 +129,14 @@ const Article = () => {
           :
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_explanation2.svg" />
-        <ImageRight
-          src="/images/svg_ch4_explanation2_cloud.svg"
-          offset_x="-5em"
-          offset_y="1em"
-          y="top" />
+        <Image src="/images/svg_ch4_explanation2.svg">
+          <ImageRight
+            src="/images/svg_ch4_explanation2_cloud.svg"
+            offset_x="-5em"
+            offset_y="1em"
+            y="top" />
+        </Image>
+        <Pause />
         <VerticalChunk>
           In fact,
           we can
@@ -274,8 +276,10 @@ const Article = () => {
           values and interpolate:
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_first_derivative_sketch.svg" />
-        <ImageRight src="/images/svg_ch4_polaroid_cloud.svg" />
+        <Image src="/images/svg_ch4_first_derivative_sketch.svg">
+          <ImageRight src="/images/svg_ch4_polaroid_cloud.svg" />
+        </Image>
+        <Pause />
         <VerticalChunk>
           ...voilà!
         </VerticalChunk>
@@ -1165,8 +1169,10 @@ const Article = () => {
           (look at the units); the derivative...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_position_by_time_der.svg" />
-        <ImageRight src="/images/svg_ch4_position_by_time_cloud.svg" />
+        <Image src="/images/svg_ch4_position_by_time_der.svg">
+          <ImageRight src="/images/svg_ch4_position_by_time_cloud.svg" />
+        </Image>
+        <Pause />
         <VerticalChunk>
           ...describes{" "}
           <i>
@@ -1176,8 +1182,10 @@ const Article = () => {
           finally, the second derivative...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_position_by_time_der_der.svg" />
-        <ImageLeft src="/images/svg_ch4_position_by_time_der_cloud.svg" />
+        <Image src="/images/svg_ch4_position_by_time_der_der.svg">
+          <ImageLeft src="/images/svg_ch4_position_by_time_der_cloud.svg" />
+        </Image>
+        <Pause />
         <VerticalChunk>
           ...describes
         </VerticalChunk>
@@ -2444,8 +2452,10 @@ const Article = () => {
               {" "}on this interval:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch4_sketch_the_middle_b_sol4.svg" />
-            <ImageLeft src="/images/svg_ch4_sketch_the_middle_b_cloud.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol4.svg">
+              <ImageLeft src="/images/svg_ch4_sketch_the_middle_b_cloud.svg" />
+            </Image>
+            <Pause />
             <VerticalChunk>
               (To achieve a passable slope of{" "}
               <Math>
@@ -4254,8 +4264,10 @@ const Article = () => {
               vectors end up looking like so, for example:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch4_17_velocity_vector_1.svg" />
-            <ImageRight src="/images/svg_ch4_17_velocity_vector_1_cloud.svg" />
+            <Image src="/images/svg_ch4_17_velocity_vector_1.svg">
+              <ImageRight src="/images/svg_ch4_17_velocity_vector_1_cloud.svg" />
+            </Image>
+            <Pause />
             <VerticalChunk>
               Maintaining this relationship at all 
               points in time, and given that the velocity 
@@ -6591,10 +6603,11 @@ const Article = () => {
             vertical velocities...
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch4_pacman1_hor0.svg" />
-          <ImageLeft
-            src="/images/svg_ch4_pacman1_x_prime_t_scloud.svg"
-            offset_y="1em" />
+          <Image src="/images/svg_ch4_pacman1_hor0.svg">
+            <ImageLeft
+              src="/images/svg_ch4_pacman1_x_prime_t_scloud.svg"
+              offset_y="1em" />
+          </Image>
           <Pause />
           <Image src="/images/svg_ch4_pacman1_ver0.svg" />
           <Pause />
@@ -7891,8 +7904,10 @@ const Article = () => {
               the background):
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch4_one_long_line_solution_sketch_1.svg" />
-            <ImageLeft src="/images/svg_ch4_one_long_line_c_is_approx_0_point_2_cloud.svg" />
+            <Image src="/images/svg_ch4_one_long_line_solution_sketch_1.svg">
+              <ImageLeft src="/images/svg_ch4_one_long_line_c_is_approx_0_point_2_cloud.svg" />
+            </Image>
+            <Pause />
             <VerticalChunk>
               In this example{" "}
               <NoBreak>
@@ -7931,8 +7946,10 @@ const Article = () => {
               -values:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch4_one_long_line_solution_sketch_2.svg" />
-            <ImageLeft src="/images/svg_ch4_one_long_line_c_is_approx_minus_a_over_2_cloud.svg" />
+            <Image src="/images/svg_ch4_one_long_line_solution_sketch_2.svg">
+              <ImageLeft src="/images/svg_ch4_one_long_line_c_is_approx_minus_a_over_2_cloud.svg" />
+            </Image>
+            <Pause />
             <VerticalChunk>
               Moreover, like the previous graph, this solution
               can also be vertically translated by any amount!

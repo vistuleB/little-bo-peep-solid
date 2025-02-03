@@ -319,6 +319,8 @@ pub fn our_pipeline() -> List(Pipe) {
       #("CentralDisplayItalic", "ImageLeft"),
       #("CentralDisplay", "ImageRight"),
       #("CentralDisplay", "ImageLeft"),
+      #("Image", "ImageRight"),
+      #("Image", "ImageLeft"),
     ]),
     change_attribute_value([#("src", "/()")]),
     // ************************
