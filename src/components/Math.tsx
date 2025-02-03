@@ -2,6 +2,10 @@ import { onCleanup, onMount, ParentProps } from "solid-js";
 
 export const Math = (props: ParentProps) => {
   let ref: HTMLDivElement | undefined;
+  
+  // createEffect(() => {
+  //   (window as any).MathJax.typesetPromise([ref]);
+  // });
 
   onMount(
     () => {
@@ -30,6 +34,10 @@ export const Math = (props: ParentProps) => {
 
 export const MathBlock = (props: ParentProps) => {
   let ref: HTMLDivElement | undefined;
+  
+  // createEffect(() => {
+  //   (window as any).MathJax.typesetPromise([ref]);
+  // });
 
   onMount(
     () => {
