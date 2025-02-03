@@ -797,7 +797,7 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$g(x) = \sqrt&#123;x - 1^&#123;\color&#123;white&#125;*\!\!&#125;&#125;$$
+            $$g(x) = \sqrt&#123;x - 1&#125;$$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2534,9 +2534,7 @@ const Article = () => {
             <VerticalChunk>
               For the first graph,{" "}
               <del>
-                <VerticalChunk>
-                  the
-                </VerticalChunk>
+                the{" "}
               </del>
               an answer is
             </VerticalChunk>
@@ -2807,11 +2805,11 @@ const Article = () => {
             Rewrite
           </VerticalChunk>
           <VerticalChunk indent={true}>
-            <CustomBlock style="font-size:1.1em">
+            <div style="font-size:1.1em;margin:1em 0em;">
               <MathBlock>
                 $$\tag&#123;A&#125;(f \circ (g \circ h))(x)$$
               </MathBlock>
-            </CustomBlock>
+            </div>
             without using “
             <NoBreak>
               <Math>
@@ -2824,11 +2822,11 @@ const Article = () => {
             composition”, which is namely
           </VerticalChunk>
           <VerticalChunk indent={true}>
-            <CustomBlock style="font-size:1.1em">
+            <div style="font-size:1.1em;margin:1em 0em;">
               <MathBlock>
                 $$\tag&#123;AA&#125;(r \circ s)(x) = r(s(x))$$
               </MathBlock>
-            </CustomBlock>
+            </div>
             (where{" "}
             <Math>
               $r$
@@ -3564,18 +3562,15 @@ const Article = () => {
               input but this is a actually subtle thing 
               that has to do with how functions are defined 
               “under the hood”. Specifically, mathematicians 
-              view functions as
+              view functions as{" "}
               <del>
-                <VerticalChunk>
-                  long
-                </VerticalChunk>
+                long
               </del>
+              &ensp;
               <del>
-                <VerticalChunk>
-                  lists of
-                </VerticalChunk>
+                lists of
               </del>
-              sets of ordered pairs; for example—conceptual
+              &ensp;sets of ordered pairs; for example—conceptual
               cold water shock ahead—
             </VerticalChunk>
             <Pause />
@@ -3607,11 +3602,11 @@ const Article = () => {
               {" "}(The presence of an ordered pair
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$(a, b)$$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               means that input{" "}
               <Math>
                 $a$
@@ -3642,11 +3637,9 @@ const Article = () => {
               same output on every input—producing the same
               output on every input implies that the{" "}
               <del>
-                <VerticalChunk>
-                  list of
-                </VerticalChunk>
+                list of
               </del>
-              set of ordered pairs is equal, and, perforce, 
+              &ensp;set of ordered pairs is equal, and, perforce, 
               that the two functions are equal!!
             </VerticalChunk>
           </Solution>

@@ -359,18 +359,18 @@ const Article = () => {
           <tbody>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $x_2 - x_1$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $x_2 - x_1$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $y_2 - y_1$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $y_2 - y_1$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
                 <img
@@ -386,18 +386,18 @@ const Article = () => {
             </tr>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $+$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $+$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $+$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $+$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
                 <img
@@ -412,18 +412,18 @@ const Article = () => {
             </tr>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $-$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $-$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $-$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $-$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
                 <img
@@ -439,18 +439,18 @@ const Article = () => {
             </tr>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $+$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $+$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $-$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $-$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
                 <img
@@ -466,18 +466,18 @@ const Article = () => {
             </tr>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $-$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $-$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $+$
-                  </Math>
-                </VerticalChunk>
+                {" "}{" "}
+                <Math>
+                  $+$
+                </Math>
+                {" "}{" "}
               </td>
               <td>
                 <img
@@ -626,14 +626,12 @@ const Article = () => {
           </Math>
           {" "}{" "}
           <span class="nobreak">
-            <VerticalChunk>
-              <InlineImage
-                width="28px"
-                src="/images/rise-run.svg" />
-              ”),
-            </VerticalChunk>
+            <InlineImage
+              width="28px"
+              src="/images/rise-run.svg" />
+            ”),
           </span>
-          following such a picture:
+          &ensp;following such a picture:
         </VerticalChunk>
         <Pause />
         <Image

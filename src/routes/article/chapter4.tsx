@@ -993,9 +993,7 @@ const Article = () => {
         <VerticalChunk>
           Reason like this: the second derivative is{" "}
           <del>
-            <VerticalChunk>
-              “the rate of change of the rate of change”.
-            </VerticalChunk>
+            “the rate of change of the rate of change”.
           </del>
           Sorry: “the rate of change of the slope”. 
           (Same difference.) Ergo, if the second derivative
@@ -1738,10 +1736,8 @@ const Article = () => {
             If we pretend that the graph of Exercise 1
             depicts the{" "}
             <del>
-              <VerticalChunk>
-                distance that a car has traveled
-                as a function of time,
-              </VerticalChunk>
+              distance that a car has traveled
+              as a function of time,
             </del>
             &ensp;position of a car as a function of 
             time, with hours (hr) on the{" "}
@@ -3713,9 +3709,7 @@ const Article = () => {
                 src="/images/svg_ch4_5_euler_spiral_figure.svg"
                 offset_x="1.5em">
                 <span font-size="1.4em">
-                  <VerticalChunk>
-                    Fig. 1
-                  </VerticalChunk>
+                  Fig. 1
                 </span>
               </ImageLeft>
             </VerticalChunk>
@@ -4387,9 +4381,7 @@ const Article = () => {
               {" "}you
               find{" "}
               <del>
-                <VerticalChunk>
-                  paths
-                </VerticalChunk>
+                paths
               </del>
               &ensp;functions that look like so:
             </VerticalChunk>
@@ -4540,9 +4532,7 @@ const Article = () => {
                 <VerticalChunk>
                   in{" "}
                   <span style="border:1px solid blue">
-                    <VerticalChunk>
-                      blue
-                    </VerticalChunk>
+                    blue
                   </span>
                   , particle 1, the last particle
                   to be (noticeably*) “peeled off” from
@@ -4561,9 +4551,7 @@ const Article = () => {
                 <VerticalChunk>
                   in{" "}
                   <span style="border:1px solid red">
-                    <VerticalChunk>
-                      red
-                    </VerticalChunk>
+                    red
                   </span>
                   , particle 14, the{" "}
                   <i>
@@ -4984,17 +4972,15 @@ const Article = () => {
             <li style="margin-top:0.5em">
               <VerticalChunk>
                 <del>
-                  <VerticalChunk>
-                    when{" "}
-                    <NoBreak>
-                      <Math>
-                        $B$
-                      </Math>
-                      's
-                    </NoBreak>
-                    {" "}tail is sticking out of the
-                    cat's mouth, and
-                  </VerticalChunk>
+                  when{" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    's
+                  </NoBreak>
+                  {" "}tail is sticking out of the
+                  cat's mouth, and
                 </del>
                 &ensp;when{" "}
                 <Math>
@@ -6730,96 +6716,86 @@ const Article = () => {
             <VerticalChunk>
               then gives us the following estimates for the
               <del>
-                <VerticalChunk>
-                  amount of travel
-                </VerticalChunk>
+                amount of travel
               </del>
               &ensp;
               <del>
-                <VerticalChunk>
-                  during the
-                </VerticalChunk>
+                during the
               </del>
               &ensp;six displacements:
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  style="margin-right:1em"
-                  src="/images/svg_ch4_pacman1_pellet1_inline.svg"
-                  class="ch4_pacman1_inline_number_pellet" />
-                {" "}{" "}
-                <Math>
-                  $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.5\te&#123;s&#125;\,\,=\,\,-3.375\,\te&#123;cells&#125;$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                style="margin-right:1em"
+                src="/images/svg_ch4_pacman1_pellet1_inline.svg"
+                class="ch4_pacman1_inline_number_pellet" />
+              {" "}{" "}
+              <Math>
+                $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.5\te&#123;s&#125;\,\,=\,\,-3.375\,\te&#123;cells&#125;$
+              </Math>
+              {" "}{" "}
               <ImageRight src="/images/svg_ch4_pacman1_cells_per_second_times_seconds_cloud.svg" />
             </CentralDisplay>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  style="margin-right:1em"
-                  src="/images/svg_ch4_pacman1_pellet2_inline.svg"
-                  class="ch4_pacman1_inline_number_pellet" />
-                {" "}{" "}
-                <Math>
-                  $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.4\te&#123;s&#125;\,\,=\,\,-2.7\,\te&#123;cells&#125;$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                style="margin-right:1em"
+                src="/images/svg_ch4_pacman1_pellet2_inline.svg"
+                class="ch4_pacman1_inline_number_pellet" />
+              {" "}{" "}
+              <Math>
+                $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.4\te&#123;s&#125;\,\,=\,\,-2.7\,\te&#123;cells&#125;$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  style="margin-right:1em"
-                  src="/images/svg_ch4_pacman1_pellet3_inline.svg"
-                  class="ch4_pacman1_inline_number_pellet" />
-                {" "}{" "}
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.9\te&#123;s&#125;\,\,=\,\,6.075\,\te&#123;cells&#125;$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                style="margin-right:1em"
+                src="/images/svg_ch4_pacman1_pellet3_inline.svg"
+                class="ch4_pacman1_inline_number_pellet" />
+              {" "}{" "}
+              <Math>
+                $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.9\te&#123;s&#125;\,\,=\,\,6.075\,\te&#123;cells&#125;$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  style="margin-right:1em"
-                  src="/images/svg_ch4_pacman1_pellet4_inline.svg"
-                  class="ch4_pacman1_inline_number_pellet" />
-                {" "}{" "}
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.4\te&#123;s&#125;\,\,=\,\,2.7\,\te&#123;cells&#125;$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                style="margin-right:1em"
+                src="/images/svg_ch4_pacman1_pellet4_inline.svg"
+                class="ch4_pacman1_inline_number_pellet" />
+              {" "}{" "}
+              <Math>
+                $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.4\te&#123;s&#125;\,\,=\,\,2.7\,\te&#123;cells&#125;$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  style="margin-right:1em"
-                  src="/images/svg_ch4_pacman1_pellet5_inline.svg"
-                  class="ch4_pacman1_inline_number_pellet" />
-                {" "}{" "}
-                <Math>
-                  $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.4\te&#123;s&#125;\,\,=\,\,-2.7\,\te&#123;cells&#125;$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                style="margin-right:1em"
+                src="/images/svg_ch4_pacman1_pellet5_inline.svg"
+                class="ch4_pacman1_inline_number_pellet" />
+              {" "}{" "}
+              <Math>
+                $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.4\te&#123;s&#125;\,\,=\,\,-2.7\,\te&#123;cells&#125;$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  style="margin-right:1em"
-                  src="/images/svg_ch4_pacman1_pellet6_inline.svg"
-                  class="ch4_pacman1_inline_number_pellet" />
-                {" "}{" "}
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.9\te&#123;s&#125;\,\,=\,\,6.075\,\te&#123;cells&#125;$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                style="margin-right:1em"
+                src="/images/svg_ch4_pacman1_pellet6_inline.svg"
+                class="ch4_pacman1_inline_number_pellet" />
+              {" "}{" "}
+              <Math>
+                $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.9\te&#123;s&#125;\,\,=\,\,6.075\,\te&#123;cells&#125;$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -9256,9 +9232,7 @@ const Article = () => {
             <VerticalChunk>
               in decimal, i.e.,{" "}
               <span style="font-family:Clicker Script;font-size:1.3em;">
-                <VerticalChunk>
-                  ~sixteen~
-                </VerticalChunk>
+                ~sixteen~{" "}
               </span>
               point{" "}
               <Math>
@@ -10359,39 +10333,37 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                ,{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                ,{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                ,{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                ,{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                ,{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                ,{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                ,{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              ,{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              ,{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              ,{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              ,{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              ,{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              ,{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              ,{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -10573,15 +10545,14 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -10598,15 +10569,14 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x : \rr \ra \rr$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x : \rr \ra \rr$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -10614,15 +10584,14 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(2)$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(2)$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -10646,15 +10615,14 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -10675,23 +10643,22 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -10713,39 +10680,38 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -10754,43 +10720,43 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <Math>
-                  $($
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x)' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
+              {" "}{" "}
+              <Math>
+                $($
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x)' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -10819,213 +10785,205 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -11041,405 +10999,397 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = ($
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\!\rt&#123;0.05&#125;)' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x =$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\,\!\!\!' = ($
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\!\rt&#123;0.05&#125;)' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y =$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = ($
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\!\rt&#123;0.05&#125;)' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x =$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\,\!\!\!' = ($
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\!\rt&#123;0.05&#125;)' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y =$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = ($
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\!\rt&#123;0.05&#125;)' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x =$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\,\!\!\!' = ($
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\!\rt&#123;0.05&#125;)' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y =$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = ($
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\!\rt&#123;0.05&#125;)' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x =$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\,\!\!\!' = ($
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\!\rt&#123;0.05&#125;)' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y =$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = ($
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\!\rt&#123;0.05&#125;)' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x =$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\,\!\!\!' = ($
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\!\rt&#123;0.05&#125;)' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y =$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = ($
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\!\rt&#123;0.05&#125;)' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x =$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\,\!\!\!' = ($
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\!\rt&#123;0.05&#125;)' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y =$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = ($
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\!\rt&#123;0.05&#125;)' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x =$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\,\!\!\!' = ($
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\!\rt&#123;0.05&#125;)' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y =$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = ($
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\!\rt&#123;0.05&#125;)' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x =$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\,\!\!\!' = ($
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\!\rt&#123;0.05&#125;)' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y =$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -11447,149 +11397,141 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y\,\!\!\!' = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y\,\!\!\!' = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -11605,277 +11547,269 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) + $
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0)$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) + $
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4black_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0)$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -11883,149 +11817,141 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              <VerticalChunk>
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_x(0)$
-                </Math>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <br />
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0) = 2\,\,+$
-                </Math>
-                {" "}{" "}
-                <InlineImage
-                  src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
-                  class="ch4_inline_blackwhite_particles" />
-                {" "}{" "}
-                <Math>
-                  $_y(0)$
-                </Math>
-              </VerticalChunk>
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p1white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p3white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_x(0)$
+              </Math>
+              {" "}{" "}
+              <br />
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0) = 2\,\,+$
+              </Math>
+              {" "}{" "}
+              <InlineImage
+                src="/images/svg_ch4_circle_at_2_4_p4white_inline.svg"
+                class="ch4_inline_blackwhite_particles" />
+              {" "}{" "}
+              <Math>
+                $_y(0)$
+              </Math>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
