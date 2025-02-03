@@ -121,6 +121,7 @@ pub fn our_pipeline() -> List(Pipe) {
         "VerticalChunk",
         [
           "Chapter",
+          "Bootcamp",
           "Section",
           "Example",
           "Exercises", 
