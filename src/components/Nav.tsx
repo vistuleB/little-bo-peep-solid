@@ -27,7 +27,7 @@ const Title = () => {
       class="slice select-none w-full h-full border-r-0 font-clickerscript"
       id="Header"
     >
-      <div class="font-clickerscript text-3xl self-end mt-auto mb-auto py-2 sm:px-0">
+      <div class="font-clickerscript text-3xl self-end mt-auto mb-auto py-2 sm:px-0" style="transform:translate(0, 0.1em);">
         <a href="/" onClick={() => setRoute("/")}>
           Little Bo Peep
         </a>
