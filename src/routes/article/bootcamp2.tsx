@@ -859,184 +859,136 @@ const Article = () => {
           <tbody>
             <tr>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $n$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $n$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $\,\,10^n$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $\,\,10^n$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  name
-                </VerticalChunk>
+                name
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $0$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $0$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $1$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $1$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <i>
-                    one
-                  </i>
-                </VerticalChunk>
+                <i>
+                  one
+                </i>
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $1$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $1$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $10$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $10$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <i>
-                    ten
-                  </i>
-                </VerticalChunk>
+                <i>
+                  ten
+                </i>
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $2$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $2$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $100$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $100$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <i>
-                    hundred
-                  </i>
-                </VerticalChunk>
+                <i>
+                  hundred
+                </i>
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $3$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $3$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $1000$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $1000$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <i>
-                    thousand
-                  </i>
-                </VerticalChunk>
+                <i>
+                  thousand
+                </i>
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $6$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $6$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $1\,000\,000$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $1\,000\,000$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <i>
-                    million
-                  </i>
-                </VerticalChunk>
+                <i>
+                  million
+                </i>
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $9$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $9$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $1\,000\,000\,000$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $1\,000\,000\,000$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <i>
-                    billion
-                  </i>
-                </VerticalChunk>
+                <i>
+                  billion
+                </i>
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $12$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $12$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <Math>
-                    $1\,000\,000\,000\,000$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $1\,000\,000\,000\,000$
+                </Math>
               </td>
               <td class="align-center">
-                <VerticalChunk>
-                  <i>
-                    trillion
-                  </i>
-                </VerticalChunk>
+                <i>
+                  trillion
+                </i>
               </td>
             </tr>
           </tbody>
@@ -1072,28 +1024,34 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
+          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
           and
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
+          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
           and also (while we're at it)
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight src="/images/svg_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
+          <ImageRight src="/images/svg_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
           as can be seen, for example, by replacing “billion”
           with “thousand million” in the previous sentence and
           then further replacing “thousand thousand” with “million”
@@ -1128,138 +1086,136 @@ const Article = () => {
             <tbody>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $n$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $n$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $\,\,10^n$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $\,\,10^n$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    name
-                  </VerticalChunk>
+                  name
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $-1$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $-1$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $0.1$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $0.1$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      one tenth
-                    </i>
-                  </VerticalChunk>
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $-2$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $0.01$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      one hundredth
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    one tenth
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $-3$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $-2$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $0.001$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $0.01$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      one thousandth
-                    </i>
-                  </VerticalChunk>
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $-6$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $0.000001$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      one millionth
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    one hundredth
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $-9$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $-3$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $0.000000001$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $0.001$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      one trillionth
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    one thousandth
+                  </i>
+                  {" "}{" "}
+                </td>
+              </tr>
+              <tr>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $-6$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $0.000001$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <i>
+                    one millionth
+                  </i>
+                  {" "}{" "}
+                </td>
+              </tr>
+              <tr>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $-9$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $0.000000001$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <i>
+                    one trillionth
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
             </tbody>
@@ -1346,126 +1302,122 @@ const Article = () => {
             <tbody>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    power
-                  </VerticalChunk>
+                  power
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    prefix
-                  </VerticalChunk>
+                  prefix
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;-1&#125;$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;-1&#125;$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      deci
-                    </i>
-                  </VerticalChunk>
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;-2&#125;$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      centi
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    deci
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;-3&#125;$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;-2&#125;$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      milli
-                    </i>
-                  </VerticalChunk>
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;-6&#125;$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      micro
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    centi
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;-9&#125;$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;-3&#125;$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      nano
-                    </i>
-                  </VerticalChunk>
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;-12&#125;$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      pico
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    milli
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;-15&#125;$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;-6&#125;$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      femto
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    micro
+                  </i>
+                  {" "}{" "}
+                </td>
+              </tr>
+              <tr>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;-9&#125;$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <i>
+                    nano
+                  </i>
+                  {" "}{" "}
+                </td>
+              </tr>
+              <tr>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;-12&#125;$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <i>
+                    pico
+                  </i>
+                  {" "}{" "}
+                </td>
+              </tr>
+              <tr>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;-15&#125;$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <i>
+                    femto
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
             </tbody>
@@ -1579,126 +1531,122 @@ const Article = () => {
             <tbody>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    power
-                  </VerticalChunk>
+                  power
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    prefix
-                  </VerticalChunk>
+                  prefix
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^1$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $10^1$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      deca
-                    </i>
-                  </VerticalChunk>
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;2&#125;$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      hecto
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    deca
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;3&#125;$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;2&#125;$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      kilo
-                    </i>
-                  </VerticalChunk>
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;6&#125;$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      mega
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    hecto
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;9&#125;$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;3&#125;$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      giga
-                    </i>
-                  </VerticalChunk>
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;12&#125;$
-                    </Math>
-                  </VerticalChunk>
-                </td>
-                <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      tera
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    kilo
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
               <tr>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <Math>
-                      $10^&#123;15&#125;$
-                    </Math>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;6&#125;$
+                  </Math>
+                  {" "}{" "}
                 </td>
                 <td class="align-center">
-                  <VerticalChunk>
-                    <i>
-                      peta
-                    </i>
-                  </VerticalChunk>
+                  {" "}{" "}
+                  <i>
+                    mega
+                  </i>
+                  {" "}{" "}
+                </td>
+              </tr>
+              <tr>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;9&#125;$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <i>
+                    giga
+                  </i>
+                  {" "}{" "}
+                </td>
+              </tr>
+              <tr>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;12&#125;$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <i>
+                    tera
+                  </i>
+                  {" "}{" "}
+                </td>
+              </tr>
+              <tr>
+                <td class="align-center">
+                  {" "}{" "}
+                  <Math>
+                    $10^&#123;15&#125;$
+                  </Math>
+                  {" "}{" "}
+                </td>
+                <td class="align-center">
+                  {" "}{" "}
+                  <i>
+                    peta
+                  </i>
+                  {" "}{" "}
                 </td>
               </tr>
             </tbody>
@@ -2682,9 +2630,7 @@ const Article = () => {
             take for granted any identity that is stated
             in this{" "}
             <del>
-              <VerticalChunk>
-                chapter
-              </VerticalChunk>
+              chapter
             </del>
             bootcamp.)
           </VerticalChunk>

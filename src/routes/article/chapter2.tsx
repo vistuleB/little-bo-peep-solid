@@ -206,7 +206,8 @@ const Article = () => {
         <MathBlock>
           $$\te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;$$
           <ImageRight
-            offset_y="-1rem"
+            offset_x="3em"
+            offset_y="-0.7em"
             src="/images/32.svg" />
         </MathBlock>
         <Pause />
@@ -247,47 +248,7 @@ const Article = () => {
             $$&#123;1 - 5 \over 4 - (-2)&#125; = &#123;-4 \over 6&#125; = - &#123;2 \over 3&#125;.$$
           </MathBlock>
         </Example>
-        <Pause />
-        <VerticalChunk>
-          <StarDivider />
-          (The main thing to understand about Example
-          1 is that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$ 1 - 5 $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is the vertical change from{" "}
-          <Math>
-            $A$
-          </Math>
-          {" "}to{" "}
-          <NoBreak>
-            <Math>
-              $B$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}while
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$ 4 - (-2) $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is the horizontal change from{" "}
-          <Math>
-            $A$
-          </Math>
-          {" "}to{" "}
-          <Math>
-            $B$
-          </Math>
-          .)
-        </VerticalChunk>
+        <StarDivider style="margin-top:1.5em;margin-bottom:0em;" />
       </Section>
       <Pause />
       <Section>
@@ -359,18 +320,14 @@ const Article = () => {
           <tbody>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $x_2 - x_1$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $x_2 - x_1$
+                </Math>
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $y_2 - y_1$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $y_2 - y_1$
+                </Math>
               </td>
               <td>
                 <img
@@ -386,18 +343,14 @@ const Article = () => {
             </tr>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $+$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $+$
+                </Math>
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $+$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $+$
+                </Math>
               </td>
               <td>
                 <img
@@ -412,18 +365,14 @@ const Article = () => {
             </tr>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $-$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $-$
+                </Math>
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $-$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $-$
+                </Math>
               </td>
               <td>
                 <img
@@ -439,18 +388,14 @@ const Article = () => {
             </tr>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $+$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $+$
+                </Math>
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $-$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $-$
+                </Math>
               </td>
               <td>
                 <img
@@ -466,18 +411,14 @@ const Article = () => {
             </tr>
             <tr>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $-$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $-$
+                </Math>
               </td>
               <td>
-                <VerticalChunk>
-                  <Math>
-                    $+$
-                  </Math>
-                </VerticalChunk>
+                <Math>
+                  $+$
+                </Math>
               </td>
               <td>
                 <img
@@ -512,8 +453,9 @@ const Article = () => {
           {" "}swap
           places, or, namely, to show that the fractions
           <ImageRight
+            offset_x="-0.5em"
             line={3.0}
-            src="/images/38.svg" />
+            src="/images/svg_ch2_ch_swap_cloud.svg" />
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -527,7 +469,8 @@ const Article = () => {
         <MathBlock>
           $$ &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125; $$
           <ImageLeft
-            offset_y="-3.5rem"
+            offset_y="-60px"
+            offset_x="2.5em"
             src="/images/39.svg" />
         </MathBlock>
         <Pause />
@@ -626,14 +569,12 @@ const Article = () => {
           </Math>
           {" "}{" "}
           <span class="nobreak">
-            <VerticalChunk>
-              <InlineImage
-                width="28px"
-                src="/images/rise-run.svg" />
-              ”),
-            </VerticalChunk>
+            <InlineImage
+              width="28px"
+              src="/images/rise-run.svg" />
+            ”),
           </span>
-          following such a picture:
+          &ensp;following such a picture:
         </VerticalChunk>
         <Pause />
         <Image
@@ -1015,11 +956,6 @@ const Article = () => {
         <Pause />
         <MathBlock>
           $$x = c$$
-          <ImageLeft
-            use_squiggle_on_mobile={false}
-            offset_x="4rem"
-            offset_y="1rem"
-            src="/images/svg_vertical_line_equation.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1029,6 +965,10 @@ const Article = () => {
           </Math>
           {" "}is a constant, 
           similarly to the more familiar equation
+          <ImageLeft
+            offset_x="1em"
+            offset_y="-6em"
+            src="/images/svg_ch2_ch_vertical_line_equation.svg" />
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -1511,12 +1451,12 @@ const Article = () => {
               class="relative w-fit"
               src="/images/55.svg">
               <ImageRight
-                use_squiggle_on_mobile={false}
+                squiggle={false}
                 offset_x="-1.3rem"
                 offset_y="5rem"
                 src="/images/56.svg" />
               <ImageLeft
-                use_squiggle_on_mobile={false}
+                squiggle={false}
                 img_position="bottom"
                 y="bottom"
                 offset_y="0.5rem"
@@ -1566,12 +1506,12 @@ const Article = () => {
               class="relative w-fit"
               src="/images/58.svg">
               <ImageRight
-                use_squiggle_on_mobile={false}
+                squiggle={false}
                 offset_x="-1.2rem"
                 offset_y="7.2rem"
                 src="/images/59.svg" />
               <ImageLeft
-                use_squiggle_on_mobile={false}
+                squiggle={false}
                 img_position="bottom"
                 y="bottom"
                 offset_y="0.5rem"
@@ -1632,11 +1572,10 @@ const Article = () => {
             <MathBlock>
               $$ p = &#123;y - y_0 \over x - x_0&#125; $$
               <ImageLeft
-                use_squiggle_on_mobile={false}
-                offset_y="-7.1rem"
-                offset_x="-5.5rem"
-                img_position="top"
-                src="/images/62.svg" />
+                squiggle={false}
+                offset_y="103px"
+                offset_x="7.5em"
+                src="/images/svg_ch2_ex_x0_y0_line_equation_cloud.svg" />
             </MathBlock>
             <Pause />
             <VerticalChunk>

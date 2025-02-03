@@ -29,7 +29,8 @@ function LazyImage(
   return (
     <img
       ref={imgRef}
-      src={isVisible() ? props.src : ""}
+      // src={isVisible() ? props.src : ""}
+      src={props.src}
       alt={props.alt || ""}
       class={props.class || ""}
       style={props.style || ""}

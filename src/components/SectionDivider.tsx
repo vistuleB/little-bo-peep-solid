@@ -14,6 +14,6 @@ export const SectionDivider = () => {
   </>;
 };
 
-export const StarDivider = () => {
-  return <p class="text-center">* * * *</p>;
+export const StarDivider = (props: SharedProps) => {
+  return <div class="star-divider text-center" style={props.style}>*&ensp;&ensp;*&ensp;&ensp;*&ensp;&ensp;*</div>;
 };

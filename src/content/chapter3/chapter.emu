@@ -471,7 +471,7 @@
 
     |> ImageRight
         src images/svg_ch3_crossing_cloud_circle.svg
-        use_squiggle_on_mobile false
+        squiggle false
 
     ...is not the graph of any function, because 
     some vertical lines intersect the graph more 
@@ -719,7 +719,7 @@
     \begin{array}{c|c|c}
     \,\,\,\,\te{degree}\,\,\,\, & \te{name} & \,\,\,\,\te{example}\,\,\,\,\Rule{0pt}{0.8em}{0.5em} \\ \hline
     -\infty & \te{zero} & 0\Rule{0pt}{1.1em}{0.0em}\\
-    \te{0} & \te{constant} & 1 + \sqrt{5^{\color{white}*\!\!\!}}\\
+    \te{0} & \te{constant} & 1 + \sqrt{5}\\
     \te{1} & \te{affine} & 10x - 1\\
     \te{2} & \,\,\,\,\te{quadratic}\,\,\,\, & x^2 - 1\\
     \te{3} & \te{cubic} & x^3 - 1\\
@@ -748,8 +748,8 @@
     there is no constant $a_0$!
 
     |> Image
-        src images/svg_ch3_affine_linear_cloud.svg
-
+        style margin-top:-0.6em;margin-bottom:-0.4em
+        src images/svg_ch3_ch_affine_linear_cloud.svg
 
 |> Section
 
@@ -764,7 +764,7 @@
     $$
 
     |> ImageRight
-        src images/svg_ch3_quadratic_linear_constant_cloud.svg
+        src images/svg_ch3_ch_quadratic_linear_constant_cloud.svg
 
     then the quadratic term is $-a_2x^2$, not 
     $a_2x^2$, fyi.
@@ -1622,12 +1622,12 @@
             
             __as sets of ordered pairs__
             
-            because the set of ordered pairs is the 
-            underlying “thing” that the function is. In 
-            particular, there is no notion of a “formula” 
-            or of a “procedure” being attached to a 
-            function, that might cause two functions to 
-            be considered unequal even if they produce the 
+            because the set of ordered pairs is the
+            underlying “thing” that the function is. In
+            particular, there is no notion of a “formula”
+            or of a “procedure” being attached to a
+            function, that might cause two functions to
+            be considered unequal even if they produce the
             same output on every input—producing the same
             output on every input implies that the 
             |> del

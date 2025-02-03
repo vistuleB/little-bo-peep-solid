@@ -17,399 +17,738 @@ const Article = () => {
   return (
     <Chapter
       number={1}
-      title="Functions">
+      title="A Few Refreshers">
       <Section>
         <VerticalChunk>
           <b>
-            Syntax.
+            Square Roots.
           </b>
           {" "}
-          A
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          function
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          is a “rule” for transforming inputs (usually
-          numbers) into outputs (usually numbers as well).
-          One can think of a function as a box with an
-          “input tube” and an “output tube”:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch3_f_box.svg" />
-        <Pause />
-        <VerticalChunk>
-          An input goes in via the input tube, is
-          processed according to the function's rule,
-          and the result comes out the other side.
-          (Metaphorically speaking.)
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          In the above picture, the name of the function
-          is “
-          <Math>
-            $f$
-          </Math>
-          ”.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          Notation-wise, one writes
+          You might remember that “minus times minus 
+          is plus” and that “plus times plus is plus”.
+          (Why? The enemy of my enemy is my friend.)
+          So any nonzero number multiplied by itself
+          is positive. For example,
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;f(x)&#125;$$
+          $$(-2) \times (-2) = 4$$
+        </MathBlock>
+        <Pause />
+        <CentralDisplay>
+          and
+        </CentralDisplay>
+        <Pause />
+        <MathBlock>
+          $$2 \times 2 = 4$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          (which is read “
+          are both positive. But{" "}
           <Math>
-            $f$
+            $\sqrt&#123;4&#125;$
           </Math>
-          {" "}of{" "}
+          {" "}is, by 
+          definition, the unique{" "}
+          <i>
+            nonnegative
+          </i>
+          {" "}
+          solution to{" "}
+          <NoBreak>
+            <Math>
+              $x^2 = 4$
+            </Math>
+            .
+          </NoBreak>
+          {" "}Hence, and whether 
+          you like it or not,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\sqrt&#123;(-2)^2&#125; = 2$$
+          <ImageRight
+            offset_x="9em"
+            offset_y="0em"
+            src="/images/svg_ch1_ch_minus_two_squared_cloud.svg" />
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          and, in particular, it is{" "}
+          <i>
+            not
+          </i>
+          {" "}true that
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          for every real number{" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
-            ”,
-          </NoBreak>
-          {" "}and that's 
-          important) for the result of passing an input
-          {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}to a function{" "}
-          <NoBreak>
-            <Math>
-              $f$
-            </Math>
             .
           </NoBreak>
-          {" "}For example, if the rule
-          according to which{" "}
-          <Math>
-            $f$
-          </Math>
-          {" "}processes inputs is
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          the output is the square of the input
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          then
+          {" "}Instead we have
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;f(2) = 4&#125;$$
+          $$\sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x|$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          [“
-          <Math>
-            $f$
-          </Math>
-          {" "}of{" "}
-          <Math>
-            $2$
-          </Math>
-          {" "}equals{" "}
+          for every real number{" "}
           <NoBreak>
             <Math>
-              $4$
-            </Math>
-            ”]
-          </NoBreak>
-          {" "}because{" "}
-          <NoBreak>
-            <Math>
-              $2^2 = 4$
+              $x$
             </Math>
             ,
           </NoBreak>
-          {" "}and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$&#123;f(3) = 9&#125;$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          [“
+          {" "}where{" "}
           <Math>
-            $f$
+            $|x|$
           </Math>
-          {" "}of{" "}
-          <Math>
-            $3$
-          </Math>
-          {" "}equals{" "}
-          <NoBreak>
-            <Math>
-              $9$
-            </Math>
-            ”]
-          </NoBreak>
-          {" "}because{" "}
-          <NoBreak>
-            <Math>
-              $3^2 = 9$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$&#123; f(0.1) = 0.01&#125;$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          [...] because{" "}
-          <NoBreak>
-            <Math>
-              $0.1^2 = 0.01$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}and so on. Also,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$&#123;f(x) = x^2&#125;$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          [“
-          <Math>
-            $f$
-          </Math>
-          {" "}of{" "}
+          {" "}
+          denotes the absolute value of{" "}
           <Math>
             $x$
           </Math>
-          {" "}equals{" "}
+          .
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          (Nb: If ever you want to indicate both 
+          solutions of the equation{" "}
+          <Math>
+            $x^2 = 4$
+          </Math>
+          {" "}you
+          can always use the notation “
           <NoBreak>
             <Math>
-              $x^2$
-            </Math>
-            ”]
-          </NoBreak>
-          {" "}more generally, which
-          is actually the
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          definition
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          of{" "}
-          <NoBreak>
-            <Math>
-              $f$
-            </Math>
-            !!
-          </NoBreak>
-          {" "}(Stated algebraically.)
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Lambda functions.
-          </b>
-          {" "}
-          A
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          lambda function
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          is not a type of function, but a type of
-          notation  that enables one to define a function 
-          without giving it a name, such as “
-          <NoBreak>
-            <Math>
-              $f$
+              $\pm \sqrt&#123;4&#125;$
             </Math>
             ”.
           </NoBreak>
-          {" "}In fact 
-          there are two different mainstream notations, in 
-          this instance. One notation writes
+          {" "}
+          This is what happens, for example, in the 
+          maybe-well-known formula
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\lambda&#123;&#125;x.x^2$$
+          $$x = &#123;-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          to mean “the function that maps{" "}
+          for the solutions to the quadratic equation
+          {" "}
+          <Math>
+            $ax^2 + bx + c = 0$
+          </Math>
+          .)
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          Now we can ponder, say,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\sqrt&#123;0.5&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          whose value is—by definition—the unique
+          nonnegative solution to
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$x^2 = 0.5.$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          As beginners, there's nothing wrong with 
+          trying to solve this equation by trial and
+          error. With{" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;1\over 4&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}for example,
+          we find
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$x^2 = &#123;1\over 4&#125;\times&#123;1\over 4&#125; = &#123;1\over 16&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          so{" "}
+          <Math>
+            $x = &#123;1\over 4&#125;$
+          </Math>
+          {" "}is not a solution of 
+          the equation, being apparently too small. 
+          Increasing{" "}
           <Math>
             $x$
           </Math>
           {" "}to{" "}
           <NoBreak>
             <Math>
-              $x^2$
+              $x = &#123;1\over 2&#125;$
             </Math>
-            ”
+            ,
           </NoBreak>
-          {" "}
-          (and by the way,
+          {" "}say, we 
+          find
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\lambda&#123;&#125;z.z^2$$
+          $$x^2 = &#123;1\over 2&#125;\times&#123;1\over 2&#125; = &#123;1\over 4&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          which is better, since{" "}
+          <Math>
+            $1/4$
+          </Math>
+          {" "}is closer to{" "}
+          <NoBreak>
+            <Math>
+              $1/2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          but still too small. Increasing{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}by{" "}
+          <Math>
+            $1/4$
+          </Math>
+          {" "}
+          again, say, to{" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;3\over 4&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}we find
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$x^2 = &#123;3\over 4&#125;\times&#123;3\over 4&#125; = &#123;9\over 16&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          which—surprise!—is actually pretty close to 
+          {" "}
+          <NoBreak>
+            <Math>
+              $1/2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}as{" "}
+          <NoBreak>
+            <Math>
+              $1/2 = 8/16$
+            </Math>
+            .
+          </NoBreak>
+          {" "}And since{" "}
+          <NoBreak>
+            <Math>
+              $9/16 &gt; 0.5$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $\sqrt&#123;0.5&#125;$
+          </Math>
+          {" "}must be a little{" "}
+          <i>
+            less
+          </i>
+          {" "}than 
+          {" "}
+          <Math>
+            $&#123;3\over 4&#125; = 0.75$
+          </Math>
+          .
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          In last resort, and in reasonably good 
+          agreement with our observations, a calculator 
+          reveals that
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\sqrt&#123;0.5&#125; = 0.7071067...$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          where the decimals trail off with no pattern. 
+          (This number is irrational.) Even so, the fact 
+          that{" "}
+          <Math>
+            $\sqrt&#123;0.5&#125;$
+          </Math>
+          {" "}is{" "}
+          <i>
+            greater
+          </i>
+          {" "}than{" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "}is 
+          often perceived as counterintuitive.
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          You can think of it this way: multiplying a 
+          value by{" "}
+          <NoBreak>
+            <Math>
+              $0.7071$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}or approximately{" "}
+          <NoBreak>
+            <Math>
+              $\sqrt&#123;0.5&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          is like taking{" "}
+          <Math>
+            $70.71\%$
+          </Math>
+          {" "}of that value—for 
+          example, say,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$605 \cdot 0.7071 = 427.7955$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
           is{" "}
-          <i>
-            the same
-          </i>
-          {" "}function, because 
-          it specifies the same in-out mapping—a thing 
-          goes to its square—also by the way, the symbol
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$\Huge \lambda$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is the Greek letter “lambda”, giving its name 
-          to the topic) while the other notation writes
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$x \rightarrow x^2$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          to mean the same thing.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          Note that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$(x \ra x^2)(0.1)$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          means “the function that maps each number to its
-          square, of{" "}
+          <Math>
+            $70.71\%$
+          </Math>
+          {" "}of{" "}
           <NoBreak>
             <Math>
-              $0.1$
+              $605$
             </Math>
-            ”.
+            ,
           </NoBreak>
-          {" "}So...
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$(x \ra x^2)(0.1) = 0.01$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          ...the same as an equation of the form 
+          {" "}and so on—so if we 
+          multiply{" "}
+          <i>
+            twice
+          </i>
+          {" "}by{" "}
+          <Math>
+            $0.7071$
+          </Math>
+          {" "}we obtain 
           “
           <Math>
-            $f(\dots) = \dots$
+            $70.71\%$
           </Math>
-          ”.
+          {" "}of{" "}
+          <NoBreak>
+            <Math>
+              $70.71\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}and it just so happens 
+          that “
+          <Math>
+            $70.71\%$
+          </Math>
+          {" "}of{" "}
+          <NoBreak>
+            <Math>
+              $70.71\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}is close to 
+          {" "}
+          <Math>
+            $50\%$
+          </Math>
+          .
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          For more practice:
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$(\lambda x.x^3)(10) = 1000$$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$(\lambda u.u^5)(10) = 100000$$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$(v \ra v^2)(10) = 100$$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$(z \ra z^3)(10) + (t \ra t^2)(5) = 1025.$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (Etc.) (Indeed, to emphasize again, the variable 
-          denoting the input does not matter: it is just a 
-          placeholder, and you obtain the same output, and 
-          the same{" "}
-          <i>
-            function
-          </i>
-          , no matter what symbol 
-          you choose.*) (\*As long as you don't collide 
-          with other existing variable names.)
+          The point is: if “
+          <Math>
+            $X\%$
+          </Math>
+          {" "}of{" "}
+          <NoBreak>
+            <Math>
+              $X\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}equals{" "}
+          <NoBreak>
+            <Math>
+              $50\%$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          then, of course,{" "}
+          <NoBreak>
+            <Math>
+              $\rt&#123;0.03&#125;X &gt; 50$
+            </Math>
+            —that
+          </NoBreak>
+          {" "}much 
+          seems logical—and, with a little thought, the
+          same phenomenon explains why{" "}
+          <Math>
+            $\sqrt&#123;0.5&#125; &gt; 0.5$
+          </Math>
+          .
         </VerticalChunk>
       </Section>
       <Pause />
       <Section>
         <VerticalChunk>
           <b>
-            Definition by cases.
+            Fractions and Division.
           </b>
           {" "}
-          Sometimes a function is defined by an expression 
-          of the form
+          An elementary fraction, or division, such as
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x \ra \begin&#123;cases&#125;
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \vdots & \vdots\\
-          \ldots & \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;$$
+          $$&#123;50 \over 2&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          where the right-hand side is a list of mutually 
-          exclusive cases to consider according to the 
-          value of{" "}
+          can be thought of in a few different ways:
+        </VerticalChunk>
+        <Pause />
+        <List>
+          <Item>
+            Fifty halves (i.e.,{" "}
+            <Math>
+              $50 \times &#123;1\over 2&#125;$
+            </Math>
+            ).
+          </Item>
+          <Item>
+            The size obtained when something of size 
+            fifty is divided into two equal parts 
+            (answer:{" "}
+            <Math>
+              $25$
+            </Math>
+            ).
+          </Item>
+          <Item>
+            The number of times that{" "}
+            <Math>
+              $2$
+            </Math>
+            {" "}goes into{" "}
+            <Math>
+              $50$
+            </Math>
+            {" "}
+            (answer:{" "}
+            <NoBreak>
+              <Math>
+                $25$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}because it takes twenty-five
+            {" "}
+            <NoBreak>
+              <Math>
+                $2$
+              </Math>
+              's
+            </NoBreak>
+            {" "}to make up{" "}
+            <Math>
+              $50$
+            </Math>
+            ).
+          </Item>
+        </List>
+        <Pause />
+        <VerticalChunk>
+          But{" "}
+          <Math>
+            $50/2$
+          </Math>
+          {" "}is a ratio of integers, which makes 
+          things particularly nice! For a ratio of 
+          decimals, such as, say,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$&#123;1 \over 0.01&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          our possible points of view are going to be
+          more restricted. Thankfully, however, we can 
+          still characterize this fraction as the 
+          answer to the question “how many times does 
+          {" "}
+          <Math>
+            $0.01$
+          </Math>
+          {" "}go into{" "}
           <NoBreak>
             <Math>
-              $x$
+              $1$
+            </Math>
+            ?”
+          </NoBreak>
+          {" "}as in the third option 
+          above. And, indeed,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$&#123;1 \over 0.01&#125; \,=\,100$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          because{" "}
+          <Math>
+            $0.01$
+          </Math>
+          {" "}goes{" "}
+          <Math>
+            $100$
+          </Math>
+          {" "}times into{" "}
+          <NoBreak>
+            <Math>
+              $1$
             </Math>
             .
           </NoBreak>
-          {" "}Equivalently,
+          {" "}For 
+          that matter,
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$g(x) = \begin&#123;cases&#125;
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \vdots & \vdots\\
-          \ldots & \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;$$
+          $$&#123; 1 \over 0.001&#125; = 1000,\qquad&#123;1 \over 0.0001&#125; = 10000,\quad\,\,\,\,\textrm&#123;(etc)&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          in the case where the function has a name, such
-          as “
+          by the same reasoning, which explains why 
+          dividing by smaller and smaller numbers produces 
+          larger and larger results (and, by extension, 
+          why dividing by{" "}
           <Math>
-            $g$
+            $0$
           </Math>
-          ”.
+          {" "}is undefined).
+        </VerticalChunk>
+        <Pause />
+        <VerticalChunk>
+          <b>
+            Note.
+          </b>
+          {" "}In general, the ratio of two decimal 
+          numbers can be turned into a ratio of integers 
+          by multiplying the ratio top and bottom by a 
+          suitable power of{" "}
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+            .
+          </NoBreak>
+          {" "}E.g.:
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$&#123;1.42 \over 0.8&#125; = &#123;100 \cdot 1.42 \over 100 \cdot 0.8&#125; = &#123;142 \over 80&#125; = &#123;71 \over 40&#125;.$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          This example was chosen randomly, and, if you
+          allow, we would like to see how large{" "}
+          <Math>
+            $71/40$
+          </Math>
+          {" "}
+          really is (one second!):
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\begin&#123;align&#125;
+          &#123;71 \over 40&#125; \,&=\, &#123;40 + 30 + 1 \over 40&#125; \,=\, &#123;40 \over 40&#125; + &#123;30 \over 40&#125; + &#123;1 \over 40&#125;\\
+          \,&=\, 1 + &#123;3 \over 4&#125; + &#123;1 \over 4&#125;\!\cdot \!&#123;1 \over 10&#125;\up&#123;1.5&#125;\\
+          \,&=\, 1 + 0.75 + 0.025 = 1.775\up&#123;1.5&#125;
+          \end&#123;align&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          ...so we find, among others, that{" "}
+          <Math>
+            $71$
+          </Math>
+          {" "}is exactly
+          {" "}
+          <Math>
+            $77.5\%$
+          </Math>
+          {" "}greater than{" "}
+          <NoBreak>
+            <Math>
+              $40$
+            </Math>
+            .
+          </NoBreak>
+          {" "}(Interesting, no?)
+        </VerticalChunk>
+      </Section>
+      <Pause />
+      <Section>
+        <VerticalChunk>
+          <b>
+            Distributivity.
+          </b>
+          {" "}
+          As you might already know, a number that 
+          multiplies a sum can be brought “inside” the 
+          sum. For example,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$5(10 + 2) \,=\, 5\!\cdot\!10 \,+\, 5\!\cdot\!2$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          (five times twelve equals fifty plus ten), or
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$a(b + c) = ab + ac$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          more generally. This property is known as the
+          {" "}
+          <i>
+            distributivity of multiplication over addition
+          </i>
+          ,
+          or{" "}
+          <i>
+            distributivity
+          </i>
+          {" "}for short.
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          (We might finally clarify that ‘
+          <NoBreak>
+            <Math>
+              $\cdot$
+            </Math>
+            ’
+          </NoBreak>
+          {" "}means
+          “times”, i.e., the same as ‘
+          <NoBreak>
+            <Math>
+              $\times$
+            </Math>
+            ’.
+          </NoBreak>
+          {" "}Moreover,
+          when we write
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$5\!\cdot\!10 \,+\, 5\!\cdot\!2$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          we really mean
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(5\!\cdot\!10) + (5\!\cdot\!2)$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          as opposed to something else, such as
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$((5\!\cdot\!10) + 5)\!\cdot\! 2,$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          because multiplication takes precedence over 
+          addition, by default.)
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          A little more generally, one has such identities 
+          as
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(a + b)(C + D) \,=\, aC + bC + aD + bD$$
+          <ImageLeft
+            offset_x="2em"
+            offset_y="-0.5em"
+            src="/images/325.svg" />
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          that come from multiplying every term of the first 
+          parenthesis with every term of the second 
+          parenthesis. Indeed,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(a + b)(C + D) = (a + b)C + (a + b)D$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          by one application of distributivity, while
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(a + b)C = aC + bC$$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$(a + b)D = aD + bD$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          by distributivity again.
         </VerticalChunk>
         <Pause />
         <Example>
@@ -418,199 +757,25 @@ const Article = () => {
               Example 1.
             </b>
             {" "}
-            If VX-11/78A (don't mind the weird name, chosen
-            at random) is the function defined by
+            One has
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125; 
-            3.5 & \te&#123;if $x = 0$&#125;,\\
-            2.5\up&#123;1.1&#125; & \te&#123;if $x = 1$&#125;,\\
-            \te&#123;undefined&#125;\up&#123;1.1&#125; & \te&#123;if $x \ne 0, 1$&#125;
-            \end&#123;cases&#125;$$
+            $$\begin&#123;align&#125;
+            (10 + 2)(10 + 4) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4\\
+            \,&=\, 100 \,+\, 40 \,+\, 20 \,+\, 8\\
+            \,&=\, 168
+            \end&#123;align&#125;$$
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            then
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\te&#123;VX-11/78A&#125;(0) = 3.5,$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\te&#123;VX-11/78A&#125;(1) = 2.5,$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            aaand... and these are the only two values of 
-            {" "}
+            so{" "}
             <Math>
-              $x$
+              $12 \times 14 = 168$
             </Math>
-            {" "}for which VX-11/78A
-            <Math>
-              $(x)$
-            </Math>
-            {" "}is defined, as 
-            specified.
+            .
           </VerticalChunk>
         </Example>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            On arbitrariness.
-          </b>
-          {" "}
-          While a function such as VX-11/78A might seem 
-          completely arbitrary, one lesson from the former 
-          example is that functions{" "}
-          <i>
-            can
-          </i>
-          {" "}be 
-          completely arbitrary! In fact, there are only 
-          two “ground rules” to respect in order for 
-          something to qualify as a function:{" "}
-          <b>
-            (i)
-          </b>
-          {" "}to 
-          output
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          one
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          output per (accepted) input, and{" "}
-          <b>
-            (ii)
-          </b>
-          {" "}to return 
-          the
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          same
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          output each time on the same input. (Sometimes,
-          functions are said to be
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          deterministic
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          because of{" "}
-          <b>
-            (ii)
-          </b>
-          .)
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Graphs.
-          </b>
-          {" "}
-          The
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          graph
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          of a function is a visualization device. A point
-          on the graph corresponds to an input for which
-          the function is defined. The{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinate
-          </NoBreak>
-          {" "}of 
-          the point is the value of the input, while the 
-          {" "}
-          <NoBreak>
-            <Math>
-              $y$
-            </Math>
-            -coordinate
-          </NoBreak>
-          {" "}is the value of the corresponding 
-          output.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          For example, here is a graph of VX-11/78A:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch3_vx1178A.svg" />
-        <Pause />
-        <VerticalChunk>
-          The graph has only two points, because VX-78/11A 
-          is defined at only two values. One point is...
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch3_vx1178A_@0_with_cors.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...
-          <NoBreak>
-            <Math>
-              $(0, 3.5)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}because VX-78/11A maps{" "}
-          <Math>
-            $0$
-          </Math>
-          {" "}to 
-          {" "}
-          <NoBreak>
-            <Math>
-              $3.5$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}while the other point is...
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch3_vx1178A_@1_with_cors.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...
-          <NoBreak>
-            <Math>
-              $(1, 2.5)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}because VX-78/11A maps{" "}
-          <Math>
-            $1$
-          </Math>
-          {" "}to{" "}
-          <Math>
-            $2.5$
-          </Math>
-          .
-        </VerticalChunk>
         <Pause />
         <Example>
           <VerticalChunk>
@@ -618,93 +783,104 @@ const Article = () => {
               Example 2.
             </b>
             {" "}
-            Here is a graph of{" "}
-            <Math>
-              $x \ra x^2$
-            </Math>
-            {" "}on the interval
-            {" "}
-            <Math>
-              $[-1, 1]$
-            </Math>
-            {" "}(meaning: going from{" "}
-            <Math>
-              $x = -1$
-            </Math>
-            {" "}to 
-            {" "}
-            <Math>
-              $x = 1$
-            </Math>
-            ):
+            One has
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch3_x_squared_1_worked.svg" />
+          <MathBlock>
+            $$\begin&#123;align&#125;
+            (10 + 3)(10 + 3) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
+            \,&=\, 100 \,+\, 30 \,+\, 30 \,+\, 9\\
+            \,&=\, 169
+            \end&#123;align&#125;$$
+          </MathBlock>
           <Pause />
           <VerticalChunk>
-            Among all the points on this graph that we 
-            could discuss, let us name, say, the point 
-            {" "}
+            so{" "}
             <Math>
-              $(0.75, 0.5625)$
-            </Math>
-            ...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_x_squared_2_worked.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...which finds itself on the graph, namely, 
-            because the square of{" "}
-            <Math>
-              $0.75$
-            </Math>
-            {" "}is 
-            {" "}
-            <Math>
-              $0.5625 = 9/16$
+              $13 \times 13 = 169$
             </Math>
             .
-            <ImageLeft
-              offset_y="0em"
-              line={-1.0}
-              src="/images/svg_ch3_0.5625_cloud.svg" />
           </VerticalChunk>
         </Example>
-      </Section>
-      <Pause />
-      <Section>
+        <Pause />
         <VerticalChunk>
-          <b>
-            Domains.
-          </b>
-          {" "}
-          The{" "}
-          <i>
-            domain
-          </i>
-          {" "}of a function{" "}
+          (The fact that{" "}
           <Math>
-            $f$
+            $13 \times 13$
           </Math>
-          —written
+          {" "}is exactly one 
+          greater than{" "}
+          <Math>
+            $12 \times 14$
+          </Math>
+          {" "}is a bit curious 
+          indeed.)
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          If we start from the afore-mentioned identity
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\dom\, f$$
+          $$(a + b)(C + D) \,=\, aC + bC + aD + bD$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          —is the set of inputs{" "}
+          and set{" "}
+          <NoBreak>
+            <Math>
+              $C = a$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}{" "}
+          <NoBreak>
+            <Math>
+              $D = b$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}we find
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(a + b)(a + b) \,=\, aa + ba + ab + bb$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          or, equivalently,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(a + b)^2 = a^2 + 2ab + b^2$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          since{" "}
+          <NoBreak>
+            <Math>
+              $(a + b)(a + b) = (a + b)^2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}{" "}
           <Math>
-            $x$
+            $aa = a^2$
           </Math>
-          {" "}for which{" "}
-          <Math>
-            $f(x)$
-          </Math>
-          {" "}is
-          defined.
+          {" "}
+          and{" "}
+          <NoBreak>
+            <Math>
+              $bb = b^2$
+            </Math>
+            .
+          </NoBreak>
+          {" "}(This is the{" "}
+          <i>
+            binomial expansion 
+            of degree two
+          </i>
+          , but such terminology is not very 
+          important at this stage.)
         </VerticalChunk>
         <Pause />
         <Example>
@@ -713,33 +889,119 @@ const Article = () => {
               Example 3.
             </b>
             {" "}
-            We have
+            By the last formula (or “binomial expansion
+            of degree two”),
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;$$
+            $$\begin&#123;align&#125;
+            \up&#123;1&#125; (10 + 3)^2 \,&=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
+            \up&#123;1&#125; \,&=\, 100 + 60 + 9 \\
+            \up&#123;1&#125; \,&=\, 169
+            \end&#123;align&#125;$$
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            because VX-11/78A
-            <Math>
-              $(x)$
-            </Math>
-            {" "}is only defined at{" "}
-            <NoBreak>
-              <Math>
-                $x = 0$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            {" "}
-            <Math>
-              $1$
-            </Math>
-            .
+            which agrees with Example 2.
           </VerticalChunk>
         </Example>
+        <Pause />
+        <VerticalChunk>
+          On the other hand, setting{" "}
+          <NoBreak>
+            <Math>
+              $C = a$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}{" "}
+          <Math>
+            $D = -b$
+          </Math>
+          {" "}in
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(a + b)(C + D) = aC + aD + bC + bD$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          gives
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(a + b)(a + (-b)) = aa + a(-b) + ba + b(-b)$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          or, less pedantically,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(a + b)(a - b) = aa - ab + ba - bb$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          or
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(a + b)(a - b) = a^2 - b^2$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          since{" "}
+          <NoBreak>
+            <Math>
+              $- ab + ba = 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}{" "}
+          <NoBreak>
+            <Math>
+              $aa = a^2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}{" "}
+          <NoBreak>
+            <Math>
+              $bb = b^2$
+            </Math>
+            .
+          </NoBreak>
+          {" "}Note that
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$a^2 - b^2$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          a difference of squares
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          whence{" "}
+          <i>
+            a difference of squares can always be 
+            factored
+          </i>
+          . (Factored as{" "}
+          <NoBreak>
+            <Math>
+              $(a + b)(a - b)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}that
+          is.) (PS: “Factored” means “written as a product”.)
+        </VerticalChunk>
         <Pause />
         <Example>
           <VerticalChunk>
@@ -747,37 +1009,25 @@ const Article = () => {
               Example 4.
             </b>
             {" "}
-            If DM-1700 (another weirdly named function) is 
-            defined by
+            Since
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\te&#123;DM-1700&#125;(x) = 
-            \begin&#123;cases&#125; 
-            0             & \te&#123;if $x \leq 0$ or $x \geq 1$&#125;,\\
-            1 - x\up&#123;1.1&#125; & \te&#123;if $0 &lt; x &lt; 1$&#125;
-            \end&#123;cases&#125;$$
+            $$19 = 100 - 81 = 10^2 - 9^2$$
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            then
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            because{" "}
+            is a difference of squares,{" "}
             <Math>
-              $\te&#123;DM-1700&#125;(x)$
+              $19$
             </Math>
-            {" "}is defined for all
-            {" "}
+            {" "}can be 
+            factored. (On the other hand{" "}
             <Math>
-              $x \in \rr$
+              $19$
             </Math>
-            .
+            {" "}is a prime 
+            number, but nevermind.)
           </VerticalChunk>
         </Example>
         <Pause />
@@ -787,52 +1037,88 @@ const Article = () => {
               Example 5.
             </b>
             {" "}
-            If{" "}
-            <Math>
-              $g : \rr \ra \rr$
-            </Math>
-            {" "}(we are going to explain 
-            this notation imminently) is the function given 
-            by
+            The algebraic expression
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$g(x) = \sqrt&#123;x - 1&#125;$$
+            $$1 - x^2$$
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            then
+            can be factored, because
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\begin&#123;align&#125;
-            \dom\, g &\,=\, [1, \infty)
-            \end&#123;align&#125;$$
+            $$1 = 1^2$$
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            because the square root of a number is defined 
-            if and only if that number is{" "}
-            <i>
-              nonnegative
-            </i>
-            {" "}
-            (i.e., we need{" "}
+            implies that
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$1 - x^2$$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            truly is “a difference of squares”. And, indeed,
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$1 - x^2 = (1 - x)(1 + x)$$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            as per “
             <Math>
-              $x - 1 \geq 0$
+              $\rt&#123;0.04&#125;a^2 - b^2 = (a - b)(a + b)$
             </Math>
-            {" "}in order for{" "}
-            <Math>
-              $g(x)$
-            </Math>
-            {" "}
-            to be defined, i.e., we need{" "}
-            <Math>
-              $x \geq 1$
-            </Math>
-            ).
+            ”.
           </VerticalChunk>
         </Example>
+        <Pause />
+        <VerticalChunk>
+          In relation to distributivity, we should also 
+          mention the simple but important fact that 
+          multiplying a difference by{" "}
+          <Math>
+            $-1$
+          </Math>
+          {" "}{" "}
+          <i>
+            reverses
+          </i>
+          {" "}the 
+          difference. That is,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$(-1)(a - b) \,=\, b - a$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          or, for short,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$-(a - b) \,=\, b - a$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          because, indeed,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\begin&#123;align&#125;
+          (-1)(a - b) \,&=\, (-1)(a + (-b)) \\
+          \,&=\, (-1)a + (-1)(-b) \\
+          \,&=\, -a + b
+          \end&#123;align&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          by distributivity (used in the second step).
+        </VerticalChunk>
         <Pause />
         <Example>
           <VerticalChunk>
@@ -840,397 +1126,36 @@ const Article = () => {
               Example 6.
             </b>
             {" "}
-            If{" "}
-            <Math>
-              $h : \rr \ra \rr$
-            </Math>
-            {" "}is defined by
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$h(x) = \frac&#123;1&#125;&#123;x+1&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            then
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\begin&#123;align&#125;
-            \dom\,h \,=\, \rr\back\&#123;-1\&#125; =\, (-\infty,-1) \cup (-1,\infty)
-            \end&#123;align&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            because{" "}
-            <Math>
-              $1/(x+1)$
-            </Math>
-            {" "}is well-defined if and only if
-            division by 0 is avoided, i.e., if and only if 
-            {" "}
-            <Math>
-              $x \ne -1$
-            </Math>
-            .
-          </VerticalChunk>
-        </Example>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            “From/To” Notation.
-          </b>
-          {" "}
-          The notation
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$f : \rr \ra \rr$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          means that{" "}
-          <Math>
-            $f$
-          </Math>
-          {" "}is a function
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          from{" "}
-          <Math>
-            $\rr$
-          </Math>
-          {" "}to{" "}
-          <Math>
-            $\rr$
-          </Math>
-          {" "}{" "}
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          or, which is to say, that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$\dom f \subseteq \rr$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          [translation:{" "}
-          <i>
-            the domain of{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}is a subset of 
-            the set of real numbers
-          </i>
-          ] and that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$\&#123;f(x) : x \in \dom f\&#125; \subseteq \rr$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          [translation:{" "}
-          <i>
-            the set of values output by{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}
-            is a subset of the set of real numbers
-          </i>
-          ].
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          Generalizing,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$f : A \ra B$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          means that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$\dom f \subseteq A$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (i.e., that{" "}
-          <Math>
-            $f$
-          </Math>
-          {" "}only accepts values from{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-            )
-          </NoBreak>
-          {" "}and 
-          that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$\&#123;f(x) : x \in \dom f\&#125; \subseteq B$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (i.e., that{" "}
-          <Math>
-            $f$
-          </Math>
-          {" "}only outputs values from{" "}
-          <NoBreak>
-            <Math>
-              $B$
-            </Math>
-            ),
-          </NoBreak>
-          {" "}
-          following the pattern above.
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            The Vertical Line Test.
-          </b>
-          {" "}
-          As it turns out, the term “graph” just means 
-          “set of points in the plane”. So a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          function graph
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          (as described above) is just one particular 
-          kind of “graph” among other things that are 
-          also called “graphs”, but that are not 
-          function graphs.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          The so-called
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          vertical line test
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          observes that a graph [
-          <Math>
-            $=$
-          </Math>
-          {" "}{" "}
-          <i>
-            set of points 
-            in the plane
-          </i>
-          ] is a function graph if and 
-          only if every{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -value
-          </NoBreak>
-          {" "}(a.k.a., input) 
-          corresponds to at most one{" "}
-          <NoBreak>
-            <Math>
-              $y$
-            </Math>
-            -value
-          </NoBreak>
-          {" "}(a.k.a., 
-          output). In other words, every vertical line 
-          should intersect the graph at most once.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          For example, this particular graph...
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch3_wiggle_graph.svg" />
-        <Pause />
-        <VerticalChunk>
-          is a function graph (or locally at least, from
-          what we can see), because every vertical line 
-          intersects the graph at most once, but this 
-          graph...
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch3_circle.svg" />
-        <ImageRight
-          use_squiggle_on_mobile={false}
-          src="/images/svg_ch3_crossing_cloud_circle.svg" />
-        <VerticalChunk>
-          ...is not the graph of any function, because 
-          some vertical lines intersect the graph more 
-          than once.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          (Oops. To backtrack and quickly clarify a small 
-          matter, an empty circle at the end of a segment, 
-          in the vein of the previous figure...
-        </VerticalChunk>
-        <Pause />
-        <Image
-          class="pt-4 mb-3"
-          src="/images/svg_ch3_empty_circle.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...means that the point in question is{" "}
-          <i>
-            excluded
-          </i>
-          {" "}
-          from the graph. A filled circle, by opposition, 
-          means that the point is included!)
-        </VerticalChunk>
-        <Pause />
-        <Example>
-          <VerticalChunk>
-            <b>
-              Example 7.
-            </b>
-            {" "}
-            This{" "}
-            <i>
-              upper semicircle
-            </i>
-            {" "}of unit radius...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_semicircle.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...passes the vertical line test, and, hence, 
-            defines a function.
-          </VerticalChunk>
-        </Example>
-        <Pause />
-        <Example>
-          <VerticalChunk>
-            <b>
-              Example 8.
-            </b>
-            {" "}
-            This graph defines a function...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_factory_function.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...because it passes the vertical line test, 
-            while this graph does not define a function...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_factory_nonfunction.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...because it does{" "}
-            <i>
-              not
-            </i>
-            {" "}pass the vertical 
-            line test!
-          </VerticalChunk>
-        </Example>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            A Famous Discontinuity.
-          </b>
-          {" "}
-          As already seen, functions can have
-          {" "}
-          <i>
-            discontinuities
-          </i>
-          : a place where the function 
-          experiences a sudden “jump” in value.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          For a famous example of a “naturally” occurring 
-          discontinuity (that we feel compelled to 
-          mention, for some reason) we need look no 
-          further than the function
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$\Large x \ra 0^x$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          as it so happens that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$0^x = 
-          \begin&#123;cases&#125; 0 & \te&#123;if &#125; x &gt; 0\\
-          1 & \te&#123;if &#125; x = 0\\
-          \te&#123;undefined&#125; & \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          which implies a discontinuity in the graph of
-          {" "}
-          <Math>
-            $y = 0^x$
-          </Math>
-          {" "}at{" "}
-          <NoBreak>
-            <Math>
-              $x = 0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}as pictured here:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch3_zero_to_the_x.svg" />
-        <Pause />
-        <VerticalChunk>
-          (Pretty cool, no?)
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Distinguishing “
+            We have{" "}
             <NoBreak>
               <Math>
-                $f$
+                $-(10 - 3) = 3 - 10$
               </Math>
-              ”
+              .
             </NoBreak>
-            {" "}and “
-            <Math>
-              $f(x)$
-            </Math>
-            ”.
+            {" "}
+            (Because{" "}
+            <NoBreak>
+              <Math>
+                $-7 = -7$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}as it would be, haha.)
+          </VerticalChunk>
+        </Example>
+      </Section>
+      <Pause />
+      <Section divider={false}>
+        <VerticalChunk>
+          <b>
+            Epilogue.
           </b>
-          {" "}
-          The difference between
+          {" "}Do you remember the near miss between
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;\te&#123;VX-11/78A&#125;&#125;$$
+          $$12\cdot 14 \,=\, 168$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1238,557 +1163,1201 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;\te&#123;VX-11/78A&#125;(x)&#125;$$
+          $$13 \cdot 13 \,=\, 13^2 \,=\, 169$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          is that the former is a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          function
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          while the latter is a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          value.
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          (Well, provided{" "}
-          <NoBreak>
-            <Math>
-              $x \in \&#123;0, 1\&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}to make it 
-          well-defined at all.) Likewise, if{" "}
-          <NoBreak>
-            <Math>
-              $f : \rr \ra \rr$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          the difference between
+          ...? Well if you observe, additionally, that
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f$$
+          $$\begin&#123;align&#125;
+          11\,\cdot\,13 &= 12^2 - 1\\
+          10\,\cdot\,12 &= 11^2 - 1\\
+          9\,\cdot\,11 &= 10^2 - 1
+          \end&#123;align&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          and
+          (etc) you might become suspicious of a pattern! 
+          But the mystery is rather thin: we have
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f(x)$$
+          $$(n - 1)(n + 1) \,=\, n^2 - 1$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          is that the former is a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          function
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          while the latter is a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          value.
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          Amusingly, though, if we add “
-          <NoBreak>
-            <Math>
-              $x \ra$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}in front 
-          of “
-          <NoBreak>
-            <Math>
-              $f(x)$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}then we are back to considering a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          function
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          and which is namely the function whose rule is: 
-          apply{" "}
-          <NoBreak>
-            <Math>
-              $f$
-            </Math>
-            .
-          </NoBreak>
-          {" "}In fact,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$f = (x \ra f(x))$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          where the above is{" "}
+          for{" "}
           <i>
-            an equality between functions
+            every
           </i>
-          . 
-          (You cannot use this equality to
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          define
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
+          {" "}real number{" "}
           <Math>
-            $f$
+            $n$
           </Math>
-          {" "}because that would lead to a circular 
-          definition. But that doesn't make the equality 
-          any less true. And btw, you can go “one layer 
-          deeper”:
+          {" "}because of the 
+          formula
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f = (x \ra f(x)) = (x \ra (t \ra f(t))(x))$$
+          $$(a - b)(a + b) \,=\, a^2 - b^2$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          ...where we use the fact that{" "}
-          <Math>
-            $f = (t \ra f(t))$
-          </Math>
-          {" "}
-          in the second equality. You could keep going, 
-          replacing each time “
-          <NoBreak>
-            <Math>
-              $f$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}by a self-referential 
-          expression, but the process is not intrinsically 
-          useful.)
+          for a difference of squares!
         </VerticalChunk>
       </Section>
       <Pause />
       <Section>
         <VerticalChunk>
           <b>
-            Distinguishing “
-            <NoBreak>
-              <Math>
-                $x^3$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}and “
-            <Math>
-              $x \ra x^3$
-            </Math>
-            ”.
+            Vocabulary.
           </b>
           {" "}
-          Technically,
+          A pair of algebraic expressions of the form
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^3$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is a{" "}
-          <i>
-            value
-          </i>
-          {" "}(not a function) and the way 
-          logicians think of it, philosophically speaking, 
-          is like so: at inception, every symbol has 
-          some default value attached, absent any other 
-          context.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          By contrast,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$x \ra x^3$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is clearly a{" "}
-          <i>
-            function
-          </i>
-          , not a{" "}
-          <i>
-            value
-          </i>
-          . 
-          So “
-          <NoBreak>
-            <Math>
-              $x^3$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}and “
-          <NoBreak>
-            <Math>
-              $x \ra x^3$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}are very (VERY) 
-          different, qualitatively speaking.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          But including the arrow everywhere is 
-          impractical and even pedantic, so, in the end,
-          you might see us refer to an expression such as, 
-          e.g.,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$x^3 + x^2$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          as a “function”, arrow or no arrow.
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Polynomials.
-          </b>
-          {" "}
-          A function{" "}
-          <Math>
-            $f$
-          </Math>
-          {" "}of the form
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$f(x) = a_kx^k + a_&#123;k-1&#125;x^&#123;k-1&#125; + \dots + a_2x^2 + a_1x + a_0$$
+          $$a + b,\, a - b$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
           is called a{" "}
           <i>
-            polynomial
+            conjugate pair
           </i>
-          . Here
+          . For example,
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$a_0,\,a_1,\, \ldots,\, a_k \in \rr$$
+          $$n + 1,\, n - 1$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          are arbitrary constants, also known as the 
-          {" "}
-          <i>
-            coefficients
-          </i>
-          {" "}of the polynomial. The{" "}
-          <i>
-            degree
-          </i>
-          {" "}
-          of the polynomial is{" "}
-          <NoBreak>
-            <Math>
-              $k$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}if{" "}
-          <NoBreak>
-            <Math>
-              $a_k \ne 0$
-            </Math>
-            .
-          </NoBreak>
-          {" "}
-          (Otherwise, work your way down until you find
-          a nonzero coefficient—if there are none, because 
-          the polynomial is just the constant{" "}
-          <NoBreak>
-            <Math>
-              $0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}then 
-          the degree is{" "}
-          <i>
-            minus infinity
-          </i>
-          .) (We're not 
-          kidding.)
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          For example,
+          is a conjugate pair, as is
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$2x + \sqrt&#123;2&#125;$$
+          $$\sqrt&#123;3&#125; + \sqrt&#123;2&#125;,\,\, \sqrt&#123;3&#125; - \sqrt&#123;2&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          is a polynomial of degree 1, and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$x^2 - 10$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is a polynomial of degree 2, and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$x^&#123;100&#125; + x^&#123;99&#125; + x^&#123;98&#125; + \dots + x^4 + x^3 + x^2 + x + 1$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is a polynomial of degree 100.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          Polynomials of low degree have their own 
-          special names, as inventoried in the following 
-          table:
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$\begin&#123;array&#125;&#123;c|c|c&#125;
-          \,\,\,\,\te&#123;degree&#125;\,\,\,\, & \te&#123;name&#125; & \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
-          -\infty & \te&#123;zero&#125; & 0\Rule&#123;0pt&#125;&#123;1.1em&#125;&#123;0.0em&#125;\\
-          \te&#123;0&#125; & \te&#123;constant&#125; & 1 + \sqrt&#123;5^&#123;\color&#123;white&#125;*\!\!\!&#125;&#125;\\
-          \te&#123;1&#125; & \te&#123;affine&#125; & 10x - 1\\
-          \te&#123;2&#125; & \,\,\,\,\te&#123;quadratic&#125;\,\,\,\, & x^2 - 1\\
-          \te&#123;3&#125; & \te&#123;cubic&#125; & x^3 - 1\\
-          \te&#123;4&#125; & \te&#123;quartic&#125; & 1 - x^4\\
-          \te&#123;5&#125; & \te&#123;quintic&#125; & x^5
-          \end&#123;array&#125;$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          There is some confusion about the term
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          affine
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          for which the term
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          linear
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          is sometimes substituted. But if we say 
-          “linear” we mean a function of the form
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$x \ra a_1x$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          for a constant{" "}
-          <NoBreak>
-            <Math>
-              $a_1 \in \rr$
-            </Math>
-            .
-          </NoBreak>
-          {" "}This is more 
-          restricted than an affine function, because
-          there is no constant{" "}
-          <Math>
-            $a_0$
-          </Math>
-          !
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch3_affine_linear_cloud.svg" />
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Quadratic, linear, and constant terms.
-          </b>
-          {" "}
-          To finish up on polynomials: the terms of degree
-          {" "}
-          <NoBreak>
-            <Math>
-              $2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}{" "}
-          <Math>
-            $1$
-          </Math>
-          {" "}and{" "}
-          <Math>
-            $0$
-          </Math>
-          {" "}are called the{" "}
-          <i>
-            quadratic
-          </i>
-          , 
-          {" "}
-          <i>
-            linear
-          </i>
-          , and{" "}
-          <i>
-            constant
-          </i>
-          {" "}terms of the 
-          polynomial, respectively. If you see
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$a_7x^7 + a_6x^6 + a_5x^5 + a_4x^4 + a_3x^3 - a_2x^2 + a_1x + a_0$$
-          <ImageRight src="/images/svg_ch3_quadratic_linear_constant_cloud.svg" />
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          then the quadratic term is{" "}
-          <NoBreak>
-            <Math>
-              $-a_2x^2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}not 
-          {" "}
-          <NoBreak>
-            <Math>
-              $a_2x^2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}fyi.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          Note that the linear term can also be viewed as
-          the “
-          <Math>
-            $x^1$
-          </Math>
-          {" "}term” while the constant term can
-          also be viewed as the “
-          <Math>
-            $x^0$
-          </Math>
-          {" "}term”; because
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$x^1 = x$$
-          <ImageRight src="/images/svg_ch3_a1_x1_cloud.svg" />
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          for all{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$x^0 = 1$$
-          <ImageRight src="/images/svg_ch3_a0_x0_cloud.svg" />
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          for all{" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}(even{" "}
-          <NoBreak>
-            <Math>
-              $x = 0$
-            </Math>
-            ),
-          </NoBreak>
-          {" "}namely.
+          and so on. (Generally speaking, conjugate pairs
+          are good things to multiply together.)
         </VerticalChunk>
       </Section>
       <Pause />
-      <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]}>
+      <Exercises labels={["0", "1"]}>
         <Exercise exercise_number={0}>
           <VerticalChunk>
             <b>
               Exercise 1.
             </b>
             {" "}
-            How can you define the absolute value 
-            function using “definition by cases”?
+            True or false (and, if possible, explain):
           </VerticalChunk>
+          <Pause />
+          <Grid
+            center_on_overflow={true}
+            sm_cutoff={520}
+            sm_cols={2}
+            cols={3}>
+            <Item>
+              a.{" "}
+              <Math>
+                $ 0.9^2 &lt; 0.9 $
+              </Math>
+              {" "}{" "}
+            </Item>
+            <Item>
+              b.{" "}
+              <Math>
+                $ \sqrt&#123;0.01&#125; = 0.1 $
+              </Math>
+              {" "}{" "}
+            </Item>
+            <Item>
+              c.{" "}
+              <Math>
+                $ \sqrt[2]&#123;\up&#123;0.8&#125;\sqrt[3]&#123;2&#125;&#125; = \sqrt[3]&#123;\up&#123;0.8&#125;\sqrt[2]&#123;2&#125;&#125; $
+              </Math>
+              {" "}{" "}
+            </Item>
+            <Item>
+              d.{" "}
+              <Math>
+                $&#123;\sqrt&#123;2&#125; \over \up&#123;0.55&#125;2&#125; = \sqrt&#123;0.5&#125;$
+              </Math>
+              {" "}{" "}
+            </Item>
+            <Item>
+              e.{" "}
+              <Math>
+                $ &#123;1 \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;0.5&#125; $
+              </Math>
+              {" "}{" "}
+            </Item>
+            <Item>
+              f.{" "}
+              <Math>
+                $ 2^&#123;30&#125; &gt; 1000^3 $
+              </Math>
+              {" "}{" "}
+            </Item>
+            <Item>
+              g.{" "}
+              <Math>
+                $ &#123;1 \over 0.95&#125; &gt; 1.05 $
+              </Math>
+              {" "}{" "}
+            </Item>
+            <Item>
+              h.{" "}
+              <Math>
+                $ (-1)^&#123;101&#125; = -1 $
+              </Math>
+              {" "}{" "}
+            </Item>
+            <Item>
+              i.{" "}
+              <Math>
+                $ &#123;100 \over \up&#123;0.5&#125;99&#125; &lt; &#123;101 \over \up&#123;0.5&#125;100&#125; $
+              </Math>
+              {" "}{" "}
+            </Item>
+          </Grid>
           <Pause />
           <Solution solution_number={0}>
             <VerticalChunk>
-              The absolute value function is
+              Part by part:
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              a. (True) We have
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x \ra \begin&#123;cases&#125; x & \te&#123;if $x \geq 0$,&#125;\\ -x\!\!\up&#123;1.2&#125; & \te&#123;if $x &lt; 0$&#125;\end&#123;cases&#125;$$
+              $$0.9^2 = &#123;9 \over 10&#125;\cdot&#123;9 \over 10&#125; = &#123;81 \over 100&#125; = 0.81$$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              because{" "}
+              and{" "}
+              <Math>
+                $0.81 &lt; 0.9$
+              </Math>
+              .
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              b. (True) We have
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$0.1^2 = &#123;1 \over 10&#125; \cdot &#123;1 \over 10&#125; = &#123;1 \over 100&#125; = 0.01,$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and{" "}
+              <Math>
+                $0.1$
+              </Math>
+              {" "}is nonnegative, so{" "}
+              <Math>
+                $\sqrt&#123;0.01&#125; = 0.1$
+              </Math>
+              .
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              c. (True) In fact, 
+              {" "}
+              <Math>
+                $\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;$
+              </Math>
+              {" "}
+              and{" "}
+              <Math>
+                $\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;$
+              </Math>
+              {" "}are 
+              both equal to{" "}
               <NoBreak>
                 <Math>
-                  $-(-1) = 1$
+                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+                </Math>
+                .
+              </NoBreak>
+              {" "}To 
+              convince yourself, note that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;align&#125;
+              &\,\, (\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
+              =&\,\, \up&#123;1.3&#125;
+              \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times
+              \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times
+              \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times
+              \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times
+              \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times
+              \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\qquad\\
+              =&\,\, \up&#123;1.3&#125;
+              (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times
+              \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times
+              (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times
+              \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times
+              (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times
+              \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \\
+              =& \,\, \up&#123;1.3&#125; (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times
+              (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;)\\
+              =& \,\, \up&#123;1.4&#125; 2
+              \end&#123;align&#125;$$
+              <ImageLeft
+                offset_y="0.8rem"
+                src="/images/17.svg" />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;align&#125;
+              &\,\, (\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
+              =&\,\, \up&#123;1.3&#125;
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\\
+              =& \,\, \up&#123;1.3&#125;
+              (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times
+              (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
+              \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;)\\
+              =&\,\, \up&#123;1.3&#125;
+              \sqrt[2]&#123;\up&#123;0.65&#125;2&#125; \times \sqrt[2]&#123;\up&#123;0.65&#125;2&#125;\\
+              =&\,\, \up&#123;1.4&#125; 2
+              \end&#123;align&#125;$$
+              <ImageLeft src="/images/18.svg" />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              so{" "}
+              <Math>
+                $(\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 = 
+                (\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 = 2$
+              </Math>
+              .
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Technically, however, a number{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}such that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$x^6 = 2$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is not necessarily{" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              because{" "}
+              <Math>
+                $x = -\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+              </Math>
+              {" "}satisfies 
+              this equation as well!
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              The last step, therefore, is to note that
+              {" "}
+              <Math>
+                $\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;$
+              </Math>
+              {" "}and
+              {" "}
+              <Math>
+                $\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;$
+              </Math>
+              {" "}are both 
+              {" "}
+              <i>
+                nonnegative
+              </i>
+              {" "}numbers (taken as obvious),
+              and which implies that they are the{" "}
+              <i>
+                unique
+                nonnegative
+              </i>
+              {" "}solution to{" "}
+              <Math>
+                $x^6 = 2$
+              </Math>
+              .
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              d. (True) In general,
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; = \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for all{" "}
+              <NoBreak>
+                <Math>
+                  $x \geq 0$
                 </Math>
                 ,
               </NoBreak>
               {" "}{" "}
+              <Math>
+                $y &gt; 0$
+              </Math>
+              {" "}(you need each 
+              root to be defined), so
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\sqrt&#123;2&#125; \over 2&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;4&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;2 \over 4&#125; = \sqrt&#123;0.5&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...ta-daa!
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              <i>
+                Note 1.
+              </i>
+              {" "}One can also proceed by “direct
+              verification”:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\left(&#123;\sqrt&#123;2&#125; \over 2&#125;\right)^&#123;\!2&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;\cdot&#123;\sqrt&#123;2&#125; \over 2&#125;
+              = &#123;\sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125; \over 4&#125; = &#123;2 \over 4&#125; = 0.5.$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (This, together with the fact that 
+              {" "}
+              <Math>
+                $&#123;\sqrt&#123;2&#125; \over 2&#125;$
+              </Math>
+              {" "}is not negative, 
+              establishes that{" "}
+              <Math>
+                $&#123;\sqrt&#123;2&#125; \over 2&#125; = 
+                \sqrt&#123;0.5&#125;$
+              </Math>
+              .)
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              e. (True) Using the 
+              “
               <NoBreak>
                 <Math>
-                  $-(-5) = 5$
+                  $&#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; = 
+                  \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}identity:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;1&#125; \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;1 \over 2&#125; = \sqrt&#123;0.5&#125;.$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              Or by direct verification:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\left(&#123;1 \over \sqrt&#123;2&#125;&#125;\right)^&#123;\!2&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;\cdot&#123;1 \over \sqrt&#123;2&#125;&#125;
+              = &#123;1 \over \sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125;&#125; = &#123;1 \over 2&#125; = 0.5.$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (And{" "}
+              <Math>
+                $1 \over \sqrt&#123;2&#125;$
+              </Math>
+              {" "}is nonnegative.)
+              Or by reducing to part d:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;2&#125; \cdot \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;.$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (The point being: we already know that 
+              {" "}
+              <Math>
+                $&#123;\sqrt&#123;2&#125; \over 2&#125; = \sqrt&#123;0.5&#125;$
+              </Math>
+              {" "}by part d.)
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              f. (True) We have
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$2^&#123;30&#125; = 2^&#123;10&#125; \times 2^&#123;10&#125; \times 2^&#123;10&#125; = (2^&#123;10&#125;)^3$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$(2^&#123;10&#125;)^3 = (1024)^3 &gt; 1000^3.$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              <i>
+                Note 2.
+              </i>
+              {" "}
+              The first ten or so powers of{" "}
+              <Math>
+                $2$
+              </Math>
+              {" "}are worth
+              knowing by heart (here's{" "}
+              <i>
+                eleven
+              </i>
+              {" "}powers, mind
+              you):
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;array&#125;&#123;c|c&#125;
+              \,\,\,\,n\,\,\,\, & 2^n\dn&#123;0.3&#125; \\ \hline
+              0 & 1 \up&#123;1.1&#125;\\
+              1 & 2 \\
+              2 & 4 \\
+              3 & 8 \\
+              4 & 16 \\
+              5 & 32 \\
+              6 & 64 \\
+              7 & 128 \\
+              8 & 256 \\
+              9 & 512 \\
+              10 & 1024
+              \end&#123;array&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              Among which, the fact that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$2^&#123;10&#125; \approx 10^3$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              can be particularly useful to know! For 
+              example, if a 1-millimeter-thick napkin is 
+              folded{" "}
+              <Math>
+                $50$
+              </Math>
+              {" "}times over, doubling the width 
+              each time, one obtains something of 
+              thickness
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$2^&#123;50&#125;\fw\te&#123;mm&#125; = (2^&#123;10&#125;)^5\fw\te&#123;mm&#125; \approx (10^3)^5\fw\te&#123;mm&#125; = 10^&#123;15&#125;\fw\te&#123;mm&#125;.$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              As
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$1\fw\te&#123;mm&#125; = 10^&#123;-6&#125;\fw\te&#123;km&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              this is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$10^&#123;9&#125;\fw\te&#123;km&#125;$$
+              <ImageRight
+                squiggle={false}
+                offset_y="-1rem"
+                offset_x="-4rem"
+                src="/images/svg_ch1_ex_104.svg" />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              or{" "}
+              <i>
+                one billion
+              </i>
+              {" "}kilometers. By 
+              comparison, the distance from the Earth to
+              the Sun is a mere{" "}
+              <Math>
+                $150$
+              </Math>
+              {" "}million kilometers.
+              (The point being: that we could go from the 
+              relatively mysterious
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\te&#123;“&#125;2^&#123;50&#125;\fw\te&#123;mm&#125;\te&#123;”&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              to the relatively less mysterious
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\te&#123;“&#125;\fw10^&#123;15&#125;\te&#123;mm&#125;\te&#123;”&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by the approximation{" "}
+              <Math>
+                $2^&#123;10&#125; \approx 10^3$
+              </Math>
+              .)
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              g. (True) As an inequality can be multiplied 
+              on both sides by a positive number while 
+              preserving the inequality, one has
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;align&#125;
+              & &#123;1 \over 0.95&#125; &gt; 1.05\\
+              \iff & 1 &gt; 1.05 \cdot 0.95\up&#123;1.4&#125;\\
+              \iff & 1 &gt; (1 + 0.05)(1 - 0.05)\up&#123;1.4&#125;\\
+              \iff & 1 &gt; 1 - 0.05^2\up&#123;1.4&#125;
+              \end&#123;align&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (using the fact that{" "}
+              <NoBreak>
+                <Math>
+                  $(1+x)(1-x) = 1-x^2$
                 </Math>
                 ,
               </NoBreak>
-              {" "}etc.
+              {" "}of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\te&#123;“&#125;\,(a+b)(a-b) = a^2-b^2\,\te&#123;”&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              fame), and since the{" "}
+              <i>
+                last
+              </i>
+              {" "}inequality is true,
+              the{" "}
+              <i>
+                first
+              </i>
+              {" "}inequality is true! (Recall that
+              “
+              <NoBreak>
+                <Math>
+                  $\!\iff\!$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}means “if and only if”.)
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              <i>
+                Note 3.
+              </i>
+              {" "}
+              More generally, even though
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 1 - \epsilon&#125; &gt; 1 + \epsilon$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for any small{" "}
+              <NoBreak>
+                <Math>
+                  $\epsilon &gt; 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}the number 
+              {" "}
+              <Math>
+                $1 + \epsilon$
+              </Math>
+              {" "}remains a good approximation to 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1 \over 1 - \epsilon&#125;$
+                </Math>
+                .
+              </NoBreak>
+              {" "}For example,
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 0.99&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is a good approximation to
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 0.99&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              while
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 0.999&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is a good approximation to
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 0.999&#125;,$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              etc.
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              h. (True) Here are the first few powers of{" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "}
+              (note how each additional multiplication by{" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "}
+              simply changes the sign of the previous result):
+            </VerticalChunk>
+            <Pause />
+            <Grid
+              place_items="end"
+              cols={3}>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ (-1)^1 = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ (-1) = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ -1 $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ (-1)^2 = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ (-1)\times (-1) = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ 1 $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ (-1)^3 = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ (-1)\times(-1)\times (-1) = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ -1 $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ (-1)^4 = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ (-1)\times(-1)\times(-1)\times(-1) = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ 1 $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ (-1)^5 = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ \,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) = $
+                </Math>
+                {" "}{" "}
+              </Item>
+              <Item>
+                {" "}{" "}
+                <Math>
+                  $ -1 $
+                </Math>
+                {" "}{" "}
+              </Item>
+            </Grid>
+            <Pause />
+            <VerticalChunk>
+              (Etc.) Obviously, even powers of{" "}
+              <Math>
+                $(-1)$
+              </Math>
+              {" "}are 
+              equal to{" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}while odd powers of{" "}
+              <Math>
+                $(-1)$
+              </Math>
+              {" "}are
+              equal to{" "}
+              <NoBreak>
+                <Math>
+                  $-1$
+                </Math>
+                .
+              </NoBreak>
+              {" "}As{" "}
+              <Math>
+                $101$
+              </Math>
+              {" "}is odd,{" "}
+              <Math>
+                $(-1)^&#123;101&#125;$
+              </Math>
+              {" "}
+              is{" "}
+              <Math>
+                $-1$
+              </Math>
+              .
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              i. (False) We have
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;100 \over 99&#125; = &#123;99 + 1 \over 99&#125; = 1 + &#123;1 \over 99&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;101 \over 100&#125; = &#123;100 + 1 \over 100&#125; = 1 + &#123;1 \over 100&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              so the smaller of the two fractions is{" "}
+              <NoBreak>
+                <Math>
+                  $&#123;101 
+                  \over 100&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}since{" "}
+              <Math>
+                $&#123;1 \over 100&#125; &lt; &#123;1 \over 
+                99&#125;$
+              </Math>
+              .
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              <i>
+                Note 4.
+              </i>
+              {" "}
+              The difference
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 99&#125; - &#123;1 \over 100&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is interesting in its own right, being 
+              connected to a famous infinite sum. To 
+              visualize this sum, picture a hare poised at 
+              {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "}on the number line. This hare runs
+              forward by one unit and backwards by half a
+              unit, stopping at the number
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$1 - &#123;1\over 2&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by virtue of this back-and-forth movement. 
+              The hare then proceeds to run forward by 
+              {" "}
+              <i>
+                half
+              </i>
+              {" "}a unit and back by a{" "}
+              <i>
+                third
+              </i>
+              {" "}of a unit,
+              stopping at
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;align&#125;
+              &\, \left(1 - &#123;1 \over 2&#125;\right) \\
+              + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)_&#123;\color&#123;white&#125; a_&#123;a_a&#125;\!\!\!\!\!\!\!\!\!\!&#125; \\
+              \hline
+              = \,&\, \left(1 - &#123;1 \over 3&#125;\right)^&#123;\color&#123;white&#125; a^&#123;a^a&#125;&#125;
+              \end&#123;align&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for another break. Keeping with this pattern,
+              the hare then stops at
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;align&#125;
+              &\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)_&#123;\color&#123;white&#125; a_&#123;a_a&#125;\!\!\!\!\!\!\!\!\!\!&#125;\\
+              \hline
+              = \,&\, \left(1 - &#123;1 \over 4&#125;\right)^&#123;\color&#123;white&#125; a^&#123;a^a&#125;&#125;
+              \end&#123;align&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and then at
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;align&#125;
+              &\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)_&#123;\color&#123;white&#125; a_&#123;a_a&#125;\!\!\!\!\!\!\!\!\!\!&#125;\\
+              \hline
+              = \,&\, \left(1 - &#123;1 \over 5&#125;\right)^&#123;\color&#123;white&#125; a^&#123;a^a&#125;&#125;
+              \end&#123;align&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and so on.
+              Clearly, the successive positions at which 
+              the hare stops are approaching the number{" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}
+              from the left, pointing to the fact that the 
+              {" "}
+              <i>
+                infinite
+              </i>
+              {" "}sum
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;align&#125;
+              &\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
+              + \,&\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;
+              \end&#123;align&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is “equal” (in some sense) to{" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                .
+              </NoBreak>
+              {" "}But how 
+              much, exactly, is the{" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                -th
+              </NoBreak>
+              {" "}term
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              of the sum? (By the way, this{" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                -th
+              </NoBreak>
+              {" "}term 
+              is the difference
+              {" "}
+              <Math>
+                $&#123;1 \over 99&#125; - &#123;1 \over 100&#125;$
+              </Math>
+              {" "}for{" "}
+              <NoBreak>
+                <Math>
+                  $n = 99$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              which is how we came to be reminded of this 
+              infinite sum in the first place.) Well...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;align&#125;
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; &= &#123;1 \over n&#125;\cdot&#123;n+1 \over n+1&#125;\, - \,
+              &#123;1 \over n+1&#125;\cdot&#123;n \over n&#125;\up&#123;1.5&#125;\\
+              &= &#123;n+1 \over n(n+1)&#125; - &#123;n \over n(n+1)&#125;\up&#123;1.5&#125;\\
+              &= &#123;1 \over n(n+1)&#125;\up&#123;1.5&#125;
+              \end&#123;align&#125;$$
+              <ImageRight
+                y="12%"
+                offset_y="3.5rem"
+                src="/images/svg_ch1_ex_24.svg" />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...it's that much. (For example,
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 1&#125; - &#123;1 \over 2&#125; = &#123;1 \over 1 \cdot 2&#125; = &#123;1 \over 2&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 2&#125; - &#123;1 \over 3&#125; = &#123;1 \over 2 \cdot 3&#125; = &#123;1 \over 6&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and so on.) So the infinite sum
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\begin&#123;align&#125;
+              &\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
+              + \,&\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
+              + \,&\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;\dn&#123;1&#125;\\ \hline
+              = \,&\, 1\up&#123;1.5&#125;
+              \end&#123;align&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              can also be written
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 1 \cdot 2&#125; + &#123;1 \over 2 \cdot 3&#125; + &#123;1 \over 3 \cdot 4&#125; + &#123;1 \over 4 \cdot 5&#125; + &#123;1 \over
+              5 \cdot 6&#125; + \dots \,=\, 1$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (or
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 2&#125; + &#123;1 \over 6&#125; + &#123;1 \over 12&#125; + &#123;1 \over 20&#125; + &#123;1 \over 30&#125; + \dots \,=\, 1$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              equivalently) which is not obvious at first 
+              glance, and kind of interesting!
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              <i>
+                Note 5.
+              </i>
+              {" "}The fact that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              means, in particular, that 
+              {" "}
+              <Math>
+                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
+              </Math>
+              {" "}is roughly 
+              {" "}
+              <Math>
+                $&#123;1 \over n^2&#125;$
+              </Math>
+              {" "}for large{" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}which is 
+              sometimes handy to know. For example,
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 10&#125; - &#123;1 \over 11&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is approximately{" "}
+              <NoBreak>
+                <Math>
+                  $1/10^2 = 0.01$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}while
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 100&#125; - &#123;1 \over 101&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is approximately{" "}
+              <NoBreak>
+                <Math>
+                  $1/100^2 = 0.01^2 = 0.0001$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              etc.
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -1798,4215 +2367,244 @@ const Article = () => {
               Exercise 2.
             </b>
             {" "}
-            How can you define the absolute value 
-            function using an “ordinary” algebraic formula?
+            In the solution to Exercise 1, we observed how 
+            the difference
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            is{" "}
+            <i>
+              roughly
+            </i>
+            {" "}{" "}
+            <Math>
+              $1/n^2$
+            </Math>
+            {" "}for large{" "}
+            <NoBreak>
+              <Math>
+                $n$
+              </Math>
+              .
+            </NoBreak>
+            {" "}But how 
+            far off is this exactly? (I.e., what is the
+            difference between{" "}
+            <Math>
+              $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
+            </Math>
+            {" "}
+            and{" "}
+            <NoBreak>
+              <Math>
+                $&#123;1 \over n^2&#125;$
+              </Math>
+              ?)
+            </NoBreak>
+            {" "}And{" "}
+            <i>
+              roughly
+            </i>
+            {" "}how much is
+            this far-offness, for large{" "}
+            <Math>
+              $n$
+            </Math>
+            ?
           </VerticalChunk>
           <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
-              We have
+              Since
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$|x| = \sqrt&#123;x^2&#125;$$
+              $$&#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;$$
+              <ImageRight
+                squiggle={false}
+                src="/images/svg_ch1_ex_25.svg"
+                offset_y="1.2rem"
+                offset_x="-6rem" />
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              because{" "}
-              <NoBreak>
-                <Math>
-                  $\sqrt&#123;(-1)^2&#125; = 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $\sqrt&#123;(-5)^2&#125; = 5$
-              </Math>
-              ,
-              etc.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              This definition is less ad-hoc than might seem, 
-              being a 1-dimensional form of the Pythagorean 
-              theorem.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={2}>
-          <VerticalChunk>
-            <b>
-              Exercise 3.
-            </b>
-            {" "}
-            Evaluate:
-          </VerticalChunk>
-          <Pause />
-          <Grid
-            column_first={true}
-            with_padding={false}
-            place_items="start"
-            center_on_overflow={true}
-            sm_cutoff={460}
-            sm_cols={1}
-            cols={2}>
-            <Item>
-              i.{" "}
-              <Math>
-                $(\lambda u.u^3)(0.5)$
-              </Math>
-              {" "}{" "}
-            </Item>
-            <Item>
-              ii.{" "}
-              <Math>
-                $(u \ra u^2)(x + 1)$
-              </Math>
-              {" "}{" "}
-            </Item>
-            <Item>
-              iii.{" "}
-              <Math>
-                $(\lambda t.t - 1)(100) \cdot (\lambda t.t + 1)(100)$
-              </Math>
-              {" "}{" "}
-            </Item>
-            <Item>
-              iv.{" "}
-              <Math>
-                $(u \ra u^2)(a + b)$
-              </Math>
-              {" "}{" "}
-            </Item>
-          </Grid>
-          <Pause />
-          <Solution solution_number={2}>
-            <VerticalChunk>
-              The answers are:
-            </VerticalChunk>
-            <Pause />
-            <Grid
-              column_first={true}
-              with_padding={false}
-              place_items="start"
-              center_on_overflow={true}
-              sm_cutoff={460}
-              sm_cols={1}
-              cols={2}>
-              <Item>
-                i.{" "}
-                <Math>
-                  $0.5^3 = 0.125$
-                </Math>
-                {" "}{" "}
-              </Item>
-              <Item>
-                ii.{" "}
-                <Math>
-                  $(x + 1)^2 = x^2 + 2x + 1$
-                </Math>
-                {" "}{" "}
-              </Item>
-              <Item>
-                iii.{" "}
-                <Math>
-                  $(100 - 1) \cdot (100 + 1) = 9999$
-                </Math>
-                {" "}{" "}
-              </Item>
-              <Item>
-                iv.{" "}
-                <Math>
-                  $(a + b)^2 = a^2 + 2ab + b^2$
-                </Math>
-                {" "}{" "}
-              </Item>
-            </Grid>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={3}>
-          <VerticalChunk>
-            <b>
-              Exercise 4.
-            </b>
-            {" "}
-            The{" "}
-            <i>
-              floor
-            </i>
-            {" "}of a real number{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}written
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\lfloor x \rfloor,$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is the greatest integer less than or equal 
-            to{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              .
-            </NoBreak>
-            {" "}(Start at{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}and travel left on the 
-            number line until you meet an integer; but if
-            {" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}is already an integer, stay there; the 
-            place you land is{" "}
-            <Math>
-              $\lfloor x \rfloor$
-            </Math>
-            .)
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Sketch the graph{" "}
-            <Math>
-              $y = \floor&#123;x&#125;$
-            </Math>
-            .
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Secondly, find a formula for a function whose
-            graph looks like this, where you are allowed
-            to use “
-            <NoBreak>
-              <Math>
-                $\floor&#123;x&#125;$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}in your formula:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_factory_roof_graph.svg" />
-          <Pause />
-          <Solution solution_number={3}>
-            <VerticalChunk>
-              As{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}grows, so does{" "}
-              <NoBreak>
-                <Math>
-                  $\floor&#123;x&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}but
-              {" "}
-              <Math>
-                $\floor&#123;x&#125;$
-              </Math>
-              {" "}only “levels up” each time{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              reaches a new integer, and “flatlines”
-              otherwise; this gives rise to the following
-              staircase-shaped graph:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_floor_graph.svg" />
-            <Pause />
-            <VerticalChunk>
-              (For example,{" "}
-              <Math>
-                $\floor&#123;1&#125; = 1$
-              </Math>
-              {" "}because the 
-              greatest integer less than or equal to{" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}
-              is{" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $\floor&#123;-0.5&#125; = -1$
-              </Math>
-              {" "}because the greatest
-              integer less than or equal to{" "}
-              <Math>
-                $-0.5$
-              </Math>
-              {" "}is{" "}
-              <Math>
-                $-1$
-              </Math>
-              ,
-              and so on.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              For the second part note that the following 
-              two displacements, excerpted from the “factory 
-              roof” graph in the statement, are equal:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_factory_roof_graph_with_displacement_arrows_worked.svg" />
-            <Pause />
-            <VerticalChunk>
-              The red dot to the left of{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}has{" "}
-              <Math>
-                $x$
-              </Math>
-              -coordinate
-              {" "}
-              <NoBreak>
-                <Math>
-                  $\floor&#123;x&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}so the horizontal displacement is
+              (as previously computed) is smaller than
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x - \floor&#123;x&#125;$$
+              $$&#123;1 \over n^2&#125;$$
+              <ImageRight
+                squiggle={false}
+                src="/images/ch1_ex_26.svg"
+                offset_y="1.2rem"
+                offset_x="-6rem" />
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              so the equation of the graph is
+              we will compute the difference
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = x - \floor&#123;x&#125;$$
+              $$&#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125;$$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              because the{" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "}{" "}
-              <i>
-                is
-              </i>
-              {" "}the 
-              vertical displacement, given that the vertical 
-              displacement starts at{" "}
-              <NoBreak>
-                <Math>
-                  $y = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and because
-              the vertical and horizontal displacements are
-              equal.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={4}>
-          <VerticalChunk>
-            <b>
-              Exercise 5.
-            </b>
-            {" "}
-            Find the formula for a function whose graph 
-            looks like this, again using the floor function
-            ‘
-            <NoBreak>
-              <Math>
-                $\lfloor \cdot \rfloor$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}as a building block:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_factory_roof_stretched_x2_graph_worked.svg" />
-          <Pause />
-          <Solution solution_number={4}>
-            <VerticalChunk>
-              We would like to argue the correctness of 
-              the following two-step process (divide the 
-              input by{" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}apply the function from Exercise 
-              4):
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_factory_roof_stretched_and_compressed.svg" />
-            <Pause />
-            <VerticalChunk>
-              Indeed, the two graphs featured above differ
-              only by a horizontal dilation; dividing the 
-              input by{" "}
-              <Math>
-                $2$
-              </Math>
-              {" "}“undoes” the dilation, at which 
-              point it suffices to apply the function pictured
-              in the second graph; having declared our method 
-              correct, the answer is thus...
+              as opposed to the “other difference
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;x/2 - \lfloor x/2 \rfloor&#125;$$
+              $$&#123;1 \over n(n+1)&#125; - &#123;1 \over n^2&#125;$$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...as obtained by “sticking”{" "}
-              <Math>
-                $x/2$
-              </Math>
-              {" "}(the halved 
-              input) in place of “
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}in “
-              <Math>
-                $\,x - \lfloor x \rfloor$
-              </Math>
-              ”,
-              the formula for the function from Exercise 4.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              One can check the answer by typing “x/2 - floor(x/2)”
-              in DESMOS. Viz:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="1400px"
-              src="/images/png_ch3_desmos_composition_0_c.png" />
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              Alternately, enter “f(x) = x - floor(x)” and
-              then “f(x/2)”, viz:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="1400px"
-              src="/images/png_ch3_desmos_composition_1_c.png" />
-            <Pause />
-            <VerticalChunk>
-              Or we can be even fancier:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="1400px"
-              src="/images/png_ch3_desmos_composition_2_b.png" />
-            <Pause />
-            <VerticalChunk>
-              What you see above (the graph in orange) is 
-              the so-called
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              composition
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              of the functions 
-              {" "}
-              <Math>
-                $\f$
-              </Math>
-              {" "}and{" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ;
-              </NoBreak>
-              {" "}in more detail, if we switch the 
-              “input tube” and “output tube” sides of a function...
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_f_box_inverted.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...(compared to the drawing at the top of the
-              chapter), then the composition of{" "}
-              <Math>
-                $\f$
-              </Math>
-              {" "}and{" "}
-              <Math>
-                $g$
-              </Math>
-              ,
-              written
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;\f \circ g&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and read
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              “
-              <Math>
-                $f$
-              </Math>
-              {" "}of{" "}
-              <Math>
-                $\hlfbk&#123;&#125;g$
-              </Math>
-              ”
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              (mathematicians have to invent a notation for 
-              everything—that little circle “
-              <NoBreak>
-                <Math>
-                  $\circ$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}is called 
-              the{" "}
-              <i>
-                composition operator
-              </i>
-              ,
-              by the way) is the function that you get by
-              gluing{" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                's
-              </NoBreak>
-              {" "}box to the right of{" "}
-              <NoBreak>
-                <Math>
-                  $\f$
-                </Math>
-                's
-              </NoBreak>
-              {" "}box, 
-              like so:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_f_box_g_box.svg" />
-            <Pause />
-            <VerticalChunk>
-              In other words,{" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                's
-              </NoBreak>
-              {" "}output is passed on to{" "}
-              <Math>
-                $\f$
-              </Math>
-              {" "}
-              for further processing. (A certain movie called
-              “The Human Centipede” comes to mind.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              (To be perfectly clear,
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_f_circle_g_and_f_box_g_box.svg" />
-            <Pause />
-            <VerticalChunk>
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "}is a{" "}
-              <i>
-                function
-              </i>
-              , defined as the
-              above assemblage of “
-              <Math>
-                $g$
-              </Math>
-              {" "}first,{" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}second”.)
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 3.
-              </i>
-              {" "}
-              For a formal definition of “
-              <Math>
-                $f \circ g$
-              </Math>
-              ”—something
-              not based on pictures—one need only specify what
-              {" "}
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "}does to inputs. Specifically:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\,&#123;(f \circ g)(x) = f(g(x))&#125;.$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (So that equation is a formal definition.) One can
-              also clarify that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which is to say that the domain of{" "}
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "}
-              consists of all{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}such that:{" "}
-              <b>
-                (i)
-              </b>
-              {" "}{" "}
-              <Math>
-                $g(x)$
-              </Math>
-              {" "}
-              exists (a.k.a, “
-              <NoBreak>
-                <Math>
-                  $x \in \dom g$
-                </Math>
-                ”)
-              </NoBreak>
-              {" "}and,
-              {" "}
-              <b>
-                (ii)
-              </b>
-              {" "}{" "}
-              <Math>
-                $f(g(x))$
-              </Math>
-              {" "}exists (a.k.a., “
-              <Math>
-                $g(x) \in \dom f$
-              </Math>
-              ”).
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 4.
-              </i>
-              {" "}
-              Amusingly—or not—both sides of
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;(f \circ g)(x) = f(g(x))&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              are read
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplay>
-              “
-              <Math>
-                $f$
-              </Math>
-              {" "}of{" "}
-              <Math>
-                $\hlfbk&#123;&#125;g$
-              </Math>
-              {" "}of{" "}
-              <Math>
-                $x\hspace&#123;0.1em&#125;$
-              </Math>
-              ”
-            </CentralDisplay>
-            <Pause />
-            <VerticalChunk>
-              since “
-              <NoBreak>
-                <Math>
-                  $f \circ g$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}is read “
-              <Math>
-                $f$
-              </Math>
-              {" "}of{" "}
-              <Math>
-                $g\rt&#123;0.1&#125;$
-              </Math>
-              ”,
-              and “
-              <NoBreak>
-                <Math>
-                  $f(\dots)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}is read “
-              <Math>
-                $f$
-              </Math>
-              {" "}of ...”.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={5}>
-          <VerticalChunk>
-            <b>
-              Exercise 6.
-            </b>
-            {" "}
-            Find formulas for functions whose graphs look 
-            like these:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_factory_roof_x2_worked.svg" />
-          <Pause />
-          <Solution solution_number={5}>
-            <VerticalChunk>
-              For the first graph,{" "}
-              <del>
-                the{" "}
-              </del>
-              an answer is
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$2 \cdot(x/2 - \fl&#123;x/2&#125;)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which simplifies to
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x - 2\fl&#123;x/2&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              because all we have to do is to multiply 
-              Exercise 5's formula by{" "}
-              <Math>
-                $2$
-              </Math>
-              .
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              For the second graph, an answer is
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x/3 - \fl&#123;x/3&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              because the problem is similar to Exercise 5 
-              except with a factor{" "}
-              <Math>
-                $3$
-              </Math>
-              {" "}horizontal dilation.
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              For the third graph, we will first stop to 
-              find a formula  for the function depicted here:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_factory_roof_stretched_x3_translated_1_worked.svg" />
-            <Pause />
-            <VerticalChunk>
-              And that formula is...
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_factory_roof_stretched_x3_translated_1_explanation.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...iiiiiiiS...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x-1)/3 - \fl&#123;(x-1)/3&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as obtained by substituting “
-              <NoBreak>
-                <Math>
-                  $x - 1$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              (the input, minus{" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                )
-              </NoBreak>
-              {" "}in place of “
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}in 
-              “
-              <NoBreak>
-                <Math>
-                  $\,x/3 - \fl&#123;x/3&#125;$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "}the formula for the 
-              second graph. Then we multiply that by{" "}
-              <Math>
-                $3$
-              </Math>
-              {" "}
-              (to go from ”
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <InlineImage
-                width="0.9em"
-                src="/images/svg_ch3_3_3_grid_1.svg" />
-              ” to “
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <InlineImage
-                width="0.9em"
-                src="/images/svg_ch3_3_3_grid_2.svg" />
-              ”, namely), meaning that the final answer is
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$3 \cdot ((x-1)/3 - \fl&#123;(x-1)/3&#125;)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$   
-              (x - 1) - 3\fl&#123;(x-1)/3&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              after simplification. (Or just
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x - 1 - 3\fl&#123;(x-1)/3&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              though we personally prefer the previous 
-              form, it being more “talkative”.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={6}>
-          <VerticalChunk>
-            <b>
-              Exercise 7.
-            </b>
-            {" "}
-            If
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\cos \dblcol \rr \ra \rr$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (the “hollow dot colon” means that{" "}
-            <Math>
-              $\dom \cos = \rr$
-            </Math>
-            )
-            is a function whose graph looks like so...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_cosine.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...then does the function...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$&#123;x \ra \cos(1000x)&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...have a graph that looks like a bunch of very tight 
-            bumps, or, instead, very flat{" "}
-            <i>
-              &
-            </i>
-            {" "}spaced-out bumps??
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={6}>
-            <VerticalChunk>
-              Consider how to “read off” a value of{" "}
-              <Math>
-                $y = \cos(1000x)$
-              </Math>
-              {" "}
-              from the graph{" "}
-              <Math>
-                $y = \cos(x)$
-              </Math>
-              :
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_cosine_1000x_worked.svg" />
-            <Pause />
-            <VerticalChunk>
-              By the first step, a
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              horizontal dilation by a factor 1000
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk />
-            <VerticalChunk indent={true}>
-              maps the first graph onto the second graph—i.e.,
-              a point
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x, y)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              is on the first graph if and only the dilated
-              point
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(1000x, y)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              is on the second graph. The first graph is
-              therefore some very compressed thing, full of
-              scrunched bumps!
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              One can also reason that a small change in{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              results in a large change in{" "}
-              <NoBreak>
-                <Math>
-                  $1000x$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}so that 
-              {" "}
-              <Math>
-                $\cos(1000x)$
-              </Math>
-              {" "}must “cycle” much faster through 
-              values than{" "}
-              <Math>
-                $\cos(x)$
-              </Math>
-              {" "}does.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={7}>
-          <VerticalChunk>
-            <b>
-              Exercise 8.
-            </b>
-            {" "}
-            Rewrite
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$\tag&#123;A&#125;(f \circ (g \circ h))(x)$$
-              </MathBlock>
-            </div>
-            without using “
-            <NoBreak>
-              <Math>
-                $\circ$
-              </Math>
-              ”,
-            </NoBreak>
-            {" "}using only the 
-            “definitional equation of function 
-            composition”, which is namely
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$\tag&#123;AA&#125;(r \circ s)(x) = r(s(x))$$
-              </MathBlock>
-            </div>
-            (where{" "}
-            <Math>
-              $r$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $s$
-            </Math>
-            {" "}are functions); plz
-            note that you will have to apply (AA) 
-            {" "}
-            <i>
-              twice
-            </i>
-            , as each application of (AA) 
-            makes{" "}
-            <i>
-              one
-            </i>
-            {" "}copy of the symbol “
-            <NoBreak>
-              <Math>
-                $\circ$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}
-            disappear, and (A) contains{" "}
-            <i>
-              two
-            </i>
-            {" "}copies of 
-            “
-            <Math>
-              $\circ$
-            </Math>
-            ”!!
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={7}>
-            <VerticalChunk>
-              Setting “
-              <NoBreak>
-                <Math>
-                  $r$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}to “
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}and “
-              <NoBreak>
-                <Math>
-                  $s$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}to “
-              <NoBreak>
-                <Math>
-                  $(g \circ h)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              in (AA) yields
-              <ImageLeft
-                offset_y="-0.5em"
-                offset_x="1em"
-                popup={true}
-                src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg" />
-            </VerticalChunk>
-            <VerticalChunk>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$(f \circ (g \circ h))(x) = \f((g \circ h)(x))$$
-                </MathBlock>
-              </CustomBlock>
-              ...which already constitutes progress towards
-              our goal, since only one copy of “
-              <NoBreak>
-                <Math>
-                  $\circ$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              exists on the right-hand side! But
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$(g \circ h)(x) = g(h(x))$$
-                </MathBlock>
-              </CustomBlock>
-              by the “definitional equation” again, so
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$f((g \circ h)(x)) = \f(g(h(x)))$$
-                </MathBlock>
-              </CustomBlock>
-              ...and this completes the computation!
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              We can collect both steps of the computation 
-              into a single string of equalities:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_first_victim_second_victim_1_1em.svg" />
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={8}>
-          <VerticalChunk>
-            <b>
-              Exercise 9.
-            </b>
-            {" "}
-            Same question as Exercise 17, but for 
-            “
-            <NoBreak>
-              <Math>
-                $f \circ (g \circ h)$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}instead of 
-            “
-            <Math>
-              $(f \circ g) \circ h$
-            </Math>
-            ”.
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={8}>
-            <VerticalChunk>
-              We will again evaluate the “outer”
-              composition operator first and the “inner”
-              composition operator second, where the “outer”
-              composition operator is the one that is fewer
-              pairs of parentheses away from the outside 
-              world:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_inner_outer_1_1em.svg" />
-            <Pause />
-            <VerticalChunk>
-              So the first step is...
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$((f \circ g) \circ h)(x) = (f \circ g)(h(x))$$
-                </MathBlock>
-              </CustomBlock>
-              ...by setting{" "}
-              <NoBreak>
-                <Math>
-                  $r = f \circ g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $s = h$
-              </Math>
-              {" "}in
-              the definitional equation, and the second step
-              is...
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$(f \circ g)(h(x)) = \f(g(h(x)))$$
-                </MathBlock>
-              </CustomBlock>
-              ...by setting{" "}
-              <NoBreak>
-                <Math>
-                  $r = f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $s = g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and while
-              replacing “
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}by “
-              <Math>
-                $h(x)$
-              </Math>
-              ”.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              The fact that
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$(f \circ (g \circ h))(x)$$
-                </MathBlock>
-              </CustomBlock>
-              and
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$((f \circ g) \circ h)(x)$$
-                </MathBlock>
-              </CustomBlock>
-              both evaluate to
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$f(g(h(x)))$$
-                </MathBlock>
-              </CustomBlock>
-              actually implies that
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$f \circ (g \circ h)$$
-                </MathBlock>
-              </CustomBlock>
-              and
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$(f \circ g) \circ h$$
-                </MathBlock>
-              </CustomBlock>
-              are the same function; this function is namely
-              the function that maps{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}to{" "}
-              <Math>
-                $f(g(h(x)))$
-              </Math>
-              {" "}for 
-              all{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}(or
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$x \ra f(g(h(x)))$$
-                </MathBlock>
-              </CustomBlock>
-              in lambda notation).
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              Because of this, we can write
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$f \circ g \circ half$$
-                </MathBlock>
-              </CustomBlock>
-              without any parentheses. (The point is: either
-              way you parenthesize it you obtain the same 
-              function, so why bother?)
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 3.
-              </i>
-              {" "}
-              The fact that
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$&#123;(a + b) + c = a + (b + c)&#125;$$
-                </MathBlock>
-              </CustomBlock>
-              for all numbers{" "}
-              <NoBreak>
-                <Math>
-                  $a$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $b$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $c$
-              </Math>
-              {" "}is known as the
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              associativity
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              of addition; likewise, the fact that
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$(ab)c = a(bc)$$
-                </MathBlock>
-              </CustomBlock>
-              for all numbers{" "}
-              <NoBreak>
-                <Math>
-                  $a$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $b$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $c$
-              </Math>
-              {" "}is known as the
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              associativity
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              of multiplication; and again likewise,
-              the fact that
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
-                <MathBlock>
-                  $$&#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;$$
-                </MathBlock>
-              </CustomBlock>
-              for all functions{" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $h$
-              </Math>
-              {" "}is known 
-              as the
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              associativity
-              <ImageRight src="/images/svg_ch3_associativity_cloud.svg" />
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              of function composition.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 4.
-              </i>
-              {" "}
-              One of the best ways to explain{" "}
-              <i>
-                &
-              </i>
-              {" "}understand
-              the associativity of function composition 
-              uses this picture:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_truth_be_said.svg" />
-            <Pause />
-            <VerticalChunk>
-              In the above{" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $C$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $D$
-              </Math>
-              {" "}are sets 
-              while the arrows encode functions{" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $g$
-              </Math>
-              {" "}
-              and{" "}
-              <Math>
-                $h$
-              </Math>
-              {" "}that, respectively in reverse order, 
-              go from{" "}
-              <Math>
-                $D$
-              </Math>
-              {" "}to{" "}
-              <NoBreak>
-                <Math>
-                  $C$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $C$
-              </Math>
-              {" "}to{" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and{" "}
-              <Math>
-                $B$
-              </Math>
-              {" "}to{" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              For example,
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplay>
-              {" "}{" "}
-              <Math>
-                $\Large h($
-              </Math>
-              {" "}{" "}
-              <InlineImage
-                y_anchor="-3px"
-                width="1rem"
-                src="/images/svg_ch3_composition_icon_clubs.svg" />
-              {" "}{" "}
-              <Math>
-                $\Large&#123;&#125;) =$
-              </Math>
-              {" "}{" "}
-              <InlineImage
-                margin_right=".5rem"
-                margin_left=".5rem"
-                y_anchor="-3px"
-                width="1.25rem"
-                src="/images/svg_ch3_composition_icon_die_3.svg" />
-              {" "}{" "}
-            </CentralDisplay>
-            <Pause />
-            <VerticalChunk>
-              because the arrow that originates at
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="1rem"
-                src="/images/svg_ch3_composition_icon_clubs.svg" />
-              in set{" "}
-              <Math>
-                $D$
-              </Math>
-              {" "}lands at
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="1.25rem"
-                src="/images/svg_ch3_composition_icon_die_3.svg" />
-              in set{" "}
-              <NoBreak>
-                <Math>
-                  $C$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplay>
-              {" "}
-              {" "}
-              <Math>
-                $\Large g(h($
-              </Math>
-              {" "}{" "}
-              <InlineImage
-                y_anchor="-3px"
-                width="1rem"
-                src="/images/svg_ch3_composition_icon_clubs.svg" />
-              {" "}{" "}
-              <Math>
-                $\Large&#123;&#125;))&#123;&#125;=$
-              </Math>
-              {" "}{" "}
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="2.3rem"
-                src="/images/svg_ch3_composition_icon_fence.svg" />
-              {" "}{" "}
-            </CentralDisplay>
-            <Pause />
-            <VerticalChunk>
-              because, pursuing that path onwards, the arrow 
-              that originates at
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="1.25rem"
-                src="/images/svg_ch3_composition_icon_die_3.svg" />
-              in set{" "}
-              <Math>
-                $C$
-              </Math>
-              {" "}lands at
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="2.3rem"
-                src="/images/svg_ch3_composition_icon_fence.svg" />
-              in set{" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}etc.
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              Under this representation one can “compute”
-              {" "}
-              <Math>
-                $f \circ g \circ h$
-              </Math>
-              {" "}by gluing arrows end-to-end.
-              First, say, obliviate set{" "}
-              <Math>
-                $C$
-              </Math>
-              {" "}in the middle 
-              right, then do the same with set{" "}
-              <Math>
-                $B$
-              </Math>
-              {" "}in the
-              middle left:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="2000px"
-              src="/images/svg_ch3_truth_be_said_right_first.svg" />
-            <Pause />
-            <VerticalChunk>
-              We can also get rid of{" "}
-              <Math>
-                $B$
-              </Math>
-              {" "}first,{" "}
-              <Math>
-                $C$
-              </Math>
-              {" "}second:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="2000px"
-              src="/images/svg_ch3_truth_be_said_left_first.svg" />
-            <Pause />
-            <VerticalChunk>
-              The first order of computation corresponds
-              to the parenthetization “
-              <Math>
-                $f \circ (g \circ h)$
-              </Math>
-              ”
-              while the second corresponds to the 
-              parenthetization “
-              <Math>
-                $(f \circ g) \circ h$
-              </Math>
-              ”.
-              Intuitively, the reason they come out the 
-              same (in “step 6”, bottom left) is because 
-              each final arrow in the last diagram comes 
-              from a path-of-arrows in the original 
-              diagram, and the order in which the 
-              waypoints along a path are “straightened” 
-              (or “collapsed”) does not affect the origin 
-              point or destination point of the final 
-              arrow.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 5.
-              </i>
-              {" "}
-              The last series of diagrams might leave one 
-              with the impression that the composition of 
-              two or more functions can be “precomputed”
-              by looking ahead along the path of yellow arrows. 
-              Just so you know, computers do not generically 
-              do this. For reason, computers are not given 
-              functions as tables of input-output values to 
-              know by heart but rather as “recipes” (synonyms: 
-              algorithms, code, programs) that allow them 
-              to compute an output for any given input. 
-              Moreover, there is no general way of flattening 
-              two recipes into a single, shorter one—when 
-              composing two functions the computer has, in 
-              general, no choice but to diligently apply 
-              each recipe in order—the first function first,
-              the second function second.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 6.
-              </i>
-              {" "}
-              We have taken for granted the fact that two 
-              functions{" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}and{" "}
-              <Math>
-                $g$
-              </Math>
-              {" "}are “equal” if and only
-              if they produce the same outupt for every 
-              input but this is a actually subtle thing 
-              that has to do with how functions are defined 
-              “under the hood”. Specifically, mathematicians 
-              view functions as{" "}
-              <del>
-                long
-              </del>
-              &ensp;
-              <del>
-                lists of
-              </del>
-              &ensp;sets of ordered pairs; for example—conceptual
-              cold water shock ahead—
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;\textrm&#123;VX-11/78A&#125; = \&#123;(0, 3.5), (1, 2.5)\&#125;&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              because VX-11/78A maps{" "}
-              <Math>
-                $0$
-              </Math>
-              {" "}to{" "}
-              <Math>
-                $3.5$
-              </Math>
-              {" "}and maps 
-              {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}to{" "}
-              <NoBreak>
-                <Math>
-                  $2.5$
-                </Math>
-                .
-              </NoBreak>
-              {" "}(The presence of an ordered pair
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div style="font-size:1.1em;margin:1em 0em;">
-                <MathBlock>
-                  $$(a, b)$$
-                </MathBlock>
-              </div>
-              means that input{" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}produces output{" "}
-              <NoBreak>
-                <Math>
-                  $b$
-                </Math>
-                .)
-              </NoBreak>
-              {" "}So 
-              two functions are equal if and only if they 
-              are equal
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              as sets of ordered pairs
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              because the set of ordered pairs is the 
-              underlying “thing” that the function is. In 
-              particular, there is no notion of a “formula” 
-              or of a “procedure” being attached to a 
-              function, that might cause two functions to 
-              be considered unequal even if they produce the 
-              same output on every input—producing the same
-              output on every input implies that the{" "}
-              <del>
-                list of
-              </del>
-              &ensp;set of ordered pairs is equal, and, perforce, 
-              that the two functions are equal!!
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={9}>
-          <VerticalChunk>
-            <b>
-              Exercise 10.
-            </b>
-            {" "}
-            Show that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$x^2 + 10x + 30$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            can be written in the form
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$(x + \dots)^2 + \,\dots$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for some numbers “
-            <NoBreak>
-              <Math>
-                $\dots$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}and “
-            <Math>
-              $\dots$
-            </Math>
-            ”.
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={9}>
-            <VerticalChunk>
-              The answer is
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x + 5)^2 + 5$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              because
+              to avoid a minus sign in the result. 
+              (Computing the second difference and having 
+              a minus sign does not constitute a mistake, 
+              however.) Having said this, the difference is:
             </VerticalChunk>
             <Pause />
             <MathBlock>
               $$\begin&#123;align&#125;
-              \,\,\,\,(x + 5)^2
-              &= x^2 + (2\cdot 5)x + 5^2 \\
-              &= \up&#123;1.4&#125; x^2 + 10x + 25
+              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125; &= &#123;1 \over n^2&#125; \cdot &#123;n+1 \over n+1&#125; - &#123;1 \over n(n+1)&#125; \cdot
+              &#123;n \over n&#125;\\
+              &= &#123;n+1 \over n^2(n+1)&#125; - &#123;n \over n^2(n+1)&#125;\up&#123;1.5&#125;\\
+              &= &#123;1 \over n^2(n+1)&#125;\up&#123;1.5&#125;
               \end&#123;align&#125;$$
+              <ImageRight
+                clickable_on_desktop={true}
+                y="12%"
+                offset_y="2rem"
+                src="/images/svg_ch1_ex_27.svg" />
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              and adding{" "}
+              which, for large{" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}is roughly
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over n^3&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              since{" "}
               <Math>
-                $5$
+                $n^2(n+1) \approx n^3$
               </Math>
-              {" "}gives{" "}
+              {" "}for large{" "}
               <Math>
-                $x^2 + 10x + 30$
+                $n$
               </Math>
               .
             </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={10}>
-          <VerticalChunk>
-            <b>
-              Exercise 11.
-            </b>
-            {" "}
-            Solve Exercise 10 using algebra{" "}
-            <i>
-              &
-            </i>
-            {" "}
-            variables.
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={10}>
-            <VerticalChunk>
-              Put an unknown “
-              <NoBreak>
-                <Math>
-                  $U$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}for the first set
-              of dots and an unknown “
-              <NoBreak>
-                <Math>
-                  $V$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}for the 
-              second set of dots. Then
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x + U)^2 + V = x^2 + 10x + 30$$
-            </MathBlock>
             <Pause />
             <VerticalChunk>
-              becomes the equation to satisfy.
-              Expanding the left-hand side, we get:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x^2 + 2Ux + U^2 + V = x^2 + 10x + 30.$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              In order for this equation to hold as an 
-              equality between polynomials (i.e., for all
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                )
-              </NoBreak>
-              {" "}the coefficients of{" "}
-              <Math>
-                $x^2$
-              </Math>
-              {" "}on both 
-              sides of the equation must be equal, the 
-              coefficients of{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}on both sides of the
-              equation must be equal, and the constant
-              terms on boths of the equation must be 
-              equal—this gives us
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$1 = 1$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (equating the coefficients of{" "}
-              <NoBreak>
-                <Math>
-                  $x^2$
-                </Math>
-                ),
-              </NoBreak>
-              {" "}and
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$2U = 10$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (equating the coefficients of{" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ),
-              </NoBreak>
-              {" "}and
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$U^2 + V = 30$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (equating the constant terms). Only the
-              latter two equations contain information.
-              In particular,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$2U = 10$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              implies{" "}
-              <NoBreak>
-                <Math>
-                  $U = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}so{" "}
-              <Math>
-                $U^2 + V = 30$
-              </Math>
-              {" "}becomes
-              {" "}
-              <NoBreak>
-                <Math>
-                  $25 + V = 30$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and 
-              {" "}
-              <Math>
-                $V = 30 - 25 = 5$
-              </Math>
-              .
-              So{" "}
-              <NoBreak>
-                <Math>
-                  $U = V = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}as previously found.
-              (But now we know that the solution is{" "}
               <i>
-                unique
+                Example 1.
               </i>
-              ,
-              because the only number{" "}
-              <Math>
-                $U$
-              </Math>
-              {" "}that satisfies
+              {" "}Above, we estimated
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$2U = 10$$
+              $$&#123;1 \over 10&#125; - &#123;1 \over 11&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              to be roughly{" "}
+              <NoBreak>
+                <Math>
+                  $1/100 = 0.01$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}but{" "}
+              <Math>
+                $1/100$
+              </Math>
+              {" "}is 
+              bigger than the actual value of
+              {" "}
+              <Math>
+                $&#123;1 \over 10\cdot 11&#125; = &#123;1 \over 110&#125;$
+              </Math>
+              {" "}by
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 10^2\cdot 11&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              or close to{" "}
+              <NoBreak>
+                <Math>
+                  $1/10^3 = 0.001$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (So
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 10&#125; - &#123;1 \over 11&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is about{" "}
+              <NoBreak>
+                <Math>
+                  $0.01$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}while making an error of about
+              {" "}
+              <NoBreak>
+                <Math>
+                  $0.001$
+                </Math>
+                .)
+              </NoBreak>
+              {" "}(In fact,
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1 \over 10^2\cdot 11&#125;$$
             </MathBlock>
             <Pause />
             <VerticalChunk>
               is{" "}
+              <i>
+                less
+              </i>
+              {" "}than{" "}
               <NoBreak>
                 <Math>
-                  $U = 5$
+                  $1/10^3$
                 </Math>
                 ,
               </NoBreak>
-              {" "}and the only number{" "}
+              {" "}so the error is{" "}
+              <i>
+                less
+              </i>
+              {" "}
+              than{" "}
               <Math>
-                $V$
-              </Math>
-              {" "}that
-              satisfies
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$25 + V = 30$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              is{" "}
-              <Math>
-                $V = 5$
+                $0.001$
               </Math>
               .)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={11}>
-          <VerticalChunk>
-            <b>
-              Exercise 12.
-            </b>
-            {" "}
-            Show that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$x^2 + 10x + 30 = 0$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (cf
-            <Math>
-              $.$
-            </Math>
-            {" "}Exercise 21) has no solutions{" "}
-            <Math>
-              $x \in \rr$
-            </Math>
-            .
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={11}>
-            <VerticalChunk>
-              The equation is equivalent to
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x + 5)^2 + 5 = 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by Exercise 21, but this implies
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x + 5)^2 = -5$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which is an equation with no solution over
-              the reals because the square of a real number
-              is nonnegative.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={12}>
-          <VerticalChunk>
-            <b>
-              Exercise 13.
-            </b>
-            {" "}
-            Show that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$x^2 + 10x - 30 = 0$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            has two solutions{" "}
-            <Math>
-              $x \in \rr$
-            </Math>
-            .
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={12}>
-            <VerticalChunk>
-              The equation can be written
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x + 5)^2 - 55 = 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              because{" "}
-              <Math>
-                $(x + 5)^2 = x^2 + 10x + 25$
-              </Math>
-              {" "}
-              and{" "}
-              <NoBreak>
-                <Math>
-                  $25 - 55 = -30$
-                </Math>
-                .
-              </NoBreak>
-              {" "}Passing{" "}
-              <Math>
-                $55$
-              </Math>
-              {" "}to the
-              other side, we find
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x + 5)^2 = 55$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which holds if and only if
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\,x + 5 = \pm\sqrt&#123;55&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\,x = -5 \pm\sqrt&#123;55&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              constituting two distinct solutions.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={13}>
-          <VerticalChunk>
-            <b>
-              Exercise 14.
-            </b>
-            {" "}
-            What sequence of geometric transformations
-            (rotations, translations, scalings, etc) 
-            maps the curve
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$&#123;y = x^2&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            onto
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$&#123;y = Ax^2 + Bx&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for constants{" "}
-            <NoBreak>
-              <Math>
-                $A$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}such that{" "}
-            <NoBreak>
-              <Math>
-                $A \ne 0$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={13}>
-            <VerticalChunk>
-              Write
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;Ax^2 + Bx&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;A\Big(x^2 + &#123;B \over A&#125;x\Big)&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and then write
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;x^2 + &#123;B \over A&#125;x&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              so that, altogether,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;Ax^2 + Bx&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              is rewritten
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              that can be seen as descending from{" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              {" "}
-              in three steps:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = x^2&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;\downarrow&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;\downarrow&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;\downarrow&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;.$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              Three steps, three geometric transformations!
-              The third step effects a
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              vertical scaling by{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              i.e., vertically stretches the graph by
-              a factor{" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}because we multiply the
-              value of{" "}
-              <Math>
-                $y$
-              </Math>
-              {" "}by{" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                .
-              </NoBreak>
-              {" "}The second step 
-              effects a
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              vertical translation by{" "}
-              <Math>
-                $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              i.e., lowers the height of the entire
-              graph by{" "}
-              <NoBreak>
-                <Math>
-                  $&#123;B^2 \over 4A^2&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}because we add 
-              {" "}
-              <Math>
-                $-&#123;B^2 \over 4A^2&#125;$
-              </Math>
-              {" "}to the value of{" "}
-              <Math>
-                $y$
-              </Math>
-              .
-              The first step, on the other hand, is
-              entirely different: it is a
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              preprocessing
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              step, in that we mess with the input (i.e., 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ),
-              </NoBreak>
-              {" "}instead of adding on (or “multiplying 
-              on”) to the current value of{" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              To understand how a preprocessing step 
-              affects the shape of a graph, note that, more
-              generally, a graph of the form
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = f(x + a)&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (for some constant{" "}
-              <NoBreak>
-                <Math>
-                  $a$
-                </Math>
-                )
-              </NoBreak>
-              {" "}“fetches” values on
-              the graph
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = f(x)&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by going{" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}units to the right. The larger{" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}
-              is, thus, the further
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = f(x + a)&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              drifts off to the left. For example,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = f(x + 20)&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              has value{" "}
-              <Math>
-                $f(0)$
-              </Math>
-              {" "}at{" "}
-              <NoBreak>
-                <Math>
-                  $x = -20$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and if you replace
-              {" "}
-              <Math>
-                $20$
-              </Math>
-              {" "}with something larger, that position (i.e., 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x = -20$
-                </Math>
-                )
-              </NoBreak>
-              {" "}drifts even further off to the left!
-              In any case, the graph{" "}
-              <Math>
-                $y = f(x + a)$
-              </Math>
-              {" "}is the
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              leftward
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              translate by{" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}units of{" "}
-              <Math>
-                $y = f(x)$
-              </Math>
-              {" "}
-              and, as a consequence, the first step effects a
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              leftward translation by{" "}
-              <Math>
-                $&#123;B\over 2A&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              of the curve{" "}
-              <NoBreak>
-                <Math>
-                  $y = x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}or
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              horizontal translation by{" "}
-              <Math>
-                $-&#123;B\over 2A&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              more elegantly put. (The second formulation
-              doesn't assume a particular orientation of the 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -axis,
-              </NoBreak>
-              {" "}that's why it's “more elegantly put”,
-              in our opinion.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              To recapitulate, the three transformations
-              are,in order:
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              1. horizontal translation by{" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. vertical translation by{" "}
-              <Math>
-                $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              You could do the vertical translation
-              before the horizontal translation,
-              geometrically it comes out the same.
-              That order of geometric transformations 
-              would correspond to the following sequence
-              of algebraic transformations:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = x^2&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;\downarrow&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = x^2 - &#123;B^2 \over 4A^2&#125;&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;\downarrow&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;\downarrow&#125;$$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$&#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...in which the{" "}
-              <i>
-                second
-              </i>
-              {" "}step is a 
-              preprocessing step. (I.e., a step that 
-              replaces “
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}with something else.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={14}>
-          <VerticalChunk>
-            <b>
-              Exercise 15.
-            </b>
-            {" "}
-            Let{" "}
-            <NoBreak>
-              <Math>
-                $x_0 \in \rr$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $y_0 \in \rr$
-            </Math>
-            {" "}and 
-            {" "}
-            <Math>
-              $a \in \rr$
-            </Math>
-            {" "}with{" "}
-            <NoBreak>
-              <Math>
-                $y_0 \geq 0$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $a \ne 0.$
-            </Math>
-            {" "}
-            If you apply these transformations...
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            1. vertical translation by{" "}
-            <Math>
-              $-y_0$
-            </Math>
-            {" "}{" "}
-          </CentralDisplayItalic>
-          <Pause />
-          <CentralDisplayItalic>
-            2. horizontal translation by{" "}
-            <Math>
-              $x_0$
-            </Math>
-            {" "}{" "}
-          </CentralDisplayItalic>
-          <Pause />
-          <CentralDisplayItalic>
-            3. vertical scaling by{" "}
-            <Math>
-              $a$
-            </Math>
-            {" "}{" "}
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            ...to the curve{" "}
-            <NoBreak>
-              <Math>
-                $y = x^2$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}what are the 
-            roots of the final curve that you obtain?
-            (Nb:{" "}
-            <i>
-              Roots
-            </i>
-            {" "}are values of{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}such 
-            that{" "}
-            <Math>
-              $y = 0$
-            </Math>
-            .)
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={14}>
-            <VerticalChunk>
-              Start by noting that the point 
-              {" "}
-              <Math>
-                $(\sqrt&#123;y_0&#125;, y_0)$
-              </Math>
-              {" "}is on the curve{" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              ,
-              as well as the point{" "}
-              <NoBreak>
-                <Math>
-                  $(-\sqrt&#123;y_0&#125;, y_0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              because
-              {" "}
-              <Math>
-                $(\sqrt&#123;y_0&#125;)^2 = (-\sqrt&#123;y_0&#125;)^2 =$
-              </Math>
-              {" "}{" "}
-              <Math>
-                $y_0;$
-              </Math>
-              {" "}
-              here is a sketch of the situation before 
-              anything happens:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="760px"
-              src="/images/svg_ch3_x0_y0_step0.svg" />
-            <Pause />
-            <VerticalChunk>
-              After vertically translating by{" "}
-              <Math>
-                $-y_0$
-              </Math>
-              {" "}
-              the roots will therefore be at{" "}
-              <Math>
-                $x = \pm\sqrt&#123;y_0&#125;$
-              </Math>
-              :
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="760px"
-              src="/images/svg_ch3_x0_y0_step1_alone.svg" />
-            <Pause />
-            <VerticalChunk>
-              Then after horizontally translating by{" "}
-              <Math>
-                $x_0$
-              </Math>
-              {" "}
-              the roots mosey over to{" "}
-              <Math>
-                $x = x_0\pm\sqrt&#123;y_0&#125;$
-              </Math>
-              :
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="760px"
-              src="/images/svg_ch3_x0_y0_step2_alone.svg" />
-            <Pause />
-            <VerticalChunk>
-              Lastly, vertical scaling does not affect 
-              the position of the roots, because it 
-              stretches the graph{" "}
-              <i>
-                about
-              </i>
-              {" "}the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              axis (here{" "}
-              <Math>
-                $a \approx 1.7$
-              </Math>
-              ):
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="760px"
-              src="/images/svg_ch3_x0_y0_step3_alone.svg" />
-            <Pause />
-            <VerticalChunk>
-              So the roots are at:{" "}
-              <Math>
-                $x = x_0 \pm \sqrt&#123;y_0&#125;$
-              </Math>
-              .
-              (Like we found them after the second step.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={15}>
-          <VerticalChunk>
-            <b>
-              Exercise 16.
-            </b>
-            {" "}
-            Use the results of the previous two exercises
-            to find the value(s) of{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}such that 
-            {" "}
-            <Math>
-              $Ax^2 + Bx = 0$
-            </Math>
-            {" "}for constants{" "}
-            <NoBreak>
-              <Math>
-                $A$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}such 
-            that{" "}
-            <Math>
-              $A \ne 0$
-            </Math>
-            .
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={15}>
-            <VerticalChunk>
-              Well,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$Ax^2 + Bx = 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              obviously has solution{" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "}to start
-              with, so we{" "}
-              <i>
-                don't need
-              </i>
-              {" "}the previous 
-              exercises for one of the roots at least—actually,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$Ax^2 + Bx = x(Ax + B)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              so the equation is equivalent to
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x(Ax + B) = 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and so one of the roots is
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x = 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and the other root is the value of{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              such that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$Ax + B = 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which is{" "}
-              <NoBreak>
-                <Math>
-                  $x = -B/A$
-                </Math>
-                .
-              </NoBreak>
-              {" "}(In order for the product
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x(Ax + B)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              to be{" "}
-              <Math>
-                $0$
-              </Math>
-              {" "}you either need the first term to
-              be{" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}leading us to{" "}
-              <NoBreak>
-                <Math>
-                  $x = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}or the second
-              term to be{" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}leading us to{" "}
-              <NoBreak>
-                <Math>
-                  $Ax + B = 0$
-                </Math>
-                —the
-              </NoBreak>
-              {" "}
-              product of two things is{" "}
-              <Math>
-                $0$
-              </Math>
-              {" "}if and only if
-              one of the two things is{" "}
-              <Math>
-                $0$
-              </Math>
-              .)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              So the roots are{" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "}and{" "}
-              <Math>
-                $x = -B/A$
-              </Math>
-              .
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              To complete the problem{" "}
-              <i>
-                as we were asked
-              </i>
-              , 
-              however, we will use the fact that{" "}
-              <Math>
-                $y = Ax^2 + Bx$
-              </Math>
-              {" "}
-              is obtained from{" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              {" "}by the following
-              sequence of transformations (cf. Exercise 14):
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by{" "}
-              <Math>
-                $-&#123;B^2 \over 4A^2&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by{" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              (We put the vertical translation first.)
-              By Exercise 15, the roots of{" "}
-              <Math>
-                $y = Ax^2 + Bx$
-              </Math>
-              {" "}
-              are thus at
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\tag&#123;A&#125;
-              x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which looks a little different than our 
-              previous result of{" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "}and{" "}
-              <Math>
-                $x = -B/A$
-              </Math>
-              {" "}
-              until you realize that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (because
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and even though{" "}
-              <Math>
-                $&#123;B\over 2A&#125;$
-              </Math>
-              {" "}could be 
-              negative, the “
-              <NoBreak>
-                <Math>
-                  $\pm$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}on either side of 
-              the equation means that the{" "}
-              <i>
-                set
-              </i>
-              {" "}of values
-              on either side of the equation is the same),
-              so that (A) becomes
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x = -&#123;B\over 2A&#125; \pm &#123;B \over 2A&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and, on the one hand,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$-&#123;B\over 2A&#125; + &#123;B \over 2A&#125; = 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              while, on the other hand,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$-&#123;B\over 2A&#125; - &#123;B \over 2A&#125; = -&#123;2B\over 2A&#125; = -&#123;B\over A&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              so here too we find that the roots are{" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "}
-              and{" "}
-              <NoBreak>
-                <Math>
-                  $x = -B/A$
-                </Math>
-                .
-              </NoBreak>
-              {" "}(It must be the right answer!)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={16}>
-          <VerticalChunk>
-            <b>
-              Exercise 17.
-            </b>
-            {" "}
-            True or false (
-            <Math>
-              $f$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}are functions):
-          </VerticalChunk>
-          <Pause />
-          <Grid
-            column_first={true}
-            with_padding={false}
-            place_items="start"
-            center_on_overflow={true}
-            sm_cutoff={520}
-            sm_cols={1}
-            cols={2}>
-            <Item>
-              i.{" "}
-              <Math>
-                $f \circ g = (x \ra f(g(x)))$
-              </Math>
-              {" "}{" "}
-            </Item>
-            <Item>
-              ii.{" "}
-              <Math>
-                $g \circ f = (x \ra f(g(x)))$
-              </Math>
-              {" "}{" "}
-            </Item>
-            <Item>
-              iii.{" "}
-              <Math>
-                $f \circ g = (x \ra g(f(x)))$
-              </Math>
-              {" "}{" "}
-            </Item>
-            <Item>
-              iv.{" "}
-              <Math>
-                $g \circ f = (x \ra g(f(x)))$
-              </Math>
-              {" "}{" "}
-            </Item>
-          </Grid>
-          <Pause />
-          <Solution solution_number={16}>
-            <VerticalChunk>
-              The true statements are i, iv, because
-              {" "}
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "}is the function that maps an 
-              input{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}to{" "}
-              <NoBreak>
-                <Math>
-                  $f(g(x))$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and symmetrically 
-              for{" "}
-              <NoBreak>
-                <Math>
-                  $g \circ f$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={17}>
-          <VerticalChunk>
-            <b>
-              Exercise 18.
-            </b>
-            {" "}
-            If{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}are functions then we define 
-            (and not just us but people in general)
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$f + g$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            to be
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$t \ra f(t) + g(t)$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (use ‘
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}if you like), 
-            i.e., to be the function that applies{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}and
-            {" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}separately and then takes the sum,
-            and we define
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$fg$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            to be
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$z \ra f(z)g(z)$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (use ‘
-            <NoBreak>
-              <Math>
-                $t$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}if you like, hehe),
-            i.e., to be the function that applies{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}and 
-            {" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}separately and then takes the product.
-            (These definitions are similar to how we define
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$f \circ g$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            to be
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$u \ra f(g(u))$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for the symbol “
-            <NoBreak>
-              <Math>
-                $\circ$
-              </Math>
-              ”,
-            </NoBreak>
-            {" "}except that now we 
-            are defining the{" "}
-            <i>
-              sum
-            </i>
-            {" "}and{" "}
-            <i>
-              product
-            </i>
-            {" "}of functions,
-            instead of their{" "}
-            <i>
-              composition
-            </i>
-            , namely.)
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Given these definitions, which of the following
-            equalities hold, in general for all functions{" "}
-            <Math>
-              $f$
-            </Math>
-            ,
-            {" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $h$
-            </Math>
-            ?
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$f \circ (g + h) = (x \ra f(g(x) + h(x)))$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(g + h) \circ f = (x \ra h(f(x)) + g(f(x)))$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(g + h) \circ f = (x \ra (g + h)(f(x)))$$
-          </MathBlock>
-          <Pause />
-          <Solution solution_number={17}>
-            <VerticalChunk>
-              The first equality is false because the 
-              right-hand side is actually
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(f \circ g) + (f \circ h)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              not{" "}
-              <NoBreak>
-                <Math>
-                  $f \circ (g + h)$
-                </Math>
-                ;
-              </NoBreak>
-              {" "}the second equality is
-              true; the third equality is true even though you
-              would expect the right-hand side to be written
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x \ra g(f(x)) + h(f(x)))$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              with “
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}and “
-              <NoBreak>
-                <Math>
-                  $h$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}switched (but addition is
-              commutative, so it doesn't matter); the fourth
-              equality is true: it is the definition of “
-              <Math>
-                $\circ$
-              </Math>
-              ”.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={18}>
-          <VerticalChunk>
-            <b>
-              Exercise 19.
-            </b>
-            {" "}
-            What sequence of geometric transformations 
-            of length no more than 3 maps
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$y = x^2$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            onto
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$y = Ax^2 + Bx + C$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for constants{" "}
-            <NoBreak>
-              <Math>
-                $A$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $B$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $C$
-            </Math>
-            {" "}such that{" "}
-            <Math>
-              $A \ne 0$
-            </Math>
-            ?
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={18}>
-            <VerticalChunk>
-              Write
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$Ax^2 + Bx + C$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$A\Big(x^2 + &#123;B \over A&#125;x + &#123;C\over A&#125;\Big)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and, similarly to Exercise 14, write
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x^2 + &#123;B \over A&#125;x$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              so that, altogether,{" "}
-              <Math>
-                $Ax^2 + Bx + C$
-              </Math>
-              {" "}
-              becomes
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125; + &#123;C\over A&#125;\right]$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 - 4AC\over 4A^2&#125;\right]$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by putting things on a common denominator.
-              (We have endeavored to keep the minus sign 
-              out front of the common denominator fraction 
-              in order to maintain the most similarity with
-              the term “
-              <NoBreak>
-                <Math>
-                  $-&#123;B^2\over 4A&#125;$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}of Exercise 14,
-              that also has a minus sign out front.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              By direct analogy with Exercise 14, the three
-              transformations are thus...
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              1. horizontal translation by{" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. vertical translation by{" "}
-              <Math>
-                $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              ...or...
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by{" "}
-              <Math>
-                $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by{" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              ...if we put the vertical translation first.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={19}>
-          <VerticalChunk>
-            <b>
-              Exercise 20.
-            </b>
-            {" "}
-            What are the roots (i.e., solutions){" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$Ax^2 + Bx + C = 0$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for constants{" "}
-            <NoBreak>
-              <Math>
-                $A$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $B$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $C$
-            </Math>
-            {" "}such that{" "}
-            <Math>
-              $A \ne 0$
-            </Math>
-            ?
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={19}>
-            <VerticalChunk>
-              The curve
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$y = Ax^2 + Bx + C$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              is obtained from the curve{" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              {" "}by the following sequence of 
-              transformations (cf. Exercise 19):
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by{" "}
-              <Math>
-                $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by{" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplay>
-              ~
-            </CentralDisplay>
-            <Pause />
-            <VerticalChunk>
-              On the one hand, if
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;B^2 - 4AC \over 4A^2&#125; &lt; 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              then
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$-&#123;B^2 - 4AC \over 4A^2&#125; &gt; 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and the vertical translation is{" "}
-              <i>
-                upward
-              </i>
-              , 
-              the curve detaches from the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}axis never
-              to see it again, and there are no roots!
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              On the other hand, if
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;B^2 - 4AC \over 4A^2&#125; \geq 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              then the roots are given by
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x = -&#123;B \over 2A&#125; \pm \sqrt&#123;B^2 - 4AC \over 4A^2&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by Exercise 15.{" "}
-              <Math>
-                $\rightarrow$
-              </Math>
-              {" "}~The End~{" "}
-              <Math>
-                $\leftarrow$
-              </Math>
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              In fact,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (square both sides of the equation—in general,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\pm E = \pm F$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as one set of two values equalling another 
-              set of two values, if and only if
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$|E| = |F|$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$E^2 = F^2$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              —so that's why we say “square both sides”),
-              so the formula for the roots can also be written
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x = -&#123;B \over 2A&#125; \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$x = &#123;&#123;-B \pm \sqrt&#123;B^2 - 4AC&#125;&#125; \over 2A&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as briefly flashed by, e.g., in Chapter 1.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              If
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;B^2 - 4AC \over 4A^2&#125; &lt; 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              then
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\sqrt&#123;B^2 - 4AC \over 4A^2&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              does not exist, alerting you to the absence 
-              of roots, if you try to use the first formula 
-              we gave. Also
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;B^2 - 4AC \over 4A^2&#125; &lt; 0\iff B^2 - 4AC &lt; 0$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              because{" "}
-              <Math>
-                $4A^2 &gt; 0$
-              </Math>
-              {" "}for all{" "}
-              <NoBreak>
-                <Math>
-                  $A \ne 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              so the second set of formulas would alert you
-              to the absence of roots in that case, as well.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={20}>
-          <VerticalChunk>
-            <b>
-              Exercise 21.
-            </b>
-            {" "}
-            Summon your senses of extrapolation{" "}
-            <i>
-              &
-            </i>
-            {" "}
-            imagination to evaluate this expression:
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$(f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (Hint: The answer is a specific real number.)
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={20}>
-            <VerticalChunk>
-              ...in an expression such as...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x \ra x^3)(6)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...we pair the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}with{" "}
-              <Math>
-                $6$
-              </Math>
-              ...
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_connection_x_6.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...and{" "}
-              <Math>
-                $6$
-              </Math>
-              {" "}becomes the value to use for{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              in “
-              <Math>
-                $x^3$
-              </Math>
-              ”:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_connection_x_6_in_computation.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...; in an expression such as...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x \ra y \ra x^3y)(6)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...we also pair the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}with{" "}
-              <Math>
-                $6$
-              </Math>
-              ...
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_connection_x_6_again.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...and{" "}
-              <Math>
-                $6$
-              </Math>
-              {" "}becomes the value to use for{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              in “
-              <Math>
-                $y \ra x^3y$
-              </Math>
-              ”:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_connection_x_6_again_in_computation.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...(in this case the result is not a number,
-              but a function—a function is a mathematical 
-              object like another, after all); in an 
-              expression such as...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(x \ra y \ra x^3y)(6)(8)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...we pair the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}with{" "}
-              <Math>
-                $6$
-              </Math>
-              {" "}and the{" "}
-              <Math>
-                $y$
-              </Math>
-              {" "}with{" "}
-              <Math>
-                $8$
-              </Math>
-              ...
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_connection_x_y_6_8.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...and{" "}
-              <Math>
-                $6$
-              </Math>
-              {" "}and{" "}
-              <Math>
-                $8$
-              </Math>
-              {" "}become respectively the 
-              values to use for{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}and{" "}
-              <Math>
-                $y$
-              </Math>
-              {" "}in “
-              <Math>
-                $x^3y$
-              </Math>
-              ”:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_connection_x_y_6_8_in_computation.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...; now in an expression such as...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$(f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...we pair the{" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}with{" "}
-              <NoBreak>
-                <Math>
-                  $x \ra x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}the 
-              {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}with{" "}
-              <NoBreak>
-                <Math>
-                  $5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and the{" "}
-              <Math>
-                $h$
-              </Math>
-              {" "}with{" "}
-              <Math>
-                $0.1$
-              </Math>
-              ...
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_connection_f_x_h.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...and{" "}
-              <NoBreak>
-                <Math>
-                  $x \ra x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $5$
-              </Math>
-              {" "}and{" "}
-              <Math>
-                $0.1$
-              </Math>
-              {" "}become
-              respectively the values to use for{" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              and{" "}
-              <Math>
-                $h$
-              </Math>
-              {" "}in “
-              <Math>
-                $&#123;f(x + h) - f(x)\over h&#125;$
-              </Math>
-              ”:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_connection_f_x_h_in_computation.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...; evaluating...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;(x \ra x^2)(5 + 0.1) - (x \ra x^2)(5) \over 0.1&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...we...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;(x \ra x^2)(5.1) - (x \ra x^2)(5) \over 0.1&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...get...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;5.1^2 - 5^2 \over 0.1&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...this...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;26.01 - 25 \over 0.1&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...
-              <i>
-                thiiis
-              </i>
-              ...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;1.01 \over 0.1&#125; = 1.01 \times 10 = 10.1$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...result! (The answer is: ten point one.)
             </VerticalChunk>
           </Solution>
         </Exercise>

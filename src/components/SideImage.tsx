@@ -15,7 +15,7 @@ import { useGlobalContext } from "~/store/StoreProvider";
 type ImageProps = ParentProps &
   SharedProps & {
     src: string;
-    use_squiggle_on_mobile?: boolean;
+    squiggle?: boolean;
     width?: string;
 
     img_position?: "top" | "bottom" | "center";
@@ -63,7 +63,7 @@ const SideImage = (_props: SideImageProps) => {
 
   let innerStyles = () => ({
     left: props.side === "right" ? props.offset_x : "",
-    right: props.side === "left" ? `calc(-100% + ${props.offset_x})` : "",
+    right: props.side === "left" ? props.offset_x : "",
     top: `calc(50% + ${props.offset_y.includes("%") ? "0px" : props.offset_y})`,
     transform: `translateY(calc(-50% + ${getInnerTransfrom(
       props.img_position
@@ -92,7 +92,7 @@ const SideImage = (_props: SideImageProps) => {
     <div
       ref={container_ref}
       style={props.parentStyles}
-      class="side-img absolute -translate-x-1/2 !w-1 !p-0 !ps-0 !pe-0 h-1"
+      class="absolute !w-1 !p-0 !ps-0 !pe-0 h-1"
       >
       <div
         style={innerStyles()}
@@ -110,7 +110,7 @@ const SideImage = (_props: SideImageProps) => {
         />
       </div>
 
-      {show_squiggles() && props.use_squiggle_on_mobile && (
+      {show_squiggles() && props.squiggle && (
         <div
           class="squiggle block sm:hidden absolute"
           style={{
@@ -136,12 +136,12 @@ export const ImageRight = ({
   y = "center",
   ...props
 }: ImageProps) => {
-  const { on_mobile } = useOnMobile();
+  // const { on_mobile } = useOnMobile();
+  // let line_height = () => (on_mobile() ? 28.0 : 32.5);
 
-  let line_height = () => (on_mobile() ? 28.0 : 32.5);
   let parent_styles = () => ({
-    left: "calc(100% - 0.5rem)",
-    top: getTopPos(y, line, line_height()),
+    left: "100%",
+    top: getTopPos(y, line, 30),
   });
 
   return (
@@ -152,12 +152,14 @@ export const ImageRight = ({
   );
 };
 
-export const ImageLeft = ({ line = 0, y = "center", ...props }: ImageProps) => {
+export const ImageLeft = (
+  { line = 0, y = "center", ...props }: ImageProps
+) => {
   const { on_mobile } = useOnMobile();
 
   let line_height = () => (on_mobile() ? 28.0 : 32.5);
   let parent_styles = () => ({
-    left: "0.5rem",
+    right: "100%",
     top: getTopPos(y, line, line_height()),
   });
 
