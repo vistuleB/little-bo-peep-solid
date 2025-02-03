@@ -76,6 +76,10 @@ i {
   margin-inline: auto;
 }
 
+.mathinline {
+  display: inline; 
+}
+
 .star-divider {
   margin-top: 1em;
   margin-bottom: 1em;
