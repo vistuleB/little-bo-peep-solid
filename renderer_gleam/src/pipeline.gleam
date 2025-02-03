@@ -295,8 +295,8 @@ pub fn our_pipeline() -> List(Pipe) {
     counter_desugarer(),
     counter_handles_desugarer(),
     add_exercise_labels(),
-    add_counter_attributes([#("Solution", "Exercises", "solution_number", 0)]),
-    add_counter_attributes([#("Exercise", "Exercises", "exercise_number", 0)]),
+    add_counter_attributes([#("Solution", "Exercises", "solution_number", 1)]),
+    add_counter_attributes([#("Exercise", "Exercises", "exercise_number", 1)]),
     concatenate_text_nodes(),
     insert_bookend_tags([
       #("Math", "OpeningSingleDollar", "ClosingSingleDollar"),

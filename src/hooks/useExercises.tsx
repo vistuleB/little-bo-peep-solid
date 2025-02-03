@@ -25,20 +25,20 @@ const useExercises = (length: number) => {
   );
 
   const update_solution_open = (
-    index: number,
+    exercise_number: number,
     value: boolean,
     update_store: boolean = true
   ) => {
     set_solutions_open((prev) => {
-      prev[index] = value;
+      prev[exercise_number - 1] = value;
       return [...prev];
     });
 
-    localStorage.setItem(`${article()}_exo_${index}_opened`, String(value));
+    localStorage.setItem(`${article()}_exo_${exercise_number}_opened`, String(value));
 
     if (update_store) {
       set_store("solutions_open", (prev) => {
-        prev[index] = value;
+        prev[exercise_number - 1] = value;
         return [...prev];
       });
     }

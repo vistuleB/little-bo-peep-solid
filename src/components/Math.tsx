@@ -37,7 +37,7 @@ export const Math = (props: ParentProps) => {
   // });
 
   return (
-    <LazyMath class="math w-fit inline-flex items-baseline indent-0">
+    <LazyMath class="mathinline">
       {props.children}
     </LazyMath>
   );

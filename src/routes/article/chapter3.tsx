@@ -1756,7 +1756,7 @@ const Article = () => {
       </Section>
       <Pause />
       <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]}>
-        <Exercise exercise_number={0}>
+        <Exercise exercise_number={1}>
           <VerticalChunk>
             <b>
               Exercise 1.
@@ -1766,7 +1766,7 @@ const Article = () => {
             function using “definition by cases”?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={0}>
+          <Solution solution_number={1}>
             <VerticalChunk>
               The absolute value function is
             </VerticalChunk>
@@ -1794,7 +1794,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={1}>
+        <Exercise exercise_number={2}>
           <VerticalChunk>
             <b>
               Exercise 2.
@@ -1804,7 +1804,7 @@ const Article = () => {
             function using an “ordinary” algebraic formula?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={1}>
+          <Solution solution_number={2}>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -1840,7 +1840,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={2}>
+        <Exercise exercise_number={3}>
           <VerticalChunk>
             <b>
               Exercise 3.
@@ -1887,7 +1887,7 @@ const Article = () => {
             </Item>
           </Grid>
           <Pause />
-          <Solution solution_number={2}>
+          <Solution solution_number={3}>
             <VerticalChunk>
               The answers are:
             </VerticalChunk>
@@ -1931,7 +1931,7 @@ const Article = () => {
             </Grid>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={3}>
+        <Exercise exercise_number={4}>
           <VerticalChunk>
             <b>
               Exercise 4.
@@ -2003,7 +2003,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch3_factory_roof_graph.svg" />
           <Pause />
-          <Solution solution_number={3}>
+          <Solution solution_number={4}>
             <VerticalChunk>
               As{" "}
               <Math>
@@ -2134,7 +2134,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={4}>
+        <Exercise exercise_number={5}>
           <VerticalChunk>
             <b>
               Exercise 5.
@@ -2154,7 +2154,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch3_factory_roof_stretched_x2_graph_worked.svg" />
           <Pause />
-          <Solution solution_number={4}>
+          <Solution solution_number={5}>
             <VerticalChunk>
               We would like to argue the correctness of 
               the following two-step process (divide the 
@@ -2520,7 +2520,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={5}>
+        <Exercise exercise_number={6}>
           <VerticalChunk>
             <b>
               Exercise 6.
@@ -2532,7 +2532,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch3_factory_roof_x2_worked.svg" />
           <Pause />
-          <Solution solution_number={5}>
+          <Solution solution_number={6}>
             <VerticalChunk>
               For the first graph,{" "}
               <del>
@@ -2677,7 +2677,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={6}>
+        <Exercise exercise_number={7}>
           <VerticalChunk>
             <b>
               Exercise 7.
@@ -2718,7 +2718,7 @@ const Article = () => {
             {" "}spaced-out bumps??
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={6}>
+          <Solution solution_number={7}>
             <VerticalChunk>
               Consider how to “read off” a value of{" "}
               <Math>
@@ -2797,7 +2797,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={7}>
+        <Exercise exercise_number={8}>
           <VerticalChunk>
             <b>
               Exercise 8.
@@ -2867,7 +2867,7 @@ const Article = () => {
             ”!!
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={7}>
+          <Solution solution_number={8}>
             <VerticalChunk>
               Setting “
               <NoBreak>
@@ -2951,7 +2951,7 @@ const Article = () => {
             <Image src="/images/svg_first_victim_second_victim_1_1em.svg" />
           </Solution>
         </Exercise>
-        <Exercise exercise_number={8}>
+        <Exercise exercise_number={9}>
           <VerticalChunk>
             <b>
               Exercise 9.
@@ -2973,7 +2973,7 @@ const Article = () => {
             ”.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={8}>
+          <Solution solution_number={9}>
             <VerticalChunk>
               We will again evaluate the “outer”
               composition operator first and the “inner”
@@ -3647,7 +3647,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={9}>
+        <Exercise exercise_number={10}>
           <VerticalChunk>
             <b>
               Exercise 10.
@@ -3683,7 +3683,7 @@ const Article = () => {
             ”.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={9}>
+          <Solution solution_number={10}>
             <VerticalChunk>
               The answer is
             </VerticalChunk>
@@ -3717,7 +3717,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={10}>
+        <Exercise exercise_number={11}>
           <VerticalChunk>
             <b>
               Exercise 11.
@@ -3731,7 +3731,7 @@ const Article = () => {
             variables.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={10}>
+          <Solution solution_number={11}>
             <VerticalChunk>
               Put an unknown “
               <NoBreak>
@@ -3914,7 +3914,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={11}>
+        <Exercise exercise_number={12}>
           <VerticalChunk>
             <b>
               Exercise 12.
@@ -3939,7 +3939,7 @@ const Article = () => {
             .
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={11}>
+          <Solution solution_number={12}>
             <VerticalChunk>
               The equation is equivalent to
             </VerticalChunk>
@@ -3963,7 +3963,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={12}>
+        <Exercise exercise_number={13}>
           <VerticalChunk>
             <b>
               Exercise 13.
@@ -3984,7 +3984,7 @@ const Article = () => {
             .
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={12}>
+          <Solution solution_number={13}>
             <VerticalChunk>
               The equation can be written
             </VerticalChunk>
@@ -4039,7 +4039,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={13}>
+        <Exercise exercise_number={14}>
           <VerticalChunk>
             <b>
               Exercise 14.
@@ -4083,7 +4083,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={13}>
+          <Solution solution_number={14}>
             <VerticalChunk>
               Write
             </VerticalChunk>
@@ -4489,7 +4489,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={14}>
+        <Exercise exercise_number={15}>
           <VerticalChunk>
             <b>
               Exercise 15.
@@ -4576,7 +4576,7 @@ const Article = () => {
             .)
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={14}>
+          <Solution solution_number={15}>
             <VerticalChunk>
               Start by noting that the point 
               {" "}
@@ -4681,7 +4681,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={15}>
+        <Exercise exercise_number={16}>
           <VerticalChunk>
             <b>
               Exercise 16.
@@ -4716,7 +4716,7 @@ const Article = () => {
             .
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={15}>
+          <Solution solution_number={16}>
             <VerticalChunk>
               Well,
             </VerticalChunk>
@@ -4989,7 +4989,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={16}>
+        <Exercise exercise_number={17}>
           <VerticalChunk>
             <b>
               Exercise 17.
@@ -5044,7 +5044,7 @@ const Article = () => {
             </Item>
           </Grid>
           <Pause />
-          <Solution solution_number={16}>
+          <Solution solution_number={17}>
             <VerticalChunk>
               The true statements are i, iv, because
               {" "}
@@ -5074,7 +5074,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={17}>
+        <Exercise exercise_number={18}>
           <VerticalChunk>
             <b>
               Exercise 18.
@@ -5230,7 +5230,7 @@ const Article = () => {
             $$(g + h) \circ f = (x \ra (g + h)(f(x)))$$
           </MathBlock>
           <Pause />
-          <Solution solution_number={17}>
+          <Solution solution_number={18}>
             <VerticalChunk>
               The first equality is false because the 
               right-hand side is actually
@@ -5282,7 +5282,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={18}>
+        <Exercise exercise_number={19}>
           <VerticalChunk>
             <b>
               Exercise 19.
@@ -5330,7 +5330,7 @@ const Article = () => {
             ?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={18}>
+          <Solution solution_number={19}>
             <VerticalChunk>
               Write
             </VerticalChunk>
@@ -5461,7 +5461,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={19}>
+        <Exercise exercise_number={20}>
           <VerticalChunk>
             <b>
               Exercise 20.
@@ -5504,7 +5504,7 @@ const Article = () => {
             ?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={19}>
+          <Solution solution_number={20}>
             <VerticalChunk>
               The curve
             </VerticalChunk>
@@ -5712,7 +5712,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={20}>
+        <Exercise exercise_number={21}>
           <VerticalChunk>
             <b>
               Exercise 21.
@@ -5734,7 +5734,7 @@ const Article = () => {
             (Hint: The answer is a specific real number.)
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={20}>
+          <Solution solution_number={21}>
             <VerticalChunk>
               ...in an expression such as...
             </VerticalChunk>

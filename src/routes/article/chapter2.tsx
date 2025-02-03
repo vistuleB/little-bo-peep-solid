@@ -1424,7 +1424,7 @@ const Article = () => {
       </Section>
       <Pause />
       <Exercises labels={["0", "1", "2", "3"]}>
-        <Exercise exercise_number={0}>
+        <Exercise exercise_number={1}>
           <VerticalChunk>
             <b>
               Exercise 1.
@@ -1442,7 +1442,7 @@ const Article = () => {
             .
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={0}>
+          <Solution solution_number={1}>
             <VerticalChunk>
               This is true, as illustrated by the following pair of lines:
             </VerticalChunk>
@@ -1536,7 +1536,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={1}>
+        <Exercise exercise_number={2}>
           <VerticalChunk>
             <b>
               Exercise 2.
@@ -1555,7 +1555,7 @@ const Article = () => {
             (Hint: Start from the slope formula.)
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={1}>
+          <Solution solution_number={2}>
             <VerticalChunk>
               A point{" "}
               <Math>
@@ -1769,7 +1769,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={2}>
+        <Exercise exercise_number={3}>
           <VerticalChunk>
             <b>
               Exercise 3.
@@ -1785,7 +1785,7 @@ const Article = () => {
             class="pt-[22px] pb-[15px] pl-[90px]"
             src="/images/1.svg" />
           <Pause />
-          <Solution solution_number={2}>
+          <Solution solution_number={3}>
             <VerticalChunk>
               Here is the “official” graph of the (vertical)
               velocity:
@@ -1933,7 +1933,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={3}>
+        <Exercise exercise_number={4}>
           <VerticalChunk>
             <b>
               Exercise 4.
@@ -1968,7 +1968,7 @@ const Article = () => {
             and “rise equals slope times run”.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={3}>
+          <Solution solution_number={4}>
             <VerticalChunk>
               E.g.:
             </VerticalChunk>

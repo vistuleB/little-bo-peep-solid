@@ -1249,7 +1249,7 @@ const Article = () => {
       </Section>
       <Pause />
       <Exercises labels={["0", "1"]}>
-        <Exercise exercise_number={0}>
+        <Exercise exercise_number={1}>
           <VerticalChunk>
             <b>
               Exercise 1.
@@ -1328,7 +1328,7 @@ const Article = () => {
             </Item>
           </Grid>
           <Pause />
-          <Solution solution_number={0}>
+          <Solution solution_number={1}>
             <VerticalChunk>
               Part by part:
             </VerticalChunk>
@@ -2361,7 +2361,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={1}>
+        <Exercise exercise_number={2}>
           <VerticalChunk>
             <b>
               Exercise 2.
@@ -2417,7 +2417,7 @@ const Article = () => {
             ?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={1}>
+          <Solution solution_number={2}>
             <VerticalChunk>
               Since
             </VerticalChunk>
