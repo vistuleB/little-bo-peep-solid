@@ -2428,7 +2428,7 @@ const Article = () => {
                 squiggle={false}
                 src="/images/svg_ch1_ex_25.svg"
                 offset_y="1.2rem"
-                offset_x="-6rem" />
+                offset_x="5rem" />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2439,9 +2439,9 @@ const Article = () => {
               $$&#123;1 \over n^2&#125;$$
               <ImageRight
                 squiggle={false}
-                src="/images/ch1_ex_26.svg"
+                src="/images/svg_ch1_ex_26.svg"
                 offset_y="1.2rem"
-                offset_x="-6rem" />
+                offset_x="11.5rem" />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2453,7 +2453,7 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              as opposed to the “other difference
+              as opposed to the “other” difference
             </VerticalChunk>
             <Pause />
             <MathBlock>

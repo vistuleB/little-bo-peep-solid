@@ -1,4 +1,4 @@
-import { createEffect, createSignal, ParentProps } from "solid-js";
+import { createContext, createEffect, createSignal, ParentProps, useContext } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import useOnMobile from "../hooks/useOnMobile";
@@ -14,12 +14,15 @@ type ImageProps = ParentProps &
     padding_right?: number;
   };
 
+const ScaleContext = createContext<(() => number)>();
+
 const Image = (props: ImageProps) => {
   let { on_mobile } = useOnMobile();
   let [scaled_down, set_scaled_down] = createSignal(false);
-  let [scale_value, set_scale_value] = createSignal(1.0);
-  let [image_original_width, set_image_original_width] = createSignal(1.0);
+  let [scale, set_scale] = createSignal(1.0);
   let image_ref: HTMLImageElement | undefined;
+  const naturalWidth = () => image_ref ? image_ref.naturalWidth : 520;
+  const scaledDownWidth = () => Math.min(1, window.innerWidth / (naturalWidth() + 32.0));
 
   createEffect(() => {
     if (on_mobile()) {
@@ -27,69 +30,52 @@ const Image = (props: ImageProps) => {
     }
   });
 
-  createEffect(() => {
-    // re_calculate on scaled_down change
-    scaled_down();
-    if (image_ref && image_ref?.naturalWidth > 0.0) {
-      let image_width = image_ref.naturalWidth;
-      if (window.innerWidth < image_width && scaled_down()) {
-        set_scale_value(window.innerWidth / (image_width + 32.0));
-      } else {
-        set_scale_value(1.0);
-      }
-    } else {
-      set_scale_value(1.0);
-    }
-    // dispatch event to scale down side images with it
-    setTimeout(() => {
-      let custom_event = new CustomEvent("image_scale");
-      let _ = window.dispatchEvent(custom_event);
-    }, 10);
-  });
-
   return (
-    <div
-      id={props.id}
-      style={{
-        "padding-left": `${props.padding_left || 0}`,
-        "padding-right": `${props.padding_right || 0}`,
-      }}
-      class={twJoin(
-        "relative left-1/2 -translate-x-1/2 col-start-2 scrollbar-hidden sm:overflow-x-visible transition-all w-max",
-        props.class
-      )}>
+    <ScaleContext.Provider value={scale}>
       <div
+        id={props.id}
         style={{
-          height: props.height,
-          width: props.width,
+          "padding-left": `${props.padding_left || 0}`,
+          "padding-right": `${props.padding_right || 0}`,
         }}
-        data-scale_side_images={scale_value()}
-        class="left-1/2 -translate-x-1/2 relative w-max">
-        <LazyImage
-          onClick={() => {
-            // if on_mobile.get() && !margin_mode.get() {
-            console.log("heard click");
-            if (on_mobile()) {
-              set_scaled_down(!scaled_down());
-            } else {
-              set_scaled_down(false);
-            }
-            // } else if !margin_mode.get() {
-            //   set_scaled_down.set(false);
-            // }
+        class={twJoin(
+          "relative left-1/2 -translate-x-1/2 col-start-2 scrollbar-hidden sm:overflow-x-visible transition-all w-max",
+          props.class
+        )}>
+        <div
+          style={{
+            height: props.height,
+            width: props.width,
           }}
-          ref={image_ref}
-          class={twJoin(
-            "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
-            on_mobile() && scaled_down() && "max-width-screen"
-          )}
-          style={props.style}
-          src={props.src}
-        />
+          class="left-1/2 -translate-x-1/2 relative w-max">
+          <LazyImage
+            ref={image_ref}
+            onClick={() => {
+              const newScaledDown = on_mobile() ? !scaled_down() : false;
+              set_scaled_down(newScaledDown);
+              set_scale(newScaledDown ? scaledDownWidth() : 1);
+            }}
+            class={twJoin(
+              "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
+              on_mobile() && scaled_down() && "max-width-screen"
+            )}
+            style={props.style}
+            src={props.src}
+          />
+        </div>
+        {props.children}
       </div>
-      {props.children}
-    </div>
+    </ScaleContext.Provider>
   );
 };
 
-export default Image;
+export default Image; 
+
+export const useScale = () => {
+  const scale = useContext(ScaleContext);
+  if (!scale) {
+    console.log("wurning returning 520 scale; hm");
+  }
+  if (!scale) return () => 520;
+  return scale;
+};

@@ -32,7 +32,6 @@ function LazyImage(
   return (
     <img
       ref={imgRef}
-      // src={isVisible() ? props.src : ""}
       onClick={props.onClick}
       src={props.src}
       alt={props.alt || ""}

@@ -1148,7 +1148,7 @@
             $$
 
             |> ImageRight
-                offset_x -6rem
+                offset_x 5rem
                 offset_y 1.2rem
                 src images/svg_ch1_ex_25.svg
                 squiggle false
@@ -1160,9 +1160,9 @@
             $$
 
             |> ImageRight
-                offset_x -6rem
+                offset_x 11.5rem
                 offset_y 1.2rem
-                src images/ch1_ex_26.svg
+                src images/svg_ch1_ex_26.svg
                 squiggle false
 
             we will compute the difference
@@ -1171,7 +1171,7 @@
             {1 \over n^2} - {1 \over n(n+1)}
             $$
 
-            as opposed to the “other difference
+            as opposed to the “other” difference
 
             $$
             {1 \over n(n+1)} - {1 \over n^2}
