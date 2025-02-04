@@ -77,7 +77,7 @@ i {
 }
 
 .mathinline {
-  display: inline; 
+  display: inline !important; 
 }
 
 .star-divider {
