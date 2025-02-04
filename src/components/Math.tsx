@@ -1,7 +1,7 @@
 import { onCleanup, onMount, ParentProps } from "solid-js";
 
 export const Math = (props: ParentProps) => {
-  let ref: HTMLDivElement | undefined;
+  let ref: HTMLSpanElement | undefined;
   
   // createEffect(() => {
   //   (window as any).MathJax.typesetPromise([ref]);

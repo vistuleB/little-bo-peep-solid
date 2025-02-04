@@ -68,8 +68,8 @@ const Image = (props: ImageProps) => {
         <LazyImage
           onClick={() => {
             // if on_mobile.get() && !margin_mode.get() {
+            console.log("heard click");
             if (on_mobile()) {
-              console.log("heard click");
               set_scaled_down(!scaled_down());
             } else {
               set_scaled_down(false);
