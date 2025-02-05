@@ -45,8 +45,8 @@ const Image = (props: ImageProps) => {
 
   createEffect(() => {
     setTimeout(() => { handleResize(); }, 10);
-    // window.addEventListener("resize", handleResize);
-    // onCleanup(() => { window.removeEventListener("resize", handleResize); });
+    window.addEventListener("resize", handleResize);
+    onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
 
 
@@ -83,7 +83,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
               on_mobile() && scaled_down() && "max-width-screen",
-              recent_click() && "bg-green"
+              recent_click() && "bg-reddish"
             )}
             style={props.style}
             src={props.src}
