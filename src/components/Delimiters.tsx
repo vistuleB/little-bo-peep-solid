@@ -25,10 +25,10 @@ export const CentralDisplayItalic = (
 ) => {
   return (
     <div
-      class={`slice font-baskerville-italic text-center block`}
+      class={`slice text-center block`}
       classList={{"indent-10": props.indent}}
       style={props.style}>
-      <div class="display-text">{props.children}</div>
+      <i class="display-text">{props.children}</i>
     </div>
   );
 };
