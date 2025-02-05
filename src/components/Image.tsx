@@ -1,4 +1,4 @@
-import { createContext, createEffect, createSignal, onCleanup, ParentProps, useContext } from "solid-js";
+import { createContext, createEffect, createSignal, onCleanup, onMount, ParentProps, useContext } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import useOnMobile from "../hooks/useOnMobile";
@@ -58,6 +58,7 @@ const Image = (props: ImageProps) => {
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
 
+  onMount(() => handleResize());
 
   return (
     <ScaleContext.Provider value={scale}>
