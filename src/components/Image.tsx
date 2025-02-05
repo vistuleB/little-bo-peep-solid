@@ -58,7 +58,12 @@ const Image = (props: ImageProps) => {
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
 
-  onMount(() => handleResize());
+  onMount(() => {
+    if (on_mobile()) {
+      set_scaled_down(true);
+      set_scale(scaledDownWidth());
+    }
+  });
 
   return (
     <ScaleContext.Provider value={scale}>
@@ -94,7 +99,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
               on_mobile() && scaled_down() && "max-width-screen",
-              recent_click() && "bg-reddish"
+              recent_click() && "bg-green"
             )}
             style={props.style}
             src={props.src}
