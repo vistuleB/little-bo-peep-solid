@@ -18,7 +18,9 @@ const Article = () => {
     <Chapter
       number={4}
       title="Derivatives">
-      <Image src="/images/svg_ch4_ch_polaroids.svg" />
+      <Section>
+        <Image src="/images/svg_ch4_ch_polaroids.svg" />
+      </Section>
       <Pause />
       <Section>
         <VerticalChunk>
@@ -93,7 +95,9 @@ const Article = () => {
           the “after” graph records the slope of the 
           “before” graph.) E.g.:
         </VerticalChunk>
-        <Pause />
+      </Section>
+      <Pause />
+      <Section>
         <Image src="/images/svg_ch4_explanation1.svg" />
         <Pause />
         <VerticalChunk>

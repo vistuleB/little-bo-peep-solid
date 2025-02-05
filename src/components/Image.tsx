@@ -20,8 +20,8 @@ const ScaleContext = createContext<(() => number)>();
 const Image = (props: ImageProps) => {
   let { on_mobile } = useOnMobile();
   
-  let [scaled_down, set_scaled_down] = createSignal(false);
   let [scale, set_scale] = createSignal(1.0);
+  let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(false);
   const [innerWidth, set_innerWidth] = createSignal(0);
   let {_, set_store } = useGlobalContext();
@@ -34,6 +34,8 @@ const Image = (props: ImageProps) => {
   }
   const scaledDownWidth = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
 
+  const fmt = (num: number) => { return (Math.round(num * 100) / 100).toFixed(2); }
+
   const handleResize = () => {
     set_innerWidth(window.innerWidth);
     if (on_mobile() && scaledDownWidth() < 1) {
@@ -42,7 +44,7 @@ const Image = (props: ImageProps) => {
     }
     else {
       if (scale() != 1) {
-        set_store("title", `${scaledDownWidth()}`);
+        set_store("title", `${fmt(innerWidth() - 32)}  ${fmt(naturalWidth())}`);
       }
       set_scale(1);
       set_scaled_down(false);

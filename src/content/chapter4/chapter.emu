@@ -1,7 +1,10 @@
-|> Image
-    src images/svg_ch4_ch_polaroids.svg
+|> Section
+    handle sss
+    |> Image
+        src images/svg_ch4_ch_polaroids.svg
 
 |> Section    
+    handle sss
 
     *Definitions.*
     The _derivative_ of a function
@@ -29,6 +32,8 @@
     “before”], $y = f'(x)$ [$=$ “after”]. (Meaning,
     the “after” graph records the slope of the 
     “before” graph.) E.g.:
+
+|> Section
 
     |> Image
         src images/svg_ch4_explanation1.svg
