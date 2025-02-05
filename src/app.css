@@ -455,6 +455,10 @@ table.first-line tr td:first-child {
   background-color: rgba(0, 0, 255, 0.05);
 }
 
+.bg-green {
+  background-color: rgba(136, 243, 109, 0.726);
+}
+
 .outer-width-enforcer {
   width: calc(min(var(--desktop-text-column-width), 100%) + 3000px);
   overflow: hidden;
