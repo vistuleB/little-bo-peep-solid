@@ -83,7 +83,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
               on_mobile() && scaled_down() && "max-width-screen",
-              recent_click() && "bg-slate-500"
+              recent_click() && "bg-slate-800"
             )}
             style={props.style}
             src={props.src}

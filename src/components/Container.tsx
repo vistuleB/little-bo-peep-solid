@@ -37,10 +37,10 @@ const Container = (props: ParentProps) => {
         scrollX() > theoretical_left - 200 &&
         scrollX() < theoretical_left + 200
       ) {
-        window.scroll({
-          left: theoretical_left,
-          behavior: "smooth",
-        });
+        // window.scroll({
+        //   left: theoretical_left,
+        //   behavior: "smooth",
+        // });
       }
     };
 
