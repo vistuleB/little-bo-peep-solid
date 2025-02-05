@@ -24,6 +24,7 @@ const Image = (props: ImageProps) => {
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(false);
   const [innerWidth, set_innerWidth] = createSignal(0);
+  let [after_first_load, set_after_first_load] = createSignal(false);
   let {_, set_store } = useGlobalContext();
 
   let image_ref: HTMLImageElement | undefined;
@@ -62,6 +63,7 @@ const Image = (props: ImageProps) => {
     if (on_mobile()) {
       set_scaled_down(true);
       set_scale(scaledDownWidth());
+      setTimeout(() => { set_after_first_load(true); }, 2000);
     }
   });
 
@@ -97,9 +99,10 @@ const Image = (props: ImageProps) => {
               )
             }}
             class={twJoin(
-              "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
+              "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
               on_mobile() && scaled_down() && "max-width-screen",
-              recent_click() && "bg-green"
+              recent_click() && "bg-reddish",
+              after_first_load() && "transition-all",
             )}
             style={props.style}
             src={props.src}
