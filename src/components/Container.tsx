@@ -1,6 +1,7 @@
 import { ParentProps, createEffect, onCleanup, createSignal } from "solid-js";
 import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
+import useOnMobile from "../hooks/useOnMobile";
 
 const Container = (props: ParentProps) => {
   // can_click is for disabling click on page transition
@@ -11,6 +12,7 @@ const Container = (props: ParentProps) => {
   const [scrollX, set_scrollX] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
   const [scrollWidth, set_scrollWidth] = createSignal(0);
+  let { on_mobile } = useOnMobile();
 
   const handleScroll = () => {
     set_scrollY(window.scrollY);
@@ -62,10 +64,12 @@ const Container = (props: ParentProps) => {
     });
 
     window.addEventListener("resize", (_) => {
-      window.scroll({
-        left: (scrollWidth() - innerWidth()) / 2,
-        behavior: "instant",
-      });
+      if (!on_mobile()) {
+        window.scroll({
+          left: (scrollWidth() - innerWidth()) / 2,
+          behavior: "instant",
+        });
+      }
     });
   });
 

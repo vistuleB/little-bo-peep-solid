@@ -25,7 +25,7 @@ const Image = (props: ImageProps) => {
   let [recent_click, set_recent_click] = createSignal(false);
   const [innerWidth, set_innerWidth] = createSignal(0);
   let [after_first_load, set_after_first_load] = createSignal(false);
-  let {_, set_store } = useGlobalContext();
+  // let {store, set_store } = useGlobalContext();
 
   let image_ref: HTMLImageElement | undefined;
   const naturalWidth = () => {
