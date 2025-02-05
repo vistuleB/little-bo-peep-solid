@@ -1,4 +1,4 @@
-import { createContext, createEffect, createSignal, ParentProps, useContext } from "solid-js";
+import { createContext, createEffect, createSignal, onCleanup, ParentProps, useContext } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import useOnMobile from "../hooks/useOnMobile";
@@ -18,16 +18,34 @@ const ScaleContext = createContext<(() => number)>();
 
 const Image = (props: ImageProps) => {
   let { on_mobile } = useOnMobile();
+  
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [scale, set_scale] = createSignal(1.0);
+  const [innerWidth, set_innerWidth] = createSignal(0);
+
   let image_ref: HTMLImageElement | undefined;
-  const naturalWidth = () => image_ref ? image_ref.naturalWidth : 520;
-  const scaledDownWidth = () => Math.min(1, window.innerWidth / (naturalWidth() + 32.0));
+  const naturalWidth = () => {
+    let toReturn = (image_ref) ? image_ref.naturalWidth : 3000;
+    // console.log("image_ref is: ", image_ref);
+    return toReturn;
+  }
+  const scaledDownWidth = () => Math.min(1, innerWidth() / (naturalWidth() + 32.0));
+
+  const handleResize = () => {
+    set_innerWidth(window.innerWidth);
+    if (on_mobile() && scaledDownWidth() < 1) {
+      set_scale(scaledDownWidth());
+      set_scaled_down(true);
+    } else {
+      set_scale(1);
+      set_scaled_down(false);
+    }
+  };
 
   createEffect(() => {
-    if (on_mobile()) {
-      set_scaled_down(true);
-    }
+    setTimeout(() => { handleResize(); }, 10);
+    window.addEventListener("resize", handleResize);
+    onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
 
   return (
@@ -76,6 +94,6 @@ export const useScale = () => {
   if (!scale) {
     console.log("wurning returning 520 scale; hm");
   }
-  if (!scale) return () => 520;
+  if (!scale) return () => 1;
   return scale;
 };

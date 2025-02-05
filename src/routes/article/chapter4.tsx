@@ -132,14 +132,12 @@ const Article = () => {
         <Image src="/images/svg_ch4_explanation2.svg">
           <ImageRight
             src="/images/svg_ch4_explanation2_cloud.svg"
-            offset_x="-5em"
-            offset_y="1em"
-            y="top" />
+            offset_x="-13em"
+            offset_y="-17em" />
         </Image>
         <Pause />
         <VerticalChunk>
-          In fact,
-          we can
+          In fact, we can
           succinctly describe the derivative by...
         </VerticalChunk>
         <Pause />

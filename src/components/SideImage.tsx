@@ -52,15 +52,13 @@ const SideImage = (_props: SideImageProps) => {
   );
 
   let innerStyles = () => ({
-    left: props.side === "right" ? props.offset_x : "",
-    right: props.side === "left" ? props.offset_x : "",
-    top: `calc(50% + ${props.offset_y.includes("%") ? "0px" : props.offset_y})`,
-    transform: `translateY(calc(-50% + ${getInnerTransform(
-      props.img_position
-    )} + ${props.offset_y.includes("%") ? props.offset_y : "0px"}))`,
+    left: props.side === "right" ? `calc(${props.offset_x} * ${scale()}`: "",
+    right: props.side === "left" ? `calc(${props.offset_x} * ${scale()}`: "",
+    top: `calc(50% + ${props.offset_y} * ${scale()})`,
+    transform: `translateY(calc(-50% + ${getInnerTransform(props.img_position)}))`,
     padding: `${props.padding}`,
     scale: `${scale()}`,
-    "transform-origin": `0 top 0`, // (have no idea why this works...)
+    "transform-origin": `0 top 0`,
   });
 
   return (
