@@ -29,7 +29,6 @@ const Image = (props: ImageProps) => {
   let image_ref: HTMLImageElement | undefined;
   const naturalWidth = () => {
     let toReturn = (image_ref) ? image_ref.naturalWidth : 3000;
-    // console.log("image_ref is: ", image_ref);
     return toReturn;
   }
   const scaledDownWidth = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
@@ -42,13 +41,15 @@ const Image = (props: ImageProps) => {
       set_scale(scaledDownWidth());
       set_scaled_down(true);
     }
-    else {
-      if (scale() != 1) {
-        set_store("title", `${fmt(window.innerWidth - 32)}  ${fmt(naturalWidth())}`);
-      }
-      set_scale(1);
-      set_scaled_down(false);
-    }
+    // taking this out because the '.naturalWidth' property
+    // not reliably working on iPhone 12:
+    // else {
+    //   // if (scale() != 1) {
+    //   //   set_store("title", `b ${fmt(window.innerWidth - 32)}  ${fmt(naturalWidth())}`);
+    //   // }
+    //   set_scale(1);
+    //   set_scaled_down(false);
+    // }
   };
 
   createEffect(() => {
@@ -81,7 +82,7 @@ const Image = (props: ImageProps) => {
             onClick={(event) => {
               const newScaledDown = on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
-              set_store("title", `${window.innerWidth} ${naturalWidth()}`);
+              // set_store("title", `a ${window.innerWidth} ${naturalWidth()}`);
               set_scale(newScaledDown ? scaledDownWidth() : 1);
               set_recent_click(true);
               setTimeout(
