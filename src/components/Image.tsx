@@ -37,10 +37,11 @@ const Image = (props: ImageProps) => {
     if (on_mobile() && scaledDownWidth() < 1) {
       set_scale(scaledDownWidth());
       set_scaled_down(true);
-    } else {
-      set_scale(1);
-      set_scaled_down(false);
     }
+    // else {
+    //   set_scale(1);
+    //   set_scaled_down(false);
+    // }
   };
 
   createEffect(() => {
@@ -83,7 +84,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
               on_mobile() && scaled_down() && "max-width-screen",
-              recent_click() && "bg-reddish"
+              recent_click() && "bg-green"
             )}
             style={props.style}
             src={props.src}
