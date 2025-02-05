@@ -31,8 +31,8 @@ const Title = () => {
     >
       <div class="font-clickerscript text-3xl self-end mt-auto mb-auto py-2 sm:px-0" style="transform:translate(0, 0.1em);">
         <a href="/" onClick={() => setRoute("/")}>
-          {/* {store.title} */}
-          {`${window.innerWidth}`}
+          {store.title}
+          {/* {`${window.innerWidth}`} */}
         </a>
       </div>
     </div>

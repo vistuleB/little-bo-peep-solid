@@ -81,6 +81,7 @@ const Image = (props: ImageProps) => {
             onClick={(event) => {
               const newScaledDown = on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
+              set_store("title", `${window.innerWidth} ${naturalWidth()}`);
               set_scale(newScaledDown ? scaledDownWidth() : 1);
               set_recent_click(true);
               setTimeout(
