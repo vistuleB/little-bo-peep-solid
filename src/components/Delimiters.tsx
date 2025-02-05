@@ -28,7 +28,7 @@ export const CentralDisplayItalic = (
       class={`slice text-center block`}
       classList={{"indent-10": props.indent}}
       style={props.style}>
-      <i class="display-text">{props.children}</i>
+      <i class="display-text block">{props.children}</i>
     </div>
   );
 };

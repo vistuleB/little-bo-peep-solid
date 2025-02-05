@@ -275,13 +275,6 @@ span .MathJax_SVG {
   fill: black;
 }
 
-@media (min-width: 520px) {
-  .gridColsWidth {
-    /* DESKTOP_TEXT_WIDTH_WITH_MARGIN Constant */
-    grid-template-columns: 1fr 488px 1fr;
-  }
-}
-
 table.lines tr td {
   text-align: center;
   border-left: thin solid black;
@@ -405,6 +398,13 @@ table.first-line tr td:first-child {
   .center-on-mobile {
     grid-column: 1/-1;
   }
+
+  .gridColsWidth {
+    /* DESKTOP_TEXT_WIDTH_WITH_MARGIN Constant */
+    grid-template-columns: 1fr 488px 1fr;
+  }
+
+ 
 }
 
 .nowrap,
