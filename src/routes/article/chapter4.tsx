@@ -4,13 +4,11 @@ import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
 import Image from "~/components/Image";
+import GenericSideImageContainer from "~/components/GenericSideImageContainer";
 import InlineImage from "~/components/InlineImage";
 import { Exercise, Exercises } from "~/components/Exercises";
 import Solution from "~/components/Solution";
-import Table from "~/components/Table";
-import Grid from "~/components/Grid";
-import { List, Item } from "~/components/List";
-import { SectionDivider, StarDivider } from "~/components/SectionDivider";
+import { StarDivider } from "~/components/SectionDivider";
 import VerticalChunk from "~/components/VerticalChunk";
 
 const Article = () => {
@@ -668,25 +666,27 @@ const Article = () => {
           For example, if the “before” graph has units 
           of...
         </VerticalChunk>
-        <ul>
-          <li>
-            seconds on the{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis, meters on the 
-            {" "}
-            <Math>
-              $y$
-            </Math>
-            {" "}axis
-          </li>
-        </ul>
-        <ImageRight src="/images/svg_ch4_units1_cloud.svg" />
+        <GenericSideImageContainer>
+          <ul class="slice">
+            <li>
+              seconds on the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis, meters on the 
+              {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "}axis
+            </li>
+          </ul>
+          <ImageRight src="/images/svg_ch4_units1_cloud.svg" />
+        </GenericSideImageContainer>
         <VerticalChunk>
           ...then the “after” graph will have units of...
         </VerticalChunk>
-        <ul>
+        <ul class="slice">
           <li>
             seconds on the{" "}
             <Math>
@@ -703,7 +703,7 @@ const Article = () => {
         <VerticalChunk>
           ...while if the “before” graph has units of...
         </VerticalChunk>
-        <ul>
+        <ul class="slice">
           <li>
             years on the{" "}
             <Math>
@@ -717,11 +717,11 @@ const Article = () => {
             {" "}axis
           </li>
         </ul>
-        <ImageLeft src="/images/svg_ch4_units2_cloud.svg" />
+        {/* <ImageLeft src="/images/svg_ch4_units2_cloud.svg" /> */}
         <VerticalChunk>
           ...then the “after” graph will have units of...
         </VerticalChunk>
-        <ul>
+        <ul class="slice">
           <li>
             years on the{" "}
             <Math>
@@ -963,11 +963,9 @@ const Article = () => {
           <Pause />
           <CentralDisplayItalic>
             ~ the second derivative of an affine function is zero ~
+            <ImageLeft src="/images/svg_ch4_adding_statements_cloud.svg" />
           </CentralDisplayItalic>
           <Pause />
-          <VerticalChunk>
-            <ImageLeft src="/images/svg_ch4_adding_statements_cloud.svg" />
-          </VerticalChunk>
         </Example>
       </Section>
       <Pause />

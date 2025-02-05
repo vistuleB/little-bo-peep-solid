@@ -1110,9 +1110,7 @@ const Article = () => {
           in seconds:
         </VerticalChunk>
         <Pause />
-        <Image
-          class="mt-[1.4em] mb-[1.2em]"
-          src="/images/52.svg" />
+        <Image src="/images/52.svg" />
         <Pause />
         <VerticalChunk>
           The slope of the graph is{" "}
@@ -1457,9 +1455,7 @@ const Article = () => {
                 src="/images/56.svg" />
               <ImageLeft
                 squiggle={false}
-                img_position="bottom"
-                y="bottom"
-                offset_y="0.5rem"
+                offset_y="0%"
                 offset_x="-7rem"
                 src="/images/57.svg" />
             </Image>

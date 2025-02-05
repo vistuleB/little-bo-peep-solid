@@ -524,7 +524,6 @@
 
     |> Image
         src images/52.svg
-        class mt-[1.4em] mb-[1.2em]
 
     The slope of the graph is $0.75$ _meters per
     second_ because the balloon's height increases by
@@ -695,8 +694,8 @@
                     src images/57.svg
                     offset_x -7rem
                     offset_y 0.5rem
-                    y bottom
-                    img_position bottom
+                    !! y bottom
+                    !! img_position bottom
                     squiggle false
 
             In more detail, the two triangles are related

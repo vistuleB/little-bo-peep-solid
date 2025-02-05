@@ -1,40 +1,33 @@
-import { createContext, createEffect, createSignal, onCleanup, onMount, ParentProps, useContext } from "solid-js";
+import { createEffect, createSignal, onCleanup, onMount, ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import useOnMobile from "../hooks/useOnMobile";
 import LazyImage from "./LazyImage";
-import { useGlobalContext } from "~/store/StoreProvider";
+import { ScaleProvider } from "~/store/ScaleProvider";
 
-type ImageProps = ParentProps &
-  SharedProps & {
-    src: string;
-    id?: string;
-    width?: string;
-    height?: string;
-    padding_left?: number;
-    padding_right?: number;
-  };
-
-const ScaleContext = createContext<(() => number)>();
+type ImageProps = ParentProps & SharedProps & {
+  src: string;
+  id?: string;
+  width?: string;
+  height?: string;
+  padding_left?: number;
+  padding_right?: number;
+};
 
 const Image = (props: ImageProps) => {
   let { on_mobile } = useOnMobile();
-  
   let [scale, set_scale] = createSignal(1.0);
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(false);
   const [innerWidth, set_innerWidth] = createSignal(0);
   let [after_first_load, set_after_first_load] = createSignal(false);
-  // let {store, set_store } = useGlobalContext();
-
   let image_ref: HTMLImageElement | undefined;
+
   const naturalWidth = () => {
     let toReturn = (image_ref) ? image_ref.naturalWidth : 3000;
     return toReturn;
   }
   const scaledDownWidth = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
-
-  const fmt = (num: number) => { return (Math.round(num * 100) / 100).toFixed(2); }
 
   const handleResize = () => {
     set_innerWidth(window.innerWidth);
@@ -42,55 +35,50 @@ const Image = (props: ImageProps) => {
       set_scale(scaledDownWidth());
       set_scaled_down(true);
     }
-    // taking this out because the '.naturalWidth' property
-    // not reliably working on iPhone 12:
-    // else {
-    //   // if (scale() != 1) {
-    //   //   set_store("title", `b ${fmt(window.innerWidth - 32)}  ${fmt(naturalWidth())}`);
-    //   // }
-    //   set_scale(1);
-    //   set_scaled_down(false);
-    // }
+    // only putting this test if !on_mobile()
+    // because the '.naturalWidth' property
+    // is not reliably working on iPhone 12
+    else if (!on_mobile()) {
+      set_scale(1);
+      set_scaled_down(false);
+    }
   };
-
+  
   createEffect(() => {
-    setTimeout(() => { handleResize(); }, 10);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
-
+  
   onMount(() => {
+    window.requestAnimationFrame(() => { handleResize(); });
     if (on_mobile()) {
       set_scaled_down(true);
       set_scale(scaledDownWidth());
-      setTimeout(() => { set_after_first_load(true); }, 2000);
     }
+    setTimeout(() => { set_after_first_load(true); }, 2000);
   });
 
   return (
-    <ScaleContext.Provider value={scale}>
+    <ScaleProvider scale={scale}>
       <div
         id={props.id}
         style={{
           "padding-left": `${props.padding_left || 0}`,
           "padding-right": `${props.padding_right || 0}`,
         }}
-        class={twJoin(
-          "relative left-1/2 -translate-x-1/2 col-start-2 scrollbar-hidden sm:overflow-x-visible transition-all w-max bg-slate-200",
-          props.class
-        )}>
-        <div
+        class={twJoin("left-1/2 -translate-x-1/2 relative w-max bg-slate-200", props.class)}>
+        <div 
           style={{
             height: props.height,
             width: props.width,
           }}
-          class="left-1/2 -translate-x-1/2 relative w-max">
+        >
           <LazyImage
             ref={image_ref}
             onClick={(event) => {
               const newScaledDown = on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
-              // set_store("title", `a ${window.innerWidth} ${naturalWidth()}`);
+              set_after_first_load(true);
               set_scale(newScaledDown ? scaledDownWidth() : 1);
               set_recent_click(true);
               setTimeout(
@@ -110,17 +98,8 @@ const Image = (props: ImageProps) => {
         </div>
         {props.children}
       </div>
-    </ScaleContext.Provider>
+    </ScaleProvider>
   );
 };
 
 export default Image; 
-
-export const useScale = () => {
-  const scale = useContext(ScaleContext);
-  if (!scale) {
-    console.log("wurning returning 520 scale; hm");
-  }
-  if (!scale) return () => 1;
-  return scale;
-};

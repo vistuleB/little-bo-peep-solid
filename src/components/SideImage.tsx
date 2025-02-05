@@ -7,7 +7,7 @@ import { twJoin } from "tailwind-merge";
 import useOnMobile from "../hooks/useOnMobile";
 import LazyImage from "./LazyImage";
 import { useGlobalContext } from "~/store/StoreProvider";
-import { useScale } from "./Image";
+import { useScale } from "~/store/ScaleProvider";
 
 type ImageProps = ParentProps &
   SharedProps & {
@@ -52,8 +52,8 @@ const SideImage = (_props: SideImageProps) => {
   );
 
   let innerStyles = () => ({
-    left: props.side === "right" ? `calc(${props.offset_x} * ${scale()}`: "",
-    right: props.side === "left" ? `calc(${props.offset_x} * ${scale()}`: "",
+    left: props.side === "right" ? `calc(100% + ${props.offset_x} * ${scale()}`: "",
+    right: props.side === "left" ? `calc(100% + ${props.offset_x} * ${scale()}`: "",
     top: `calc(50% + ${props.offset_y} * ${scale()})`,
     transform: `translateY(calc(-50% + ${getInnerTransform(props.img_position)}))`,
     padding: `${props.padding}`,
@@ -64,8 +64,9 @@ const SideImage = (_props: SideImageProps) => {
   return (
     <div
       ref={container_ref}
-      style={props.parentStyles}
-      class="absolute !w-1 !p-0 !ps-0 !pe-0 h-1"
+      // style={props.parentStyles}
+      // class="absolute !w-1 !p-0 !ps-0 !pe-0 h-1 bg-black"
+      class="absolute" style="left:0;top:0;width:100%;height:100%;background-color:none;pointer-events:none;margin:0;padding:0;"
       >
       <div
         style={innerStyles()}
