@@ -45,9 +45,10 @@ const Image = (props: ImageProps) => {
 
   createEffect(() => {
     setTimeout(() => { handleResize(); }, 10);
-    window.addEventListener("resize", handleResize);
-    onCleanup(() => { window.removeEventListener("resize", handleResize); });
+    // window.addEventListener("resize", handleResize);
+    // onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
+
 
   return (
     <ScaleContext.Provider value={scale}>
