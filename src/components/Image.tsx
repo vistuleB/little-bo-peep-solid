@@ -68,7 +68,7 @@ const Image = (props: ImageProps) => {
           class="left-1/2 -translate-x-1/2 relative w-max">
           <LazyImage
             ref={image_ref}
-            onClick={() => {
+            onClick={(event) => {
               const newScaledDown = on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
               set_scale(newScaledDown ? scaledDownWidth() : 1);
