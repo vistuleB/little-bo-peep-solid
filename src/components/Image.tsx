@@ -21,6 +21,7 @@ const Image = (props: ImageProps) => {
   
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [scale, set_scale] = createSignal(1.0);
+  let [recent_click, set_recent_click] = createSignal(false);
   const [innerWidth, set_innerWidth] = createSignal(0);
 
   let image_ref: HTMLImageElement | undefined;
@@ -57,7 +58,7 @@ const Image = (props: ImageProps) => {
           "padding-right": `${props.padding_right || 0}`,
         }}
         class={twJoin(
-          "relative left-1/2 -translate-x-1/2 col-start-2 scrollbar-hidden sm:overflow-x-visible transition-all w-max",
+          "relative left-1/2 -translate-x-1/2 col-start-2 scrollbar-hidden sm:overflow-x-visible transition-all w-max bg-slate-200",
           props.class
         )}>
         <div
@@ -72,10 +73,16 @@ const Image = (props: ImageProps) => {
               const newScaledDown = on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
               set_scale(newScaledDown ? scaledDownWidth() : 1);
+              set_recent_click(true);
+              setTimeout(
+                () => { set_recent_click(false); },
+                100
+              )
             }}
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
-              on_mobile() && scaled_down() && "max-width-screen"
+              on_mobile() && scaled_down() && "max-width-screen",
+              recent_click() && "bg-slate-500"
             )}
             style={props.style}
             src={props.src}
