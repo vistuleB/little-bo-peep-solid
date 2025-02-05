@@ -44,7 +44,7 @@ const Image = (props: ImageProps) => {
     }
     else {
       if (scale() != 1) {
-        set_store("title", `${fmt(innerWidth() - 32)}  ${fmt(naturalWidth())}`);
+        set_store("title", `${fmt(window.innerWidth - 32)}  ${fmt(naturalWidth())}`);
       }
       set_scale(1);
       set_scaled_down(false);
@@ -91,7 +91,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
               on_mobile() && scaled_down() && "max-width-screen",
-              recent_click() && "bg-green"
+              recent_click() && "bg-reddish"
             )}
             style={props.style}
             src={props.src}
