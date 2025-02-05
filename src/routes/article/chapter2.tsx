@@ -1455,7 +1455,7 @@ const Article = () => {
                 src="/images/56.svg" />
               <ImageLeft
                 squiggle={false}
-                offset_y="0%"
+                offset_y="0.5rem"
                 offset_x="-7rem"
                 src="/images/57.svg" />
             </Image>
