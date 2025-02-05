@@ -18,7 +18,7 @@ const Container = (props: ParentProps) => {
   };
 
   const handleResize = () => {
-    console.log("resizing scrollWidth to ", document.body.scrollWidth);
+    // console.log("resizing scrollWidth to ", document.body.scrollWidth);
     set_innerWidth(window.innerWidth);
     set_scrollWidth(document.body.scrollWidth);
   };
@@ -27,31 +27,29 @@ const Container = (props: ParentProps) => {
     handleScroll();
     handleResize();
 
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
     const scroll_back = () => {
       let theoretical_left = (scrollWidth() - innerWidth()) / 2;
-
       if (
         scrollX() > theoretical_left - 200 &&
         scrollX() < theoretical_left + 200
       ) {
-        // window.scroll({
-        //   left: theoretical_left,
-        //   behavior: "smooth",
-        // });
+        window.scroll({
+          left: theoretical_left,
+          behavior: "smooth",
+        });
       }
     };
-
+    
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
     document.addEventListener("scrollend", scroll_back);
     document.addEventListener("touchend", scroll_back);
 
     onCleanup(() => {
+      window.removeEventListener("scroll", scroll_back);
+      window.removeEventListener("resize", scroll_back);
       document.removeEventListener("scrollend", scroll_back);
       document.removeEventListener("touchend", scroll_back);
-      document.removeEventListener("scroll", scroll_back);
-      document.removeEventListener("resize", scroll_back);
     });
   });
 

@@ -3,6 +3,7 @@ import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import useOnMobile from "../hooks/useOnMobile";
 import LazyImage from "./LazyImage";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 type ImageProps = ParentProps &
   SharedProps & {
@@ -23,6 +24,7 @@ const Image = (props: ImageProps) => {
   let [scale, set_scale] = createSignal(1.0);
   let [recent_click, set_recent_click] = createSignal(false);
   const [innerWidth, set_innerWidth] = createSignal(0);
+  let {_, set_store } = useGlobalContext();
 
   let image_ref: HTMLImageElement | undefined;
   const naturalWidth = () => {
@@ -30,7 +32,7 @@ const Image = (props: ImageProps) => {
     // console.log("image_ref is: ", image_ref);
     return toReturn;
   }
-  const scaledDownWidth = () => Math.min(1, innerWidth() / (naturalWidth() + 32.0));
+  const scaledDownWidth = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
 
   const handleResize = () => {
     set_innerWidth(window.innerWidth);
@@ -38,10 +40,13 @@ const Image = (props: ImageProps) => {
       set_scale(scaledDownWidth());
       set_scaled_down(true);
     }
-    // else {
-    //   set_scale(1);
-    //   set_scaled_down(false);
-    // }
+    else {
+      if (scale() != 1) {
+        set_store("title", `${scaledDownWidth()}`);
+      }
+      set_scale(1);
+      set_scaled_down(false);
+    }
   };
 
   createEffect(() => {
@@ -84,7 +89,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
               on_mobile() && scaled_down() && "max-width-screen",
-              recent_click() && "bg-green"
+              recent_click() && "bg-reddish"
             )}
             style={props.style}
             src={props.src}
