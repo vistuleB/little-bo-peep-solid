@@ -1,8 +1,9 @@
-import { createEffect, createSignal, ParentProps } from "solid-js";
+import { createContext, createEffect, createSignal, onCleanup, onMount, ParentProps, useContext } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import useOnMobile from "../hooks/useOnMobile";
 import LazyImage from "./LazyImage";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 type ImageProps = ParentProps &
   SharedProps & {
@@ -14,81 +15,112 @@ type ImageProps = ParentProps &
     padding_right?: number;
   };
 
+const ScaleContext = createContext<(() => number)>();
+
 const Image = (props: ImageProps) => {
   let { on_mobile } = useOnMobile();
+  
+  let [scale, set_scale] = createSignal(1.0);
   let [scaled_down, set_scaled_down] = createSignal(false);
-  let [scale_value, set_scale_value] = createSignal(1.0);
-  let [image_original_width, set_image_original_width] = createSignal(1.0);
-  let image_ref: HTMLImageElement | undefined;
+  let [recent_click, set_recent_click] = createSignal(false);
+  const [innerWidth, set_innerWidth] = createSignal(0);
+  let [after_first_load, set_after_first_load] = createSignal(false);
+  // let {store, set_store } = useGlobalContext();
 
-  createEffect(() => {
-    if (on_mobile()) {
+  let image_ref: HTMLImageElement | undefined;
+  const naturalWidth = () => {
+    let toReturn = (image_ref) ? image_ref.naturalWidth : 3000;
+    return toReturn;
+  }
+  const scaledDownWidth = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
+
+  const fmt = (num: number) => { return (Math.round(num * 100) / 100).toFixed(2); }
+
+  const handleResize = () => {
+    set_innerWidth(window.innerWidth);
+    if (on_mobile() && scaledDownWidth() < 1) {
+      set_scale(scaledDownWidth());
       set_scaled_down(true);
     }
-  });
+    // taking this out because the '.naturalWidth' property
+    // not reliably working on iPhone 12:
+    // else {
+    //   // if (scale() != 1) {
+    //   //   set_store("title", `b ${fmt(window.innerWidth - 32)}  ${fmt(naturalWidth())}`);
+    //   // }
+    //   set_scale(1);
+    //   set_scaled_down(false);
+    // }
+  };
 
   createEffect(() => {
-    // re_calculate on scaled_down change
-    scaled_down();
-    if (image_ref && image_ref?.naturalWidth > 0.0) {
-      let image_width = image_ref.naturalWidth;
-      if (window.innerWidth < image_width && scaled_down()) {
-        set_scale_value(window.innerWidth / (image_width + 32.0));
-      } else {
-        set_scale_value(1.0);
-      }
-    } else {
-      set_scale_value(1.0);
+    setTimeout(() => { handleResize(); }, 10);
+    window.addEventListener("resize", handleResize);
+    onCleanup(() => { window.removeEventListener("resize", handleResize); });
+  });
+
+  onMount(() => {
+    if (on_mobile()) {
+      set_scaled_down(true);
+      set_scale(scaledDownWidth());
+      setTimeout(() => { set_after_first_load(true); }, 2000);
     }
-    // dispatch event to scale down side images with it
-    setTimeout(() => {
-      let custom_event = new CustomEvent("image_scale");
-      let _ = window.dispatchEvent(custom_event);
-    }, 10);
   });
 
   return (
-    <div
-      id={props.id}
-      style={{
-        "padding-left": `${props.padding_left || 0}`,
-        "padding-right": `${props.padding_right || 0}`,
-      }}
-      class={twJoin(
-        "relative left-1/2 -translate-x-1/2 col-start-2 scrollbar-hidden sm:overflow-x-visible transition-all w-max",
-        props.class
-      )}>
+    <ScaleContext.Provider value={scale}>
       <div
+        id={props.id}
         style={{
-          height: props.height,
-          width: props.width,
+          "padding-left": `${props.padding_left || 0}`,
+          "padding-right": `${props.padding_right || 0}`,
         }}
-        data-scale_side_images={scale_value()}
-        class="left-1/2 -translate-x-1/2 relative w-max">
-        <LazyImage
-          onClick={() => {
-            // if on_mobile.get() && !margin_mode.get() {
-            if (on_mobile()) {
-              set_scaled_down(!scaled_down());
-            } else {
-              set_scaled_down(false);
-            }
-            // } else if !margin_mode.get() {
-            //   set_scaled_down.set(false);
-            // }
+        class={twJoin(
+          "relative left-1/2 -translate-x-1/2 col-start-2 scrollbar-hidden sm:overflow-x-visible transition-all w-max bg-slate-200",
+          props.class
+        )}>
+        <div
+          style={{
+            height: props.height,
+            width: props.width,
           }}
-          ref={image_ref}
-          class={twJoin(
-            "scrollbar-hidden sm:overflow-x-visible m-auto transition-all h-[inherit]",
-            on_mobile() && scaled_down() && "max-width-screen"
-          )}
-          style={props.style}
-          src={props.src}
-        />
+          class="left-1/2 -translate-x-1/2 relative w-max">
+          <LazyImage
+            ref={image_ref}
+            onClick={(event) => {
+              const newScaledDown = on_mobile() ? !scaled_down() : false;
+              set_scaled_down(newScaledDown);
+              // set_store("title", `a ${window.innerWidth} ${naturalWidth()}`);
+              set_scale(newScaledDown ? scaledDownWidth() : 1);
+              set_recent_click(true);
+              setTimeout(
+                () => { set_recent_click(false); },
+                100
+              )
+            }}
+            class={twJoin(
+              "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
+              on_mobile() && scaled_down() && "max-width-screen",
+              recent_click() && "bg-reddish",
+              after_first_load() && "transition-all",
+            )}
+            style={props.style}
+            src={props.src}
+          />
+        </div>
+        {props.children}
       </div>
-      {props.children}
-    </div>
+    </ScaleContext.Provider>
   );
 };
 
-export default Image;
+export default Image; 
+
+export const useScale = () => {
+  const scale = useContext(ScaleContext);
+  if (!scale) {
+    console.log("wurning returning 520 scale; hm");
+  }
+  if (!scale) return () => 1;
+  return scale;
+};

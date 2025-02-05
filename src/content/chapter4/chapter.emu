@@ -2,6 +2,7 @@
     src images/svg_ch4_ch_polaroids.svg
 
 |> Section    
+    type sss
 
     *Definitions.*
     The _derivative_ of a function
@@ -44,13 +45,11 @@
         src images/svg_ch4_explanation2.svg
 
     |> ImageRight
-        y top
-        offset_y 1em
-        offset_x -5em
+        offset_y -17em
+        offset_x -13em
         src images/svg_ch4_explanation2_cloud.svg
 
-    In fact,
-    we can
+    In fact, we can
     succinctly describe the derivative by...
 
     $$

@@ -1,54 +1,66 @@
 import { onCleanup, onMount, ParentProps } from "solid-js";
-import { JSX } from "solid-js/jsx-runtime";
-
-function LazyMath(props: ParentProps & JSX.HTMLAttributes<HTMLDivElement>) {
-  let ref: HTMLDivElement | undefined;
-
-  onMount(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          (window as any).MathJax.typesetPromise([ref]);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin: "300px",
-      }
-    );
-
-    if (ref) observer.observe(ref);
-
-    onCleanup(() => observer.disconnect());
-  });
-
-  return (
-    <div ref={ref} class={props.class || ""} style={props.style || ""}>
-      {props.children}
-    </div>
-  );
-}
 
 export const Math = (props: ParentProps) => {
-  // let math: HTMLDivElement | undefined;
-
+  let ref: HTMLSpanElement | undefined;
+  
   // createEffect(() => {
-  //   (window as any).MathJax.typesetPromise([math]);
+  //   (window as any).MathJax.typesetPromise([ref]);
   // });
 
+  onMount(
+    () => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              (window as any).MathJax.typesetPromise([ref]);
+              observer.disconnect();
+            }
+          },
+          {
+            rootMargin: "300px",
+          }
+        );
+        if (ref) observer.observe(ref);
+        onCleanup(() => observer.disconnect());
+    }
+  );
+
   return (
-    <LazyMath class="math w-fit inline-flex items-baseline indent-0">
+    // w-fit items-baseline indent-0
+    <span class="inline-flex indent-0" ref={ref}>
       {props.children}
-    </LazyMath>
+    </span>
   );
 };
 
 export const MathBlock = (props: ParentProps) => {
-  // let math: HTMLDivElement | undefined;
-
+  let ref: HTMLDivElement | undefined;
+  
   // createEffect(() => {
-  //   (window as any).MathJax.typesetPromise([math]);
+  //   (window as any).MathJax.typesetPromise([ref]);
   // });
 
-  return <LazyMath>{props.children}</LazyMath>;
+  onMount(
+    () => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              (window as any).MathJax.typesetPromise([ref]);
+              observer.disconnect();
+            }
+          },
+          {
+            rootMargin: "300px",
+          }
+        );
+        if (ref) observer.observe(ref);
+        onCleanup(() => observer.disconnect());
+    }
+  );
+
+  return (
+    <div class="mathblock" ref={ref}>
+      {props.children}
+    </div>
+  );
 };

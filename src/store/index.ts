@@ -17,20 +17,20 @@ type Store = {
   show_section_dividers: boolean;
   show_areas: boolean;
   show_squiggles: boolean;
+
+  title: string;
 };
 
 const [store, set_store] = createStore<Store>({
   panel_opened: false,
-
   exercises: [],
-
   selected_exo: 0,
   solutions_open: [],
   transition_duration: [],
-
   show_section_dividers: false,
   show_areas: false,
   show_squiggles: true,
+  title: "Little Bo Peep",
 });
 
 const getExerciseByIndex = (store: Store, index: number) => {

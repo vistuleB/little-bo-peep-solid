@@ -25,11 +25,9 @@
     $$\sqrt{(-2)^2} = 2$$
 
     |> ImageRight
-        src images/svg_cloud_minus_two_squared.svg
-        offset_y -1rem
-        offset_x -3rem
-        padding 40px
-        use_squiggle_on_mobile false
+        src images/svg_ch1_ch_minus_two_squared_cloud.svg
+        offset_y 0em
+        offset_x 9em
 
     and, in particular, it is _not_ true that
 
@@ -270,14 +268,15 @@
     (a + b)(C + D) \,=\, aC + bC + aD + bD
     $$
 
+    |> ImageLeft
+        src images/325.svg
+        offset_y -0.5em
+        offset_x 2em
+
     that come from multiplying every term of the first 
     parenthesis with every term of the second 
     parenthesis. Indeed,
 
-    |> ImageLeft
-        src images/325.svg
-        line 1.5
-        offset_y -10px
         
     $$
     (a + b)(C + D) = (a + b)C + (a + b)D
@@ -806,7 +805,7 @@
                 src images/svg_ch1_ex_104.svg
                 offset_x -4rem
                 offset_y -1rem
-                use_squiggle_on_mobile false
+                squiggle false
 
             or _one billion_ kilometers. By 
             comparison, the distance from the Earth to
@@ -1149,10 +1148,10 @@
             $$
 
             |> ImageRight
-                offset_x -6rem
+                offset_x 5rem
                 offset_y 1.2rem
                 src images/svg_ch1_ex_25.svg
-                use_squiggle_on_mobile false 
+                squiggle false
 
             (as previously computed) is smaller than
 
@@ -1161,10 +1160,10 @@
             $$
 
             |> ImageRight
-                offset_x -6rem
+                offset_x 11.5rem
                 offset_y 1.2rem
-                src images/ch1_ex_26.svg
-                use_squiggle_on_mobile false
+                src images/svg_ch1_ex_26.svg
+                squiggle false
 
             we will compute the difference
 
@@ -1172,7 +1171,7 @@
             {1 \over n^2} - {1 \over n(n+1)}
             $$
 
-            as opposed to the “other difference
+            as opposed to the “other” difference
 
             $$
             {1 \over n(n+1)} - {1 \over n^2}

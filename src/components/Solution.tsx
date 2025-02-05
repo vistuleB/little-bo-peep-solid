@@ -33,7 +33,7 @@ const Solution = (props: SolutionProps) => {
   let ref: HTMLDivElement | undefined;
   let { store, set_store } = useGlobalContext();
 
-  const solution_open = () => store.solutions_open[props.solution_number];
+  const solution_open = () => store.solutions_open[props.solution_number - 1];
   let transition_duration = () => store.transition_duration;
 
   let [content_height, set_content_height] = createSignal(0);
@@ -53,14 +53,14 @@ const Solution = (props: SolutionProps) => {
       window.addEventListener("scroll", handleResize);
       setTimeout(
         () => { set_bot_div(false); },
-        transition_duration()[props.solution_number]
+        transition_duration()[props.solution_number - 1]
       );
     } else {
       window.removeEventListener("scroll", handleResize);
       set_content_height(0);
       setTimeout(
         () => { set_bot_div(true); }, 
-        transition_duration()[props.solution_number]
+        transition_duration()[props.solution_number - 1]
       );
     }
 
@@ -70,10 +70,9 @@ const Solution = (props: SolutionProps) => {
   // set transition duration
   createEffect(() => {
     if (ref?.offsetHeight)
-      set_store("transition_duration", (prev) =>
-        prev.map((val, i) =>
-          i === props.solution_number ? Math.min(ref?.offsetHeight, 1000) : val
-        )
+      set_store(
+        "transition_duration",
+        (prev) => prev.map((val, i) => i + 1 === props.solution_number ? Math.min(ref?.offsetHeight, 1000) : val)
       );
   });
 
@@ -82,7 +81,7 @@ const Solution = (props: SolutionProps) => {
     if (solution_open()) {
       let timeout_handle = setTimeout(
         () => { set_solution_fully_opened(true); },
-        transition_duration()[props.solution_number]
+        transition_duration()[props.solution_number - 1]
       );
       set_handle(timeout_handle);
     } else {
@@ -92,7 +91,7 @@ const Solution = (props: SolutionProps) => {
       set_solution_fully_opened(false);
       setTimeout(
         () => { set_solution_fully_opened(false); },
-        transition_duration()[props.solution_number]
+        transition_duration()[props.solution_number - 1]
       );
     }
   });
@@ -118,7 +117,7 @@ const Solution = (props: SolutionProps) => {
               set_store(
                 "solutions_open",
                 (prev) => {
-                  prev[props.solution_number] = !solution_open();
+                  prev[props.solution_number - 1] = !solution_open();
                   return [...prev];
                 }
               );
@@ -135,7 +134,7 @@ const Solution = (props: SolutionProps) => {
         style={{
           height: `${content_height()}px`,
           "transition-duration": `${
-            transition_duration()[props.solution_number]
+            transition_duration()[props.solution_number - 1]
           }ms`,
           "transition-property": "height",
         }}
@@ -148,7 +147,7 @@ const Solution = (props: SolutionProps) => {
           )}
           style={{
             "transition-duration": `${
-              transition_duration()[props.solution_number]
+              transition_duration()[props.solution_number - 1]
             }ms`,
           }}
         >
@@ -156,7 +155,7 @@ const Solution = (props: SolutionProps) => {
           <div
             style={{
               "transition-duration": `${
-                transition_duration()[props.solution_number]
+                transition_duration()[props.solution_number - 1]
               }ms`,
             }}
             class={twJoin(

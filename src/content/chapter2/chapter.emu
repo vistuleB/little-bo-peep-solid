@@ -84,7 +84,8 @@
 
     |> ImageRight
         src images/32.svg
-        offset_y -1rem
+        offset_y -0.7em
+        offset_x 3em
 
     more succinctly. We call this the _slope formula_.
 
@@ -103,20 +104,10 @@
         $${1 - 5 \over 4 - (-2)} = {-4 \over 6} = - {2 \over 3}.$$
 
     |> StarDivider
-
-    (The main thing to understand about Example
-    1 is that
-
-    $$ 1 - 5 $$
-
-    is the vertical change from $A$ to $B$, while
-
-    $$ 4 - (-2) $$
-
-    is the horizontal change from $A$ to $B$.)
-
+        style margin-top:1.5em;margin-bottom:0em;
 
 |> Section
+    handle table
 
     *Sign Combinations.*
     Technically, quantities such as
@@ -271,8 +262,9 @@
     places, or, namely, to show that the fractions
 
     |> ImageRight
-        src images/38.svg
+        src images/svg_ch2_ch_swap_cloud.svg
         line 3
+        offset_x -0.5em
 
     $$ {y_2 - y_1 \over x_2 - x_1}\qquad\,\,\,\,\,\te{and}\,\,\,\,\,\qquad{y_1 - y_2 \over x_1 - x_2} $$
 
@@ -282,7 +274,8 @@
 
     |> ImageLeft
         src images/39.svg
-        offset_y -3.5rem
+        offset_x 2.5em
+        offset_y -60px
 
     which verifies this hypothesis. In particular,
 
@@ -471,14 +464,13 @@
 
     $$x = c$$
 
-    |> ImageLeft
-        src images/svg_vertical_line_equation.svg
-        offset_y 1rem
-        offset_x 4rem
-        use_squiggle_on_mobile false
-
     (see Fig. 1) where $c \in \rr$ is a constant, 
     similarly to the more familiar equation
+
+    |> ImageLeft
+        src images/svg_ch2_ch_vertical_line_equation.svg
+        offset_y -6em
+        offset_x 1em
 
     $$y = b$$
 
@@ -637,6 +629,7 @@
 
 |> Section
     divider false
+    handle unitsvsdimensions
 
     *Postscript: Units vs Dimensions.*
     Comparing
@@ -696,7 +689,7 @@
                     src images/56.svg
                     offset_y 5rem
                     offset_x -1.3rem
-                    use_squiggle_on_mobile false
+                    squiggle false
 
                 |> ImageLeft
                     src images/57.svg
@@ -704,7 +697,7 @@
                     offset_y 0.5rem
                     y bottom
                     img_position bottom
-                    use_squiggle_on_mobile false
+                    squiggle false
 
             In more detail, the two triangles are related
             by a $90^\circ$ rotation and so, likewise,
@@ -725,7 +718,7 @@
                     src images/59.svg
                     offset_y 7.2rem
                     offset_x -1.2rem
-                    use_squiggle_on_mobile false
+                    squiggle false
 
                 |> ImageLeft
                     src images/60.svg
@@ -733,7 +726,7 @@
                     offset_y 0.5rem
                     y bottom
                     img_position bottom
-                    use_squiggle_on_mobile false
+                    squiggle false
 
             (If the axes are oriented the usual way then 
             the above drawing covers all the cases $p > 0$,
@@ -755,11 +748,10 @@
             $$ p = {y - y_0 \over x - x_0} $$
 
             |> ImageLeft
-                src images/62.svg
-                img_position top
-                offset_x -5.5rem
-                offset_y -7.1rem
-                use_squiggle_on_mobile false
+                src images/svg_ch2_ex_x0_y0_line_equation_cloud.svg
+                offset_x 7.5em
+                offset_y 103px
+                squiggle false
 
             because
 

@@ -8,26 +8,24 @@ import {
 import { MOBILE_MAX_WIDTH } from "../constants";
 import { useEffect } from "solidjs-hooks";
 
-function useOnMobile(): {
-  on_mobile: Accessor<boolean>;
-} {
+function useOnMobile() : { on_mobile: Accessor<boolean> } {
   const [on_mobile, set_on_mobile] = createSignal(false);
-
-  createEffect(() => {
-    set_on_mobile(window.innerWidth <= MOBILE_MAX_WIDTH);
-  });
-
-  const handle = () => {
+  
+  const handleResize = () => {
     set_on_mobile(window.innerWidth <= MOBILE_MAX_WIDTH);
   };
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("resize", handle);
+  createEffect(() => {
+    handleResize();
+    
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+    }
 
     onCleanup(() => {
-      window.removeEventListener("resize", handle);
+      window.removeEventListener("resize", handleResize);
     });
-  }
+  });
 
   return { on_mobile };
 }

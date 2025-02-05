@@ -859,18 +859,14 @@ const Article = () => {
           <tbody>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $n$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $\,\,10^n$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
                 name
@@ -878,163 +874,121 @@ const Article = () => {
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $0$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   one
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $10$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   ten
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $2$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $100$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   hundred
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $3$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1000$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   thousand
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $6$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1\,000\,000$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   million
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $9$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1\,000\,000\,000$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   billion
                 </i>
-                {" "}{" "}
               </td>
             </tr>
             <tr>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $12$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <Math>
                   $1\,000\,000\,000\,000$
                 </Math>
-                {" "}{" "}
               </td>
               <td class="align-center">
-                {" "}{" "}
                 <i>
                   trillion
                 </i>
-                {" "}{" "}
               </td>
             </tr>
           </tbody>
@@ -1070,28 +1024,34 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
+          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
           and
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
+          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
           and also (while we're at it)
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight src="/images/svg_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
+          <ImageRight src="/images/svg_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
           as can be seen, for example, by replacing “billion”
           with “thousand million” in the previous sentence and
           then further replacing “thousand thousand” with “million”
@@ -1957,7 +1917,7 @@ const Article = () => {
       </Section>
       <Pause />
       <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]}>
-        <Exercise exercise_number={0}>
+        <Exercise exercise_number={1}>
           <VerticalChunk>
             <b>
               Exercise 1.
@@ -1981,7 +1941,7 @@ const Article = () => {
             {" "}by hand.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={0}>
+          <Solution solution_number={1}>
             <VerticalChunk>
               Since{" "}
               <NoBreak>
@@ -2055,7 +2015,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={1}>
+        <Exercise exercise_number={2}>
           <VerticalChunk>
             <b>
               Exercise 2.
@@ -2068,7 +2028,7 @@ const Article = () => {
             {" "}by hand.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={1}>
+          <Solution solution_number={2}>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -2106,7 +2066,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={2}>
+        <Exercise exercise_number={3}>
           <VerticalChunk>
             <b>
               Exercise 3.
@@ -2120,7 +2080,7 @@ const Article = () => {
             What about “万万万”?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={2}>
+          <Solution solution_number={3}>
             <VerticalChunk>
               “万万” is “ten thousand ten thousand”, or
             </VerticalChunk>
@@ -2199,7 +2159,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={3}>
+        <Exercise exercise_number={4}>
           <VerticalChunk>
             <b>
               Exercise 4.
@@ -2209,7 +2169,7 @@ const Article = () => {
             How many kilometers in a millimeter?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={3}>
+          <Solution solution_number={4}>
             <VerticalChunk>
               There are{" "}
               <Math>
@@ -2263,7 +2223,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={4}>
+        <Exercise exercise_number={5}>
           <VerticalChunk>
             <b>
               Exercise 5.
@@ -2276,7 +2236,7 @@ const Article = () => {
             {" "}millimeters?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={4}>
+          <Solution solution_number={5}>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -2303,7 +2263,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={5}>
+        <Exercise exercise_number={6}>
           <VerticalChunk>
             <b>
               Exercise 6.
@@ -2318,7 +2278,7 @@ const Article = () => {
             one hundred billion \$?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={5}>
+          <Solution solution_number={6}>
             <VerticalChunk>
               One hundred billion is{" "}
               <Math>
@@ -2357,7 +2317,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={6}>
+        <Exercise exercise_number={7}>
           <VerticalChunk>
             <b>
               Exercise 7.
@@ -2370,7 +2330,7 @@ const Article = () => {
             {" "}of one trillion?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={6}>
+          <Solution solution_number={7}>
             <VerticalChunk>
               <NoBreak>
                 <Math>
@@ -2386,7 +2346,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={7}>
+        <Exercise exercise_number={8}>
           <VerticalChunk>
             <b>
               Exercise 8.
@@ -2403,7 +2363,7 @@ const Article = () => {
             ?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={7}>
+          <Solution solution_number={8}>
             <VerticalChunk>
               <NoBreak>
                 <Math>
@@ -2419,7 +2379,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={8}>
+        <Exercise exercise_number={9}>
           <VerticalChunk>
             <b>
               Exercise 9.
@@ -2436,7 +2396,7 @@ const Article = () => {
             ?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={8}>
+          <Solution solution_number={9}>
             <VerticalChunk>
               Since
             </VerticalChunk>
@@ -2464,7 +2424,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={9}>
+        <Exercise exercise_number={10}>
           <VerticalChunk>
             <b>
               Exercise 10.
@@ -2477,7 +2437,7 @@ const Article = () => {
             $$\Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; $$
           </MathBlock>
           <Pause />
-          <Solution solution_number={9}>
+          <Solution solution_number={10}>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -2511,7 +2471,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={10}>
+        <Exercise exercise_number={11}>
           <VerticalChunk>
             <b>
               Exercise 11.
@@ -2528,7 +2488,7 @@ const Article = () => {
             ?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={10}>
+          <Solution solution_number={11}>
             <VerticalChunk>
               Presumably, there are{" "}
               <Math>
@@ -2562,7 +2522,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={11}>
+        <Exercise exercise_number={12}>
           <VerticalChunk>
             <b>
               Exercise 12.
@@ -2620,7 +2580,7 @@ const Article = () => {
             by using some kind of algebra?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={11}>
+          <Solution solution_number={12}>
             <VerticalChunk>
               One has
             </VerticalChunk>
@@ -2641,7 +2601,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={12}>
+        <Exercise exercise_number={13}>
           <VerticalChunk>
             <b>
               Exercise 13.
@@ -2675,7 +2635,7 @@ const Article = () => {
             bootcamp.)
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={12}>
+          <Solution solution_number={13}>
             <VerticalChunk>
               Here is the “proof” that your professor is 
               hoping for:
@@ -2742,7 +2702,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={13}>
+        <Exercise exercise_number={14}>
           <VerticalChunk>
             <b>
               Exercise 14.
@@ -2793,7 +2753,7 @@ const Article = () => {
             .
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={13}>
+          <Solution solution_number={14}>
             <VerticalChunk>
               We have (#1)
             </VerticalChunk>
@@ -2866,7 +2826,7 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={14}>
+        <Exercise exercise_number={15}>
           <VerticalChunk>
             <b>
               Exercise 15.
@@ -2936,7 +2896,7 @@ const Article = () => {
             $$\Large \rho = &#123;M \over L^3&#125;$$
           </MathBlock>
           <Pause />
-          <Solution solution_number={14}>
+          <Solution solution_number={15}>
             <VerticalChunk>
               Firstly we can rewrite{" "}
               <NoBreak>

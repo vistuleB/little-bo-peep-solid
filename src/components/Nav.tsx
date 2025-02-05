@@ -1,4 +1,5 @@
 import { createSignal } from "solid-js";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 const HAMBURGER_MENU_HEIGHT = 56;
 
@@ -21,15 +22,17 @@ const Nav = () => {
 
 const Title = () => {
   const [route, setRoute] = createSignal("/");
+  let { store } = useGlobalContext();
 
   return (
     <div
       class="slice select-none w-full h-full border-r-0 font-clickerscript"
       id="Header"
     >
-      <div class="font-clickerscript text-3xl self-end mt-auto mb-auto py-2 sm:px-0">
+      <div class="font-clickerscript text-3xl self-end mt-auto mb-auto py-2 sm:px-0" style="transform:translate(0, 0.1em);">
         <a href="/" onClick={() => setRoute("/")}>
-          Little Bo Peep
+          {store.title}
+          {/* {`${window.innerWidth}`} */}
         </a>
       </div>
     </div>
