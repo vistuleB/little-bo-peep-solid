@@ -477,7 +477,7 @@
     for a horizontal line, where $b \in \rr$ is a
     constant.
 
-    One should also keep in mind that an equation can
+    One should also bear in mind that an equation can
     define a line without having either of the forms
     “$y = ax + b$” or “$x = c$”. For example,
 

@@ -46,9 +46,11 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           The whole expression is read{" "}
-          <Math>
-            $\mathit&#123;10&#125;$
-          </Math>
+          <NoBreak>
+            <Math>
+              $\mathit&#123;10&#125;$
+            </Math>
+          </NoBreak>
           {" "}{" "}
           <i>
             to the power
@@ -84,22 +86,30 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           as follows, if{" "}
-          <Math>
-            $n$
-          </Math>
+          <NoBreak>
+            <Math>
+              $n$
+            </Math>
+          </NoBreak>
           {" "}is a nonnegative integer: start
           from{" "}
-          <Math>
-            $1$
-          </Math>
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+          </NoBreak>
           {" "}and multiply by{" "}
-          <Math>
-            $10$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+          </NoBreak>
           {" "}{" "}
-          <Math>
-            $n$
-          </Math>
+          <NoBreak>
+            <Math>
+              $n$
+            </Math>
+          </NoBreak>
           {" "}times. We also define
         </VerticalChunk>
         <Pause />
@@ -109,22 +119,30 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           as follows, if{" "}
-          <Math>
-            $n$
-          </Math>
+          <NoBreak>
+            <Math>
+              $n$
+            </Math>
+          </NoBreak>
           {" "}is a positive integer: start from{" "}
-          <Math>
-            $1$
-          </Math>
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+          </NoBreak>
           {" "}and divide
           by{" "}
-          <Math>
-            $10$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+          </NoBreak>
           {" "}{" "}
-          <Math>
-            $n$
-          </Math>
+          <NoBreak>
+            <Math>
+              $n$
+            </Math>
+          </NoBreak>
           {" "}times.
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -154,13 +172,17 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           (where, in the last line,{" "}
-          <Math>
-            $1$
-          </Math>
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+          </NoBreak>
           {" "}is multiplied by{" "}
-          <Math>
-            $10$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+          </NoBreak>
           {" "}{" "}
           <i>
             zero times
@@ -190,14 +212,18 @@ const Article = () => {
         </VerticalChunk>
         <VerticalChunk indent={true}>
           As{" "}
-          <Math>
-            $n$
-          </Math>
+          <NoBreak>
+            <Math>
+              $n$
+            </Math>
+          </NoBreak>
           {" "}successive divisions
           by{" "}
-          <Math>
-            $10$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+          </NoBreak>
           {" "}is the same as one division by{" "}
           <NoBreak>
             <Math>
@@ -221,10 +247,13 @@ const Article = () => {
             ,
           </NoBreak>
           {" "}which gives an alternate means of computing{" "}
-          <Math>
-            $10^&#123;-n&#125;$
-          </Math>
-          .
+          <NoBreak>
+            <Math>
+              $10^&#123;-n&#125;$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
           Moreover, (A) actually holds for
         </VerticalChunk>
         <Pause />
@@ -242,9 +271,11 @@ const Article = () => {
           </NoBreak>
           {" "}which is mildly important. In more
           detail, (A) holds for{" "}
-          <Math>
-            $n = 0$
-          </Math>
+          <NoBreak>
+            <Math>
+              $n = 0$
+            </Math>
+          </NoBreak>
           {" "}by inspection, and (A) 
           is equivalent to the identity
           <ImageLeft src="/images/svg_zero_verification_cloud.svg" />
@@ -256,9 +287,11 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           which holds for{" "}
-          <Math>
-            $n$
-          </Math>
+          <NoBreak>
+            <Math>
+              $n$
+            </Math>
+          </NoBreak>
           {" "}if and only if it holds for
           {" "}
           <NoBreak>
@@ -267,18 +300,23 @@ const Article = () => {
             </Math>
             .
           </NoBreak>
-          {" "}(By which we mean: replacing “
+          {" "}(By which we mean: replacing{" "}
           <NoBreak>
+            “
             <Math>
               $n$
             </Math>
             ”
           </NoBreak>
-          {" "}by “
-          <Math>
-            $-n$
-          </Math>
-          ”
+          {" "}by{" "}
+          <NoBreak>
+            “
+            <Math>
+              $-n$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
           in (AA) lands you right back on (AA), due to the fact
           that{" "}
           <NoBreak>
@@ -312,13 +350,17 @@ const Article = () => {
           </b>
           {" "}
           Numbers{" "}
-          <Math>
-            $a$
-          </Math>
+          <NoBreak>
+            <Math>
+              $a$
+            </Math>
+          </NoBreak>
           {" "}and{" "}
-          <Math>
-            $b$
-          </Math>
+          <NoBreak>
+            <Math>
+              $b$
+            </Math>
+          </NoBreak>
           {" "}such that
         </VerticalChunk>
         <Pause />
@@ -333,13 +375,17 @@ const Article = () => {
           </i>
           .
           If{" "}
-          <Math>
-            $a$
-          </Math>
+          <NoBreak>
+            <Math>
+              $a$
+            </Math>
+          </NoBreak>
           {" "}and{" "}
-          <Math>
-            $b$
-          </Math>
+          <NoBreak>
+            <Math>
+              $b$
+            </Math>
+          </NoBreak>
           {" "}are reciprocal, then 
           these equations are satisfied...
         </VerticalChunk>
@@ -359,14 +405,18 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           of{" "}
-          <Math>
-            $10^n$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10^n$
+            </Math>
+          </NoBreak>
           {" "}and{" "}
-          <Math>
-            $10^&#123;-n&#125;$
-          </Math>
-          .
+          <NoBreak>
+            <Math>
+              $10^&#123;-n&#125;$
+            </Math>
+            .
+          </NoBreak>
         </VerticalChunk>
       </Section>
       <Pause />
@@ -385,13 +435,17 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           is defined as{" "}
-          <Math>
-            $1$
-          </Math>
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+          </NoBreak>
           {" "}divided by{" "}
-          <Math>
-            $2$
-          </Math>
+          <NoBreak>
+            <Math>
+              $2$
+            </Math>
+          </NoBreak>
           {" "}twice, etc.
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -411,9 +465,11 @@ const Article = () => {
             ,
           </NoBreak>
           {" "}negative powers of{" "}
-          <Math>
-            $0$
-          </Math>
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+          </NoBreak>
           {" "}remain undefined. E.g.,
         </VerticalChunk>
         <Pause />
@@ -422,14 +478,19 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          would be “
-          <Math>
-            $1$
-          </Math>
+          would be{" "}
+          <NoBreak>
+            “
+            <Math>
+              $1$
+            </Math>
+          </NoBreak>
           {" "}divided by{" "}
-          <Math>
-            $0$
-          </Math>
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+          </NoBreak>
           {" "}twice”, but this
           is undefined. 
           Hence{" "}
@@ -450,14 +511,19 @@ const Article = () => {
         </VerticalChunk>
         <VerticalChunk indent={true}>
           Also (in case you're wondering){" "}
-          <Math>
-            $0^0 = 1$
-          </Math>
-          .
+          <NoBreak>
+            <Math>
+              $0^0 = 1$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
           You can see this by writing down the first few powers of{" "}
-          <Math>
-            $0$
-          </Math>
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+          </NoBreak>
           {" "}in descending order:
         </VerticalChunk>
         <Pause />
@@ -479,25 +545,32 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           In other words, every positive power of{" "}
-          <Math>
-            $0$
-          </Math>
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+          </NoBreak>
           {" "}is zero, 
           but when it comes to{" "}
-          <Math>
-            $0^0$
-          </Math>
-          ,
-          the ‘
           <NoBreak>
+            <Math>
+              $0^0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          the{" "}
+          <NoBreak>
+            ‘
             <Math>
               $0\hspace&#123;0.12ex&#125;$
             </Math>
             ’
           </NoBreak>
           {" "}in the
-          exponent “wins out” over the ‘
+          exponent “wins out” over the{" "}
           <NoBreak>
+            ‘
             <Math>
               $0\hspace&#123;0.12ex&#125;$
             </Math>
@@ -505,17 +578,21 @@ const Article = () => {
           </NoBreak>
           {" "}in the base, 
           making the result{" "}
-          <Math>
-            $1$
-          </Math>
-          .
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            .
+          </NoBreak>
         </VerticalChunk>
         <VerticalChunk indent={true}>
           Note that mathematicians sometimes refer 
           to a power with an exponent of{" "}
-          <Math>
-            $0$
-          </Math>
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+          </NoBreak>
           {" "}as an
         </VerticalChunk>
         <Pause />
@@ -529,9 +606,11 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           an empty product is{" "}
-          <Math>
-            $\mathit&#123;1&#125;$
-          </Math>
+          <NoBreak>
+            <Math>
+              $\mathit&#123;1&#125;$
+            </Math>
+          </NoBreak>
           {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
@@ -545,15 +624,19 @@ const Article = () => {
             ”,
           </NoBreak>
           {" "}and that if you start at{" "}
-          <Math>
-            $1$
-          </Math>
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+          </NoBreak>
           {" "}and don't
           multiply anything in, you stay at{" "}
-          <Math>
-            $1$
-          </Math>
-          .
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            .
+          </NoBreak>
         </VerticalChunk>
       </Section>
       <Pause />
@@ -572,32 +655,44 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           because{" "}
-          <Math>
-            $13$
-          </Math>
+          <NoBreak>
+            <Math>
+              $13$
+            </Math>
+          </NoBreak>
           {" "}multiplications by{" "}
-          <Math>
-            $10$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+          </NoBreak>
           {" "}followed
           by{" "}
-          <Math>
-            $14$
-          </Math>
+          <NoBreak>
+            <Math>
+              $14$
+            </Math>
+          </NoBreak>
           {" "}multiplications by{" "}
-          <Math>
-            $10$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+          </NoBreak>
           {" "}makes{" "}
-          <Math>
-            $13 + 14 = 27$
-          </Math>
+          <NoBreak>
+            <Math>
+              $13 + 14 = 27$
+            </Math>
+          </NoBreak>
           {" "}
           multiplications by{" "}
-          <Math>
-            $10$
-          </Math>
-          .
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+            .
+          </NoBreak>
         </VerticalChunk>
         <VerticalChunk indent={true}>
           More generally,
@@ -609,18 +704,25 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           for all{" "}
-          <Math>
-            $n$
-          </Math>
+          <NoBreak>
+            <Math>
+              $n$
+            </Math>
+          </NoBreak>
           {" "}and{" "}
-          <Math>
-            $m$
-          </Math>
+          <NoBreak>
+            <Math>
+              $m$
+            </Math>
+          </NoBreak>
           {" "}(and other bases than{" "}
-          <Math>
-            $10$
-          </Math>
-          ),
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+            ),
+          </NoBreak>
+          {" "}
           which is known as
         </VerticalChunk>
         <Pause />
@@ -643,8 +745,9 @@ const Article = () => {
             the product of the powers
           </i>
           {" "}refers to
-          “
+          {" "}
           <NoBreak>
+            “
             <Math>
               $10^n \times 10^m$
             </Math>
@@ -655,8 +758,9 @@ const Article = () => {
             the power of the sum
           </i>
           {" "}
-          refers to “
+          refers to{" "}
           <NoBreak>
+            “
             <Math>
               $10^&#123;n+m&#125;$
             </Math>
@@ -681,18 +785,24 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           because multiplying{" "}
-          <Math>
-            $14$
-          </Math>
+          <NoBreak>
+            <Math>
+              $14$
+            </Math>
+          </NoBreak>
           {" "}times by{" "}
-          <Math>
-            $10^&#123;13&#125;$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10^&#123;13&#125;$
+            </Math>
+          </NoBreak>
           {" "}is like
           multiplying{" "}
-          <Math>
-            $13\cdot 14$
-          </Math>
+          <NoBreak>
+            <Math>
+              $13\cdot 14$
+            </Math>
+          </NoBreak>
           {" "}times by{" "}
           <NoBreak>
             <Math>
@@ -710,9 +820,11 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           for all{" "}
-          <Math>
-            $n$
-          </Math>
+          <NoBreak>
+            <Math>
+              $n$
+            </Math>
+          </NoBreak>
           {" "}and{" "}
           <NoBreak>
             <Math>
@@ -732,19 +844,26 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          [“
-          <Math>
-            $a$
-          </Math>
+          <NoBreak>
+            [“
+            <Math>
+              $a$
+            </Math>
+          </NoBreak>
           {" "}to the power{" "}
-          <Math>
-            $b$
-          </Math>
+          <NoBreak>
+            <Math>
+              $b$
+            </Math>
+          </NoBreak>
           {" "}to the power{" "}
-          <Math>
-            $c$
-          </Math>
-          ”]
+          <NoBreak>
+            <Math>
+              $c$
+            </Math>
+            ”]
+          </NoBreak>
+          {" "}
           there is a seeming ambiguity: does it mean
         </VerticalChunk>
         <Pause />
@@ -753,19 +872,27 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          [“
-          <Math>
-            $a$
-          </Math>
-          {" "}to the power [
-          <Math>
-            $b$
-          </Math>
+          <NoBreak>
+            [“
+            <Math>
+              $a$
+            </Math>
+          </NoBreak>
           {" "}to the power{" "}
-          <Math>
-            $c$
-          </Math>
-          ]”]
+          <NoBreak>
+            [
+            <Math>
+              $b$
+            </Math>
+          </NoBreak>
+          {" "}to the power{" "}
+          <NoBreak>
+            <Math>
+              $c$
+            </Math>
+            ]”]
+          </NoBreak>
+          {" "}
           or does it mean
         </VerticalChunk>
         <Pause />
@@ -774,10 +901,12 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          [“[
-          <Math>
-            $a$
-          </Math>
+          <NoBreak>
+            [“[
+            <Math>
+              $a$
+            </Math>
+          </NoBreak>
           {" "}to the power{" "}
           <NoBreak>
             <Math>
@@ -786,10 +915,13 @@ const Article = () => {
             ]
           </NoBreak>
           {" "}to the power{" "}
-          <Math>
-            $c$
-          </Math>
-          ”]...?
+          <NoBreak>
+            <Math>
+              $c$
+            </Math>
+            ”]...?
+          </NoBreak>
+          {" "}
           Well, because the second way can be written
         </VerticalChunk>
         <Pause />
@@ -836,18 +968,22 @@ const Article = () => {
           {" "}due to the fact
           that many of our ancestors chose to count in base
           {" "}
-          <Math>
-            $10$
-          </Math>
-          .
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+            .
+          </NoBreak>
         </VerticalChunk>
         <VerticalChunk indent={true}>
           In English, e.g., these are some of the “famous”
           powers of{" "}
-          <Math>
-            $10$
-          </Math>
-          :
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+            :
+          </NoBreak>
         </VerticalChunk>
         <Pause />
         <table class="first-line">
@@ -859,14 +995,18 @@ const Article = () => {
           <tbody>
             <tr>
               <td class="align-center">
-                <Math>
-                  $n$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $n$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
-                <Math>
-                  $\,\,10^n$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $\,\,10^n$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
                 name
@@ -874,14 +1014,18 @@ const Article = () => {
             </tr>
             <tr>
               <td class="align-center">
-                <Math>
-                  $0$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
-                <Math>
-                  $1$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
                 <i>
@@ -891,14 +1035,18 @@ const Article = () => {
             </tr>
             <tr>
               <td class="align-center">
-                <Math>
-                  $1$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
-                <Math>
-                  $10$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $10$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
                 <i>
@@ -908,14 +1056,18 @@ const Article = () => {
             </tr>
             <tr>
               <td class="align-center">
-                <Math>
-                  $2$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
-                <Math>
-                  $100$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $100$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
                 <i>
@@ -925,14 +1077,18 @@ const Article = () => {
             </tr>
             <tr>
               <td class="align-center">
-                <Math>
-                  $3$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $3$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
-                <Math>
-                  $1000$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $1000$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
                 <i>
@@ -942,14 +1098,18 @@ const Article = () => {
             </tr>
             <tr>
               <td class="align-center">
-                <Math>
-                  $6$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $6$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
-                <Math>
-                  $1\,000\,000$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $1\,000\,000$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
                 <i>
@@ -959,14 +1119,18 @@ const Article = () => {
             </tr>
             <tr>
               <td class="align-center">
-                <Math>
-                  $9$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $9$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
-                <Math>
-                  $1\,000\,000\,000$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $1\,000\,000\,000$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
                 <i>
@@ -976,14 +1140,18 @@ const Article = () => {
             </tr>
             <tr>
               <td class="align-center">
-                <Math>
-                  $12$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $12$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
-                <Math>
-                  $1\,000\,000\,000\,000$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $1\,000\,000\,000\,000$
+                  </Math>
+                </NoBreak>
               </td>
               <td class="align-center">
                 <i>
@@ -1087,16 +1255,20 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $n$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $n$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $\,\,10^n$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $\,\,10^n$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1106,16 +1278,20 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $-1$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $-1$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $0.1$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $0.1$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1129,16 +1305,20 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $-2$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $-2$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $0.01$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $0.01$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1152,16 +1332,20 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $-3$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $-3$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $0.001$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $0.001$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1175,16 +1359,20 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $-6$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $-6$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $0.000001$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $0.000001$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1198,16 +1386,20 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $-9$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $-9$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $0.000000001$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $0.000000001$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1225,29 +1417,37 @@ const Article = () => {
         <VerticalChunk>
           In passing, note how the standard decimal expansion
           for{" "}
-          <Math>
-            $10^&#123;-1&#125;$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10^&#123;-1&#125;$
+            </Math>
+          </NoBreak>
           {" "}contains exactly one{" "}
-          <Math>
-            $&#123;0&#125;$
-          </Math>
-          :
+          <NoBreak>
+            <Math>
+              $&#123;0&#125;$
+            </Math>
+            :
+          </NoBreak>
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_one_blue_one_image_equation.svg" />
         <Pause />
         <VerticalChunk>
           Likewise, the standard decimal expansion for{" "}
-          <Math>
-            $10^&#123;-2&#125;$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10^&#123;-2&#125;$
+            </Math>
+          </NoBreak>
           {" "}
           contains exactly two{" "}
-          <Math>
-            $0$
-          </Math>
-          's...
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+            's...
+          </NoBreak>
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_two_blue_one_image_equation.svg" />
@@ -1275,9 +1475,11 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           is{" "}
-          <Math>
-            $10^&#123;-3&#125;$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10^&#123;-3&#125;$
+            </Math>
+          </NoBreak>
           {" "}meters, i.e., one thousandth of
           a meter, because “milli” happens to be the prefix
           for{" "}
@@ -1311,9 +1513,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;-1&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;-1&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1327,9 +1531,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;-2&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;-2&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1343,9 +1549,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;-3&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;-3&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1359,9 +1567,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;-6&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;-6&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1375,9 +1585,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;-9&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;-9&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1391,9 +1603,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;-12&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;-12&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1407,9 +1621,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;-15&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;-15&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1450,13 +1666,18 @@ const Article = () => {
           are among the smallest animal cells,
           have a diameter of
           {" "}
-          <Math>
-            $7$
-          </Math>
-          ~
-          <Math>
-            $9$
-          </Math>
+          <NoBreak>
+            <Math>
+              $7$
+            </Math>
+            ~
+          </NoBreak>
+          {" "}{" "}
+          <NoBreak>
+            <Math>
+              $9$
+            </Math>
+          </NoBreak>
           {" "}{" "}
           <NoBreak>
             <Math>
@@ -1464,13 +1685,18 @@ const Article = () => {
             </Math>
             )
           </NoBreak>
-          {" "}(nb: “
-          <Math>
-            $\mu$
-          </Math>
-          ”
-          stands for “micro” and “
+          {" "}(nb:{" "}
           <NoBreak>
+            “
+            <Math>
+              $\mu$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          stands for “micro” and{" "}
+          <NoBreak>
+            “
             <Math>
               $\mu$
             </Math>
@@ -1540,9 +1766,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^1$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^1$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1556,9 +1784,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;2&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;2&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1572,9 +1802,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;3&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;3&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1588,9 +1820,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;6&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;6&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1604,9 +1838,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;9&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;9&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1620,9 +1856,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;12&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;12&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1636,9 +1874,11 @@ const Article = () => {
               <tr>
                 <td class="align-center">
                   {" "}{" "}
-                  <Math>
-                    $10^&#123;15&#125;$
-                  </Math>
+                  <NoBreak>
+                    <Math>
+                      $10^&#123;15&#125;$
+                    </Math>
+                  </NoBreak>
                   {" "}{" "}
                 </td>
                 <td class="align-center">
@@ -1663,10 +1903,13 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           is a thousand meters
-          [b/
-          <Math>
-            $\!\hspace&#123;0.1ex&#125;\rm&#123;c&#125;$
-          </Math>
+          {" "}
+          <NoBreak>
+            [b/
+            <Math>
+              $\!\hspace&#123;0.1ex&#125;\rm&#123;c&#125;$
+            </Math>
+          </NoBreak>
           {" "}“kilo” = thousand], 
           while a
         </VerticalChunk>
@@ -1676,10 +1919,13 @@ const Article = () => {
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          is a trillion bytes [b/
-          <Math>
-            $\!\hspace&#123;0.1ex&#125;\rm&#123;c&#125;$
-          </Math>
+          is a trillion bytes{" "}
+          <NoBreak>
+            [b/
+            <Math>
+              $\!\hspace&#123;0.1ex&#125;\rm&#123;c&#125;$
+            </Math>
+          </NoBreak>
           {" "}“tera” = trillion].
           (In case you don't know, by the way, 
           a
@@ -1692,9 +1938,11 @@ const Article = () => {
         <VerticalChunk>
           is a unit of computer memory
           that is equal to{" "}
-          <Math>
-            $8$
-          </Math>
+          <NoBreak>
+            <Math>
+              $8$
+            </Math>
+          </NoBreak>
           {" "}{" "}
           <i>
             bits
@@ -1720,9 +1968,11 @@ const Article = () => {
           the{" "}
           <i>
             logarithm base{" "}
-            <Math>
-              $\mathit&#123;10&#125;$
-            </Math>
+            <NoBreak>
+              <Math>
+                $\mathit&#123;10&#125;$
+              </Math>
+            </NoBreak>
             {" "}{" "}
           </i>
           {" "}of that 
@@ -1739,17 +1989,21 @@ const Article = () => {
         <VerticalChunk>
           can be uniquely written as “ten to the power
           something”. To wit,{" "}
-          <Math>
-            $100$
-          </Math>
+          <NoBreak>
+            <Math>
+              $100$
+            </Math>
+          </NoBreak>
           {" "}is, of course,
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
           ten to the power{" "}
-          <Math>
-            $\mathit&#123;2&#125;$
-          </Math>
+          <NoBreak>
+            <Math>
+              $\mathit&#123;2&#125;$
+            </Math>
+          </NoBreak>
           {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
@@ -1763,14 +2017,18 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           is the logarithm base{" "}
-          <Math>
-            $10$
-          </Math>
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+          </NoBreak>
           {" "}of{" "}
-          <Math>
-            $100$
-          </Math>
-          .
+          <NoBreak>
+            <Math>
+              $100$
+            </Math>
+            .
+          </NoBreak>
         </VerticalChunk>
         <Pause />
         <Example>
@@ -1789,9 +2047,11 @@ const Article = () => {
           <VerticalChunk>
             under an extended definition of exponentiation that allows us to 
             compute{" "}
-            <Math>
-              $10^x$
-            </Math>
+            <NoBreak>
+              <Math>
+                $10^x$
+              </Math>
+            </NoBreak>
             {" "}for every{" "}
             <NoBreak>
               <Math>
@@ -1809,14 +2069,18 @@ const Article = () => {
           <Pause />
           <VerticalChunk>
             is the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
+            <NoBreak>
+              <Math>
+                $10$
+              </Math>
+            </NoBreak>
             {" "}of{" "}
-            <Math>
-              $99$
-            </Math>
-            .
+            <NoBreak>
+              <Math>
+                $99$
+              </Math>
+              .
+            </NoBreak>
           </VerticalChunk>
         </Example>
         <Pause />
@@ -1843,14 +2107,18 @@ const Article = () => {
           <Pause />
           <VerticalChunk>
             is the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
+            <NoBreak>
+              <Math>
+                $10$
+              </Math>
+            </NoBreak>
             {" "}of{" "}
-            <Math>
-              $98$
-            </Math>
-            .
+            <NoBreak>
+              <Math>
+                $98$
+              </Math>
+              .
+            </NoBreak>
           </VerticalChunk>
         </Example>
         <Pause />
@@ -1869,18 +2137,24 @@ const Article = () => {
           <Pause />
           <VerticalChunk>
             the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
+            <NoBreak>
+              <Math>
+                $10$
+              </Math>
+            </NoBreak>
             {" "}of{" "}
-            <Math>
-              $0.1$
-            </Math>
+            <NoBreak>
+              <Math>
+                $0.1$
+              </Math>
+            </NoBreak>
             {" "}is{" "}
-            <Math>
-              $-1$
-            </Math>
-            .
+            <NoBreak>
+              <Math>
+                $-1$
+              </Math>
+              .
+            </NoBreak>
           </VerticalChunk>
         </Example>
         <Pause />
@@ -1900,18 +2174,24 @@ const Article = () => {
           <Pause />
           <VerticalChunk>
             the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
+            <NoBreak>
+              <Math>
+                $10$
+              </Math>
+            </NoBreak>
             {" "}of{" "}
-            <Math>
-              $0.00001$
-            </Math>
+            <NoBreak>
+              <Math>
+                $0.00001$
+              </Math>
+            </NoBreak>
             {" "}is{" "}
-            <Math>
-              $-5$
-            </Math>
-            .
+            <NoBreak>
+              <Math>
+                $-5$
+              </Math>
+              .
+            </NoBreak>
           </VerticalChunk>
         </Example>
       </Section>
@@ -1931,13 +2211,17 @@ const Article = () => {
               ,
             </NoBreak>
             {" "}{" "}
-            <Math>
-              $2^&#123;-3&#125;$
-            </Math>
+            <NoBreak>
+              <Math>
+                $2^&#123;-3&#125;$
+              </Math>
+            </NoBreak>
             {" "}and{" "}
-            <Math>
-              $2^&#123;-4&#125;$
-            </Math>
+            <NoBreak>
+              <Math>
+                $2^&#123;-4&#125;$
+              </Math>
+            </NoBreak>
             {" "}by hand.
           </VerticalChunk>
           <Pause />
@@ -1974,14 +2258,18 @@ const Article = () => {
               </i>
               {" "}
               For the last computation,{" "}
-              <Math>
-                $0.125$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $0.125$
+                </Math>
+              </NoBreak>
               {" "}can be viewed 
               as twelve hundredths plus{" "}
-              <Math>
-                $5$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $5$
+                </Math>
+              </NoBreak>
               {" "}thousandths:
             </VerticalChunk>
             <Pause />
@@ -1990,13 +2278,17 @@ const Article = () => {
             <VerticalChunk>
               Half of twelve hundredths is six hundredths, and 
               half of{" "}
-              <Math>
-                $5$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $5$
+                </Math>
+              </NoBreak>
               {" "}thousandths is{" "}
-              <Math>
-                $2.5$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $2.5$
+                </Math>
+              </NoBreak>
               {" "}thousandths:
             </VerticalChunk>
             <Pause />
@@ -2004,14 +2296,18 @@ const Article = () => {
             <Pause />
             <VerticalChunk>
               ...so{" "}
-              <Math>
-                $0.125/2$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $0.125/2$
+                </Math>
+              </NoBreak>
               {" "}is{" "}
-              <Math>
-                $0.06 + 0.0025 = 0.0625$
-              </Math>
-              .
+              <NoBreak>
+                <Math>
+                  $0.06 + 0.0025 = 0.0625$
+                </Math>
+                .
+              </NoBreak>
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -2022,9 +2318,11 @@ const Article = () => {
             </b>
             {" "}
             Compute{" "}
-            <Math>
-              $100/16$
-            </Math>
+            <NoBreak>
+              <Math>
+                $100/16$
+              </Math>
+            </NoBreak>
             {" "}by hand.
           </VerticalChunk>
           <Pause />
@@ -2047,14 +2345,19 @@ const Article = () => {
             <Pause />
             <VerticalChunk>
               and that's all there is to it! (Or you could repeatedly divide{" "}
-              <Math>
-                $100$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $100$
+                </Math>
+              </NoBreak>
               {" "}by{" "}
-              <Math>
-                $2$
-              </Math>
-              ,
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               until you reach{" "}
               <NoBreak>
                 <Math>
@@ -2095,9 +2398,11 @@ const Article = () => {
                 one hundred million
               </i>
               {" "}since{" "}
-              <Math>
-                $10^8 = 10^2 \times 10^6$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $10^8 = 10^2 \times 10^6$
+                </Math>
+              </NoBreak>
               {" "}is a hundred times a 
               million. Similarly, “万万万” is
             </VerticalChunk>
@@ -2172,52 +2477,66 @@ const Article = () => {
           <Solution solution_number={4}>
             <VerticalChunk>
               There are{" "}
-              <Math>
-                $10^3$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $10^3$
+                </Math>
+              </NoBreak>
               {" "}millimeters in a meter 
               (
               <i>
                 milli
               </i>
               {" "}= thousandth) and{" "}
-              <Math>
-                $10^3$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $10^3$
+                </Math>
+              </NoBreak>
               {" "}meters
               in a kilometer, so there are 
               {" "}
-              <Math>
-                $10^3 \times 10^3 = 10^6$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $10^3 \times 10^3 = 10^6$
+                </Math>
+              </NoBreak>
               {" "}
               millimeters in a kilometer.
             </VerticalChunk>
             <VerticalChunk indent={true}>
               From there, it automatically follows that
               there are{" "}
-              <Math>
-                $1/10^6 = 10^&#123;-6&#125;$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $1/10^6 = 10^&#123;-6&#125;$
+                </Math>
+              </NoBreak>
               {" "}kilometers in
               a millimeter.
             </VerticalChunk>
             <VerticalChunk indent={true}>
               (Or you can run the reverse reasoning: 
               There are{" "}
-              <Math>
-                $10^&#123;-3&#125;$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $10^&#123;-3&#125;$
+                </Math>
+              </NoBreak>
               {" "}kilometers in a meter, 
               and{" "}
-              <Math>
-                $10^&#123;-3&#125;$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $10^&#123;-3&#125;$
+                </Math>
+              </NoBreak>
               {" "}meters in a millimeter, 
               so{" "}
-              <Math>
-                $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
+                </Math>
+              </NoBreak>
               {" "}
               kilometers in a millimeter.)
             </VerticalChunk>
@@ -2230,9 +2549,11 @@ const Article = () => {
             </b>
             {" "}
             How many kilometers is{" "}
-            <Math>
-              $10^&#123;24&#125;$
-            </Math>
+            <NoBreak>
+              <Math>
+                $10^&#123;24&#125;$
+              </Math>
+            </NoBreak>
             {" "}millimeters?
           </VerticalChunk>
           <Pause />
@@ -2256,10 +2577,12 @@ const Article = () => {
             <VerticalChunk>
               by direct substitution. (You can do that with
               units.) The answer is therefore:{" "}
-              <Math>
-                $10^&#123;18&#125;$
-              </Math>
-              .
+              <NoBreak>
+                <Math>
+                  $10^&#123;18&#125;$
+                </Math>
+                .
+              </NoBreak>
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -2270,9 +2593,11 @@ const Article = () => {
             </b>
             {" "}
             If the US yearly budget is{" "}
-            <Math>
-              $4$
-            </Math>
+            <NoBreak>
+              <Math>
+                $4$
+              </Math>
+            </NoBreak>
             {" "}trillion
             dollars, what percentage of the budget is
             one hundred billion \$?
@@ -2281,25 +2606,34 @@ const Article = () => {
           <Solution solution_number={6}>
             <VerticalChunk>
               One hundred billion is{" "}
-              <Math>
-                $10\%$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $10\%$
+                </Math>
+              </NoBreak>
               {" "}of one trillion [cf.: 
               {" "}
-              <Math>
-                $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
-              </Math>
-              ]
+              <NoBreak>
+                <Math>
+                  $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
+                </Math>
+                ]
+              </NoBreak>
+              {" "}
               and one trillion is a quarter of{" "}
-              <Math>
-                $4$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $4$
+                </Math>
+              </NoBreak>
               {" "}
               trillion, so the answer is{" "}
-              <Math>
-                $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
-              </Math>
-              .
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
+                </Math>
+                .
+              </NoBreak>
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
@@ -2324,9 +2658,11 @@ const Article = () => {
             </b>
             {" "}
             What is the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
+            <NoBreak>
+              <Math>
+                $10$
+              </Math>
+            </NoBreak>
             {" "}of one trillion?
           </VerticalChunk>
           <Pause />
@@ -2339,10 +2675,12 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}because one trillion is{" "}
-              <Math>
-                $10^&#123;12&#125;$
-              </Math>
-              .
+              <NoBreak>
+                <Math>
+                  $10^&#123;12&#125;$
+                </Math>
+                .
+              </NoBreak>
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -2353,14 +2691,18 @@ const Article = () => {
             </b>
             {" "}
             What is the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
+            <NoBreak>
+              <Math>
+                $10$
+              </Math>
+            </NoBreak>
             {" "}of{" "}
-            <Math>
-              $1$
-            </Math>
-            ?
+            <NoBreak>
+              <Math>
+                $1$
+              </Math>
+              ?
+            </NoBreak>
           </VerticalChunk>
           <Pause />
           <Solution solution_number={8}>
@@ -2372,10 +2714,12 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}because{" "}
-              <Math>
-                $1 = 10^0$
-              </Math>
-              .
+              <NoBreak>
+                <Math>
+                  $1 = 10^0$
+                </Math>
+                .
+              </NoBreak>
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -2386,9 +2730,11 @@ const Article = () => {
             </b>
             {" "}
             What is the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
+            <NoBreak>
+              <Math>
+                $10$
+              </Math>
+            </NoBreak>
             {" "}of:{" "}
             <i>
               a trillion times a billion times a million times a thousand
@@ -2464,10 +2810,12 @@ const Article = () => {
             <Pause />
             <VerticalChunk>
               so the answer is{" "}
-              <Math>
-                $10^&#123;12&#125;$
-              </Math>
-              .
+              <NoBreak>
+                <Math>
+                  $10^&#123;12&#125;$
+                </Math>
+                .
+              </NoBreak>
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -2491,9 +2839,11 @@ const Article = () => {
           <Solution solution_number={11}>
             <VerticalChunk>
               Presumably, there are{" "}
-              <Math>
-                $1000$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $1000$
+                </Math>
+              </NoBreak>
               {" "}“millibits”
               (whatever those are, we can go along with
               the joke here) in one bit. Since there are
@@ -2508,9 +2858,11 @@ const Article = () => {
             <Pause />
             <VerticalChunk>
               or{" "}
-              <Math>
-                $8$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $8$
+                </Math>
+              </NoBreak>
               {" "}billion “millibits” per gigabyte.
               (But to reiterate, there is no such thing 
               as a “millibit”; a bit is a{" "}
@@ -2616,9 +2968,11 @@ const Article = () => {
           <Pause />
           <VerticalChunk>
             for all integers{" "}
-            <Math>
-              $n$
-            </Math>
+            <NoBreak>
+              <Math>
+                $n$
+              </Math>
+            </NoBreak>
             {" "}and{" "}
             <NoBreak>
               <Math>
@@ -2747,10 +3101,12 @@ const Article = () => {
               ,
             </NoBreak>
             {" "}{" "}
-            <Math>
-              $c$
-            </Math>
-            .
+            <NoBreak>
+              <Math>
+                $c$
+              </Math>
+              .
+            </NoBreak>
           </VerticalChunk>
           <Pause />
           <Solution solution_number={14}>
@@ -2819,10 +3175,12 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $&#123;1\over L&#125;=L^&#123;-1&#125;$
-              </Math>
-              .
+              <NoBreak>
+                <Math>
+                  $&#123;1\over L&#125;=L^&#123;-1&#125;$
+                </Math>
+                .
+              </NoBreak>
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -2840,13 +3198,17 @@ const Article = () => {
               ,
             </NoBreak>
             {" "}{" "}
-            <Math>
-              $b$
-            </Math>
+            <NoBreak>
+              <Math>
+                $b$
+              </Math>
+            </NoBreak>
             {" "}and{" "}
-            <Math>
-              $c$
-            </Math>
+            <NoBreak>
+              <Math>
+                $c$
+              </Math>
+            </NoBreak>
             {" "}such that
           </VerticalChunk>
           <Pause />
@@ -2870,13 +3232,17 @@ const Article = () => {
               ,
             </NoBreak>
             {" "}{" "}
-            <Math>
-              $\mu$
-            </Math>
+            <NoBreak>
+              <Math>
+                $\mu$
+              </Math>
+            </NoBreak>
             {" "}and{" "}
-            <Math>
-              $\rho$
-            </Math>
+            <NoBreak>
+              <Math>
+                $\rho$
+              </Math>
+            </NoBreak>
             {" "}are defined as below.
           </VerticalChunk>
           <Pause />
@@ -2920,14 +3286,18 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $\rho$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $\rho$
+                </Math>
+              </NoBreak>
               {" "}
               in the canonical form{" "}
-              <Math>
-                $M^xL^yT^z$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $M^xL^yT^z$
+                </Math>
+              </NoBreak>
               {" "}
               for integers{" "}
               <NoBreak>
@@ -2944,9 +3314,11 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $z$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $z$
+                </Math>
+              </NoBreak>
               {" "}(as in the previous
               exercise):
             </VerticalChunk>
@@ -2983,9 +3355,11 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $\mu^c$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $\mu^c$
+                </Math>
+              </NoBreak>
               {" "}
               by applying the fourth law of exponents (note e.g.
               that{" "}
@@ -3016,14 +3390,19 @@ const Article = () => {
             <Pause />
             <VerticalChunk>
               (In the last line we just restated{" "}
-              <Math>
-                $\rho$
-              </Math>
-              .)
+              <NoBreak>
+                <Math>
+                  $\rho$
+                </Math>
+                .)
+              </NoBreak>
+              {" "}
               Then{" "}
-              <Math>
-                $v^aF^b\mu^c\rho$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $v^aF^b\mu^c\rho$
+                </Math>
+              </NoBreak>
               {" "}becomes
             </VerticalChunk>
             <Pause />
@@ -3034,10 +3413,13 @@ const Article = () => {
             <VerticalChunk>
               by multiplying everything together and using
               additivity of exponents. (E.g.,{" "}
-              <Math>
-                $M^bM^cM = M^&#123;b+c+1&#125;$
-              </Math>
-              ,
+              <NoBreak>
+                <Math>
+                  $M^bM^cM = M^&#123;b+c+1&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               and so on.) This expression equals
             </VerticalChunk>
             <Pause />
@@ -3061,9 +3443,11 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $T$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $T$
+                </Math>
+              </NoBreak>
               {" "}
               if and only if...
             </VerticalChunk>
@@ -3082,13 +3466,17 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $b$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $b$
+                </Math>
+              </NoBreak>
               {" "}and{" "}
-              <Math>
-                $c$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $c$
+                </Math>
+              </NoBreak>
               {" "}such that these three equations...
             </VerticalChunk>
             <Pause />
@@ -3142,9 +3530,11 @@ const Article = () => {
               </NoBreak>
               {" "}
               Plugging{" "}
-              <Math>
-                $c = -2$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $c = -2$
+                </Math>
+              </NoBreak>
               {" "}into the first of our three
               equations, we find
             </VerticalChunk>
@@ -3178,9 +3568,11 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $c = -2$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $c = -2$
+                </Math>
+              </NoBreak>
               {" "}in our second equation above
               gives us
             </VerticalChunk>
@@ -3191,14 +3583,19 @@ const Article = () => {
             <Pause />
             <VerticalChunk>
               which implies that{" "}
-              <Math>
-                $a = 0$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $a = 0$
+                </Math>
+              </NoBreak>
               {" "}since{" "}
-              <Math>
-                $1-(-2)-3 = 0$
-              </Math>
-              .
+              <NoBreak>
+                <Math>
+                  $1-(-2)-3 = 0$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
               (One can finally check that 
               setting{" "}
               <NoBreak>
@@ -3215,9 +3612,11 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $c=-2$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $c=-2$
+                </Math>
+              </NoBreak>
               {" "}satisfies that
               third equation,{" "}
               <NoBreak>
@@ -3237,10 +3636,13 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $b = 1$
-              </Math>
-              ,
+              <NoBreak>
+                <Math>
+                  $b = 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               {" "}
               <NoBreak>
                 <Math>
@@ -3271,9 +3673,11 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $\mu$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $\mu$
+                </Math>
+              </NoBreak>
               {" "}
               and{" "}
               <NoBreak>
@@ -3299,10 +3703,12 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}{" "}
-              <Math>
-                $F^1 = F$
-              </Math>
-              ).
+              <NoBreak>
+                <Math>
+                  $F^1 = F$
+                </Math>
+                ).
+              </NoBreak>
             </VerticalChunk>
           </Solution>
         </Exercise>

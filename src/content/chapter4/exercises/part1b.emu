@@ -1,0 +1,872 @@
+|> Exercise
+
+    Apply the definition
+    
+    $$
+    fg = (u \ra f(u)g(u))
+    $$
+    
+    of function multiplication
+    in order to show that
+
+    $$
+    (fg)h = f(gh)
+    $$
+
+    for all functions $f, g, h : \rr \ra \rr$,
+    or, namely, to show that
+
+    __($f$ times $g$) times $h$__
+
+    equals
+
+    __$f$ times ($g$ times $h$)__
+
+    for all functions $f, g, h : \rr \ra \rr$.
+
+    |> Solution
+
+        It is necessary and sufficient to show that
+        
+        $$
+        ((fg)h)(u)
+        $$
+        
+        is the same as
+        
+        $$
+        (f(gh))(u)
+        $$
+        
+        for an arbitrary input $u \in \rr$, in order to
+        show that 
+        
+        $$
+        (fg)h
+        $$
+        
+        and
+        
+        $$
+        f(gh)
+        $$
+        
+        are the same function. (Function equality is
+        based on input-output behavior: two functions are
+        equal if and only if every input is mapped to the
+        same output under either function. See Note 6,
+        Exercise 9, Chapter 3.)
+
+        Starting up,
+        
+        $$
+        ((fg)h)(u) = (fg)(u) \cdot h(u)
+        $$
+        
+        by the definition of function multiplication,
+        and
+        
+        $$
+        (f(gh))(u) = f(u) \cdot (gh)(u)
+        $$
+        
+        likewise. Moreover,
+        
+        $$
+        (fg)(u) = f(u) \cdot g(u)
+        $$
+        
+        and
+        
+        $$
+        (gh)(u) = g(u) \cdot h(u)
+        $$
+        
+        by the same definition again. Therefore,
+        
+        $$
+        ((fg)h)(u) = (f(u) \cdot g(u)) \cdot h(u)
+        $$
+        
+        on the one hand, and
+        
+        $$
+        (f(gh))(u) = f(u) \cdot (g(u) \cdot h(u))
+        $$
+        
+        on the other hand. But
+        
+        $$
+        (f(u) \cdot g(u)) \cdot h(u) = f(u) \cdot (g(u) \cdot h(u))
+        $$
+        
+        by the associativity of ordinary real number
+        multiplication. (Not function multiplication:
+        _real number multiplication_.) So
+        
+        $$
+        ((fg)h)(u)
+        $$
+        
+        equals
+        
+        $$
+        (f(gh))(u)
+        $$
+        
+        for arbitrary $u$, which completes the proof.
+
+        |> Pause
+        _Note 1._
+        In words, we have just established the
+        
+        __associativity of function multiplication__
+        
+        while we had previously established the
+
+        __associativity of function composition__
+
+        (if you recall that one) in Exercise 9 of Chapter 
+        3.
+
+        |> Pause
+        _Note 2._
+        By this result, we can write
+        
+        $$
+        fgh
+        $$
+        
+        without any parentheses at all: 
+        it doesn't matter whether we think of this 
+        product as $(fg)h$ or $f(gh)$, the result 
+        is the same.
+
+|> Exercise
+
+    Prove that
+    
+    $$
+    f + g = g + f
+    $$
+    
+    and that
+    
+    $$
+    fg = gf
+    $$
+    
+    for all $f, g : \rr \ra \rr$, using the fact that 
+    
+    $$
+    a + b = b + a
+    $$
+    
+    and that
+    
+    $$
+    ab = ba
+    $$
+    
+    for all $a, b \in \rr$. 
+    (Prove something for functions by using the
+    corresponding fact for numbers, namely.)
+
+    |> Solution
+
+        Given an arbitrary $u \in \rr$ we have
+        
+        $$
+        (f + g)(u) = f(u) + g(u)
+        $$
+        
+        and
+        
+        $$
+        (g + f)(u) = g(u) + f(u)
+        $$
+        
+        by the definition of function addition. But
+        
+        $$
+        f(u) + g(u) = g(u) + f(u)
+        $$
+        
+        by the commutativity of real number addition
+        [$f(u)$ and $g(u)$ are both real numbers—the
+
+        __commutativity__
+
+        of real number addition is the fact that
+
+        $$
+        a + b = b + a
+        $$
+
+        for all real numbers $a$, $b$, mentioned in the
+        statement—so we can use this here]; thus
+
+        $$
+        (f + g)(u) = (g + f)(u)
+        $$
+
+        for all $u \in \rr$, which implies
+
+        $$
+        f + g = g + f
+        $$
+
+        by definition of function equality. 
+
+        For the second half we have, similarly,
+
+        $$
+        \begin{align}
+        (fg)(u) &= f(u) \cdot g(u) \\
+        &= g(u) \cdot f(u) \up{1.5}\\
+        &= (gf)(u) \up{1.5}
+        \end{align}
+        $$
+
+        for arbitrary $u\in \rr$, where the first and
+        last equality are by the definition of a
+        product of functions and where
+        the middle equality is by commutativity of real
+        number multiplication. [That would be the fact that
+
+        $$
+        ab = ba
+        $$
+
+        for all $a, b \in \rr$, as mentioned in the statement.] Hence
+
+        $$
+        fg
+        $$
+
+        and
+
+        $$
+        gf
+        $$
+
+        agree on an arbitrary input, hence $fg = gf$ by
+        definition of function equality.
+
+
+
+|> Exercise
+
+    A rat is running a fundraising race. The function
+    
+    $$
+    \Large f : \rr \ra \rr
+    $$
+    
+    gives the amount raised as a function of position;
+    specifically, ${f(x)}$ is the total number of 
+    $\te{\$}$'s earned by virtue of running 
+    $x$ meters from the start of the race; 
+    a second function
+    
+    $$
+    \Large g : \rr \ra \rr
+    $$
+    
+    gives the position of the rat as a function of time;
+    specifically, ${g(t)}$ is the position from the start,
+    in meters, reached by the rat at $t$ seconds after the
+    start of the race.
+
+    In this case, what does $f \circ g$ compute?
+
+    |> Solution
+
+        It computes
+        the amount earned by the rat as a function of time. In 
+        more detail, $(f \circ g)(t)$
+        is the number of $\te{\$}$'s earned by the rat at $t$
+        seconds after the start of the race.
+
+        |> Pause
+        _Note 1._
+        In even more detail,
+        $$
+        g(t)
+        $$
+        is the position in meters of the rat $t$
+        seconds after start, by definition 
+        of $g$, at which position the rat has
+        earned
+        $$
+        f(g(t))
+        $$
+        $\te{\$}$'s in total, by definition of $f$.
+        And
+        $$
+        f(g(t))
+        $$
+        is
+        $$
+        (f \circ g)(t)
+        $$
+        by definition of “$\circ$”.
+
+        |> Pause
+        _Note 2._
+        If it helps, 
+        here is a pictorialization of the 
+        “units transformation pipeline” that 
+        occurs inside $f \circ g$: 
+
+        |> Image
+            src images/svg_ch4_f_g_composition_units.svg
+
+        |> Pause
+        _Note 3._
+        To emphasize, $f(x)$ is the
+
+        __~ total ~__
+
+        amount earned when position $x$ is reached.
+        In real life $f$'s
+        graph might therefore look something like this, 
+        while inventing some numbers:
+
+        |> Image
+            src images/svg_ch4_f_g_first_example_of_f.svg
+
+        In the above the rat earns $\te{\$}$3 for the 
+        first 50m, after which the dollar-per-meter 
+        rate is reduced.
+        Or 
+        $f$
+        could look like this,
+        with discrete “unlocks”: 
+
+        |> Image
+            src images/svg_ch4_f_g_second_example_of_f.svg
+
+        In our mathematicians' imaginations, however, $f$
+        might also look like this, nice and differentiable,
+        with periods of negative slope (corresponding to
+        parts of the course that momentarily lose you money):
+
+        |> Image
+            src images/svg_ch4_f_g_third_example_of_f.svg
+
+        (Etc.)
+
+|> Exercise
+
+    What does $(f \circ g)'$ compute,
+    keeping the same setup as in Exercise 34?
+
+    |> Solution
+
+        It computes the dollars-per-second earnings rate 
+        as a function of time. In full detail,
+
+        $$
+        (f \circ g)'(t)
+        $$
+
+        is the dollars-per-second rate which the rat is
+        fundraising at $t$ seconds after the start of the race.
+
+        _Note 1._
+        You don't need to know anything about “$f$”
+        or “$g$” to answer this question. You only need to
+        know what “$f \circ g$” is. 
+
+|> Exercise
+
+    Continuing with the fundraising rat as in the 
+    previous two exercises, assume that the functions
+    $f$ and $g$ have these graphs:
+
+    |> Image
+        src images/svg_ch4_f_g_actual_exercise_f.svg
+
+    |> Image
+        src images/svg_ch4_f_g_actual_exercise_g.svg
+
+    |> Solution
+
+        At $t = 2$s the rat is running at a velocity of
+        
+        $$
+        {5\over 3\up{1}}[{\te{m/s}}]
+        $$
+        
+        by the slope of this line segment on $y = g(t)$:
+
+        |> Image
+            src images/svg_ch4_f_g_actual_exercise_g_with_slope.svg
+
+        Moreover at $t = 2$s the rat 
+        has reached
+        $2 \cdot (5/3) = 10/3 = 3.\overline{33}$m,
+        where the dollars-per-meter earnings
+        rate is one-tenth of a dollar per meter, by
+        the slope of this segment on the graph $y = f(x)$:
+
+        |> Image
+            src images/svg_ch4_f_g_actual_exercise_f_with_slope.svg
+
+        Multiplying the $5/3$ meters-per-second velocity
+        by the $1/10$ dollars-per-meter rate gives
+        us the dollars-per-second rate at $t = 2$s (our 
+        final answer—recall that $(f \circ g)'(2)$ is 
+        the dollars-per-second rate at $t = 2$s, by Exercise 35):
+
+        $$
+        \left({5\over 3\up{1}}\left[{\te{m} \over \te{s}}\right]\right) \times \left({1 \over 10\up{1}}\left[{\te{\$} \over \te{m}}\right]\right) = {5\over 30\up{1}}\left[{\te{\$} \over \te{s}}\right].
+        $$
+
+        |> ImageRight
+            src images/svg_ch4_f_g_actual_exercise_cloud.svg
+
+        Or since
+        $$
+        {5 \over 3} = 1.6666...
+        $$
+        that would be
+        $$
+        {0.1666...}[\te{\$/s}]
+        $$
+        in decimal, i.e., 
+        |> span
+            style font-family:Clicker Script;font-size:1.3em;
+
+            ~sixteen~ 
+        point $666...$ cents per second.
+
+        |> Pause
+        _Postscript._
+        It turns out that
+        
+        $$
+        {5 \over 30} = {1 \over 6}
+        $$
+        
+        as we weren't really paying attention to the 
+        possibility of simplifying the fraction. In
+        particular,
+        
+        $$
+        {1 \over 6} = 0.1666...
+        $$
+        
+        as, indeed, $0.1666...$ is half of $0.333...$! (Learn
+        something every day.)
+
+
+|> Exercise
+
+    Conjecture a general formula for 
+    $$
+    (f \circ g)'(t)
+    $$
+    for arbitrary (differentiable, say) functions
+    $f, g : \rr \ra \rr$. (If it helps, interpret $f$
+    and $g$ exactly as in the scenario of the fundraising
+    race, cf$.$ Exercises 34-37.)
+
+    |> Solution
+
+        The sought-for formula is
+    
+        $$
+        g'(t)\cdot f'(g(t))
+        $$
+        
+        because—to come back to the example of the 
+        fundraising race—one must multiply the meters-per-second
+        velocity at time $t$ (that is, $g'(t)$) by the dollars-per-meter 
+        earnings rate at position $g(t)$ (that is, $f'(g(t))$) to obtain
+        the final dollars-per-second earning rate at time $t$
+        (that is, $(f \circ g)'(t)$).
+
+        (For example, the solution to Exercise 36 can actually
+        be written
+        
+        $$
+        g'(2) \cdot f'(g(2))
+        $$
+        
+        since, indeed, $g(2) = 3.333...$. [Remember that we ended
+        up multiplying $g'(2) = {5\over 3}\te{m/s}$ by 
+        $f'(3.333...) = {1\over 10}\te{\$/s}$—the “$3.333...$” is
+        $g(2)$.])
+
+        Nb: This result is known as the _chain rule_.
+
+        |> Pause
+        _Note 1._ Said _chain rule_
+        is more commonly written...
+        $$
+        (f \circ g)'(x) = f'(g(x))g'(x)
+        $$
+        ...with “$g'(x)$” last. (And “$x$” instead of “$t$”.)
+
+        |> Pause
+        _Note 2._ One can also write the chain rule very succinctly like so... 
+
+        $$
+        (f \circ g)' = (f' \circ g)g'
+        $$
+
+        ...where the right-hand-side is the product of $g'$ and $f' \circ g$.
+
+
+
+|> Exercise
+
+    Sketch the velocity vector of a particle
+    going at three times unit speed (“speed $3$” in common
+    parlance) clockwise around a circle of radius $2$.
+    What path does the velocity vector describe 
+    over time? (I.e., if you cut-paste the velocity
+    vector back to the origin, so that its “tail” 
+    is at $(0, 0)$, what curve does the far end of the
+    vector describe?) Over how much time?
+
+    |> Solution
+
+        The velocity vector is an arrow of length $3$
+        tangent to a circle of radius $2$, brushed
+        clockwise:
+
+        |> Image
+            src images/svg_velocity_vector_radius_2_speed_3_sketch_1.svg
+
+        If we bring the tail of the vector back to
+        $(0, 0)$ we find an arrow of length $3$
+        tracing a circle of radius $3$:
+
+        |> Image
+            src images/svg_velocity_vector_radius_2_speed_3_centered.svg
+
+        Lastly, the velocity vector does a full revolution
+        of the red circle in the same amount of time that
+        the particle does a full revolution of the blue circle,
+        which is
+
+        $$
+        {2\cdot (\te{circumference of a unit circle}) \over \te{3}}
+        $$
+
+        because the circumference of the blue circle
+        is twice the circumference of a unit circle,
+        and the particle is going at speed $3$.
+
+        |> Pause
+        _Note 1._ 
+        In such diagrams we recycle the axes
+        to plot quantities of several different
+        dimensions: positions (in blue, in this
+        case) have dimensions of length ([L]) while
+        velocities (in red, in this case) have 
+        dimensions of length over time ([L/T]).
+
+|> Exercise
+
+    What is the 
+    
+    __acceleration vector__
+    
+    (velocity vector of the velocity vector)
+    of the particle from Exercise 39?
+
+    |> Solution
+
+        The velocity vector of Exercise 39 travels
+        in a circle of radius $3$ in the same amount
+        of time that the position vector 
+        travels around a circle of radius $2$.
+        The speed of the velocity vector is therefore
+        $1.5$ times the speed of the position vector,
+        or $1.5 \times 3 = 4.5$.
+
+        As the derivative of the velocity vector,
+        the acceleration vector is therefore
+        a vector of length $4.5$ (= the speed of the 
+        velocity vector) brushed clockwise along 
+        the path of the velocity vector:
+
+        |> Image
+            src images/svg_ch4_what_is_the_acceleration_vector_uncentered.svg
+
+        Or, if we translate the acceleration vector back 
+        to the origin and trace out its path over time 
+        (either way is fine):
+
+        |> Image
+            src images/svg_ch4_what_is_the_acceleration_vector_centered.svg
+
+        |> Pause
+        _Note 1._
+        You truly have to think of the acceleration
+        vector as “the velocity of the velocity 
+        vector”—if the velocity vector is changing, the
+        acceleration vector is nonzero!
+
+|> Exercise
+
+    Sketch the velocity vector, acceleration vector,
+    and jerk vector of a particle going around a circle
+    of radius $3$ at speed $2$. (Clockwise, say.)
+
+    |> Solution
+
+        The velocity vector has length $2$, because the
+        particle has speed $2$. So the velocity vector
+        looks like so, while attached to the particle path
+        (top) or brought back to the origin (bottom):
+
+        |> Image
+            src images/svg_ch4_velocity_vector_radius_3_speed_2_uncentered.svg
+
+        |> Image
+            src images/svg_ch4_velocity_vector_radius_3_speed_2_centered.svg
+
+        Moreover (!) the speed of the velocity vector is 
+        $2/3$ the speed of the particle, because the 
+        velocity vector goes around a circle of $2/3$ the 
+        radius in the same amount of time. So the velocity 
+        vector has speed
+        
+        $$
+        \Large 2 \cdot {2\over 3} = {4\over 3}
+        $$
+        
+        from which the acceleration vector—that can be 
+        described as “the velocity vector of the velocity
+        vector”—has length ${4\over 3}$ (the speed of the
+        velocity vector), and looks like so (in either representation):
+
+        |> Image
+            src images/svg_ch4_velocity_vector_radius_3_speed_2_acceleration_uncentered.svg
+
+        |> Image
+            src images/svg_ch4_velocity_vector_radius_3_speed_2_acceleration_centered.svg
+
+        Lastly the acceleration vector has speed
+        
+        $$
+        \Large {4\over 3}\cdot {2\over 3} = {8 \over 9}
+        $$
+        
+        by virtue of circling a circle of radius $2/3$ 
+        that of the velocity vector, that has speed $4/3$, 
+        in the same amount of time. Since the jerk is the
+        derivative of the acceleration, this becomes the
+        length of the jerk vector, that is exactly opposite
+        to the velocity vector, being twice $90^\circ$ away:
+
+        |> Image
+            src images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_uncentered.svg
+
+        |> Image
+            src images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_centered.svg
+
+        |> StarDivider
+
+        |> Pause
+        _Note 1._
+        If the particle's original path is centered at
+        $(0, 0)$ then that path constitutes a fourth
+        circle obeying the same pattern
+        of $2/3$-ratios between the successive radii:
+
+        |> Image
+            src images/svg_ch4_velocity_vector_radius_3_speed_2_with_position.svg
+
+|> Exercise
+
+    Imagine a single particle in a one-dimensional
+    world, whose velocity equals its position; at $t = 0$,
+    the particle is sitting at $x = 1$:
+
+    |> Image
+        src images/svg_ch4_one_particle_at_1.svg
+
+    If we play time backward, will the particle 
+    ever reach $x = 0$? 
+
+    |> Solution
+
+        Going back in time,
+        examine how long it would take
+        the particle to cross each of the intervals defined by
+        the following geometric progression* (*see Note 1):
+
+        |> Image
+            src images/svg_ch4_one_particle_interval_subdivision.svg
+
+        The interval from $0.5$ to $1$
+        takes _at least_
+
+        $$
+        {0.5 \over 1} = 0.5
+        $$
+
+        |> ImageLeft
+            src images/svg_ch4_one_particle_speed_equals_time_cloud.svg
+
+        time to cross, because the maximum speed of the particle
+        inside of that interval is $1$.
+        Similarly, the interval from 
+        
+        $$
+        x = 0.25
+        $$
+        
+        to
+        
+        $$
+        x = 0.5
+        $$
+        
+        takes _at least_
+        
+        $$
+        {0.25 \over 0.5} = 0.5
+        $$
+        
+        time to cross, because the maximum speed of the particle
+        inside of that interval is $0.5$!
+        And, again, the interval from 
+        
+        $$
+        x = 0.125
+        $$
+        
+        to
+        
+        $$
+        x = 0.25
+        $$
+        
+        takes at least
+        
+        $$
+        {0.125 \over 0.25} = 0.5
+        $$
+        
+        time to cross, because the maximum speed of the particle
+        inside of that interval is $0.25$. Etc—each interval 
+        takes _at least_
+        
+        $$
+        0.5
+        $$
+        
+        units of time to cross, because the length of each
+        interval is half of the maximum speed within the interval!
+        But there are infinitely many intervals, and, therefore,
+        it takes
+        
+        __at least__
+        
+        infinitely much time to make it to $x = 0$, where the
+        “infinitely” comes from adding infinitely many $0.5$'s
+        together! (In other words, the particle never makes it to
+        $x = 0$, no matter how far back in time you look.)
+
+        A so-called
+
+        __geometric progression__
+        
+        is a sequence of numbers in which each number
+        is a fixed multiple of the previous number.
+        For example,
+        
+        $$
+        100,\, 300,\, 900,\, 2700
+        $$
+        
+        is a (finite) geometric progression, because each number
+        is the previous number multiplied by $3$,
+        and
+        
+        $$
+        1,\, 0.5,\, 0.25,\, 0.125,\, 0.0625,\, \ldots
+        $$
+        
+        is an (infinite) geometric progression, because each number
+        is the previous multiplied by $0.5$.
+
+
+|> Exercise
+
+    Take a system of two particles on the real
+    line; at time $t = 0$, the first particle (yellow)
+    is at $x = -1$, while the second one (blue)
+    is at $x = 1$:
+
+    |> Image
+        src images/svg_ch4_three_one_dimensional_particles.svg
+
+    If the velocity of the yellow particle is set to track
+    the position of the blue particle and vice-versa, 
+    give a qualitative sketch of the
+    position-as-a-function-of-time (time on the $x$
+    axis, position on the $y$ axis) of the two 
+    particles. If we add also the graph of the position
+    of the red particle from Exercise 41 to this set of
+    graphs, what symmetries
+    exist altogether between the three graphs?
+
+    |> Solution
+
+        For $t > 0$ the yellow and blue particles
+        approach $0$ in a kind of “radioactive decay”
+        pattern; for $t < 0$,
+        they spin
+        off to $-\infty$ and $\infty$ respectively at an
+        accelerating rate:
+
+        |> Image
+            src images/svg_ch4_three_one_dimensional_particles_blue_yellow.svg
+
+        If we add the graph of the red particle to the
+        mix, it is simply the mirror image of the
+        blue particle's position through the $y$ axis
+        ($y$ axis that is ironically labeled “$x$”):
+    
+        |> Image
+            src images/svg_ch4_three_one_dimensional_particles_blue_yellow_red.svg
+
+        Indeed, for the red graph,
+
+        __the slope equals the $y$-value__
+
+        (velocity = position), while
+
+        __the slope equals minus the $y$-value__
+
+        for the blue graph (velocity = position
+        of yellow = minus own position). 
+        (We forgot to mention that the blue and
+        yellow graphs are mirror images of one another
+        through the horizontal axis—this is one of the 
+        “symmetries” that the problem statement asks about, though.)
+        As taking a mirror image through the $y$ axis
+        negates slopes without affecting $y$-coordinates,
+        while both the blue and red graphs have the same
+        value at $t = 0$, this explains why the mirror
+        image of one graph fits the constraints of the other
+        and vice-versa:
+
+        |> Image
+            src images/svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg
+    
+        Also note that all graphs have slopes of
+        $
+        \pm 1
+        $
+        at $t = 0$, as we tried to reflect in the sketches, 
+        because each corresponding particle position 
+        is either $1$ or $-1$.

@@ -1,4 +1,9 @@
 |> Section
+    type fake
+
+    ,$x$,
+
+|> Section
 
     *Square Roots.*
     You might remember that “minus times minus 
