@@ -8,8 +8,7 @@ import desugarers/add_title_counters_and_titles_with_handle_assignments.{add_tit
 import desugarers/change_attribute_value.{change_attribute_value}
 import desugarers/concatenate_text_nodes.{concatenate_text_nodes}
 import desugarers/convert_int_attributes_to_float.{convert_int_attributes_to_float}
-import desugarers/counter.{counter_desugarer}
-import desugarers/counter_handles.{counter_handles_desugarer}
+import desugarers/counters_substitute_and_assign_handles.{counters_substitute_and_assign_handles}
 import desugarers/fold_tags_into_text.{fold_tags_into_text}
 import desugarers/free_children.{free_children}
 import desugarers/generate_lbp_table_of_contents.{generate_lbp_table_of_contents}
@@ -279,8 +278,7 @@ pub fn our_pipeline() -> List(Pipe) {
     // misc *******************
     // ************************
     wrap_math_with_no_break(),
-    counter_desugarer(),
-    counter_handles_desugarer(),
+    counters_substitute_and_assign_handles(),
     add_exercise_labels(),
     add_counter_attributes([#("Solution", "Exercises", "solution_number", 1)]),
     add_counter_attributes([#("Exercise", "Exercises", "exercise_number", 1)]),
