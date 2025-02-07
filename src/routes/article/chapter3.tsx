@@ -1,5 +1,5 @@
 import Chapter from "~/components/Chapter";
-import { Section, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
+import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
@@ -721,7 +721,6 @@ const Article = () => {
               </Math>
               .
             </NoBreak>
-            {" "}{" "}
             <ImageLeft
               offset_y="0em"
               line={-1.0}
@@ -1176,7 +1175,7 @@ const Article = () => {
         <Pause />
         <Image src="/images/svg_ch3_circle.svg">
           <ImageRight
-            squiggle={false}
+            offset_x="2em"
             src="/images/svg_ch3_crossing_cloud_circle.svg" />
         </Image>
         <Pause />
@@ -1860,7 +1859,9 @@ const Article = () => {
         <Pause />
         <MathBlock>
           $$x^1 = x$$
-          <ImageRight src="/images/svg_ch3_a1_x1_cloud.svg" />
+          <ImageRight
+            offset_y="0.2em"
+            src="/images/svg_ch3_ch_a1_x1_cloud.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1876,7 +1877,10 @@ const Article = () => {
         <Pause />
         <MathBlock>
           $$x^0 = 1$$
-          <ImageRight src="/images/svg_ch3_a0_x0_cloud.svg" />
+          <ImageRight
+            offset_y="0.2em"
+            offset_x="0.2em"
+            src="/images/svg_ch3_ch_a0_x0_cloud.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3558,12 +3562,10 @@ const Article = () => {
             <Pause />
             <CentralDisplayItalic>
               associativity
+              <ImageRight src="/images/svg_ch3_associativity_cloud.svg" />
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
-              <ImageRight src="/images/svg_ch3_associativity_cloud.svg" />
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
               of function composition.
             </VerticalChunk>
             <Pause />

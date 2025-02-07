@@ -32,7 +32,7 @@
     “before” graph.) E.g.:
 
     |> Image
-        src images/svg_ch4_explanation1.svg
+        src images/svg_ch4_ch_explanation1.svg
 
     Note that $f'\!$ (read “$f$ prime”) remains 
     undefined where $y = f(x)$ has a sharp “corner” 
@@ -42,12 +42,12 @@
     tangent line supplies the value of $f'(a)$:
 
     |> Image
-        src images/svg_ch4_explanation2.svg
+        src images/svg_ch4_ch_explanation2.svg
 
     |> ImageRight
         offset_y -17em
         offset_x -13em
-        src images/svg_ch4_explanation2_cloud.svg
+        src images/svg_ch4_ch_explanation2_cloud.svg
 
     In fact, we can
     succinctly describe the derivative by...
@@ -58,18 +58,23 @@
 
     ...with the understanding that $f'(a)$ is 
     undefined if a tangent line does not exist 
-    or if the tangent is vertical. But for one 
-    last asterisk—and speaking of the existence,
-    or not, of the tangent—note that the endpoint
-    of a curve does not count as having a tangent,
-    and therefore leaves a missing value for the 
-    derivative:
+    or if the tangent is vertical. 
+    !! But for one 
+    !! last asterisk—and speaking of the existence,
+    !! or not, of the tangent—note that the endpoint
+    !! of a curve does not count as having a tangent,
+    !! and therefore leaves a missing value for the 
+    !! derivative:
+    For one extra special case, note that
+    the endpoing of a curve does not count
+    as having a tangent, and leaves a missing
+    value for the derivative:
 
     |> Image
-        src images/svg_ch4_explanation_one_sided_tangent.svg
+        src images/svg_ch4_ch_one_sided_tangent.svg
 
     (In other words, “half-tangents” do not actually 
-    count as tangents.) 
+    count as tangents.)
 
 |> Section
 
@@ -97,18 +102,20 @@
     (the one with the closed endpoints):
 
     |> Image
-        src images/svg_ch4_curve_to_sketch.svg
+        src images/svg_ch4_ch_curve_to_sketch.svg
 
     One method is simply to eyeball the slope at 
     a few points along the curve, plot these 
     values and interpolate:
     
     |> Image
-        src images/svg_ch4_first_derivative_sketch.svg
+        src images/svg_ch4_ch_curve_to_sketch_sketch.svg
 
     |> ImageRight
-        src images/svg_ch4_polaroid_cloud.svg
-    
+        src images/svg_ch4_ch_curve_to_sketch_cloud.svg
+        offset_y 36%
+        offset_x -15%
+
     ...voilà!
     
     An alternate approach is to start by
@@ -119,10 +126,7 @@
     interval:
 
     |> Image
-        src images/svg_ch4_second_derivative_sketch_pt1.svg
-
-    |> Image
-        src images/svg_ch4_second_derivative_sketch_pt2.svg
+        src images/svg_ch4_ch_second_sketch.svg
 
     The result (at bottom right)
     is a charming “robosketch” of the true
@@ -149,7 +153,8 @@
     $$
 
     |> ImageLeft
-        src images/svg_ch4_constant_derivative_cloud.svg
+        src images/svg_ch4_ch_constant_derivative_cloud.svg
+        offset_x 8em
 
     because at each $x$-value you find a slope of
     $0$, when you look up (down?) at the graph.
@@ -189,7 +194,8 @@
     $$
 
     |> ImageLeft
-        src images/svg_ch4_affine_derivative_cloud.svg
+        src images/svg_ch4_ch_affine_derivative_cloud.svg
+        offset_x 7em
 
     because the slope of a line of slope $A$ is
     $A$, no matter where you put yourself on the
@@ -238,6 +244,7 @@
         with $A = -1$, $B = 12$.
 
 |> Section
+    type caba
 
     *Units of the Derivative.*
     If units are present, we have
@@ -261,37 +268,51 @@
     of...
 
     |> ul
+        class slice
+        style list-style-type:disc;margin-top:1em;margin-bottom:1em;
         |> li
+            style margin:0 60px;
 
             seconds on the $x$ axis, meters on the 
             $y$ axis
 
-    |> ImageRight
-        src images/svg_ch4_units1_cloud.svg
-    
     ...then the “after” graph will have units of...
+
+    |> ImageRight
+        src images/svg_ch4_ch_units1_cloud.svg
+        offset_y -0.6em
     
-    |> ul    
+    |> ul
+        class slice
+        style list-style-type:disc;margin-top:1em;margin-bottom:1em;
         |> li
+            style margin:0 60px;
 
             seconds on the $x$ axis, meters per
             second on the $y$ axis
 
     ...while if the “before” graph has units of...
-    
+
     |> ul
+        class slice
+        style list-style-type:disc;margin-top:1em;margin-bottom:1em;
         |> li
+            style margin:0 60px;
 
             years on the $x$ axis, dollars on the
             $y$ axis
     
-    |> ImageLeft
-        src images/svg_ch4_units2_cloud.svg
-
     ...then the “after” graph will have units of...
 
+    |> ImageLeft
+        src images/svg_ch4_ch_units2_cloud.svg
+        offset_y 0.6em
+
     |> ul
+        class slice
+        style list-style-type:disc;margin-top:1em;margin-bottom:1em;
         |> li
+            style margin:0 60px;
 
             years on the $x$ axis, dollars per
             year on the $y$ axis
@@ -367,6 +388,8 @@
 
         |> ImageRight
             src images/svg_ch4_3x_plus_one_and_second_cloud.svg
+            offset_x 6em
+            offset_y 0.1em
 
     because, firstly,
 
@@ -390,6 +413,7 @@
     inside. (Physically difficult.)
 
     |> Example
+        type trash
 
         More generally,
 
@@ -401,9 +425,13 @@
         a.k.a.:
 
         __~ the second derivative of an affine function is zero ~__
-            
+
         |> ImageLeft
-            src images/svg_ch4_adding_statements_cloud.svg
+            src images/svg_ch4_ch_adding_statements_cloud.svg
+            line 1
+
+    |> StarDivider
+        style margin-top:1.5em;margin-bottom:0em
 
 |> Section
 
@@ -470,7 +498,7 @@
     Viz:
     
     |> Image
-        src images/svg_ch4_convex_concave.svg
+        src images/svg_ch4_ch_convex_concave.svg
 
     *Vocabulary #2.*
     An _inflection point_ is a point at the
@@ -478,7 +506,7 @@
     of a graph:
 
     |> Image
-        src images/svg_ch4_inflection_point.svg
+        src images/svg_ch4_ch_inflection_point.svg
 
     |> Example
 
@@ -496,6 +524,7 @@
         
         is neither “bending upwards” nor “bending 
         downwards”—$0$ is neither positive, nor negative.
+
 |> Section
 
     *The Second Derivative of Position.*
@@ -547,7 +576,7 @@
     seconds:
     
     |> Image
-        src images/svg_ch4_position_by_time_tangent.svg
+        src images/svg_ch4_ch_position_by_time_tangent.svg
     
     The ratio “rise over run” has the form
 
@@ -616,7 +645,8 @@
         $$
 
         |> ImageRight
-            src images/svg_ch4_unit_cancellation_cloud.svg
+            src images/svg_ch4_ch_units_cancellation_cloud.svg
+            offset_x 5em
         
         according to the template
         

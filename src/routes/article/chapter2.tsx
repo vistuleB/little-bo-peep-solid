@@ -1,5 +1,5 @@
 import Chapter from "~/components/Chapter";
-import { Section, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
+import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
@@ -1141,7 +1141,6 @@ const Article = () => {
             </Math>
             .
           </NoBreak>
-          {" "}{" "}
           <ImageRight
             offset_x="2rem"
             line={1.0}
@@ -1576,21 +1575,20 @@ const Article = () => {
           <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
-              This is true, as illustrated by the following pair of lines:
+              This is true, as illustrated by the following
+              pair of lines:
             </VerticalChunk>
             <Pause />
             <Image
               class="relative w-fit"
               src="/images/55.svg">
               <ImageRight
-                squiggle={false}
                 offset_x="-1.3rem"
                 offset_y="5rem"
                 src="/images/56.svg" />
               <ImageLeft
-                squiggle={false}
-                offset_y="0.5rem"
-                offset_x="-7rem"
+                offset_y="8rem"
+                offset_x="-8rem"
                 src="/images/57.svg" />
             </Image>
             <Pause />
@@ -1606,73 +1604,51 @@ const Article = () => {
               are the lines defined by their hypotenuses!
             </VerticalChunk>
             <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              More generally, a line of slope{" "}
-              <NoBreak>
-                <Math>
-                  $p$
-                </Math>
-              </NoBreak>
-              {" "}is
-              perpendicular to a line of slope{" "}
-              <NoBreak>
-                <Math>
-                  $-1/p$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}for
-              all{" "}
-              <NoBreak>
-                <Math>
-                  $p \ne 0$
-                </Math>
-                .
-              </NoBreak>
-              {" "}By a similar drawing:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              class="relative w-fit"
-              src="/images/58.svg">
-              <ImageRight
-                squiggle={false}
-                offset_x="-1.2rem"
-                offset_y="7.2rem"
-                src="/images/59.svg" />
-              <ImageLeft
-                squiggle={false}
-                img_position="bottom"
-                y="bottom"
-                offset_y="0.5rem"
-                offset_x="-5rem"
-                src="/images/60.svg" />
-            </Image>
-            <Pause />
-            <VerticalChunk>
-              (If the axes are oriented the usual way then 
-              the above drawing covers all the cases{" "}
-              <NoBreak>
-                <Math>
-                  $p &gt; 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              whereas if we flip the two number axes to point
-              down/left the above drawing covers all the cases 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $p &lt; 0$
-                </Math>
-                —magic!)
-              </NoBreak>
-            </VerticalChunk>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                More generally, a line of slope{" "}
+                <NoBreak>
+                  <Math>
+                    $p$
+                  </Math>
+                </NoBreak>
+                {" "}is
+                perpendicular to a line of slope{" "}
+                <NoBreak>
+                  <Math>
+                    $-1/p$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}for
+                all{" "}
+                <NoBreak>
+                  <Math>
+                    $p \ne 0$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}By a similar drawing:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                class="relative w-fit"
+                src="/images/58.svg">
+                <ImageRight
+                  offset_x="-10%"
+                  offset_y="27%"
+                  src="/images/59.svg" />
+                <ImageLeft
+                  offset_y="33%"
+                  offset_x="-24%"
+                  src="/images/60.svg" />
+              </Image>
+              <StarDivider />
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
@@ -1720,7 +1696,6 @@ const Article = () => {
             <MathBlock>
               $$ p = &#123;y - y_0 \over x - x_0&#125; $$
               <ImageLeft
-                squiggle={false}
                 offset_y="103px"
                 offset_x="7.5em"
                 src="/images/svg_ch2_ex_x0_y0_line_equation_cloud.svg" />

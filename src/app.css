@@ -134,21 +134,10 @@ table .slice {
 
 mjx-container {
   margin: 0 !important;
-  /* left: 50%;
-  transform: translateX(-50%); */
-  /* position: relative; */
   svg {
     display: inline;
   }
 }
-
-/* @media (max-width: 520px) {
-  mjx-container {
-    left: 0;
-    transform: translateX(0);
-    margin-inline: auto !important;
-  }
-} */
 
 span .MathJax_SVG {
   display: ruby !important;
@@ -413,13 +402,23 @@ table.first-line tr td:first-child {
   white-space: nowrap;
 }
 
-.test-bg {
+.divide-horizontally {
   background-image: linear-gradient(
     to right,
-    #d1d1f7 16px,
+    #d1d1f7 0%,
     #d1d1f7 50%,
     #e6bbff 50%,
-    #e6bbff calc(100% - 16px)
+    #e6bbff 100%
+  );
+}
+
+.divide-vertically {
+  background-image: linear-gradient(
+    to bottom,
+    #d1f7dc 0%,
+    #d1f7dc 50%,
+    #f9ffbb 50%,
+    #f9ffbb 100%
   );
 }
 

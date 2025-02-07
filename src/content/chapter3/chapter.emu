@@ -471,7 +471,7 @@
 
     |> ImageRight
         src images/svg_ch3_crossing_cloud_circle.svg
-        squiggle false
+        offset_x 2em
 
     ...is not the graph of any function, because 
     some vertical lines intersect the graph more 
@@ -778,7 +778,8 @@
     $$
 
     |> ImageRight
-        src images/svg_ch3_a1_x1_cloud.svg
+        src images/svg_ch3_ch_a1_x1_cloud.svg
+        offset_y 0.2em
 
     for all $x$, and 
 
@@ -787,7 +788,9 @@
     $$
 
     |> ImageRight
-        src images/svg_ch3_a0_x0_cloud.svg
+        src images/svg_ch3_ch_a0_x0_cloud.svg
+        offset_x 0.2em
+        offset_y 0.2em
 
     for all $x$ (even $x = 0$), namely.
 

@@ -1,10 +1,6 @@
-import {
-  mergeProps,
-  ParentProps,
-} from "solid-js";
+import { mergeProps, ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
-import useOnMobile from "../hooks/useOnMobile";
 import LazyImage from "./LazyImage";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useScale } from "~/store/ScaleProvider";
@@ -64,8 +60,6 @@ const SideImage = (_props: SideImageProps) => {
   return (
     <div
       ref={container_ref}
-      // style={props.parentStyles}
-      // class="absolute !w-1 !p-0 !ps-0 !pe-0 h-1 bg-black"
       class="absolute" style="left:0;top:0;width:100%;height:100%;background-color:none;pointer-events:none;margin:0;padding:0;"
       >
       <div
@@ -76,11 +70,11 @@ const SideImage = (_props: SideImageProps) => {
           style={`top: ${props.children_y}; left: ${props.children_x}`}>
           {props.children}
         </div>
-
         <LazyImage
-          class={twJoin(props.class, !props.width && "max-w-max")}
+          class={twJoin(props.class, !props.width && "max-w-max", "cloud")}
           style={props.style}
           src={props.src}
+          side_image={true}
         />
       </div>
 
@@ -126,12 +120,9 @@ export const ImageRight = ({
 export const ImageLeft = (
   { line = 0, y = "center", ...props }: ImageProps
 ) => {
-  const { on_mobile } = useOnMobile();
-
-  let line_height = () => (on_mobile() ? 28.0 : 32.5);
   let parent_styles = () => ({
     right: "100%",
-    top: getTopPos(y, line, line_height()),
+    top: getTopPos(y, line, 30),
   });
 
   return (

@@ -1,5 +1,5 @@
 import Chapter from "~/components/Chapter";
-import { Section, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
+import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
@@ -18,18 +18,6 @@ const Article = () => {
     <Chapter
       number={1}
       title="A Few Refreshers">
-      <Section>
-        <VerticalChunk>
-          <NoBreak>
-            ,
-            <Math>
-              $x$
-            </Math>
-            ,
-          </NoBreak>
-        </VerticalChunk>
-      </Section>
-      <Pause />
       <Section>
         <VerticalChunk>
           <b>

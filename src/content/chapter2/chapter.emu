@@ -678,7 +678,8 @@
 
         |> Solution
 
-            This is true, as illustrated by the following pair of lines:
+            This is true, as illustrated by the following
+            pair of lines:
 
             |> Image
                 src images/55.svg
@@ -688,50 +689,43 @@
                     src images/56.svg
                     offset_y 5rem
                     offset_x -1.3rem
-                    squiggle false
 
                 |> ImageLeft
                     src images/57.svg
-                    offset_x -7rem
-                    offset_y 0.5rem
-                    !! y bottom
-                    !! img_position bottom
-                    squiggle false
+                    offset_x -8rem
+                    offset_y 8rem
 
             In more detail, the two triangles are related
             by a $90^\circ$ rotation and so, likewise,
             are the lines defined by their hypotenuses!
 
-            |> Pause
+            |> SolutionNote
 
-            _Note 1._
-            More generally, a line of slope $p$ is
-            perpendicular to a line of slope $-1/p$, for
-            all $p \ne 0$. By a similar drawing:
+                More generally, a line of slope $p$ is
+                perpendicular to a line of slope $-1/p$, for
+                all $p \ne 0$. By a similar drawing:
 
-            |> Image
-                src images/58.svg
-                class relative w-fit
+                |> Image
+                    src images/58.svg
+                    class relative w-fit
 
-                |> ImageRight
-                    src images/59.svg
-                    offset_y 7.2rem
-                    offset_x -1.2rem
-                    squiggle false
+                    |> ImageRight
+                        src images/59.svg
+                        offset_y 27%
+                        offset_x -10%
 
-                |> ImageLeft
-                    src images/60.svg
-                    offset_x -5rem
-                    offset_y 0.5rem
-                    y bottom
-                    img_position bottom
-                    squiggle false
+                    |> ImageLeft
+                        src images/60.svg
+                        offset_x -24%
+                        offset_y 33%
 
-            (If the axes are oriented the usual way then 
-            the above drawing covers all the cases $p > 0$,
-            whereas if we flip the two number axes to point
-            down/left the above drawing covers all the cases 
-            $p < 0$—magic!)
+                |> StarDivider
+
+            !! (If the axes are oriented the usual way then 
+            !! the above drawing covers all the cases $p > 0$,
+            !! whereas if we flip the two number axes to point
+            !! down/left the above drawing covers all the cases 
+            !! $p < 0$—magic!)
 
     |> Exercise
 
@@ -750,7 +744,6 @@
                 src images/svg_ch2_ex_x0_y0_line_equation_cloud.svg
                 offset_x 7.5em
                 offset_y 103px
-                squiggle false
 
             because
 

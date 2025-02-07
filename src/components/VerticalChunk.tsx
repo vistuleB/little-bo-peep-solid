@@ -14,7 +14,7 @@ const VerticalChunk = (
         "slice", 
         props.indent && "indent-10",
         props.class,
-        store.show_areas && "test-bg"
+        store.show_areas && "divide-horizontally"
       )}
       style={props.style}
     >

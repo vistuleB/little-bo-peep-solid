@@ -1,4 +1,3 @@
-// import desugarers/add_attributes
 import gleam/option.{Some, None}
 import desugarers/absorb_next_sibling_while.{absorb_next_sibling_while}
 import desugarers/add_before_tags_but_not_first_child_tags.{add_before_tags_but_not_first_child_tags}
@@ -15,10 +14,8 @@ import desugarers/fold_tags_into_text.{fold_tags_into_text}
 import desugarers/free_children.{free_children}
 import desugarers/generate_lbp_table_of_contents.{generate_lbp_table_of_contents}
 import desugarers/group_consecutive_children_avoiding.{group_consecutive_children_avoiding}
-// import desugarers/group_siblings_not_separated_by_blank_lines.{group_siblings_not_separated_by_blank_lines}
 import desugarers/insert_bookend_tags.{insert_bookend_tags}
 import desugarers/insert_indent.{insert_indent}
-// import desugarers/lbp_distribute_slices.{lbp_distribute_slices}
 import desugarers/pair_bookends.{pair_bookends}
 import desugarers/remove_attributes.{remove_attributes}
 import desugarers/remove_empty_chunks.{remove_empty_chunks}
@@ -26,9 +23,7 @@ import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/remove_vertical_chunks_with_no_text_child.{remove_vertical_chunks_with_no_text_child}
 import desugarers/remove_starting_and_ending_empty_lines.{remove_starting_and_ending_empty_lines}
 import desugarers/remove_starting_and_ending_spaces.{remove_starting_and_ending_spaces}
-// import desugarers/rename_tag.{rename_tag}
 import desugarers/rename_when_child_of.{rename_when_child_of}
-// import desugarers/surround_elements_by.{surround_elements_by}
 import desugarers/split_by_indexed_regexes.{split_by_indexed_regexes}
 import desugarers/unwrap_tags.{unwrap_tags}
 import desugarers/unwrap_tags_if_descendants_of.{unwrap_tags_if_descendants_of}
@@ -111,7 +106,7 @@ pub fn our_pipeline() -> List(Pipe) {
         ".*",
         "*Exercise.*",
       ),
-      #("Solution", "SolutionNoteCounter", "Note", "_Note ", "._", "_Note._"),
+      #("Solution", "SolutionNoteCounter", "SolutionNote", "_Note ", "._", "_Note._"),
     ]),
     // ************************
     // VerticalChunk **********
@@ -125,6 +120,8 @@ pub fn our_pipeline() -> List(Pipe) {
           "Bootcamp",
           "Section",
           "Example",
+          "Note",
+          "SolutionNote",
           "Exercises", 
           "Exercise",
           "Grid",
@@ -132,12 +129,11 @@ pub fn our_pipeline() -> List(Pipe) {
           "ImageLeft",
           "ImageRight",
           "MathBlock", 
-          "Note",
           "Section",
-          "Solution", 
+          "Solution",
           "List",
           "Pause",
-          "Table", 
+          "Table",
           "WriterlyBlankLine", 
           "li",
           "ul",
@@ -150,22 +146,13 @@ pub fn our_pipeline() -> List(Pipe) {
           "td",
           "section",
         ],
-        ["MathBlock", "VerticalChunk"],
+        [
+          "MathBlock",
+          "VerticalChunk",
+        ],
       )
     ),
     unwrap_tags(["WriterlyBlankLine"]),
-    // surround_elements_by(#(
-    //   [
-    //     "MathBlock", "Image", "Table", "Exercises", "Solution", "Example",
-    //     "Section", "Exercise", "List", "Grid", "ImageLeft", "ImageRight",
-    //     "Pause", "ul", "li", "ol"
-    //   ],
-    //   "WriterlyBlankLine",
-    //   "WriterlyBlankLine",
-    // )),
-    // group_siblings_not_separated_by_blank_lines(
-    //   #("VerticalChunk", ["MathBlock"]),
-    // ),
     rename_when_child_of([
       #("VerticalChunk", "Item", "List"),
       #("VerticalChunk", "Item", "Grid")
@@ -310,6 +297,16 @@ pub fn our_pipeline() -> List(Pipe) {
         #("ClosingDoubleDollar", "$$"),
       ]
     ),
+    // ************************
+    // VerticalChunk cleanup
+    // ************************
+    remove_starting_and_ending_spaces(["VerticalChunk"]),
+    remove_starting_and_ending_empty_lines(["VerticalChunk"]),
+    unwrap_tags_if_descendants_of([#("VerticalChunk", ["td", "li"])]),
+    remove_empty_chunks(),
+    // ************************
+    // ImageLeft, ImageRight parent-finding
+    // ************************
     absorb_next_sibling_while([
       #("VerticalChunk", "ImageRight"),
       #("VerticalChunk", "ImageLeft"),
@@ -321,15 +318,12 @@ pub fn our_pipeline() -> List(Pipe) {
       #("CentralDisplay", "ImageLeft"),
       #("Image", "ImageRight"),
       #("Image", "ImageLeft"),
+      #("ul", "ImageRight"),
+      #("ul", "ImageLeft"),
     ]),
-    change_attribute_value([#("src", "/()")]),
     // ************************
-    // VerticalChunk cleanup
+    // VerticalChunk indents
     // ************************
-    remove_starting_and_ending_spaces(["VerticalChunk"]),
-    remove_starting_and_ending_empty_lines(["VerticalChunk"]),
-    unwrap_tags_if_descendants_of([#("VerticalChunk", ["td", "li"])]),
-    remove_empty_chunks(),
     insert_indent(),
     // ************************
     // Add spacers
@@ -337,6 +331,8 @@ pub fn our_pipeline() -> List(Pipe) {
     add_between_tags([
       #(#("MathBlock", "VerticalChunk"), "Pause", []),
       #(#("Example", "VerticalChunk"), "Pause", []),
+      #(#("Note", "VerticalChunk"), "Pause", []),
+      #(#("SolutionNote", "VerticalChunk"), "Pause", []),
       #(#("Image", "VerticalChunk"), "Pause", []),
       #(#("Table", "VerticalChunk"), "Pause", []),
       #(#("table", "VerticalChunk"), "Pause", []),
@@ -349,6 +345,7 @@ pub fn our_pipeline() -> List(Pipe) {
       #("Exercises", "Pause", []),
       #("Example", "Pause", []),
       #("Note", "Pause", []),
+      #("SolutionNote", "Pause", []),
       #("Section", "Pause", []),
       #("MathBlock", "Pause", []),
       #("CentralDisplayItalic", "Pause", []),
@@ -361,36 +358,15 @@ pub fn our_pipeline() -> List(Pipe) {
       #("Solution", "Pause", []),
       #("List", "Pause", []),
     ]),
+    // ************************
+    // attribute cleanup
+    // ************************
+    change_attribute_value([#("src", "/()")]),
     remove_attributes(["counter", "handle", "type"]),
-    // lbp_distribute_slices(),
-    // rename_tag(#("VerticalChunk", "p")),
-    // add_attributes.add_attributes([#("p", "class", "slice")]),
+    // ************************
+    // contents
+    // ************************
     generate_lbp_table_of_contents(#("PanelAuthorSuppliedContent", "PanelTitle", "PanelItem", None)),
     generate_lbp_table_of_contents(#("TOCAuthorSuppliedContent", "TOCTitle", "TOCItem", Some("Spacer"))),
-    // unwrap_tags(["VerticalChunk"]),
-    // insert_bookend_tags([#("i", "3p", "3p")]),
-    // fold_tags_into_text([#("3p", "   ")]),
-    // extract_starting_and_ending_spaces.extract_starting_and_ending_spaces([
-    //   "i"
-    // ])
-    // encode_spaces_in_first_and_last_child(["i", "b", "strong"]),
-    // insert_bookend_text_if_no_attributes([
-    //   #("i", "_", "_"),
-    //   #("b", "*", "*"),
-    //   #("strong", "*", "*"),
-    // ]),
-    // unwrap_tags_if_no_attributes.unwrap_tags_if_no_attributes(["i", "b", "strong"]),
-    // insert_bookend_tags([
-    //   #("i", "OpeningUnderscore", "ClosingUnderscore"),
-    //   #("b", "OpeningAsterisk", "ClosingAsterisk"),
-    //   #("strong", "OpeningAsterisk", "ClosingAsterisk"),
-    // ]),
-    // fold_tags_into_text([
-    //   #("OpeningUnderscore", "_"),
-    //   #("ClosingUnderscore", "_"),
-    //   #("OpeningAsterisk", "*"),
-    //   #("ClosingAsterisk", "*"),
-    // ]),
-    // concatenate_text_nodes(),
   ]
 }

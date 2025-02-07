@@ -20,6 +20,14 @@ export const Example = (props: ParentProps) => {
   return <>{props.children}</>;
 };
 
+export const Note = (props: ParentProps) => {
+  return <>{props.children}</>;
+};
+
+export const SolutionNote = (props: ParentProps) => {
+  return <>{props.children}</>;
+};
+
 export const NoBreak = (props: ParentProps) => {
   return <span class="nobreak">{props.children}</span>;
 };

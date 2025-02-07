@@ -1,5 +1,5 @@
 import Chapter from "~/components/Chapter";
-import { Section, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
+import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
@@ -108,7 +108,7 @@ const Article = () => {
           “before” graph.) E.g.:
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_explanation1.svg" />
+        <Image src="/images/svg_ch4_ch_explanation1.svg" />
         <Pause />
         <VerticalChunk>
           Note that{" "}
@@ -156,9 +156,9 @@ const Article = () => {
           </NoBreak>
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_explanation2.svg">
+        <Image src="/images/svg_ch4_ch_explanation2.svg">
           <ImageRight
-            src="/images/svg_ch4_explanation2_cloud.svg"
+            src="/images/svg_ch4_ch_explanation2_cloud.svg"
             offset_x="-13em"
             offset_y="-17em" />
         </Image>
@@ -181,15 +181,14 @@ const Article = () => {
           </NoBreak>
           {" "}is 
           undefined if a tangent line does not exist 
-          or if the tangent is vertical. But for one 
-          last asterisk—and speaking of the existence,
-          or not, of the tangent—note that the endpoint
-          of a curve does not count as having a tangent,
-          and therefore leaves a missing value for the 
-          derivative:
+          or if the tangent is vertical. 
+          For one extra special case, note that
+          the endpoing of a curve does not count
+          as having a tangent, and leaves a missing
+          value for the derivative:
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_explanation_one_sided_tangent.svg" />
+        <Image src="/images/svg_ch4_ch_one_sided_tangent.svg" />
         <Pause />
         <VerticalChunk>
           (In other words, “half-tangents” do not actually 
@@ -307,7 +306,7 @@ const Article = () => {
           (the one with the closed endpoints):
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_curve_to_sketch.svg" />
+        <Image src="/images/svg_ch4_ch_curve_to_sketch.svg" />
         <Pause />
         <VerticalChunk>
           One method is simply to eyeball the slope at 
@@ -315,8 +314,11 @@ const Article = () => {
           values and interpolate:
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_first_derivative_sketch.svg">
-          <ImageRight src="/images/svg_ch4_polaroid_cloud.svg" />
+        <Image src="/images/svg_ch4_ch_curve_to_sketch_sketch.svg">
+          <ImageRight
+            offset_x="-15%"
+            offset_y="36%"
+            src="/images/svg_ch4_ch_curve_to_sketch_cloud.svg" />
         </Image>
         <Pause />
         <VerticalChunk>
@@ -331,9 +333,7 @@ const Article = () => {
           interval:
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_second_derivative_sketch_pt1.svg" />
-        <Pause />
-        <Image src="/images/svg_ch4_second_derivative_sketch_pt2.svg" />
+        <Image src="/images/svg_ch4_ch_second_sketch.svg" />
         <Pause />
         <VerticalChunk>
           The result (at bottom right)
@@ -391,7 +391,9 @@ const Article = () => {
         <Pause />
         <MathBlock>
           $$(x \ra B)' = (x \ra 0)$$
-          <ImageLeft src="/images/svg_ch4_constant_derivative_cloud.svg" />
+          <ImageLeft
+            offset_x="8em"
+            src="/images/svg_ch4_ch_constant_derivative_cloud.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -498,7 +500,9 @@ const Article = () => {
         <Pause />
         <MathBlock>
           $$(x \ra Ax + B)' = (x \ra A)$$
-          <ImageLeft src="/images/svg_ch4_affine_derivative_cloud.svg" />
+          <ImageLeft
+            offset_x="7em"
+            src="/images/svg_ch4_ch_affine_derivative_cloud.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -744,8 +748,10 @@ const Article = () => {
           For example, if the “before” graph has units 
           of...
         </VerticalChunk>
-        <ul>
-          <li>
+        <ul
+          style="list-style-type:disc;margin-top:1em;margin-bottom:1em;"
+          class="slice">
+          <li style="margin:0 60px;">
             seconds on the{" "}
             <NoBreak>
               <Math>
@@ -762,12 +768,16 @@ const Article = () => {
             {" "}axis
           </li>
         </ul>
-        <ImageRight src="/images/svg_ch4_units1_cloud.svg" />
         <VerticalChunk>
           ...then the “after” graph will have units of...
+          <ImageRight
+            offset_y="-0.6em"
+            src="/images/svg_ch4_ch_units1_cloud.svg" />
         </VerticalChunk>
-        <ul>
-          <li>
+        <ul
+          style="list-style-type:disc;margin-top:1em;margin-bottom:1em;"
+          class="slice">
+          <li style="margin:0 60px;">
             seconds on the{" "}
             <NoBreak>
               <Math>
@@ -787,8 +797,10 @@ const Article = () => {
         <VerticalChunk>
           ...while if the “before” graph has units of...
         </VerticalChunk>
-        <ul>
-          <li>
+        <ul
+          style="list-style-type:disc;margin-top:1em;margin-bottom:1em;"
+          class="slice">
+          <li style="margin:0 60px;">
             years on the{" "}
             <NoBreak>
               <Math>
@@ -805,12 +817,16 @@ const Article = () => {
             {" "}axis
           </li>
         </ul>
-        <ImageLeft src="/images/svg_ch4_units2_cloud.svg" />
         <VerticalChunk>
           ...then the “after” graph will have units of...
+          <ImageLeft
+            offset_y="0.6em"
+            src="/images/svg_ch4_ch_units2_cloud.svg" />
         </VerticalChunk>
-        <ul>
-          <li>
+        <ul
+          style="list-style-type:disc;margin-top:1em;margin-bottom:1em;"
+          class="slice">
+          <li style="margin:0 60px;">
             years on the{" "}
             <NoBreak>
               <Math>
@@ -1002,7 +1018,10 @@ const Article = () => {
           <Pause />
           <MathBlock>
             $$(x \ra 3x + 1)'' = (x \ra 0)$$
-            <ImageRight src="/images/svg_ch4_3x_plus_one_and_second_cloud.svg" />
+            <ImageRight
+              offset_y="0.1em"
+              offset_x="6em"
+              src="/images/svg_ch4_3x_plus_one_and_second_cloud.svg" />
           </MathBlock>
         </Example>
         <Pause />
@@ -1062,12 +1081,12 @@ const Article = () => {
           <Pause />
           <CentralDisplayItalic>
             ~ the second derivative of an affine function is zero ~
+            <ImageLeft
+              line={1.0}
+              src="/images/svg_ch4_ch_adding_statements_cloud.svg" />
           </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            <ImageLeft src="/images/svg_ch4_adding_statements_cloud.svg" />
-          </VerticalChunk>
         </Example>
+        <StarDivider style="margin-top:1.5em;margin-bottom:0em" />
       </Section>
       <Pause />
       <Section>
@@ -1202,7 +1221,7 @@ const Article = () => {
           Viz:
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_convex_concave.svg" />
+        <Image src="/images/svg_ch4_ch_convex_concave.svg" />
         <Pause />
         <VerticalChunk>
           <b>
@@ -1218,7 +1237,7 @@ const Article = () => {
           of a graph:
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_inflection_point.svg" />
+        <Image src="/images/svg_ch4_ch_inflection_point.svg" />
         <Pause />
         <Example>
           <VerticalChunk>
@@ -1348,7 +1367,7 @@ const Article = () => {
           seconds:
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_position_by_time_tangent.svg" />
+        <Image src="/images/svg_ch4_ch_position_by_time_tangent.svg" />
         <Pause />
         <VerticalChunk>
           The ratio “rise over run” has the form
@@ -1480,7 +1499,9 @@ const Article = () => {
           <Pause />
           <MathBlock>
             $$(2&#123;\te&#123;m&#125;/\te&#123;s&#125;\!&#123;\,&#125;^2&#125;) \times\, (10\te&#123;s&#125;) = 20&#123;\te&#123;m&#125;/\te&#123;s&#125;&#125;$$
-            <ImageRight src="/images/svg_ch4_unit_cancellation_cloud.svg" />
+            <ImageRight
+              offset_x="5em"
+              src="/images/svg_ch4_ch_units_cancellation_cloud.svg" />
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5874,7 +5895,6 @@ const Article = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "}{" "}
               <ImageRight src="/images/svg_ch4_circle_at_2_4_with_some_vectors_cloud.svg" />
             </VerticalChunk>
             <VerticalChunk indent={true}>
@@ -6056,12 +6076,10 @@ const Article = () => {
             <Pause />
             <CentralDisplayItalic>
               length of the position vector
+              <ImageRight src="/images/svg_ch4_circle_at_2_4_position_equals_velocity_cloud.svg" />
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
-              <ImageRight src="/images/svg_ch4_circle_at_2_4_position_equals_velocity_cloud.svg" />
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
               of said particles, is equal to the
             </VerticalChunk>
             <Pause />
@@ -8431,8 +8449,8 @@ const Article = () => {
                   {" "}{" "}
                 </i>
               </li>
+              <ImageLeft src="/images/svg_ch4_express_the_f_g_h_A_B_C_D_cloud.svg" />
             </ul>
-            <ImageLeft src="/images/svg_ch4_express_the_f_g_h_A_B_C_D_cloud.svg" />
             <VerticalChunk>
               For the real numbers:
             </VerticalChunk>
@@ -9444,13 +9462,11 @@ const Article = () => {
             <Pause />
             <CentralDisplayItalic>
               the whole is simpler than the parts
+              <ImageLeft src="/images/svg_ch4_5_euler_hearts_left.svg" />
+              <ImageRight src="/images/svg_ch4_5_euler_hearts_right.svg" />
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
-              <ImageLeft src="/images/svg_ch4_5_euler_hearts_left.svg" />
-              <ImageRight src="/images/svg_ch4_5_euler_hearts_right.svg" />
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
               in that you would never spot the symmetry
               at play, or have a chance of eyeballing
               the long-term evolution of the system, if
@@ -10612,7 +10628,6 @@ const Article = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "}{" "}
               <ImageLeft src="/images/svg_ch4_RATS_for_f_equals_AB_cloud.svg" />
             </VerticalChunk>
             <VerticalChunk indent={true}>
@@ -10705,7 +10720,7 @@ const Article = () => {
               Lastly the most interesting term is the
               second term on the right-hand side!
               Symmetrically to the first term on the
-              right-hand side, the second term approaches{" "}
+              right-hand side, the second term approaches
               <ImageRight src="/images/svg_ch4_RATS_second_term_cloud.svg" />
             </VerticalChunk>
             <Pause />

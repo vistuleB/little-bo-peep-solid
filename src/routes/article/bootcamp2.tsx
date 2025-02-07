@@ -1,5 +1,5 @@
 import Bootcamp from "~/components/Bootcamp";
-import { Section, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
+import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
@@ -1192,34 +1192,28 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
+          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
           and
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
+          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
           and also (while we're at it)
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
+          <ImageRight src="/images/svg_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          <ImageRight src="/images/svg_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
           as can be seen, for example, by replacing “billion”
           with “thousand million” in the previous sentence and
           then further replacing “thousand thousand” with “million”

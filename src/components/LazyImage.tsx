@@ -1,34 +1,16 @@
-import { createSignal, onCleanup, onMount, ParentProps } from "solid-js";
-import SharedProps from "./types/SharedProps";
+import { ParentProps } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
+import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
-// import EventHandlerUnion from "";
-// import EventHandler from "";
+
+type LazyImageProp = {
+  side_image?: boolean;
+};
 
 function LazyImage(
-  props: ParentProps & JSX.ImgHTMLAttributes<HTMLImageElement>
-  // props: LazyImageProps
+  props: ParentProps & JSX.ImgHTMLAttributes<HTMLImageElement> & LazyImageProp
 ) {
-  // const [isVisible, setIsVisible] = createSignal(false);
-  // let imgRef: HTMLImageElement | undefined;
   let {store} = useGlobalContext();
-
-  // onMount(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting) {
-  //         setIsVisible(true);
-  //         observer.disconnect();
-  //       }
-  //     },
-  //     { rootMargin: "300px" }
-  //   );
-  //   if (imgRef) observer.observe(imgRef);
-  //   else {
-  //     console.log("imgRef was undefined");
-  //   }
-  //   onCleanup(() => observer.disconnect());
-  // });
 
   return (
     <img
@@ -36,9 +18,11 @@ function LazyImage(
       onClick={props.onClick}
       src={props.src}
       alt={props.alt || ""}
-      class={props.class || ""}
+      class={twJoin(
+        props.class,
+        store.show_areas && (props.side_image ? "divide-vertically" : "divide-horizontally"),
+      )}
       style={props.style || ""}
-      classList={{"bg-red-500": store.show_areas}}
       loading="lazy"
     />
   );
