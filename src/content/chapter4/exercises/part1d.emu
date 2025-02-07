@@ -57,28 +57,30 @@
     Express the...
 
     |> ul
-        style margin:1em 0 0 2.5em
+        class slice
+        style margin:1em 0 0 2.5em;margin:auto
 
         |> li
 
             associativity of function composition
         |> li
 
-            associativity of function kmultiplication
+            associativity of function multiplication
         |> li
 
-            associativity of function addition</li>
+            associativity of function addition
         |> li
 
-            commutativity of function multiplication</li>
+            commutativity of function multiplication
         |> li
 
-            commutativity of function addition</li>
+            commutativity of function addition
 
-    ...as well as the..
+    ...as well as the...
 
     |> ul
-        style margin:1em 0 0 2.5em
+        class slice
+        style margin:1em 0 0 2.5em;margin:auto
 
         |> li
             

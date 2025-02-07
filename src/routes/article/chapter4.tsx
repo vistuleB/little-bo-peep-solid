@@ -8251,27 +8251,31 @@ const Article = () => {
             {" "}
             Express the...
           </VerticalChunk>
-          <ul style="margin:1em 0 0 2.5em">
+          <ul
+            style="margin:1em 0 0 2.5em;margin:auto"
+            class="slice">
             <li>
               associativity of function composition
             </li>
             <li>
-              associativity of function kmultiplication
+              associativity of function multiplication
             </li>
             <li>
-              associativity of function addition&lt;/li&gt;
+              associativity of function addition
             </li>
             <li>
-              commutativity of function multiplication&lt;/li&gt;
+              commutativity of function multiplication
             </li>
             <li>
-              commutativity of function addition&lt;/li&gt;
+              commutativity of function addition
             </li>
           </ul>
           <VerticalChunk>
-            ...as well as the..
+            ...as well as the...
           </VerticalChunk>
-          <ul style="margin:1em 0 0 2.5em">
+          <ul
+            style="margin:1em 0 0 2.5em;margin:auto"
+            class="slice">
             <li>
               associativity of real number multiplication
             </li>

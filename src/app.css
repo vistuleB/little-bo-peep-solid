@@ -62,7 +62,6 @@ i {
   justify-content: center;
 }
 
-/* Slice */
 .slice {
   position: relative;
   width: min(var(--desktop-text-column-width), 100vw);
