@@ -13,6 +13,7 @@ import desugarers/fold_tags_into_text.{fold_tags_into_text}
 import desugarers/free_children.{free_children}
 import desugarers/generate_lbp_table_of_contents.{generate_lbp_table_of_contents}
 import desugarers/group_consecutive_children_avoiding.{group_consecutive_children_avoiding}
+import desugarers/handles_substitute.{handles_substitute}
 import desugarers/insert_bookend_tags.{insert_bookend_tags}
 import desugarers/insert_indent.{insert_indent}
 import desugarers/pair_bookends.{pair_bookends}
@@ -29,7 +30,7 @@ import desugarers/unwrap_tags_if_descendants_of.{unwrap_tags_if_descendants_of}
 import desugarers/wrap_math_with_no_break.{wrap_math_with_no_break}
 import infrastructure.{type Pipe} as infra
 
-pub fn our_pipeline() -> List(Pipe) {
+pub fn lbp_pipeline() -> List(Pipe) {
   let double_dollar_indexed_regex =
     infra.unescaped_suffix_indexed_regex("\\$\\$")
 
@@ -279,6 +280,7 @@ pub fn our_pipeline() -> List(Pipe) {
     // ************************
     wrap_math_with_no_break(),
     counters_substitute_and_assign_handles(),
+    handles_substitute(),
     add_exercise_labels(),
     add_counter_attributes([#("Solution", "Exercises", "solution_number", 1)]),
     add_counter_attributes([#("Exercise", "Exercises", "exercise_number", 1)]),

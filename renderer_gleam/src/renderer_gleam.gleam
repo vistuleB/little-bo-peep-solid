@@ -201,7 +201,7 @@ pub fn main() {
     assembler: wp.assemble_blamed_lines_advanced_mode(_, amendments.assemble_blamed_lines_selector_args),
     source_parser: wp.parse_blamed_lines,
     parsed_source_converter: wp.writerlys_to_vxmls,
-    pipeline: pipeline.our_pipeline(),
+    pipeline: pipeline.lbp_pipeline(),
     splitter: lbp_splitter,
     emitter: lbp_emitter,
     prettifier: vr.prettier_prettifier,
