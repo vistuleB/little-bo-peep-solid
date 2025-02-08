@@ -1,7 +1,7 @@
+import { MOBILE_MAX_WIDTH } from "~/constants";
 import { ParentProps, createSignal, createEffect, onCleanup, onMount } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
-import useOnMobile from "../hooks/useOnMobile";
 
 const Table = (props: ParentProps & SharedProps) => {
   const [innerWidth, set_innerWidth] = createSignal(window.innerWidth);
@@ -10,7 +10,6 @@ const Table = (props: ParentProps & SharedProps) => {
   let [recent_click, set_recent_click] = createSignal(false);
   let [after_first_load, set_after_first_load] = createSignal(false);
   let table_ref: HTMLTableElement | undefined;
-  let { on_mobile } = useOnMobile();
 
   const tableWidth = () => {
     let toReturn = (table_ref) ? table_ref.offsetWidth : 3000;
@@ -22,35 +21,34 @@ const Table = (props: ParentProps & SharedProps) => {
     return toReturn;
   }
 
-  const scaledDownWidth = () => Math.min(1, (innerWidth() - 64.0) / tableWidth());
+  const scaled_down_scale = () => Math.min(1, (innerWidth() - 32.0) / tableWidth());
+  const our_on_mobile = () => (innerWidth() <= MOBILE_MAX_WIDTH);
+
+  const reset_scale = () => {
+    if (our_on_mobile() && scaled_down_scale() < 1) {
+      set_scale(scaled_down_scale());
+      set_scaled_down(true);
+    } else {
+      set_scale(1);
+      set_scaled_down(false);
+    }
+  }
+
+  const handleResize = () => {
+    let previous_innerWidth = innerWidth();
+    let new_innerWidth = window.innerWidth;
+    if (previous_innerWidth == new_innerWidth) return;
+    let previous_on_mobile = our_on_mobile();
+    set_innerWidth(new_innerWidth);
+    if (previous_on_mobile != our_on_mobile() || !previous_on_mobile) reset_scale();
+  };
 
   createEffect(() => {
+    window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
+    setTimeout(() => { set_after_first_load(true); }, 2000);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
-  
-  onMount(() => {
-    window.requestAnimationFrame(() => { handleResize(); });
-    if (on_mobile()) {
-      set_scaled_down(true);
-      set_scale(scaledDownWidth());
-    }
-    setTimeout(() => {
-      set_after_first_load(true); 
-    }, 2000);
-  });
-
-  const handleResize = () => {
-    set_innerWidth(window.innerWidth);
-    // if (on_mobile() && scaledDownWidth() < 1) {
-    //   set_scale(scaledDownWidth());
-    //   set_scaled_down(true);
-    // }
-    // else if (!on_mobile()) {
-    //   set_scale(1);
-    //   set_scaled_down(false);
-    // }
-  };
 
   return (
     <div style={props.style}>
@@ -63,10 +61,10 @@ const Table = (props: ParentProps & SharedProps) => {
         )}
         ref={table_ref}
         onClick={(_) => {
-          const newScaledDown = on_mobile() ? !scaled_down() : false;
+          const newScaledDown = our_on_mobile() ? !scaled_down() : false;
           set_scaled_down(newScaledDown);
           set_after_first_load(true);
-          set_scale(newScaledDown ? scaledDownWidth() : 1);
+          set_scale(newScaledDown ? scaled_down_scale() : 1);
           set_recent_click(true);
           setTimeout(
             () => { set_recent_click(false); },

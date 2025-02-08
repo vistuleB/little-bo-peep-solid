@@ -1,3 +1,4 @@
+import { MOBILE_MAX_WIDTH } from "~/constants";
 import { createEffect, createSignal, onCleanup, onMount, ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
@@ -15,7 +16,6 @@ type ImageProps = ParentProps & SharedProps & {
 };
 
 const Image = (props: ImageProps) => {
-  let { on_mobile } = useOnMobile();
   let [scale, set_scale] = createSignal(1.0);
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(false);
@@ -27,36 +27,36 @@ const Image = (props: ImageProps) => {
     let toReturn = (image_ref) ? image_ref.naturalWidth : 3000;
     return toReturn;
   }
-  const scaledDownWidth = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
 
-  const handleResize = () => {
-    set_innerWidth(window.innerWidth);
-    if (on_mobile() && scaledDownWidth() < 1) {
-      set_scale(scaledDownWidth());
+  const scaled_down_scale = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
+  const our_on_mobile = () => (innerWidth() <= MOBILE_MAX_WIDTH);
+
+  const reset_scale = () => {
+    if (our_on_mobile() && scaled_down_scale() < 1) {
+      set_scale(scaled_down_scale());
       set_scaled_down(true);
-    }
-    // only putting this test if !on_mobile()
-    // because the '.naturalWidth' property
-    // is not reliably working on iPhone 12
-    else if (!on_mobile()) {
+    } else {
       set_scale(1);
       set_scaled_down(false);
     }
+  }
+
+  const handleResize = () => {
+    let previous_innerWidth = innerWidth();
+    let new_innerWidth = window.innerWidth;
+    if (previous_innerWidth == new_innerWidth) return;
+    let previous_on_mobile = our_on_mobile();
+    set_innerWidth(new_innerWidth);
+    if (previous_on_mobile != our_on_mobile() || !previous_on_mobile) reset_scale();
   };
   
   createEffect(() => {
+    window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
+    setTimeout(() => { set_after_first_load(true); }, 2000);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
   
-  onMount(() => {
-    window.requestAnimationFrame(() => { handleResize(); });
-    if (on_mobile()) {
-      set_scaled_down(true);
-      set_scale(scaledDownWidth());
-    }
-    setTimeout(() => { set_after_first_load(true); }, 2000);
-  });
 
   return (
     <ScaleProvider scale={scale}>
@@ -76,10 +76,10 @@ const Image = (props: ImageProps) => {
           <LazyImage
             ref={image_ref}
             onClick={(event) => {
-              const newScaledDown = on_mobile() ? !scaled_down() : false;
+              const newScaledDown = our_on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
               set_after_first_load(true);
-              set_scale(newScaledDown ? scaledDownWidth() : 1);
+              set_scale(newScaledDown ? scaled_down_scale() : 1);
               set_recent_click(true);
               setTimeout(
                 () => { set_recent_click(false); },
@@ -88,7 +88,7 @@ const Image = (props: ImageProps) => {
             }}
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
-              on_mobile() && scaled_down() && "max-width-screen",
+              our_on_mobile() && scaled_down() && "max-width-screen",
               recent_click() && "bg-reddish",
               after_first_load() && "transition-all",
             )}
