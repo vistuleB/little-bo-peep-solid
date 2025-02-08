@@ -23,7 +23,7 @@ const Image = (props: ImageProps) => {
   let image_ref: HTMLImageElement | undefined;
 
   const imageWidth = () => {
-    let toReturn = (image_ref) ? image_ref.offsetWidth : 3000;
+    let toReturn = (image_ref) ? image_ref.naturalWidth : 3000;
     return toReturn;
   }
 
@@ -64,7 +64,7 @@ const Image = (props: ImageProps) => {
           "padding-left": `${props.padding_left || 0}`,
           "padding-right": `${props.padding_right || 0}`,
         }}
-        class={twJoin("left-1/2 -translate-x-1/2 relative w-max bg-slate-200", props.class)}>
+        class={twJoin("left-1/2 -translate-x-1/2 relative w-max", props.class)}>
         <div 
           style={{
             height: props.height,
@@ -88,6 +88,7 @@ const Image = (props: ImageProps) => {
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
               our_on_mobile() && (scaled_down() || !after_first_load()) && "max-width-screen",
               recent_click() && "bg-yellowish",
+              !recent_click() && "bg-slate-200",
               after_first_load() && "transition-all",
             )}
             style={props.style}
