@@ -46,7 +46,7 @@ const Table = (props: ParentProps & SharedProps) => {
       set_scale(scaledDownWidth());
       set_scaled_down(true);
     }
-    else {
+    else if (!on_mobile()) {
       set_scale(1);
       set_scaled_down(false);
     }
