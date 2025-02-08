@@ -66,7 +66,7 @@ const Image = (props: ImageProps) => {
           "padding-left": `${props.padding_left || 0}`,
           "padding-right": `${props.padding_right || 0}`,
         }}
-        class={twJoin("left-1/2 -translate-x-1/2 relative w-max bg-slate-200", props.class)}>
+        class={twJoin("left-1/2 -translate-x-1/2 relative w-fit bg-slate-200", props.class)}>
         <div 
           style={{
             height: props.height,
