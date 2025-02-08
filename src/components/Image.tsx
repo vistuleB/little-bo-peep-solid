@@ -23,9 +23,12 @@ const Image = (props: ImageProps) => {
   let [after_first_load, set_after_first_load] = createSignal(false);
   let image_ref: HTMLImageElement | undefined;
 
+  let maxSeenNaturalWidth = 100;
+
   const naturalWidth = () => {
     let toReturn = (image_ref) ? image_ref.naturalWidth : 3000;
-    return toReturn;
+    maxSeenNaturalWidth = Math.max(toReturn, maxSeenNaturalWidth);
+    return maxSeenNaturalWidth;
   }
 
   const scaled_down_scale = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
