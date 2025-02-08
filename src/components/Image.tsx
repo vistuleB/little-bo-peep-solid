@@ -19,7 +19,7 @@ const Image = (props: ImageProps) => {
   let [scale, set_scale] = createSignal(1.0);
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(false);
-  const [innerWidth, set_innerWidth] = createSignal(0);
+  const [innerWidth, set_innerWidth] = createSignal(5000);
   let [after_first_load, set_after_first_load] = createSignal(false);
   let image_ref: HTMLImageElement | undefined;
 
@@ -43,16 +43,16 @@ const Image = (props: ImageProps) => {
 
   const handleResize = () => {
     let previous_innerWidth = innerWidth();
-    let new_innerWidth = window.innerWidth;
-    if (previous_innerWidth == new_innerWidth) return;
     let previous_on_mobile = our_on_mobile();
+    let new_innerWidth = window.innerWidth;
+    if (previous_innerWidth === new_innerWidth) return;
     set_innerWidth(new_innerWidth);
     if (previous_on_mobile != our_on_mobile() || !previous_on_mobile) reset_scale();
   };
   
   createEffect(() => {
     window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
-    setTimeout(() => { reset_scale(); }, 50);
+    setTimeout(() => { reset_scale(); }, 5000);
     setTimeout(() => { set_after_first_load(true); }, 2000);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
@@ -89,7 +89,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
               our_on_mobile() && scaled_down() && "max-width-screen",
-              recent_click() && "bg-reddish",
+              recent_click() && "bg-green",
               after_first_load() && "transition-all",
             )}
             style={props.style}
