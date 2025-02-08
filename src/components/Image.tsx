@@ -91,6 +91,7 @@ const Image = (props: ImageProps) => {
               our_on_mobile() && scaled_down() && "max-width-screen",
               recent_click() && "bg-green",
               after_first_load() && "transition-all",
+              "w-fit",
             )}
             style={props.style}
             src={props.src}
