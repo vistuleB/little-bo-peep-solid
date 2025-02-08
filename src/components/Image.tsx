@@ -52,11 +52,11 @@ const Image = (props: ImageProps) => {
   
   createEffect(() => {
     window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
+    setTimeout(() => { reset_scale(); }, 50);
     setTimeout(() => { set_after_first_load(true); }, 2000);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
-  
 
   return (
     <ScaleProvider scale={scale}>
@@ -75,7 +75,7 @@ const Image = (props: ImageProps) => {
         >
           <LazyImage
             ref={image_ref}
-            onClick={(event) => {
+            onClick={(_) => {
               const newScaledDown = our_on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
               set_after_first_load(true);

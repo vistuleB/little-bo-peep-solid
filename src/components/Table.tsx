@@ -56,7 +56,7 @@ const Table = (props: ParentProps & SharedProps) => {
         class={twJoin(
           props.class,
           "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
-          recent_click() && "bg-green",
+          recent_click() && "bg-reddish",
           after_first_load() && "transition-all",
         )}
         ref={table_ref}
