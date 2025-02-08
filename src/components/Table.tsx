@@ -25,19 +25,19 @@ const Table = (props: ParentProps & SharedProps) => {
   const scaledDownWidth = () => Math.min(1, (innerWidth() - 64.0) / tableWidth());
 
   createEffect(() => {
-    window.addEventListener("resize", handleResize);
-    onCleanup(() => { window.removeEventListener("resize", handleResize); });
+    // window.addEventListener("resize", handleResize);
+    // onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
   
   onMount(() => {
     window.requestAnimationFrame(() => { handleResize(); });
-    if (on_mobile()) {
-      set_scaled_down(true);
-      set_scale(scaledDownWidth());
-    }
-    setTimeout(() => {
-      set_after_first_load(true); 
-    }, 2000);
+    // if (on_mobile()) {
+    //   set_scaled_down(true);
+    //   set_scale(scaledDownWidth());
+    // }
+    // setTimeout(() => {
+    //   set_after_first_load(true); 
+    // }, 2000);
   });
 
   const handleResize = () => {
