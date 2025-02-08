@@ -52,6 +52,8 @@ const Image = (props: ImageProps) => {
   
   createEffect(() => {
     window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
+    setTimeout(() => { handleResize(); reset_scale(); }, 50);
+    setTimeout(() => { reset_scale(); }, 500);
     setTimeout(() => { reset_scale(); }, 5000);
     setTimeout(() => { set_after_first_load(true); }, 2000);
     window.addEventListener("resize", handleResize);
@@ -66,7 +68,7 @@ const Image = (props: ImageProps) => {
           "padding-left": `${props.padding_left || 0}`,
           "padding-right": `${props.padding_right || 0}`,
         }}
-        class={twJoin("left-1/2 -translate-x-1/2 relative w-fit bg-slate-200", props.class)}>
+        class={twJoin("left-1/2 -translate-x-1/2 relative w-min bg-slate-200", props.class)}>
         <div 
           style={{
             height: props.height,
