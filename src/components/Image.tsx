@@ -1,4 +1,3 @@
-import { MOBILE_MAX_WIDTH } from "~/constants";
 import { createEffect, createSignal, onCleanup, onMount, ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
@@ -16,51 +15,47 @@ type ImageProps = ParentProps & SharedProps & {
 };
 
 const Image = (props: ImageProps) => {
+  let { on_mobile } = useOnMobile();
   let [scale, set_scale] = createSignal(1.0);
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(false);
-  const [innerWidth, set_innerWidth] = createSignal(5000);
+  const [innerWidth, set_innerWidth] = createSignal(0);
   let [after_first_load, set_after_first_load] = createSignal(false);
   let image_ref: HTMLImageElement | undefined;
 
-  let maxSeenNaturalWidth = 100;
-
   const naturalWidth = () => {
     let toReturn = (image_ref) ? image_ref.naturalWidth : 3000;
-    maxSeenNaturalWidth = Math.max(toReturn, maxSeenNaturalWidth);
-    return maxSeenNaturalWidth;
+    return toReturn;
   }
+  const scaledDownWidth = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
 
-  const scaled_down_scale = () => Math.min(1, (innerWidth() - 32.0) / naturalWidth());
-  const our_on_mobile = () => (innerWidth() <= MOBILE_MAX_WIDTH);
-
-  const reset_scale = () => {
-    if (our_on_mobile() && scaled_down_scale() < 1) {
-      set_scale(scaled_down_scale());
+  const handleResize = () => {
+    set_innerWidth(window.innerWidth);
+    if (on_mobile() && scaledDownWidth() < 1) {
+      set_scale(scaledDownWidth());
       set_scaled_down(true);
-    } else {
+    }
+    // only putting this test if !on_mobile()
+    // because the '.naturalWidth' property
+    // is not reliably working on iPhone 12
+    else if (!on_mobile()) {
       set_scale(1);
       set_scaled_down(false);
     }
-  }
-
-  const handleResize = () => {
-    let previous_innerWidth = innerWidth();
-    let previous_on_mobile = our_on_mobile();
-    let new_innerWidth = window.innerWidth;
-    if (previous_innerWidth === new_innerWidth) return;
-    set_innerWidth(new_innerWidth);
-    if (previous_on_mobile != our_on_mobile() || !previous_on_mobile) reset_scale();
   };
   
   createEffect(() => {
-    window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
-    setTimeout(() => { handleResize(); reset_scale(); }, 50);
-    setTimeout(() => { reset_scale(); }, 500);
-    setTimeout(() => { reset_scale(); }, 5000);
-    setTimeout(() => { set_after_first_load(true); }, 2000);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
+  });
+  
+  onMount(() => {
+    window.requestAnimationFrame(() => { handleResize(); });
+    if (on_mobile()) {
+      set_scaled_down(true);
+      set_scale(scaledDownWidth());
+    }
+    setTimeout(() => { set_after_first_load(true); }, 2000);
   });
 
   return (
@@ -71,7 +66,7 @@ const Image = (props: ImageProps) => {
           "padding-left": `${props.padding_left || 0}`,
           "padding-right": `${props.padding_right || 0}`,
         }}
-        class={twJoin("left-1/2 -translate-x-1/2 relative w-min bg-slate-200", props.class)}>
+        class={twJoin("left-1/2 -translate-x-1/2 relative w-max bg-slate-200", props.class)}>
         <div 
           style={{
             height: props.height,
@@ -80,11 +75,11 @@ const Image = (props: ImageProps) => {
         >
           <LazyImage
             ref={image_ref}
-            onClick={(_) => {
-              const newScaledDown = our_on_mobile() ? !scaled_down() : false;
+            onClick={(event) => {
+              const newScaledDown = on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
               set_after_first_load(true);
-              set_scale(newScaledDown ? scaled_down_scale() : 1);
+              set_scale(newScaledDown ? scaledDownWidth() : 1);
               set_recent_click(true);
               setTimeout(
                 () => { set_recent_click(false); },
@@ -93,10 +88,9 @@ const Image = (props: ImageProps) => {
             }}
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
-              our_on_mobile() && scaled_down() && "max-width-screen",
-              recent_click() && "bg-green",
+              on_mobile() && scaled_down() && "max-width-screen",
+              recent_click() && "bg-reddish",
               after_first_load() && "transition-all",
-              "w-fit",
             )}
             style={props.style}
             src={props.src}
