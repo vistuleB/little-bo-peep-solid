@@ -42,10 +42,10 @@ const Table = (props: ParentProps & SharedProps) => {
 
   const handleResize = () => {
     set_innerWidth(window.innerWidth);
-    if (on_mobile() && scaledDownWidth() < 1) {
-      set_scale(scaledDownWidth());
-      set_scaled_down(true);
-    }
+    // if (on_mobile() && scaledDownWidth() < 1) {
+    //   set_scale(scaledDownWidth());
+    //   set_scaled_down(true);
+    // }
     // else if (!on_mobile()) {
     //   set_scale(1);
     //   set_scaled_down(false);
@@ -58,7 +58,7 @@ const Table = (props: ParentProps & SharedProps) => {
         class={twJoin(
           props.class,
           "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
-          recent_click() && "bg-green",
+          recent_click() && "bg-reddish",
           after_first_load() && "transition-all",
         )}
         ref={table_ref}
