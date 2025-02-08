@@ -1,5 +1,5 @@
+import { MOBILE_MAX_WIDTH } from "~/constants";
 import {
-  FlowProps,
   mergeProps,
   ParentProps,
   children,
@@ -10,6 +10,7 @@ import {
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { TEXT_X_PADDING } from "~/constants";
+import { twJoin } from "tailwind-merge";
 
 type GridProps = ParentProps &
   SharedProps & {
@@ -32,7 +33,7 @@ const Grid = (_props: GridProps) => {
       margin_bottom: 0,
       cols: 0,
       sm_cols: -1,
-      sm_cutoff: 520,
+      sm_cutoff: MOBILE_MAX_WIDTH,
       class: "",
       place_items: "center",
       gap: "1rem",
@@ -41,36 +42,37 @@ const Grid = (_props: GridProps) => {
     _props
   );
 
-  const children_list = children(() => props.children);
+  props.cols = Math.max(props.cols, props.sm_cols, 1);
+  props.sm_cols = (props.sm_cols <= 0) ? props.cols : props.sm_cols;
 
-  const [smActivated, setSmActivated] = createSignal(false);
+  const children_array = children(() => props.children).toArray();
 
-  const updateSmActivated = () => {
-    setSmActivated(window.innerWidth <= props.sm_cutoff);
+  const [cols, setCols] = createSignal(props.cols);
+
+  const handleResize = () => {
+    setCols(window.innerWidth <= props.sm_cutoff ? props.sm_cols : props.cols);
+    console.log("reset cols to: ", cols());
   };
 
   createEffect(() => {
-    updateSmActivated();
-    window.addEventListener("resize", updateSmActivated);
-    onCleanup(() => window.removeEventListener("resize", updateSmActivated));
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    onCleanup(() => window.removeEventListener("resize", handleResize));
   });
 
   let parentSpan: HTMLDivElement | undefined;
 
   createEffect(() => {
-    smActivated(); // re-render on change
+    if (!props.column_first) return;
     const children = parentSpan?.children || [];
+    const rows = Math.ceil(children.length / cols());
     for (let i = 0; i < children.length; i++) {
-      let position = i;
-      if (props.column_first && !smActivated()) {
-        const rows = Math.ceil(children.length / props.cols);
-        const elementRow = Math.ceil((i + 1) / props.cols);
-        const elementCol = (i % props.cols) + 1;
-        const precedingElementsInPrevCols = (elementCol - 1) * rows;
-        const precedingElementsInCurrCol = elementRow - 1;
-        position = precedingElementsInPrevCols + precedingElementsInCurrCol;
-      }
-      children[i].setAttribute("style", `order: ${position}`);
+      const elementCol = Math.ceil((i + 1) / rows);
+      const elementRow = (i % rows) + 1;
+      const precedingElementsInPrevRows = (elementRow - 1) * cols();
+      const precedingElementsInCurrRow = elementCol - 1;
+      let number = precedingElementsInPrevRows + precedingElementsInCurrRow;
+      children[i].setAttribute("style", `order: ${number}`);
     }
   });
 
@@ -84,26 +86,22 @@ const Grid = (_props: GridProps) => {
       }}>
       <div
         ref={parentSpan}
-        class={`!grid list-none`}
+        class={`slice !grid list-none`}
         style={{
           animation: "appear 2s ease 0s 1 normal forwards",
           "place-items": props.place_items,
           gap: props.gap,
-          "grid-template-columns": `repeat(${props.cols}, 1fr)`,
+          "grid-template-columns": `repeat(${cols()}, 1fr)`,
         }}>
-        <For each={children_list.toArray()}>
-          {(child, index) => {
-            if (
-              props.center_on_overflow &&
-              children.length % props.sm_cols === 1 &&
-              index() === children.length - 1
-            ) {
-              return (
-                <span class="col-span-full sm:col-span-1 w-max">{child}</span>
-              );
+        <For each={children_array}>
+          {
+            (child, index) => {
+              return <span class={twJoin(
+                "w-max",
+                children_array.length - index() < cols() && children_array.length % cols() !== 0 && "col-span-full w-max",
+              )}>{child}</span>
             }
-            return <span class="w-max">{child}</span>;
-          }}
+          }
         </For>
       </div>
     </div>

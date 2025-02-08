@@ -780,6 +780,7 @@
     |> ImageRight
         src images/svg_ch3_ch_a1_x1_cloud.svg
         offset_y 0.2em
+        offset_x -0.1em
 
     for all $x$, and 
 
@@ -789,7 +790,7 @@
 
     |> ImageRight
         src images/svg_ch3_ch_a0_x0_cloud.svg
-        offset_x 0.2em
+        offset_x 0em
         offset_y 0.2em
 
     for all $x$ (even $x = 0$), namely.
@@ -837,14 +838,13 @@
             theorem.
 
     |> Exercise
+        type tada
 
         Evaluate:
 
         |> Grid
             cols 2
             sm_cols 1
-            sm_cutoff 460
-            center_on_overflow true
             place_items start
             with_padding false
             column_first true
@@ -863,10 +863,9 @@
             The answers are:
 
             |> Grid
+                type tada
                 cols 2
                 sm_cols 1
-                sm_cutoff 460
-                center_on_overflow true
                 place_items start
                 with_padding false
                 column_first true
@@ -2104,7 +2103,6 @@
         |> Grid
             cols 2
             sm_cols 1
-            sm_cutoff 520
             center_on_overflow true
             place_items start
             with_padding false

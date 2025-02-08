@@ -546,6 +546,7 @@
         True or false (and, if possible, explain):
 
         |> Grid
+            type qq
             cols 3 
             sm_cols 2
             sm_cutoff 520

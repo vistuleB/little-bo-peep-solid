@@ -1860,6 +1860,7 @@ const Article = () => {
         <MathBlock>
           $$x^1 = x$$
           <ImageRight
+            offset_x="-0.1em"
             offset_y="0.2em"
             src="/images/svg_ch3_ch_a1_x1_cloud.svg" />
         </MathBlock>
@@ -1879,7 +1880,7 @@ const Article = () => {
           $$x^0 = 1$$
           <ImageRight
             offset_y="0.2em"
-            offset_x="0.2em"
+            offset_x="0em"
             src="/images/svg_ch3_ch_a0_x0_cloud.svg" />
         </MathBlock>
         <Pause />
@@ -2002,8 +2003,6 @@ const Article = () => {
             column_first={true}
             with_padding={false}
             place_items="start"
-            center_on_overflow={true}
-            sm_cutoff={460}
             sm_cols={1}
             cols={2}>
             <Item>
@@ -2053,8 +2052,6 @@ const Article = () => {
               column_first={true}
               with_padding={false}
               place_items="start"
-              center_on_overflow={true}
-              sm_cutoff={460}
               sm_cols={1}
               cols={2}>
               <Item>
@@ -5550,7 +5547,6 @@ const Article = () => {
             with_padding={false}
             place_items="start"
             center_on_overflow={true}
-            sm_cutoff={520}
             sm_cols={1}
             cols={2}>
             <Item>
