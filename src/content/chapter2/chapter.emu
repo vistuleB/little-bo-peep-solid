@@ -135,7 +135,7 @@
     zero below), the following sign combinations
     arise (lines of slope zero not included):
 
-    |> table
+    |> Table
         class lines
         style margin-top:0.5em;margin-bottom:0.5em;
         |> colgroup

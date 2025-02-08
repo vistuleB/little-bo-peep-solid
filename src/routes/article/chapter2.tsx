@@ -316,7 +316,7 @@ const Article = () => {
           arise (lines of slope zero not included):
         </VerticalChunk>
         <Pause />
-        <table
+        <Table
           style="margin-top:0.5em;margin-bottom:0.5em;"
           class="lines">
           <colgroup>
@@ -461,7 +461,7 @@ const Article = () => {
               </td>
             </tr>
           </tbody>
-        </table>
+        </Table>
         <Pause />
         <VerticalChunk>
           In fact, we{" "}
