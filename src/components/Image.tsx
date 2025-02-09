@@ -19,19 +19,18 @@ const Image = (props: ImageProps) => {
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(false);
   const [innerWidth, set_innerWidth] = createSignal(0);
-  let [after_first_load, set_after_first_load] = createSignal(false);
+  let [after_first_click, set_after_first_click] = createSignal(false);
   let image_ref: HTMLImageElement | undefined;
 
   const imageWidth = () => {
-    return (image_ref) ? image_ref.naturalWidth : 3000;
+    return (image_ref) ? Math.max(image_ref.naturalWidth, image_ref.offsetWidth) : 3000;
   }
 
   const scaled_down_scale = () => Math.min(1, (innerWidth() - 32.0) / imageWidth());
   const our_on_mobile = () => (innerWidth() <= MOBILE_MAX_WIDTH);
 
   const reset_scale = () => {
-    console.log("imageWidth(): ", imageWidth(), scaled_down_scale(), innerWidth());
-    if (our_on_mobile() && scaled_down_scale() < 1) {
+    if (our_on_mobile() && (scaled_down_scale() < 1 || scaled_down())) {
       set_scale(scaled_down_scale());
       set_scaled_down(true);
     } else {
@@ -41,18 +40,25 @@ const Image = (props: ImageProps) => {
   }
 
   const handleResize = () => {
+    // backup
     let previous_innerWidth = innerWidth();
+    let previous_on_mobile = our_on_mobile();
+
+    // update
     let new_innerWidth = window.innerWidth;
     if (previous_innerWidth == new_innerWidth) return;
-    let previous_on_mobile = our_on_mobile();
     set_innerWidth(new_innerWidth);
+
+    // we only want to reset scale as a result of
+    // resize if we are not on mobile, or if the on_mobile
+    // status has changed (true -> false, false -> true)
     if (previous_on_mobile != our_on_mobile() || !previous_on_mobile) reset_scale();
   };
 
   createEffect(() => {
     if (our_on_mobile()) set_scaled_down(true);
     window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
-    setTimeout(() => { reset_scale(); set_after_first_load(true); }, 2000);
+    setTimeout(() => { reset_scale(); }, 2000);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
@@ -75,22 +81,25 @@ const Image = (props: ImageProps) => {
           <LazyImage
             ref={image_ref}
             onClick={(_) => {
-              const newScaledDown = our_on_mobile() ? !scaled_down() : false;
-              set_scaled_down(newScaledDown);
-              set_after_first_load(true);
-              set_scale(newScaledDown ? scaled_down_scale() : 1);
+              // should we scale?
+              const should_be_scaled_down = our_on_mobile() && !scaled_down();
+
+              // do the scale
+              set_scaled_down(should_be_scaled_down);
+              set_scale(should_be_scaled_down ? scaled_down_scale() : 1);
+
+              // bookkeeping other things
+              set_after_first_click(true);
               set_recent_click(true);
-              setTimeout(
-                () => { set_recent_click(false); },
-                100
-              )
+              setTimeout(() => { set_recent_click(false); }, 100)
+              set_innerWidth(window.innerWidth); // (refreshing for safety, since we have all these bugs)
             }}
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
-              our_on_mobile() && (scaled_down() || !after_first_load()) && "max-width-screen",
-              recent_click() && "bg-reddish",
+              our_on_mobile() && (scaled_down() || !after_first_click()) && "max-width-screen",
+              recent_click() && "bg-green",
               !recent_click() && "bg-slate-200",
-              after_first_load() && "transition-all",
+              after_first_click() && "transition-all",
             )}
             style={props.style}
             src={props.src}
