@@ -23,7 +23,7 @@ const Image = (props: ImageProps) => {
   let image_ref: HTMLImageElement | undefined;
 
   const imageWidth = () => {
-    return (image_ref) ? image_ref.naturalWidth : 3000;
+    return (image_ref) ? image_ref.offsetWidth : 3000;
   }
 
   const scaled_down_scale = () => Math.min(1, (innerWidth() - 32.0) / imageWidth());
@@ -31,7 +31,7 @@ const Image = (props: ImageProps) => {
 
   const reset_scale = () => {
     console.log("imageWidth(): ", imageWidth(), scaled_down_scale(), innerWidth());
-    if (our_on_mobile() && scaled_down_scale() < 1) {
+    if (our_on_mobile() && scaled_down()) {
       set_scale(scaled_down_scale());
       set_scaled_down(true);
     } else {
@@ -88,7 +88,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
               our_on_mobile() && (scaled_down() || !after_first_load()) && "max-width-screen",
-              recent_click() && "bg-reddish",
+              recent_click() && "bg-yellowish",
               !recent_click() && "bg-slate-200",
               after_first_load() && "transition-all",
             )}
