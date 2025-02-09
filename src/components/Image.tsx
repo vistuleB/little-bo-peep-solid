@@ -58,7 +58,7 @@ const Image = (props: ImageProps) => {
   createEffect(() => {
     if (our_on_mobile()) set_scaled_down(true);
     window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
-    setTimeout(() => { reset_scale(); }, 2000);
+    // setTimeout(() => { reset_scale(); }, 2000);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
@@ -97,9 +97,12 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
               our_on_mobile() && (scaled_down() || !after_first_click()) && "max-width-screen",
-              recent_click() == 1 && "bg-reddish",
-              recent_click() == 2 && "bg-yellowish",
-              !recent_click() && "bg-slate-200",
+              (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-500",
+              !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-200",
+              (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 1 && "bg-reddish-dark",
+              !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 1 && "bg-reddish",
+              (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish-dark",
+              !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish",
               after_first_click() && "transition-all",
             )}
             style={props.style}
