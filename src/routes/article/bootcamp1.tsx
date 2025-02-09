@@ -561,8 +561,8 @@ const Article = () => {
         <MathBlock>
           $$\Large \&#123;\&#123;\&#125; \&#125; \ne \&#123;\&#125;$$
           <ImageRight
-            offset_x="1em"
-            src="/images/svg_empty_set_cloud.svg" />
+            offset_x="3em"
+            src="/images/svg_bt1_bt_empty_set_cloud.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>

@@ -26,7 +26,6 @@ export const Math = (props: ParentProps) => {
   );
 
   return (
-    // w-fit items-baseline indent-0
     <span class="inline-flex indent-0" ref={ref}>
       {props.children}
     </span>

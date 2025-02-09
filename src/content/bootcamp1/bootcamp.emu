@@ -196,8 +196,8 @@
     $$
 
     |> ImageRight
-        src images/svg_empty_set_cloud.svg
-        offset_x 1em
+        src images/svg_bt1_bt_empty_set_cloud.svg
+        offset_x 3em
 
     because a box containing an empty box is not the same
     thing as an empty box! Specifically,

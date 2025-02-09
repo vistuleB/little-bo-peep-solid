@@ -167,7 +167,10 @@ const Article = () => {
         <Pause />
         <MathBlock>
           $$\Large 10^0 = 1 = 1$$
-          <ImageLeft src="/images/svg_ten_to_the_0_cloud.svg" />
+          <ImageLeft
+            offset_x="4em"
+            offset_y="-0.2em"
+            src="/images/svg_bt2_bt_alert_cloud.svg" />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -278,7 +281,9 @@ const Article = () => {
           </NoBreak>
           {" "}by inspection, and (A) 
           is equivalent to the identity
-          <ImageLeft src="/images/svg_zero_verification_cloud.svg" />
+          <ImageLeft
+            line={2.0}
+            src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -373,8 +378,7 @@ const Article = () => {
           <i>
             reciprocal
           </i>
-          .
-          If{" "}
+          . If{" "}
           <NoBreak>
             <Math>
               $a$
@@ -386,8 +390,8 @@ const Article = () => {
               $b$
             </Math>
           </NoBreak>
-          {" "}are reciprocal, then 
-          these equations are satisfied...
+          {" "}are reciprocal, 
+          then these equations are satisfied...
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -426,7 +430,8 @@ const Article = () => {
             Other bases.
           </b>
           {" "}
-          Integer powers of other nonzero bases are defined similarly, e.g.,
+          Integer powers of other nonzero bases are defined
+          similarly, e.g.,
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -456,8 +461,8 @@ const Article = () => {
             </Math>
             :
           </NoBreak>
-          {" "}as one cannot
-          divide by{" "}
+          {" "}as one
+          cannot divide by{" "}
           <NoBreak>
             <Math>
               $0$
@@ -470,7 +475,8 @@ const Article = () => {
               $0$
             </Math>
           </NoBreak>
-          {" "}remain undefined. E.g.,
+          {" "}remain
+          undefined. E.g.,
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -492,8 +498,7 @@ const Article = () => {
             </Math>
           </NoBreak>
           {" "}twice”, but this
-          is undefined. 
-          Hence{" "}
+          is undefined. Hence{" "}
           <NoBreak>
             <Math>
               $0^&#123;-1&#125;$
@@ -507,7 +512,8 @@ const Article = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}etc, remain undefined.
+          {" "}etc, remain
+          undefined.
         </VerticalChunk>
         <VerticalChunk indent={true}>
           Also (in case you're wondering){" "}
@@ -518,7 +524,8 @@ const Article = () => {
             .
           </NoBreak>
           {" "}
-          You can see this by writing down the first few powers of{" "}
+          You can see this by writing down the first few powers
+          of{" "}
           <NoBreak>
             <Math>
               $0$
@@ -558,8 +565,16 @@ const Article = () => {
             </Math>
             ,
           </NoBreak>
+          {" "}the{" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $0\hspace&#123;0.12ex&#125;$
+            </Math>
+            ’
+          </NoBreak>
           {" "}
-          the{" "}
+          in the exponent “wins out” over the{" "}
           <NoBreak>
             ‘
             <Math>
@@ -567,17 +582,8 @@ const Article = () => {
             </Math>
             ’
           </NoBreak>
-          {" "}in the
-          exponent “wins out” over the{" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $0\hspace&#123;0.12ex&#125;$
-            </Math>
-            ’
-          </NoBreak>
-          {" "}in the base, 
-          making the result{" "}
+          {" "}
+          in the base, making the result{" "}
           <NoBreak>
             <Math>
               $1$
@@ -1192,7 +1198,7 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
+          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -1201,7 +1207,7 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft src="/images/svg_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
+          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -1210,7 +1216,7 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight src="/images/svg_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
+          <ImageRight src="/images/svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -2073,7 +2079,9 @@ const Article = () => {
           <Pause />
           <MathBlock>
             $$\Large 0.00001 = 10^&#123;-5&#125;$$
-            <ImageRight src="/images/svg_ten_to_the_-5_cloud.svg" />
+            <ImageRight
+              offset_x="-4em"
+              src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg" />
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -3394,9 +3402,6 @@ const Article = () => {
             <Pause />
             <MathBlock>
               $$\Large -a -2b - c = 0$$
-              <ImageRight
-                offset_y="1em"
-                src="/images/svg_add_equations_cloud.svg" />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3406,6 +3411,9 @@ const Article = () => {
             <Pause />
             <MathBlock>
               $$\Large -b -2c -3 = 0$$
+              <ImageRight
+                offset_y="-0.5em"
+                src="/images/svg_bt2_ex_equation_addition_cloud.svg" />
             </MathBlock>
             <Pause />
             <VerticalChunk>

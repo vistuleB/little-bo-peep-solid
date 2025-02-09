@@ -86,4 +86,5 @@ export {
   getExerciseByIndex,
   getSelectedExercise,
 };
+
 export type { Store };

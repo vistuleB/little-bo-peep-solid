@@ -7,6 +7,7 @@ const Bootcamp = (props: any) => {
   useSaveScroll();
   return (
     <>
+      <div class="first_child_of_chapter"></div>
       <ArticleTitle
         label={`Bootcamp ${props.number}: ` + props.title}
         on_mobile_label={`Bootcamp ${props.number}: ` + (props.mobile_title || props.title)}

@@ -42,6 +42,7 @@
 body {
   background: rgb(var(--background-rgb));
   color: rgb(var(--foreground-rgb));
+  font-family: "Baskerville";
   font-size: 1.25rem; /* Equivalent to text-xl */
   line-height: 1.5em;
 }

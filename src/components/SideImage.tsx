@@ -55,27 +55,36 @@ const SideImage = (_props: SideImageProps) => {
     padding: `${props.padding}`,
     scale: `${scale()}`,
     "transform-origin": `0 top 0`,
+    zIndex: 20,
   });
+
+  let maybeChildren = () => {
+    if (props.children) {
+      return <div
+        class="absolute z-10"
+        style={`top: ${props.children_y}; left: ${props.children_x}`}>
+        {props.children}
+      </div>;
+    }
+
+    return <></>;
+  }
 
   return (
     <div
       ref={container_ref}
-      class="absolute" style="left:0;top:0;width:100%;height:100%;background-color:none;pointer-events:none;margin:0;padding:0;"
+      class="absolute" style="left:0;top:0;width:100%;height:100%;background-color:none;margin:0;padding:0;"
       >
       <div
         style={innerStyles()}
-        class="flex shrink-0 transition-opacity duration-300 lg:transition-none lg:opacity-100  z-10 absolute w-max">
-        <div
-          class="absolute z-10"
-          style={`top: ${props.children_y}; left: ${props.children_x}`}>
-          {props.children}
-        </div>
+        class="flex shrink-0 transition-opacity duration-300 lg:transition-none lg:opacity-100 absolute w-max">
         <LazyImage
           class={twJoin(props.class, !props.width && "max-w-max", "cloud")}
           style={props.style}
           src={props.src}
           side_image={true}
         />
+        {maybeChildren()}
       </div>
 
       {show_squiggles() && props.squiggle && (

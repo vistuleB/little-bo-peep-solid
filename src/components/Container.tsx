@@ -41,7 +41,7 @@ const Container = (props: ParentProps) => {
         });
       }
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     document.addEventListener("scrollend", scroll_back);
@@ -74,18 +74,13 @@ const Container = (props: ParentProps) => {
   });
 
   return (
-    <div class="">
-      <div
-        class="outer-width-enforcer pb-14"
-        id="Container">
-        <div class="w-full transition duration-300 sm:overflow-visible sm:translate-x-0">
-          <div class="font-baskerville w-full">
-            <Nav />
-            {props.children}
-            <SVGDefs />
-          </div>
-        </div>
+    <div id="Container" class="outer-width-enforcer pb-14 -z-10">
+      {/* <div class="w-full transition duration-300 sm:overflow-visible sm:translate-x-0 font-baskerville"> */}
+      <div class="sm:translate-x-0">
+        <Nav />
       </div>
+      {props.children}
+      <SVGDefs />
     </div>
   );
 };
