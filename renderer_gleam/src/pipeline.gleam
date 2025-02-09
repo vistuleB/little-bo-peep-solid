@@ -1,3 +1,4 @@
+import desugarers/find_replace.{find_replace}
 import gleam/option.{Some, None}
 import desugarers/absorb_next_sibling_while.{absorb_next_sibling_while}
 import desugarers/add_before_tags_but_not_first_child_tags.{add_before_tags_but_not_first_child_tags}
@@ -167,6 +168,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
     ),
     pair_bookends(#(["SingleDollar"], ["SingleDollar"], "Math")),
     fold_tags_into_text([#("SingleDollar", "$")]),
+    find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
     // ************************
     // __ *********************
     // ************************

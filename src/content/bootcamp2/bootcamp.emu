@@ -14,7 +14,6 @@
 
 
 |> Section
-    handle quack
 
     *Integer powers of 10.*
     We define
@@ -418,101 +417,96 @@
     instead of “ten”, etc. Specifically, the table looks
     like so:
     
-    |> div
-        class slice align-center
+    |> table
+        class first-line
+        margin-top 1em
+        margin-bottom 1em
+        |> colgroup
+            |> col
+                width 60px
+            |> col
+                width 200px
+            |> col
+                width 140px
+        |> tbody
+            |> tr
+                |> td
+                    class align-center
 
-        |> table
-            class first-line
-            margin-top 1em
-            margin-bottom 1em
+                    $n$
+                |> td
+                    class align-center
 
-            |> colgroup
+                    $\,\,10^n$
+                |> td
+                    class align-center
 
-                |> col
-                    width 60px
-                |> col
-                    width 200px
-                |> col
-                    width 140px
-            |> tbody
-                |> tr
-                    |> td
-                        class align-center
+                    name
+            |> tr
+                |> td
+                    class align-center
 
-                        $n$
-                    |> td
-                        class align-center
+                    $-1$
+                |> td
+                    class align-center
 
-                        $\,\,10^n$
-                    |> td
-                        class align-center
+                    $0.1$
+                |> td
+                    class align-center
 
-                        name
-                |> tr
-                    |> td
-                        class align-center
+                    _one tenth_
+            |> tr
+                |> td
+                    class align-center
 
-                        $-1$
-                    |> td
-                        class align-center
+                    $-2$
+                |> td
+                    class align-center
 
-                        $0.1$
-                    |> td
-                        class align-center
+                    $0.01$
+                |> td
+                    class align-center
 
-                        _one tenth_
-                |> tr
-                    |> td
-                        class align-center
+                    _one hundredth_
+            |> tr
+                |> td
+                    class align-center
 
-                        $-2$
-                    |> td
-                        class align-center
+                    $-3$
+                |> td
+                    class align-center
 
-                        $0.01$
-                    |> td
-                        class align-center
+                    $0.001$
+                |> td
+                    class align-center
 
-                        _one hundredth_
-                |> tr
-                    |> td
-                        class align-center
+                    _one thousandth_
+            |> tr
+                |> td
+                    class align-center
 
-                        $-3$
-                    |> td
-                        class align-center
+                    $-6$
+                |> td
+                    class align-center
 
-                        $0.001$
-                    |> td
-                        class align-center
+                    $0.000001$
+                |> td
+                    class align-center
 
-                        _one thousandth_
-                |> tr
-                    |> td
-                        class align-center
+                    _one millionth_
+            |> tr
+                |> td
+                    class align-center
 
-                        $-6$
-                    |> td
-                        class align-center
+                    $-9$
+                |> td
+                    class align-center
 
-                        $0.000001$
-                    |> td
-                        class align-center
+                    $0.000000001$
+                |> td
+                    class align-center
 
-                        _one millionth_
-                |> tr
-                    |> td
-                        class align-center
-
-                        $-9$
-                    |> td
-                        class align-center
-
-                        $0.000000001$
-                    |> td
-                        class align-center
-
-                        _one trillionth_
+                    _one trillionth_
 
     |> Pause
 
@@ -545,95 +539,89 @@
     for $10^{-3}$. Here is a list of the most common
     such prefixes:
     
-    |> div
-        class slice align-center
+    |> table
+        class first-line
+        margin-top 1em
+        margin-bottom 1em
+        |> colgroup
+            |> col
+                width 120px
+            |> col
+                width 120px
+        |> tbody
+            |> tr
+                |> td
+                    class align-center
 
-        |> table
-            class first-line
-            margin-top 1em
-            margin-bottom 1em
+                    power
+                |> td
+                    class align-center
 
-            |> colgroup
+                    prefix
+            |> tr
+                |> td
+                    class align-center
 
-                |> col
-                    width 120px
-                |> col
-                    width 120px
-            |> tbody
+                    $10^{-1}$
+                |> td
+                    class align-center
 
-                |> tr
-                    |> td
-                        class align-center
+                    _deci_
+            |> tr
+                |> td
+                    class align-center
 
-                        power
-                    |> td
-                        class align-center
+                    $10^{-2}$
+                |> td
+                    class align-center
 
-                        prefix
-                |> tr
-                    |> td
-                        class align-center
+                    _centi_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^{-1}$
-                    |> td
-                        class align-center
+                    $10^{-3}$
+                |> td
+                    class align-center
 
-                        _deci_
-                |> tr
-                    |> td
-                        class align-center
+                    _milli_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^{-2}$
-                    |> td
-                        class align-center
+                    $10^{-6}$
+                |> td
+                    class align-center
 
-                        _centi_
-                |> tr
-                    |> td
-                        class align-center
+                    _micro_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^{-3}$
-                    |> td
-                        class align-center
+                    $10^{-9}$
+                |> td
+                    class align-center
 
-                        _milli_
-                |> tr
-                    |> td
-                        class align-center
+                    _nano_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^{-6}$
-                    |> td
-                        class align-center
+                    $10^{-12}$
+                |> td
+                    class align-center
 
-                        _micro_
-                |> tr
-                    |> td
-                        class align-center
+                    _pico_
+            |> tr
 
-                        $10^{-9}$
-                    |> td
-                        class align-center
+                |> td
+                    class align-center
 
-                        _nano_
-                |> tr
-                    |> td
-                        class align-center
+                    $10^{-15}$
+                |> td
+                    class align-center
 
-                        $10^{-12}$
-                    |> td
-                        class align-center
-
-                        _pico_
-                |> tr
-
-                    |> td
-                        class align-center
-
-                        $10^{-15}$
-                    |> td
-                        class align-center
-
-                        _femto_
+                    _femto_
 
     |> Pause
 
@@ -659,101 +647,95 @@
     of DNA, with DNA having a diameter of
     about $2.5$nm (“nm” = “nanometer”).
 
+|> Section
+
     *Positive exponent prefixes.*
     There exists a similar set of prefixes
     for positve powers of $10$. Going up
     to $10^{15}$, these are:
     
-    |> div
-        class slice align-center
+    |> Table
+        class first-line
+        margin-top 1em
+        margin-bottom 1em
+        |> colgroup
+            |> col
+                width 120px
+            |> col
+                width 120px
+        |> tbody
+            |> tr
+                |> td
+                    class align-center
 
-        |> table
-            class first-line
-            margin-top 1em
-            margin-bottom 1em
+                    power
+                |> td
+                    class align-center
 
-            |> colgroup
-            
-                |> col
-                    width 120px
-                |> col
-                    width 120px
-                    
-            |> tbody
-                |> tr
-                    |> td
-                        class align-center
+                    prefix
+            |> tr
+                |> td
+                    class align-center
 
-                        power
-                    |> td
-                        class align-center
+                    $10^1$
+                |> td
+                    class align-center
 
-                        prefix
-                |> tr
-                    |> td
-                        class align-center
+                    _deca_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^1$
-                    |> td
-                        class align-center
+                    $10^{2}$
+                |> td
+                    class align-center
 
-                        _deca_
-                |> tr
-                    |> td
-                        class align-center
+                    _hecto_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^{2}$
-                    |> td
-                        class align-center
+                    $10^{3}$
+                |> td
+                    class align-center
 
-                        _hecto_
-                |> tr
-                    |> td
-                        class align-center
+                    _kilo_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^{3}$
-                    |> td
-                        class align-center
+                    $10^{6}$
+                |> td
+                    class align-center
 
-                        _kilo_
-                |> tr
-                    |> td
-                        class align-center
+                    _mega_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^{6}$
-                    |> td
-                        class align-center
+                    $10^{9}$
+                |> td
+                    class align-center
 
-                        _mega_
-                |> tr
-                    |> td
-                        class align-center
+                    _giga_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^{9}$
-                    |> td
-                        class align-center
+                    $10^{12}$
+                |> td
+                    class align-center
 
-                        _giga_
-                |> tr
-                    |> td
-                        class align-center
+                    _tera_
+            |> tr
+                |> td
+                    class align-center
 
-                        $10^{12}$
-                    |> td
-                        class align-center
+                    $10^{15}$
+                |> td
+                    class align-center
 
-                        _tera_
-                |> tr
-                    |> td
-                        class align-center
-
-                        $10^{15}$
-                    |> td
-                        class align-center
-
-                        _peta_
-
-    |> Pause
+                    _peta_
 
     For example, a
     

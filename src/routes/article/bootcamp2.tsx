@@ -1235,178 +1235,143 @@ const Article = () => {
           instead of “ten”, etc. Specifically, the table looks
           like so:
         </VerticalChunk>
-        <div class="slice align-center">
-          <table
-            margin-bottom="1em"
-            margin-top="1em"
-            class="first-line">
-            <colgroup>
-              <col width="60px" />
-              <col width="200px" />
-              <col width="140px" />
-            </colgroup>
-            <tbody>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $n$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $\,\,10^n$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  name
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $-1$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $0.1$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    one tenth
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $-2$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $0.01$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    one hundredth
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $-3$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $0.001$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    one thousandth
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $-6$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $0.000001$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    one millionth
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $-9$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $0.000000001$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    one trillionth
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <Pause />
+        <table
+          margin-bottom="1em"
+          margin-top="1em"
+          class="first-line">
+          <colgroup>
+            <col width="60px" />
+            <col width="200px" />
+            <col width="140px" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $n$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $\,\,10^n$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                name
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $-1$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $0.1$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  one tenth
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $-2$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $0.01$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  one hundredth
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $-3$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $0.001$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  one thousandth
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $-6$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $0.000001$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  one millionth
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $-9$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $0.000000001$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  one trillionth
+                </i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <Pause />
         <VerticalChunk>
           In passing, note how the standard decimal expansion
@@ -1486,153 +1451,124 @@ const Article = () => {
           {" "}Here is a list of the most common
           such prefixes:
         </VerticalChunk>
-        <div class="slice align-center">
-          <table
-            margin-bottom="1em"
-            margin-top="1em"
-            class="first-line">
-            <colgroup>
-              <col width="120px" />
-              <col width="120px" />
-            </colgroup>
-            <tbody>
-              <tr>
-                <td class="align-center">
-                  power
-                </td>
-                <td class="align-center">
-                  prefix
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;-1&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    deci
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;-2&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    centi
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;-3&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    milli
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;-6&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    micro
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;-9&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    nano
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;-12&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    pico
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;-15&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    femto
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <Pause />
+        <table
+          margin-bottom="1em"
+          margin-top="1em"
+          class="first-line">
+          <colgroup>
+            <col width="120px" />
+            <col width="120px" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="align-center">
+                power
+              </td>
+              <td class="align-center">
+                prefix
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;-1&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  deci
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;-2&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  centi
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;-3&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  milli
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;-6&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  micro
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;-9&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  nano
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;-12&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  pico
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;-15&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  femto
+                </i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <Pause />
         <VerticalChunk>
           (Funny how the prefixes switch from 
@@ -1716,7 +1652,10 @@ const Article = () => {
           </NoBreak>
           {" "}(“nm” = “nanometer”).
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+      </Section>
+      <Pause />
+      <Section>
+        <VerticalChunk>
           <b>
             Positive exponent prefixes.
           </b>
@@ -1739,153 +1678,124 @@ const Article = () => {
           </NoBreak>
           {" "}these are:
         </VerticalChunk>
-        <div class="slice align-center">
-          <table
-            margin-bottom="1em"
-            margin-top="1em"
-            class="first-line">
-            <colgroup>
-              <col width="120px" />
-              <col width="120px" />
-            </colgroup>
-            <tbody>
-              <tr>
-                <td class="align-center">
-                  power
-                </td>
-                <td class="align-center">
-                  prefix
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^1$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    deca
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;2&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    hecto
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;3&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    kilo
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;6&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    mega
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;9&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    giga
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;12&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    tera
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-              <tr>
-                <td class="align-center">
-                  {" "}{" "}
-                  <NoBreak>
-                    <Math>
-                      $10^&#123;15&#125;$
-                    </Math>
-                  </NoBreak>
-                  {" "}{" "}
-                </td>
-                <td class="align-center">
-                  {" "}{" "}
-                  <i>
-                    peta
-                  </i>
-                  {" "}{" "}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <Pause />
+        <Table
+          margin-bottom="1em"
+          margin-top="1em"
+          class="first-line">
+          <colgroup>
+            <col width="120px" />
+            <col width="120px" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="align-center">
+                power
+              </td>
+              <td class="align-center">
+                prefix
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^1$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  deca
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;2&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  hecto
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;3&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  kilo
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;6&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  mega
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;9&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  giga
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;12&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  tera
+                </i>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-center">
+                <NoBreak>
+                  <Math>
+                    $10^&#123;15&#125;$
+                  </Math>
+                </NoBreak>
+              </td>
+              <td class="align-center">
+                <i>
+                  peta
+                </i>
+              </td>
+            </tr>
+          </tbody>
+        </Table>
         <Pause />
         <VerticalChunk>
           For example, a
@@ -2594,7 +2504,7 @@ const Article = () => {
             </NoBreak>
             {" "}trillion
             dollars, what percentage of the budget is
-            one hundred billion \$?
+            one hundred billion $?
           </VerticalChunk>
           <Pause />
           <Solution solution_number={6}>
