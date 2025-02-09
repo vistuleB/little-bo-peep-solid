@@ -96,13 +96,17 @@ const Image = (props: ImageProps) => {
             }}
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
-              our_on_mobile() && (scaled_down() || !after_first_click()) && "max-width-screen",
-              (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-500",
-              !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-200",
-              (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 1 && "bg-reddish-dark",
-              !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 1 && "bg-reddish",
-              (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish-dark",
-              !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish",
+              (our_on_mobile() && (scaled_down() || !after_first_click())) && "max-width-screen",
+              (our_on_mobile() && (scaled_down() || !after_first_click())) && "bg-slate-500",  // dark gray means "max-width-screen"
+              !(our_on_mobile() && (scaled_down() || !after_first_click())) && "bg-slate-200", // light gray means not "max-width-screen"
+
+              // (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-500",  // dark means "max-width-screen"
+              // !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-200", // light means not "max-width-screen"
+              // (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 1 && "bg-reddish-dark", // dark red means "max-width-screen" & recent "scale down" click
+              // !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 1 && "bg-reddish",     // light red means not "max-width-screen" & recent "scale down" click
+              // (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish-dark", // dark yellow means "max-width-screen" & recent "scale up" click
+              // !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish",     // light yellow means not "max-width-screen" & recent "scale up" click
+
               after_first_click() && "transition-all",
             )}
             style={props.style}
