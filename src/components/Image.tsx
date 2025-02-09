@@ -23,7 +23,7 @@ const Image = (props: ImageProps) => {
   let image_ref: HTMLImageElement | undefined;
 
   const imageWidth = () => {
-    return (image_ref) ? image_ref.offsetWidth : 3000;
+    return (image_ref) ? Math.max(image_ref.offsetWidth, image_ref.naturalWidth) : 3000;
   }
 
   const scaled_down_scale = () => Math.min(1, (innerWidth() - 32.0) / imageWidth());
@@ -78,6 +78,7 @@ const Image = (props: ImageProps) => {
               const newScaledDown = our_on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
               set_after_first_load(true);
+              set_innerWidth(window.innerWidth); // just trying to make sure... gosh...
               set_scale(newScaledDown ? scaled_down_scale() : 1);
               set_recent_click(true);
               setTimeout(
