@@ -89,7 +89,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
               our_on_mobile() && (scaled_down() || !after_first_load()) && "max-width-screen",
-              recent_click() && "bg-yellowish",
+              recent_click() && "bg-green",
               !recent_click() && "bg-slate-200",
               after_first_load() && "transition-all",
             )}

@@ -411,8 +411,7 @@
     the Cartesian plane. E.g.:
 
     |> Image
-        src images/49.svg
-        width 640px
+        src images/svg_ch2_ch_line_equations.svg
 
     Note that, assuming said $y = ax + b$, one has
 

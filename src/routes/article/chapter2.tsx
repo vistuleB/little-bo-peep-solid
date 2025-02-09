@@ -801,9 +801,7 @@ const Article = () => {
           the Cartesian plane. E.g.:
         </VerticalChunk>
         <Pause />
-        <Image
-          width="640px"
-          src="/images/49.svg" />
+        <Image src="/images/svg_ch2_ch_line_equations.svg" />
         <Pause />
         <VerticalChunk>
           Note that, assuming said{" "}
