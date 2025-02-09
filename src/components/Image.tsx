@@ -23,15 +23,15 @@ const Image = (props: ImageProps) => {
   let image_ref: HTMLImageElement | undefined;
 
   const imageWidth = () => {
-    return (image_ref) ? Math.max(image_ref.offsetWidth, image_ref.naturalWidth) : 3000;
+    let toReturn = (image_ref) ? image_ref.naturalWidth : 3000;
+    return toReturn;
   }
 
   const scaled_down_scale = () => Math.min(1, (innerWidth() - 32.0) / imageWidth());
   const our_on_mobile = () => (innerWidth() <= MOBILE_MAX_WIDTH);
 
   const reset_scale = () => {
-    console.log("imageWidth(): ", imageWidth(), scaled_down_scale(), innerWidth());
-    if (our_on_mobile() && scaled_down()) {
+    if (our_on_mobile() && scaled_down_scale() < 1) {
       set_scale(scaled_down_scale());
       set_scaled_down(true);
     } else {
@@ -50,7 +50,6 @@ const Image = (props: ImageProps) => {
   };
 
   createEffect(() => {
-    if (our_on_mobile()) set_scaled_down(true);
     window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
     setTimeout(() => { reset_scale(); set_after_first_load(true); }, 2000);
     window.addEventListener("resize", handleResize);
@@ -78,7 +77,6 @@ const Image = (props: ImageProps) => {
               const newScaledDown = our_on_mobile() ? !scaled_down() : false;
               set_scaled_down(newScaledDown);
               set_after_first_load(true);
-              set_innerWidth(window.innerWidth); // just trying to make sure... gosh...
               set_scale(newScaledDown ? scaled_down_scale() : 1);
               set_recent_click(true);
               setTimeout(
@@ -89,7 +87,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
               our_on_mobile() && (scaled_down() || !after_first_load()) && "max-width-screen",
-              recent_click() && "bg-green",
+              recent_click() && "bg-yellowish",
               !recent_click() && "bg-slate-200",
               after_first_load() && "transition-all",
             )}
