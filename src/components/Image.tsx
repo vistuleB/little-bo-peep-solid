@@ -17,7 +17,7 @@ type ImageProps = ParentProps & SharedProps & {
 const Image = (props: ImageProps) => {
   let [scale, set_scale] = createSignal(1.0);
   let [scaled_down, set_scaled_down] = createSignal(false);
-  let [recent_click, set_recent_click] = createSignal(false);
+  let [recent_click, set_recent_click] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
   let [after_first_click, set_after_first_click] = createSignal(false);
   let image_ref: HTMLImageElement | undefined;
@@ -90,14 +90,15 @@ const Image = (props: ImageProps) => {
 
               // bookkeeping other things
               set_after_first_click(true);
-              set_recent_click(true);
-              setTimeout(() => { set_recent_click(false); }, 100)
+              set_recent_click(should_be_scaled_down ? 1 : 2);
+              setTimeout(() => { set_recent_click(0); }, 100)
               set_innerWidth(window.innerWidth); // (refreshing for safety, since we have all these bugs)
             }}
             class={twJoin(
               "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
               our_on_mobile() && (scaled_down() || !after_first_click()) && "max-width-screen",
-              recent_click() && "bg-green",
+              recent_click() == 1 && "bg-reddish",
+              recent_click() == 2 && "bg-yellowish",
               !recent_click() && "bg-slate-200",
               after_first_click() && "transition-all",
             )}
