@@ -401,8 +401,8 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          these sets are actually one and the same, because they both
-          answer “yes” to
+          these sets are actually one and the same,
+          because they both answer “yes” to
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
@@ -480,7 +480,8 @@ const Article = () => {
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          and only one empty set. Therefore, mathematicians speak of
+          and only one empty set. Therefore, mathematicians
+          speak of
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
@@ -514,9 +515,9 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          which is the Greek letter phi, read “fee”. (Or “fie”?
-          Hum.) (Or you can just say “the empty set”, and
-          keep it safe.)
+          which is the Greek letter phi, read “fee”. (Or
+          “fie”? Hum.) (Or you can just say “the empty set”,
+          and keep it safe.)
         </VerticalChunk>
       </Section>
       <Pause />
@@ -526,9 +527,9 @@ const Article = () => {
             Sets within sets.
           </b>
           {" "}
-          Sets can be nested much like Russian dolls.
-          In fact, the result of doing this might even look like a little bit
-          like a Russian doll (no?):
+          Sets can be nested much like Russian dolls. In
+          fact, the result of doing this might even look
+          like a little bit like a Russian doll (no?):
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -536,9 +537,10 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          The above is “a set containing a set containing a set
-          containing a set containing the empty set”. Eschewing complete
-          adherence to the Russian doll aesthetic, we could also write
+          The above is “a set containing a set containing
+          a set containing a set containing the empty set”.
+          Eschewing complete adherence to the Russian doll
+          aesthetic, we could also write
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -566,8 +568,8 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          because a box containing an empty box is not the same
-          thing as an empty box! Specifically,
+          because a box containing an empty box is not the
+          same thing as an empty box! Specifically,
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -575,7 +577,7 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          answers “yes” to the question “do you contain 
+          answers “yes” to the question “do you contain
           {" "}
           <NoBreak>
             <Math>
@@ -583,16 +585,14 @@ const Article = () => {
             </Math>
             ?”
           </NoBreak>
-          {" "}
-          (a.k.a., “do you contain{" "}
+          {" "}(a.k.a., “do you contain{" "}
           <NoBreak>
             <Math>
               $\phi$
             </Math>
             ?”)
           </NoBreak>
-          {" "}
-          whereas
+          {" "}whereas
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -600,8 +600,8 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          answers “no” to the same question. (Indeed, while the empty set
-          {" "}
+          answers “no” to the same question. (Indeed, while
+          the empty set{" "}
           <i>
             contains
           </i>
@@ -609,7 +609,8 @@ const Article = () => {
           <i>
             is
           </i>
-          {" "}something.) Similarly,
+          {" "}something.)
+          Similarly,
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -617,7 +618,8 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          etc, etc: adding a new outer layer changes the whole set each time.
+          etc, etc: adding a new outer layer changes the
+          whole set each time.
         </VerticalChunk>
       </Section>
       <Pause />
@@ -631,21 +633,20 @@ const Article = () => {
           <i>
             union
           </i>
-          {" "}
-          of two sets{" "}
+          {" "}of two sets{" "}
           <NoBreak>
             <Math>
               $A$
             </Math>
           </NoBreak>
-          {" "}and
-          {" "}
+          {" "}and{" "}
           <NoBreak>
             <Math>
               $B$
             </Math>
           </NoBreak>
-          {" "}is written
+          {" "}is
+          written
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -653,21 +654,22 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          and consists of the set of all things that are either in{" "}
+          and consists of the set
+          of all things that are either in{" "}
           <NoBreak>
             <Math>
               $A$
             </Math>
           </NoBreak>
-          {" "}or in 
-          {" "}
+          {" "}or in{" "}
           <NoBreak>
             <Math>
-              $B.$
+              $B$
             </Math>
+            .
           </NoBreak>
-          {" "}
-          For example,
+          {" "}For
+          example,
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -695,8 +697,7 @@ const Article = () => {
             </Math>
           </NoBreak>
           {" "}are the only elements to find
-          themselves either in
-          {" "}
+          themselves either in{" "}
           <NoBreak>
             <Math>
               $\&#123;1, 2\&#125;$
@@ -735,22 +736,21 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          and consists of the set of all things that are both in{" "}
+          and consists of the set of all things that are both
+          in{" "}
           <NoBreak>
             <Math>
               $A$
             </Math>
           </NoBreak>
-          {" "}and in 
-          {" "}
+          {" "}and in{" "}
           <NoBreak>
             <Math>
               $B$
             </Math>
             .
           </NoBreak>
-          {" "}
-          For example,
+          {" "}For example,
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -764,14 +764,14 @@ const Article = () => {
               $2$
             </Math>
           </NoBreak>
-          {" "}is the only element that is both in
-          {" "}
+          {" "}is the only element that is both in{" "}
           <NoBreak>
             <Math>
               $\&#123;1, 2\&#125;$
             </Math>
           </NoBreak>
-          {" "}and in{" "}
+          {" "}
+          and in{" "}
           <NoBreak>
             <Math>
               $\&#123;2, 5\&#125;$
@@ -806,10 +806,10 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          because that's how we defined “union”. (Replace “or”
-          by “and” to get a definition of intersection.)
-          In fact, a logician would define the union of two sets by an
-          abstruse expression of the type
+          because that's how we defined “union”. (Replace
+          “or” by “and” to get a definition of intersection.)
+          In fact, a logician would define the union of two
+          sets by an abstruse expression of the type
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -903,7 +903,8 @@ const Article = () => {
           {" "}
           In calculus, you will see sets such as{" "}
           <i>
-            the real numbers
+            the real
+            numbers
           </i>
         </VerticalChunk>
         <Pause />
@@ -937,14 +938,14 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          which contains only those integers that are greater than{" "}
+          which contains only those integers that are greater
+          than{" "}
           <NoBreak>
             <Math>
               $0$
             </Math>
           </NoBreak>
-          {" "}(i.e.,
-          {" "}
+          {" "}(i.e.,{" "}
           <NoBreak>
             <Math>
               $\nn = \&#123;1, 2, 3, \ldots \&#125;$
@@ -953,8 +954,8 @@ const Article = () => {
           </NoBreak>
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          Secondly—and this pretty much wraps it up for those sets 
-          that are commonly seen in calculus—you will
+          Secondly—and this pretty much wraps it up for those
+          sets  that are commonly seen in calculus—you will
           encounter{" "}
           <i>
             intervals
@@ -971,15 +972,16 @@ const Article = () => {
           <i>
             closed interval
           </i>
-          , consisting of all (real) numbers 
-          greater than or equal to{" "}
+          , consisting of all (real)
+          numbers greater than or equal to{" "}
           <NoBreak>
             <Math>
               $a$
             </Math>
             ,
           </NoBreak>
-          {" "}and less than or equal to{" "}
+          {" "}and less than
+          or equal to{" "}
           <NoBreak>
             <Math>
               $b$
@@ -998,15 +1000,16 @@ const Article = () => {
           <i>
             half-open
           </i>
-          {" "}interval, consisting of all real numbers
-          greater than or equal to{" "}
+          {" "}interval, consisting of all real
+          numbers greater than or equal to{" "}
           <NoBreak>
             <Math>
               $a$
             </Math>
             ,
           </NoBreak>
-          {" "}and less than{" "}
+          {" "}and less than
+          {" "}
           <NoBreak>
             <Math>
               $b$
@@ -1061,8 +1064,8 @@ const Article = () => {
             Sets not encountered in calculus.
           </b>
           {" "}
-          If you take a more advanced course, you might encounter 
-          the so-called{" "}
+          If you take a more advanced course, you might
+          encounter the so-called{" "}
           <i>
             set of extended real numbers
           </i>
@@ -1082,8 +1085,8 @@ const Article = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}plus the formal 
-          symbols{" "}
+          {" "}plus
+          the formal symbols{" "}
           <NoBreak>
             “
             <Math>
@@ -1130,8 +1133,8 @@ const Article = () => {
               $\overline&#123;\rr&#125;$
             </Math>
           </NoBreak>
-          {" "}as being
-          the closed interval
+          {" "}
+          as being the closed interval
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -1146,16 +1149,16 @@ const Article = () => {
           .
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          Does all this have any “real meaning”? Good question! The answer
-          is:{" "}
+          Does all this have any “real meaning”? Good question!
+          The answer is:{" "}
           <i>
             not until you give it one
           </i>
           .
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          E.g. (to give you a brief flavor, before we move on forever from the topic),
-          the value of something like
+          E.g. (to give you a brief flavor, before we move on
+          forever from the topic), the value of something like
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -1174,22 +1177,23 @@ const Article = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}in case you're curious.
-          In fact, one has{" "}
+          {" "}in
+          case you're curious. In fact, one has{" "}
           <NoBreak>
             <Math>
               $a + \infty = \infty$
             </Math>
           </NoBreak>
-          {" "}for any{" "}
+          {" "}
+          for any{" "}
           <NoBreak>
             <Math>
               $a \ne -\infty$
             </Math>
             .)
           </NoBreak>
-          {" "}And some things
-          remain explicitly{" "}
+          {" "}And some things remain
+          explicitly{" "}
           <i>
             undefined
           </i>
@@ -1205,8 +1209,8 @@ const Article = () => {
           <i>
             undefined
           </i>
-          {" "}value—the same way, say, that division by
-          {" "}
+          {" "}value—the same way, say, that
+          division by{" "}
           <NoBreak>
             <Math>
               $0$

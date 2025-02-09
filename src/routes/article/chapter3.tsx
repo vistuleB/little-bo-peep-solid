@@ -1164,7 +1164,7 @@ const Article = () => {
           For example, this particular graph...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch3_wiggle_graph.svg" />
+        <Image src="/images/svg_ch3_ch_wiggle_graph.svg" />
         <Pause />
         <VerticalChunk>
           is a function graph (or locally at least, from
@@ -1173,10 +1173,10 @@ const Article = () => {
           graph...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch3_circle.svg">
+        <Image src="/images/svg_ch3_ch_circle.svg">
           <ImageRight
             offset_x="2em"
-            src="/images/svg_ch3_crossing_cloud_circle.svg" />
+            src="/images/svg_ch3_ch_crossing_circle_cloud.svg" />
         </Image>
         <Pause />
         <VerticalChunk>
@@ -1192,7 +1192,7 @@ const Article = () => {
         <Pause />
         <Image
           class="pt-4 mb-3"
-          src="/images/svg_ch3_empty_circle.svg" />
+          src="/images/svg_ch3_ch_empty_circle.svg" />
         <Pause />
         <VerticalChunk>
           ...means that the point in question is{" "}
@@ -1217,7 +1217,7 @@ const Article = () => {
             {" "}of unit radius...
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch3_semicircle.svg" />
+          <Image src="/images/svg_ch3_ch_upper_semicircle.svg" />
           <Pause />
           <VerticalChunk>
             ...passes the vertical line test, and, hence, 
@@ -1234,7 +1234,7 @@ const Article = () => {
             This graph defines a function...
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch3_factory_function.svg" />
+          <Image src="/images/svg_ch3_ch_factory_function.svg" />
           <Pause />
           <VerticalChunk>
             ...because it passes the vertical line test, 
@@ -2172,7 +2172,7 @@ const Article = () => {
             {" "}in your formula:
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch3_factory_roof_graph.svg" />
+          <Image src="/images/svg_ch3_ex_factory_roof_graph.svg" />
           <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
@@ -2208,7 +2208,7 @@ const Article = () => {
               staircase-shaped graph:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch3_floor_graph.svg" />
+            <Image src="/images/svg_ch3_ex_factory_roof_floor_graph.svg" />
             <Pause />
             <VerticalChunk>
               (For example,{" "}
@@ -2261,7 +2261,7 @@ const Article = () => {
               roof” graph in the statement, are equal:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch3_factory_roof_graph_with_displacement_arrows_worked.svg" />
+            <Image src="/images/svg_ch3_ex_factory_roof_with_displacement_arrows.svg" />
             <Pause />
             <VerticalChunk>
               The red dot to the left of{" "}
@@ -2346,7 +2346,7 @@ const Article = () => {
             {" "}as a building block:
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch3_factory_roof_stretched_x2_graph_worked.svg" />
+          <Image src="/images/svg_ch3_ex_factory_roof_stretched.svg" />
           <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
@@ -2363,7 +2363,7 @@ const Article = () => {
               4):
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch3_factory_roof_stretched_and_compressed.svg" />
+            <Image src="/images/svg_ch3_ex_factory_roof_stretched_solution.svg" />
             <Pause />
             <VerticalChunk>
               Indeed, the two graphs featured above differ
@@ -2556,7 +2556,7 @@ const Article = () => {
               like so:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch3_f_box_g_box.svg" />
+            <Image src="/images/svg_ch3_ex_f_box_g_box.svg" />
             <Pause />
             <VerticalChunk>
               In other words,{" "}
@@ -2580,7 +2580,7 @@ const Article = () => {
               (To be perfectly clear,
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch3_f_circle_g_and_f_box_g_box.svg" />
+            <Image src="/images/svg_ch3_ex_f_circle_g_equals.svg" />
             <Pause />
             <VerticalChunk>
               <NoBreak>
@@ -2793,7 +2793,7 @@ const Article = () => {
             like these:
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch3_factory_roof_x2_worked.svg" />
+          <Image src="/images/svg_ch3_ex_three_factories.svg" />
           <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
@@ -2846,16 +2846,17 @@ const Article = () => {
             </VerticalChunk>
             <VerticalChunk indent={true}>
               For the third graph, we will first stop to 
-              find a formula  for the function depicted here:
+              find a formula  for the function depicted
+              here:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch3_factory_roof_stretched_x3_translated_1_worked.svg" />
+            <Image src="/images/svg_ch3_ex_three_factories_sol1.svg" />
             <Pause />
             <VerticalChunk>
               And that formula is...
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch3_factory_roof_stretched_x3_translated_1_explanation.svg" />
+            <Image src="/images/svg_ch3_ex_three_factories_sol2.svg" />
             <Pause />
             <VerticalChunk>
               ...iiiiiiiS...
@@ -3091,7 +3092,9 @@ const Article = () => {
             Rewrite
           </VerticalChunk>
           <VerticalChunk indent={true}>
-            <div style="font-size:1.1em;margin:1em 0em;">
+            <div
+              style="font-size:1.1em;margin:1em 0em;"
+              class="slice">
               <MathBlock>
                 $$\tag&#123;A&#125;(f \circ (g \circ h))(x)$$
               </MathBlock>

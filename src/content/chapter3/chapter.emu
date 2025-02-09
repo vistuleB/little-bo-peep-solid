@@ -459,7 +459,7 @@
     For example, this particular graph...
 
     |> Image
-        src images/svg_ch3_wiggle_graph.svg
+        src images/svg_ch3_ch_wiggle_graph.svg
 
     is a function graph (or locally at least, from
     what we can see), because every vertical line 
@@ -467,10 +467,10 @@
     graph...
 
     |> Image
-        src images/svg_ch3_circle.svg
+        src images/svg_ch3_ch_circle.svg
 
     |> ImageRight
-        src images/svg_ch3_crossing_cloud_circle.svg
+        src images/svg_ch3_ch_crossing_circle_cloud.svg
         offset_x 2em
 
     ...is not the graph of any function, because 
@@ -482,7 +482,7 @@
     in the vein of the previous figure...
 
     |> Image
-        src images/svg_ch3_empty_circle.svg
+        src images/svg_ch3_ch_empty_circle.svg
         class pt-4 mb-3
 
     ...means that the point in question is _excluded_ 
@@ -495,7 +495,7 @@
         This _upper semicircle_ of unit radius...
 
         |> Image
-            src images/svg_ch3_semicircle.svg
+            src images/svg_ch3_ch_upper_semicircle.svg
 
         ...passes the vertical line test, and, hence, 
         defines a function.
@@ -506,7 +506,7 @@
         This graph defines a function...
 
         |> Image
-            src images/svg_ch3_factory_function.svg
+            src images/svg_ch3_ch_factory_function.svg
 
         ...because it passes the vertical line test, 
         while this graph does not define a function...
@@ -863,7 +863,6 @@
             The answers are:
 
             |> Grid
-                type tada
                 cols 2
                 sm_cols 1
                 place_items start
@@ -899,7 +898,7 @@
         to use “$\floor{x}$” in your formula:
 
         |> Image
-            src images/svg_ch3_factory_roof_graph.svg
+            src images/svg_ch3_ex_factory_roof_graph.svg
 
         |> Solution
         
@@ -910,7 +909,7 @@
             staircase-shaped graph:
 
             |> Image
-                src images/svg_ch3_floor_graph.svg
+                src images/svg_ch3_ex_factory_roof_floor_graph.svg
 
             (For example, $\floor{1} = 1$ because the 
             greatest integer less than or equal to $1$ 
@@ -923,7 +922,7 @@
             roof” graph in the statement, are equal:
 
             |> Image
-                src images/svg_ch3_factory_roof_graph_with_displacement_arrows_worked.svg
+                src images/svg_ch3_ex_factory_roof_with_displacement_arrows.svg
 
             The red dot to the left of $x$ has $x$-coordinate
             $\floor{x}$, so the horizontal displacement is 
@@ -947,7 +946,7 @@
         ‘$\lfloor \cdot \rfloor$’ as a building block:
 
         |> Image
-            src images/svg_ch3_factory_roof_stretched_x2_graph_worked.svg
+            src images/svg_ch3_ex_factory_roof_stretched.svg
 
         |> Solution
 
@@ -957,7 +956,7 @@
             4):
 
             |> Image
-                src images/svg_ch3_factory_roof_stretched_and_compressed.svg
+                src images/svg_ch3_ex_factory_roof_stretched_solution.svg
 
             Indeed, the two graphs featured above differ
             only by a horizontal dilation; dividing the 
@@ -1024,7 +1023,7 @@
             like so:
 
             |> Image
-                src images/svg_ch3_f_box_g_box.svg
+                src images/svg_ch3_ex_f_box_g_box.svg
 
             In other words, $g$'s output is passed on to $\f$ 
             for further processing. (A certain movie called
@@ -1033,7 +1032,7 @@
             (To be perfectly clear,
 
             |> Image
-                src images/svg_ch3_f_circle_g_and_f_box_g_box.svg
+                src images/svg_ch3_ex_f_circle_g_equals.svg
 
             $f \circ g$ is a _function_, defined as the
             above assemblage of “$g$ first, $f$ second”.)
@@ -1077,7 +1076,7 @@
         like these:
     
         |> Image
-            src images/svg_ch3_factory_roof_x2_worked.svg
+            src images/svg_ch3_ex_three_factories.svg
 
         |> Solution
 
@@ -1104,15 +1103,16 @@
             except with a factor $3$ horizontal dilation.
 
             For the third graph, we will first stop to 
-            find a formula  for the function depicted here:
+            find a formula  for the function depicted
+            here:
 
             |> Image
-                src images/svg_ch3_factory_roof_stretched_x3_translated_1_worked.svg
+                src images/svg_ch3_ex_three_factories_sol1.svg
         
             And that formula is...
         
             |> Image
-                src images/svg_ch3_factory_roof_stretched_x3_translated_1_explanation.svg
+                src images/svg_ch3_ex_three_factories_sol2.svg
 
             ...iiiiiiiS...
             $$

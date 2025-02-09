@@ -108,8 +108,8 @@
     $$
     \Large\{1, 2\}
     $$
-    these sets are actually one and the same, because they both
-    answer “yes” to
+    these sets are actually one and the same,
+    because they both answer “yes” to
 
     __do you contain 1?__
     __do you contain 2?__
@@ -151,7 +151,8 @@
         
     __one__
     
-    and only one empty set. Therefore, mathematicians speak of
+    and only one empty set. Therefore, mathematicians
+    speak of
     
     __the__
     
@@ -168,25 +169,30 @@
     $$
     \Large \phi
     $$
-    which is the Greek letter phi, read “fee”. (Or “fie”?
-    Hum.) (Or you can just say “the empty set”, and
-    keep it safe.)
+    which is the Greek letter phi, read “fee”. (Or
+    “fie”? Hum.) (Or you can just say “the empty set”,
+    and keep it safe.)
 
 |> Section
 
     *Sets within sets.*
-    Sets can be nested much like Russian dolls.
-    In fact, the result of doing this might even look like a little bit
-    like a Russian doll (no?):
+    Sets can be nested much like Russian dolls. In
+    fact, the result of doing this might even look
+    like a little bit like a Russian doll (no?):
+    
     $$
     \Large \{\{\{\{\}\}\}\}
     $$
-    The above is “a set containing a set containing a set
-    containing a set containing the empty set”. Eschewing complete
-    adherence to the Russian doll aesthetic, we could also write
+    
+    The above is “a set containing a set containing
+    a set containing a set containing the empty set”.
+    Eschewing complete adherence to the Russian doll
+    aesthetic, we could also write
+    
     $$
     \Large \{\{\{\phi\}\}\}
     $$
+    
     for the same thing, given that $\phi = \{\}$.
 
     Mind you, concerning this example, that
@@ -199,72 +205,89 @@
         src images/svg_bt1_bt_empty_set_cloud.svg
         offset_x 3em
 
-    because a box containing an empty box is not the same
-    thing as an empty box! Specifically,
+    because a box containing an empty box is not the
+    same thing as an empty box! Specifically,
+    
     $$
     \Large \{ \{\} \}
     $$
-    answers “yes” to the question “do you contain 
-    $\{\}$?”
-    (a.k.a., “do you contain $\phi$?”) 
-    whereas
+    
+    answers “yes” to the question “do you contain
+    $\{\}$?” (a.k.a., “do you contain $\phi$?”) whereas
+
     $$
     \Large \{\}
     $$
-    answers “no” to the same question. (Indeed, while the empty set
-    _contains_ nothing, it _is_ something.) Similarly,
+
+    answers “no” to the same question. (Indeed, while
+    the empty set _contains_ nothing, it _is_ something.)
+    Similarly,
+
     $$
     \Large \{\{\{\}\} \} \ne \{\{\}\}
     $$
-    etc, etc: adding a new outer layer changes the whole set each time.
+
+    etc, etc: adding a new outer layer changes the
+    whole set each time.
 
 |> Section
 
     *Set union and set intersection.*
-    The so-called _union_
-    of two sets $A$ and
-    $B$ is written 
-    $$\Large A \cup B$$
-    and consists of the set of all things that are either in $A$ or in 
-    $B.$
-    For example,
+    The so-called _union_ of two sets $A$ and $B$ is
+    written $$\Large A \cup B$$ and consists of the set
+    of all things that are either in $A$ or in $B$. For
+    example,
+
     $$
     \Large \{1, 2\} \cup \{2, 5\} = \{1, 2, 5\}
     $$
+
     as $1$, $2$ and $5$ are the only elements to find
-    themselves either in
-    $\{1, 2\}$ or in $\{2, 5\}$.
+    themselves either in $\{1, 2\}$ or in $\{2, 5\}$.
     The so-called _intersection_ of two sets $A$ and
     $B$ is written 
-    $$\Large A \cap B$$
-    and consists of the set of all things that are both in $A$ and in 
-    $B$.
-    For example,
+    
+    $$
+    \Large A \cap B
+    $$
+    
+    and consists of the set of all things that are both
+    in $A$ and in $B$. For example,
+
     $$
     \Large \{1, 2\} \cap \{2, 5\} = \{2\}
     $$
-    as $2$ is the only element that is both in
-    $\{1, 2\}$ and in $\{2, 5\}$.
+
+    as $2$ is the only element that is both in $\{1, 2\}$
+    and in $\{2, 5\}$.
 
     Note that
+
     $$
     \Large x \in (A \cup B)
     $$
+
     if and only if
+
     $$
     \Large x \in A
     $$
+
     _or_
+
     $$
     \Large x \in B
     $$
-    because that's how we defined “union”. (Replace “or”
-    by “and” to get a definition of intersection.)
-    In fact, a logician would define the union of two sets by an
-    abstruse expression of the type
+
+    because that's how we defined “union”. (Replace
+    “or” by “and” to get a definition of intersection.)
+    In fact, a logician would define the union of two
+    sets by an abstruse expression of the type
+
     $$
     \Large x \in (A \cup B) \iff (x \in A) \vee (x \in B)
     $$
+
     read
     
     __an element $x$ is in the thing I call “$A \cup B$”
@@ -275,18 +298,22 @@
     similar definition for the intersection of two sets
     if we tell you that
     
-    $$\Large \wedge$$
+    $$
+    \Large \wedge
+    $$
 
     means “and”.)
-
 
 |> Section
 
     *Sets encountered in calculus.*
-    In calculus, you will see sets such as _the real numbers_
+    In calculus, you will see sets such as _the real
+    numbers_
+
     $$
     \Large\rr
     $$
+
     which is an infinite set containing all “ordinary”
     decimal numbers, or such as _the integers_
     $$
@@ -298,31 +325,41 @@
     $$
     \Large\nn
     $$
-    which contains only those integers that are greater than $0$ (i.e.,
-    $\nn = \{1, 2, 3, \ldots \}$).
+    which contains only those integers that are greater
+    than $0$ (i.e., $\nn = \{1, 2, 3, \ldots \}$).
         
-    Secondly—and this pretty much wraps it up for those sets 
-    that are commonly seen in calculus—you will
+    Secondly—and this pretty much wraps it up for those
+    sets  that are commonly seen in calculus—you will
     encounter _intervals_. For example,
+
     $$
     \Large [a, b]
     $$
-    is a _closed interval_, consisting of all (real) numbers 
-    greater than or equal to $a$, and less than or equal to $b$. Or
+
+    is a _closed interval_, consisting of all (real)
+    numbers greater than or equal to $a$, and less than
+    or equal to $b$. Or
+
     $$
     \Large [a, b)
     $$
-    is a _half-open_ interval, consisting of all real numbers
-    greater than or equal to $a$, and less than $b$. Etc.
+
+    is a _half-open_ interval, consisting of all real
+    numbers greater than or equal to $a$, and less than
+    $b$. Etc.
 
     Note that
+
     $$
     \Large (-\infty, \infty) = \rr
     $$
+
     since
+
     $$
     \Large (-\infty, \infty)
     $$
+
     (which is an _open_ interval, by the way) means
     
     __the set of real numbers with no bound below,
@@ -333,41 +370,52 @@
 |> Section
 
     *Sets not encountered in calculus.*
-    If you take a more advanced course, you might encounter 
-    the so-called _set of extended real numbers_,
+    If you take a more advanced course, you might
+    encounter the so-called _set of extended real numbers_,
     written
+
     $$
     \Large\overline{\rr}
     $$
-    and which consists of all the numbers in $\rr$, plus the formal 
-    symbols “$-\infty$”, “$\infty$” as well:
+
+    and which consists of all the numbers in $\rr$, plus
+    the formal symbols “$-\infty$”, “$\infty$” as well:
+
     $$
     \Large\overline{\rr} = \rr \cup \{-\infty, \infty\}
     $$
+
     (I.e., ...well, you get it!)
 
     You can view $\overline{\rr}$ as a kind “closed interval”
-    version of $\rr$, that is, think of $\overline{\rr}$ as being
-    the closed interval
+    version of $\rr$, that is, think of $\overline{\rr}$
+    as being the closed interval
+
     $$
     \Large [-\infty, \infty]
     $$
+
     with the two infinite endpoints _included_.
 
-    Does all this have any “real meaning”? Good question! The answer
-    is: _not until you give it one_.
+    Does all this have any “real meaning”? Good question!
+    The answer is: _not until you give it one_.
 
-    E.g. (to give you a brief flavor, before we move on forever from the topic),
-    the value of something like
+    E.g. (to give you a brief flavor, before we move on
+    forever from the topic), the value of something like
+
     $$
     \Large 0.5+ \infty
     $$
-    must be _defined_. (It is defined to be $\infty$, in case you're curious.
-    In fact, one has $a + \infty = \infty$ for any $a \ne -\infty$.) And some things
-    remain explicitly _undefined_. For example, the expression
+
+    must be _defined_. (It is defined to be $\infty$, in
+    case you're curious. In fact, one has $a + \infty = \infty$
+    for any $a \ne -\infty$.) And some things remain
+    explicitly _undefined_. For example, the expression
+
     $$
     \Large (-\infty) + \infty
     $$
-    has an _undefined_ value—the same way, say, that division by
-    $0$ is undefined in $\rr$. 
+
+    has an _undefined_ value—the same way, say, that
+    division by $0$ is undefined in $\rr$.
     (Well, anyway, end of lesson.)
