@@ -5,13 +5,11 @@ import LazyImage from "./LazyImage";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useScale } from "~/store/ScaleProvider";
 
-type ImageProps = ParentProps &
+type UserFacingSideImageProps = ParentProps &
   SharedProps & {
     src: string;
     squiggle?: boolean;
     width?: string;
-    img_position?: "top" | "bottom" | "center";
-    y?: string | number;
     offset_y?: string;
     offset_x?: string;
     line?: number;
@@ -23,37 +21,24 @@ type ImageProps = ParentProps &
     popup?: boolean;
   };
 
-type SideImageProps = Partial<ImageProps> & {
-  side: "left" | "right";
-  parentStyles?: {
-    [key: string]: string;
-  };
+type InternalSideImageProps = UserFacingSideImageProps & {
+  side: string;
+  left: string;
+  right: string;
+  top: string;
 };
 
-const SideImage = (_props: SideImageProps) => {
+const SideImage = (props: InternalSideImageProps) => {
   let container_ref: HTMLDivElement | undefined;
   const { store } = useGlobalContext();
-  const scale = useScale();
   const show_squiggles = () => store.show_squiggles;
 
-  const props = mergeProps(
-    {
-      offset_x: "0px",
-      offset_y: "0px",
-      img_position: "center",
-      padding: "",
-      squiggle_y: "30%",
-    },
-    _props
-  );
-
   let innerStyles = () => ({
-    left: props.side === "right" ? `calc(100% + ${props.offset_x} * ${scale()}`: "",
-    right: props.side === "left" ? `calc(100% + ${props.offset_x} * ${scale()}`: "",
-    top: `calc(50% + ${props.offset_y} * ${scale()})`,
-    transform: `translateY(calc(-50% + ${getInnerTransform(props.img_position)}))`,
+    left: props.left,
+    right: props.right,
+    top: props.top,
+    transform: `translateY(calc(-50%))`,
     padding: `${props.padding}`,
-    scale: `${scale()}`,
     "transform-origin": `0 top 0`,
     zIndex: 20,
   });
@@ -66,7 +51,6 @@ const SideImage = (_props: SideImageProps) => {
         {props.children}
       </div>;
     }
-
     return <></>;
   }
 
@@ -110,60 +94,75 @@ const SideImage = (_props: SideImageProps) => {
 
 export const ImageRight = ({
   line = 0,
-  y = "center",
+  offset_x = "0px",
+  offset_y = "0px",
   ...props
-}: ImageProps) => {
-  let parent_styles = () => ({
-    left: "100%",
-    top: getTopPos(y, line, 30),
-  });
+}: UserFacingSideImageProps) => {
+  const scale = useScale();
 
-  return (
-    <SideImage
-      side="right"
-      parentStyles={parent_styles()}
-      {...props}></SideImage>
-  );
+  let internalProps : InternalSideImageProps = mergeProps(
+    props,
+    {
+      right: getRight("right", offset_x, scale()),
+      left: getLeft("right", offset_x, scale()),
+      top: getTop(line, 30, offset_y, scale()),
+      side: "right",
+    }
+  )
+
+  return (<SideImage {...internalProps}></SideImage>);
 };
 
-export const ImageLeft = (
-  { line = 0, y = "center", ...props }: ImageProps
-) => {
-  let parent_styles = () => ({
-    right: "100%",
-    top: getTopPos(y, line, 30),
-  });
+export const ImageLeft = ({
+  line = 0,
+  offset_x = "0px",
+  offset_y = "0px",
+  ...props
+}: UserFacingSideImageProps) => {
+  const scale = useScale();
 
-  return (
-    <SideImage
-      side="left"
-      parentStyles={parent_styles()}
-      {...props}></SideImage>
-  );
+  let internalProps : InternalSideImageProps = mergeProps(
+    props,
+    {
+      right: getRight("left", offset_x, scale()),
+      left: getLeft("left", offset_x, scale()),
+      top: getTop(line, 30, offset_y, scale()),
+      side: "left",
+    }
+  )
+
+  return (<SideImage {...internalProps}></SideImage>);
 };
 
-const getTopPos = (y: string | number, line: number, line_height: number) => {
+const getLeft = (
+  side: string,
+  offset_x: string,
+  scale: number,
+): string => {
+  return side === "right" ? `calc(100% + ${offset_x} * ${scale}`: "";
+}
+
+const getRight = (
+  side: string,
+  offset_x: string,
+  scale: number,
+): string => {
+  return side === "left" ? `calc(100% + ${offset_x} * ${scale}`: "";
+}
+
+const getTop = (
+  line: number, 
+  line_height: number,
+  offset_y: string,
+  scale: number,
+) : string => {
   let top = "";
   if (line > 0) {
-    top = (line - 0.5) * line_height + "px";
-  } else if (line < 0.0) {
-    top = `calc(100% + ${(0.5 + line) * line_height}px)`;
+    top = `calc(0% + ${(line - 0.5) * line_height}px * ${scale} + ${offset_y} * ${scale})`;
+  } else if (line < 0) {
+    top = `calc(100% + ${(0.5 + line) * line_height}px * ${scale} + ${offset_y} * ${scale})`;
   } else {
-    let map = {
-      bottom: "100%",
-      top: "0",
-      center: "50%",
-    };
-    top = typeof y === "string" ? map[y as keyof typeof map] : `${y}`;
+    top = `calc(50% + ${offset_y} * ${scale})`
   }
   return top;
-};
-
-const getInnerTransform = (img_position: string) => {
-  let map = {
-    bottom: "-50%",
-    top: "50%",
-  };
-
-  return map[img_position as keyof typeof map] || "0%";
 };

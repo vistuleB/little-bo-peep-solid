@@ -1,4 +1,6 @@
 |> Exercise
+    type hello_world
+
 
     Four particles are placed 
     at intervals of $90^\circ$
@@ -36,6 +38,8 @@
 
         |> ImageRight
             src images/svg_ch4_circle_at_2_4_with_some_vectors_cloud.svg
+            offset_y 150px
+            offset_x -0.5em
 
         For $t < 0$ motion will be
         down and to the left, at least initially—it
@@ -141,7 +145,8 @@
         __length of the position vector__
 
         |> ImageRight
-            src images/svg_ch4_circle_at_2_4_position_equals_velocity_cloud.svg
+            src images/svg_ch4_ex_circle_at_2_4_position_equals_velocity_cloud.svg
+            offset_x -4em
 
         of said particles, is equal to the
 
@@ -179,7 +184,8 @@
         (!!)
 
         |> ImageLeft
-            src images/svg_ch4_circle_at_2_4_sqrt_20_cloud.svg
+            src images/svg_ch4_ex_circle_at_2_4_sqrt_20_cloud.svg
+            line -1
         
         This describes an “understandable”
         behavior of the black and white particles.
@@ -439,7 +445,6 @@
         For starters...
 
         |> CentralDisplay
-
             |> InlineImage
                 class ch4_inline_blackwhite_particles
                 src images/svg_ch4_circle_at_2_4_p1_inline.svg
@@ -1006,7 +1011,7 @@
         |> InlineImage
             class ch4_inline_blackwhite_particles
             src images/svg_ch4_circle_at_2_4_p3_inline.svg
-        &ensp;and
+        &ensp;and 
         |> InlineImage
             class ch4_inline_blackwhite_particles
             src images/svg_ch4_circle_at_2_4_p4_inline.svg

@@ -1714,7 +1714,7 @@ const Article = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40"]}>
+      <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"]}>
         <Exercise exercise_number={1}>
           <VerticalChunk>
             <b>
@@ -5320,6 +5320,660 @@ const Article = () => {
               Exercise 22.
             </b>
             {" "}
+            Sketch the velocity vector, acceleration vector,
+            and jerk vector of a particle going around a circle
+            of radius{" "}
+            <NoBreak>
+              <Math>
+                $r$
+              </Math>
+            </NoBreak>
+            {" "}at speed{" "}
+            <NoBreak>
+              <Math>
+                $v$
+              </Math>
+              .
+            </NoBreak>
+            {" "}
+            (You can assume say{" "}
+            <NoBreak>
+              <Math>
+                $v/r \approx 1.2$
+              </Math>
+            </NoBreak>
+            {" "}for the sake
+            of your sketch.) Give algebraic expressions for the 
+            lengths of the various vectors.
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={22}>
+            <VerticalChunk>
+              While the particle goes around a circle of 
+              radius{" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}the velocity vector goes around a
+              circle of radius{" "}
+              <NoBreak>
+                <Math>
+                  $v$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(Indeed{" "}
+              <NoBreak>
+                <Math>
+                  $v$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              being the speed, is the length of the velocity
+              vector, and the length of the velocity vector
+              is the radius of the circle traced by the
+              velocity vector.) So the circle traced by the
+              velocity vector is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\Large &#123;v \over r&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              times as large as the circle traced by the
+              position vector. Therefore, the  velocity vector
+              goes
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\Large &#123;v \over r&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              times as fast as the position vector! (The two
+              vectors trace their respective circles in the
+              same amount of time, so the only difference
+              in speed is caused by differences in the 
+              radii—and this is the ratio of the radii.) 
+              Therefore, the velocity vector has speed
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\Large v \cdot &#123;v \over r&#125; = &#123;v^2 \over r&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...as obtained by multiplying the speed of the
+              position vector{" "}
+              <NoBreak>
+                (
+                <Math>
+                  $v$
+                </Math>
+                )
+              </NoBreak>
+              {" "}by the ratio of the speeds
+              {" "}
+              <NoBreak>
+                (
+                <Math>
+                  $v/r$
+                </Math>
+                ).
+              </NoBreak>
+              {" "}This is also the length of the acceleration
+              vector. (Speed of velocity vector = length of
+              acceleration vector.)
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Next, the ratio
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is the same for the velocity vector as it is for
+              the position vector, because both “speed” and
+              “radius” are scaled up by a factor
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\Large &#123;v \over r&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              compared to the position vector.
+              So
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125; = &#123;v \over r&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for the velocity vector as well as for the position
+              vector. But we can also write this ratio as
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\Large &#123;\te&#123;length of acceleration vector&#125;\over \te&#123;radius&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              since the speed of the velocity vector is the
+              length of the acceleration vector, or as
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$\Large &#123;\te&#123;length of acceleration vector&#125;\over \te&#123;radius of velocity vector circle&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              to be more exact, or as
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\Large &#123;\te&#123;radius of acceleration vector circle&#125;\over \te&#123;radius of velocity vector circle&#125;&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              in yet another way! Therefore, the circle traced by
+              the acceleration vector is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\Large &#123;v \over r&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              times as large as the circle traced by the velocity 
+              vector, and the same pattern starts all over again!
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              (In other words, each time we take a derivative we 
+              find that the vector whose derivative we are taking
+              has speed
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\Large &#123;v \over r&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              times the speed of the previous vector whose 
+              derivative we took, resulting in a circle
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\Large &#123;v \over r&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              times as large as the current circle, resulting in
+              a future speed{" "}
+              <NoBreak>
+                <Math>
+                  $v/r$
+                </Math>
+              </NoBreak>
+              {" "}times as large for the next 
+              derivative, etc, etc.)
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Concretely, the length of the jerk vector will be
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\Large &#123;v^2 \over r&#125; \cdot &#123;v \over r&#125; = &#123;v^3 \over r^2&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              because the length of the acceleration is{" "}
+              <NoBreak>
+                <Math>
+                  $v^2/r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and the length of the derivative of the jerk would
+              be
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\Large &#123;v^3 \over r^2&#125; \cdot &#123;v \over r&#125; = &#123;v^4 \over r^3&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              because the length of the jerk is{" "}
+              <NoBreak>
+                <Math>
+                  $v^3/r^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}etc. 
+              (Not that we needed to go beyond the jerk.)
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Coming back to a sketch of all this, if
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\Large &#123;v \over r&#125; \approx 1.2&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              the sketch will involve concentric circles
+              of successive ratio{" "}
+              <NoBreak>
+                <Math>
+                  $\approx 1.2$
+                </Math>
+              </NoBreak>
+              {" "}with the
+              successive vectors being off by{" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              The position circle might not be centered at
+              {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}so we didn't include it in this sketch
+              (this sketch presumes clockwise motion, but
+              it's unimportant):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_ex_general_circular_motion_uncentered.svg">
+              <VerticalChunk>
+                But if the position circle is centered at{" "}
+                <NoBreak>
+                  <Math>
+                    $(0, 0)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                it becomes the first circle in the sequence:
+              </VerticalChunk>
+            </Image>
+            <Pause />
+            <Image src="/images/svg_ch4_ex_general_circular_motion_centered.svg" />
+            <StarDivider />
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The ratio
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$&#123;\Large &#123;v \over r&#125;&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                is known as the
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                angular velocity
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                of the particle. You can think of the angular velocity
+                as
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$&#123;\Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125;&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                directly per the expression above, or as
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$&#123;\Large &#123;\te&#123;distance per unit time&#125;\over \te&#123;radius&#125;&#125;&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                since that is just the definition of “speed”, but which also
+                means that you can think of the angular velocity as
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\Large &#123;\te&#123;number of radii per unit time&#125;&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                or, say, just as
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\Large &#123;\te&#123;radii per unit time&#125;&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                in other words. 
+                (The “number or radii” covered by an arc is
+                also known as the{" "}
+                <i>
+                  radian measure
+                </i>
+                {" "}of the arc—an
+                alternate measure of angle—so this can also be
+                phrased{" "}
+                <i>
+                  radians per unit time
+                </i>
+                , in that sense.)
+                What is noteworthy is that the angular velocity
+                of the position vector is the same as the
+                angular velocity of the velocity vector, of the
+                acceleration vector, etc, and it also constitutes
+                the ratio between the successive lengths of all
+                these vectors!
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                A common notation for the angular velocity of a 
+                particle is
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$&#123;\Large \omega&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                which means that the velocity vector, acceleration
+                vector, and jerk vector have lengths
+                have lengths
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$&#123;\Large \omega&#123;&#125;^1r&#125;$$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$&#123;\Large \omega&#123;&#125;^2r&#125;$$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$&#123;\Large \omega&#123;&#125;^3r&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                respectively, where{" "}
+                <NoBreak>
+                  <Math>
+                    $r$
+                  </Math>
+                </NoBreak>
+                {" "}is the radius of the circle,
+                as the angular velocity is the ratio of the lengths
+                of the successive vectors, as noted. (PS: As the
+                length of the velocity vector is also known as the
+                speed,{" "}
+                <NoBreak>
+                  <Math>
+                    $\omega^1r = \omega&#123;&#125;r$
+                  </Math>
+                </NoBreak>
+                {" "}is also the speed,
+                by another name.) (PPS: We couldn't resist writing
+                {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $\omega^1r$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}instead of{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $\omega&#123;&#125;r$
+                  </Math>
+                  ”,
+                </NoBreak>
+                {" "}to keep things
+                extra symmetric{" "}
+                <i>
+                  &
+                </i>
+                {" "}typographically aligned.)
+              </VerticalChunk>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={23}>
+          <VerticalChunk>
+            <b>
+              Exercise 23.
+            </b>
+            {" "}
+            Four particles are moving at speed{" "}
+            <NoBreak>
+              <Math>
+                $3$
+              </Math>
+            </NoBreak>
+            {" "}
+            around a circle of radius{" "}
+            <NoBreak>
+              <Math>
+                $3$
+              </Math>
+            </NoBreak>
+            {" "}centered at{" "}
+            <NoBreak>
+              <Math>
+                $(0, 0)$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}
+            spaced out by{" "}
+            <NoBreak>
+              <Math>
+                $90^\circ$
+              </Math>
+              :
+            </NoBreak>
+          </VerticalChunk>
+          <Pause />
+          <Image src="/images/svg_ch4_ex_four_particles_radius_3.svg" />
+          <Pause />
+          <VerticalChunk>
+            Sketch the position vector, velocity vector,
+            acceleration vector, and jerk vector of each 
+            particle. What is the angular velocity of each 
+            particle?
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={23}>
+            <VerticalChunk>
+              Starting with the second part of the
+              question, because the particles are going around 
+              a circle of radius{" "}
+              <NoBreak>
+                <Math>
+                  $3$
+                </Math>
+              </NoBreak>
+              {" "}at speed{" "}
+              <NoBreak>
+                <Math>
+                  $3$
+                </Math>
+              </NoBreak>
+              {" "}the
+              angular velocity (cf. Exercise 37) is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\Large &#123;3\over 3&#125; = 1&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              which means that the ratio of the lengths of
+              all the vectors will be{" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}i.e., all vectors
+              (velocity, acceleration, jerk) will have the 
+              same length as the radius, which is{" "}
+              <NoBreak>
+                <Math>
+                  $3$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Keeping in mind that the jerk is 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+              </NoBreak>
+              {" "}ahead of the acceleration is{" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+              </NoBreak>
+              {" "}
+              ahead of the velocity, etc, in the direction of
+              rotation, the sixteen vectors—four for each
+              particle—are therefore as follows:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_ex_four_particles_radius_3_four_minis.svg" />
+            <Pause />
+            <VerticalChunk>
+              (In particular, the purple particle's position
+              ends up being the velocity of the red particle,
+              and many other identities of the sort.)
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={24}>
+          <VerticalChunk>
+            <b>
+              Exercise 24.
+            </b>
+            {" "}
+            What are the dimensions of angular velocity?
+            (For example, the dimensions of velocity are
+            “length over time”, ([L/T]).)
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={24}>
+            <VerticalChunk>
+              <i>
+                Solution 1.
+              </i>
+              {" "}
+              Angular velocity is
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              speed over radius
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              which has dimensions
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;\Large &#123;\te&#123;L/T&#125; \over \te&#123;L&#125;&#125;&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              because speed has dimensions of length over time,
+              L/T, while the radius has dimensions of length, L;
+              this simplifies...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_ex_1_over_L_times_L_over_T_simplification.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...down to dimensions of “one over time”.
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              <i>
+                Solution 2.
+              </i>
+              {" "}
+              Angular velocity is
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              radians per unit time
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              or
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              number of radii per unit time
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              (if you prefer),
+              which is a “one over time” quantity, because
+              radians are dimensionless.
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Indeed, “radian” is
+              short for “number of radii that fit inside the
+              arc length”, which is one length 
+              divided by another length, 
+              which is, therefore,
+              dimensionless.
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={25}>
+          <VerticalChunk>
+            <b>
+              Exercise 25.
+            </b>
+            {" "}
             Imagine a single particle in a one-dimensional
             world, whose velocity equals its position; at{" "}
             <NoBreak>
@@ -5338,7 +5992,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch4_one_particle_at_1.svg" />
+          <Image src="/images/svg_ch4_ex_one_particle_at_1.svg" />
           <Pause />
           <VerticalChunk>
             If we play time backward, will the particle 
@@ -5351,7 +6005,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={22}>
+          <Solution solution_number={25}>
             <VerticalChunk>
               Going back in time,
               examine how long it would take
@@ -5359,7 +6013,7 @@ const Article = () => {
               the following geometric progression* (*see Note 1):
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch4_one_particle_interval_subdivision.svg" />
+            <Image src="/images/svg_ch4_ex_one_particle_interval_subdivision.svg" />
             <Pause />
             <VerticalChunk>
               The interval from{" "}
@@ -5383,7 +6037,9 @@ const Article = () => {
             <Pause />
             <MathBlock>
               $$&#123;0.5 \over 1&#125; = 0.5$$
-              <ImageLeft src="/images/svg_ch4_one_particle_speed_equals_time_cloud.svg" />
+              <ImageLeft
+                offset_x="6em"
+                src="/images/svg_ch4_one_particle_speed_equals_time_cloud.svg" />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5560,10 +6216,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={23}>
+        <Exercise exercise_number={26}>
           <VerticalChunk>
             <b>
-              Exercise 23.
+              Exercise 26.
             </b>
             {" "}
             Take a system of two particles on the real
@@ -5618,7 +6274,7 @@ const Article = () => {
             exist altogether between the three graphs?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={23}>
+          <Solution solution_number={26}>
             <VerticalChunk>
               For{" "}
               <NoBreak>
@@ -5793,12 +6449,13 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={24}>
+        <Exercise exercise_number={27}>
           <VerticalChunk>
             <b>
-              Exercise 24.
+              Exercise 27.
             </b>
-            {" "}
+          </VerticalChunk>
+          <VerticalChunk indent={true}>
             Four particles are placed 
             at intervals of{" "}
             <NoBreak>
@@ -5849,7 +6506,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={24}>
+          <Solution solution_number={27}>
             <VerticalChunk>
               At{" "}
               <NoBreak>
@@ -5883,7 +6540,10 @@ const Article = () => {
                 </Math>
                 .
               </NoBreak>
-              <ImageRight src="/images/svg_ch4_circle_at_2_4_with_some_vectors_cloud.svg" />
+              <ImageRight
+                offset_x="-0.5em"
+                offset_y="150px"
+                src="/images/svg_ch4_circle_at_2_4_with_some_vectors_cloud.svg" />
             </VerticalChunk>
             <VerticalChunk indent={true}>
               For{" "}
@@ -6064,7 +6724,9 @@ const Article = () => {
             <Pause />
             <CentralDisplayItalic>
               length of the position vector
-              <ImageRight src="/images/svg_ch4_circle_at_2_4_position_equals_velocity_cloud.svg" />
+              <ImageRight
+                offset_x="-4em"
+                src="/images/svg_ch4_ex_circle_at_2_4_position_equals_velocity_cloud.svg" />
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -6140,7 +6802,9 @@ const Article = () => {
               </NoBreak>
               {" "}
               (!!)
-              <ImageLeft src="/images/svg_ch4_circle_at_2_4_sqrt_20_cloud.svg" />
+              <ImageLeft
+                line={-1.0}
+                src="/images/svg_ch4_ex_circle_at_2_4_sqrt_20_cloud.svg" />
             </VerticalChunk>
             <VerticalChunk indent={true}>
               This describes an “understandable”
@@ -7888,7 +8552,7 @@ const Article = () => {
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              &ensp;and
+              &ensp;and{" "}
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
@@ -8113,10 +8777,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={25}>
+        <Exercise exercise_number={28}>
           <VerticalChunk>
             <b>
-              Exercise 25.
+              Exercise 28.
             </b>
             {" "}
             Find a nonzero function{" "}
@@ -8149,7 +8813,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={25}>
+          <Solution solution_number={28}>
             <VerticalChunk>
               Recall the curves from Exercise 12:
             </VerticalChunk>
@@ -8233,10 +8897,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={26}>
+        <Exercise exercise_number={29}>
           <VerticalChunk>
             <b>
-              Exercise 26.
+              Exercise 29.
             </b>
             {" "}
             Express the...
@@ -8283,7 +8947,7 @@ const Article = () => {
             ...in the form of self-contained, formal statements.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={26}>
+          <Solution solution_number={29}>
             <VerticalChunk>
               For the functions:
             </VerticalChunk>
@@ -8541,10 +9205,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={27}>
+        <Exercise exercise_number={30}>
           <VerticalChunk>
             <b>
-              Exercise 27.
+              Exercise 30.
             </b>
             {" "}
             How can we generate the following set of
@@ -8586,7 +9250,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch4_scaled_cosine_curves.svg" />
           <Pause />
-          <Solution solution_number={27}>
+          <Solution solution_number={30}>
             <VerticalChunk>
               The values oscillate between{" "}
               <NoBreak>
@@ -8646,10 +9310,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={28}>
+        <Exercise exercise_number={31}>
           <VerticalChunk>
             <b>
-              Exercise 28.
+              Exercise 31.
             </b>
             {" "}
             Exercise 12 exhibits a function{" "}
@@ -8748,7 +9412,7 @@ const Article = () => {
             ...?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={28}>
+          <Solution solution_number={31}>
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9489,10 +10153,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={29}>
+        <Exercise exercise_number={32}>
           <VerticalChunk>
             <b>
-              Exercise 29.
+              Exercise 32.
             </b>
             {" "}
             If we seek a function{" "}
@@ -9536,7 +10200,7 @@ const Article = () => {
             concerned, what would our options be?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={29}>
+          <Solution solution_number={32}>
             <VerticalChunk>
               Take{" "}
               <NoBreak>
@@ -9926,10 +10590,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={30}>
+        <Exercise exercise_number={33}>
           <VerticalChunk>
             <b>
-              Exercise 30.
+              Exercise 33.
             </b>
             {" "}
             Add elements to the following drawing...
@@ -9952,7 +10616,7 @@ const Article = () => {
             the expression, if any.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={30}>
+          <Solution solution_number={33}>
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10121,10 +10785,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={31}>
+        <Exercise exercise_number={34}>
           <VerticalChunk>
             <b>
-              Exercise 31.
+              Exercise 34.
             </b>
             {" "}
             In this exercise we consider two points
@@ -10452,7 +11116,7 @@ const Article = () => {
             each term become?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={31}>
+          <Solution solution_number={34}>
             <VerticalChunk>
               Dividing by{" "}
               <NoBreak>
@@ -11022,10 +11686,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={32}>
+        <Exercise exercise_number={35}>
           <VerticalChunk>
             <b>
-              Exercise 32.
+              Exercise 35.
             </b>
             {" "}
             The identity
@@ -11060,7 +11724,7 @@ const Article = () => {
             , by the way.)
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={32}>
+          <Solution solution_number={35}>
             <VerticalChunk>
               One can say
             </VerticalChunk>
@@ -11093,10 +11757,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={33}>
+        <Exercise exercise_number={36}>
           <VerticalChunk>
             <b>
-              Exercise 33.
+              Exercise 36.
             </b>
             {" "}
             If we rewrite the “product rule” of Exercise
@@ -11104,7 +11768,7 @@ const Article = () => {
             of Exercise 19, what do we obtain?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={33}>
+          <Solution solution_number={36}>
             <VerticalChunk>
               The form of...
             </VerticalChunk>
@@ -11232,10 +11896,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={34}>
+        <Exercise exercise_number={37}>
           <VerticalChunk>
             <b>
-              Exercise 34.
+              Exercise 37.
             </b>
             {" "}
             If the identities
@@ -11278,7 +11942,7 @@ const Article = () => {
             to this point?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={34}>
+          <Solution solution_number={37}>
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>
@@ -11354,10 +12018,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={35}>
+        <Exercise exercise_number={38}>
           <VerticalChunk>
             <b>
-              Exercise 35.
+              Exercise 38.
             </b>
             {" "}
             The solution to the previous exercise
@@ -11428,7 +12092,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={35}>
+          <Solution solution_number={38}>
             <VerticalChunk>
               The “logical” definition is:
             </VerticalChunk>
@@ -11526,10 +12190,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={36}>
+        <Exercise exercise_number={39}>
           <VerticalChunk>
             <b>
-              Exercise 36.
+              Exercise 39.
             </b>
             {" "}
             The definition
@@ -11612,7 +12276,7 @@ const Article = () => {
             the input.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={36}>
+          <Solution solution_number={39}>
             <VerticalChunk>
               E.g.:
             </VerticalChunk>
@@ -11640,10 +12304,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={37}>
+        <Exercise exercise_number={40}>
           <VerticalChunk>
             <b>
-              Exercise 37.
+              Exercise 40.
             </b>
             {" "}
             What does...
@@ -11690,7 +12354,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={37}>
+          <Solution solution_number={40}>
             <VerticalChunk>
               We can start with the fraction in the
               middle of the product:
@@ -11980,10 +12644,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={38}>
+        <Exercise exercise_number={41}>
           <VerticalChunk>
             <b>
-              Exercise 38.
+              Exercise 41.
             </b>
             {" "}
             The function below is also the red
@@ -12010,7 +12674,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch4_cosine_for_eta.svg" />
           <Pause />
-          <Solution solution_number={38}>
+          <Solution solution_number={41}>
             <VerticalChunk>
               Because the particle is going at unit speed the
               circumference of the unit circle is equal to the
@@ -12165,10 +12829,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={39}>
+        <Exercise exercise_number={42}>
           <VerticalChunk>
             <b>
-              Exercise 39.
+              Exercise 42.
             </b>
             {" "}
             The graphs below are the horizontal and
@@ -12231,7 +12895,7 @@ const Article = () => {
             data!)
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={39}>
+          <Solution solution_number={42}>
             <VerticalChunk>
               Let's start by examining Pacman's first six displacements,
               appearing here in blue (positive displacements, going to the right 
@@ -12744,10 +13408,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={40}>
+        <Exercise exercise_number={43}>
           <VerticalChunk>
             <b>
-              Exercise 40.
+              Exercise 43.
             </b>
             {" "}
             Same question, but for the following maze...
@@ -12776,7 +13440,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={40}>
+          <Solution solution_number={43}>
             <VerticalChunk>
               It seems well-advised to start by heuristically verifying
               that Pacman's speed remains
@@ -13399,10 +14063,10 @@ const Article = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={41}>
+        <Exercise exercise_number={44}>
           <VerticalChunk>
             <b>
-              Exercise 41.
+              Exercise 44.
             </b>
             {" "}
             Describe what a function might look like
@@ -13411,7 +14075,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch4_one_long_line.svg" />
           <Pause />
-          <Solution solution_number={41}>
+          <Solution solution_number={44}>
             <VerticalChunk>
               As the second derivative is the
             </VerticalChunk>

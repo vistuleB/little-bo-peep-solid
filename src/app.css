@@ -491,4 +491,5 @@ table.first-line tr td:first-child {
   overflow:visible;
   padding-left:0px;
   display: inline;
+  transform: translate(0em, 0.1em);
 }
