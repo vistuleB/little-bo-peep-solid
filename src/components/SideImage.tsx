@@ -73,7 +73,7 @@ const SideImage = (_props: SideImageProps) => {
   return (
     <div
       ref={container_ref}
-      class="absolute" style="left:0;top:0;width:100%;height:100%;background-color:none;margin:0;padding:0;pointer-events:none;"
+      class="absolute" style="left:0;top:0;width:100%;height:100%;background-color:none;margin:0;padding:0;"
       >
       <div
         style={innerStyles()}

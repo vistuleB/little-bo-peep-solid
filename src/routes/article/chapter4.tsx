@@ -1283,7 +1283,7 @@ const Article = () => {
           A graph of the form...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_position_by_time.svg" />
+        <Image src="/images/svg_ch4_ch_position_by_time.svg" />
         <Pause />
         <VerticalChunk>
           ...describes{" "}
@@ -1294,8 +1294,8 @@ const Article = () => {
           (look at the units); the derivative...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_position_by_time_der.svg">
-          <ImageRight src="/images/svg_ch4_position_by_time_cloud.svg" />
+        <Image src="/images/svg_ch4_ch_position_by_time_der.svg">
+          <ImageRight src="/images/svg_ch4_ch_position_by_time_cloud.svg" />
         </Image>
         <Pause />
         <VerticalChunk>
@@ -1307,8 +1307,8 @@ const Article = () => {
           finally, the second derivative...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch4_position_by_time_der_der.svg">
-          <ImageLeft src="/images/svg_ch4_position_by_time_der_cloud.svg" />
+        <Image src="/images/svg_ch4_ch_position_by_time_der_der.svg">
+          <ImageLeft src="/images/svg_ch4_ch_position_by_time_der_cloud.svg" />
         </Image>
         <Pause />
         <VerticalChunk>
@@ -2306,7 +2306,7 @@ const Article = () => {
             assuming that relationship exists.)
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch4_position_by_time_find_the_order.svg" />
+          <Image src="/images/svg_ch4_ex_position_by_time_find_the_order.svg" />
           <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
@@ -2342,7 +2342,7 @@ const Article = () => {
               {" "}is on the right:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch4_position_by_time_find_the_order_answer.svg" />
+            <Image src="/images/svg_ch4_ex_position_by_time_find_the_order_answer.svg" />
             <Pause />
             <VerticalChunk>
               For example, the graph on the left 
@@ -2367,7 +2367,7 @@ const Article = () => {
               derivative of the graph on the left!):
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch4_position_by_time_find_the_order_first_pair.svg" />
+            <Image src="/images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg" />
             <Pause />
             <VerticalChunk>
               Moreover the middle graph has slope
@@ -2399,12 +2399,14 @@ const Article = () => {
               on the right:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch4_position_by_time_find_the_order_second_pair.svg" />
+            <Image src="/images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg" />
             <Pause />
             <VerticalChunk>
               (Taking one more derivative would produce a
               zigzag, by the way.)
-              <ImageRight src="/images/svg_ch4_position_by_time_find_the_order_cloud.svg" />
+              <ImageRight
+                offset_y="-0.1em"
+                src="/images/svg_ch4_ex_position_by_time_find_the_order_cloud.svg" />
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -4195,14 +4197,7 @@ const Article = () => {
               </Math>
             </NoBreak>
             {" "}is the total number of 
-            {" "}
-            <NoBreak>
-              <Math>
-                $\te&#123;\$&#125;$
-              </Math>
-              's
-            </NoBreak>
-            {" "}earned by virtue of running 
+            $'s earned by virtue of running 
             {" "}
             <NoBreak>
               <Math>
@@ -4256,14 +4251,7 @@ const Article = () => {
                 </Math>
               </NoBreak>
               {" "}
-              is the number of{" "}
-              <NoBreak>
-                <Math>
-                  $\te&#123;\$&#125;$
-                </Math>
-                's
-              </NoBreak>
-              {" "}earned by the rat at{" "}
+              is the number of $'s earned by the rat at{" "}
               <NoBreak>
                 <Math>
                   $t$
@@ -4310,13 +4298,7 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              <NoBreak>
-                <Math>
-                  $\te&#123;\$&#125;$
-                </Math>
-                's
-              </NoBreak>
-              {" "}in total, by definition of{" "}
+              $'s in total, by definition of{" "}
               <NoBreak>
                 <Math>
                   $f$
@@ -4420,16 +4402,14 @@ const Article = () => {
               {" "}for the 
               first 50m, after which the dollar-per-meter 
               rate is reduced.
-              Or 
-              {" "}
+              Or{" "}
               <NoBreak>
                 <Math>
                   $f$
                 </Math>
               </NoBreak>
-              {" "}
-              could look like this,
-              with discrete “unlocks”:
+              {" "}could look like this, with discrete
+              “unlocks”:
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch4_f_g_second_example_of_f.svg" />
@@ -4551,6 +4531,16 @@ const Article = () => {
           <Image src="/images/svg_ch4_f_g_actual_exercise_f.svg" />
           <Pause />
           <Image src="/images/svg_ch4_f_g_actual_exercise_g.svg" />
+          <Pause />
+          <VerticalChunk>
+            In this case what is{" "}
+            <NoBreak>
+              <Math>
+                $(f \circ g)'(2)$
+              </Math>
+              ?
+            </NoBreak>
+          </VerticalChunk>
           <Pause />
           <Solution solution_number={17}>
             <VerticalChunk>
@@ -4722,8 +4712,6 @@ const Article = () => {
                 </Math>
                 !
               </NoBreak>
-              {" "}(Learn
-              something every day.)
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -8166,7 +8154,7 @@ const Article = () => {
               Recall the curves from Exercise 12:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch4_cosine_recall.svg" />
+            <Image src="/images/svg_ch4_ex_cosine_recall.svg" />
             <Pause />
             <VerticalChunk>
               The blue curve is the derivative of the red curve
@@ -8182,7 +8170,9 @@ const Article = () => {
             <Pause />
             <MathBlock>
               $$a$$
-              <ImageLeft src="/images/svg_ch4_cosine_recall_cloud.svg" />
+              <ImageLeft
+                offset_x="200px"
+                src="/images/svg_ch4_ex_cosine_recall_cloud.svg" />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -8252,7 +8242,7 @@ const Article = () => {
             Express the...
           </VerticalChunk>
           <ul
-            style="margin:1em 0 0 2.5em;margin:auto"
+            style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;"
             class="slice">
             <li>
               associativity of function composition
@@ -8274,7 +8264,7 @@ const Article = () => {
             ...as well as the...
           </VerticalChunk>
           <ul
-            style="margin:1em 0 0 2.5em;margin:auto"
+            style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;"
             class="slice">
             <li>
               associativity of real number multiplication
@@ -8297,8 +8287,10 @@ const Article = () => {
             <VerticalChunk>
               For the functions:
             </VerticalChunk>
-            <ul style="margin:1em 0 0 2.5em">
-              <li>
+            <ul
+              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;"
+              class="slice">
+              <li style="position:relative;">
                 <i>
                   the associativity of function multiplication is
                   the fact that{" "}
@@ -8380,6 +8372,9 @@ const Article = () => {
                   </NoBreak>
                   {" "}{" "}
                 </i>
+                <ImageLeft
+                  offset_x="4em"
+                  src="/images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg" />
               </li>
               <li>
                 <i>
@@ -8453,12 +8448,13 @@ const Article = () => {
                   {" "}{" "}
                 </i>
               </li>
-              <ImageLeft src="/images/svg_ch4_express_the_f_g_h_A_B_C_D_cloud.svg" />
             </ul>
             <VerticalChunk>
               For the real numbers:
             </VerticalChunk>
-            <ul style="margin:1em 0 0 2.5em">
+            <ul
+              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;"
+              class="slice">
               <li>
                 <i>
                   the associativity of [real number] multiplication is

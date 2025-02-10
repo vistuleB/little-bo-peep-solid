@@ -265,7 +265,7 @@
     
     gives the amount raised as a function of position;
     specifically, ${f(x)}$ is the total number of 
-    $\te{\$}$'s earned by virtue of running 
+    \$'s earned by virtue of running 
     $x$ meters from the start of the race; 
     a second function
     
@@ -285,7 +285,7 @@
         It computes
         the amount earned by the rat as a function of time. In 
         more detail, $(f \circ g)(t)$
-        is the number of $\te{\$}$'s earned by the rat at $t$
+        is the number of \$'s earned by the rat at $t$
         seconds after the start of the race.
 
         |> Pause
@@ -301,7 +301,7 @@
         $$
         f(g(t))
         $$
-        $\te{\$}$'s in total, by definition of $f$.
+        \$'s in total, by definition of $f$.
         And
         $$
         f(g(t))
@@ -339,10 +339,8 @@
         In the above the rat earns $\te{\$}$3 for the 
         first 50m, after which the dollar-per-meter 
         rate is reduced.
-        Or 
-        $f$
-        could look like this,
-        with discrete “unlocks”: 
+        Or $f$ could look like this, with discrete
+        “unlocks”: 
 
         |> Image
             src images/svg_ch4_f_g_second_example_of_f.svg
@@ -390,6 +388,8 @@
 
     |> Image
         src images/svg_ch4_f_g_actual_exercise_g.svg
+
+    In this case what is $(f \circ g)'(2)$?
 
     |> Solution
 
@@ -458,9 +458,7 @@
         {1 \over 6} = 0.1666...
         $$
         
-        as, indeed, $0.1666...$ is half of $0.333...$! (Learn
-        something every day.)
-
+        as, indeed, $0.1666...$ is half of $0.333...$! 
 
 |> Exercise
 

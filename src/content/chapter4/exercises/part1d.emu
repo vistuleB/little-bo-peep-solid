@@ -14,7 +14,7 @@
         Recall the curves from Exercise 12:
 
         |> Image
-            src images/svg_ch4_cosine_recall.svg
+            src images/svg_ch4_ex_cosine_recall.svg
 
         The blue curve is the derivative of the red curve
         but is also the horizontal translate of the red curve by
@@ -25,7 +25,8 @@
         $$
 
         |> ImageLeft
-            src images/svg_ch4_cosine_recall_cloud.svg
+            src images/svg_ch4_ex_cosine_recall_cloud.svg
+            offset_x 200px
 
         is the distance between adjacent bumps. Thus if
 
@@ -58,8 +59,7 @@
 
     |> ul
         class slice
-        style margin:1em 0 0 2.5em;margin:auto
-
+        style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;
         |> li
 
             associativity of function composition
@@ -80,19 +80,18 @@
 
     |> ul
         class slice
-        style margin:1em 0 0 2.5em;margin:auto
-
+        style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;
         |> li
-            
+
             associativity of real number multiplication
         |> li
-            
+
             associativity of real number addition
         |> li
-            
+
             commutativity of real number multiplication
         |> li
-            
+
             commutativity of real number addition
 
     ...in the form of self-contained, formal statements.
@@ -102,9 +101,10 @@
         For the functions:
 
         |> ul
-            style margin:1em 0 0 2.5em
-
+            class slice
+            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;
             |> li
+                style position:relative;
 
                 _the associativity of function multiplication is
                 the fact that $(f \circ g) \circ h = f \circ (g \circ h)$
@@ -112,33 +112,32 @@
                 $h : D \ra C$, $g : C \ra B$, $f : B \ra A$ 
                 [for arbitrary sets $A$, $B$, $C$, $D$]_
 
+                |> ImageLeft
+                    src images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg
+                    offset_x 4em
+
             |> li
-            
+
                 _the associativity of function multiplication is
                 the fact that $f(gh) = (fg)h$ for all $f, g, h : \rr \ra \rr$_
-
             |> li
-            
+
                 _the associativity of function addition is
                 the fact that $f + (g + h) = (f + g) + h$ for all $f, g, h : \rr \ra \rr$_
-
             |> li
-            
+
                 _the commutativity of function multiplication is
                 the fact that $fg = gf$ for all $f, g : \rr \ra \rr$_
-
             |> li
-            
+
                 _the commutativity of function addition is
                 the fact that $f + g = g + f$ for all $f, g : \rr \ra \rr$_
-
-        |> ImageLeft
-            src images/svg_ch4_express_the_f_g_h_A_B_C_D_cloud.svg
 
         For the real numbers:
 
         |> ul
-            style margin:1em 0 0 2.5em
+            class slice
+            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;
 
             |> li
             

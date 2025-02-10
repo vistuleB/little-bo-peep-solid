@@ -531,25 +531,25 @@
     A graph of the form...
 
     |> Image
-        src images/svg_ch4_position_by_time.svg
+        src images/svg_ch4_ch_position_by_time.svg
 
     ...describes _position as a function of time_
     (look at the units); the derivative...
 
     |> Image
-        src images/svg_ch4_position_by_time_der.svg
+        src images/svg_ch4_ch_position_by_time_der.svg
 
     |> ImageRight
-        src images/svg_ch4_position_by_time_cloud.svg
+        src images/svg_ch4_ch_position_by_time_cloud.svg
 
     ...describes _velocity as a function of time_;
     finally, the second derivative...
 
     |> Image
-        src images/svg_ch4_position_by_time_der_der.svg
+        src images/svg_ch4_ch_position_by_time_der_der.svg
 
     |> ImageLeft
-        src images/svg_ch4_position_by_time_der_cloud.svg
+        src images/svg_ch4_ch_position_by_time_der_cloud.svg
 
     ...describes
 

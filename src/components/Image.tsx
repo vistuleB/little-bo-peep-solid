@@ -19,7 +19,7 @@ const Image = (props: ImageProps) => {
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
-  let [after_first_click, set_after_first_click] = createSignal(true);
+  let [after_first_click, set_after_first_click] = createSignal(false);
   let image_ref: HTMLImageElement | undefined;
 
   const imageWidth = () => {

@@ -484,3 +484,11 @@ table.first-line tr td:first-child {
   padding-left: 2em;
   padding-right: 2em;
 }
+
+.ch4_inline_blackwhite_particles {
+  height:0.9em;
+  vertical-align:baseline;
+  overflow:visible;
+  padding-left:0px;
+  display: inline;
+}

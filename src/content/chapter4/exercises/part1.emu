@@ -252,7 +252,7 @@
     assuming that relationship exists.)
 
     |> Image
-        src images/svg_ch4_position_by_time_find_the_order.svg
+        src images/svg_ch4_ex_position_by_time_find_the_order.svg
 
     |> Solution
 
@@ -262,7 +262,7 @@
         middle, and $f''$ is on the right:
 
         |> Image
-            src images/svg_ch4_position_by_time_find_the_order_answer.svg
+            src images/svg_ch4_ex_position_by_time_find_the_order_answer.svg
 
         For example, the graph on the left 
         has a slope that starts at $\sim\!-1$ and
@@ -273,7 +273,7 @@
         derivative of the graph on the left!):
 
         |> Image
-            src images/svg_ch4_position_by_time_find_the_order_first_pair.svg
+            src images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg
 
         Moreover the middle graph has slope
         close to $0$ at either end, and some
@@ -282,13 +282,14 @@
         on the right:
 
         |> Image
-            src images/svg_ch4_position_by_time_find_the_order_second_pair.svg
+            src images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg
 
         (Taking one more derivative would produce a
         zigzag, by the way.)
 
         |> ImageRight
-            src images/svg_ch4_position_by_time_find_the_order_cloud.svg
+            src images/svg_ch4_ex_position_by_time_find_the_order_cloud.svg
+            offset_y -0.1em
 
 
 |> Exercise
