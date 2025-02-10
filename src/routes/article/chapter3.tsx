@@ -3092,9 +3092,7 @@ const Article = () => {
             Rewrite
           </VerticalChunk>
           <VerticalChunk indent={true}>
-            <div
-              style="font-size:1.1em;margin:1em 0em;"
-              class="slice">
+            <div style="font-size:1.1em;margin:1em 0em;">
               <MathBlock>
                 $$\tag&#123;A&#125;(f \circ (g \circ h))(x)$$
               </MathBlock>
@@ -3562,7 +3560,7 @@ const Article = () => {
             <Pause />
             <CentralDisplayItalic>
               associativity
-              <ImageRight src="/images/svg_ch3_associativity_cloud.svg" />
+              <ImageRight src="/images/svg_ch3_ex_associativity_cloud.svg" />
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5088,7 +5086,7 @@ const Article = () => {
             <Pause />
             <Image
               width="760px"
-              src="/images/svg_ch3_x0_y0_step0.svg" />
+              src="/images/svg_ch3_ex_x0_y0_step0.svg" />
             <Pause />
             <VerticalChunk>
               After vertically translating by{" "}
@@ -5109,7 +5107,7 @@ const Article = () => {
             <Pause />
             <Image
               width="760px"
-              src="/images/svg_ch3_x0_y0_step1_alone.svg" />
+              src="/images/svg_ch3_ex_x0_y0_step1.svg" />
             <Pause />
             <VerticalChunk>
               Then after horizontally translating by{" "}
@@ -5130,7 +5128,7 @@ const Article = () => {
             <Pause />
             <Image
               width="760px"
-              src="/images/svg_ch3_x0_y0_step2_alone.svg" />
+              src="/images/svg_ch3_ex_x0_y0_step2.svg" />
             <Pause />
             <VerticalChunk>
               Lastly, vertical scaling does not affect 
@@ -5157,7 +5155,7 @@ const Article = () => {
             <Pause />
             <Image
               width="760px"
-              src="/images/svg_ch3_x0_y0_step3_alone.svg" />
+              src="/images/svg_ch3_ex_x0_y0_step3.svg" />
             <Pause />
             <VerticalChunk>
               So the roots are at:{" "}

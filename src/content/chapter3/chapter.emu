@@ -1444,7 +1444,7 @@
             __associativity__
 
             |> ImageRight
-                src images/svg_ch3_associativity_cloud.svg
+                src images/svg_ch3_ex_associativity_cloud.svg
 
             of function composition.
         
@@ -1976,21 +1976,21 @@
             anything happens:
         
             |> Image
-                src images/svg_ch3_x0_y0_step0.svg
+                src images/svg_ch3_ex_x0_y0_step0.svg
                 width 760px
         
             After vertically translating by $-y_0$ 
             the roots will therefore be at $x = \pm\sqrt{y_0}$:
         
             |> Image
-                src images/svg_ch3_x0_y0_step1_alone.svg
+                src images/svg_ch3_ex_x0_y0_step1.svg
                 width 760px
         
             Then after horizontally translating by $x_0$
             the roots mosey over to $x = x_0\pm\sqrt{y_0}$:
 
             |> Image
-                src images/svg_ch3_x0_y0_step2_alone.svg
+                src images/svg_ch3_ex_x0_y0_step2.svg
                 width 760px
 
             Lastly, vertical scaling does not affect 
@@ -1999,7 +1999,7 @@
             axis (here $a \approx 1.7$):
 
             |> Image
-                src images/svg_ch3_x0_y0_step3_alone.svg
+                src images/svg_ch3_ex_x0_y0_step3.svg
                 width 760px
 
             So the roots are at: $x = x_0 \pm \sqrt{y_0}$.
