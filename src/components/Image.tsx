@@ -19,7 +19,7 @@ const Image = (props: ImageProps) => {
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
-  let [after_first_click, set_after_first_click] = createSignal(false);
+  let [after_first_click, set_after_first_click] = createSignal(true);
   let image_ref: HTMLImageElement | undefined;
 
   const imageWidth = () => {
@@ -56,7 +56,7 @@ const Image = (props: ImageProps) => {
   };
 
   createEffect(() => {
-    if (our_on_mobile()) set_scaled_down(true);
+    // if (our_on_mobile()) set_scaled_down(true);
     window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
     // setTimeout(() => { reset_scale(); }, 2000);
     window.addEventListener("resize", handleResize);
