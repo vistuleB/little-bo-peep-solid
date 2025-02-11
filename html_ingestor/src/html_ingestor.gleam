@@ -1,5 +1,3 @@
-// import desugarers/remove_outside_subtrees.{remove_outside_subtrees}
-// import desugarers/fold_tag_contents_into_text.{fold_tag_contents_into_text}
 import desugarers/fold_tags_into_text.{fold_tags_into_text}
 import desugarers/concatenate_text_nodes.{concatenate_text_nodes}
 import desugarers/unwrap_tags_if_attributes_match.{unwrap_tags_if_attributes_match}
@@ -26,8 +24,6 @@ import gleam/string.{inspect as ins}
 import infrastructure as infra
 
 import desugarers/remove_empty_lines.{remove_empty_lines}
-import desugarers/unwrap_tags_if_no_attributes.{unwrap_tags_if_no_attributes}
-import desugarers/insert_bookend_text_if_no_attributes.{insert_bookend_text_if_no_attributes}
 import desugarers/insert_bookend_text.{insert_bookend_text}
 import desugarers/extract_starting_and_ending_spaces.{extract_starting_and_ending_spaces}
 
@@ -96,11 +92,9 @@ pub fn main() {
     source_parser: fn(lines) {
       let path = bl.first_blame_filename(lines) |> result.unwrap("")
       bl.blamed_lines_to_string(lines)
-      // |> quickprint_string
       |> vp.xmlm_based_html_parser(path)
     },
     parsed_source_converter: fn(vxml) {
-      // quickprint_vxml(vxml)
       [vxml]
     },
     pipeline: [
