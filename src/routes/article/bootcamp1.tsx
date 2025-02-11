@@ -56,17 +56,13 @@ const Article = () => {
             ,
           </NoBreak>
           {" "}{" "}
-          <NoBreak>
-            <Math>
-              $2$
-            </Math>
-          </NoBreak>
+          <Math>
+            $2$
+          </Math>
           {" "}and{" "}
-          <NoBreak>
-            <Math>
-              $3$
-            </Math>
-          </NoBreak>
+          <Math>
+            $3$
+          </Math>
           {" "}(and nothing else):
         </VerticalChunk>
         <Pause />
@@ -99,11 +95,9 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           is a set containing just the numbers{" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-          </NoBreak>
+          <Math>
+            $1$
+          </Math>
           {" "}
           and{" "}
           <NoBreak>
@@ -164,18 +158,14 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           to which{" "}
-          <NoBreak>
-            <Math>
-              $\&#123;1, 3\&#125;$
-            </Math>
-          </NoBreak>
+          <Math>
+            $\&#123;1, 3\&#125;$
+          </Math>
           {" "}would answer “yes”, but
           {" "}
-          <NoBreak>
-            <Math>
-              $\&#123; 1\&#125;$
-            </Math>
-          </NoBreak>
+          <Math>
+            $\&#123; 1\&#125;$
+          </Math>
           {" "}would answer “no”, or
         </VerticalChunk>
         <Pause />
@@ -185,24 +175,18 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           to which{" "}
-          <NoBreak>
-            <Math>
-              $\&#123;1\&#125;$
-            </Math>
-          </NoBreak>
+          <Math>
+            $\&#123;1\&#125;$
+          </Math>
           {" "}and{" "}
-          <NoBreak>
-            <Math>
-              $\&#123;1, 3\&#125;$
-            </Math>
-          </NoBreak>
+          <Math>
+            $\&#123;1, 3\&#125;$
+          </Math>
           {" "}would
           both answer “no”, but{" "}
-          <NoBreak>
-            <Math>
-              $\&#123;1, 2, 3\&#125;$
-            </Math>
-          </NoBreak>
+          <Math>
+            $\&#123;1, 2, 3\&#125;$
+          </Math>
           {" "}would
           answer “yes”.
         </VerticalChunk>
@@ -220,17 +204,13 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           {" "}{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}contains{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
+          <Math>
+            $x$
+          </Math>
           {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
@@ -240,11 +220,9 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           {" "}{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}answers “yes” to the
           question “do you contain{" "}
           <NoBreak>
@@ -262,17 +240,13 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           {" "}{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
+          <Math>
+            $x$
+          </Math>
           {" "}in{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
@@ -282,17 +256,13 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           {" "}{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
+          <Math>
+            $x$
+          </Math>
           {" "}is in{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
@@ -302,17 +272,13 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           {" "}{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
+          <Math>
+            $x$
+          </Math>
           {" "}is an element of{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
@@ -329,11 +295,9 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           is true, because{" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-          </NoBreak>
+          <Math>
+            $1$
+          </Math>
           {" "}{" "}
           <i>
             is
@@ -355,11 +319,9 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           is false, because{" "}
-          <NoBreak>
-            <Math>
-              $3$
-            </Math>
-          </NoBreak>
+          <Math>
+            $3$
+          </Math>
           {" "}{" "}
           <i>
             is not
@@ -634,17 +596,13 @@ const Article = () => {
             union
           </i>
           {" "}of two sets{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}and{" "}
-          <NoBreak>
-            <Math>
-              $B$
-            </Math>
-          </NoBreak>
+          <Math>
+            $B$
+          </Math>
           {" "}is
           written
         </VerticalChunk>
@@ -656,11 +614,9 @@ const Article = () => {
         <VerticalChunk>
           and consists of the set
           of all things that are either in{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}or in{" "}
           <NoBreak>
             <Math>
@@ -685,24 +641,18 @@ const Article = () => {
             ,
           </NoBreak>
           {" "}{" "}
-          <NoBreak>
-            <Math>
-              $2$
-            </Math>
-          </NoBreak>
+          <Math>
+            $2$
+          </Math>
           {" "}and{" "}
-          <NoBreak>
-            <Math>
-              $5$
-            </Math>
-          </NoBreak>
+          <Math>
+            $5$
+          </Math>
           {" "}are the only elements to find
           themselves either in{" "}
-          <NoBreak>
-            <Math>
-              $\&#123;1, 2\&#125;$
-            </Math>
-          </NoBreak>
+          <Math>
+            $\&#123;1, 2\&#125;$
+          </Math>
           {" "}or in{" "}
           <NoBreak>
             <Math>
@@ -716,18 +666,14 @@ const Article = () => {
             intersection
           </i>
           {" "}of two sets{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}and
           {" "}
-          <NoBreak>
-            <Math>
-              $B$
-            </Math>
-          </NoBreak>
+          <Math>
+            $B$
+          </Math>
           {" "}is written
         </VerticalChunk>
         <Pause />
@@ -738,11 +684,9 @@ const Article = () => {
         <VerticalChunk>
           and consists of the set of all things that are both
           in{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}and in{" "}
           <NoBreak>
             <Math>
@@ -759,17 +703,13 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           as{" "}
-          <NoBreak>
-            <Math>
-              $2$
-            </Math>
-          </NoBreak>
+          <Math>
+            $2$
+          </Math>
           {" "}is the only element that is both in{" "}
-          <NoBreak>
-            <Math>
-              $\&#123;1, 2\&#125;$
-            </Math>
-          </NoBreak>
+          <Math>
+            $\&#123;1, 2\&#125;$
+          </Math>
           {" "}
           and in{" "}
           <NoBreak>
@@ -822,11 +762,9 @@ const Article = () => {
         <Pause />
         <CentralDisplayItalic>
           an element{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
+          <Math>
+            $x$
+          </Math>
           {" "}is in the thing I call{" "}
           <NoBreak>
             “
@@ -837,29 +775,21 @@ const Article = () => {
           </NoBreak>
           {" "}
           if and only if{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
+          <Math>
+            $x$
+          </Math>
           {" "}is in{" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-          </NoBreak>
+          <Math>
+            $A$
+          </Math>
           {" "}or{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
+          <Math>
+            $x$
+          </Math>
           {" "}is in{" "}
-          <NoBreak>
-            <Math>
-              $B$
-            </Math>
-          </NoBreak>
+          <Math>
+            $B$
+          </Math>
           {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
@@ -940,11 +870,9 @@ const Article = () => {
         <VerticalChunk>
           which contains only those integers that are greater
           than{" "}
-          <NoBreak>
-            <Math>
-              $0$
-            </Math>
-          </NoBreak>
+          <Math>
+            $0$
+          </Math>
           {" "}(i.e.,{" "}
           <NoBreak>
             <Math>
@@ -1114,11 +1042,9 @@ const Article = () => {
         </VerticalChunk>
         <VerticalChunk indent={true}>
           You can view{" "}
-          <NoBreak>
-            <Math>
-              $\overline&#123;\rr&#125;$
-            </Math>
-          </NoBreak>
+          <Math>
+            $\overline&#123;\rr&#125;$
+          </Math>
           {" "}as a kind “closed interval”
           version of{" "}
           <NoBreak>
@@ -1128,11 +1054,9 @@ const Article = () => {
             ,
           </NoBreak>
           {" "}that is, think of{" "}
-          <NoBreak>
-            <Math>
-              $\overline&#123;\rr&#125;$
-            </Math>
-          </NoBreak>
+          <Math>
+            $\overline&#123;\rr&#125;$
+          </Math>
           {" "}
           as being the closed interval
         </VerticalChunk>
@@ -1179,11 +1103,9 @@ const Article = () => {
           </NoBreak>
           {" "}in
           case you're curious. In fact, one has{" "}
-          <NoBreak>
-            <Math>
-              $a + \infty = \infty$
-            </Math>
-          </NoBreak>
+          <Math>
+            $a + \infty = \infty$
+          </Math>
           {" "}
           for any{" "}
           <NoBreak>
@@ -1211,11 +1133,9 @@ const Article = () => {
           </i>
           {" "}value—the same way, say, that
           division by{" "}
-          <NoBreak>
-            <Math>
-              $0$
-            </Math>
-          </NoBreak>
+          <Math>
+            $0$
+          </Math>
           {" "}is undefined in{" "}
           <NoBreak>
             <Math>

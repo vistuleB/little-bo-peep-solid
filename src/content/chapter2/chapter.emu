@@ -564,8 +564,8 @@
 
     can be rephrased as
 
-    $$“\rt{0.1}\te{rate of change} \,\,=\,\,
-    {\!\rt{0.15}\te{amount of change}\!\rt{0.1} \over \te{amount of time}}\rt{0.1}”$$
+    $$\te{“}\rt{0.1}\te{rate of change} \,\,=\,\,
+    {\!\rt{0.15}\te{amount of change}\!\rt{0.1} \over \te{amount of time}}\rt{0.1}\te{”}$$
 
     where “amount of change” is short for “amount of
     change on the $y$-axis”. By extension, taking all

@@ -15,18 +15,21 @@ import desugarers/free_children.{free_children}
 import desugarers/generate_lbp_table_of_contents.{generate_lbp_table_of_contents}
 import desugarers/group_consecutive_children_avoiding.{group_consecutive_children_avoiding}
 import desugarers/handles_substitute.{handles_substitute}
+import desugarers/identity.{identity}
 import desugarers/insert_bookend_tags.{insert_bookend_tags}
 import desugarers/insert_indent.{insert_indent}
 import desugarers/pair_bookends.{pair_bookends}
 import desugarers/remove_attributes.{remove_attributes}
 import desugarers/remove_empty_chunks.{remove_empty_chunks}
 import desugarers/remove_empty_lines.{remove_empty_lines}
+import desugarers/remove_empty_text_nodes.{remove_empty_text_nodes}
 import desugarers/remove_vertical_chunks_with_no_text_child.{remove_vertical_chunks_with_no_text_child}
 import desugarers/remove_starting_and_ending_empty_lines.{remove_starting_and_ending_empty_lines}
 import desugarers/remove_starting_and_ending_spaces.{remove_starting_and_ending_spaces}
 import desugarers/rename_when_child_of.{rename_when_child_of}
 import desugarers/split_by_indexed_regexes.{split_by_indexed_regexes}
 import desugarers/unwrap_tags.{unwrap_tags}
+import desugarers/unwrap_tags_if_single_child.{unwrap_tags_if_single_child}
 import desugarers/unwrap_tags_if_descendants_of.{unwrap_tags_if_descendants_of}
 import desugarers/wrap_math_with_no_break.{wrap_math_with_no_break}
 import infrastructure.{type Pipe} as infra
@@ -117,25 +120,27 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #(
         "VerticalChunk",
         [
-          "Chapter",
           "Bootcamp",
-          "Section",
+          "CentralDisplay",
+          "CentralDisplayItalic",
+          "Chapter",
           "Example",
-          "Note",
-          "SolutionNote",
-          "Exercises", 
           "Exercise",
+          "Exercises",
           "Grid",
           "Image", 
           "ImageLeft",
           "ImageRight",
+          "List",
           "MathBlock", 
+          "Note",
+          "Pause",
           "Section",
           "Solution",
-          "List",
-          "Pause",
+          "SolutionNote",
           "Table",
-          "WriterlyBlankLine", 
+          "WriterlyBlankLine",
+          "br",
           "li",
           "ul",
           "ol",
@@ -159,7 +164,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #("VerticalChunk", "Item", "Grid")
     ]),
     unwrap_tags(["WriterlyBlankLine"]),
-    remove_vertical_chunks_with_no_text_child(),
+    // remove_vertical_chunks_with_no_text_child(),
     // ************************
     // $ **********************
     // ************************
@@ -169,6 +174,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
     pair_bookends(#(["SingleDollar"], ["SingleDollar"], "Math")),
     fold_tags_into_text([#("SingleDollar", "$")]),
     find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
+    remove_empty_text_nodes(),
+    identity(),
     // ************************
     // __ *********************
     // ************************
@@ -277,10 +284,16 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("ClosingAsterisk", "*"),
       ],
     ),
+    find_replace(#([
+      #("&ensp;", " "),
+      #("\\*", "*"),
+      #("\\_", "_"),
+    ], ["MathBlock", "Math"])),
     // ************************
     // misc *******************
     // ************************
     wrap_math_with_no_break(),
+    unwrap_tags_if_single_child(["NoBreak"]),
     counters_substitute_and_assign_handles(),
     handles_substitute(),
     add_exercise_labels(),

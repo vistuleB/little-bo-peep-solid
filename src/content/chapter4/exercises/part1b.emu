@@ -1057,28 +1057,30 @@
         together! (In other words, the particle never makes it to
         $x = 0$, no matter how far back in time you look.)
 
-        A so-called
+        |> SolutionNote
 
-        __geometric progression__
-        
-        is a sequence of numbers in which each number
-        is a fixed multiple of the previous number.
-        For example,
-        
-        $$
-        100,\, 300,\, 900,\, 2700
-        $$
-        
-        is a (finite) geometric progression, because each number
-        is the previous number multiplied by $3$,
-        and
-        
-        $$
-        1,\, 0.5,\, 0.25,\, 0.125,\, 0.0625,\, \ldots
-        $$
-        
-        is an (infinite) geometric progression, because each number
-        is the previous multiplied by $0.5$.
+            A so-called
+
+            __geometric progression__
+            
+            is a sequence of numbers in which each number
+            is a fixed multiple of the previous number.
+            For example,
+            
+            $$
+            100,\, 300,\, 900,\, 2700
+            $$
+            
+            is a (finite) geometric progression, because each number
+            is the previous number multiplied by $3$,
+            and
+            
+            $$
+            1,\, 0.5,\, 0.25,\, 0.125,\, 0.0625,\, \ldots
+            $$
+            
+            is an (infinite) geometric progression, because each number
+            is the previous multiplied by $0.5$.
 
 
 |> Exercise
