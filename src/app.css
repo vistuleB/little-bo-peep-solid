@@ -22,7 +22,7 @@
   src: url("/fonts/ClickerScript-Regular.ttf");
 }
 
-@font-face {
+/* @font-face {
   font-family: "Lora Italic";
   src: url("/fonts/Lora-italic.ttf");
 }
@@ -30,7 +30,7 @@
 @font-face {
   font-family: "Lora";
   src: url("/fonts/Lora.ttf");
-}
+} */
 
 :root {
   --background-rgb: 255, 255, 255;
@@ -42,7 +42,7 @@
 body {
   background: rgb(var(--background-rgb));
   color: rgb(var(--foreground-rgb));
-  font-family: "Baskerville";
+  font-family: "Baskerville Regular";
   font-size: 1.25rem; /* Equivalent to text-xl */
   line-height: 1.5em;
 }
