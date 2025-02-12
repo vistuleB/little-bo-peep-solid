@@ -4,7 +4,7 @@ import desugarers/unwrap_tags_if_attributes_match.{unwrap_tags_if_attributes_mat
 import desugarers/unwrap_tag_when_parent_of_tag.{unwrap_tag_when_parent_of_tag}
 import desugarers/merge_parent_attributes_into_child.{merge_parent_attributes_into_child}
 import desugarers/rename_when_child_of.{rename_when_child_of}
-import desugarers/remove_outside_subtrees_matching_one_key_value_pair.{remove_outside_subtrees_matching_one_key_value_pair}
+import desugarers/keep_only_subtrees_and_ancestors_of_nodes_matching_a_key_value_pair.{keep_only_subtrees_and_ancestors_of_nodes_matching_a_key_value_pair}
 import desugarers/surround_elements_by.{surround_elements_by}
 import desugarers/replace_in_attribute_values.{replace_in_attribute_values}
 import desugarers/unwrap_tags.{unwrap_tags}
@@ -99,7 +99,7 @@ pub fn main() {
     },
     pipeline: [
       // 1.
-      remove_outside_subtrees_matching_one_key_value_pair(selectors),
+      keep_only_subtrees_and_ancestors_of_nodes_matching_a_key_value_pair(selectors),
       // 2.
       remove_empty_lines(),
       // 3.

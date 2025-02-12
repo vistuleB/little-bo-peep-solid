@@ -22,16 +22,6 @@
   src: url("/fonts/ClickerScript-Regular.ttf");
 }
 
-/* @font-face {
-  font-family: "Lora Italic";
-  src: url("/fonts/Lora-italic.ttf");
-}
-
-@font-face {
-  font-family: "Lora";
-  src: url("/fonts/Lora.ttf");
-} */
-
 :root {
   --background-rgb: 255, 255, 255;
   --foreground-rgb: 0, 0, 0;
