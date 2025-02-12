@@ -17,7 +17,7 @@
         $(0, 0)$:
 
         |> Image
-            style margin-top:0.9em;margin-bottom:1.2em;
+            src images/svg_ch5_ch_cosine_and_sine.svg
 
         As far as standard definitions go,
         $\cos(x)$ is the

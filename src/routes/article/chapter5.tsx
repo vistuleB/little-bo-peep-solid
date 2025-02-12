@@ -17,7 +17,7 @@ const Article = () => {
   return (
     <Chapter
       number={5}
-      title="Cos, Sin, Tan, Cot, Sec and Csc">
+      title="The Trigonometric Functions">
       <Section>
         <VerticalChunk>
           <b>
@@ -59,7 +59,7 @@ const Article = () => {
           </NoBreak>
         </VerticalChunk>
         <Pause />
-        <Image style="margin-top:0.9em;margin-bottom:1.2em;" />
+        <Image src="/images/svg_ch5_ch_cosine_and_sine.svg" />
         <Pause />
         <VerticalChunk>
           As far as standard definitions go,
