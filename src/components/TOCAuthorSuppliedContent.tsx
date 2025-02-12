@@ -28,6 +28,11 @@ const TOCAuthorSuppliedContent = () => {
             label="Derivatives"
             on_mobile="Derivatives"
             href="chapter4" />
+          <TOCItem
+            article_type={5}
+            label="Cos, Sin, Tan, Cot, Sec and Csc"
+            on_mobile="Cos, Sin, Tan, Cot, Sec and Csc"
+            href="chapter5" />
         </ul>
       </div>
       <Spacer />

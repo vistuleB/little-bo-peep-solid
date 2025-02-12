@@ -1,0 +1,142 @@
+|> Chapter
+    title Cos, Sin, Tan, Cot, Sec and Csc
+
+    |> Section
+
+        *Definitions.*
+        We've already encountered the ‘cos’ 
+        function in Exercise 7 of Chapter 3, e.g.. 
+        It is the one that has this graph:
+
+        |> Image
+            src images/svg_ch5_ch_cosine.svg
+
+        It has a close cousin named ‘sin’.
+        While $\cos(x)$ “tops off” at $x = 0$,
+        $\sin(x)$ goes diagonally through the point
+        $(0, 0)$:
+
+        |> Image
+            style margin-top:0.9em;margin-bottom:1.2em;
+
+        As far as standard definitions go,
+        $\cos(x)$ is the
+
+        __$x$-coordinate__
+
+        and $\sin(x)$ is the
+
+        __$y$-coordinate__
+
+        of a point $x$ units counterclockwise from
+        $(1, 0)$ on the unit circle. (Nb: “a”
+
+        __unit circle__
+
+        is a circle of radius $1$, while “the” unit
+        circle is the circle of radius $1$ centered
+        at $(0, 0)$.) For example, if we look at $x = 0.5$,
+        we see $\cos({1\over 2}) \approx 0.9$,
+        $\sin({1\over 2}) \approx 0.5$:
+
+        |> Image
+            src images/svg_ch5_ch_cosine_and_sine_@0.5.svg
+
+        The reason for these values, per the
+        definitions, is that the point half a unit
+        counterclockwise from $(1, 0)$ on the unit
+        circle has coordinates $\approx 0.9$ in $x$
+        and $\approx 0.5$ in $y$ (or actually $0.87758...$
+        and $0.47942...$, it turns out, as we can know by
+        a calculator equipped with ‘sin’ and ‘cos’):
+
+        |> Image
+            src images/svg_ch5_ch_unit_circle_@0.5_smaller.svg
+
+        As another example, the graphs indicate that 
+        $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$
+        (or something very close to $-1$, in any case):
+
+        |> Image
+            src images/svg_ch5_ch_cosine_and_sine_@-3.svg
+
+        Again, going $-3$ units counterclockwise—which
+        means, going $3$ units clockwise—on the unit
+        circle, starting from $(1, 0)$, brings us to a point
+        with $y$- and $x$-coordinates of $\approx -0.2$ 
+        and $\approx -0.99$ respectively (or $-0.1411...$
+        and $-0.989992...$, to be exact, it turns out):
+
+        |> Image
+            src images/svg_ch5_ch_unit_circle_@-3_smaller.svg
+
+        For a last example, note that there appears
+        to be a value of $x$ near $-1.6$, where $\cos(x) = 0$,
+        $\sin(x) = -1$:
+
+        |> Image
+            src images/svg_ch5_ch_cosine_and_sine_@minus_eta.svg
+
+        Some thought reveals that this value of $x$
+        would be _minus one-quarter the circumference
+        of a unit circle_, because $(0, -1)$ is 
+        one-quarter of the unit circle clockwise from $(1, 0)$.
+        Note that one-quarter the circumference of a unit
+        circle was estimated to be
+
+        $$
+        \approx {11\over 7} = 1.\overline{571428}
+        $$
+
+        in Exercise 24 of Chapter 3 (by direct inspection
+        of the graph $y = \cos(x)$, for that matter,
+        which may or may not be cheating), which agrees
+        with the visual estimate $x \approx -1.6$. (But
+        that value would be namely $x = -1.57...$, not
+        $x = -1.6$.)
+
+        (Etc.)
+
+        In another possible definition,
+
+        $$
+        \sin(x)
+        $$
+
+        is defined as the $x$-coordinate of a point that
+        is $x$ units counterclockwise from $(0, -1)$ on
+        the unit circle. In this case, $\sin(x)$ and
+        $\cos(x)$ are both defined by $x$-coordinates: 
+
+        |> Image
+            src images/svg_ch5_ch_unit_circle_with_new_definition.svg
+
+        In more detail, if you tilt your head  sideways,
+        you will see that the $x$ axis looks, from the
+        vantage point of $(0, -1)$, the same as the $y$
+        axis looks from the vantage point of $(1, 0)$. 
+        So the old and new definitions of $\sin(x)$ are
+        equivalent! (👍👍)
+
+        In particular, $\sin(x)$ and $\cos(x)$ can also
+        be understood as the $x$-coordinates of two
+        particles on the unit circle such that the ‘sin’
+        particle is one-quarter-turn behind the ‘$\cos$’
+        particle:
+
+        |> Image
+            src images/svg_ch5_ch_unit_circle_with_sin_and_cos_particles.svg
+
+        ...to be contrasted with our first definition,
+        employing a single point projected onto
+        two different axes:
+
+        |> Image
+            src images/svg_ch5_ch_unit_circle_with_sincos_particle.svg
+
+        The second definition (former diagram) explains
+        why values of $\sin$ lag a fixed amount behind
+        values of $\cos$. (“Lagging” when you read the
+        graphs from left to right.) It's because the ‘sin’
+        particle follows in the trail blazed by the ‘cos’
+        particle, namely!
