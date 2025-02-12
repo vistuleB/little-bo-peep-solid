@@ -73,7 +73,7 @@ pub fn main() {
 
   let selectors = 
     amendments.assemble_blamed_lines_selector_args
-    |> list.map(fn (pair) { pair |> pair.second })
+    |> list.map(pair.second)
     |> list.flatten
 
   let renderer = vr.Renderer(
