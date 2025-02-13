@@ -152,7 +152,7 @@ pub fn main() {
   )
 
   let parameters = vr.RendererParameters(
-    input_dir: "test/ch5_ch.xml",
+    input_dir: "test/ch5_ex.xml",
     output_dir: Some("."),
     prettifying_option: False,
   )

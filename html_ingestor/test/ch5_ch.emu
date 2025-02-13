@@ -174,7 +174,8 @@
     in the trail blazed by 
     the ‘cos’ particle, namely!
 
-    *Derivatives.*Continuing the last “chapter” in the
+    *Derivatives.*
+    Continuing the last “chapter” in the
     definitions of $\sin$ and $\cos$, we can
     add two more particles
     to the diagram that defines ‘sin’ and ‘cos’
@@ -279,7 +280,8 @@
     which means that you only need to
     remember the first two equations.
 
-    *Even/odd identities, and identities with “$\eta$”.*One has
+    *Even/odd identities, and identities with “$\eta$”.*
+    One has
 
     |> div
         class relative
@@ -579,7 +581,8 @@
 
     ...with the input appearing as a radian.
 
-    *Auto-converting degrees to radians.*We will consider the 
+    *Auto-converting degrees to radians.*
+    We will consider the 
     degree notation 
     “$^\circ$” to be pig lipstick on top of radians
     by defining
