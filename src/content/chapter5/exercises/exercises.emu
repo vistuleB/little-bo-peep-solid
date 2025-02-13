@@ -17,7 +17,7 @@
 
         by $0.1$, compared to $\cos(x)$. It is therefore
 
-        ahead
+        __ahead__
 
         or its graph
 
@@ -53,15 +53,15 @@
         making it a true _linear_function (as opposed
         to _affine_, cf. Chapter 3).
 
-        As for the “something”—the bumpy one—it appears to
-        just be a “sped up cosine”, and note that the graph
-        goes through approximately $10$
-        cycles
-        between $x = 0$ and $x = 6.28 \approx 4\eta$, 
-        as we can count on the graph of the original function:
+        As for the “something”—the bumpy one—it appears
+        to just be a “sped up cosine”, and note that
+        the graph goes through approximately $10$
+        cycles between $x = 0$ and $x = 6.28 \approx 4\eta$, 
+        as we can count on the graph of the original 
+        function:
 
-        |> img
-            style position:absolute;right:400px;top:-127px;
+        |> ImageLeft
+            line -2
             src images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg
 
         |> Image
@@ -89,7 +89,7 @@
 
     |> Image
         style margin-top:0.8em;margin-bottom:1em;
-        src images/svg_cosine_minus_cos_20x_plus_quadratic.svg
+        src images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg
 
     |> Solution
 
@@ -100,19 +100,19 @@
 
         |> Image
             style margin-top:0.8em;margin-bottom:1em;
-            src images/svg_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg
+            src images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg
 
         [Nb:
 
-        parabolic
+        __parabolic__
 
         is a synonym of
 
-        quadratic
+        __quadratic__
 
         or
 
-        degree $\mathit{2}$ polynomial
+        __degree $\mathit{2}$ polynomial__
 
         i.e., a function of the form
         $$
@@ -140,7 +140,7 @@
 
         |> Image
             style margin-top:0.8em;margin-bottom:1em;
-            src images/svg_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg
+            src images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg
 
         ...so...
         $$
@@ -154,7 +154,7 @@
 
         |> Image
             style margin-top:0.8em;margin-bottom:1em;
-            src images/svg_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg
+            src images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg
 
         That increase being entirely due to the term
         $Ax^2$, we get 
@@ -185,7 +185,7 @@
 
         |> Image
             style margin-top:0.8em;margin-bottom:1em;
-            src images/svg_cosine_minus_cos_20x_plus_quadratic_with_inset.svg
+            src images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg
 
         Moreover at $x = 0$ we find 
         more or less exactly
@@ -215,7 +215,7 @@
 
         |> Image
             style margin-top:0.8em;margin-bottom:1em;
-            src images/svg_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg
+            src images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg
 
         So an estimate for the 
         second function
@@ -234,7 +234,6 @@
     Guesstimate a function with this graph: 
 
     |> Image
-        style margin-top:0.8em;margin-bottom:1em;
         src images/svg_ch5_ex_big_wave.svg
 
     |> Solution
@@ -243,26 +242,24 @@
         curve in purple:
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_wave_purple.svg
 
         It appears to be a linear function (line through
-        $(0, 0)$ sloping down)
-        plus a
-        sinusoid. To estimate the slope of the linear
-        function we can take two points in like relation
-        to the sinusoid, draw a line between them
-        and estimate the slope:
+        $(0, 0)$ sloping down) plus a sinusoid. To 
+        estimate the slope of the linear function we can 
+        take two points in like relation to the sinusoid, 
+        draw a line between them and estimate the slope:
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_wave_purple_blue_with_1_4.svg
 
-        This makes the 
-        linear function portion of the purple curve
+        This makes the linear function portion of the purple 
+        curve
+
         $$
         y = -{1\over 4}x
         $$
+
         or thereabouts.
 
         To model the sinusoid portion of the large-scale 
@@ -274,7 +271,6 @@
         we won't be able to see where we're measuring):
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_wave_purple_blue_with_height.svg
 
         So it appears that the sinusoid has a total height
@@ -286,24 +282,23 @@
         to measure the vertical width of this blue band...
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_wave_purple_blue_with_band.svg
 
-        ...that, indeed, 
-        seems near $4$.)
+        ...that, indeed, seems near $4$.)
 
         What this means is that if we remove the linear
         portion
+
         $$
         y = -{1\over 4}x
         $$
+
         from the purple curve, what we will find is a
         sinusoid whose individual bumps have height $\approx 2$;
         something like this (we switch the color to aquamarine, so
         that “purple curve” retains its unique meaning):
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_wave_purple_sinusoid_only.svg
 
         This graph has the form
@@ -328,78 +323,93 @@
         has graph...
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_wave_minus_2sin_x.svg
 
-        ...and, from there, all that remains is to “slow down” the 
-        oscillation to match the aquamarine graph—the “slowing down”
-        is what $B$ is for.)
+        ...and, from there, all that remains is to 
+        “slow down” the oscillation to match the 
+        aquamarine graph—the “slowing down” is what 
+        $B$ is for.)
 
-        To know how much $B$ must be, we must measure the cycle
-        length (it is, admittedly, hard to accurately determine 
-        the position of the top of each
-        large-scale bump, but we do our best by basing ourselves off
-        of what appear to be identical patterns in the small-scale
-        oscillations at the top of each large-scale bump):
+        To know how much $B$ must be, we must measure 
+        the cycle length (it is, admittedly, hard to
+        accurately determine the position of the top 
+        of each large-scale bump, but we do our best by 
+        basing ourselves off of what appear to be identical 
+        patterns in the small-scale oscillations at 
+        the top of each large-scale bump):
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_wave_purple_blue_period_measurement.svg
 
         As
+
         $$
         12.6 \approx 12.56 = 2\times 6.28 \approx 2\cdot 4\eta
         $$
+
         the period of the large-scale sinusoid is near
-        twice the period of sin or cos; i.e., we need to “slow
-        down”
+        twice the period of sin or cos; i.e., we need to 
+        “slow down”
+
         $$
         -2\sin(x)
         $$
+
         by a factor $2$, i.e., put
+
         $$
         B = 0.5
         $$
+
         i.e., use
+
         $$
         y = -2\sin(0.5x)
         $$
+
         for the large-scale sinusoid. (Aquamarine graph.)
 
         (So far we have
+
         $$
         -{1\over 4}x - 2\sin(0.5x)
         $$
+
         for our approximation to the purple curve, putting
-        the linear and sinusoidal parts together. Now we move
-        on from the purple curve.)
+        the linear and sinusoidal parts together. Now we 
+        move on from the purple curve.)
 
         It remains to add in the small-scale oscillation
-        from the original curve; we can do the tedious part
-        first, and count the number cycles in an interval of length
-        $4\eta \approx 6.28$:
+        from the original curve; we can do the tedious 
+        part first, and count the number cycles in an
+        interval of length $4\eta \approx 6.28$:
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_wave_purple_small_scale_bump_count.svg
 
         So the small-scale oscillation is running
-        at $\approx 19$ times the frequency of an ordinary sine or cosine,
-        and we can model the small-scale oscillation by
+        at $\approx 19$ times the frequency of an ordinary 
+        sine or cosine, and we can model the small-scale
+        oscillation by
+
         $$
         x \ra -0.5\sin(19x)
         $$
-        since, like the large-scale oscillation from the purple
-        curve, it shares the same phase as $-\sin(x)$, and since,
-        like the small-scale oscillation from Exercise 3, it has
-        an amplitude of $\approx 0.5$.
+
+        since, like the large-scale oscillation from the
+        purple curve, it shares the same phase as $-\sin(x)$,
+        and since, like the small-scale oscillation from
+        Exercise 3, it has an amplitude of $\approx 0.5$.
 
         Altogether, we get
+
         $$
         y = -{1\over 4}x - 2\sin(0.5x) - 0.5\sin(19x)
         $$
-        as our “guesstimate”, while adding the linear function, 
-        the large-scale sinusoid, and the small-scale sinusoid together.
+
+        as our “guesstimate”, while adding the linear 
+        function, the large-scale sinusoid, and the small-scale 
+        sinusoid together.
 
 |> Exercise
 
@@ -443,17 +453,14 @@
         The culprits are:
 
         |> Image
-            style margin-top:0.9em;margin-bottom:1em;
             src images/svg_ch5_ex_four_graphs_labeled.svg
 
         For reference (if you need help checking), the
         graphs of $\sin$ and $\cos$ are as follows:
 
         |> Image
-            style margin-top:0.9em;margin-bottom:1em;
             src images/svg_ch5_ex_four_graphs_cos.svg
         |> Image
-            style margin-top:0.9em;margin-bottom:1em;
             src images/svg_ch5_ex_four_graphs_sin.svg
 
         (Then imagine summing together, squaring, etc.)
@@ -1046,7 +1053,6 @@
     Which of these angles is $0.2$ radians?
 
     |> Image
-        style margin-top:1em;margin-bottom:1em;
         src images/svg_ch5_ex_0_2_radians_guess.svg
 
     |> Solution
@@ -1302,7 +1308,6 @@
         remainders repeat, look as follows:
 
         |> Image
-            style height:490px;margin-top:1.2em;margin-bottom:1.2em;
             src images/svg_ch5_ex_22_and_33_and_44_over_7_combined_longhands.svg
 
         From which...
@@ -1327,10 +1332,12 @@
             style font-size:1em;
 
             $$
+            \displaylines{
             \Large         \eta  \approx{11\over 7}\\
             \Large \up{1.7}2\eta \approx{22\over 7}\\
             \Large \up{1.7}3\eta \approx{33\over 7}\\
             \Large \up{1.7}4\eta \approx{44\over 7}
+            }
             $$
 
         ...we thus have...
@@ -1339,80 +1346,104 @@
             style font-size:1em;
 
             $$
+            \displaylines{
             \Large         \eta \approx  1.\overline{571428}\\
             \Large \up{1.7}2\eta \approx 3.\overline{142857}\\
             \Large \up{1.7}3\eta \approx 4.\overline{714285}\\
-            \Large \up{1.7}4\eta \approx 6.\overline{285714}
+            \Large \up{1.7}4\eta \approx 6.\overline{285714}}
             $$
 
         ...though none of these estimates are actually
         accurate to more than two decimal places. (While all
         are accurate up to _at least_two decimal places.)
 
-        _Note 2._As mentioned in Note 1 of Exercise 24, Chapter 3,
-        these approximations are about half-a-part-in-a-thousand
+        _Note 2._As mentioned in Note 1 of 
+        Exercise 24, Chapter 3, these approximations
+        are about half-a-part-in-a-thousand
         too large, or to be more exact,
+
         $$
         \approx 0.0004
         $$
+
         too large in relative terms. I.e., you can subtract
+
         $$
         \approx 1.\overline{571428} \cdot 0.0004 \approx 0.0006
         $$
+
         from
+
         $$
         \approx 1.\overline{571428}
         $$
+
         to get a better approximation for $\eta$, subtract
+
         $$
         \approx 3.\overline{142857} \cdot 0.0004 \approx 0.0012
         $$
+
         from
+
         $$
         \approx 3.\overline{142857}
         $$
+
         to get a better approximation for $2\eta$, subtract
+
         $$
         \approx 4.\overline{714285} \cdot 0.0004 \approx 0.0019
         $$
+
         from
+
         $$
         \approx 4.\overline{714285}
         $$
+
         to get a better approximation for $3\eta$, subtract
+
         $$
         \approx 6.\overline{285714} \cdot 0.0004 \approx 0.0025
         $$
+
         from
+
         $$
         \approx 6.\overline{285714}
         $$
+
         to get a better approximation for $4\eta$. The resulting
         approximations end up being...
+
         $$
+        \displaylines{
         \Large         \eta \approx  1.5708\\
         \Large \up{1.7}2\eta \approx 3.1416\\
         \Large \up{1.7}3\eta \approx 4.7123\\
-        \Large \up{1.7}4\eta \approx 6.2832
+        \Large \up{1.7}4\eta \approx 6.2832}
         $$
-        ...that are correct approximations up to the fourth
-        digit, it turns out, modulo rounding off of the fifth digit.
-        (But these are not worth learning by heart, by any means.)
+
+        ...that are correct approximations up to
+        the fourth digit, it turns out, modulo
+        rounding off of the fifth digit. (But these
+        are not worth learning by heart, by any means.)
 
 |> Exercise
 
-    To close our division skills: use the table
-    below to compute the integer part and the first
-    three digits past the decimal point (no rounding
-    based on the fourth digit) of
+    To close our division skills: use the
+    table below to compute the integer part and
+    the first three digits past the decimal point
+    (no rounding based on the fourth digit) of
 
     $$
     15542486476949/777
     $$
 
-    by hand, using long division. What is the new
-    (last) remainder when the quotient reaches the
-    3rd digit after the decimal point, and what 
+    by hand, using long division. What is the
+    new (last) remainder when the quotient reaches
+    the 3rd digit after the decimal point, and what 
     equation is implied from the quotient and the 
     new (last) remainder at that point?
 
@@ -1428,12 +1459,13 @@
 
     |> Solution
 
-        Here is the long division, pursued up to the 
-        “$10^{-3}$” column of the quotient, including
-        one last remainder computation that occurs
-        pursuant to adding the digit in the “$10^{-3}$”
-        column of the quotient (this is what the problem
-        statement refers to as the “last remainder”):
+        Here is the long division, pursued up to
+        the “$10^{-3}$” column of the quotient,
+        including one last remainder computation
+        that occurs pursuant to adding the digit in
+        the “$10^{-3}$” column of the quotient (this
+        is what the problem statement refers to as
+        the “last remainder”):
 
         |> Image
             src images/svg_ch5_ex_big_division.svg

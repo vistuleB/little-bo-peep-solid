@@ -943,10 +943,12 @@ const Article = () => {
         <VerticalChunk indent={true}>
           <center>
             <MathBlock>
-              $$\up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
+              $$\displaylines&#123;
+              \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
               \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
               \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
-              \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;$$
+              \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
+              &#125;$$
             </MathBlock>
           </center>
           ...that follow because one full turn around the
@@ -960,8 +962,8 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\up&#123;1.0&#125;\cos(x + \eta) = -\!\sin(x) \\
-          \up&#123;1.7&#125;\sin(x - \eta) = -\!\cos(x)$$
+          $$\displaylines&#123;\up&#123;1.0&#125;\cos(x + \eta) = -\!\sin(x) \\
+          \up&#123;1.7&#125;\sin(x - \eta) = -\!\cos(x)&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2231,8 +2233,8 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x = r \cos(\theta)\\
-          \up&#123;1.3&#125;y = r \sin(\theta)$$
+          $$\displaylines&#123;x = r \cos(\theta)\\
+          \up&#123;1.3&#125;y = r \sin(\theta)&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3688,10 +3690,12 @@ const Article = () => {
               </NoBreak>
               {" "}It is therefore
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <Pause />
+            <CentralDisplayItalic>
               ahead
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
               or its graph
             </VerticalChunk>
             <Pause />
@@ -3765,15 +3769,14 @@ const Article = () => {
               , cf. Chapter 3).
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              As for the “something”—the bumpy one—it appears to
-              just be a “sped up cosine”, and note that the graph
-              goes through approximately{" "}
+              As for the “something”—the bumpy one—it appears
+              to just be a “sped up cosine”, and note that
+              the graph goes through approximately{" "}
               <Math>
                 $10$
               </Math>
               {" "}
-              cycles
-              between{" "}
+              cycles between{" "}
               <Math>
                 $x = 0$
               </Math>
@@ -3785,11 +3788,12 @@ const Article = () => {
                 ,
               </NoBreak>
               {" "}
-              as we can count on the graph of the original function:
+              as we can count on the graph of the original 
+              function:
+              <ImageLeft
+                src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
+                line={-2.0} />
             </VerticalChunk>
-            <img
-              src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
-              style="position:absolute;right:400px;top:-127px;" />
             <Pause />
             <Image
               src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg"
@@ -3861,7 +3865,7 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <Image
-            src="/images/svg_cosine_minus_cos_20x_plus_quadratic.svg"
+            src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
             style="margin-top:0.8em;margin-bottom:1em;" />
           <Pause />
           <Solution solution_number={3}>
@@ -3873,32 +3877,38 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg"
               style="margin-top:0.8em;margin-bottom:1em;" />
             <Pause />
             <VerticalChunk>
               [Nb:
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <Pause />
+            <CentralDisplayItalic>
               parabolic
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
               is a synonym of
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <Pause />
+            <CentralDisplayItalic>
               quadratic
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
               or
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <Pause />
+            <CentralDisplayItalic>
               degree{" "}
               <Math>
                 $\mathit&#123;2&#125;$
               </Math>
               {" "}polynomial
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
               i.e., a function of the form
             </VerticalChunk>
             <Pause />
@@ -3999,7 +4009,7 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg"
               style="margin-top:0.8em;margin-bottom:1em;" />
             <Pause />
             <VerticalChunk>
@@ -4050,7 +4060,7 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg"
               style="margin-top:0.8em;margin-bottom:1em;" />
             <Pause />
             <VerticalChunk>
@@ -4122,7 +4132,7 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_cosine_minus_cos_20x_plus_quadratic_with_inset.svg"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg"
               style="margin-top:0.8em;margin-bottom:1em;" />
             <Pause />
             <VerticalChunk>
@@ -4222,7 +4232,7 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg"
               style="margin-top:0.8em;margin-bottom:1em;" />
             <Pause />
             <VerticalChunk>
@@ -4257,9 +4267,7 @@ const Article = () => {
             Guesstimate a function with this graph:
           </VerticalChunk>
           <Pause />
-          <Image
-            src="/images/svg_ch5_ex_big_wave.svg"
-            style="margin-top:0.8em;margin-bottom:1em;" />
+          <Image src="/images/svg_ch5_ex_big_wave.svg" />
           <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
@@ -4267,9 +4275,7 @@ const Article = () => {
               curve in purple:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_wave_purple.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_wave_purple.svg" />
             <Pause />
             <VerticalChunk>
               It appears to be a linear function (line through
@@ -4277,21 +4283,17 @@ const Article = () => {
               <Math>
                 $(0, 0)$
               </Math>
-              {" "}sloping down)
-              plus a
-              sinusoid. To estimate the slope of the linear
-              function we can take two points in like relation
-              to the sinusoid, draw a line between them
-              and estimate the slope:
+              {" "}sloping down) plus a sinusoid. To 
+              estimate the slope of the linear function we can 
+              take two points in like relation to the sinusoid, 
+              draw a line between them and estimate the slope:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_wave_purple_blue_with_1_4.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_wave_purple_blue_with_1_4.svg" />
             <Pause />
             <VerticalChunk>
-              This makes the 
-              linear function portion of the purple curve
+              This makes the linear function portion of the purple 
+              curve
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4311,9 +4313,7 @@ const Article = () => {
               we won't be able to see where we're measuring):
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_wave_purple_blue_with_height.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_wave_purple_blue_with_height.svg" />
             <Pause />
             <VerticalChunk>
               So it appears that the sinusoid has a total height
@@ -4330,13 +4330,10 @@ const Article = () => {
               to measure the vertical width of this blue band...
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_wave_purple_blue_with_band.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_wave_purple_blue_with_band.svg" />
             <Pause />
             <VerticalChunk>
-              ...that, indeed, 
-              seems near{" "}
+              ...that, indeed, seems near{" "}
               <NoBreak>
                 <Math>
                   $4$
@@ -4367,9 +4364,7 @@ const Article = () => {
               that “purple curve” retains its unique meaning):
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_wave_purple_sinusoid_only.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_wave_purple_sinusoid_only.svg" />
             <Pause />
             <VerticalChunk>
               This graph has the form
@@ -4412,14 +4407,13 @@ const Article = () => {
               has graph...
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_wave_minus_2sin_x.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_wave_minus_2sin_x.svg" />
             <Pause />
             <VerticalChunk>
-              ...and, from there, all that remains is to “slow down” the 
-              oscillation to match the aquamarine graph—the “slowing down”
-              is what{" "}
+              ...and, from there, all that remains is to 
+              “slow down” the oscillation to match the 
+              aquamarine graph—the “slowing down” is what 
+              {" "}
               <Math>
                 $B$
               </Math>
@@ -4430,17 +4424,16 @@ const Article = () => {
               <Math>
                 $B$
               </Math>
-              {" "}must be, we must measure the cycle
-              length (it is, admittedly, hard to accurately determine 
-              the position of the top of each
-              large-scale bump, but we do our best by basing ourselves off
-              of what appear to be identical patterns in the small-scale
-              oscillations at the top of each large-scale bump):
+              {" "}must be, we must measure 
+              the cycle length (it is, admittedly, hard to
+              accurately determine the position of the top 
+              of each large-scale bump, but we do our best by 
+              basing ourselves off of what appear to be identical 
+              patterns in the small-scale oscillations at 
+              the top of each large-scale bump):
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_wave_purple_blue_period_measurement.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_wave_purple_blue_period_measurement.svg" />
             <Pause />
             <VerticalChunk>
               As
@@ -4452,8 +4445,8 @@ const Article = () => {
             <Pause />
             <VerticalChunk>
               the period of the large-scale sinusoid is near
-              twice the period of sin or cos; i.e., we need to “slow
-              down”
+              twice the period of sin or cos; i.e., we need to 
+              “slow down”
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4496,14 +4489,14 @@ const Article = () => {
             <Pause />
             <VerticalChunk>
               for our approximation to the purple curve, putting
-              the linear and sinusoidal parts together. Now we move
-              on from the purple curve.)
+              the linear and sinusoidal parts together. Now we 
+              move on from the purple curve.)
             </VerticalChunk>
             <VerticalChunk indent={true}>
               It remains to add in the small-scale oscillation
-              from the original curve; we can do the tedious part
-              first, and count the number cycles in an interval of length
-              {" "}
+              from the original curve; we can do the tedious 
+              part first, and count the number cycles in an
+              interval of length{" "}
               <NoBreak>
                 <Math>
                   $4\eta \approx 6.28$
@@ -4512,9 +4505,7 @@ const Article = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_wave_purple_small_scale_bump_count.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_wave_purple_small_scale_bump_count.svg" />
             <Pause />
             <VerticalChunk>
               So the small-scale oscillation is running
@@ -4522,8 +4513,9 @@ const Article = () => {
               <Math>
                 $\approx 19$
               </Math>
-              {" "}times the frequency of an ordinary sine or cosine,
-              and we can model the small-scale oscillation by
+              {" "}times the frequency of an ordinary 
+              sine or cosine, and we can model the small-scale
+              oscillation by
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4531,17 +4523,17 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              since, like the large-scale oscillation from the purple
-              curve, it shares the same phase as{" "}
+              since, like the large-scale oscillation from the
+              purple curve, it shares the same phase as{" "}
               <NoBreak>
                 <Math>
                   $-\sin(x)$
                 </Math>
                 ,
               </NoBreak>
-              {" "}and since,
-              like the small-scale oscillation from Exercise 3, it has
-              an amplitude of{" "}
+              {" "}
+              and since, like the small-scale oscillation from
+              Exercise 3, it has an amplitude of{" "}
               <NoBreak>
                 <Math>
                   $\approx 0.5$
@@ -4558,8 +4550,9 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              as our “guesstimate”, while adding the linear function, 
-              the large-scale sinusoid, and the small-scale sinusoid together.
+              as our “guesstimate”, while adding the linear 
+              function, the large-scale sinusoid, and the small-scale 
+              sinusoid together.
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -4615,9 +4608,7 @@ const Article = () => {
               The culprits are:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_four_graphs_labeled.svg"
-              style="margin-top:0.9em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_four_graphs_labeled.svg" />
             <Pause />
             <VerticalChunk>
               For reference (if you need help checking), the
@@ -4632,13 +4623,9 @@ const Article = () => {
               {" "}are as follows:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_four_graphs_cos.svg"
-              style="margin-top:0.9em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_four_graphs_cos.svg" />
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_four_graphs_sin.svg"
-              style="margin-top:0.9em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_four_graphs_sin.svg" />
             <Pause />
             <VerticalChunk>
               (Then imagine summing together, squaring, etc.)
@@ -6072,9 +6059,7 @@ const Article = () => {
             {" "}radians?
           </VerticalChunk>
           <Pause />
-          <Image
-            src="/images/svg_ch5_ex_0_2_radians_guess.svg"
-            style="margin-top:1em;margin-bottom:1em;" />
+          <Image src="/images/svg_ch5_ex_0_2_radians_guess.svg" />
           <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
@@ -6752,9 +6737,7 @@ const Article = () => {
               remainders repeat, look as follows:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_22_and_33_and_44_over_7_combined_longhands.svg"
-              style="height:490px;margin-top:1.2em;margin-bottom:1.2em;" />
+            <Image src="/images/svg_ch5_ex_22_and_33_and_44_over_7_combined_longhands.svg" />
             <Pause />
             <VerticalChunk>
               From which...
@@ -6781,10 +6764,12 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <div style="font-size:1em;">
                 <MathBlock>
-                  $$\Large         \eta  \approx&#123;11\over 7&#125;\\
+                  $$\displaylines&#123;
+                  \Large         \eta  \approx&#123;11\over 7&#125;\\
                   \Large \up&#123;1.7&#125;2\eta \approx&#123;22\over 7&#125;\\
                   \Large \up&#123;1.7&#125;3\eta \approx&#123;33\over 7&#125;\\
-                  \Large \up&#123;1.7&#125;4\eta \approx&#123;44\over 7&#125;$$
+                  \Large \up&#123;1.7&#125;4\eta \approx&#123;44\over 7&#125;
+                  &#125;$$
                 </MathBlock>
               </div>
               ...we thus have...
@@ -6792,10 +6777,11 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <div style="font-size:1em;">
                 <MathBlock>
-                  $$\Large         \eta \approx  1.\overline&#123;571428&#125;\\
+                  $$\displaylines&#123;
+                  \Large         \eta \approx  1.\overline&#123;571428&#125;\\
                   \Large \up&#123;1.7&#125;2\eta \approx 3.\overline&#123;142857&#125;\\
                   \Large \up&#123;1.7&#125;3\eta \approx 4.\overline&#123;714285&#125;\\
-                  \Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;$$
+                  \Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;&#125;$$
                 </MathBlock>
               </div>
               ...though none of these estimates are actually
@@ -6810,8 +6796,9 @@ const Article = () => {
               <i>
                 Note 2.
               </i>
-              As mentioned in Note 1 of Exercise 24, Chapter 3,
-              these approximations are about half-a-part-in-a-thousand
+              As mentioned in Note 1 of 
+              Exercise 24, Chapter 3, these approximations
+              are about half-a-part-in-a-thousand
               too large, or to be more exact,
             </VerticalChunk>
             <Pause />
@@ -6917,16 +6904,18 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\Large         \eta \approx  1.5708\\
+              $$\displaylines&#123;
+              \Large         \eta \approx  1.5708\\
               \Large \up&#123;1.7&#125;2\eta \approx 3.1416\\
               \Large \up&#123;1.7&#125;3\eta \approx 4.7123\\
-              \Large \up&#123;1.7&#125;4\eta \approx 6.2832$$
+              \Large \up&#123;1.7&#125;4\eta \approx 6.2832&#125;$$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...that are correct approximations up to the fourth
-              digit, it turns out, modulo rounding off of the fifth digit.
-              (But these are not worth learning by heart, by any means.)
+              ...that are correct approximations up to
+              the fourth digit, it turns out, modulo
+              rounding off of the fifth digit. (But these
+              are not worth learning by heart, by any means.)
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -6936,10 +6925,10 @@ const Article = () => {
               Exercise 16.
             </b>
             {" "}
-            To close our division skills: use the table
-            below to compute the integer part and the first
-            three digits past the decimal point (no rounding
-            based on the fourth digit) of
+            To close our division skills: use the
+            table below to compute the integer part and
+            the first three digits past the decimal point
+            (no rounding based on the fourth digit) of
           </VerticalChunk>
           <Pause />
           <MathBlock>
@@ -6947,9 +6936,9 @@ const Article = () => {
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            by hand, using long division. What is the new
-            (last) remainder when the quotient reaches the
-            3rd digit after the decimal point, and what 
+            by hand, using long division. What is the
+            new (last) remainder when the quotient reaches
+            the 3rd digit after the decimal point, and what 
             equation is implied from the quotient and the 
             new (last) remainder at that point?
           </VerticalChunk>
@@ -6965,8 +6954,8 @@ const Article = () => {
           <Pause />
           <Solution solution_number={16}>
             <VerticalChunk>
-              Here is the long division, pursued up to the 
-              {" "}
+              Here is the long division, pursued up to
+              the{" "}
               <NoBreak>
                 “
                 <Math>
@@ -6974,9 +6963,10 @@ const Article = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}column of the quotient, including
-              one last remainder computation that occurs
-              pursuant to adding the digit in the{" "}
+              {" "}column of the quotient,
+              including one last remainder computation
+              that occurs pursuant to adding the digit in
+              the{" "}
               <NoBreak>
                 “
                 <Math>
@@ -6984,9 +6974,9 @@ const Article = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}
-              column of the quotient (this is what the problem
-              statement refers to as the “last remainder”):
+              {" "}column of the quotient (this
+              is what the problem statement refers to as
+              the “last remainder”):
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch5_ex_big_division.svg" />

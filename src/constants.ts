@@ -1,4 +1,4 @@
-export const MOBILE_MAX_WIDTH = 520;
+export const MOBILE_MAX_WIDTH = 720;
 export const TEXT_X_PADDING = "1rem";
 export const CHAPTER_TITLE_TOP_MARGIN_DESKTOP = 15;
 export const CHAPTER_TITLE_TOP_MARGIN_MOBILE = 0;

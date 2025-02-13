@@ -297,10 +297,12 @@
     |> center
 
         $$
+        \displaylines{
         \up{1.2}\cos(x + 4\eta) = \cos(x)\\
         \up{1.7}\sin(x + 4\eta) = \rt{0.15}\sin(x)\rt{0.15}\\
         \up{1.7}\cos(x + 2\eta) = \rt{0.15}-\!\cos(x)\rt{0.15}\\
         \up{1.7}\sin(x + 2\eta) = \rt{0.15}-\!\sin(x)\rt{0.15}
+        }
         $$
 
     ...that follow because one full turn around the
@@ -309,8 +311,8 @@
     both coordinates are negated), and these two more...
 
     $$
-    \up{1.0}\cos(x + \eta) = -\!\sin(x) \\
-    \up{1.7}\sin(x - \eta) = -\!\cos(x)
+    \displaylines{\up{1.0}\cos(x + \eta) = -\!\sin(x) \\
+    \up{1.7}\sin(x - \eta) = -\!\cos(x)}
     $$
 
     ...that follow from the four-particle
@@ -982,8 +984,8 @@
     Definitionally, the equations
 
     $$
-    x = r \cos(\theta)\\
-    \up{1.3}y = r \sin(\theta)
+    \displaylines{x = r \cos(\theta)\\
+    \up{1.3}y = r \sin(\theta)}
     $$
 
     give the change-of-coordinate formulas
