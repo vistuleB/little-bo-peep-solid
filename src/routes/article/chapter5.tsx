@@ -840,11 +840,13 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\up&#123;1.0&#125;\cos(-x) = \cos(x) \\
+          $$\displaylines&#123;
+          \up&#123;1.0&#125;\cos(-x) = \cos(x) \\
           \up&#123;1.7&#125;\sin(-x) = -\sin(x) \\
-          \up&#123;1.7&#125;\sin(x + \eta) = \cos(x)\\
-          \up&#123;1.7&#125;\cos(x - \eta) = \sin(x)\\
-          \up&#123;1.7&#125;\dn&#123;0.5&#125;\cos(\eta/2 + x) = \sin(\eta/2 - x)$$
+          \up&#123;1.7&#125;\sin(x + \eta) = \cos(x) \\
+          \up&#123;1.7&#125;\cos(x - \eta) = \sin(x) \\
+          \up&#123;1.7&#125;\dn&#123;0.5&#125;\cos(\eta/2 + x) = \sin(\eta/2 - x)
+          &#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3724,7 +3726,7 @@ const Article = () => {
             Guesstimate a function with this graph:
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_cosine_10x_plus_x_over_4.svg" />
+          <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4.svg" />
           <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
@@ -3734,7 +3736,7 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_cosine_10x_plus_x_over_4_equation.svg"
+              src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg"
               style="margin-top:1.2em;margin-bottom:1.2em;" />
             <Pause />
             <VerticalChunk>
@@ -3786,11 +3788,11 @@ const Article = () => {
               as we can count on the graph of the original function:
             </VerticalChunk>
             <img
-              src="/images/svg_cosine_10x_plus_x_over_4_4eta_cloud.svg"
+              src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
               style="position:absolute;right:400px;top:-127px;" />
             <Pause />
             <Image
-              src="/images/svg_cosine_10x_plus_x_over_4_bump_count.svg"
+              src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg"
               style="margin-top:0.8em;margin-bottom:1em;" />
             <Pause />
             <VerticalChunk>

@@ -246,11 +246,13 @@
     One has
 
     $$
+    \displaylines{
     \up{1.0}\cos(-x) = \cos(x) \\
     \up{1.7}\sin(-x) = -\sin(x) \\
-    \up{1.7}\sin(x + \eta) = \cos(x)\\
-    \up{1.7}\cos(x - \eta) = \sin(x)\\
+    \up{1.7}\sin(x + \eta) = \cos(x) \\
+    \up{1.7}\cos(x - \eta) = \sin(x) \\
     \up{1.7}\dn{0.5}\cos(\eta/2 + x) = \sin(\eta/2 - x)
+    }
     $$
 
     for all $x \in \rr$, where 
