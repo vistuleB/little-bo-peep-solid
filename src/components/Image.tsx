@@ -67,16 +67,16 @@ const Image = (props: ImageProps) => {
     <ScaleProvider scale={scale}>
       <div
         id={props.id}
-        style={{
-          "padding-left": `${props.padding_left || 0}`,
-          "padding-right": `${props.padding_right || 0}`,
-        }}
-        class={twJoin("left-1/2 -translate-x-1/2 relative w-max", props.class)}>
+        // style={{
+        //   "padding-left": `${props.padding_left || 0}`,
+        //   "padding-right": `${props.padding_right || 0}`,
+        // }}
+        class={twJoin("left-1/2 -translate-x-1/2 relative", props.class)}>
         <div 
-          style={{
-            height: props.height,
-            width: props.width,
-          }}
+          // style={{
+          //   height: props.height,
+          //   width: props.width,
+          // }}
         >
           <LazyImage
             ref={image_ref}
