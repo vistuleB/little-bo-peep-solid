@@ -146,7 +146,9 @@ const Article = () => {
             offset_x="-13em"
             offset_y="-17em" />
         </Image>
-        <Pause />
+      </Section>
+      <Pause />
+      <Section>
         <VerticalChunk>
           In fact, we can
           succinctly describe the derivative by...

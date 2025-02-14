@@ -26,9 +26,6 @@ type InternalSideImageProps = UserFacingSideImageProps & {
   offset_x: string;
   offset_y: string;
   line: number;
-  // left: string;
-  // right: string;
-  // top: string;
 };
 
 const SideImage = (props: InternalSideImageProps) => {
@@ -108,10 +105,6 @@ export const ImageRight = ({
       offset_x: offset_x,
       offset_y: offset_y,
       line: line,
-      // right: getRight("right", offset_x, scale()),
-      // left: getLeft("right", offset_x, scale()),
-      // top: getTop(line, offset_y, scale()),
-      // side: "right",
     }
   )
 
@@ -133,10 +126,6 @@ export const ImageLeft = ({
       offset_x: offset_x,
       offset_y: offset_y,
       line: line,
-      // right: getRight("left", offset_x, scale()),
-      // left: getLeft("left", offset_x, scale()),
-      // top: getTop(line, offset_y, scale()),
-      // side: "left",
     }
   )
 

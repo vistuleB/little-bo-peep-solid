@@ -10703,8 +10703,9 @@ const Article = () => {
                   Note 1.
                 </i>
                 {" "}
-                In some sense, the vector “wins” over the number, in
-                that their conjoint baby is a vector, not a number:
+                In some sense, the vector “wins” over the 
+                number, in that their conjoint baby is a vector, 
+                not a number:
               </VerticalChunk>
               <Pause />
               <Image src="/images/svg_ch5_ex_c_times_vector_box.svg" />
