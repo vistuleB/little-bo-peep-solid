@@ -10,6 +10,7 @@ import { GREEN_DIV_HEIGHT, TEXT_X_PADDING } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import Spacer from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 
 type SolutionProps = ParentProps &
   SharedProps & {
@@ -31,7 +32,9 @@ const turnOnScrollHistory = () => {
 const Solution = (props: SolutionProps) => {
   let button_ref: HTMLDivElement | undefined;
   let ref: HTMLDivElement | undefined;
-  let { store, set_store } = useGlobalContext();
+  // let { store, set_store } = useGlobalContext();
+  const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
+
 
   const solution_open = () => store.solutions_open[props.solution_number - 1];
   let transition_duration = () => store.transition_duration;

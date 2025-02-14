@@ -1,11 +1,10 @@
 import { useLocation, useSearchParams } from "@solidjs/router";
-import { Accessor, createEffect, createSignal, Setter } from "solid-js";
-import { SetStoreFunction } from "solid-js/store";
+import { createEffect, createSignal } from "solid-js";
 import { useLocalStorage } from "solidjs-hooks";
-import { useGlobalContext } from "~/store/StoreProvider";
+import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 
 const useExercises = (length: number) => {
-  const { store, set_store } = useGlobalContext();
+  const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
 
   const stored_selected_exo = () => store.selected_exo;
   const stored_solutions_open = () => store.solutions_open;
@@ -35,13 +34,13 @@ const useExercises = (length: number) => {
     });
 
     localStorage.setItem(`${article()}_exo_${exercise_number}_opened`, String(value));
-
     if (update_store) {
       set_store("solutions_open", (prev) => {
         prev[exercise_number - 1] = value;
         return [...prev];
       });
     }
+
   };
 
   if (localStorage) {
@@ -70,18 +69,18 @@ const useExercises = (length: number) => {
     set_selected_exo(String(stored_selected_exo()));
     setSearchParams({
       selected: String(stored_selected_exo()),
-      opened: stored_solutions_open()[stored_selected_exo()],
+      opened: stored_solutions_open()[stored_selected_exo() - 1],
     });
   });
 
   createEffect(() => {
     update_solution_open(
       Number(stored_selected_exo()),
-      stored_solutions_open()[stored_selected_exo()],
+      stored_solutions_open()[stored_selected_exo() - 1],
       false
     );
     setSearchParams({
-      opened: stored_solutions_open()[stored_selected_exo()],
+      opened: stored_solutions_open()[stored_selected_exo() - 1],
       selected: String(stored_selected_exo()),
     });
   });

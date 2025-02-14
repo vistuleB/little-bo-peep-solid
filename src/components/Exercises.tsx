@@ -15,10 +15,8 @@ import { JSX } from "solid-js/h/jsx-runtime";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { GREEN_DIV_HEIGHT } from "~/constants";
-import { getSelectedExercise } from "~/store";
-import { useLocation, useSearchParams } from "@solidjs/router";
-import { useLocalStorage, useToggle } from "solidjs-hooks";
 import useExercises from "~/hooks/useExercises";
+import { ExercisesStoreProvider, useExercisesContext } from "~/store/ExercisesStoreProvider";
 
 type ExercisesProps = ParentProps &
   SharedProps & {
@@ -26,9 +24,17 @@ type ExercisesProps = ParentProps &
   };
 
 export const Exercises = (props: ExercisesProps) => {
+  return (
+  <ExercisesStoreProvider>
+    <ExercisesConsumer {...props}/>
+  </ExercisesStoreProvider>
+  )
+}
+const ExercisesConsumer = (props: ExercisesProps) => {
   let children_list = children(() => props.children);
   useExercises(children_list.toArray().length);
-  let { store, set_store } = useGlobalContext();
+  const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
+
   let selected_exo = () => store.selected_exo;
   let num_exercises = children_list.toArray().length;
 
@@ -78,7 +84,7 @@ type SwitcherProps = {
 };
 
 const Switcher = (props: SwitcherProps) => {
-  let { store, set_store } = useGlobalContext();
+  const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
   let selected_exo = () => store.selected_exo;
 
   return (
@@ -152,7 +158,8 @@ export const Exercise = (
       exercise_number: number;
     }
 ) => {
-  let { store, set_store } = useGlobalContext();
+  const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
+  const { store: global_store } = useGlobalContext()
   const solution_open = () => store.solutions_open[props.exercise_number - 1];
 
   let transition_duration = () => store.transition_duration;
@@ -179,7 +186,7 @@ export const Exercise = (
         class="slice transition-all col-start-2"
         style={{
           height: `${!solution_open() || bot_div() ? GREEN_DIV_HEIGHT : 0}px`,
-          "background-color": store.show_areas ? "#00440050" : "",
+          "background-color": global_store.show_areas ? "#00440050" : "",
           "transition-duration": `${
             transition_duration()[props.exercise_number - 1]
           }ms`,
