@@ -1,7 +1,5 @@
 |> body
 
-|> Exercise
-
     *Exercise 1.*Is
     $$
     y =  \cos(x + 0.1)
@@ -21,8 +19,6 @@
     to the left
 
     of $y = \cos(x)$, by $0.1$.
-
-|> Exercise
 
     *Exercise 2.*Guesstimate a function with this graph:
 
@@ -76,8 +72,6 @@
     y = \cos(10x) + {1\over 4} x
     $$
     adding our two separate guesstimates together.
-
-|> Exercise
 
     *Exercise 3.*Guesstimate a function with this graph (we can
     tell you that the large-scale curve is a
@@ -222,8 +216,6 @@
     -0.5\cos(20x) + {x^2\over 24} - 3
     $$
     ...for our final answer, after adding the parabola back.
-
-|> Exercise
 
     *Exercise 3.*Guesstimate a function with this graph: 
 
@@ -393,8 +385,6 @@
     as our “guesstimate”, while adding the linear function, 
     the large-scale sinusoid, and the small-scale sinusoid together.
 
-|> Exercise
-
     *Exercise 4.*Which function is most plausibly associated to
     which graph?
 
@@ -453,8 +443,6 @@
     function of the form $x \ra A\cdot \sin(Bx + C) + D$ for
     some constants $A$, $B$, $C$, $D \in \rr$.)
 
-|> Exercise
-
     *Exercise 5.*Is the pythagorean identity apparent in the
     graphs of the previous exercise?
 
@@ -483,8 +471,6 @@
     \cos^2(x) + \sin^2(x) = 1
     $$
     for all $x \in \rr$, which is the pythagorean identity.
-
-|> Exercise
 
     *Exercise 6.*Compute the ratio $A/B$ assuming all same-colored
     triangles are similar, with the help of a calculator:
@@ -616,8 +602,6 @@
     $$
     quadrilaterals for two turns!
 
-|> Exercise
-
     *Exercise 6.*In the drawing below the oval is a circle of
     radius $r$ and the angle $\phi$ is in “standard
     position”, meaning that it opens counterclockwise
@@ -669,8 +653,6 @@
 
     is the difference from the center of the circle to $P$ in $y$,
     as per scaling a unit circle to radius $r$.
-
-|> Exercise
 
     *Exercise 6.*If a
 
@@ -815,8 +797,6 @@
     |> Image
         style margin-top:1em;margin-bottom:0.8em;
         src images/svg_ch5_ex_vector_sum_previous_example.svg
-
-|> Exercise
 
     *Exercise 7.*If a particle in $\rr^2$ (= “in the plane”)
     has $x$-coordinate
@@ -963,8 +943,6 @@
     insofar as non-direction-reversing
     particles are concerned!
 
-|> Exercise
-
     *Exercise 11.*Take a particle traveling around a circle at constant
     speed. What is the
 
@@ -1003,8 +981,6 @@
     of the particle. (That's the answer: “angular speed”, or,
     equivalently, “angular frequency”.)
 
-|> Exercise
-
     *Exercise 13.*Which of these angles is $0.2$ radians?
 
     |> Image
@@ -1039,8 +1015,6 @@
         src images/svg_ch5_ex_0_2_radians_guess_joke.svg
 
     (Joking.)
-
-|> Exercise
 
     *Exercise 12.*What geometric ratios do
     $$
@@ -1080,8 +1054,6 @@
     by viewing 
     $\eta$ and $4\eta$ as the radian values
     of a right angle and a full angle, respectively.
-
-|> Exercise
 
     *Exercise 12.*Compute 
     $$
@@ -1235,8 +1207,6 @@
 
     (Etc.)
 
-|> Exercise
-
     *Exercise 16.*Compute
     $$
     {22\over 7}, \,\,\,\,\, {33\over 7}, \,\,\,\,\,\rm{and}\,\,\,\,\,{44\over 7}
@@ -1343,8 +1313,6 @@
     ...that are correct approximations up to the fourth
     digit, it turns out, modulo rounding off of the fifth digit.
     (But these are not worth learning by heart, by any means.)
-
-|> Exercise
 
     *Exercise 15.*To close our division skills:
     use the table below to
@@ -1618,8 +1586,6 @@
     is updated to account for a new term added to the quotient.
     That's what the remainder is for: to satisfy this equation!
 
-|> Exercise
-
     *Exercise 15.*What is the angle marked ‘?’, as a function of
     $\theta$?
 
@@ -1643,8 +1609,6 @@
     which would indicate that the angles are
     given to you for free—everything in math is
     free, not just those angles!)
-
-|> Exercise
 
     *Exercise 18.*The graph $y = \cos(x) + \sin(x)$ from Exercise 5
     has a maximum value greater than $1$:
@@ -1810,8 +1774,6 @@
     and, in general, the numerators of these fractions will be some multiple of
     $8\eta$ apart.)
 
-|> Exercise
-
     *Exercise 19.*What is the angle marked ‘?’, as a function of
     $\theta$?
 
@@ -1843,8 +1805,6 @@
     the smallest-size triangle is a right triangle—and in
     both cases that the original, largest triangle is a
     right triangle.)
-
-|> Exercise
 
     *Exercise 19.*Argue that, in the following figure, the angle
     marked ‘?’ equals $\theta$, the angle at the center of the circle:
@@ -1887,9 +1847,7 @@
         src images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg
     |> StarDivider
 
-|> Exercise
-
-    If each of these dotted lines...
+    *Exercise 19.*If each of these dotted lines...
 
     |> Image
         style margin-top:0.7em;margin-bottom:1em;
@@ -2293,9 +2251,7 @@
     to prove here, except to make this observation 
     about composition!
 
-|> Exercise
-
-    Express $A/B$ as a function of $\theta$:
+    *Exercise Z.*Express $A/B$ as a function of $\theta$:
 
     |> Image
         style margin-top:1.0em;margin-bottom:1em;
@@ -2330,9 +2286,7 @@
     (As per the fact that
     $(A/B) = (C/B)\cdot(A/C)$.)
 
-|> Exercise
-
-    Express $A/B$ as a function of $\theta$:
+    *Exercise Z.*Express $A/B$ as a function of $\theta$:
 
     |> Image
         style margin-top:1.0em;margin-bottom:1em;
@@ -2400,9 +2354,7 @@
     (The same identity holds
     more generally than just those $\theta$'s, however.)
 
-|> Exercise
-
-    In general, $\sec(\theta)$ and $\tan(\theta)$ are 
+    *Exercise Q.*In general, $\sec(\theta)$ and $\tan(\theta)$ are 
     defined for all $\theta$ such that
     $$
     \cos(\theta) \ne 0
@@ -2454,9 +2406,7 @@
     $$
     using the pythagorean identity in the fourth step.
 
-|> Exercise
-
-    Run the computation of the
+    *Exercise Z.*Run the computation of the
     previous exercise backwards, starting with
     $$
     \sec^2(\theta)
@@ -2490,9 +2440,7 @@
     “$\cos^2(\theta) + \sin^2(\theta)$”, instead of the
     other way around.)
 
-|> Exercise
-
-    Here are four function compositions
+    *Exercise Z.*Here are four function compositions
     depicted as “function box” diagrams, with
     inputs coming in the right and outputs
     going out the left (with $f$ being some generic
@@ -2589,9 +2537,7 @@
     ...where we use “$x$” because we were _told_to use
     $x$. (By the statement.)
 
-|> Exercise
-
-    *How would the graph of each of the compositions
+    *Exercise 27.*How would the graph of each of the compositions
     from Exercise 26 compare to the graph of the 
     generic function $f$?
 
@@ -2632,9 +2578,7 @@
     Exercise 7 of Chapter 3, 
     Exercise 14 of Chapter 3.)
 
-|> Exercise
-
-    Prove that
+    *Exercise X.*Prove that
     $\cos\cdot\sin$, $\cos^2$, and $\sin^2$ 
     are periodic mod $2\eta$, where
     a function $f$ is “periodic mod $T$” if
@@ -2711,9 +2655,7 @@
     ...per the definition of function multiplication. (Etc.)
     (We mean: likewise for “$\sin^2$” and “$\cos^2$”.)
 
-|> Exercise
-
-    *Given the graphs
+    *Exercise 28.*Given the graphs
     $y = \cos(x)\sin(x)$ and $y = \cos^2(x)$...
 
     |> Image
@@ -2800,9 +2742,7 @@
     ...for all $x\in \rr$—_if_this conjecture about
     translation turns out to be true!!!
 
-|> Exercise
-
-    Similarly to Exercise 9, suggest a definition for the product $$ c\cdot
+    *Exercise Z.*Similarly to Exercise 9, suggest a definition for the product $$ c\cdot
     \vec{v} $$ of a vector $\vec{v}$ by a real number $c$.
 
     We define

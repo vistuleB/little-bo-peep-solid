@@ -39,12 +39,11 @@
         diagram:
 
         |> Image
-            style margin-top:1.2em;margin-bottom:1.2em;
             src images/svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg
 
         (Or in the technical sense of taking the sum
-        of two functions, to be more exact—that is what the sum
-        of two functions looks like, pictorialized!)
+        of two functions, to be more exact—that is what 
+        the sum of two functions looks like, pictorialized!)
 
         The line appears to be
         $$
@@ -65,12 +64,12 @@
             src images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg
 
-        As cos goes through _one_cycle from $x = 0$ to $x = 4\eta$, the “bumpy
-        function” is therefore (roughly, from what we can see) a 
-        “$10$​$\times$” sped-up version of cosine, i.e.,
+        As cos goes through _one_cycle from $x = 0$ to 
+        $x = 4\eta$, the “bumpy function” is therefore 
+        (roughly, from what we can see) a “$10$&#x200b;$\times$” 
+        sped-up version of cosine, i.e.,
         $$
         y = \cos(10x)
         $$
@@ -465,10 +464,12 @@
 
         (Then imagine summing together, squaring, etc.)
 
-        _Note 1._It is, indeed,
-        intriguing that all of these functions appear to be_sinusoids_. (Formally defined as a
-        function of the form $x \ra A\cdot \sin(Bx + C) + D$ for
-        some constants $A$, $B$, $C$, $D \in \rr$.)
+        |> SolutionNote
+
+            It is, indeed, intriguing that all of these 
+            functions appear to be_sinusoids_. (Formally defined 
+            as a function of the form $x \ra A\cdot \sin(Bx + C) + D$ 
+            for some constants $A$, $B$, $C$, $D \in \rr$.)
 
 |> Exercise
 
@@ -516,126 +517,147 @@
 
         What we want is the multiplicative ratio that
         would take us from the bottom to the top side of 
-        this quadrilateral,
-        so that we can multiply by that ratio over and over
-        again:
+        this quadrilateral, so that we can multiply by that
+        ratio over and over again:
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_snail_quad.svg
 
         But the two triangles involved are
 
-        NOT RIGHT TRIANGLES
+        _|NOT RIGHT TRIANGLES|_
 
-        and we must break them into smaller parts that _are_right triangles in order to 
-        use trigonometric functions.
-        Specifically, as per this drawing:
+        and we must break them into smaller parts that 
+        _are_ right triangles in order to use trigonometric
+        functions. Specifically, as per this drawing:
 
         |> Image
-            style margin-top:0.8em;margin-bottom:1em;
             src images/svg_ch5_ex_big_snail_quad_four_parts.svg
 
-        The multiplicative ratios that correspond to the first and
-        third arrows (in arrow-order from bottom to top) are
+        The multiplicative ratios that correspond to the
+        first and third arrows (in arrow-order from bottom 
+        to top) are
+
         $$
         \sin(68^\circ\hlfbk)
         $$
         $$
         \sin(59^\circ\hlfbk)
         $$
+
         because these are “hypotenuse-to-opposite” arrows,
         while the multiplicative ratios that correspond to the
         second and fourth arrows are
+
         $$
         \csc(71^\circ\hlfbk)
         $$
         $$
         \csc(60^\circ\hlfbk)
         $$
-        because these are the opposite (no pun intended), i.e.,“opposite-to-hypotenuse” arrows.
-        The “big grey arrow” ratio from two diagrams ago is obtained
-        by multiplying these four small-arrow ratios together, or
+
+        because these are the opposite (no pun intended),
+        i.e.,“opposite-to-hypotenuse” arrows. The “big grey 
+        arrow” ratio from two diagrams ago is obtained by multiplying 
+        these four small-arrow ratios together, or
+
         $$
         \sin(68^\circ\hlfbk)\times\csc(71^\circ\hlfbk)\times\sin(59^\circ\hlfbk)\times\csc(60^\circ\hlfbk)
         $$
+
         (that can also be written
+
         $$
         {\sin(68^\circ\hlfbk)\times\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\times\sin(60^\circ\hlfbk)}
         $$
+
         because $\csc = {1\over \sin}$) which, numerically, comes out to
+
         $$
         0.97057870529467...
         $$
+
         meaning that the top side of the quadrilateral tile is
+
         $$
         97\%
         $$
+
         and some the length of the bottom side; taking
         the $36$-th power of $0.9705\dots$, because $36$ is the 
         number of times that the quadrilateral
         repeats within the spiral, we find
+
         $$
         0.34127722635785...
         $$
+
         which is the desired ratio $A/B$, and which agrees with the
         drawing, as $A$ seems plausibly to be about one-third of 
-        $B$,
-        from the drawing!
+        $B$, from the drawing!
 
-        _Note 1._While the final answer can be written
-        $$
-        (\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^{36}
-        $$
-        or
-        $$
-        \left({\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)}\right)^{\!36}
-        $$
-        teachers typically want to see such
-        expressions evualuated out, to make sure that you
-        and your calculator form a good team.
-        (And, to be fair, catching one's own calculator
-        mistakes by virtue of spotting a nonsensical
-        number is a skill in itself.)
+        |> SolutionNote
+        
+            While the final answer can be written
 
-        _Note 2._Instead of counting the number of times that the
-        quadrilateral appears in the double spiral by hand
-        one can 
-        calculate the amount of rotation between one
-        quadrilateral and the next, which is this purple angle:
+            $$
+            (\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^{36}
+            $$
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1em;
-            src images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg
+            or
 
-        The key to measuring this
-        angle is the concept of an “alternating angle”,
-        whereby $68^\circ$ reappears to the left of $71^\circ$,
-        here:
+            $$
+            \left({\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)}\right)^{\!36}
+            $$
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1em;
-            src images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg
+            teachers typically want to see such expressions
+            evualuated out, to make sure that you and your 
+            calculator form a good team. (And, to be fair,
+            catching one's own calculator mistakes by virtue
+            of spotting a nonsensical number is a skill in
+            itself.)
 
-        Then we can calculate the purple angle as
+        |> SolutionNote
 
-        |> div
-            class relative
+            Instead of counting the number of times that the
+            quadrilateral appears in the double spiral by hand
+            one can 
+            calculate the amount of rotation between one
+            quadrilateral and the next, which is this purple angle:
+
+            |> Image
+                style margin-top:0.8em;margin-bottom:1em;
+                src images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg
+
+            The key to measuring this
+            angle is the concept of an “alternating angle”,
+            whereby $68^\circ$ reappears to the left of $71^\circ$,
+            here:
+
+            |> Image
+                style margin-top:0.8em;margin-bottom:1em;
+                src images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg
+
+            Then we can calculate the purple angle as
 
             $$
             68^\circ + 71^\circ + 61^\circ - 180^\circ = 20^\circ
             $$
 
-        meaning that each quadrilateral is rotated by $20^\circ$ from the
-        previous, and in one turn of the spiral there are
-        $$
-        {360^\circ\over 20^\circ} = 18
-        $$
-        quadrilaterals, or
-        $$
-        2 \times 18 = 36
-        $$
-        quadrilaterals for two turns!
+            meaning that each quadrilateral is rotated by $20^\circ$ from the
+            previous, and in one turn of the spiral there are
+
+            $$
+            {360^\circ\over 20^\circ} = 18
+            $$
+
+            quadrilaterals, or
+
+            $$
+            2 \times 18 = 36
+            $$
+
+            quadrilaterals for two turns!
 
 |> Exercise
 
@@ -864,9 +886,9 @@
     A\cdot\cos(Bt + C) + D
     $$
     at time $t$ what is the most likely motion
-    that the particle is undergoing? 
-    In that case, what is the 
-    geometric meaning of the constants $A$, $B$, $C$, $D$?
+    that the particle is undergoing? In that 
+    case, what is the geometric meaning of the
+    constants $A$, $B$, $C$, $D$?
 
     |> Solution
 
@@ -875,135 +897,141 @@
         standards of simplicity, admittedly) is circular
         motion at uniform speed. In this case:
 
-        |> div
-            class column
-            |> ul
-                style margin-left:50px;margin-right:20px;margin-top:20px;margin-bottom:1em;
-                |> li
+        |> ul
+            class slice
+            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+            |> li
 
-                    $A$ is the radius of the circle
-                |> li
-                    style padding-top:0.2em;
+                $A$ is the radius of the circle
+            |> li
 
-                    $D$ is the $x$-coordinate of the circle's center
+                $D$ is the $x$-coordinate of the circle's center
 
         And either:
 
-        |> div
-            class column
-            |> ul
-                style margin-left:50px;margin-right:20px;margin-top:20px;margin-bottom:1em;
-                |> li
+        |> ul
+            class slice
+            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+            |> li
 
-                    $B$ is the counterclockwise _angular speed_/_angular frequency_(radians per unit time) and $C$ is the counterclockwise
-                    starting angle ($t = 0$) of the particle, as measured
-                    from a translate of the positive $x$ axis going through
-                    the center of the circle
+                $B$ is the counterclockwise 
+                _angular speed_/_angular frequency_ (radians per 
+                unit time) and $C$ is the counterclockwise 
+                starting angle ($t = 0$) of the particle, as 
+                measured from a translate of the positive $x$ 
+                axis going through the center of the circle
 
         Or:
 
-        |> div
-            class column
-            |> ul
-                style margin-left:50px;margin-right:20px;margin-top:20px;margin-bottom:1em;
-                |> li
+        |> ul
+            class slice
+            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+            |> li
 
-                    $-B$ is the counterclockwise angular speed/angular frequency
-                    of the particle and $-C$ is the counterclockwise
-                    starting angle of the particle, as measured
-                    from a translate of the positive $x$ axis going
-                    through the center of the circle
+                $-B$ is the counterclockwise 
+                angular speed/angular frequency of the particle 
+                and $-C$ is the counterclockwise starting angle 
+                of the particle, as measured from a translate of 
+                the positive $x$ axis going through the center 
+                of the circle
 
         In more detail, every time
+
         $$
         t
         $$
-        increases by $1$, 
-        $$
-        Bt + C
-        $$
-        increases by $B$, but
-        $$
-        Bt + C
-        $$
-        is an amount of radians, because anything fed to
-        ‘cos’ is an amount of radians; and so $B$ ends up
-        being the
 
-        radian increase per unit time,
+        increases by $1$, 
+
+        $$
+        Bt + C
+        $$
+
+        increases by $B$, but
+
+        $$
+        Bt + C
+        $$
+
+        is an amount of radians, because anything 
+        fed to ‘cos’ is an amount of radians; and so 
+        $B$ ends up being the
+
+        __radian increase per unit time,__
 
         or angular speed, of the particle. 
 
-        However, said “increase” in radians can be associated 
-        to either
-        clockwise or a counterclockwise motion, there is no
-        telling. 
-        (Quite aside from the fact that $B$ might be negative.)
-        Indeed,
-        while 
-        we have a tendency to think of $\cos(x)$ as 
+        However, said “increase” in radians can be
+        associated to either clockwise or a 
+        counterclockwise motion, there is no telling. 
+        (Quite aside from the fact that $B$ might be
+        negative.) Indeed, while we have a tendency to
+        think of $\cos(x)$ as 
 
-        the $x$-coordinate of a point $x$ units
+        __the $x$-coordinate of a point $x$ units
         |> br
-        counterclockwise from $(1, 0)$ on the unit circle
+        counterclockwise from $(1, 0)$ on the unit circle__
 
         $\cos(x)$ is also
 
-        the $x$-coordinate of a point $x$ units
+        __the $x$-coordinate of a point $x$ units
         |> br
-        clockwise from $(1, 0)$ on the unit circle
+        clockwise from $(1, 0)$ on the unit circle__
 
         [“counterclockwise” $\ra$ “clockwise”].
         Per the one interpretation of ‘cos’,
+
         $$
         Bt + C
         $$
-        is an amount of counterclockwise radians; per the other,
+
+        is an amount of counterclockwise radians; per 
+        the other,
+
         $$
         Bt + C
         $$
-        is an amount of _clockwise_radians.
-        The following diagram
-        illustrates the two possibilities:
+
+        is an amount of _clockwise_radians. The following 
+        diagram illustrates the two possibilities:
 
         |> Image
-            style margin-top:1em;margin-bottom:1.1em;
             src images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg
 
         (Or... ~ ~ ~ ~ ~ ~ ~ ~ ~
 
         |> Image
-            style margin-top:1em;margin-bottom:1.1em;
             src images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg
 
-        ...to put everything in terms of counterclockwise-ness.)
-        This accounts for the two solutions listed above.
-        (But it can only be one of those two
-        solutions, having made the “Occam's razor” assumption
-        that the particle is traveling at uniform speed around
-        a circle.) (Nb: In particular, “uniform speed” precludes
-        sudden reversals of direction at either end of the circle,
-        if you were at all thinking of that, for speed
-        would be undefined at those points where direction is reversed.)
+        ...to put everything in terms of 
+        counterclockwise-ness.) This accounts for 
+        the two solutions listed above. (But it can 
+        only be one of those two solutions, having made 
+        the “Occam's razor” assumption that the 
+        particle is traveling at uniform speed around 
+        a circle.) (Nb: In particular, “uniform speed” 
+        precludes sudden reversals of direction at either 
+        end of the circle, if you were at all thinking 
+        of that, for speed would be undefined at 
+        those points where direction is reversed.)
 
-        _Note 1._If you harbor any doubts about there being no more
-        than two solutions, picture this diagram...
+        |> SolutionNote
 
-        |> Image
-            style width:190px;margin-top:1.0em;margin-bottom:0.8em;
-            src images/svg_ch5_ex_Bt_plus_C_black_on_white.svg
+            If you harbor any doubts about there being no more
+            than two solutions, picture this diagram...
 
-        ...and imagine the vertical line scanning
-        to the left
-        |> br
-        and to the right again 
-        as it tracks the $x$-coordinate
-        of a particle going around the circle, unseen. 
-        Then there is one clockwise particle that tracks
-        with the line, and one counterclockwise particle that
-        tracks with the line, but no more, 
-        insofar as non-direction-reversing
-        particles are concerned!
+            |> Image
+                src images/svg_ch5_ex_Bt_plus_C_black_on_white.svg
+
+            ...and imagine the vertical line scanning 
+            to the left and to the right again as it 
+            tracks the $x$-coordinate of a particle going 
+            around the circle, unseen. Then there is one 
+            clockwise particle that tracks with the line, 
+            and one counterclockwise particle that tracks 
+            with the line, but no more, insofar as 
+            non-direction-reversing particles are 
+            concerned!
 
 |> Exercise
 
@@ -1107,35 +1135,38 @@
         While $\eta$ was defined
         as the quarter-circumference of a unit circle, 
         more generally, 
+
         $$
         \eta
         $$
-        is the
-        quarter-circumference of a circle (any circle) divided
-        by its radius, and, correspondingly,
+
+        is the quarter-circumference of a circle (any 
+        circle) divided by its radius, and, correspondingly,
+
         $$
         4\eta
         $$
-        is the circumference of a circle (any circle) divided
-        by its radius. 
+
+        is the circumference of a circle (any circle) 
+        divided by its radius. 
 
         |> SolutionNote
 
-            As one consequence,
-            it follows that the circumference of a circle is
+            As one consequence, it follows that the circumference 
+            of a circle is
+
             $$
             4\eta\cdot r
             $$
+
             where $r$ is the radius.
 
         |> SolutionNote
 
-            These “ratio descriptions” 
-            of $\eta$ and $4\eta$
-            also follow 
-            by viewing 
-            $\eta$ and $4\eta$ as the radian values
-            of a right angle and a full angle, respectively.
+            These “ratio descriptions” of $\eta$ and 
+            $4\eta$ also follow by viewing $\eta$ and $4\eta$
+            as the radian values of a right angle and a full angle, 
+            respectively.
 
 |> Exercise
 
@@ -1151,148 +1182,149 @@
 
         Here is the division in American notation
         overlayed on top of a “Plaza” wallpaper to
-        help demarcate the different columns of digits
-        (in American notation each column of digits
-        is associated to a power of $10$, with
-        both the numerator and the quotient [the result]
-        living inside the same set of columns, and only
-        the denominator living outside, in a time-space
-        porthole
-        of its own):
+        help demarcate the different columns of 
+        digits (in American notation each column 
+        of digits is associated to a power of $10$, 
+        with both the numerator and the quotient 
+        [the result] living inside the same set of 
+        columns, and only the denominator living 
+        outside, in a time-space porthole of its own):
 
         |> Image
             src images/svg_ch5_ex_11_over_7_longhand_eloise.svg
 
-        The division stops when we see the same remainder
-        twice—here ‘$40$’ reappears, which means that the
-        next digit of the quotient will be $5$ (like the second
-        digit of the quotient, that we obtained back when we
-        had a remainder of $40$), the next one $7$ (the third
-        digit of the quotient), etc—digits will repeat and the
-        “final” quotient when we let the division unravel infinitely
-        far to the right will be
+        The division stops when we see the same 
+        remainder twice—here ‘$40$’ reappears, which 
+        means that the next digit of the quotient 
+        will be $5$ (like the second digit of the 
+        quotient, that we obtained back when we had 
+        a remainder of $40$), the next one $7$ (the 
+        third digit of the quotient), etc—digits will 
+        repeat and the “final” quotient when we let 
+        the division unravel infinitely far to the right 
+        will be
 
         |> div
-            style font-size:1.65em;margin-top:-0.4em;margin-bottom:-0.5em;
+            style font-size:1.65em;margin:1em 0;
 
             $$
             1.\overline{571428}
             $$
 
-        ...where the decimal point is after the first ‘$1$’
-        because the first ‘$1$’ is in the ‘$10^0$’ column.
+        ...where the decimal point is after the 
+        first ‘$1$’ because the first ‘$1$’ is in the
+        ‘$10^0$’ column.
 
-        |> center
-            style margin-top:1.5em;
+        |> StarDivider
 
-            &thinsp;* * * *
+        |> SolutionNote
 
-        _Note 1._If you've never done this kind of thing before, the
-        division starts in this blank state:
+            If you've never done this kind of thing before, the
+            division starts in this blank state:
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.4em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.4em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg
 
-        We take the first digit 
-        of the numerator, which is ‘$1$’, ask “how many times does
-        $7$ go into $1$?”, we will write the answer here:
+            We take the first digit of the numerator, 
+            which is ‘$1$’, ask “how many times does
+            $7$ go into $1$?”, we will write the answer 
+            here:
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg
 
-        The answer is ‘$0$’ ($7$ goes $0$ times into $1$):
+            The answer is ‘$0$’ ($7$ goes $0$ times into $1$):
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg
 
-        We next add a digit from the numerator, giving
-        us $11$, we ask “how many
-        times does $7$ go into $11$?”, 
-        we will write the answer here:
+            We next add a digit from the numerator, giving
+            us $11$, we ask “how many times does $7$ go into 
+            $11$?”, we will write the answer here:
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg
 
-        The answer is ‘$1$’ ($7$ goes $1$ times into $11$):
+            The answer is ‘$1$’ ($7$ goes $1$ times into $11$):
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg
 
-        We subtract
+            We subtract
 
-        |> div
-            style font-size:1.65em;margin-top:-0.4em;margin-bottom:-0.5em;
+            |> div
+                style font-size:1.65em;margin:1em 0;
 
-            $$
-            1 \times 7
-            $$
+                $$
+                1 \times 7
+                $$
 
-        from $11$, giving us a new remainder
-        of $4$ (the very first “remainder” is actually $11$,
-        before anything starts) (before anything started we
-        had $11 = 7 \times 0 + 11$, and now we have
-        $11 = 7 \times 1 + 4$):
+            from $11$, giving us a new remainder
+            of $4$ (the very first “remainder” is actually $11$,
+            before anything starts) (before anything started we
+            had $11 = 7 \times 0 + 11$, and now we have
+            $11 = 7 \times 1 + 4$):
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg
 
-        Because $7$ does not fit into $4$ (and if it did,
-        we would have done something wrong)
-        we “bring down a $0$” that is actually part of
-        a hidden sequence of $0$'s sitting to the right
-        of $11$:
+            Because $7$ does not fit into $4$ (and if it did,
+            we would have done something wrong)
+            we “bring down a $0$” that is actually part of
+            a hidden sequence of $0$'s sitting to the right
+            of $11$:
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg
 
-        We ask “how many times does $7$ go into $40$?”,
-        we will write the answer here:
+            We ask “how many times does $7$ go into $40$?”,
+            we will write the answer here:
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg
 
-        The answer is ‘$5$’ ($7$ goes $5$ times into $40$):
+            The answer is ‘$5$’ ($7$ goes $5$ times into $40$):
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg
 
-        We subtract
+            We subtract
 
-        |> div
-            style font-size:1.65em;margin-top:-0.4em;margin-bottom:-0.5em;
+            |> div
+                style font-size:1.65em;margin:1em 0;
 
-            $$
-            5\times 7
-            $$
+                $$
+                5\times 7
+                $$
 
-        from $40$, giving us a new remainder
-        of $5$ 
-        (well, to be technical, the remainder is actually
-        $5 \times 10^{-1}$, not $5$, but 
-        the teacher at the board will often say “$5$”):
+            from $40$, giving us a new remainder
+            of $5$ 
+            (well, to be technical, the remainder is actually
+            $5 \times 10^{-1}$, not $5$, but 
+            the teacher at the board will often say “$5$”):
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg
 
-        Because $7$ does not fit into $5$, we bring
-        another $0$ down from our infinite reserve of
-        $0$'s:
+            Because $7$ does not fit into $5$, we bring
+            another $0$ down from our infinite reserve of
+            $0$'s:
 
-        |> Image
-            style margin-top:0.8em;margin-bottom:1.5em;
-            src images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg
+            |> Image
+                style margin-top:0.8em;margin-bottom:1.5em;
+                src images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg
 
-        (Etc.)
+            (Etc.)
 
 |> Exercise
 
@@ -1312,24 +1344,20 @@
 
         From which...
 
-        |> div
-            style font-size:1em;
-
-            $$
-            \Large \up{1.5}{22\over 7} = 3.\overline{142857}\\
-            \Large \up{1.7}{33\over 7} = 4.\overline{714285}\\
-            \Large \up{1.7}{44\over 7} = 6.\overline{285714}
-            $$
+        $$
+        \Large \up{1.5}{22\over 7} = 3.\overline{142857}\\
+        \Large \up{1.7}{33\over 7} = 4.\overline{714285}\\
+        \Large \up{1.7}{44\over 7} = 6.\overline{285714}
+        $$
 
         ...because the digits of the quotient are,
         in each case, about to
         restart from the first digit 
         after the decimal point.
 
-        _Note 1._Because...
+        |> SolutionNote
 
-        |> div
-            style font-size:1em;
+            Because...
 
             $$
             \displaylines{
@@ -1340,10 +1368,7 @@
             }
             $$
 
-        ...we thus have...
-
-        |> div
-            style font-size:1em;
+            ...we thus have...
 
             $$
             \displaylines{
@@ -1353,82 +1378,84 @@
             \Large \up{1.7}4\eta \approx 6.\overline{285714}}
             $$
 
-        ...though none of these estimates are actually
-        accurate to more than two decimal places. (While all
-        are accurate up to _at least_two decimal places.)
+            ...though none of these estimates are actually
+            accurate to more than two decimal places. (While all
+            are accurate up to _at least_two decimal places.)
 
-        _Note 2._As mentioned in Note 1 of 
-        Exercise 24, Chapter 3, these approximations
-        are about half-a-part-in-a-thousand
-        too large, or to be more exact,
+        |> SolutionNote
 
-        $$
-        \approx 0.0004
-        $$
+            As mentioned in Note 1 of Exercise 24, 
+            Chapter 3, these approximations are about 
+            half-a-part-in-a-thousand too large, or to 
+            be more exact,
 
-        too large in relative terms. I.e., you can subtract
+            $$
+            \approx 0.0004
+            $$
 
-        $$
-        \approx 1.\overline{571428} \cdot 0.0004 \approx 0.0006
-        $$
+            too large in relative terms. I.e., you can subtract
 
-        from
+            $$
+            \approx 1.\overline{571428} \cdot 0.0004 \approx 0.0006
+            $$
 
-        $$
-        \approx 1.\overline{571428}
-        $$
+            from
 
-        to get a better approximation for $\eta$, subtract
+            $$
+            \approx 1.\overline{571428}
+            $$
 
-        $$
-        \approx 3.\overline{142857} \cdot 0.0004 \approx 0.0012
-        $$
+            to get a better approximation for $\eta$, subtract
 
-        from
+            $$
+            \approx 3.\overline{142857} \cdot 0.0004 \approx 0.0012
+            $$
 
-        $$
-        \approx 3.\overline{142857}
-        $$
+            from
 
-        to get a better approximation for $2\eta$, subtract
+            $$
+            \approx 3.\overline{142857}
+            $$
 
-        $$
-        \approx 4.\overline{714285} \cdot 0.0004 \approx 0.0019
-        $$
+            to get a better approximation for $2\eta$, subtract
 
-        from
+            $$
+            \approx 4.\overline{714285} \cdot 0.0004 \approx 0.0019
+            $$
 
-        $$
-        \approx 4.\overline{714285}
-        $$
+            from
 
-        to get a better approximation for $3\eta$, subtract
+            $$
+            \approx 4.\overline{714285}
+            $$
 
-        $$
-        \approx 6.\overline{285714} \cdot 0.0004 \approx 0.0025
-        $$
+            to get a better approximation for $3\eta$, subtract
 
-        from
+            $$
+            \approx 6.\overline{285714} \cdot 0.0004 \approx 0.0025
+            $$
 
-        $$
-        \approx 6.\overline{285714}
-        $$
+            from
 
-        to get a better approximation for $4\eta$. The resulting
-        approximations end up being...
+            $$
+            \approx 6.\overline{285714}
+            $$
 
-        $$
-        \displaylines{
-        \Large         \eta \approx  1.5708\\
-        \Large \up{1.7}2\eta \approx 3.1416\\
-        \Large \up{1.7}3\eta \approx 4.7123\\
-        \Large \up{1.7}4\eta \approx 6.2832}
-        $$
+            to get a better approximation for $4\eta$. The resulting
+            approximations end up being...
 
-        ...that are correct approximations up to
-        the fourth digit, it turns out, modulo
-        rounding off of the fifth digit. (But these
-        are not worth learning by heart, by any means.)
+            $$
+            \displaylines{
+            \Large         \eta \approx  1.5708\\
+            \Large \up{1.7}2\eta \approx 3.1416\\
+            \Large \up{1.7}3\eta \approx 4.7123\\
+            \Large \up{1.7}4\eta \approx 6.2832}
+            $$
+
+            ...that are correct approximations up to
+            the fourth digit, it turns out, modulo
+            rounding off of the fifth digit. (But these
+            are not worth learning by heart, by any means.)
 
 |> Exercise
 
@@ -1447,15 +1474,13 @@
     equation is implied from the quotient and the 
     new (last) remainder at that point?
 
-    |> div
-
-        $$
-        \begin{array}{c|cc}
-        \up{1}\dn{0.5} n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
-        \up{1}\dn{0.5} n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
-        \\
-        \end{array}
-        $$
+    $$
+    \begin{array}{c|cc}
+    \up{1}\dn{0.5} n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
+    \up{1}\dn{0.5} n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
+    \\
+    \end{array}
+    $$
 
     |> Solution
 
@@ -1500,7 +1525,6 @@
             go into $1$?”, the answer will go here:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_1.svg
 
             The answer is $0$ (that we need not write
@@ -1509,7 +1533,6 @@
             go into $15$?”, the answer will go here:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_2.svg
 
             The answer is $0$, we move to asking
@@ -1517,7 +1540,6 @@
             go into $155$?”, the answer will go here:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_3.svg
 
             The answer is $0$, we move to asking
@@ -1525,7 +1547,6 @@
             go into $1554$?”, the answer will go here:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_4.svg
 
             The answer is $2$, we subtract $2 \times 777$
@@ -1533,21 +1554,18 @@
             the remainder: 
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_4b.svg
 
             (FYI, the remainder now consists of these yellow
             digits:)
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_4remainder.svg
 
             Continuing, we bring down a $2$, ask “how many times does $777$
             go into $2$?”, the answer will go here:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_5b_v2.svg
 
             The answer is $0$; we bring down a $4$, ask “how many 
@@ -1555,7 +1573,6 @@
             here:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_6b_v2.svg
 
             The answer is $0$; we bring down an $8$, ask “how many 
@@ -1563,7 +1580,6 @@
             here:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_7b_v2.svg
 
             The answer is $0$; we bring down a $6$, ask “how many 
@@ -1571,21 +1587,18 @@
             here:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_8b_v2.svg
 
             The answer is $3$, we subtract $3 \times 777$
             from $2648$, giving us a new remainder: 
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_8c.svg
 
             (And to be specific, the remainder is now formed
             by...
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_inside_8remainder.svg
 
             ...these yellow digits.) Etc.
@@ -1596,7 +1609,6 @@
             long-form subtraction, say your subtraction is this:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_a.svg
 
             You can either treat the top or bottom number as an
@@ -1608,7 +1620,6 @@
             would be as follows:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_odometer_1.svg
 
             Starting from the right end of the subtraction, we ask
@@ -1617,13 +1628,11 @@
             will write the answer below:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_c.svg
 
             The answer is: $4$ [miles*] (*say):
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_d.svg
 
             But the odometer will pass
@@ -1632,7 +1641,6 @@
             $12 - 8 = 4$, as some teachers put it): 
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_e.svg
 
             Next we ask “by how many [$10$s of miles] does the car need
@@ -1640,13 +1648,11 @@
             will write the answer below:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_f.svg
 
             The answer is: $6$ [$10$s of miles]:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_g.svg
 
             But here too the odometer will pass
@@ -1657,7 +1663,6 @@
             effect:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_h.svg
 
             Next we ask “by how many [$100$s of miles] does the car need
@@ -1665,26 +1670,22 @@
             will write the answer below:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_i.svg
 
             The answer is: $9$ [$100$s of miles]:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_j.svg
 
             Next we ask “by how many [$1000$s of miles] does the car need
             to be driven back, to turn the ‘$9$’ into a ‘$5$’?”:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_k.svg
 
             The answer is: $4$ [$1000$s of miles]:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_big_division_big_subtraction_l.svg
 
             Etc—we finally obtain:
@@ -1927,7 +1928,6 @@
     $\theta$?
 
     |> Image
-        style margin-top:1em;margin-bottom:1em;
         src images/svg_ch5_ex_angle_sum_180_followup.svg
 
     It is $\theta$, as well. One method of
@@ -1935,7 +1935,6 @@
     of my complement is myself”:
 
     |> Image
-        style margin-top:1em;margin-bottom:1em;
         src images/svg_ch5_ex_angle_sum_180_followup_explanation.svg
 
     Another method of deduction uses the fact that,
@@ -1962,7 +1961,6 @@
     the center of the circle:
 
     |> Image
-        style margin-top:1em;margin-bottom:0.8em;
         src images/svg_ch5_ex_tangent_angle_v2.svg
 
     The ending and starting half-lines of the 
@@ -2007,7 +2005,6 @@
     If each of these dotted lines...
 
     |> Image
-        style margin-top:0.7em;margin-bottom:1em;
         src images/svg_ch5_ex_max_xy_x_plus_y_isosets.svg
 
     ...is a so-called
@@ -2015,8 +2012,8 @@
     __isoset__
 
     (also: _isoline_, _contour line_, _isoquant_,
-    _isosurface_,_isovalue line_, or _isovalue set_$\rt{0.1}$)
-    of the two-variable function
+    _isosurface_, _isovalue line_, or _isovalue set_ 
+    $\rt{0.1}$) of the two-variable function
 
     $$
     f : \rr^2\ra \rr
@@ -2457,7 +2454,6 @@
             through the line $x = -y$:
 
             |> Image
-                style margin-top:1em;margin-bottom:1em;
                 src images/svg_ch5_ex_max_xy_mirror_image_other_way.svg
 
             Indeed, this symmetry can be obtained as the
@@ -2557,7 +2553,6 @@
         Exercise 22:
 
         |> Image
-            style margin-top:1.2em;margin-bottom:1em;
             src images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg
 
         We find:
@@ -2700,8 +2695,7 @@
     Rewrite each case:
 
     |> div
-        style line-height:0;
-        class column
+        class slice
         |> span
             style width:50px;display:inline-block;margin-top:0.8em;
             |> span
@@ -2719,8 +2713,6 @@
         |> span
 
             as an expression of the form $$x \ra \dots$$
-        |> span
-            style width:50px;display:inline-block;
         |> span
 
             for some value of “$\dots$”.
@@ -2807,34 +2799,35 @@
     $$
     ...are, respectively, obtained by:
 
-    |> div
-        class column
-        |> ul
-            class l1
-            |> li
+    |> ul
+        class slice
+        style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;
+        |> li
 
-                horizontally translating the graph of $f$ by $A$ units to the left;
-            |> li
+            horizontally translating the graph of $f$ by $A$ units to the left;
+        |> li
 
-                horizontally compressing the graph of $f$ by a factor $B$;
-            |> li
+            horizontally compressing the graph of $f$ by a factor $B$;
+        |> li
 
-                vertically translating the graph of $f$ by $A$ units upward;
-            |> li
+            vertically translating the graph of $f$ by $A$ units upward;
+        |> li
 
-                vertically dilating (scaling) the graph of $f$ by a factor $B$.
+            vertically dilating (scaling) the graph of $f$ by a factor $B$.
 
-    (Cf. Exercise 7 of Chapter 3, 
-    Exercise 14 of Chapter 3.)
+    (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
+    Chapter 3.)
 
 |> Exercise
 
     Prove that $\cos\cdot\sin$, $\cos^2$, and $\sin^2$ 
-    are periodic mod $2\eta$, where a function $f$ 
-    is “periodic mod $T$” if
+    are periodic mod $2\eta$, where a function $f$ is 
+    “periodic mod $T$” if
+
     $$
     {f(x + T) = f(x)}
     $$
+
     for all $x \in \rr$.
 
     |> Solution
@@ -2911,11 +2904,10 @@
 
 |> Exercise
 
-    Given the graphs
-    $y = \cos(x)\sin(x)$ and $y = \cos^2(x)$...
+    Given the graphs $y = \cos(x)\sin(x)$ and 
+    $y = \cos^2(x)$...
 
     |> Image
-        style margin-top:1em;margin-bottom:1em;
         src images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg
 
     ...it _appears_that one graph is a
@@ -2924,83 +2916,85 @@
     of translation be? (Vertical _&_ horizontal.)
     What algebraic identity would this imply?
 
-    We know from Exercise 21 that the 
-    highest point on the bump immediately to the 
-    right of $(0, 0)$ on the graph $y = \cos(x)\sin(x)$ 
-    has coordinates $(\eta/2, 0.5)$:
+    |> Solution
 
-    |> Image
-        src images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg
+        We know from Exercise 21 that the 
+        highest point on the bump immediately to the 
+        right of $(0, 0)$ on the graph $y = \cos(x)\sin(x)$ 
+        has coordinates $(\eta/2, 0.5)$:
 
-    A horizontal translation of
-    $$
-    -{\eta\over 2}
-    $$
-    units and a vertical translation of
-    $$
-    {1\over 2}
-    $$
-    units bring this point onto
-    $$
-    (0, 1)
-    $$
-    that is a local maximum of $y = \cos^2(x)$; zoomed in:
+        |> Image
+            src images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg
 
-    |> Image
-        src images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg
-
-    We can therefore conjecture that the
-    afore-mentioned amounts of translation
-    will map $y = \cos(x)\sin(x)$ onto $y = \cos^2(x)$.
-    (And any integer multiple of $2\eta$ could
-    be added to the horizontal translation
-    since both curves are periodic modulo 
-    $2\eta$.)
-
-    Algebraically, this would indicate that
-
-    |> center
-
+        A horizontal translation of
         $$
-        \cos^2 = (u \ra {1\over 2} + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + {\eta\over 2})
+        -{\eta\over 2}
         $$
+        units and a vertical translation of
+        $$
+        {1\over 2}
+        $$
+        units bring this point onto
+        $$
+        (0, 1)
+        $$
+        that is a local maximum of $y = \cos^2(x)$; zoomed in:
 
-    ...or...
+        |> Image
+            src images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg
 
-    |> Image
-        src images/svg_ch5_ex_sinxcosx_and_cos2_comparison_three_boxes.svg
+        We can therefore conjecture that the
+        afore-mentioned amounts of translation
+        will map $y = \cos(x)\sin(x)$ onto $y = \cos^2(x)$.
+        (And any integer multiple of $2\eta$ could
+        be added to the horizontal translation
+        since both curves are periodic modulo 
+        $2\eta$.)
 
-    ...in a box diagram, where
+        Algebraically, this would indicate that
 
-    $$
-    w \ra w + {\eta\over 2}
-    $$
-
-    and
-
-    $$
-    u \ra u + {1\over 2}
-    $$
-
-    respectively effect a translation to
-    the left by $\eta/2$ and upward by $1/2$.
-    (Cf. Exercise 28.)
-
-    Or, placing an input “$x$” into each side
-    of the above equation, this would indicate
-    that...
-
-    |> center
-        style margin-top:1em;margin-bottom:1em;
-        |> div
-            style display:inline-block;border: 1px solid red;padding-left:1.5em;padding-right:1.5em;
+        |> center
 
             $$
-            \cos^2(x) = {1\over 2} + \cos(x + \eta/2)\sin(x + \eta/2)
+            \cos^2 = (u \ra {1\over 2} + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + {\eta\over 2})
             $$
 
-    ...for all $x\in \rr$—_if_this conjecture
-    about translation turns out to be true!!!
+        ...or...
+
+        |> Image
+            src images/svg_ch5_ex_sinxcosx_and_cos2_comparison_three_boxes.svg
+
+        ...in a box diagram, where
+
+        $$
+        w \ra w + {\eta\over 2}
+        $$
+
+        and
+
+        $$
+        u \ra u + {1\over 2}
+        $$
+
+        respectively effect a translation to
+        the left by $\eta/2$ and upward by $1/2$.
+        (Cf. Exercise 28.)
+
+        Or, placing an input “$x$” into each side
+        of the above equation, this would indicate
+        that...
+
+        |> center
+            style margin-top:1em;margin-bottom:1em;
+            |> div
+                style border:1px solid red;padding:1em 1em;width:fit-content;
+
+                $$
+                \cos^2(x) = {1\over 2} + \cos(x + \eta/2)\sin(x + \eta/2)
+                $$
+
+        ...for all $x\in \rr$—_if_this conjecture
+        about translation turns out to be true!!!
 
 |> Exercise
 
@@ -3013,7 +3007,7 @@
 
     of a vector $\vec{v}$ by a real number $c$.
 
-    |> SolutionNote
+    |> Solution
 
         We define
         $$
@@ -3048,8 +3042,9 @@
 
         |> SolutionNote
         
-            In some sense, the vector “wins” over the number, in
-            that their conjoint baby is a vector, not a number:
+            In some sense, the vector “wins” over the 
+            number, in that their conjoint baby is a vector, 
+            not a number:
 
             |> Image
                 src images/svg_ch5_ex_c_times_vector_box.svg

@@ -940,17 +940,17 @@ const Article = () => {
         <VerticalChunk>
           We also have these identities...
         </VerticalChunk>
-        <VerticalChunk indent={true}>
-          <center>
-            <MathBlock>
-              $$\displaylines&#123;
-              \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
-              \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
-              \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
-              \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
-              &#125;$$
-            </MathBlock>
-          </center>
+        <center>
+          <MathBlock>
+            $$\displaylines&#123;
+            \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
+            \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
+            \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
+            \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
+            &#125;$$
+          </MathBlock>
+        </center>
+        <VerticalChunk>
           ...that follow because one full turn around the
           circle brings you back to the same position, whereas
           a half-turn brings you around  to your{" "}
@@ -3739,14 +3739,12 @@ const Article = () => {
               diagram:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg"
-              style="margin-top:1.2em;margin-bottom:1.2em;" />
+            <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg" />
             <Pause />
             <VerticalChunk>
               (Or in the technical sense of taking the sum
-              of two functions, to be more exact—that is what the sum
-              of two functions looks like, pictorialized!)
+              of two functions, to be more exact—that is what 
+              the sum of two functions looks like, pictorialized!)
             </VerticalChunk>
             <VerticalChunk indent={true}>
               The line appears to be
@@ -3795,9 +3793,7 @@ const Article = () => {
                 line={-2.0} />
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg" />
             <Pause />
             <VerticalChunk>
               As cos goes through{" "}
@@ -3808,22 +3804,22 @@ const Article = () => {
               <Math>
                 $x = 0$
               </Math>
-              {" "}to{" "}
+              {" "}to 
+              {" "}
               <NoBreak>
                 <Math>
                   $x = 4\eta$
                 </Math>
                 ,
               </NoBreak>
-              {" "}the “bumpy
-              function” is therefore (roughly, from what we can see) a 
-              {" "}
+              {" "}the “bumpy function” is therefore 
+              (roughly, from what we can see) a{" "}
               <NoBreak>
                 “
                 <Math>
                   $10$
                 </Math>
-                ​
+                &#x200b;
               </NoBreak>
               {" "}{" "}
               <NoBreak>
@@ -3832,7 +3828,8 @@ const Article = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}sped-up version of cosine, i.e.,
+              {" "}
+              sped-up version of cosine, i.e.,
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4630,50 +4627,54 @@ const Article = () => {
             <VerticalChunk>
               (Then imagine summing together, squaring, etc.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <i>
-                Note 1.
-              </i>
-              It is, indeed,
-              intriguing that all of these functions appear to be
-              <i>
-                sinusoids
-              </i>
-              . (Formally defined as a
-              function of the form{" "}
-              <Math>
-                $x \ra A\cdot \sin(Bx + C) + D$
-              </Math>
-              {" "}for
-              some constants{" "}
-              <NoBreak>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                It is, indeed, intriguing that all of these 
+                functions appear to be
+                <i>
+                  sinusoids
+                </i>
+                . (Formally defined 
+                as a function of the form{" "}
                 <Math>
-                  $A$
+                  $x \ra A\cdot \sin(Bx + C) + D$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $C$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $D \in \rr$
-                </Math>
-                .)
-              </NoBreak>
-            </VerticalChunk>
+                {" "}
+                for some constants{" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $D \in \rr$
+                  </Math>
+                  .)
+                </NoBreak>
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={6}>
@@ -4778,38 +4779,36 @@ const Article = () => {
             <VerticalChunk>
               What we want is the multiplicative ratio that
               would take us from the bottom to the top side of 
-              this quadrilateral,
-              so that we can multiply by that ratio over and over
-              again:
+              this quadrilateral, so that we can multiply by that
+              ratio over and over again:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_snail_quad.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_snail_quad.svg" />
             <Pause />
             <VerticalChunk>
               But the two triangles involved are
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <Pause />
+            <CentralDisplay>
               NOT RIGHT TRIANGLES
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              and we must break them into smaller parts that{" "}
+            </CentralDisplay>
+            <Pause />
+            <VerticalChunk>
+              and we must break them into smaller parts that 
+              {" "}
               <i>
                 are
               </i>
-              right triangles in order to 
-              use trigonometric functions.
-              Specifically, as per this drawing:
+              {" "}right triangles in order to use trigonometric
+              functions. Specifically, as per this drawing:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_snail_quad_four_parts.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_big_snail_quad_four_parts.svg" />
             <Pause />
             <VerticalChunk>
-              The multiplicative ratios that correspond to the first and
-              third arrows (in arrow-order from bottom to top) are
+              The multiplicative ratios that correspond to the
+              first and third arrows (in arrow-order from bottom 
+              to top) are
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4835,9 +4834,10 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              because these are the opposite (no pun intended), i.e.,“opposite-to-hypotenuse” arrows.
-              The “big grey arrow” ratio from two diagrams ago is obtained
-              by multiplying these four small-arrow ratios together, or
+              because these are the opposite (no pun intended),
+              i.e.,“opposite-to-hypotenuse” arrows. The “big grey 
+              arrow” ratio from two diagrams ago is obtained by multiplying 
+              these four small-arrow ratios together, or
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4925,105 +4925,112 @@ const Article = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              from the drawing!
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <i>
-                Note 1.
-              </i>
-              While the final answer can be written
+              {" "}from the drawing!
             </VerticalChunk>
             <Pause />
-            <MathBlock>
-              $$(\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^&#123;36&#125;$$
-            </MathBlock>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                While the final answer can be written
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$(\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^&#123;36&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                or
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\left(&#123;\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)&#125;\right)^&#123;\!36&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                teachers typically want to see such expressions
+                evualuated out, to make sure that you and your 
+                calculator form a good team. (And, to be fair,
+                catching one's own calculator mistakes by virtue
+                of spotting a nonsensical number is a skill in
+                itself.)
+              </VerticalChunk>
+            </SolutionNote>
             <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\left(&#123;\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)&#125;\right)^&#123;\!36&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              teachers typically want to see such
-              expressions evualuated out, to make sure that you
-              and your calculator form a good team.
-              (And, to be fair, catching one's own calculator
-              mistakes by virtue of spotting a nonsensical
-              number is a skill in itself.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <i>
-                Note 2.
-              </i>
-              Instead of counting the number of times that the
-              quadrilateral appears in the double spiral by hand
-              one can 
-              calculate the amount of rotation between one
-              quadrilateral and the next, which is this purple angle:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
-            <Pause />
-            <VerticalChunk>
-              The key to measuring this
-              angle is the concept of an “alternating angle”,
-              whereby{" "}
-              <Math>
-                $68^\circ$
-              </Math>
-              {" "}reappears to the left of{" "}
-              <NoBreak>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Instead of counting the number of times that the
+                quadrilateral appears in the double spiral by hand
+                one can 
+                calculate the amount of rotation between one
+                quadrilateral and the next, which is this purple angle:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg"
+                style="margin-top:0.8em;margin-bottom:1em;" />
+              <Pause />
+              <VerticalChunk>
+                The key to measuring this
+                angle is the concept of an “alternating angle”,
+                whereby{" "}
                 <Math>
-                  $71^\circ$
+                  $68^\circ$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}
-              here:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
-            <Pause />
-            <VerticalChunk>
-              Then we can calculate the purple angle as
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div class="relative">
-                <MathBlock>
-                  $$68^\circ + 71^\circ + 61^\circ - 180^\circ = 20^\circ$$
-                </MathBlock>
-              </div>
-              meaning that each quadrilateral is rotated by{" "}
-              <Math>
-                $20^\circ$
-              </Math>
-              {" "}from the
-              previous, and in one turn of the spiral there are
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$&#123;360^\circ\over 20^\circ&#125; = 18$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              quadrilaterals, or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$2 \times 18 = 36$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              quadrilaterals for two turns!
-            </VerticalChunk>
+                {" "}reappears to the left of{" "}
+                <NoBreak>
+                  <Math>
+                    $71^\circ$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                here:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg"
+                style="margin-top:0.8em;margin-bottom:1em;" />
+              <Pause />
+              <VerticalChunk>
+                Then we can calculate the purple angle as
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$68^\circ + 71^\circ + 61^\circ - 180^\circ = 20^\circ$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                meaning that each quadrilateral is rotated by{" "}
+                <Math>
+                  $20^\circ$
+                </Math>
+                {" "}from the
+                previous, and in one turn of the spiral there are
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$&#123;360^\circ\over 20^\circ&#125; = 18$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                quadrilaterals, or
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$2 \times 18 = 36$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                quadrilaterals for two turns!
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
@@ -5582,9 +5589,9 @@ const Article = () => {
               $t$
             </Math>
             {" "}what is the most likely motion
-            that the particle is undergoing? 
-            In that case, what is the 
-            geometric meaning of the constants{" "}
+            that the particle is undergoing? In that 
+            case, what is the geometric meaning of the
+            constants{" "}
             <NoBreak>
               <Math>
                 $A$
@@ -5628,95 +5635,98 @@ const Article = () => {
               standards of simplicity, admittedly) is circular
               motion at uniform speed. In this case:
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div class="column">
-                <ul style="margin-left:50px;margin-right:20px;margin-top:20px;margin-bottom:1em;">
-                  <li>
-                    <Math>
-                      $A$
-                    </Math>
-                    {" "}is the radius of the circle
-                  </li>
-                  <li style="padding-top:0.2em;">
-                    <Math>
-                      $D$
-                    </Math>
-                    {" "}is the{" "}
-                    <NoBreak>
-                      <Math>
-                        $x$
-                      </Math>
-                      -coordinate
-                    </NoBreak>
-                    {" "}of the circle's center
-                  </li>
-                </ul>
-              </div>
+            <ul
+              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;"
+              class="slice">
+              <li>
+                <Math>
+                  $A$
+                </Math>
+                {" "}is the radius of the circle
+              </li>
+              <li>
+                <Math>
+                  $D$
+                </Math>
+                {" "}is the{" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}of the circle's center
+              </li>
+            </ul>
+            <VerticalChunk>
               And either:
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div class="column">
-                <ul style="margin-left:50px;margin-right:20px;margin-top:20px;margin-bottom:1em;">
-                  <li>
-                    <Math>
-                      $B$
-                    </Math>
-                    {" "}is the counterclockwise{" "}
-                    <i>
-                      angular speed
-                    </i>
-                    /
-                    <i>
-                      angular frequency
-                    </i>
-                    (radians per unit time) and{" "}
-                    <Math>
-                      $C$
-                    </Math>
-                    {" "}is the counterclockwise
-                    starting angle{" "}
-                    <NoBreak>
-                      (
-                      <Math>
-                        $t = 0$
-                      </Math>
-                      )
-                    </NoBreak>
-                    {" "}of the particle, as measured
-                    from a translate of the positive{" "}
-                    <Math>
-                      $x$
-                    </Math>
-                    {" "}axis going through
-                    the center of the circle
-                  </li>
-                </ul>
-              </div>
+            <ul
+              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;"
+              class="slice">
+              <li>
+                <Math>
+                  $B$
+                </Math>
+                {" "}is the counterclockwise 
+                {" "}
+                <i>
+                  angular speed
+                </i>
+                /
+                <i>
+                  angular frequency
+                </i>
+                {" "}(radians per 
+                unit time) and{" "}
+                <Math>
+                  $C$
+                </Math>
+                {" "}is the counterclockwise 
+                starting angle{" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $t = 0$
+                  </Math>
+                  )
+                </NoBreak>
+                {" "}of the particle, as 
+                measured from a translate of the positive{" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "}
+                axis going through the center of the circle
+              </li>
+            </ul>
+            <VerticalChunk>
               Or:
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div class="column">
-                <ul style="margin-left:50px;margin-right:20px;margin-top:20px;margin-bottom:1em;">
-                  <li>
-                    <Math>
-                      $-B$
-                    </Math>
-                    {" "}is the counterclockwise angular speed/angular frequency
-                    of the particle and{" "}
-                    <Math>
-                      $-C$
-                    </Math>
-                    {" "}is the counterclockwise
-                    starting angle of the particle, as measured
-                    from a translate of the positive{" "}
-                    <Math>
-                      $x$
-                    </Math>
-                    {" "}axis going
-                    through the center of the circle
-                  </li>
-                </ul>
-              </div>
+            <ul
+              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;"
+              class="slice">
+              <li>
+                <Math>
+                  $-B$
+                </Math>
+                {" "}is the counterclockwise 
+                angular speed/angular frequency of the particle 
+                and{" "}
+                <Math>
+                  $-C$
+                </Math>
+                {" "}is the counterclockwise starting angle 
+                of the particle, as measured from a translate of 
+                the positive{" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "}axis going through the center 
+                of the circle
+              </li>
+            </ul>
+            <VerticalChunk>
               In more detail, every time
             </VerticalChunk>
             <Pause />
@@ -5754,39 +5764,40 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is an amount of radians, because anything fed to
-              ‘cos’ is an amount of radians; and so{" "}
+              is an amount of radians, because anything 
+              fed to ‘cos’ is an amount of radians; and so 
+              {" "}
               <Math>
                 $B$
               </Math>
-              {" "}ends up
-              being the
+              {" "}ends up being the
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <Pause />
+            <CentralDisplayItalic>
               radian increase per unit time,
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
               or angular speed, of the particle.
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              However, said “increase” in radians can be associated 
-              to either
-              clockwise or a counterclockwise motion, there is no
-              telling. 
+              However, said “increase” in radians can be
+              associated to either clockwise or a 
+              counterclockwise motion, there is no telling. 
               (Quite aside from the fact that{" "}
               <Math>
                 $B$
               </Math>
-              {" "}might be negative.)
-              Indeed,
-              while 
-              we have a tendency to think of{" "}
+              {" "}might be
+              negative.) Indeed, while we have a tendency to
+              think of{" "}
               <Math>
                 $\cos(x)$
               </Math>
               {" "}as
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <Pause />
+            <CentralDisplayItalic>
               the{" "}
               <NoBreak>
                 <Math>
@@ -5799,22 +5810,22 @@ const Article = () => {
                 $x$
               </Math>
               {" "}units
-            </VerticalChunk>
-            <br />
-            <VerticalChunk>
+              <br />
               counterclockwise from{" "}
               <Math>
                 $(1, 0)$
               </Math>
               {" "}on the unit circle
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
               <Math>
                 $\cos(x)$
               </Math>
               {" "}is also
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <Pause />
+            <CentralDisplayItalic>
               the{" "}
               <NoBreak>
                 <Math>
@@ -5827,16 +5838,15 @@ const Article = () => {
                 $x$
               </Math>
               {" "}units
-            </VerticalChunk>
-            <br />
-            <VerticalChunk>
+              <br />
               clockwise from{" "}
               <Math>
                 $(1, 0)$
               </Math>
               {" "}on the unit circle
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
               [“counterclockwise”{" "}
               <Math>
                 $\ra$
@@ -5850,7 +5860,8 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is an amount of counterclockwise radians; per the other,
+              is an amount of counterclockwise radians; per 
+              the other,
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -5862,68 +5873,63 @@ const Article = () => {
               <i>
                 clockwise
               </i>
-              radians.
-              The following diagram
-              illustrates the two possibilities:
+              radians. The following 
+              diagram illustrates the two possibilities:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg"
-              style="margin-top:1em;margin-bottom:1.1em;" />
+            <Image src="/images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg" />
             <Pause />
             <VerticalChunk>
               (Or... ~ ~ ~ ~ ~ ~ ~ ~ ~
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg"
-              style="margin-top:1em;margin-bottom:1.1em;" />
+            <Image src="/images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg" />
             <Pause />
             <VerticalChunk>
-              ...to put everything in terms of counterclockwise-ness.)
-              This accounts for the two solutions listed above.
-              (But it can only be one of those two
-              solutions, having made the “Occam's razor” assumption
-              that the particle is traveling at uniform speed around
-              a circle.) (Nb: In particular, “uniform speed” precludes
-              sudden reversals of direction at either end of the circle,
-              if you were at all thinking of that, for speed
-              would be undefined at those points where direction is reversed.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <i>
-                Note 1.
-              </i>
-              If you harbor any doubts about there being no more
-              than two solutions, picture this diagram...
+              ...to put everything in terms of 
+              counterclockwise-ness.) This accounts for 
+              the two solutions listed above. (But it can 
+              only be one of those two solutions, having made 
+              the “Occam's razor” assumption that the 
+              particle is traveling at uniform speed around 
+              a circle.) (Nb: In particular, “uniform speed” 
+              precludes sudden reversals of direction at either 
+              end of the circle, if you were at all thinking 
+              of that, for speed would be undefined at 
+              those points where direction is reversed.)
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_Bt_plus_C_black_on_white.svg"
-              style="width:190px;margin-top:1.0em;margin-bottom:0.8em;" />
-            <Pause />
-            <VerticalChunk>
-              ...and imagine the vertical line scanning
-              to the left
-            </VerticalChunk>
-            <br />
-            <VerticalChunk>
-              and to the right again 
-              as it tracks the{" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "}
-              of a particle going around the circle, unseen. 
-              Then there is one clockwise particle that tracks
-              with the line, and one counterclockwise particle that
-              tracks with the line, but no more, 
-              insofar as non-direction-reversing
-              particles are concerned!
-            </VerticalChunk>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                If you harbor any doubts about there being no more
+                than two solutions, picture this diagram...
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_Bt_plus_C_black_on_white.svg" />
+              <Pause />
+              <VerticalChunk>
+                ...and imagine the vertical line scanning 
+                to the left and to the right again as it 
+                tracks the{" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}of a particle going 
+                around the circle, unseen. Then there is one 
+                clockwise particle that tracks with the line, 
+                and one counterclockwise particle that tracks 
+                with the line, but no more, insofar as 
+                non-direction-reversing particles are 
+                concerned!
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={11}>
@@ -6167,9 +6173,8 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is the
-              quarter-circumference of a circle (any circle) divided
-              by its radius, and, correspondingly,
+              is the quarter-circumference of a circle (any 
+              circle) divided by its radius, and, correspondingly,
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -6177,8 +6182,8 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is the circumference of a circle (any circle) divided
-              by its radius.
+              is the circumference of a circle (any circle) 
+              divided by its radius.
             </VerticalChunk>
             <Pause />
             <SolutionNote>
@@ -6187,8 +6192,8 @@ const Article = () => {
                   Note 1.
                 </i>
                 {" "}
-                As one consequence,
-                it follows that the circumference of a circle is
+                As one consequence, it follows that the circumference 
+                of a circle is
               </VerticalChunk>
               <Pause />
               <MathBlock>
@@ -6210,8 +6215,16 @@ const Article = () => {
                   Note 2.
                 </i>
                 {" "}
-                These “ratio descriptions” 
-                of{" "}
+                These “ratio descriptions” of{" "}
+                <Math>
+                  $\eta$
+                </Math>
+                {" "}and 
+                {" "}
+                <Math>
+                  $4\eta$
+                </Math>
+                {" "}also follow by viewing{" "}
                 <Math>
                   $\eta$
                 </Math>
@@ -6220,18 +6233,8 @@ const Article = () => {
                   $4\eta$
                 </Math>
                 {" "}
-                also follow 
-                by viewing 
-                {" "}
-                <Math>
-                  $\eta$
-                </Math>
-                {" "}and{" "}
-                <Math>
-                  $4\eta$
-                </Math>
-                {" "}as the radian values
-                of a right angle and a full angle, respectively.
+                as the radian values of a right angle and a full angle, 
+                respectively.
               </VerticalChunk>
             </SolutionNote>
           </Solution>
@@ -6257,28 +6260,27 @@ const Article = () => {
             <VerticalChunk>
               Here is the division in American notation
               overlayed on top of a “Plaza” wallpaper to
-              help demarcate the different columns of digits
-              (in American notation each column of digits
-              is associated to a power of{" "}
+              help demarcate the different columns of 
+              digits (in American notation each column 
+              of digits is associated to a power of{" "}
               <NoBreak>
                 <Math>
                   $10$
                 </Math>
                 ,
               </NoBreak>
-              {" "}with
-              both the numerator and the quotient [the result]
-              living inside the same set of columns, and only
-              the denominator living outside, in a time-space
-              porthole
-              of its own):
+              {" "}
+              with both the numerator and the quotient 
+              [the result] living inside the same set of 
+              columns, and only the denominator living 
+              outside, in a time-space porthole of its own):
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch5_ex_11_over_7_longhand_eloise.svg" />
             <Pause />
             <VerticalChunk>
-              The division stops when we see the same remainder
-              twice—here{" "}
+              The division stops when we see the same 
+              remainder twice—here{" "}
               <NoBreak>
                 ‘
                 <Math>
@@ -6286,14 +6288,15 @@ const Article = () => {
                 </Math>
                 ’
               </NoBreak>
-              {" "}reappears, which means that the
-              next digit of the quotient will be{" "}
+              {" "}reappears, which 
+              means that the next digit of the quotient 
+              will be{" "}
               <Math>
                 $5$
               </Math>
-              {" "}(like the second
-              digit of the quotient, that we obtained back when we
-              had a remainder of{" "}
+              {" "}(like the second digit of the 
+              quotient, that we obtained back when we had 
+              a remainder of{" "}
               <NoBreak>
                 <Math>
                   $40$
@@ -6304,18 +6307,20 @@ const Article = () => {
               <Math>
                 $7$
               </Math>
-              {" "}(the third
-              digit of the quotient), etc—digits will repeat and the
-              “final” quotient when we let the division unravel infinitely
-              far to the right will be
+              {" "}(the 
+              third digit of the quotient), etc—digits will 
+              repeat and the “final” quotient when we let 
+              the division unravel infinitely far to the right 
+              will be
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <div style="font-size:1.65em;margin-top:-0.4em;margin-bottom:-0.5em;">
+              <div style="font-size:1.65em;margin:1em 0;">
                 <MathBlock>
                   $$1.\overline&#123;571428&#125;$$
                 </MathBlock>
               </div>
-              ...where the decimal point is after the first{" "}
+              ...where the decimal point is after the 
+              first{" "}
               <NoBreak>
                 ‘
                 <Math>
@@ -6323,16 +6328,16 @@ const Article = () => {
                 </Math>
                 ’
               </NoBreak>
+              {" "}because the first{" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}is in the
               {" "}
-              because the first{" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $1$
-                </Math>
-                ’
-              </NoBreak>
-              {" "}is in the{" "}
               <NoBreak>
                 ‘
                 <Math>
@@ -6342,376 +6347,377 @@ const Article = () => {
               </NoBreak>
               {" "}column.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <center style="margin-top:1.5em;">
-                &thinsp;* * * *
-              </center>
-              {" "}{" "}
-              <i>
-                Note 1.
-              </i>
-              If you've never done this kind of thing before, the
-              division starts in this blank state:
-            </VerticalChunk>
+            <StarDivider />
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg"
-              style="margin-top:0.8em;margin-bottom:1.4em;" />
-            <Pause />
-            <VerticalChunk>
-              We take the first digit 
-              of the numerator, which is{" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $1$
-                </Math>
-                ’,
-              </NoBreak>
-              {" "}ask “how many times does
-              {" "}
-              <Math>
-                $7$
-              </Math>
-              {" "}go into{" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ?”,
-              </NoBreak>
-              {" "}we will write the answer here:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              The answer is{" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $0$
-                </Math>
-                ’
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                (
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                If you've never done this kind of thing before, the
+                division starts in this blank state:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg"
+                style="margin-top:0.8em;margin-bottom:1.4em;" />
+              <Pause />
+              <VerticalChunk>
+                We take the first digit of the numerator, 
+                which is{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $1$
+                  </Math>
+                  ’,
+                </NoBreak>
+                {" "}ask “how many times does
+                {" "}
                 <Math>
                   $7$
                 </Math>
-              </NoBreak>
-              {" "}goes{" "}
-              <Math>
-                $0$
-              </Math>
-              {" "}times into{" "}
-              <NoBreak>
+                {" "}go into{" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "}we will write the answer 
+                here:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                The answer is{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
+                {" "}goes{" "}
                 <Math>
-                  $1$
+                  $0$
                 </Math>
-                ):
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              We next add a digit from the numerator, giving
-              us{" "}
-              <NoBreak>
-                <Math>
-                  $11$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}we ask “how many
-              times does{" "}
-              <Math>
-                $7$
-              </Math>
-              {" "}go into{" "}
-              <NoBreak>
-                <Math>
-                  $11$
-                </Math>
-                ?”,
-              </NoBreak>
-              {" "}
-              we will write the answer here:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              The answer is{" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $1$
-                </Math>
-                ’
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                (
+                {" "}times into{" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ):
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                We next add a digit from the numerator, giving
+                us{" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}we ask “how many times does{" "}
                 <Math>
                   $7$
                 </Math>
-              </NoBreak>
-              {" "}goes{" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}times into{" "}
-              <NoBreak>
+                {" "}go into 
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "}we will write the answer here:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                The answer is{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $1$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
+                {" "}goes{" "}
                 <Math>
-                  $11$
+                  $1$
                 </Math>
-                ):
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              We subtract
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div style="font-size:1.65em;margin-top:-0.4em;margin-bottom:-0.5em;">
-                <MathBlock>
-                  $$1 \times 7$$
-                </MathBlock>
-              </div>
-              from{" "}
-              <NoBreak>
+                {" "}times into{" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ):
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                We subtract
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                <div style="font-size:1.65em;margin:1em 0;">
+                  <MathBlock>
+                    $$1 \times 7$$
+                  </MathBlock>
+                </div>
+                from{" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}giving us a new remainder
+                of{" "}
                 <Math>
-                  $11$
+                  $4$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}giving us a new remainder
-              of{" "}
-              <Math>
-                $4$
-              </Math>
-              {" "}(the very first “remainder” is actually{" "}
-              <NoBreak>
-                <Math>
-                  $11$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              before anything starts) (before anything started we
-              had{" "}
-              <NoBreak>
-                <Math>
-                  $11 = 7 \times 0 + 11$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and now we have
-              {" "}
-              <NoBreak>
-                <Math>
-                  $11 = 7 \times 1 + 4$
-                </Math>
-                ):
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              Because{" "}
-              <Math>
-                $7$
-              </Math>
-              {" "}does not fit into{" "}
-              <Math>
-                $4$
-              </Math>
-              {" "}(and if it did,
-              we would have done something wrong)
-              we “bring down a{" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}that is actually part of
-              a hidden sequence of{" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                's
-              </NoBreak>
-              {" "}sitting to the right
-              of{" "}
-              <NoBreak>
-                <Math>
-                  $11$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              We ask “how many times does{" "}
-              <Math>
-                $7$
-              </Math>
-              {" "}go into{" "}
-              <NoBreak>
-                <Math>
-                  $40$
-                </Math>
-                ?”,
-              </NoBreak>
-              {" "}
-              we will write the answer here:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              The answer is{" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $5$
-                </Math>
-                ’
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                (
+                {" "}(the very first “remainder” is actually{" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                before anything starts) (before anything started we
+                had{" "}
+                <NoBreak>
+                  <Math>
+                    $11 = 7 \times 0 + 11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}and now we have
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $11 = 7 \times 1 + 4$
+                  </Math>
+                  ):
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                Because{" "}
                 <Math>
                   $7$
                 </Math>
-              </NoBreak>
-              {" "}goes{" "}
-              <Math>
-                $5$
-              </Math>
-              {" "}times into{" "}
-              <NoBreak>
+                {" "}does not fit into{" "}
                 <Math>
-                  $40$
+                  $4$
                 </Math>
-                ):
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              We subtract
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div style="font-size:1.65em;margin-top:-0.4em;margin-bottom:-0.5em;">
-                <MathBlock>
-                  $$5\times 7$$
-                </MathBlock>
-              </div>
-              from{" "}
-              <NoBreak>
+                {" "}(and if it did,
+                we would have done something wrong)
+                we “bring down a{" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}that is actually part of
+                a hidden sequence of{" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "}sitting to the right
+                of{" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  :
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                We ask “how many times does{" "}
                 <Math>
-                  $40$
+                  $7$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}giving us a new remainder
-              of{" "}
-              <Math>
-                $5$
-              </Math>
-              {" "}
-              (well, to be technical, the remainder is actually
-              {" "}
-              <NoBreak>
-                <Math>
-                  $5 \times 10^&#123;-1&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}not{" "}
-              <NoBreak>
-                <Math>
-                  $5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}but 
-              the teacher at the board will often say{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $5$
-                </Math>
-                ”):
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              Because{" "}
-              <Math>
-                $7$
-              </Math>
-              {" "}does not fit into{" "}
-              <NoBreak>
+                {" "}go into{" "}
+                <NoBreak>
+                  <Math>
+                    $40$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "}
+                we will write the answer here:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                The answer is{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
+                {" "}goes{" "}
                 <Math>
                   $5$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}we bring
-              another{" "}
-              <Math>
-                $0$
-              </Math>
-              {" "}down from our infinite reserve of
-              {" "}
-              <NoBreak>
+                {" "}times into{" "}
+                <NoBreak>
+                  <Math>
+                    $40$
+                  </Math>
+                  ):
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                We subtract
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                <div style="font-size:1.65em;margin:1em 0;">
+                  <MathBlock>
+                    $$5\times 7$$
+                  </MathBlock>
+                </div>
+                from{" "}
+                <NoBreak>
+                  <Math>
+                    $40$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}giving us a new remainder
+                of{" "}
+                <Math>
+                  $5$
+                </Math>
+                {" "}
+                (well, to be technical, the remainder is actually
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $5 \times 10^&#123;-1&#125;$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}not{" "}
+                <NoBreak>
+                  <Math>
+                    $5$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}but 
+                the teacher at the board will often say{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $5$
+                  </Math>
+                  ”):
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                Because{" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "}does not fit into{" "}
+                <NoBreak>
+                  <Math>
+                    $5$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}we bring
+                another{" "}
                 <Math>
                   $0$
                 </Math>
-                's:
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg"
-              style="margin-top:0.8em;margin-bottom:1.5em;" />
-            <Pause />
-            <VerticalChunk>
-              (Etc.)
-            </VerticalChunk>
+                {" "}down from our infinite reserve of
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  's:
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <Image
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;" />
+              <Pause />
+              <VerticalChunk>
+                (Etc.)
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
@@ -6742,181 +6748,189 @@ const Article = () => {
             <VerticalChunk>
               From which...
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div style="font-size:1em;">
-                <MathBlock>
-                  $$\Large \up&#123;1.5&#125;&#123;22\over 7&#125; = 3.\overline&#123;142857&#125;\\
-                  \Large \up&#123;1.7&#125;&#123;33\over 7&#125; = 4.\overline&#123;714285&#125;\\
-                  \Large \up&#123;1.7&#125;&#123;44\over 7&#125; = 6.\overline&#123;285714&#125;$$
-                </MathBlock>
-              </div>
+            <Pause />
+            <MathBlock>
+              $$\Large \up&#123;1.5&#125;&#123;22\over 7&#125; = 3.\overline&#123;142857&#125;\\
+              \Large \up&#123;1.7&#125;&#123;33\over 7&#125; = 4.\overline&#123;714285&#125;\\
+              \Large \up&#123;1.7&#125;&#123;44\over 7&#125; = 6.\overline&#123;285714&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
               ...because the digits of the quotient are,
               in each case, about to
               restart from the first digit 
               after the decimal point.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <i>
-                Note 1.
-              </i>
-              Because...
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div style="font-size:1em;">
-                <MathBlock>
-                  $$\displaylines&#123;
-                  \Large         \eta  \approx&#123;11\over 7&#125;\\
-                  \Large \up&#123;1.7&#125;2\eta \approx&#123;22\over 7&#125;\\
-                  \Large \up&#123;1.7&#125;3\eta \approx&#123;33\over 7&#125;\\
-                  \Large \up&#123;1.7&#125;4\eta \approx&#123;44\over 7&#125;
-                  &#125;$$
-                </MathBlock>
-              </div>
-              ...we thus have...
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div style="font-size:1em;">
-                <MathBlock>
-                  $$\displaylines&#123;
-                  \Large         \eta \approx  1.\overline&#123;571428&#125;\\
-                  \Large \up&#123;1.7&#125;2\eta \approx 3.\overline&#123;142857&#125;\\
-                  \Large \up&#123;1.7&#125;3\eta \approx 4.\overline&#123;714285&#125;\\
-                  \Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;&#125;$$
-                </MathBlock>
-              </div>
-              ...though none of these estimates are actually
-              accurate to more than two decimal places. (While all
-              are accurate up to{" "}
-              <i>
-                at least
-              </i>
-              two decimal places.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <i>
-                Note 2.
-              </i>
-              As mentioned in Note 1 of 
-              Exercise 24, Chapter 3, these approximations
-              are about half-a-part-in-a-thousand
-              too large, or to be more exact,
-            </VerticalChunk>
             <Pause />
-            <MathBlock>
-              $$\approx 0.0004$$
-            </MathBlock>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Because...
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\displaylines&#123;
+                \Large         \eta  \approx&#123;11\over 7&#125;\\
+                \Large \up&#123;1.7&#125;2\eta \approx&#123;22\over 7&#125;\\
+                \Large \up&#123;1.7&#125;3\eta \approx&#123;33\over 7&#125;\\
+                \Large \up&#123;1.7&#125;4\eta \approx&#123;44\over 7&#125;
+                &#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...we thus have...
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\displaylines&#123;
+                \Large         \eta \approx  1.\overline&#123;571428&#125;\\
+                \Large \up&#123;1.7&#125;2\eta \approx 3.\overline&#123;142857&#125;\\
+                \Large \up&#123;1.7&#125;3\eta \approx 4.\overline&#123;714285&#125;\\
+                \Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...though none of these estimates are actually
+                accurate to more than two decimal places. (While all
+                are accurate up to{" "}
+                <i>
+                  at least
+                </i>
+                two decimal places.)
+              </VerticalChunk>
+            </SolutionNote>
             <Pause />
-            <VerticalChunk>
-              too large in relative terms. I.e., you can subtract
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\approx 1.\overline&#123;571428&#125; \cdot 0.0004 \approx 0.0006$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              from
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\approx 1.\overline&#123;571428&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              to get a better approximation for{" "}
-              <NoBreak>
-                <Math>
-                  $\eta$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}subtract
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\approx 3.\overline&#123;142857&#125; \cdot 0.0004 \approx 0.0012$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              from
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\approx 3.\overline&#123;142857&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              to get a better approximation for{" "}
-              <NoBreak>
-                <Math>
-                  $2\eta$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}subtract
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\approx 4.\overline&#123;714285&#125; \cdot 0.0004 \approx 0.0019$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              from
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\approx 4.\overline&#123;714285&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              to get a better approximation for{" "}
-              <NoBreak>
-                <Math>
-                  $3\eta$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}subtract
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\approx 6.\overline&#123;285714&#125; \cdot 0.0004 \approx 0.0025$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              from
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\approx 6.\overline&#123;285714&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              to get a better approximation for{" "}
-              <NoBreak>
-                <Math>
-                  $4\eta$
-                </Math>
-                .
-              </NoBreak>
-              {" "}The resulting
-              approximations end up being...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$\displaylines&#123;
-              \Large         \eta \approx  1.5708\\
-              \Large \up&#123;1.7&#125;2\eta \approx 3.1416\\
-              \Large \up&#123;1.7&#125;3\eta \approx 4.7123\\
-              \Large \up&#123;1.7&#125;4\eta \approx 6.2832&#125;$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...that are correct approximations up to
-              the fourth digit, it turns out, modulo
-              rounding off of the fifth digit. (But these
-              are not worth learning by heart, by any means.)
-            </VerticalChunk>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                As mentioned in Note 1 of Exercise 24, 
+                Chapter 3, these approximations are about 
+                half-a-part-in-a-thousand too large, or to 
+                be more exact,
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\approx 0.0004$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                too large in relative terms. I.e., you can subtract
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\approx 1.\overline&#123;571428&#125; \cdot 0.0004 \approx 0.0006$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                from
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\approx 1.\overline&#123;571428&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                to get a better approximation for{" "}
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}subtract
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\approx 3.\overline&#123;142857&#125; \cdot 0.0004 \approx 0.0012$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                from
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\approx 3.\overline&#123;142857&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                to get a better approximation for{" "}
+                <NoBreak>
+                  <Math>
+                    $2\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}subtract
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\approx 4.\overline&#123;714285&#125; \cdot 0.0004 \approx 0.0019$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                from
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\approx 4.\overline&#123;714285&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                to get a better approximation for{" "}
+                <NoBreak>
+                  <Math>
+                    $3\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}subtract
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\approx 6.\overline&#123;285714&#125; \cdot 0.0004 \approx 0.0025$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                from
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\approx 6.\overline&#123;285714&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                to get a better approximation for{" "}
+                <NoBreak>
+                  <Math>
+                    $4\eta$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}The resulting
+                approximations end up being...
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\displaylines&#123;
+                \Large         \eta \approx  1.5708\\
+                \Large \up&#123;1.7&#125;2\eta \approx 3.1416\\
+                \Large \up&#123;1.7&#125;3\eta \approx 4.7123\\
+                \Large \up&#123;1.7&#125;4\eta \approx 6.2832&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...that are correct approximations up to
+                the fourth digit, it turns out, modulo
+                rounding off of the fifth digit. (But these
+                are not worth learning by heart, by any means.)
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={16}>
@@ -6942,15 +6956,14 @@ const Article = () => {
             equation is implied from the quotient and the 
             new (last) remainder at that point?
           </VerticalChunk>
-          <div>
-            <MathBlock>
-              $$\begin&#123;array&#125;&#123;c|cc&#125;
-              \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
-              \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
-              \\
-              \end&#123;array&#125;$$
-            </MathBlock>
-          </div>
+          <Pause />
+          <MathBlock>
+            $$\begin&#123;array&#125;&#123;c|cc&#125;
+            \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
+            \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
+            \\
+            \end&#123;array&#125;$$
+          </MathBlock>
           <Pause />
           <Solution solution_number={16}>
             <VerticalChunk>
@@ -7035,9 +7048,7 @@ const Article = () => {
                 {" "}the answer will go here:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_1.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_1.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7061,9 +7072,7 @@ const Article = () => {
                 {" "}the answer will go here:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_2.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_2.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7089,9 +7098,7 @@ const Article = () => {
                 {" "}the answer will go here:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_3.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_3.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7117,9 +7124,7 @@ const Article = () => {
                 {" "}the answer will go here:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_4.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_4.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7145,18 +7150,14 @@ const Article = () => {
                 the remainder:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_4b.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_4b.svg" />
               <Pause />
               <VerticalChunk>
                 (FYI, the remainder now consists of these yellow
                 digits:)
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_4remainder.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_4remainder.svg" />
               <Pause />
               <VerticalChunk>
                 Continuing, we bring down a{" "}
@@ -7181,9 +7182,7 @@ const Article = () => {
                 {" "}the answer will go here:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_5b_v2.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_5b_v2.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7216,9 +7215,7 @@ const Article = () => {
                 here:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_6b_v2.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_6b_v2.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7251,9 +7248,7 @@ const Article = () => {
                 here:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_7b_v2.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_7b_v2.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7286,9 +7281,7 @@ const Article = () => {
                 here:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_8b_v2.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_8b_v2.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7313,18 +7306,14 @@ const Article = () => {
                 {" "}giving us a new remainder:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_8c.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_8c.svg" />
               <Pause />
               <VerticalChunk>
                 (And to be specific, the remainder is now formed
                 by...
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_inside_8remainder.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_inside_8remainder.svg" />
               <Pause />
               <VerticalChunk>
                 ...these yellow digits.) Etc.
@@ -7341,9 +7330,7 @@ const Article = () => {
                 long-form subtraction, say your subtraction is this:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_a.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_a.svg" />
               <Pause />
               <VerticalChunk>
                 You can either treat the top or bottom number as an
@@ -7356,9 +7343,7 @@ const Article = () => {
                 would be as follows:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_odometer_1.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_odometer_1.svg" />
               <Pause />
               <VerticalChunk>
                 Starting from the right end of the subtraction, we ask
@@ -7383,9 +7368,7 @@ const Article = () => {
                 will write the answer below:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_c.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_c.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is:{" "}
@@ -7395,9 +7378,7 @@ const Article = () => {
                 {" "}[miles*] (*say):
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_d.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_d.svg" />
               <Pause />
               <VerticalChunk>
                 But the odometer will pass
@@ -7459,9 +7440,7 @@ const Article = () => {
                 {" "}as some teachers put it):
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_e.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_e.svg" />
               <Pause />
               <VerticalChunk>
                 Next we ask “by how many{" "}
@@ -7493,9 +7472,7 @@ const Article = () => {
                 will write the answer below:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_f.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_f.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is:{" "}
@@ -7513,9 +7490,7 @@ const Article = () => {
                 {" "}of miles]:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_g.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_g.svg" />
               <Pause />
               <VerticalChunk>
                 But here too the odometer will pass
@@ -7554,9 +7529,7 @@ const Article = () => {
                 effect:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_h.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_h.svg" />
               <Pause />
               <VerticalChunk>
                 Next we ask “by how many{" "}
@@ -7588,9 +7561,7 @@ const Article = () => {
                 will write the answer below:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_i.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_i.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is:{" "}
@@ -7608,9 +7579,7 @@ const Article = () => {
                 {" "}of miles]:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_j.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_j.svg" />
               <Pause />
               <VerticalChunk>
                 Next we ask “by how many{" "}
@@ -7640,9 +7609,7 @@ const Article = () => {
                 </NoBreak>
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_k.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_k.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is:{" "}
@@ -7660,9 +7627,7 @@ const Article = () => {
                 {" "}of miles]:
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_l.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_l.svg" />
               <Pause />
               <VerticalChunk>
                 Etc—we finally obtain:
@@ -8216,9 +8181,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Image
-            src="/images/svg_ch5_ex_angle_sum_180_followup.svg"
-            style="margin-top:1em;margin-bottom:1em;" />
+          <Image src="/images/svg_ch5_ex_angle_sum_180_followup.svg" />
           <Pause />
           <VerticalChunk>
             It is{" "}
@@ -8233,9 +8196,7 @@ const Article = () => {
             of my complement is myself”:
           </VerticalChunk>
           <Pause />
-          <Image
-            src="/images/svg_ch5_ex_angle_sum_180_followup_explanation.svg"
-            style="margin-top:1em;margin-bottom:1em;" />
+          <Image src="/images/svg_ch5_ex_angle_sum_180_followup_explanation.svg" />
           <Pause />
           <VerticalChunk>
             Another method of deduction uses the fact that,
@@ -8292,9 +8253,7 @@ const Article = () => {
             the center of the circle:
           </VerticalChunk>
           <Pause />
-          <Image
-            src="/images/svg_ch5_ex_tangent_angle_v2.svg"
-            style="margin-top:1em;margin-bottom:0.8em;" />
+          <Image src="/images/svg_ch5_ex_tangent_angle_v2.svg" />
           <Pause />
           <VerticalChunk>
             The ending and starting half-lines of the 
@@ -8375,9 +8334,7 @@ const Article = () => {
             If each of these dotted lines...
           </VerticalChunk>
           <Pause />
-          <Image
-            src="/images/svg_ch5_ex_max_xy_x_plus_y_isosets.svg"
-            style="margin-top:0.7em;margin-bottom:1em;" />
+          <Image src="/images/svg_ch5_ex_max_xy_x_plus_y_isosets.svg" />
           <Pause />
           <VerticalChunk>
             ...is a so-called
@@ -8405,7 +8362,7 @@ const Article = () => {
             <i>
               isosurface
             </i>
-            ,
+            ,{" "}
             <i>
               isovalue line
             </i>
@@ -8413,15 +8370,15 @@ const Article = () => {
             <i>
               isovalue set
             </i>
-            {" "}{" "}
+            {" "}
+            {" "}
             <NoBreak>
               <Math>
                 $\rt&#123;0.1&#125;$
               </Math>
               )
             </NoBreak>
-            {" "}
-            of the two-variable function
+            {" "}of the two-variable function
           </VerticalChunk>
           <Pause />
           <MathBlock>
@@ -9378,9 +9335,7 @@ const Article = () => {
                 </NoBreak>
               </VerticalChunk>
               <Pause />
-              <Image
-                src="/images/svg_ch5_ex_max_xy_mirror_image_other_way.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+              <Image src="/images/svg_ch5_ex_max_xy_mirror_image_other_way.svg" />
               <Pause />
               <VerticalChunk>
                 Indeed, this symmetry can be obtained as the
@@ -9630,9 +9585,7 @@ const Article = () => {
               Exercise 22:
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg"
-              style="margin-top:1.2em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg" />
             <Pause />
             <VerticalChunk>
               We find:
@@ -9724,18 +9677,18 @@ const Article = () => {
           <VerticalChunk>
             with the definitions being...
           </VerticalChunk>
-          <VerticalChunk indent={true}>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding-left:1.5em;padding-right:1.5em;">
-                <MathBlock>
-                  $$\,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,$$
-                </MathBlock>
-                <Pause />
-                <MathBlock>
-                  $$\,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,$$
-                </MathBlock>
-              </div>
-            </center>
+          <center style="margin-top:1em;margin-bottom:1em;">
+            <div style="display:inline-block;border:1px solid red;padding-left:1.5em;padding-right:1.5em;">
+              <MathBlock>
+                $$\,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,$$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$\,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,$$
+              </MathBlock>
+            </div>
+          </center>
+          <VerticalChunk>
             ...for all{" "}
             <NoBreak>
               <Math>
@@ -9838,21 +9791,21 @@ const Article = () => {
           <VerticalChunk indent={true}>
             Viz:
           </VerticalChunk>
-          <VerticalChunk indent={true}>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding-left:1.5em;padding-right:1.5em;">
-                <MathBlock>
-                  $$\begin&#123;align&#125;
-                  \sec^2(\theta)
-                  \,\,&=\,\, &#123;1\over \cos^2(\theta)&#125; \\
-                  &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
-                  &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
-                  &amp;=\,\, \up&#123;2&#125; 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
-                  &amp;=\,\, \up&#123;2&#125;1 + \tan^2(\theta).
-                  \end&#123;align&#125;$$
-                </MathBlock>
-              </div>
-            </center>
+          <center style="margin-top:1em;margin-bottom:1em;">
+            <div style="display:inline-block;border:1px solid red;padding-left:1.5em;padding-right:1.5em;">
+              <MathBlock>
+                $$\begin&#123;align&#125;
+                \sec^2(\theta)
+                \,\,&=\,\, &#123;1\over \cos^2(\theta)&#125; \\
+                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
+                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
+                &amp;=\,\, \up&#123;2&#125; 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
+                &amp;=\,\, \up&#123;2&#125;1 + \tan^2(\theta).
+                \end&#123;align&#125;$$
+              </MathBlock>
+            </div>
+          </center>
+          <VerticalChunk>
             (Ta-daa!) (It's slightly harder in this 
             direction, when you have to think of
             turning the{" "}
@@ -9898,9 +9851,7 @@ const Article = () => {
             Rewrite each case:
           </VerticalChunk>
           <VerticalChunk indent={true}>
-            <div
-              class="column"
-              style="line-height:0;">
+            <div class="slice">
               <span style="width:50px;display:inline-block;margin-top:0.8em;">
                 <span>
                   {" "}{" "}
@@ -9938,7 +9889,6 @@ const Article = () => {
                   $$x \ra \dots$$
                 </MathBlock>
               </span>
-              <span style="width:50px;display:inline-block;" />
               <span>
                 for some value of{" "}
                 <NoBreak>
@@ -10107,63 +10057,61 @@ const Article = () => {
           <VerticalChunk>
             ...are, respectively, obtained by:
           </VerticalChunk>
-          <VerticalChunk indent={true}>
-            <div class="column">
-              <ul class="l1">
-                <li>
-                  horizontally translating the graph of{" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "}by{" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "}units to the left;
-                </li>
-                <li>
-                  horizontally compressing the graph of{" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "}by a factor{" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    ;
-                  </NoBreak>
-                  {" "}{" "}
-                </li>
-                <li>
-                  vertically translating the graph of{" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "}by{" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "}units upward;
-                </li>
-                <li>
-                  vertically dilating (scaling) the graph of{" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "}by a factor{" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    .
-                  </NoBreak>
-                  {" "}{" "}
-                </li>
-              </ul>
-            </div>
-            (Cf. Exercise 7 of Chapter 3, 
-            Exercise 14 of Chapter 3.)
+          <ul
+            style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;"
+            class="slice">
+            <li>
+              horizontally translating the graph of{" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}by{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}units to the left;
+            </li>
+            <li>
+              horizontally compressing the graph of{" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}by a factor{" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ;
+              </NoBreak>
+            </li>
+            <li>
+              vertically translating the graph of{" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}by{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}units upward;
+            </li>
+            <li>
+              vertically dilating (scaling) the graph of{" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}by a factor{" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                .
+              </NoBreak>
+            </li>
+          </ul>
+          <VerticalChunk>
+            (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
+            Chapter 3.)
           </VerticalChunk>
         </Exercise>
         <Exercise exercise_number={28}>
@@ -10202,8 +10150,8 @@ const Article = () => {
             <Math>
               $f$
             </Math>
-            {" "}
-            is “periodic mod{" "}
+            {" "}is 
+            “periodic mod{" "}
             <NoBreak>
               <Math>
                 $T$
@@ -10421,12 +10369,12 @@ const Article = () => {
               Exercise 29.
             </b>
             {" "}
-            Given the graphs
-            {" "}
+            Given the graphs{" "}
             <Math>
               $y = \cos(x)\sin(x)$
             </Math>
-            {" "}and{" "}
+            {" "}and 
+            {" "}
             <NoBreak>
               <Math>
                 $y = \cos^2(x)$
@@ -10435,9 +10383,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Image
-            src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg"
-            style="margin-top:1em;margin-bottom:1em;" />
+          <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg" />
           <Pause />
           <VerticalChunk>
             ...it{" "}
@@ -10454,177 +10400,180 @@ const Article = () => {
             {" "}horizontal.)
             What algebraic identity would this imply?
           </VerticalChunk>
-          <VerticalChunk indent={true}>
-            We know from Exercise 21 that the 
-            highest point on the bump immediately to the 
-            right of{" "}
-            <Math>
-              $(0, 0)$
-            </Math>
-            {" "}on the graph{" "}
-            <Math>
-              $y = \cos(x)\sin(x)$
-            </Math>
-            {" "}
-            has coordinates{" "}
-            <NoBreak>
+          <Pause />
+          <Solution solution_number={20}>
+            <VerticalChunk>
+              We know from Exercise 21 that the 
+              highest point on the bump immediately to the 
+              right of{" "}
               <Math>
-                $(\eta/2, 0.5)$
+                $(0, 0)$
               </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg" />
-          <Pause />
-          <VerticalChunk>
-            A horizontal translation of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$-&#123;\eta\over 2&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            units and a vertical translation of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$&#123;1\over 2&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            units bring this point onto
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$(0, 1)$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            that is a local maximum of{" "}
-            <NoBreak>
+              {" "}on the graph{" "}
               <Math>
-                $y = \cos^2(x)$
+                $y = \cos(x)\sin(x)$
               </Math>
-              ;
-            </NoBreak>
-            {" "}zoomed in:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg" />
-          <Pause />
-          <VerticalChunk>
-            We can therefore conjecture that the
-            afore-mentioned amounts of translation
-            will map{" "}
-            <Math>
-              $y = \cos(x)\sin(x)$
-            </Math>
-            {" "}onto{" "}
-            <NoBreak>
+              {" "}
+              has coordinates{" "}
+              <NoBreak>
+                <Math>
+                  $(\eta/2, 0.5)$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg" />
+            <Pause />
+            <VerticalChunk>
+              A horizontal translation of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$-&#123;\eta\over 2&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              units and a vertical translation of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$&#123;1\over 2&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              units bring this point onto
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$(0, 1)$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              that is a local maximum of{" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos^2(x)$
+                </Math>
+                ;
+              </NoBreak>
+              {" "}zoomed in:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg" />
+            <Pause />
+            <VerticalChunk>
+              We can therefore conjecture that the
+              afore-mentioned amounts of translation
+              will map{" "}
               <Math>
-                $y = \cos^2(x)$
+                $y = \cos(x)\sin(x)$
               </Math>
-              .
-            </NoBreak>
-            {" "}
-            (And any integer multiple of{" "}
-            <Math>
-              $2\eta$
-            </Math>
-            {" "}could
-            be added to the horizontal translation
-            since both curves are periodic modulo 
-            {" "}
-            <NoBreak>
+              {" "}onto{" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos^2(x)$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (And any integer multiple of{" "}
               <Math>
                 $2\eta$
               </Math>
-              .)
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Algebraically, this would indicate that
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
+              {" "}could
+              be added to the horizontal translation
+              since both curves are periodic modulo 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $2\eta$
+                </Math>
+                .)
+              </NoBreak>
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Algebraically, this would indicate that
+            </VerticalChunk>
             <center>
               <MathBlock>
                 $$\cos^2 = (u \ra &#123;1\over 2&#125; + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + &#123;\eta\over 2&#125;)$$
               </MathBlock>
             </center>
-            ...or...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_three_boxes.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...in a box diagram, where
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$w \ra w + &#123;\eta\over 2&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$u \ra u + &#123;1\over 2&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            respectively effect a translation to
-            the left by{" "}
-            <Math>
-              $\eta/2$
-            </Math>
-            {" "}and upward by{" "}
-            <NoBreak>
+            <VerticalChunk>
+              ...or...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_three_boxes.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...in a box diagram, where
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$w \ra w + &#123;\eta\over 2&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$u \ra u + &#123;1\over 2&#125;$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              respectively effect a translation to
+              the left by{" "}
               <Math>
-                $1/2$
+                $\eta/2$
               </Math>
-              .
-            </NoBreak>
-            {" "}
-            (Cf. Exercise 28.)
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Or, placing an input{" "}
-            <NoBreak>
-              “
-              <Math>
-                $x$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}into each side
-            of the above equation, this would indicate
-            that...
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
+              {" "}and upward by{" "}
+              <NoBreak>
+                <Math>
+                  $1/2$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (Cf. Exercise 28.)
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Or, placing an input{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}into each side
+              of the above equation, this would indicate
+              that...
+            </VerticalChunk>
             <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border: 1px solid red;padding-left:1.5em;padding-right:1.5em;">
+              <div style="border:1px solid red;padding:1em 1em;width:fit-content;">
                 <MathBlock>
                   $$\cos^2(x) = &#123;1\over 2&#125; + \cos(x + \eta/2)\sin(x + \eta/2)$$
                 </MathBlock>
               </div>
             </center>
-            ...for all{" "}
-            <NoBreak>
-              <Math>
-                $x\in \rr$
-              </Math>
-              —
-            </NoBreak>
-            {" "}{" "}
-            <i>
-              if
-            </i>
-            this conjecture
-            about translation turns out to be true!!!
-          </VerticalChunk>
+            <VerticalChunk>
+              ...for all{" "}
+              <NoBreak>
+                <Math>
+                  $x\in \rr$
+                </Math>
+                —
+              </NoBreak>
+              {" "}{" "}
+              <i>
+                if
+              </i>
+              this conjecture
+              about translation turns out to be true!!!
+            </VerticalChunk>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={30}>
           <VerticalChunk>
@@ -10654,7 +10603,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <SolutionNote>
+          <Solution solution_number={21}>
             <VerticalChunk>
               We define
             </VerticalChunk>
@@ -10750,13 +10699,17 @@ const Article = () => {
             <Pause />
             <SolutionNote>
               <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
                 In some sense, the vector “wins” over the number, in
                 that their conjoint baby is a vector, not a number:
               </VerticalChunk>
               <Pause />
               <Image src="/images/svg_ch5_ex_c_times_vector_box.svg" />
             </SolutionNote>
-          </SolutionNote>
+          </Solution>
         </Exercise>
       </Exercises>
     </Chapter>

@@ -140,7 +140,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
           "SolutionNote",
           "Table",
           "WriterlyBlankLine",
-          "br",
+          "center",
           "li",
           "ul",
           "ol",
@@ -201,6 +201,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       [
         #("OpeningDoubleUnderscore", "__"),
         #("ClosingDoubleUnderscore", "__"),
+        #("OpeningOrClosingDoubleUnderscore", "__"),
       ],
     ),
     // ************************
