@@ -81,8 +81,8 @@ const Image = (props: ImageProps) => {
           <LazyImage
             ref={image_ref}
             onClick={(_) => {
-              // should we scale?
-              const should_be_scaled_down = our_on_mobile() && !scaled_down();
+              // should we scale? (if it's the first click we should def. scale up)
+              const should_be_scaled_down = our_on_mobile() && !scaled_down() && after_first_click();
 
               // do the scale
               set_scaled_down(should_be_scaled_down);
