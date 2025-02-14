@@ -137,7 +137,6 @@ const getLeft = (
   offset_x: string,
   scale: number,
 ): string => {
-  console.log("scale:", scale);
   return side === "right" ? `calc(100% + ${offset_x} * ${scale}`: "";
 }
 

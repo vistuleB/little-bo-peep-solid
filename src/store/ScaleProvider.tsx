@@ -24,9 +24,7 @@ export function ScaleProvider(
 export function useScale() {
   const scale = useContext(ScaleContext);
   if (!scale) {
-    console.log("RETURNING FALSE SCALE CONTEXT");
     return () => {return {scale: 1, name: "FALSE"}};
   }
-  console.log("there was a scale context");
   return scale;
 }

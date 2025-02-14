@@ -20,7 +20,6 @@ const Container = (props: ParentProps) => {
   };
 
   const handleResize = () => {
-    // console.log("resizing scrollWidth to ", document.body.scrollWidth);
     set_innerWidth(window.innerWidth);
     set_scrollWidth(document.body.scrollWidth);
   };
@@ -74,8 +73,7 @@ const Container = (props: ParentProps) => {
   });
 
   return (
-    <div id="Container" class="outer-width-enforcer pb-14 -z-10">
-      {/* <div class="w-full transition duration-300 sm:overflow-visible sm:translate-x-0 font-baskerville"> */}
+    <div id="Container" class="outer-width-enforcer pb-14 -z-10" style="position:relative;">
       <div class="sm:translate-x-0">
         <Nav />
       </div>

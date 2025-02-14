@@ -18,10 +18,10 @@ import { GREEN_DIV_HEIGHT } from "~/constants";
 import useExercises from "~/hooks/useExercises";
 import { ExercisesStoreProvider, useExercisesContext } from "~/store/ExercisesStoreProvider";
 
-type ExercisesProps = ParentProps &
-  SharedProps & {
-    labels: string[];
-  };
+type ExercisesProps = ParentProps & SharedProps;
+  // & {
+  //   labels: string[];
+  // };
 
 export const Exercises = (props: ExercisesProps) => {
   return (
