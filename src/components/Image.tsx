@@ -15,7 +15,7 @@ type ImageProps = ParentProps & SharedProps & {
 };
 
 const Image = (props: ImageProps) => {
-  let [scale, set_scale] = createSignal(1.0);
+  let [scale, set_scale] = createSignal({scale: 1.0, name: props.src});
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
@@ -31,10 +31,11 @@ const Image = (props: ImageProps) => {
 
   const reset_scale = () => {
     if (our_on_mobile() && (scaled_down_scale() < 1 || scaled_down())) {
-      set_scale(scaled_down_scale());
+      set_scale({scale: scaled_down_scale(), name: props.src});
+      console.log("just set scale to", scale());
       set_scaled_down(true);
     } else {
-      set_scale(1);
+      set_scale({scale:1, name:props.src});
       set_scaled_down(false);
     }
   }
@@ -71,7 +72,7 @@ const Image = (props: ImageProps) => {
         //   "padding-left": `${props.padding_left || 0}`,
         //   "padding-right": `${props.padding_right || 0}`,
         // }}
-        class={twJoin("left-1/2 -translate-x-1/2 relative", props.class)}>
+        class={twJoin("left-1/2 -translate-x-1/2 relative w-fit", props.class)}>
         <div 
           // style={{
           //   height: props.height,
@@ -86,7 +87,8 @@ const Image = (props: ImageProps) => {
 
               // do the scale
               set_scaled_down(should_be_scaled_down);
-              set_scale(should_be_scaled_down ? scaled_down_scale() : 1);
+              set_scale({scale: should_be_scaled_down ? scaled_down_scale() : 1, name:props.src});
+              console.log("set scale to:", scale());
 
               // bookkeeping other things
               set_after_first_click(true);

@@ -2,10 +2,13 @@ import { createSignal, createContext, useContext } from "solid-js";
 import { ParentProps } from "solid-js";
 import SharedProps from "../components/types/SharedProps";
 
-const ScaleContext = createContext<() => number>();
+const ScaleContext = createContext<() => {scale: number, name: string}>();
 
 type ScaleProps = {
-  scale: () => number;
+  scale: () => {
+    scale: number,
+    name: string
+  }
 };
 
 export function ScaleProvider(
@@ -20,6 +23,10 @@ export function ScaleProvider(
 
 export function useScale() {
   const scale = useContext(ScaleContext);
-  if (!scale) return () => 1;
+  if (!scale) {
+    console.log("RETURNING FALSE SCALE CONTEXT");
+    return () => {return {scale: 1, name: "FALSE"}};
+  }
+  console.log("there was a scale context");
   return scale;
 }

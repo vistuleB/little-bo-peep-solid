@@ -23,25 +23,19 @@ type UserFacingSideImageProps = ParentProps &
 
 type InternalSideImageProps = UserFacingSideImageProps & {
   side: string;
-  left: string;
-  right: string;
-  top: string;
+  offset_x: string;
+  offset_y: string;
+  line: number;
+  // left: string;
+  // right: string;
+  // top: string;
 };
 
 const SideImage = (props: InternalSideImageProps) => {
   let container_ref: HTMLDivElement | undefined;
   const { store } = useGlobalContext();
   const show_squiggles = () => store.show_squiggles;
-
-  let innerStyles = () => ({
-    left: props.left,
-    right: props.right,
-    top: props.top,
-    transform: `translateY(calc(-50%))`,
-    padding: `${props.padding}`,
-    "transform-origin": `0 top 0`,
-    zIndex: 20,
-  });
+  const scale = useScale();
 
   let maybeChildren = () => {
     if (props.children) {
@@ -57,10 +51,19 @@ const SideImage = (props: InternalSideImageProps) => {
   return (
     <div
       ref={container_ref}
-      class="absolute" style="left:0;top:0;width:100%;height:100%;background-color:none;margin:0;padding:0;"
+      class="absolute" style="left:0;top:0;width:100%;height:100%;background-color:none;margin:0;padding:0;pointer-events:none;"
       >
       <div
-        style={innerStyles()}
+        style={{
+          left: getLeft(props.side, props.offset_x, scale().scale),
+          right: getRight(props.side, props.offset_x, scale().scale),
+          top: getTop(props.line, props.offset_y, scale().scale),
+          transform: `translateY(calc(-50%))`,
+          padding: `${props.padding}`,
+          "transform-origin": `0 top 0`,
+          scale: scale().scale,
+          "z-index": 20,
+        }}
         class="flex shrink-0 transition-opacity duration-300 lg:transition-none lg:opacity-100 absolute w-max">
         <LazyImage
           class={twJoin(props.class, !props.width && "max-w-max", "cloud")}
@@ -98,15 +101,17 @@ export const ImageRight = ({
   offset_y = "0px",
   ...props
 }: UserFacingSideImageProps) => {
-  const scale = useScale();
-
   let internalProps : InternalSideImageProps = mergeProps(
     props,
     {
-      right: getRight("right", offset_x, scale()),
-      left: getLeft("right", offset_x, scale()),
-      top: getTop(line, 30, offset_y, scale()),
       side: "right",
+      offset_x: offset_x,
+      offset_y: offset_y,
+      line: line,
+      // right: getRight("right", offset_x, scale()),
+      // left: getLeft("right", offset_x, scale()),
+      // top: getTop(line, offset_y, scale()),
+      // side: "right",
     }
   )
 
@@ -124,10 +129,14 @@ export const ImageLeft = ({
   let internalProps : InternalSideImageProps = mergeProps(
     props,
     {
-      right: getRight("left", offset_x, scale()),
-      left: getLeft("left", offset_x, scale()),
-      top: getTop(line, 30, offset_y, scale()),
       side: "left",
+      offset_x: offset_x,
+      offset_y: offset_y,
+      line: line,
+      // right: getRight("left", offset_x, scale()),
+      // left: getLeft("left", offset_x, scale()),
+      // top: getTop(line, offset_y, scale()),
+      // side: "left",
     }
   )
 
@@ -139,6 +148,7 @@ const getLeft = (
   offset_x: string,
   scale: number,
 ): string => {
+  console.log("scale:", scale);
   return side === "right" ? `calc(100% + ${offset_x} * ${scale}`: "";
 }
 
@@ -152,10 +162,10 @@ const getRight = (
 
 const getTop = (
   line: number, 
-  line_height: number,
   offset_y: string,
   scale: number,
 ) : string => {
+  let line_height = 30;
   let top = "";
   if (line > 0) {
     top = `calc(0% + ${(line - 0.5) * line_height}px * ${scale} + ${offset_y} * ${scale})`;
