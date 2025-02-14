@@ -25,7 +25,7 @@
 :root {
   --background-rgb: 255, 255, 255;
   --foreground-rgb: 0, 0, 0;
-  --desktop-text-column-width: 688px;
+  --desktop-text-column-width: 488px;
   --desktop-text-column-padding: 16px;
 }
 
@@ -340,7 +340,7 @@ table.first-line tr td:first-child {
   grid-template-columns: repeat(12, 1fr);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 520px) {
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, 1fr);
   }
