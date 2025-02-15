@@ -6,11 +6,11 @@ import { twJoin } from "tailwind-merge";
 const HAMBURGER_MENU_HEIGHT = 56;
 
 const Nav = () => {
-  let { store, } = useGlobalContext();
+  let { store } = useGlobalContext();
   return (
     <>
       <nav class={twJoin(
-        "select-none w-full",
+        "select-none w-full z-10",
         store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
         store.innerWidth >= MOBILE_MAX_WIDTH && "absolute",
       )}>
@@ -23,7 +23,7 @@ const Nav = () => {
       </nav>
       <div
         style={{ top: `${HAMBURGER_MENU_HEIGHT - 1.0}px` }}
-        class="h-0 border-b !fixed  z-50"
+        class="h-0 border-b !fixed z-50"
       ></div>
       <div class="h-14"></div>
     </>
