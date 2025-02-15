@@ -897,43 +897,43 @@
         standards of simplicity, admittedly) is circular
         motion at uniform speed. In this case:
 
-        |> ul
-            class slice
-            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
-            |> li
+        |> TextParent
+            |> ul
+                style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+                |> li
 
-                $A$ is the radius of the circle
-            |> li
+                    $A$ is the radius of the circle
+                |> li
 
-                $D$ is the $x$-coordinate of the circle's center
+                    $D$ is the $x$-coordinate of the circle's center
 
         And either:
 
-        |> ul
-            class slice
-            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
-            |> li
+        |> TextParent
+            |> ul
+                style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+                |> li
 
-                $B$ is the counterclockwise 
-                _angular speed_/_angular frequency_ (radians per 
-                unit time) and $C$ is the counterclockwise 
-                starting angle ($t = 0$) of the particle, as 
-                measured from a translate of the positive $x$ 
-                axis going through the center of the circle
+                    $B$ is the counterclockwise 
+                    _angular speed_/_angular frequency_ (radians per 
+                    unit time) and $C$ is the counterclockwise 
+                    starting angle ($t = 0$) of the particle, as 
+                    measured from a translate of the positive $x$ 
+                    axis going through the center of the circle
 
         Or:
 
-        |> ul
-            class slice
-            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
-            |> li
+        |> TextParent
+            |> ul
+                style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
+                |> li
 
-                $-B$ is the counterclockwise 
-                angular speed/angular frequency of the particle 
-                and $-C$ is the counterclockwise starting angle 
-                of the particle, as measured from a translate of 
-                the positive $x$ axis going through the center 
-                of the circle
+                    $-B$ is the counterclockwise 
+                    angular speed/angular frequency of the particle 
+                    and $-C$ is the counterclockwise starting angle 
+                    of the particle, as measured from a translate of 
+                    the positive $x$ axis going through the center 
+                    of the circle
 
         In more detail, every time
 
@@ -2480,7 +2480,7 @@
         style margin-top:1.0em;margin-bottom:1em;
         src images/svg_ch5_ex_tan_sq_AB_ratio.svg
 
-    |> SolutionNote
+    |> Solution
 
         We shall use the height $C$ of the triangle
         as a stopover between $A$ and $B$:
@@ -2516,7 +2516,7 @@
     |> Image
         src images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg
 
-    |> SolutionNote
+    |> Solution
 
         Here are two solutions:
 
@@ -2546,6 +2546,7 @@
         $$
 
         |> StarDivider
+            style margin-top:0.5em;
 
         _Solution 2._
         We decompose $A$ as $B + A'$
@@ -2575,10 +2576,10 @@
             answers to the same question,
             one can in particular deduce that
 
-            |> div
-                style margin-top:1em;margin-bottom:1em;
+            |> center
+                style margin-top:1.5em;margin-bottom:1.5em;
                 |> div
-                    style display:inline-block;border: 1px solid red;padding-left:1.5em;padding-right:1.5em;
+                    style display:inline-block;border:1px solid red;padding:1em 1em;
 
                     $$
                     \sec^2(\theta) = 1 + \tan^2(\theta)
@@ -2604,7 +2605,7 @@
     |> center
         style margin-top:1em;margin-bottom:1em;
         |> div
-            style display:inline-block;border:1px solid red;padding-left:1.5em;padding-right:1.5em;
+            style display:inline-block;border:1px solid red;padding:1em 1em;
 
             $$
             \,\tan(\theta) = {\sin(\theta)\over \cos(\theta)}\,
@@ -2631,7 +2632,7 @@
         $$
         and
         $$
-        1 = {\cos^2(\theta)\over \cos^2(\theta)}
+        1 = {\cos(\theta)\over \cos(\theta)} = {\cos^2(\theta)\over \cos^2(\theta)}
         $$
         and, by the definitions,
         $$
@@ -2694,88 +2695,82 @@
 
     Rewrite each case:
 
-    |> div
-        class slice
-        |> span
-            style width:50px;display:inline-block;margin-top:0.8em;
-            |> span
+    |> TextParent
+        |> ol
+            class l1
+            style margin-top:0.5em;
+            |> li
 
-                *(a)*
-        |> span
+                using the composition “$\circ$” operator;
+            |> li
 
-            using the composition “$\circ$” operator;
-        |> br
-        |> span
-            style width:50px;margin-top:0.8em;display:inline-block;
-            |> span
+                as an expression of the form $$x \ra \dots$$
+                for some value of “$\dots$”
 
-                *(b)*
-        |> span
+    |> Solution
 
-            as an expression of the form $$x \ra \dots$$
-        |> span
+        *(a)*
+        The expressions are respectively...
+        $$
+        f  \circ (u \ra u + A)
+        $$
+        $$
+        f  \circ (z \ra Bz)
+        $$
+        $$
+        (u \ra u + A)\circ f
+        $$
+        $$
+        (z \ra Bz)\circ f
+        $$
+        ...but where the dummy variables used inside of each
+        lambda-notation do not matter, so we might as well have
+        written...
+        $$
+        f  \circ (t \ra t + A)
+        $$
+        $$
+        f  \circ (t \ra Bt)
+        $$
+        $$
+        (t \ra t + A)\circ f
+        $$
+        $$
+        (t \ra Bt)\circ f
+        $$
+        ...or...
+        $$
+        f  \circ (x \ra x + A)
+        $$
+        $$
+        f  \circ (x \ra Bx)
+        $$
+        $$
+        (x \ra x + A)\circ f
+        $$
+        $$
+        (x \ra Bx)\circ f
+        $$
+        ...! (It really doesn't matter.)
 
-            for some value of “$\dots$”.
+        |> Pause
 
-    *(a)*
-    The expressions are respectively...
-    $$
-    f  \circ (u \ra u + A)
-    $$
-    $$
-    f  \circ (z \ra Bz)
-    $$
-    $$
-    (u \ra u + A)\circ f
-    $$
-    $$
-    (z \ra Bz)\circ f
-    $$
-    ...but where the dummy variables used inside of each
-    lambda-notation do not matter, so we might as well have
-    written...
-    $$
-    f  \circ (t \ra t + A)
-    $$
-    $$
-    f  \circ (t \ra Bt)
-    $$
-    $$
-    (t \ra t + A)\circ f
-    $$
-    $$
-    (t \ra Bt)\circ f
-    $$
-    ...or...
-    $$
-    f  \circ (x \ra x + A)
-    $$
-    $$
-    f  \circ (x \ra Bx)
-    $$
-    $$
-    (x \ra x + A)\circ f
-    $$
-    $$
-    (x \ra Bx)\circ f
-    $$
-    ...! (It really doesn't matter.)
-
-    *(b)*The expressions are respectively:
-    $$
-    x \ra f(x + A)
-    $$
-    $$
-    x \ra f(Bx)
-    $$
-    $$
-    x \ra f(x) + A
-    $$
-    $$
-    x \ra Bf(x)
-    $$
-    ...where we use “$x$” because we were _told_to use
-    $x$. (By the statement.)
+        *(b)*
+        The expressions are respectively:
+        $$
+        x \ra f(x + A)
+        $$
+        $$
+        x \ra f(Bx)
+        $$
+        $$
+        x \ra f(x) + A
+        $$
+        $$
+        x \ra Bf(x)
+        $$
+        ...where we use “$x$” because we were _told_to use
+        $x$. (By the statement.)
 
 |> Exercise
 
@@ -2799,21 +2794,21 @@
     $$
     ...are, respectively, obtained by:
 
-    |> ul
-        class slice
-        style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;
-        |> li
+    |> TextParent
+        |> ul
+            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;
+            |> li
 
-            horizontally translating the graph of $f$ by $A$ units to the left;
-        |> li
+                horizontally translating the graph of $f$ by $A$ units to the left;
+            |> li
 
-            horizontally compressing the graph of $f$ by a factor $B$;
-        |> li
+                horizontally compressing the graph of $f$ by a factor $B$;
+            |> li
 
-            vertically translating the graph of $f$ by $A$ units upward;
-        |> li
+                vertically translating the graph of $f$ by $A$ units upward;
+            |> li
 
-            vertically dilating (scaling) the graph of $f$ by a factor $B$.
+                vertically dilating (scaling) the graph of $f$ by a factor $B$.
 
     (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
     Chapter 3.)

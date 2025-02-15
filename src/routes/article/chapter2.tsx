@@ -1,6 +1,7 @@
 import Chapter from "~/components/Chapter";
 import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
+import TextParent from "~/components/TextParent";
 import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
 import Image from "~/components/Image";
@@ -82,9 +83,7 @@ const Article = () => {
           {" "}unit for each unit to the right:
         </VerticalChunk>
         <Pause />
-        <Image
-          class="pl-[2px]"
-          src="/images/slope_1_example.svg" />
+        <Image src="/images/slope_1_example.svg" />
         <Pause />
         <VerticalChunk>
           On the other hand, the line below has slope
@@ -107,9 +106,7 @@ const Article = () => {
           with each unit to the right:
         </VerticalChunk>
         <Pause />
-        <Image
-          class="pl-[19.5px]"
-          src="/images/slope_0.5_example.svg" />
+        <Image src="/images/slope_0.5_example.svg" />
         <Pause />
         <VerticalChunk>
           (Etc.)
@@ -138,9 +135,7 @@ const Article = () => {
           {" "}on the line:
         </VerticalChunk>
         <Pause />
-        <Image
-          class="mt-6 mb-2"
-          src="/images/31.svg" />
+        <Image src="/images/31.svg" />
         <Pause />
         <MathBlock>
           $$ \te&#123;slope&#125; = &#123;\te&#123;vertical change from A to B&#125; \over \te&#123;horizontal change from A to B&#125;&#125; $$
@@ -580,10 +575,7 @@ const Article = () => {
           {" "}following such a picture:
         </VerticalChunk>
         <Pause />
-        <Image
-          class="pt-4 mb-4"
-          width="300px"
-          src="/images/44.svg" />
+        <Image src="/images/44.svg" />
         <Pause />
         <VerticalChunk>
           In this context, note that, in physics, a
@@ -620,9 +612,7 @@ const Article = () => {
           also include this picture:
         </VerticalChunk>
         <Pause />
-        <Image
-          class="pt-4 mb-4"
-          src="/images/47.svg" />
+        <Image src="/images/47.svg" />
         <Pause />
         <VerticalChunk>
           Then “rise” and “run” have their signs flipped,

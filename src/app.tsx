@@ -11,8 +11,10 @@ import Panel from "./components/Panel";
 export default function App() {
   return (
     <StoreProvider>
-      <Router root={(props) => (
+      <Router 
+        root={(props) => (
           <>
+            <div class="test-width"></div>
             <PanelButton />
             <Panel />
             <Container>

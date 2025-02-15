@@ -28,7 +28,6 @@
 
     |> Image
         src images/slope_1_example.svg
-        class pl-[2px]
 
     On the other hand, the line below has slope
     $-0.5$, because it goes up by _minus_ $0.5$ units
@@ -36,7 +35,6 @@
 
     |> Image
         src images/slope_0.5_example.svg
-        class pl-[19.5px]
 
     (Etc.)
 
@@ -51,7 +49,6 @@
 
     |> Image
         src images/31.svg
-        class mt-6 mb-2
 
     $$ \te{slope} = {\te{vertical change from A to B} \over \te{horizontal change from A to B}} $$
 
@@ -332,8 +329,6 @@
 
     |> Image
         src images/44.svg
-        width 300px
-        class pt-4 mb-4
 
     In this context, note that, in physics, a
     one-dimensional displacement is measured as
@@ -351,7 +346,6 @@
 
     |> Image
         src images/47.svg
-        class pt-4 mb-4
 
     Then “rise” and “run” have their signs flipped,
     but the ratio rise-over-run is the same, as

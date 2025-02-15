@@ -1,5 +1,6 @@
 import { createSignal } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 
 const HAMBURGER_MENU_HEIGHT = 56;
 
@@ -26,10 +27,13 @@ const Title = () => {
 
   return (
     <div
-      class="slice select-none w-full h-full border-r-0 font-clickerscript"
+      class="select-none w-full h-full border-r-0"
       id="Header"
     >
-      <div class="font-clickerscript text-3xl self-end mt-auto mb-auto py-2 sm:px-0" style="transform:translate(0, 0.1em);">
+      <div 
+        class="font-clickerscript text-3xl self-end mt-auto mb-auto py-2 slice"
+        style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;transform:translate(0, 0.1em);`}
+        >
         <a href="/" onClick={() => setRoute("/")}>
           {store.title}
           {/* {`${window.innerWidth}`} */}

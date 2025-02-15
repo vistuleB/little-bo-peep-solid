@@ -1,6 +1,7 @@
 import Chapter from "~/components/Chapter";
 import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
+import TextParent from "~/components/TextParent";
 import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
 import Image from "~/components/Image";
@@ -166,8 +167,8 @@ const Article = () => {
           {" "}is 
           undefined if a tangent line does not exist 
           or if the tangent is vertical. 
-          For one extra special case, note that
-          the endpoing of a curve does not count
+          Also note that
+          the endpoint of a curve does not count
           as having a tangent, and leaves a missing
           value for the derivative:
         </VerticalChunk>
@@ -175,8 +176,8 @@ const Article = () => {
         <Image src="/images/svg_ch4_ch_one_sided_tangent.svg" />
         <Pause />
         <VerticalChunk>
-          (In other words, “half-tangents” do not actually 
-          count as tangents.)
+          (In other words, what one might describe as 
+          “half-tangents” do not actually count as tangents.)
         </VerticalChunk>
       </Section>
       <Pause />
@@ -702,85 +703,85 @@ const Article = () => {
           For example, if the “before” graph has units 
           of...
         </VerticalChunk>
-        <ul
-          style="list-style-type:disc;margin-top:1em;margin-bottom:1em;"
-          class="slice">
-          <li style="margin:0 60px;">
-            seconds on the{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis, meters on the 
-            {" "}
-            <Math>
-              $y$
-            </Math>
-            {" "}axis
-          </li>
-        </ul>
+        <TextParent style="margin-top:1em;margin-bottom:1em;">
+          <ul style="list-style-type:disc;">
+            <li style="margin:0 60px;">
+              seconds on the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis, meters on the 
+              {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "}axis
+            </li>
+          </ul>
+        </TextParent>
         <VerticalChunk>
           ...then the “after” graph will have units of...
           <ImageRight
-            offset_y="-0.6em"
+            offset_y="1em"
             src="/images/svg_ch4_ch_units1_cloud.svg" />
         </VerticalChunk>
-        <ul
-          style="list-style-type:disc;margin-top:1em;margin-bottom:1em;"
-          class="slice">
-          <li style="margin:0 60px;">
-            seconds on the{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis, meters per
-            second on the{" "}
-            <Math>
-              $y$
-            </Math>
-            {" "}axis
-          </li>
-        </ul>
-        <VerticalChunk>
-          ...while if the “before” graph has units of...
-        </VerticalChunk>
-        <ul
-          style="list-style-type:disc;margin-top:1em;margin-bottom:1em;"
-          class="slice">
-          <li style="margin:0 60px;">
-            years on the{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis, dollars on the
-            {" "}
-            <Math>
-              $y$
-            </Math>
-            {" "}axis
-          </li>
-        </ul>
+        <TextParent style="margin-top:1em;margin-bottom:1em;">
+          <ul style="list-style-type:disc;">
+            <li style="margin:0 60px;">
+              seconds on the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis, meters per
+              second on the{" "}
+              <Math>
+                $y$
+              </Math>
+              {" "}axis
+            </li>
+          </ul>
+          <VerticalChunk>
+            ...while if the “before” graph has units of...
+          </VerticalChunk>
+        </TextParent>
+        <TextParent style="margin-top:1em;margin-bottom:1em;">
+          <ul style="list-style-type:disc;">
+            <li style="margin:0 60px;">
+              years on the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis, dollars on the
+              {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "}axis
+            </li>
+          </ul>
+        </TextParent>
         <VerticalChunk>
           ...then the “after” graph will have units of...
           <ImageLeft
             offset_y="0.6em"
             src="/images/svg_ch4_ch_units2_cloud.svg" />
         </VerticalChunk>
-        <ul
-          style="list-style-type:disc;margin-top:1em;margin-bottom:1em;"
-          class="slice">
-          <li style="margin:0 60px;">
-            years on the{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis, dollars per
-            year on the{" "}
-            <Math>
-              $y$
-            </Math>
-            {" "}axis
-          </li>
-        </ul>
+        <TextParent style="margin-top:1em;margin-bottom:1em;">
+          <ul style="list-style-type:disc;">
+            <li style="margin:0 60px;">
+              years on the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis, dollars per year
+              on the{" "}
+              <Math>
+                $y$
+              </Math>
+              {" "}axis
+            </li>
+          </ul>
+        </TextParent>
         <VerticalChunk>
           ...and so on.
         </VerticalChunk>
@@ -8048,44 +8049,44 @@ const Article = () => {
             {" "}
             Express the...
           </VerticalChunk>
-          <ul
-            style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;"
-            class="slice">
-            <li>
-              associativity of function composition
-            </li>
-            <li>
-              associativity of function multiplication
-            </li>
-            <li>
-              associativity of function addition
-            </li>
-            <li>
-              commutativity of function multiplication
-            </li>
-            <li>
-              commutativity of function addition
-            </li>
-          </ul>
-          <VerticalChunk>
-            ...as well as the...
-          </VerticalChunk>
-          <ul
-            style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;"
-            class="slice">
-            <li>
-              associativity of real number multiplication
-            </li>
-            <li>
-              associativity of real number addition
-            </li>
-            <li>
-              commutativity of real number multiplication
-            </li>
-            <li>
-              commutativity of real number addition
-            </li>
-          </ul>
+          <TextParent>
+            <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+              <li>
+                associativity of function composition
+              </li>
+              <li>
+                associativity of function multiplication
+              </li>
+              <li>
+                associativity of function addition
+              </li>
+              <li>
+                commutativity of function multiplication
+              </li>
+              <li>
+                commutativity of function addition
+              </li>
+            </ul>
+            <VerticalChunk>
+              ...as well as the...
+            </VerticalChunk>
+          </TextParent>
+          <TextParent>
+            <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+              <li>
+                associativity of real number multiplication
+              </li>
+              <li>
+                associativity of real number addition
+              </li>
+              <li>
+                commutativity of real number multiplication
+              </li>
+              <li>
+                commutativity of real number addition
+              </li>
+            </ul>
+          </TextParent>
           <VerticalChunk>
             ...in the form of self-contained, formal statements.
           </VerticalChunk>
@@ -8094,209 +8095,209 @@ const Article = () => {
             <VerticalChunk>
               For the functions:
             </VerticalChunk>
-            <ul
-              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;"
-              class="slice">
-              <li style="position:relative;">
-                <i>
-                  the associativity of function multiplication is
-                  the fact that{" "}
-                  <Math>
-                    $(f \circ g) \circ h = f \circ (g \circ h)$
-                  </Math>
-                  {" "}
-                  for all functions{" "}
-                  <NoBreak>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+                <li style="position:relative;">
+                  <i>
+                    the associativity of function multiplication is
+                    the fact that{" "}
                     <Math>
-                      $f$
+                      $(f \circ g) \circ h = f \circ (g \circ h)$
                     </Math>
-                    ,
-                  </NoBreak>
-                  {" "}{" "}
-                  <NoBreak>
+                    {" "}
+                    for all functions{" "}
+                    <NoBreak>
+                      <Math>
+                        $f$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "}{" "}
+                    <NoBreak>
+                      <Math>
+                        $g$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "}{" "}
                     <Math>
-                      $g$
+                      $h$
                     </Math>
-                    ,
-                  </NoBreak>
-                  {" "}{" "}
-                  <Math>
-                    $h$
-                  </Math>
-                  {" "}such that 
-                  {" "}
-                  <NoBreak>
+                    {" "}such that 
+                    {" "}
+                    <NoBreak>
+                      <Math>
+                        $h : D \ra C$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "}{" "}
+                    <NoBreak>
+                      <Math>
+                        $g : C \ra B$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "}{" "}
                     <Math>
-                      $h : D \ra C$
+                      $f : B \ra A$
                     </Math>
-                    ,
-                  </NoBreak>
-                  {" "}{" "}
-                  <NoBreak>
+                    {" "}
+                    [for arbitrary sets{" "}
+                    <NoBreak>
+                      <Math>
+                        $A$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "}{" "}
+                    <NoBreak>
+                      <Math>
+                        $B$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "}{" "}
+                    <NoBreak>
+                      <Math>
+                        $C$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "}{" "}
+                    <NoBreak>
+                      <Math>
+                        $D$
+                      </Math>
+                      ]
+                    </NoBreak>
+                    {" "}{" "}
+                  </i>
+                  <ImageLeft
+                    offset_x="4em"
+                    src="/images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg" />
+                </li>
+                <li>
+                  <i>
+                    the associativity of function multiplication is
+                    the fact that{" "}
                     <Math>
-                      $g : C \ra B$
+                      $f(gh) = (fg)h$
                     </Math>
-                    ,
-                  </NoBreak>
-                  {" "}{" "}
-                  <Math>
-                    $f : B \ra A$
-                  </Math>
-                  {" "}
-                  [for arbitrary sets{" "}
-                  <NoBreak>
+                    {" "}for all{" "}
                     <Math>
-                      $A$
+                      $f, g, h : \rr \ra \rr$
                     </Math>
-                    ,
-                  </NoBreak>
-                  {" "}{" "}
-                  <NoBreak>
+                    {" "}{" "}
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the associativity of function addition is
+                    the fact that{" "}
                     <Math>
-                      $B$
+                      $f + (g + h) = (f + g) + h$
                     </Math>
-                    ,
-                  </NoBreak>
-                  {" "}{" "}
-                  <NoBreak>
+                    {" "}for all{" "}
                     <Math>
-                      $C$
+                      $f, g, h : \rr \ra \rr$
                     </Math>
-                    ,
-                  </NoBreak>
-                  {" "}{" "}
-                  <NoBreak>
+                    {" "}{" "}
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the commutativity of function multiplication is
+                    the fact that{" "}
                     <Math>
-                      $D$
+                      $fg = gf$
                     </Math>
-                    ]
-                  </NoBreak>
-                  {" "}{" "}
-                </i>
-                <ImageLeft
-                  offset_x="4em"
-                  src="/images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg" />
-              </li>
-              <li>
-                <i>
-                  the associativity of function multiplication is
-                  the fact that{" "}
-                  <Math>
-                    $f(gh) = (fg)h$
-                  </Math>
-                  {" "}for all{" "}
-                  <Math>
-                    $f, g, h : \rr \ra \rr$
-                  </Math>
-                  {" "}{" "}
-                </i>
-              </li>
-              <li>
-                <i>
-                  the associativity of function addition is
-                  the fact that{" "}
-                  <Math>
-                    $f + (g + h) = (f + g) + h$
-                  </Math>
-                  {" "}for all{" "}
-                  <Math>
-                    $f, g, h : \rr \ra \rr$
-                  </Math>
-                  {" "}{" "}
-                </i>
-              </li>
-              <li>
-                <i>
-                  the commutativity of function multiplication is
-                  the fact that{" "}
-                  <Math>
-                    $fg = gf$
-                  </Math>
-                  {" "}for all{" "}
-                  <Math>
-                    $f, g : \rr \ra \rr$
-                  </Math>
-                  {" "}{" "}
-                </i>
-              </li>
-              <li>
-                <i>
-                  the commutativity of function addition is
-                  the fact that{" "}
-                  <Math>
-                    $f + g = g + f$
-                  </Math>
-                  {" "}for all{" "}
-                  <Math>
-                    $f, g : \rr \ra \rr$
-                  </Math>
-                  {" "}{" "}
-                </i>
-              </li>
-            </ul>
+                    {" "}for all{" "}
+                    <Math>
+                      $f, g : \rr \ra \rr$
+                    </Math>
+                    {" "}{" "}
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the commutativity of function addition is
+                    the fact that{" "}
+                    <Math>
+                      $f + g = g + f$
+                    </Math>
+                    {" "}for all{" "}
+                    <Math>
+                      $f, g : \rr \ra \rr$
+                    </Math>
+                    {" "}{" "}
+                  </i>
+                </li>
+              </ul>
+            </TextParent>
             <VerticalChunk>
               For the real numbers:
             </VerticalChunk>
-            <ul
-              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;"
-              class="slice">
-              <li>
-                <i>
-                  the associativity of [real number] multiplication is
-                  the fact that{" "}
-                  <Math>
-                    $a(bc) = (ab)c$
-                  </Math>
-                  {" "}for all{" "}
-                  <Math>
-                    $a, b, c \in \rr$
-                  </Math>
-                  {" "}{" "}
-                </i>
-              </li>
-              <li>
-                <i>
-                  the associativity of [real number] addition is
-                  the fact that{" "}
-                  <Math>
-                    $a + (b + c) = (a + b) + c$
-                  </Math>
-                  {" "}for all{" "}
-                  <Math>
-                    $a, b, c \in \rr$
-                  </Math>
-                  {" "}{" "}
-                </i>
-              </li>
-              <li>
-                <i>
-                  the commutativity of [real number] multiplication is
-                  the fact that{" "}
-                  <Math>
-                    $ab = ba$
-                  </Math>
-                  {" "}for all{" "}
-                  <Math>
-                    $a, b \in \rr$
-                  </Math>
-                  {" "}{" "}
-                </i>
-              </li>
-              <li>
-                <i>
-                  the commutativity of [real number] addition is
-                  the fact that{" "}
-                  <Math>
-                    $a + b = b + a$
-                  </Math>
-                  {" "}for all{" "}
-                  <Math>
-                    $a, b \in \rr$
-                  </Math>
-                  {" "}{" "}
-                </i>
-              </li>
-            </ul>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+                <li>
+                  <i>
+                    the associativity of [real number] multiplication is
+                    the fact that{" "}
+                    <Math>
+                      $a(bc) = (ab)c$
+                    </Math>
+                    {" "}for all{" "}
+                    <Math>
+                      $a, b, c \in \rr$
+                    </Math>
+                    {" "}{" "}
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the associativity of [real number] addition is
+                    the fact that{" "}
+                    <Math>
+                      $a + (b + c) = (a + b) + c$
+                    </Math>
+                    {" "}for all{" "}
+                    <Math>
+                      $a, b, c \in \rr$
+                    </Math>
+                    {" "}{" "}
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the commutativity of [real number] multiplication is
+                    the fact that{" "}
+                    <Math>
+                      $ab = ba$
+                    </Math>
+                    {" "}for all{" "}
+                    <Math>
+                      $a, b \in \rr$
+                    </Math>
+                    {" "}{" "}
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the commutativity of [real number] addition is
+                    the fact that{" "}
+                    <Math>
+                      $a + b = b + a$
+                    </Math>
+                    {" "}for all{" "}
+                    <Math>
+                      $a, b \in \rr$
+                    </Math>
+                    {" "}{" "}
+                  </i>
+                </li>
+              </ul>
+            </TextParent>
             <Pause />
             <VerticalChunk>
               <i>
@@ -9505,22 +9506,24 @@ const Article = () => {
               To parse the above figure, understand
               that:
             </VerticalChunk>
-            <ul style="margin:20px 20px 0px 50px">
-              <li>
-                the red arrows indicate which particle
-                takes its velocity from the position
-                of which other particle; for example,
-                particle 1 has velocity equal to the
-                position of particle 5
-              </li>
-              <li>
-                particles that occupy the same starting
-                position on the unit circle appear
-                stacked together, as a representation
-                device; for example, particle 2 has the
-                same starting position as particle 5
-              </li>
-            </ul>
+            <TextParent>
+              <ul style="margin:20px 20px 0px 50px">
+                <li>
+                  the red arrows indicate which particle
+                  takes its velocity from the position
+                  of which other particle; for example,
+                  particle 1 has velocity equal to the
+                  position of particle 5
+                </li>
+                <li>
+                  particles that occupy the same starting
+                  position on the unit circle appear
+                  stacked together, as a representation
+                  device; for example, particle 2 has the
+                  same starting position as particle 5
+                </li>
+              </ul>
+            </TextParent>
             <VerticalChunk>
               (Note that the red arrows have to form
               a cycle of length 17 in order for us to
@@ -9577,41 +9580,43 @@ const Article = () => {
               have also highlighted two particle trajectories
               in this figure:
             </VerticalChunk>
-            <ul style="margin:1em 1em 0em 2.5em">
-              <li>
-                in{" "}
-                <span style="border:1px solid blue">
-                  blue
-                </span>
-                , particle 1, the last particle
-                to be (noticeably*) “peeled off” from
-                the circle (*all particles are 
-                instantaneously peeled off from the 
-                circle to{" "}
-                <i>
-                  some
-                </i>
-                {" "}degree, as one 
-                particle's slight deviation affects
-                the next, that affects the next, etc)
-              </li>
-              <li>
-                in{" "}
-                <span style="border:1px solid red">
-                  red
-                </span>
-                , particle 14, the{" "}
-                <i>
-                  first
-                </i>
-                {" "}particle
-                to leave the circle—but because its
-                velocity vector is given by particle 1,
-                which itself starts by going around in
-                a circle, it, too, starts out by going
-                around in a circle!
-              </li>
-            </ul>
+            <TextParent>
+              <ul style="margin:1em 1em 0em 2.5em">
+                <li>
+                  in{" "}
+                  <span style="border:1px solid blue">
+                    blue
+                  </span>
+                  , particle 1, the last particle
+                  to be (noticeably*) “peeled off” from
+                  the circle (*all particles are 
+                  instantaneously peeled off from the 
+                  circle to{" "}
+                  <i>
+                    some
+                  </i>
+                  {" "}degree, as one 
+                  particle's slight deviation affects
+                  the next, that affects the next, etc)
+                </li>
+                <li>
+                  in{" "}
+                  <span style="border:1px solid red">
+                    red
+                  </span>
+                  , particle 14, the{" "}
+                  <i>
+                    first
+                  </i>
+                  {" "}particle
+                  to leave the circle—but because its
+                  velocity vector is given by particle 1,
+                  which itself starts by going around in
+                  a circle, it, too, starts out by going
+                  around in a circle!
+                </li>
+              </ul>
+            </TextParent>
             <VerticalChunk>
               (The point is: if your velocity vector 
               is tracing a circle centered at{" "}

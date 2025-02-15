@@ -1,6 +1,7 @@
 import Chapter from "~/components/Chapter";
 import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
+import TextParent from "~/components/TextParent";
 import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
 import Image from "~/components/Image";
@@ -2048,43 +2049,43 @@ const Article = () => {
         <VerticalChunk>
           or namely with the property that:
         </VerticalChunk>
-        <ul
-          style="list-style-type:disc;margin-top:1em;margin-bottom:1em;"
-          class="slice">
-          <li style="margin:0 60px;">
-            <Math>
-              $r$
-            </Math>
-            {" "}is the distance from{" "}
-            <Math>
-              $P$
-            </Math>
-            {" "}to the origin;
-          </li>
-          <li style="margin:0 60px;">
-            <Math>
-              $\theta$
-            </Math>
-            {" "}is “the” counterclockwise angle 
-            from the positive{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis to the segment
-            {" "}
-            <NoBreak>
+        <TextParent>
+          <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;">
+            <li style="margin:0 60px;">
               <Math>
-                $OP$
+                $r$
               </Math>
-              ,
-            </NoBreak>
-            {" "}where{" "}
-            <Math>
-              $O$
-            </Math>
-            {" "}is the origin;
-          </li>
-        </ul>
+              {" "}is the distance from{" "}
+              <Math>
+                $P$
+              </Math>
+              {" "}to the origin;
+            </li>
+            <li style="margin:0 60px;">
+              <Math>
+                $\theta$
+              </Math>
+              {" "}is “the” counterclockwise angle 
+              from the positive{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis to the segment
+              {" "}
+              <NoBreak>
+                <Math>
+                  $OP$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}where{" "}
+              <Math>
+                $O$
+              </Math>
+              {" "}is the origin;
+            </li>
+          </ul>
+        </TextParent>
         <VerticalChunk>
           ...even though{" "}
           <Math>
@@ -5635,97 +5636,97 @@ const Article = () => {
               standards of simplicity, admittedly) is circular
               motion at uniform speed. In this case:
             </VerticalChunk>
-            <ul
-              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;"
-              class="slice">
-              <li>
-                <Math>
-                  $A$
-                </Math>
-                {" "}is the radius of the circle
-              </li>
-              <li>
-                <Math>
-                  $D$
-                </Math>
-                {" "}is the{" "}
-                <NoBreak>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
+                <li>
                   <Math>
-                    $x$
+                    $A$
                   </Math>
-                  -coordinate
-                </NoBreak>
-                {" "}of the circle's center
-              </li>
-            </ul>
+                  {" "}is the radius of the circle
+                </li>
+                <li>
+                  <Math>
+                    $D$
+                  </Math>
+                  {" "}is the{" "}
+                  <NoBreak>
+                    <Math>
+                      $x$
+                    </Math>
+                    -coordinate
+                  </NoBreak>
+                  {" "}of the circle's center
+                </li>
+              </ul>
+            </TextParent>
             <VerticalChunk>
               And either:
             </VerticalChunk>
-            <ul
-              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;"
-              class="slice">
-              <li>
-                <Math>
-                  $B$
-                </Math>
-                {" "}is the counterclockwise 
-                {" "}
-                <i>
-                  angular speed
-                </i>
-                /
-                <i>
-                  angular frequency
-                </i>
-                {" "}(radians per 
-                unit time) and{" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "}is the counterclockwise 
-                starting angle{" "}
-                <NoBreak>
-                  (
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
+                <li>
                   <Math>
-                    $t = 0$
+                    $B$
                   </Math>
-                  )
-                </NoBreak>
-                {" "}of the particle, as 
-                measured from a translate of the positive{" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "}
-                axis going through the center of the circle
-              </li>
-            </ul>
+                  {" "}is the counterclockwise 
+                  {" "}
+                  <i>
+                    angular speed
+                  </i>
+                  /
+                  <i>
+                    angular frequency
+                  </i>
+                  {" "}(radians per 
+                  unit time) and{" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  {" "}is the counterclockwise 
+                  starting angle{" "}
+                  <NoBreak>
+                    (
+                    <Math>
+                      $t = 0$
+                    </Math>
+                    )
+                  </NoBreak>
+                  {" "}of the particle, as 
+                  measured from a translate of the positive{" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "}
+                  axis going through the center of the circle
+                </li>
+              </ul>
+            </TextParent>
             <VerticalChunk>
               Or:
             </VerticalChunk>
-            <ul
-              style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;"
-              class="slice">
-              <li>
-                <Math>
-                  $-B$
-                </Math>
-                {" "}is the counterclockwise 
-                angular speed/angular frequency of the particle 
-                and{" "}
-                <Math>
-                  $-C$
-                </Math>
-                {" "}is the counterclockwise starting angle 
-                of the particle, as measured from a translate of 
-                the positive{" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "}axis going through the center 
-                of the circle
-              </li>
-            </ul>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
+                <li>
+                  <Math>
+                    $-B$
+                  </Math>
+                  {" "}is the counterclockwise 
+                  angular speed/angular frequency of the particle 
+                  and{" "}
+                  <Math>
+                    $-C$
+                  </Math>
+                  {" "}is the counterclockwise starting angle 
+                  of the particle, as measured from a translate of 
+                  the positive{" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "}axis going through the center 
+                  of the circle
+                </li>
+              </ul>
+            </TextParent>
             <VerticalChunk>
               In more detail, every time
             </VerticalChunk>
@@ -9400,7 +9401,7 @@ const Article = () => {
             src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg"
             style="margin-top:1.0em;margin-bottom:1em;" />
           <Pause />
-          <SolutionNote>
+          <Solution solution_number={18}>
             <VerticalChunk>
               We shall use the height{" "}
               <Math>
@@ -9468,7 +9469,7 @@ const Article = () => {
                 .)
               </NoBreak>
             </VerticalChunk>
-          </SolutionNote>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={23}>
           <VerticalChunk>
@@ -9491,7 +9492,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg" />
           <Pause />
-          <SolutionNote>
+          <Solution solution_number={19}>
             <VerticalChunk>
               Here are two solutions:
             </VerticalChunk>
@@ -9555,7 +9556,7 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              <StarDivider />
+              <StarDivider style="margin-top:0.5em;" />
               {" "}{" "}
               <i>
                 Solution 2.
@@ -9609,18 +9610,22 @@ const Article = () => {
             <Pause />
             <SolutionNote>
               <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
                 Since the two solutions compute
                 answers to the same question,
                 one can in particular deduce that
               </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <div style="margin-top:1em;margin-bottom:1em;">
-                  <div style="display:inline-block;border: 1px solid red;padding-left:1.5em;padding-right:1.5em;">
-                    <MathBlock>
-                      $$\sec^2(\theta) = 1 + \tan^2(\theta)$$
-                    </MathBlock>
-                  </div>
+              <center style="margin-top:1.5em;margin-bottom:1.5em;">
+                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                  <MathBlock>
+                    $$\sec^2(\theta) = 1 + \tan^2(\theta)$$
+                  </MathBlock>
                 </div>
+              </center>
+              <VerticalChunk>
                 for all{" "}
                 <NoBreak>
                   <Math>
@@ -9646,7 +9651,7 @@ const Article = () => {
                 however.)
               </VerticalChunk>
             </SolutionNote>
-          </SolutionNote>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={24}>
           <VerticalChunk>
@@ -9678,7 +9683,7 @@ const Article = () => {
             with the definitions being...
           </VerticalChunk>
           <center style="margin-top:1em;margin-bottom:1em;">
-            <div style="display:inline-block;border:1px solid red;padding-left:1.5em;padding-right:1.5em;">
+            <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
               <MathBlock>
                 $$\,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,$$
               </MathBlock>
@@ -9717,7 +9722,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={18}>
+          <Solution solution_number={20}>
             <VerticalChunk>
               Let{" "}
               <NoBreak>
@@ -9738,7 +9743,7 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$1 = &#123;\cos^2(\theta)\over \cos^2(\theta)&#125;$$
+              $$1 = &#123;\cos(\theta)\over \cos(\theta)&#125; = &#123;\cos^2(\theta)\over \cos^2(\theta)&#125;$$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9850,18 +9855,11 @@ const Article = () => {
           <VerticalChunk>
             Rewrite each case:
           </VerticalChunk>
-          <VerticalChunk indent={true}>
-            <div class="slice">
-              <span style="width:50px;display:inline-block;margin-top:0.8em;">
-                <span>
-                  {" "}{" "}
-                  <b>
-                    (a)
-                  </b>
-                  {" "}{" "}
-                </span>
-              </span>
-              <span>
+          <TextParent>
+            <ol
+              style="margin-top:0.5em;"
+              class="l1">
+              <li>
                 using the composition{" "}
                 <NoBreak>
                   “
@@ -9871,151 +9869,145 @@ const Article = () => {
                   ”
                 </NoBreak>
                 {" "}operator;
-              </span>
-              <br />
-              <span style="width:50px;margin-top:0.8em;display:inline-block;">
-                <span>
-                  {" "}{" "}
-                  <b>
-                    (b)
-                  </b>
-                  {" "}{" "}
-                </span>
-              </span>
-              <span>
-                as an expression of the form{" "}
+              </li>
+              <li>
+                as an expression of the form
                 <Pause />
                 <MathBlock>
                   $$x \ra \dots$$
                 </MathBlock>
-              </span>
-              <span>
+                <Pause />
                 for some value of{" "}
                 <NoBreak>
                   “
                   <Math>
                     $\dots$
                   </Math>
-                  ”.
+                  ”
                 </NoBreak>
-                {" "}{" "}
-              </span>
-            </div>
-            {" "}{" "}
-            <b>
-              (a)
-            </b>
-            {" "}
-            The expressions are respectively...
-          </VerticalChunk>
+              </li>
+            </ol>
+          </TextParent>
           <Pause />
-          <MathBlock>
-            $$f  \circ (u \ra u + A)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$f  \circ (z \ra Bz)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(u \ra u + A)\circ f$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(z \ra Bz)\circ f$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...but where the dummy variables used inside of each
-            lambda-notation do not matter, so we might as well have
-            written...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$f  \circ (t \ra t + A)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$f  \circ (t \ra Bt)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(t \ra t + A)\circ f$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(t \ra Bt)\circ f$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...or...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$f  \circ (x \ra x + A)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$f  \circ (x \ra Bx)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(x \ra x + A)\circ f$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(x \ra Bx)\circ f$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...! (It really doesn't matter.)
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            <b>
-              (b)
-            </b>
-            The expressions are respectively:
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$x \ra f(x + A)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$x \ra f(Bx)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$x \ra f(x) + A$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$x \ra Bf(x)$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...where we use{" "}
-            <NoBreak>
-              “
-              <Math>
-                $x$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}because we were{" "}
-            <i>
-              told
-            </i>
-            to use
-            {" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              .
-            </NoBreak>
-            {" "}(By the statement.)
-          </VerticalChunk>
+          <Solution solution_number={21}>
+            <VerticalChunk>
+              <b>
+                (a)
+              </b>
+              {" "}
+              The expressions are respectively...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$f  \circ (u \ra u + A)$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$f  \circ (z \ra Bz)$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$(u \ra u + A)\circ f$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$(z \ra Bz)\circ f$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...but where the dummy variables used inside of each
+              lambda-notation do not matter, so we might as well have
+              written...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$f  \circ (t \ra t + A)$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$f  \circ (t \ra Bt)$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$(t \ra t + A)\circ f$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$(t \ra Bt)\circ f$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...or...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$f  \circ (x \ra x + A)$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$f  \circ (x \ra Bx)$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$(x \ra x + A)\circ f$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$(x \ra Bx)\circ f$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...! (It really doesn't matter.)
+            </VerticalChunk>
+            <Pause />
+            <VerticalChunk>
+              <b>
+                (b)
+              </b>
+              {" "}
+              The expressions are respectively:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$x \ra f(x + A)$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$x \ra f(Bx)$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$x \ra f(x) + A$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$x \ra Bf(x)$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...where we use{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}because we were{" "}
+              <i>
+                told
+              </i>
+              to use
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(By the statement.)
+            </VerticalChunk>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={27}>
           <VerticalChunk>
@@ -10057,58 +10049,58 @@ const Article = () => {
           <VerticalChunk>
             ...are, respectively, obtained by:
           </VerticalChunk>
-          <ul
-            style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;"
-            class="slice">
-            <li>
-              horizontally translating the graph of{" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}by{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}units to the left;
-            </li>
-            <li>
-              horizontally compressing the graph of{" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}by a factor{" "}
-              <NoBreak>
+          <TextParent>
+            <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;">
+              <li>
+                horizontally translating the graph of{" "}
                 <Math>
-                  $B$
+                  $f$
                 </Math>
-                ;
-              </NoBreak>
-            </li>
-            <li>
-              vertically translating the graph of{" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}by{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}units upward;
-            </li>
-            <li>
-              vertically dilating (scaling) the graph of{" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}by a factor{" "}
-              <NoBreak>
+                {" "}by{" "}
                 <Math>
-                  $B$
+                  $A$
                 </Math>
-                .
-              </NoBreak>
-            </li>
-          </ul>
+                {" "}units to the left;
+              </li>
+              <li>
+                horizontally compressing the graph of{" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "}by a factor{" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ;
+                </NoBreak>
+              </li>
+              <li>
+                vertically translating the graph of{" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "}by{" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "}units upward;
+              </li>
+              <li>
+                vertically dilating (scaling) the graph of{" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "}by a factor{" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  .
+                </NoBreak>
+              </li>
+            </ul>
+          </TextParent>
           <VerticalChunk>
             (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
             Chapter 3.)
@@ -10175,7 +10167,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={19}>
+          <Solution solution_number={22}>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -10401,7 +10393,7 @@ const Article = () => {
             What algebraic identity would this imply?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={20}>
+          <Solution solution_number={23}>
             <VerticalChunk>
               We know from Exercise 21 that the 
               highest point on the bump immediately to the 
@@ -10603,7 +10595,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={21}>
+          <Solution solution_number={24}>
             <VerticalChunk>
               We define
             </VerticalChunk>

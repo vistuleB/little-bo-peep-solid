@@ -904,19 +904,19 @@
 
     or namely with the property that: 
 
-    |> ul
-        class slice
-        style list-style-type:disc;margin-top:1em;margin-bottom:1em;
-        |> li
-            style margin:0 60px;
+    |> TextParent
+        |> ul
+            style list-style-type:disc;margin-top:1em;margin-bottom:1em;
+            |> li
+                style margin:0 60px;
 
-            $r$ is the distance from $P$ to the origin; 
-        |> li
-            style margin:0 60px;
+                $r$ is the distance from $P$ to the origin; 
+            |> li
+                style margin:0 60px;
 
-            $\theta$ is “the” counterclockwise angle 
-            from the positive $x$ axis to the segment
-            $OP$, where $O$ is the origin;
+                $\theta$ is “the” counterclockwise angle 
+                from the positive $x$ axis to the segment
+                $OP$, where $O$ is the origin;
 
     ...even though $\theta$ is not unique,
     because any multiple of $4\eta$ may be

@@ -61,22 +61,16 @@
     ...with the understanding that $f'(a)$ is 
     undefined if a tangent line does not exist 
     or if the tangent is vertical. 
-    !! But for one 
-    !! last asterisk—and speaking of the existence,
-    !! or not, of the tangent—note that the endpoint
-    !! of a curve does not count as having a tangent,
-    !! and therefore leaves a missing value for the 
-    !! derivative:
-    For one extra special case, note that
-    the endpoing of a curve does not count
+    Also note that
+    the endpoint of a curve does not count
     as having a tangent, and leaves a missing
     value for the derivative:
 
     |> Image
         src images/svg_ch4_ch_one_sided_tangent.svg
 
-    (In other words, “half-tangents” do not actually 
-    count as tangents.)
+    (In other words, what one might describe as 
+    “half-tangents” do not actually count as tangents.)
 
 |> Section
 
@@ -269,40 +263,43 @@
     For example, if the “before” graph has units 
     of...
 
-    |> ul
-        class slice
-        style list-style-type:disc;margin-top:1em;margin-bottom:1em;
-        |> li
-            style margin:0 60px;
+    |> TextParent
+        style margin-top:1em;margin-bottom:1em;
+        |> ul
+            style list-style-type:disc;
+            |> li
+                style margin:0 60px;
 
-            seconds on the $x$ axis, meters on the 
-            $y$ axis
+                seconds on the $x$ axis, meters on the 
+                $y$ axis
 
     ...then the “after” graph will have units of...
 
     |> ImageRight
         src images/svg_ch4_ch_units1_cloud.svg
-        offset_y -0.6em
+        offset_y 1em
     
-    |> ul
-        class slice
-        style list-style-type:disc;margin-top:1em;margin-bottom:1em;
-        |> li
-            style margin:0 60px;
+    |> TextParent
+        style margin-top:1em;margin-bottom:1em;
+        |> ul
+            style list-style-type:disc;
+            |> li
+                style margin:0 60px;
 
-            seconds on the $x$ axis, meters per
-            second on the $y$ axis
+                seconds on the $x$ axis, meters per
+                second on the $y$ axis
 
-    ...while if the “before” graph has units of...
+        ...while if the “before” graph has units of...
 
-    |> ul
-        class slice
-        style list-style-type:disc;margin-top:1em;margin-bottom:1em;
-        |> li
-            style margin:0 60px;
+    |> TextParent
+        style margin-top:1em;margin-bottom:1em;
+        |> ul
+            style list-style-type:disc;
+            |> li
+                style margin:0 60px;
 
-            years on the $x$ axis, dollars on the
-            $y$ axis
+                years on the $x$ axis, dollars on the
+                $y$ axis
     
     ...then the “after” graph will have units of...
 
@@ -310,14 +307,15 @@
         src images/svg_ch4_ch_units2_cloud.svg
         offset_y 0.6em
 
-    |> ul
-        class slice
-        style list-style-type:disc;margin-top:1em;margin-bottom:1em;
-        |> li
-            style margin:0 60px;
+    |> TextParent
+        style margin-top:1em;margin-bottom:1em;
+        |> ul
+            style list-style-type:disc;
+            |> li
+                style margin:0 60px;
 
-            years on the $x$ axis, dollars per
-            year on the $y$ axis
+                years on the $x$ axis, dollars per year
+                on the $y$ axis
 
     ...and so on.
 

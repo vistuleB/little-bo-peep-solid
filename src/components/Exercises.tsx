@@ -1,27 +1,16 @@
 import {
-  Accessor,
   children,
-  createEffect,
-  createMemo,
-  createSignal,
   For,
   ParentProps,
-  Setter,
-  useContext,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import Image from "./Image";
 import { JSX } from "solid-js/h/jsx-runtime";
 import { twJoin } from "tailwind-merge";
-import { useGlobalContext } from "~/store/StoreProvider";
-import { GREEN_DIV_HEIGHT } from "~/constants";
 import useExercises from "~/hooks/useExercises";
 import { ExercisesStoreProvider, useExercisesContext } from "~/store/ExercisesStoreProvider";
 
 type ExercisesProps = ParentProps & SharedProps;
-  // & {
-  //   labels: string[];
-  // };
 
 export const Exercises = (props: ExercisesProps) => {
   return (
@@ -53,9 +42,10 @@ const ExercisesConsumer = (props: ExercisesProps) => {
     <>
       <Image
         id="exo"
-        src="/images/seperator.png"
+        src="/images/separator.png"
         height="50px"
-        class="mt-[15px] mb-[40px]"></Image>
+        class="mt-[15px] mb-[40px]"
+        ></Image>
       <Switcher exercises={children_list.toArray()} />
       <div class="h-[31px]"></div>
       <For each={children_list.toArray()}>
@@ -79,8 +69,6 @@ const ExercisesConsumer = (props: ExercisesProps) => {
 
 type SwitcherProps = {
   exercises: JSX.Element[];
-  // selected_exo: Accessor<number>;
-  // set_selected_exo: Setter<number>;
 };
 
 const Switcher = (props: SwitcherProps) => {
@@ -153,44 +141,11 @@ const Switcher = (props: SwitcherProps) => {
 };
 
 export const Exercise = (
-  props: ParentProps &
-    SharedProps & {
-      exercise_number: number;
-    }
+  props: ParentProps
 ) => {
-  const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
-  const { store: global_store } = useGlobalContext()
-  const solution_open = () => store.solutions_open[props.exercise_number - 1];
-
-  let transition_duration = () => store.transition_duration;
-
-  let [bot_div, set_bot_div] = createSignal(false);
-
-  // toggle bot div
-  createEffect(() => {
-    if (solution_open()) {
-      setTimeout(() => {
-        set_bot_div(false);
-      }, transition_duration()[props.exercise_number - 1]);
-    } else {
-      setTimeout(() => {
-        set_bot_div(true);
-      }, transition_duration()[props.exercise_number - 1]);
-    }
-  });
-
   return (
     <div>
       {props.children}
-      <div
-        class="slice transition-all col-start-2"
-        style={{
-          height: `${!solution_open() || bot_div() ? GREEN_DIV_HEIGHT : 0}px`,
-          "background-color": global_store.show_areas ? "#00440050" : "",
-          "transition-duration": `${
-            transition_duration()[props.exercise_number - 1]
-          }ms`,
-        }}></div>
     </div>
   );
 };

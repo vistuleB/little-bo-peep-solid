@@ -26,8 +26,12 @@ export default createHandler(() => (
 
           {assets}
         </head>
-        <body>
-          <div id="app">{children}</div>
+        {/* needed width:0 to avoid an overlapping 
+        div that was fucking with pointer events: */}
+        <body style="width:0;">
+          <div id="app">
+            {children}
+          </div>
           {scripts}
         </body>
       </html>

@@ -25,8 +25,9 @@
 :root {
   --background-rgb: 255, 255, 255;
   --foreground-rgb: 0, 0, 0;
-  --desktop-text-column-width: 900px;
+  --desktop-text-column-width: 520px;
   --desktop-text-column-padding: 16px;
+  --mobile-max-width: 900px;
 }
 
 body {
@@ -53,12 +54,18 @@ i {
   justify-content: center;
 }
 
-.slice {
+.text-column {
   position: relative;
-  width: min(var(--desktop-text-column-width), 100vw);
+  margin-inline: auto;
   padding-left: var(--desktop-text-column-padding);
   padding-right: var(--desktop-text-column-padding);
+}
+
+.slice {
+  position: relative;
   margin-inline: auto;
+  padding-left: var(--desktop-text-column-padding);
+  padding-right: var(--desktop-text-column-padding);
 }
 
 .mathblock {
@@ -336,7 +343,7 @@ table.first-line tr td:first-child {
   grid-template-columns: repeat(12, 1fr);
 }
 
-@media (min-width: 520px) {
+/* @media (min-width: 520px) {
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -379,12 +386,10 @@ table.first-line tr td:first-child {
   }
 
   .gridColsWidth {
-    /* DESKTOP_TEXT_WIDTH_WITH_MARGIN Constant */
+    // DESKTOP_TEXT_WIDTH_WITH_MARGIN Constant
     grid-template-columns: 1fr 588px 1fr;
   }
-
- 
-}
+} */
 
 .nowrap,
 .nobreak,
@@ -465,8 +470,14 @@ table.first-line tr td:first-child {
   background-color: rgba(170, 170, 50, 0.7);
 }
 
+.test-width {
+  /* width: calc(round(down, 100vw / 900px)); */
+  --shf: 4.9406564584124654e-324;
+  width: calc(100 * (100vw / 900) * var(--shf) / var(--shf));
+}
+
 .outer-width-enforcer {
-  width: calc(min(var(--desktop-text-column-width), 100%) + 3000px);
+  width: calc(min(var(--desktop-text-column-width), 100vw) + 3000px);
   overflow: hidden;
 }
 
@@ -482,4 +493,24 @@ table.first-line tr td:first-child {
   padding-left:0px;
   display: inline;
   transform: translate(0em, 0.1em);
+}
+
+ol.l1 {
+  counter-reset: list;
+}
+ol.l1 > li {
+  margin-left: 60px;
+  list-style: none;
+  line-height: 1.8em;
+}
+ol.l1 > li:before {
+    content: "(" counter(list, lower-alpha ) ") ";
+    counter-increment: list;
+    position: absolute;
+    left: -0em;
+    display: block;
+    width: 2em; 
+    text-align: right;
+    font-family: "Baskerville Bold";
+    margin-left: 30px;
 }

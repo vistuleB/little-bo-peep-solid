@@ -17,22 +17,10 @@ type SolutionProps = ParentProps &
     solution_number: number;
   };
 
-const turnOffScrollHistory = () => {
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
-}
-
-const turnOnScrollHistory = () => {
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
-}
-
 const Solution = (props: SolutionProps) => {
   let button_ref: HTMLDivElement | undefined;
   let ref: HTMLDivElement | undefined;
-  // let { store, set_store } = useGlobalContext();
+  let { store: global_store, set_store: set_global_store } = useGlobalContext();
   const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
 
 
@@ -171,6 +159,15 @@ const Solution = (props: SolutionProps) => {
           </div>
         </div>
       </div>
+      <div
+        class="slice transition-all col-start-2"
+        style={{
+          height: `${(!solution_open() || bot_div()) ? GREEN_DIV_HEIGHT : 0}px`,
+          "background-color": global_store.show_areas ? "#00440050" : "",
+          "transition-duration": `${
+            transition_duration()[props.solution_number - 1]
+          }ms`,
+        }}></div>
     </>
   );
 };

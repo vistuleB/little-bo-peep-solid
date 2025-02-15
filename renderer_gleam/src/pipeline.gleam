@@ -1,3 +1,4 @@
+import desugarers/add_between_tag_and_text_node.{add_between_tag_and_text_node}
 import desugarers/find_replace.{find_replace}
 import gleam/option.{Some, None}
 import desugarers/absorb_next_sibling_while.{absorb_next_sibling_while}
@@ -139,6 +140,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
           "Solution",
           "SolutionNote",
           "Table",
+          "TextParent",
           "WriterlyBlankLine",
           "center",
           "li",
@@ -357,6 +359,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #(#("CentralDisplay", "VerticalChunk"), "Pause", []),
       #(#("List", "VerticalChunk"), "Pause", []),
     ]),
+    add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
     add_before_tags_but_not_first_child_tags([
       #("Exercises", "Pause", []),
       #("Example", "Pause", []),

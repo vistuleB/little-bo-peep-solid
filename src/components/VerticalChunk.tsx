@@ -1,4 +1,5 @@
-import { createEffect, onCleanup, ParentProps } from "solid-js";
+import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
+import { ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "../store/StoreProvider";
@@ -6,7 +7,7 @@ import { useGlobalContext } from "../store/StoreProvider";
 const VerticalChunk = (
   props: ParentProps & SharedProps & { indent?: boolean },
 ) => {
-  const { store,  } = useGlobalContext();
+  const { store, } = useGlobalContext();
 
   return (
     <p
@@ -16,7 +17,7 @@ const VerticalChunk = (
         props.class,
         store.show_areas && "divide-horizontally"
       )}
-      style={props.style}
+      style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;${props.style}`}
     >
       {props.children}
     </p>

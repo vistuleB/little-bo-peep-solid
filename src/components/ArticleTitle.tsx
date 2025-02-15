@@ -1,10 +1,13 @@
 import {
+  MOBILE_MAX_WIDTH,
+  DESKTOP_COLUMN_WIDTH,
   CHAPTER_TITLE_BOTTOM_MARGIN_DESKTOP,
   CHAPTER_TITLE_BOTTOM_MARGIN_MOBILE,
   CHAPTER_TITLE_TOP_MARGIN_DESKTOP,
   CHAPTER_TITLE_TOP_MARGIN_MOBILE,
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 const ArticleTitle = (
   props: {
@@ -12,14 +15,15 @@ const ArticleTitle = (
     on_mobile_label?: string;
     class?: string;
   },
-  // label: &'static str,
-  // #[prop(default = "")] on_mobile: &'static str,
-  // #[prop(default = "")] class: &'static str,
 ) => {
   const { on_mobile } = useOnMobile();
+  const { store, } = useGlobalContext();
 
   return (
-    <div class="slice">
+    <div 
+      class="slice"
+      style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;`}
+      >
       <h1
         class="text-3xl sm:text-4xl py-4"
         style={`margin-top: ${

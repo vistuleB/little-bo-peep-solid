@@ -6,7 +6,6 @@ import {
   createEffect,
 } from "solid-js";
 import { MOBILE_MAX_WIDTH } from "../constants";
-import { useEffect } from "solidjs-hooks";
 
 function useOnMobile() : { on_mobile: Accessor<boolean> } {
   const [on_mobile, set_on_mobile] = createSignal(false);

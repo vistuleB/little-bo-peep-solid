@@ -2,6 +2,7 @@ import { ParentProps, createEffect, onCleanup, createSignal } from "solid-js";
 import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
 import useOnMobile from "../hooks/useOnMobile";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 const Container = (props: ParentProps) => {
   // can_click is for disabling click on page transition
@@ -10,9 +11,10 @@ const Container = (props: ParentProps) => {
   // add_imports and table of contents
   const [scrollY, set_scrollY] = createSignal(0);
   const [scrollX, set_scrollX] = createSignal(0);
-  const [innerWidth, set_innerWidth] = createSignal(0);
-  const [scrollWidth, set_scrollWidth] = createSignal(0);
+  // const [innerWidth, set_innerWidth] = createSignal(0);
+  // const [scrollWidth, set_scrollWidth] = createSignal(0);
   let { on_mobile } = useOnMobile();
+  let { store, set_store } = useGlobalContext();
 
   const handleScroll = () => {
     set_scrollY(window.scrollY);
@@ -20,8 +22,10 @@ const Container = (props: ParentProps) => {
   };
 
   const handleResize = () => {
-    set_innerWidth(window.innerWidth);
-    set_scrollWidth(document.body.scrollWidth);
+    set_store('innerWidth', window.innerWidth);
+    set_store('scrollWidth', document.body.scrollWidth);
+    // set_innerWidth(window.innerWidth);
+    // set_scrollWidth(document.body.scrollWidth);
   };
 
   createEffect(() => {
@@ -29,7 +33,8 @@ const Container = (props: ParentProps) => {
     handleResize();
 
     const scroll_back = () => {
-      let theoretical_left = (scrollWidth() - innerWidth()) / 2;
+      // let theoretical_left = (scrollWidth() - innerWidth()) / 2;
+      let theoretical_left = (store.scrollWidth - store.innerWidth) / 2;
       if (
         scrollX() > theoretical_left - 200 &&
         scrollX() < theoretical_left + 200
@@ -57,7 +62,7 @@ const Container = (props: ParentProps) => {
   createEffect(() => {
     document.addEventListener("click", (_) => {
       window.scroll({
-        left: (scrollWidth() - innerWidth()) / 2,
+        left: (store.scrollWidth - store.innerWidth) / 2,
         behavior: "smooth",
       });
     });
@@ -65,7 +70,7 @@ const Container = (props: ParentProps) => {
     window.addEventListener("resize", (_) => {
       if (!on_mobile()) {
         window.scroll({
-          left: (scrollWidth() - innerWidth()) / 2,
+          left: (store.scrollWidth - store.innerWidth) / 2,
           behavior: "instant",
         });
       }
@@ -73,13 +78,16 @@ const Container = (props: ParentProps) => {
   });
 
   return (
-    <div id="Container" class="outer-width-enforcer pb-14 -z-10" style="position:relative;">
-      <div class="sm:translate-x-0">
-        <Nav />
+    <>
+      {/* <div class="test-width"></div> */}
+      <div id="Container" class="outer-width-enforcer pb-14 -z-10" style="position:relative;">
+        <div class="sm:translate-x-0">
+          <Nav />
+        </div>
+        {props.children}
+        <SVGDefs />
       </div>
-      {props.children}
-      <SVGDefs />
-    </div>
+    </>
   );
 };
 

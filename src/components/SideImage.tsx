@@ -105,7 +105,7 @@ export const ImageRight = ({
       offset_x: offset_x,
       offset_y: offset_y,
       line: line,
-    }
+    },
   )
 
   return (<SideImage {...internalProps}></SideImage>);
@@ -117,8 +117,6 @@ export const ImageLeft = ({
   offset_y = "0px",
   ...props
 }: UserFacingSideImageProps) => {
-  const scale = useScale();
-
   let internalProps : InternalSideImageProps = mergeProps(
     props,
     {
