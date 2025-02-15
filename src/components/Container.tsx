@@ -1,3 +1,4 @@
+import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { ParentProps, createEffect, onCleanup, createSignal } from "solid-js";
 import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
@@ -79,8 +80,11 @@ const Container = (props: ParentProps) => {
 
   return (
     <>
-      {/* <div class="test-width"></div> */}
-      <div id="Container" class="outer-width-enforcer pb-14 -z-10" style="position:relative;">
+      <div
+        id="Container"
+        class="pb-14 -z-10 relative"
+        style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}
+        >
         <div class="sm:translate-x-0">
           <Nav />
         </div>

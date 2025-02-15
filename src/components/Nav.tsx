@@ -1,14 +1,23 @@
 import { createSignal } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
+import { twJoin } from "tailwind-merge";
 
 const HAMBURGER_MENU_HEIGHT = 56;
 
 const Nav = () => {
+  let { store, } = useGlobalContext();
   return (
     <>
-      <nav class="select-none w-full">
-        <div class="border-b select-none flex justify-center items-center fixed sm:absolute bg-white z-40 w-full h-14 left-0">
+      <nav class={twJoin(
+        "select-none w-full",
+        store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
+        store.innerWidth >= MOBILE_MAX_WIDTH && "absolute",
+      )}>
+        <div
+          class={twJoin(
+            "border-b select-none flex justify-center items-center bg-white z-40 w-full h-14 left-0",
+          )}>
           <Title />
         </div>
       </nav>
