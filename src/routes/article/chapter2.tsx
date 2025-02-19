@@ -1793,9 +1793,7 @@ const Article = () => {
             graph):
           </VerticalChunk>
           <Pause />
-          <Image
-            class="pt-[22px] pb-[15px] pl-[90px]"
-            src="/images/1.svg" />
+          <Image src="/images/1.svg" />
           <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
@@ -1803,9 +1801,7 @@ const Article = () => {
               velocity:
             </VerticalChunk>
             <Pause />
-            <Image
-              class="pt-[21px] pb-[20px] pl-[46px]"
-              src="/images/64.svg" />
+            <Image src="/images/64.svg" />
             <Pause />
             <VerticalChunk>
               On each interval, the velocity is rate of

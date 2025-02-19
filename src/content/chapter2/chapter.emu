@@ -831,7 +831,6 @@
 
         |> Image
             src images/1.svg
-            class pt-[22px] pb-[15px] pl-[90px]
 
         |> Solution
 
@@ -840,7 +839,6 @@
 
             |> Image
                 src images/64.svg
-                class pt-[21px] pb-[20px] pl-[46px]
 
             On each interval, the velocity is rate of
             change of the height, i.e., the _slope_ of
