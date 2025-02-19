@@ -875,50 +875,6 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
         </Example>
-        <Pause />
-        <Example>
-          <VerticalChunk>
-            <b>
-              Example 6.
-            </b>
-            {" "}
-            If{" "}
-            <Math>
-              $h : \rr \ra \rr$
-            </Math>
-            {" "}is defined by
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$h(x) = \frac&#123;1&#125;&#123;x+1&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            then
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\begin&#123;align&#125;
-            \dom\,h \,=\, \rr\back\&#123;-1\&#125; =\, (-\infty,-1) \cup (-1,\infty)
-            \end&#123;align&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            because{" "}
-            <Math>
-              $1/(x+1)$
-            </Math>
-            {" "}is well-defined if and only if
-            division by 0 is avoided, i.e., if and only if 
-            {" "}
-            <NoBreak>
-              <Math>
-                $x \ne -1$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-        </Example>
       </Section>
       <Pause />
       <Section>
@@ -1152,7 +1108,7 @@ const Article = () => {
         <Example>
           <VerticalChunk>
             <b>
-              Example 7.
+              Example 6.
             </b>
             {" "}
             This{" "}
@@ -1173,7 +1129,7 @@ const Article = () => {
         <Example>
           <VerticalChunk>
             <b>
-              Example 8.
+              Example 7.
             </b>
             {" "}
             This graph defines a function...

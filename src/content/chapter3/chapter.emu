@@ -359,25 +359,25 @@
         (i.e., we need $x - 1 \geq 0$ in order for $g(x)$ 
         to be defined, i.e., we need $x \geq 1$).
 
-    |> Example 
+    !! |> Example 
 
-        If $h : \rr \ra \rr$ is defined by
+    !!     If $h : \rr \ra \rr$ is defined by
 
-        $$
-        h(x) = \frac{1}{x+1}
-        $$
+    !!     $$
+    !!     h(x) = \frac{1}{x+1}
+    !!     $$
 
-        then
+    !!     then
 
-        $$
-        \begin{align}
-        \dom\,h \,=\, \rr\back\{-1\} =\, (-\infty,-1) \cup (-1,\infty)
-        \end{align}
-        $$
+    !!     $$
+    !!     \begin{align}
+    !!     \dom\,h \,=\, \rr\back\{-1\} =\, (-\infty,-1) \cup (-1,\infty)
+    !!     \end{align}
+    !!     $$
 
-        because $1/(x+1)$ is well-defined if and only if
-        division by 0 is avoided, i.e., if and only if 
-        $x \ne -1$.
+    !!     because $1/(x+1)$ is well-defined if and only if
+    !!     division by 0 is avoided, i.e., if and only if 
+    !!     $x \ne -1$.
 
 
 |> Section
