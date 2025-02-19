@@ -34,6 +34,16 @@
   background-color: var(--background-rgb);
 }
 
+.scaled-up-bg {
+  border-radius: 3px;
+  background-color: rgb(226 232 240);
+}
+
+.scaled-down-bg {
+  border-radius: 4px;
+  background-color: rgb(220, 216, 203);
+}
+
 body {
   background: var(--background-rgb);
   color: var(--foreground-rgb);

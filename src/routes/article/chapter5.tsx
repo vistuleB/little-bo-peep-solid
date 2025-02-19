@@ -641,7 +641,9 @@ const Article = () => {
         <VerticalChunk>
           also known simply as
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <Pause />
+        <CentralDisplay>
+          {" "}{" "}
           <NoBreak>
             “
             <Math>
@@ -649,8 +651,10 @@ const Article = () => {
             </Math>
             ”
           </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
+          {" "}{" "}
+        </CentralDisplay>
+        <Pause />
+        <VerticalChunk>
           by the general definition that
         </VerticalChunk>
         <Pause />
@@ -664,10 +668,10 @@ const Article = () => {
             <Math>
               $f : \rr \ra \rr$
             </Math>
-            .
+            ,
           </NoBreak>
           {" "}
-          And similarly for{" "}
+          and similarly for{" "}
           <NoBreak>
             “
             <Math>
@@ -941,16 +945,16 @@ const Article = () => {
         <VerticalChunk>
           We also have these identities...
         </VerticalChunk>
-        <center>
-          <MathBlock>
-            $$\displaylines&#123;
-            \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
-            \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
-            \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
-            \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
-            &#125;$$
-          </MathBlock>
-        </center>
+        <Pause />
+        <MathBlock>
+          $$\displaylines&#123;
+          \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
+          \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
+          \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
+          \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
+          &#125;$$
+        </MathBlock>
+        <Pause />
         <VerticalChunk>
           ...that follow because one full turn around the
           circle brings you back to the same position, whereas

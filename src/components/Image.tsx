@@ -83,10 +83,12 @@ const Image = (props: ImageProps) => {
           onClick={(_) => {
             // should we scale? (if it's the first click we should def. scale up)
             const should_be_scaled_down = our_on_mobile() && !scaled_down() && after_first_click();
+            const large_scale = scaled_down_scale() < 0.88 ? 1 : scaled_down_scale();
+            const scale_to_use = should_be_scaled_down ? scaled_down_scale() : large_scale;
 
             // do the scale
-            set_scaled_down(should_be_scaled_down);
-            set_scale({scale: should_be_scaled_down ? scaled_down_scale() : 1, name:props.src});
+            set_scale({scale: scale_to_use, name:props.src});
+            set_scaled_down(scale_to_use != large_scale);
             console.log("set scale to:", scale());
 
             // bookkeeping other things
@@ -98,8 +100,8 @@ const Image = (props: ImageProps) => {
           class={twJoin(
             "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
             (our_on_mobile() && (scaled_down() || !after_first_click())) && "max-width-screen",
-            (our_on_mobile() && (scaled_down() || !after_first_click())) && "bg-slate-500",  // dark gray means "max-width-screen"
-            !(our_on_mobile() && (scaled_down() || !after_first_click())) && "bg-slate-200", // light gray means not "max-width-screen"
+            (our_on_mobile() && scaled_down()) && "scaled-down-bg",  // dark gray means "max-width-screen"
+            !(our_on_mobile() && scaled_down()) && "scaled-up-bg",   // light gray means not "max-width-screen"
 
             // (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-500",  // dark means "max-width-screen"
             // !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-200", // light means not "max-width-screen"

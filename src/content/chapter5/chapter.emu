@@ -169,14 +169,14 @@
     $$
     also known simply as
 
-    “$-\!\sin$”
+    _|“$-\!\sin$”|_
 
     by the general definition that
     $$
     -f = (x \ra -f(x))
     $$
-    for all $f : \rr \ra \rr$. 
-    And similarly for “$-\!\cos$”.
+    for all $f : \rr \ra \rr$, 
+    and similarly for “$-\!\cos$”.
 
     Adding the curves for $-\!\sin$ and $-\!\cos$
     to the graphs fills the “gap” between $y = \sin(x)$
@@ -294,16 +294,14 @@
 
     We also have these identities...
 
-    |> center
-
-        $$
-        \displaylines{
-        \up{1.2}\cos(x + 4\eta) = \cos(x)\\
-        \up{1.7}\sin(x + 4\eta) = \rt{0.15}\sin(x)\rt{0.15}\\
-        \up{1.7}\cos(x + 2\eta) = \rt{0.15}-\!\cos(x)\rt{0.15}\\
-        \up{1.7}\sin(x + 2\eta) = \rt{0.15}-\!\sin(x)\rt{0.15}
-        }
-        $$
+    $$
+    \displaylines{
+    \up{1.2}\cos(x + 4\eta) = \cos(x)\\
+    \up{1.7}\sin(x + 4\eta) = \rt{0.15}\sin(x)\rt{0.15}\\
+    \up{1.7}\cos(x + 2\eta) = \rt{0.15}-\!\cos(x)\rt{0.15}\\
+    \up{1.7}\sin(x + 2\eta) = \rt{0.15}-\!\sin(x)\rt{0.15}
+    }
+    $$
 
     ...that follow because one full turn around the
     circle brings you back to the same position, whereas
