@@ -14,7 +14,6 @@ export default function App() {
       <Router 
         root={(props) => (
           <>
-            <div class="test-width"></div>
             <PanelButton />
             <Panel />
             <Container>

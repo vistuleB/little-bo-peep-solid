@@ -1,5 +1,4 @@
-import { createEffect, createSignal, JSXElement, onMount } from "solid-js";
-import { DOMElement } from "solid-js/jsx-runtime";
+import { createEffect, createSignal, } from "solid-js";
 import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 
@@ -59,7 +58,7 @@ const TOCItem = (props: {
     <>
       <a
         href={`/article/${props.href}`}
-        class="text-column flex items-baseline justify-between !leading-9 lg:!leading-10 text-3xl"
+        class="text-column flex items-baseline justify-between !leading-[2.4rem] text-3xl"
         style={`width:${our_width()}px;`}
       >
         <span class="block !w-fit">{props.article_type}</span>
@@ -72,11 +71,10 @@ const TOCItem = (props: {
         ) : (
           <a
             href={`/article/${props.href}`}
-            class="text-column flex items-baseline justify-between !leading-9 lg:!leading-10 text-3xl"
+            class="text-column flex items-baseline justify-between !leading-[2.4rem] text-3xl"
             style={`width:${our_width()}px;`}
           >
             <span class="dots !w-auto"></span>
-            {/* <span class="!w-auto"></span> */}
             <span class="text-right">{second_half()}</span>
           </a>
         )

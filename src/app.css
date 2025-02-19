@@ -422,6 +422,16 @@ table.first-line tr td:first-child {
   position: relative;
 }
 
+.body_line {
+  flex-grow: 1;
+  height: 1em;
+  background: left / 100% 1px;
+  background-image: url('/images/toc_deco_line_body.svg');
+  background-size: 100% 100%;
+  margin: 0 0;
+  position: relative;
+}
+
 .flip-y {
   transform: rotateY(180deg);
 }
