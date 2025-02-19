@@ -5,6 +5,7 @@ import { twJoin } from "tailwind-merge";
 import LazyImage from "./LazyImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
 
+
 type ImageProps = ParentProps & SharedProps & {
   src: string;
   id?: string;
@@ -62,9 +63,7 @@ const Image = (props: ImageProps) => {
   };
 
   createEffect(() => {
-    // if (our_on_mobile()) set_scaled_down(true);
     window.requestAnimationFrame(() => { handleResize(); reset_scale(); });
-    // setTimeout(() => { reset_scale(); }, 2000);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
@@ -83,7 +82,7 @@ const Image = (props: ImageProps) => {
           ref={image_ref}
           onClick={(_) => {
             // should we scale? (if it's the first click we should def. scale up)
-            const should_be_scaled_down = our_on_mobile() && !scaled_down() && after_first_click();
+            const should_be_scaled_down = our_on_mobile() && !scaled_down();
 
             // do the scale
             set_scaled_down(should_be_scaled_down);
