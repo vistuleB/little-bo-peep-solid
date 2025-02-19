@@ -4,6 +4,7 @@ import { twJoin } from "tailwind-merge";
 import LazyImage from "./LazyImage";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useScale } from "~/store/ScaleProvider";
+import { DESKTOP_COLUMN_WIDTH, MOBILE_MAX_WIDTH } from "~/constants";
 
 type UserFacingSideImageProps = ParentProps &
   SharedProps & {
@@ -52,8 +53,8 @@ const SideImage = (props: InternalSideImageProps) => {
       >
       <div
         style={{
-          left: getLeft(props.side, props.offset_x, scale().scale),
-          right: getRight(props.side, props.offset_x, scale().scale),
+          left: getLeft(props.side, props.offset_x, scale().scale, store.innerWidth),
+          right: getRight(props.side, props.offset_x, scale().scale, store.innerWidth),
           top: getTop(props.line, props.offset_y, scale().scale),
           transform: `translateY(calc(-50%))`,
           padding: `${props.padding}`,
@@ -134,16 +135,22 @@ const getLeft = (
   side: string,
   offset_x: string,
   scale: number,
+  innerWidth: number,
 ): string => {
-  return side === "right" ? `calc(100% + ${offset_x} * ${scale}`: "";
+  let text_width = innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;
+  let added = Math.max(0, (text_width - DESKTOP_COLUMN_WIDTH) / 2);
+  return side === "right" ? `calc(100% + ${offset_x} * ${scale} + ${added}px * ${scale})`: "";
 }
 
 const getRight = (
   side: string,
   offset_x: string,
   scale: number,
+  innerWidth: number,
 ): string => {
-  return side === "left" ? `calc(100% + ${offset_x} * ${scale}`: "";
+  let column_width = innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;
+  let added = Math.max(0, (column_width - DESKTOP_COLUMN_WIDTH) / 2);
+  return side === "left" ? `calc(100% + ${offset_x} * ${scale} + ${added}px * ${scale})`: "";
 }
 
 const getTop = (

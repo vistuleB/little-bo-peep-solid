@@ -589,7 +589,7 @@ const Article = () => {
           is defined at only two values. One point is...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch3_vx1178A_@0_with_cors.svg" />
+        <Image src="/images/svg_ch3_ch_vx1178A_@0_with_cors.svg" />
         <Pause />
         <VerticalChunk>
           <NoBreak>
@@ -614,7 +614,7 @@ const Article = () => {
           {" "}while the other point is...
         </VerticalChunk>
         <Pause />
-        <Image src="/images/svg_ch3_vx1178A_@1_with_cors.svg" />
+        <Image src="/images/svg_ch3_ch_vx1178A_@1_with_cors.svg" />
         <Pause />
         <VerticalChunk>
           <NoBreak>
@@ -666,7 +666,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch3_x_squared_1_worked.svg" />
+          <Image src="/images/svg_ch3_ch_x_squared_1.svg" />
           <Pause />
           <VerticalChunk>
             Among all the points on this graph that we 
@@ -680,7 +680,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch3_x_squared_2_worked.svg" />
+          <Image src="/images/svg_ch3_ch_x_squared_2.svg" />
           <Pause />
           <VerticalChunk>
             ...which finds itself on the graph, namely, 

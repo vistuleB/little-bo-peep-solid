@@ -1,4 +1,4 @@
-import { MOBILE_MAX_WIDTH } from "~/constants";
+import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import {
   mergeProps,
   ParentProps,
@@ -11,6 +11,7 @@ import {
 import SharedProps from "./types/SharedProps";
 import { TEXT_X_PADDING } from "~/constants";
 import { twJoin } from "tailwind-merge";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 type GridProps = ParentProps &
   SharedProps & {
@@ -41,6 +42,8 @@ const Grid = (_props: GridProps) => {
     },
     _props
   );
+
+  const { store, } = useGlobalContext();
 
   props.cols = Math.max(props.cols, props.sm_cols, 1);
   props.sm_cols = (props.sm_cols <= 0) ? props.cols : props.sm_cols;
@@ -83,6 +86,7 @@ const Grid = (_props: GridProps) => {
         "margin-top": `${props.margin_top}px`,
         "margin-bottom": `${props.margin_bottom}px`,
         "padding-inline": props.with_padding ? `${TEXT_X_PADDING}px` : "0",
+        "width": `${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px`
       }}>
       <div
         ref={parentSpan}

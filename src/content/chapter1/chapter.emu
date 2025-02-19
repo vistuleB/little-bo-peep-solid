@@ -271,7 +271,7 @@
     |> ImageLeft
         src images/325.svg
         offset_y -0.5em
-        offset_x 2em
+        offset_x 1em
 
     that come from multiplying every term of the first 
     parenthesis with every term of the second 
@@ -803,7 +803,7 @@
 
             |> ImageRight
                 src images/svg_ch1_ex_104.svg
-                offset_x -4rem
+                offset_x 3rem
                 offset_y -1rem
                 squiggle false
 
@@ -894,7 +894,7 @@
             simply changes the sign of the previous result):
 
             |> Grid
-                cols 3 
+                cols 3
                 place_items end
 
                 $ (-1)^1 = $
@@ -978,9 +978,9 @@
             $$
             \begin{align}
             &\, \left(1 - {1 \over 2}\right) \\
-            + \,&\, \left({1 \over 2} - {1 \over 3}\right)_{\color{white} a_{a_a}\!\!\!\!\!\!\!\!\!\!} \\
+            + \,&\, \left({1 \over 2} - {1 \over 3}\right) \\
             \hline
-            = \,&\, \left(1 - {1 \over 3}\right)^{\color{white} a^{a^a}}
+            = \,&\, \left(1 - {1 \over 3}\right)
             \end{align}
             $$
 
@@ -991,9 +991,9 @@
             \begin{align}
             &\, \left(1 - {1 \over 2}\right)\\
             + \,&\, \left({1 \over 2} - {1 \over 3}\right)\\
-            + \,&\, \left({1 \over 3} - {1 \over 4}\right)_{\color{white} a_{a_a}\!\!\!\!\!\!\!\!\!\!}\\
+            + \,&\, \left({1 \over 3} - {1 \over 4}\right)\\
             \hline
-            = \,&\, \left(1 - {1 \over 4}\right)^{\color{white} a^{a^a}}
+            = \,&\, \left(1 - {1 \over 4}\right)
             \end{align}
             $$
 
@@ -1004,9 +1004,9 @@
             &\, \left(1 - {1 \over 2}\right)\\
             + \,&\, \left({1 \over 2} - {1 \over 3}\right)\\
             + \,&\, \left({1 \over 3} - {1 \over 4}\right)\\
-            + \,&\, \left({1 \over 4} - {1 \over 5}\right)_{\color{white} a_{a_a}\!\!\!\!\!\!\!\!\!\!}\\
+            + \,&\, \left({1 \over 4} - {1 \over 5}\right)\\
             \hline
-            = \,&\, \left(1 - {1 \over 5}\right)^{\color{white} a^{a^a}}
+            = \,&\, \left(1 - {1 \over 5}\right)
             \end{align}
             $$
 
@@ -1052,8 +1052,7 @@
 
             |> ImageRight
                 src images/svg_ch1_ex_24.svg
-                offset_y 3.5rem
-                y 12%
+                offset_y -0.5em
 
             ...it's that much. (For example,
 
@@ -1193,9 +1192,7 @@
 
             |> ImageRight
                 src images/svg_ch1_ex_27.svg
-                offset_y 2rem
-                y 12%
-                clickable_on_desktop true
+                offset_y -0.5em
 
             which, for large $n$, is roughly
 

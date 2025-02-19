@@ -10,13 +10,13 @@ const Nav = () => {
   return (
     <>
       <nav class={twJoin(
-        "select-none w-full z-10",
+        "select-none w-full z-40",
         store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
         store.innerWidth >= MOBILE_MAX_WIDTH && "absolute",
       )}>
         <div
           class={twJoin(
-            "border-b select-none flex justify-center items-center bg-white z-40 w-full h-14 left-0",
+            "border-b select-none flex justify-center items-center bg-bg z-40 w-full h-14 left-0",
           )}>
           <Title />
         </div>

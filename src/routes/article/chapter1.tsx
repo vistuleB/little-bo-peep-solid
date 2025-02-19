@@ -752,7 +752,7 @@ const Article = () => {
         <MathBlock>
           $$(a + b)(C + D) \,=\, aC + bC + aD + bD$$
           <ImageLeft
-            offset_x="2em"
+            offset_x="1em"
             offset_y="-0.5em"
             src="/images/325.svg" />
         </MathBlock>
@@ -1752,7 +1752,7 @@ const Article = () => {
               <ImageRight
                 squiggle={false}
                 offset_y="-1rem"
-                offset_x="-4rem"
+                offset_x="3rem"
                 src="/images/svg_ch1_ex_104.svg" />
             </MathBlock>
             <Pause />
@@ -2133,9 +2133,9 @@ const Article = () => {
             <MathBlock>
               $$\begin&#123;align&#125;
               &\, \left(1 - &#123;1 \over 2&#125;\right) \\
-              + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)_&#123;\color&#123;white&#125; a_&#123;a_a&#125;\!\!\!\!\!\!\!\!\!\!&#125; \\
+              + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right) \\
               \hline
-              = \,&\, \left(1 - &#123;1 \over 3&#125;\right)^&#123;\color&#123;white&#125; a^&#123;a^a&#125;&#125;
+              = \,&\, \left(1 - &#123;1 \over 3&#125;\right)
               \end&#123;align&#125;$$
             </MathBlock>
             <Pause />
@@ -2148,9 +2148,9 @@ const Article = () => {
               $$\begin&#123;align&#125;
               &\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)_&#123;\color&#123;white&#125; a_&#123;a_a&#125;\!\!\!\!\!\!\!\!\!\!&#125;\\
+              + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
               \hline
-              = \,&\, \left(1 - &#123;1 \over 4&#125;\right)^&#123;\color&#123;white&#125; a^&#123;a^a&#125;&#125;
+              = \,&\, \left(1 - &#123;1 \over 4&#125;\right)
               \end&#123;align&#125;$$
             </MathBlock>
             <Pause />
@@ -2163,9 +2163,9 @@ const Article = () => {
               &\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
               + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
-              + \,&\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)_&#123;\color&#123;white&#125; a_&#123;a_a&#125;\!\!\!\!\!\!\!\!\!\!&#125;\\
+              + \,&\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
               \hline
-              = \,&\, \left(1 - &#123;1 \over 5&#125;\right)^&#123;\color&#123;white&#125; a^&#123;a^a&#125;&#125;
+              = \,&\, \left(1 - &#123;1 \over 5&#125;\right)
               \end&#123;align&#125;$$
             </MathBlock>
             <Pause />
@@ -2254,8 +2254,7 @@ const Article = () => {
               &= &#123;1 \over n(n+1)&#125;\up&#123;1.5&#125;
               \end&#123;align&#125;$$
               <ImageRight
-                y="12%"
-                offset_y="3.5rem"
+                offset_y="-0.5em"
                 src="/images/svg_ch1_ex_24.svg" />
             </MathBlock>
             <Pause />
@@ -2495,9 +2494,7 @@ const Article = () => {
               &= &#123;1 \over n^2(n+1)&#125;\up&#123;1.5&#125;
               \end&#123;align&#125;$$
               <ImageRight
-                clickable_on_desktop={true}
-                y="12%"
-                offset_y="2rem"
+                offset_y="-0.5em"
                 src="/images/svg_ch1_ex_27.svg" />
             </MathBlock>
             <Pause />

@@ -256,13 +256,13 @@
     is defined at only two values. One point is...
         
     |> Image
-        src images/svg_ch3_vx1178A_@0_with_cors.svg
+        src images/svg_ch3_ch_vx1178A_@0_with_cors.svg
 
     ...$(0, 3.5)$, because VX-78/11A maps $0$ to 
     $3.5$, while the other point is...
         
     |> Image
-        src images/svg_ch3_vx1178A_@1_with_cors.svg
+        src images/svg_ch3_ch_vx1178A_@1_with_cors.svg
 
     ...$(1, 2.5)$, because VX-78/11A maps $1$ to $2.5$.
 
@@ -273,14 +273,14 @@
         $x = 1$):
 
         |> Image
-            src images/svg_ch3_x_squared_1_worked.svg
+            src images/svg_ch3_ch_x_squared_1.svg
 
         Among all the points on this graph that we 
         could discuss, let us name, say, the point 
         $(0.75, 0.5625)$...
 
         |> Image
-            src images/svg_ch3_x_squared_2_worked.svg
+            src images/svg_ch3_ch_x_squared_2.svg
 
         ...which finds itself on the graph, namely, 
         because the square of $0.75$ is 
