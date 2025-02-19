@@ -474,6 +474,11 @@ table.first-line tr td:first-child {
   padding-right: 2em;
 }
 
+.toc_item {
+  font-size: 3em;
+  line-height: 1.5;
+}
+
 .ch4_inline_blackwhite_particles {
   height:0.9em;
   vertical-align:baseline;
