@@ -1787,10 +1787,13 @@ const Article = () => {
               Exercise 3.
             </b>
             {" "}
-            Plot the vertical velocity of an object a
-            mosquito whose height over time is given by
-            this graph (use the same time interval as the
-            graph):
+            Plot the vertical velocity of{" "}
+            <del>
+              an object
+            </del>
+            {" "}a mosquito whose height over time is 
+            given by this graph (use the same time interval 
+            as the graph):
           </VerticalChunk>
           <Pause />
           <Image src="/images/1.svg" />
