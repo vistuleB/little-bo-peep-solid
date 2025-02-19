@@ -69,7 +69,7 @@ const Article = () => {
         <MathBlock>
           $$\sqrt&#123;(-2)^2&#125; = 2$$
           <ImageRight
-            offset_x="9em"
+            offset_x="5em"
             offset_y="0em"
             src="/images/svg_ch1_ch_minus_two_squared_cloud.svg" />
         </MathBlock>
