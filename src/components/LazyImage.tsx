@@ -15,6 +15,7 @@ function LazyImage(
   return (
     <img
       ref={props.ref}
+      onLoad={props.onLoad}
       onClick={props.onClick}
       src={props.src}
       alt={props.alt || ""}
