@@ -72,6 +72,7 @@ const Image = (props: ImageProps) => {
 
   createEffect(() => {
     window.requestAnimationFrame(() => { handleResize(); set_should_be_scaled_down(true); });
+    setTimeout(() => { set_should_be_scaled_down(true); }, 600);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
