@@ -258,7 +258,7 @@
     In English, e.g., these are some of the “famous”
     powers of $10$:
 
-    |> table
+    |> Table
         class first-line
 
         |> colgroup
@@ -420,10 +420,8 @@
     instead of “ten”, etc. Specifically, the table looks
     like so:
     
-    |> table
+    |> Table
         class first-line
-        margin-top 1em
-        margin-bottom 1em
         |> colgroup
             |> col
                 width 60px
@@ -542,10 +540,8 @@
     for $10^{-3}$. Here is a list of the most common
     such prefixes:
     
-    |> table
+    |> Table
         class first-line
-        margin-top 1em
-        margin-bottom 1em
         |> colgroup
             |> col
                 width 120px

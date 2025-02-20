@@ -911,7 +911,7 @@ const Article = () => {
           </NoBreak>
         </VerticalChunk>
         <Pause />
-        <table class="first-line">
+        <Table class="first-line">
           <colgroup>
             <col width="60px" />
             <col width="200px" />
@@ -1053,7 +1053,7 @@ const Article = () => {
               </td>
             </tr>
           </tbody>
-        </table>
+        </Table>
         <Pause />
         <VerticalChunk>
           One can note that
@@ -1129,10 +1129,7 @@ const Article = () => {
           like so:
         </VerticalChunk>
         <Pause />
-        <table
-          margin-bottom="1em"
-          margin-top="1em"
-          class="first-line">
+        <Table class="first-line">
           <colgroup>
             <col width="60px" />
             <col width="200px" />
@@ -1240,7 +1237,7 @@ const Article = () => {
               </td>
             </tr>
           </tbody>
-        </table>
+        </Table>
         <Pause />
         <VerticalChunk>
           In passing, note how the standard decimal expansion
@@ -1315,10 +1312,7 @@ const Article = () => {
           such prefixes:
         </VerticalChunk>
         <Pause />
-        <table
-          margin-bottom="1em"
-          margin-top="1em"
-          class="first-line">
+        <Table class="first-line">
           <colgroup>
             <col width="120px" />
             <col width="120px" />
@@ -1417,7 +1411,7 @@ const Article = () => {
               </td>
             </tr>
           </tbody>
-        </table>
+        </Table>
         <Pause />
         <VerticalChunk>
           (Funny how the prefixes switch from 
