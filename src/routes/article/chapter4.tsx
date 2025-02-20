@@ -722,7 +722,7 @@ const Article = () => {
         <VerticalChunk>
           ...then the “after” graph will have units of...
           <ImageRight
-            offset_y="1em"
+            offset_y="-0.6em"
             src="/images/svg_ch4_ch_units1_cloud.svg" />
         </VerticalChunk>
         <TextParent style="margin-top:1em;margin-bottom:1em;">

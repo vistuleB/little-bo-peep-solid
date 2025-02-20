@@ -1881,7 +1881,7 @@ const Article = () => {
           <MathBlock>
             $$\Large 0.00001 = 10^&#123;-5&#125;$$
             <ImageRight
-              offset_x="-4em"
+              offset_x="0em"
               src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg" />
           </MathBlock>
           <Pause />

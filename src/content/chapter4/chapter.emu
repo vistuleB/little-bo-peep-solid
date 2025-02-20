@@ -277,7 +277,7 @@
 
     |> ImageRight
         src images/svg_ch4_ch_units1_cloud.svg
-        offset_y 1em
+        offset_y -0.6em
     
     |> TextParent
         style margin-top:1em;margin-bottom:1em;
