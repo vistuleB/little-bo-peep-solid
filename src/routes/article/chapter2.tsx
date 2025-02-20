@@ -199,7 +199,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;$$
+          $$
+          \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
+          $$
           <ImageRight
             offset_x="3em"
             offset_y="-0.7em"
@@ -332,7 +334,9 @@ const Article = () => {
               </td>
               <td>
                 <MathBlock>
-                  $$&#123;y_2-y_1 \over x_2-x_1&#125;$$
+                  $$
+                  &#123;y_2-y_1 \over x_2-x_1&#125;
+                  $$
                 </MathBlock>
               </td>
             </tr>
@@ -354,7 +358,9 @@ const Article = () => {
               </td>
               <td>
                 <MathBlock>
-                  $$&#123;+ \over +&#125; = \,+$$
+                  $$
+                  &#123;+ \over +&#125; = \,+
+                  $$
                 </MathBlock>
               </td>
             </tr>
@@ -377,7 +383,9 @@ const Article = () => {
               </td>
               <td>
                 <MathBlock>
-                  $$&#123;- \over -&#125; = \,+$$
+                  $$
+                  &#123;- \over -&#125; = \,+
+                  $$
                 </MathBlock>
               </td>
             </tr>
@@ -400,7 +408,9 @@ const Article = () => {
               </td>
               <td>
                 <MathBlock>
-                  $$&#123;- \over +&#125; = \,-$$
+                  $$
+                  &#123;- \over +&#125; = \,-
+                  $$
                 </MathBlock>
               </td>
             </tr>
@@ -423,7 +433,9 @@ const Article = () => {
               </td>
               <td>
                 <MathBlock>
-                  $$\frac&#123;+&#125;&#123;-&#125; = \,-$$
+                  $$
+                  \frac&#123;+&#125;&#123;-&#125; = \,-
+                  $$
                 </MathBlock>
               </td>
             </tr>
@@ -583,7 +595,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\left(&#123;\te&#123;coordinate&#125; \atop \te&#123;at arrival&#125;&#125;\right)\,\, - \,\,\left(&#123;\te&#123;coordinate&#125; \atop \te&#123;at start&#125;&#125;\right)$$
+          $$
+          \left(&#123;\te&#123;coordinate&#125; \atop \te&#123;at arrival&#125;&#125;\right)\,\, - \,\,\left(&#123;\te&#123;coordinate&#125; \atop \te&#123;at start&#125;&#125;\right)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -629,7 +643,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\te&#123;slope&#125; = \frac&#123;\Delta y&#125;&#123;\Delta x&#125;$$
+          $$
+          \te&#123;slope&#125; = \frac&#123;\Delta y&#125;&#123;\Delta x&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -691,7 +707,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\te&#123;slope&#125; = &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;$$
+          $$
+          \te&#123;slope&#125; = &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -699,7 +717,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;$$
+          $$
+          \te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -708,7 +728,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\te&#123;run&#125; = &#123;\te&#123;rise&#125; \over \te&#123;slope&#125;&#125;$$
+          $$
+          \te&#123;run&#125; = &#123;\te&#123;rise&#125; \over \te&#123;slope&#125;&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1084,7 +1106,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;\te&#123;$y$ axis units&#125; \over \te&#123;$x$ axis units&#125;&#125;$$
+          $$
+          &#123;\te&#123;$y$ axis units&#125; \over \te&#123;$x$ axis units&#125;&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1116,7 +1140,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;\te&#123;$y$ axis units&#125; \over \te&#123;$x$ axis units&#125;&#125; = &#123;\te&#123;m&#125; \over \te&#123;s&#125;&#125;$$
+          $$
+          &#123;\te&#123;$y$ axis units&#125; \over \te&#123;$x$ axis units&#125;&#125; = &#123;\te&#123;m&#125; \over \te&#123;s&#125;&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1157,7 +1183,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\te&#123;slope&#125; \left(\!= &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;\right) = &#123;3\te&#123;m&#125; \over 4\te&#123;s&#125;&#125; = 0.75\te&#123;m&#125;/\te&#123;s&#125;$$
+          $$
+          \te&#123;slope&#125; \left(\!= &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;\right) = &#123;3\te&#123;m&#125; \over 4\te&#123;s&#125;&#125; = 0.75\te&#123;m&#125;/\te&#123;s&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1274,7 +1302,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$0.75\te&#123;m&#125;/\te&#123;s&#125; \times 5\te&#123;s&#125; = 3.75\te&#123;m&#125;$$
+            $$
+            0.75\te&#123;m&#125;/\te&#123;s&#125; \times 5\te&#123;s&#125; = 3.75\te&#123;m&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -1282,11 +1312,13 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\begin&#123;array&#125;&#123;c&#125;
+            $$
+            \begin&#123;array&#125;&#123;c&#125;
             \rt&#123;0.08&#125;
             (\te&#123;rate of change&#125;) \times \te&#123;(amount of time)&#125;\\
             = \te&#123;(amount of change)&#125;\rt&#123;0.05&#125;
-            \end&#123;array&#125;$$
+            \end&#123;array&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -1328,7 +1360,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;$$
+            $$
+            \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
+            $$
             <ImageRight
               style="width:930px"
               offset_x="-6rem"
@@ -1340,9 +1374,11 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\te&#123;“&#125;\rt&#123;0.1&#125;
+            $$
+            \te&#123;“&#125;\rt&#123;0.1&#125;
             \te&#123;amount of time&#125; \,\,=\,\, \frac&#123;\!\rt&#123;0.15&#125;\te&#123;amount of change&#125;\!\rt&#123;0.1&#125;&#125;&#123;\te&#123;rate of change&#125;&#125;
-            \rt&#123;0.1&#125;\te&#123;”&#125;$$
+            \rt&#123;0.1&#125;\te&#123;”&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -1664,7 +1700,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$p = &#123;y - y_0 \over x - x_0&#125;$$
+              $$
+              p = &#123;y - y_0 \over x - x_0&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1680,7 +1718,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$p(x-x_0) = y-y_0$$
+              $$
+              p(x-x_0) = y-y_0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1695,7 +1735,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\te&#123;“&#125;\te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;\te&#123;”&#125;$$
+              $$
+              \te&#123;“&#125;\te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;\te&#123;”&#125;
+              $$
               <ImageRight
                 offset_y="-0.5rem"
                 offset_x="2.5rem"
@@ -1715,7 +1757,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y - y_0 = p(x - x_0)$$
+              $$
+              y - y_0 = p(x - x_0)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1723,7 +1767,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = p(x - x_0) + y_0$$
+              $$
+              y = p(x - x_0) + y_0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1752,7 +1798,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = px + y_0 - px_0$$
+              $$
+              y = px + y_0 - px_0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1760,7 +1808,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = ax + b$$
+              $$
+              y = ax + b
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1818,7 +1868,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1\te&#123;m&#125; \over 1\te&#123;s&#125;&#125; = 1\te&#123;m&#125;/\te&#123;s&#125;$$
+              $$
+              &#123;1\te&#123;m&#125; \over 1\te&#123;s&#125;&#125; = 1\te&#123;m&#125;/\te&#123;s&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2017,7 +2069,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y_0 - px_0$$
+              $$
+              y_0 - px_0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>

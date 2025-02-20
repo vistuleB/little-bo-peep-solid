@@ -33,7 +33,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(-2) \times (-2) = 4$$
+          $$
+          (-2) \times (-2) = 4
+          $$
         </MathBlock>
         <Pause />
         <CentralDisplay>
@@ -41,7 +43,9 @@ const Article = () => {
         </CentralDisplay>
         <Pause />
         <MathBlock>
-          $$2 \times 2 = 4$$
+          $$
+          2 \times 2 = 4
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -83,7 +87,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x$$
+          $$
+          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -98,7 +104,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x|$$
+          $$
+          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x|
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -143,7 +151,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x = &#123;-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a&#125;$$
+          $$
+          x = &#123;-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -161,7 +171,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sqrt&#123;0.5&#125;$$
+          $$
+          \sqrt&#123;0.5&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -170,7 +182,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^2 = 0.5.$$
+          $$
+          x^2 = 0.5.
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -188,7 +202,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^2 = &#123;1\over 4&#125;\times&#123;1\over 4&#125; = &#123;1\over 16&#125;$$
+          $$
+          x^2 = &#123;1\over 4&#125;\times&#123;1\over 4&#125; = &#123;1\over 16&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -214,7 +230,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^2 = &#123;1\over 2&#125;\times&#123;1\over 2&#125; = &#123;1\over 4&#125;$$
+          $$
+          x^2 = &#123;1\over 2&#125;\times&#123;1\over 2&#125; = &#123;1\over 4&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -250,7 +268,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^2 = &#123;3\over 4&#125;\times&#123;3\over 4&#125; = &#123;9\over 16&#125;$$
+          $$
+          x^2 = &#123;3\over 4&#125;\times&#123;3\over 4&#125; = &#123;9\over 16&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -301,7 +321,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sqrt&#123;0.5&#125; = 0.7071067...$$
+          $$
+          \sqrt&#123;0.5&#125; = 0.7071067...
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -348,7 +370,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$605 \cdot 0.7071 = 427.7955$$
+          $$
+          605 \cdot 0.7071 = 427.7955
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -463,7 +487,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;50 \over 2&#125;$$
+          $$
+          &#123;50 \over 2&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -540,7 +566,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;1 \over 0.01&#125;$$
+          $$
+          &#123;1 \over 0.01&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -564,7 +592,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;1 \over 0.01&#125; \,=\,100$$
+          $$
+          &#123;1 \over 0.01&#125; \,=\,100
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -588,7 +618,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123; 1 \over 0.001&#125; = 1000,\qquad&#123;1 \over 0.0001&#125; = 10000,\quad\,\,\,\,\textrm&#123;(etc)&#125;$$
+          $$
+          &#123; 1 \over 0.001&#125; = 1000,\qquad&#123;1 \over 0.0001&#125; = 10000,\quad\,\,\,\,\textrm&#123;(etc)&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -620,7 +652,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;1.42 \over 0.8&#125; = &#123;100 \cdot 1.42 \over 100 \cdot 0.8&#125; = &#123;142 \over 80&#125; = &#123;71 \over 40&#125;.$$
+          $$
+          &#123;1.42 \over 0.8&#125; = &#123;100 \cdot 1.42 \over 100 \cdot 0.8&#125; = &#123;142 \over 80&#125; = &#123;71 \over 40&#125;.
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -634,11 +668,13 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\begin&#123;align&#125;
+          $$
+          \begin&#123;align&#125;
           &#123;71 \over 40&#125; \,&=\, &#123;40 + 30 + 1 \over 40&#125; \,=\, &#123;40 \over 40&#125; + &#123;30 \over 40&#125; + &#123;1 \over 40&#125;\\
           \,&=\, 1 + &#123;3 \over 4&#125; + &#123;1 \over 4&#125;\!\cdot \!&#123;1 \over 10&#125;\up&#123;1.5&#125;\\
           \,&=\, 1 + 0.75 + 0.025 = 1.775\up&#123;1.5&#125;
-          \end&#123;align&#125;$$
+          \end&#123;align&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -674,7 +710,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$5(10 + 2) \,=\, 5\!\cdot\!10 \,+\, 5\!\cdot\!2$$
+          $$
+          5(10 + 2) \,=\, 5\!\cdot\!10 \,+\, 5\!\cdot\!2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -682,7 +720,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$a(b + c) = ab + ac$$
+          $$
+          a(b + c) = ab + ac
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -721,7 +761,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$5\!\cdot\!10 \,+\, 5\!\cdot\!2$$
+          $$
+          5\!\cdot\!10 \,+\, 5\!\cdot\!2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -729,7 +771,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(5\!\cdot\!10) + (5\!\cdot\!2)$$
+          $$
+          (5\!\cdot\!10) + (5\!\cdot\!2)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -737,7 +781,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$((5\!\cdot\!10) + 5)\!\cdot\! 2,$$
+          $$
+          ((5\!\cdot\!10) + 5)\!\cdot\! 2,
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -750,7 +796,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)(C + D) \,=\, aC + bC + aD + bD$$
+          $$
+          (a + b)(C + D) \,=\, aC + bC + aD + bD
+          $$
           <ImageLeft
             offset_x="1em"
             offset_y="-0.5em"
@@ -764,7 +812,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)(C + D) = (a + b)C + (a + b)D$$
+          $$
+          (a + b)(C + D) = (a + b)C + (a + b)D
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -772,11 +822,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)C = aC + bC$$
+          $$
+          (a + b)C = aC + bC
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$(a + b)D = aD + bD$$
+          $$
+          (a + b)D = aD + bD
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -793,11 +847,13 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\begin&#123;align&#125;
+            $$
+            \begin&#123;align&#125;
             (10 + 2)(10 + 4) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4\\
             \,&=\, 100 \,+\, 40 \,+\, 20 \,+\, 8\\
             \,&=\, 168
-            \end&#123;align&#125;$$
+            \end&#123;align&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -821,11 +877,13 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\begin&#123;align&#125;
+            $$
+            \begin&#123;align&#125;
             (10 + 3)(10 + 3) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
             \,&=\, 100 \,+\, 30 \,+\, 30 \,+\, 9\\
             \,&=\, 169
-            \end&#123;align&#125;$$
+            \end&#123;align&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -857,7 +915,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)(C + D) \,=\, aC + bC + aD + bD$$
+          $$
+          (a + b)(C + D) \,=\, aC + bC + aD + bD
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -879,7 +939,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)(a + b) \,=\, aa + ba + ab + bb$$
+          $$
+          (a + b)(a + b) \,=\, aa + ba + ab + bb
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -887,7 +949,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)^2 = a^2 + 2ab + b^2$$
+          $$
+          (a + b)^2 = a^2 + 2ab + b^2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -930,11 +994,13 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\begin&#123;align&#125;
+            $$
+            \begin&#123;align&#125;
             \up&#123;1&#125; (10 + 3)^2 \,&=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
             \up&#123;1&#125; \,&=\, 100 + 60 + 9 \\
             \up&#123;1&#125; \,&=\, 169
-            \end&#123;align&#125;$$
+            \end&#123;align&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -958,7 +1024,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)(C + D) = aC + aD + bC + bD$$
+          $$
+          (a + b)(C + D) = aC + aD + bC + bD
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -966,7 +1034,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)(a + (-b)) = aa + a(-b) + ba + b(-b)$$
+          $$
+          (a + b)(a + (-b)) = aa + a(-b) + ba + b(-b)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -974,7 +1044,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)(a - b) = aa - ab + ba - bb$$
+          $$
+          (a + b)(a - b) = aa - ab + ba - bb
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -982,7 +1054,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a + b)(a - b) = a^2 - b^2$$
+          $$
+          (a + b)(a - b) = a^2 - b^2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1011,7 +1085,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$a^2 - b^2$$
+          $$
+          a^2 - b^2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1049,7 +1125,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$19 = 100 - 81 = 10^2 - 9^2$$
+            $$
+            19 = 100 - 81 = 10^2 - 9^2
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -1077,7 +1155,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$1 - x^2$$
+            $$
+            1 - x^2
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -1085,7 +1165,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$1 = 1^2$$
+            $$
+            1 = 1^2
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -1093,7 +1175,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$1 - x^2$$
+            $$
+            1 - x^2
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -1101,7 +1185,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$1 - x^2 = (1 - x)(1 + x)$$
+            $$
+            1 - x^2 = (1 - x)(1 + x)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -1132,7 +1218,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(-1)(a - b) \,=\, b - a$$
+          $$
+          (-1)(a - b) \,=\, b - a
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1140,7 +1228,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$-(a - b) \,=\, b - a$$
+          $$
+          -(a - b) \,=\, b - a
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1148,11 +1238,13 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\begin&#123;align&#125;
+          $$
+          \begin&#123;align&#125;
           (-1)(a - b) \,&=\, (-1)(a + (-b)) \\
           \,&=\, (-1)a + (-1)(-b) \\
           \,&=\, -a + b
-          \end&#123;align&#125;$$
+          \end&#123;align&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1194,7 +1286,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$12\cdot 14 \,=\, 168$$
+          $$
+          12\cdot 14 \,=\, 168
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1202,7 +1296,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$13 \cdot 13 \,=\, 13^2 \,=\, 169$$
+          $$
+          13 \cdot 13 \,=\, 13^2 \,=\, 169
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1210,11 +1306,13 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\begin&#123;align&#125;
+          $$
+          \begin&#123;align&#125;
           11\,\cdot\,13 &= 12^2 - 1\\
           10\,\cdot\,12 &= 11^2 - 1\\
           9\,\cdot\,11 &= 10^2 - 1
-          \end&#123;align&#125;$$
+          \end&#123;align&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1223,7 +1321,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(n - 1)(n + 1) \,=\, n^2 - 1$$
+          $$
+          (n - 1)(n + 1) \,=\, n^2 - 1
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1240,7 +1340,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(a - b)(a + b) \,=\, a^2 - b^2$$
+          $$
+          (a - b)(a + b) \,=\, a^2 - b^2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1258,7 +1360,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$a + b,\, a - b$$
+          $$
+          a + b,\, a - b
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1270,7 +1374,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$n + 1,\, n - 1$$
+          $$
+          n + 1,\, n - 1
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1278,7 +1384,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sqrt&#123;3&#125; + \sqrt&#123;2&#125;,\,\, \sqrt&#123;3&#125; - \sqrt&#123;2&#125;$$
+          $$
+          \sqrt&#123;3&#125; + \sqrt&#123;2&#125;,\,\, \sqrt&#123;3&#125; - \sqrt&#123;2&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1368,7 +1476,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$0.9^2 = &#123;9 \over 10&#125;\cdot&#123;9 \over 10&#125; = &#123;81 \over 100&#125; = 0.81$$
+              $$
+              0.9^2 = &#123;9 \over 10&#125;\cdot&#123;9 \over 10&#125; = &#123;81 \over 100&#125; = 0.81
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1386,7 +1496,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$0.1^2 = &#123;1 \over 10&#125; \cdot &#123;1 \over 10&#125; = &#123;1 \over 100&#125; = 0.01,$$
+              $$
+              0.1^2 = &#123;1 \over 10&#125; \cdot &#123;1 \over 10&#125; = &#123;1 \over 100&#125; = 0.01,
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1427,7 +1539,8 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &\,\, (\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
               =&\,\, \up&#123;1.3&#125;
               \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times
@@ -1446,7 +1559,8 @@ const Article = () => {
               =& \,\, \up&#123;1.3&#125; (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times
               (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;)\\
               =& \,\, \up&#123;1.4&#125; 2
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
               <ImageLeft
                 offset_y="0.8rem"
                 src="/images/17.svg" />
@@ -1457,7 +1571,8 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &\,\, (\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
               =&\,\, \up&#123;1.3&#125;
               \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times
@@ -1476,7 +1591,8 @@ const Article = () => {
               =&\,\, \up&#123;1.3&#125;
               \sqrt[2]&#123;\up&#123;0.65&#125;2&#125; \times \sqrt[2]&#123;\up&#123;0.65&#125;2&#125;\\
               =&\,\, \up&#123;1.4&#125; 2
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
               <ImageLeft src="/images/18.svg" />
             </MathBlock>
             <Pause />
@@ -1499,7 +1615,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x^6 = 2$$
+              $$
+              x^6 = 2
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1554,7 +1672,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; = \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;$$
+              $$
+              &#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; = \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1574,7 +1694,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;\sqrt&#123;2&#125; \over 2&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;4&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;2 \over 4&#125; = \sqrt&#123;0.5&#125;$$
+              $$
+              &#123;\sqrt&#123;2&#125; \over 2&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;4&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;2 \over 4&#125; = \sqrt&#123;0.5&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1590,8 +1712,10 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\left(&#123;\sqrt&#123;2&#125; \over 2&#125;\right)^&#123;\!2&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;\cdot&#123;\sqrt&#123;2&#125; \over 2&#125;
-              = &#123;\sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125; \over 4&#125; = &#123;2 \over 4&#125; = 0.5.$$
+              $$
+              \left(&#123;\sqrt&#123;2&#125; \over 2&#125;\right)^&#123;\!2&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;\cdot&#123;\sqrt&#123;2&#125; \over 2&#125;
+              = &#123;\sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125; \over 4&#125; = &#123;2 \over 4&#125; = 0.5.
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1626,7 +1750,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;1&#125; \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;1 \over 2&#125; = \sqrt&#123;0.5&#125;.$$
+              $$
+              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;1&#125; \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;1 \over 2&#125; = \sqrt&#123;0.5&#125;.
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1634,8 +1760,10 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\left(&#123;1 \over \sqrt&#123;2&#125;&#125;\right)^&#123;\!2&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;\cdot&#123;1 \over \sqrt&#123;2&#125;&#125;
-              = &#123;1 \over \sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125;&#125; = &#123;1 \over 2&#125; = 0.5.$$
+              $$
+              \left(&#123;1 \over \sqrt&#123;2&#125;&#125;\right)^&#123;\!2&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;\cdot&#123;1 \over \sqrt&#123;2&#125;&#125;
+              = &#123;1 \over \sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125;&#125; = &#123;1 \over 2&#125; = 0.5.
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1648,7 +1776,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;2&#125; \cdot \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;.$$
+              $$
+              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;2&#125; \cdot \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;.
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1665,7 +1795,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$2^&#123;30&#125; = 2^&#123;10&#125; \times 2^&#123;10&#125; \times 2^&#123;10&#125; = (2^&#123;10&#125;)^3$$
+              $$
+              2^&#123;30&#125; = 2^&#123;10&#125; \times 2^&#123;10&#125; \times 2^&#123;10&#125; = (2^&#123;10&#125;)^3
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1673,7 +1805,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(2^&#123;10&#125;)^3 = (1024)^3 &gt; 1000^3.$$
+              $$
+              (2^&#123;10&#125;)^3 = (1024)^3 &gt; 1000^3.
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1695,7 +1829,8 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;array&#125;&#123;c|c&#125;
+              $$
+              \begin&#123;array&#125;&#123;c|c&#125;
               \,\,\,\,n\,\,\,\, & 2^n\dn&#123;0.3&#125; \\ \hline
               0 & 1 \up&#123;1.1&#125;\\
               1 & 2 \\
@@ -1708,7 +1843,8 @@ const Article = () => {
               8 & 256 \\
               9 & 512 \\
               10 & 1024
-              \end&#123;array&#125;$$
+              \end&#123;array&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1716,7 +1852,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$2^&#123;10&#125; \approx 10^3$$
+              $$
+              2^&#123;10&#125; \approx 10^3
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1732,7 +1870,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$2^&#123;50&#125;\fw\te&#123;mm&#125; = (2^&#123;10&#125;)^5\fw\te&#123;mm&#125; \approx (10^3)^5\fw\te&#123;mm&#125; = 10^&#123;15&#125;\fw\te&#123;mm&#125;.$$
+              $$
+              2^&#123;50&#125;\fw\te&#123;mm&#125; = (2^&#123;10&#125;)^5\fw\te&#123;mm&#125; \approx (10^3)^5\fw\te&#123;mm&#125; = 10^&#123;15&#125;\fw\te&#123;mm&#125;.
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1740,7 +1880,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$1\fw\te&#123;mm&#125; = 10^&#123;-6&#125;\fw\te&#123;km&#125;$$
+              $$
+              1\fw\te&#123;mm&#125; = 10^&#123;-6&#125;\fw\te&#123;km&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1748,7 +1890,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$10^&#123;9&#125;\fw\te&#123;km&#125;$$
+              $$
+              10^&#123;9&#125;\fw\te&#123;km&#125;
+              $$
               <ImageRight
                 squiggle={false}
                 offset_y="-1rem"
@@ -1773,7 +1917,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\te&#123;“&#125;2^&#123;50&#125;\fw\te&#123;mm&#125;\te&#123;”&#125;$$
+              $$
+              \te&#123;“&#125;2^&#123;50&#125;\fw\te&#123;mm&#125;\te&#123;”&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1781,7 +1927,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\te&#123;“&#125;\fw10^&#123;15&#125;\te&#123;mm&#125;\te&#123;”&#125;$$
+              $$
+              \te&#123;“&#125;\fw10^&#123;15&#125;\te&#123;mm&#125;\te&#123;”&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1801,12 +1949,14 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               & &#123;1 \over 0.95&#125; &gt; 1.05\\
               \iff & 1 &gt; 1.05 \cdot 0.95\up&#123;1.4&#125;\\
               \iff & 1 &gt; (1 + 0.05)(1 - 0.05)\up&#123;1.4&#125;\\
               \iff & 1 &gt; 1 - 0.05^2\up&#123;1.4&#125;
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1821,7 +1971,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\te&#123;“&#125;\,(a+b)(a-b) = a^2-b^2\,\te&#123;”&#125;$$
+              $$
+              \te&#123;“&#125;\,(a+b)(a-b) = a^2-b^2\,\te&#123;”&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1855,7 +2007,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 1 - \epsilon&#125; &gt; 1 + \epsilon$$
+              $$
+              &#123;1 \over 1 - \epsilon&#125; &gt; 1 + \epsilon
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1883,7 +2037,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 0.99&#125;$$
+              $$
+              &#123;1 \over 0.99&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1891,7 +2047,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 0.99&#125;$$
+              $$
+              &#123;1 \over 0.99&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1899,7 +2057,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 0.999&#125;$$
+              $$
+              &#123;1 \over 0.999&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1907,7 +2067,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 0.999&#125;,$$
+              $$
+              &#123;1 \over 0.999&#125;,
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2056,7 +2218,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;100 \over 99&#125; = &#123;99 + 1 \over 99&#125; = 1 + &#123;1 \over 99&#125;$$
+              $$
+              &#123;100 \over 99&#125; = &#123;99 + 1 \over 99&#125; = 1 + &#123;1 \over 99&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2064,7 +2228,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;101 \over 100&#125; = &#123;100 + 1 \over 100&#125; = 1 + &#123;1 \over 100&#125;$$
+              $$
+              &#123;101 \over 100&#125; = &#123;100 + 1 \over 100&#125; = 1 + &#123;1 \over 100&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2095,7 +2261,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 99&#125; - &#123;1 \over 100&#125;$$
+              $$
+              &#123;1 \over 99&#125; - &#123;1 \over 100&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2112,7 +2280,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$1 - &#123;1\over 2&#125;$$
+              $$
+              1 - &#123;1\over 2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2131,12 +2301,14 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &\, \left(1 - &#123;1 \over 2&#125;\right) \\
               + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right) \\
               \hline
               = \,&\, \left(1 - &#123;1 \over 3&#125;\right)
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2145,13 +2317,15 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
               + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
               \hline
               = \,&\, \left(1 - &#123;1 \over 4&#125;\right)
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2159,14 +2333,16 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
               + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
               + \,&\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
               \hline
               = \,&\, \left(1 - &#123;1 \over 5&#125;\right)
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2186,7 +2362,8 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
               + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
@@ -2194,7 +2371,8 @@ const Article = () => {
               + \,&\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
               + \,&\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
               + \,&\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2217,7 +2395,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$$
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2247,12 +2427,14 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &#123;1 \over n&#125; - &#123;1 \over n+1&#125; &= &#123;1 \over n&#125;\cdot&#123;n+1 \over n+1&#125;\, - \,
               &#123;1 \over n+1&#125;\cdot&#123;n \over n&#125;\up&#123;1.5&#125;\\
               &= &#123;n+1 \over n(n+1)&#125; - &#123;n \over n(n+1)&#125;\up&#123;1.5&#125;\\
               &= &#123;1 \over n(n+1)&#125;\up&#123;1.5&#125;
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
               <ImageRight
                 offset_y="-0.5em"
                 src="/images/svg_ch1_ex_24.svg" />
@@ -2263,7 +2445,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 1&#125; - &#123;1 \over 2&#125; = &#123;1 \over 1 \cdot 2&#125; = &#123;1 \over 2&#125;$$
+              $$
+              &#123;1 \over 1&#125; - &#123;1 \over 2&#125; = &#123;1 \over 1 \cdot 2&#125; = &#123;1 \over 2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2271,7 +2455,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 2&#125; - &#123;1 \over 3&#125; = &#123;1 \over 2 \cdot 3&#125; = &#123;1 \over 6&#125;$$
+              $$
+              &#123;1 \over 2&#125; - &#123;1 \over 3&#125; = &#123;1 \over 2 \cdot 3&#125; = &#123;1 \over 6&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2279,7 +2465,8 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
               + \,&\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
@@ -2288,7 +2475,8 @@ const Article = () => {
               + \,&\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
               + \,&\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;\dn&#123;1&#125;\\ \hline
               = \,&\, 1\up&#123;1.5&#125;
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2296,8 +2484,10 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 1 \cdot 2&#125; + &#123;1 \over 2 \cdot 3&#125; + &#123;1 \over 3 \cdot 4&#125; + &#123;1 \over 4 \cdot 5&#125; + &#123;1 \over
-              5 \cdot 6&#125; + \dots \,=\, 1$$
+              $$
+              &#123;1 \over 1 \cdot 2&#125; + &#123;1 \over 2 \cdot 3&#125; + &#123;1 \over 3 \cdot 4&#125; + &#123;1 \over 4 \cdot 5&#125; + &#123;1 \over
+              5 \cdot 6&#125; + \dots \,=\, 1
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2305,7 +2495,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 2&#125; + &#123;1 \over 6&#125; + &#123;1 \over 12&#125; + &#123;1 \over 20&#125; + &#123;1 \over 30&#125; + \dots \,=\, 1$$
+              $$
+              &#123;1 \over 2&#125; + &#123;1 \over 6&#125; + &#123;1 \over 12&#125; + &#123;1 \over 20&#125; + &#123;1 \over 30&#125; + \dots \,=\, 1
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2321,7 +2513,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;$$
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2347,7 +2541,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 10&#125; - &#123;1 \over 11&#125;$$
+              $$
+              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2362,7 +2558,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 100&#125; - &#123;1 \over 101&#125;$$
+              $$
+              &#123;1 \over 100&#125; - &#123;1 \over 101&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2389,7 +2587,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$$
+            $$
+            &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2442,7 +2642,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;$$
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
+              $$
               <ImageRight
                 squiggle={false}
                 src="/images/svg_ch1_ex_25.svg"
@@ -2455,7 +2657,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over n^2&#125;$$
+              $$
+              &#123;1 \over n^2&#125;
+              $$
               <ImageRight
                 squiggle={false}
                 src="/images/svg_ch1_ex_26.svg"
@@ -2468,7 +2672,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125;$$
+              $$
+              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2476,7 +2682,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over n(n+1)&#125; - &#123;1 \over n^2&#125;$$
+              $$
+              &#123;1 \over n(n+1)&#125; - &#123;1 \over n^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2487,12 +2695,14 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125; &= &#123;1 \over n^2&#125; \cdot &#123;n+1 \over n+1&#125; - &#123;1 \over n(n+1)&#125; \cdot
               &#123;n \over n&#125;\\
               &= &#123;n+1 \over n^2(n+1)&#125; - &#123;n \over n^2(n+1)&#125;\up&#123;1.5&#125;\\
               &= &#123;1 \over n^2(n+1)&#125;\up&#123;1.5&#125;
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
               <ImageRight
                 offset_y="-0.5em"
                 src="/images/svg_ch1_ex_27.svg" />
@@ -2510,7 +2720,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over n^3&#125;$$
+              $$
+              &#123;1 \over n^3&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2535,7 +2747,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 10&#125; - &#123;1 \over 11&#125;$$
+              $$
+              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2560,7 +2774,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 10^2\cdot 11&#125;$$
+              $$
+              &#123;1 \over 10^2\cdot 11&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2576,7 +2792,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 10&#125; - &#123;1 \over 11&#125;$$
+              $$
+              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2599,7 +2817,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1 \over 10^2\cdot 11&#125;$$
+              $$
+              &#123;1 \over 10^2\cdot 11&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>

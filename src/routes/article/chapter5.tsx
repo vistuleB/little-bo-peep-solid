@@ -355,7 +355,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\approx &#123;11\over 7&#125; = 1.\overline&#123;571428&#125;$$
+          $$
+          \approx &#123;11\over 7&#125; = 1.\overline&#123;571428&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -401,7 +403,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin(x)$$
+          $$
+          \sin(x)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -611,7 +615,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$-\!\sin(x)$$
+          $$
+          -\!\sin(x)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -635,7 +641,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x \ra -\!\sin(x)$$
+          $$
+          x \ra -\!\sin(x)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -659,7 +667,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$-f = (x \ra -f(x))$$
+          $$
+          -f = (x \ra -f(x))
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -735,19 +745,27 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin' = \cos$$
+          $$
+          \sin' = \cos
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\cos' = -\!\sin$$
+          $$
+          \cos' = -\!\sin
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$(-\!\sin)' = -\!\cos$$
+          $$
+          (-\!\sin)' = -\!\cos
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$(-\!\cos)' = \sin$$
+          $$
+          (-\!\cos)' = \sin
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -778,7 +796,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'$$
+          $$
+          (-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -792,7 +812,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(-\!\sin)' = -\!\sin'$$
+          $$
+          (-\!\sin)' = -\!\sin'
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -800,7 +822,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(-\!\sin)' = -\!\sin' = -\!\cos$$
+          $$
+          (-\!\sin)' = -\!\sin' = -\!\cos
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -809,7 +833,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(-\!\cos)' = -\!\cos'$$
+          $$
+          (-\!\cos)' = -\!\cos'
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -817,7 +843,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(-\!\cos)' = -\!\cos' = -(-\!\sin) = \sin$$
+          $$
+          (-\!\cos)' = -\!\cos' = -(-\!\sin) = \sin
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -845,13 +873,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\displaylines&#123;
+          $$
+          \displaylines&#123;
           \up&#123;1.0&#125;\cos(-x) = \cos(x) \\
           \up&#123;1.7&#125;\sin(-x) = -\sin(x) \\
           \up&#123;1.7&#125;\sin(x + \eta) = \cos(x) \\
           \up&#123;1.7&#125;\cos(x - \eta) = \sin(x) \\
           \up&#123;1.7&#125;\dn&#123;0.5&#125;\cos(\eta/2 + x) = \sin(\eta/2 - x)
-          &#125;$$
+          &#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -866,7 +896,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \eta$$
+          $$
+          \Large \eta
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -919,7 +951,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin(\eta - x) = \cos(x)$$
+          $$
+          \sin(\eta - x) = \cos(x)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -927,7 +961,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(\eta - x) = \sin(x)$$
+          $$
+          \cos(\eta - x) = \sin(x)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -947,12 +983,14 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\displaylines&#123;
+          $$
+          \displaylines&#123;
           \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
           \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
           \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
           \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
-          &#125;$$
+          &#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -967,8 +1005,10 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\displaylines&#123;\up&#123;1.0&#125;\cos(x + \eta) = -\!\sin(x) \\
-          \up&#123;1.7&#125;\sin(x - \eta) = -\!\cos(x)&#125;$$
+          $$
+          \displaylines&#123;\up&#123;1.0&#125;\cos(x + \eta) = -\!\sin(x) \\
+          \up&#123;1.7&#125;\sin(x - \eta) = -\!\cos(x)&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -989,11 +1029,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin'(x) = \sin(x + \eta)$$
+          $$
+          \sin'(x) = \sin(x + \eta)
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\cos'(x) = \cos(x + \eta)$$
+          $$
+          \cos'(x) = \cos(x + \eta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1001,11 +1045,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin(x + \eta) = \cos(x)$$
+          $$
+          \sin(x + \eta) = \cos(x)
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\cos(x + \eta) = -\!\sin(x)$$
+          $$
+          \cos(x + \eta) = -\!\sin(x)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1016,11 +1064,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin^&#123;(\ell)&#125;(x) = \sin(x + \ell\eta)$$
+          $$
+          \sin^&#123;(\ell)&#125;(x) = \sin(x + \ell\eta)
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\cos^&#123;(\ell)&#125;(x) = \cos(x + \ell\eta)$$
+          $$
+          \cos^&#123;(\ell)&#125;(x) = \cos(x + \ell\eta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1068,7 +1120,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^2 + y^2 = 1$$
+          $$
+          x^2 + y^2 = 1
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1077,7 +1131,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(\cos(x), \sin(x))$$
+          $$
+          (\cos(x), \sin(x))
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1085,7 +1141,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos^2(x) + \sin^2(x) = 1 \tag&#123;*&#125;$$
+          $$
+          \cos^2(x) + \sin^2(x) = 1 \tag&#123;*&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1110,7 +1168,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$1$$
+          $$
+          1
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1119,7 +1179,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin^2(x) + \cos^2(x)$$
+          $$
+          \sin^2(x) + \cos^2(x)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1128,7 +1190,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin^2(y)$$
+          $$
+          \sin^2(y)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1136,7 +1200,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$1 - \cos^2(y)$$
+          $$
+          1 - \cos^2(y)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1144,7 +1210,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos^2(y)$$
+          $$
+          \cos^2(y)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1152,7 +1220,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$1 - \sin^2(y)$$
+          $$
+          1 - \sin^2(y)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1160,7 +1230,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$1 - \cos^2(y)$$
+          $$
+          1 - \cos^2(y)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1168,7 +1240,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$1 - \sin^2(y)$$
+          $$
+          1 - \sin^2(y)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1176,7 +1250,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(1 - \cos(y))\cdot (1 + \cos(y))$$
+          $$
+          (1 - \cos(y))\cdot (1 + \cos(y))
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1184,7 +1260,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(1 - \sin(y))\cdot (1 + \sin(y))$$
+          $$
+          (1 - \sin(y))\cdot (1 + \sin(y))
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1193,7 +1271,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin^2(\theta) - \cos^2(\theta)$$
+          $$
+          \sin^2(\theta) - \cos^2(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1201,7 +1281,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$1 - 2\cos^2(\theta)$$
+          $$
+          1 - 2\cos^2(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1209,7 +1291,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$2\sin^2(\theta) - 1$$
+          $$
+          2\sin^2(\theta) - 1
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1217,7 +1301,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\,\cos^2(\theta) - \sin^2(\theta),$$
+          $$
+          \,\cos^2(\theta) - \sin^2(\theta),
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1441,7 +1527,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^\circ = x \cdot &#123;\eta\over 90&#125;$$
+          $$
+          x^\circ = x \cdot &#123;\eta\over 90&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1457,7 +1545,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\eta\over 90$$
+          $$
+          \eta\over 90
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1468,7 +1558,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$90^\circ = 90 \cdot &#123;\eta\over 90&#125; = \eta$$
+          $$
+          90^\circ = 90 \cdot &#123;\eta\over 90&#125; = \eta
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1476,7 +1568,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$45^\circ = 45 \cdot &#123;\eta\over 90&#125; = \eta/2,$$
+          $$
+          45^\circ = 45 \cdot &#123;\eta\over 90&#125; = \eta/2,
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1487,7 +1581,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(90^\circ\hlfbk)$$
+          $$
+          \cos(90^\circ\hlfbk)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1495,7 +1591,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(\eta)$$
+          $$
+          \cos(\eta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1506,7 +1604,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(\eta) = 0$$
+          $$
+          \cos(\eta) = 0
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1549,7 +1649,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(\pm\sqrt&#123;x&#125;, \pm\sqrt&#123;1 - x&#125;),\,\,\,0 \leq x \leq 1 \tag&#123;*&#125;$$
+          $$
+          (\pm\sqrt&#123;x&#125;, \pm\sqrt&#123;1 - x&#125;),\,\,\,0 \leq x \leq 1 \tag&#123;*&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1574,7 +1676,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(\sqrt&#123;0.2&#125;, \sqrt&#123;0.8&#125;)$$
+          $$
+          (\sqrt&#123;0.2&#125;, \sqrt&#123;0.8&#125;)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1582,7 +1686,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(\sqrt&#123;0.1&#125;, \sqrt&#123;0.9&#125;)$$
+          $$
+          (\sqrt&#123;0.1&#125;, \sqrt&#123;0.9&#125;)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1622,7 +1728,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(\sqrt&#123;0.5&#125;,\, \sqrt&#123;0.5&#125;\rt&#123;0.2&#125;)$$
+          $$
+          (\sqrt&#123;0.5&#125;,\, \sqrt&#123;0.5&#125;\rt&#123;0.2&#125;)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1639,11 +1747,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;$$
+          $$
+          \cos(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;$$
+          $$
+          \sin(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1651,11 +1763,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(\eta/2) = \sqrt&#123;0.5&#125;$$
+          $$
+          \cos(\eta/2) = \sqrt&#123;0.5&#125;
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(\eta/2) = \sqrt&#123;0.5&#125;$$
+          $$
+          \sin(\eta/2) = \sqrt&#123;0.5&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1663,11 +1779,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(135^\circ\hlfbk) = -\sqrt&#123;0.5&#125;$$
+          $$
+          \cos(135^\circ\hlfbk) = -\sqrt&#123;0.5&#125;
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(135^\circ\hlfbk) = \sqrt&#123;0.5&#125;$$
+          $$
+          \sin(135^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1675,11 +1795,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(1.5\eta) = -\sqrt&#123;0.5&#125;$$
+          $$
+          \cos(1.5\eta) = -\sqrt&#123;0.5&#125;
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(1.5\eta) = \sqrt&#123;0.5&#125;$$
+          $$
+          \sin(1.5\eta) = \sqrt&#123;0.5&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1742,7 +1866,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sqrt&#123;0.25&#125; = 0.5$$
+          $$
+          \sqrt&#123;0.25&#125; = 0.5
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1751,7 +1877,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(\sqrt&#123;0.25&#125;, \,\sqrt&#123;0.75&#125;) = (0.5, \,\sqrt&#123;0.75&#125;)$$
+          $$
+          (\sqrt&#123;0.25&#125;, \,\sqrt&#123;0.75&#125;) = (0.5, \,\sqrt&#123;0.75&#125;)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1759,7 +1887,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(\sqrt&#123;0.75&#125;, \,\sqrt&#123;0.25&#125;) = (\sqrt&#123;0.75&#125;, \,0.5)$$
+          $$
+          (\sqrt&#123;0.75&#125;, \,\sqrt&#123;0.25&#125;) = (\sqrt&#123;0.75&#125;, \,0.5)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1768,11 +1898,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(60^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),$$
+          $$
+          \cos(60^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(60^\circ\hlfbk) = \sqrt&#123;0.75&#125;$$
+          $$
+          \sin(60^\circ\hlfbk) = \sqrt&#123;0.75&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1780,11 +1914,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(30^\circ\hlfbk) = \sqrt&#123;0.75&#125;,$$
+          $$
+          \cos(30^\circ\hlfbk) = \sqrt&#123;0.75&#125;,
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(30^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),$$
+          $$
+          \sin(30^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1792,11 +1930,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(2\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),$$
+          $$
+          \cos(2\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(2\eta/3) = \sqrt&#123;0.75&#125;$$
+          $$
+          \sin(2\eta/3) = \sqrt&#123;0.75&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1804,11 +1946,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(\eta/3) = \sqrt&#123;0.75&#125;,$$
+          $$
+          \cos(\eta/3) = \sqrt&#123;0.75&#125;,
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;)$$
+          $$
+          \sin(\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1819,11 +1965,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(120^\circ\hlfbk) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),$$
+          $$
+          \cos(120^\circ\hlfbk) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(120^\circ\hlfbk) = \sqrt&#123;0.75&#125;$$
+          $$
+          \sin(120^\circ\hlfbk) = \sqrt&#123;0.75&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1831,11 +1981,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(4\eta/3) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),$$
+          $$
+          \cos(4\eta/3) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\sin(4\eta/3) = \sqrt&#123;0.75&#125;$$
+          $$
+          \sin(4\eta/3) = \sqrt&#123;0.75&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1850,7 +2004,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;$$
+          $$
+          \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1858,7 +2014,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sqrt&#123;0.75&#125; = &#123;\sqrt&#123;3&#125;\over 2&#125;$$
+          $$
+          \sqrt&#123;0.75&#125; = &#123;\sqrt&#123;3&#125;\over 2&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1878,7 +2036,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;\sqrt&#123;2&#125;\over 2&#125;$$
+          $$
+          &#123;\sqrt&#123;2&#125;\over 2&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1961,7 +2121,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$Q = (r\cos(\theta), r\sin(\theta))$$
+          $$
+          Q = (r\cos(\theta), r\sin(\theta))
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1969,11 +2131,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$Q_x = r\cdot\cos(\theta)$$
+          $$
+          Q_x = r\cdot\cos(\theta)
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$Q_y = r\cdot\sin(\theta)$$
+          $$
+          Q_y = r\cdot\sin(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2035,7 +2201,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(r, \theta)$$
+          $$
+          (r, \theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2047,7 +2215,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$P = (r\cos(\theta), r\sin(\theta))$$
+          $$
+          P = (r\cos(\theta), r\sin(\theta))
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2135,7 +2305,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$P = (0, 0)$$
+          $$
+          P = (0, 0)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2148,7 +2320,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$P = (0\cdot \cos(\theta), 0\cdot \sin(\theta))$$
+          $$
+          P = (0\cdot \cos(\theta), 0\cdot \sin(\theta))
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2171,15 +2345,21 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$(\sqrt&#123;2&#125;,\, -3.5\eta)$$
+            $$
+            (\sqrt&#123;2&#125;,\, -3.5\eta)
+            $$
           </MathBlock>
           <Pause />
           <MathBlock>
-            $$(\sqrt&#123;2&#125;,\, 0.5\eta)$$
+            $$
+            (\sqrt&#123;2&#125;,\, 0.5\eta)
+            $$
           </MathBlock>
           <Pause />
           <MathBlock>
-            $$(\sqrt&#123;2&#125;,\, 4.5\eta)$$
+            $$
+            (\sqrt&#123;2&#125;,\, 4.5\eta)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2204,15 +2384,21 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$(\sqrt&#123;2&#125;,\, -2.5\eta)$$
+            $$
+            (\sqrt&#123;2&#125;,\, -2.5\eta)
+            $$
           </MathBlock>
           <Pause />
           <MathBlock>
-            $$(\sqrt&#123;2&#125;,\, 1.5\eta)$$
+            $$
+            (\sqrt&#123;2&#125;,\, 1.5\eta)
+            $$
           </MathBlock>
           <Pause />
           <MathBlock>
-            $$(\sqrt&#123;2&#125;,\, 101.5\eta)$$
+            $$
+            (\sqrt&#123;2&#125;,\, 101.5\eta)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2238,8 +2424,10 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\displaylines&#123;x = r \cos(\theta)\\
-          \up&#123;1.3&#125;y = r \sin(\theta)&#125;$$
+          $$
+          \displaylines&#123;x = r \cos(\theta)\\
+          \up&#123;1.3&#125;y = r \sin(\theta)&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2285,7 +2473,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$r = \sqrt&#123;x^2 + y^2&#125;$$
+          $$
+          r = \sqrt&#123;x^2 + y^2&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2300,11 +2490,13 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\theta = \begin&#123;cases&#125;
+          $$
+          \theta = \begin&#123;cases&#125;
           \arctan(y/x)&amp;\te&#123;if &#125;\, x \ne 0, \,\te&#123;else&#125; \\
           \up&#123;1.2&#125;\te&#123;arccot&#125;(x/y) &amp;\te&#123;if &#125;\, y \ne 0, \,\te&#123;else&#125; \\
           \up&#123;1.2&#125;\rm&#123;?&#125; &amp;\te&#123;if &#125;\, x = 0, y = 0
-          \end&#123;cases&#125;$$
+          \end&#123;cases&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2548,7 +2740,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$10\cdot \cos(43^\circ\hlfbk)\cdot \cos(20^\circ\hlfbk)$$
+            $$
+            10\cdot \cos(43^\circ\hlfbk)\cdot \cos(20^\circ\hlfbk)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2580,7 +2774,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$10\cdot \cos(43^\circ\hlfbk)\cdot \sin(60^\circ\hlfbk)\cdot \sin(50^\circ\hlfbk)$$
+            $$
+            10\cdot \cos(43^\circ\hlfbk)\cdot \sin(60^\circ\hlfbk)\cdot \sin(50^\circ\hlfbk)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2737,7 +2933,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$A\leq S$$
+          $$
+          A\leq S
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2835,7 +3033,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\overline&#123;s_1s_2&#125;\, &gt; \,\overline&#123;p_1p_2&#125;$$
+          $$
+          \overline&#123;s_1s_2&#125;\, &gt; \,\overline&#123;p_1p_2&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -2980,7 +3180,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin(\theta) \,&lt;\, \theta \,&lt;\, &#123;\sin(\theta)\over\cos(\theta)&#125;$$
+          $$
+          \sin(\theta) \,&lt;\, \theta \,&lt;\, &#123;\sin(\theta)\over\cos(\theta)&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3004,7 +3206,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin(\theta) \rt&#123;0.1&#125;&lt;\, \theta$$
+          $$
+          \sin(\theta) \rt&#123;0.1&#125;&lt;\, \theta
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3012,7 +3216,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\,\theta \,&lt;\rt&#123;0.1&#125; &#123;\sin(\theta)\over\cos(\theta)&#125;$$
+          $$
+          \,\theta \,&lt;\rt&#123;0.1&#125; &#123;\sin(\theta)\over\cos(\theta)&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3023,7 +3229,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin(\theta) \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; \theta$$
+          $$
+          \sin(\theta) \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; \theta
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3043,7 +3251,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\theta &gt; L$$
+          $$
+          \theta &gt; L
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3056,7 +3266,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$L &gt; \sin(\theta)$$
+          $$
+          L &gt; \sin(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3075,7 +3287,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;\sin(\theta)\over \cos(\theta)&#125; = &#123;1\over \cos(\theta)&#125;\cdot \sin(\theta)$$
+          $$
+          &#123;\sin(\theta)\over \cos(\theta)&#125; = &#123;1\over \cos(\theta)&#125;\cdot \sin(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3100,7 +3314,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;1\over \cos(\theta)&#125;$$
+          $$
+          &#123;1\over \cos(\theta)&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3126,7 +3342,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sin(\theta)$$
+          $$
+          \sin(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3140,7 +3358,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;\theta&#125; \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; &#123;\sin(\theta)\over \cos(\theta)&#125;$$
+          $$
+          &#123;\theta&#125; \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; &#123;\sin(\theta)\over \cos(\theta)&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3228,7 +3448,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\,\sin(\theta_1 + \theta_2)\,$$
+          $$
+          \,\sin(\theta_1 + \theta_2)\,
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3236,7 +3458,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\,\cos(\theta_1 + \theta_2)\,$$
+          $$
+          \,\cos(\theta_1 + \theta_2)\,
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3384,7 +3608,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sec(\theta)$$
+          $$
+          \sec(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3392,7 +3618,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\csc(\theta)$$
+          $$
+          \csc(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3400,7 +3628,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\tan(\theta)$$
+          $$
+          \tan(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3409,7 +3639,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cot(\theta)$$
+          $$
+          \cot(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3420,7 +3652,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sec = &#123;1\over \cos&#125;$$
+          $$
+          \sec = &#123;1\over \cos&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3428,7 +3662,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\csc = &#123;1\over \sin&#125;$$
+          $$
+          \csc = &#123;1\over \sin&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3438,11 +3674,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\,\tan = &#123;1\over \cot&#125;,$$
+          $$
+          \,\tan = &#123;1\over \cot&#125;,
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\cot = &#123;1\over \tan&#125;$$
+          $$
+          \cot = &#123;1\over \tan&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3450,11 +3690,15 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\tan \,=\, \sec \cdot \sin \,\,=\,\, &#123;\sin\!\!\!\!\phantom&#123;1&#125;\over \cos&#125;$$
+          $$
+          \tan \,=\, \sec \cdot \sin \,\,=\,\, &#123;\sin\!\!\!\!\phantom&#123;1&#125;\over \cos&#125;
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$\cot \,=\, \csc \cdot \cos \,\,=\,\, &#123;\cos\!\!\!\!\phantom&#123;1&#125;\over \sin&#125;$$
+          $$
+          \cot \,=\, \csc \cdot \cos \,\,=\,\, &#123;\cos\!\!\!\!\phantom&#123;1&#125;\over \sin&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3468,7 +3712,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\te&#123;“&#125;\sin(\theta)&lt; \theta&lt; \tan(\theta)\rt&#123;0.1&#125;\te&#123;”&#125;$$
+          $$
+          \te&#123;“&#125;\sin(\theta)&lt; \theta&lt; \tan(\theta)\rt&#123;0.1&#125;\te&#123;”&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3486,7 +3732,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\sec(\theta)$$
+          $$
+          \sec(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3494,7 +3742,7 @@ const Article = () => {
           <span style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             PURPLE
           </span>
-          to the{" "}
+          {" "}to the{" "}
           <span style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             LIME GREEN
           </span>
@@ -3516,7 +3764,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$A\cdot \cos(\theta) = 1$$
+          $$
+          A\cdot \cos(\theta) = 1
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3524,7 +3774,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$A = &#123;1\over \cos(\theta)&#125; = \sec(\theta)$$
+          $$
+          A = &#123;1\over \cos(\theta)&#125; = \sec(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3566,7 +3818,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\csc(\theta)$$
+          $$
+          \csc(\theta)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3574,7 +3828,7 @@ const Article = () => {
           <span style="white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             BURNT ORANGE
           </span>
-          to the{" "}
+          {" "}to the{" "}
           <span style="white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             FAUX BORDEAUX
           </span>
@@ -3598,7 +3852,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\cos(1.57)$$
+          $$
+          \cos(1.57)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -3640,7 +3896,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$y =  \cos(x + 0.1)$$
+            $$
+            y =  \cos(x + 0.1)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -3756,7 +4014,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = &#123;1\over 4&#125;x$$
+              $$
+              y = &#123;1\over 4&#125;x
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3764,7 +4024,7 @@ const Article = () => {
               <i>
                 linear
               </i>
-              function (as opposed
+              {" "}function (as opposed
               to{" "}
               <i>
                 affine
@@ -3805,7 +4065,7 @@ const Article = () => {
               <i>
                 one
               </i>
-              cycle from{" "}
+              {" "}cycle from{" "}
               <Math>
                 $x = 0$
               </Math>
@@ -3838,7 +4098,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = \cos(10x)$$
+              $$
+              y = \cos(10x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3847,7 +4109,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = \cos(10x) + &#123;1\over 4&#125; x$$
+              $$
+              y = \cos(10x) + &#123;1\over 4&#125; x
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3915,7 +4179,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x \ra a_2x^2 + a_1x + a_0$$
+              $$
+              x \ra a_2x^2 + a_1x + a_0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3952,7 +4218,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = Ax^2 + C$$
+              $$
+              y = Ax^2 + C
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3989,7 +4257,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$C$$
+              $$
+              C
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4019,7 +4289,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$C = -3$$
+              $$
+              C = -3
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4074,11 +4346,13 @@ const Article = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}we get
+              {" "}we get{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$A \cdot 12^2 \approx 6$$
+              $$
+              A \cdot 12^2 \approx 6
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4086,8 +4360,10 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$%(A\cdot 12^2) - (A\cdot 0^2) \approx 6
-              A\cdot 12^2 - A\cdot 0^2 \approx 6$$
+              $$
+              %(A\cdot 12^2) - (A\cdot 0^2) \approx 6
+              A\cdot 12^2 - A\cdot 0^2 \approx 6
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4099,7 +4375,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$A \approx &#123;6\over 12^2&#125; = &#123;1\over 24&#125;$$
+              $$
+              A \approx &#123;6\over 12^2&#125; = &#123;1\over 24&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4107,7 +4385,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;x^2\over 24&#125; - 3$$
+              $$
+              &#123;x^2\over 24&#125; - 3
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4148,14 +4428,16 @@ const Article = () => {
               <i>
                 bottom
               </i>
-              of a
+              {" "}of a
               bump, 
               so altogether 
               we can use a function of the form
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$-0.5\cos(Bx)$$
+              $$
+              -0.5\cos(Bx)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4191,7 +4473,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$B = 1$$
+              $$
+              B = 1
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4244,7 +4528,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$-0.5\cos(20x)$$
+              $$
+              -0.5\cos(20x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4252,7 +4538,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$-0.5\cos(20x) + &#123;x^2\over 24&#125; - 3$$
+              $$
+              -0.5\cos(20x) + &#123;x^2\over 24&#125; - 3
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4299,7 +4587,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = -&#123;1\over 4&#125;x$$
+              $$
+              y = -&#123;1\over 4&#125;x
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4349,7 +4639,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = -&#123;1\over 4&#125;x$$
+              $$
+              y = -&#123;1\over 4&#125;x
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4373,7 +4665,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = -2\sin(Bx)$$
+              $$
+              y = -2\sin(Bx)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4386,7 +4680,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = -\sin(x)$$
+              $$
+              y = -\sin(x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4402,7 +4698,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = -2\sin(x)$$
+              $$
+              y = -2\sin(x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4442,7 +4740,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$12.6 \approx 12.56 = 2\times 6.28 \approx 2\cdot 4\eta$$
+              $$
+              12.6 \approx 12.56 = 2\times 6.28 \approx 2\cdot 4\eta
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4452,7 +4752,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$-2\sin(x)$$
+              $$
+              -2\sin(x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4467,7 +4769,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$B = 0.5$$
+              $$
+              B = 0.5
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4475,7 +4779,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = -2\sin(0.5x)$$
+              $$
+              y = -2\sin(0.5x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4486,7 +4792,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$-&#123;1\over 4&#125;x - 2\sin(0.5x)$$
+              $$
+              -&#123;1\over 4&#125;x - 2\sin(0.5x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4521,7 +4829,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x \ra -0.5\sin(19x)$$
+              $$
+              x \ra -0.5\sin(19x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4548,7 +4858,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = -&#123;1\over 4&#125;x - 2\sin(0.5x) - 0.5\sin(19x)$$
+              $$
+              y = -&#123;1\over 4&#125;x - 2\sin(0.5x) - 0.5\sin(19x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4747,7 +5059,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\cos^2(x) + \sin^2(x) = 1$$
+              $$
+              \cos^2(x) + \sin^2(x) = 1
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4817,11 +5131,15 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\sin(68^\circ\hlfbk)$$
+              $$
+              \sin(68^\circ\hlfbk)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$\sin(59^\circ\hlfbk)$$
+              $$
+              \sin(59^\circ\hlfbk)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4831,11 +5149,15 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\csc(71^\circ\hlfbk)$$
+              $$
+              \csc(71^\circ\hlfbk)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$\csc(60^\circ\hlfbk)$$
+              $$
+              \csc(60^\circ\hlfbk)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4846,7 +5168,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\sin(68^\circ\hlfbk)\times\csc(71^\circ\hlfbk)\times\sin(59^\circ\hlfbk)\times\csc(60^\circ\hlfbk)$$
+              $$
+              \sin(68^\circ\hlfbk)\times\csc(71^\circ\hlfbk)\times\sin(59^\circ\hlfbk)\times\csc(60^\circ\hlfbk)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4854,7 +5178,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;\sin(68^\circ\hlfbk)\times\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\times\sin(60^\circ\hlfbk)&#125;$$
+              $$
+              &#123;\sin(68^\circ\hlfbk)\times\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\times\sin(60^\circ\hlfbk)&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4869,7 +5195,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$0.97057870529467...$$
+              $$
+              0.97057870529467...
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4877,7 +5205,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$97\%$$
+              $$
+              97\%
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4906,7 +5236,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$0.34127722635785...$$
+              $$
+              0.34127722635785...
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4943,7 +5275,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$(\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^&#123;36&#125;$$
+                $$
+                (\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^&#123;36&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -4951,7 +5285,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\left(&#123;\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)&#125;\right)^&#123;\!36&#125;$$
+                $$
+                \left(&#123;\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)&#125;\right)^&#123;\!36&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -5008,7 +5344,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$68^\circ + 71^\circ + 61^\circ - 180^\circ = 20^\circ$$
+                $$
+                68^\circ + 71^\circ + 61^\circ - 180^\circ = 20^\circ
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -5021,7 +5359,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$&#123;360^\circ\over 20^\circ&#125; = 18$$
+                $$
+                &#123;360^\circ\over 20^\circ&#125; = 18
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -5029,7 +5369,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$2 \times 18 = 36$$
+                $$
+                2 \times 18 = 36
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -5116,7 +5458,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x_0 + r\cdot \cos(\phi)$$
+              $$
+              x_0 + r\cdot \cos(\phi)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5124,7 +5468,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y_0 + r\cdot \sin(\phi)$$
+              $$
+              y_0 + r\cdot \sin(\phi)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5139,7 +5485,9 @@ const Article = () => {
                 </div>
                 <Pause />
                 <MathBlock>
-                  $$r\cdot\cos(\phi)$$
+                  $$
+                  r\cdot\cos(\phi)
+                  $$
                 </MathBlock>
               </div>
               is the difference from the center of the circle to{" "}
@@ -5161,7 +5509,9 @@ const Article = () => {
                 </div>
                 <Pause />
                 <MathBlock>
-                  $$r\cdot\sin(\phi)$$
+                  $$
+                  r\cdot\sin(\phi)
+                  $$
                 </MathBlock>
               </div>
               is the difference from the center of the circle to{" "}
@@ -5222,7 +5572,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\vec&#123;u&#125; + \vec&#123;v&#125;$$
+              $$
+              \vec&#123;u&#125; + \vec&#123;v&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5230,7 +5582,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\vec&#123;u&#125; = (u_x, u_y)$$
+              $$
+              \vec&#123;u&#125; = (u_x, u_y)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5238,7 +5592,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\vec&#123;v&#125; = (v_x, v_y)$$
+              $$
+              \vec&#123;v&#125; = (v_x, v_y)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5246,7 +5602,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(u_x + v_x, u_y + v_y)$$
+              $$
+              (u_x + v_x, u_y + v_y)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5281,7 +5639,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\vec&#123;u&#125; = (100, 100)$$
+              $$
+              \vec&#123;u&#125; = (100, 100)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5289,7 +5649,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\vec&#123;v&#125; = (1, -1)$$
+              $$
+              \vec&#123;v&#125; = (1, -1)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5304,14 +5666,18 @@ const Article = () => {
                 </div>
                 <Pause />
                 <MathBlock>
-                  $$\,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)$$
+                  $$
+                  \,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
+                  $$
                 </MathBlock>
               </div>
               because
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$100 + 1 = 101$$
+              $$
+              100 + 1 = 101
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5319,7 +5685,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$100 - 1 = 99$$
+              $$
+              100 - 1 = 99
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5423,7 +5791,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$u_x + v_x$$
+                $$
+                u_x + v_x
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -5448,7 +5818,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$u_y + v_y$$
+                $$
+                u_y + v_y
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -5585,7 +5957,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$A\cdot\cos(Bt + C) + D$$
+            $$
+            A\cdot\cos(Bt + C) + D
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5736,7 +6110,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$t$$
+              $$
+              t
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5750,7 +6126,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$Bt + C$$
+              $$
+              Bt + C
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5765,7 +6143,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$Bt + C$$
+              $$
+              Bt + C
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5861,7 +6241,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$Bt + C$$
+              $$
+              Bt + C
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5870,7 +6252,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$Bt + C$$
+              $$
+              Bt + C
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5960,7 +6344,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x$$
+              $$
+              x
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6074,11 +6460,13 @@ const Article = () => {
           <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
-              An angle is
+              An angle is{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$0.2$$
+              $$
+              0.2
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6086,7 +6474,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$20\%$$
+              $$
+              20\%
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6147,7 +6537,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\eta$$
+            $$
+            \eta
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -6155,7 +6547,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$4\eta$$
+            $$
+            4\eta
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -6174,7 +6568,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\eta$$
+              $$
+              \eta
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6183,7 +6579,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$4\eta$$
+              $$
+              4\eta
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6202,7 +6600,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$4\eta\cdot r$$
+                $$
+                4\eta\cdot r
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6254,7 +6654,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$&#123;11\over 7&#125;$$
+            $$
+            &#123;11\over 7&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -6321,7 +6723,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <div style="font-size:1.65em;margin:1em 0;">
                 <MathBlock>
-                  $$1.\overline&#123;571428&#125;$$
+                  $$
+                  1.\overline&#123;571428&#125;
+                  $$
                 </MathBlock>
               </div>
               ...where the decimal point is after the 
@@ -6498,7 +6902,9 @@ const Article = () => {
               <VerticalChunk indent={true}>
                 <div style="font-size:1.65em;margin:1em 0;">
                   <MathBlock>
-                    $$1 \times 7$$
+                    $$
+                    1 \times 7
+                    $$
                   </MathBlock>
                 </div>
                 from{" "}
@@ -6642,7 +7048,9 @@ const Article = () => {
               <VerticalChunk indent={true}>
                 <div style="font-size:1.65em;margin:1em 0;">
                   <MathBlock>
-                    $$5\times 7$$
+                    $$
+                    5\times 7
+                    $$
                   </MathBlock>
                 </div>
                 from{" "}
@@ -6735,7 +7143,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$&#123;22\over 7&#125;, \,\,\,\,\, &#123;33\over 7&#125;, \,\,\,\,\,\rm&#123;and&#125;\,\,\,\,\,&#123;44\over 7&#125;$$
+            $$
+            &#123;22\over 7&#125;, \,\,\,\,\, &#123;33\over 7&#125;, \,\,\,\,\,\rm&#123;and&#125;\,\,\,\,\,&#123;44\over 7&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -6755,9 +7165,11 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\Large \up&#123;1.5&#125;&#123;22\over 7&#125; = 3.\overline&#123;142857&#125;\\
+              $$
+              \Large \up&#123;1.5&#125;&#123;22\over 7&#125; = 3.\overline&#123;142857&#125;\\
               \Large \up&#123;1.7&#125;&#123;33\over 7&#125; = 4.\overline&#123;714285&#125;\\
-              \Large \up&#123;1.7&#125;&#123;44\over 7&#125; = 6.\overline&#123;285714&#125;$$
+              \Large \up&#123;1.7&#125;&#123;44\over 7&#125; = 6.\overline&#123;285714&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6777,12 +7189,14 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\displaylines&#123;
+                $$
+                \displaylines&#123;
                 \Large         \eta  \approx&#123;11\over 7&#125;\\
                 \Large \up&#123;1.7&#125;2\eta \approx&#123;22\over 7&#125;\\
                 \Large \up&#123;1.7&#125;3\eta \approx&#123;33\over 7&#125;\\
                 \Large \up&#123;1.7&#125;4\eta \approx&#123;44\over 7&#125;
-                &#125;$$
+                &#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6790,11 +7204,13 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\displaylines&#123;
+                $$
+                \displaylines&#123;
                 \Large         \eta \approx  1.\overline&#123;571428&#125;\\
                 \Large \up&#123;1.7&#125;2\eta \approx 3.\overline&#123;142857&#125;\\
                 \Large \up&#123;1.7&#125;3\eta \approx 4.\overline&#123;714285&#125;\\
-                \Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;&#125;$$
+                \Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6804,7 +7220,7 @@ const Article = () => {
                 <i>
                   at least
                 </i>
-                two decimal places.)
+                {" "}two decimal places.)
               </VerticalChunk>
             </SolutionNote>
             <Pause />
@@ -6821,7 +7237,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\approx 0.0004$$
+                $$
+                \approx 0.0004
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6829,7 +7247,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\approx 1.\overline&#123;571428&#125; \cdot 0.0004 \approx 0.0006$$
+                $$
+                \approx 1.\overline&#123;571428&#125; \cdot 0.0004 \approx 0.0006
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6837,7 +7257,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\approx 1.\overline&#123;571428&#125;$$
+                $$
+                \approx 1.\overline&#123;571428&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6852,7 +7274,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\approx 3.\overline&#123;142857&#125; \cdot 0.0004 \approx 0.0012$$
+                $$
+                \approx 3.\overline&#123;142857&#125; \cdot 0.0004 \approx 0.0012
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6860,7 +7284,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\approx 3.\overline&#123;142857&#125;$$
+                $$
+                \approx 3.\overline&#123;142857&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6875,7 +7301,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\approx 4.\overline&#123;714285&#125; \cdot 0.0004 \approx 0.0019$$
+                $$
+                \approx 4.\overline&#123;714285&#125; \cdot 0.0004 \approx 0.0019
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6883,7 +7311,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\approx 4.\overline&#123;714285&#125;$$
+                $$
+                \approx 4.\overline&#123;714285&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6898,7 +7328,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\approx 6.\overline&#123;285714&#125; \cdot 0.0004 \approx 0.0025$$
+                $$
+                \approx 6.\overline&#123;285714&#125; \cdot 0.0004 \approx 0.0025
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6906,7 +7338,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\approx 6.\overline&#123;285714&#125;$$
+                $$
+                \approx 6.\overline&#123;285714&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6922,11 +7356,13 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\displaylines&#123;
+                $$
+                \displaylines&#123;
                 \Large         \eta \approx  1.5708\\
                 \Large \up&#123;1.7&#125;2\eta \approx 3.1416\\
                 \Large \up&#123;1.7&#125;3\eta \approx 4.7123\\
-                \Large \up&#123;1.7&#125;4\eta \approx 6.2832&#125;$$
+                \Large \up&#123;1.7&#125;4\eta \approx 6.2832&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -6951,7 +7387,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$15542486476949/777$$
+            $$
+            15542486476949/777
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -6963,11 +7401,13 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\begin&#123;array&#125;&#123;c|cc&#125;
+            $$
+            \begin&#123;array&#125;&#123;c|cc&#125;
             \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
             \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
             \\
-            \end&#123;array&#125;$$
+            \end&#123;array&#125;
+            $$
           </MathBlock>
           <Pause />
           <Solution solution_number={16}>
@@ -7004,7 +7444,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$20003200099.033$$
+              $$
+              20003200099.033
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7012,7 +7454,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$0.359$$
+              $$
+              0.359
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7020,7 +7464,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$15542486476949 = 777 \times 20003200099.033 + 0.359$$
+              $$
+              15542486476949 = 777 \times 20003200099.033 + 0.359
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7701,7 +8147,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\theta + (\eta - \theta) + \eta = 2\eta$$
+            $$
+            \theta + (\eta - \theta) + \eta = 2\eta
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -7784,7 +8232,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x + y$$
+              $$
+              x + y
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7792,7 +8242,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x, y)$$
+              $$
+              (x, y)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7810,14 +8262,18 @@ const Article = () => {
               displacement to be vertical:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch5_ex_x_plus_y_options.svg" />
+            <Image
+              style="background-color:#fdfdfd"
+              src="/images/svg_ch5_ex_x_plus_y_options.svg" />
             <Pause />
             <VerticalChunk>
               Either way, the upshot is that the sum
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x + y$$
+              $$
+              x + y
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7883,7 +8339,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x + y$$
+              $$
+              x + y
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7916,7 +8374,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\cos(x) + \sin(x)$$
+              $$
+              \cos(x) + \sin(x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7939,7 +8399,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(\cos(x), \sin(x))$$
+              $$
+              (\cos(x), \sin(x))
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7975,7 +8437,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\Large \&#123;\eta/2 + 4\eta&#123;&#125;k : k \in \zz\&#125;$$
+              $$
+              \Large \&#123;\eta/2 + 4\eta&#123;&#125;k : k \in \zz\&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -7994,11 +8458,11 @@ const Article = () => {
                 ”)
               </NoBreak>
               {" "}
-              (*or: “the
+              (*or: “the{" "}
               <i>
                 set of
               </i>
-              values of the form{" "}
+              {" "}values of the form{" "}
               <NoBreak>
                 <Math>
                   $\eta/2$
@@ -8024,10 +8488,12 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\Large
+              $$
+              \Large
               \begin&#123;align&#125;
               &amp;\,\, \cos(\eta/2) + \sin(\eta/2)\\ =&\,\,\up&#123;1.5&#125;  \sqrt&#123;0.5&#125; + \sqrt&#123;0.5&#125;\\ =&\,\,\up&#123;1.5&#125; \sqrt&#123;2&#125;
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -8036,14 +8502,18 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <div>
                 <MathBlock>
-                  $$\Large \cos(\eta/2) = \sin(\eta/2) = \sqrt&#123;0.5&#125;$$
+                  $$
+                  \Large \cos(\eta/2) = \sin(\eta/2) = \sqrt&#123;0.5&#125;
+                  $$
                 </MathBlock>
               </div>
               and that
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\Large \sqrt&#123;0.5&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;$$
+              $$
+              \Large \sqrt&#123;0.5&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -8060,7 +8530,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\Large \cos(\eta/2) + \sin(\eta/2) = \sqrt&#123;2&#125;$$
+                $$
+                \Large \cos(\eta/2) + \sin(\eta/2) = \sqrt&#123;2&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8151,12 +8623,16 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\Large &#123;\eta\over 2&#125; + 4\eta = &#123;\eta\over 2&#125; + &#123;8\eta\over 2&#125; = &#123;9\eta\over 2&#125;$$
+                $$
+                \Large &#123;\eta\over 2&#125; + 4\eta = &#123;\eta\over 2&#125; + &#123;8\eta\over 2&#125; = &#123;9\eta\over 2&#125;
+                $$
               </MathBlock>
               <Pause />
               <MathBlock>
-                $$\Large
-                &#123;\eta\over 2&#125; - 4\eta = &#123;\eta\over 2&#125; - &#123;8\eta\over 2&#125; = -&#123;7\eta\over 2&#125;$$
+                $$
+                \Large
+                &#123;\eta\over 2&#125; - 4\eta = &#123;\eta\over 2&#125; - &#123;8\eta\over 2&#125; = -&#123;7\eta\over 2&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8188,57 +8664,59 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch5_ex_angle_sum_180_followup.svg" />
           <Pause />
-          <VerticalChunk>
-            It is{" "}
-            <NoBreak>
+          <Solution solution_number={18}>
+            <VerticalChunk>
+              It is{" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}as well. One method of
+              deduction uses the fact that “the complement
+              of my complement is myself”:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_angle_sum_180_followup_explanation.svg" />
+            <Pause />
+            <VerticalChunk>
+              Another method of deduction uses the fact that,
+              together with the angle immediately to its left
+              (which happens to be{" "}
+              <NoBreak>
+                <Math>
+                  $\eta - \theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}because 
+              it is the complement of{" "}
               <Math>
                 $\theta$
               </Math>
-              ,
-            </NoBreak>
-            {" "}as well. One method of
-            deduction uses the fact that “the complement
-            of my complement is myself”:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_angle_sum_180_followup_explanation.svg" />
-          <Pause />
-          <VerticalChunk>
-            Another method of deduction uses the fact that,
-            together with the angle immediately to its left
-            (which happens to be{" "}
-            <NoBreak>
-              <Math>
-                $\eta - \theta$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}because 
-            it is the complement of{" "}
-            <Math>
-              $\theta$
-            </Math>
-            {" "}via the smallest
-            right triangle present), the sought-for angle 
-            makes up{" "}
-            <NoBreak>
-              <Math>
-                $90^\circ$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_angle_sum_180_followup_explanation_2.svg" />
-          <Pause />
-          <VerticalChunk>
-            (In one case we use the fact that the
-            medium-sized triangle is a right triangle,
-            in another case that the smallest-size 
-            triangle is a right triangle—and in both cases
-            that the original, largest triangle is a 
-            right triangle.)
-          </VerticalChunk>
+              {" "}via the smallest
+              right triangle present), the sought-for angle 
+              makes up{" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_angle_sum_180_followup_explanation_2.svg" />
+            <Pause />
+            <VerticalChunk>
+              (In one case we use the fact that the
+              medium-sized triangle is a right triangle,
+              in another case that the smallest-size 
+              triangle is a right triangle—and in both cases
+              that the original, largest triangle is a 
+              right triangle.)
+            </VerticalChunk>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
@@ -8260,75 +8738,81 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch5_ex_tangent_angle_v2.svg" />
           <Pause />
-          <VerticalChunk>
-            The ending and starting half-lines of the 
-            angle marked ‘?’ are both{" "}
-            <Math>
-              $90^\circ$
-            </Math>
-            {" "}counterclockwise
-            from the ending and starting half-lines,
-            respectively, of the central angle:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_tangent_angle_explanation_v2.svg" />
-          <Pause />
-          <VerticalChunk>
-            The angle marked ‘?’ is therefore obtained
-            by a{" "}
-            <Math>
-              $90^\circ$
-            </Math>
-            {" "}rotation (and then translation)
-            of the central angle, and is, therefore, equal
-            to the central angle{" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <SolutionNote>
+          <Solution solution_number={19}>
             <VerticalChunk>
-              This holds no matter which quadrant we
-              push{" "}
+              The ending and starting half-lines of the 
+              angle marked ‘?’ are both{" "}
               <Math>
-                $\theta$
+                $90^\circ$
               </Math>
-              {" "}to:
+              {" "}counterclockwise
+              from the ending and starting half-lines,
+              respectively, of the central angle:
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tangent_angle_explanation_other_quadrants.svg" />
+            <Image src="/images/svg_ch5_ex_tangent_angle_explanation_v2.svg" />
             <Pause />
             <VerticalChunk>
-              Verbalized:{" "}
-              <i>
-                the counterclockwise angle from the positive
-                {" "}
+              The angle marked ‘?’ is therefore obtained
+              by a{" "}
+              <Math>
+                $90^\circ$
+              </Math>
+              {" "}rotation (and then translation)
+              of the central angle, and is, therefore, equal
+              to the central angle{" "}
+              <NoBreak>
                 <Math>
-                  $x$
+                  $\theta$
                 </Math>
-                {" "}axis to 
-                the radial vector
-                equals the counterclockwise angle from the positive
-                {" "}
-                <Math>
-                  $y$
-                </Math>
-                {" "}axis to the counterclockwise tangent.
-              </i>
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              (Nb: When we say the “radial vector” and 
-              “counterclockwise tangent” we mean those objects that
-              are illustrated here:)
+                .
+              </NoBreak>
             </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg" />
-          </SolutionNote>
-          <StarDivider />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                This holds no matter which quadrant we
+                push{" "}
+                <Math>
+                  $\theta$
+                </Math>
+                {" "}to:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_tangent_angle_explanation_other_quadrants.svg" />
+              <Pause />
+              <VerticalChunk>
+                Verbalized:{" "}
+                <i>
+                  the counterclockwise angle from the positive
+                  {" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "}axis to 
+                  the radial vector
+                  equals the counterclockwise angle from the positive
+                  {" "}
+                  <Math>
+                    $y$
+                  </Math>
+                  {" "}axis to the counterclockwise tangent.
+                </i>
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                (Nb: When we say the “radial vector” and 
+                “counterclockwise tangent” we mean those objects that
+                are illustrated here:)
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg" />
+            </SolutionNote>
+            <StarDivider />
+          </Solution>
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
@@ -8387,7 +8871,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$f : \rr^2\ra \rr$$
+            $$
+            f : \rr^2\ra \rr
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -8395,7 +8881,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$f(x, y) = x + y$$
+            $$
+            f(x, y) = x + y
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -8412,7 +8900,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$g : \rr^2\ra \rr$$
+            $$
+            g : \rr^2\ra \rr
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -8420,7 +8910,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$g(x, y) = xy$$
+            $$
+            g(x, y) = xy
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -8431,7 +8923,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$xy = C$$
+            $$
+            xy = C
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -8462,7 +8956,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\sin\theta&#123;&#125;\cos\theta$$
+            $$
+            \sin\theta&#123;&#125;\cos\theta
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -8481,330 +8977,383 @@ const Article = () => {
             {" "}for which the maximum is 
             attained.
           </VerticalChunk>
-          <VerticalChunk indent={true}>
-            The isosets of
-          </VerticalChunk>
           <Pause />
-          <MathBlock>
-            $$(x, y) \ra xy$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (lambda-notation for a two-variable function)
-            have this general appearance (it depends on
-            the window and on the exact isosets that 
-            you choose to  draw—we chose a few 
-            different random ones):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_max_xy_xy_isosets.svg" />
-          <Pause />
-          <VerticalChunk>
-            Note that each isoset consists of the union of TWO 
-            disjoint curves, except for the isoset
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$xy = 0$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (or: “the isoset
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\&#123;(x, y) \in \rr^2 : xy = 0 \&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...” to pedantically indicate that we are
-            talking about{" "}
-            <i>
-              a set of points in the plane
-            </i>
-            ),
-            that, for its part, cannot be said to consist
-            of two{" "}
-            <i>
+          <Solution solution_number={20}>
+            <VerticalChunk>
+              The isosets of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (x, y) \ra xy
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (lambda-notation for a two-variable function)
+              have this general appearance (it depends on
+              the window and on the exact isosets that 
+              you choose to  draw—we chose a few 
+              different random ones):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_max_xy_xy_isosets.svg" />
+            <Pause />
+            <VerticalChunk>
+              Note that each isoset consists of the union of TWO 
+              disjoint curves, except for the isoset
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              xy = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (or: “the isoset
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;(x, y) \in \rr^2 : xy = 0 \&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...” to pedantically indicate that we are
+              talking about{" "}
+              <i>
+                a set of points in the plane
+              </i>
+              ),
+              that, for its part, cannot be said to consist
+              of two{" "}
+              <i>
+                ~
+              </i>
               ~
-            </i>
-            ~
-            <i>
-              disjoint
-            </i>
-            ~
-            <i>
+              <i>
+                disjoint
+              </i>
               ~
-            </i>
-            {" "}curves, because it
-            is the union of the{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -
-            </NoBreak>
-            {" "}and{" "}
-            <NoBreak>
-              <Math>
-                $y$
-              </Math>
-              -
-            </NoBreak>
-            {" "}axes, that
-            intersect.
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            (For a throwback, the solution of Exercise
-            16 of Chapter 3 mentions that the product of
-            two numbers is{" "}
-            <Math>
-              $0$
-            </Math>
-            {" "}if and only if one of the 
-            numbers is{" "}
-            <NoBreak>
+              <i>
+                ~
+              </i>
+              {" "}curves, because it
+              is the union of the{" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -
+              </NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -
+              </NoBreak>
+              {" "}axes, that
+              intersect.
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              (For a throwback, the solution of Exercise
+              16 of Chapter 3 mentions that the product of
+              two numbers is{" "}
               <Math>
                 $0$
               </Math>
-              .
-            </NoBreak>
-            {" "}In our case,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$xy = 0$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            if and only
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\,x = 0\,$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            <i>
-              or
-            </i>
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\,y = 0$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            where
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$x = 0$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            happens to be the equation of the{" "}
-            <Math>
-              $y$
-            </Math>
-            {" "}axis, and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$y = 0$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            happens to be the equation of the{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis, which
-            explains the shape of the isoset.)
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            If we draw a “heatmap” of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$xy$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            in some region of the plane, similarly to 
-            Exercise 18, the larger (more positive)
-            values show up in the first and third
-            quadrants, while the smaller (more negative)
-            values show up in the second and fourth 
-            quadrants:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_max_xy_rainbow.svg" />
-          <Pause />
-          <VerticalChunk>
-            Of particular interest to us: at a given 
-            distance from the origin, the line
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$x = y$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            can be seen seen to hold the largest of values of{" "}
-            <NoBreak>
+              {" "}if and only if one of the 
+              numbers is{" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "}In our case,
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              xy = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              if and only
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \,x = 0\,
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              <i>
+                or
+              </i>
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \,y = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              where
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              happens to be the equation of the{" "}
               <Math>
-                $xy$
+                $y$
               </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_max_xy_fixed_distance.svg" />
-          <Pause />
-          <VerticalChunk>
-            In particular,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\cos\theta\,\sin\theta$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            will reach its maximum at those values of 
-            {" "}
-            <Math>
-              $\theta$
-            </Math>
-            {" "}that put the point{" "}
-            <Math>
-              $(\cos \theta, \sin \theta)$
-            </Math>
-            {" "}
-            at either{" "}
-            <Math>
-              $(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)$
-            </Math>
-            {" "}or 
-            {" "}
-            <Math>
-              $(-\sqrt&#123;0.5&#125;, -\sqrt&#123;0.5&#125;)$
-            </Math>
-            {" "}on the unit circle; 
-            these values of{" "}
-            <Math>
-              $\theta$
-            </Math>
-            {" "}are
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\
-            \Large \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125;\up&#123;1.5&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            as per this illustration...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_max_xy_angles.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...and the maximum value of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large \cos\theta\,\sin\theta$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            itself will be
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            or
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large (-\sqrt&#123;0.5&#125;) \cdot (-\sqrt&#123;0.5&#125;) = &#123;1\over 2&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            equivalently; though one should also note
-            that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\ \Large \up&#123;1.5&#125;= \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            which is the “clever” way of writing the set
-            of{" "}
-            <NoBreak>
+              {" "}axis, and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              happens to be the equation of the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis, which
+              explains the shape of the isoset.)
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              If we draw a “heatmap” of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              xy
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              in some region of the plane, similarly to 
+              Exercise 18, the larger (more positive)
+              values show up in the first and third
+              quadrants, while the smaller (more negative)
+              values show up in the second and fourth 
+              quadrants:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_max_xy_rainbow.svg" />
+            <Pause />
+            <VerticalChunk>
+              Of particular interest to us: at a given 
+              distance from the origin, the line
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x = y
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              can be seen seen to hold the largest of values of{" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_max_xy_fixed_distance.svg" />
+            <Pause />
+            <VerticalChunk>
+              In particular,
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos\theta\,\sin\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              will reach its maximum at those values of 
+              {" "}
               <Math>
                 $\theta$
               </Math>
-              's
-            </NoBreak>
-            {" "}for which the maximum is achieved.
-          </VerticalChunk>
-          <Pause />
-          <SolutionNote>
-            <VerticalChunk>
-              As a consequence, the function
+              {" "}that put the point{" "}
+              <Math>
+                $(\cos \theta, \sin \theta)$
+              </Math>
+              {" "}
+              at either{" "}
+              <Math>
+                $(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)$
+              </Math>
+              {" "}or 
+              {" "}
+              <Math>
+                $(-\sqrt&#123;0.5&#125;, -\sqrt&#123;0.5&#125;)$
+              </Math>
+              {" "}on the unit circle; 
+              these values of{" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "}are
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x \ra \sin x&#123;&#125;\cos x$$
+              $$
+              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\
+              \Large \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125;\up&#123;1.5&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              discussed in Exercise 4 has maximum value
+              as per this illustration...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_max_xy_angles.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...and the maximum value of
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1\over 2&#125;$$
+              $$
+              \Large \cos\theta\,\sin\theta
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              achieved for inputs in the set
+              itself will be
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\Large \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;$$
+              $$
+              \Large \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              comprising the sequence of values...
+              or
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\large \dots,\,\, -&#123;7\eta\over 2&#125;,\,\, -&#123;3\eta\over 2&#125;,\,\, &#123;\dn&#123;0.25&#125;\eta \over 2&#125;,\,\, &#123;5\eta \over 2&#125;,\,\, &#123;9\eta \over 2&#125;,\,\, \dots$$
+              $$
+              \Large (-\sqrt&#123;0.5&#125;) \cdot (-\sqrt&#123;0.5&#125;) = &#123;1\over 2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...or...
+              equivalently; though one should also note
+              that
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\large \dots,\,\, &#123;-3.5\eta&#125;,\,\, &#123;-1.5\eta&#125;,\,\, &#123;0.5\eta&#125;,\,\, &#123;2.5\eta&#125;,\,\, &#123;4.5\eta&#125;,\,\, \dots$$
+              $$
+              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\ \Large \up&#123;1.5&#125;= \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...(maybe more legibly); annotating the graph
-              given in Exercise 4:
+              which is the “clever” way of writing the set
+              of{" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                's
+              </NoBreak>
+              {" "}for which the maximum is achieved.
             </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_graph.svg" />
-            <StarDivider />
             <Pause />
             <SolutionNote>
               <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                As a consequence, the function
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra \sin x&#123;&#125;\cos x
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                discussed in Exercise 4 has maximum value
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;1\over 2&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                achieved for inputs in the set
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                comprising the sequence of values...
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \large \dots,\,\, -&#123;7\eta\over 2&#125;,\,\, -&#123;3\eta\over 2&#125;,\,\, &#123;\dn&#123;0.25&#125;\eta \over 2&#125;,\,\, &#123;5\eta \over 2&#125;,\,\, &#123;9\eta \over 2&#125;,\,\, \dots
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...or...
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \large \dots,\,\, &#123;-3.5\eta&#125;,\,\, &#123;-1.5\eta&#125;,\,\, &#123;0.5\eta&#125;,\,\, &#123;2.5\eta&#125;,\,\, &#123;4.5\eta&#125;,\,\, \dots
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...(maybe more legibly); annotating the graph
+                given in Exercise 4:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_max_xy_graph.svg" />
+              <StarDivider />
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
                 For completeness, here is a closer look at 
                 the isoset{" "}
                 <NoBreak>
@@ -8823,6 +9372,10 @@ const Article = () => {
             <Pause />
             <SolutionNote>
               <VerticalChunk>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
                 Because a point{" "}
                 <Math>
                   $(x, y)$
@@ -8831,7 +9384,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = 1$$
+                $$
+                xy = 1
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8843,7 +9398,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = 2$$
+                $$
+                xy = 2
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8851,7 +9408,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$x_0y_0 = 1$$
+                $$
+                x_0y_0 = 1
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8859,7 +9418,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$(2x_0)y_0 = 2$$
+                $$
+                (2x_0)y_0 = 2
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8867,7 +9428,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = 2$$
+                $$
+                xy = 2
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8875,7 +9438,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = 1$$
+                $$
+                xy = 1
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8898,7 +9463,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = 1$$
+                $$
+                xy = 1
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8920,7 +9487,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = C$$
+                $$
+                xy = C
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8961,7 +9530,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = 1$$
+                $$
+                xy = 1
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -8981,7 +9552,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = 3$$
+                $$
+                xy = 3
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -9112,7 +9685,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = 1$$
+                $$
+                xy = 1
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -9174,7 +9749,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = C$$
+                $$
+                xy = C
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -9182,7 +9759,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$(-x)(-y) = C$$
+                $$
+                (-x)(-y) = C
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -9199,11 +9778,17 @@ const Article = () => {
             <Pause />
             <SolutionNote>
               <VerticalChunk>
+                <i>
+                  Note 4.
+                </i>
+                {" "}
                 Among other additional symmetries, the line
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$x = y$$
+                $$
+                x = y
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -9233,7 +9818,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\Large (x_0, y_0) \in S \iff (y_0, x_0) \in S$$
+                $$
+                \Large (x_0, y_0) \in S \iff (y_0, x_0) \in S
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -9282,7 +9869,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$xy = C$$
+                $$
+                xy = C
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -9314,13 +9903,15 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\large
+                $$
+                \large
                 \begin&#123;align&#125;
                 \large     &amp; (x_0, y_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125; \\
                 \large\up&#123;1.4&#125; \iff&amp; \,x_0y_0 = C \\
                 \large\up&#123;1.4&#125; \iff&amp; \,y_0x_0 = C \\
                 \large\up&#123;1.4&#125; \iff&amp; (y_0, x_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125;
-                \end&#123;align&#125;$$
+                \end&#123;align&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -9330,6 +9921,10 @@ const Article = () => {
             <Pause />
             <SolutionNote>
               <VerticalChunk>
+                <i>
+                  Note 5.
+                </i>
+                {" "}
                 Lastly, each isoset is symmetric
                 through the line{" "}
                 <NoBreak>
@@ -9380,7 +9975,7 @@ const Article = () => {
                 about composition!
               </VerticalChunk>
             </SolutionNote>
-          </SolutionNote>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={22}>
           <VerticalChunk>
@@ -9405,7 +10000,7 @@ const Article = () => {
             src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg"
             style="margin-top:1.0em;margin-bottom:1em;" />
           <Pause />
-          <Solution solution_number={18}>
+          <Solution solution_number={21}>
             <VerticalChunk>
               We shall use the height{" "}
               <Math>
@@ -9461,7 +10056,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).$$
+              $$
+              \tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9496,7 +10093,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg" />
           <Pause />
-          <Solution solution_number={19}>
+          <Solution solution_number={22}>
             <VerticalChunk>
               Here are two solutions:
             </VerticalChunk>
@@ -9556,7 +10153,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;A\over B&#125; = &#123;D\over B&#125;\times &#123;A\over D&#125; = \sec(\theta)\cdot \sec(\theta) = \sec^2(\theta).$$
+              $$
+              &#123;A\over B&#125; = &#123;D\over B&#125;\times &#123;A\over D&#125; = \sec(\theta)\cdot \sec(\theta) = \sec^2(\theta).
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9597,7 +10196,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;A\over B&#125; = &#123;&#123;B + A'&#125;\over B&#125; = &#123;B\over B&#125; + &#123;A'\over B&#125; = 1 + \tan^2(\theta)$$
+              $$
+              &#123;A\over B&#125; = &#123;&#123;B + A'&#125;\over B&#125; = &#123;B\over B&#125; + &#123;A'\over B&#125; = 1 + \tan^2(\theta)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9605,7 +10206,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;A'\over B&#125; = \tan^2(\theta)$$
+              $$
+              &#123;A'\over B&#125; = \tan^2(\theta)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9625,7 +10228,9 @@ const Article = () => {
               <center style="margin-top:1.5em;margin-bottom:1.5em;">
                 <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
                   <MathBlock>
-                    $$\sec^2(\theta) = 1 + \tan^2(\theta)$$
+                    $$
+                    \sec^2(\theta) = 1 + \tan^2(\theta)
+                    $$
                   </MathBlock>
                 </div>
               </center>
@@ -9633,18 +10238,18 @@ const Article = () => {
                 for all{" "}
                 <NoBreak>
                   <Math>
-                    $0&lt; \theta&lt; \eta$
+                    $0 &lt; \theta &lt; \eta$
                   </Math>
                   ,
                 </NoBreak>
-                {" "}which is the range of{" "}
+                {" "}which is
+                the range of{" "}
                 <Math>
                   $\theta$
                 </Math>
-                {" "}
-                covered by these diagrams.
-                (The same identity holds
-                more generally than just those{" "}
+                {" "}covered by these 
+                diagrams. (The same identity holds more 
+                generally than just those{" "}
                 <NoBreak>
                   <Math>
                     $\theta$
@@ -9680,7 +10285,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\cos(\theta) \ne 0$$
+            $$
+            \cos(\theta) \ne 0
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -9689,11 +10296,15 @@ const Article = () => {
           <center style="margin-top:1em;margin-bottom:1em;">
             <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
               <MathBlock>
-                $$\,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,$$
+                $$
+                \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
+                $$
               </MathBlock>
               <Pause />
               <MathBlock>
-                $$\,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,$$
+                $$
+                \,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
+                $$
               </MathBlock>
             </div>
           </center>
@@ -9712,7 +10323,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$1 + \tan^2(\theta) = \sec^2(\theta)$$
+            $$
+            1 + \tan^2(\theta) = \sec^2(\theta)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -9726,7 +10339,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={20}>
+          <Solution solution_number={23}>
             <VerticalChunk>
               Let{" "}
               <NoBreak>
@@ -9739,7 +10352,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\cos(\theta) \ne 0$$
+              $$
+              \cos(\theta) \ne 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9747,7 +10362,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$1 = &#123;\cos(\theta)\over \cos(\theta)&#125; = &#123;\cos^2(\theta)\over \cos^2(\theta)&#125;$$
+              $$
+              1 = &#123;\cos(\theta)\over \cos(\theta)&#125; = &#123;\cos^2(\theta)\over \cos^2(\theta)&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9755,7 +10372,8 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               1 + \tan^2(\theta)
               \,\,&=\,\, 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
               &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
@@ -9763,7 +10381,8 @@ const Article = () => {
               &amp;=\,\, \up&#123;2&#125; &#123;1\over \cos^2(\theta)&#125; \\
               &amp;=\,\, \up&#123;2&#125; \left(&#123;1\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
               &amp;=\,\, \up&#123;2&#125; \sec^2(\theta)
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9782,7 +10401,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\sec^2(\theta)$$
+            $$
+            \sec^2(\theta)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -9797,45 +10418,50 @@ const Article = () => {
             at the far end. (No peeking back at the solution of
             that exercise.)
           </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Viz:
-          </VerticalChunk>
-          <center style="margin-top:1em;margin-bottom:1em;">
-            <div style="display:inline-block;border:1px solid red;padding-left:1.5em;padding-right:1.5em;">
-              <MathBlock>
-                $$\begin&#123;align&#125;
-                \sec^2(\theta)
-                \,\,&=\,\, &#123;1\over \cos^2(\theta)&#125; \\
-                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
-                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
-                &amp;=\,\, \up&#123;2&#125; 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
-                &amp;=\,\, \up&#123;2&#125;1 + \tan^2(\theta).
-                \end&#123;align&#125;$$
-              </MathBlock>
-            </div>
-          </center>
-          <VerticalChunk>
-            (Ta-daa!) (It's slightly harder in this 
-            direction, when you have to think of
-            turning the{" "}
-            <NoBreak>
-              “
-              <Math>
-                $1$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}into{" "}
-            <NoBreak>
-              “
-              <Math>
-                $\cos^2(\theta) + \sin^2(\theta)$
-              </Math>
-              ”,
-            </NoBreak>
-            {" "}
-            instead of the other way around.)
-          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={24}>
+            <VerticalChunk>
+              Viz:
+            </VerticalChunk>
+            <center style="margin:1em 0em;">
+              <div style="display:inline-block;border:1px solid red;padding:1.2em 1.4em;">
+                <MathBlock>
+                  $$
+                  \begin&#123;align&#125;
+                  \sec^2(\theta)
+                  \,\,&=\,\, &#123;1\over \cos^2(\theta)&#125; \\
+                  &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
+                  &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
+                  &amp;=\,\, \up&#123;2&#125; 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
+                  &amp;=\,\, \up&#123;2&#125;1 + \tan^2(\theta).
+                  \end&#123;align&#125;
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <VerticalChunk>
+              (Ta-daa!) (It's slightly harder in this 
+              direction, when you have to think of
+              turning the{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $1$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}into{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\cos^2(\theta) + \sin^2(\theta)$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "}
+              instead of the other way around.)
+            </VerticalChunk>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={26}>
           <VerticalChunk>
@@ -9887,13 +10513,13 @@ const Article = () => {
                   <Math>
                     $\dots$
                   </Math>
-                  ”
+                  ”.
                 </NoBreak>
               </li>
             </ol>
           </TextParent>
           <Pause />
-          <Solution solution_number={21}>
+          <Solution solution_number={25}>
             <VerticalChunk>
               <b>
                 (a)
@@ -9903,19 +10529,27 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$f  \circ (u \ra u + A)$$
+              $$
+              f  \circ (u \ra u + A)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$f  \circ (z \ra Bz)$$
+              $$
+              f  \circ (z \ra Bz)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$(u \ra u + A)\circ f$$
+              $$
+              (u \ra u + A)\circ f
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$(z \ra Bz)\circ f$$
+              $$
+              (z \ra Bz)\circ f
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9925,19 +10559,27 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$f  \circ (t \ra t + A)$$
+              $$
+              f  \circ (t \ra t + A)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$f  \circ (t \ra Bt)$$
+              $$
+              f  \circ (t \ra Bt)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$(t \ra t + A)\circ f$$
+              $$
+              (t \ra t + A)\circ f
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$(t \ra Bt)\circ f$$
+              $$
+              (t \ra Bt)\circ f
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9945,19 +10587,27 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$f  \circ (x \ra x + A)$$
+              $$
+              f  \circ (x \ra x + A)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$f  \circ (x \ra Bx)$$
+              $$
+              f  \circ (x \ra Bx)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$(x \ra x + A)\circ f$$
+              $$
+              (x \ra x + A)\circ f
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$(x \ra Bx)\circ f$$
+              $$
+              (x \ra Bx)\circ f
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -9973,19 +10623,27 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x \ra f(x + A)$$
+              $$
+              x \ra f(x + A)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$x \ra f(Bx)$$
+              $$
+              x \ra f(Bx)
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$x \ra f(x) + A$$
+              $$
+              x \ra f(x) + A
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$x \ra Bf(x)$$
+              $$
+              x \ra Bf(x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10001,7 +10659,7 @@ const Article = () => {
               <i>
                 told
               </i>
-              to use
+              {" "}to use
               {" "}
               <NoBreak>
                 <Math>
@@ -10029,86 +10687,97 @@ const Article = () => {
               ?
             </NoBreak>
           </VerticalChunk>
-          <VerticalChunk indent={true}>
-            The graphs of the four functions, that are
-            namely...
-          </VerticalChunk>
           <Pause />
-          <MathBlock>
-            $$x \ra f(x + A)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$x \ra f(Bx)$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$x \ra f(x) + A$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$x \ra Bf(x)$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...are, respectively, obtained by:
-          </VerticalChunk>
-          <TextParent>
-            <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;">
-              <li>
-                horizontally translating the graph of{" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "}by{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}units to the left;
-              </li>
-              <li>
-                horizontally compressing the graph of{" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "}by a factor{" "}
-                <NoBreak>
+          <Solution solution_number={26}>
+            <VerticalChunk>
+              The graphs of the four functions, that are
+              namely...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x) + A
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra Bf(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...are, respectively, obtained by:
+            </VerticalChunk>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;">
+                <li>
+                  horizontally translating the graph of{" "}
                   <Math>
-                    $B$
+                    $f$
                   </Math>
-                  ;
-                </NoBreak>
-              </li>
-              <li>
-                vertically translating the graph of{" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "}by{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}units upward;
-              </li>
-              <li>
-                vertically dilating (scaling) the graph of{" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "}by a factor{" "}
-                <NoBreak>
+                  {" "}by{" "}
                   <Math>
-                    $B$
+                    $A$
                   </Math>
-                  .
-                </NoBreak>
-              </li>
-            </ul>
-          </TextParent>
-          <VerticalChunk>
-            (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
-            Chapter 3.)
-          </VerticalChunk>
+                  {" "}units to the left;
+                </li>
+                <li>
+                  horizontally compressing the graph of{" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "}by a factor{" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    ;
+                  </NoBreak>
+                </li>
+                <li>
+                  vertically translating the graph of{" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "}by{" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "}units upward;
+                </li>
+                <li>
+                  vertically dilating (scaling) the graph of{" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "}by a factor{" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    .
+                  </NoBreak>
+                </li>
+              </ul>
+            </TextParent>
+            <VerticalChunk>
+              (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
+              Chapter 3.)
+            </VerticalChunk>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={28}>
           <VerticalChunk>
@@ -10158,7 +10827,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$&#123;f(x + T) = f(x)&#125;$$
+            $$
+            &#123;f(x + T) = f(x)&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -10171,19 +10842,21 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={22}>
+          <Solution solution_number={27}>
             <VerticalChunk>
               We have
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &amp;\,\,\, (\cos\cdot\sin)(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;\cos(x + 2\eta)\cdot\sin(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;(-\cos(x))\cdot(-\sin(x))\\
               =&\,\,\, \up&#123;1.2&#125;\cos(x)\cdot\sin(x)\\
               =&\,\,\, \up&#123;1.2&#125;(\cos\cdot\sin)(x)
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10198,7 +10871,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\cos(x + 2\eta) = -\cos(x)$$
+              $$
+              \cos(x + 2\eta) = -\cos(x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10206,7 +10881,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\sin(x + 2\eta) = -\sin(x)$$
+              $$
+              \sin(x + 2\eta) = -\sin(x)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10221,13 +10898,15 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &amp;\,\,\, \cos^2(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;\cos(x + 2\eta)\cdot\cos(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;(-\cos(x))\cdot(-\cos(x))\\
               =&\,\,\, \up&#123;1.2&#125;\cos(x)\cdot\cos(x)\\
               =&\,\,\, \up&#123;1.2&#125;\cos^2(x)
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10242,13 +10921,15 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               &amp;\,\,\, \sin^2(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;\sin(x + 2\eta)\cdot\sin(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;(-\sin(x))\cdot(-\sin(x))\\
               =&\,\,\, \up&#123;1.2&#125;\sin(x)\cdot\sin(x)\\
               =&\,\,\, \up&#123;1.2&#125;\sin^2(x)
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10271,7 +10952,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\te&#123;“&#125;\cos\cdot\sin\te&#123;”&#125;$$
+                $$
+                \te&#123;“&#125;\cos\cdot\sin\te&#123;”&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -10279,7 +10962,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\te&#123;“&#125;\rt&#123;0.1&#125;x \ra \cos(x)\sin(x)\rt&#123;0.1&#125;\te&#123;”&#125;$$
+                $$
+                \te&#123;“&#125;\rt&#123;0.1&#125;x \ra \cos(x)\sin(x)\rt&#123;0.1&#125;\te&#123;”&#125;
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -10287,7 +10972,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$fg$$
+                $$
+                fg
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -10295,7 +10982,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$x\ra f(x)g(x)$$
+                $$
+                x\ra f(x)g(x)
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -10326,7 +11015,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$(\cos\cdot\sin)(x+2\eta)$$
+                $$
+                (\cos\cdot\sin)(x+2\eta)
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -10334,7 +11025,9 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <MathBlock>
-                $$\cos(x + 2\eta)\cdot\sin(x+2\eta)$$
+                $$
+                \cos(x + 2\eta)\cdot\sin(x+2\eta)
+                $$
               </MathBlock>
               <Pause />
               <VerticalChunk>
@@ -10386,7 +11079,7 @@ const Article = () => {
             <i>
               appears
             </i>
-            that one graph is a
+            {" "}that one graph is a
             translate of the other; if this were 
             really so, what would the exact amounts
             of translation be? (Vertical{" "}
@@ -10397,7 +11090,7 @@ const Article = () => {
             What algebraic identity would this imply?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={23}>
+          <Solution solution_number={28}>
             <VerticalChunk>
               We know from Exercise 21 that the 
               highest point on the bump immediately to the 
@@ -10426,7 +11119,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$-&#123;\eta\over 2&#125;$$
+              $$
+              -&#123;\eta\over 2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10434,7 +11129,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1\over 2&#125;$$
+              $$
+              &#123;1\over 2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10442,7 +11139,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(0, 1)$$
+              $$
+              (0, 1)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10493,7 +11192,9 @@ const Article = () => {
             </VerticalChunk>
             <center>
               <MathBlock>
-                $$\cos^2 = (u \ra &#123;1\over 2&#125; + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + &#123;\eta\over 2&#125;)$$
+                $$
+                \cos^2 = (u \ra &#123;1\over 2&#125; + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + &#123;\eta\over 2&#125;)
+                $$
               </MathBlock>
             </center>
             <VerticalChunk>
@@ -10507,7 +11208,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$w \ra w + &#123;\eta\over 2&#125;$$
+              $$
+              w \ra w + &#123;\eta\over 2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10515,7 +11218,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$u \ra u + &#123;1\over 2&#125;$$
+              $$
+              u \ra u + &#123;1\over 2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10550,7 +11255,9 @@ const Article = () => {
             <center style="margin-top:1em;margin-bottom:1em;">
               <div style="border:1px solid red;padding:1em 1em;width:fit-content;">
                 <MathBlock>
-                  $$\cos^2(x) = &#123;1\over 2&#125; + \cos(x + \eta/2)\sin(x + \eta/2)$$
+                  $$
+                  \cos^2(x) = &#123;1\over 2&#125; + \cos(x + \eta/2)\sin(x + \eta/2)
+                  $$
                 </MathBlock>
               </div>
             </center>
@@ -10582,7 +11289,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$c\cdot\vec&#123;v&#125;$$
+            $$
+            c\cdot\vec&#123;v&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -10599,13 +11308,15 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={24}>
+          <Solution solution_number={29}>
             <VerticalChunk>
               We define
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$c \cdot (v_x, v_y) = (c\rt&#123;0.1&#125;v_x, c\rt&#123;0.1&#125;v_y)$$
+              $$
+              c \cdot (v_x, v_y) = (c\rt&#123;0.1&#125;v_x, c\rt&#123;0.1&#125;v_y)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10649,7 +11360,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$2 \cdot (10, 3.333) = (20, 6.666),$$
+              $$
+              2 \cdot (10, 3.333) = (20, 6.666),
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10670,29 +11383,6 @@ const Article = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <VerticalChunk>
-              <i>
-                Example 2.
-              </i>
-              {" "}We have
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$2 \cdot (a, b) = (2a, 2b),$$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              for all{" "}
-              <NoBreak>
-                <Math>
-                  $a, b \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}for an example
-              that is half-algebraic, half-numerical.
-            </VerticalChunk>
-            <Pause />
             <SolutionNote>
               <VerticalChunk>
                 <i>
@@ -10700,8 +11390,7 @@ const Article = () => {
                 </i>
                 {" "}
                 In some sense, the vector “wins” over the 
-                number, in that their conjoint baby is a vector, 
-                not a number:
+                number, in that their conjoint baby is a vector:
               </VerticalChunk>
               <Pause />
               <Image src="/images/svg_ch5_ex_c_times_vector_box.svg" />

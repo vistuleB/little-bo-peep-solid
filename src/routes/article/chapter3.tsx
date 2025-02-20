@@ -63,7 +63,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;f(x)&#125;$$
+          $$
+          &#123;f(x)&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -111,7 +113,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;f(2) = 4&#125;$$
+          $$
+          &#123;f(2) = 4&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -143,7 +147,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;f(3) = 9&#125;$$
+          $$
+          &#123;f(3) = 9&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -175,7 +181,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123; f(0.1) = 0.01&#125;$$
+          $$
+          &#123; f(0.1) = 0.01&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -190,7 +198,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;f(x) = x^2&#125;$$
+          $$
+          &#123;f(x) = x^2&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -261,7 +271,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\lambda&#123;&#125;x.x^2$$
+          $$
+          \lambda&#123;&#125;x.x^2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -281,7 +293,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\lambda&#123;&#125;z.z^2$$
+          $$
+          \lambda&#123;&#125;z.z^2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -295,7 +309,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Huge \lambda$$
+          $$
+          \Huge \lambda
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -304,7 +320,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x \rightarrow x^2$$
+          $$
+          x \rightarrow x^2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -315,7 +333,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(x \ra x^2)(0.1)$$
+          $$
+          (x \ra x^2)(0.1)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -331,7 +351,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(x \ra x^2)(0.1) = 0.01$$
+          $$
+          (x \ra x^2)(0.1) = 0.01
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -350,19 +372,27 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$(\lambda x.x^3)(10) = 1000$$
+          $$
+          (\lambda x.x^3)(10) = 1000
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$(\lambda u.u^5)(10) = 100000$$
+          $$
+          (\lambda u.u^5)(10) = 100000
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$(v \ra v^2)(10) = 100$$
+          $$
+          (v \ra v^2)(10) = 100
+          $$
         </MathBlock>
         <Pause />
         <MathBlock>
-          $$(z \ra z^3)(10) + (t \ra t^2)(5) = 1025.$$
+          $$
+          (z \ra z^3)(10) + (t \ra t^2)(5) = 1025.
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -390,12 +420,14 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x \ra \begin&#123;cases&#125;
+          $$
+          x \ra \begin&#123;cases&#125;
           \ldots & \te&#123;if $\ldots$&#125;\\
           \ldots & \te&#123;if $\ldots$&#125;\\
           \vdots & \vdots\\
           \ldots & \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;$$
+          \end&#123;cases&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -412,12 +444,14 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$g(x) = \begin&#123;cases&#125;
+          $$
+          g(x) = \begin&#123;cases&#125;
           \ldots & \te&#123;if $\ldots$&#125;\\
           \ldots & \te&#123;if $\ldots$&#125;\\
           \vdots & \vdots\\
           \ldots & \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;$$
+          \end&#123;cases&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -443,11 +477,13 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125; 
+            $$
+            \te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125; 
             3.5 & \te&#123;if $x = 0$&#125;,\\
             2.5\up&#123;1.1&#125; & \te&#123;if $x = 1$&#125;,\\
             \te&#123;undefined&#125;\up&#123;1.1&#125; & \te&#123;if $x \ne 0, 1$&#125;
-            \end&#123;cases&#125;$$
+            \end&#123;cases&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -455,7 +491,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\te&#123;VX-11/78A&#125;(0) = 3.5,$$
+            $$
+            \te&#123;VX-11/78A&#125;(0) = 3.5,
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -463,7 +501,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\te&#123;VX-11/78A&#125;(1) = 2.5,$$
+            $$
+            \te&#123;VX-11/78A&#125;(1) = 2.5,
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -724,7 +764,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\dom\, f$$
+          $$
+          \dom\, f
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -750,7 +792,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;$$
+            $$
+            \dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -790,11 +834,13 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\te&#123;DM-1700&#125;(x) = 
+            $$
+            \te&#123;DM-1700&#125;(x) = 
             \begin&#123;cases&#125; 
             0             & \te&#123;if $x \leq 0$ or $x \geq 1$&#125;,\\
             1 - x\up&#123;1.1&#125; & \te&#123;if $0 &lt; x &lt; 1$&#125;
-            \end&#123;cases&#125;$$
+            \end&#123;cases&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -802,7 +848,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr$$
+            $$
+            \dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -837,7 +885,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$g(x) = \sqrt&#123;x - 1&#125;$$
+            $$
+            g(x) = \sqrt&#123;x - 1&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -845,9 +895,11 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\begin&#123;align&#125;
+            $$
+            \begin&#123;align&#125;
             \dom\, g &\,=\, [1, \infty)
-            \end&#123;align&#125;$$
+            \end&#123;align&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -887,7 +939,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f : \rr \ra \rr$$
+          $$
+          f : \rr \ra \rr
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -915,7 +969,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\dom f \subseteq \rr$$
+          $$
+          \dom f \subseteq \rr
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -932,7 +988,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\&#123;f(x) : x \in \dom f\&#125; \subseteq \rr$$
+          $$
+          \&#123;f(x) : x \in \dom f\&#125; \subseteq \rr
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -952,7 +1010,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f : A \ra B$$
+          $$
+          f : A \ra B
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -960,7 +1020,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\dom f \subseteq A$$
+          $$
+          \dom f \subseteq A
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -980,7 +1042,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\&#123;f(x) : x \in \dom f\&#125; \subseteq B$$
+          $$
+          \&#123;f(x) : x \in \dom f\&#125; \subseteq B
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1177,7 +1241,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large x \ra 0^x$$
+          $$
+          \Large x \ra 0^x
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1185,10 +1251,12 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$0^x = 
+          $$
+          0^x = 
           \begin&#123;cases&#125; 0 & \te&#123;if &#125; x &gt; 0\\
           1 & \te&#123;if &#125; x = 0\\
-          \te&#123;undefined&#125; & \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;$$
+          \te&#123;undefined&#125; & \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1240,7 +1308,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;\te&#123;VX-11/78A&#125;&#125;$$
+          $$
+          &#123;\te&#123;VX-11/78A&#125;&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1248,7 +1318,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$&#123;\te&#123;VX-11/78A&#125;(x)&#125;$$
+          $$
+          &#123;\te&#123;VX-11/78A&#125;(x)&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1288,7 +1360,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f$$
+          $$
+          f
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1296,7 +1370,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f(x)$$
+          $$
+          f(x)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1353,7 +1429,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f = (x \ra f(x))$$
+          $$
+          f = (x \ra f(x))
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1380,7 +1458,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f = (x \ra f(x)) = (x \ra (t \ra f(t))(x))$$
+          $$
+          f = (x \ra f(x)) = (x \ra (t \ra f(t))(x))
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1430,7 +1510,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^3$$
+          $$
+          x^3
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1449,7 +1531,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x \ra x^3$$
+          $$
+          x \ra x^3
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1489,7 +1573,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^3 + x^2$$
+          $$
+          x^3 + x^2
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1511,7 +1597,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$f(x) = a_kx^k + a_&#123;k-1&#125;x^&#123;k-1&#125; + \dots + a_2x^2 + a_1x + a_0$$
+          $$
+          f(x) = a_kx^k + a_&#123;k-1&#125;x^&#123;k-1&#125; + \dots + a_2x^2 + a_1x + a_0
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1523,7 +1611,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$a_0,\,a_1,\, \ldots,\, a_k \in \rr$$
+          $$
+          a_0,\,a_1,\, \ldots,\, a_k \in \rr
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1574,7 +1664,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$2x + \sqrt&#123;2&#125;$$
+          $$
+          2x + \sqrt&#123;2&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1582,7 +1674,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^2 - 10$$
+          $$
+          x^2 - 10
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1590,7 +1684,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^&#123;100&#125; + x^&#123;99&#125; + x^&#123;98&#125; + \dots + x^4 + x^3 + x^2 + x + 1$$
+          $$
+          x^&#123;100&#125; + x^&#123;99&#125; + x^&#123;98&#125; + \dots + x^4 + x^3 + x^2 + x + 1
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1603,7 +1699,8 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\begin&#123;array&#125;&#123;c|c|c&#125;
+          $$
+          \begin&#123;array&#125;&#123;c|c|c&#125;
           \,\,\,\,\te&#123;degree&#125;\,\,\,\, & \te&#123;name&#125; & \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
           -\infty & \te&#123;zero&#125; & 0\Rule&#123;0pt&#125;&#123;1.1em&#125;&#123;0.0em&#125;\\
           \te&#123;0&#125; & \te&#123;constant&#125; & 1 + \sqrt&#123;5&#125;\\
@@ -1612,7 +1709,8 @@ const Article = () => {
           \te&#123;3&#125; & \te&#123;cubic&#125; & x^3 - 1\\
           \te&#123;4&#125; & \te&#123;quartic&#125; & 1 - x^4\\
           \te&#123;5&#125; & \te&#123;quintic&#125; & x^5
-          \end&#123;array&#125;$$
+          \end&#123;array&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1637,7 +1735,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x \ra a_1x$$
+          $$
+          x \ra a_1x
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1704,7 +1804,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$a_7x^7 + a_6x^6 + a_5x^5 + a_4x^4 + a_3x^3 - a_2x^2 + a_1x + a_0$$
+          $$
+          a_7x^7 + a_6x^6 + a_5x^5 + a_4x^4 + a_3x^3 - a_2x^2 + a_1x + a_0
+          $$
           <ImageRight src="/images/svg_ch3_ch_quadratic_linear_constant_cloud.svg" />
         </MathBlock>
         <Pause />
@@ -1747,7 +1849,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^1 = x$$
+          $$
+          x^1 = x
+          $$
           <ImageRight
             offset_x="-0.1em"
             offset_y="0.2em"
@@ -1766,7 +1870,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$x^0 = 1$$
+          $$
+          x^0 = 1
+          $$
           <ImageRight
             offset_y="0.2em"
             offset_x="0em"
@@ -1806,7 +1912,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x \ra \begin&#123;cases&#125; x & \te&#123;if $x \geq 0$,&#125;\\ -x\!\!\up&#123;1.2&#125; & \te&#123;if $x &lt; 0$&#125;\end&#123;cases&#125;$$
+              $$
+              x \ra \begin&#123;cases&#125; x & \te&#123;if $x \geq 0$,&#125;\\ -x\!\!\up&#123;1.2&#125; & \te&#123;if $x &lt; 0$&#125;\end&#123;cases&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1844,7 +1952,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$|x| = \sqrt&#123;x^2&#125;$$
+              $$
+              |x| = \sqrt&#123;x^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1977,7 +2087,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\lfloor x \rfloor,$$
+            $$
+            \lfloor x \rfloor,
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2128,19 +2240,23 @@ const Article = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}so the horizontal displacement is
+              {" "}so the horizontal displacement is{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x - \floor&#123;x&#125;$$
+              $$
+              x - \floor&#123;x&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              so the equation of the graph is
+              so the equation of the graph is{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = x - \floor&#123;x&#125;$$
+              $$
+              y = x - \floor&#123;x&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2222,7 +2338,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;x/2 - \lfloor x/2 \rfloor&#125;$$
+              $$
+              &#123;x/2 - \lfloor x/2 \rfloor&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2331,7 +2449,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;\f \circ g&#125;$$
+              $$
+              &#123;\f \circ g&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2461,7 +2581,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\,&#123;(f \circ g)(x) = f(g(x))&#125;.$$
+              $$
+              \,&#123;(f \circ g)(x) = f(g(x))&#125;.
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2470,7 +2592,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;$$
+              $$
+              &#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2524,11 +2648,13 @@ const Article = () => {
                 Note 4.
               </i>
               {" "}
-              Amusingly—or not—both sides of
+              Amusingly—or not—both sides of{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;(f \circ g)(x) = f(g(x))&#125;$$
+              $$
+              &#123;(f \circ g)(x) = f(g(x))&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2618,11 +2744,13 @@ const Article = () => {
               <del>
                 the{" "}
               </del>
-              an answer is
+              an answer is{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$2 \cdot(x/2 - \fl&#123;x/2&#125;)$$
+              $$
+              2 \cdot(x/2 - \fl&#123;x/2&#125;)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2630,7 +2758,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x - 2\fl&#123;x/2&#125;$$
+              $$
+              x - 2\fl&#123;x/2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2648,7 +2778,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x/3 - \fl&#123;x/3&#125;$$
+              $$
+              x/3 - \fl&#123;x/3&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2678,7 +2810,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x-1)/3 - \fl&#123;(x-1)/3&#125;$$
+              $$
+              (x-1)/3 - \fl&#123;(x-1)/3&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2737,7 +2871,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$3 \cdot ((x-1)/3 - \fl&#123;(x-1)/3&#125;)$$
+              $$
+              3 \cdot ((x-1)/3 - \fl&#123;(x-1)/3&#125;)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2746,7 +2882,8 @@ const Article = () => {
             <Pause />
             <MathBlock>
               $$   
-              (x - 1) - 3\fl&#123;(x-1)/3&#125;$$
+              (x - 1) - 3\fl&#123;(x-1)/3&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2754,7 +2891,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x - 1 - 3\fl&#123;(x-1)/3&#125;$$
+              $$
+              x - 1 - 3\fl&#123;(x-1)/3&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2773,7 +2912,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$\cos \dblcol \rr \ra \rr$$
+            $$
+            \cos \dblcol \rr \ra \rr
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2795,7 +2936,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$&#123;x \ra \cos(1000x)&#125;$$
+            $$
+            &#123;x \ra \cos(1000x)&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2839,7 +2982,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x, y)$$
+              $$
+              (x, y)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2848,7 +2993,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(1000x, y)$$
+              $$
+              (1000x, y)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2899,7 +3046,9 @@ const Article = () => {
           <VerticalChunk indent={true}>
             <div style="font-size:1.1em;margin:1em 0em;">
               <MathBlock>
-                $$\tag&#123;A&#125;(f \circ (g \circ h))(x)$$
+                $$
+                \tag&#123;A&#125;(f \circ (g \circ h))(x)
+                $$
               </MathBlock>
             </div>
             without using{" "}
@@ -2917,7 +3066,9 @@ const Article = () => {
           <VerticalChunk indent={true}>
             <div style="font-size:1.1em;margin:1em 0em;">
               <MathBlock>
-                $$\tag&#123;AA&#125;(r \circ s)(x) = r(s(x))$$
+                $$
+                \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
+                $$
               </MathBlock>
             </div>
             (where{" "}
@@ -3008,7 +3159,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$(f \circ (g \circ h))(x) = \f((g \circ h)(x))$$
+                  $$
+                  (f \circ (g \circ h))(x) = \f((g \circ h)(x))
+                  $$
                 </MathBlock>
               </CustomBlock>
               ...which already constitutes progress towards
@@ -3026,7 +3179,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$(g \circ h)(x) = g(h(x))$$
+                  $$
+                  (g \circ h)(x) = g(h(x))
+                  $$
                 </MathBlock>
               </CustomBlock>
               by the “definitional equation” again, so
@@ -3034,7 +3189,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$f((g \circ h)(x)) = \f(g(h(x)))$$
+                  $$
+                  f((g \circ h)(x)) = \f(g(h(x)))
+                  $$
                 </MathBlock>
               </CustomBlock>
               ...and this completes the computation!
@@ -3096,7 +3253,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$((f \circ g) \circ h)(x) = (f \circ g)(h(x))$$
+                  $$
+                  ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
+                  $$
                 </MathBlock>
               </CustomBlock>
               ...by setting{" "}
@@ -3117,7 +3276,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$(f \circ g)(h(x)) = \f(g(h(x)))$$
+                  $$
+                  (f \circ g)(h(x)) = \f(g(h(x)))
+                  $$
                 </MathBlock>
               </CustomBlock>
               ...by setting{" "}
@@ -3163,7 +3324,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$(f \circ (g \circ h))(x)$$
+                  $$
+                  (f \circ (g \circ h))(x)
+                  $$
                 </MathBlock>
               </CustomBlock>
               and
@@ -3171,7 +3334,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$((f \circ g) \circ h)(x)$$
+                  $$
+                  ((f \circ g) \circ h)(x)
+                  $$
                 </MathBlock>
               </CustomBlock>
               both evaluate to
@@ -3179,7 +3344,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$f(g(h(x)))$$
+                  $$
+                  f(g(h(x)))
+                  $$
                 </MathBlock>
               </CustomBlock>
               actually implies that
@@ -3187,7 +3354,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$f \circ (g \circ h)$$
+                  $$
+                  f \circ (g \circ h)
+                  $$
                 </MathBlock>
               </CustomBlock>
               and
@@ -3195,7 +3364,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$(f \circ g) \circ h$$
+                  $$
+                  (f \circ g) \circ h
+                  $$
                 </MathBlock>
               </CustomBlock>
               are the same function; this function is namely
@@ -3217,7 +3388,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$x \ra f(g(h(x)))$$
+                  $$
+                  x \ra f(g(h(x)))
+                  $$
                 </MathBlock>
               </CustomBlock>
               in lambda notation).
@@ -3233,7 +3406,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$f \circ g \circ half$$
+                  $$
+                  f \circ g \circ half
+                  $$
                 </MathBlock>
               </CustomBlock>
               without any parentheses. (The point is: either
@@ -3251,7 +3426,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$&#123;(a + b) + c = a + (b + c)&#125;$$
+                  $$
+                  &#123;(a + b) + c = a + (b + c)&#125;
+                  $$
                 </MathBlock>
               </CustomBlock>
               for all numbers{" "}
@@ -3285,7 +3462,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$(ab)c = a(bc)$$
+                  $$
+                  (ab)c = a(bc)
+                  $$
                 </MathBlock>
               </CustomBlock>
               for all numbers{" "}
@@ -3320,7 +3499,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <CustomBlock style="font-size:1.1em">
                 <MathBlock>
-                  $$&#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;$$
+                  $$
+                  &#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;
+                  $$
                 </MathBlock>
               </CustomBlock>
               for all functions{" "}
@@ -3687,7 +3868,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;\textrm&#123;VX-11/78A&#125; = \&#123;(0, 3.5), (1, 2.5)\&#125;&#125;$$
+              $$
+              &#123;\textrm&#123;VX-11/78A&#125; = \&#123;(0, 3.5), (1, 2.5)\&#125;&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3716,7 +3899,9 @@ const Article = () => {
             <VerticalChunk indent={true}>
               <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
-                  $$(a, b)$$
+                  $$
+                  (a, b)
+                  $$
                 </MathBlock>
               </div>
               means that input{" "}
@@ -3766,15 +3951,19 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$x^2 + 10x + 30$$
+            $$
+            x^2 + 10x + 30
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            can be written in the form
+            can be written in the form{" "}
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$(x + \dots)^2 + \,\dots$$
+            $$
+            (x + \dots)^2 + \,\dots
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -3802,7 +3991,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x + 5)^2 + 5$$
+              $$
+              (x + 5)^2 + 5
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3810,11 +4001,13 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\begin&#123;align&#125;
+              $$
+              \begin&#123;align&#125;
               \,\,\,\,(x + 5)^2
               &= x^2 + (2\cdot 5)x + 5^2 \\
               &= \up&#123;1.4&#125; x^2 + 10x + 25
-              \end&#123;align&#125;$$
+              \end&#123;align&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3870,7 +4063,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x + U)^2 + V = x^2 + 10x + 30$$
+              $$
+              (x + U)^2 + V = x^2 + 10x + 30
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3879,7 +4074,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x^2 + 2Ux + U^2 + V = x^2 + 10x + 30.$$
+              $$
+              x^2 + 2Ux + U^2 + V = x^2 + 10x + 30.
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3909,7 +4106,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$1 = 1$$
+              $$
+              1 = 1
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3924,7 +4123,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$2U = 10$$
+              $$
+              2U = 10
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3935,11 +4136,13 @@ const Article = () => {
                 </Math>
                 ),
               </NoBreak>
-              {" "}and
+              {" "}and{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$U^2 + V = 30$$
+              $$
+              U^2 + V = 30
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -3949,7 +4152,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$2U = 10$$
+              $$
+              2U = 10
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4002,7 +4207,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$2U = 10$$
+              $$
+              2U = 10
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4018,11 +4225,13 @@ const Article = () => {
                 $V$
               </Math>
               {" "}that
-              satisfies
+              satisfies{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$25 + V = 30$$
+              $$
+              25 + V = 30
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4046,7 +4255,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$x^2 + 10x + 30 = 0$$
+            $$
+            x^2 + 10x + 30 = 0
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -4071,7 +4282,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x + 5)^2 + 5 = 0$$
+              $$
+              (x + 5)^2 + 5 = 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4079,7 +4292,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x + 5)^2 = -5$$
+              $$
+              (x + 5)^2 = -5
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4095,11 +4310,13 @@ const Article = () => {
               Exercise 13.
             </b>
             {" "}
-            Show that
+            Show that{" "}
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$x^2 + 10x - 30 = 0$$
+            $$
+            x^2 + 10x - 30 = 0
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -4118,7 +4335,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x + 5)^2 - 55 = 0$$
+              $$
+              (x + 5)^2 - 55 = 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4143,7 +4362,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x + 5)^2 = 55$$
+              $$
+              (x + 5)^2 = 55
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4151,7 +4372,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\,x + 5 = \pm\sqrt&#123;55&#125;$$
+              $$
+              \,x + 5 = \pm\sqrt&#123;55&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4159,7 +4382,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\,x = -5 \pm\sqrt&#123;55&#125;$$
+              $$
+              \,x = -5 \pm\sqrt&#123;55&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4179,7 +4404,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$&#123;y = x^2&#125;$$
+            $$
+            &#123;y = x^2&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -4187,7 +4414,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$&#123;y = Ax^2 + Bx&#125;$$
+            $$
+            &#123;y = Ax^2 + Bx&#125;
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -4217,7 +4446,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;Ax^2 + Bx&#125;$$
+              $$
+              &#123;Ax^2 + Bx&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4225,7 +4456,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;A\Big(x^2 + &#123;B \over A&#125;x\Big)&#125;$$
+              $$
+              &#123;A\Big(x^2 + &#123;B \over A&#125;x\Big)&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4233,7 +4466,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;x^2 + &#123;B \over A&#125;x&#125;$$
+              $$
+              &#123;x^2 + &#123;B \over A&#125;x&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4241,7 +4476,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;$$
+              $$
+              &#123;\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4249,7 +4486,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;Ax^2 + Bx&#125;$$
+              $$
+              &#123;Ax^2 + Bx&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4257,7 +4496,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;$$
+              $$
+              &#123;A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4270,31 +4511,45 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;y = x^2&#125;$$
+              $$
+              &#123;y = x^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;\downarrow&#125;$$
+              $$
+              &#123;\downarrow&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2&#125;$$
+              $$
+              &#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;\downarrow&#125;$$
+              $$
+              &#123;\downarrow&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;$$
+              $$
+              &#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;\downarrow&#125;$$
+              $$
+              &#123;\downarrow&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;.$$
+              $$
+              &#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;.
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4398,7 +4653,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;y = f(x + a)&#125;$$
+              $$
+              &#123;y = f(x + a)&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4414,7 +4671,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;y = f(x)&#125;$$
+              $$
+              &#123;y = f(x)&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4427,11 +4686,13 @@ const Article = () => {
                 $a$
               </Math>
               {" "}
-              is, thus, the further
+              is, thus, the further{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;y = f(x + a)&#125;$$
+              $$
+              &#123;y = f(x + a)&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4439,7 +4700,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;y = f(x + 20)&#125;$$
+              $$
+              &#123;y = f(x + 20)&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4575,31 +4838,45 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;y = x^2&#125;$$
+              $$
+              &#123;y = x^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;\downarrow&#125;$$
+              $$
+              &#123;\downarrow&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;y = x^2 - &#123;B^2 \over 4A^2&#125;&#125;$$
+              $$
+              &#123;y = x^2 - &#123;B^2 \over 4A^2&#125;&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;\downarrow&#125;$$
+              $$
+              &#123;\downarrow&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;$$
+              $$
+              &#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;\downarrow&#125;$$
+              $$
+              &#123;\downarrow&#125;
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$&#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;$$
+              $$
+              &#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4870,7 +5147,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$Ax^2 + Bx = 0$$
+              $$
+              Ax^2 + Bx = 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4888,7 +5167,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$Ax^2 + Bx = x(Ax + B)$$
+              $$
+              Ax^2 + Bx = x(Ax + B)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4896,15 +5177,19 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x(Ax + B) = 0$$
+              $$
+              x(Ax + B) = 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              and so one of the roots is
+              and so one of the roots is{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x = 0$$
+              $$
+              x = 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4917,7 +5202,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$Ax + B = 0$$
+              $$
+              Ax + B = 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -4932,7 +5219,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x(Ax + B)$$
+              $$
+              x(Ax + B)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5051,8 +5340,10 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\tag&#123;A&#125;
-              x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;$$
+              $$
+              \tag&#123;A&#125;
+              x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5070,7 +5361,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;$$
+              $$
+              \pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5078,7 +5371,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;$$
+              $$
+              \left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5106,7 +5401,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x = -&#123;B\over 2A&#125; \pm &#123;B \over 2A&#125;$$
+              $$
+              x = -&#123;B\over 2A&#125; \pm &#123;B \over 2A&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5114,7 +5411,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$-&#123;B\over 2A&#125; + &#123;B \over 2A&#125; = 0$$
+              $$
+              -&#123;B\over 2A&#125; + &#123;B \over 2A&#125; = 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5122,7 +5421,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$-&#123;B\over 2A&#125; - &#123;B \over 2A&#125; = -&#123;2B\over 2A&#125; = -&#123;B\over A&#125;$$
+              $$
+              -&#123;B\over 2A&#125; - &#123;B \over 2A&#125; = -&#123;2B\over 2A&#125; = -&#123;B\over A&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5244,7 +5545,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$f + g$$
+            $$
+            f + g
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5252,7 +5555,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$t \ra f(t) + g(t)$$
+            $$
+            t \ra f(t) + g(t)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5275,11 +5580,13 @@ const Article = () => {
               $g$
             </Math>
             {" "}separately and then takes the sum,
-            and we define
+            and we define{" "}
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$fg$$
+            $$
+            fg
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5287,7 +5594,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$z \ra f(z)g(z)$$
+            $$
+            z \ra f(z)g(z)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5314,7 +5623,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$f \circ g$$
+            $$
+            f \circ g
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5322,7 +5633,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$u \ra f(g(u))$$
+            $$
+            u \ra f(g(u))
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5396,7 +5709,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(f \circ g) + (f \circ h)$$
+              $$
+              (f \circ g) + (f \circ h)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5409,11 +5724,13 @@ const Article = () => {
               </NoBreak>
               {" "}the second equality is
               true; the third equality is true even though you
-              would expect the right-hand side to be written
+              would expect the right-hand side to be written{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x \ra g(f(x)) + h(f(x)))$$
+              $$
+              (x \ra g(f(x)) + h(f(x)))
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5457,7 +5774,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$y = x^2$$
+            $$
+            y = x^2
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5465,7 +5784,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$y = Ax^2 + Bx + C$$
+            $$
+            y = Ax^2 + Bx + C
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5502,7 +5823,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$Ax^2 + Bx + C$$
+              $$
+              Ax^2 + Bx + C
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5510,7 +5833,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$A\Big(x^2 + &#123;B \over A&#125;x + &#123;C\over A&#125;\Big)$$
+              $$
+              A\Big(x^2 + &#123;B \over A&#125;x + &#123;C\over A&#125;\Big)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5518,7 +5843,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x^2 + &#123;B \over A&#125;x$$
+              $$
+              x^2 + &#123;B \over A&#125;x
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5526,7 +5853,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;$$
+              $$
+              \Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5539,15 +5868,19 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125; + &#123;C\over A&#125;\right]$$
+              $$
+              A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125; + &#123;C\over A&#125;\right]
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              or
+              or{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 - 4AC\over 4A^2&#125;\right]$$
+              $$
+              A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 - 4AC\over 4A^2&#125;\right]
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5642,7 +5975,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$Ax^2 + Bx + C = 0$$
+            $$
+            Ax^2 + Bx + C = 0
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5679,7 +6014,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$y = Ax^2 + Bx + C$$
+              $$
+              y = Ax^2 + Bx + C
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5724,7 +6061,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;B^2 - 4AC \over 4A^2&#125; &lt; 0$$
+              $$
+              &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5732,7 +6071,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$-&#123;B^2 - 4AC \over 4A^2&#125; &gt; 0$$
+              $$
+              -&#123;B^2 - 4AC \over 4A^2&#125; &gt; 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5753,7 +6094,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;B^2 - 4AC \over 4A^2&#125; \geq 0$$
+              $$
+              &#123;B^2 - 4AC \over 4A^2&#125; \geq 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5761,7 +6104,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x = -&#123;B \over 2A&#125; \pm \sqrt&#123;B^2 - 4AC \over 4A^2&#125;$$
+              $$
+              x = -&#123;B \over 2A&#125; \pm \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5784,7 +6129,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;$$
+              $$
+              \pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5792,7 +6139,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\pm E = \pm F$$
+              $$
+              \pm E = \pm F
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5801,15 +6150,19 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$|E| = |F|$$
+              $$
+              |E| = |F|
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              or
+              or{" "}
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$E^2 = F^2$$
+              $$
+              E^2 = F^2
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5818,7 +6171,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x = -&#123;B \over 2A&#125; \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;$$
+              $$
+              x = -&#123;B \over 2A&#125; \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5826,7 +6181,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$x = &#123;&#123;-B \pm \sqrt&#123;B^2 - 4AC&#125;&#125; \over 2A&#125;$$
+              $$
+              x = &#123;&#123;-B \pm \sqrt&#123;B^2 - 4AC&#125;&#125; \over 2A&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5842,7 +6199,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;B^2 - 4AC \over 4A^2&#125; &lt; 0$$
+              $$
+              &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5850,7 +6209,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$\sqrt&#123;B^2 - 4AC \over 4A^2&#125;$$
+              $$
+              \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5860,7 +6221,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;B^2 - 4AC \over 4A^2&#125; &lt; 0\iff B^2 - 4AC &lt; 0$$
+              $$
+              &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0\iff B^2 - 4AC &lt; 0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5896,7 +6259,9 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$(f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)$$
+            $$
+            (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -5909,7 +6274,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x \ra x^3)(6)$$
+              $$
+              (x \ra x^3)(6)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5955,7 +6322,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x \ra y \ra x^3y)(6)$$
+              $$
+              (x \ra y \ra x^3y)(6)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6004,7 +6373,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(x \ra y \ra x^3y)(6)(8)$$
+              $$
+              (x \ra y \ra x^3y)(6)(8)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6066,7 +6437,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$(f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)$$
+              $$
+              (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6158,7 +6531,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;(x \ra x^2)(5 + 0.1) - (x \ra x^2)(5) \over 0.1&#125;$$
+              $$
+              &#123;(x \ra x^2)(5 + 0.1) - (x \ra x^2)(5) \over 0.1&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6166,7 +6541,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;(x \ra x^2)(5.1) - (x \ra x^2)(5) \over 0.1&#125;$$
+              $$
+              &#123;(x \ra x^2)(5.1) - (x \ra x^2)(5) \over 0.1&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6174,7 +6551,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;5.1^2 - 5^2 \over 0.1&#125;$$
+              $$
+              &#123;5.1^2 - 5^2 \over 0.1&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6182,7 +6561,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;26.01 - 25 \over 0.1&#125;$$
+              $$
+              &#123;26.01 - 25 \over 0.1&#125;
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -6194,7 +6575,9 @@ const Article = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$&#123;1.01 \over 0.1&#125; = 1.01 \times 10 = 10.1$$
+              $$
+              &#123;1.01 \over 0.1&#125; = 1.01 \times 10 = 10.1
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>

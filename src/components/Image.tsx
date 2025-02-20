@@ -106,8 +106,10 @@ const Image = (props: ImageProps) => {
           class={twJoin(
             "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
             (our_on_mobile() && (scale().scale < 1 || !after_first_click())) && "max-width-screen",
-            (our_on_mobile() && scale().scale < 0.81) && "scaled-down-bg",  // dark gray means "max-width-screen"
-            !(our_on_mobile() && scale().scale < 0.81) && "scaled-up-bg",   // light gray means not "max-width-screen"
+            (our_on_mobile() && (scale().scale < 1 || !after_first_click())) && "scaled-down-bg",
+            !(our_on_mobile() && (scale().scale < 1 || !after_first_click())) && "scaled-up-bg",
+            // (our_on_mobile() && scale().scale < 0.81) && "scaled-down-bg",  // dark gray means "max-width-screen"
+            // !(our_on_mobile() && scale().scale < 0.81) && "scaled-up-bg",   // light gray means not "max-width-screen"
 
             // (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-500",  // dark means "max-width-screen"
             // !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-200", // light means not "max-width-screen"

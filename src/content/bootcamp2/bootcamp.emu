@@ -1006,10 +1006,9 @@
 
             Since 
             $$
-            %\Large 10^{12}\times 10^{9}\times 10^{6}\times 10^3 = 10^{12+9+6+3} = 10^{30}
             \Large 10^{12}\times 10^{9}\times 10^{6}\times 10^3 = 10^{12+9+6+3}
             $$
-            the answer is $12+9+6+3$, i.e., $30$. 
+            the answer is $12+9+6+3$, or $30$.
 
 
     |> Exercise
@@ -1096,7 +1095,7 @@
         |> del
 
             chapter
-        bootcamp.)
+        &ensp;bootcamp.)
 
         |> Solution
 
@@ -1129,7 +1128,7 @@
             The first law can be recognized as “additivity of exponents”
             while the second law 
             is the above-mentioned generalization of this exercise's result.
-            (Nb: Concerning the next-to-last law, note that, <i>by definition</i>,
+            (Nb: Concerning the next-to-last law, note that, _by definition_,
             $$
             \Large \left({a\over b}\right)^{\!-1} = {1 \over \left( {a \over b}\right)} 
             $$
@@ -1210,6 +1209,7 @@
         $$
 
         |> Solution
+            type qq
 
             Firstly we can rewrite $v$, $F$, $\mu$, $\rho$
             in the canonical form $M^xL^yT^z$
@@ -1277,6 +1277,7 @@
             |> ImageRight
                 src images/svg_bt2_ex_equation_addition_cloud.svg
                 offset_y -0.5em
+                offset_x 0.5em
             and adding this last equation to the first
             equation above, we find 
             $$

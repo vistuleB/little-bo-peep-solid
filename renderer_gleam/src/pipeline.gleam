@@ -93,7 +93,28 @@ pub fn lbp_pipeline() -> List(Pipe) {
     ),
     pair_bookends(#(["DoubleDollar"], ["DoubleDollar"], "MathBlock")),
     fold_tags_into_text([#("DoubleDollar", "$$")]),
-    remove_empty_lines(),
+    // ************************
+    // $ **********************
+    // ************************
+    split_by_indexed_regexes(
+      #([#(single_dollar_indexed_regex, "SingleDollar")], ["MathBlock"]),
+    ),
+    pair_bookends(#(["SingleDollar"], ["SingleDollar"], "Math")),
+    fold_tags_into_text([#("SingleDollar", "$")]),
+    insert_bookend_tags([
+      #("Math", "OpeningSingleDollar", "ClosingSingleDollar"),
+      #("MathBlock", "OpeningDoubleDollar", "ClosingDoubleDollar"),
+    ]),
+    fold_tags_into_text(
+      [
+        #("OpeningSingleDollar", "$"),
+        #("ClosingSingleDollar", "$"),
+        #("OpeningDoubleDollar", "$$"),
+        #("ClosingDoubleDollar", "$$"),
+      ]
+    ),
+    find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
+    identity(),
     // ************************
     // AddTitleCounters *******
     // ************************
@@ -166,18 +187,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #("VerticalChunk", "Item", "Grid")
     ]),
     unwrap_tags(["WriterlyBlankLine"]),
-    // remove_vertical_chunks_with_no_text_child(),
-    // ************************
-    // $ **********************
-    // ************************
-    split_by_indexed_regexes(
-      #([#(single_dollar_indexed_regex, "SingleDollar")], ["MathBlock"]),
-    ),
-    pair_bookends(#(["SingleDollar"], ["SingleDollar"], "Math")),
-    fold_tags_into_text([#("SingleDollar", "$")]),
-    find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
     remove_empty_text_nodes(),
-    identity(),
     // ************************
     // __ *********************
     // ************************
@@ -303,18 +313,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
     add_counter_attributes([#("Solution", "Exercises", "solution_number", 1)]),
     add_counter_attributes([#("Exercise", "Exercises", "exercise_number", 1)]),
     concatenate_text_nodes(),
-    insert_bookend_tags([
-      #("Math", "OpeningSingleDollar", "ClosingSingleDollar"),
-      #("MathBlock", "OpeningDoubleDollar", "ClosingDoubleDollar"),
-    ]),
-    fold_tags_into_text(
-      [
-        #("OpeningSingleDollar", "$"),
-        #("ClosingSingleDollar", "$"),
-        #("OpeningDoubleDollar", "$$"),
-        #("ClosingDoubleDollar", "$$"),
-      ]
-    ),
     // ************************
     // VerticalChunk cleanup
     // ************************

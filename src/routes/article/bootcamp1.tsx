@@ -352,7 +352,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large\&#123;2, 1\&#125;$$
+          $$
+          \Large\&#123;2, 1\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -360,7 +362,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large\&#123;1, 2\&#125;$$
+          $$
+          \Large\&#123;1, 2\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -381,7 +385,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large\&#123;1, 1, 2\&#125;$$
+          $$
+          \Large\&#123;1, 1, 2\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -389,7 +395,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large\&#123;1, 2\&#125;$$
+          $$
+          \Large\&#123;1, 2\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -466,7 +474,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \&#123;\&#125;$$
+          $$
+          \Large \&#123;\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -474,7 +484,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \phi$$
+          $$
+          \Large \phi
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -496,7 +508,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \&#123;\&#123;\&#123;\&#123;\&#125;\&#125;\&#125;\&#125;$$
+          $$
+          \Large \&#123;\&#123;\&#123;\&#123;\&#125;\&#125;\&#125;\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -507,7 +521,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \&#123;\&#123;\&#123;\phi\&#125;\&#125;\&#125;$$
+          $$
+          \Large \&#123;\&#123;\&#123;\phi\&#125;\&#125;\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -524,7 +540,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \&#123;\&#123;\&#125; \&#125; \ne \&#123;\&#125;$$
+          $$
+          \Large \&#123;\&#123;\&#125; \&#125; \ne \&#123;\&#125;
+          $$
           <ImageRight
             offset_x="3em"
             src="/images/svg_bt1_bt_empty_set_cloud.svg" />
@@ -536,7 +554,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \&#123; \&#123;\&#125; \&#125;$$
+          $$
+          \Large \&#123; \&#123;\&#125; \&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -559,7 +579,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \&#123;\&#125;$$
+          $$
+          \Large \&#123;\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -577,7 +599,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \&#123;\&#123;\&#123;\&#125;\&#125; \&#125; \ne \&#123;\&#123;\&#125;\&#125;$$
+          $$
+          \Large \&#123;\&#123;\&#123;\&#125;\&#125; \&#125; \ne \&#123;\&#123;\&#125;\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -630,7 +654,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \&#123;1, 2\&#125; \cup \&#123;2, 5\&#125; = \&#123;1, 2, 5\&#125;$$
+          $$
+          \Large \&#123;1, 2\&#125; \cup \&#123;2, 5\&#125; = \&#123;1, 2, 5\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -679,7 +705,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large A \cap B$$
+          $$
+          \Large A \cap B
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -699,7 +727,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \&#123;1, 2\&#125; \cap \&#123;2, 5\&#125; = \&#123;2\&#125;$$
+          $$
+          \Large \&#123;1, 2\&#125; \cap \&#123;2, 5\&#125; = \&#123;2\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -725,7 +755,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large x \in (A \cup B)$$
+          $$
+          \Large x \in (A \cup B)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -733,7 +765,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large x \in A$$
+          $$
+          \Large x \in A
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -743,7 +777,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large x \in B$$
+          $$
+          \Large x \in B
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -754,7 +790,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large x \in (A \cup B) \iff (x \in A) \vee (x \in B)$$
+          $$
+          \Large x \in (A \cup B) \iff (x \in A) \vee (x \in B)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -818,7 +856,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large \wedge$$
+          $$
+          \Large \wedge
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -840,7 +880,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large\rr$$
+          $$
+          \Large\rr
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -852,7 +894,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large\zz$$
+          $$
+          \Large\zz
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -865,7 +909,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large\nn$$
+          $$
+          \Large\nn
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -893,7 +939,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large [a, b]$$
+          $$
+          \Large [a, b]
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -921,7 +969,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large [a, b)$$
+          $$
+          \Large [a, b)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -952,7 +1002,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large (-\infty, \infty) = \rr$$
+          $$
+          \Large (-\infty, \infty) = \rr
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -960,7 +1012,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large (-\infty, \infty)$$
+          $$
+          \Large (-\infty, \infty)
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1003,7 +1057,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large\overline&#123;\rr&#125;$$
+          $$
+          \Large\overline&#123;\rr&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1035,7 +1091,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large\overline&#123;\rr&#125; = \rr \cup \&#123;-\infty, \infty\&#125;$$
+          $$
+          \Large\overline&#123;\rr&#125; = \rr \cup \&#123;-\infty, \infty\&#125;
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1063,7 +1121,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large [-\infty, \infty]$$
+          $$
+          \Large [-\infty, \infty]
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1087,7 +1147,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large 0.5+ \infty$$
+          $$
+          \Large 0.5+ \infty
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1124,7 +1186,9 @@ const Article = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$\Large (-\infty) + \infty$$
+          $$
+          \Large (-\infty) + \infty
+          $$
         </MathBlock>
         <Pause />
         <VerticalChunk>

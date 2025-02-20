@@ -49,7 +49,7 @@
         $$
         y = {1\over 4}x
         $$
-        making it a true _linear_function (as opposed
+        making it a true _linear_ function (as opposed
         to _affine_, cf. Chapter 3).
 
         As for the “something”—the bumpy one—it appears
@@ -66,7 +66,7 @@
         |> Image
             src images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg
 
-        As cos goes through _one_cycle from $x = 0$ to 
+        As cos goes through _one_ cycle from $x = 0$ to 
         $x = 4\eta$, the “bumpy function” is therefore 
         (roughly, from what we can see) a “$10$&#x200b;$\times$” 
         sped-up version of cosine, i.e.,
@@ -188,7 +188,7 @@
 
         Moreover at $x = 0$ we find 
         more or less exactly
-        the _bottom_of a
+        the _bottom_ of a
         bump, 
         so altogether 
         we can use a function of the form
@@ -1380,7 +1380,7 @@
 
             ...though none of these estimates are actually
             accurate to more than two decimal places. (While all
-            are accurate up to _at least_two decimal places.)
+            are accurate up to _at least_ two decimal places.)
 
         |> SolutionNote
 
@@ -1779,6 +1779,7 @@
 
         |> Image
             src images/svg_ch5_ex_x_plus_y_options.svg
+            style background-color:#fdfdfd
 
         Either way, the upshot is that the sum
 
@@ -1852,7 +1853,7 @@
         $$
 
         (to be read “$\eta/2$ plus any multiple of $4\eta$”)
-        (*or: “the_set of_values of the form $\eta/2$, 
+        (*or: “the _set of_ values of the form $\eta/2$, 
         plus any multiple of $4\eta$”).
 
         The actual value of $\cos(x) + \sin(x)$ achieved
@@ -1930,29 +1931,31 @@
     |> Image
         src images/svg_ch5_ex_angle_sum_180_followup.svg
 
-    It is $\theta$, as well. One method of
-    deduction uses the fact that “the complement
-    of my complement is myself”:
+    |> Solution
 
-    |> Image
-        src images/svg_ch5_ex_angle_sum_180_followup_explanation.svg
+        It is $\theta$, as well. One method of
+        deduction uses the fact that “the complement
+        of my complement is myself”:
 
-    Another method of deduction uses the fact that,
-    together with the angle immediately to its left
-    (which happens to be $\eta - \theta$, because 
-    it is the complement of $\theta$ via the smallest
-    right triangle present), the sought-for angle 
-    makes up $90^\circ$:
+        |> Image
+            src images/svg_ch5_ex_angle_sum_180_followup_explanation.svg
 
-    |> Image
-        src images/svg_ch5_ex_angle_sum_180_followup_explanation_2.svg
+        Another method of deduction uses the fact that,
+        together with the angle immediately to its left
+        (which happens to be $\eta - \theta$, because 
+        it is the complement of $\theta$ via the smallest
+        right triangle present), the sought-for angle 
+        makes up $90^\circ$:
 
-    (In one case we use the fact that the
-    medium-sized triangle is a right triangle,
-    in another case that the smallest-size 
-    triangle is a right triangle—and in both cases
-    that the original, largest triangle is a 
-    right triangle.)
+        |> Image
+            src images/svg_ch5_ex_angle_sum_180_followup_explanation_2.svg
+
+        (In one case we use the fact that the
+        medium-sized triangle is a right triangle,
+        in another case that the smallest-size 
+        triangle is a right triangle—and in both cases
+        that the original, largest triangle is a 
+        right triangle.)
 
 |> Exercise
 
@@ -1963,41 +1966,43 @@
     |> Image
         src images/svg_ch5_ex_tangent_angle_v2.svg
 
-    The ending and starting half-lines of the 
-    angle marked ‘?’ are both $90^\circ$ counterclockwise
-    from the ending and starting half-lines,
-    respectively, of the central angle:
+    |> Solution
 
-    |> Image
-        src images/svg_ch5_ex_tangent_angle_explanation_v2.svg
-
-    The angle marked ‘?’ is therefore obtained
-    by a $90^\circ$ rotation (and then translation)
-    of the central angle, and is, therefore, equal
-    to the central angle $\theta$.
-
-    |> SolutionNote
-
-        This holds no matter which quadrant we
-        push $\theta$ to:
+        The ending and starting half-lines of the 
+        angle marked ‘?’ are both $90^\circ$ counterclockwise
+        from the ending and starting half-lines,
+        respectively, of the central angle:
 
         |> Image
-            src images/svg_ch5_ex_tangent_angle_explanation_other_quadrants.svg
+            src images/svg_ch5_ex_tangent_angle_explanation_v2.svg
 
-        Verbalized: _the counterclockwise angle from the positive
-        $x$ axis to 
-        the radial vector
-        equals the counterclockwise angle from the positive
-        $y$ axis to the counterclockwise tangent._
+        The angle marked ‘?’ is therefore obtained
+        by a $90^\circ$ rotation (and then translation)
+        of the central angle, and is, therefore, equal
+        to the central angle $\theta$.
 
-        (Nb: When we say the “radial vector” and 
-        “counterclockwise tangent” we mean those objects that
-        are illustrated here:)
+        |> SolutionNote
 
-        |> Image
-            src images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg
+            This holds no matter which quadrant we
+            push $\theta$ to:
 
-    |> StarDivider
+            |> Image
+                src images/svg_ch5_ex_tangent_angle_explanation_other_quadrants.svg
+
+            Verbalized: _the counterclockwise angle from the positive
+            $x$ axis to 
+            the radial vector
+            equals the counterclockwise angle from the positive
+            $y$ axis to the counterclockwise tangent._
+
+            (Nb: When we say the “radial vector” and 
+            “counterclockwise tangent” we mean those objects that
+            are illustrated here:)
+
+            |> Image
+                src images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg
+
+        |> StarDivider
 
 
 |> Exercise
@@ -2068,193 +2073,195 @@
     values of $\theta$ for which the maximum is 
     attained.
 
-    The isosets of
+    |> Solution
 
-    $$
-    (x, y) \ra xy
-    $$
-
-    (lambda-notation for a two-variable function)
-    have this general appearance (it depends on
-    the window and on the exact isosets that 
-    you choose to  draw—we chose a few 
-    different random ones):
-
-    |> Image
-        src images/svg_ch5_ex_max_xy_xy_isosets.svg
-
-    Note that each isoset consists of the union of TWO 
-    disjoint curves, except for the isoset
-
-    $$
-    xy = 0
-    $$
-
-    (or: “the isoset
-
-    $$
-    \{(x, y) \in \rr^2 : xy = 0 \}
-    $$
-
-    ...” to pedantically indicate that we are
-    talking about _a set of points in the plane_),
-    that, for its part, cannot be said to consist
-    of two _~_~_disjoint_~_~_ curves, because it
-    is the union of the $x$- and $y$- axes, that
-    intersect.
-
-    (For a throwback, the solution of Exercise
-    16 of Chapter 3 mentions that the product of
-    two numbers is $0$ if and only if one of the 
-    numbers is $0$. In our case,
-
-    $$
-    xy = 0
-    $$
-
-    if and only
-
-    $$
-    \,x = 0\,
-    $$
-
-    _or_
-
-    $$
-    \,y = 0
-    $$
-
-    where
-
-    $$
-    x = 0
-    $$
-
-    happens to be the equation of the $y$ axis, and
-
-    $$
-    y = 0
-    $$
-
-    happens to be the equation of the $x$ axis, which
-    explains the shape of the isoset.)
-
-    If we draw a “heatmap” of
-
-    $$
-    xy
-    $$
-
-    in some region of the plane, similarly to 
-    Exercise 18, the larger (more positive)
-    values show up in the first and third
-    quadrants, while the smaller (more negative)
-    values show up in the second and fourth 
-    quadrants:
-
-    |> Image
-        src images/svg_ch5_ex_max_xy_rainbow.svg
-
-    Of particular interest to us: at a given 
-    distance from the origin, the line
-
-    $$
-    x = y
-    $$
-
-    can be seen seen to hold the largest of values of $xy$:
-
-    |> Image
-        src images/svg_ch5_ex_max_xy_fixed_distance.svg
-
-    In particular,
-
-    $$
-    \cos\theta\,\sin\theta
-    $$
-
-    will reach its maximum at those values of 
-    $\theta$ that put the point $(\cos \theta, \sin \theta)$
-    at either $(\sqrt{0.5}, \sqrt{0.5})$ or 
-    $(-\sqrt{0.5}, -\sqrt{0.5})$ on the unit circle; 
-    these values of $\theta$ are
-
-    $$
-    \Large \{0.5\eta + 4\eta{}k : k \in \zz\} \\
-    \Large \cup \{2.5\eta + 4\eta{}k : k \in \zz\}\up{1.5}
-    $$
-
-    as per this illustration...
-
-    |> Image
-        src images/svg_ch5_ex_max_xy_angles.svg
-
-    ...and the maximum value of
-
-    $$
-    \Large \cos\theta\,\sin\theta
-    $$
-
-    itself will be
-
-    $$
-    \Large \sqrt{0.5} \cdot \sqrt{0.5} = {1\over 2}
-    $$
-
-    or
-
-    $$
-    \Large (-\sqrt{0.5}) \cdot (-\sqrt{0.5}) = {1\over 2}
-    $$
-
-    equivalently; though one should also note
-    that
-
-    $$
-    \Large \{0.5\eta + 4\eta{}k : k \in \zz\} \cup \{2.5\eta + 4\eta{}k : k \in \zz\} \\ \Large \up{1.5}= \{0.5\eta + 2\eta{}k : k \in \zz\}
-    $$
-
-    which is the “clever” way of writing the set
-    of $\theta$'s for which the maximum is achieved.
-
-    |> SolutionNote
-
-        As a consequence, the function
+        The isosets of
 
         $$
-        x \ra \sin x{}\cos x
+        (x, y) \ra xy
         $$
 
-        discussed in Exercise 4 has maximum value
-
-        $$
-        {1\over 2}
-        $$
-
-        achieved for inputs in the set
-
-        $$
-        \Large \{0.5\eta + 2\eta{}k : k \in \zz\}
-        $$
-
-        comprising the sequence of values...
-        $$
-        \large \dots,\,\, -{7\eta\over 2},\,\, -{3\eta\over 2},\,\, {\dn{0.25}\eta \over 2},\,\, {5\eta \over 2},\,\, {9\eta \over 2},\,\, \dots
-        $$
-
-        ...or...
-
-        $$
-        \large \dots,\,\, {-3.5\eta},\,\, {-1.5\eta},\,\, {0.5\eta},\,\, {2.5\eta},\,\, {4.5\eta},\,\, \dots
-        $$
-
-        ...(maybe more legibly); annotating the graph
-        given in Exercise 4:
+        (lambda-notation for a two-variable function)
+        have this general appearance (it depends on
+        the window and on the exact isosets that 
+        you choose to  draw—we chose a few 
+        different random ones):
 
         |> Image
-            src images/svg_ch5_ex_max_xy_graph.svg
+            src images/svg_ch5_ex_max_xy_xy_isosets.svg
 
-        |> StarDivider
+        Note that each isoset consists of the union of TWO 
+        disjoint curves, except for the isoset
+
+        $$
+        xy = 0
+        $$
+
+        (or: “the isoset
+
+        $$
+        \{(x, y) \in \rr^2 : xy = 0 \}
+        $$
+
+        ...” to pedantically indicate that we are
+        talking about _a set of points in the plane_),
+        that, for its part, cannot be said to consist
+        of two _~_~_disjoint_~_~_ curves, because it
+        is the union of the $x$- and $y$- axes, that
+        intersect.
+
+        (For a throwback, the solution of Exercise
+        16 of Chapter 3 mentions that the product of
+        two numbers is $0$ if and only if one of the 
+        numbers is $0$. In our case,
+
+        $$
+        xy = 0
+        $$
+
+        if and only
+
+        $$
+        \,x = 0\,
+        $$
+
+        _or_
+
+        $$
+        \,y = 0
+        $$
+
+        where
+
+        $$
+        x = 0
+        $$
+
+        happens to be the equation of the $y$ axis, and
+
+        $$
+        y = 0
+        $$
+
+        happens to be the equation of the $x$ axis, which
+        explains the shape of the isoset.)
+
+        If we draw a “heatmap” of
+
+        $$
+        xy
+        $$
+
+        in some region of the plane, similarly to 
+        Exercise 18, the larger (more positive)
+        values show up in the first and third
+        quadrants, while the smaller (more negative)
+        values show up in the second and fourth 
+        quadrants:
+
+        |> Image
+            src images/svg_ch5_ex_max_xy_rainbow.svg
+
+        Of particular interest to us: at a given 
+        distance from the origin, the line
+
+        $$
+        x = y
+        $$
+
+        can be seen seen to hold the largest of values of $xy$:
+
+        |> Image
+            src images/svg_ch5_ex_max_xy_fixed_distance.svg
+
+        In particular,
+
+        $$
+        \cos\theta\,\sin\theta
+        $$
+
+        will reach its maximum at those values of 
+        $\theta$ that put the point $(\cos \theta, \sin \theta)$
+        at either $(\sqrt{0.5}, \sqrt{0.5})$ or 
+        $(-\sqrt{0.5}, -\sqrt{0.5})$ on the unit circle; 
+        these values of $\theta$ are
+
+        $$
+        \Large \{0.5\eta + 4\eta{}k : k \in \zz\} \\
+        \Large \cup \{2.5\eta + 4\eta{}k : k \in \zz\}\up{1.5}
+        $$
+
+        as per this illustration...
+
+        |> Image
+            src images/svg_ch5_ex_max_xy_angles.svg
+
+        ...and the maximum value of
+
+        $$
+        \Large \cos\theta\,\sin\theta
+        $$
+
+        itself will be
+
+        $$
+        \Large \sqrt{0.5} \cdot \sqrt{0.5} = {1\over 2}
+        $$
+
+        or
+
+        $$
+        \Large (-\sqrt{0.5}) \cdot (-\sqrt{0.5}) = {1\over 2}
+        $$
+
+        equivalently; though one should also note
+        that
+
+        $$
+        \Large \{0.5\eta + 4\eta{}k : k \in \zz\} \cup \{2.5\eta + 4\eta{}k : k \in \zz\} \\ \Large \up{1.5}= \{0.5\eta + 2\eta{}k : k \in \zz\}
+        $$
+
+        which is the “clever” way of writing the set
+        of $\theta$'s for which the maximum is achieved.
+
+        |> SolutionNote
+
+            As a consequence, the function
+
+            $$
+            x \ra \sin x{}\cos x
+            $$
+
+            discussed in Exercise 4 has maximum value
+
+            $$
+            {1\over 2}
+            $$
+
+            achieved for inputs in the set
+
+            $$
+            \Large \{0.5\eta + 2\eta{}k : k \in \zz\}
+            $$
+
+            comprising the sequence of values...
+            $$
+            \large \dots,\,\, -{7\eta\over 2},\,\, -{3\eta\over 2},\,\, {\dn{0.25}\eta \over 2},\,\, {5\eta \over 2},\,\, {9\eta \over 2},\,\, \dots
+            $$
+
+            ...or...
+
+            $$
+            \large \dots,\,\, {-3.5\eta},\,\, {-1.5\eta},\,\, {0.5\eta},\,\, {2.5\eta},\,\, {4.5\eta},\,\, \dots
+            $$
+
+            ...(maybe more legibly); annotating the graph
+            given in Exercise 4:
+
+            |> Image
+                src images/svg_ch5_ex_max_xy_graph.svg
+
+            |> StarDivider
 
         |> SolutionNote
 
@@ -2585,10 +2592,10 @@
                     \sec^2(\theta) = 1 + \tan^2(\theta)
                     $$
 
-            for all $0&lt; \theta&lt; \eta$, which is the range of $\theta$
-            covered by these diagrams.
-            (The same identity holds
-            more generally than just those $\theta$'s,
+            for all $0 < \theta < \eta$, which is
+            the range of $\theta$ covered by these 
+            diagrams. (The same identity holds more 
+            generally than just those $\theta$'s,
             however.)
 
 |> Exercise
@@ -2659,28 +2666,30 @@
     at the far end. (No peeking back at the solution of
     that exercise.)
 
-    Viz:
+    |> Solution
 
-    |> center
-        style margin-top:1em;margin-bottom:1em;
-        |> div
-            style display:inline-block;border:1px solid red;padding-left:1.5em;padding-right:1.5em;
+        Viz:
 
-            $$
-            \begin{align}
-            \sec^2(\theta)
-            \,\,&=\,\, {1\over \cos^2(\theta)} \\
-            &amp;=\,\, \up{2} {\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)} \\
-            &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
-            &amp;=\,\, \up{2} 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
-            &amp;=\,\, \up{2}1 + \tan^2(\theta).
-            \end{align}
-            $$
+        |> center
+            style margin:1em 0em;
+            |> div
+                style display:inline-block;border:1px solid red;padding:1.2em 1.4em;
 
-    (Ta-daa!) (It's slightly harder in this 
-    direction, when you have to think of
-    turning the “$1$” into “$\cos^2(\theta) + \sin^2(\theta)$”,
-    instead of the other way around.)
+                $$
+                \begin{align}
+                \sec^2(\theta)
+                \,\,&=\,\, {1\over \cos^2(\theta)} \\
+                &amp;=\,\, \up{2} {\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)} \\
+                &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
+                &amp;=\,\, \up{2} 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
+                &amp;=\,\, \up{2}1 + \tan^2(\theta).
+                \end{align}
+                $$
+
+        (Ta-daa!) (It's slightly harder in this 
+        direction, when you have to think of
+        turning the “$1$” into “$\cos^2(\theta) + \sin^2(\theta)$”,
+        instead of the other way around.)
 
 |> Exercise
 
@@ -2705,7 +2714,7 @@
             |> li
 
                 as an expression of the form $$x \ra \dots$$
-                for some value of “$\dots$”
+                for some value of “$\dots$”.
 
     |> Solution
 
@@ -2769,7 +2778,7 @@
         $$
         x \ra Bf(x)
         $$
-        ...where we use “$x$” because we were _told_to use
+        ...where we use “$x$” because we were _told_ to use
         $x$. (By the statement.)
 
 |> Exercise
@@ -2778,40 +2787,42 @@
     from Exercise 26 compare to the graph of the 
     generic function $f$?
 
-    The graphs of the four functions, that are
-    namely...
-    $$
-    x \ra f(x + A)
-    $$
-    $$
-    x \ra f(Bx)
-    $$
-    $$
-    x \ra f(x) + A
-    $$
-    $$
-    x \ra Bf(x)
-    $$
-    ...are, respectively, obtained by:
+    |> Solution
 
-    |> TextParent
-        |> ul
-            style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;
-            |> li
+        The graphs of the four functions, that are
+        namely...
+        $$
+        x \ra f(x + A)
+        $$
+        $$
+        x \ra f(Bx)
+        $$
+        $$
+        x \ra f(x) + A
+        $$
+        $$
+        x \ra Bf(x)
+        $$
+        ...are, respectively, obtained by:
 
-                horizontally translating the graph of $f$ by $A$ units to the left;
-            |> li
+        |> TextParent
+            |> ul
+                style list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;
+                |> li
 
-                horizontally compressing the graph of $f$ by a factor $B$;
-            |> li
+                    horizontally translating the graph of $f$ by $A$ units to the left;
+                |> li
 
-                vertically translating the graph of $f$ by $A$ units upward;
-            |> li
+                    horizontally compressing the graph of $f$ by a factor $B$;
+                |> li
 
-                vertically dilating (scaling) the graph of $f$ by a factor $B$.
+                    vertically translating the graph of $f$ by $A$ units upward;
+                |> li
 
-    (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
-    Chapter 3.)
+                    vertically dilating (scaling) the graph of $f$ by a factor $B$.
+
+        (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
+        Chapter 3.)
 
 |> Exercise
 
@@ -2905,7 +2916,7 @@
     |> Image
         src images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg
 
-    ...it _appears_that one graph is a
+    ...it _appears_ that one graph is a
     translate of the other; if this were 
     really so, what would the exact amounts
     of translation be? (Vertical _&_ horizontal.)
@@ -3026,20 +3037,18 @@
         applying the definition with $c = 2$,
         $\vec{v} = (10, 3.333)$.
 
-        |> Pause
-
-        _Example 2._ We have
-        $$
-        2 \cdot (a, b) = (2a, 2b),
-        $$
-        for all $a, b \in \rr$, for an example
-        that is half-algebraic, half-numerical.
+        !! |> Pause
+        !! _Example 2._ We have
+        !! $$
+        !! 2 \cdot (a, b) = (2a, 2b),
+        !! $$
+        !! for all $a, b \in \rr$, for an example
+        !! that is half-algebraic, half-numerical.
 
         |> SolutionNote
         
             In some sense, the vector “wins” over the 
-            number, in that their conjoint baby is a vector, 
-            not a number:
+            number, in that their conjoint baby is a vector:
 
             |> Image
                 src images/svg_ch5_ex_c_times_vector_box.svg
