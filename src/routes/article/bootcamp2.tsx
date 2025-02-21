@@ -167,7 +167,8 @@ const Article = () => {
           <ImageLeft
             offset_x="4em"
             offset_y="-0.2em"
-            src="/images/svg_bt2_bt_alert_cloud.svg" />
+            src="/images/svg_bt2_bt_alert_cloud.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1964,7 +1965,8 @@ const Article = () => {
             $$
             <ImageRight
               offset_x="0em"
-              src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg" />
+              src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
+              compensate_offset_x_for_large_text_columns={true} />
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -3324,7 +3326,8 @@ const Article = () => {
               <ImageRight
                 offset_x="0.5em"
                 offset_y="-0.5em"
-                src="/images/svg_bt2_ex_equation_addition_cloud.svg" />
+                src="/images/svg_bt2_ex_equation_addition_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>

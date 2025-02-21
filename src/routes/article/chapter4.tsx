@@ -380,7 +380,8 @@ const Article = () => {
           $$
           <ImageLeft
             offset_x="8em"
-            src="/images/svg_ch4_ch_constant_derivative_cloud.svg" />
+            src="/images/svg_ch4_ch_constant_derivative_cloud.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -493,7 +494,8 @@ const Article = () => {
           $$
           <ImageLeft
             offset_x="7em"
-            src="/images/svg_ch4_ch_affine_derivative_cloud.svg" />
+            src="/images/svg_ch4_ch_affine_derivative_cloud.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -772,10 +774,10 @@ const Article = () => {
               {" "}axis
             </li>
           </ul>
-          <VerticalChunk>
-            ...while if the “before” graph has units of...
-          </VerticalChunk>
         </TextParent>
+        <VerticalChunk>
+          ...while if the “before” graph has units of...
+        </VerticalChunk>
         <TextParent style="margin-top:1em;margin-bottom:1em;">
           <ul style="list-style-type:disc;">
             <li style="margin:0 60px;">
@@ -1000,7 +1002,8 @@ const Article = () => {
             <ImageRight
               offset_y="0.1em"
               offset_x="6em"
-              src="/images/svg_ch4_3x_plus_one_and_second_cloud.svg" />
+              src="/images/svg_ch4_3x_plus_one_and_second_cloud.svg"
+              compensate_offset_x_for_large_text_columns={true} />
           </MathBlock>
         </Example>
         <Pause />
@@ -1492,7 +1495,8 @@ const Article = () => {
             $$
             <ImageRight
               offset_x="5em"
-              src="/images/svg_ch4_ch_units_cancellation_cloud.svg" />
+              src="/images/svg_ch4_ch_units_cancellation_cloud.svg"
+              compensate_offset_x_for_large_text_columns={true} />
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -4576,7 +4580,9 @@ const Article = () => {
               $$
               \left(&#123;5\over 3\up&#123;1&#125;&#125;\left[&#123;\te&#123;m&#125; \over \te&#123;s&#125;&#125;\right]\right) \times \left(&#123;1 \over 10\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;m&#125;&#125;\right]\right) = &#123;5\over 30\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;s&#125;&#125;\right].
               $$
-              <ImageRight src="/images/svg_ch4_f_g_actual_exercise_cloud.svg" />
+              <ImageRight
+                src="/images/svg_ch4_f_g_actual_exercise_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -5978,7 +5984,8 @@ const Article = () => {
               $$
               <ImageLeft
                 offset_x="6em"
-                src="/images/svg_ch4_one_particle_speed_equals_time_cloud.svg" />
+                src="/images/svg_ch4_one_particle_speed_equals_time_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -8278,7 +8285,8 @@ const Article = () => {
               $$
               <ImageLeft
                 offset_x="200px"
-                src="/images/svg_ch4_ex_cosine_recall_cloud.svg" />
+                src="/images/svg_ch4_ex_cosine_recall_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10021,7 +10029,9 @@ const Article = () => {
               $$
               (x, f(x))
               $$
-              <ImageLeft src="/images/svg_ch4_new_quatient_x_fx_cloud.svg" />
+              <ImageLeft
+                src="/images/svg_ch4_new_quatient_x_fx_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -10034,7 +10044,8 @@ const Article = () => {
               $$
               <ImageRight
                 src="/images/svg_ch4_new_quatient_x_fxplush_cloud.svg"
-                offset_y="-0.5em" />
+                offset_y="-0.5em"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -11671,7 +11682,9 @@ const Article = () => {
             $$
             A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
             $$
-            <ImageRight src="/images/svg_ch4_big_product_parchment_cloud.svg" />
+            <ImageRight
+              src="/images/svg_ch4_big_product_parchment_cloud.svg"
+              compensate_offset_x_for_large_text_columns={true} />
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -12287,7 +12300,9 @@ const Article = () => {
               $$
               (\te&#123;velocity&#125;) \times (\te&#123;amount of time&#125;) = (\te&#123;displacement&#125;)
               $$
-              <ImageRight src="/images/svg_ch4_pacman1_velocity_times_amt_time_cloud.svg" />
+              <ImageRight
+                src="/images/svg_ch4_pacman1_velocity_times_amt_time_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -12413,7 +12428,8 @@ const Article = () => {
               $$
               <ImageLeft
                 src="/images/svg_ch4_pacman1_disp_4_cloud.svg"
-                width="700px" />
+                width="700px"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -12426,7 +12442,8 @@ const Article = () => {
               $$
               <ImageLeft
                 src="/images/svg_ch4_pacman1_disp_6_cloud.svg"
-                width="1400px" />
+                width="1400px"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -12439,7 +12456,8 @@ const Article = () => {
               $$
               <ImageLeft
                 src="/images/svg_ch4_pacman1_disp_7_cloud.svg"
-                width="700px" />
+                width="700px"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -12856,7 +12874,9 @@ const Article = () => {
               $$
               \sqrt&#123;4.8^2 + 4.8^2&#125; = \sqrt&#123;2&#125; \times 4.8 = 6.788...
               $$
-              <ImageLeft src="/images/svg_ch4_pacman2_4_point_8_cloud.svg" />
+              <ImageLeft
+                src="/images/svg_ch4_pacman2_4_point_8_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>

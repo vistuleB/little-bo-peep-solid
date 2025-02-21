@@ -205,7 +205,8 @@ const Article = () => {
           <ImageRight
             offset_x="3em"
             offset_y="-0.7em"
-            src="/images/32.svg" />
+            src="/images/32.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -478,7 +479,8 @@ const Article = () => {
           <ImageLeft
             offset_y="-60px"
             offset_x="2.5em"
-            src="/images/39.svg" />
+            src="/images/39.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1366,7 +1368,8 @@ const Article = () => {
             <ImageRight
               style="width:930px"
               offset_x="-6rem"
-              src="/images/svg_ch2_ch_units_cloud.svg" />
+              src="/images/svg_ch2_ch_units_cloud.svg"
+              compensate_offset_x_for_large_text_columns={true} />
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -1617,7 +1620,8 @@ const Article = () => {
               <ImageLeft
                 offset_y="103px"
                 offset_x="7.5em"
-                src="/images/svg_ch2_ex_x0_y0_line_equation_cloud.svg" />
+                src="/images/svg_ch2_ex_x0_y0_line_equation_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1741,7 +1745,8 @@ const Article = () => {
               <ImageRight
                 offset_y="-0.5rem"
                 offset_x="2.5rem"
-                src="/images/svg_slope_times_run_equals_rise_cloud.svg" />
+                src="/images/svg_slope_times_run_equals_rise_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>

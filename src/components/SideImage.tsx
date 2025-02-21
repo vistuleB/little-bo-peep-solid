@@ -1,4 +1,4 @@
-import { mergeProps, ParentProps } from "solid-js";
+import { createEffect, mergeProps, ParentProps, createSignal, onCleanup } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import LazyImage from "./LazyImage";
@@ -9,11 +9,12 @@ import { DESKTOP_COLUMN_WIDTH, MOBILE_MAX_WIDTH } from "~/constants";
 type UserFacingSideImageProps = ParentProps &
   SharedProps & {
     src: string;
-    squiggle?: boolean;
-    width?: string;
     offset_y?: string;
     offset_x?: string;
+    compensate_offset_x_for_large_text_columns?: boolean;
     line?: number;
+    squiggle?: boolean;
+    width?: string;
     squiggle_y?: string | number;
     children_y?: string | number;
     children_x?: string | number;
@@ -26,6 +27,7 @@ type InternalSideImageProps = UserFacingSideImageProps & {
   side: string;
   offset_x: string;
   offset_y: string;
+  compensate_offset_x_for_large_text_columns: boolean;
   line: number;
 };
 
@@ -53,8 +55,8 @@ const SideImage = (props: InternalSideImageProps) => {
       >
       <div
         style={{
-          left: getLeft(props.side, props.offset_x, scale().scale, store.innerWidth),
-          right: getRight(props.side, props.offset_x, scale().scale, store.innerWidth),
+          left: getLeft(props.side, props.offset_x, scale().scale, store.innerWidth, props.compensate_offset_x_for_large_text_columns),
+          right: getRight(props.side, props.offset_x, scale().scale, store.innerWidth, props.compensate_offset_x_for_large_text_columns),
           top: getTop(props.line, props.offset_y, scale().scale),
           transform: `translateY(calc(-50%))`,
           padding: `${props.padding}`,
@@ -97,6 +99,7 @@ export const ImageRight = ({
   line = 0,
   offset_x = "0px",
   offset_y = "0px",
+  compensate_offset_x_for_large_text_columns = false,
   ...props
 }: UserFacingSideImageProps) => {
   let internalProps : InternalSideImageProps = mergeProps(
@@ -105,6 +108,7 @@ export const ImageRight = ({
       side: "right",
       offset_x: offset_x,
       offset_y: offset_y,
+      compensate_offset_x_for_large_text_columns: compensate_offset_x_for_large_text_columns,
       line: line,
     },
   )
@@ -116,6 +120,7 @@ export const ImageLeft = ({
   line = 0,
   offset_x = "0px",
   offset_y = "0px",
+  compensate_offset_x_for_large_text_columns = false,
   ...props
 }: UserFacingSideImageProps) => {
   let internalProps : InternalSideImageProps = mergeProps(
@@ -124,6 +129,7 @@ export const ImageLeft = ({
       side: "left",
       offset_x: offset_x,
       offset_y: offset_y,
+      compensate_offset_x_for_large_text_columns: compensate_offset_x_for_large_text_columns,
       line: line,
     }
   )
@@ -136,9 +142,10 @@ const getLeft = (
   offset_x: string,
   scale: number,
   innerWidth: number,
+  compensate_offset_x: boolean,
 ): string => {
   let text_width = innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;
-  let added = Math.max(0, (text_width - DESKTOP_COLUMN_WIDTH) / 2);
+  let added = compensate_offset_x ? Math.max(0, (text_width - DESKTOP_COLUMN_WIDTH) / 2) : 0;
   return side === "right" ? `calc(100% + ${offset_x} * ${scale} + ${added}px * ${scale})`: "";
 }
 
@@ -147,9 +154,10 @@ const getRight = (
   offset_x: string,
   scale: number,
   innerWidth: number,
+  compensate_offset_x: boolean,
 ): string => {
   let column_width = innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;
-  let added = Math.max(0, (column_width - DESKTOP_COLUMN_WIDTH) / 2);
+  let added = compensate_offset_x ? Math.max(0, (column_width - DESKTOP_COLUMN_WIDTH) / 2) : 0;
   return side === "left" ? `calc(100% + ${offset_x} * ${scale} + ${added}px * ${scale})`: "";
 }
 

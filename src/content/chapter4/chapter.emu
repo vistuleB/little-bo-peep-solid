@@ -288,7 +288,7 @@
                 seconds on the $x$ axis, meters per
                 second on the $y$ axis
 
-        ...while if the “before” graph has units of...
+    ...while if the “before” graph has units of...
 
     |> TextParent
         style margin-top:1em;margin-bottom:1em;

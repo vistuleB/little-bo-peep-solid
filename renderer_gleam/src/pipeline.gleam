@@ -1,3 +1,4 @@
+import desugarers/add_attribute_to_if_child_of_but_no_overwrites.{add_attribute_to_if_child_of_but_no_overwrites}
 import desugarers/add_between_tag_and_text_node.{add_between_tag_and_text_node}
 import desugarers/find_replace.{find_replace}
 import gleam/option.{Some, None}
@@ -22,7 +23,6 @@ import desugarers/insert_indent.{insert_indent}
 import desugarers/pair_bookends.{pair_bookends}
 import desugarers/remove_attributes.{remove_attributes}
 import desugarers/remove_empty_chunks.{remove_empty_chunks}
-import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/remove_empty_text_nodes.{remove_empty_text_nodes}
 import desugarers/remove_vertical_chunks_with_no_text_child.{remove_vertical_chunks_with_no_text_child}
 import desugarers/remove_starting_and_ending_empty_lines.{remove_starting_and_ending_empty_lines}
@@ -336,6 +336,10 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #("Image", "ImageLeft"),
       #("ul", "ImageRight"),
       #("ul", "ImageLeft"),
+    ]),
+    add_attribute_to_if_child_of_but_no_overwrites([
+      #("ImageRight", "MathBlock", "compensate_offset_x_for_large_text_columns", "true"),
+      #("ImageLeft", "MathBlock", "compensate_offset_x_for_large_text_columns", "true"),
     ]),
     // ************************
     // VerticalChunk indents

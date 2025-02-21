@@ -75,7 +75,8 @@ const Article = () => {
           <ImageRight
             offset_x="5em"
             offset_y="0em"
-            src="/images/svg_ch1_ch_minus_two_squared_cloud.svg" />
+            src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -802,7 +803,8 @@ const Article = () => {
           <ImageLeft
             offset_x="1em"
             offset_y="-0.5em"
-            src="/images/325.svg" />
+            src="/images/325.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1563,7 +1565,8 @@ const Article = () => {
               $$
               <ImageLeft
                 offset_y="0.8rem"
-                src="/images/17.svg" />
+                src="/images/17.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1593,7 +1596,9 @@ const Article = () => {
               =&\,\, \up&#123;1.4&#125; 2
               \end&#123;align&#125;
               $$
-              <ImageLeft src="/images/18.svg" />
+              <ImageLeft
+                src="/images/18.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1897,7 +1902,8 @@ const Article = () => {
                 squiggle={false}
                 offset_y="-1rem"
                 offset_x="3rem"
-                src="/images/svg_ch1_ex_104.svg" />
+                src="/images/svg_ch1_ex_104.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2437,7 +2443,8 @@ const Article = () => {
               $$
               <ImageRight
                 offset_y="-0.5em"
-                src="/images/svg_ch1_ex_24.svg" />
+                src="/images/svg_ch1_ex_24.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2649,7 +2656,8 @@ const Article = () => {
                 squiggle={false}
                 src="/images/svg_ch1_ex_25.svg"
                 offset_y="1.2rem"
-                offset_x="5rem" />
+                offset_x="5rem"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2664,7 +2672,8 @@ const Article = () => {
                 squiggle={false}
                 src="/images/svg_ch1_ex_26.svg"
                 offset_y="1.2rem"
-                offset_x="11.5rem" />
+                offset_x="11.5rem"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -2705,7 +2714,8 @@ const Article = () => {
               $$
               <ImageRight
                 offset_y="-0.5em"
-                src="/images/svg_ch1_ex_27.svg" />
+                src="/images/svg_ch1_ex_27.svg"
+                compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>

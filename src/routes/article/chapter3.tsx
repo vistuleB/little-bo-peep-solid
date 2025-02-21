@@ -1807,7 +1807,9 @@ const Article = () => {
           $$
           a_7x^7 + a_6x^6 + a_5x^5 + a_4x^4 + a_3x^3 - a_2x^2 + a_1x + a_0
           $$
-          <ImageRight src="/images/svg_ch3_ch_quadratic_linear_constant_cloud.svg" />
+          <ImageRight
+            src="/images/svg_ch3_ch_quadratic_linear_constant_cloud.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1855,7 +1857,8 @@ const Article = () => {
           <ImageRight
             offset_x="-0.1em"
             offset_y="0.2em"
-            src="/images/svg_ch3_ch_a1_x1_cloud.svg" />
+            src="/images/svg_ch3_ch_a1_x1_cloud.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -1876,7 +1879,8 @@ const Article = () => {
           <ImageRight
             offset_y="0.2em"
             offset_x="0em"
-            src="/images/svg_ch3_ch_a0_x0_cloud.svg" />
+            src="/images/svg_ch3_ch_a0_x0_cloud.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>

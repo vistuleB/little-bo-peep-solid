@@ -545,7 +545,8 @@ const Article = () => {
           $$
           <ImageRight
             offset_x="3em"
-            src="/images/svg_bt1_bt_empty_set_cloud.svg" />
+            src="/images/svg_bt1_bt_empty_set_cloud.svg"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
         <VerticalChunk>
