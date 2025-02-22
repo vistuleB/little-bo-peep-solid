@@ -495,10 +495,10 @@ table.first-line tr td:first-child {
   overflow: hidden;
 }
 
-.display-text {
+/* .display-text {
   padding-left: 2em;
   padding-right: 2em;
-}
+} */
 
 .toc_item {
   font-size: 3em;

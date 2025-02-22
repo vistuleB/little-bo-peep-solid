@@ -31,7 +31,7 @@ const Nav = () => {
 };
 
 const Title = () => {
-  const [route, setRoute] = createSignal("/");
+  const [_, setRoute] = createSignal("/");
   let { store } = useGlobalContext();
 
   return (
@@ -45,7 +45,6 @@ const Title = () => {
         >
         <a href="/" onClick={() => setRoute("/")}>
           {store.title}
-          {/* {`${window.innerWidth}`} */}
         </a>
       </div>
     </div>

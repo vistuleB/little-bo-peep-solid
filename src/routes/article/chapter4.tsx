@@ -781,11 +781,11 @@ const Article = () => {
         <TextParent style="margin-top:1em;margin-bottom:1em;">
           <ul style="list-style-type:disc;">
             <li style="margin:0 60px;">
-              years on the{" "}
+              apples on the{" "}
               <Math>
                 $x$
               </Math>
-              {" "}axis, dollars on the
+              {" "}axis, oranges on the
               {" "}
               <Math>
                 $y$
@@ -803,11 +803,11 @@ const Article = () => {
         <TextParent style="margin-top:1em;margin-bottom:1em;">
           <ul style="list-style-type:disc;">
             <li style="margin:0 60px;">
-              years on the{" "}
+              apples on the{" "}
               <Math>
                 $x$
               </Math>
-              {" "}axis, dollars per year
+              {" "}axis, oranges per apple
               on the{" "}
               <Math>
                 $y$
@@ -1071,9 +1071,6 @@ const Article = () => {
           <Pause />
           <CentralDisplayItalic>
             ~ the second derivative of an affine function is zero ~
-            <ImageLeft
-              line={1.0}
-              src="/images/svg_ch4_ch_adding_statements_cloud.svg" />
           </CentralDisplayItalic>
         </Example>
         <StarDivider style="margin-top:1.5em;margin-bottom:0em" />
@@ -1100,7 +1097,7 @@ const Article = () => {
           <del>
             “the rate of change of the rate of change”.
           </del>
-          Sorry: “the rate of change of the slope”. 
+          {" "}Sorry: “the rate of change of the slope”. 
           (Same difference.) Ergo, if the second derivative
           is positive, the slope is increasing; if the
           second derivative is negative, the slope is 
@@ -1935,8 +1932,8 @@ const Article = () => {
               </Math>
               {" "}axis become kilometers,
               kilometers per hour, and kilometers per
-              hours squared (or “kilometers per hour, per
-              hour”), including the first graph. (Each time
+              hours squared, including the first graph. 
+              (Each time
               another derivative is taken, divide the
               units of the{" "}
               <Math>
@@ -1947,9 +1944,7 @@ const Article = () => {
               <Math>
                 $x$
               </Math>
-              {" "}axis.) These are the position, velocity,
-              and acceleration of the car as a function
-              of time:
+              {" "}axis.) Viz:
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch4_slope_one_half_see_saw_with_units.svg" />
@@ -1957,6 +1952,18 @@ const Article = () => {
             <Image src="/images/svg_ch4_slope_one_half_see_saw_with_units_derivative.svg" />
             <Pause />
             <Image src="/images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg" />
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The second and third functions are respectively
+                the velocity and the acceleration of the car as
+                a function of time.
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
@@ -1977,8 +1984,8 @@ const Article = () => {
           <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
-              The equation is true!
-              Syntatically,
+              The equation makes sense and is true.
+              Syntactically,
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2317,8 +2324,8 @@ const Article = () => {
           <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
-              The graphs are already in the right order 
-              (hehe): if{" "}
+              The graphs are already in the right order: 
+              if{" "}
               <NoBreak>
                 “
                 <Math>
@@ -2398,6 +2405,7 @@ const Article = () => {
               (Taking one more derivative would produce a
               zigzag, by the way.)
               <ImageRight
+                offset_x="-0.5em"
                 offset_y="-0.1em"
                 src="/images/svg_ch4_ex_position_by_time_find_the_order_cloud.svg" />
             </VerticalChunk>

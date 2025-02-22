@@ -297,7 +297,7 @@
             |> li
                 style margin:0 60px;
 
-                years on the $x$ axis, dollars on the
+                apples on the $x$ axis, oranges on the
                 $y$ axis
     
     ...then the “after” graph will have units of...
@@ -313,7 +313,7 @@
             |> li
                 style margin:0 60px;
 
-                years on the $x$ axis, dollars per year
+                apples on the $x$ axis, oranges per apple
                 on the $y$ axis
 
     ...and so on.
@@ -425,9 +425,9 @@
 
         __~ the second derivative of an affine function is zero ~__
 
-        |> ImageLeft
-            src images/svg_ch4_ch_adding_statements_cloud.svg
-            line 1
+        !! |> ImageLeft
+        !!     src images/svg_ch4_ch_adding_statements_cloud.svg
+        !!     line 1
 
     |> StarDivider
         style margin-top:1.5em;margin-bottom:0em
@@ -449,7 +449,7 @@
     |> del
 
         “the rate of change of the rate of change”.
-    Sorry: “the rate of change of the slope”. 
+    &ensp;Sorry: “the rate of change of the slope”. 
     (Same difference.) Ergo, if the second derivative
     is positive, the slope is increasing; if the
     second derivative is negative, the slope is 

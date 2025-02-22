@@ -90,13 +90,14 @@
 
         The units on the $y$ axis become kilometers,
         kilometers per hour, and kilometers per
-        hours squared (or “kilometers per hour, per
-        hour”), including the first graph. (Each time
+        hours squared, including the first graph. 
+        (Each time
         another derivative is taken, divide the
         units of the $y$ axis by the units of the 
-        $x$ axis.) These are the position, velocity,
-        and acceleration of the car as a function
-        of time:
+        $x$ axis.) Viz:
+        !! These are the position, velocity,
+        !! and acceleration of the car as a function
+        !! of time:
 
         |> Image
             src images/svg_ch4_slope_one_half_see_saw_with_units.svg
@@ -106,6 +107,12 @@
 
         |> Image
             src images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg
+
+        |> SolutionNote
+
+            The second and third functions are respectively
+            the velocity and the acceleration of the car as
+            a function of time.
 
 |> Exercise
 
@@ -118,8 +125,8 @@
 
     |> Solution
 
-        The equation is true!
-        Syntatically,
+        The equation makes sense and is true.
+        Syntactically,
 
         $$
         (x \ra x + 1) \,+\, (u \ra 2u + 1)
@@ -256,8 +263,8 @@
 
     |> Solution
 
-        The graphs are already in the right order 
-        (hehe): if “$f$” is the original function 
+        The graphs are already in the right order: 
+        if “$f$” is the original function 
         then $f$ is on the left, $f'$ is in the 
         middle, and $f''$ is on the right:
 
@@ -290,6 +297,7 @@
         |> ImageRight
             src images/svg_ch4_ex_position_by_time_find_the_order_cloud.svg
             offset_y -0.1em
+            offset_x -0.5em
 
 
 |> Exercise
