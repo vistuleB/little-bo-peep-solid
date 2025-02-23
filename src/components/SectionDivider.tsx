@@ -1,11 +1,5 @@
-import { ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import Spacer from "./Spacer";
-
-type SolutionProps = ParentProps &
-  SharedProps & {
-    solution_number: number;
-  };
 
 export const SectionDivider = () => {
   return <>
@@ -15,5 +9,5 @@ export const SectionDivider = () => {
 };
 
 export const StarDivider = (props: SharedProps) => {
-  return <div class="star-divider text-center" style={props.style}>*&ensp;&ensp;*&ensp;&ensp;*&ensp;&ensp;*</div>;
+  return <div class="text-center" style={`transform:translate(0, 0.4em);${props.style}`}>*&ensp;&ensp;*&ensp;&ensp;*&ensp;&ensp;*</div>;
 };

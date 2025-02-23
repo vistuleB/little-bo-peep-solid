@@ -360,7 +360,9 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #(#("CentralDisplayItalic", "VerticalChunk"), "Pause", []),
       #(#("CentralDisplay", "VerticalChunk"), "Pause", []),
       #(#("List", "VerticalChunk"), "Pause", []),
+      #(#("StarDivider", "VerticalChunk"), "Pause", []),
     ]),
+    // (I forgot... why would raw text directly follow a MathBlock?)
     add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
     add_before_tags_but_not_first_child_tags([
       #("Exercises", "Pause", []),
@@ -378,12 +380,13 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #("Grid", "Pause", []),
       #("Solution", "Pause", []),
       #("List", "Pause", []),
+      #("StarDivider", "Pause", []),
     ]),
     // ************************
     // attribute cleanup
     // ************************
     change_attribute_value([#("src", "/()")]),
-    remove_attributes(["counter", "handle", "type"]),
+    remove_attributes(["counter", "handle", "type", "t"]),
     // ************************
     // contents
     // ************************

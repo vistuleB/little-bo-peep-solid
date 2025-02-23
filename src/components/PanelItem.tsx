@@ -8,6 +8,7 @@ const setUpParentAndWidth = (
 ):void => {
   parent.style.width = MOBILE_MAX_WIDTH + "px";
   parent.style.position = 'absolute';
+  parent.style.top = '0px';
   parent.style.visibility = 'hidden';
   span.style.font = "Baskerville, serif";
   span.style.fontSize = "1.875rem";

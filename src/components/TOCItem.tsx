@@ -4,10 +4,12 @@ import { useGlobalContext } from "~/store/StoreProvider";
 
 const setUpParentAndWidth = (
   parent: HTMLDivElement,
-  span: HTMLSpanElement
+  span: HTMLSpanElement,
 ):void => {
   parent.style.width = MOBILE_MAX_WIDTH + "px";
+  parent.style.height = "0px;";
   parent.style.position = 'absolute';
+  parent.style.top = '0px';
   parent.style.visibility = 'hidden';
   span.style.font = "Baskerville, serif";
   span.style.fontSize = "1.875rem";
@@ -44,11 +46,12 @@ const TOCItem = (props: {
   createEffect(() => {
     set_our_width(store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth);
     if (props.label === "The Trigonometric Functions") {
+      console.log(getTextWidth(props.label));
       if (getTextWidth(props.label) > our_width() - 60) {
         set_first_half("The Trigonometric");
         set_second_half("Functions");
       } else {
-        set_first_half("The Trigonometric Functions");
+        set_first_half(props.label);
         set_second_half("");
       }
     }

@@ -674,7 +674,9 @@
 
     |> Solution
 
-        The $x$- and $y$-coordinates are respectively
+        The $x$- and $y$-coordinates are 
+        respectively
+
         $$
         x_0 + r\cdot \cos(\phi)
         $$
@@ -684,29 +686,24 @@
         $$
         because 
 
-        |> div
-            class relative
-            |> div
-                class abs_middle_anchor
-                |> img
-                    style position:absolute;left:5em;top:-125px;
-                    src images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg
-            $$
-            r\cdot\cos(\phi)
-            $$
+        $$
+        r\cdot\cos(\phi)
+        $$
 
-        is the difference from the center of the circle to $P$ in $x$ and
+        |> ImageRight
+            src images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg
+            offset_x 5.5em
 
-        |> div
-            class relative
-            |> div
-                class abs_middle_anchor
-                |> img
-                    style position:absolute;right:10em;top:-125px;
-                    src images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg
-            $$
-            r\cdot\sin(\phi)
-            $$
+        is the difference from the center of the 
+        circle to $P$ in $x$ and 
+
+        $$
+        r\cdot\sin(\phi)
+        $$
+
+        |> ImageLeft
+            src images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg
+            offset_x 7.5em
 
         is the difference from the center of the circle to $P$ in $y$,
         as per scaling a unit circle to radius $r$.

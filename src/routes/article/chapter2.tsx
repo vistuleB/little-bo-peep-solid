@@ -246,6 +246,7 @@ const Article = () => {
             $$&#123;1 - 5 \over 4 - (-2)&#125; = &#123;-4 \over 6&#125; = - &#123;2 \over 3&#125;.$$
           </MathBlock>
         </Example>
+        <Pause />
         <StarDivider style="margin-top:1.5em;margin-bottom:0em;" />
       </Section>
       <Pause />
@@ -1575,6 +1576,7 @@ const Article = () => {
                   offset_x="-24%"
                   src="/images/60.svg" />
               </Image>
+              <Pause />
               <StarDivider />
             </SolutionNote>
           </Solution>

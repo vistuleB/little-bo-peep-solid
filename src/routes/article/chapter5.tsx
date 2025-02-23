@@ -3847,8 +3847,8 @@ const Article = () => {
           </b>
           {" "}
           Your calculator has “degree mode” and 
-          “radian mode”. If your calculator tells you 
-          that
+          “radian mode”. If your calculator tells
+          you that
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -5454,7 +5454,8 @@ const Article = () => {
                 </Math>
                 -coordinates
               </NoBreak>
-              {" "}are respectively
+              {" "}are 
+              respectively
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -5476,21 +5477,20 @@ const Article = () => {
             <VerticalChunk>
               because
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div class="relative">
-                <div class="abs_middle_anchor">
-                  <img
-                    src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg"
-                    style="position:absolute;left:5em;top:-125px;" />
-                </div>
-                <Pause />
-                <MathBlock>
-                  $$
-                  r\cdot\cos(\phi)
-                  $$
-                </MathBlock>
-              </div>
-              is the difference from the center of the circle to{" "}
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot\cos(\phi)
+              $$
+              <ImageRight
+                offset_x="5.5em"
+                src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is the difference from the center of the 
+              circle to{" "}
               <Math>
                 $P$
               </Math>
@@ -5500,20 +5500,18 @@ const Article = () => {
               </Math>
               {" "}and
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div class="relative">
-                <div class="abs_middle_anchor">
-                  <img
-                    src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg"
-                    style="position:absolute;right:10em;top:-125px;" />
-                </div>
-                <Pause />
-                <MathBlock>
-                  $$
-                  r\cdot\sin(\phi)
-                  $$
-                </MathBlock>
-              </div>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot\sin(\phi)
+              $$
+              <ImageLeft
+                offset_x="7.5em"
+                src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
               is the difference from the center of the circle to{" "}
               <Math>
                 $P$
@@ -6756,6 +6754,7 @@ const Article = () => {
               </NoBreak>
               {" "}column.
             </VerticalChunk>
+            <Pause />
             <StarDivider />
             <Pause />
             <SolutionNote>
@@ -8811,6 +8810,7 @@ const Article = () => {
               <Pause />
               <Image src="/images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg" />
             </SolutionNote>
+            <Pause />
             <StarDivider />
           </Solution>
         </Exercise>
@@ -9345,6 +9345,7 @@ const Article = () => {
               </VerticalChunk>
               <Pause />
               <Image src="/images/svg_ch5_ex_max_xy_graph.svg" />
+              <Pause />
               <StarDivider />
             </SolutionNote>
             <Pause />

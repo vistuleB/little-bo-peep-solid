@@ -849,7 +849,6 @@
 
 |> Section
 
-
     *Scaling the circle.*
     In the following diagram, the coordinates 
     of the point $P$ are obviously $(\cos(\theta), \sin(\theta))$,
@@ -1659,8 +1658,8 @@
 
     *Note on calculators.*
     Your calculator has “degree mode” and 
-    “radian mode”. If your calculator tells you 
-    that
+    “radian mode”. If your calculator tells
+    you that
 
     $$
     \cos(1.57)
@@ -1672,5 +1671,3 @@
     as $1.57$ as a number of degrees, instead of
     as a number of radians! (Be sure, in any 
     case, that you're in the mode that you want.)
-
-!! https://www.pinterest.com/pin/4574037115989223/

@@ -1073,6 +1073,7 @@ const Article = () => {
             ~ the second derivative of an affine function is zero ~
           </CentralDisplayItalic>
         </Example>
+        <Pause />
         <StarDivider style="margin-top:1.5em;margin-bottom:0em" />
       </Section>
       <Pause />
@@ -1711,7 +1712,7 @@ const Article = () => {
         <Pause />
         <VerticalChunk>
           of functions already appear in Exercise 18
-          of Chapter 3, also. On the other hand, the
+          of Chapter 3, also. (On the other hand, the
           quotient (i.e.{" "}
           <NoBreak>
             <Math>
@@ -1721,16 +1722,19 @@ const Article = () => {
           </NoBreak>
           {" "}and difference (i.e.,
           {" "}
-          <Math>
-            $f - g$
-          </Math>
+          <NoBreak>
+            <Math>
+              $f - g$
+            </Math>
+            )
+          </NoBreak>
           {" "}of functions are defined above for
           the first time, even if the definitions might
           {" "}
           <i>
             seem
           </i>
-          {" "}familiar.
+          {" "}familiar!)
         </VerticalChunk>
       </Section>
       <Pause />
@@ -1787,8 +1791,8 @@ const Article = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}and is undefined at
-              the corners.)
+              {" "}and is 
+              undefined at the corners.)
             </VerticalChunk>
           </Solution>
         </Exercise>
@@ -1932,8 +1936,8 @@ const Article = () => {
               </Math>
               {" "}axis become kilometers,
               kilometers per hour, and kilometers per
-              hours squared, including the first graph. 
-              (Each time
+              hours squared, including the first graph 
+              (each time
               another derivative is taken, divide the
               units of the{" "}
               <Math>
@@ -1944,7 +1948,7 @@ const Article = () => {
               <Math>
                 $x$
               </Math>
-              {" "}axis.) Viz:
+              {" "}axis):
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch4_slope_one_half_see_saw_with_units.svg" />
@@ -1952,6 +1956,8 @@ const Article = () => {
             <Image src="/images/svg_ch4_slope_one_half_see_saw_with_units_derivative.svg" />
             <Pause />
             <Image src="/images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg" />
+            <Pause />
+            <StarDivider />
             <Pause />
             <SolutionNote>
               <VerticalChunk>
@@ -1962,6 +1968,25 @@ const Article = () => {
                 The second and third functions are respectively
                 the velocity and the acceleration of the car as
                 a function of time.
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                In a more physically realistic scenario the corners 
+                are rounded off a bit while the velocity and
+                acceleration remain continuous, albeit with steep
+                slopes and sharp peaks. (Maybe...
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch4_ex_car_position_rounded.svg" />
+              <Pause />
+              <VerticalChunk>
+                ..something like this.)
               </VerticalChunk>
             </SolutionNote>
           </Solution>
@@ -5214,6 +5239,7 @@ const Article = () => {
             <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_uncentered.svg" />
             <Pause />
             <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_centered.svg" />
+            <Pause />
             <StarDivider />
             <Pause />
             <VerticalChunk>
@@ -5564,6 +5590,7 @@ const Article = () => {
             </Image>
             <Pause />
             <Image src="/images/svg_ch4_ex_general_circular_motion_centered.svg" />
+            <Pause />
             <StarDivider />
             <Pause />
             <SolutionNote>

@@ -15,8 +15,8 @@
             src images/svg_ch4_slope_one_half_see_saw_derivative.svg
 
         (The derivative is $1/2$ when the slope is $1/2$,
-        is $-1/2$ when the slope is $-1/2$, and is undefined at
-        the corners.)
+        is $-1/2$ when the slope is $-1/2$, and is 
+        undefined at the corners.)
 
 |> Exercise
 
@@ -71,7 +71,6 @@
         _Note 2._
         “first derivative” is a synonym of “derivative”. 
 
-
 |> Exercise
 
     If we pretend that the graph of Exercise 1
@@ -90,14 +89,11 @@
 
         The units on the $y$ axis become kilometers,
         kilometers per hour, and kilometers per
-        hours squared, including the first graph. 
-        (Each time
+        hours squared, including the first graph 
+        (each time
         another derivative is taken, divide the
         units of the $y$ axis by the units of the 
-        $x$ axis.) Viz:
-        !! These are the position, velocity,
-        !! and acceleration of the car as a function
-        !! of time:
+        $x$ axis):
 
         |> Image
             src images/svg_ch4_slope_one_half_see_saw_with_units.svg
@@ -108,11 +104,27 @@
         |> Image
             src images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg
 
+        |> StarDivider
+
         |> SolutionNote
 
             The second and third functions are respectively
             the velocity and the acceleration of the car as
             a function of time.
+
+        |> SolutionNote
+
+            In a more physically realistic scenario the corners 
+            !! on the position-as-a-function-of-time graph 
+            are rounded off a bit while the velocity and
+            acceleration remain continuous, albeit with steep
+            slopes and sharp peaks. (Maybe...
+
+            |> Image
+                src images/svg_ch4_ex_car_position_rounded.svg
+
+            ..something like this.)
+
 
 |> Exercise
 
