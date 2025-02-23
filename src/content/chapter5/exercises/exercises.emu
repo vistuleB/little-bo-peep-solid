@@ -3040,10 +3040,10 @@
         !! for all $a, b \in \rr$, for an example
         !! that is half-algebraic, half-numerical.
 
-        |> SolutionNote
+        !! |> SolutionNote
         
-            In some sense, the vector “wins” over the 
-            number, in that their conjoint baby is a vector:
+        !!     In some sense, the vector “wins” over the 
+        !!     number, in that their conjoint baby is a vector:
 
-            |> Image
-                src images/svg_ch5_ex_c_times_vector_box.svg
+        !!     |> Image
+        !!         src images/svg_ch5_ex_c_times_vector_box.svg

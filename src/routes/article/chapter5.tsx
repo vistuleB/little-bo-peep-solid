@@ -11382,19 +11382,6 @@ const Article = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                In some sense, the vector “wins” over the 
-                number, in that their conjoint baby is a vector:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_c_times_vector_box.svg" />
-            </SolutionNote>
           </Solution>
         </Exercise>
       </Exercises>
