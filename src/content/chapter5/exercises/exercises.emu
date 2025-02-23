@@ -764,16 +764,13 @@
         $$
         then
 
-        |> div
-            class relative
-            |> div
-                class abs_middle_anchor
-                |> img
-                    style position:absolute;left:5em;top:-97px;
-                    src images/svg_ch5_ex_vector_sum_101_cloud.svg
-            $$
-            \,\vec{u} + \vec{v} = (101, 99)
-            $$
+        $$
+        \,\vec{u} + \vec{v} = (101, 99)
+        $$
+
+        |> ImageRight
+            src images/svg_ch5_ex_vector_sum_101_cloud.svg
+            offset_x 1em
 
         because
 
@@ -791,7 +788,7 @@
 
         |> SolutionNote
 
-            The little arrow “$\vec{{\color \white{x}}}$”
+            The little arrow “$\vec{\phantom{x}}$”
             is a notation used to denote vectors. (Feel free
             to choose your own notation.)
 
@@ -840,7 +837,8 @@
             ...which actually implies that $\vec{u} + \vec{v}$
             is the vector going from the head of $\vec{u}$ to 
             the tail of $\vec{v}$ in the afore-mentioned 
-            concatenation, because of how we defined $\vec{u} + \vec{v}$:
+            concatenation, because of how we defined 
+            $\vec{u} + \vec{v}$:
 
             |> Image
                 src images/svg_ch5_ex_vector_sum_u_plus_v.svg

@@ -5655,20 +5655,18 @@ const Article = () => {
             <VerticalChunk>
               then
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div class="relative">
-                <div class="abs_middle_anchor">
-                  <img
-                    src="/images/svg_ch5_ex_vector_sum_101_cloud.svg"
-                    style="position:absolute;left:5em;top:-97px;" />
-                </div>
-                <Pause />
-                <MathBlock>
-                  $$
-                  \,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
-                  $$
-                </MathBlock>
-              </div>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
+              $$
+              <ImageRight
+                offset_x="1em"
+                src="/images/svg_ch5_ex_vector_sum_101_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
               because
             </VerticalChunk>
             <Pause />
@@ -5702,7 +5700,7 @@ const Article = () => {
                 <NoBreak>
                   “
                   <Math>
-                    $\vec&#123;&#123;\color \white&#123;x&#125;&#125;&#125;$
+                    $\vec&#123;\phantom&#123;x&#125;&#125;$
                   </Math>
                   ”
                 </NoBreak>
