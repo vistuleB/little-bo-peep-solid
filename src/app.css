@@ -36,12 +36,12 @@
 
 .scaled-up-bg {
   border-radius: 3px;
-  background-color: rgb(226 232 240);
+  /* background-color: rgb(226 232 240); */
 }
 
 .scaled-down-bg {
   border-radius: 4px;
-  background-color: rgb(226 232 240);
+  /* background-color: rgb(226 232 240); */
   /* background-color: rgb(220, 216, 203); */
   /* background-color: rgb(175, 171, 160); */
 }

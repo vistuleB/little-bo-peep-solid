@@ -5869,7 +5869,8 @@ const Article = () => {
                   $\vec&#123;v&#125;$
                 </Math>
                 {" "}in the afore-mentioned 
-                concatenation, because of how we defined{" "}
+                concatenation, because of how we defined 
+                {" "}
                 <NoBreak>
                   <Math>
                     $\vec&#123;u&#125; + \vec&#123;v&#125;$
