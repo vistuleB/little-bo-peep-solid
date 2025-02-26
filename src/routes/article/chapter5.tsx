@@ -3885,7 +3885,7 @@ const Article = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"]}>
+      <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
             <b>
@@ -11190,13 +11190,13 @@ const Article = () => {
             <VerticalChunk indent={true}>
               Algebraically, this would indicate that
             </VerticalChunk>
-            <center>
-              <MathBlock>
-                $$
-                \cos^2 = (u \ra &#123;1\over 2&#125; + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + &#123;\eta\over 2&#125;)
-                $$
-              </MathBlock>
-            </center>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos^2 = (u \ra &#123;1\over 2&#125; + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + &#123;\eta\over 2&#125;)
+              $$
+            </MathBlock>
+            <Pause />
             <VerticalChunk>
               ...or...
             </VerticalChunk>

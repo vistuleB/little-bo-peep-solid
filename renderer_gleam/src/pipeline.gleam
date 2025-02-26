@@ -309,7 +309,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
     unwrap_tags_if_single_child(["NoBreak"]),
     counters_substitute_and_assign_handles(),
     handles_substitute(),
-    add_exercise_labels(),
     add_counter_attributes([#("Solution", "Exercises", "solution_number", 1)]),
     add_counter_attributes([#("Exercise", "Exercises", "exercise_number", 1)]),
     concatenate_text_nodes(),

@@ -1,5 +1,7 @@
+import { MOBILE_MAX_WIDTH } from "~/constants";
 import { createContext, ParentComponent, useContext } from "solid-js";
 import { SetStoreFunction, createStore } from "solid-js/store";
+import { useGlobalContext } from "./StoreProvider";
 
 type ExercisesState = {
   selected: boolean;
@@ -11,11 +13,11 @@ type Store = {
   selected_exo: number;
   solutions_open: boolean[];
   transition_duration: number[];
-  exercises: ExercisesState[]
-}
+  exercises: ExercisesState;
+  num_exercises: number;
+  list_view: boolean;
+};
 
-
-// helpers 
 const getExerciseByIndex = (store: Store, index: number) => {
   return store.exercises.find((exercise, i) => i === index);
 };
@@ -29,7 +31,8 @@ const updateSelectedExercises = (
   set_store: SetStoreFunction<Store>,
   index: number
 ) => {
-  set_store((prev) => ({
+  set_store(
+    (prev) => ({
     ...prev,
     exercises: prev.exercises.map((exercise, i) => ({
       ...exercise,
@@ -61,14 +64,14 @@ const updateExerciseByIndex = (
   }));
 };
 
-
-
 // Store Provider
 const [exercises_store, set_exercises_store] = createStore<Store>({
   selected_exo: 0,
   solutions_open: [],
   transition_duration: [],
-  exercises: []
+  exercises: [],
+  num_exercises: 0,
+  list_view: window.innerWidth > MOBILE_MAX_WIDTH,
 });
 
 const StoreContext = createContext<{

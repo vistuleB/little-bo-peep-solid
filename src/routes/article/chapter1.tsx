@@ -1397,7 +1397,7 @@ const Article = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Exercises labels={["0", "1"]}>
+      <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
             <b>

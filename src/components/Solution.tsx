@@ -23,7 +23,6 @@ const Solution = (props: SolutionProps) => {
   let { store: global_store, set_store: set_global_store } = useGlobalContext();
   const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
 
-
   const solution_open = () => store.solutions_open[props.solution_number - 1];
   let transition_duration = () => store.transition_duration;
 
@@ -154,15 +153,16 @@ const Solution = (props: SolutionProps) => {
               !(solution_open() && solution_fully_opened()) && "opacity-0",
               bot_div() && "delay-[2s]"
             )}
-          >
-            <BackupArrow />
+          > {
+            (!store.list_view || props.solution_number === store.num_exercises) ? <BackupArrow /> : <></>
+          }
           </div>
         </div>
       </div>
       <div
         class="slice transition-all col-start-2"
         style={{
-          height: `${(!solution_open() || bot_div()) ? GREEN_DIV_HEIGHT : 0}px`,
+          height: `${(!store.list_view || props.solution_number === store.num_exercises) && (!solution_open() || bot_div()) ? GREEN_DIV_HEIGHT : 0}px`,
           "background-color": global_store.show_areas ? "#00440050" : "",
           "transition-duration": `${
             transition_duration()[props.solution_number - 1]
