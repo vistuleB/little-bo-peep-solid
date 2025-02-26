@@ -32,6 +32,10 @@ const Solution = (props: SolutionProps) => {
   let [handle, set_handle] = createSignal<ReturnType<typeof setTimeout> | null>(
     null
   );
+  let [memoed_list_view, set_memoed_list_view] = createSignal(store.list_view);
+  let [green_div_transition, set_green_div_transition] = createSignal(0);
+
+  
 
   const handleResize = () => {
     set_content_height(ref?.clientHeight || 0);
@@ -85,6 +89,18 @@ const Solution = (props: SolutionProps) => {
       );
     }
   });
+
+  //green div transition on list view change
+  createEffect(()=> {
+    if (store.list_view === memoed_list_view()) {
+      set_green_div_transition(transition_duration()[props.solution_number - 1])
+    } else {
+      set_green_div_transition(0)
+      setTimeout(()=>{
+        set_memoed_list_view(store.list_view )
+      }, 10)
+    }
+  })
 
   return (
     <>
@@ -165,7 +181,7 @@ const Solution = (props: SolutionProps) => {
           height: `${(!store.list_view || props.solution_number === store.num_exercises) && (!solution_open() || bot_div()) ? GREEN_DIV_HEIGHT : 0}px`,
           "background-color": global_store.show_areas ? "#00440050" : "",
           "transition-duration": `${
-            transition_duration()[props.solution_number - 1]
+            green_div_transition()
           }ms`,
         }}></div>
     </>
