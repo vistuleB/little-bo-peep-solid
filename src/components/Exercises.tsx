@@ -1,43 +1,42 @@
-import {
-  children,
-  createSignal,
-  For,
-  ParentProps,
-} from "solid-js";
+import { children, createSignal, For, ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import Image from "./Image";
 import { JSX } from "solid-js/h/jsx-runtime";
 import { twJoin } from "tailwind-merge";
 import useExercises from "~/hooks/useExercises";
-import { ExercisesStoreProvider, useExercisesContext } from "~/store/ExercisesStoreProvider";
+import {
+  ExercisesStoreProvider,
+  useExercisesContext,
+} from "~/store/ExercisesStoreProvider";
 import TextParent from "~/components/TextParent";
 
 type ExercisesProps = ParentProps & SharedProps;
 
 type ExerciseProps = ParentProps & {
-  exercise_number: number,
+  exercise_number: number;
 };
 
 export const Exercises = (props: ExercisesProps) => {
   return (
-  <ExercisesStoreProvider>
-    <ExercisesConsumer {...props}/>
-  </ExercisesStoreProvider>
-  )
-}
+    <ExercisesStoreProvider>
+      <ExercisesConsumer {...props} />
+    </ExercisesStoreProvider>
+  );
+};
 const ExercisesConsumer = (props: ExercisesProps) => {
   let children_list = children(() => props.children);
   useExercises(children_list.toArray().length);
-  const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
+  const { set_exercises_store: set_store, exercises_store: store } =
+    useExercisesContext();
 
   let selected_exo = () => store.selected_exo;
   let num_exercises = children_list.toArray().length;
-  set_store('num_exercises', num_exercises);
+  set_store("num_exercises", num_exercises);
 
   if (selected_exo() > num_exercises) {
-    set_store('selected_exo', num_exercises);
+    set_store("selected_exo", num_exercises);
   } else if (selected_exo() < 1) {
-    set_store('selected_exo', 1);
+    set_store("selected_exo", 1);
   }
 
   set_store(
@@ -52,7 +51,7 @@ const ExercisesConsumer = (props: ExercisesProps) => {
         src="/images/separator.png"
         height="50px"
         class="mt-[15px] mb-[40px]"
-        ></Image>
+      ></Image>
       <Switcher exercises={children_list.toArray()} />
       <div class="h-[31px]"></div>
       <For each={children_list.toArray()}>
@@ -64,7 +63,8 @@ const ExercisesConsumer = (props: ExercisesProps) => {
                 selected_exo() == index() + 1 || store.list_view
                   ? "opacity-100 h-auto overflow-visible transition-none"
                   : "opacity-0 h-0 overflow-hidden transition-opacity"
-              )}>
+              )}
+            >
               {child}
             </div>
           );
@@ -78,52 +78,10 @@ type SwitcherProps = {
   exercises: JSX.Element[];
 };
 
-const Toggle = () => {
-  const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
-
-  let w = 43;
-  let h = 43;
-  let r1 = 9.5;
-  let dr = 2.8;
-  let r2 = r1 - dr;
-  let c2c = r1 * 15 / 9.5;
-
-  let p1x = (w / 2) + c2c / 2;
-  let p1y = (h / 2) - r2;
-
-  return (
-    <svg
-      width={w}
-      height={h}
-      viewBox="0 0 43 43"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      class={twJoin(
-        "tab cursor-pointer overflow-visible",
-      )}
-      onClick={() => {
-        set_store('list_view', !store.list_view);
-      }}>
-      <path
-        class="overflow-visible"
-        d="M35.49 1H6.65C3.53 1 1 3.53 1 6.65V35.49C1 38.6175 3.53203 41.1495 6.65545 41.1495H35.4941C38.6175 41.1495 41.1495 38.6175 41.1495 35.4941V6.65545C41.1495 3.53203 38.6175 1 35.4941 1Z"
-        fill={store.list_view ? "#EEFFAA" : "#EBEBEB"}
-        stroke="black"
-        stroke-width="1.5"
-        stroke-miterlimit="2"></path>
-      <path
-        d="M8 21L18 26.7735V15.2265L8 21ZM17 22H34V20H17V22Z"
-        fill="black"></path>
-    </svg>
-  )
-}
-
 const Switcher = (props: SwitcherProps) => {
-  const { set_exercises_store: set_store, exercises_store: store } = useExercisesContext();
+  const { set_exercises_store: set_store, exercises_store: store } =
+    useExercisesContext();
   let selected_exo = () => store.selected_exo;
-  
-  let b = "position:absolute;right:140px;margin-left:16px;transition:500ms;transform-origin:18px 50%;"
-  let [style, set_style] = createSignal(b);
 
   // gap between left/right buttons
   let gap = 8.5;
@@ -146,20 +104,20 @@ const Switcher = (props: SwitcherProps) => {
   let r1 = 8.5;
   let dr = 2.8;
   let r2 = r1 - dr;
-  let c2c = r1 * 15 / 9.5;
+  let c2c = (r1 * 15) / 9.5;
   let toggle_transition = 100;
 
   let toggle_cx = () => {
     return store.list_view ? 1 + r1 : 1 + r1 + c2c;
-  }
+  };
 
   const left_on = () => {
     return store.selected_exo > 1 && !store.list_view;
-  }
+  };
 
   const right_on = () => {
     return store.selected_exo < props.exercises.length && !store.list_view;
-  }
+  };
 
   return (
     <TextParent>
@@ -172,9 +130,13 @@ const Switcher = (props: SwitcherProps) => {
           xmlns="http://www.w3.org/2000/svg"
           class={twJoin(
             "tab cursor-pointer overflow-visible",
-            left_on() ? "" : "disabled",
+            left_on() ? "" : "disabled"
           )}
-          onClick={() => { if (left_on()) { set_store("selected_exo", selected_exo() - 1); }}}
+          onClick={() => {
+            if (left_on()) {
+              set_store("selected_exo", selected_exo() - 1);
+            }
+          }}
         >
           <path
             d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
@@ -184,11 +146,11 @@ const Switcher = (props: SwitcherProps) => {
             stroke-miterlimit="2"
           ></path>
           <path
-            d={`M ${1 + triangle_tip_to_edge} ${1 + (w / 2)} l ${triangle_sidelength * Math.sqrt(3) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
+            d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
             fill="black"
           ></path>
           <path
-            d={`M ${1 + w - arrow_start_to_edge} ${1 + (w / 2) - (arrow_body_width / 2)} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}
+            d={`M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}
             fill="black"
           ></path>
         </svg>
@@ -206,9 +168,13 @@ const Switcher = (props: SwitcherProps) => {
             xmlns="http://www.w3.org/2000/svg"
             class={twJoin(
               "tab cursor-pointer overflow-visible",
-              right_on() ? "" : "disabled",
+              right_on() ? "" : "disabled"
             )}
-            onClick={() => { if (right_on()) { set_store("selected_exo", selected_exo() + 1); }}}
+            onClick={() => {
+              if (right_on()) {
+                set_store("selected_exo", selected_exo() + 1);
+              }
+            }}
           >
             <path
               d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
@@ -218,11 +184,11 @@ const Switcher = (props: SwitcherProps) => {
               stroke-miterlimit="2"
             ></path>
             <path
-              d={`M ${1 + w - triangle_tip_to_edge} ${1 + (w / 2)} l ${-triangle_sidelength * Math.sqrt(3) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
+              d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
               fill="black"
             ></path>
             <path
-              d={`M ${1 + arrow_start_to_edge} ${1 + (w / 2) - (arrow_body_width / 2)} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}
+              d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}
               fill="black"
             ></path>
           </svg>
@@ -236,11 +202,13 @@ const Switcher = (props: SwitcherProps) => {
             height={`${2 + w}`}
             viewBox={`0 0 ${c2c + 2 * r1 + 2} ${2 + w}`}
             xmlns="http://www.w3.org/2000/svg"
-            onClick={() => { set_store('list_view', !store.list_view); }}
+            onClick={() => {
+              set_store("list_view", !store.list_view);
+            }}
           >
             <path
               d={`
-                M ${1 + r1 + c2c} ${(w/2) - r1}
+                M ${1 + r1 + c2c} ${w / 2 - r1}
                 a ${r1} ${r1} 0 0 1 ${r1} ${r1}
                 a ${r1} ${r1} 0 0 1 ${-r1} ${r1}
                 h ${-c2c}
@@ -254,7 +222,7 @@ const Switcher = (props: SwitcherProps) => {
             ></path>
             <circle
               cx={`${toggle_cx()}`}
-              cy={`${w/2}`}
+              cy={`${w / 2}`}
               r={`${r2}`}
               fill="#fdfdfd"
               stroke="black"
@@ -268,12 +236,6 @@ const Switcher = (props: SwitcherProps) => {
   );
 };
 
-export const Exercise = (
-  props: ExerciseProps,
-) => {
-  return (
-    <div>
-      {props.children}
-    </div>
-  );
+export const Exercise = (props: ExerciseProps) => {
+  return <div>{props.children}</div>;
 };
