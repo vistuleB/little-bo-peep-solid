@@ -1185,6 +1185,7 @@
     “utility” of the diagram might be!)
 
 |> Section
+    t tt
 
     *The Abercrombie inequality.*
     Take an ordinary angle of aperture less than 
@@ -1199,23 +1200,33 @@
 
     __Abercrombie inequality__
 
-    states that the length of the segment is at
-    least as much as the length of the arc, i.e.,
-    that
+    states that 
+    !! the length of the segment is at
+    !! least as much as the length of the arc, i.e.,
+    !! that
 
     $$
     A\leq S
     $$
 
-    if $A$ is the length of the arc and $S$ is
-    the length of the segment, regardless of the
-    exact configuration of the angle, arc, and
-    segment. (The segment just has to remain outside 
-    the arc.)
+    in the language of the above figure, i.e.,
+    that the length of the segment is 
+    at least
+    !! greater-than-or-equal-to
+    the length of the arc.
+    !! if $A$ is the length of the arc and $S$ is
+    !! the length of the segment, regardless of the
+    !! exact configuration of the angle, arc, and
+    !! segment. (The segment just has to remain outside 
+    !! the arc.)
 
-    Otherwise—if this were not the case—the length
+    !! Otherwise—if this were not the case—the 
+    The proof is that, if this were not the case,
+    the
+    length
     $S$ of the segment would lie to left of the
-    length $A$ of the arc on the number line:
+    length $A$ of the arc on the number line, as
+    pictured in this stylized view of the number line:
 
     |> Image
         src images/svg_ch5_ch_abercrombie_to_the_left.svg
@@ -1271,27 +1282,28 @@
         src images/svg_ch5_ch_abercrombie_to_the_left_second.svg
 
     ...on the number line is an impossibility, 
-    i.e., $S \geq A$, i.e., the Abercrombie 
-    inequality is proved!
+    i.e., $S \geq A$.
+    This constitutes the proof of the Abercrombie
+    inequality.
 
-    NB: We can polish a few details by noting that:
+    One can polish a few more details by noting that:
 
     |> p
         style text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;
 
         *(i)* the segment can be tangent to the 
-        arc at one point, it does not need to 
-        _strictly_ clear the arc (this is easy to
-        check from the proof);
+        arc at one point, the proof will still go
+        through (so the segment does not need to
+        _strictly_ clear the arc);
 
     |> p
         style text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;
 
         *(ii)* as long as the angle is nonzero, 
         and the arc has nonzero radius, the
-        length of the segment will be STRICTLY 
-        GREATER than the length of the arc 
-        (not just greater-or-equal-to)
+        length of the segment will be strictly 
+        greater than the length of the arc,
+        not just greater-or-equal-to
 
     (Point *(ii)* can be seen by 
     comparing the segment to a two-segment 
@@ -1300,6 +1312,7 @@
     of the original inequality.)
 
 |> Section
+    t tt
 
     *The “Fisher sandwich”.*
     The “Fisher sandwich”—we don't make these 
@@ -1309,24 +1322,58 @@
     \sin(\theta) \,<\, \theta \,<\, {\sin(\theta)\over\cos(\theta)}
     $$
 
-    for all $0 < \theta < \eta$. The Fisher 
-    sandwich is so-called because it consists of
-
-    _|TWO|_
-
-    inequalities, the first being
-
+    for all $0 < \theta < \eta$.
+    The Fisher sandwich is so-called because 
+    !! $\theta$ is “sandwiched” 
+    it “sandwiches” $\theta$
+    between
     $$
-    \sin(\theta) \rt{0.1}<\, \theta
+    \sin(\theta)
     $$
-
-    and the second being
-
+    below, and
     $$
-    \,\theta \,<\rt{0.1} {\sin(\theta)\over\cos(\theta)}
+    {\sin(\theta)\over\cos(\theta)}
     $$
+    !! (futurely known as “$\tan(\theta)$”) 
+    above. (Indeed,
+    $$
+    {\sin(\theta)\over\cos(\theta)} > \sin(\theta)
+    $$
+    in the range $0 < \theta < \eta$
+    because dividing by
+    $$
+    \cos(\theta)
+    $$
+    makes you
+    _|BIGGER|_
+    when $0 < \cos(\theta) < 1$, which is the case
+    for $0 < \theta < \eta$—in fact, dividing by
+    $\cos(\theta)$ will make you
+    _|DRAMATICALLY BIGGER|_
+    when $\cos(\theta)$ is close to $0$, which is the 
+    case when $\theta$ is close to $\eta$.)
+    
+    !! The Fisher sandwich 
+    !! consists of two separate 
+    !! inequalities that require two separate proofs.
+    !! The Fisher 
+    !! sandwich is so-called because it consists of
 
-    ...with each inequality requiring a separate proof.
+    !! _|TWO|_
+
+    !! inequalities, the first being
+
+    !! $$
+    !! \sin(\theta) \rt{0.1}<\, \theta
+    !! $$
+
+    !! and the second being
+
+    !! $$
+    !! \,\theta \,<\rt{0.1} {\sin(\theta)\over\cos(\theta)}
+    !! $$
+
+    !! ...with each inequality requiring a separate proof.
 
     The first inequality
 
@@ -1339,7 +1386,7 @@
     |> Image
         src images/svg_ch5_ch_fisher_first_ineq.svg
 
-    Namely, per one slightly pedantic logic,
+    Namely, per the one slightly pedantic logic,
 
     $$
     \theta > L
@@ -1352,7 +1399,7 @@
     L > \sin(\theta)
     $$
 
-    on the other hand. This implies 
+    on the other hand. Together, this implies 
     $\theta \rt{0.1}>\rt{0.1} \sin(\theta)$.
 
     For the second inequality, we have to start

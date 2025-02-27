@@ -1209,7 +1209,6 @@
         $$
 
         |> Solution
-            type qq
 
             Firstly we can rewrite $v$, $F$, $\mu$, $\rho$
             in the canonical form $M^xL^yT^z$

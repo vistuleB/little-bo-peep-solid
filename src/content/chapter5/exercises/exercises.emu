@@ -2954,11 +2954,9 @@
 
         Algebraically, this would indicate that
 
-        |> center
-
-            $$
-            \cos^2 = (u \ra {1\over 2} + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + {\eta\over 2})
-            $$
+        $$
+        \cos^2 = (u \ra {1\over 2} + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + {\eta\over 2})
+        $$
 
         ...or...
 
@@ -2994,7 +2992,7 @@
                 \cos^2(x) = {1\over 2} + \cos(x + \eta/2)\sin(x + \eta/2)
                 $$
 
-        ...for all $x\in \rr$—_if_this conjecture
+        ...for all $x\in \rr$—_if_ this conjecture
         about translation turns out to be true!!!
 
 |> Exercise

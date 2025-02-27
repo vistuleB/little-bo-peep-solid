@@ -2927,9 +2927,7 @@ const Article = () => {
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          states that the length of the segment is at
-          least as much as the length of the arc, i.e.,
-          that
+          states that
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -2939,22 +2937,15 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          if{" "}
-          <Math>
-            $A$
-          </Math>
-          {" "}is the length of the arc and{" "}
-          <Math>
-            $S$
-          </Math>
-          {" "}is
-          the length of the segment, regardless of the
-          exact configuration of the angle, arc, and
-          segment. (The segment just has to remain outside 
-          the arc.)
+          in the language of the above figure, i.e.,
+          that the length of the segment is 
+          at least
+          the length of the arc.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          Otherwise—if this were not the case—the length
+          The proof is that, if this were not the case,
+          the
+          length
           {" "}
           <Math>
             $S$
@@ -2964,7 +2955,8 @@ const Article = () => {
           <Math>
             $A$
           </Math>
-          {" "}of the arc on the number line:
+          {" "}of the arc on the number line, as
+          pictured in this stylized view of the number line:
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_abercrombie_to_the_left.svg" />
@@ -3123,13 +3115,14 @@ const Article = () => {
             <Math>
               $S \geq A$
             </Math>
-            ,
+            .
           </NoBreak>
-          {" "}i.e., the Abercrombie 
-          inequality is proved!
+          {" "}
+          This constitutes the proof of the Abercrombie
+          inequality.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          NB: We can polish a few details by noting that:
+          One can polish a few more details by noting that:
         </VerticalChunk>
         <VerticalChunk indent={true}>
           <p style="text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;">
@@ -3138,13 +3131,13 @@ const Article = () => {
               (i)
             </b>
             {" "}the segment can be tangent to the 
-            arc at one point, it does not need to 
+            arc at one point, the proof will still go
+            through (so the segment does not need to
             {" "}
             <i>
               strictly
             </i>
-            {" "}clear the arc (this is easy to
-            check from the proof);
+            {" "}clear the arc);
           </p>
           <p style="text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;">
             {" "}{" "}
@@ -3153,9 +3146,9 @@ const Article = () => {
             </b>
             {" "}as long as the angle is nonzero, 
             and the arc has nonzero radius, the
-            length of the segment will be STRICTLY 
-            GREATER than the length of the arc 
-            (not just greater-or-equal-to)
+            length of the segment will be strictly 
+            greater than the length of the arc,
+            not just greater-or-equal-to
           </p>
           (Point{" "}
           <b>
@@ -3193,36 +3186,117 @@ const Article = () => {
             </Math>
             .
           </NoBreak>
-          {" "}The Fisher 
-          sandwich is so-called because it consists of
+          {" "}
+          The Fisher sandwich is so-called because 
+          it “sandwiches”{" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "}
+          between
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          below, and
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\sin(\theta)\over\cos(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          above. (Indeed,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\sin(\theta)\over\cos(\theta)&#125; &gt; \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          in the range{" "}
+          <Math>
+            $0 &lt; \theta &lt; \eta$
+          </Math>
+          {" "}
+          because dividing by
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          makes you
         </VerticalChunk>
         <Pause />
         <CentralDisplay>
-          TWO
+          BIGGER
         </CentralDisplay>
         <Pause />
         <VerticalChunk>
-          inequalities, the first being
+          when{" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \cos(\theta) &lt; 1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}which is the case
+          for{" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            —in
+          </NoBreak>
+          {" "}fact, dividing by
+          {" "}
+          <Math>
+            $\cos(\theta)$
+          </Math>
+          {" "}will make you
         </VerticalChunk>
         <Pause />
-        <MathBlock>
-          $$
-          \sin(\theta) \rt&#123;0.1&#125;&lt;\, \theta
-          $$
-        </MathBlock>
+        <CentralDisplay>
+          DRAMATICALLY BIGGER
+        </CentralDisplay>
         <Pause />
         <VerticalChunk>
-          and the second being
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \,\theta \,&lt;\rt&#123;0.1&#125; &#123;\sin(\theta)\over\cos(\theta)&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          ...with each inequality requiring a separate proof.
+          when{" "}
+          <Math>
+            $\cos(\theta)$
+          </Math>
+          {" "}is close to{" "}
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}which is the 
+          case when{" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "}is close to{" "}
+          <NoBreak>
+            <Math>
+              $\eta$
+            </Math>
+            .)
+          </NoBreak>
         </VerticalChunk>
         <VerticalChunk indent={true}>
           The first inequality
@@ -3247,7 +3321,7 @@ const Article = () => {
         <Image src="/images/svg_ch5_ch_fisher_first_ineq.svg" />
         <Pause />
         <VerticalChunk>
-          Namely, per one slightly pedantic logic,
+          Namely, per the one slightly pedantic logic,
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -3272,7 +3346,7 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          on the other hand. This implies 
+          on the other hand. Together, this implies 
           {" "}
           <NoBreak>
             <Math>
@@ -11190,13 +11264,13 @@ const Article = () => {
             <VerticalChunk indent={true}>
               Algebraically, this would indicate that
             </VerticalChunk>
-            <center>
-              <MathBlock>
-                $$
-                \cos^2 = (u \ra &#123;1\over 2&#125; + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + &#123;\eta\over 2&#125;)
-                $$
-              </MathBlock>
-            </center>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos^2 = (u \ra &#123;1\over 2&#125; + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + &#123;\eta\over 2&#125;)
+              $$
+            </MathBlock>
+            <Pause />
             <VerticalChunk>
               ...or...
             </VerticalChunk>
@@ -11273,7 +11347,7 @@ const Article = () => {
               <i>
                 if
               </i>
-              this conjecture
+              {" "}this conjecture
               about translation turns out to be true!!!
             </VerticalChunk>
           </Solution>
