@@ -1399,7 +1399,7 @@ const Article = () => {
             $x$
           </Math>
           {" "}units on the unit circle
-          subtends an angle—or technically:
+          subtends an angle—or technically:{" "}
           <i>
             rotation
           </i>
@@ -1409,7 +1409,7 @@ const Article = () => {
           <i>
             signed angle
           </i>
-          instead of
+          {" "}instead of
           {" "}
           <i>
             rotation
