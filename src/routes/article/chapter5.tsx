@@ -142,7 +142,7 @@ const Article = () => {
           {" "}For example, if we look at{" "}
           <NoBreak>
             <Math>
-              $x = 0.5$
+              $x = &#123;1\over 2&#125;$
             </Math>
             ,
           </NoBreak>
@@ -167,8 +167,8 @@ const Article = () => {
         <Image src="/images/svg_ch5_ch_cosine_and_sine_@0.5.svg" />
         <Pause />
         <VerticalChunk>
-          The reason for these values, per the
-          definitions, is that the point half a unit
+          Per the definitions,
+          the point half a unit
           counterclockwise from{" "}
           <Math>
             $(1, 0)$
@@ -210,7 +210,7 @@ const Article = () => {
         <Image src="/images/svg_ch5_ch_unit_circle_@0.5_smaller.svg" />
         <Pause />
         <VerticalChunk>
-          As another example, the graphs indicate that 
+          As a second example, the graphs indicate that 
           {" "}
           <NoBreak>
             <Math>
@@ -236,7 +236,7 @@ const Article = () => {
         <Image src="/images/svg_ch5_ch_cosine_and_sine_@-3.svg" />
         <Pause />
         <VerticalChunk>
-          Again, going{" "}
+          Indeed, going{" "}
           <Math>
             $-3$
           </Math>
@@ -295,7 +295,8 @@ const Article = () => {
         <Image src="/images/svg_ch5_ch_unit_circle_@-3_smaller.svg" />
         <Pause />
         <VerticalChunk>
-          For a last example, note that there appears
+          For a last example, 
+          note that there appears
           to be a value of{" "}
           <Math>
             $x$
@@ -394,9 +395,6 @@ const Article = () => {
             </Math>
             .)
           </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          (Etc.)
         </VerticalChunk>
         <VerticalChunk indent={true}>
           In another possible definition,
@@ -3146,8 +3144,8 @@ const Article = () => {
             </b>
             {" "}as long as the angle is nonzero, 
             and the arc has nonzero radius, the
-            length of the segment will be strictly 
-            greater than the length of the arc,
+            length of the segment will be STRICTLY
+            GREATER than the length of the arc,
             not just greater-or-equal-to
           </p>
           (Point{" "}
@@ -3906,7 +3904,7 @@ const Article = () => {
           <span style="white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             FAUX BORDEAUX
           </span>
-          triangle below:
+          {" "}triangle below:
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_secant_reinterpretation_4.svg" />

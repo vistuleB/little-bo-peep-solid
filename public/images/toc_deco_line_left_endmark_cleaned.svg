@@ -1,0 +1,9 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="10"
+  height="20"
+  viewBox="0 0 10 20"
+  preserveAspectRatio="none">
+  <rect width="7" height="1" x="3" y="14.072" />
+  <rect transform="matrix(0.707 0.707 -0.707 0.707 0 0)" width="3.733" height="3.733" x="10.304" y="6.571" />
+</svg>

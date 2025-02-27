@@ -36,12 +36,12 @@
 
 .scaled-up-bg {
   border-radius: 3px;
-  /* background-color: rgb(226 232 240); */
+  background-color: rgb(226 232 240);
 }
 
 .scaled-down-bg {
   border-radius: 4px;
-  /* background-color: rgb(226 232 240); */
+  background-color: rgb(226 232 240);
   /* background-color: rgb(220, 216, 203); */
   /* background-color: rgb(175, 171, 160); */
 }
@@ -426,11 +426,22 @@ table.first-line tr td:first-child {
   position: relative;
 }
 
+
 .body_line {
   flex-grow: 1;
   height: 1em;
   background: left / 100% 1px;
-  background-image: url('/images/toc_deco_line_body.svg');
+  /*
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="10"
+      height="20"
+      viewBox="0 0 10 20"
+      preserveAspectRatio="none">
+      <rect width="10" height="1" x="0" y="14.072"/>
+    </svg>
+  */
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20" preserveAspectRatio="none"><rect width="10" height="1" x="0" y="14.072"/></svg>');
   background-size: 100% 100%;
   margin: 0 0;
   position: relative;

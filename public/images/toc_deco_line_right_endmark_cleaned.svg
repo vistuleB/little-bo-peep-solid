@@ -1,0 +1,9 @@
+<svg id='svg1'
+     xmlns='http://www.w3.org/2000/svg'
+     width='10'
+     height='20'
+     viewBox='0 0 10 20'
+     preserveAspectRatio='none'>
+    <rect style='fill-opacity:0.980159' width='6.7660766' height='1' x='8.3266727e-17' y='14.072034'/>
+    <rect style='fill-opacity:0.980159' transform='matrix(0.707 0.707 -0.707 0.707 0 0)' width='3.7327087' height='3.7327087' x='13.642344' y='3.2329154'/>
+</svg>

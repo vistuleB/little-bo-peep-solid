@@ -32,15 +32,17 @@
 
     is a circle of radius $1$, while “the” unit
     circle is the circle of radius $1$ centered
-    at $(0, 0)$.) For example, if we look at $x = 0.5$,
+    at $(0, 0)$.) For example, if we look at $x = {1\over 2}$,
     we see $\cos({1\over 2}) \approx 0.9$,
     $\sin({1\over 2}) \approx 0.5$:
 
     |> Image
         src images/svg_ch5_ch_cosine_and_sine_@0.5.svg
 
-    The reason for these values, per the
-    definitions, is that the point half a unit
+    !! The reason for these values, per the definitions, 
+    !! is that 
+    Per the definitions,
+    the point half a unit
     counterclockwise from $(1, 0)$ on the unit
     circle has coordinates $\approx 0.9$ in $x$
     and $\approx 0.5$ in $y$ (or actually $0.87758...$
@@ -50,14 +52,14 @@
     |> Image
         src images/svg_ch5_ch_unit_circle_@0.5_smaller.svg
 
-    As another example, the graphs indicate that 
+    As a second example, the graphs indicate that 
     $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$
     (or something very close to $-1$, in any case):
 
     |> Image
         src images/svg_ch5_ch_cosine_and_sine_@-3.svg
 
-    Again, going $-3$ units counterclockwise—which
+    Indeed, going $-3$ units counterclockwise—which
     means, going $3$ units clockwise—on the unit
     circle, starting from $(1, 0)$, brings us to a point
     with $y$- and $x$-coordinates of $\approx -0.2$ 
@@ -67,7 +69,8 @@
     |> Image
         src images/svg_ch5_ch_unit_circle_@-3_smaller.svg
 
-    For a last example, note that there appears
+    For a last example, 
+    note that there appears
     to be a value of $x$ near $-1.6$, where $\cos(x) = 0$,
     $\sin(x) = -1$:
 
@@ -92,7 +95,7 @@
     that value would be namely $x = -1.57...$, not
     $x = -1.6$.)
 
-    (Etc.)
+    !! (Etc.)
 
     In another possible definition,
 
@@ -1301,8 +1304,8 @@
 
         *(ii)* as long as the angle is nonzero, 
         and the arc has nonzero radius, the
-        length of the segment will be strictly 
-        greater than the length of the arc,
+        length of the segment will be STRICTLY
+        GREATER than the length of the arc,
         not just greater-or-equal-to
 
     (Point *(ii)* can be seen by 
@@ -1694,7 +1697,7 @@
         style white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
 
         FAUX BORDEAUX
-    triangle below:
+    &ensp;triangle below:
 
     |> Image
         src images/svg_ch5_ch_secant_reinterpretation_4.svg
