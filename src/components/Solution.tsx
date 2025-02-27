@@ -32,9 +32,9 @@ const Solution = (props: SolutionProps) => {
   let [handle, set_handle] = createSignal<ReturnType<typeof setTimeout> | null>(
     null
   );
-  let [memoed_list_view, set_memoed_list_view] = createSignal(store.list_view);
-  let [green_div_transition, set_green_div_transition] = createSignal(0);
-
+  const [green_div_transition, set_green_div_transition] = createSignal(0);
+  const [exercises_height_sum, set_exercises_height_sum] = createSignal(0);
+  const [green_div_height, set_green_div_height] = createSignal(0);
   
 
   const handleResize = () => {
@@ -90,18 +90,38 @@ const Solution = (props: SolutionProps) => {
     }
   });
 
-  //green div transition on list view change
+
   createEffect(()=> {
-    if (store.list_view === memoed_list_view()) {
-      set_green_div_transition(transition_duration()[props.solution_number - 1])
+    //green div height 
+    if (!store.list_view) {
+      //green div should be max of GREEN_DIV_HEIGHT and total of exercises height
+      set_green_div_height(Math.max(GREEN_DIV_HEIGHT, exercises_height_sum()))
     } else {
-      set_green_div_transition(0)
-      setTimeout(()=>{
-        set_memoed_list_view(store.list_view )
-      }, 10)
+      let exercises = document.getElementsByClassName("exercise")
+      let sum = 0
+      for (let i = 0; i < exercises.length; i++) {
+        if ((i + 1) !== props.solution_number) // do not add current exo height
+          sum += exercises.item(i)?.clientHeight || 0
+      }
+      if (!store.solutions_open[store.solutions_open.length - 1] && props.solution_number == store.solutions_open.length) {
+        sum += GREEN_DIV_HEIGHT // if last exo is closed and it is the current exo we add green div height
+      }
+      set_exercises_height_sum(sum)
+      set_green_div_height(GREEN_DIV_HEIGHT)
     }
   })
 
+
+  createEffect(()=> {
+    // green div transition
+    if (solution_fully_opened() || !solution_open()) {
+      set_green_div_transition(transition_duration()[props.solution_number - 1])
+      setTimeout(()=> {
+        set_green_div_transition(0)
+      }, transition_duration()[props.solution_number - 1])
+    }
+  })
+  
   return (
     <>
       <div
@@ -178,7 +198,7 @@ const Solution = (props: SolutionProps) => {
       <div
         class="slice transition-all col-start-2"
         style={{
-          height: `${(!store.list_view || props.solution_number === store.num_exercises) && (!solution_open() || bot_div()) ? GREEN_DIV_HEIGHT : 0}px`,
+          height: `${(!store.list_view || props.solution_number === store.num_exercises) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
           "background-color": global_store.show_areas ? "#00440050" : "",
           "transition-duration": `${
             green_div_transition()

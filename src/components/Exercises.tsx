@@ -1,4 +1,4 @@
-import { children, createSignal, For, ParentProps } from "solid-js";
+import { children, For, ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import Image from "./Image";
 import { JSX } from "solid-js/h/jsx-runtime";
@@ -59,7 +59,7 @@ const ExercisesConsumer = (props: ExercisesProps) => {
           return (
             <div
               class={twJoin(
-                "duration-500 ",
+                "exercise duration-500 ",
                 selected_exo() == index() + 1 || store.list_view
                   ? "opacity-100 h-auto overflow-visible transition-none"
                   : "opacity-0 h-0 overflow-hidden transition-opacity"
