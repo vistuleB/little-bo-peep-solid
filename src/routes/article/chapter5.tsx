@@ -10625,9 +10625,8 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...but where the dummy variables used inside of each
-              lambda-notation do not matter, so we might as well have
-              written...
+              ...but where the dummy variables don't matter,
+              so we might as well write...
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -10683,7 +10682,7 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...! (It really doesn't matter.)
+              ...etc. (All are correct.)
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
@@ -10727,12 +10726,12 @@ const Article = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}because we were{" "}
+              {" "}as the dummy variable 
+              because we were{" "}
               <i>
                 told
               </i>
-              {" "}to use
-              {" "}
+              {" "}to use{" "}
               <NoBreak>
                 <Math>
                   $x$
@@ -10762,39 +10761,38 @@ const Article = () => {
           <Pause />
           <Solution solution_number={26}>
             <VerticalChunk>
-              The graphs of the four functions, that are
-              namely...
+              For reference, the four functions are:
             </VerticalChunk>
             <Pause />
             <MathBlock>
               $$
-              x \ra f(x + A)
+              \te&#123;1.&#125;\,\, x \ra f(x + A)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              x \ra f(Bx)
+              \te&#123;2.&#125;\,\, x \ra f(Bx)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              x \ra f(x) + A
+              \te&#123;3.&#125;\,\, x \ra f(x) + A
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              x \ra Bf(x)
+              \te&#123;4.&#125;\,\, x \ra Bf(x)
               $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...are, respectively, obtained by:
+              For which the graphs are respectively obtained by:
             </VerticalChunk>
             <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;">
+              <ul style="list-style-type:decimal;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;">
                 <li>
                   horizontally translating the graph of{" "}
                   <Math>
@@ -11159,13 +11157,14 @@ const Article = () => {
               &
             </i>
             {" "}horizontal.)
-            What algebraic identity would this imply?
+            What algebraic identity would this imply? How to
+            prove this identity?
           </VerticalChunk>
           <Pause />
           <Solution solution_number={28}>
             <VerticalChunk>
               We know from Exercise 21 that the 
-              highest point on the bump immediately to the 
+              bump immediately to the 
               right of{" "}
               <Math>
                 $(0, 0)$
@@ -11187,142 +11186,39 @@ const Article = () => {
             <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg" />
             <Pause />
             <VerticalChunk>
-              A horizontal translation of
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              -&#123;\eta\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              units and a vertical translation of
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              units bring this point onto
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              (0, 1)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              that is a local maximum of{" "}
+              It might therefore be
+              that a translation
+              of{" "}
+              <Math>
+                $-\eta/2$
+              </Math>
+              {" "}
+              units horizontally and
+              {" "}
+              <Math>
+                $
+                &#123;1\over 2&#125;
+                $
+              </Math>
+              {" "}
+              units vertically maps the graph{" "}
+              <Math>
+                $y = \sin(x)\cos(x)$
+              </Math>
+              {" "}onto
+              the graph{" "}
               <NoBreak>
                 <Math>
                   $y = \cos^2(x)$
                 </Math>
-                ;
+                :
               </NoBreak>
-              {" "}zoomed in:
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg" />
             <Pause />
             <VerticalChunk>
-              We can therefore conjecture that the
-              afore-mentioned amounts of translation
-              will map{" "}
-              <Math>
-                $y = \cos(x)\sin(x)$
-              </Math>
-              {" "}onto{" "}
-              <NoBreak>
-                <Math>
-                  $y = \cos^2(x)$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              (And any integer multiple of{" "}
-              <Math>
-                $2\eta$
-              </Math>
-              {" "}could
-              be added to the horizontal translation
-              since both curves are periodic modulo 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $2\eta$
-                </Math>
-                .)
-              </NoBreak>
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              Algebraically, this would indicate that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos^2 = (u \ra &#123;1\over 2&#125; + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + &#123;\eta\over 2&#125;)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...or...
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_three_boxes.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...in a box diagram, where
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              w \ra w + &#123;\eta\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              u \ra u + &#123;1\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              respectively effect a translation to
-              the left by{" "}
-              <Math>
-                $\eta/2$
-              </Math>
-              {" "}and upward by{" "}
-              <NoBreak>
-                <Math>
-                  $1/2$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              (Cf. Exercise 28.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              Or, placing an input{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}into each side
-              of the above equation, this would indicate
-              that...
+              If true, this would indicate that
             </VerticalChunk>
             <center style="margin-top:1em;margin-bottom:1em;">
               <div style="border:1px solid red;padding:1em 1em;width:fit-content;">
@@ -11334,20 +11230,335 @@ const Article = () => {
               </div>
             </center>
             <VerticalChunk>
-              ...for all{" "}
+              since replacing
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}by{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x + \eta/2$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}in{" "}
+              <Math>
+                $\sin(x)\cos(x)$
+              </Math>
+              {" "}effects
+              horizontal translation of the graph by{" "}
               <NoBreak>
                 <Math>
-                  $x\in \rr$
+                  $-\eta/2$
                 </Math>
-                —
+                ,
+              </NoBreak>
+              {" "}while adding
+              {" "}
+              <Math>
+                $
+                &#123;1\over 2&#125;
+                $
+              </Math>
+              {" "}
+              to the result effects a vertical translation by{" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              To prove formula we use the angle-sum formulas;
+              specifically...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(A + B) = \cos(A)\sin(B) + \sin(A)\cos(B)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...(in case you had forgotten those); since
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\cos(\eta/2) = \sin(\eta/2) = \sqrt&#123;0.5&#125;,
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              we find:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+              \cos(x + \eta/2) &= \cos(x)\cos(\eta/2) - \sin(x)\sin(\eta/2) \\
+              &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) - \sin(x))
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+              \sin(x + \eta/2) &= \cos(x)\sin(\eta/2) + \sin(x)\cos(\eta/2) \\
+              &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x))
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...from which the product...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(x + \eta/2)\sin(x + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...becomes...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+              &\sqrt&#123;0.5&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
+              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
+              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - (1 - \cos^2(x))) \\
+              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(2\cos^2(x) - 1) \\
+              \up&#123;1.6&#125; =\,\,&\cos^2(x) - &#123;1\over 2&#125; \\
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...by the difference-of-squares formula and
+              the pythagorean identity (often used together),
+              and adding{" "}
+              <Math>
+                $&#123;1\over 2&#125;$
+              </Math>
+              {" "}gives{" "}
+              <NoBreak>
+                <Math>
+                  $\cos^2(x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}Q.E.D.!
+              (So{" "}
+              <Math>
+                $y = \cos^2(x)$
+              </Math>
+              {" "}truly is the translate of 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos(x)\sin(x)$
+                </Math>
+                ,
               </NoBreak>
               {" "}{" "}
               <i>
-                if
+                &
               </i>
-              {" "}this conjecture
-              about translation turns out to be true!!!
+              {" "}vice-versa.)
             </VerticalChunk>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                We can turn the identity around, mapping
+                {" "}
+                <Math>
+                  $y = \cos^2(x)$
+                </Math>
+                {" "}onto{" "}
+                <Math>
+                  $y = \sin(x)\cos(x)$
+                </Math>
+                {" "}via a
+                translation, instead of the other way around; this gives:
+              </VerticalChunk>
+              <center style="margin-top:1em;margin-bottom:1em;">
+                <div style="border:1px solid red;padding:1em 1em;width:fit-content;">
+                  <MathBlock>
+                    $$
+                    \,- &#123;1\over 2&#125; + \cos^2(x - \eta/2) = \cos(x)\sin(x).
+                    $$
+                  </MathBlock>
+                </div>
+              </center>
+              <VerticalChunk>
+                In more detail: replacing
+                {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $x$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}by{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $x - \eta/2$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}in{" "}
+                <Math>
+                  $\cos^2(x)$
+                </Math>
+                {" "}effects
+                horizontal translation by{" "}
+                <NoBreak>
+                  <Math>
+                    $+\eta/2$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}and adding
+                {" "}
+                <Math>
+                  $-&#123;1\over 2&#125;$
+                </Math>
+                {" "}
+                to the result effects a vertical translation by{" "}
+                <NoBreak>
+                  <Math>
+                    $-&#123;1\over 2&#125;$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                (I.e., we are using the
+                inverse amounts of translation that we used to map
+                {" "}
+                <Math>
+                  $y = \cos(x)\sin(x)$
+                </Math>
+                {" "}onto{" "}
+                <NoBreak>
+                  <Math>
+                    $y = \cos^2(x)$
+                  </Math>
+                  .)
+                </NoBreak>
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The identity from the previous note can also
+                be proved via the angle-sum formulas; since{" "}
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                and
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin(-\eta/2) = -\sqrt&#123;0.5&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                we have
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;align*&#125;
+                \cos(x - \eta/2) &= \cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2) \\
+                \up&#123;1.6&#125; &=\,\, \cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;) \\
+                \up&#123;1.6&#125; &=\,\, \sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+                \end&#123;align*&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                from which
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos^2(x - \eta/2)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                becomes
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;align*&#125;
+                &\left(\sqrt&#123;0.5&#125;\cdot(\cos x + \sin x)\right)^2 \\
+                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2 x + 2\cos x\sin x +  \sin^2 x) \\
+                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(1 + 2\cos x\sin x) \\
+                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125; + \cos(x)\sin(x) \\
+                \end&#123;align*&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                using the pythagorean identity in the third equality, 
+                and
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;align*&#125;
+                & -&#123;1\over 2&#125; + \cos^2(x - \eta/2) \\
+                \up&#123;1.7&#125; =\,\,&-&#123;1\over 2&#125; + \left(&#123;1\over 2&#125; + \cos(x)\sin(x)\right) \\
+                \up&#123;1.7&#125; =\,\,&\cos(x)\sin(x)
+                \end&#123;align*&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                as claimed.
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={30}>
