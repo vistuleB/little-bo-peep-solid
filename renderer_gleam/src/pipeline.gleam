@@ -114,7 +114,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       ]
     ),
     find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
-    identity(),
     // ************************
     // AddTitleCounters *******
     // ************************
@@ -160,6 +159,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
           "Section",
           "Solution",
           "SolutionNote",
+          "StarDivider",
           "Table",
           "TextParent",
           "WriterlyBlankLine",
@@ -362,6 +362,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #(#("List", "VerticalChunk"), "Pause", []),
       #(#("StarDivider", "VerticalChunk"), "Pause", []),
     ]),
+    identity(),
     // (I forgot... why would raw text directly follow a MathBlock?)
     add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
     add_before_tags_but_not_first_child_tags([

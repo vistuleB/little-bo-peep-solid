@@ -101,7 +101,16 @@
         $${1 - 5 \over 4 - (-2)} = {-4 \over 6} = - {2 \over 3}.$$
 
     |> StarDivider
-        style margin-top:1.5em;margin-bottom:0em;
+
+    (The main thing to understand about Example 1 is that
+    $$
+    1 - 5
+    $$
+    is the vertical change from $A$ to $B$, while
+    $$
+    4 - (-2)
+    $$
+    is the horizontal change from $A$ to $B$.)
 
 |> Section
     handle table

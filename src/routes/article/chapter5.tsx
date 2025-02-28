@@ -10230,9 +10230,9 @@ const Article = () => {
               $$
             </MathBlock>
             <Pause />
+            <StarDivider style="margin-top:0.5em;" />
+            <Pause />
             <VerticalChunk>
-              <StarDivider style="margin-top:0.5em;" />
-              {" "}{" "}
               <i>
                 Solution 2.
               </i>

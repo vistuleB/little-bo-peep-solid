@@ -1394,9 +1394,9 @@ const Article = () => {
           ~ acceleration is the derivative of velocity ~
         </CentralDisplayItalic>
         <Pause />
+        <StarDivider />
+        <Pause />
         <VerticalChunk>
-          <StarDivider />
-          {" "}{" "}
           <b>
             Note.
           </b>

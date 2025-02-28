@@ -247,7 +247,52 @@ const Article = () => {
           </MathBlock>
         </Example>
         <Pause />
-        <StarDivider style="margin-top:1.5em;margin-bottom:0em;" />
+        <StarDivider />
+        <Pause />
+        <VerticalChunk>
+          (The main thing to understand about Example 1 is that
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - 5
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is the vertical change from{" "}
+          <Math>
+            $A$
+          </Math>
+          {" "}to{" "}
+          <NoBreak>
+            <Math>
+              $B$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}while
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          4 - (-2)
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is the horizontal change from{" "}
+          <Math>
+            $A$
+          </Math>
+          {" "}to{" "}
+          <NoBreak>
+            <Math>
+              $B$
+            </Math>
+            .)
+          </NoBreak>
+        </VerticalChunk>
       </Section>
       <Pause />
       <Section>
