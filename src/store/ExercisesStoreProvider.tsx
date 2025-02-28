@@ -11,7 +11,7 @@ type Store = {
   selected_exo: number;
   solutions_open: boolean[];
   transition_duration: number[];
-  exercises: ExercisesState[]
+  exercises: ExercisesState
 }
 
 

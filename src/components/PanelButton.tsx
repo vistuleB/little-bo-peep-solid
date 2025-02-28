@@ -25,9 +25,7 @@ const PanelButton = () => {
   const calc_opacity = () => {
     return Math.min(
       1.0,
-      1.0 -
-        (scrollY() - HAMBURGER_MENU_SCROLLY_START_FADE) /
-          HAMBURGER_MENU_SCROLLY_END_FADE
+      Math.max(0, 1.0 - (scrollY() - HAMBURGER_MENU_SCROLLY_START_FADE) / (HAMBURGER_MENU_SCROLLY_END_FADE - HAMBURGER_MENU_SCROLLY_START_FADE))
     );
   };
 
@@ -57,33 +55,16 @@ const PanelButton = () => {
 
   return (
     <>
+      {/* the background */}
       <div
         class={twJoin(
-          "h-14 w-14 fixed right-0 border-l sm:border-l-0 z-50 border-b",
-          !open() && scrollY() > HAMBURGER_MENU_HEIGHT && "sm:border-b-0",
-          open() && !on_mobile() && scrollY() > 0 && "hover:border-b-0"
-        )}
-      >
-        <button
-          onClick={() => {
-            set_store("panel_opened", !open());
-          }}
-          style={{
-            opacity: !open() && !on_mobile() ? opacity() : 1,
-          }}
-          class="select-none flex items-center justify-center h-8 w-8 m-3 fill-[rgb(30,30,30)] hover:fill-stone-600 hover:!opacity-100"
-        >
-          <PanelButtonIcon open={open()} />
-        </button>
-      </div>
-      <div
-        class={twJoin(
-          "w-14 fixed right-0 z-40 h-14",
+          "fixed right-0 z-40 h-14",
           scrollY() <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
           !on_mobile() &&
           scrollX() + innerWidth() >= (scrollWidth() / 2) + (MOBILE_MAX_WIDTH / 2) && "h-[10rem]"
         )}
         style={{
+          "width": "142px",
           "background-color":
             scrollY() > HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY || on_mobile()
               ? "transparent"
@@ -92,42 +73,101 @@ const PanelButton = () => {
               : "#fff",
         }}
       ></div>
+      <div
+        style="height:57px;" // I don't know if it's box-sizing model or what but I need to put 57px here to get height 56px in the (Chrome) inspector
+        class={twJoin(
+          "fixed right-0 z-50",
+          on_mobile() && "border-l",
+          !on_mobile() && !open() && scrollY() < 2 * HAMBURGER_MENU_HEIGHT && "border-b",
+        )}
+      >
+        <div
+          class="select-none flex items-center justify-center h-8 m-3 fill-[rgb(30,30,30)] hover:fill-stone-600 hover:!opacity-100"
+          style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
+        >
+          <button
+            class="w-8 mr-2"
+            onClick={() => { set_store("panel_opened", !open()); }}
+          >
+            <LeftArrow />
+          </button>
+          <button
+            class="w-8 mr-3"
+            onClick={() => { set_store("panel_opened", !open()); }}
+          >
+            <RightArrow />
+          </button>
+          <button
+            onClick={() => { set_store("panel_opened", !open()); }}
+          >
+            <PanelButtonIcon open={open()} />
+          </button>
+        </div>
+      </div>
     </>
   );
 };
 
+const LeftArrow = () => {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30">
+      <path
+        d="M18 7.5 L10.5 15 L18 22.5"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-width="2.6"
+        fill="none"
+      >
+      </path>
+    </svg>
+  );
+}
+
+const RightArrow = () => {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30">
+      <path
+        d="M12 7.5 L19.5 15 L12 22.5"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-width="2.6"
+        fill="none"
+      >
+      </path>
+    </svg>
+  );
+}
+
 const PanelButtonIcon = (props: { open: boolean }) => {
   return (
-    <svg width="30px" height="30px" version="1.1" viewBox="0 0 30 30">
-      <g>
-        <rect
-          x="5"
-          y="6"
-          width="20"
-          height="3"
-          rx="1.5"
-          ry="1.5"
-          class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}
-        ></rect>
-        <rect
-          x="5"
-          y="13.5"
-          width="20"
-          height="3"
-          rx="1.5"
-          ry="1.5"
-          class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}
-        ></rect>
-        <rect
-          x="5"
-          y="21"
-          width="20"
-          height="3"
-          rx="1.5"
-          ry="1.5"
-          class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}
-        ></rect>
-      </g>
+    <svg width="30" height="30" viewBox="0 0 30 30">
+      <rect
+        x="5"
+        y="6"
+        width="20"
+        height="3"
+        rx="1.5"
+        ry="1.5"
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}
+      ></rect>
+      <rect
+        x="5"
+        y="13.5"
+        width="20"
+        height="3"
+        rx="1.5"
+        ry="1.5"
+        class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}
+      ></rect>
+      <rect
+        x="5"
+        y="21"
+        width="20"
+        height="3"
+        rx="1.5"
+        ry="1.5"
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}
+      ></rect>
     </svg>
   );
 };

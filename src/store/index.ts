@@ -1,4 +1,4 @@
-import { createStore, SetStoreFunction } from "solid-js/store";
+import { createStore } from "solid-js/store";
 
 type Store = {
   panel_opened: boolean;
