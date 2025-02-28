@@ -843,20 +843,21 @@
             $$
             respectively.            
 
-            _Notes._ 
-            For the last computation, $0.125$ can be viewed 
-            as twelve hundredths plus $5$ thousandths:
+            |> SolutionNote
 
-            |> Image
-                src images/svg_0.125_twelve_5.svg
-            
-            Half of twelve hundredths is six hundredths, and 
-            half of $5$ thousandths is $2.5$ thousandths:
-            
-            |> Image
-                src images/svg_06_and_0025.svg
-            
-            ...so $0.125/2$ is $0.06 + 0.0025 = 0.0625$.
+                For the last computation, $0.125$ can be viewed 
+                as twelve hundredths plus $5$ thousandths:
+
+                |> Image
+                    src images/svg_0.125_twelve_5.svg
+                
+                Half of twelve hundredths is six hundredths, and 
+                half of $5$ thousandths is $2.5$ thousandths:
+                
+                |> Image
+                    src images/svg_06_and_0025.svg
+                
+                ...so $0.125/2$ is $0.06 + 0.0025 = 0.0625$.
 
     |> Exercise
 
