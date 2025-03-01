@@ -2047,53 +2047,56 @@ const Article = () => {
             <VerticalChunk>
               respectively.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <i>
-                Notes.
-              </i>
-              {" "}
-              For the last computation,{" "}
-              <Math>
-                $0.125$
-              </Math>
-              {" "}can be viewed 
-              as twelve hundredths plus{" "}
-              <Math>
-                $5$
-              </Math>
-              {" "}thousandths:
-            </VerticalChunk>
             <Pause />
-            <Image src="/images/svg_0.125_twelve_5.svg" />
-            <Pause />
-            <VerticalChunk>
-              Half of twelve hundredths is six hundredths, and 
-              half of{" "}
-              <Math>
-                $5$
-              </Math>
-              {" "}thousandths is{" "}
-              <Math>
-                $2.5$
-              </Math>
-              {" "}thousandths:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_06_and_0025.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...so{" "}
-              <Math>
-                $0.125/2$
-              </Math>
-              {" "}is{" "}
-              <NoBreak>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                For the last computation,{" "}
                 <Math>
-                  $0.06 + 0.0025 = 0.0625$
+                  $0.125$
                 </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
+                {" "}can be viewed 
+                as twelve hundredths plus{" "}
+                <Math>
+                  $5$
+                </Math>
+                {" "}thousandths:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_0.125_twelve_5.svg" />
+              <Pause />
+              <VerticalChunk>
+                Half of twelve hundredths is six hundredths, and 
+                half of{" "}
+                <Math>
+                  $5$
+                </Math>
+                {" "}thousandths is{" "}
+                <Math>
+                  $2.5$
+                </Math>
+                {" "}thousandths:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_06_and_0025.svg" />
+              <Pause />
+              <VerticalChunk>
+                ...so{" "}
+                <Math>
+                  $0.125/2$
+                </Math>
+                {" "}is{" "}
+                <NoBreak>
+                  <Math>
+                    $0.06 + 0.0025 = 0.0625$
+                  </Math>
+                  .
+                </NoBreak>
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
