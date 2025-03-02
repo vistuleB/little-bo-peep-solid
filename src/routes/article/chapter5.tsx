@@ -11164,17 +11164,17 @@ const Article = () => {
           <Solution solution_number={28}>
             <VerticalChunk>
               We know from Exercise 21 that the 
-              bump immediately to the 
-              right of{" "}
+              bump immediately to the right of{" "}
               <Math>
                 $(0, 0)$
               </Math>
-              {" "}on the graph{" "}
+              {" "}
+              on the graph{" "}
               <Math>
                 $y = \cos(x)\sin(x)$
               </Math>
-              {" "}
-              has coordinates{" "}
+              {" "}has 
+              coordinates{" "}
               <NoBreak>
                 <Math>
                   $(\eta/2, 0.5)$
@@ -11186,27 +11186,23 @@ const Article = () => {
             <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg" />
             <Pause />
             <VerticalChunk>
-              It might therefore be
-              that a translation
+              It might therefore be that a translation
               of{" "}
               <Math>
                 $-\eta/2$
               </Math>
-              {" "}
-              units horizontally and
+              {" "}units horizontally and 
               {" "}
               <Math>
-                $
-                &#123;1\over 2&#125;
-                $
+                $&#123;1\over 2&#125;$
               </Math>
+              {" "}units vertically maps the graph 
               {" "}
-              units vertically maps the graph{" "}
               <Math>
                 $y = \sin(x)\cos(x)$
               </Math>
-              {" "}onto
-              the graph{" "}
+              {" "}onto the graph 
+              {" "}
               <NoBreak>
                 <Math>
                   $y = \cos^2(x)$
@@ -11230,8 +11226,7 @@ const Article = () => {
               </div>
             </center>
             <VerticalChunk>
-              since replacing
-              {" "}
+              since replacing{" "}
               <NoBreak>
                 “
                 <Math>
@@ -11247,27 +11242,26 @@ const Article = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}in{" "}
+              {" "}
+              in{" "}
               <Math>
                 $\sin(x)\cos(x)$
               </Math>
-              {" "}effects
-              horizontal translation of the graph by{" "}
+              {" "}effects horizontal 
+              translation of the graph by{" "}
               <NoBreak>
                 <Math>
                   $-\eta/2$
                 </Math>
                 ,
               </NoBreak>
-              {" "}while adding
               {" "}
+              while adding{" "}
               <Math>
-                $
-                &#123;1\over 2&#125;
-                $
+                $&#123;1\over 2&#125;$
               </Math>
-              {" "}
-              to the result effects a vertical translation by{" "}
+              {" "}to the result 
+              effects a vertical translation by{" "}
               <NoBreak>
                 <Math>
                   $&#123;1\over 2&#125;$
@@ -11567,43 +11561,28 @@ const Article = () => {
               Exercise 30.
             </b>
             {" "}
-            Given the graphs{" "}
+            It also seems that 
+            {" "}
             <Math>
-              $y = \cos(x)$
+              $y = \cos^2(x)$
             </Math>
-            {" "}and 
+            {" "}is some
+            combination of a scaling and translation of 
             {" "}
             <NoBreak>
               <Math>
-                $y = \cos^2(x)$
+                $y = \cos(x)$
               </Math>
-              ...
+              :
             </NoBreak>
           </VerticalChunk>
           <Pause />
           <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg" />
           <Pause />
           <VerticalChunk>
-            ...it likewise appears that{" "}
-            <Math>
-              $\cos^2(x)$
-            </Math>
-            {" "}
-            is the result of some scaling (horizontal{" "}
-            <i>
-              &
-            </i>
-            {" "}
-            vertical) of{" "}
-            <NoBreak>
-              <Math>
-                $\cos(x)$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}followed by some
-            translation. (Or vice-versa with the translation
-            first—either way.)
+            Conjecture the exact amounts of scaling and
+            translation, and prove these amounts work using
+            algebra.
           </VerticalChunk>
         </Exercise>
         <Exercise exercise_number={31}>
