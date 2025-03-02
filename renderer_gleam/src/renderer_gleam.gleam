@@ -1,3 +1,5 @@
+import gleam/result
+import simplifile
 import argv
 import gleam/option.{ Some }
 import gleam/list
@@ -69,6 +71,74 @@ fn lbp_splitter(root: VXML) -> Result(List(#(String, VXML, FragmentType)), LBPSp
   )
 }
 
+fn get_articles() -> List(String) {
+  let articles = 
+    simplifile.read_directory("../src/content") 
+    |> result.unwrap([]) 
+    |> list.filter(fn(f){ !string.starts_with(f, "#") && f != "__parent.emu"  })
+    
+
+  let chapters = 
+  articles 
+    |> list.filter(fn(a) { string.starts_with(a, "chapter") } )
+    |> list.sort(fn(a, b) { string.compare(a, b) })
+  let bootcamps = 
+  articles 
+    |> list.filter(fn(a) { string.starts_with(a, "bootcamp") } )
+    |> list.sort(fn(a, b) { string.compare(b, a) })
+
+  list.flatten([
+    bootcamps,
+    ["/"], // toc
+    chapters
+  ])
+}
+
+fn get_index(article: String, articles_list: List(String), index: Int) -> Int {
+  case articles_list {
+    [] -> -1
+    [first, ..rest] -> {
+      case first == article {
+        True -> index
+        False -> get_index(article, rest, index + 1) 
+      }
+    }
+  }
+}
+
+fn page_prev_next_links(fragment_type: FragmentType){
+  let articles_list = get_articles() 
+  let list_length = list.length(articles_list)
+
+  let current = case fragment_type{
+    Chapter(n) -> {
+      "chapter" <> ins(n)
+    }
+    Bootcamp(n) -> "bootcamp" <> ins(n)
+    TOCAuthorSuppliedContent -> "/"
+    _ -> ""
+  }
+  let next_index = { get_index(current, articles_list, 0) + 1 } % list_length
+  let prev_index = { get_index(current, articles_list, 0) - 1 + list_length } % list_length
+
+  let assert [next_article, ..] = list.drop(articles_list, next_index)
+  let assert [prev_article, ..] = list.drop(articles_list, prev_index)
+
+  let next_article = case next_article == "/" {
+    True -> "/"
+    False -> "/article/" <> next_article
+  }
+  let prev_article = case prev_article == "/" {
+    True -> "/"
+    False -> "/article/" <> prev_article
+  }
+
+  // these will be querySelected by panelButtons
+  "<a href=\""<> prev_article <> "\" class=\"prev_page hidden\"></a>\n 
+   <a href=\""<> next_article <> "\" class=\"next_page hidden\"></a>"
+
+}
+
 fn lbp_chapter_bootcamp_common_emitter(
   path: String,
   fragment: VXML,
@@ -107,11 +177,13 @@ fn lbp_chapter_bootcamp_common_emitter(
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import VerticalChunk from \"~/components/VerticalChunk\";"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, ""),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "const Article = () => {"),
-      BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return ("),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return (<>"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 4, page_prev_next_links(fragment_type)),
+
     ],
-    vxml_parser.vxml_to_jsx_blamed_lines(fragment, 4),
+    vxml_parser.vxml_to_jsx_blamed_lines(fragment, 6),
     [
-      BlamedLine(blame_us("lbp_fragment_emitter"), 2, ");"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 2, "</>);"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "};"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, ""),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "export default Article;"),
@@ -131,6 +203,7 @@ fn toc_emitter(path: String, fragment: VXML, fragment_type: FragmentType) -> Res
       BlamedLine(blame_us("toc_emitter"), 0, "const TOCAuthorSuppliedContent = () => {"),
       BlamedLine(blame_us("toc_emitter"), 2, "return ("),
       BlamedLine(blame_us("toc_emitter"), 4, "<>"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 4, page_prev_next_links(fragment_type)),
     ],
     vxml_parser.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
     [

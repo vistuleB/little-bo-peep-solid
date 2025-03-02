@@ -10,90 +10,21 @@ import {
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "../store/StoreProvider";
 import { set_store } from "~/store";
-import { join } from "path";
-import { cwd } from "process";
-import { readdir } from "fs/promises";
-import { createAsync, query } from "@solidjs/router";
-
-const navigate = (to: string = "/") => {
-  let a = document.createElement("a")
-  a.href = to
-  document.body.appendChild(a)
-  a.click()
-}
-
-const getArticles = query(async () => {
-  "use server";
-  const currentDir = cwd();
-  const folderPath = join(currentDir, "src/routes/article");
-
-  let fileNames = await readdir(folderPath).catch(err => console.log(err));
-  fileNames = fileNames?.map(name => name.slice(0, name.length - 4))
-
-  return [
-    ...fileNames?.filter(name => name.startsWith("chapter")) || [],
-    ...fileNames?.filter(name => name.startsWith("bootcamp")) || [],
-  ]
- 
-}, "articles");
-
-
 
 const PanelButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
   const open = () => store.panel_opened;
-  const articles =  createAsync(() => getArticles());
 
-  const [current_article, set_current_article] = createSignal(location.pathname);
-
-  const getIndex = (articles: string[]) => {
- let current_article_sliced = current_article().startsWith("/article/") ? current_article().slice("/article/".length) : current_article();
-    return articles.findIndex(a => a === current_article_sliced)
+  const getNextArticle = () => {
+    let a = document.querySelector(".next_page") as HTMLAnchorElement
+    a.click()
   }
 
-  const getNextArticle = (articles: string[]) => {
-    if (nextDisabled(articles)) return;
-
-    if (current_article() == "/") {
-      set_current_article(articles[0])
-      navigate("/article/" + articles[0])
-      return;
-    }
-    let current_article_index = getIndex(articles)
-    if (current_article_index < articles.length - 1) {
-      set_current_article(articles[current_article_index + 1])
-      navigate(articles[current_article_index + 1])
-      return;
-    }
+  const getPrevArticle = () => {
+    let a = document.querySelector(".prev_page") as HTMLAnchorElement
+    a.click()
   }
-
-  const getPrevArticle = (articles: string[]) => {
-    if (prevDisabled(articles)) return;
-    let current_article_index = getIndex(articles)
-    if (current_article_index === 0 ) {
-      set_current_article("/")
-      navigate("/")
-      return;
-    }
-    set_current_article(articles[current_article_index - 1])
-    navigate(articles[current_article_index - 1])
-    return;
-  }
-
-  const nextDisabled = (articles: string[]) => {
-    return getIndex(articles) == articles.length - 1
-  }
-
-  const prevDisabled = (articles: string[]) => {
-    return current_article() == "/"
-  }
-
-  // createEffect(()=>{
-  //   if (articles()){
-  //     getNextArticle(articles() || [])
-  //   }
-  // })
 
   const [opacity, set_opacity] = createSignal(1);
   const [scrollY, set_scrollY] = createSignal(0);
@@ -165,14 +96,14 @@ const PanelButton = () => {
           style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
         >
           <button
-            class={twJoin("w-8 mr-2", prevDisabled(articles() || []) && "cursor-not-allowed" )}
-            onClick={() => { getPrevArticle(articles() || []) }}
+            class={twJoin("w-8 mr-2")}
+            onClick={() => { getPrevArticle() }}
           >
             <LeftArrow />
           </button>
           <button
-            class={twJoin("w-8 mr-3", nextDisabled(articles() || []) && "cursor-not-allowed" )}
-            onClick={() => { getNextArticle(articles() || []) }}
+            class={twJoin("w-8 mr-3")}
+            onClick={() => { getNextArticle() }}
           >
             <RightArrow />
           </button>
