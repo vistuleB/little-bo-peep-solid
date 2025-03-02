@@ -3957,7 +3957,7 @@ const Article = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"]}>
+      <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]}>
         <Exercise exercise_number={1}>
           <VerticalChunk>
             <b>
@@ -11565,6 +11565,51 @@ const Article = () => {
           <VerticalChunk>
             <b>
               Exercise 30.
+            </b>
+            {" "}
+            Given the graphs{" "}
+            <Math>
+              $y = \cos(x)$
+            </Math>
+            {" "}and 
+            {" "}
+            <NoBreak>
+              <Math>
+                $y = \cos^2(x)$
+              </Math>
+              ...
+            </NoBreak>
+          </VerticalChunk>
+          <Pause />
+          <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg" />
+          <Pause />
+          <VerticalChunk>
+            ...it likewise appears that{" "}
+            <Math>
+              $\cos^2(x)$
+            </Math>
+            {" "}
+            is the result of some scaling (horizontal{" "}
+            <i>
+              &
+            </i>
+            {" "}
+            vertical) of{" "}
+            <NoBreak>
+              <Math>
+                $\cos(x)$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}followed by some
+            translation. (Or vice-versa with the translation
+            first—either way.)
+          </VerticalChunk>
+        </Exercise>
+        <Exercise exercise_number={31}>
+          <VerticalChunk>
+            <b>
+              Exercise 31.
             </b>
             {" "}
             Similarly to Exercise 9, suggest a

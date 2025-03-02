@@ -2909,6 +2909,7 @@
             (We mean: likewise for “$\sin^2$” and “$\cos^2$”.)
 
 |> Exercise
+    t tt
 
     Given the graphs $y = \cos(x)\sin(x)$ and 
     $y = \cos^2(x)$...
@@ -2926,44 +2927,21 @@
     |> Solution
 
         We know from Exercise 21 that the 
-        !! highest point on the 
-        bump immediately to the 
-        right of $(0, 0)$ on the graph $y = \cos(x)\sin(x)$ 
-        has coordinates $(\eta/2, 0.5)$:
+        bump immediately to the right of $(0, 0)$ 
+        on the graph $y = \cos(x)\sin(x)$ has 
+        coordinates $(\eta/2, 0.5)$:
 
         |> Image
             src images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg
 
-        !! A horizontal translation of
-        !! Therefore, one can conjecture 
-        It might therefore be
-        that a translation
-        of $-\eta/2$
-        !! $$
-        !! -{\eta\over 2}
-        !! $$
-        units horizontally and
-        $
-        {1\over 2}
-        $
-        units vertically maps the graph $y = \sin(x)\cos(x)$ onto
-        the graph $y = \cos^2(x)$:
-        !! bring this point onto
-        !! $$
-        !! (0, 1)
-        !! $$
-        !! that is a local maximum of $y = \cos^2(x)$; zoomed in:
+        It might therefore be that a translation
+        of $-\eta/2$ units horizontally and 
+        ${1\over 2}$ units vertically maps the graph 
+        $y = \sin(x)\cos(x)$ onto the graph 
+        $y = \cos^2(x)$:
 
         |> Image
             src images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg
-
-        !! We can therefore conjecture that the
-        !! afore-mentioned amounts of translation
-        !! will map $y = \cos(x)\sin(x)$ onto $y = \cos^2(x)$.
-        !! (And any integer multiple of $2\eta$ could
-        !! be added to the horizontal translation
-        !! since both curves are periodic modulo 
-        !! $2\eta$.)
 
         If true, this would indicate that
 
@@ -2976,13 +2954,11 @@
                 \cos^2(x) = {1\over 2} + \cos(x + \eta/2)\sin(x + \eta/2)
                 $$
 
-        since replacing
-        “$x$” by “$x + \eta/2$” in $\sin(x)\cos(x)$ effects
-        horizontal translation of the graph by $-\eta/2$, while adding
-        $
-        {1\over 2}
-        $
-        to the result effects a vertical translation by ${1\over 2}$.
+        since replacing “$x$” by “$x + \eta/2$” 
+        in $\sin(x)\cos(x)$ effects horizontal 
+        translation of the graph by $-\eta/2$, 
+        while adding ${1\over 2}$ to the result 
+        effects a vertical translation by ${1\over 2}$.
 
         To prove formula we use the angle-sum formulas;
         specifically...
@@ -3132,7 +3108,20 @@
 
         !! ...or...
 
+|> Exercise
+    t tt
 
+    It also seems that 
+    $y = \cos^2(x)$ is some
+    combination of a scaling and translation of 
+    $y = \cos(x)$:
+
+    |> Image
+        src images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg
+
+    Conjecture the exact amounts of scaling and
+    translation, and prove these amounts work using
+    algebra.
 
 |> Exercise
 

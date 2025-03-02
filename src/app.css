@@ -23,7 +23,8 @@
 }
 
 :root {
-  --background-rgb: #fdfdfd;
+  /* --background-rgb: #fdfdfd; */
+  --background-rgb: #fff;
   --foreground-rgb: rgb(0, 0, 0);
   /* --desktop-text-column-width: 520px; */
   --desktop-text-column-padding: 16px;
