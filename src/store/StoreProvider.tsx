@@ -15,7 +15,8 @@ export const StoreProvider: ParentComponent = (props) => {
       value={{
         store,
         set_store,
-      }}>
+      }}
+    >
       {props.children}
     </StoreContext.Provider>
   );

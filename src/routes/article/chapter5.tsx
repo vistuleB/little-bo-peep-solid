@@ -3957,7 +3957,7 @@ const Article = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]}>
+      <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33"]}>
         <Exercise exercise_number={1}>
           <VerticalChunk>
             <b>
@@ -11558,14 +11558,17 @@ const Article = () => {
               Exercise 30.
             </b>
             {" "}
-            It also seems that 
-            {" "}
+            It also seems from the graphs that{" "}
             <Math>
               $y = \cos^2(x)$
             </Math>
-            {" "}is some
-            combination of a scaling and translation of 
             {" "}
+            is a{" "}
+            <i>
+              sinusoid
+            </i>
+            , i.e., some combination of a
+            scaling and translation of{" "}
             <NoBreak>
               <Math>
                 $y = \cos(x)$
@@ -11574,18 +11577,825 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg" />
+          <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison.svg" />
           <Pause />
           <VerticalChunk>
-            Conjecture the exact amounts of scaling and
-            translation, and prove these amounts work using
-            algebra.
+            If so, what scaling and translation operations,
+            more exactly, can be conjectured to relate the 
+            two graphs? Can you prove this geometric relationship 
+            by algebra?
           </VerticalChunk>
+          <Pause />
+          <Solution solution_number={30}>
+            <VerticalChunk>
+              Since{" "}
+              <Math>
+                $\cos^2$
+              </Math>
+              {" "}is periodic mod{" "}
+              <Math>
+                $2\eta$
+              </Math>
+              {" "}while
+              {" "}
+              <Math>
+                $\cos$
+              </Math>
+              {" "}is periodic mod{" "}
+              <NoBreak>
+                <Math>
+                  $4\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              we need, at the very least, a horizontal compression by
+              a factor{" "}
+              <Math>
+                $2$
+              </Math>
+              {" "}in order to map the bumps of{" "}
+              <Math>
+                $y = \cos(x)$
+              </Math>
+              {" "}
+              onto those of{" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos^2(x)$
+                </Math>
+                .
+              </NoBreak>
+              {" "}From there we have to
+              readjust the range and amplitude of the curve, such as,
+              e.g., by translating up by{" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}and scaling vertically
+              by{" "}
+              <Math>
+                $&#123;1\over 2&#125;$
+              </Math>
+              {" "}(or scaling vertically by{" "}
+              <Math>
+                $&#123;1\over 2&#125;$
+              </Math>
+              {" "}
+              and translating up by{" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}either way):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison_transformations_1.svg" />
+            <Pause />
+            <VerticalChunk>
+              Algebraically, the three steps above turn
+              {" "}
+              <Math>
+                $\cos(x)$
+              </Math>
+              {" "}into{" "}
+              <NoBreak>
+                <Math>
+                  $\cos(2x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}into{" "}
+              <NoBreak>
+                <Math>
+                  $1 + \cos(2x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              into{" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1 + \cos(2x)\over 2&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\cos(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\downarrow
+              $$
+              <ImageRight
+                offset_x="4em"
+                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\cos(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\downarrow
+              $$
+              <ImageRight
+                offset_x="4em"
+                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 1 + \cos(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\downarrow
+              $$
+              <ImageRight
+                offset_x="4em"
+                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large&#123;1 + \cos(2x)\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              as substituting{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $2x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}for{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}effects a horizontal
+              compression by{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (See 
+              the second case 
+              of Exercise 27, in particular.)
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              (NB: If we do it the other way around, 
+              putting the vertical scaling before the vertical 
+              translation, we obtain{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;1\over 2&#125;\cos(2x)$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              as the third function and{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x)$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              as the fourth function:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\cos(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\downarrow
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\cos(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\downarrow
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large&#123;1\over 2&#125;\cos(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large\downarrow
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...which is same-same since
+              {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x) = &#123;1 + \cos(2x)\over 2&#125;$
+                </Math>
+                .)
+              </NoBreak>
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              The issue for the second part of the problem is
+              therefore to prove that...
+            </VerticalChunk>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  &#123;1 + \cos(2x)\over 2&#125; = \cos^2(x)
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <VerticalChunk>
+              ...by algebraic means.
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              For this we again use the angle-sum formula
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for{" "}
+              <NoBreak>
+                <Math>
+                  $\cos$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}but with{" "}
+              <NoBreak>
+                <Math>
+                  $A = B = x$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}namely
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+              \cos(2x) 
+              &= \cos(x + x) \\
+              &= \up&#123;1.6&#125; \cos(x)\cos(x) - \sin(x)\sin(x) \\
+              &= \up&#123;1.6&#125; \cos^2(x) - \sin^2(x)
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              which gives us
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+              &#123;1 + \cos(2x)\over 2&#125; 
+              &= \up&#123;2.0&#125; &#123;1 + \cos^2(x) - \sin^2(x) \over 2&#125; \\
+              &= \up&#123;2.0&#125; &#123;(1 - \sin^2(x)) + \cos^2(x)\over 2&#125; \\
+              &= \up&#123;2.0&#125; &#123;\cos^2(x) + \cos^2(x)\over 2&#125; \\
+              &= \up&#123;2.0&#125; &#123;2\cos^2(x)\over 2&#125; \\
+              &= \up&#123;2.0&#125; \cos^2(x)
+              \end&#123;align*&#125;
+              $$
+              <ImageLeft
+                offset_y="3%"
+                offset_x="3.4em"
+                src="/images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...as conjectured! 
+              (In particular,{" "}
+              <Math>
+                $\cos^2(x)$
+              </Math>
+              {" "}truly{" "}
+              <i>
+                is
+              </i>
+              {" "}a
+              sinusoid, as a result of all this, surprisingly
+              enough.)
+            </VerticalChunk>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={31}>
           <VerticalChunk>
             <b>
               Exercise 31.
+            </b>
+            {" "}
+            Relate
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$
+            \sin(x)\cos(x)
+            $$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            to
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$
+            \sin(2x)
+            $$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            with the help of the angle-sum formulas.
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={31}>
+            <VerticalChunk>
+              The angle-sum formula for sin is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(A+B) = \cos A\sin B + \sin A\cos B
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              from which
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+              \sin(2x) =&\,\, \sin(x + x) \\
+              \up&#123;1.6&#125; =&\,\, \cos x\sin x + \sin x\cos x \\
+              \up&#123;1.6&#125; =&\,\, 2\sin x\cos x
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <VerticalChunk>
+              ...solving for{" "}
+              <NoBreak>
+                <Math>
+                  $\sin x\cos x$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={32}>
+          <VerticalChunk>
+            <b>
+              Exercise 32.
+            </b>
+            {" "}
+            What sequence of geometric transformations
+            can turn [the graph]{" "}
+            <Math>
+              $y = \sin(x)$
+            </Math>
+            {" "}
+            into [the graph]{" "}
+            <NoBreak>
+              <Math>
+                $y = \sin(x)\cos(x)$
+              </Math>
+              ?
+            </NoBreak>
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={32}>
+            <VerticalChunk>
+              Since
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by Exercise 30 and since the substitution
+              of{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}by{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $2x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}effects a horizontal
+              compression by{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}the answer is: 
+              “a horizontal scaling by{" "}
+              <Math>
+                $&#123;1\over 2&#125;$
+              </Math>
+              {" "}followed by a vertical scaling by{" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "}
+              though order doesn't matter, and we might also
+              say “uniform scaling by{" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+                ”.
+              </NoBreak>
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={33}>
+          <VerticalChunk>
+            <b>
+              Exercise 33.
+            </b>
+            {" "}
+            Building on the discoveries of Exercise 18,
+            conjecture a sequence of geometric transformations
+            that maps
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$y = \cos(x)$$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            onto
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$y = \sin(x) + \cos(x)$$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            and prove your answer with algebra.
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={33}>
+            <VerticalChunk>
+              Note that{" "}
+              <Math>
+                $\sin + \cos$
+              </Math>
+              {" "}
+              has period{" "}
+              <Math>
+                $4\eta$
+              </Math>
+              {" "}just like{" "}
+              <Math>
+                $\sin$
+              </Math>
+              {" "}or
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\cos$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}but, unlike{" "}
+              <Math>
+                $\sin$
+              </Math>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $\cos$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <Math>
+                $\sin + \cos$
+              </Math>
+              {" "}reaches a maximum of{" "}
+              <Math>
+                $\sqrt&#123;2&#125;$
+              </Math>
+              {" "}
+              at{" "}
+              <NoBreak>
+                <Math>
+                  $x = \eta/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}as uncovered in Exercise 18,
+              from which the following graphic is pilfered/bastardized:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_cos_to_sin_plus_cos_reminder.svg" />
+            <Pause />
+            <VerticalChunk>
+              (We have added the minimum at{" "}
+              <NoBreak>
+                <Math>
+                  $y = -\sqrt&#123;2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              which is no harder to prove than the
+              maximum at{" "}
+              <NoBreak>
+                <Math>
+                  $y = \sqrt&#123;2&#125;$
+                </Math>
+                .)
+              </NoBreak>
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Note that while the above graph may
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              seem
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              like a sinusoid, we have
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              not yet proved
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              that it is a sinusoid, which is indeed the goal
+              of the current exercise! But we can conjecture
+              that the
+              following two steps would take us from{" "}
+              <Math>
+                $y = \cos(x)$
+              </Math>
+              {" "}
+              to{" "}
+              <NoBreak>
+                <Math>
+                  $y = \sin(x) + \cos(x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}given the structure above:
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              1. horizontal translation to the right by{" "}
+              <Math>
+                $\eta/2$
+              </Math>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              2. vertical scaling by{" "}
+              <Math>
+                $\sqrt&#123;2&#125;$
+              </Math>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              Now you might recall from previous discussions
+              (cf. Exercise 7 of Chapter 3, part 1 of Exercise 27
+              in this chapter) that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x + a)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              has a graph that is the translate of{" "}
+              <Math>
+                $y = f(x)$
+              </Math>
+              {" "}to
+              left by{" "}
+              <Math>
+                $a$
+              </Math>
+              {" "}units, whence
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x - a)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              has a graph that is the translate of{" "}
+              <Math>
+                $y = f(x)$
+              </Math>
+              {" "}to
+              the{" "}
+              <i>
+                right
+              </i>
+              {" "}by{" "}
+              <Math>
+                $a$
+              </Math>
+              {" "}units; whence, we can
+              conjecture that...
+            </VerticalChunk>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  \sqrt&#123;2&#125;\cdot \cos(x - \eta/2)
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <VerticalChunk>
+              <NoBreak>
+                ...[
+                <Math>
+                  $\cos(x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}translated, scaled] actually coincides
+              with{" "}
+              <NoBreak>
+                <Math>
+                  $\cos(x) + \sin(x)$
+                </Math>
+                !!!
+              </NoBreak>
+              {" "}(!!!)
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              For the proof, we resort to the angle-sum formula...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(A + B) = \cos A\cos B - \sin A\sin B
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...again, giving us...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+              &\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
+              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
+              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;)) \\
+              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2 \cdot 0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+              \up&#123;1.6&#125; =&\,\, \sqrt&#123;1&#125;\cdot(\cos(x) + \sin(x)) \\
+              \up&#123;1.6&#125; =&\,\, \cos(x) + \sin(x)
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...victory!!!!
+            </VerticalChunk>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The fact that
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sqrt&#123;2&#125;\cdot \sqrt&#123;0.5&#125; = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                can also be seen from the fact that
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                that is indeed the preferred way of writing{" "}
+                <Math>
+                  $\sqrt&#123;0.5&#125;$
+                </Math>
+                {" "}
+                for many people.
+              </VerticalChunk>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={34}>
+          <VerticalChunk>
+            <b>
+              Exercise 34.
             </b>
             {" "}
             Similarly to Exercise 9, suggest a
@@ -11612,7 +12422,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={30}>
+          <Solution solution_number={34}>
             <VerticalChunk>
               We define
             </VerticalChunk>
