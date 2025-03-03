@@ -18,12 +18,12 @@ const PanelButton = () => {
 
   const getNextArticle = () => {
     let a = document.querySelector(".next_page") as HTMLAnchorElement
-    a.click()
+    a?.click()
   }
 
   const getPrevArticle = () => {
     let a = document.querySelector(".prev_page") as HTMLAnchorElement
-    a.click()
+    a?.click()
   }
 
   const [opacity, set_opacity] = createSignal(1);
@@ -31,6 +31,8 @@ const PanelButton = () => {
   const [scrollX, set_scrollX] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
   const [scrollWidth, set_scrollWidth] = createSignal(0);
+  const [prevDisabled, set_prevDisabled] = createSignal(false);
+  const [nextDisabled, set_nextDisabled] = createSignal(false);
 
   const calc_opacity = () => {
     return Math.min(
@@ -92,25 +94,51 @@ const PanelButton = () => {
         )}
       >
         <div
-          class="select-none flex items-center justify-center h-8 m-3 fill-[rgb(30,30,30)] hover:fill-stone-600 hover:!opacity-100"
+          class="select-none flex items-center justify-center h-8 m-3"
           style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
         >
           <button
-            class={twJoin("w-8 mr-2")}
+            class={twJoin("w-8 mr-2", prevDisabled() && "cursor-not-allowed")}
+            onMouseOver={() => {
+              set_prevDisabled(!document.querySelector(".prev_page"))
+            }}
             onClick={() => { getPrevArticle() }}
+            style={{
+              "background-color":
+                store.show_areas
+                  ? "rgb(224, 215, 48)"
+                  : "#fff",
+            }}
           >
-            <LeftArrow />
+            <LeftArrow class="stroke-[rgb(30,30,30)] hover:stroke-stone-600"/>
           </button>
           <button
-            class={twJoin("w-8 mr-3")}
+            class={twJoin("w-8 mr-3", nextDisabled() && "cursor-not-allowed")}
+            onMouseOver={() => {
+              set_nextDisabled(!document.querySelector(".next_page"))
+            }}
             onClick={() => { getNextArticle() }}
+            style={{
+              "background-color":
+                store.show_areas
+                  ? "rgb(224, 215, 48)"
+                  : "#fff",
+            }}
           >
-            <RightArrow />
+            <RightArrow class="stroke-[rgb(30,30,30)] hover:stroke-stone-600"/>
           </button>
           <button
             onClick={() => { set_store("panel_opened", !open()); }}
+            // style={{
+            //     "background-color":
+            //       scrollY() > HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY || on_mobile()
+            //         ? "transparent"
+            //         : store.show_areas
+            //         ? "#fff000"
+            //         : "#fff",
+            // }}
           >
-            <PanelButtonIcon open={open()} />
+            <PanelButtonIcon class="hover:!opacity-100 fill-[rgb(30,30,30)] hover:fill-stone-600" open={open()} />
           </button>
         </div>
       </div>
@@ -118,12 +146,11 @@ const PanelButton = () => {
   );
 };
 
-const LeftArrow = () => {
+const LeftArrow = (props: {class: string}) => {
   return (
-    <svg width="30" height="30" viewBox="0 0 30 30">
+    <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
       <path
         d="M18 7.5 L10.5 15 L18 22.5"
-        stroke="black"
         stroke-linecap="round"
         stroke-width="2.6"
         fill="none"
@@ -133,12 +160,11 @@ const LeftArrow = () => {
   );
 }
 
-const RightArrow = () => {
+const RightArrow = (props: {class: string}) => {
   return (
-    <svg width="30" height="30" viewBox="0 0 30 30">
+    <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
       <path
         d="M12 7.5 L19.5 15 L12 22.5"
-        stroke="black"
         stroke-linecap="round"
         stroke-width="2.6"
         fill="none"
@@ -148,9 +174,9 @@ const RightArrow = () => {
   );
 }
 
-const PanelButtonIcon = (props: { open: boolean }) => {
+const PanelButtonIcon = (props: { open: boolean, class: string }) => {
   return (
-    <svg width="30" height="30" viewBox="0 0 30 30">
+    <svg width="30" height="30" viewBox="0 0 30 30" class={props.class}>
       <rect
         x="5"
         y="6"

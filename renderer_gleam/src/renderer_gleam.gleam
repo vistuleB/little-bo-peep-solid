@@ -118,25 +118,44 @@ fn page_prev_next_links(fragment_type: FragmentType){
     TOCAuthorSuppliedContent -> "/"
     _ -> ""
   }
-  let next_index = { get_index(current, articles_list, 0) + 1 } % list_length
-  let prev_index = { get_index(current, articles_list, 0) - 1 + list_length } % list_length
+  case get_index(current, articles_list, 0) {
+    0 -> {
+      let assert [next_article, ..] = list.drop(articles_list, 1)
+      let next_article = case next_article == "/" {
+        True -> "/"
+        False -> "/article/" <> next_article
+      }
+      "<a href=\""<> next_article <> "\" class=\"next_page hidden\"></a>"
+    }
+    a if a == {list_length - 1} -> {
+      let assert [prev_article, ..] = list.drop(articles_list, a - 1)
+      let prev_article = case prev_article == "/" {
+        True -> "/"
+        False -> "/article/" <> prev_article
+      }
+      "<a href=\""<> prev_article <> "\" class=\"prev_page hidden\"></a>"
+    }
+    _ -> {
+      let next_index = { get_index(current, articles_list, 0) + 1 } 
+      let prev_index = { get_index(current, articles_list, 0) - 1 } 
 
-  let assert [next_article, ..] = list.drop(articles_list, next_index)
-  let assert [prev_article, ..] = list.drop(articles_list, prev_index)
+      let assert [next_article, ..] = list.drop(articles_list, next_index)
+      let assert [prev_article, ..] = list.drop(articles_list, prev_index)
 
-  let next_article = case next_article == "/" {
-    True -> "/"
-    False -> "/article/" <> next_article
+      let next_article = case next_article == "/" {
+        True -> "/"
+        False -> "/article/" <> next_article
+      }
+      let prev_article = case prev_article == "/" {
+        True -> "/"
+        False -> "/article/" <> prev_article
+      }
+
+      // these will be querySelected by panelButtons
+      "<a href=\""<> prev_article <> "\" class=\"prev_page hidden\"></a>\n 
+      <a href=\""<> next_article <> "\" class=\"next_page hidden\"></a>"
+    }
   }
-  let prev_article = case prev_article == "/" {
-    True -> "/"
-    False -> "/article/" <> prev_article
-  }
-
-  // these will be querySelected by panelButtons
-  "<a href=\""<> prev_article <> "\" class=\"prev_page hidden\"></a>\n 
-   <a href=\""<> next_article <> "\" class=\"next_page hidden\"></a>"
-
 }
 
 fn lbp_chapter_bootcamp_common_emitter(

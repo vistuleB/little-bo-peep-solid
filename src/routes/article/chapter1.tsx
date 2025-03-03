@@ -18,7 +18,7 @@ const Article = () => {
   return (<>
     <a href="/" class="prev_page hidden"></a>
  
-   <a href="/article/chapter2" class="next_page hidden"></a>
+      <a href="/article/chapter2" class="next_page hidden"></a>
       <Chapter
         number={1}
         title="A Few Refreshers">

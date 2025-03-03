@@ -7,7 +7,7 @@ const TOCAuthorSuppliedContent = () => {
     <>
     <a href="/article/bootcamp1" class="prev_page hidden"></a>
  
-   <a href="/article/chapter1" class="next_page hidden"></a>
+      <a href="/article/chapter1" class="next_page hidden"></a>
       <div id="chapter">
         <TOCTitle label="Chapters" />
         <ul>

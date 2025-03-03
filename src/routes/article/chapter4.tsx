@@ -18,7 +18,7 @@ const Article = () => {
   return (<>
     <a href="/article/chapter3" class="prev_page hidden"></a>
  
-   <a href="/article/chapter5" class="next_page hidden"></a>
+      <a href="/article/chapter5" class="next_page hidden"></a>
       <Chapter
         number={4}
         title="Derivatives">
