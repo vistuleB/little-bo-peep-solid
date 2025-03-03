@@ -145,14 +145,20 @@ const PanelButton = () => {
     </>
   );
 };
+// svg paths constants
+const sw = 2.6
+const cdx = 4.5
+const adx = 7.5
+const ady = 7.5
+const un = 30/2
 
 const LeftArrow = (props: {class: string}) => {
   return (
     <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
       <path
-        d="M18 7.5 L10.5 15 L18 22.5"
+        d={`M18 ${adx} L${un - cdx} ${un} L${un - cdx + adx} ${ady + un}`}
         stroke-linecap="round"
-        stroke-width="2.6"
+        stroke-width={sw}
         fill="none"
       >
       </path>
@@ -164,9 +170,9 @@ const RightArrow = (props: {class: string}) => {
   return (
     <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
       <path
-        d="M12 7.5 L19.5 15 L12 22.5"
+        d={`M12 ${adx} L${un + cdx} ${un} L${un + cdx - adx} ${ady + un}`}
         stroke-linecap="round"
-        stroke-width="2.6"
+        stroke-width={sw}
         fill="none"
       >
       </path>
