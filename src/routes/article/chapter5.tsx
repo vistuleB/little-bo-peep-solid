@@ -8205,64 +8205,61 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch5_ex_angle_sum_180.svg" />
           <Pause />
-          <VerticalChunk>
-            It is{" "}
-            <NoBreak>
-              <Math>
-                $\eta - \theta$
-              </Math>
-              .
-            </NoBreak>
-            {" "}(Since...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \theta + (\eta - \theta) + \eta = 2\eta
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...you know that's the right answer!) (Nb:{" "}
-            <NoBreak>
-              <Math>
-                $2\eta = 180^\circ$
-              </Math>
-              .)
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <SolutionNote>
+          <Solution solution_number={17}>
             <VerticalChunk>
-              Two angles that sum to{" "}
-              <Math>
-                $\eta$
-              </Math>
-              {" "}are 
-              called{" "}
-              <i>
-                complementary
-              </i>
-              , with each angle being
-              the{" "}
-              <i>
-                complement
-              </i>
-              of the other. The two non-right
-              angles of a right triangle are, therefore, 
-              complementary! (Not
+              It is{" "}
+              <NoBreak>
+                <Math>
+                  $\eta - \theta$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(Since...
             </VerticalChunk>
             <Pause />
-            <CentralDisplayItalic>
-              complimentary
-            </CentralDisplayItalic>
+            <MathBlock>
+              $$
+              \theta + (\eta - \theta) + \eta = 2\eta
+              $$
+            </MathBlock>
             <Pause />
             <VerticalChunk>
-              which would indicate that the angles are
-              given to you for free—everything in math is
-              free, not just those angles!)
+              ...you know that's the right answer!) (Nb:{" "}
+              <NoBreak>
+                <Math>
+                  $2\eta = 180^\circ$
+                </Math>
+                .)
+              </NoBreak>
             </VerticalChunk>
-          </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Two angles that sum to{" "}
+                <Math>
+                  $\eta$
+                </Math>
+                {" "}are 
+                called{" "}
+                <i>
+                  complementary
+                </i>
+                , with each angle being
+                the{" "}
+                <i>
+                  complement
+                </i>
+                {" "}of the other. 
+                The two 
+                non-right angles of a right triangle are, 
+                therefore, complementary!
+              </VerticalChunk>
+            </SolutionNote>
+          </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
@@ -8296,7 +8293,7 @@ const Article = () => {
             {" "}is it achieved?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={17}>
+          <Solution solution_number={18}>
             <VerticalChunk>
               The sum
             </VerticalChunk>
@@ -8734,7 +8731,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch5_ex_angle_sum_180_followup.svg" />
           <Pause />
-          <Solution solution_number={18}>
+          <Solution solution_number={19}>
             <VerticalChunk>
               It is{" "}
               <NoBreak>
@@ -8808,7 +8805,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch5_ex_tangent_angle_v2.svg" />
           <Pause />
-          <Solution solution_number={19}>
+          <Solution solution_number={20}>
             <VerticalChunk>
               The ending and starting half-lines of the 
               angle marked ‘?’ are both{" "}
@@ -9049,7 +9046,7 @@ const Article = () => {
             attained.
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={20}>
+          <Solution solution_number={21}>
             <VerticalChunk>
               The isosets of
             </VerticalChunk>
@@ -10072,7 +10069,7 @@ const Article = () => {
             src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg"
             style="margin-top:1.0em;margin-bottom:1em;" />
           <Pause />
-          <Solution solution_number={21}>
+          <Solution solution_number={22}>
             <VerticalChunk>
               We shall use the height{" "}
               <Math>
@@ -10165,7 +10162,7 @@ const Article = () => {
           <Pause />
           <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg" />
           <Pause />
-          <Solution solution_number={22}>
+          <Solution solution_number={23}>
             <VerticalChunk>
               Here are two solutions:
             </VerticalChunk>
@@ -10411,7 +10408,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={23}>
+          <Solution solution_number={24}>
             <VerticalChunk>
               Let{" "}
               <NoBreak>
@@ -10491,7 +10488,7 @@ const Article = () => {
             that exercise.)
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={24}>
+          <Solution solution_number={25}>
             <VerticalChunk>
               Viz:
             </VerticalChunk>
@@ -10591,7 +10588,7 @@ const Article = () => {
             </ol>
           </TextParent>
           <Pause />
-          <Solution solution_number={25}>
+          <Solution solution_number={26}>
             <VerticalChunk>
               <b>
                 (a)
@@ -10759,7 +10756,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={26}>
+          <Solution solution_number={27}>
             <VerticalChunk>
               For reference, the four functions are:
             </VerticalChunk>
@@ -10912,7 +10909,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={27}>
+          <Solution solution_number={28}>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -11161,7 +11158,7 @@ const Article = () => {
             prove this identity?
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={28}>
+          <Solution solution_number={29}>
             <VerticalChunk>
               We know from Exercise 21 that the 
               bump immediately to the right of{" "}
@@ -11615,7 +11612,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={29}>
+          <Solution solution_number={30}>
             <VerticalChunk>
               We define
             </VerticalChunk>

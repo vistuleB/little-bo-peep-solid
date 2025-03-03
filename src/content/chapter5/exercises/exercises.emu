@@ -1715,27 +1715,31 @@
     |> Image
         src images/svg_ch5_ex_angle_sum_180.svg
 
-    It is $\eta - \theta$. (Since...
+    |> Solution
 
-    $$
-    \theta + (\eta - \theta) + \eta = 2\eta
-    $$
+        It is $\eta - \theta$. (Since...
 
-    ...you know that's the right answer!) (Nb: $2\eta = 180^\circ$.)
+        $$
+        \theta + (\eta - \theta) + \eta = 2\eta
+        $$
 
-    |> SolutionNote
+        ...you know that's the right answer!) (Nb: $2\eta = 180^\circ$.)
 
-        Two angles that sum to $\eta$ are 
-        called _complementary_, with each angle being
-        the _complement_of the other. The two non-right
-        angles of a right triangle are, therefore, 
-        complementary! (Not
+        |> SolutionNote
 
-        __complimentary__
+            Two angles that sum to $\eta$ are 
+            called _complementary_, with each angle being
+            the _complement_ of the other. 
+            The two 
+            non-right angles of a right triangle are, 
+            therefore, complementary! 
+            !! (Not
 
-        which would indicate that the angles are
-        given to you for free—everything in math is
-        free, not just those angles!)
+            !! __complimentary__
+
+            !! which would indicate that the angles are
+            !! given to you for free—everything in math is
+            !! free, not just those angles!)
 
 |> Exercise
 
@@ -2729,9 +2733,6 @@
         $$
         ...but where the dummy variables don't matter,
         so we might as well write...
-        !! ...but where the dummy variables used inside of each
-        !! lambda-notation do not matter, so we might as well have
-        !! written...
         $$
         f  \circ (t \ra t + A)
         $$
@@ -2758,8 +2759,6 @@
         (x \ra Bx)\circ f
         $$
         ...etc. (All are correct.)
-        !! (The dummy variables don't matter.)
-        !! ...! (It really doesn't matter.)
 
         |> Pause
 
