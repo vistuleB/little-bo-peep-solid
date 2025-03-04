@@ -84,7 +84,7 @@ const PanelButton = () => {
           scrollX() + innerWidth() >= (scrollWidth() / 2) + (MOBILE_MAX_WIDTH / 2) && "h-[10rem]"
         )}
         style={{
-          "width": "142px",
+          "width": "135px",
           "background-color":
             scrollY() > HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY || on_mobile()
               ? "transparent"
@@ -102,7 +102,7 @@ const PanelButton = () => {
         )}
       >
         <div
-          class="select-none flex items-center justify-center h-8 m-3"
+          class="select-none flex items-center justify-center h-8 m-3 hover:!opacity-100"
           style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
         >
           <button
@@ -118,7 +118,7 @@ const PanelButton = () => {
                   : "#fff",
             }}
           >
-            <LeftArrow class={twMerge(!prevDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-500")}/>
+            <LeftArrow class={twMerge(!prevDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-300")}/>
           </button>
           <button
             class={twJoin("mr-3", nextDisabled() && "cursor-default")}
@@ -133,7 +133,7 @@ const PanelButton = () => {
                   : "#fff",
             }}
           >
-            <RightArrow class={twMerge(!nextDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-500")}/>
+            <RightArrow class={twMerge(!nextDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-300")}/>
           </button>
           <button
             onClick={() => { set_store("panel_opened", !open()); }}
@@ -144,7 +144,7 @@ const PanelButton = () => {
                   : "#fff",
             }}
           >
-            <PanelButtonIcon class="hover:!opacity-100 fill-[rgb(30,30,30)] hover:fill-stone-600" open={open()} />
+            <PanelButtonIcon class="fill-[rgb(30,30,30)] hover:fill-stone-600" open={open()} />
           </button>
         </div>
       </div>
