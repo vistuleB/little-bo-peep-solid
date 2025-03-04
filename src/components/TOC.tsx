@@ -1,5 +1,3 @@
-import { ParentProps } from "solid-js";
-import Spacer from "./Spacer";
 import TOCAuthorSuppliedContent from "./TOCAuthorSuppliedContent";
 import useScrollX from "~/hooks/useScrollX";
 
@@ -21,8 +19,7 @@ const TitleSVG = () => {
   return (
     <svg
       class="max-w-[80%]"
-      xmlns="http://www.w3.org/2000/svg"
-      width="350px"
+      width="350"
       viewBox="0 0 333.92395 30.203999"
     >
       <path

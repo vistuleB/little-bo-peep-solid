@@ -1,5 +1,5 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
-import { twJoin } from "tailwind-merge";
+import { twJoin, twMerge } from "tailwind-merge";
 import {
   HAMBURGER_MENU_HEIGHT,
   HAMBURGER_MENU_SCROLLY_END_FADE,
@@ -16,18 +16,28 @@ const PanelButton = () => {
   const { store } = useGlobalContext();
   const open = () => store.panel_opened;
 
+  const getNextArticle = () => {
+    let a = document.querySelector(".next_page") as HTMLAnchorElement
+    a?.click()
+  }
+
+  const getPrevArticle = () => {
+    let a = document.querySelector(".prev_page") as HTMLAnchorElement
+    a?.click()
+  }
+
   const [opacity, set_opacity] = createSignal(1);
   const [scrollY, set_scrollY] = createSignal(0);
   const [scrollX, set_scrollX] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
   const [scrollWidth, set_scrollWidth] = createSignal(0);
+  const [prevDisabled, set_prevDisabled] = createSignal(true);
+  const [nextDisabled, set_nextDisabled] = createSignal(true);
 
   const calc_opacity = () => {
     return Math.min(
       1.0,
-      1.0 -
-        (scrollY() - HAMBURGER_MENU_SCROLLY_START_FADE) /
-          HAMBURGER_MENU_SCROLLY_END_FADE
+      Math.max(0, 1.0 - (scrollY() - HAMBURGER_MENU_SCROLLY_START_FADE) / (HAMBURGER_MENU_SCROLLY_END_FADE - HAMBURGER_MENU_SCROLLY_START_FADE))
     );
   };
 
@@ -55,35 +65,26 @@ const PanelButton = () => {
     });
   });
 
+  createEffect(()=>{
+    store.route // re-run on route change
+    setTimeout(()=>{
+      set_nextDisabled(!document.querySelector(".next_page"))
+      set_prevDisabled(!document.querySelector(".prev_page"))
+    }, 200)
+  })
+
   return (
     <>
+      {/* the background */}
       <div
         class={twJoin(
-          "h-14 w-14 fixed right-0 border-l sm:border-l-0 z-50 border-b",
-          !open() && scrollY() > HAMBURGER_MENU_HEIGHT && "sm:border-b-0",
-          open() && !on_mobile() && scrollY() > 0 && "hover:border-b-0"
-        )}
-      >
-        <button
-          onClick={() => {
-            set_store("panel_opened", !open());
-          }}
-          style={{
-            opacity: !open() && !on_mobile() ? opacity() : 1,
-          }}
-          class="select-none flex items-center justify-center h-8 w-8 m-3 fill-[rgb(30,30,30)] hover:fill-stone-600 hover:!opacity-100"
-        >
-          <PanelButtonIcon open={open()} />
-        </button>
-      </div>
-      <div
-        class={twJoin(
-          "w-14 fixed right-0 z-40 h-14",
+          "fixed right-0 z-40 h-14",
           scrollY() <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
           !on_mobile() &&
           scrollX() + innerWidth() >= (scrollWidth() / 2) + (MOBILE_MAX_WIDTH / 2) && "h-[10rem]"
         )}
         style={{
+          "width": "142px",
           "background-color":
             scrollY() > HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY || on_mobile()
               ? "transparent"
@@ -92,42 +93,129 @@ const PanelButton = () => {
               : "#fff",
         }}
       ></div>
+      <div
+        style="height:57px;" // I don't know if it's box-sizing model or what but I need to put 57px here to get height 56px in the (Chrome) inspector
+        class={twJoin(
+          "fixed right-0 z-50",
+          on_mobile() && "border-l",
+          !on_mobile() && !open() && scrollY() < 2 * HAMBURGER_MENU_HEIGHT && "border-b",
+        )}
+      >
+        <div
+          class="select-none flex items-center justify-center h-8 m-3"
+          style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
+        >
+          <button
+            class={twJoin("w-8 mr-2", prevDisabled() && "cursor-default")}
+            onMouseOver={() => {
+              set_prevDisabled(!document.querySelector(".prev_page"))
+            }}
+            onClick={() => { getPrevArticle() }}
+            style={{
+              "background-color":
+                store.show_areas
+                  ? "rgb(224, 215, 48)"
+                  : "#fff",
+            }}
+          >
+            <LeftArrow class={twMerge(!prevDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-400")}/>
+          </button>
+          <button
+            class={twJoin("w-8 mr-3", nextDisabled() && "cursor-default")}
+            onMouseOver={() => {
+              set_nextDisabled(!document.querySelector(".next_page"))
+            }}
+            onClick={() => { getNextArticle() }}
+            style={{
+              "background-color":
+                store.show_areas
+                  ? "rgb(224, 215, 48)"
+                  : "#fff",
+            }}
+          >
+            <RightArrow class={twMerge(!nextDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-400")}/>
+          </button>
+          <button
+            onClick={() => { set_store("panel_opened", !open()); }}
+             style={{
+              "background-color":
+                store.show_areas
+                  ? "rgb(224, 215, 48)"
+                  : "#fff",
+            }}
+          >
+            <PanelButtonIcon class="hover:!opacity-100 fill-[rgb(30,30,30)] hover:fill-stone-600" open={open()} />
+          </button>
+        </div>
+      </div>
     </>
   );
 };
+// svg paths constants
+const sw = 2.6
+const cdx = 4.5
+const adx = 7.5
+const ady = 7.5
+const un = 30/2
 
-const PanelButtonIcon = (props: { open: boolean }) => {
+const LeftArrow = (props: {class: string}) => {
   return (
-    <svg width="30px" height="30px" version="1.1" viewBox="0 0 30 30">
-      <g>
-        <rect
-          x="5"
-          y="6"
-          width="20"
-          height="3"
-          rx="1.5"
-          ry="1.5"
-          class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}
-        ></rect>
-        <rect
-          x="5"
-          y="13.5"
-          width="20"
-          height="3"
-          rx="1.5"
-          ry="1.5"
-          class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}
-        ></rect>
-        <rect
-          x="5"
-          y="21"
-          width="20"
-          height="3"
-          rx="1.5"
-          ry="1.5"
-          class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}
-        ></rect>
-      </g>
+    <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
+      <path
+        d={`M18 ${adx} L${un - cdx} ${un} L${un - cdx + adx} ${ady + un}`}
+        stroke-linecap="round"
+        stroke-width={sw}
+        fill="none"
+      >
+      </path>
+    </svg>
+  );
+}
+
+const RightArrow = (props: {class: string}) => {
+  return (
+    <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
+      <path
+        d={`M12 ${adx} L${un + cdx} ${un} L${un + cdx - adx} ${ady + un}`}
+        stroke-linecap="round"
+        stroke-width={sw}
+        fill="none"
+      >
+      </path>
+    </svg>
+  );
+}
+
+const PanelButtonIcon = (props: { open: boolean, class: string }) => {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" class={props.class}>
+      <rect
+        x="5"
+        y="6"
+        width="20"
+        height="3"
+        rx="1.5"
+        ry="1.5"
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}
+      ></rect>
+      <rect
+        x="5"
+        y="13.5"
+        width="20"
+        height="3"
+        rx="1.5"
+        ry="1.5"
+        class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}
+      ></rect>
+      <rect
+        x="5"
+        y="21"
+        width="20"
+        height="3"
+        rx="1.5"
+        ry="1.5"
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}
+      ></rect>
     </svg>
   );
 };

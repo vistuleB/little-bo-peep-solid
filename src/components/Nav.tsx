@@ -14,17 +14,14 @@ const Nav = () => {
         store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
         store.innerWidth >= MOBILE_MAX_WIDTH && "absolute",
       )}>
-        <div
-          class={twJoin(
-            "border-b select-none flex justify-center items-center bg-bg z-40 w-full h-14 left-0",
-          )}>
+        <div class="select-none border-b flex justify-center items-center bg-bg z-40 w-full h-14 left-0">
           <Title />
         </div>
       </nav>
-      <div
+      {/* <div
         style={{ top: `${HAMBURGER_MENU_HEIGHT - 1.0}px` }}
         class="h-0 border-b !fixed z-50"
-      ></div>
+      ></div> */}
       <div class="h-14"></div>
     </>
   );
@@ -36,26 +33,16 @@ const Title = () => {
 
   return (
     <div
-      class="select-none w-full h-full border-r-0"
+      class="select-none w-full h-full"
       id="Header"
     >
       <div 
-        class="font-clickerscript text-3xl self-end mt-auto mb-auto py-2 slice"
+        class="text-3xl self-end mt-auto mb-auto py-2 slice"
         style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;transform:translate(0, 0.2em);`}
         >
         <a href="/" onClick={() => setRoute("/")}>
-          {/* {store.title} */}
           <LittleBoPeepSvg />
         </a>
-        <div style="visibility:hidden;position:aboslute;top:0px;left:0px;pointer-events:none;width:1px;height:1px;">
-          <img src="/images/svg_base_exponent.svg" />
-          <img src="/images/svg_ch1_ch_minus_two_squared_cloud.svg" />
-          <img src="/images/chapter_2_1.svg" />
-          <img src="/images/svg_ch3_f_box.svg" />
-          <img src="/images/svg_ch4_ch_polaroids.svg" />
-          <img src="/images/svg_ch5_ch_cosine.svg" />
-          <img src="/images/svg_ch5_ch_cosine_and_sine.svg" />
-        </div>
       </div>
     </div>
   );

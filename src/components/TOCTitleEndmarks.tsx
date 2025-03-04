@@ -2,7 +2,6 @@ export const TOCTitleLeftEndmarkSVG = () => {
   return (
     <svg
       style="width:0.5em;height:1em;"
-      xmlns="http://www.w3.org/2000/svg"
       width="10"
       height="20"
       viewBox="0 0 10 20"
@@ -17,7 +16,6 @@ export const TOCTitleRightEndmarkSVG = () => {
   return (
     <svg
       style="width:0.5em;height:1em;"
-      xmlns="http://www.w3.org/2000/svg"
       width="10"
       height="20"
       viewBox="0 0 10 20"
