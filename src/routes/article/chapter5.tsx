@@ -22,7 +22,7 @@ const Article = () => {
       <Section>
         <VerticalChunk>
           <b>
-            Definitions.
+            Cos and Sin. (“Cosine” and “sine”.)
           </b>
           {" "}
           We've already encountered the ‘cos’ 
