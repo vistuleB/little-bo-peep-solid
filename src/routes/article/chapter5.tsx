@@ -992,14 +992,16 @@ const Article = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          ...that follow because one full turn around the
-          circle brings you back to the same position, whereas
-          a half-turn brings you around  to your{" "}
+          ...that follow because one full turn 
+          around the circle brings you back to the
+          same position, whereas a half-turn brings
+          you around  to your{" "}
           <i>
             antipode
           </i>
-          (where
-          both coordinates are negated), and these two more...
+          {" "}(where
+          both coordinates are negated), and these 
+          two more...
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -12102,25 +12104,30 @@ const Article = () => {
               Exercise 33.
             </b>
             {" "}
-            Building on the discoveries of Exercise 18,
-            conjecture a sequence of geometric transformations
-            that maps
+            What sequence of geometric transformations
+            maps the graph
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$y = \cos(x)$$
+            $$
+            y = \cos x
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            onto
+            onto the graph
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$y = \sin(x) + \cos(x)$$
+            $$
+            y = \sin x + \cos x
+            $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            and prove your answer with algebra.
+            ...? 
+            (Study Exercise 18, if you have no inspiration.)
+            (PS: Prove your answer.)
           </VerticalChunk>
           <Pause />
           <Solution solution_number={33}>
@@ -12382,12 +12389,7 @@ const Article = () => {
               </MathBlock>
               <Pause />
               <VerticalChunk>
-                that is indeed the preferred way of writing{" "}
-                <Math>
-                  $\sqrt&#123;0.5&#125;$
-                </Math>
-                {" "}
-                for many people.
+                that some might prefer.
               </VerticalChunk>
             </SolutionNote>
           </Solution>
@@ -12496,6 +12498,21 @@ const Article = () => {
                 .
               </NoBreak>
             </VerticalChunk>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                In some sense, the vector “wins” over the 
+                number, in that their conjoint baby is a vector:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                style="background-color:rgb(226 232 240);"
+                src="/images/svg_ch5_ex_c_times_vector_box.svg" />
+            </SolutionNote>
           </Solution>
         </Exercise>
       </Exercises>

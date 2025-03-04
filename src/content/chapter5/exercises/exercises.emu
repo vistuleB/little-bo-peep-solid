@@ -3338,11 +3338,24 @@
     !! can turn [the graph] $y = \cos(x)$
     !! into [the graph] $y = \sin(x) + \cos(x)$?
     !! Prove your answer using algebra.
-    Building on the discoveries of Exercise 18,
-    conjecture a sequence of geometric transformations
-    that maps $$y = \cos(x)$$
-    onto $$y = \sin(x) + \cos(x)$$
-    and prove your answer with algebra.
+    !! Building on the discoveries of Exercise 18,
+    !! conjecture a sequence of geometric transformations
+    !! that maps $$y = \cos(x)$$
+    !! onto $$y = \sin(x) + \cos(x)$$
+    !! and prove your answer with algebra.
+    What sequence of geometric transformations
+    maps the graph
+    $$
+    y = \cos x
+    $$
+    onto the graph
+    $$
+    y = \sin x + \cos x
+    $$
+    ...? 
+    (Study Exercise 18, if you have no inspiration.)
+    (PS: Prove your answer.)
+    !! ($\,$Justify your answer.)
 
     |> Solution
 
@@ -3425,8 +3438,9 @@
             $$
             \sqrt{0.5} = {1\over \sqrt{2}}
             $$
-            that is indeed the preferred way of writing $\sqrt{0.5}$
-            for many people.
+            that some might prefer.
+            !! that is indeed the preferred way of writing $\sqrt{0.5}$
+            !! for many people.
 
 
 |> Exercise
@@ -3472,12 +3486,13 @@
         !! for all $a, b \in \rr$, for an example
         !! that is half-algebraic, half-numerical.
 
-        !! |> SolutionNote
+        |> SolutionNote
         
-        !!     In some sense, the vector “wins” over the 
-        !!     number, in that their conjoint baby is a vector:
+            In some sense, the vector “wins” over the 
+            number, in that their conjoint baby is a vector:
 
-        !!     |> Image
-        !!         src images/svg_ch5_ex_c_times_vector_box.svg
+            |> Image
+                src images/svg_ch5_ex_c_times_vector_box.svg
+                style background-color:rgb(226 232 240);
 
 

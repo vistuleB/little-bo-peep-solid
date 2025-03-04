@@ -306,10 +306,12 @@
     }
     $$
 
-    ...that follow because one full turn around the
-    circle brings you back to the same position, whereas
-    a half-turn brings you around  to your _antipode_(where
-    both coordinates are negated), and these two more...
+    ...that follow because one full turn 
+    around the circle brings you back to the
+    same position, whereas a half-turn brings
+    you around  to your _antipode_ (where
+    both coordinates are negated), and these 
+    two more...
 
     $$
     \displaylines{\up{1.0}\cos(x + \eta) = -\!\sin(x) \\
