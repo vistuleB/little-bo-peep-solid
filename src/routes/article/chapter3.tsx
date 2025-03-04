@@ -13,8 +13,10 @@ import Grid from "~/components/Grid";
 import { List, Item } from "~/components/List";
 import { SectionDivider, StarDivider } from "~/components/SectionDivider";
 import VerticalChunk from "~/components/VerticalChunk";
+import useSetRoute from "~/hooks/useSetRoute";
 
 const Article = () => {
+  useSetRoute();
   return (<>
     <a href="/article/chapter2" class="prev_page hidden"></a>
  

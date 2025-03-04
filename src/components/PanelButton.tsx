@@ -1,5 +1,5 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
-import { twJoin } from "tailwind-merge";
+import { twJoin, twMerge } from "tailwind-merge";
 import {
   HAMBURGER_MENU_HEIGHT,
   HAMBURGER_MENU_SCROLLY_END_FADE,
@@ -31,8 +31,8 @@ const PanelButton = () => {
   const [scrollX, set_scrollX] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
   const [scrollWidth, set_scrollWidth] = createSignal(0);
-  const [prevDisabled, set_prevDisabled] = createSignal(false);
-  const [nextDisabled, set_nextDisabled] = createSignal(false);
+  const [prevDisabled, set_prevDisabled] = createSignal(true);
+  const [nextDisabled, set_nextDisabled] = createSignal(true);
 
   const calc_opacity = () => {
     return Math.min(
@@ -64,6 +64,14 @@ const PanelButton = () => {
       window.removeEventListener("resize", handleResize);
     });
   });
+
+  createEffect(()=>{
+    store.route // re-run on route change
+    setTimeout(()=>{
+      set_nextDisabled(!document.querySelector(".next_page"))
+      set_prevDisabled(!document.querySelector(".prev_page"))
+    }, 200)
+  })
 
   return (
     <>
@@ -98,7 +106,7 @@ const PanelButton = () => {
           style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
         >
           <button
-            class={twJoin("w-8 mr-2", prevDisabled() && "cursor-not-allowed")}
+            class={twJoin("w-8 mr-2", prevDisabled() && "cursor-default")}
             onMouseOver={() => {
               set_prevDisabled(!document.querySelector(".prev_page"))
             }}
@@ -110,10 +118,10 @@ const PanelButton = () => {
                   : "#fff",
             }}
           >
-            <LeftArrow class="stroke-[rgb(30,30,30)] hover:stroke-stone-600"/>
+            <LeftArrow class={twMerge(!prevDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-400")}/>
           </button>
           <button
-            class={twJoin("w-8 mr-3", nextDisabled() && "cursor-not-allowed")}
+            class={twJoin("w-8 mr-3", nextDisabled() && "cursor-default")}
             onMouseOver={() => {
               set_nextDisabled(!document.querySelector(".next_page"))
             }}
@@ -125,18 +133,16 @@ const PanelButton = () => {
                   : "#fff",
             }}
           >
-            <RightArrow class="stroke-[rgb(30,30,30)] hover:stroke-stone-600"/>
+            <RightArrow class={twMerge(!nextDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-400")}/>
           </button>
           <button
             onClick={() => { set_store("panel_opened", !open()); }}
-            // style={{
-            //     "background-color":
-            //       scrollY() > HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY || on_mobile()
-            //         ? "transparent"
-            //         : store.show_areas
-            //         ? "#fff000"
-            //         : "#fff",
-            // }}
+             style={{
+              "background-color":
+                store.show_areas
+                  ? "rgb(224, 215, 48)"
+                  : "#fff",
+            }}
           >
             <PanelButtonIcon class="hover:!opacity-100 fill-[rgb(30,30,30)] hover:fill-stone-600" open={open()} />
           </button>

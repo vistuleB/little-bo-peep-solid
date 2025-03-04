@@ -1,6 +1,6 @@
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
-import { Suspense } from "solid-js";
+import { ParentProps, Suspense } from "solid-js";
 import Container from "~/components/Container";
 
 import "./app.css";
@@ -21,7 +21,7 @@ export default function App() {
             </Container>
           </>
         )}>
-        <FileRoutes />
+          <FileRoutes />
       </Router>
     </StoreProvider>
   );
