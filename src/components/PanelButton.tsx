@@ -106,7 +106,7 @@ const PanelButton = () => {
           style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
         >
           <button
-            class={twJoin("w-8 mr-2", prevDisabled() && "cursor-default")}
+            class={twJoin("mr-2", prevDisabled() && "cursor-default")}
             onMouseOver={() => {
               set_prevDisabled(!document.querySelector(".prev_page"))
             }}
@@ -118,10 +118,10 @@ const PanelButton = () => {
                   : "#fff",
             }}
           >
-            <LeftArrow class={twMerge(!prevDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-400")}/>
+            <LeftArrow class={twMerge(!prevDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-500")}/>
           </button>
           <button
-            class={twJoin("w-8 mr-3", nextDisabled() && "cursor-default")}
+            class={twJoin("mr-3", nextDisabled() && "cursor-default")}
             onMouseOver={() => {
               set_nextDisabled(!document.querySelector(".next_page"))
             }}
@@ -133,7 +133,7 @@ const PanelButton = () => {
                   : "#fff",
             }}
           >
-            <RightArrow class={twMerge(!nextDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-400")}/>
+            <RightArrow class={twMerge(!nextDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-500")}/>
           </button>
           <button
             onClick={() => { set_store("panel_opened", !open()); }}
@@ -151,18 +151,19 @@ const PanelButton = () => {
     </>
   );
 };
+
 // svg paths constants
 const sw = 2.6
-const cdx = 4.5
-const adx = 7.5
-const ady = 7.5
+const cdx = 4
+const adx = 6.5
+const ady = 6.5
 const un = 30/2
 
 const LeftArrow = (props: {class: string}) => {
   return (
     <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
       <path
-        d={`M18 ${adx} L${un - cdx} ${un} L${un - cdx + adx} ${ady + un}`}
+        d={`M${un - cdx + adx} ${un - ady} L${un - cdx} ${un} L${un - cdx + adx} ${un + ady}`}
         stroke-linecap="round"
         stroke-width={sw}
         fill="none"
@@ -176,7 +177,7 @@ const RightArrow = (props: {class: string}) => {
   return (
     <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
       <path
-        d={`M12 ${adx} L${un + cdx} ${un} L${un + cdx - adx} ${ady + un}`}
+        d={`M${un + cdx - adx} ${un - ady} L${un + cdx} ${un} L${un + cdx - adx} ${un + ady}`}
         stroke-linecap="round"
         stroke-width={sw}
         fill="none"

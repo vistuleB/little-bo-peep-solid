@@ -16,1448 +16,6 @@ import VerticalChunk from "~/components/VerticalChunk";
 import useSetRoute from "~/hooks/useSetRoute";
 
 const Article = () => {
-<<<<<<< HEAD
-  return (
-    <Chapter
-      number={5}
-      title="The Trigonometric Functions">
-      <Section>
-        <VerticalChunk>
-          <b>
-            Cos and Sin. (“Cosine” and “sine”.)
-          </b>
-          {" "}
-          We've already encountered the ‘cos’ 
-          function in Exercise 7 of Chapter 3, e.g.. 
-          It is the one that has this graph:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_cosine.svg" />
-        <Pause />
-        <VerticalChunk>
-          It has a close cousin named ‘sin’.
-          While{" "}
-          <Math>
-            $\cos(x)$
-          </Math>
-          {" "}“tops off” at{" "}
-          <NoBreak>
-            <Math>
-              $x = 0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          {" "}
-          <Math>
-            $\sin(x)$
-          </Math>
-          {" "}goes diagonally through the point
-          {" "}
-          <NoBreak>
-            <Math>
-              $(0, 0)$
-            </Math>
-            :
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_cosine_and_sine.svg" />
-        <Pause />
-        <VerticalChunk>
-          As far as standard definitions go,
-          {" "}
-          <Math>
-            $\cos(x)$
-          </Math>
-          {" "}is the
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          {" "}{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinate
-          </NoBreak>
-          {" "}{" "}
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          and{" "}
-          <Math>
-            $\sin(x)$
-          </Math>
-          {" "}is the
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          {" "}{" "}
-          <NoBreak>
-            <Math>
-              $y$
-            </Math>
-            -coordinate
-          </NoBreak>
-          {" "}{" "}
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          of a point{" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}units counterclockwise from
-          {" "}
-          <Math>
-            $(1, 0)$
-          </Math>
-          {" "}on the unit circle. (Nb: “a”
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          unit circle
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          is a circle of radius{" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}while “the” unit
-          circle is the circle of radius{" "}
-          <Math>
-            $1$
-          </Math>
-          {" "}centered
-          at{" "}
-          <NoBreak>
-            <Math>
-              $(0, 0)$
-            </Math>
-            .)
-          </NoBreak>
-          {" "}For example, if we look at{" "}
-          <NoBreak>
-            <Math>
-              $x = &#123;1\over 2&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          we see{" "}
-          <NoBreak>
-            <Math>
-              $\cos(&#123;1\over 2&#125;) \approx 0.9$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          {" "}
-          <NoBreak>
-            <Math>
-              $\sin(&#123;1\over 2&#125;) \approx 0.5$
-            </Math>
-            :
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_cosine_and_sine_@0.5.svg" />
-        <Pause />
-        <VerticalChunk>
-          Per the definitions,
-          the point half a unit
-          counterclockwise from{" "}
-          <Math>
-            $(1, 0)$
-          </Math>
-          {" "}on the unit
-          circle has coordinates{" "}
-          <Math>
-            $\approx 0.9$
-          </Math>
-          {" "}in{" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}
-          and{" "}
-          <Math>
-            $\approx 0.5$
-          </Math>
-          {" "}in{" "}
-          <Math>
-            $y$
-          </Math>
-          {" "}(or actually{" "}
-          <Math>
-            $0.87758...$
-          </Math>
-          {" "}
-          and{" "}
-          <NoBreak>
-            <Math>
-              $0.47942...$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}it turns out, as we can know by
-          a calculator equipped with ‘sin’ and ‘cos’):
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_@0.5_smaller.svg" />
-        <Pause />
-        <VerticalChunk>
-          As a second example, the graphs indicate that 
-          {" "}
-          <NoBreak>
-            <Math>
-              $\sin(-3) \approx -0.2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}{" "}
-          <Math>
-            $\cos(-3) \approx -0.99$
-          </Math>
-          {" "}
-          (or something very close to{" "}
-          <NoBreak>
-            <Math>
-              $-1$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}in any case):
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_cosine_and_sine_@-3.svg" />
-        <Pause />
-        <VerticalChunk>
-          Indeed, going{" "}
-          <Math>
-            $-3$
-          </Math>
-          {" "}units counterclockwise—which
-          means, going{" "}
-          <Math>
-            $3$
-          </Math>
-          {" "}units clockwise—on the unit
-          circle, starting from{" "}
-          <NoBreak>
-            <Math>
-              $(1, 0)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}brings us to a point
-          with{" "}
-          <NoBreak>
-            <Math>
-              $y$
-            </Math>
-            -
-          </NoBreak>
-          {" "}and{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinates
-          </NoBreak>
-          {" "}of{" "}
-          <Math>
-            $\approx -0.2$
-          </Math>
-          {" "}
-          and{" "}
-          <Math>
-            $\approx -0.99$
-          </Math>
-          {" "}respectively (or{" "}
-          <Math>
-            $-0.1411...$
-          </Math>
-          {" "}
-          and{" "}
-          <NoBreak>
-            <Math>
-              $-0.989992...$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}to be exact, it turns out):
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_@-3_smaller.svg" />
-        <Pause />
-        <VerticalChunk>
-          For a last example, 
-          note that there appears
-          to be a value of{" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}near{" "}
-          <NoBreak>
-            <Math>
-              $-1.6$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}where{" "}
-          <NoBreak>
-            <Math>
-              $\cos(x) = 0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          {" "}
-          <NoBreak>
-            <Math>
-              $\sin(x) = -1$
-            </Math>
-            :
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_cosine_and_sine_@minus_eta.svg" />
-        <Pause />
-        <VerticalChunk>
-          Some thought reveals that this value of{" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}
-          would be{" "}
-          <i>
-            minus one-quarter the circumference
-            of a unit circle
-          </i>
-          , because{" "}
-          <Math>
-            $(0, -1)$
-          </Math>
-          {" "}is 
-          one-quarter of the unit circle clockwise from{" "}
-          <NoBreak>
-            <Math>
-              $(1, 0)$
-            </Math>
-            .
-          </NoBreak>
-          {" "}
-          Note that one-quarter the circumference of a unit
-          circle was estimated to be
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \approx &#123;11\over 7&#125; = 1.\overline&#123;571428&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          in Exercise 24 of Chapter 3 (by direct inspection
-          of the graph{" "}
-          <NoBreak>
-            <Math>
-              $y = \cos(x)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}for that matter,
-          which may or may not be cheating), which agrees
-          with the visual estimate{" "}
-          <NoBreak>
-            <Math>
-              $x \approx -1.6$
-            </Math>
-            .
-          </NoBreak>
-          {" "}(But
-          that value would be namely{" "}
-          <NoBreak>
-            <Math>
-              $x = -1.57...$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}not
-          {" "}
-          <NoBreak>
-            <Math>
-              $x = -1.6$
-            </Math>
-            .)
-          </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          In another possible definition,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is defined as the{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinate
-          </NoBreak>
-          {" "}of a point that
-          is{" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}units counterclockwise from{" "}
-          <Math>
-            $(0, -1)$
-          </Math>
-          {" "}on
-          the unit circle. In this case,{" "}
-          <Math>
-            $\sin(x)$
-          </Math>
-          {" "}and
-          {" "}
-          <Math>
-            $\cos(x)$
-          </Math>
-          {" "}are both defined by{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinates:
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_with_new_definition.svg" />
-        <Pause />
-        <VerticalChunk>
-          In more detail, if you tilt your head  sideways,
-          you will see that the{" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}axis looks, from the
-          vantage point of{" "}
-          <NoBreak>
-            <Math>
-              $(0, -1)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}the same as the{" "}
-          <Math>
-            $y$
-          </Math>
-          {" "}
-          axis looks from the vantage point of{" "}
-          <NoBreak>
-            <Math>
-              $(1, 0)$
-            </Math>
-            .
-          </NoBreak>
-          {" "}
-          So the old and new definitions of{" "}
-          <Math>
-            $\sin(x)$
-          </Math>
-          {" "}are
-          equivalent! (👍👍)
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          In particular,{" "}
-          <Math>
-            $\sin(x)$
-          </Math>
-          {" "}and{" "}
-          <Math>
-            $\cos(x)$
-          </Math>
-          {" "}can also
-          be understood as the{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinates
-          </NoBreak>
-          {" "}of two
-          particles on the unit circle such that the ‘sin’
-          particle is one-quarter-turn behind the{" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $\cos$
-            </Math>
-            ’
-          </NoBreak>
-          {" "}
-          particle:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_with_sin_and_cos_particles.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...to be contrasted with our first definition,
-          employing a single point projected onto
-          two different axes:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_with_sincos_particle.svg" />
-        <Pause />
-        <VerticalChunk>
-          The second definition (former diagram) explains
-          why values of{" "}
-          <Math>
-            $\sin$
-          </Math>
-          {" "}lag a fixed amount behind
-          values of{" "}
-          <NoBreak>
-            <Math>
-              $\cos$
-            </Math>
-            .
-          </NoBreak>
-          {" "}(“Lagging” when you read the
-          graphs from left to right.) It's because the ‘sin’
-          particle follows in the trail blazed by the ‘cos’
-          particle, namely!
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Derivatives.
-          </b>
-          {" "}
-          Continuing the last “chapter” in the
-          definitions of{" "}
-          <Math>
-            $\sin$
-          </Math>
-          {" "}and{" "}
-          <NoBreak>
-            <Math>
-              $\cos$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}we can
-          add two more particles to the diagram that
-          defines ‘sin’ and ‘cos’ via{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinates.
-          </NoBreak>
-          {" "}
-          The two new particles are labeled{" "}
-          <NoBreak>
-            “
-            <Math>
-              $-\!\sin$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}
-          and{" "}
-          <NoBreak>
-            “
-            <Math>
-              $-\!\cos$
-            </Math>
-            ”:
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_with_four_particles.svg" />
-        <Pause />
-        <VerticalChunk>
-          These labels are chosen
-          because
-          the{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinate
-          </NoBreak>
-          {" "}of the
-          {" "}
-          <NoBreak>
-            “
-            <Math>
-              $-\!\sin$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}
-          particle is
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          -\!\sin(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          by symmetry with the{" "}
-          <Math>
-            $\sin$
-          </Math>
-          {" "}particle,
-          meaning that the 
-          {" "}
-          <NoBreak>
-            “
-            <Math>
-              $-\!\sin$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}
-          particle
-          defines the function
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          x \ra -\!\sin(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          also known simply as
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplay>
-          {" "}{" "}
-          <NoBreak>
-            “
-            <Math>
-              $-\!\sin$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}{" "}
-        </CentralDisplay>
-        <Pause />
-        <VerticalChunk>
-          by the general definition that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          -f = (x \ra -f(x))
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          for all{" "}
-          <NoBreak>
-            <Math>
-              $f : \rr \ra \rr$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          and similarly for{" "}
-          <NoBreak>
-            “
-            <Math>
-              $-\!\cos$
-            </Math>
-            ”.
-          </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          Adding the curves for{" "}
-          <Math>
-            $-\!\sin$
-          </Math>
-          {" "}and{" "}
-          <Math>
-            $-\!\cos$
-          </Math>
-          {" "}
-          to the graphs fills the “gap” between{" "}
-          <Math>
-            $y = \sin(x)$
-          </Math>
-          {" "}
-          and{" "}
-          <Math>
-            $y = \cos(x)$
-          </Math>
-          {" "}with two new equally-spaced curves; 
-          note that 
-          {" "}
-          <Math>
-            $\cos$
-          </Math>
-          {" "}lags behind{" "}
-          <Math>
-            $-\!\sin$
-          </Math>
-          {" "}
-          (reading the graphs from left to right)
-          by the same amount that{" "}
-          <Math>
-            $\sin$
-          </Math>
-          {" "}lags behind
-          {" "}
-          <NoBreak>
-            <Math>
-              $\cos$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}etc:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_four_curves.svg" />
-        <Pause />
-        <VerticalChunk>
-          These are the same four curves that
-          appear in Exercise 12 of Chapter 4.
-          In particular,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin' = \cos
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \cos' = -\!\sin
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          (-\!\sin)' = -\!\cos
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          (-\!\cos)' = \sin
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          because the rate of change of each
-          particle's{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinate
-          </NoBreak>
-          {" "}is the
-          {" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -coordinate
-          </NoBreak>
-          {" "}of the next particle
-          in the order of rotation, as explained
-          in the solution to that problem.
-          (Clockwise vs. counterclockwise rotation
-          notwithstanding.)
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          However, note that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          (-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          in general for any{" "}
-          <Math>
-            $f : \rr \ra \rr$
-          </Math>
-          {" "}
-          (cf. Exercise 20 and Exercise 10 of Chapter 4),
-          which implies that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          (-\!\sin)' = -\!\sin'
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (or
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          (-\!\sin)' = -\!\sin' = -\!\cos
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          to finish the computation),
-          and that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          (-\!\cos)' = -\!\cos'
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (or
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          (-\!\cos)' = -\!\cos' = -(-\!\sin) = \sin
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          to finish the computation),
-          which means that you only need to
-          remember the first two equations.
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Even/odd identities, and identities with{" "}
-            <NoBreak>
-              “
-              <Math>
-                $\eta$
-              </Math>
-              ”.
-            </NoBreak>
-            {" "}{" "}
-          </b>
-          {" "}
-          One has
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \displaylines&#123;
-          \up&#123;1.0&#125;\cos(-x) = \cos(x) \\
-          \up&#123;1.7&#125;\sin(-x) = -\sin(x) \\
-          \up&#123;1.7&#125;\sin(x + \eta) = \cos(x) \\
-          \up&#123;1.7&#125;\cos(x - \eta) = \sin(x) \\
-          \up&#123;1.7&#125;\dn&#123;0.5&#125;\cos(\eta/2 + x) = \sin(\eta/2 - x)
-          &#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          for all{" "}
-          <NoBreak>
-            <Math>
-              $x \in \rr$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}where
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large \eta
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (“aye-tah”, Greek letter “eta”) is a
-          constant that denotes the quarter-circumference
-          of a unit circle, or about{" "}
-          <NoBreak>
-            <Math>
-              $&#123;11\over 7&#125;$
-            </Math>
-            .
-          </NoBreak>
-          {" "}
-          (Cf. Exercise 24, Chapter 4.) You should
-          be able to verify each of these identities
-          just by looking at them and thinking of the
-          definitions of{" "}
-          <NoBreak>
-            <Math>
-              $\sin(x)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}{" "}
-          <NoBreak>
-            <Math>
-              $\cos(x)$
-            </Math>
-            —possibly
-          </NoBreak>
-          {" "}
-          the “second” definition of{" "}
-          <NoBreak>
-            <Math>
-              $\sin(x)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}in some
-          cases—but in case something goes wrong, here
-          is a cheat sheet that does some of the thinking
-          for you (or, help you compare your way of seeing
-          things to the author's way of seeing things):
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_identity_explanations.svg" />
-        <Pause />
-        <VerticalChunk>
-          Two more identities
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin(\eta - x) = \cos(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \cos(\eta - x) = \sin(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          are related to the last identity above, in that they
-          involve symmetry about the line{" "}
-          <Math>
-            $x = y$
-          </Math>
-          {" "}in the Cartesian
-          plane:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_identity_explanations_more.svg" />
-        <Pause />
-        <VerticalChunk>
-          We also have these identities...
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \displaylines&#123;
-          \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
-          \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
-          \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
-          \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
-          &#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          ...that follow because one full turn 
-          around the circle brings you back to the
-          same position, whereas a half-turn brings
-          you around  to your{" "}
-          <i>
-            antipode
-          </i>
-          {" "}(where
-          both coordinates are negated), and these 
-          two more...
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \displaylines&#123;\up&#123;1.0&#125;\cos(x + \eta) = -\!\sin(x) \\
-          \up&#123;1.7&#125;\sin(x - \eta) = -\!\cos(x)&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          ...that follow from the four-particle
-          diagram, e.g..
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Relation to derivatives.
-          </b>
-          {" "}
-          Note that the derivatives of
-          sin and cos can also be expressed by 
-          the [possibly more “logical”] formulas
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin'(x) = \sin(x + \eta)
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \cos'(x) = \cos(x + \eta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          given that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin(x + \eta) = \cos(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \cos(x + \eta) = -\!\sin(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          as seen in the previous section.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          In fact, one can make the further observation that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin^&#123;(\ell)&#125;(x) = \sin(x + \ell\eta)
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \cos^&#123;(\ell)&#125;(x) = \cos(x + \ell\eta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          where{" "}
-          <NoBreak>
-            “
-            <Math>
-              $^&#123;(\ell)&#125;$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}denotes the{" "}
-          <NoBreak>
-            <Math>
-              $\ell$
-            </Math>
-            -th
-          </NoBreak>
-          {" "}
-          derivative, for all{" "}
-          <NoBreak>
-            <Math>
-              $\ell \in \nn$
-            </Math>
-            .
-          </NoBreak>
-          {" "}Each
-          derivative is obtained by moving to the next
-          particle in the order of rotation, i.e.,
-          by adding{" "}
-          <Math>
-            $+\eta$
-          </Math>
-          {" "}to the input!
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            The pythagorean identity.
-          </b>
-          {" "}
-          Because
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 + y^2 = 1
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is the equation of the unit circle, and
-          points of the form
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          (\cos(x), \sin(x))
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          are points on the unit circle, we have
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \cos^2(x) + \sin^2(x) = 1 \tag&#123;*&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          for all{" "}
-          <NoBreak>
-            <Math>
-              $x \in \rr$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}surprise or not.
-          We refer to (*) as the{" "}
-          <i>
-            pythagorean identity
-          </i>
-          .
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          Various “tricks” are associated to the
-          pythagorean identity. For example, the
-          number
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          1
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is forevermore suspect, because it might
-          just be
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin^2(x) + \cos^2(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (or for some other variable) in disguise,
-          depending on the situation. Also
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin^2(y)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (variable not important) might be
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          1 - \cos^2(y)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          just as
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \cos^2(y)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          might be
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          1 - \sin^2(y)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (also
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          1 - \cos^2(y)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          1 - \sin^2(y)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          might end up respectively rewritten
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          (1 - \cos(y))\cdot (1 + \cos(y))
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          (1 - \sin(y))\cdot (1 + \sin(y))
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          by the difference-of-squares factorization),
-          and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin^2(\theta) - \cos^2(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          might be
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          1 - 2\cos^2(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          or otherwise
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          2\sin^2(\theta) - 1
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          and symmetrically for the opposite difference. (I.e.,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \,\cos^2(\theta) - \sin^2(\theta),
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          this one.) Etc.
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Inputs as radians.
-          </b>
-          {" "}
-          The
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          radian measure
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          of an angle was briefly touched upon in
-          Note 1 of Exercise 37, Chapter 4. 
-          In short, it is a “scientific” measure
-          of angles in which the value of an angle
-          is the length of a circular arc subtended
-          by the angle, divided by the radius of
-          that arc:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition.svg" />
-        <Pause />
-        <VerticalChunk>
-          The definition implies that the radian
-          measure of an angle is the length subtended
-          by the angle on a unit circle:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition_radius_1.svg" />
-        <Pause />
-        <VerticalChunk>
-          In particular,{" "}
-          <Math>
-            $90^\circ$
-          </Math>
-          {" "}is{" "}
-          <Math>
-            $\eta$
-          </Math>
-          {" "}radians:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition_90_degrees_is.svg" />
-        <Pause />
-        <VerticalChunk>
-          To imprint this fact in our memories:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition_90_imprint.svg" />
-        <Pause />
-        <VerticalChunk>
-          (We will often leave out the “rad”—in fact,
-          if you don't see a degree symbol{" "}
-          <NoBreak>
-            “
-            <Math>
-              $^\circ$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}
-          next to an angle measure, that means the angle
-          measure is a radian.) From there, other radian
-          measures can be proportionally deduced; for
-          example,{" "}
-          <Math>
-            $45^\circ$
-          </Math>
-          {" "}is{" "}
-          <Math>
-            $\eta/2$
-          </Math>
-          {" "}radians:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition_45_imprint.svg" />
-        <Pause />
-        <VerticalChunk>
-          aaaand... and so on.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          As a consequence of the definition, a
-          displacement of{" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}units on the unit circle
-          subtends an angle—or technically:{" "}
-          <i>
-            rotation
-          </i>
-          , 
-          because there is a “positive” direction—and
-          you can also say{" "}
-          <i>
-            signed angle
-          </i>
-          {" "}instead of
-          {" "}
-          <i>
-            rotation
-          </i>
-          , by the way—whose (signed) radian
-          measure is{" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            :
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_x_displacement_and_x_radians.svg" />
-        <Pause />
-        <VerticalChunk>
-          In particular,
-          instead of positing the definitions of
-          sin and cos like this...
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_x_displacement_and_x_radians_displacement_definition.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...with the input appearing as a
-          displacement, we can posit the definitions
-          like this...
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch_ch_x_displacement_and_x_radians_radian_definition.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...with the input appearing as a radian.
-        </VerticalChunk>
-        <Pause />
-        <Example>
-          <VerticalChunk>
-            <b>
-              Example 1.
-            </b>
-            {" "}
-            We can conceptualize{" "}
-=======
   useSetRoute();
   return (<>
     <a href="/article/chapter4" class="prev_page hidden"></a>
@@ -1467,7 +25,7 @@ const Article = () => {
         <Section>
           <VerticalChunk>
             <b>
-              Definitions.
+              Cos and Sin. (“Cosine” and “sine”.)
             </b>
             {" "}
             We've already encountered the ‘cos’ 
@@ -1484,7 +42,6 @@ const Article = () => {
               $\cos(x)$
             </Math>
             {" "}“tops off” at{" "}
->>>>>>> chapter_changing_buttons
             <NoBreak>
               <Math>
                 $x = 0$
@@ -2104,831 +661,8 @@ const Article = () => {
               ”
             </NoBreak>
             {" "}{" "}
-<<<<<<< HEAD
-            <b>
-              (ii)
-            </b>
-            {" "}as long as the angle is nonzero, 
-            and the arc has nonzero radius, the
-            length of the segment will be STRICTLY
-            GREATER than the length of the arc,
-            not just greater-or-equal-to
-          </p>
-          (Point{" "}
-          <b>
-            (ii)
-          </b>
-          {" "}can be seen by 
-          comparing the segment to a two-segment 
-          assemblage that is shorter than the segment 
-          itself, but still-as-long-as-the-arc, by virtue 
-          of the original inequality.)
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            The “Fisher sandwich”.
-          </b>
-          {" "}
-          The “Fisher sandwich”—we don't make these 
-          terms up—states that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin(\theta) \,&lt;\, \theta \,&lt;\, &#123;\sin(\theta)\over\cos(\theta)&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          for all{" "}
-          <NoBreak>
-            <Math>
-              $0 &lt; \theta &lt; \eta$
-            </Math>
-            .
-          </NoBreak>
-          {" "}
-          The Fisher sandwich is so-called because 
-          it “sandwiches”{" "}
-          <Math>
-            $\theta$
-          </Math>
-          {" "}
-          between
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          below, and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;\sin(\theta)\over\cos(\theta)&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          above. (Indeed,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;\sin(\theta)\over\cos(\theta)&#125; &gt; \sin(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          in the range{" "}
-          <Math>
-            $0 &lt; \theta &lt; \eta$
-          </Math>
-          {" "}
-          because dividing by
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \cos(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          makes you
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplay>
-          BIGGER
-        </CentralDisplay>
-        <Pause />
-        <VerticalChunk>
-          when{" "}
-          <NoBreak>
-            <Math>
-              $0 &lt; \cos(\theta) &lt; 1$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}which is the case
-          for{" "}
-          <NoBreak>
-            <Math>
-              $0 &lt; \theta &lt; \eta$
-            </Math>
-            —in
-          </NoBreak>
-          {" "}fact, dividing by
-          {" "}
-          <Math>
-            $\cos(\theta)$
-          </Math>
-          {" "}will make you
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplay>
-          DRAMATICALLY BIGGER
-        </CentralDisplay>
-        <Pause />
-        <VerticalChunk>
-          when{" "}
-          <Math>
-            $\cos(\theta)$
-          </Math>
-          {" "}is close to{" "}
-          <NoBreak>
-            <Math>
-              $0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}which is the 
-          case when{" "}
-          <Math>
-            $\theta$
-          </Math>
-          {" "}is close to{" "}
-          <NoBreak>
-            <Math>
-              $\eta$
-            </Math>
-            .)
-          </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          The first inequality
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin(\theta) \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; \theta
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          follows by this illustration (using{" "}
-          <NoBreak>
-            <Math>
-              $0 &lt; \theta &lt; \eta$
-            </Math>
-            ):
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_fisher_first_ineq.svg" />
-        <Pause />
-        <VerticalChunk>
-          Namely, per the one slightly pedantic logic,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \theta &gt; L
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          on the one hand, where{" "}
-          <Math>
-            $L$
-          </Math>
-          {" "}is the length of
-          the dotted chord, and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          L &gt; \sin(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          on the other hand. Together, this implies 
-          {" "}
-          <NoBreak>
-            <Math>
-              $\theta \rt&#123;0.1&#125;&gt;\rt&#123;0.1&#125; \sin(\theta)$
-            </Math>
-            .
-          </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          For the second inequality, we have to start
-          by noting that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;\sin(\theta)\over \cos(\theta)&#125; = &#123;1\over \cos(\theta)&#125;\cdot \sin(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is the length that{" "}
-          <Math>
-            $\theta$
-          </Math>
-          {" "}projects onto
-          the line{" "}
-          <NoBreak>
-            <Math>
-              $x = 1$
-            </Math>
-            :
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_fisher_second_ineq.svg" />
-        <Pause />
-        <VerticalChunk>
-          Specifically,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;1\over \cos(\theta)&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          turns the bottom segment of length{" "}
-          <Math>
-            $1$
-          </Math>
-          {" "}
-          into the pink hypotenuse, because just as ‘cos’
-          is the hypotenuse-to-adjacent multiplicative
-          factor, so is{" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $1/\!\cos$
-            </Math>
-            ’
-          </NoBreak>
-          {" "}the adjacent-to-hypotenuse
-          multiplicative factor (don't be confused by the
-          presence of two possible triangles to which 
-          this can be applied); then,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sin(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          brings one over to the right-hand segment
-          from the pink hypotenuse, being the 
-          hypotenuse-to-opposite multiplicative
-          factor.
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          The fact that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;\theta&#125; \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; &#123;\sin(\theta)\over \cos(\theta)&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          then follows from the “polished” version 
-          of the Abercrombie inequality. (The version
-          that allows the segment to be tangent to the
-          arc, and that claims a strict inequality.)
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            The angle-sum formulas.
-          </b>
-          {" "}
-          In the “famous diagram” from above there 
-          are a total of four different ways to 
-          reach an outer edge by means of ‘cos’ 
-          and ‘sin’ arrows while starting from the 
-          edge of length{" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}reaching each of the 
-          four other outer edges precisely once:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_1.svg" />
-        <Pause />
-        <VerticalChunk>
-          (Note by the way that{" "}
-          <NoBreak>
-            <Math>
-              $0 \leq \theta_1 \leq \eta$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          {" "}
-          <Math>
-            $0 \leq \theta_2 \leq \eta$
-          </Math>
-          {" "}because of 
-          the way the figure is constructed, which 
-          implies that{" "}
-          <NoBreak>
-            <Math>
-              $\sin(\theta_1\!\rt&#123;0.1&#125;)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          {" "}
-          <NoBreak>
-            <Math>
-              $\cos(\theta_1\!\rt&#123;0.1&#125;)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          {" "}
-          <Math>
-            $\sin(\theta_2\!\rt&#123;0.1&#125;)$
-          </Math>
-          {" "}and{" "}
-          <Math>
-            $\cos(\theta_2\!\rt&#123;0.1&#125;)$
-          </Math>
-          {" "}
-          are all nonnegative, and that all their
-          products are nonnegative, as well.)
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          On the other hand, if we inscribe the
-          figure in the unit circle with the joint angle
-          {" "}
-          <Math>
-            $\theta_1 + \theta_2$
-          </Math>
-          {" "}at the center, we find that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \,\sin(\theta_1 + \theta_2)\,
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \,\cos(\theta_1 + \theta_2)\,
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          make an appearance as coordinates, and 
-          that these coordinates can be expressed as 
-          sums or differences of the four outer edges:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_2.svg" />
-        <Pause />
-        <VerticalChunk>
-          (Or with{" "}
-          <NoBreak>
-            <Math>
-              $\theta_1 + \theta_2 &gt; \eta$
-            </Math>
-            ...
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_3.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...works as well!)
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          In other words, we find...
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_formulas_flowers.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...for{" "}
-          <Math>
-            $\theta_1$
-          </Math>
-          {" "}and{" "}
-          <Math>
-            $\theta_2$
-          </Math>
-          {" "}as may
-          appear in such a figure, i.e., for 
-          {" "}
-          <NoBreak>
-            <Math>
-              $0 \leq \theta_1, \theta_2 \leq \eta$
-            </Math>
-            .
-          </NoBreak>
-          {" "}In 
-          fact, these two formulas hold for{" "}
-          <i>
-            all
-          </i>
-          {" "}
-          {" "}
-          <NoBreak>
-            <Math>
-              $\theta_1$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}{" "}
-          <NoBreak>
-            <Math>
-              $\theta_2 \in \rr$
-            </Math>
-            .
-          </NoBreak>
-          {" "}They are 
-          known as the{" "}
-          <i>
-            angle-sum formulas
-          </i>
-          . Also 
-          note the “pattern” of the angle-sum formulas:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_formulas_by_heart.svg" />
-        <Pause />
-        <VerticalChunk>
-          The point of remembering these patterns 
-          is that, on their own, these patterns are
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          enough
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          to reconstruct the full formulas from scratch!
-          (Well, a lot of students remember the formulas
-          that way, at least.)
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            The missing arrows.
-          </b>
-          {" "}
-          ‘sin’ and ‘cos’ only constitute two out 
-          of six ratios that exist among the sides 
-          of a right triangle. The four “missing ratios” 
-          are hereby drawn:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_missing_arrows_veiled.svg" />
-        <Pause />
-        <VerticalChunk>
-          In fact, there is a dedicated, named function 
-          that computes each of the six ratios. We shall 
-          now reveal the names of the four missing 
-          functions (!!):
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_missing_arrows_unveiled.svg" />
-        <Pause />
-        <VerticalChunk>
-          Here 
-          “sec” is short for{" "}
-          <i>
-            secant
-          </i>
-          ,
-          “tan” is short for{" "}
-          <i>
-            tangent
-          </i>
-          ,
-          “cot” is short for{" "}
-          <i>
-            cotangent
-          </i>
-          , and
-          “csc” is short for{" "}
-          <i>
-            cosecant
-          </i>
-          .
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          To be clear, multiplying by
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sec(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          takes you from ‘adjacent’ to ‘hypotenuse’, multiplying by
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \csc(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          takes you from ‘opposite’ to ‘hypotenuse’, multiplying by
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \tan(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          takes you from ‘adjacent’ to ‘opposite’, 
-          and multiplying by
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \cot(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          takes you from ‘opposite’ to ‘adjacent’. (!)
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          You may observe that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sec = &#123;1\over \cos&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          and that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \csc = &#123;1\over \sin&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          as multiplying by ‘cos’ undoes the work 
-          of multiplying by ‘sec’, and likewise for 
-          ‘sin’ and ‘csc’; also,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \,\tan = &#123;1\over \cot&#125;,
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \cot = &#123;1\over \tan&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          modulo a technicality, and
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \tan \,=\, \sec \cdot \sin \,\,=\,\, &#123;\sin\!\!\!\!\phantom&#123;1&#125;\over \cos&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \cot \,=\, \csc \cdot \cos \,\,=\,\, &#123;\cos\!\!\!\!\phantom&#123;1&#125;\over \sin&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          since one way to reach ‘opposite’ from
-          ‘adjacent’ is to go via ‘hypotenuse’, and 
-          vice-versa for reaching ‘adjacent’ from 
-          ‘opposite’. (In fact, the next-to-last
-          identity played a role in our proof of the 
-          Fisher sandwich.) (Indeed: the Fisher 
-          sandwich can be written...
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \te&#123;“&#125;\sin(\theta)&lt; \theta&lt; \tan(\theta)\rt&#123;0.1&#125;\te&#123;”&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          ...in this form, as well!)
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section>
-        <VerticalChunk>
-          <b>
-            Secant: a second view.
-          </b>
-          {" "}
-          We will point out that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \sec(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is also the multiplicative factor that takes you from the{" "}
-          <span style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            PURPLE
-          </span>
-          {" "}to the{" "}
-          <span style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            LIME GREEN
-          </span>
-          {" "}triangle 
-          (hard to draw, because it is behind the 
-          purple triangle!) in the following figure:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_secant_reinterpretation_1.svg" />
-        <Pause />
-        <VerticalChunk>
-          Indeed, the scaling factor that is needed 
-          to turn the purple into the lime green
-          triangle is the solution{" "}
-          <Math>
-            $A$
-          </Math>
-          {" "}to
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          A\cdot \cos(\theta) = 1
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          which gives
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          A = &#123;1\over \cos(\theta)&#125; = \sec(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          using{" "}
-          <NoBreak>
-            <Math>
-              $\sec = 1/\cos$
-            </Math>
-            .
-          </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk indent={true}>
-          (After all, this multiplicative factor...
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_secant_reinterpretation_2.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...was always going to equal 
-          this multiplicative factor...
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_secant_reinterpretation_3.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...given that the target segment has length{" "}
-          <Math>
-            $1$
-          </Math>
-          {" "}each time!)
-        </VerticalChunk>
-        <Pause />
-        <VerticalChunk>
-          <i>
-            Postscript.
-          </i>
-          {" "}
-          Similarly,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \csc(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is the multiplicative factor that takes you from the{" "}
-          <span style="white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            BURNT ORANGE
-          </span>
-          {" "}to the{" "}
-          <span style="white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            FAUX BORDEAUX
-          </span>
-          {" "}triangle below:
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_ch5_ch_secant_reinterpretation_4.svg" />
-        <Pause />
-        <VerticalChunk>
-          (But this fact is, somehow, not used as often.)
-        </VerticalChunk>
-        <Pause />
-        <VerticalChunk>
-          <b>
-            Note on calculators.
-          </b>
-          {" "}
-          Your calculator has “degree mode” and 
-          “radian mode”. If your calculator tells
-          you that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \cos(1.57)
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is a number close to{" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}instead of being 
-          a number close to{" "}
-          <NoBreak>
-            <Math>
-              $0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}it means that your
-          calculator is in “degree mode”—it has treated
-          as{" "}
-          <Math>
-            $1.57$
-          </Math>
-          {" "}as a number of degrees, instead of
-          as a number of radians! (Be sure, in any 
-          case, that you're in the mode that you want.)
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33"]}>
-        <Exercise exercise_number={1}>
-=======
           </CentralDisplay>
           <Pause />
->>>>>>> chapter_changing_buttons
           <VerticalChunk>
             by the general definition that
           </VerticalChunk>
@@ -3261,14 +995,16 @@ const Article = () => {
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            ...that follow because one full turn around the
-            circle brings you back to the same position, whereas
-            a half-turn brings you around  to your{" "}
+            ...that follow because one full turn 
+            around the circle brings you back to the
+            same position, whereas a half-turn brings
+            you around  to your{" "}
             <i>
               antipode
             </i>
-            (where
-            both coordinates are negated), and these two more...
+            {" "}(where
+            both coordinates are negated), and these 
+            two more...
           </VerticalChunk>
           <Pause />
           <MathBlock>
@@ -6226,7 +3962,7 @@ const Article = () => {
           </VerticalChunk>
         </Section>
         <Pause />
-        <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"]}>
+        <Exercises labels={["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33"]}>
           <Exercise exercise_number={1}>
             <VerticalChunk>
               <b>
@@ -10474,64 +8210,61 @@ const Article = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_angle_sum_180.svg" />
             <Pause />
-            <VerticalChunk>
-              It is{" "}
-              <NoBreak>
-                <Math>
-                  $\eta - \theta$
-                </Math>
-                .
-              </NoBreak>
-              {" "}(Since...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \theta + (\eta - \theta) + \eta = 2\eta
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...you know that's the right answer!) (Nb:{" "}
-              <NoBreak>
-                <Math>
-                  $2\eta = 180^\circ$
-                </Math>
-                .)
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
+            <Solution solution_number={17}>
               <VerticalChunk>
-                Two angles that sum to{" "}
-                <Math>
-                  $\eta$
-                </Math>
-                {" "}are 
-                called{" "}
-                <i>
-                  complementary
-                </i>
-                , with each angle being
-                the{" "}
-                <i>
-                  complement
-                </i>
-                of the other. The two non-right
-                angles of a right triangle are, therefore, 
-                complementary! (Not
+                It is{" "}
+                <NoBreak>
+                  <Math>
+                    $\eta - \theta$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}(Since...
               </VerticalChunk>
               <Pause />
-              <CentralDisplayItalic>
-                complimentary
-              </CentralDisplayItalic>
+              <MathBlock>
+                $$
+                \theta + (\eta - \theta) + \eta = 2\eta
+                $$
+              </MathBlock>
               <Pause />
               <VerticalChunk>
-                which would indicate that the angles are
-                given to you for free—everything in math is
-                free, not just those angles!)
+                ...you know that's the right answer!) (Nb:{" "}
+                <NoBreak>
+                  <Math>
+                    $2\eta = 180^\circ$
+                  </Math>
+                  .)
+                </NoBreak>
               </VerticalChunk>
-            </SolutionNote>
+              <Pause />
+              <SolutionNote>
+                <VerticalChunk>
+                  <i>
+                    Note 1.
+                  </i>
+                  {" "}
+                  Two angles that sum to{" "}
+                  <Math>
+                    $\eta$
+                  </Math>
+                  {" "}are 
+                  called{" "}
+                  <i>
+                    complementary
+                  </i>
+                  , with each angle being
+                  the{" "}
+                  <i>
+                    complement
+                  </i>
+                  {" "}of the other. 
+                  The two 
+                  non-right angles of a right triangle are, 
+                  therefore, complementary!
+                </VerticalChunk>
+              </SolutionNote>
+            </Solution>
           </Exercise>
           <Exercise exercise_number={18}>
             <VerticalChunk>
@@ -10565,7 +8298,7 @@ const Article = () => {
               {" "}is it achieved?
             </VerticalChunk>
             <Pause />
-            <Solution solution_number={17}>
+            <Solution solution_number={18}>
               <VerticalChunk>
                 The sum
               </VerticalChunk>
@@ -10826,1135 +8559,6 @@ const Article = () => {
                 at this point is
               </VerticalChunk>
               <Pause />
-<<<<<<< HEAD
-              <Image src="/images/svg_ch5_ex_big_division_inside_1.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is{" "}
-                <Math>
-                  $0$
-                </Math>
-                {" "}(that we need not write
-                down, but we can), we move to asking
-                “how many times does{" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}
-                go into{" "}
-                <NoBreak>
-                  <Math>
-                    $15$
-                  </Math>
-                  ?”,
-                </NoBreak>
-                {" "}the answer will go here:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_2.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is{" "}
-                <NoBreak>
-                  <Math>
-                    $0$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}we move to asking
-                “how many times does{" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}
-                go into{" "}
-                <NoBreak>
-                  <Math>
-                    $155$
-                  </Math>
-                  ?”,
-                </NoBreak>
-                {" "}the answer will go here:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_3.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is{" "}
-                <NoBreak>
-                  <Math>
-                    $0$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}we move to asking
-                “how many times does{" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}
-                go into{" "}
-                <NoBreak>
-                  <Math>
-                    $1554$
-                  </Math>
-                  ?”,
-                </NoBreak>
-                {" "}the answer will go here:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_4.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is{" "}
-                <NoBreak>
-                  <Math>
-                    $2$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}we subtract{" "}
-                <Math>
-                  $2 \times 777$
-                </Math>
-                {" "}
-                from{" "}
-                <NoBreak>
-                  <Math>
-                    $1554$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}giving us a new “prefix” for
-                the remainder:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_4b.svg" />
-              <Pause />
-              <VerticalChunk>
-                (FYI, the remainder now consists of these yellow
-                digits:)
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_4remainder.svg" />
-              <Pause />
-              <VerticalChunk>
-                Continuing, we bring down a{" "}
-                <NoBreak>
-                  <Math>
-                    $2$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}ask “how many times does{" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}
-                go into{" "}
-                <NoBreak>
-                  <Math>
-                    $2$
-                  </Math>
-                  ?”,
-                </NoBreak>
-                {" "}the answer will go here:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_5b_v2.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is{" "}
-                <NoBreak>
-                  <Math>
-                    $0$
-                  </Math>
-                  ;
-                </NoBreak>
-                {" "}we bring down a{" "}
-                <NoBreak>
-                  <Math>
-                    $4$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}ask “how many 
-                times does{" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}go into{" "}
-                <NoBreak>
-                  <Math>
-                    $24$
-                  </Math>
-                  ?”,
-                </NoBreak>
-                {" "}the answer will go 
-                here:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_6b_v2.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is{" "}
-                <NoBreak>
-                  <Math>
-                    $0$
-                  </Math>
-                  ;
-                </NoBreak>
-                {" "}we bring down an{" "}
-                <NoBreak>
-                  <Math>
-                    $8$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}ask “how many 
-                times does{" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}go into{" "}
-                <NoBreak>
-                  <Math>
-                    $248$
-                  </Math>
-                  ?”,
-                </NoBreak>
-                {" "}the answer will go 
-                here:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_7b_v2.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is{" "}
-                <NoBreak>
-                  <Math>
-                    $0$
-                  </Math>
-                  ;
-                </NoBreak>
-                {" "}we bring down a{" "}
-                <NoBreak>
-                  <Math>
-                    $6$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}ask “how many 
-                times does{" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}go into{" "}
-                <NoBreak>
-                  <Math>
-                    $2486$
-                  </Math>
-                  ?”,
-                </NoBreak>
-                {" "}the answer will go 
-                here:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_8b_v2.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is{" "}
-                <NoBreak>
-                  <Math>
-                    $3$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}we subtract{" "}
-                <Math>
-                  $3 \times 777$
-                </Math>
-                {" "}
-                from{" "}
-                <NoBreak>
-                  <Math>
-                    $2648$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}giving us a new remainder:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_8c.svg" />
-              <Pause />
-              <VerticalChunk>
-                (And to be specific, the remainder is now formed
-                by...
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_8remainder.svg" />
-              <Pause />
-              <VerticalChunk>
-                ...these yellow digits.) Etc.
-              </VerticalChunk>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                If you need help brushing up on your
-                long-form subtraction, say your subtraction is this:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_a.svg" />
-              <Pause />
-              <VerticalChunk>
-                You can either treat the top or bottom number as an
-                odometer, and count how much a car with this
-                odometer must be driven back/forth to reach the other
-                number.
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                Viewing the top number as an odometer, the odometer
-                would be as follows:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_odometer_1.svg" />
-              <Pause />
-              <VerticalChunk>
-                Starting from the right end of the subtraction, we ask
-                “by how much (or how little) does a car need to be 
-                driven backwards, to turn the{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $2$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}into an{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $8$
-                  </Math>
-                  ’?”,
-                </NoBreak>
-                {" "}we
-                will write the answer below:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_c.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is:{" "}
-                <Math>
-                  $4$
-                </Math>
-                {" "}[miles*] (*say):
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_d.svg" />
-              <Pause />
-              <VerticalChunk>
-                But the odometer will pass
-                from{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $0$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}to{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $9$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}on its way down to{" "}
-                <NoBreak>
-                  <Math>
-                    $8$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}so we also
-                turn the{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $6$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}into a{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $5$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}(or “borrow a{" "}
-                <NoBreak>
-                  <Math>
-                    $10$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "}to do
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $12 - 8 = 4$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}as some teachers put it):
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_e.svg" />
-              <Pause />
-              <VerticalChunk>
-                Next we ask “by how many{" "}
-                <NoBreak>
-                  [
-                  <Math>
-                    $10$
-                  </Math>
-                  s
-                </NoBreak>
-                {" "}of miles] does the car need
-                to be driven back, to turn the{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $5$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}into a{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $9$
-                  </Math>
-                  ’?”,
-                </NoBreak>
-                {" "}we
-                will write the answer below:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_f.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is:{" "}
-                <Math>
-                  $6$
-                </Math>
-                {" "}{" "}
-                <NoBreak>
-                  [
-                  <Math>
-                    $10$
-                  </Math>
-                  s
-                </NoBreak>
-                {" "}of miles]:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_g.svg" />
-              <Pause />
-              <VerticalChunk>
-                But here too the odometer will pass
-                from{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $0$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}to{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $9$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}as we reduce it, so the wheel to its
-                left must be turned back a notch as well; and because that
-                wheel is a{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $0$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}already, the wheel to{" "}
-                <i>
-                  its
-                </i>
-                left
-                must be turned back a notch; and so on, resulting in a small cascade
-                effect:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_h.svg" />
-              <Pause />
-              <VerticalChunk>
-                Next we ask “by how many{" "}
-                <NoBreak>
-                  [
-                  <Math>
-                    $100$
-                  </Math>
-                  s
-                </NoBreak>
-                {" "}of miles] does the car need
-                to be driven back, to turn the{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $9$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}into a{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $0$
-                  </Math>
-                  ’?”,
-                </NoBreak>
-                {" "}we
-                will write the answer below:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_i.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is:{" "}
-                <Math>
-                  $9$
-                </Math>
-                {" "}{" "}
-                <NoBreak>
-                  [
-                  <Math>
-                    $100$
-                  </Math>
-                  s
-                </NoBreak>
-                {" "}of miles]:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_j.svg" />
-              <Pause />
-              <VerticalChunk>
-                Next we ask “by how many{" "}
-                <NoBreak>
-                  [
-                  <Math>
-                    $1000$
-                  </Math>
-                  s
-                </NoBreak>
-                {" "}of miles] does the car need
-                to be driven back, to turn the{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $9$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}into a{" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $5$
-                  </Math>
-                  ’?”:
-                </NoBreak>
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_k.svg" />
-              <Pause />
-              <VerticalChunk>
-                The answer is:{" "}
-                <Math>
-                  $4$
-                </Math>
-                {" "}{" "}
-                <NoBreak>
-                  [
-                  <Math>
-                    $1000$
-                  </Math>
-                  s
-                </NoBreak>
-                {" "}of miles]:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_l.svg" />
-              <Pause />
-              <VerticalChunk>
-                Etc—we finally obtain:
-              </VerticalChunk>
-              <Pause />
-              <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_final.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
-              <Pause />
-              <VerticalChunk>
-                (And like we alluded to above, one can also
-                consider the bottom number to be the odometer,
-                and “count up” towards the top number, leading
-                to a symmetric algorithm, but one method is not
-                better than the other.)
-              </VerticalChunk>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
-                Generally,
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_remainder_equation.svg" />
-              <Pause />
-              <VerticalChunk>
-                at any point in a long division after the
-                remainder is updated to account for a new term
-                added to the quotient. That's what the remainder
-                is for: to satisfy this equation!
-              </VerticalChunk>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={17}>
-          <VerticalChunk>
-            <b>
-              Exercise 17.
-            </b>
-            {" "}
-            What is the angle marked ‘?’, as a function
-            of{" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_angle_sum_180.svg" />
-          <Pause />
-          <Solution solution_number={17}>
-            <VerticalChunk>
-              It is{" "}
-              <NoBreak>
-                <Math>
-                  $\eta - \theta$
-                </Math>
-                .
-              </NoBreak>
-              {" "}(Since...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \theta + (\eta - \theta) + \eta = 2\eta
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...you know that's the right answer!) (Nb:{" "}
-              <NoBreak>
-                <Math>
-                  $2\eta = 180^\circ$
-                </Math>
-                .)
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                Two angles that sum to{" "}
-                <Math>
-                  $\eta$
-                </Math>
-                {" "}are 
-                called{" "}
-                <i>
-                  complementary
-                </i>
-                , with each angle being
-                the{" "}
-                <i>
-                  complement
-                </i>
-                {" "}of the other. 
-                The two 
-                non-right angles of a right triangle are, 
-                therefore, complementary!
-              </VerticalChunk>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={18}>
-          <VerticalChunk>
-            <b>
-              Exercise 18.
-            </b>
-            {" "}
-            The graph{" "}
-            <Math>
-              $y = \cos(x) + \sin(x)$
-            </Math>
-            {" "}from
-            Exercise 5 has a maximum value greater than
-            {" "}
-            <NoBreak>
-              <Math>
-                $1$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_maximum_of_sin_plus_cos.svg" />
-          <Pause />
-          <VerticalChunk>
-            What is this maximum value, and for which
-            value(s) of{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}is it achieved?
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={18}>
-            <VerticalChunk>
-              The sum
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x + y
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              where
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              (x, y)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              is a point in{" "}
-              <Math>
-                $\rr^2$
-              </Math>
-              {" "}can be understood as a
-              certain vertical displacement added to a 
-              certain horizontal displacement, but where
-              the sum is numerical. (Not vectorial.)
-              To realize the sum geometrically we must
-              either align the vertical displacement to be
-              horizontal, or else align the horizontal 
-              displacement to be vertical:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              style="background-color:#fdfdfd"
-              src="/images/svg_ch5_ex_x_plus_y_options.svg" />
-            <Pause />
-            <VerticalChunk>
-              Either way, the upshot is that the sum
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x + y
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              can be found as the intersection of a line of 
-              angle{" "}
-              <Math>
-                $-45^\circ$
-              </Math>
-              {" "}through the point{" "}
-              <Math>
-                $(x, y)$
-              </Math>
-              {" "}
-              with either the{" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -
-              </NoBreak>
-              {" "}or{" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -axis:
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_x_plus_y_intersections.svg" />
-            <Pause />
-            <VerticalChunk>
-              (By the way: when we say “line of angle 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $-45^\circ$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}we refer to the standard position
-              of{" "}
-              <Math>
-                $-45^\circ$
-              </Math>
-              {" "}on the unit circle, and, more
-              specifically, to a line that is parallel
-              to a line going through{" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              {" "}and that standard
-              position.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              To add a little imagery, if we make a heatmap
-              of{" "}
-              <Math>
-                $\rr^2$
-              </Math>
-              {" "}according to the value of the coordinate 
-              sum...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x + y
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...over all points{" "}
-              <Math>
-                $(x, y)$
-              </Math>
-              {" "}we will obtain diagonal
-              bands of slope{" "}
-              <NoBreak>
-                <Math>
-                  $-1$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_x_plus_y_rainbow.svg" />
-            <Pause />
-            <VerticalChunk>
-              If we are confined to some region of the plane
-              and we need to find a point that maximizes the 
-              coordinate sum we must go as far up and to the
-              right as possible, towards brown—whereas
-              to minimize the sum we must go as far down and
-              to the left as possible, towards purple!
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              Having said this,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos(x) + \sin(x)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              can be interpreted as the sum of the{" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -
-              </NoBreak>
-              {" "}and 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinates
-              </NoBreak>
-              {" "}of the point
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              (\cos(x), \sin(x))
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              that is a point on the unit circle. In other words,
-              the unit circle is “the region of the plane” (cf.
-              previous paragraph) to which we are confined—we 
-              must choose a value of{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}that puts us as far 
-              “up and to the right” as possible on the circle.
-              That value is...{" "}
-              <Math>
-                $x = \eta/2$
-              </Math>
-              {" "}(!!!!):
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_x_plus_y_eta_over_2.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...or with any multiple of{" "}
-              <Math>
-                $4\eta$
-              </Math>
-              {" "}added, 
-              making the set of solutions{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}actually equal to
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \&#123;\eta/2 + 4\eta&#123;&#125;k : k \in \zz\&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (to be read{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\eta/2$
-                </Math>
-              </NoBreak>
-              {" "}plus any multiple of{" "}
-              <NoBreak>
-                <Math>
-                  $4\eta$
-                </Math>
-                ”)
-              </NoBreak>
-              {" "}
-              (*or: “the{" "}
-              <i>
-                set of
-              </i>
-              {" "}values of the form{" "}
-              <NoBreak>
-                <Math>
-                  $\eta/2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              plus any multiple of{" "}
-              <NoBreak>
-                <Math>
-                  $4\eta$
-                </Math>
-                ”).
-              </NoBreak>
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              The actual value of{" "}
-              <Math>
-                $\cos(x) + \sin(x)$
-              </Math>
-              {" "}achieved
-              at this point is
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large
-              \begin&#123;align&#125;
-              &amp;\,\, \cos(\eta/2) + \sin(\eta/2)\\ =&\,\,\up&#123;1.5&#125;  \sqrt&#123;0.5&#125; + \sqrt&#123;0.5&#125;\\ =&\,\,\up&#123;1.5&#125; \sqrt&#123;2&#125;
-              \end&#123;align&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              using the fact that
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <div>
-                <MathBlock>
-                  $$
-                  \Large \cos(\eta/2) = \sin(\eta/2) = \sqrt&#123;0.5&#125;
-                  $$
-                </MathBlock>
-              </div>
-              and that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \sqrt&#123;0.5&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (cf. Exercise 1, Chapter 1).
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                The fact that
-              </VerticalChunk>
-              <Pause />
-              <MathBlock>
-                $$
-                \Large \cos(\eta/2) + \sin(\eta/2) = \sqrt&#123;2&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <VerticalChunk>
-                can also be seen from this diagram...
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_x_plus_y_pythagoras.svg" />
-              <Pause />
-              <VerticalChunk>
-                ...which is an application of the Pythagorean
-                theorem. (In the above,{" "}
-                <NoBreak>
-                  <Math>
-                    $x_0 = \cos(\eta/2)$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $y_0 = \sin(\eta/2)$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}and the sum is seen to be
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $\sqrt&#123;1^2 + 1^2&#125; = \sqrt&#123;2&#125;$
-                  </Math>
-                  .)
-                </NoBreak>
-              </VerticalChunk>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                On the original graph from the statement, the
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $y$
-                  </Math>
-                  -value
-                </NoBreak>
-                {" "}of the maximum is therefore 
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $y = \sqrt&#123;2&#125;$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}attained at{" "}
-                <NoBreak>
-                  <Math>
-                    $x = \eta/2$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $x = 9\eta/2$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}{" "}
-                <NoBreak>
-                  <Math>
-                    $x = -7\eta/2$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}etc:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_maximum_of_sin_plus_cos_with_answer.svg" />
-              <Pause />
-              <VerticalChunk>
-                (Note that
-              </VerticalChunk>
-              <Pause />
-              <MathBlock>
-                $$
-                \Large &#123;\eta\over 2&#125; + 4\eta = &#123;\eta\over 2&#125; + &#123;8\eta\over 2&#125; = &#123;9\eta\over 2&#125;
-                $$
-              </MathBlock>
-              <Pause />
-=======
->>>>>>> chapter_changing_buttons
               <MathBlock>
                 $$
                 \Large
@@ -11967,30 +8571,6 @@ const Article = () => {
               <VerticalChunk>
                 using the fact that
               </VerticalChunk>
-<<<<<<< HEAD
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={19}>
-          <VerticalChunk>
-            <b>
-              Exercise 19.
-            </b>
-            {" "}
-            What is the angle marked ‘?’, as a function of
-            {" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_angle_sum_180_followup.svg" />
-          <Pause />
-          <Solution solution_number={19}>
-=======
               <VerticalChunk indent={true}>
                 <div>
                   <MathBlock>
@@ -12139,7 +8719,6 @@ const Article = () => {
             </Solution>
           </Exercise>
           <Exercise exercise_number={19}>
->>>>>>> chapter_changing_buttons
             <VerticalChunk>
               <b>
                 Exercise 19.
@@ -12157,7 +8736,7 @@ const Article = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_angle_sum_180_followup.svg" />
             <Pause />
-            <Solution solution_number={18}>
+            <Solution solution_number={19}>
               <VerticalChunk>
                 It is{" "}
                 <NoBreak>
@@ -12231,75 +8810,13 @@ const Article = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_tangent_angle_v2.svg" />
             <Pause />
-            <Solution solution_number={19}>
+            <Solution solution_number={20}>
               <VerticalChunk>
                 The ending and starting half-lines of the 
                 angle marked ‘?’ are both{" "}
                 <Math>
                   $90^\circ$
                 </Math>
-<<<<<<< HEAD
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_angle_sum_180_followup_explanation_2.svg" />
-            <Pause />
-            <VerticalChunk>
-              (In one case we use the fact that the
-              medium-sized triangle is a right triangle,
-              in another case that the smallest-size 
-              triangle is a right triangle—and in both cases
-              that the original, largest triangle is a 
-              right triangle.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={20}>
-          <VerticalChunk>
-            <b>
-              Exercise 20.
-            </b>
-            {" "}
-            Argue that, in the following figure, the
-            angle marked ‘?’ equals{" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}the angle at 
-            the center of the circle:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_tangent_angle_v2.svg" />
-          <Pause />
-          <Solution solution_number={20}>
-            <VerticalChunk>
-              The ending and starting half-lines of the 
-              angle marked ‘?’ are both{" "}
-              <Math>
-                $90^\circ$
-              </Math>
-              {" "}counterclockwise
-              from the ending and starting half-lines,
-              respectively, of the central angle:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_tangent_angle_explanation_v2.svg" />
-            <Pause />
-            <VerticalChunk>
-              The angle marked ‘?’ is therefore obtained
-              by a{" "}
-              <Math>
-                $90^\circ$
-              </Math>
-              {" "}rotation (and then translation)
-              of the central angle, and is, therefore, equal
-              to the central angle{" "}
-              <NoBreak>
-=======
                 {" "}counterclockwise
                 from the ending and starting half-lines,
                 respectively, of the central angle:
@@ -12310,609 +8827,12 @@ const Article = () => {
               <VerticalChunk>
                 The angle marked ‘?’ is therefore obtained
                 by a{" "}
->>>>>>> chapter_changing_buttons
                 <Math>
                   $90^\circ$
                 </Math>
-<<<<<<< HEAD
-                .
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                This holds no matter which quadrant we
-                push{" "}
-                <Math>
-                  $\theta$
-                </Math>
-                {" "}to:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_tangent_angle_explanation_other_quadrants.svg" />
-              <Pause />
-              <VerticalChunk>
-                Verbalized:{" "}
-                <i>
-                  the counterclockwise angle from the positive
-                  {" "}
-                  <Math>
-                    $x$
-                  </Math>
-                  {" "}axis to 
-                  the radial vector
-                  equals the counterclockwise angle from the positive
-                  {" "}
-                  <Math>
-                    $y$
-                  </Math>
-                  {" "}axis to the counterclockwise tangent.
-                </i>
-              </VerticalChunk>
-              <VerticalChunk indent={true}>
-                (Nb: When we say the “radial vector” and 
-                “counterclockwise tangent” we mean those objects that
-                are illustrated here:)
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg" />
-            </SolutionNote>
-            <Pause />
-            <StarDivider />
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={21}>
-          <VerticalChunk>
-            <b>
-              Exercise 21.
-            </b>
-            {" "}
-            If each of these dotted lines...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_max_xy_x_plus_y_isosets.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...is a so-called
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            isoset
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            (also:{" "}
-            <i>
-              isoline
-            </i>
-            ,{" "}
-            <i>
-              contour line
-            </i>
-            ,{" "}
-            <i>
-              isoquant
-            </i>
-            ,
-            {" "}
-            <i>
-              isosurface
-            </i>
-            ,{" "}
-            <i>
-              isovalue line
-            </i>
-            , or{" "}
-            <i>
-              isovalue set
-            </i>
-            {" "}
-            {" "}
-            <NoBreak>
-              <Math>
-                $\rt&#123;0.1&#125;$
-              </Math>
-              )
-            </NoBreak>
-            {" "}of the two-variable function
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f : \rr^2\ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            given by
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f(x, y) = x + y
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            then what are similar
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            isosets
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            (man, we like this word! of the two-variable
-            function
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            g : \rr^2\ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            given by
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            g(x, y) = xy
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...?
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            [In human terms: draw solutions of the equation
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            xy = C
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            in{" "}
-            <Math>
-              $\rr^2$
-            </Math>
-            {" "}for some different values of
-            {" "}
-            <NoBreak>
-              <Math>
-                $C \in \rr$
-              </Math>
-              .]
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Next: Use any geometric insights gleaned from
-            these
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            isosets
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            (😍😍😍) to find the maximum value of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sin\theta&#123;&#125;\cos\theta
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for{" "}
-            <NoBreak>
-              <Math>
-                $\theta \in \rr$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and specify the set of
-            values of{" "}
-            <Math>
-              $\theta$
-            </Math>
-            {" "}for which the maximum is 
-            attained.
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={21}>
-            <VerticalChunk>
-              The isosets of
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              (x, y) \ra xy
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (lambda-notation for a two-variable function)
-              have this general appearance (it depends on
-              the window and on the exact isosets that 
-              you choose to  draw—we chose a few 
-              different random ones):
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_xy_isosets.svg" />
-            <Pause />
-            <VerticalChunk>
-              Note that each isoset consists of the union of TWO 
-              disjoint curves, except for the isoset
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              xy = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (or: “the isoset
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \&#123;(x, y) \in \rr^2 : xy = 0 \&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...” to pedantically indicate that we are
-              talking about{" "}
-              <i>
-                a set of points in the plane
-              </i>
-              ),
-              that, for its part, cannot be said to consist
-              of two{" "}
-              <i>
-                ~
-              </i>
-              ~
-              <i>
-                disjoint
-              </i>
-              ~
-              <i>
-                ~
-              </i>
-              {" "}curves, because it
-              is the union of the{" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -
-              </NoBreak>
-              {" "}and{" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -
-              </NoBreak>
-              {" "}axes, that
-              intersect.
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              (For a throwback, the solution of Exercise
-              16 of Chapter 3 mentions that the product of
-              two numbers is{" "}
-              <Math>
-                $0$
-              </Math>
-              {" "}if and only if one of the 
-              numbers is{" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .
-              </NoBreak>
-              {" "}In our case,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              xy = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              if and only
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \,x = 0\,
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                or
-              </i>
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \,y = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              where
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              happens to be the equation of the{" "}
-              <Math>
-                $y$
-              </Math>
-              {" "}axis, and
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              y = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              happens to be the equation of the{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}axis, which
-              explains the shape of the isoset.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              If we draw a “heatmap” of
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              xy
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              in some region of the plane, similarly to 
-              Exercise 18, the larger (more positive)
-              values show up in the first and third
-              quadrants, while the smaller (more negative)
-              values show up in the second and fourth 
-              quadrants:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_rainbow.svg" />
-            <Pause />
-            <VerticalChunk>
-              Of particular interest to us: at a given 
-              distance from the origin, the line
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x = y
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              can be seen seen to hold the largest of values of{" "}
-              <NoBreak>
-                <Math>
-                  $xy$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_fixed_distance.svg" />
-            <Pause />
-            <VerticalChunk>
-              In particular,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos\theta\,\sin\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              will reach its maximum at those values of 
-              {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "}that put the point{" "}
-              <Math>
-                $(\cos \theta, \sin \theta)$
-              </Math>
-              {" "}
-              at either{" "}
-              <Math>
-                $(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)$
-              </Math>
-              {" "}or 
-              {" "}
-              <Math>
-                $(-\sqrt&#123;0.5&#125;, -\sqrt&#123;0.5&#125;)$
-              </Math>
-              {" "}on the unit circle; 
-              these values of{" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "}are
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\
-              \Large \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125;\up&#123;1.5&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as per this illustration...
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_angles.svg" />
-            <Pause />
-            <VerticalChunk>
-              ...and the maximum value of
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \cos\theta\,\sin\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              itself will be
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large (-\sqrt&#123;0.5&#125;) \cdot (-\sqrt&#123;0.5&#125;) = &#123;1\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              equivalently; though one should also note
-              that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\ \Large \up&#123;1.5&#125;= \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which is the “clever” way of writing the set
-              of{" "}
-              <NoBreak>
-                <Math>
-                  $\theta$
-                </Math>
-                's
-              </NoBreak>
-              {" "}for which the maximum is achieved.
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                As a consequence, the function
-              </VerticalChunk>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \sin x&#123;&#125;\cos x
-                $$
-              </MathBlock>
-              <Pause />
-              <VerticalChunk>
-                discussed in Exercise 4 has maximum value
-              </VerticalChunk>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;1\over 2&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <VerticalChunk>
-                achieved for inputs in the set
-              </VerticalChunk>
-              <Pause />
-              <MathBlock>
-                $$
-                \Large \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <VerticalChunk>
-                comprising the sequence of values...
-              </VerticalChunk>
-              <Pause />
-              <MathBlock>
-                $$
-                \large \dots,\,\, -&#123;7\eta\over 2&#125;,\,\, -&#123;3\eta\over 2&#125;,\,\, &#123;\dn&#123;0.25&#125;\eta \over 2&#125;,\,\, &#123;5\eta \over 2&#125;,\,\, &#123;9\eta \over 2&#125;,\,\, \dots
-                $$
-              </MathBlock>
-              <Pause />
-              <VerticalChunk>
-                ...or...
-              </VerticalChunk>
-              <Pause />
-              <MathBlock>
-                $$
-                \large \dots,\,\, &#123;-3.5\eta&#125;,\,\, &#123;-1.5\eta&#125;,\,\, &#123;0.5\eta&#125;,\,\, &#123;2.5\eta&#125;,\,\, &#123;4.5\eta&#125;,\,\, \dots
-                $$
-              </MathBlock>
-              <Pause />
-              <VerticalChunk>
-                ...(maybe more legibly); annotating the graph
-                given in Exercise 4:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_ch5_ex_max_xy_graph.svg" />
-              <Pause />
-              <StarDivider />
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                For completeness, here is a closer look at 
-                the isoset{" "}
-=======
                 {" "}rotation (and then translation)
                 of the central angle, and is, therefore, equal
                 to the central angle{" "}
->>>>>>> chapter_changing_buttons
                 <NoBreak>
                   <Math>
                     $\theta$
@@ -13131,7 +9051,7 @@ const Article = () => {
               attained.
             </VerticalChunk>
             <Pause />
-            <Solution solution_number={20}>
+            <Solution solution_number={21}>
               <VerticalChunk>
                 The isosets of
               </VerticalChunk>
@@ -13347,294 +9267,6 @@ const Article = () => {
                 will reach its maximum at those values of 
                 {" "}
                 <Math>
-<<<<<<< HEAD
-                  $x = y$
-                </Math>
-                {" "}and that is centrally symmetric is also
-                symmetric through{" "}
-                <NoBreak>
-                  <Math>
-                    $x = -y$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}so there is nothing “new”
-                to prove here, except to make this observation 
-                about composition!
-              </VerticalChunk>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={22}>
-          <VerticalChunk>
-            <b>
-              Exercise 22.
-            </b>
-            {" "}
-            Express{" "}
-            <Math>
-              $A/B$
-            </Math>
-            {" "}as a function of{" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image
-            src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg"
-            style="margin-top:1.0em;margin-bottom:1em;" />
-          <Pause />
-          <Solution solution_number={22}>
-            <VerticalChunk>
-              We shall use the height{" "}
-              <Math>
-                $C$
-              </Math>
-              {" "}of the triangle
-              as a stopover between{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}and{" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_height_C.svg" />
-            <Pause />
-            <VerticalChunk>
-              On the one hand,{" "}
-              <NoBreak>
-                <Math>
-                  $C/B = \tan(\theta)$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_left_part.svg" />
-            <Pause />
-            <VerticalChunk>
-              On the other hand,{" "}
-              <Math>
-                $A/C = \tan(\theta)$
-              </Math>
-              {" "}
-              also, by the result of Exercise 19 (whereby
-              {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "}reappears as the top left angle of
-              the middle-sized right triangle):
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_right_part.svg" />
-            <Pause />
-            <VerticalChunk>
-              The answer is therefore:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (As per the fact that{" "}
-              <NoBreak>
-                <Math>
-                  $(A/B) = (C/B)\cdot(A/C)$
-                </Math>
-                .)
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={23}>
-          <VerticalChunk>
-            <b>
-              Exercise 23.
-            </b>
-            {" "}
-            Express{" "}
-            <Math>
-              $A/B$
-            </Math>
-            {" "}as a function of{" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg" />
-          <Pause />
-          <Solution solution_number={23}>
-            <VerticalChunk>
-              Here are two solutions:
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Solution 1.
-              </i>
-              {" "}We use the small leg{" "}
-              <Math>
-                $D$
-              </Math>
-              {" "}
-              of the triangle as a stopover between{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}and
-              {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_D.svg" />
-            <Pause />
-            <VerticalChunk>
-              On the one hand,{" "}
-              <NoBreak>
-                <Math>
-                  $D/B = \sec(\theta)\,\, (= 1/\cos(\theta))$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_left_part.svg" />
-            <Pause />
-            <VerticalChunk>
-              On the other hand,{" "}
-              <NoBreak>
-                <Math>
-                  $A/D = \sec(\theta)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}also (!?):
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_right_part_shrunk.svg" />
-            <Pause />
-            <VerticalChunk>
-              Thus:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;A\over B&#125; = &#123;D\over B&#125;\times &#123;A\over D&#125; = \sec(\theta)\cdot \sec(\theta) = \sec^2(\theta).
-              $$
-            </MathBlock>
-            <Pause />
-            <StarDivider style="margin-top:0.5em;" />
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Solution 2.
-              </i>
-              {" "}
-              We decompose{" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}as{" "}
-              <Math>
-                $B + A'$
-              </Math>
-              {" "}
-              where{" "}
-              <Math>
-                $A' = B - A$
-              </Math>
-              {" "}is the “old{" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}from
-              Exercise 22:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg" />
-            <Pause />
-            <VerticalChunk>
-              We find:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;A\over B&#125; = &#123;&#123;B + A'&#125;\over B&#125; = &#123;B\over B&#125; + &#123;A'\over B&#125; = 1 + \tan^2(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...since
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;A'\over B&#125; = \tan^2(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by Exercise 22. (The End.)
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                Since the two solutions compute
-                answers to the same question,
-                one can in particular deduce that
-              </VerticalChunk>
-              <center style="margin-top:1.5em;margin-bottom:1.5em;">
-                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
-                  <MathBlock>
-                    $$
-                    \sec^2(\theta) = 1 + \tan^2(\theta)
-                    $$
-                  </MathBlock>
-                </div>
-              </center>
-              <VerticalChunk>
-                for all{" "}
-                <NoBreak>
-                  <Math>
-                    $0 &lt; \theta &lt; \eta$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}which is
-                the range of{" "}
-                <Math>
-=======
->>>>>>> chapter_changing_buttons
                   $\theta$
                 </Math>
                 {" "}that put the point{" "}
@@ -14442,7 +10074,7 @@ const Article = () => {
               src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg"
               style="margin-top:1.0em;margin-bottom:1em;" />
             <Pause />
-            <Solution solution_number={21}>
+            <Solution solution_number={22}>
               <VerticalChunk>
                 We shall use the height{" "}
                 <Math>
@@ -14502,42 +10134,6 @@ const Article = () => {
                 \tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
                 $$
               </MathBlock>
-<<<<<<< HEAD
-            </div>
-          </center>
-          <VerticalChunk>
-            ...for all{" "}
-            <NoBreak>
-              <Math>
-                $\theta \in \rr$
-              </Math>
-              .
-            </NoBreak>
-            {" "}(I.e., if the fraction is undefined,
-            then the function is undefined.)
-            Use these definitions 
-            to prove that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            1 + \tan^2(\theta) = \sec^2(\theta)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for all 
-            {" "}
-            <NoBreak>
-              <Math>
-                $\theta \in \dom \tan = \dom \sec$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={24}>
-=======
               <Pause />
               <VerticalChunk>
                 (As per the fact that{" "}
@@ -14551,7 +10147,6 @@ const Article = () => {
             </Solution>
           </Exercise>
           <Exercise exercise_number={23}>
->>>>>>> chapter_changing_buttons
             <VerticalChunk>
               <b>
                 Exercise 23.
@@ -14572,7 +10167,7 @@ const Article = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg" />
             <Pause />
-            <Solution solution_number={22}>
+            <Solution solution_number={23}>
               <VerticalChunk>
                 Here are two solutions:
               </VerticalChunk>
@@ -14772,76 +10367,8 @@ const Article = () => {
             <VerticalChunk>
               with the definitions being...
             </VerticalChunk>
-<<<<<<< HEAD
-            <Pause />
-            <MathBlock>
-              $$
-              1 = &#123;\cos(\theta)\over \cos(\theta)&#125; = &#123;\cos^2(\theta)\over \cos^2(\theta)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and, by the definitions,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align&#125;
-              1 + \tan^2(\theta)
-              \,\,&=\,\, 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
-              &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
-              &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
-              &amp;=\,\, \up&#123;2&#125; &#123;1\over \cos^2(\theta)&#125; \\
-              &amp;=\,\, \up&#123;2&#125; \left(&#123;1\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
-              &amp;=\,\, \up&#123;2&#125; \sec^2(\theta)
-              \end&#123;align&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              using the pythagorean identity in the fourth step.
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={25}>
-          <VerticalChunk>
-            <b>
-              Exercise 25.
-            </b>
-            {" "}
-            Run the computation of the
-            previous exercise backwards, starting with
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sec^2(\theta)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            at the near end, and ending with
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$1 + \tan^2(\theta)$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            at the far end. (No peeking back at the solution of
-            that exercise.)
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={25}>
-            <VerticalChunk>
-              Viz:
-            </VerticalChunk>
-            <center style="margin:1em 0em;">
-              <div style="display:inline-block;border:1px solid red;padding:1.2em 1.4em;">
-=======
             <center style="margin-top:1em;margin-bottom:1em;">
               <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
->>>>>>> chapter_changing_buttons
                 <MathBlock>
                   $$
                   \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
@@ -14856,267 +10383,17 @@ const Article = () => {
               </div>
             </center>
             <VerticalChunk>
-<<<<<<< HEAD
-              (Ta-daa!) (It's slightly harder in this 
-              direction, when you have to think of
-              turning the{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $1$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}into{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\cos^2(\theta) + \sin^2(\theta)$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "}
-              instead of the other way around.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={26}>
-          <VerticalChunk>
-            <b>
-              Exercise 26.
-            </b>
-            {" "}
-            Here are four function compositions
-            depicted as “function box” diagrams, with
-            inputs coming in the right and outputs
-            going out the left (with{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}being some generic
-            function):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_four_compositions.svg" />
-          <Pause />
-          <VerticalChunk>
-            Rewrite each case:
-          </VerticalChunk>
-          <TextParent>
-            <ol
-              style="margin-top:0.5em;"
-              class="l1">
-              <li>
-                using the composition{" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $\circ$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "}operator;
-              </li>
-              <li>
-                as an expression of the form
-                <Pause />
-                <MathBlock>
-                  $$x \ra \dots$$
-                </MathBlock>
-                <Pause />
-                for some value of{" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $\dots$
-                  </Math>
-                  ”.
-                </NoBreak>
-              </li>
-            </ol>
-          </TextParent>
-          <Pause />
-          <Solution solution_number={26}>
-            <VerticalChunk>
-              <b>
-                (a)
-              </b>
-              {" "}
-              The expressions are respectively...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (u \ra u + A)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (z \ra Bz)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (u \ra u + A)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (z \ra Bz)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...but where the dummy variables don't matter,
-              so we might as well write...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (t \ra t + A)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (t \ra Bt)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (t \ra t + A)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (t \ra Bt)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...or...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (x \ra x + A)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (x \ra Bx)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra x + A)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra Bx)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...etc. (All are correct.)
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <b>
-                (b)
-              </b>
-              {" "}
-              The expressions are respectively:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra f(x + A)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra f(Bx)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra f(x) + A
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra Bf(x)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...where we use{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}as the dummy variable 
-              because we were{" "}
-              <i>
-                told
-              </i>
-              {" "}to use{" "}
-=======
               ...for all{" "}
->>>>>>> chapter_changing_buttons
               <NoBreak>
                 <Math>
                   $\theta \in \rr$
                 </Math>
                 .
               </NoBreak>
-<<<<<<< HEAD
-              {" "}(By the statement.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={27}>
-          <VerticalChunk>
-            <b>
-              Exercise 27.
-            </b>
-            {" "}
-            How would the graph of each of the compositions
-            from Exercise 26 compare to the graph of the 
-            generic function{" "}
-            <NoBreak>
-              <Math>
-                $f$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={27}>
-            <VerticalChunk>
-              For reference, the four functions are:
-=======
               {" "}(I.e., if the fraction is undefined,
               then the function is undefined.)
               Use these definitions 
               to prove that
->>>>>>> chapter_changing_buttons
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -15126,153 +10403,8 @@ const Article = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-<<<<<<< HEAD
-              For which the graphs are respectively obtained by:
-            </VerticalChunk>
-            <TextParent>
-              <ul style="list-style-type:decimal;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;">
-                <li>
-                  horizontally translating the graph of{" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "}by{" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "}units to the left;
-                </li>
-                <li>
-                  horizontally compressing the graph of{" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "}by a factor{" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    ;
-                  </NoBreak>
-                </li>
-                <li>
-                  vertically translating the graph of{" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "}by{" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "}units upward;
-                </li>
-                <li>
-                  vertically dilating (scaling) the graph of{" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "}by a factor{" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    .
-                  </NoBreak>
-                </li>
-              </ul>
-            </TextParent>
-            <VerticalChunk>
-              (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
-              Chapter 3.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={28}>
-          <VerticalChunk>
-            <b>
-              Exercise 28.
-            </b>
-            {" "}
-            Prove that{" "}
-            <NoBreak>
-              <Math>
-                $\cos\cdot\sin$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $\cos^2$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and{" "}
-            <Math>
-              $\sin^2$
-            </Math>
-            {" "}
-            are periodic mod{" "}
-            <NoBreak>
-              <Math>
-                $2\eta$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}where a function{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}is 
-            “periodic mod{" "}
-            <NoBreak>
-              <Math>
-                $T$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}if
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(x + T) = f(x)&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for all{" "}
-            <NoBreak>
-              <Math>
-                $x \in \rr$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={28}>
-            <VerticalChunk>
-              We have
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align&#125;
-              &amp;\,\,\, (\cos\cdot\sin)(x + 2\eta)\\
-              =&\,\,\, \up&#123;1.2&#125;\cos(x + 2\eta)\cdot\sin(x + 2\eta)\\
-              =&\,\,\, \up&#123;1.2&#125;(-\cos(x))\cdot(-\sin(x))\\
-              =&\,\,\, \up&#123;1.2&#125;\cos(x)\cdot\sin(x)\\
-              =&\,\,\, \up&#123;1.2&#125;(\cos\cdot\sin)(x)
-              \end&#123;align&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              for all{" "}
-=======
               for all 
               {" "}
->>>>>>> chapter_changing_buttons
               <NoBreak>
                 <Math>
                   $\theta \in \dom \tan = \dom \sec$
@@ -15281,7 +10413,7 @@ const Article = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <Solution solution_number={23}>
+            <Solution solution_number={24}>
               <VerticalChunk>
                 Let{" "}
                 <NoBreak>
@@ -15312,272 +10444,6 @@ const Article = () => {
               <VerticalChunk>
                 and, by the definitions,
               </VerticalChunk>
-<<<<<<< HEAD
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={29}>
-          <VerticalChunk>
-            <b>
-              Exercise 29.
-            </b>
-            {" "}
-            Given the graphs{" "}
-            <Math>
-              $y = \cos(x)\sin(x)$
-            </Math>
-            {" "}and 
-            {" "}
-            <NoBreak>
-              <Math>
-                $y = \cos^2(x)$
-              </Math>
-              ...
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...it{" "}
-            <i>
-              appears
-            </i>
-            {" "}that one graph is a
-            translate of the other; if this were 
-            really so, what would the exact amounts
-            of translation be? (Vertical{" "}
-            <i>
-              &
-            </i>
-            {" "}horizontal.)
-            What algebraic identity would this imply? How to
-            prove this identity?
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={29}>
-            <VerticalChunk>
-              We know from Exercise 21 that the 
-              bump immediately to the right of{" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              {" "}
-              on the graph{" "}
-              <Math>
-                $y = \cos(x)\sin(x)$
-              </Math>
-              {" "}has 
-              coordinates{" "}
-              <NoBreak>
-                <Math>
-                  $(\eta/2, 0.5)$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg" />
-            <Pause />
-            <VerticalChunk>
-              It might therefore be that a translation
-              of{" "}
-              <Math>
-                $-\eta/2$
-              </Math>
-              {" "}units horizontally and 
-              {" "}
-              <Math>
-                $&#123;1\over 2&#125;$
-              </Math>
-              {" "}units vertically maps the graph 
-              {" "}
-              <Math>
-                $y = \sin(x)\cos(x)$
-              </Math>
-              {" "}onto the graph 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $y = \cos^2(x)$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg" />
-            <Pause />
-            <VerticalChunk>
-              If true, this would indicate that
-            </VerticalChunk>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="border:1px solid red;padding:1em 1em;width:fit-content;">
-                <MathBlock>
-                  $$
-                  \cos^2(x) = &#123;1\over 2&#125; + \cos(x + \eta/2)\sin(x + \eta/2)
-                  $$
-                </MathBlock>
-              </div>
-            </center>
-            <VerticalChunk>
-              since replacing{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}by{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x + \eta/2$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              in{" "}
-              <Math>
-                $\sin(x)\cos(x)$
-              </Math>
-              {" "}effects horizontal 
-              translation of the graph by{" "}
-              <NoBreak>
-                <Math>
-                  $-\eta/2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              while adding{" "}
-              <Math>
-                $&#123;1\over 2&#125;$
-              </Math>
-              {" "}to the result 
-              effects a vertical translation by{" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over 2&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              To prove formula we use the angle-sum formulas;
-              specifically...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \sin(A + B) = \cos(A)\sin(B) + \sin(A)\cos(B)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...(in case you had forgotten those); since
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \,\cos(\eta/2) = \sin(\eta/2) = \sqrt&#123;0.5&#125;,
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              we find:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              \cos(x + \eta/2) &= \cos(x)\cos(\eta/2) - \sin(x)\sin(\eta/2) \\
-              &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) - \sin(x))
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              \sin(x + \eta/2) &= \cos(x)\sin(\eta/2) + \sin(x)\cos(\eta/2) \\
-              &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x))
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...from which the product...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos(x + \eta/2)\sin(x + \eta/2)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...becomes...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &\sqrt&#123;0.5&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
-              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
-              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - (1 - \cos^2(x))) \\
-              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(2\cos^2(x) - 1) \\
-              \up&#123;1.6&#125; =\,\,&\cos^2(x) - &#123;1\over 2&#125; \\
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...by the difference-of-squares formula and
-              the pythagorean identity (often used together),
-              and adding{" "}
-              <Math>
-                $&#123;1\over 2&#125;$
-              </Math>
-              {" "}gives{" "}
-              <NoBreak>
-                <Math>
-                  $\cos^2(x)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}Q.E.D.!
-              (So{" "}
-              <Math>
-                $y = \cos^2(x)$
-              </Math>
-              {" "}truly is the translate of 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $y = \cos(x)\sin(x)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <i>
-                &
-              </i>
-              {" "}vice-versa.)
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-=======
               <Pause />
               <MathBlock>
                 $$
@@ -15593,7 +10459,6 @@ const Article = () => {
                 $$
               </MathBlock>
               <Pause />
->>>>>>> chapter_changing_buttons
               <VerticalChunk>
                 using the pythagorean identity in the fourth step.
               </VerticalChunk>
@@ -15628,7 +10493,7 @@ const Article = () => {
               that exercise.)
             </VerticalChunk>
             <Pause />
-            <Solution solution_number={24}>
+            <Solution solution_number={25}>
               <VerticalChunk>
                 Viz:
               </VerticalChunk>
@@ -15728,7 +10593,7 @@ const Article = () => {
               </ol>
             </TextParent>
             <Pause />
-            <Solution solution_number={25}>
+            <Solution solution_number={26}>
               <VerticalChunk>
                 <b>
                   (a)
@@ -15896,7 +10761,7 @@ const Article = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <Solution solution_number={26}>
+            <Solution solution_number={27}>
               <VerticalChunk>
                 For reference, the four functions are:
               </VerticalChunk>
@@ -16049,7 +10914,7 @@ const Article = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <Solution solution_number={27}>
+            <Solution solution_number={28}>
               <VerticalChunk>
                 We have
               </VerticalChunk>
@@ -16298,20 +11163,20 @@ const Article = () => {
               prove this identity?
             </VerticalChunk>
             <Pause />
-            <Solution solution_number={28}>
+            <Solution solution_number={29}>
               <VerticalChunk>
                 We know from Exercise 21 that the 
-                bump immediately to the 
-                right of{" "}
+                bump immediately to the right of{" "}
                 <Math>
                   $(0, 0)$
                 </Math>
-                {" "}on the graph{" "}
+                {" "}
+                on the graph{" "}
                 <Math>
                   $y = \cos(x)\sin(x)$
                 </Math>
-                {" "}
-                has coordinates{" "}
+                {" "}has 
+                coordinates{" "}
                 <NoBreak>
                   <Math>
                     $(\eta/2, 0.5)$
@@ -16323,27 +11188,23 @@ const Article = () => {
               <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg" />
               <Pause />
               <VerticalChunk>
-                It might therefore be
-                that a translation
+                It might therefore be that a translation
                 of{" "}
                 <Math>
                   $-\eta/2$
                 </Math>
-                {" "}
-                units horizontally and
+                {" "}units horizontally and 
                 {" "}
                 <Math>
-                  $
-                  &#123;1\over 2&#125;
-                  $
+                  $&#123;1\over 2&#125;$
                 </Math>
+                {" "}units vertically maps the graph 
                 {" "}
-                units vertically maps the graph{" "}
                 <Math>
                   $y = \sin(x)\cos(x)$
                 </Math>
-                {" "}onto
-                the graph{" "}
+                {" "}onto the graph 
+                {" "}
                 <NoBreak>
                   <Math>
                     $y = \cos^2(x)$
@@ -16367,8 +11228,7 @@ const Article = () => {
                 </div>
               </center>
               <VerticalChunk>
-                since replacing
-                {" "}
+                since replacing{" "}
                 <NoBreak>
                   “
                   <Math>
@@ -16384,27 +11244,26 @@ const Article = () => {
                   </Math>
                   ”
                 </NoBreak>
-                {" "}in{" "}
+                {" "}
+                in{" "}
                 <Math>
                   $\sin(x)\cos(x)$
                 </Math>
-                {" "}effects
-                horizontal translation of the graph by{" "}
+                {" "}effects horizontal 
+                translation of the graph by{" "}
                 <NoBreak>
                   <Math>
                     $-\eta/2$
                   </Math>
                   ,
                 </NoBreak>
-                {" "}while adding
                 {" "}
+                while adding{" "}
                 <Math>
-                  $
-                  &#123;1\over 2&#125;
-                  $
+                  $&#123;1\over 2&#125;$
                 </Math>
-                {" "}
-                to the result effects a vertical translation by{" "}
+                {" "}to the result 
+                effects a vertical translation by{" "}
                 <NoBreak>
                   <Math>
                     $&#123;1\over 2&#125;$
@@ -16524,882 +11383,6 @@ const Article = () => {
                 </i>
                 {" "}vice-versa.)
               </VerticalChunk>
-<<<<<<< HEAD
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={30}>
-          <VerticalChunk>
-            <b>
-              Exercise 30.
-            </b>
-            {" "}
-            It also seems from the graphs that{" "}
-            <Math>
-              $y = \cos^2(x)$
-            </Math>
-            {" "}
-            is a{" "}
-            <i>
-              sinusoid
-            </i>
-            , i.e., some combination of a
-            scaling and translation of{" "}
-            <NoBreak>
-              <Math>
-                $y = \cos(x)$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison.svg" />
-          <Pause />
-          <VerticalChunk>
-            If so, what scaling and translation operations,
-            more exactly, can be conjectured to relate the 
-            two graphs? Can you prove this geometric relationship 
-            by algebra?
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={30}>
-            <VerticalChunk>
-              Since{" "}
-              <Math>
-                $\cos^2$
-              </Math>
-              {" "}is periodic mod{" "}
-              <Math>
-                $2\eta$
-              </Math>
-              {" "}while
-              {" "}
-              <Math>
-                $\cos$
-              </Math>
-              {" "}is periodic mod{" "}
-              <NoBreak>
-                <Math>
-                  $4\eta$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              we need, at the very least, a horizontal compression by
-              a factor{" "}
-              <Math>
-                $2$
-              </Math>
-              {" "}in order to map the bumps of{" "}
-              <Math>
-                $y = \cos(x)$
-              </Math>
-              {" "}
-              onto those of{" "}
-              <NoBreak>
-                <Math>
-                  $y = \cos^2(x)$
-                </Math>
-                .
-              </NoBreak>
-              {" "}From there we have to
-              readjust the range and amplitude of the curve, such as,
-              e.g., by translating up by{" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}and scaling vertically
-              by{" "}
-              <Math>
-                $&#123;1\over 2&#125;$
-              </Math>
-              {" "}(or scaling vertically by{" "}
-              <Math>
-                $&#123;1\over 2&#125;$
-              </Math>
-              {" "}
-              and translating up by{" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over 2&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}either way):
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison_transformations_1.svg" />
-            <Pause />
-            <VerticalChunk>
-              Algebraically, the three steps above turn
-              {" "}
-              <Math>
-                $\cos(x)$
-              </Math>
-              {" "}into{" "}
-              <NoBreak>
-                <Math>
-                  $\cos(2x)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}into{" "}
-              <NoBreak>
-                <Math>
-                  $1 + \cos(2x)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              into{" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1 + \cos(2x)\over 2&#125;$
-                </Math>
-                :
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\cos(x)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\downarrow
-              $$
-              <ImageRight
-                offset_x="4em"
-                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg"
-                compensate_offset_x_for_large_text_columns={true} />
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\cos(2x)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\downarrow
-              $$
-              <ImageRight
-                offset_x="4em"
-                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg"
-                compensate_offset_x_for_large_text_columns={true} />
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1 + \cos(2x)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\downarrow
-              $$
-              <ImageRight
-                offset_x="4em"
-                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg"
-                compensate_offset_x_for_large_text_columns={true} />
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large&#123;1 + \cos(2x)\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as substituting{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $2x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}for{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}effects a horizontal
-              compression by{" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              (See 
-              the second case 
-              of Exercise 27, in particular.)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              (NB: If we do it the other way around, 
-              putting the vertical scaling before the vertical 
-              translation, we obtain{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $&#123;1\over 2&#125;\cos(2x)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              as the third function and{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              as the fourth function:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\cos(x)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\downarrow
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\cos(2x)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\downarrow
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large&#123;1\over 2&#125;\cos(2x)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large\downarrow
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...which is same-same since
-              {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x) = &#123;1 + \cos(2x)\over 2&#125;$
-                </Math>
-                .)
-              </NoBreak>
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              The issue for the second part of the problem is
-              therefore to prove that...
-            </VerticalChunk>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
-                <MathBlock>
-                  $$
-                  &#123;1 + \cos(2x)\over 2&#125; = \cos^2(x)
-                  $$
-                </MathBlock>
-              </div>
-            </center>
-            <VerticalChunk>
-              ...by algebraic means.
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              For this we again use the angle-sum formula
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              for{" "}
-              <NoBreak>
-                <Math>
-                  $\cos$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}but with{" "}
-              <NoBreak>
-                <Math>
-                  $A = B = x$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}namely
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              \cos(2x) 
-              &= \cos(x + x) \\
-              &= \up&#123;1.6&#125; \cos(x)\cos(x) - \sin(x)\sin(x) \\
-              &= \up&#123;1.6&#125; \cos^2(x) - \sin^2(x)
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which gives us
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &#123;1 + \cos(2x)\over 2&#125; 
-              &= \up&#123;2.0&#125; &#123;1 + \cos^2(x) - \sin^2(x) \over 2&#125; \\
-              &= \up&#123;2.0&#125; &#123;(1 - \sin^2(x)) + \cos^2(x)\over 2&#125; \\
-              &= \up&#123;2.0&#125; &#123;\cos^2(x) + \cos^2(x)\over 2&#125; \\
-              &= \up&#123;2.0&#125; &#123;2\cos^2(x)\over 2&#125; \\
-              &= \up&#123;2.0&#125; \cos^2(x)
-              \end&#123;align*&#125;
-              $$
-              <ImageLeft
-                offset_y="3%"
-                offset_x="3.4em"
-                src="/images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg"
-                compensate_offset_x_for_large_text_columns={true} />
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...as conjectured! 
-              (In particular,{" "}
-              <Math>
-                $\cos^2(x)$
-              </Math>
-              {" "}truly{" "}
-              <i>
-                is
-              </i>
-              {" "}a
-              sinusoid, as a result of all this, surprisingly
-              enough.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={31}>
-          <VerticalChunk>
-            <b>
-              Exercise 31.
-            </b>
-            {" "}
-            Relate
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sin(x)\cos(x)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            to
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sin(2x)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            with the help of the angle-sum formulas.
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={31}>
-            <VerticalChunk>
-              The angle-sum formula for sin is
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \sin(A+B) = \cos A\sin B + \sin A\cos B
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              from which
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              \sin(2x) =&\,\, \sin(x + x) \\
-              \up&#123;1.6&#125; =&\,\, \cos x\sin x + \sin x\cos x \\
-              \up&#123;1.6&#125; =&\,\, 2\sin x\cos x
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and
-            </VerticalChunk>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
-                <MathBlock>
-                  $$
-                  \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
-                  $$
-                </MathBlock>
-              </div>
-            </center>
-            <VerticalChunk>
-              ...solving for{" "}
-              <NoBreak>
-                <Math>
-                  $\sin x\cos x$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={32}>
-          <VerticalChunk>
-            <b>
-              Exercise 32.
-            </b>
-            {" "}
-            What sequence of geometric transformations
-            can turn [the graph]{" "}
-            <Math>
-              $y = \sin(x)$
-            </Math>
-            {" "}
-            into [the graph]{" "}
-            <NoBreak>
-              <Math>
-                $y = \sin(x)\cos(x)$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={32}>
-            <VerticalChunk>
-              Since
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by Exercise 30 and since the substitution
-              of{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}by{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $2x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}effects a horizontal
-              compression by{" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}the answer is: 
-              “a horizontal scaling by{" "}
-              <Math>
-                $&#123;1\over 2&#125;$
-              </Math>
-              {" "}followed by a vertical scaling by{" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over 2&#125;$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "}
-              though order doesn't matter, and we might also
-              say “uniform scaling by{" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over 2&#125;$
-                </Math>
-                ”.
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={33}>
-          <VerticalChunk>
-            <b>
-              Exercise 33.
-            </b>
-            {" "}
-            What sequence of geometric transformations
-            maps the graph
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y = \cos x
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            onto the graph
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y = \sin x + \cos x
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...? 
-            (Study Exercise 18, if you have no inspiration.)
-            (PS: Prove your answer.)
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={33}>
-            <VerticalChunk>
-              Note that{" "}
-              <Math>
-                $\sin + \cos$
-              </Math>
-              {" "}
-              has period{" "}
-              <Math>
-                $4\eta$
-              </Math>
-              {" "}just like{" "}
-              <Math>
-                $\sin$
-              </Math>
-              {" "}or
-              {" "}
-              <NoBreak>
-                <Math>
-                  $\cos$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}but, unlike{" "}
-              <Math>
-                $\sin$
-              </Math>
-              {" "}and{" "}
-              <NoBreak>
-                <Math>
-                  $\cos$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              {" "}
-              <Math>
-                $\sin + \cos$
-              </Math>
-              {" "}reaches a maximum of{" "}
-              <Math>
-                $\sqrt&#123;2&#125;$
-              </Math>
-              {" "}
-              at{" "}
-              <NoBreak>
-                <Math>
-                  $x = \eta/2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}as uncovered in Exercise 18,
-              from which the following graphic is pilfered/bastardized:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_cos_to_sin_plus_cos_reminder.svg" />
-            <Pause />
-            <VerticalChunk>
-              (We have added the minimum at{" "}
-              <NoBreak>
-                <Math>
-                  $y = -\sqrt&#123;2&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              which is no harder to prove than the
-              maximum at{" "}
-              <NoBreak>
-                <Math>
-                  $y = \sqrt&#123;2&#125;$
-                </Math>
-                .)
-              </NoBreak>
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              Note that while the above graph may
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              seem
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              like a sinusoid, we have
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              not yet proved
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              that it is a sinusoid, which is indeed the goal
-              of the current exercise! But we can conjecture
-              that the
-              following two steps would take us from{" "}
-              <Math>
-                $y = \cos(x)$
-              </Math>
-              {" "}
-              to{" "}
-              <NoBreak>
-                <Math>
-                  $y = \sin(x) + \cos(x)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}given the structure above:
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              1. horizontal translation to the right by{" "}
-              <Math>
-                $\eta/2$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. vertical scaling by{" "}
-              <Math>
-                $\sqrt&#123;2&#125;$
-              </Math>
-              {" "}{" "}
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              Now you might recall from previous discussions
-              (cf. Exercise 7 of Chapter 3, part 1 of Exercise 27
-              in this chapter) that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra f(x + a)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              has a graph that is the translate of{" "}
-              <Math>
-                $y = f(x)$
-              </Math>
-              {" "}to
-              left by{" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}units, whence
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra f(x - a)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              has a graph that is the translate of{" "}
-              <Math>
-                $y = f(x)$
-              </Math>
-              {" "}to
-              the{" "}
-              <i>
-                right
-              </i>
-              {" "}by{" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}units; whence, we can
-              conjecture that...
-            </VerticalChunk>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
-                <MathBlock>
-                  $$
-                  \sqrt&#123;2&#125;\cdot \cos(x - \eta/2)
-                  $$
-                </MathBlock>
-              </div>
-            </center>
-            <VerticalChunk>
-              <NoBreak>
-                ...[
-                <Math>
-                  $\cos(x)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}translated, scaled] actually coincides
-              with{" "}
-              <NoBreak>
-                <Math>
-                  $\cos(x) + \sin(x)$
-                </Math>
-                !!!
-              </NoBreak>
-              {" "}(!!!)
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              For the proof, we resort to the angle-sum formula...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos(A + B) = \cos A\cos B - \sin A\sin B
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...again, giving us...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2 \cdot 0.5&#125;\cdot(\cos(x) + \sin(x)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;1&#125;\cdot(\cos(x) + \sin(x)) \\
-              \up&#123;1.6&#125; =&\,\, \cos(x) + \sin(x)
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...victory!!!!
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                The fact that
-              </VerticalChunk>
-              <Pause />
-              <MathBlock>
-                $$
-                \sqrt&#123;2&#125;\cdot \sqrt&#123;0.5&#125; = 1
-                $$
-              </MathBlock>
-              <Pause />
-              <VerticalChunk>
-                can also be seen from the fact that
-              </VerticalChunk>
-              <Pause />
-              <MathBlock>
-                $$
-                \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <VerticalChunk>
-                that some might prefer.
-              </VerticalChunk>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={34}>
-          <VerticalChunk>
-            <b>
-              Exercise 34.
-            </b>
-            {" "}
-            Similarly to Exercise 9, suggest a
-            definition for the product
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            c\cdot\vec&#123;v&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            of a vector{" "}
-            <Math>
-              $\vec&#123;v&#125;$
-            </Math>
-            {" "}by a real number{" "}
-            <NoBreak>
-              <Math>
-                $c$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Solution solution_number={34}>
-=======
               <Pause />
               <SolutionNote>
                 <VerticalChunk>
@@ -17575,10 +11558,849 @@ const Article = () => {
             </Solution>
           </Exercise>
           <Exercise exercise_number={30}>
->>>>>>> chapter_changing_buttons
             <VerticalChunk>
               <b>
                 Exercise 30.
+              </b>
+              {" "}
+              It also seems from the graphs that{" "}
+              <Math>
+                $y = \cos^2(x)$
+              </Math>
+              {" "}
+              is a{" "}
+              <i>
+                sinusoid
+              </i>
+              , i.e., some combination of a
+              scaling and translation of{" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos(x)$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison.svg" />
+            <Pause />
+            <VerticalChunk>
+              If so, what scaling and translation operations,
+              more exactly, can be conjectured to relate the 
+              two graphs? Can you prove this geometric relationship 
+              by algebra?
+            </VerticalChunk>
+            <Pause />
+            <Solution solution_number={30}>
+              <VerticalChunk>
+                Since{" "}
+                <Math>
+                  $\cos^2$
+                </Math>
+                {" "}is periodic mod{" "}
+                <Math>
+                  $2\eta$
+                </Math>
+                {" "}while
+                {" "}
+                <Math>
+                  $\cos$
+                </Math>
+                {" "}is periodic mod{" "}
+                <NoBreak>
+                  <Math>
+                    $4\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                we need, at the very least, a horizontal compression by
+                a factor{" "}
+                <Math>
+                  $2$
+                </Math>
+                {" "}in order to map the bumps of{" "}
+                <Math>
+                  $y = \cos(x)$
+                </Math>
+                {" "}
+                onto those of{" "}
+                <NoBreak>
+                  <Math>
+                    $y = \cos^2(x)$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}From there we have to
+                readjust the range and amplitude of the curve, such as,
+                e.g., by translating up by{" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "}and scaling vertically
+                by{" "}
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+                {" "}(or scaling vertically by{" "}
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+                {" "}
+                and translating up by{" "}
+                <NoBreak>
+                  <Math>
+                    $&#123;1\over 2&#125;$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}either way):
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison_transformations_1.svg" />
+              <Pause />
+              <VerticalChunk>
+                Algebraically, the three steps above turn
+                {" "}
+                <Math>
+                  $\cos(x)$
+                </Math>
+                {" "}into{" "}
+                <NoBreak>
+                  <Math>
+                    $\cos(2x)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}into{" "}
+                <NoBreak>
+                  <Math>
+                    $1 + \cos(2x)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                into{" "}
+                <NoBreak>
+                  <Math>
+                    $&#123;1 + \cos(2x)\over 2&#125;$
+                  </Math>
+                  :
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\cos(x)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\downarrow
+                $$
+                <ImageRight
+                  offset_x="4em"
+                  src="/images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg"
+                  compensate_offset_x_for_large_text_columns={true} />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\cos(2x)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\downarrow
+                $$
+                <ImageRight
+                  offset_x="4em"
+                  src="/images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg"
+                  compensate_offset_x_for_large_text_columns={true} />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large 1 + \cos(2x)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\downarrow
+                $$
+                <ImageRight
+                  offset_x="4em"
+                  src="/images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg"
+                  compensate_offset_x_for_large_text_columns={true} />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large&#123;1 + \cos(2x)\over 2&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                as substituting{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $2x$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}for{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $x$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}effects a horizontal
+                compression by{" "}
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                (See 
+                the second case 
+                of Exercise 27, in particular.)
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                (NB: If we do it the other way around, 
+                putting the vertical scaling before the vertical 
+                translation, we obtain{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $&#123;1\over 2&#125;\cos(2x)$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}
+                as the third function and{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x)$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}
+                as the fourth function:
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\cos(x)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\downarrow
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\cos(2x)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\downarrow
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large&#123;1\over 2&#125;\cos(2x)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large\downarrow
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...which is same-same since
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x) = &#123;1 + \cos(2x)\over 2&#125;$
+                  </Math>
+                  .)
+                </NoBreak>
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                The issue for the second part of the problem is
+                therefore to prove that...
+              </VerticalChunk>
+              <center style="margin-top:1em;margin-bottom:1em;">
+                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                  <MathBlock>
+                    $$
+                    &#123;1 + \cos(2x)\over 2&#125; = \cos^2(x)
+                    $$
+                  </MathBlock>
+                </div>
+              </center>
+              <VerticalChunk>
+                ...by algebraic means.
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                For this we again use the angle-sum formula
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                for{" "}
+                <NoBreak>
+                  <Math>
+                    $\cos$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}but with{" "}
+                <NoBreak>
+                  <Math>
+                    $A = B = x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}namely
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;align*&#125;
+                \cos(2x) 
+                &= \cos(x + x) \\
+                &= \up&#123;1.6&#125; \cos(x)\cos(x) - \sin(x)\sin(x) \\
+                &= \up&#123;1.6&#125; \cos^2(x) - \sin^2(x)
+                \end&#123;align*&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                which gives us
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;align*&#125;
+                &#123;1 + \cos(2x)\over 2&#125; 
+                &= \up&#123;2.0&#125; &#123;1 + \cos^2(x) - \sin^2(x) \over 2&#125; \\
+                &= \up&#123;2.0&#125; &#123;(1 - \sin^2(x)) + \cos^2(x)\over 2&#125; \\
+                &= \up&#123;2.0&#125; &#123;\cos^2(x) + \cos^2(x)\over 2&#125; \\
+                &= \up&#123;2.0&#125; &#123;2\cos^2(x)\over 2&#125; \\
+                &= \up&#123;2.0&#125; \cos^2(x)
+                \end&#123;align*&#125;
+                $$
+                <ImageLeft
+                  offset_y="3%"
+                  offset_x="3.4em"
+                  src="/images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg"
+                  compensate_offset_x_for_large_text_columns={true} />
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...as conjectured! 
+                (In particular,{" "}
+                <Math>
+                  $\cos^2(x)$
+                </Math>
+                {" "}truly{" "}
+                <i>
+                  is
+                </i>
+                {" "}a
+                sinusoid, as a result of all this, surprisingly
+                enough.)
+              </VerticalChunk>
+            </Solution>
+          </Exercise>
+          <Exercise exercise_number={31}>
+            <VerticalChunk>
+              <b>
+                Exercise 31.
+              </b>
+              {" "}
+              Relate
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(x)\cos(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              to
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              with the help of the angle-sum formulas.
+            </VerticalChunk>
+            <Pause />
+            <Solution solution_number={31}>
+              <VerticalChunk>
+                The angle-sum formula for sin is
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin(A+B) = \cos A\sin B + \sin A\cos B
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                from which
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;align*&#125;
+                \sin(2x) =&\,\, \sin(x + x) \\
+                \up&#123;1.6&#125; =&\,\, \cos x\sin x + \sin x\cos x \\
+                \up&#123;1.6&#125; =&\,\, 2\sin x\cos x
+                \end&#123;align*&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                and
+              </VerticalChunk>
+              <center style="margin-top:1em;margin-bottom:1em;">
+                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                  <MathBlock>
+                    $$
+                    \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
+                    $$
+                  </MathBlock>
+                </div>
+              </center>
+              <VerticalChunk>
+                ...solving for{" "}
+                <NoBreak>
+                  <Math>
+                    $\sin x\cos x$
+                  </Math>
+                  .
+                </NoBreak>
+              </VerticalChunk>
+            </Solution>
+          </Exercise>
+          <Exercise exercise_number={32}>
+            <VerticalChunk>
+              <b>
+                Exercise 32.
+              </b>
+              {" "}
+              What sequence of geometric transformations
+              can turn [the graph]{" "}
+              <Math>
+                $y = \sin(x)$
+              </Math>
+              {" "}
+              into [the graph]{" "}
+              <NoBreak>
+                <Math>
+                  $y = \sin(x)\cos(x)$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Solution solution_number={32}>
+              <VerticalChunk>
+                Since
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                by Exercise 30 and since the substitution
+                of{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $x$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}by{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $2x$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}effects a horizontal
+                compression by{" "}
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}the answer is: 
+                “a horizontal scaling by{" "}
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+                {" "}followed by a vertical scaling by{" "}
+                <NoBreak>
+                  <Math>
+                    $&#123;1\over 2&#125;$
+                  </Math>
+                  ”,
+                </NoBreak>
+                {" "}
+                though order doesn't matter, and we might also
+                say “uniform scaling by{" "}
+                <NoBreak>
+                  <Math>
+                    $&#123;1\over 2&#125;$
+                  </Math>
+                  ”.
+                </NoBreak>
+              </VerticalChunk>
+            </Solution>
+          </Exercise>
+          <Exercise exercise_number={33}>
+            <VerticalChunk>
+              <b>
+                Exercise 33.
+              </b>
+              {" "}
+              What sequence of geometric transformations
+              maps the graph
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = \cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              onto the graph
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = \sin x + \cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...? 
+              (Study Exercise 18, if you have no inspiration.)
+              (PS: Prove your answer.)
+            </VerticalChunk>
+            <Pause />
+            <Solution solution_number={33}>
+              <VerticalChunk>
+                Note that{" "}
+                <Math>
+                  $\sin + \cos$
+                </Math>
+                {" "}
+                has period{" "}
+                <Math>
+                  $4\eta$
+                </Math>
+                {" "}just like{" "}
+                <Math>
+                  $\sin$
+                </Math>
+                {" "}or
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\cos$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}but, unlike{" "}
+                <Math>
+                  $\sin$
+                </Math>
+                {" "}and{" "}
+                <NoBreak>
+                  <Math>
+                    $\cos$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                {" "}
+                <Math>
+                  $\sin + \cos$
+                </Math>
+                {" "}reaches a maximum of{" "}
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                {" "}
+                at{" "}
+                <NoBreak>
+                  <Math>
+                    $x = \eta/2$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}as uncovered in Exercise 18,
+                from which the following graphic is pilfered/bastardized:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_cos_to_sin_plus_cos_reminder.svg" />
+              <Pause />
+              <VerticalChunk>
+                (We have added the minimum at{" "}
+                <NoBreak>
+                  <Math>
+                    $y = -\sqrt&#123;2&#125;$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                which is no harder to prove than the
+                maximum at{" "}
+                <NoBreak>
+                  <Math>
+                    $y = \sqrt&#123;2&#125;$
+                  </Math>
+                  .)
+                </NoBreak>
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                Note that while the above graph may
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                seem
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                like a sinusoid, we have
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                not yet proved
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                that it is a sinusoid, which is indeed the goal
+                of the current exercise! But we can conjecture
+                that the
+                following two steps would take us from{" "}
+                <Math>
+                  $y = \cos(x)$
+                </Math>
+                {" "}
+                to{" "}
+                <NoBreak>
+                  <Math>
+                    $y = \sin(x) + \cos(x)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}given the structure above:
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                1. horizontal translation to the right by{" "}
+                <Math>
+                  $\eta/2$
+                </Math>
+                {" "}{" "}
+              </CentralDisplayItalic>
+              <Pause />
+              <CentralDisplayItalic>
+                2. vertical scaling by{" "}
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                {" "}{" "}
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                Now you might recall from previous discussions
+                (cf. Exercise 7 of Chapter 3, part 1 of Exercise 27
+                in this chapter) that
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra f(x + a)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                has a graph that is the translate of{" "}
+                <Math>
+                  $y = f(x)$
+                </Math>
+                {" "}to
+                left by{" "}
+                <Math>
+                  $a$
+                </Math>
+                {" "}units, whence
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra f(x - a)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                has a graph that is the translate of{" "}
+                <Math>
+                  $y = f(x)$
+                </Math>
+                {" "}to
+                the{" "}
+                <i>
+                  right
+                </i>
+                {" "}by{" "}
+                <Math>
+                  $a$
+                </Math>
+                {" "}units; whence, we can
+                conjecture that...
+              </VerticalChunk>
+              <center style="margin-top:1em;margin-bottom:1em;">
+                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                  <MathBlock>
+                    $$
+                    \sqrt&#123;2&#125;\cdot \cos(x - \eta/2)
+                    $$
+                  </MathBlock>
+                </div>
+              </center>
+              <VerticalChunk>
+                <NoBreak>
+                  ...[
+                  <Math>
+                    $\cos(x)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}translated, scaled] actually coincides
+                with{" "}
+                <NoBreak>
+                  <Math>
+                    $\cos(x) + \sin(x)$
+                  </Math>
+                  !!!
+                </NoBreak>
+                {" "}(!!!)
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                For the proof, we resort to the angle-sum formula...
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(A + B) = \cos A\cos B - \sin A\sin B
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...again, giving us...
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;align*&#125;
+                &\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;)) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;2 \cdot 0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;1&#125;\cdot(\cos(x) + \sin(x)) \\
+                \up&#123;1.6&#125; =&\,\, \cos(x) + \sin(x)
+                \end&#123;align*&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...victory!!!!
+              </VerticalChunk>
+              <Pause />
+              <SolutionNote>
+                <VerticalChunk>
+                  <i>
+                    Note 1.
+                  </i>
+                  {" "}
+                  The fact that
+                </VerticalChunk>
+                <Pause />
+                <MathBlock>
+                  $$
+                  \sqrt&#123;2&#125;\cdot \sqrt&#123;0.5&#125; = 1
+                  $$
+                </MathBlock>
+                <Pause />
+                <VerticalChunk>
+                  can also be seen from the fact that
+                </VerticalChunk>
+                <Pause />
+                <MathBlock>
+                  $$
+                  \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
+                  $$
+                </MathBlock>
+                <Pause />
+                <VerticalChunk>
+                  that some might prefer.
+                </VerticalChunk>
+              </SolutionNote>
+            </Solution>
+          </Exercise>
+          <Exercise exercise_number={34}>
+            <VerticalChunk>
+              <b>
+                Exercise 34.
               </b>
               {" "}
               Similarly to Exercise 9, suggest a
@@ -17605,7 +12427,7 @@ const Article = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <Solution solution_number={29}>
+            <Solution solution_number={34}>
               <VerticalChunk>
                 We define
               </VerticalChunk>
@@ -17639,31 +12461,6 @@ const Article = () => {
                 <Math>
                   $c$
                 </Math>
-<<<<<<< HEAD
-                .
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                In some sense, the vector “wins” over the 
-                number, in that their conjoint baby is a vector:
-              </VerticalChunk>
-              <Pause />
-              <Image
-                style="background-color:rgb(226 232 240);"
-                src="/images/svg_ch5_ex_c_times_vector_box.svg" />
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-      </Exercises>
-    </Chapter>
-  );
-=======
                 {" "}“inside”, multiplying each coordinate of
                 the vector by{" "}
                 <NoBreak>
@@ -17704,12 +12501,26 @@ const Article = () => {
                   .
                 </NoBreak>
               </VerticalChunk>
+              <Pause />
+              <SolutionNote>
+                <VerticalChunk>
+                  <i>
+                    Note 1.
+                  </i>
+                  {" "}
+                  In some sense, the vector “wins” over the 
+                  number, in that their conjoint baby is a vector:
+                </VerticalChunk>
+                <Pause />
+                <Image
+                  style="background-color:rgb(226 232 240);"
+                  src="/images/svg_ch5_ex_c_times_vector_box.svg" />
+              </SolutionNote>
             </Solution>
           </Exercise>
         </Exercises>
       </Chapter>
   </>);
->>>>>>> chapter_changing_buttons
 };
 
 export default Article;

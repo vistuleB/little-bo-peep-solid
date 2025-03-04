@@ -523,94 +523,6 @@ const Article = () => {
             {" "}in descending order:
           </VerticalChunk>
           <Pause />
-<<<<<<< HEAD
-          <Solution solution_number={1}>
-            <VerticalChunk>
-              Since{" "}
-              <NoBreak>
-                <Math>
-                  $2^&#123;-1&#125; = 1/2 = 0.5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}one has
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2^&#123;-2&#125; = &#123;2^&#123;-1&#125;\over 2&#125; = &#123;0.5 \over 2&#125; = 0.25
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2^&#123;-3&#125; = &#123;2^&#123;-2&#125;\over 2&#125; = &#123;0.25 \over 2&#125; = 0.125
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2^&#123;-4&#125; = &#123;2^&#123;-3&#125;\over 2&#125; = &#123;0.125 \over 2&#125; = 0.0625
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              respectively.
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                For the last computation,{" "}
-                <Math>
-                  $0.125$
-                </Math>
-                {" "}can be viewed 
-                as twelve hundredths plus{" "}
-                <Math>
-                  $5$
-                </Math>
-                {" "}thousandths:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_0.125_twelve_5.svg" />
-              <Pause />
-              <VerticalChunk>
-                Half of twelve hundredths is six hundredths, and 
-                half of{" "}
-                <Math>
-                  $5$
-                </Math>
-                {" "}thousandths is{" "}
-                <Math>
-                  $2.5$
-                </Math>
-                {" "}thousandths:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_06_and_0025.svg" />
-              <Pause />
-              <VerticalChunk>
-                ...so{" "}
-                <Math>
-                  $0.125/2$
-                </Math>
-                {" "}is{" "}
-                <NoBreak>
-                  <Math>
-                    $0.06 + 0.0025 = 0.0625$
-                  </Math>
-                  .
-                </NoBreak>
-              </VerticalChunk>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise exercise_number={2}>
-=======
           <MathBlock>
             $$
             \Large 0^3 = 1 \times 0 \times 0 \times 0 = 0
@@ -635,7 +547,6 @@ const Article = () => {
             $$
           </MathBlock>
           <Pause />
->>>>>>> chapter_changing_buttons
           <VerticalChunk>
             In other words, every positive power of{" "}
             <Math>
@@ -2139,53 +2050,56 @@ const Article = () => {
               <VerticalChunk>
                 respectively.
               </VerticalChunk>
-              <VerticalChunk indent={true}>
-                <i>
-                  Notes.
-                </i>
-                {" "}
-                For the last computation,{" "}
-                <Math>
-                  $0.125$
-                </Math>
-                {" "}can be viewed 
-                as twelve hundredths plus{" "}
-                <Math>
-                  $5$
-                </Math>
-                {" "}thousandths:
-              </VerticalChunk>
               <Pause />
-              <Image src="/images/svg_0.125_twelve_5.svg" />
-              <Pause />
-              <VerticalChunk>
-                Half of twelve hundredths is six hundredths, and 
-                half of{" "}
-                <Math>
-                  $5$
-                </Math>
-                {" "}thousandths is{" "}
-                <Math>
-                  $2.5$
-                </Math>
-                {" "}thousandths:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_06_and_0025.svg" />
-              <Pause />
-              <VerticalChunk>
-                ...so{" "}
-                <Math>
-                  $0.125/2$
-                </Math>
-                {" "}is{" "}
-                <NoBreak>
+              <SolutionNote>
+                <VerticalChunk>
+                  <i>
+                    Note 1.
+                  </i>
+                  {" "}
+                  For the last computation,{" "}
                   <Math>
-                    $0.06 + 0.0025 = 0.0625$
+                    $0.125$
                   </Math>
-                  .
-                </NoBreak>
-              </VerticalChunk>
+                  {" "}can be viewed 
+                  as twelve hundredths plus{" "}
+                  <Math>
+                    $5$
+                  </Math>
+                  {" "}thousandths:
+                </VerticalChunk>
+                <Pause />
+                <Image src="/images/svg_0.125_twelve_5.svg" />
+                <Pause />
+                <VerticalChunk>
+                  Half of twelve hundredths is six hundredths, and 
+                  half of{" "}
+                  <Math>
+                    $5$
+                  </Math>
+                  {" "}thousandths is{" "}
+                  <Math>
+                    $2.5$
+                  </Math>
+                  {" "}thousandths:
+                </VerticalChunk>
+                <Pause />
+                <Image src="/images/svg_06_and_0025.svg" />
+                <Pause />
+                <VerticalChunk>
+                  ...so{" "}
+                  <Math>
+                    $0.125/2$
+                  </Math>
+                  {" "}is{" "}
+                  <NoBreak>
+                    <Math>
+                      $0.06 + 0.0025 = 0.0625$
+                    </Math>
+                    .
+                  </NoBreak>
+                </VerticalChunk>
+              </SolutionNote>
             </Solution>
           </Exercise>
           <Exercise exercise_number={2}>
