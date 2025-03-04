@@ -1,11 +1,8 @@
-import { onCleanup, onMount, ParentProps } from "solid-js";
+import { createSignal, onCleanup, onMount, ParentProps } from "solid-js";
 
 export const Math = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
-  
-  // createEffect(() => {
-  //   (window as any).MathJax.typesetPromise([ref]);
-  // });
+  const [visible, setVisible] = createSignal(false)
 
   onMount(
     () => {
@@ -13,6 +10,7 @@ export const Math = (props: ParentProps) => {
           ([entry]) => {
             if (entry.isIntersecting) {
               (window as any).MathJax.typesetPromise([ref]);
+              setVisible(true)
               observer.disconnect();
             }
           },
@@ -26,7 +24,7 @@ export const Math = (props: ParentProps) => {
   );
 
   return (
-    <span class="inline-flex indent-0" ref={ref}>
+    <span class="inline-flex indent-0 transition-opacity" style={{ opacity: visible() ? "100" : "0" }}  ref={ref}>
       {props.children}
     </span>
   );
@@ -34,17 +32,15 @@ export const Math = (props: ParentProps) => {
 
 export const MathBlock = (props: ParentProps) => {
   let ref: HTMLDivElement | undefined;
+  const [visible, setVisible] = createSignal(false)
   
-  // createEffect(() => {
-  //   (window as any).MathJax.typesetPromise([ref]);
-  // });
-
   onMount(
     () => {
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting) {
               (window as any).MathJax.typesetPromise([ref]);
+              setVisible(true)
               observer.disconnect();
             }
           },
@@ -58,7 +54,7 @@ export const MathBlock = (props: ParentProps) => {
   );
 
   return (
-    <div class="mathblock" ref={ref}>
+    <div class="mathblock transition-opacity" style={{ opacity: visible() ? "100" : "0" }} ref={ref}>
       {props.children}
     </div>
   );
