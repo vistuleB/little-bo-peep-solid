@@ -33,6 +33,7 @@ const Solution = (props: SolutionProps) => {
     null
   );
   const [green_div_transition, set_green_div_transition] = createSignal(0);
+  const [solution_transition, set_solution_transition] = createSignal(0);
   const [exercises_height_sum, set_exercises_height_sum] = createSignal(0);
   const [green_div_height, set_green_div_height] = createSignal(0);
   
@@ -121,7 +122,7 @@ const Solution = (props: SolutionProps) => {
       }, transition_duration()[props.solution_number - 1])
     }
   })
-  
+
   return (
     <>
       <div
@@ -147,6 +148,11 @@ const Solution = (props: SolutionProps) => {
                   return [...prev];
                 }
               );
+              // solution transition should be not 0 only when button is clicked
+              set_solution_transition(transition_duration()[props.solution_number - 1])
+              setTimeout(()=> {
+                set_solution_transition(0)
+              }, transition_duration()[props.solution_number - 1])
             }
           }
         />
@@ -160,7 +166,7 @@ const Solution = (props: SolutionProps) => {
         style={{
           height: `${content_height()}px`,
           "transition-duration": `${
-            transition_duration()[props.solution_number - 1]
+            solution_transition()
           }ms`,
           "transition-property": "height",
         }}
@@ -173,7 +179,7 @@ const Solution = (props: SolutionProps) => {
           )}
           style={{
             "transition-duration": `${
-              transition_duration()[props.solution_number - 1]
+              solution_transition()
             }ms`,
           }}
         >
@@ -181,7 +187,7 @@ const Solution = (props: SolutionProps) => {
           <div
             style={{
               "transition-duration": `${
-                transition_duration()[props.solution_number - 1]
+                solution_transition()
               }ms`,
             }}
             class={twJoin(
