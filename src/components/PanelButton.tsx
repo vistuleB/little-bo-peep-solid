@@ -17,13 +17,13 @@ const PanelButton = () => {
   const open = () => store.panel_opened;
 
   const getNextArticle = () => {
-    let a = document.querySelector(".next_page") as HTMLAnchorElement
-    a?.click()
+    let a = document.querySelector(".next_page") as HTMLAnchorElement;
+    a?.click();
   }
 
   const getPrevArticle = () => {
-    let a = document.querySelector(".prev_page") as HTMLAnchorElement
-    a?.click()
+    let a = document.querySelector(".prev_page") as HTMLAnchorElement;
+    a?.click();
   }
 
   const [opacity, set_opacity] = createSignal(1);
@@ -31,8 +31,8 @@ const PanelButton = () => {
   const [scrollX, set_scrollX] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
   const [scrollWidth, set_scrollWidth] = createSignal(0);
-  const [prevDisabled, set_prevDisabled] = createSignal(true);
-  const [nextDisabled, set_nextDisabled] = createSignal(true);
+  const [prevDisabled, set_prevDisabled] = createSignal(false);
+  const [nextDisabled, set_nextDisabled] = createSignal(false);
 
   const calc_opacity = () => {
     return Math.min(
@@ -66,11 +66,15 @@ const PanelButton = () => {
   });
 
   createEffect(()=>{
-    store.route // re-run on route change
-    setTimeout(()=>{
-      set_nextDisabled(!document.querySelector(".next_page"))
-      set_prevDisabled(!document.querySelector(".prev_page"))
-    }, 200)
+    store.route; // re-run on route change
+    setTimeout(() => {
+      set_nextDisabled(!document.querySelector(".next_page"));
+      set_prevDisabled(!document.querySelector(".prev_page"));
+    }, 200);
+    // setTimeout(() => {
+    //   set_nextDisabled(!document.querySelector(".next_page"));
+    //   set_prevDisabled(!document.querySelector(".prev_page"));
+    // }, 300);
   })
 
   return (
@@ -110,7 +114,11 @@ const PanelButton = () => {
             onMouseOver={() => {
               set_prevDisabled(!document.querySelector(".prev_page"))
             }}
-            onClick={() => { getPrevArticle() }}
+            onClick={(e) => {
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+              getPrevArticle();
+            }}
             style={{
               "background-color":
                 store.show_areas
@@ -125,7 +133,11 @@ const PanelButton = () => {
             onMouseOver={() => {
               set_nextDisabled(!document.querySelector(".next_page"))
             }}
-            onClick={() => { getNextArticle() }}
+            onClick={(e) => {
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+              getNextArticle();
+            }}
             style={{
               "background-color":
                 store.show_areas

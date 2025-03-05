@@ -1,4 +1,6 @@
-import { createEffect, createSignal, } from "solid-js";
+import { createEffect, createSignal, JSX } from "solid-js";
+import { A, useLocation } from "@solidjs/router";
+import { twJoin } from "tailwind-merge";
 import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 
@@ -57,29 +59,71 @@ const PanelItem = (props: {
 
   return (
     <>
-    <a
-      href={`/article/${props.href}`}
-      class="flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
-    >
-      <span class="block">{props.article_type}</span>
-      <span class="dots"></span>
-      <span class="text-right">{first_half()}</span>
-    </a>
+      <ConditionalLink 
+          href={`/article/${props.href}`}
+          class="flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
+          onSameRoute={(e) => {
+            e.preventDefault();
+            window.scroll({
+              left: (store.scrollWidth - store.innerWidth) / 2,
+              behavior: "instant",
+            });
+          }}
+        >
+        <span class="block">{props.article_type}</span>
+        <span class="dots"></span>
+        <span class="text-right">{first_half()}</span>
+      </ConditionalLink>
       {
         (second_half() === "") ? (
           <></>
         ) : (
-          <a
-            href={`/article/${props.href}`}
-            class="flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
-          >
+          <ConditionalLink 
+              href={`/article/${props.href}`}
+              class="flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
+              onSameRoute={(e) => {
+                e.preventDefault();
+                window.scroll({
+                  left: (store.scrollWidth - store.innerWidth) / 2,
+                  behavior: "instant",
+                });
+              }}
+            >
             <span class="dots !w-auto"></span>
             <span class="text-right">{second_half()}</span>
-          </a>
+          </ConditionalLink>
         )
       }
     </>
   );
 };
+
+interface ConditionalLinkProps extends JSX.AnchorHTMLAttributes<HTMLAnchorElement> {
+  href: string;
+  onSameRoute?: (e: MouseEvent) => void;
+  onClick?: (e: MouseEvent) => void;
+}
+
+export function ConditionalLink(props: ConditionalLinkProps) {
+  const location = useLocation();
+  const { onSameRoute, onClick, ...rest } = props;
+
+  const handleClick = (e: MouseEvent) => {
+    if (location.pathname === props.href) {
+      // If on the same route, call the custom onSameRoute handler
+      onSameRoute?.(e);
+    } else {
+      // Otherwise, call the original onClick handler if it exists
+      onClick?.(e);
+    }
+  };
+
+  return (
+    <A 
+      {...rest}
+      onClick={handleClick}
+    />
+  );
+}
 
 export default PanelItem;

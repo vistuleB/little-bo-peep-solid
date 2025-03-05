@@ -3,8 +3,6 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { twJoin } from "tailwind-merge";
 
-const HAMBURGER_MENU_HEIGHT = 56;
-
 const Nav = () => {
   let { store } = useGlobalContext();
   return (
@@ -18,10 +16,6 @@ const Nav = () => {
           <Title />
         </div>
       </nav>
-      {/* <div
-        style={{ top: `${HAMBURGER_MENU_HEIGHT - 1.0}px` }}
-        class="h-0 border-b !fixed z-50"
-      ></div> */}
       <div class="h-14"></div>
     </>
   );

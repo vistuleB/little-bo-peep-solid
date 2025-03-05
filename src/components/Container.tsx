@@ -61,13 +61,6 @@ const Container = (props: ParentProps) => {
   });
 
   createEffect(() => {
-    document.addEventListener("click", (_) => {
-      window.scroll({
-        left: (store.scrollWidth - store.innerWidth) / 2,
-        behavior: "smooth",
-      });
-    });
-
     window.addEventListener("resize", (_) => {
       if (!on_mobile()) {
         window.scroll({
@@ -79,18 +72,23 @@ const Container = (props: ParentProps) => {
   });
 
   return (
-    <>
-      <div
-        id="Container"
-        class="pb-14 -z-10 relative"
-        style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}
-        >
-        <EarlyImages />
-        <Nav />
+    <div
+      id="Container"
+      class="pb-14 -z-10 relative"
+      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}
+      >
+      <EarlyImages />
+      <Nav />
+      <div onClick={() => {
+        window.scroll({
+          left: (store.scrollWidth - store.innerWidth) / 2,
+          behavior: "smooth",
+        });
+      }}>
         {props.children}
-        <SVGDefs />
       </div>
-    </>
+      <SVGDefs />
+    </div>
   );
 };
 
