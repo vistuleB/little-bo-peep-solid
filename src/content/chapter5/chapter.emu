@@ -1,6 +1,6 @@
 |> Section
 
-    *Definitions.*
+    *Cos and Sin. (“Cosine” and “sine”.)*
     We've already encountered the ‘cos’ 
     function in Exercise 7 of Chapter 3, e.g.. 
     It is the one that has this graph:
@@ -32,15 +32,17 @@
 
     is a circle of radius $1$, while “the” unit
     circle is the circle of radius $1$ centered
-    at $(0, 0)$.) For example, if we look at $x = 0.5$,
+    at $(0, 0)$.) For example, if we look at $x = {1\over 2}$,
     we see $\cos({1\over 2}) \approx 0.9$,
     $\sin({1\over 2}) \approx 0.5$:
 
     |> Image
         src images/svg_ch5_ch_cosine_and_sine_@0.5.svg
 
-    The reason for these values, per the
-    definitions, is that the point half a unit
+    !! The reason for these values, per the definitions, 
+    !! is that 
+    Per the definitions,
+    the point half a unit
     counterclockwise from $(1, 0)$ on the unit
     circle has coordinates $\approx 0.9$ in $x$
     and $\approx 0.5$ in $y$ (or actually $0.87758...$
@@ -50,14 +52,14 @@
     |> Image
         src images/svg_ch5_ch_unit_circle_@0.5_smaller.svg
 
-    As another example, the graphs indicate that 
+    As a second example, the graphs indicate that 
     $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$
     (or something very close to $-1$, in any case):
 
     |> Image
         src images/svg_ch5_ch_cosine_and_sine_@-3.svg
 
-    Again, going $-3$ units counterclockwise—which
+    Indeed, going $-3$ units counterclockwise—which
     means, going $3$ units clockwise—on the unit
     circle, starting from $(1, 0)$, brings us to a point
     with $y$- and $x$-coordinates of $\approx -0.2$ 
@@ -67,7 +69,8 @@
     |> Image
         src images/svg_ch5_ch_unit_circle_@-3_smaller.svg
 
-    For a last example, note that there appears
+    For a last example, 
+    note that there appears
     to be a value of $x$ near $-1.6$, where $\cos(x) = 0$,
     $\sin(x) = -1$:
 
@@ -92,7 +95,7 @@
     that value would be namely $x = -1.57...$, not
     $x = -1.6$.)
 
-    (Etc.)
+    !! (Etc.)
 
     In another possible definition,
 
@@ -303,10 +306,12 @@
     }
     $$
 
-    ...that follow because one full turn around the
-    circle brings you back to the same position, whereas
-    a half-turn brings you around  to your _antipode_(where
-    both coordinates are negated), and these two more...
+    ...that follow because one full turn 
+    around the circle brings you back to the
+    same position, whereas a half-turn brings
+    you around  to your _antipode_ (where
+    both coordinates are negated), and these 
+    two more...
 
     $$
     \displaylines{\up{1.0}\cos(x + \eta) = -\!\sin(x) \\
@@ -521,9 +526,9 @@
 
     As a consequence of the definition, a
     displacement of $x$ units on the unit circle
-    subtends an angle—or technically:_rotation_, 
+    subtends an angle—or technically: _rotation_, 
     because there is a “positive” direction—and
-    you can also say _signed angle_instead of
+    you can also say _signed angle_ instead of
     _rotation_, by the way—whose (signed) radian
     measure is $x$:
 
@@ -1199,23 +1204,33 @@
 
     __Abercrombie inequality__
 
-    states that the length of the segment is at
-    least as much as the length of the arc, i.e.,
-    that
+    states that 
+    !! the length of the segment is at
+    !! least as much as the length of the arc, i.e.,
+    !! that
 
     $$
     A\leq S
     $$
 
-    if $A$ is the length of the arc and $S$ is
-    the length of the segment, regardless of the
-    exact configuration of the angle, arc, and
-    segment. (The segment just has to remain outside 
-    the arc.)
+    in the language of the above figure, i.e.,
+    that the length of the segment is 
+    at least
+    !! greater-than-or-equal-to
+    the length of the arc.
+    !! if $A$ is the length of the arc and $S$ is
+    !! the length of the segment, regardless of the
+    !! exact configuration of the angle, arc, and
+    !! segment. (The segment just has to remain outside 
+    !! the arc.)
 
-    Otherwise—if this were not the case—the length
+    !! Otherwise—if this were not the case—the 
+    The proof is that, if this were not the case,
+    the
+    length
     $S$ of the segment would lie to left of the
-    length $A$ of the arc on the number line:
+    length $A$ of the arc on the number line, as
+    pictured in this stylized view of the number line:
 
     |> Image
         src images/svg_ch5_ch_abercrombie_to_the_left.svg
@@ -1271,27 +1286,28 @@
         src images/svg_ch5_ch_abercrombie_to_the_left_second.svg
 
     ...on the number line is an impossibility, 
-    i.e., $S \geq A$, i.e., the Abercrombie 
-    inequality is proved!
+    i.e., $S \geq A$.
+    This constitutes the proof of the Abercrombie
+    inequality.
 
-    NB: We can polish a few details by noting that:
+    One can polish a few more details by noting that:
 
     |> p
         style text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;
 
         *(i)* the segment can be tangent to the 
-        arc at one point, it does not need to 
-        _strictly_ clear the arc (this is easy to
-        check from the proof);
+        arc at one point, the proof will still go
+        through (so the segment does not need to
+        _strictly_ clear the arc);
 
     |> p
         style text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;
 
         *(ii)* as long as the angle is nonzero, 
         and the arc has nonzero radius, the
-        length of the segment will be STRICTLY 
-        GREATER than the length of the arc 
-        (not just greater-or-equal-to)
+        length of the segment will be STRICTLY
+        GREATER than the length of the arc,
+        not just greater-or-equal-to
 
     (Point *(ii)* can be seen by 
     comparing the segment to a two-segment 
@@ -1309,24 +1325,58 @@
     \sin(\theta) \,<\, \theta \,<\, {\sin(\theta)\over\cos(\theta)}
     $$
 
-    for all $0 < \theta < \eta$. The Fisher 
-    sandwich is so-called because it consists of
-
-    _|TWO|_
-
-    inequalities, the first being
-
+    for all $0 < \theta < \eta$.
+    The Fisher sandwich is so-called because 
+    !! $\theta$ is “sandwiched” 
+    it “sandwiches” $\theta$
+    between
     $$
-    \sin(\theta) \rt{0.1}<\, \theta
+    \sin(\theta)
     $$
-
-    and the second being
-
+    below, and
     $$
-    \,\theta \,<\rt{0.1} {\sin(\theta)\over\cos(\theta)}
+    {\sin(\theta)\over\cos(\theta)}
     $$
+    !! (futurely known as “$\tan(\theta)$”) 
+    above. (Indeed,
+    $$
+    {\sin(\theta)\over\cos(\theta)} > \sin(\theta)
+    $$
+    in the range $0 < \theta < \eta$
+    because dividing by
+    $$
+    \cos(\theta)
+    $$
+    makes you
+    _|BIGGER|_
+    when $0 < \cos(\theta) < 1$, which is the case
+    for $0 < \theta < \eta$—in fact, dividing by
+    $\cos(\theta)$ will make you
+    _|DRAMATICALLY BIGGER|_
+    when $\cos(\theta)$ is close to $0$, which is the 
+    case when $\theta$ is close to $\eta$.)
+    
+    !! The Fisher sandwich 
+    !! consists of two separate 
+    !! inequalities that require two separate proofs.
+    !! The Fisher 
+    !! sandwich is so-called because it consists of
 
-    ...with each inequality requiring a separate proof.
+    !! _|TWO|_
+
+    !! inequalities, the first being
+
+    !! $$
+    !! \sin(\theta) \rt{0.1}<\, \theta
+    !! $$
+
+    !! and the second being
+
+    !! $$
+    !! \,\theta \,<\rt{0.1} {\sin(\theta)\over\cos(\theta)}
+    !! $$
+
+    !! ...with each inequality requiring a separate proof.
 
     The first inequality
 
@@ -1339,7 +1389,7 @@
     |> Image
         src images/svg_ch5_ch_fisher_first_ineq.svg
 
-    Namely, per one slightly pedantic logic,
+    Namely, per the one slightly pedantic logic,
 
     $$
     \theta > L
@@ -1352,7 +1402,7 @@
     L > \sin(\theta)
     $$
 
-    on the other hand. This implies 
+    on the other hand. Together, this implies 
     $\theta \rt{0.1}>\rt{0.1} \sin(\theta)$.
 
     For the second inequality, we have to start
@@ -1647,7 +1697,7 @@
         style white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
 
         FAUX BORDEAUX
-    triangle below:
+    &ensp;triangle below:
 
     |> Image
         src images/svg_ch5_ch_secant_reinterpretation_4.svg

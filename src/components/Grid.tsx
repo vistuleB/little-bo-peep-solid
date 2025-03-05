@@ -54,7 +54,6 @@ const Grid = (_props: GridProps) => {
 
   const handleResize = () => {
     setCols(window.innerWidth <= props.sm_cutoff ? props.sm_cols : props.cols);
-    console.log("reset cols to: ", cols());
   };
 
   createEffect(() => {

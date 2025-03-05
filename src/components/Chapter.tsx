@@ -5,6 +5,7 @@ import useSaveScroll from "~/hooks/useSaveScroll";
 const Chapter = (props: any) => {
   useScrollX();
   useSaveScroll();
+
   return (
     <>
       <ArticleTitle

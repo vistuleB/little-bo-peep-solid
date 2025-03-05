@@ -61,13 +61,6 @@ const Container = (props: ParentProps) => {
   });
 
   createEffect(() => {
-    document.addEventListener("click", (_) => {
-      window.scroll({
-        left: (store.scrollWidth - store.innerWidth) / 2,
-        behavior: "smooth",
-      });
-    });
-
     window.addEventListener("resize", (_) => {
       if (!on_mobile()) {
         window.scroll({
@@ -79,20 +72,38 @@ const Container = (props: ParentProps) => {
   });
 
   return (
-    <>
-      <div
-        id="Container"
-        class="pb-14 -z-10 relative"
-        style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}
-        >
-        <div>
-          <Nav />
-        </div>
+    <div
+      id="Container"
+      class="pb-14 -z-10 relative"
+      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}
+      >
+      <EarlyImages />
+      <Nav />
+      <div onClick={() => {
+        window.scroll({
+          left: (store.scrollWidth - store.innerWidth) / 2,
+          behavior: "smooth",
+        });
+      }}>
         {props.children}
-        <SVGDefs />
       </div>
-    </>
+      <SVGDefs />
+    </div>
   );
 };
+
+const EarlyImages = () => {
+  return (
+    <div style="visibility:hidden;position:aboslute;top:0px;left:0px;pointer-events:none;width:1px;height:1px;">
+      <img src="/images/svg_base_exponent.svg" />
+      <img src="/images/svg_ch1_ch_minus_two_squared_cloud.svg" />
+      <img src="/images/chapter_2_1.svg" />
+      <img src="/images/svg_ch3_f_box.svg" />
+      <img src="/images/svg_ch4_ch_polaroids.svg" />
+      <img src="/images/svg_ch5_ch_cosine.svg" />
+      <img src="/images/svg_ch5_ch_cosine_and_sine.svg" />
+    </div>
+  );
+}
 
 export default Container;

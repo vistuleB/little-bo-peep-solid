@@ -1,9 +1,10 @@
 import TOC from "~/components/TOC";
 import ArticleTitle from "~/components/ArticleTitle";
-import Nav from "~/components/Nav";
-import Container from "~/components/Container";
+import useSetRoute from "~/hooks/useSetRoute";
 
 export default function Home() {
+  useSetRoute();
+  
   return (
     <>
       <ArticleTitle label="" />

@@ -10,6 +10,7 @@ type Store = {
   scrollWidth: number;
   scrollX: number;
   scrollY: number;
+  route: string;
 };
 
 const [store, set_store] = createStore<Store>({
@@ -22,6 +23,7 @@ const [store, set_store] = createStore<Store>({
   scrollWidth: document.body.scrollWidth,
   scrollX: window.scrollX,
   scrollY: window.scrollY,
+  route: location?.pathname
 });
 
 export {
