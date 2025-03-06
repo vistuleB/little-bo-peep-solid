@@ -36,10 +36,10 @@ const Image = (props: ImageProps) => {
   const our_on_mobile = () => (innerWidth() <= MOBILE_MAX_WIDTH);
 
   const set_should_be_scaled_down = (should_be_scaled_down: boolean) => {
-    const large_scale = scaled_down_scale() < 0.81 ? 1 : scaled_down_scale();
-    const scale_to_use = should_be_scaled_down ? scaled_down_scale() : large_scale;
-    set_scale({scale: scale_to_use, name:props.src});
-    set_scaled_down(scale_to_use < large_scale);
+    const largest_scale = scaled_down_scale() < 0.81 ? 1 : scaled_down_scale();
+    const scale_to_use = should_be_scaled_down ? scaled_down_scale() : largest_scale;
+    set_scale({scale:scale_to_use, name:props.src});
+    set_scaled_down(scale_to_use < largest_scale);
     // if (props.src === "/images/svg_ch4_ch_explanation2.svg") {
     //   console.log("put scale_to_use ", scale_to_use, " had scaled_down_scale() == ", scaled_down_scale());
     // }
