@@ -24,7 +24,7 @@ function LazyImage(
         store.show_areas && (props.side_image ? "divide-vertically" : "divide-horizontally"),
       )}
       style={props.style || ""}
-      loading="lazy"
+      // loading="lazy"
     />
   );
 }

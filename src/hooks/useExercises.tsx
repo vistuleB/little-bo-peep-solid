@@ -33,6 +33,8 @@ const useExercises = (length: number) => {
       return [...prev];
     });
 
+    console.log("L36", `${article()}_exo_${exercise_number}_opened`, String(value));
+
     localStorage.setItem(`${article()}_exo_${exercise_number}_opened`, String(value));
     if (update_store) {
       set_store("solutions_open", (prev) => {
@@ -40,7 +42,6 @@ const useExercises = (length: number) => {
         return [...prev];
       });
     }
-
   };
 
   if (localStorage) {
@@ -74,6 +75,7 @@ const useExercises = (length: number) => {
   });
 
   createEffect(() => {
+    // console.log("should be false: ", stored_solutions_open()[stored_selected_exo() - 1]);
     update_solution_open(
       Number(stored_selected_exo()),
       stored_solutions_open()[stored_selected_exo() - 1],
