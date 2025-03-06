@@ -20,18 +20,27 @@ const useExercises = (length: number) => {
   set_store("selected_exo", Number(selected_exo()));
 
   const [solutions_open, set_solutions_open] = createSignal(
-    Array.from({ length }).map(() => false)
+    Array.from({ length }).map((_, i) => false)
   );
+
+  createEffect(()=>{
+    set_store("solutions_open", (prev) => {
+      return prev.map((el, i ) => localStorage.getItem(`${article()}_exo_${i + 1}_opened`) == "true")
+    });
+  })
 
   const update_solution_open = (
     exercise_number: number,
     value: boolean,
     update_store: boolean = true
   ) => {
+
     set_solutions_open((prev) => {
       prev[exercise_number - 1] = value;
       return [...prev];
     });
+
+    console.log("L36", `${article()}_exo_${exercise_number}_opened`, String(value));
 
     localStorage.setItem(`${article()}_exo_${exercise_number}_opened`, String(value));
     if (update_store) {
@@ -40,7 +49,6 @@ const useExercises = (length: number) => {
         return [...prev];
       });
     }
-
   };
 
   if (localStorage) {
@@ -74,6 +82,7 @@ const useExercises = (length: number) => {
   });
 
   createEffect(() => {
+    // console.log("should be false: ", stored_solutions_open()[stored_selected_exo() - 1]);
     update_solution_open(
       Number(stored_selected_exo()),
       stored_solutions_open()[stored_selected_exo() - 1],

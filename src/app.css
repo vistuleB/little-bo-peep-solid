@@ -165,14 +165,16 @@ span .MathJax_SVG {
 
 @media (hover: hover) {
   .tab:hover:not(.disabled) > path:first-child {
-    fill: #91ed23 !important;
+    /* fill: #91ed23 !important; */
+    fill: #dbf6b8 !important;
     font-weight: bold;
     border-radius: 4px;
   }
 }
 
 .tab:active:not(.disabled) > path:first-child {
-  fill: #91ed23 !important;
+  /* fill: #91ed23 !important; */
+  fill: #dbf6b8 !important;
   font-weight: bold;
   border-radius: 4px;
 }

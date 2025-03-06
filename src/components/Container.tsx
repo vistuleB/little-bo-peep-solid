@@ -94,7 +94,7 @@ const Container = (props: ParentProps) => {
 
 const EarlyImages = () => {
   return (
-    <div style="visibility:hidden;position:aboslute;top:0px;left:0px;pointer-events:none;width:1px;height:1px;">
+    <div style="visibility:hidden;position:absolute;top:0px;left:0px;pointer-events:none;width:1px;height:1px;">
       <img src="/images/svg_base_exponent.svg" />
       <img src="/images/svg_ch1_ch_minus_two_squared_cloud.svg" />
       <img src="/images/chapter_2_1.svg" />
