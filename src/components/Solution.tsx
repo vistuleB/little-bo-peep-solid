@@ -191,6 +191,11 @@ const Solution = (props: SolutionProps) => {
                   return [...prev];
                 }
               );
+               if (store.list_view) {
+                // update localstorage for the solution . as useExercises hook only updates the selectedExo which works only in carousel view
+                let article = location.pathname.split("/").pop();
+                localStorage.setItem(`${article}_exo_${props.solution_number}_opened`, String(solution_open()));
+              }
               // console.log("after writing: ", store.solutions_open[props.solution_number - 1]);
               // solution transition should be not 0 only when button is clicked
               setTimeout(

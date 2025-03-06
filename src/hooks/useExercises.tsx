@@ -20,14 +20,21 @@ const useExercises = (length: number) => {
   set_store("selected_exo", Number(selected_exo()));
 
   const [solutions_open, set_solutions_open] = createSignal(
-    Array.from({ length }).map(() => false)
+    Array.from({ length }).map((_, i) => false)
   );
+
+  createEffect(()=>{
+    set_store("solutions_open", (prev) => {
+      return prev.map((el, i ) => localStorage.getItem(`${article()}_exo_${i + 1}_opened`) == "true")
+    });
+  })
 
   const update_solution_open = (
     exercise_number: number,
     value: boolean,
     update_store: boolean = true
   ) => {
+
     set_solutions_open((prev) => {
       prev[exercise_number - 1] = value;
       return [...prev];
