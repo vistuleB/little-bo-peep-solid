@@ -4,6 +4,7 @@ import {
   createSignal,
   ParentProps,
   onCleanup,
+  onMount,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { GREEN_DIV_HEIGHT, TEXT_X_PADDING } from "~/constants";
@@ -28,7 +29,7 @@ const Solution = (props: SolutionProps) => {
 
   let [content_height, set_content_height] = createSignal(0);
   let [bot_div, set_bot_div] = createSignal(false);
-  let [solution_fully_opened, set_solution_fully_opened] = createSignal(false); // set true to get ref.height
+  let [solution_fully_opened, set_solution_fully_opened] = createSignal(false);
   let [handle, set_handle] = createSignal<ReturnType<typeof setTimeout> | null>(
     null
   );
@@ -148,6 +149,11 @@ const Solution = (props: SolutionProps) => {
     return content_height();
   };
 
+  onMount(() => {
+    set_solution_fully_opened(solution_open());
+    setTimeout(() => {set_solution_fully_opened(solution_open());}, 100);
+  });
+
   return (
     <>
       <div
@@ -177,9 +183,7 @@ const Solution = (props: SolutionProps) => {
                 set_solution_fully_opened(false);
               } else {
                 let timeout_handle = setTimeout(
-                  () => { 
-                    // set_solution_fully_opened(solution_open());
-                  },
+                  () => { set_solution_fully_opened(true); },
                   transition_duration()[props.solution_number - 1]
                 );
                 set_handle(timeout_handle);
@@ -210,7 +214,8 @@ const Solution = (props: SolutionProps) => {
         class={twJoin(
           "solution relative transition-all",
           !solution_open() && "pointer-events-none",
-          !solution_fully_opened() && "overflow-y-clip"
+          (!solution_open() || !solution_fully_opened()) && "overflow-y-clip"
+          // !solution_fully_opened() && "overflow-y-clip"
         )}
         style={{
           height: `${solution_open() ? content_height_with_log("in_style") : 0}px`,
