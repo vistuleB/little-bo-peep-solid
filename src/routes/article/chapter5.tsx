@@ -2521,7 +2521,7 @@ const Article = () => {
             <i>
               argument
             </i>
-            (see 
+            {" "}(see 
             Vocabulary below){" "}
             <Math>
               $\theta$
@@ -2612,11 +2612,11 @@ const Article = () => {
             <i>
               radius
             </i>
-            or the{" "}
+            {" "}or the{" "}
             <i>
               norm
             </i>
-            . The second coordinate 
+            . The second coordinate
             of a polar coordinate—colloquially,{" "}
             <NoBreak>
               “
@@ -2630,7 +2630,7 @@ const Article = () => {
             <i>
               angle
             </i>
-            or the{" "}
+            {" "}or the{" "}
             <i>
               argument
             </i>
@@ -10070,9 +10070,7 @@ const Article = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <Image
-              src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg"
-              style="margin-top:1.0em;margin-bottom:1em;" />
+            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg" />
             <Pause />
             <Solution solution_number={22}>
               <VerticalChunk>
@@ -12185,7 +12183,7 @@ const Article = () => {
                   ,
                 </NoBreak>
                 {" "}as uncovered in Exercise 18,
-                from which the following graphic is pilfered/bastardized:
+                from which the following graphic is recovered:
               </VerticalChunk>
               <Pause />
               <Image src="/images/svg_ch5_ex_cos_to_sin_plus_cos_reminder.svg" />
@@ -12403,6 +12401,759 @@ const Article = () => {
                 Exercise 34.
               </b>
               {" "}
+              Prove that for every{" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $A_2 \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra A_1\cos x + A_2\sin x
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              equals
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra W\cdot \cos(x + \psi)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for some appropriate constants{" "}
+              <Math>
+                $W$
+              </Math>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $\psi$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(That shall
+              be functions of{" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $A_2$
+                </Math>
+                .)
+              </NoBreak>
+              {" "}Also: draw a deep analogy
+              to polar coordinates, regarding the transform that gives
+              {" "}
+              <NoBreak>
+                <Math>
+                  $W$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <Math>
+                $\psi$
+              </Math>
+              {" "}as a function of{" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $A_2$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Solution solution_number={34}>
+              <VerticalChunk>
+                One approach is to expand
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(x + \psi)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                using the angle-sum formula, which gives
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(x)\cos(\psi) - \sin(x)\sin(\psi)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                after which multiplying by{" "}
+                <Math>
+                  $W$
+                </Math>
+                {" "}and collecting coefficients of
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\cos x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <Math>
+                  $\sin x$
+                </Math>
+                {" "}gives
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \up&#123;1.4&#125;(W \cdot \cos \psi)\cdot\cos(x) - (W \cdot \sin \psi) \cdot \sin(x)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                comparing to
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                A_1\cos x + A_2\sin x
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                we see that 
+                {" "}
+                <Math>
+                  $W \cos(x + \psi)$
+                </Math>
+                {" "}
+                would equal
+                {" "}
+                <Math>
+                  $A_1\cos x + A_2\sin x$
+                </Math>
+                {" "}
+                if we could find{" "}
+                <NoBreak>
+                  <Math>
+                    $W$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <Math>
+                  $\psi$
+                </Math>
+                {" "}such that{" "}
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \phantom&#123;-&#125;W\cdot\cos(\psi) = A_1
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                -W\cdot\sin(\psi) = A_2
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...that we can actually rewrite{" "}
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                W\cdot\cos(-\psi) = A_1
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                W\cdot\sin(-\psi) = A_2
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                because{" "}
+                <NoBreak>
+                  <Math>
+                    $\cos(-x) = \cos(x)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <Math>
+                  $-\sin(x) = \sin(-x)$
+                </Math>
+                {" "}
+                for all{" "}
+                <NoBreak>
+                  <Math>
+                    $x \in \rr$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}But the above 
+                two
+                equations are very similar to
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                r\cdot\cos(\theta) = x
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                r\cdot\sin(\theta) = y
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                that give the transformation 
+                from polar coordinates{" "}
+                <Math>
+                  $(r, \theta)$
+                </Math>
+                {" "}
+                to Cartesian coordinates{" "}
+                <NoBreak>
+                  <Math>
+                    $(x, y)$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "}in fact these are the
+                exact same equations, except that we have 
+                {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $W$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "}in place of{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $r$
+                  </Math>
+                  ’,
+                </NoBreak>
+                {" "}
+                {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $-\psi$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "}
+                in place of{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $\theta$
+                  </Math>
+                  ’,
+                </NoBreak>
+                {" "}
+                {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $A_1$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "}in place of{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $x$
+                  </Math>
+                  ’,
+                </NoBreak>
+                {" "}and
+                {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $A_2$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "}in place of{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $y$
+                  </Math>
+                  ’;
+                </NoBreak>
+                {" "}
+                so in other words,
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                (W, -\psi)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                are the
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                polar coordinates
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                of the Cartesian point
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                (A_1, A_2)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                with{" "}
+                <Math>
+                  $W$
+                </Math>
+                {" "}being the “radius”, or distance to the origin,
+                and{" "}
+                <Math>
+                  $-\psi$
+                </Math>
+                {" "}being the angle from the{" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "}axis (or{" "}
+                <i>
+                  argument
+                </i>
+                ):
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_polar_discovery.svg" />
+              <Pause />
+              <VerticalChunk>
+                In particular,
+                since every pair of Cartesian coordinates
+                has a corresponding pair of polar coordinates
+                (in fact, many corresponding pairs!), 
+                we will
+                always be able to find{" "}
+                <NoBreak>
+                  <Math>
+                    $W$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <Math>
+                  $\psi$
+                </Math>
+                {" "}such as to
+                match the equations above, 
+                which concludes the problem.
+              </VerticalChunk>
+              <Pause />
+              <SolutionNote>
+                <VerticalChunk>
+                  <i>
+                    Note 1.
+                  </i>
+                  {" "}
+                  To explicitly give formulas,
+                  one can set
+                </VerticalChunk>
+                <Pause />
+                <MathBlock>
+                  $$
+                  W = \sqrt&#123;A_1^2 + A_2^2&#125;
+                  $$
+                </MathBlock>
+                <Pause />
+                <VerticalChunk>
+                  and
+                </VerticalChunk>
+                <Pause />
+                <MathBlock>
+                  $$
+                  -\psi = \begin&#123;cases&#125;
+                  \arctan(A_2/A_1) & \te&#123;if &#125;\, A_1 \ne 0, \,\te&#123;else&#125; \\
+                  \up&#123;1.2&#125;\te&#123;arccot&#125;(A_1/A_2) & \te&#123;if &#125;\, A_2 \ne 0, \,\te&#123;else&#125; \\
+                  \up&#123;1.2&#125;\rm&#123;?&#125;       & \te&#123;if &#125;\, A_1 = 0, A_2 = 0
+                  \end&#123;cases&#125;
+                  $$
+                </MathBlock>
+                <Pause />
+                <VerticalChunk>
+                  where we are copy-pasting the formula that appears
+                  in the chapter for going from cartesian to polar
+                  coordinates (no need to remember this formula, though,
+                  really); though, IN TRUTH, setting
+                </VerticalChunk>
+                <Pause />
+                <MathBlock>
+                  $$
+                  W = -\sqrt&#123;A_1^2 + A_2^2&#125;
+                  $$
+                </MathBlock>
+                <Pause />
+                <VerticalChunk>
+                  would work as well, 
+                  if we add
+                  {" "}
+                  <Math>
+                    $2\eta$
+                  </Math>
+                  {" "}to the argument!
+                </VerticalChunk>
+              </SolutionNote>
+              <Pause />
+              <VerticalChunk>
+                <i>
+                  Example 1.
+                </i>
+                {" "}
+                The previously-studied
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos x + \sin x
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                (cf. Exercise 4) corresponds to the case
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$A_1 = A_2 = 1$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                of this exercise, and 
+                in which case we can set
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$W = \sqrt&#123;2&#125;$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                and{" "}
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$\psi = -\eta/2$$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                because the pair
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                (W, \,-\psi) \,=\, (\sqrt&#123;2&#125;, \,\,\eta/2)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                is a polar coordinate of{" "}
+                <NoBreak>
+                  <Math>
+                    $(A_1, A_2) = (1, 1)$
+                  </Math>
+                  :
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_polar_discovery_1_1.svg" />
+              <Pause />
+              <VerticalChunk>
+                (In fact, the fact that...
+              </VerticalChunk>
+              <center style="margin-top:1em;margin-bottom:1em;">
+                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                  <MathBlock>
+                    $$
+                    \cos x + \sin x = \sqrt&#123;2&#125;\cdot\cos(x - \eta/2)
+                    $$
+                    <ImageRight
+                      src="/images/svg_ch5_ex_polar_discovery_cloud.svg"
+                      compensate_offset_x_for_large_text_columns={true} />
+                  </MathBlock>
+                </div>
+              </center>
+              <VerticalChunk>
+                ...was painstakingly uncovered 
+                in Exercise 33, if you recall.)
+              </VerticalChunk>
+            </Solution>
+          </Exercise>
+          <Exercise exercise_number={35}>
+            <VerticalChunk>
+              <b>
+                Exercise 35.
+              </b>
+              {" "}
+              If we attempt to express
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              A_1\sin x + A_2\cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              in the form
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              W\cdot\sin(x + \psi)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              then what does the relationship
+              between{" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $A_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <Math>
+                $W$
+              </Math>
+              {" "}and{" "}
+              <Math>
+                $\psi$
+              </Math>
+              {" "}become?
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              (NB: We have flipped{" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\cos$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}and
+              {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\sin$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}in the first expression, compared
+              to Exercise 34, and reducing to that exercise is
+              bound to produce a mess—solving from scratch is recommended!)
+            </VerticalChunk>
+            <Pause />
+            <Solution solution_number={35}>
+              <VerticalChunk>
+                Expanding
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin(x + \psi)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                by the angle-sum formula gives
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin x\cos \psi + \cos x\sin \psi
+                $$
+                <ImageRight
+                  offset_x="3em"
+                  src="/images/svg_ch5_ex_polar_discovery2_cloud.svg"
+                  compensate_offset_x_for_large_text_columns={true} />
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                whereby multiplying by{" "}
+                <Math>
+                  $W$
+                </Math>
+                {" "}and collecting coefficients
+                of{" "}
+                <NoBreak>
+                  <Math>
+                    $\sin x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <Math>
+                  $\cos x$
+                </Math>
+                {" "}gives
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                (W\cdot\cos \psi)\cdot\sin x + (W\cdot\sin \psi)\cdot\cos x
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                and equating to
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                A_1\cdot\sin x + A_2\cdot\cos x
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                gives the system of equations
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                W\cdot\cos \psi = A_1
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                W\cdot\sin \psi = A_2
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                which is to say that, for this specific arrangement of
+                the variables,
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                (W, \,\psi)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                are the
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                exact
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                polar coordinates of{" "}
+                <NoBreak>
+                  <Math>
+                    $(A_1, A_2)$
+                  </Math>
+                  !!!
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <VerticalChunk>
+                <i>
+                  Example 1.
+                </i>
+                {" "}
+                By this result,
+              </VerticalChunk>
+              <center style="margin-top:1em;margin-bottom:1em;">
+                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                  <MathBlock>
+                    $$
+                    \sin(x) + \cos(x) = \sqrt&#123;2&#125;\cdot\sin(x + \eta/2)
+                    $$
+                  </MathBlock>
+                </div>
+              </center>
+              <VerticalChunk>
+                since
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                (\sqrt&#123;2&#125;, \,\eta/2)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                are the (hum: “the”) polar coordinates of{" "}
+                <NoBreak>
+                  <Math>
+                    $(1, 1)$
+                  </Math>
+                  .
+                </NoBreak>
+              </VerticalChunk>
+            </Solution>
+          </Exercise>
+          <Exercise exercise_number={36}>
+            <VerticalChunk>
+              <b>
+                Exercise 36.
+              </b>
+              {" "}
               Similarly to Exercise 9, suggest a
               definition for the product
             </VerticalChunk>
@@ -12427,7 +13178,7 @@ const Article = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <Solution solution_number={34}>
+            <Solution solution_number={36}>
               <VerticalChunk>
                 We define
               </VerticalChunk>

@@ -310,7 +310,7 @@ export const SolutionSVG = (props: BtnProps) => {
               <g transform="scale(-1, 1) translate(-8, 20)">
                 <use href="#finger_pointing_left"></use>
               </g>
-              <use href="#solution_button_text"></use>
+              <use x="-2" href="#solution_button_text"></use>
             </g>
           </g>
         </svg>

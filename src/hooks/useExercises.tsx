@@ -80,7 +80,6 @@ const useExercises = (length: number) => {
   });
 
   createEffect(() => {
-    // console.log("should be false: ", stored_solutions_open()[stored_selected_exo() - 1]);
     update_solution_open(
       Number(stored_selected_exo()),
       stored_solutions_open()[stored_selected_exo() - 1],

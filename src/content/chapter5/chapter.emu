@@ -1030,7 +1030,7 @@
         style font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
 
         atan2
-    that will compute the _argument_(see 
+    that will compute the _argument_ (see 
     Vocabulary below) $\theta$ of a given pair 
     $(x, y)$ out of the box, without you having to 
     worry about which of $x$ or $y$ is $0$, etc.
@@ -1057,9 +1057,9 @@
     _Vocabulary._
     The first coordinate of a polar 
     coordinate—colloquially, “$r$”—is called the 
-    _radius_or the _norm_. The second coordinate 
+    _radius_ or the _norm_. The second coordinate
     of a polar coordinate—colloquially, “$\theta$”—is 
-    called the _angle_or the _argument_.
+    called the _angle_ or the _argument_.
 
 |> Section
 
