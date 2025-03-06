@@ -14,7 +14,7 @@ type ImageProps = ParentProps & SharedProps & {
 };
 
 const Image = (props: ImageProps) => {
-  let [scale, set_scale] = createSignal({scale: 1.0, name: props.src});
+  let [scale, set_scale] = createSignal({scale: 1.0, name: props.src, after_first_click: false});
   let [scaled_down, set_scaled_down] = createSignal(false);
   let [recent_click, set_recent_click] = createSignal(0);
   const [innerWidth, set_innerWidth] = createSignal(0);
@@ -38,7 +38,8 @@ const Image = (props: ImageProps) => {
   const set_should_be_scaled_down = (should_be_scaled_down: boolean) => {
     const large_scale = scaled_down_scale() < 0.81 ? 1 : scaled_down_scale();
     const scale_to_use = should_be_scaled_down ? scaled_down_scale() : large_scale;
-    set_scale({scale: scale_to_use, name:props.src});
+    set_scale({scale: 1, name:props.src, after_first_click: after_first_click()}); // desperately trying to get a reaction
+    set_scale({scale: scale_to_use, name:props.src, after_first_click: after_first_click()});
     set_scaled_down(scale_to_use < large_scale);
     // if (props.src === "/images/svg_ch4_ch_explanation2.svg") {
     //   console.log("put scale_to_use ", scale_to_use, " had scaled_down_scale() == ", scaled_down_scale());
@@ -107,6 +108,7 @@ const Image = (props: ImageProps) => {
 
             // bookkeeping other things
             set_after_first_click(true);
+            set_scale({scale: scale().scale, name:scale().name, after_first_click:true});
             set_recent_click(should_be_scaled_down ? 1 : 2);
             setTimeout(() => { set_recent_click(0); }, 100)
             set_innerWidth(window.innerWidth); // (refreshing for safety, since we have all these bugs)

@@ -101,7 +101,7 @@ const PanelButton = () => {
         style="height:57px;" // I don't know if it's box-sizing model or what but I need to put 57px here to get height 56px in the (Chrome) inspector
         class={twJoin(
           "fixed right-0 z-50",
-          on_mobile() && "border-l",
+          // on_mobile() && "border-l",
           !on_mobile() && !open() && scrollY() < 2 * HAMBURGER_MENU_HEIGHT && "border-b",
         )}
       >
