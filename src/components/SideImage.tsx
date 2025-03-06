@@ -1,4 +1,4 @@
-import { createEffect, mergeProps, ParentProps, createSignal, onCleanup } from "solid-js";
+import { createEffect, mergeProps, ParentProps, createSignal, onCleanup, onMount } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import LazyImage from "./LazyImage";
@@ -36,6 +36,7 @@ const SideImage = (props: InternalSideImageProps) => {
   const { store } = useGlobalContext();
   const show_squiggles = () => store.show_squiggles;
   const scale = useScale();
+  const [our_scale_copy, set_our_scale_copy] = createSignal(scale().scale);
 
   let maybeChildren = () => {
     if (props.children) {
@@ -48,6 +49,17 @@ const SideImage = (props: InternalSideImageProps) => {
     return <></>;
   }
 
+  createEffect(() => {
+    set_our_scale_copy(scale().scale);
+  });
+
+  onMount(() => {
+    setTimeout(() => {
+      set_our_scale_copy(scale().scale);
+      console.log(scale().name, "scale is now:", our_scale_copy());
+    }, 500);
+  })
+
   return (
     <div
       ref={container_ref}
@@ -55,13 +67,13 @@ const SideImage = (props: InternalSideImageProps) => {
       >
       <div
         style={{
-          left: getLeft(props.side, props.offset_x, scale().scale, store.innerWidth, props.compensate_offset_x_for_large_text_columns),
-          right: getRight(props.side, props.offset_x, scale().scale, store.innerWidth, props.compensate_offset_x_for_large_text_columns),
-          top: getTop(props.line, props.offset_y, scale().scale),
+          left: getLeft(props.side, props.offset_x, our_scale_copy(), store.innerWidth, props.compensate_offset_x_for_large_text_columns),
+          right: getRight(props.side, props.offset_x, our_scale_copy(), store.innerWidth, props.compensate_offset_x_for_large_text_columns),
+          top: getTop(props.line, props.offset_y, our_scale_copy()),
           transform: `translateY(calc(-50%))`,
           padding: `${props.padding}`,
           "transform-origin": `0 top 0`,
-          scale: scale().scale,
+          scale: our_scale_copy(),
           "z-index": 20,
         }}
         class="flex shrink-0 transition-opacity duration-300 lg:transition-none lg:opacity-100 absolute w-max">
