@@ -109,8 +109,8 @@ const PanelButton = () => {
         >
           <button
             class={twJoin(
-              !on_mobile() && "mr-2", 
-              on_mobile() && "mr-3", 
+              !on_mobile() && "mr-2",
+              on_mobile() && "mr-4",
               prevDisabled() && "cursor-default"
             )}
             onMouseOver={() => {
@@ -132,8 +132,8 @@ const PanelButton = () => {
           </button>
           <button
             class={twJoin(
-              !on_mobile() && "mr-3", 
-              on_mobile() && "mr-5", 
+              !on_mobile() && "mr-3",
+              on_mobile() && "mr-4",
               nextDisabled() && "cursor-default"
             )}
             onMouseOver={() => {

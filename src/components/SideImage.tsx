@@ -5,6 +5,7 @@ import LazyImage from "./LazyImage";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useScale } from "~/store/ScaleProvider";
 import { DESKTOP_COLUMN_WIDTH, MOBILE_MAX_WIDTH } from "~/constants";
+import useOnMobile from "../hooks/useOnMobile";
 
 type UserFacingSideImageProps = ParentProps &
   SharedProps & {
@@ -36,7 +37,9 @@ const SideImage = (props: InternalSideImageProps) => {
   const { store } = useGlobalContext();
   const show_squiggles = () => store.show_squiggles;
   const scale = useScale();
+  // was trying to solve a bug, didn't work, this can be re-simplified at some point (see also (*))
   const [our_scale_copy, set_our_scale_copy] = createSignal(scale().scale);
+  const { on_mobile } = useOnMobile();
 
   let maybeChildren = () => {
     if (props.children) {
@@ -54,10 +57,8 @@ const SideImage = (props: InternalSideImageProps) => {
   });
 
   onMount(() => {
-    setTimeout(() => {
-      set_our_scale_copy(scale().scale);
-      console.log(scale().name, "scale is now:", our_scale_copy());
-    }, 500);
+    setTimeout(() => { set_our_scale_copy(scale().scale); }, 500);
+    setTimeout(() => { set_our_scale_copy(scale().scale); }, 2000);
   })
 
   return (
@@ -67,6 +68,7 @@ const SideImage = (props: InternalSideImageProps) => {
       >
       <div
         style={{
+          visibility: scale().after_first_click || !on_mobile() ? "visible" : "hidden", // (*) have to do this cause we just couldn't get rid of that bug where we can't "hear" the initial scale...
           left: getLeft(props.side, props.offset_x, our_scale_copy(), store.innerWidth, props.compensate_offset_x_for_large_text_columns),
           right: getRight(props.side, props.offset_x, our_scale_copy(), store.innerWidth, props.compensate_offset_x_for_large_text_columns),
           top: getTop(props.line, props.offset_y, our_scale_copy()),
