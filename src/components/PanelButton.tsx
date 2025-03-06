@@ -71,10 +71,10 @@ const PanelButton = () => {
       set_nextDisabled(!document.querySelector(".next_page"));
       set_prevDisabled(!document.querySelector(".prev_page"));
     }, 200);
-    // setTimeout(() => {
-    //   set_nextDisabled(!document.querySelector(".next_page"));
-    //   set_prevDisabled(!document.querySelector(".prev_page"));
-    // }, 300);
+    setTimeout(() => {
+      set_nextDisabled(!document.querySelector(".next_page"));
+      set_prevDisabled(!document.querySelector(".prev_page"));
+    }, 400);
   })
 
   return (
@@ -110,7 +110,11 @@ const PanelButton = () => {
           style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
         >
           <button
-            class={twJoin("mr-2", prevDisabled() && "cursor-default")}
+            class={twJoin(
+              !on_mobile() && "mr-2",
+              on_mobile() && "mr-4",
+              prevDisabled() && "cursor-default"
+            )}
             onMouseOver={() => {
               set_prevDisabled(!document.querySelector(".prev_page"))
             }}
@@ -129,7 +133,11 @@ const PanelButton = () => {
             <LeftArrow class={twMerge(!prevDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-300")}/>
           </button>
           <button
-            class={twJoin("mr-3", nextDisabled() && "cursor-default")}
+            class={twJoin(
+              !on_mobile() && "mr-3",
+              on_mobile() && "mr-4",
+              nextDisabled() && "cursor-default"
+            )}
             onMouseOver={() => {
               set_nextDisabled(!document.querySelector(".next_page"))
             }}
