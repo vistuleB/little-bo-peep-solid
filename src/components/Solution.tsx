@@ -44,7 +44,6 @@ const Solution = (props: SolutionProps) => {
 
   const reset_content_height_etc = (msg: string) => {
     if (ref?.clientHeight) {
-      console.log(msg, "measuring content_height to be ", ref?.clientHeight);
       set_content_height(ref?.clientHeight || 0);
       set_store(
         "transition_duration",
@@ -54,7 +53,6 @@ const Solution = (props: SolutionProps) => {
   };
 
   createEffect(() => {
-    console.log("effect A");
     reset_content_height_etc("A");
     setTimeout(() => { reset_content_height_etc("50"); }, 50);
     setTimeout(() => { reset_content_height_etc("100"); }, 100);
@@ -63,7 +61,6 @@ const Solution = (props: SolutionProps) => {
 
   createEffect(() => {
     if (solution_open()) {
-      console.log("effect B");
       window.addEventListener("scroll", handleResize);
       setTimeout(
         () => { set_bot_div(false); },
@@ -80,43 +77,10 @@ const Solution = (props: SolutionProps) => {
     onCleanup(() => window.removeEventListener("scroll", handleResize));
   });
 
-  // set transition duration
-  createEffect(() => {
-    reset_content_height_etc("O");
-    // if (ref?.clientHeight)
-    //   set_store(
-    //     "transition_duration",
-    //     (prev) => prev.map((val, i) => i + 1 === props.solution_number ? Math.min(ref?.clientHeight, 1000) : val)
-    //   );
-  });
-
-  // solution fully opened
-  // createEffect(() => {
-  //   if (solution_open()) {
-  //     let timeout_handle = setTimeout(
-  //       () => { if (solution_open()) {
-  //         set_solution_fully_opened(true);
-  //         console.log("opening", handle(), Date.now());
-  //       }},
-  //       transition_duration()[props.solution_number - 1]
-  //     );
-  //     set_handle(timeout_handle);
-  //   } else {
-  //     // if (handle()) { clearTimeout(handle()!); }
-  //     set_solution_fully_opened(false);
-  //     let timeout_handle = setTimeout(
-  //       () => { if (!solution_open()) { set_solution_fully_opened(false); }},
-  //       transition_duration()[props.solution_number - 1]
-  //     );
-  //     set_handle(timeout_handle);
-  //   }
-  // });
-
-
   createEffect(()=> {
-    //green div height 
+    // green div height 
     if (!store.list_view) {
-      //green div should be max of GREEN_DIV_HEIGHT and total of exercises height
+      // green div should be max of GREEN_DIV_HEIGHT and total of exercises height
       set_green_div_height(Math.max(GREEN_DIV_HEIGHT, exercises_height_sum()))
     } else {
       let exercises = document.getElementsByClassName("exercise")
@@ -145,7 +109,6 @@ const Solution = (props: SolutionProps) => {
   })
 
   const content_height_with_log = (msg: string): number  => {
-    console.log(msg, content_height());
     return content_height();
   };
 
@@ -165,13 +128,8 @@ const Solution = (props: SolutionProps) => {
           solution_open={solution_open}
           onClick={
             () => {
-              // if (handle()) {
-              //   console.log("canceling handle", handle(), Date.now());
-              //   clearTimeout(handle()!);
-              // }
               if (handle()) { clearTimeout(handle()!) }
               set_solution_transition(transition_duration()[props.solution_number - 1]);
-              console.log("transition_duration(): ", transition_duration()[props.solution_number - 1]);
               let element_pos =
                 window.innerHeight - (ref?.getBoundingClientRect()?.bottom || 0);
               let should_scroll_to_button_first =
@@ -200,7 +158,6 @@ const Solution = (props: SolutionProps) => {
                 let article = location.pathname.split("/").pop();
                 localStorage.setItem(`${article}_exo_${props.solution_number}_opened`, String(solution_open()));
               }
-              // console.log("after writing: ", store.solutions_open[props.solution_number - 1]);
               // solution transition should be not 0 only when button is clicked
               setTimeout(
                 () => { set_solution_transition(0) },
@@ -215,7 +172,6 @@ const Solution = (props: SolutionProps) => {
           "solution relative transition-all",
           !solution_open() && "pointer-events-none",
           (!solution_open() || !solution_fully_opened()) && "overflow-y-clip"
-          // !solution_fully_opened() && "overflow-y-clip"
         )}
         style={{
           height: `${solution_open() ? content_height_with_log("in_style") : 0}px`,
@@ -237,9 +193,9 @@ const Solution = (props: SolutionProps) => {
         >
           {props.children}
           <div
-            style={{ "transition-duration": `${solution_transition()}ms`, }}
+            style={{ "transition-duration": `${solution_open() ? solution_transition() : 50}ms`, }}
             class={twJoin(
-              "backup-arrow mt-[32px] flex items-center justify-center transition-opacity",
+              "backup-arrow mt-[32px] flex items-center justify-center",
               (!solution_open() || !solution_fully_opened()) && "opacity-0",
               bot_div() && "delay-[2s]"
             )}

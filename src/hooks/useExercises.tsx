@@ -40,8 +40,6 @@ const useExercises = (length: number) => {
       return [...prev];
     });
 
-    console.log("L36", `${article()}_exo_${exercise_number}_opened`, String(value));
-
     localStorage.setItem(`${article()}_exo_${exercise_number}_opened`, String(value));
     if (update_store) {
       set_store("solutions_open", (prev) => {

@@ -38,23 +38,16 @@ const Image = (props: ImageProps) => {
   const set_should_be_scaled_down = (should_be_scaled_down: boolean) => {
     const large_scale = scaled_down_scale() < 0.81 ? 1 : scaled_down_scale();
     const scale_to_use = should_be_scaled_down ? scaled_down_scale() : large_scale;
-    set_scale({scale: 1, name:props.src, after_first_click: after_first_click()}); // desperately trying to get a reaction
+    set_scale({scale: 1.1, name:props.src, after_first_click: after_first_click()}); // desperately trying to get a reaction
     set_scale({scale: scale_to_use, name:props.src, after_first_click: after_first_click()});
     set_scaled_down(scale_to_use < large_scale);
-    // if (props.src === "/images/svg_ch4_ch_explanation2.svg") {
-    //   console.log("put scale_to_use ", scale_to_use, " had scaled_down_scale() == ", scaled_down_scale());
-    // }
   }
 
   const reset_scale = () => {
     if (our_on_mobile() && (scaled_down_scale() < 1 || scaled_down())) {
       set_should_be_scaled_down(true);
-      // set_scale({scale: scaled_down_scale(), name: props.src});
-      // set_scaled_down(true);
     } else {
       set_should_be_scaled_down(false);
-      // set_scale({scale:1, name: props.src});
-      // set_scaled_down(false);
     }
   }
 
@@ -76,12 +69,7 @@ const Image = (props: ImageProps) => {
 
   createEffect(() => {
     window.requestAnimationFrame(() => { handleResize(); set_should_be_scaled_down(true); });
-    setTimeout(() => {
-      set_should_be_scaled_down(true);
-      // if (scale().name === "/images/svg_ch4_ch_explanation2.svg") {
-      //   console.log("now scale().scale:", scale().scale);
-      // }
-    }, 600);
+    setTimeout(() => { set_should_be_scaled_down(true); }, 600);
     window.addEventListener("resize", handleResize);
     onCleanup(() => { window.removeEventListener("resize", handleResize); });
   });
