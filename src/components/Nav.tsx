@@ -12,7 +12,7 @@ const Nav = () => {
         store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
         store.innerWidth >= MOBILE_MAX_WIDTH && "absolute",
       )}>
-        <div class="select-none border-b flex justify-center items-center bg-reddish z-40 w-full h-14 left-0 top-0">
+        <div class="select-none border-b flex justify-center items-center z-40 w-full h-14 left-0 top-0">
           <Title />
         </div>
       </nav>
