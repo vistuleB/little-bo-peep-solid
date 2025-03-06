@@ -141,17 +141,19 @@ const Switcher = (props: SwitcherProps) => {
           <path
             d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
             fill={left_on() ? "#f8fee0" : "#ebebeb"}
-            stroke="black"
+            stroke={left_on() ? "#000" : "#464646"}
             stroke-width="1.5"
             stroke-miterlimit="2"
           ></path>
           <path
             d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-            fill="black"
+            fill={left_on() ? "#000" : "#464646"}
+            // stroke={left_on() ? "#000" : "#464646"}
           ></path>
           <path
             d={`M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}
             fill="black"
+            // stroke={left_on() ? "#000" : "#464646"}
           ></path>
         </svg>
         <svg
@@ -179,22 +181,24 @@ const Switcher = (props: SwitcherProps) => {
             <path
               d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
               fill={right_on() ? "#f8fee0" : "#ebebeb"}
-              stroke="black"
+              stroke={right_on() ? "#000" : "#464646"}
               stroke-width="1.5"
               stroke-miterlimit="2"
             ></path>
             <path
               d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-              fill="black"
+              fill={right_on() ? "#000" : "#464646"}
+              // stroke={right_on() ? "#000" : "#464646"}
             ></path>
             <path
               d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}
-              fill="black"
+              fill={right_on() ? "#000" : "#464646"}
+              // stroke={right_on() ? "#000" : "#464646"}
             ></path>
           </svg>
           <svg
             class={twJoin(
-              "tab absolute cursor-pointer",
+              "toggle absolute cursor-pointer",
               store.list_view ? "disabled" : ""
             )}
             style={`left:${w + toggle_gap}px;top:0px;`}
@@ -224,7 +228,7 @@ const Switcher = (props: SwitcherProps) => {
               cx={`${toggle_cx()}`}
               cy={`${w / 2}`}
               r={`${r2}`}
-              fill="#fdfdfd"
+              fill="#fff"
               stroke="black"
               stroke-width="1.5"
               style={`transition:${toggle_transition}ms`}
