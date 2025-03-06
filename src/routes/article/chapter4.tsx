@@ -10374,70 +10374,72 @@ const Article = () => {
                 offset_y="-0.5em"
                 offset_x="0.5em" />
             </VerticalChunk>
-            <ol style="margin:0 1.5em 1em 2em">
-              <li style="margin-top:0.5em">
-                when{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}and{" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "}are both still at{" "}
-                <Math>
-                  $t_0$
-                </Math>
-              </li>
-              <li style="margin-top:0.5em">
-                when{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}has made it to{" "}
-                <NoBreak>
+            <TextParent>
+              <ol style="margin:0 1.5em 0.5em 2em;list-style:auto;list-style-position:outside;">
+                <li style="margin-top:0.5em">
+                  when{" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "}and{" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "}are both still at{" "}
+                  <Math>
+                    $t_0$
+                  </Math>
+                </li>
+                <li style="margin-top:0.5em">
+                  when{" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "}has made it to{" "}
+                  <NoBreak>
+                    <Math>
+                      $t_0 + \Delta&#123;&#125;t$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "}
+                  and{" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "}is still at{" "}
+                  <Math>
+                    $t_0$
+                  </Math>
+                </li>
+                <li style="margin-top:0.5em">
+                  <del>
+                    when{" "}
+                    <NoBreak>
+                      <Math>
+                        $B$
+                      </Math>
+                      's
+                    </NoBreak>
+                    {" "}tail is sticking out of the
+                    cat's mouth, and
+                  </del>
+                  {" "}when{" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "}and{" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "}have both made it
+                  to{" "}
                   <Math>
                     $t_0 + \Delta&#123;&#125;t$
                   </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                and{" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "}is still at{" "}
-                <Math>
-                  $t_0$
-                </Math>
-              </li>
-              <li style="margin-top:0.5em">
-                <del>
-                  when{" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    's
-                  </NoBreak>
-                  {" "}tail is sticking out of the
-                  cat's mouth, and
-                </del>
-                {" "}when{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}and{" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "}have both made it
-                to{" "}
-                <Math>
-                  $t_0 + \Delta&#123;&#125;t$
-                </Math>
-              </li>
-            </ol>
+                </li>
+              </ol>
+            </TextParent>
             <VerticalChunk>
               Correspondingly, the product
             </VerticalChunk>

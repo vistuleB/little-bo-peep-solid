@@ -188,12 +188,10 @@ const Switcher = (props: SwitcherProps) => {
             <path
               d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
               fill={right_on() ? "#000" : "#464646"}
-              // stroke={right_on() ? "#000" : "#464646"}
             ></path>
             <path
               d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}
               fill={right_on() ? "#000" : "#464646"}
-              // stroke={right_on() ? "#000" : "#464646"}
             ></path>
           </svg>
           <svg
@@ -221,7 +219,7 @@ const Switcher = (props: SwitcherProps) => {
                 z
               `}
               fill={store.list_view ? "#ebebeb" : "#f8fee0"}
-              stroke="black"
+              stroke={store.list_view ? "#464646" : "#000"}
               stroke-width="1.5"
             ></path>
             <circle
@@ -229,7 +227,7 @@ const Switcher = (props: SwitcherProps) => {
               cy={`${w / 2}`}
               r={`${r2}`}
               fill="#fff"
-              stroke="black"
+              stroke={store.list_view ? "#464646" : "#000"}
               stroke-width="1.5"
               style={`transition:${toggle_transition}ms`}
             ></circle>
