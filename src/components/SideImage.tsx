@@ -68,7 +68,7 @@ const SideImage = (props: InternalSideImageProps) => {
       >
       <div
         style={{
-          visibility: scale().after_first_click || !on_mobile() ? "visible" : "hidden", // (*) have to do this cause we just couldn't get rid of that bug where we can't "hear" the initial scale...
+          // visibility: scale().after_first_click || !on_mobile() ? "visible" : "hidden", // (*) have to do this cause we just couldn't get rid of that bug where we can't "hear" the initial scale...
           left: getLeft(props.side, props.offset_x, our_scale_copy(), store.innerWidth, props.compensate_offset_x_for_large_text_columns),
           right: getRight(props.side, props.offset_x, our_scale_copy(), store.innerWidth, props.compensate_offset_x_for_large_text_columns),
           top: getTop(props.line, props.offset_y, our_scale_copy()),
