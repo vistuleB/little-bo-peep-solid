@@ -1544,7 +1544,7 @@ const Article = () => {
               {" "}
               True or false: Lines of slope{" "}
               <Math>
-                $-1 \over 2$
+                $-&#123;1 \over 2&#125;$
               </Math>
               {" "}
               are perpendicular to lines of slope{" "}

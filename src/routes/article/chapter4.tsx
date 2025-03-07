@@ -152,12 +152,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Image src="/images/svg_ch4_ch_explanation2.svg">
-            <ImageRight
-              src="/images/svg_ch4_ch_explanation2_cloud.svg"
-              offset_x="-13em"
-              offset_y="-17em" />
-          </Image>
+          <Image src="/images/svg_ch4_ch_explanation2.svg" />
         </Section>
         <Pause />
         <Section>

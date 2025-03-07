@@ -65,7 +65,7 @@ const PanelButton = () => {
     });
   });
 
-  createEffect(()=>{
+  createEffect(() => {
     store.route; // re-run on route change
     setTimeout(() => {
       set_nextDisabled(!document.querySelector(".next_page"));

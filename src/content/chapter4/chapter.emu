@@ -43,10 +43,10 @@
     |> Image
         src images/svg_ch4_ch_explanation2.svg
 
-    |> ImageRight
-        offset_y -17em
-        offset_x -13em
-        src images/svg_ch4_ch_explanation2_cloud.svg
+    !! |> ImageRight
+    !!     offset_y -17em
+    !!     offset_x -13em
+    !!     src images/svg_ch4_ch_explanation2_cloud.svg
 
 |> Section
 

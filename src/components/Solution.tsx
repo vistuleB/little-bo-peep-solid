@@ -227,13 +227,12 @@ export const BackupArrow = () => {
       viewBox="0 0 43 43"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      class="tab cursor-pointer overflow-visible z-10"
+      class="tab cursor-pointer z-10"
       onClick={() => {
         document?.getElementById("exo")?.scrollIntoView();
       }}
     >
       <path
-        class="overflow-visible"
         d="M35.4941 1H6.65545C3.53203 1 1 3.53203 1 6.65545V35.4941C1 38.6175 3.53203 41.1495 6.65545 41.1495H35.4941C38.6175 41.1495 41.1495 38.6175 41.1495 35.4941V6.65545C41.1495 3.53203 38.6175 1 35.4941 1Z"
         fill="#EEFFAA"
         fill-opacity="0.4"

@@ -25,7 +25,7 @@ const ArticleTitle = (
       style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;`}
       >
       <h1
-        class="text-3xl sm:text-4xl py-4"
+        class="text-2rem sm:text-4xl pt-5 sm:pt-4 pb-4"
         style={`margin-top: ${
           on_mobile()
             ? CHAPTER_TITLE_TOP_MARGIN_MOBILE

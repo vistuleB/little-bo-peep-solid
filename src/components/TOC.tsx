@@ -3,6 +3,7 @@ import useScrollX from "~/hooks/useScrollX";
 
 const TOC = () => {
   useScrollX();
+  console.log("hello from TOC");
   return (
     <div>
       <div class="mb-[2.3rem] sm:mb-[2.6rem] flex justify-center items-center">
