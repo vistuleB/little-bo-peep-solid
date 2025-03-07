@@ -1,6 +1,6 @@
 import TOCTitle from "./TOCTitle";
 import TOCItem from "./TOCItem";
-import { Spacer } from "./Spacer";
+import Spacer from "./Spacer";
 
 const TOCAuthorSuppliedContent = () => {
   return (
