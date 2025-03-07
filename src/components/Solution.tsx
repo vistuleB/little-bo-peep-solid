@@ -9,7 +9,7 @@ import {
 import SharedProps from "./types/SharedProps";
 import { GREEN_DIV_HEIGHT, TEXT_X_PADDING } from "~/constants";
 import { twJoin } from "tailwind-merge";
-import Spacer from "./Spacer";
+import { Spacer, SpacerSm, SpacerXs } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 
@@ -192,10 +192,11 @@ const Solution = (props: SolutionProps) => {
           }}
         >
           {props.children}
+          <Spacer />
           <div
             style={{ "transition-duration": `${solution_open() ? solution_transition() : 50}ms`, }}
             class={twJoin(
-              "backup-arrow mt-[32px] flex items-center justify-center",
+              "flex items-center justify-center",
               (!solution_open() || !solution_fully_opened()) && "opacity-0",
               bot_div() && "delay-[2s]"
             )}
@@ -256,7 +257,7 @@ type BtnProps = {
 export const SolutionSVG = (props: BtnProps) => {
   return (
     <>
-      <Spacer />
+      <SpacerXs />
       <div
         onClick={props.onClick}
         class="cursor-pointer"
@@ -315,8 +316,8 @@ export const SolutionSVG = (props: BtnProps) => {
           </g>
         </svg>
       </div>
-      <Spacer />
-      <Spacer />
+      <SpacerSm />
+      <SpacerSm />
     </>
   );
 };
