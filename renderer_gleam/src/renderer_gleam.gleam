@@ -219,7 +219,7 @@ fn toc_emitter(path: String, fragment: VXML, fragment_type: FragmentType) -> Res
     [
       BlamedLine(blame_us("toc_emitter"), 0, "import TOCTitle from \"./TOCTitle\";"),
       BlamedLine(blame_us("toc_emitter"), 0, "import TOCItem from \"./TOCItem\";"),
-      BlamedLine(blame_us("toc_emitter"), 0, "import Spacer from \"./Spacer\";"),
+      BlamedLine(blame_us("toc_emitter"), 0, "import { Spacer } from \"./Spacer\";"),
       BlamedLine(blame_us("toc_emitter"), 0, ""),
       BlamedLine(blame_us("toc_emitter"), 0, "const TOCAuthorSuppliedContent = () => {"),
       BlamedLine(blame_us("toc_emitter"), 2, "return ("),
