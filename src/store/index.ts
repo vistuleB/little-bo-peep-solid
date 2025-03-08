@@ -11,6 +11,7 @@ type Store = {
   scrollX: number;
   scrollY: number;
   route: string;
+  content_loaded: boolean
 };
 
 const [store, set_store] = createStore<Store>({
@@ -23,7 +24,8 @@ const [store, set_store] = createStore<Store>({
   scrollWidth: document.body.scrollWidth,
   scrollX: window.scrollX,
   scrollY: window.scrollY,
-  route: location?.pathname
+  route: "",
+  content_loaded: false
 });
 
 export {

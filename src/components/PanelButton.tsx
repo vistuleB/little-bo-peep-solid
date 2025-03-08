@@ -67,14 +67,8 @@ const PanelButton = () => {
 
   createEffect(()=>{
     store.route; // re-run on route change
-    setTimeout(() => {
-      set_nextDisabled(!document.querySelector(".next_page"));
-      set_prevDisabled(!document.querySelector(".prev_page"));
-    }, 200);
-    setTimeout(() => {
-      set_nextDisabled(!document.querySelector(".next_page"));
-      set_prevDisabled(!document.querySelector(".prev_page"));
-    }, 400);
+    set_nextDisabled(!document.querySelector(".next_page"));
+    set_prevDisabled(!document.querySelector(".prev_page"));
   })
 
   return (
