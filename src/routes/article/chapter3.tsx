@@ -2975,7 +2975,7 @@ const Article = () => {
                 </NoBreak>
               </VerticalChunk>
               <Pause />
-              <Image src="/images/svg_ch3_cosine_1000x_worked.svg" />
+              <Image src="/images/svg_ch3_ex_cosine_1000x.svg" />
               <Pause />
               <VerticalChunk>
                 By the first step, a

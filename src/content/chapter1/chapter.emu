@@ -19,8 +19,10 @@
 
     are both positive. But $\sqrt{4}$ is, by 
     definition, the unique _nonnegative_ 
-    solution to $x^2 = 4$. Hence, and whether 
-    you like it or not,
+    solution to $x^2 = 4$. 
+    Hence—at possible _contrario_ to murky half-baked
+    thoughts of yesteryear—
+    !! Hence—and this is, like we said, by definition—
         
     $$\sqrt{(-2)^2} = 2$$
 
@@ -35,7 +37,7 @@
     \sqrt{x^{2}} \rt{0.1} = \rt{0.1} x
     $$
 
-    for every real number $x$. Instead we have
+    for every real number $x$. Instead: we have
 
     $$
     \sqrt{x^{2}} \rt{0.1} = \rt{0.1} |x|
@@ -57,7 +59,8 @@
     for the solutions to the quadratic equation
     $ax^2 + bx + c = 0$.)
 
-    Now we can ponder, say,
+    !! Now we can ponder, say,
+    We will next ponder
 
     $$
     \sqrt{0.5}
