@@ -44,7 +44,6 @@ const Solution = (props: SolutionProps) => {
 
   const reset_content_height_etc = (msg: string) => {
     if (ref?.clientHeight) {
-      console.log(msg, "measuring content_height to be ", ref?.clientHeight);
       set_content_height(ref?.clientHeight || 0);
       set_store(
         "transition_duration",
@@ -54,7 +53,6 @@ const Solution = (props: SolutionProps) => {
   };
 
   createEffect(() => {
-    console.log("effect A");
     reset_content_height_etc("A");
     setTimeout(() => { reset_content_height_etc("50"); }, 50);
     setTimeout(() => { reset_content_height_etc("100"); }, 100);
@@ -63,7 +61,6 @@ const Solution = (props: SolutionProps) => {
 
   createEffect(() => {
     if (solution_open()) {
-      console.log("effect B");
       window.addEventListener("scroll", handleResize);
       setTimeout(
         () => { set_bot_div(false); },
@@ -83,35 +80,7 @@ const Solution = (props: SolutionProps) => {
   // set transition duration
   createEffect(() => {
     reset_content_height_etc("O");
-    // if (ref?.clientHeight)
-    //   set_store(
-    //     "transition_duration",
-    //     (prev) => prev.map((val, i) => i + 1 === props.solution_number ? Math.min(ref?.clientHeight, 1000) : val)
-    //   );
   });
-
-  // solution fully opened
-  // createEffect(() => {
-  //   if (solution_open()) {
-  //     let timeout_handle = setTimeout(
-  //       () => { if (solution_open()) {
-  //         set_solution_fully_opened(true);
-  //         console.log("opening", handle(), Date.now());
-  //       }},
-  //       transition_duration()[props.solution_number - 1]
-  //     );
-  //     set_handle(timeout_handle);
-  //   } else {
-  //     // if (handle()) { clearTimeout(handle()!); }
-  //     set_solution_fully_opened(false);
-  //     let timeout_handle = setTimeout(
-  //       () => { if (!solution_open()) { set_solution_fully_opened(false); }},
-  //       transition_duration()[props.solution_number - 1]
-  //     );
-  //     set_handle(timeout_handle);
-  //   }
-  // });
-
 
   createEffect(()=> {
     //green div height 
@@ -165,10 +134,6 @@ const Solution = (props: SolutionProps) => {
           solution_open={solution_open}
           onClick={
             () => {
-              // if (handle()) {
-              //   console.log("canceling handle", handle(), Date.now());
-              //   clearTimeout(handle()!);
-              // }
               if (handle()) { clearTimeout(handle()!) }
               set_solution_transition(transition_duration()[props.solution_number - 1]);
               console.log("transition_duration(): ", transition_duration()[props.solution_number - 1]);
