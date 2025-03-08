@@ -9,7 +9,6 @@ import PanelButton from "./components/PanelButton";
 import Panel from "./components/Panel";
 
 export default function App() {
-  console.log("hello from app.tsx");
   return (
     <StoreProvider>
       <Router 
