@@ -1,7 +1,6 @@
 import { MOBILE_MAX_WIDTH } from "~/constants";
 import { createContext, ParentComponent, useContext } from "solid-js";
 import { SetStoreFunction, createStore } from "solid-js/store";
-import { useGlobalContext } from "./StoreProvider";
 
 type ExercisesState = {
   selected: boolean;

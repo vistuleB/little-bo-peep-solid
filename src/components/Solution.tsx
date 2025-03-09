@@ -11,7 +11,7 @@ import {
 import SharedProps from "./types/SharedProps";
 import { GREEN_DIV_HEIGHT, TEXT_X_PADDING } from "~/constants";
 import { twJoin } from "tailwind-merge";
-import Spacer from "./Spacer";
+import { Spacer, SpacerSm, SpacerXs } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 import { createStore, SetStoreFunction } from "solid-js/store";
@@ -107,15 +107,10 @@ const SolutionConsumer = (props: SolutionProps) => {
     onCleanup(() => window.removeEventListener("scroll", handleResize));
   });
 
-  // set transition duration
-  createEffect(() => {
-    reset_content_height_etc("O");
-  });
-
   createEffect(()=> {
-    //green div height 
+    // green div height 
     if (!store.list_view) {
-      //green div should be max of GREEN_DIV_HEIGHT and total of exercises height
+      // green div should be max of GREEN_DIV_HEIGHT and total of exercises height
       set_green_div_height(Math.max(GREEN_DIV_HEIGHT, exercises_height_sum()))
     } else {
       let exercises = document.getElementsByClassName("exercise")
@@ -161,7 +156,6 @@ const SolutionConsumer = (props: SolutionProps) => {
             () => {
               if (handle()) { clearTimeout(handle()!) }
               set_solution_transition(transition_duration()[props.solution_number - 1]);
-              console.log("transition_duration(): ", transition_duration()[props.solution_number - 1]);
               let element_pos =
                 window.innerHeight - (ref?.getBoundingClientRect()?.bottom || 0);
               let should_scroll_to_button_first =
@@ -190,7 +184,6 @@ const SolutionConsumer = (props: SolutionProps) => {
                 let article = location.pathname.split("/").pop();
                 localStorage.setItem(`${article}_exo_${props.solution_number}_opened`, String(solution_open()));
               }
-              // console.log("after writing: ", store.solutions_open[props.solution_number - 1]);
               // solution transition should be not 0 only when button is clicked
               setTimeout(
                 () => { set_solution_transition(0) },
@@ -225,10 +218,11 @@ const SolutionConsumer = (props: SolutionProps) => {
           }}
         >
           {props.children}
+          <Spacer />
           <div
-            style={{ "transition-duration": `${solution_transition()}ms`, }}
+            style={{ "transition-duration": `${solution_open() ? solution_transition() : 50}ms`, }}
             class={twJoin(
-              "backup-arrow mt-[32px] flex items-center justify-center transition-opacity",
+              "flex items-center justify-center",
               (!solution_open() || !solution_fully_opened()) && "opacity-0",
               bot_div() && "delay-[2s]"
             )}
@@ -259,13 +253,12 @@ export const BackupArrow = () => {
       viewBox="0 0 43 43"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      class="tab cursor-pointer overflow-visible z-10"
+      class="tab cursor-pointer z-10"
       onClick={() => {
         document?.getElementById("exo")?.scrollIntoView();
       }}
     >
       <path
-        class="overflow-visible"
         d="M35.4941 1H6.65545C3.53203 1 1 3.53203 1 6.65545V35.4941C1 38.6175 3.53203 41.1495 6.65545 41.1495H35.4941C38.6175 41.1495 41.1495 38.6175 41.1495 35.4941V6.65545C41.1495 3.53203 38.6175 1 35.4941 1Z"
         fill="#EEFFAA"
         fill-opacity="0.4"
@@ -289,7 +282,7 @@ type BtnProps = {
 export const SolutionSVG = (props: BtnProps) => {
   return (
     <>
-      <Spacer />
+      <SpacerXs />
       <div
         onClick={props.onClick}
         class="cursor-pointer"
@@ -343,13 +336,13 @@ export const SolutionSVG = (props: BtnProps) => {
               <g transform="scale(-1, 1) translate(-8, 20)">
                 <use href="#finger_pointing_left"></use>
               </g>
-              <use href="#solution_button_text"></use>
+              <use x="-2" href="#solution_button_text"></use>
             </g>
           </g>
         </svg>
       </div>
-      <Spacer />
-      <Spacer />
+      <SpacerSm />
+      <SpacerSm />
     </>
   );
 };

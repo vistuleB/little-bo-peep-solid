@@ -753,29 +753,29 @@
         offset_y -0.5em
         src images/svg_ch4_RATS_corridor_cloud.svg
 
-    |> ol
-        style margin:0 1.5em 1em 2em
+    |> TextParent
+        |> ol
+            style margin:0 1.5em 0.5em 2em;list-style:auto;list-style-position:outside;
 
-        |> li
-            style margin-top:0.5em
+            |> li
+                style margin-top:0.5em
+                
+                when $A$ and $B$ are both still at $t_0$
             
-            when $A$ and $B$ are both still at $t_0$
-        
-        |> li
-            style margin-top:0.5em
+            |> li
+                style margin-top:0.5em
 
-            when $A$ has made it to $t_0 + \Delta{}t$,
-            and $B$ is still at $t_0$
+                when $A$ has made it to $t_0 + \Delta{}t$,
+                and $B$ is still at $t_0$
 
-        |> li
-            style margin-top:0.5em
-            
-            |> del                
-            
-                when $B$'s tail is sticking out of the
-                cat's mouth, and
-            &ensp;when $A$ and $B$ have both made it
-            to $t_0 + \Delta{}t$
+            |> li
+                style margin-top:0.5em
+                |> del                
+                
+                    when $B$'s tail is sticking out of the
+                    cat's mouth, and
+                &ensp;when $A$ and $B$ have both made it
+                to $t_0 + \Delta{}t$
 
     Correspondingly, the product
 

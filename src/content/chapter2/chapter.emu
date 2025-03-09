@@ -6,7 +6,7 @@
     (for an explanation of the values, see below):
 
     |> Image
-        src images/chapter_2_1.svg
+        src images/svg_ch2_ch_collection_of_examples.svg
 
     To explain, the slope of a line is...
 
@@ -675,7 +675,7 @@
 
     |> Exercise
 
-        True or false: Lines of slope $-1 \over 2$
+        True or false: Lines of slope $-{1 \over 2}$
         are perpendicular to lines of slope $2$.
 
         |> Solution

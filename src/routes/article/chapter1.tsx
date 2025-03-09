@@ -71,8 +71,13 @@ const Article = () => {
               </Math>
               .
             </NoBreak>
-            {" "}Hence, and whether 
-            you like it or not,
+            {" "}
+            Hence—at possible{" "}
+            <i>
+              contrario
+            </i>
+            {" "}to murky half-baked
+            thoughts of yesteryear—
           </VerticalChunk>
           <Pause />
           <MathBlock>
@@ -106,7 +111,7 @@ const Article = () => {
               </Math>
               .
             </NoBreak>
-            {" "}Instead we have
+            {" "}Instead: we have
           </VerticalChunk>
           <Pause />
           <MathBlock>
@@ -173,7 +178,7 @@ const Article = () => {
             </NoBreak>
           </VerticalChunk>
           <VerticalChunk indent={true}>
-            Now we can ponder, say,
+            We will next ponder
           </VerticalChunk>
           <Pause />
           <MathBlock>

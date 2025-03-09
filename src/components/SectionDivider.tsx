@@ -1,5 +1,5 @@
 import SharedProps from "./types/SharedProps";
-import Spacer from "./Spacer";
+import { Spacer } from "./Spacer";
 
 export const SectionDivider = () => {
   return <>

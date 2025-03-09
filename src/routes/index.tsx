@@ -4,7 +4,6 @@ import useSetRoute from "~/hooks/useSetRoute";
 
 export default function Home() {
   useSetRoute();
-  
   return (
     <>
       <ArticleTitle label="" />

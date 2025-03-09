@@ -1,10 +1,15 @@
-const Spacer = (props: { inner?: boolean; before?: boolean }) => {
-  return (
-    <div
-      class={`col-start-2 spacer ${props.inner && "inner-spacer"} ${
-        props.before && "before-spacer"
-      }`}></div>
-  );
+export const Spacer = () => {
+  return <div class="spacer"></div>;
 };
 
-export default Spacer;
+export const SpacerSm = () => {
+  return <div class="spacer-sm"></div>;
+};
+
+export const SpacerXs = () => {
+  return <div class="spacer-xs"></div>;
+};
+
+export const SpacerXXs = () => {
+  return <div class="spacer-xxs"></div>;
+};

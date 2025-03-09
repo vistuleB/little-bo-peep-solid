@@ -39,7 +39,7 @@ const Article = () => {
             (for an explanation of the values, see below):
           </VerticalChunk>
           <Pause />
-          <Image src="/images/chapter_2_1.svg" />
+          <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
           <Pause />
           <VerticalChunk>
             To explain, the slope of a line is...
@@ -1544,7 +1544,7 @@ const Article = () => {
               {" "}
               True or false: Lines of slope{" "}
               <Math>
-                $-1 \over 2$
+                $-&#123;1 \over 2&#125;$
               </Math>
               {" "}
               are perpendicular to lines of slope{" "}
