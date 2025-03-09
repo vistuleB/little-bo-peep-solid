@@ -101,6 +101,7 @@ const PanelButton = () => {
           style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
         >
           <button
+            id="prev-btn"
             class={twJoin(
               !on_mobile() && "mr-2",
               on_mobile() && "mr-4",
@@ -124,6 +125,7 @@ const PanelButton = () => {
             <LeftArrow class={twMerge(!prevDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-300")}/>
           </button>
           <button
+            id="next-btn"
             class={twJoin(
               !on_mobile() && "mr-3",
               on_mobile() && "mr-4",
@@ -147,6 +149,7 @@ const PanelButton = () => {
             <RightArrow class={twMerge(!nextDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-300")}/>
           </button>
           <button
+            id="menu-btn"
             onClick={() => { set_store("panel_opened", !open()); }}
              style={{
               "background-color":

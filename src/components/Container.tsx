@@ -12,10 +12,13 @@ const Container = (props: ParentProps) => {
   // add_imports and table of contents
   const [scrollY, set_scrollY] = createSignal(0);
   const [scrollX, set_scrollX] = createSignal(0);
+  const [marginMode, set_marginMode] = createSignal(false);
+
   // const [innerWidth, set_innerWidth] = createSignal(0);
   // const [scrollWidth, set_scrollWidth] = createSignal(0);
   let { on_mobile } = useOnMobile();
   let { store, set_store } = useGlobalContext();
+
 
   const handleScroll = () => {
     set_scrollY(window.scrollY);
@@ -44,7 +47,10 @@ const Container = (props: ParentProps) => {
           left: theoretical_left,
           behavior: "smooth",
         });
+        set_marginMode(false)
+        return;
       }
+      set_marginMode(true)
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -67,6 +73,80 @@ const Container = (props: ParentProps) => {
           left: (store.scrollWidth - store.innerWidth) / 2,
           behavior: "instant",
         });
+      }
+    });
+
+    const preventActionOn = () => [
+        document.getElementById("sidebar"), 
+        document.getElementById("prev-btn"), 
+        document.getElementById("next-btn"), 
+        document.getElementById("menu-btn")
+      ]
+
+      const targetIsAnchor = (element: Element) => {
+        let currentElement = element;
+
+        while (currentElement !== null && currentElement !== document.documentElement) {
+            if (currentElement.tagName === "A") {
+                return true; 
+            }
+            currentElement = currentElement.parentElement as Element;
+        }
+        return false;
+    }
+
+    window.addEventListener("click", (e) => {
+      const target = e.target as Element;
+      if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target)) {
+        return;
+      }
+
+      if (!on_mobile()) {
+          let screenHeight = window.innerHeight
+          let screenWidth = window.innerWidth
+          if (e.clientY <= screenHeight * 0.3 ) {
+            window.scrollBy({
+              top: -screenHeight,
+              behavior: "smooth"
+            })
+            return;
+          }
+          if (e.clientY >= screenHeight * 0.6 ) {
+             window.scrollBy({
+              top: screenHeight,
+              behavior: "smooth"
+            })
+            return;
+          }
+          if (e.clientX <= screenWidth * 0.3 ) {
+           (document.querySelector(".prev_page") as HTMLAnchorElement)?.click()
+            return;
+          }
+          if (e.clientX >= screenWidth * 0.6 ) {
+           (document.querySelector(".next_page") as HTMLAnchorElement)?.click()
+            return;
+          }
+      }
+    });
+    window.addEventListener("dblclick", (e) => {
+      const target = e.target as Element;
+      if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target)) {
+        return;
+      }
+
+      if (!on_mobile()) {
+        let screenHeight = window.innerHeight
+        if (e.clientY <= screenHeight * 0.3 ) {
+            window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          })
+          return;
+        }
+        if (e.clientY >= screenHeight * 0.6 ) {
+          document.getElementById("exo")?.scrollIntoView({behavior: "smooth"})
+          return;
+        }
       }
     });
   });
