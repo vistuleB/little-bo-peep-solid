@@ -1,9 +1,10 @@
 import { MOBILE_MAX_WIDTH } from "~/constants";
-import { createEffect, createSignal, onCleanup, mergeProps, ParentProps } from "solid-js";
+import { createEffect, createSignal, onCleanup, mergeProps, ParentProps, useContext } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import LazyImage from "./LazyImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
+import { SolutionContext } from "./Solution";
 
 
 type ImageProps = ParentProps & SharedProps & {
@@ -20,6 +21,7 @@ const Image = (props: ImageProps) => {
   const [innerWidth, set_innerWidth] = createSignal(0);
   let [after_first_click, set_after_first_click] = createSignal(false);
   let image_ref: HTMLImageElement | undefined;
+  const {set_solution_store} = useContext(SolutionContext) || {}
 
   props = mergeProps(
     {
@@ -112,6 +114,7 @@ const Image = (props: ImageProps) => {
             set_recent_click(should_be_scaled_down ? 1 : 2);
             setTimeout(() => { set_recent_click(0); }, 100)
             set_innerWidth(window.innerWidth); // (refreshing for safety, since we have all these bugs)
+            set_solution_store?.("re_calculate_height", (prev)=> !prev)
           }}
           class={twJoin(
             "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",

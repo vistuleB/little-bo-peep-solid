@@ -5,6 +5,8 @@ import {
   ParentProps,
   onCleanup,
   onMount,
+  createContext,
+  ParentComponent,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { GREEN_DIV_HEIGHT, TEXT_X_PADDING } from "~/constants";
@@ -12,13 +14,40 @@ import { twJoin } from "tailwind-merge";
 import Spacer from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
+import { createStore, SetStoreFunction } from "solid-js/store";
 
 type SolutionProps = ParentProps &
   SharedProps & {
     solution_number: number;
+    re_calculate_height?: boolean;
   };
 
-const Solution = (props: SolutionProps) => {
+type SolutionStore = {
+  re_calculate_height: boolean;
+}
+export const SolutionContext = createContext<{
+  solution_store: SolutionStore;
+  set_solution_store: SetStoreFunction<SolutionStore>;
+}>();
+
+const [solution_store, set_solution_store] = createStore({
+  re_calculate_height: false
+})
+
+export const Solution = (props: ParentProps & SolutionProps) => {
+  return (
+    <SolutionContext.Provider
+      value={{
+        solution_store,
+        set_solution_store,
+      }}
+    >
+     <SolutionConsumer re_calculate_height={solution_store.re_calculate_height} {...props} />
+    </SolutionContext.Provider>
+  );
+};
+
+const SolutionConsumer = (props: SolutionProps) => {
   let button_ref: HTMLDivElement | undefined;
   let ref: HTMLDivElement | undefined;
   let { store: global_store, set_store: set_global_store } = useGlobalContext();
@@ -43,6 +72,7 @@ const Solution = (props: SolutionProps) => {
   };
 
   const reset_content_height_etc = (msg: string) => {
+    props.re_calculate_height; // re-calc on change
     if (ref?.clientHeight) {
       set_content_height(ref?.clientHeight || 0);
       set_store(
@@ -113,11 +143,6 @@ const Solution = (props: SolutionProps) => {
     }
   })
 
-  const content_height_with_log = (msg: string): number  => {
-    console.log(msg, content_height());
-    return content_height();
-  };
-
   onMount(() => {
     set_solution_fully_opened(solution_open());
     setTimeout(() => {set_solution_fully_opened(solution_open());}, 100);
@@ -180,10 +205,9 @@ const Solution = (props: SolutionProps) => {
           "solution relative transition-all",
           !solution_open() && "pointer-events-none",
           (!solution_open() || !solution_fully_opened()) && "overflow-y-clip"
-          // !solution_fully_opened() && "overflow-y-clip"
         )}
         style={{
-          height: `${solution_open() ? content_height_with_log("in_style") : 0}px`,
+          height: `${solution_open() ? content_height() : 0}px`,
           "transition-duration": `${solution_transition()}ms`,
           "transition-property": "height",
         }}
