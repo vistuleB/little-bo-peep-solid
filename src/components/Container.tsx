@@ -171,13 +171,28 @@ const Container = (props: ParentProps) => {
         return;
       }
     }
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.metaKey && e.key === "ArrowLeft") {
+        e.preventDefault();
+        (document.querySelector(".prev_page") as HTMLAnchorElement)?.click()
+        return;
+      }
+      if (e.metaKey && e.key === "ArrowRight") {
+        e.preventDefault();
+        (document.querySelector(".next_page") as HTMLAnchorElement)?.click()
+        return;
+      }
+    }
 
     window.addEventListener("click", handleClick);
     window.addEventListener("dblclick", handleDblClick);
+    window.addEventListener("keydown", handleKeyDown);
+
 
     return () => {
       window.removeEventListener("click", handleClick)
       window.removeEventListener("dblclick", handleDblClick)
+      window.removeEventListener("keydown", handleKeyDown)
     }
   });
 
