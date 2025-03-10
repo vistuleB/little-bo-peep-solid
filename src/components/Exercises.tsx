@@ -121,7 +121,7 @@ const Switcher = (props: SwitcherProps) => {
 
   return (
     <TextParent>
-      <div class="flex justify-center !text-xl gap-0 mt-[2px]">
+      <div id="exercises-btns" class="flex justify-center !text-xl gap-0 mt-[2px]">
         <svg
           width={`${2 + w}`}
           height={`${2 + w}`}

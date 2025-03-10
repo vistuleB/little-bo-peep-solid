@@ -248,6 +248,7 @@ const SolutionConsumer = (props: SolutionProps) => {
 export const BackupArrow = () => {
   return (
     <svg
+      id="backup-btn"
       width="43"
       height="43"
       viewBox="0 0 43 43"
@@ -284,6 +285,7 @@ export const SolutionSVG = (props: BtnProps) => {
     <>
       <SpacerXs />
       <div
+        id="solution-btn"
         onClick={props.onClick}
         class="cursor-pointer"
       >

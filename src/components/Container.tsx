@@ -80,75 +80,81 @@ const Container = (props: ParentProps) => {
         document.getElementById("sidebar"), 
         document.getElementById("prev-btn"), 
         document.getElementById("next-btn"), 
-        document.getElementById("menu-btn")
+        document.getElementById("menu-btn"),
+        document.getElementById("solution-btn"),
+        document.getElementById("backup-btn"),
+        document.getElementById("exercises-btns"),
       ]
 
-      const targetIsAnchor = (element: Element) => {
-        let currentElement = element;
+    const targetIsAnchor = (element: Element) => {
+      let currentElement = element;
 
-        while (currentElement !== null && currentElement !== document.documentElement) {
-            if (currentElement.tagName === "A") {
-                return true; 
-            }
-            currentElement = currentElement.parentElement as Element;
-        }
-        return false;
+      while (currentElement !== null && currentElement !== document.documentElement) {
+          if (currentElement.tagName === "A") {
+              return true; 
+          }
+          currentElement = currentElement.parentElement as Element;
+      }
+      return false;
     }
 
-    window.addEventListener("click", (e) => {
+    const handleClick = (e: MouseEvent) => {
       const target = e.target as Element;
-      if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target)) {
+      if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target) || on_mobile() || marginMode()) {
         return;
       }
 
-      if (!on_mobile()) {
-          let screenHeight = window.innerHeight
-          let screenWidth = window.innerWidth
-          if (e.clientY <= screenHeight * 0.3 ) {
-            window.scrollBy({
-              top: -screenHeight,
-              behavior: "smooth"
-            })
-            return;
-          }
-          if (e.clientY >= screenHeight * 0.6 ) {
-             window.scrollBy({
-              top: screenHeight,
-              behavior: "smooth"
-            })
-            return;
-          }
-          if (e.clientX <= screenWidth * 0.3 ) {
-           (document.querySelector(".prev_page") as HTMLAnchorElement)?.click()
-            return;
-          }
-          if (e.clientX >= screenWidth * 0.6 ) {
-           (document.querySelector(".next_page") as HTMLAnchorElement)?.click()
-            return;
-          }
+      let screenHeight = window.innerHeight
+      let clientXBasedOnScrollWidth = window.scrollX + e.clientX
+
+      if (e.clientY <= screenHeight * 0.3 ) {
+        window.scrollBy({
+          top: -screenHeight,
+        })
+        return;
       }
-    });
-    window.addEventListener("dblclick", (e) => {
+      if (e.clientY >= screenHeight * 0.6 ) {
+          window.scrollBy({
+          top: screenHeight,
+        })
+        return;
+      }
+      if (clientXBasedOnScrollWidth < 1500 ) {
+        (document.querySelector(".prev_page") as HTMLAnchorElement)?.click()
+        return;
+      }
+      if (clientXBasedOnScrollWidth > 1500 + DESKTOP_COLUMN_WIDTH ) {
+        (document.querySelector(".next_page") as HTMLAnchorElement)?.click()
+        return;
+      }
+    }
+    const handleDblClick = (e: MouseEvent) => {
       const target = e.target as Element;
-      if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target)) {
+      if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target) || on_mobile() || marginMode()) {
         return;
       }
 
-      if (!on_mobile()) {
-        let screenHeight = window.innerHeight
-        if (e.clientY <= screenHeight * 0.3 ) {
-            window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-          })
-          return;
-        }
-        if (e.clientY >= screenHeight * 0.6 ) {
-          document.getElementById("exo")?.scrollIntoView({behavior: "smooth"})
-          return;
-        }
+      let screenHeight = window.innerHeight
+      if (e.clientY <= screenHeight * 0.3 ) {
+          window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        })
+        return;
       }
-    });
+      if (e.clientY >= screenHeight * 0.6 ) {
+        document.getElementById("exo")?.scrollIntoView()
+        return;
+      }
+    }
+
+    window.addEventListener("click", handleClick);
+    window.addEventListener("dblclick", handleDblClick);
+
+    return () => {
+      window.removeEventListener("click", handleClick)
+      window.removeEventListener("dblclick", handleDblClick)
+    }
   });
 
   return (
