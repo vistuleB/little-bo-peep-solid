@@ -34,7 +34,7 @@ jobs:
           if [ "${{ github.ref }}" == "refs/heads/production" ]; then
             flyctl deploy --remote-only --app little-bo-peep 
           elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
-            flyctl deploy --remote-only --app little-bo-peep-develop-solid
+            flyctl deploy --remote-only --app lbp-dev
           else
             echo "Unknown branch, deployment skipped"
           fi
