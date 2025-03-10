@@ -98,6 +98,31 @@ const Container = (props: ParentProps) => {
       return false;
     }
 
+    function smoothScrollTo(targetPosition: number, duration: number) {
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      let startTime: DOMHighResTimeStamp | null = null;
+
+      function animation(currentTime: DOMHighResTimeStamp) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(window.scrollX, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation)
+        else window.scrollTo(window.scrollX, targetPosition);
+      }
+
+      function easeInOutQuad(t: number, b: number, c: number, d: number) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(animation);
+    }
+
+
     const handleClick = (e: MouseEvent) => {
       const target = e.target as Element;
       if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target) || on_mobile() || marginMode()) {
@@ -136,14 +161,13 @@ const Container = (props: ParentProps) => {
 
       let screenHeight = window.innerHeight
       if (e.clientY <= screenHeight * 0.3 ) {
-          window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        })
+        smoothScrollTo(0, 100)
+       
         return;
       }
       if (e.clientY >= screenHeight * 0.6 ) {
-        document.getElementById("exo")?.scrollIntoView()
+        let scrollTo = (document.getElementById("exo")?.getBoundingClientRect().y || window.innerHeight)+ window.scrollY
+        smoothScrollTo(scrollTo, 100)
         return;
       }
     }
