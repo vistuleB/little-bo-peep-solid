@@ -10,7 +10,7 @@ import vxml_renderer as vr
 import writerly_parser as wp
 import pipeline
 import blamedlines.{type BlamedLine, type Blame, BlamedLine, Blame}
-import vxml_parser.{type VXML, BlamedAttribute}
+import vxml_parser.{type VXML, BlamedAttribute, V}
 
 const ins = string.inspect
 
@@ -158,6 +158,20 @@ fn page_prev_next_links(fragment_type: FragmentType){
   }
 }
 
+
+// splitting chapter vxmls for performance
+fn split_vxmls_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
+  let assert V(b, t, a, children) = vxml
+  let assert [first, ..rest] = children
+  let rest_tag = V(blame_us("rest tag"), "Rest", [], [])
+
+  #(
+    V(b, t, a, [first, rest_tag]),
+    rest
+  )
+
+}
+
 fn lbp_chapter_bootcamp_common_emitter(
   path: String,
   fragment: VXML,
@@ -170,6 +184,8 @@ fn lbp_chapter_bootcamp_common_emitter(
     over: infra.prepend_unique_key_attribute(fragment, number_attribute),
     with_on_error: fn(_) { Error(NumberAttributeAlreadyExists(fragment_type, number)) }
   )
+
+  let #(first_split, rest) = split_vxmls_to_first_section_and_rest(fragment)
 
   let lines = list.flatten([
     [
@@ -195,6 +211,7 @@ fn lbp_chapter_bootcamp_common_emitter(
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { SectionDivider, StarDivider } from \"~/components/SectionDivider\";"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import VerticalChunk from \"~/components/VerticalChunk\";"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useSetRoute from \"~/hooks/useSetRoute\";"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, ""),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "const Article = () => {"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 2, "useSetRoute();"),
@@ -202,9 +219,23 @@ fn lbp_chapter_bootcamp_common_emitter(
       BlamedLine(blame_us("lbp_fragment_emitter"), 4, page_prev_next_links(fragment_type)),
 
     ],
-    vxml_parser.vxml_to_jsx_blamed_lines(fragment, 6),
+    vxml_parser.vxml_to_jsx_blamed_lines(first_split, 6), // first section loads immediatly
     [
       BlamedLine(blame_us("lbp_fragment_emitter"), 2, "</>);"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 0, "};"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 0, ""),
+    ],
+    [
+      BlamedLine(blame_us("lbp_fragment_emitter"), 0, "const Rest = () => {"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 2, "const showMore = useShowMore();"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return(<>"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 4, "{ showMore() && <>"),
+
+    ],
+      vxml_parser.vxmls_to_jsx_blamed_lines(rest, 6), // first section loads immediatly
+    [
+      BlamedLine(blame_us("lbp_fragment_emitter"), 0, "</> }"),
+      BlamedLine(blame_us("lbp_fragment_emitter"), 0, "</>);"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "};"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, ""),
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "export default Article;"),
