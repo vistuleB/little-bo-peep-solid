@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js";
+import { createSignal, onMount } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { twJoin } from "tailwind-merge";
@@ -43,11 +43,19 @@ const Title = () => {
 };
 
 const LittleBoPeepSvg = () => {
+  const [visible, setVisible] = createSignal(false)
+  onMount(()=>{
+    setVisible(true)
+  })
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="157"
       height="33"
+      style={{
+        opacity: visible() ? "1" : "0",
+        transition: "opacity 2000ms"
+      }}
       viewBox="0 0 157 33">
       <path
         aria-label='Little Bo Peep'
