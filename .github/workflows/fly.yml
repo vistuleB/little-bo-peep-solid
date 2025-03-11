@@ -23,7 +23,6 @@ jobs:
 
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: |
-          ls -a
           if [ "${{ github.ref }}" == "refs/heads/production" ]; then
             flyctl deploy --remote-only --app little-bo-peep 
           elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
