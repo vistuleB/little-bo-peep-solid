@@ -24,7 +24,7 @@ jobs:
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: |
           if [ "${{ github.ref }}" == "refs/heads/production" ]; then
-            flyctl deploy --remote-only --app little-bo-peep 
+            flyctl deploy --remote-only --app lbp
           elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
             flyctl deploy --remote-only --app lbp-dev
           else
