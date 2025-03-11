@@ -132,13 +132,13 @@ const Container = (props: ParentProps) => {
       let screenHeight = window.innerHeight
       let clientXBasedOnScrollWidth = window.scrollX + e.clientX
 
-      if (e.clientY <= screenHeight * 0.3 ) {
+      if (e.clientY <= screenHeight * 0.3 && window.scrollY != 0) {
         window.scrollBy({
           top: -screenHeight,
         })
         return;
       }
-      if (e.clientY >= screenHeight * 0.6 ) {
+      if (e.clientY >= screenHeight * 0.6 && window.scrollY + window.innerHeight <  document.body.scrollHeight) {
           window.scrollBy({
           top: screenHeight,
         })
@@ -166,7 +166,11 @@ const Container = (props: ParentProps) => {
         return;
       }
       if (e.clientY >= screenHeight * 0.6 ) {
-        let scrollTo = (document.getElementById("exo")?.getBoundingClientRect().y || window.innerHeight)+ window.scrollY
+        let scrollTo = 
+        (document.getElementById("exercises-btns")?.getBoundingClientRect().y || window.innerHeight)
+        + window.scrollY 
+        - (window.innerHeight / 2) // to make the exo centered
+         
         smoothScrollTo(scrollTo, 100)
         return;
       }
