@@ -172,12 +172,12 @@ const Container = (props: ParentProps) => {
       }
     }
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.metaKey && e.key === "ArrowLeft") {
+      if (e.key === "ArrowLeft") {
         e.preventDefault();
         (document.querySelector(".prev_page") as HTMLAnchorElement)?.click()
         return;
       }
-      if (e.metaKey && e.key === "ArrowRight") {
+      if (e.key === "ArrowRight") {
         e.preventDefault();
         (document.querySelector(".next_page") as HTMLAnchorElement)?.click()
         return;
