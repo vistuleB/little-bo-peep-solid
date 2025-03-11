@@ -7,6 +7,7 @@ import PanelTitle from "./PanelTitle";
 const Panel = () => {
   const { store } = useGlobalContext();
   const menu_closed = () => !store.panel_opened;
+  const env = import.meta.env.VITE_ENV;
 
   const toggle_scroll = (overflow: string) => {
     if (menu_closed()) {
@@ -41,14 +42,14 @@ const Panel = () => {
       >
         <div class="select-none scrollbar-hidden sm:h-full pt-[0.6em] px-[1em] overflow-y-hidden [&ul]:mb-[8px] [&ul]:p-0">
           <PanelTableOfContents />
-        {
-         import.meta.env.VITE_ENV === "development" &&  
-          <div id="options">
-            <PanelTitle label="Options" />
-            <Option label="Areas" state_key="show_areas" />
-            <Option label="Section Dividers" state_key="show_section_dividers"/>
-            <Option label="Squiggles" state_key="show_squiggles" />
-          </div>
+          {
+          env === "development" &&  
+            <div id="options">
+              <PanelTitle label="Options" />
+              <Option label="Areas" state_key="show_areas" />
+              <Option label="Section Dividers" state_key="show_section_dividers"/>
+              <Option label="Squiggles" state_key="show_squiggles" />
+            </div>
           }
         </div>
       </div>
