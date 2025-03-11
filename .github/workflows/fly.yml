@@ -21,16 +21,9 @@ jobs:
             echo "Unknown branch" > .env
           fi
 
-      # - uses: erlef/setup-beam@v1
-      #   with:
-      #     otp-version: "26.0.2"
-      #     gleam-version: "1.5.1"
-      #     rebar3-version: "3"
-      # - run: cd renderer_gleam && gleam deps download
-      # - run: cd renderer_gleam && gleam run
-
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: |
+          ls -a
           if [ "${{ github.ref }}" == "refs/heads/production" ]; then
             flyctl deploy --remote-only --app little-bo-peep 
           elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
