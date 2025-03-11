@@ -9,6 +9,7 @@ import PanelButton from "./components/PanelButton";
 import Panel from "./components/Panel";
 
 export default function App() {
+
   return (
     <StoreProvider>
       <Router 

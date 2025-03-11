@@ -14,9 +14,9 @@ jobs:
       - name: Create .env file
         run: |
           if [ "${{ github.ref }}" == "refs/heads/production" ]; then
-            echo "ENV=production" > .env
+            echo "VITE_ENV=production" > .env
           elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
-            echo "ENV=development" > .env
+            echo "VITE_ENV=development" > .env
           else
             echo "Unknown branch" > .env
           fi
