@@ -24,9 +24,9 @@ jobs:
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: |
           if [ "${{ github.ref }}" == "refs/heads/production" ]; then
-            flyctl deploy --remote-only --app lbp --env .env .
+            flyctl deploy --remote-only --app lbp
           elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
-            flyctl deploy --remote-only --app lbp-dev --env .env .
+            flyctl deploy --remote-only --app lbp-dev
           else
             echo "Unknown branch, deployment skipped"
           fi
