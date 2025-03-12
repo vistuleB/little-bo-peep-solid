@@ -1,5 +1,5 @@
 import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
-import { ParentProps, createEffect, onCleanup, createSignal } from "solid-js";
+import { ParentProps, createEffect, onCleanup, createSignal, onMount } from "solid-js";
 import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
 import useOnMobile from "../hooks/useOnMobile";
@@ -66,7 +66,9 @@ const Container = (props: ParentProps) => {
     });
   });
 
-  createEffect(() => {
+  let _window = window as any
+
+  onMount(() => {
     window.addEventListener("resize", (_) => {
       if (!on_mobile()) {
         window.scroll({
@@ -122,11 +124,23 @@ const Container = (props: ParentProps) => {
       requestAnimationFrame(animation);
     }
 
+    // const savedScrollY = window.scrollY
+    const exerciseBtnsPos = () => {
+      const rect = document.getElementById("exercises-btns")?.getBoundingClientRect()!;
+      return  (rect.y) + window.scrollY + (rect.height * 2)
+    }
 
     const handleClick = (e: MouseEvent) => {
       const target = e.target as Element;
       if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target) || on_mobile() || marginMode()) {
         return;
+      }
+
+      // values for dbl click event ( click event will tweak this values so they should be calculated before )
+      if (_window.firstClick){
+        _window.exerciseBtnsPos = (document.getElementById("exercises-btns")?.getBoundingClientRect().y || window.innerHeight) + window.scrollY;
+        _window.savedScrollY = window.scrollY;
+        _window.firstClick = false
       }
 
       let screenHeight = window.innerHeight
@@ -154,23 +168,29 @@ const Container = (props: ParentProps) => {
       }
     }
     const handleDblClick = (e: MouseEvent) => {
+      _window.firstClick = true
       const target = e.target as Element;
       if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target) || on_mobile() || marginMode()) {
         return;
       }
 
       let screenHeight = window.innerHeight
-      if (e.clientY <= screenHeight * 0.3 ) {
+      if (e.clientY <= screenHeight * 0.3 && _window.savedScrollY <= _window.exerciseBtnsPos) {
         smoothScrollTo(0, 100)
-       
         return;
       }
-      if (e.clientY >= screenHeight * 0.6 ) {
-        let scrollTo = 
-        (document.getElementById("exercises-btns")?.getBoundingClientRect().y || window.innerHeight)
-        + window.scrollY 
-        - (window.innerHeight / 2) // to make the exo centered
-         
+      if (e.clientY <= screenHeight * 0.3 && _window.savedScrollY > _window.exerciseBtnsPos) {
+        let scrollTo =  exerciseBtnsPos() - (window.innerHeight / 2) // to make the exo centered
+        smoothScrollTo(scrollTo, 100)
+        return;
+      }
+      if (e.clientY >= screenHeight * 0.6 && _window.savedScrollY + ( window.innerHeight / 2 ) < _window.exerciseBtnsPos) {
+        let scrollTo =  exerciseBtnsPos() - (window.innerHeight / 2) // to make the exo centered
+        smoothScrollTo(scrollTo, 100)
+        return;
+      }
+      if (e.clientY >= screenHeight * 0.6 && _window.savedScrollY + ( window.innerHeight / 2 ) >= _window.exerciseBtnsPos ) {
+        let scrollTo =  document.body.scrollHeight 
         smoothScrollTo(scrollTo, 100)
         return;
       }
@@ -192,12 +212,12 @@ const Container = (props: ParentProps) => {
     window.addEventListener("dblclick", handleDblClick);
     window.addEventListener("keydown", handleKeyDown);
 
-
-    return () => {
+    onCleanup(()=>{
       window.removeEventListener("click", handleClick)
       window.removeEventListener("dblclick", handleDblClick)
       window.removeEventListener("keydown", handleKeyDown)
-    }
+    })
+
   });
 
   return (
