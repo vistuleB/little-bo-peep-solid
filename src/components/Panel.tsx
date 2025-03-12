@@ -44,7 +44,7 @@ const Panel = () => {
         <div class="select-none scrollbar-hidden sm:h-full pt-[0.6em] px-[1em] overflow-y-hidden [&ul]:mb-[8px] [&ul]:p-0">
           <PanelTableOfContents />
           {
-          env === "development" &&  
+          env === "DEV" &&  
             <div id="options">
               <PanelTitle label="Options" />
               <Option label="Areas" state_key="show_areas" />
