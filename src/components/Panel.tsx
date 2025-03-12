@@ -8,6 +8,7 @@ const Panel = () => {
   const { store } = useGlobalContext();
   const menu_closed = () => !store.panel_opened;
   const env = import.meta.env.VITE_ENV;
+  console.log(env)
 
   const toggle_scroll = (overflow: string) => {
     if (menu_closed()) {
