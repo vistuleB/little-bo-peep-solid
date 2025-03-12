@@ -83,8 +83,8 @@ const Container = (props: ParentProps) => {
         document.getElementById("prev-btn"), 
         document.getElementById("next-btn"), 
         document.getElementById("menu-btn"),
-        document.getElementById("solution-btn"),
-        document.getElementById("backup-btn"),
+        ...document.querySelectorAll("#solution-btn"),
+        ...document.querySelectorAll("#backup-btn"),
         document.getElementById("exercises-btns"),
       ]
 
