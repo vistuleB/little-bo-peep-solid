@@ -11,6 +11,8 @@ import writerly_parser as wp
 import pipeline
 import blamedlines.{type BlamedLine, type Blame, BlamedLine, Blame}
 import vxml_parser.{type VXML, BlamedAttribute, V}
+import desugarers/filter_nodes_by_attributes.{filter_nodes_by_attributes}
+
 
 const ins = string.inspect
 
@@ -303,6 +305,28 @@ fn lbp_emitter(pair : #(String, VXML, FragmentType)) -> Result(#(String, List(Bl
   }
 }
 
+fn our_source_parser(lines: List(BlamedLine), spotlight_args: List(#(String, String, String))) {
+  use writerlys <- result.then(
+    wp.parse_blamed_lines(lines) |> result.map_error(fn(e) {
+      let assert wp.WriterlyParseError(blame) = e
+      vr.SourceParserError("parse_blamed_lines failed " <> ins(blame))
+    })
+  )
+
+  use vxml <- result.then(
+    wp.writerlys_to_vxmls(writerlys) |> infra.get_root |> result.map_error(fn(e) { vr.SourceParserError(e) })
+  )
+
+  let #(_, filter_vxmls) = filter_nodes_by_attributes(spotlight_args)
+  use filtered_vxml <- result.then(
+    filter_vxmls(vxml) |> result.map_error(fn(e: infra.DesugaringError) { 
+      let assert infra.DesugaringError(_, message) = e
+      vr.SourceParserError(message) 
+    })
+  )
+  Ok(wp.vxmls_to_writerlys([filtered_vxml]))
+}
+
 fn cli_usage_supplementary() {
   io.println("      --prettier")
   io.println("         -> run npm prettier on emitted content")
@@ -312,7 +336,8 @@ pub fn main() {
   use amendments <- infra.on_error_on_ok(
     vr.process_command_line_arguments(
       argv.load().arguments,
-      [#("--prettier", True)]
+      [#("--prettier", True)],
+      "../src/content/",
     ),
     fn (error) {
       io.println("")
@@ -324,8 +349,8 @@ pub fn main() {
   )
 
   let renderer = vr.Renderer(
-    assembler: wp.assemble_blamed_lines_advanced_mode(_, amendments.assemble_blamed_lines_selector_args),
-    source_parser: wp.parse_blamed_lines,
+    assembler: wp.assemble_blamed_lines_advanced_mode(_, amendments.spotlight_args_files),
+    source_parser: our_source_parser(_, amendments.spotlight_args),
     parsed_source_converter: wp.writerlys_to_vxmls,
     pipeline: pipeline.lbp_pipeline(),
     splitter: lbp_splitter,
