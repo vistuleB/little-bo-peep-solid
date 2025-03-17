@@ -79,13 +79,13 @@ fn get_articles() -> List(String) {
     |> result.unwrap([]) 
     |> list.filter(fn(f){ !string.starts_with(f, "#") && f != "__parent.emu"  })
     
-
-  let chapters = 
-  articles 
+  let chapters =
+    articles 
     |> list.filter(fn(a) { string.starts_with(a, "chapter") } )
     |> list.sort(fn(a, b) { string.compare(a, b) })
-  let bootcamps = 
-  articles 
+
+  let bootcamps =
+    articles 
     |> list.filter(fn(a) { string.starts_with(a, "bootcamp") } )
     |> list.sort(fn(a, b) { string.compare(b, a) })
 
@@ -108,18 +108,17 @@ fn get_index(article: String, articles_list: List(String), index: Int) -> Int {
   }
 }
 
-fn page_prev_next_links(fragment_type: FragmentType){
+fn page_prev_next_links(fragment_type: FragmentType) -> String {
   let articles_list = get_articles() 
   let list_length = list.length(articles_list)
 
   let current = case fragment_type{
-    Chapter(n) -> {
-      "chapter" <> ins(n)
-    }
+    Chapter(n) -> "chapter" <> ins(n)
     Bootcamp(n) -> "bootcamp" <> ins(n)
     TOCAuthorSuppliedContent -> "/"
     _ -> ""
   }
+
   case get_index(current, articles_list, 0) {
     0 -> {
       let assert [next_article, ..] = list.drop(articles_list, 1)
@@ -129,7 +128,8 @@ fn page_prev_next_links(fragment_type: FragmentType){
       }
       "<a href=\""<> next_article <> "\" class=\"next_page hidden\"></a>"
     }
-    a if a == {list_length - 1} -> {
+
+    a if a == list_length - 1 -> {
       let assert [prev_article, ..] = list.drop(articles_list, a - 1)
       let prev_article = case prev_article == "/" {
         True -> "/"
@@ -137,6 +137,7 @@ fn page_prev_next_links(fragment_type: FragmentType){
       }
       "<a href=\""<> prev_article <> "\" class=\"prev_page hidden\"></a>"
     }
+
     _ -> {
       let next_index = { get_index(current, articles_list, 0) + 1 } 
       let prev_index = { get_index(current, articles_list, 0) - 1 } 
@@ -148,14 +149,14 @@ fn page_prev_next_links(fragment_type: FragmentType){
         True -> "/"
         False -> "/article/" <> next_article
       }
+
       let prev_article = case prev_article == "/" {
         True -> "/"
         False -> "/article/" <> prev_article
       }
 
-      // these will be querySelected by panelButtons
-      "<a href=\""<> prev_article <> "\" class=\"prev_page hidden\"></a>\n 
-      <a href=\""<> next_article <> "\" class=\"next_page hidden\"></a>"
+      "<a href=\""<> prev_article <> "\" class=\"prev_page hidden\"></a> 
+    <a href=\""<> next_article <> "\" class=\"next_page hidden\"></a>"
     }
   }
 }
@@ -171,7 +172,6 @@ fn split_vxmls_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
     V(b, t, a, [first, rest_tag]),
     rest
   )
-
 }
 
 fn lbp_chapter_bootcamp_common_emitter(
@@ -295,8 +295,10 @@ fn panel_emitter(path: String, fragment: VXML, fragment_type: FragmentType) -> R
   Ok(#(path, lines, fragment_type))
 }
 
-fn lbp_emitter(pair : #(String, VXML, FragmentType)) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
-  let #(path, vxml, fragment_type) = pair
+fn lbp_emitter(
+  fragment : #(String, VXML, FragmentType)
+) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
+  let #(path, vxml, fragment_type) = fragment
   case fragment_type {
     Chapter(n) -> lbp_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
     Bootcamp(n) -> lbp_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
@@ -305,26 +307,20 @@ fn lbp_emitter(pair : #(String, VXML, FragmentType)) -> Result(#(String, List(Bl
   }
 }
 
-fn our_source_parser(lines: List(BlamedLine), spotlight_args: List(#(String, String, String))) {
+fn our_source_parser(
+  lines: List(BlamedLine),
+  spotlight_args: List(#(String, String, String))
+) -> Result(VXML, vr.RendererError(VXML, String, c, d, e)) {
   use writerlys <- result.then(
-    wp.parse_blamed_lines(lines) |> result.map_error(fn(e) {
-      let assert wp.WriterlyParseError(blame) = e
-      vr.SourceParserError("parse_blamed_lines failed " <> ins(blame))
-    })
+    wp.parse_blamed_lines(lines) |> result.map_error(fn(e) { vr.SourceParserError(ins(e)) })
   )
 
   use vxml <- result.then(
-    wp.writerlys_to_vxmls(writerlys) |> infra.get_root |> result.map_error(fn(e) { vr.SourceParserError(e) })
+    wp.writerlys_to_vxmls(writerlys) |> infra.get_root |> result.map_error(vr.SourceParserError)
   )
 
-  let #(_, filter_vxmls) = filter_nodes_by_attributes(spotlight_args)
-  use filtered_vxml <- result.then(
-    filter_vxmls(vxml) |> result.map_error(fn(e: infra.DesugaringError) { 
-      let assert infra.DesugaringError(_, message) = e
-      vr.SourceParserError(message) 
-    })
-  )
-  Ok(wp.vxmls_to_writerlys([filtered_vxml]))
+  filter_nodes_by_attributes(spotlight_args).desugarer(vxml)
+  |> result.map_error(fn(e: infra.DesugaringError) { vr.SourceParserError(ins(e)) })
 }
 
 fn cli_usage_supplementary() {
@@ -337,7 +333,6 @@ pub fn main() {
     vr.process_command_line_arguments(
       argv.load().arguments,
       [#("--prettier", True)],
-      "../src/content/",
     ),
     fn (error) {
       io.println("")
@@ -351,7 +346,6 @@ pub fn main() {
   let renderer = vr.Renderer(
     assembler: wp.assemble_blamed_lines_advanced_mode(_, amendments.spotlight_args_files),
     source_parser: our_source_parser(_, amendments.spotlight_args),
-    parsed_source_converter: wp.writerlys_to_vxmls,
     pipeline: pipeline.lbp_pipeline(),
     splitter: lbp_splitter,
     emitter: lbp_emitter,
@@ -367,6 +361,13 @@ pub fn main() {
 
   let debug_options = vr.empty_renderer_debug_options("../renderer_artifacts")
     |> vr.amend_renderer_debug_options_by_command_line_amendment(amendments, renderer.pipeline)
+
+  // let res = shellout.command(
+  //   run: "rm",
+  //   in: ".",
+  //   with: ["../src/routes/article/*"],
+  //   opt: [],
+  // )
 
   case vr.run_renderer(
     renderer,

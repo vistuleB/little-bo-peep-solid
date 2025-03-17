@@ -19,9 +19,8 @@ import useShowMore from "~/hooks/useShowMore";
 const Article = () => {
   useSetRoute();
   return (<>
-    <a href="/article/chapter1" class="prev_page hidden"></a>
- 
-      <a href="/article/chapter3" class="next_page hidden"></a>
+    <a href="/article/chapter1" class="prev_page hidden"></a> 
+    <a href="/article/chapter3" class="next_page hidden"></a>
       <Chapter
         number={2}
         title="Slopes">
