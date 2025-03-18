@@ -19,49 +19,36 @@ const PanelButton = () => {
   const getNextArticle = () => {
     let a = document.querySelector(".next_page") as HTMLAnchorElement;
     a?.click();
-  }
+  };
 
   const getPrevArticle = () => {
     let a = document.querySelector(".prev_page") as HTMLAnchorElement;
     a?.click();
-  }
+  };
 
   const [opacity, set_opacity] = createSignal(1);
-  const [scrollY, set_scrollY] = createSignal(0);
-  const [scrollX, set_scrollX] = createSignal(0);
-  const [innerWidth, set_innerWidth] = createSignal(0);
-  const [scrollWidth, set_scrollWidth] = createSignal(0);
   const [prevDisabled, set_prevDisabled] = createSignal(false);
   const [nextDisabled, set_nextDisabled] = createSignal(false);
 
   const calc_opacity = () => {
+    // prettier-ignore
     return Math.min(
       1.0,
-      Math.max(0, 1.0 - (scrollY() - HAMBURGER_MENU_SCROLLY_START_FADE) / (HAMBURGER_MENU_SCROLLY_END_FADE - HAMBURGER_MENU_SCROLLY_START_FADE))
+      Math.max(0, 1.0 - (store.scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) / (HAMBURGER_MENU_SCROLLY_END_FADE - HAMBURGER_MENU_SCROLLY_START_FADE))
     );
   };
 
   const handleScroll = () => {
-    set_scrollY(window.scrollY);
-    set_scrollX(window.scrollX);
     set_opacity(calc_opacity());
-  };
-
-  const handleResize = () => {
-    set_innerWidth(window.innerWidth);
-    set_scrollWidth(document.body.scrollWidth);
   };
 
   createEffect(() => {
     handleScroll();
-    handleResize();
 
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
 
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
     });
   });
 
@@ -69,7 +56,7 @@ const PanelButton = () => {
     store.route; // re-run on route change
     set_nextDisabled(!document.querySelector(".next_page"));
     set_prevDisabled(!document.querySelector(".prev_page"));
-  })
+  });
 
   return (
     <>
@@ -77,38 +64,41 @@ const PanelButton = () => {
       <div
         class={twJoin(
           "fixed right-0 z-40 h-14",
-          scrollY() <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY && !on_mobile() && scrollX() + innerWidth() >= (scrollWidth() / 2) + (MOBILE_MAX_WIDTH / 2) && "h-[10rem]"
+          store.scrollY <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
+            !on_mobile() &&
+            store.scrollX + store.innerWidth >=
+              store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2 &&
+            "h-[10rem]",
         )}
         style={{
-          "width": "134px",
+          width: "134px",
           "background-color":
-            scrollY() > HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY || on_mobile()
+            store.scrollY > HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY || on_mobile()
               ? "transparent"
               : store.show_areas
-              ? "#fff000"
-              : "#fff",
-        }}
-      ></div>
+                ? "#fff000"
+                : "#fff",
+        }}></div>
       <div
         class={twJoin(
           "fixed right-0 z-50 h-14",
-          // on_mobile() && "border-l",
-          !on_mobile() && !open() && scrollY() < 2 * HAMBURGER_MENU_HEIGHT && "border-b",
-        )}
-      >
+          !on_mobile() &&
+            !open() &&
+            store.scrollY < 2 * HAMBURGER_MENU_HEIGHT &&
+            "border-b",
+        )}>
         <div
           class="select-none flex items-center justify-center h-8 m-3 hover:!opacity-100"
-          style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
-        >
+          style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}>
           <button
             id="prev-btn"
             class={twJoin(
               !on_mobile() && "mr-2",
               on_mobile() && "mr-4",
-              prevDisabled() && "cursor-default"
+              prevDisabled() && "cursor-default",
             )}
             onMouseOver={() => {
-              set_prevDisabled(!document.querySelector(".prev_page"))
+              set_prevDisabled(!document.querySelector(".prev_page"));
             }}
             onClick={(e) => {
               e.stopPropagation();
@@ -116,23 +106,27 @@ const PanelButton = () => {
               getPrevArticle();
             }}
             style={{
-              "background-color":
-                store.show_areas
-                  ? "rgb(224, 215, 48)"
-                  : "#fff",
-            }}
-          >
-            <LeftArrow class={twMerge(!prevDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-300")}/>
+              "background-color": store.show_areas
+                ? "rgb(224, 215, 48)"
+                : "#fff",
+            }}>
+            <LeftArrow
+              class={twMerge(
+                !prevDisabled()
+                  ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
+                  : "stroke-stone-300",
+              )}
+            />
           </button>
           <button
             id="next-btn"
             class={twJoin(
               !on_mobile() && "mr-3",
               on_mobile() && "mr-4",
-              nextDisabled() && "cursor-default"
+              nextDisabled() && "cursor-default",
             )}
             onMouseOver={() => {
-              set_nextDisabled(!document.querySelector(".next_page"))
+              set_nextDisabled(!document.querySelector(".next_page"));
             }}
             onClick={(e) => {
               e.stopPropagation();
@@ -140,25 +134,32 @@ const PanelButton = () => {
               getNextArticle();
             }}
             style={{
-              "background-color":
-                store.show_areas
-                  ? "rgb(224, 215, 48)"
-                  : "#fff",
-            }}
-          >
-            <RightArrow class={twMerge(!nextDisabled() ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600" : "stroke-stone-300")}/>
+              "background-color": store.show_areas
+                ? "rgb(224, 215, 48)"
+                : "#fff",
+            }}>
+            <RightArrow
+              class={twMerge(
+                !nextDisabled()
+                  ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
+                  : "stroke-stone-300",
+              )}
+            />
           </button>
           <button
             id="menu-btn"
-            onClick={() => { set_store("panel_opened", !open()); }}
-             style={{
-              "background-color":
-                store.show_areas
-                  ? "rgb(224, 215, 48)"
-                  : "#fff",
+            onClick={() => {
+              set_store("panel_opened", !open());
             }}
-          >
-            <PanelButtonIcon class="fill-[rgb(30,30,30)] hover:fill-stone-600" open={open()} />
+            style={{
+              "background-color": store.show_areas
+                ? "rgb(224, 215, 48)"
+                : "#fff",
+            }}>
+            <PanelButtonIcon
+              class="fill-[rgb(30,30,30)] hover:fill-stone-600"
+              open={open()}
+            />
           </button>
         </div>
       </div>
@@ -167,41 +168,37 @@ const PanelButton = () => {
 };
 
 // svg paths constants
-const sw = 2.6
-const cdx = 4
-const adx = 6.5
-const ady = 6.5
-const un = 30/2
+const sw = 2.6;
+const cdx = 4;
+const adx = 6.5;
+const ady = 6.5;
+const un = 30 / 2;
 
-const LeftArrow = (props: {class: string}) => {
+export const LeftArrow = (props: { class: string }) => {
   return (
     <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
       <path
         d={`M${un - cdx + adx} ${un - ady} L${un - cdx} ${un} L${un - cdx + adx} ${un + ady}`}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"
-      >
-      </path>
+        fill="none"></path>
     </svg>
   );
-}
+};
 
-const RightArrow = (props: {class: string}) => {
+const RightArrow = (props: { class: string }) => {
   return (
     <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
       <path
         d={`M${un + cdx - adx} ${un - ady} L${un + cdx} ${un} L${un + cdx - adx} ${un + ady}`}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"
-      >
-      </path>
+        fill="none"></path>
     </svg>
   );
-}
+};
 
-const PanelButtonIcon = (props: { open: boolean, class: string }) => {
+const PanelButtonIcon = (props: { open: boolean; class: string }) => {
   return (
     <svg width="30" height="30" viewBox="0 0 30 30" class={props.class}>
       <rect
@@ -211,8 +208,7 @@ const PanelButtonIcon = (props: { open: boolean, class: string }) => {
         height="3"
         rx="1.5"
         ry="1.5"
-        class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}
-      ></rect>
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}></rect>
       <rect
         x="5"
         y="13.5"
@@ -220,8 +216,7 @@ const PanelButtonIcon = (props: { open: boolean, class: string }) => {
         height="3"
         rx="1.5"
         ry="1.5"
-        class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}
-      ></rect>
+        class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}></rect>
       <rect
         x="5"
         y="21"
@@ -229,8 +224,7 @@ const PanelButtonIcon = (props: { open: boolean, class: string }) => {
         height="3"
         rx="1.5"
         ry="1.5"
-        class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}
-      ></rect>
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}></rect>
     </svg>
   );
 };

@@ -1,17 +1,22 @@
 import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
-import { ParentProps, createEffect, onCleanup, createSignal, onMount } from "solid-js";
+import {
+  ParentProps,
+  createEffect,
+  onCleanup,
+  createSignal,
+  onMount,
+} from "solid-js";
 import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
+import ActionArrows from "./ActionArrows";
 
 const Container = (props: ParentProps) => {
   // can_click is for disabling click on page transition
   // there is an inital scroll when each page is loaded .
   // code for it is in useScrollX used in renderder helpers
   // add_imports and table of contents
-  const [scrollY, set_scrollY] = createSignal(0);
-  const [scrollX, set_scrollX] = createSignal(0);
   const [marginMode, set_marginMode] = createSignal(false);
 
   // const [innerWidth, set_innerWidth] = createSignal(0);
@@ -19,17 +24,14 @@ const Container = (props: ParentProps) => {
   let { on_mobile } = useOnMobile();
   let { store, set_store } = useGlobalContext();
 
-
   const handleScroll = () => {
-    set_scrollY(window.scrollY);
-    set_scrollX(window.scrollX);
+    set_store("scrollY", window.scrollY);
+    set_store("scrollX", window.scrollX);
   };
 
   const handleResize = () => {
-    set_store('innerWidth', window.innerWidth);
-    set_store('scrollWidth', document.body.scrollWidth);
-    // set_innerWidth(window.innerWidth);
-    // set_scrollWidth(document.body.scrollWidth);
+    set_store("innerWidth", window.innerWidth);
+    set_store("scrollWidth", document.body.scrollWidth);
   };
 
   createEffect(() => {
@@ -37,20 +39,19 @@ const Container = (props: ParentProps) => {
     handleResize();
 
     const scroll_back = () => {
-      // let theoretical_left = (scrollWidth() - innerWidth()) / 2;
       let theoretical_left = (store.scrollWidth - store.innerWidth) / 2;
       if (
-        scrollX() > theoretical_left - 200 &&
-        scrollX() < theoretical_left + 200
+        store.scrollX > theoretical_left - 200 &&
+        store.scrollX < theoretical_left + 200
       ) {
         window.scroll({
           left: theoretical_left,
           behavior: "smooth",
         });
-        set_marginMode(false)
+        set_marginMode(false);
         return;
       }
-      set_marginMode(true)
+      set_marginMode(true);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -66,7 +67,7 @@ const Container = (props: ParentProps) => {
     });
   });
 
-  let _window = window as any
+  let _window = window as any;
 
   onMount(() => {
     window.addEventListener("resize", (_) => {
@@ -79,165 +80,110 @@ const Container = (props: ParentProps) => {
     });
 
     const preventActionOn = () => [
-        document.getElementById("sidebar"), 
-        document.getElementById("prev-btn"), 
-        document.getElementById("next-btn"), 
-        document.getElementById("menu-btn"),
-        ...document.querySelectorAll("#solution-btn"),
-        ...document.querySelectorAll("#backup-btn"),
-        document.getElementById("exercises-btns"),
-      ]
+      document.getElementById("sidebar"),
+      document.getElementById("prev-btn"),
+      document.getElementById("next-btn"),
+      document.getElementById("menu-btn"),
+      ...document.querySelectorAll("#solution-btn"),
+      ...document.querySelectorAll("#backup-btn"),
+      document.getElementById("exercises-btns"),
+      document.getElementById("scroll-btns"),
+    ];
 
     const targetIsAnchor = (element: Element) => {
       let currentElement = element;
 
-      while (currentElement !== null && currentElement !== document.documentElement) {
-          if (currentElement.tagName === "A") {
-              return true; 
-          }
-          currentElement = currentElement.parentElement as Element;
+      while (
+        currentElement !== null &&
+        currentElement !== document.documentElement
+      ) {
+        if (currentElement.tagName === "A") {
+          return true;
+        }
+        currentElement = currentElement.parentElement as Element;
       }
       return false;
-    }
-
-    function smoothScrollTo(targetPosition: number, duration: number) {
-      const startPosition = window.scrollY;
-      const distance = targetPosition - startPosition;
-      let startTime: DOMHighResTimeStamp | null = null;
-
-      function animation(currentTime: DOMHighResTimeStamp) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(window.scrollX, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation)
-        else window.scrollTo(window.scrollX, targetPosition);
-      }
-
-      function easeInOutQuad(t: number, b: number, c: number, d: number) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-
-      requestAnimationFrame(animation);
-    }
-
-    // const savedScrollY = window.scrollY
-    const exerciseBtnsPos = () => {
-      if (!document.getElementById("exercises-btns")) return document.body.scrollHeight
-      const rect = document.getElementById("exercises-btns")?.getBoundingClientRect()!;
-      return  (rect.y) + window.scrollY + (rect.height * 2)
-    }
+    };
 
     const handleClick = (e: MouseEvent) => {
       const target = e.target as Element;
-      if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target) || on_mobile() || marginMode()) {
+      if (
+        preventActionOn().find((s) => s?.contains(target)) ||
+        targetIsAnchor(target) ||
+        on_mobile() ||
+        marginMode()
+      ) {
         return;
       }
 
-      // values for dbl click event ( click event will tweak this values so they should be calculated before )
-      if (_window.firstClick){
-        _window.exerciseBtnsPos = (document.getElementById("exercises-btns")?.getBoundingClientRect().y || window.innerHeight) + window.scrollY;
-        _window.savedScrollY = window.scrollY;
-        _window.firstClick = false
-      }
-
-      let screenHeight = window.innerHeight
-      let clientXBasedOnScrollWidth = window.scrollX + e.clientX
+      let screenHeight = window.innerHeight;
+      let clientXBasedOnScrollWidth = window.scrollX + e.clientX;
 
       if (e.clientY <= screenHeight * 0.3 && window.scrollY != 0) {
         window.scrollBy({
           top: -screenHeight,
-        })
+        });
         return;
       }
-      if (e.clientY >= screenHeight * 0.6 && window.scrollY + window.innerHeight <  document.body.scrollHeight) {
-          window.scrollBy({
+      if (
+        e.clientY >= screenHeight * 0.6 &&
+        window.scrollY + window.innerHeight < document.body.scrollHeight
+      ) {
+        window.scrollBy({
           top: screenHeight,
-        })
+        });
         return;
       }
-      if (clientXBasedOnScrollWidth < 1500 ) {
-        (document.querySelector(".prev_page") as HTMLAnchorElement)?.click()
+      if (clientXBasedOnScrollWidth < 1500) {
+        (document.querySelector(".prev_page") as HTMLAnchorElement)?.click();
         return;
       }
-      if (clientXBasedOnScrollWidth > 1500 + DESKTOP_COLUMN_WIDTH ) {
-        (document.querySelector(".next_page") as HTMLAnchorElement)?.click()
+      if (clientXBasedOnScrollWidth > 1500 + DESKTOP_COLUMN_WIDTH) {
+        (document.querySelector(".next_page") as HTMLAnchorElement)?.click();
         return;
       }
-    }
-    const handleDblClick = (e: MouseEvent) => {
-      _window.firstClick = true
-      const target = e.target as Element;
-      if (preventActionOn().find(s => s?.contains(target)) || targetIsAnchor(target) || on_mobile() || marginMode()) {
-        return;
-      }
+    };
 
-      let screenHeight = window.innerHeight
-      if (e.clientY <= screenHeight * 0.3 && _window.savedScrollY <= _window.exerciseBtnsPos) {
-        smoothScrollTo(0, 100)
-        return;
-      }
-      if (e.clientY <= screenHeight * 0.3 && _window.savedScrollY > _window.exerciseBtnsPos) {
-        let scrollTo =  exerciseBtnsPos() - (window.innerHeight / 2) // to make the exo centered
-        smoothScrollTo(scrollTo, 100)
-        return;
-      }
-      if (e.clientY >= screenHeight * 0.6 && _window.savedScrollY + ( window.innerHeight / 2 ) < _window.exerciseBtnsPos) {
-        let scrollTo =  exerciseBtnsPos() - (window.innerHeight / 2) // to make the exo centered
-        smoothScrollTo(scrollTo, 100)
-        return;
-      }
-      if (e.clientY >= screenHeight * 0.6 && _window.savedScrollY + ( window.innerHeight / 2 ) >= _window.exerciseBtnsPos ) {
-        let scrollTo =  document.body.scrollHeight 
-        smoothScrollTo(scrollTo, 100)
-        return;
-      }
-    }
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") {
         e.preventDefault();
-        (document.querySelector(".prev_page") as HTMLAnchorElement)?.click()
+        (document.querySelector(".prev_page") as HTMLAnchorElement)?.click();
         return;
       }
       if (e.key === "ArrowRight") {
         e.preventDefault();
-        (document.querySelector(".next_page") as HTMLAnchorElement)?.click()
+        (document.querySelector(".next_page") as HTMLAnchorElement)?.click();
         return;
       }
-    }
+    };
 
     window.addEventListener("click", handleClick);
-    window.addEventListener("dblclick", handleDblClick);
     window.addEventListener("keydown", handleKeyDown);
 
-    onCleanup(()=>{
-      window.removeEventListener("click", handleClick)
-      window.removeEventListener("dblclick", handleDblClick)
-      window.removeEventListener("keydown", handleKeyDown)
-    })
-
+    onCleanup(() => {
+      window.removeEventListener("click", handleClick);
+      window.removeEventListener("keydown", handleKeyDown);
+    });
   });
 
   return (
     <div
       id="Container"
       class="pb-14 -z-10 relative"
-      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}
-      >
+      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}>
       <EarlyImages />
       <Nav />
-      <div onClick={() => {
-        window.scroll({
-          left: (store.scrollWidth - store.innerWidth) / 2,
-          behavior: "smooth",
-        });
-      }}>
+      <div
+        onClick={() => {
+          window.scroll({
+            left: (store.scrollWidth - store.innerWidth) / 2,
+            behavior: "smooth",
+          });
+        }}>
         {props.children}
       </div>
       <SVGDefs />
+      {true && <ActionArrows />}
     </div>
   );
 };
@@ -246,16 +192,22 @@ const EarlyImages = () => {
   return (
     <div style="overflow:hidden;position:absolute;top:0px;left:0px;pointer-events:none;width:1px;height:1px;">
       <img src="/images/svg_base_exponent.svg" style="position:absolute" />
-      <img src="/images/svg_ch1_ch_minus_two_squared_cloud.svg" style="position:absolute" />
+      <img
+        src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
+        style="position:absolute"
+      />
       <img src="/images/chapter_2_1.svg" style="position:absolute" />
       <img src="/images/svg_ch3_f_box.svg" style="position:absolute" />
       <img src="/images/svg_ch4_ch_polaroids.svg" style="position:absolute" />
       <img src="/images/svg_ch5_ch_cosine.svg" style="position:absolute" />
-      <img src="/images/svg_ch5_ch_cosine_and_sine.svg" style="position:absolute" />
+      <img
+        src="/images/svg_ch5_ch_cosine_and_sine.svg"
+        style="position:absolute"
+      />
       <b>Load the bold font!</b>
       <i>Load the italic font!</i>
     </div>
   );
-}
+};
 
 export default Container;

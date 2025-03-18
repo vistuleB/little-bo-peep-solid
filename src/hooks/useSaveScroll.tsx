@@ -1,5 +1,4 @@
 import { createEffect, createSignal } from "solid-js";
-import { useLocalStorage } from "solidjs-hooks";
 
 const useSaveScroll = () => {
   const [scroll, set_scroll] = createSignal<number | null>(null);
@@ -16,7 +15,7 @@ const useSaveScroll = () => {
       if (scroll() !== null) {
         window.scrollTo(
           (document.body.scrollWidth - window.innerWidth) / 2,
-          Number(scroll())
+          Number(scroll()),
         );
       }
 
