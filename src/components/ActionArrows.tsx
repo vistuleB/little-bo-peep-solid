@@ -5,6 +5,7 @@ import {
   HAMBURGER_MENU_SCROLLY_START_FADE,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { twJoin } from "tailwind-merge";
 
 const ActionArrows = () => {
   const { store } = useGlobalContext();
@@ -12,9 +13,8 @@ const ActionArrows = () => {
   const [hovered, set_hovered] = createSignal(false);
 
   const calc_opacity = () => {
-    // prettier-ignore
     return Math.min(
-      1.0,
+      0.0,
       Math.max(0, 1.0 - (store.scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) / (HAMBURGER_MENU_SCROLLY_END_FADE - HAMBURGER_MENU_SCROLLY_START_FADE))
     );
   };
@@ -39,7 +39,7 @@ const ActionArrows = () => {
     const rect = document
       .getElementById("exercises-btns")
       ?.getBoundingClientRect()!;
-    return rect.y + store.scrollY + rect.height * 2;
+    return rect.y + store.scrollY;
   };
 
   function smoothScrollTo(targetPosition: number, duration: number) {
@@ -67,31 +67,15 @@ const ActionArrows = () => {
   }
 
   const handleUpClick = (_: MouseEvent) => {
-    if (store.scrollY <= exerciseBtnsPos()) {
-      smoothScrollTo(0, 100);
-      return;
-    }
-    if (store.scrollY > exerciseBtnsPos()) {
-      let scrollTo = exerciseBtnsPos() - window.innerHeight / 2; // to make the exo centered
-      smoothScrollTo(scrollTo, 100);
-      return;
-    }
+    let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50;
+    let scrollTo = (store.scrollY < middleScroll + 5) ? 0 : middleScroll;
+    smoothScrollTo(scrollTo, 100);
   };
 
   const handleDownClick = (_: MouseEvent) => {
-    if (store.scrollY + window.innerHeight / 2 < exerciseBtnsPos()) {
-      let scrollTo = exerciseBtnsPos() - window.innerHeight / 2; // to make the exo centered
-      smoothScrollTo(
-        scrollTo + 10, // + 10 for safety
-        100,
-      );
-      return;
-    }
-    if (store.scrollY + window.innerHeight / 2 >= exerciseBtnsPos()) {
-      let scrollTo = document.body.scrollHeight;
-      smoothScrollTo(scrollTo, 100);
-      return;
-    }
+    let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50;
+    let scrollTo = (store.scrollY > middleScroll - 5) ? document.body.scrollHeight : middleScroll;
+    smoothScrollTo(scrollTo, 100);
   };
 
   return (
@@ -100,18 +84,21 @@ const ActionArrows = () => {
       onMouseOver={() => set_hovered(true)}
       onMouseOut={() => set_hovered(false)}
       style={{ opacity: hovered() ? 1 : opacity() }}
-      class="fixed bottom-5 left-5">
+      class="fixed bottom-3 left-2">
       <button
         onClick={handleUpClick}
-        class="block bg-stone-100 px-1 stroke-black hover:stroke-stone-500 mb-1">
-        <LeftArrow class="rotate-90 -mb-5" /> <LeftArrow class="rotate-90" />
+        class={twJoin("block px-1", store.scrollY > 1 ? "stroke-black hover:stroke-stone-600" : "stroke-stone-300")}>
+        <LeftArrow class="rotate-90" style="margin-bottom:-1.3rem" /> <LeftArrow class="rotate-90" style="" />
       </button>
 
       <button
         onClick={handleDownClick}
-        class="block bg-stone-100 px-1 stroke-black hover:stroke-stone-500 ">
-        <LeftArrow class="rotate-[270deg] -mb-5" />{" "}
-        <LeftArrow class="rotate-[270deg]" />
+        class={twJoin(
+          "block px-1",
+          store.scrollY + store.innerHeight - store.scrollHeight < - 1 ? "stroke-black hover:stroke-stone-600" : "stroke-stone-300"
+        )}>
+        <LeftArrow class="rotate-[270deg]" style="margin-bottom:-1.3rem" />{" "}
+        <LeftArrow class="rotate-[270deg]" style="" />
       </button>
     </div>
   );
