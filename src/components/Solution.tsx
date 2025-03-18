@@ -124,6 +124,20 @@ const SolutionConsumer = (props: SolutionProps) => {
   });
 
   createEffect(() => {
+    // green div height
+    // if exercise question is too small we increase green div height
+    let exo = document
+      .querySelectorAll(".exercise")
+      ?.item(props.solution_number - 1);
+    if (exo?.clientHeight < 200 + green_div_height()) {
+      set_green_div_height(700);
+    } else {
+      set_green_div_height(GREEN_DIV_HEIGHT);
+    }
+    store.selected_exo; // re-run
+  });
+
+  createEffect(() => {
     // green div transition
     if (solution_fully_opened() || !solution_open()) {
       set_green_div_transition(
