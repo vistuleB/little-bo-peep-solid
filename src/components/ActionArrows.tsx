@@ -87,7 +87,11 @@ const ActionArrows = () => {
       class="fixed bottom-3 left-2">
       <button
         onClick={handleUpClick}
-        class={twJoin("block px-1", store.scrollY > 1 ? "stroke-black hover:stroke-stone-600" : "stroke-stone-300")}>
+        class={twJoin(
+          "block px-1",
+          store.scrollY > 1 ? "stroke-black hover:stroke-stone-600" : "stroke-stone-300",
+          "transition-all"
+        )}>
         <LeftArrow class="rotate-90" style="margin-bottom:-1.3rem" /> <LeftArrow class="rotate-90" style="" />
       </button>
 
@@ -95,7 +99,8 @@ const ActionArrows = () => {
         onClick={handleDownClick}
         class={twJoin(
           "block px-1",
-          store.scrollY + store.innerHeight - store.scrollHeight < - 1 ? "stroke-black hover:stroke-stone-600" : "stroke-stone-300"
+          store.scrollY + store.innerHeight - store.scrollHeight < - 1 ? "stroke-black hover:stroke-stone-600" : "stroke-stone-300",
+          "transition-all"
         )}>
         <LeftArrow class="rotate-[270deg]" style="margin-bottom:-1.3rem" />{" "}
         <LeftArrow class="rotate-[270deg]" style="" />
