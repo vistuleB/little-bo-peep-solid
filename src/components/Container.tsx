@@ -12,7 +12,9 @@ import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
 import ActionArrows from "./ActionArrows";
 
+
 const Container = (props: ParentProps) => {
+  const env = import.meta.env.VITE_ENV;
   // can_click is for disabling click on page transition
   // there is an inital scroll when each page is loaded .
   // code for it is in useScrollX used in renderder helpers
@@ -183,7 +185,7 @@ const Container = (props: ParentProps) => {
         {props.children}
       </div>
       <SVGDefs />
-      {true && <ActionArrows />}
+      {env === "DEV" && <ActionArrows />}
     </div>
   );
 };
