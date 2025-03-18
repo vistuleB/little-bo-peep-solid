@@ -36,8 +36,7 @@ const Container = (props: ParentProps) => {
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
-    // let _dummy = store.scrollY + store.innerHeight + store.scrollHeight + store.scrollWidth;
-    let _dummy = store.scrollY;
+    let _dummy = store.scrollY + store.innerHeight + store.scrollHeight + store.scrollWidth;
   };
 
   createEffect(() => {
@@ -189,7 +188,7 @@ const Container = (props: ParentProps) => {
         {props.children}
       </div>
       <SVGDefs />
-      {true && <ActionArrows />}
+      <ActionArrows />
     </div>
   );
 };
