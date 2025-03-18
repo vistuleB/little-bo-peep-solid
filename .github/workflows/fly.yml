@@ -3,32 +3,38 @@ on:
   push:
     branches:
       - production
-      - develop
+
 jobs:
-  deploy:
-    name: Deploy app
+  deploy-dev:
+    name: Deploy to prod app
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
       - name: Create .env file
         run: |
-          if [ "${{ github.ref }}" == "refs/heads/production" ]; then
-            echo "VITE_ENV=PROD" > .env
-          elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
-            echo "VITE_ENV=DEV" > .env
-          else
-            echo "Unknown branch" > .env
-          fi
+          echo "VITE_ENV=DEV" > .env
 
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: |
-          if [ "${{ github.ref }}" == "refs/heads/production" ]; then
-            flyctl deploy --remote-only --app lbp
-          elif [ "${{ github.ref }}" == "refs/heads/develop" ]; then
-            flyctl deploy --remote-only --app lbp-dev
-          else
-            echo "Unknown branch, deployment skipped"
-          fi
+          flyctl deploy --remote-only --app lbp-dev
+
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
+  deploy-prod:
+    name: Deploy to prod app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create .env file
+        run: |
+          echo "VITE_ENV=PROD" > .env
+
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - run: |
+          flyctl deploy --remote-only --app lbp
+
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
