@@ -1,15 +1,11 @@
-import { createSignal, onMount } from 'solid-js'
+import { createSignal, onMount } from "solid-js";
 
 const useShowMore = () => {
-  const [showMore, setShowMore] = createSignal(false)
+  const [showMore, setShowMore] = createSignal(false);
+  onMount(() => {
+    setShowMore(true);
+  });
+  return showMore;
+};
 
-  onMount(()=>{
-    setShowMore(true)
-    // setTimeout(()=>{
-
-    // }, 10)
-  })
-  return showMore
-}
-
-export default useShowMore
+export default useShowMore;

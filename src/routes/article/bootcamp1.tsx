@@ -19,9 +19,8 @@ import useShowMore from "~/hooks/useShowMore";
 const Article = () => {
   useSetRoute();
   return (<>
-    <a href="/article/bootcamp2" class="prev_page hidden"></a>
- 
-      <a href="/" class="next_page hidden"></a>
+    <a href="/article/bootcamp2" class="prev_page hidden"></a> 
+    <a href="/" class="next_page hidden"></a>
       <Bootcamp
         number={1}
         title="Sets">

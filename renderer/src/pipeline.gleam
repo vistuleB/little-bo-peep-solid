@@ -6,7 +6,6 @@ import desugarers/absorb_next_sibling_while.{absorb_next_sibling_while}
 import desugarers/add_before_tags_but_not_first_child_tags.{add_before_tags_but_not_first_child_tags}
 import desugarers/add_between_tags.{add_between_tags}
 import desugarers/add_counter_attributes.{add_counter_attributes}
-import desugarers/add_exercise_labels.{add_exercise_labels}
 import desugarers/add_title_counters_and_titles_with_handle_assignments.{add_title_counters_and_titles_with_handle_assignments}
 import desugarers/change_attribute_value.{change_attribute_value}
 import desugarers/concatenate_text_nodes.{concatenate_text_nodes}
