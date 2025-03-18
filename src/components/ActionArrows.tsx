@@ -5,6 +5,7 @@ import {
   HAMBURGER_MENU_SCROLLY_START_FADE,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { twJoin } from "tailwind-merge";
 
 const ActionArrows = () => {
   const { store } = useGlobalContext();
@@ -103,13 +104,13 @@ const ActionArrows = () => {
       class="fixed bottom-4 left-3">
       <button
         onClick={handleUpClick}
-        class="block px-1 stroke-black hover:stroke-stone-500 mb-1">
+        class="block px-1 stroke-black hover:stroke-stone-600 mb-1">
         <LeftArrow class="rotate-90 -mb-5" /> <LeftArrow class="rotate-90" />
       </button>
 
       <button
         onClick={handleDownClick}
-        class="block px-1 stroke-black hover:stroke-stone-500 ">
+        class="block px-1 stroke-black hover:stroke-stone-600 ">
         <LeftArrow class="rotate-[270deg] -mb-5" />{" "}
         <LeftArrow class="rotate-[270deg]" />
       </button>
