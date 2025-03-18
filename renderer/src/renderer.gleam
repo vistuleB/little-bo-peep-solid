@@ -167,7 +167,6 @@ fn toc_emitter(path: String, fragment: VXML, fragment_type: FragmentType) -> Res
       BlamedLine(blame_us("toc_emitter"), 0, "const TOCAuthorSuppliedContent = () => {"),
       BlamedLine(blame_us("toc_emitter"), 2, "return ("),
       BlamedLine(blame_us("toc_emitter"), 4, "<>"),
-      BlamedLine(blame_us("lbp_fragment_emitter"), 4, page_prev_next_links(fragment_type)),
     ],
     vxml_parser.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
     [
