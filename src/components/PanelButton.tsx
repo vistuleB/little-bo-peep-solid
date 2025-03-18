@@ -174,9 +174,9 @@ const adx = 6.5;
 const ady = 6.5;
 const un = 30 / 2;
 
-export const LeftArrow = (props: { class: string }) => {
+export const LeftArrow = (props: { class: string, style: string }) => {
   return (
-    <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
+    <svg class={props.class} width="30" height="30" viewBox="0 0 30 30" style={props.style}>
       <path
         d={`M${un - cdx + adx} ${un - ady} L${un - cdx} ${un} L${un - cdx + adx} ${un + ady}`}
         stroke-linecap="round"
@@ -186,9 +186,9 @@ export const LeftArrow = (props: { class: string }) => {
   );
 };
 
-const RightArrow = (props: { class: string }) => {
+const RightArrow = (props: { class: string, style: string }) => {
   return (
-    <svg class={props.class} width="30" height="30" viewBox="0 0 30 30">
+    <svg class={props.class} width="30" height="30" viewBox="0 0 30 30" style={props.style}>
       <path
         d={`M${un + cdx - adx} ${un - ady} L${un + cdx} ${un} L${un + cdx - adx} ${un + ady}`}
         stroke-linecap="round"

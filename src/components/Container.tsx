@@ -33,7 +33,11 @@ const Container = (props: ParentProps) => {
 
   const handleResize = () => {
     set_store("innerWidth", window.innerWidth);
+    set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
+    set_store("scrollHeight", document.body.scrollHeight);
+    // let _dummy = store.scrollY + store.innerHeight + store.scrollHeight + store.scrollWidth;
+    let _dummy = store.scrollY;
   };
 
   createEffect(() => {
@@ -185,7 +189,7 @@ const Container = (props: ParentProps) => {
         {props.children}
       </div>
       <SVGDefs />
-      {env === "DEV" && <ActionArrows />}
+      {true && <ActionArrows />}
     </div>
   );
 };

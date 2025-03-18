@@ -7,11 +7,13 @@ type Store = {
   show_squiggles: boolean;
   title: string;
   innerWidth: number;
+  innerHeight: number;
   scrollWidth: number;
+  scrollHeight: number;
   scrollX: number;
   scrollY: number;
   route: string;
-  content_loaded: boolean
+  content_loaded: boolean;
 };
 
 const [store, set_store] = createStore<Store>({
@@ -21,7 +23,9 @@ const [store, set_store] = createStore<Store>({
   show_squiggles: true,
   title: "Little Bo Peep",
   innerWidth: window.innerWidth,
+  innerHeight: window.innerHeight,
   scrollWidth: document.body.scrollWidth,
+  scrollHeight: document.body.scrollHeight,
   scrollX: window.scrollX,
   scrollY: window.scrollY,
   route: "",
