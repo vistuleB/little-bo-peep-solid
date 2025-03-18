@@ -100,16 +100,16 @@ const ActionArrows = () => {
       onMouseOver={() => set_hovered(true)}
       onMouseOut={() => set_hovered(false)}
       style={{ opacity: hovered() ? 1 : opacity() }}
-      class="fixed bottom-5 left-5">
+      class="fixed bottom-4 left-3">
       <button
         onClick={handleUpClick}
-        class="block bg-stone-100 px-1 stroke-black hover:stroke-stone-500 mb-1">
+        class="block px-1 stroke-black hover:stroke-stone-500 mb-1">
         <LeftArrow class="rotate-90 -mb-5" /> <LeftArrow class="rotate-90" />
       </button>
 
       <button
         onClick={handleDownClick}
-        class="block bg-stone-100 px-1 stroke-black hover:stroke-stone-500 ">
+        class="block px-1 stroke-black hover:stroke-stone-500 ">
         <LeftArrow class="rotate-[270deg] -mb-5" />{" "}
         <LeftArrow class="rotate-[270deg]" />
       </button>
