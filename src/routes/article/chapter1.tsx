@@ -19,474 +19,12 @@ import useShowMore from "~/hooks/useShowMore";
 const Article = () => {
   useSetRoute();
   return (<>
-    <a href="/" class="prev_page hidden"></a> 
-    <a href="/article/chapter2" class="next_page hidden"></a>
       <Chapter
         number={1}
         title="A Few Refreshers">
-        <Section>
-          <VerticalChunk>
-            <b>
-              Square Roots.
-            </b>
-            {" "}
-            You might remember that “minus times minus 
-            is plus” and that “plus times plus is plus”.
-            (Why? The enemy of my enemy is my friend.)
-            So any nonzero number multiplied by itself
-            is positive. For example,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (-2) \times (-2) = 4
-            $$
-          </MathBlock>
-          <Pause />
-          <CentralDisplay>
-            and
-          </CentralDisplay>
-          <Pause />
-          <MathBlock>
-            $$
-            2 \times 2 = 4
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            are both positive. But{" "}
-            <Math>
-              $\sqrt&#123;4&#125;$
-            </Math>
-            {" "}is, by 
-            definition, the unique{" "}
-            <i>
-              nonnegative
-            </i>
-            {" "}
-            solution to{" "}
-            <NoBreak>
-              <Math>
-                $x^2 = 4$
-              </Math>
-              .
-            </NoBreak>
-            {" "}
-            Hence—at possible{" "}
-            <i>
-              contrario
-            </i>
-            {" "}to murky half-baked
-            thoughts of yesteryear—
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\sqrt&#123;(-2)^2&#125; = 2$$
-            <ImageRight
-              offset_x="5em"
-              offset_y="0em"
-              src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
-              compensate_offset_x_for_large_text_columns={true} />
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and, in particular, it is{" "}
-            <i>
-              not
-            </i>
-            {" "}true that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for every real number{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              .
-            </NoBreak>
-            {" "}Instead: we have
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x|
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for every real number{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}where{" "}
-            <Math>
-              $|x|$
-            </Math>
-            {" "}
-            denotes the absolute value of{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            (Nb: If ever you want to indicate both 
-            solutions of the equation{" "}
-            <Math>
-              $x^2 = 4$
-            </Math>
-            {" "}you
-            can always use the notation{" "}
-            <NoBreak>
-              “
-              <Math>
-                $\pm \sqrt&#123;4&#125;$
-              </Math>
-              ”.
-            </NoBreak>
-            {" "}
-            This is what happens, for example, in the 
-            maybe-well-known formula
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x = &#123;-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for the solutions to the quadratic equation
-            {" "}
-            <NoBreak>
-              <Math>
-                $ax^2 + bx + c = 0$
-              </Math>
-              .)
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            We will next ponder
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sqrt&#123;0.5&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            whose value is—by definition—the unique
-            nonnegative solution to
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x^2 = 0.5.
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            As beginners, there's nothing wrong with 
-            trying to solve this equation by trial and
-            error. With{" "}
-            <NoBreak>
-              <Math>
-                $x = &#123;1\over 4&#125;$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}for example,
-            we find
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x^2 = &#123;1\over 4&#125;\times&#123;1\over 4&#125; = &#123;1\over 16&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            so{" "}
-            <Math>
-              $x = &#123;1\over 4&#125;$
-            </Math>
-            {" "}is not a solution of 
-            the equation, being apparently too small. 
-            Increasing{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}to{" "}
-            <NoBreak>
-              <Math>
-                $x = &#123;1\over 2&#125;$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}say, we 
-            find
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x^2 = &#123;1\over 2&#125;\times&#123;1\over 2&#125; = &#123;1\over 4&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            which is better, since{" "}
-            <Math>
-              $1/4$
-            </Math>
-            {" "}is closer to{" "}
-            <NoBreak>
-              <Math>
-                $1/2$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            but still too small. Increasing{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}by{" "}
-            <Math>
-              $1/4$
-            </Math>
-            {" "}
-            again, say, to{" "}
-            <NoBreak>
-              <Math>
-                $x = &#123;3\over 4&#125;$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}we find
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x^2 = &#123;3\over 4&#125;\times&#123;3\over 4&#125; = &#123;9\over 16&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            which—surprise!—is actually pretty close to 
-            {" "}
-            <NoBreak>
-              <Math>
-                $1/2$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}as{" "}
-            <NoBreak>
-              <Math>
-                $1/2 = 8/16$
-              </Math>
-              .
-            </NoBreak>
-            {" "}And since{" "}
-            <NoBreak>
-              <Math>
-                $9/16 &gt; 0.5$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            {" "}
-            <Math>
-              $\sqrt&#123;0.5&#125;$
-            </Math>
-            {" "}must be a little{" "}
-            <i>
-              less
-            </i>
-            {" "}than 
-            {" "}
-            <NoBreak>
-              <Math>
-                $&#123;3\over 4&#125; = 0.75$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            In last resort, and in reasonably good 
-            agreement with our observations, a calculator 
-            reveals that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sqrt&#123;0.5&#125; = 0.7071067...
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            where the decimals trail off with no pattern. 
-            (This number is irrational.) Even so, the fact 
-            that{" "}
-            <Math>
-              $\sqrt&#123;0.5&#125;$
-            </Math>
-            {" "}is{" "}
-            <i>
-              greater
-            </i>
-            {" "}than{" "}
-            <Math>
-              $0.5$
-            </Math>
-            {" "}is 
-            often perceived as counterintuitive.
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            You can think of it this way: multiplying a 
-            value by{" "}
-            <NoBreak>
-              <Math>
-                $0.7071$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}or approximately{" "}
-            <NoBreak>
-              <Math>
-                $\sqrt&#123;0.5&#125;$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            is like taking{" "}
-            <Math>
-              $70.71\%$
-            </Math>
-            {" "}of that value—for 
-            example, say,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            605 \cdot 0.7071 = 427.7955
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is{" "}
-            <Math>
-              $70.71\%$
-            </Math>
-            {" "}of{" "}
-            <NoBreak>
-              <Math>
-                $605$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and so on—so if we 
-            multiply{" "}
-            <i>
-              twice
-            </i>
-            {" "}by{" "}
-            <Math>
-              $0.7071$
-            </Math>
-            {" "}we obtain 
-            {" "}
-            <NoBreak>
-              “
-              <Math>
-                $70.71\%$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
-            <NoBreak>
-              <Math>
-                $70.71\%$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}and it just so happens 
-            that{" "}
-            <NoBreak>
-              “
-              <Math>
-                $70.71\%$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
-            <NoBreak>
-              <Math>
-                $70.71\%$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}is close to 
-            {" "}
-            <NoBreak>
-              <Math>
-                $50\%$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            The point is: if{" "}
-            <NoBreak>
-              “
-              <Math>
-                $X\%$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
-            <NoBreak>
-              <Math>
-                $X\%$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}equals{" "}
-            <NoBreak>
-              <Math>
-                $50\%$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            then, of course,{" "}
-            <NoBreak>
-              <Math>
-                $\rt&#123;0.03&#125;X &gt; 50$
-              </Math>
-              —that
-            </NoBreak>
-            {" "}much 
-            seems logical—and, with a little thought, the
-            same phenomenon explains why{" "}
-            <NoBreak>
-              <Math>
-                $\sqrt&#123;0.5&#125; &gt; 0.5$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-        </Section>
+        <a
+          class="next_page"
+          href="/article/chapter2" />
         <Rest />
       </Chapter>
   </>);
@@ -496,6 +34,473 @@ const Rest = () => {
   const showMore = useShowMore();
   return(<>
     { showMore() && <>
+      <a
+        class="prev_page"
+        href="/" />
+      <Section>
+        <VerticalChunk>
+          <b>
+            Square Roots.
+          </b>
+          {" "}
+          You might remember that “minus times minus 
+          is plus” and that “plus times plus is plus”.
+          (Why? The enemy of my enemy is my friend.)
+          So any nonzero number multiplied by itself
+          is positive. For example,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          (-2) \times (-2) = 4
+          $$
+        </MathBlock>
+        <Pause />
+        <CentralDisplay>
+          and
+        </CentralDisplay>
+        <Pause />
+        <MathBlock>
+          $$
+          2 \times 2 = 4
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          are both positive. But{" "}
+          <Math>
+            $\sqrt&#123;4&#125;$
+          </Math>
+          {" "}is, by 
+          definition, the unique{" "}
+          <i>
+            nonnegative
+          </i>
+          {" "}
+          solution to{" "}
+          <NoBreak>
+            <Math>
+              $x^2 = 4$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          Hence—at possible{" "}
+          <i>
+            contrario
+          </i>
+          {" "}to murky half-baked
+          thoughts of yesteryear—
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\sqrt&#123;(-2)^2&#125; = 2$$
+          <ImageRight
+            offset_x="5em"
+            offset_y="0em"
+            src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
+            sp="sp"
+            compensate_offset_x_for_large_text_columns={true} />
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          and, in particular, it is{" "}
+          <i>
+            not
+          </i>
+          {" "}true that
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          for every real number{" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            .
+          </NoBreak>
+          {" "}Instead: we have
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x|
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          for every real number{" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}where{" "}
+          <Math>
+            $|x|$
+          </Math>
+          {" "}
+          denotes the absolute value of{" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            .
+          </NoBreak>
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          (Nb: If ever you want to indicate both 
+          solutions of the equation{" "}
+          <Math>
+            $x^2 = 4$
+          </Math>
+          {" "}you
+          can always use the notation{" "}
+          <NoBreak>
+            “
+            <Math>
+              $\pm \sqrt&#123;4&#125;$
+            </Math>
+            ”.
+          </NoBreak>
+          {" "}
+          This is what happens, for example, in the 
+          maybe-well-known formula
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          x = &#123;-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          for the solutions to the quadratic equation
+          {" "}
+          <NoBreak>
+            <Math>
+              $ax^2 + bx + c = 0$
+            </Math>
+            .)
+          </NoBreak>
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          We will next ponder
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          whose value is—by definition—the unique
+          nonnegative solution to
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = 0.5.
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          As beginners, there's nothing wrong with 
+          trying to solve this equation by trial and
+          error. With{" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;1\over 4&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}for example,
+          we find
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = &#123;1\over 4&#125;\times&#123;1\over 4&#125; = &#123;1\over 16&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          so{" "}
+          <Math>
+            $x = &#123;1\over 4&#125;$
+          </Math>
+          {" "}is not a solution of 
+          the equation, being apparently too small. 
+          Increasing{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}to{" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;1\over 2&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}say, we 
+          find
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = &#123;1\over 2&#125;\times&#123;1\over 2&#125; = &#123;1\over 4&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          which is better, since{" "}
+          <Math>
+            $1/4$
+          </Math>
+          {" "}is closer to{" "}
+          <NoBreak>
+            <Math>
+              $1/2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          but still too small. Increasing{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}by{" "}
+          <Math>
+            $1/4$
+          </Math>
+          {" "}
+          again, say, to{" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;3\over 4&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}we find
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = &#123;3\over 4&#125;\times&#123;3\over 4&#125; = &#123;9\over 16&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          which—surprise!—is actually pretty close to 
+          {" "}
+          <NoBreak>
+            <Math>
+              $1/2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}as{" "}
+          <NoBreak>
+            <Math>
+              $1/2 = 8/16$
+            </Math>
+            .
+          </NoBreak>
+          {" "}And since{" "}
+          <NoBreak>
+            <Math>
+              $9/16 &gt; 0.5$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $\sqrt&#123;0.5&#125;$
+          </Math>
+          {" "}must be a little{" "}
+          <i>
+            less
+          </i>
+          {" "}than 
+          {" "}
+          <NoBreak>
+            <Math>
+              $&#123;3\over 4&#125; = 0.75$
+            </Math>
+            .
+          </NoBreak>
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          In last resort, and in reasonably good 
+          agreement with our observations, a calculator 
+          reveals that
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.5&#125; = 0.7071067...
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          where the decimals trail off with no pattern. 
+          (This number is irrational.) Even so, the fact 
+          that{" "}
+          <Math>
+            $\sqrt&#123;0.5&#125;$
+          </Math>
+          {" "}is{" "}
+          <i>
+            greater
+          </i>
+          {" "}than{" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "}is 
+          often perceived as counterintuitive.
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          You can think of it this way: multiplying a 
+          value by{" "}
+          <NoBreak>
+            <Math>
+              $0.7071$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}or approximately{" "}
+          <NoBreak>
+            <Math>
+              $\sqrt&#123;0.5&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          is like taking{" "}
+          <Math>
+            $70.71\%$
+          </Math>
+          {" "}of that value—for 
+          example, say,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          605 \cdot 0.7071 = 427.7955
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is{" "}
+          <Math>
+            $70.71\%$
+          </Math>
+          {" "}of{" "}
+          <NoBreak>
+            <Math>
+              $605$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}and so on—so if we 
+          multiply{" "}
+          <i>
+            twice
+          </i>
+          {" "}by{" "}
+          <Math>
+            $0.7071$
+          </Math>
+          {" "}we obtain 
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $70.71\%$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <NoBreak>
+            <Math>
+              $70.71\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}and it just so happens 
+          that{" "}
+          <NoBreak>
+            “
+            <Math>
+              $70.71\%$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <NoBreak>
+            <Math>
+              $70.71\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}is close to 
+          {" "}
+          <NoBreak>
+            <Math>
+              $50\%$
+            </Math>
+            .
+          </NoBreak>
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          The point is: if{" "}
+          <NoBreak>
+            “
+            <Math>
+              $X\%$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <NoBreak>
+            <Math>
+              $X\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}equals{" "}
+          <NoBreak>
+            <Math>
+              $50\%$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          then, of course,{" "}
+          <NoBreak>
+            <Math>
+              $\rt&#123;0.03&#125;X &gt; 50$
+            </Math>
+            —that
+          </NoBreak>
+          {" "}much 
+          seems logical—and, with a little thought, the
+          same phenomenon explains why{" "}
+          <NoBreak>
+            <Math>
+              $\sqrt&#123;0.5&#125; &gt; 0.5$
+            </Math>
+            .
+          </NoBreak>
+        </VerticalChunk>
+      </Section>
       <Pause />
       <Section>
         <VerticalChunk>

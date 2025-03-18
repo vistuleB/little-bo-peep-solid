@@ -19,12 +19,12 @@ import useShowMore from "~/hooks/useShowMore";
 const Article = () => {
   useSetRoute();
   return (<>
-    <a href="/article/chapter3" class="prev_page hidden"></a> 
-    <a href="/article/chapter5" class="next_page hidden"></a>
       <Chapter
         number={4}
         title="Derivatives">
-        <Image src="/images/svg_ch4_ch_polaroids.svg" />
+        <a
+          class="next_page"
+          href="/article/chapter5" />
         <Rest />
       </Chapter>
   </>);
@@ -34,6 +34,10 @@ const Rest = () => {
   const showMore = useShowMore();
   return(<>
     { showMore() && <>
+      <a
+        class="prev_page"
+        href="/article/chapter3" />
+      <Image src="/images/svg_ch4_ch_polaroids.svg" />
       <Pause />
       <Section>
         <VerticalChunk>

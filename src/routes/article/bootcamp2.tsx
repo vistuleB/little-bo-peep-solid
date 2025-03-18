@@ -19,60 +19,12 @@ import useShowMore from "~/hooks/useShowMore";
 const Article = () => {
   useSetRoute();
   return (<>
-    <a href="/article/bootcamp1" class="next_page hidden"></a>
       <Bootcamp
         number={2}
         title="Powers of 10">
-        <Section>
-          <VerticalChunk>
-            <b>
-              Terminology.
-            </b>
-            {" "}
-            The expression below is called a{" "}
-            <i>
-              power
-            </i>
-            ; 
-            the number at the bottom of the power is called
-            the{" "}
-            <i>
-              base
-            </i>
-            {" "}(of the power); the number at the top
-            is called the{" "}
-            <i>
-              exponent
-            </i>
-            :
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_base_exponent.svg" />
-          <Pause />
-          <VerticalChunk>
-            The whole expression is read{" "}
-            <Math>
-              $\mathit&#123;10&#125;$
-            </Math>
-            {" "}{" "}
-            <i>
-              to the power
-            </i>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $\mathit&#123;3&#125;$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and the
-            general process of taking a power is called{" "}
-            <i>
-              exponentiation
-            </i>
-            .
-          </VerticalChunk>
-        </Section>
+        <a
+          class="next_page"
+          href="/article/bootcamp1" />
         <Rest />
       </Bootcamp>
   </>);
@@ -82,6 +34,56 @@ const Rest = () => {
   const showMore = useShowMore();
   return(<>
     { showMore() && <>
+      <Section>
+        <VerticalChunk>
+          <b>
+            Terminology.
+          </b>
+          {" "}
+          The expression below is called a{" "}
+          <i>
+            power
+          </i>
+          ; 
+          the number at the bottom of the power is called
+          the{" "}
+          <i>
+            base
+          </i>
+          {" "}(of the power); the number at the top
+          is called the{" "}
+          <i>
+            exponent
+          </i>
+          :
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_base_exponent.svg" />
+        <Pause />
+        <VerticalChunk>
+          The whole expression is read{" "}
+          <Math>
+            $\mathit&#123;10&#125;$
+          </Math>
+          {" "}{" "}
+          <i>
+            to the power
+          </i>
+          {" "}{" "}
+          <NoBreak>
+            <Math>
+              $\mathit&#123;3&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}and the
+          general process of taking a power is called{" "}
+          <i>
+            exponentiation
+          </i>
+          .
+        </VerticalChunk>
+      </Section>
       <Pause />
       <Section>
         <VerticalChunk>

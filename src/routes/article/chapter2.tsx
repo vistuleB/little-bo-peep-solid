@@ -19,104 +19,12 @@ import useShowMore from "~/hooks/useShowMore";
 const Article = () => {
   useSetRoute();
   return (<>
-    <a href="/article/chapter1" class="prev_page hidden"></a> 
-    <a href="/article/chapter3" class="next_page hidden"></a>
       <Chapter
         number={2}
         title="Slopes">
-        <Section>
-          <VerticalChunk>
-            <b>
-              Slopes.
-            </b>
-            {" "}
-            The{" "}
-            <i>
-              slope
-            </i>
-            {" "}of a line is a mathematical measure
-            of how “steep” a line is. Here are a few examples
-            (for an explanation of the values, see below):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
-          <Pause />
-          <VerticalChunk>
-            To explain, the slope of a line is...
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            the number of units the line goes up with each
-            unit to the right
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            ...assuming that numbers on the{" "}
-            <NoBreak>
-              <Math>
-                $y$
-              </Math>
-              -axis
-            </NoBreak>
-            {" "}increase
-            going up and that numbers on the{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -axis
-            </NoBreak>
-            {" "}increase
-            going right, as is usually the case. One can also
-            describe slope as...
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            the amount of vertical change per unit of
-            horizontal change
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            ...more elegant!
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            For example, the line below has slope 1, because
-            it goes up by{" "}
-            <Math>
-              $1$
-            </Math>
-            {" "}unit for each unit to the right:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/slope_1_example.svg" />
-          <Pause />
-          <VerticalChunk>
-            On the other hand, the line below has slope
-            {" "}
-            <NoBreak>
-              <Math>
-                $-0.5$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}because it goes up by{" "}
-            <i>
-              minus
-            </i>
-            {" "}{" "}
-            <Math>
-              $0.5$
-            </Math>
-            {" "}units
-            with each unit to the right:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/slope_0.5_example.svg" />
-          <Pause />
-          <VerticalChunk>
-            (Etc.)
-          </VerticalChunk>
-        </Section>
+        <a
+          class="next_page"
+          href="/article/chapter3" />
         <Rest />
       </Chapter>
   </>);
@@ -126,6 +34,102 @@ const Rest = () => {
   const showMore = useShowMore();
   return(<>
     { showMore() && <>
+      <a
+        class="prev_page"
+        href="/article/chapter1" />
+      <Section>
+        <VerticalChunk>
+          <b>
+            Slopes.
+          </b>
+          {" "}
+          The{" "}
+          <i>
+            slope
+          </i>
+          {" "}of a line is a mathematical measure
+          of how “steep” a line is. Here are a few examples
+          (for an explanation of the values, see below):
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
+        <Pause />
+        <VerticalChunk>
+          To explain, the slope of a line is...
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          the number of units the line goes up with each
+          unit to the right
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          ...assuming that numbers on the{" "}
+          <NoBreak>
+            <Math>
+              $y$
+            </Math>
+            -axis
+          </NoBreak>
+          {" "}increase
+          going up and that numbers on the{" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -axis
+          </NoBreak>
+          {" "}increase
+          going right, as is usually the case. One can also
+          describe slope as...
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          the amount of vertical change per unit of
+          horizontal change
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          ...more elegant!
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          For example, the line below has slope 1, because
+          it goes up by{" "}
+          <Math>
+            $1$
+          </Math>
+          {" "}unit for each unit to the right:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/slope_1_example.svg" />
+        <Pause />
+        <VerticalChunk>
+          On the other hand, the line below has slope
+          {" "}
+          <NoBreak>
+            <Math>
+              $-0.5$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}because it goes up by{" "}
+          <i>
+            minus
+          </i>
+          {" "}{" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "}units
+          with each unit to the right:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/slope_0.5_example.svg" />
+        <Pause />
+        <VerticalChunk>
+          (Etc.)
+        </VerticalChunk>
+      </Section>
       <Pause />
       <Section>
         <VerticalChunk>

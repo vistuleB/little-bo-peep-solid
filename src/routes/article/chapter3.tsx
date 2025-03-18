@@ -19,232 +19,12 @@ import useShowMore from "~/hooks/useShowMore";
 const Article = () => {
   useSetRoute();
   return (<>
-    <a href="/article/chapter2" class="prev_page hidden"></a> 
-    <a href="/article/chapter4" class="next_page hidden"></a>
       <Chapter
         number={3}
         title="Functions">
-        <Section>
-          <VerticalChunk>
-            <b>
-              Syntax.
-            </b>
-            {" "}
-            A
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            function
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            is a “rule” for transforming inputs (usually
-            numbers) into outputs (usually numbers as well).
-            One can think of a function as a box with an
-            “input tube” and an “output tube”:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_f_box.svg" />
-          <Pause />
-          <VerticalChunk>
-            An input goes in via the input tube, is
-            processed according to the function's rule,
-            and the result comes out the other side.
-            (Metaphorically speaking.)
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            In the above picture, the name of the function
-            is{" "}
-            <NoBreak>
-              “
-              <Math>
-                $f$
-              </Math>
-              ”.
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Notation-wise, one writes
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(x)&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (which is read{" "}
-            <NoBreak>
-              “
-              <Math>
-                $f$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              ”,
-            </NoBreak>
-            {" "}and that's 
-            important) for the result of passing an input
-            {" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}to a function{" "}
-            <NoBreak>
-              <Math>
-                $f$
-              </Math>
-              .
-            </NoBreak>
-            {" "}For example, if the rule
-            according to which{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}processes inputs is
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            the output is the square of the input
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            then
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(2) = 4&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            <NoBreak>
-              [“
-              <Math>
-                $f$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
-            <Math>
-              $2$
-            </Math>
-            {" "}equals{" "}
-            <NoBreak>
-              <Math>
-                $4$
-              </Math>
-              ”]
-            </NoBreak>
-            {" "}because{" "}
-            <NoBreak>
-              <Math>
-                $2^2 = 4$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(3) = 9&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            <NoBreak>
-              [“
-              <Math>
-                $f$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
-            <Math>
-              $3$
-            </Math>
-            {" "}equals{" "}
-            <NoBreak>
-              <Math>
-                $9$
-              </Math>
-              ”]
-            </NoBreak>
-            {" "}because{" "}
-            <NoBreak>
-              <Math>
-                $3^2 = 9$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123; f(0.1) = 0.01&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            [...] because{" "}
-            <NoBreak>
-              <Math>
-                $0.1^2 = 0.01$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and so on. Also,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(x) = x^2&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            <NoBreak>
-              [“
-              <Math>
-                $f$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}equals{" "}
-            <NoBreak>
-              <Math>
-                $x^2$
-              </Math>
-              ”]
-            </NoBreak>
-            {" "}more generally, which
-            is actually the
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            definition
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            of{" "}
-            <NoBreak>
-              <Math>
-                $f$
-              </Math>
-              !!
-            </NoBreak>
-            {" "}(Stated algebraically.)
-          </VerticalChunk>
-        </Section>
+        <a
+          class="next_page"
+          href="/article/chapter4" />
         <Rest />
       </Chapter>
   </>);
@@ -254,6 +34,230 @@ const Rest = () => {
   const showMore = useShowMore();
   return(<>
     { showMore() && <>
+      <a
+        class="prev_page"
+        href="/article/chapter2" />
+      <Section>
+        <VerticalChunk>
+          <b>
+            Syntax.
+          </b>
+          {" "}
+          A
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          function
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          is a “rule” for transforming inputs (usually
+          numbers) into outputs (usually numbers as well).
+          One can think of a function as a box with an
+          “input tube” and an “output tube”:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch3_f_box.svg" />
+        <Pause />
+        <VerticalChunk>
+          An input goes in via the input tube, is
+          processed according to the function's rule,
+          and the result comes out the other side.
+          (Metaphorically speaking.)
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          In the above picture, the name of the function
+          is{" "}
+          <NoBreak>
+            “
+            <Math>
+              $f$
+            </Math>
+            ”.
+          </NoBreak>
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          Notation-wise, one writes
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;f(x)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          (which is read{" "}
+          <NoBreak>
+            “
+            <Math>
+              $f$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            ”,
+          </NoBreak>
+          {" "}and that's 
+          important) for the result of passing an input
+          {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}to a function{" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            .
+          </NoBreak>
+          {" "}For example, if the rule
+          according to which{" "}
+          <Math>
+            $f$
+          </Math>
+          {" "}processes inputs is
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          the output is the square of the input
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          then
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;f(2) = 4&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          <NoBreak>
+            [“
+            <Math>
+              $f$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <Math>
+            $2$
+          </Math>
+          {" "}equals{" "}
+          <NoBreak>
+            <Math>
+              $4$
+            </Math>
+            ”]
+          </NoBreak>
+          {" "}because{" "}
+          <NoBreak>
+            <Math>
+              $2^2 = 4$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}and
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;f(3) = 9&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          <NoBreak>
+            [“
+            <Math>
+              $f$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <Math>
+            $3$
+          </Math>
+          {" "}equals{" "}
+          <NoBreak>
+            <Math>
+              $9$
+            </Math>
+            ”]
+          </NoBreak>
+          {" "}because{" "}
+          <NoBreak>
+            <Math>
+              $3^2 = 9$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}and
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123; f(0.1) = 0.01&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          [...] because{" "}
+          <NoBreak>
+            <Math>
+              $0.1^2 = 0.01$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}and so on. Also,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;f(x) = x^2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          <NoBreak>
+            [“
+            <Math>
+              $f$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}equals{" "}
+          <NoBreak>
+            <Math>
+              $x^2$
+            </Math>
+            ”]
+          </NoBreak>
+          {" "}more generally, which
+          is actually the
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          definition
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          of{" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            !!
+          </NoBreak>
+          {" "}(Stated algebraically.)
+        </VerticalChunk>
+      </Section>
       <Pause />
       <Section>
         <VerticalChunk>

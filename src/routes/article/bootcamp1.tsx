@@ -19,114 +19,12 @@ import useShowMore from "~/hooks/useShowMore";
 const Article = () => {
   useSetRoute();
   return (<>
-    <a href="/article/bootcamp2" class="prev_page hidden"></a> 
-    <a href="/" class="next_page hidden"></a>
       <Bootcamp
         number={1}
         title="Sets">
-        <Section>
-          <VerticalChunk>
-            <b>
-              Notation.
-            </b>
-            {" "}
-            Curly braces typically denote the beginning
-            {" "}
-            <NoBreak>
-              “
-              <Math>
-                $\&#123;$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}and ending{" "}
-            <NoBreak>
-              “
-              <Math>
-                $\&#125;$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}of a collection of 
-            elements, otherwise known as a{" "}
-            <i>
-              set
-            </i>
-            .
-            For example, this is a set containing the 
-            numbers{" "}
-            <NoBreak>
-              <Math>
-                $1$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $2$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $3$
-            </Math>
-            {" "}(and nothing else):
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large\&#123;1, 2, 3\&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            Also,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large\&#123;1\&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is a set containing just the number{" "}
-            <NoBreak>
-              <Math>
-                $1$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}while
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large\&#123;1, 3\&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is a set containing just the numbers{" "}
-            <Math>
-              $1$
-            </Math>
-            {" "}
-            and{" "}
-            <NoBreak>
-              <Math>
-                $3$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}etc. Even,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large\&#123;\&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is an{" "}
-            <i>
-              empty
-            </i>
-            {" "}set, a set with no elements!
-          </VerticalChunk>
-        </Section>
+        <a
+          class="next_page"
+          href="/" />
         <Rest />
       </Bootcamp>
   </>);
@@ -136,6 +34,112 @@ const Rest = () => {
   const showMore = useShowMore();
   return(<>
     { showMore() && <>
+      <a
+        class="prev_page"
+        href="/article/bootcamp2" />
+      <Section>
+        <VerticalChunk>
+          <b>
+            Notation.
+          </b>
+          {" "}
+          Curly braces typically denote the beginning
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\&#123;$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}and ending{" "}
+          <NoBreak>
+            “
+            <Math>
+              $\&#125;$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}of a collection of 
+          elements, otherwise known as a{" "}
+          <i>
+            set
+          </i>
+          .
+          For example, this is a set containing the 
+          numbers{" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}{" "}
+          <Math>
+            $2$
+          </Math>
+          {" "}and{" "}
+          <Math>
+            $3$
+          </Math>
+          {" "}(and nothing else):
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;1, 2, 3\&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          Also,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;1\&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is a set containing just the number{" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}while
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;1, 3\&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is a set containing just the numbers{" "}
+          <Math>
+            $1$
+          </Math>
+          {" "}
+          and{" "}
+          <NoBreak>
+            <Math>
+              $3$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}etc. Even,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;\&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is an{" "}
+          <i>
+            empty
+          </i>
+          {" "}set, a set with no elements!
+        </VerticalChunk>
+      </Section>
       <Pause />
       <Section>
         <VerticalChunk>

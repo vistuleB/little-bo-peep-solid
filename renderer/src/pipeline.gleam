@@ -1,3 +1,4 @@
+import desugarers/generate_lbp_links.{generate_lbp_links}
 import desugarers/add_attribute_to_if_child_of_but_no_overwrites.{add_attribute_to_if_child_of_but_no_overwrites}
 import desugarers/add_between_tag_and_text_node.{add_between_tag_and_text_node}
 import desugarers/find_replace.{find_replace}
@@ -391,5 +392,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
     // ************************
     generate_lbp_table_of_contents(#("PanelAuthorSuppliedContent", "PanelTitle", "PanelItem", None)),
     generate_lbp_table_of_contents(#("TOCAuthorSuppliedContent", "TOCTitle", "TOCItem", Some("Spacer"))),
+    generate_lbp_links()
   ]
 }

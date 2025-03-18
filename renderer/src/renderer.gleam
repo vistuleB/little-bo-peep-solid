@@ -73,95 +73,6 @@ fn lbp_splitter(root: VXML) -> Result(List(#(String, VXML, FragmentType)), LBPSp
   )
 }
 
-fn get_articles() -> List(String) {
-  let articles = 
-    simplifile.read_directory("../src/content") 
-    |> result.unwrap([]) 
-    |> list.filter(fn(f){ !string.starts_with(f, "#") && f != "__parent.emu"  })
-    
-  let chapters =
-    articles 
-    |> list.filter(fn(a) { string.starts_with(a, "chapter") } )
-    |> list.sort(fn(a, b) { string.compare(a, b) })
-
-  let bootcamps =
-    articles 
-    |> list.filter(fn(a) { string.starts_with(a, "bootcamp") } )
-    |> list.sort(fn(a, b) { string.compare(b, a) })
-
-  list.flatten([
-    bootcamps,
-    ["/"], // toc
-    chapters
-  ])
-}
-
-fn get_index(article: String, articles_list: List(String), index: Int) -> Int {
-  case articles_list {
-    [] -> -1
-    [first, ..rest] -> {
-      case first == article {
-        True -> index
-        False -> get_index(article, rest, index + 1) 
-      }
-    }
-  }
-}
-
-fn page_prev_next_links(fragment_type: FragmentType) -> String {
-  let articles_list = get_articles() 
-  let list_length = list.length(articles_list)
-
-  let current = case fragment_type{
-    Chapter(n) -> "chapter" <> ins(n)
-    Bootcamp(n) -> "bootcamp" <> ins(n)
-    TOCAuthorSuppliedContent -> "/"
-    _ -> ""
-  }
-
-  case get_index(current, articles_list, 0) {
-    0 -> {
-      let assert [next_article, ..] = list.drop(articles_list, 1)
-      let next_article = case next_article == "/" {
-        True -> "/"
-        False -> "/article/" <> next_article
-      }
-      "<a href=\""<> next_article <> "\" class=\"next_page hidden\"></a>"
-    }
-
-    a if a == list_length - 1 -> {
-      let assert [prev_article, ..] = list.drop(articles_list, a - 1)
-      let prev_article = case prev_article == "/" {
-        True -> "/"
-        False -> "/article/" <> prev_article
-      }
-      "<a href=\""<> prev_article <> "\" class=\"prev_page hidden\"></a>"
-    }
-
-    _ -> {
-      let next_index = { get_index(current, articles_list, 0) + 1 } 
-      let prev_index = { get_index(current, articles_list, 0) - 1 } 
-
-      let assert [next_article, ..] = list.drop(articles_list, next_index)
-      let assert [prev_article, ..] = list.drop(articles_list, prev_index)
-
-      let next_article = case next_article == "/" {
-        True -> "/"
-        False -> "/article/" <> next_article
-      }
-
-      let prev_article = case prev_article == "/" {
-        True -> "/"
-        False -> "/article/" <> prev_article
-      }
-
-      "<a href=\""<> prev_article <> "\" class=\"prev_page hidden\"></a> 
-    <a href=\""<> next_article <> "\" class=\"next_page hidden\"></a>"
-    }
-  }
-}
-
-
 // splitting chapter vxmls for performance
 fn split_vxmls_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
   let assert V(b, t, a, children) = vxml
@@ -218,7 +129,6 @@ fn lbp_chapter_bootcamp_common_emitter(
       BlamedLine(blame_us("lbp_fragment_emitter"), 0, "const Article = () => {"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 2, "useSetRoute();"),
       BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return (<>"),
-      BlamedLine(blame_us("lbp_fragment_emitter"), 4, page_prev_next_links(fragment_type)),
 
     ],
     vxml_parser.vxml_to_jsx_blamed_lines(first_split, 6), // first section loads immediatly
