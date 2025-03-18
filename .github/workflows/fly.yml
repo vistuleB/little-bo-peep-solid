@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy-dev:
-    name: Deploy to prod app
+    name: Deploy to dev app
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
