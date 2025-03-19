@@ -1123,9 +1123,8 @@
             “$\,x/3 - \fl{x/3}$”, the formula for the 
             second graph. Then we multiply that by $3$ 
             (to go from 
-            |> span
-                class nobreak
-                
+            |> NoBreak
+
                 ”
                 |> InlineImage
                     src images/svg_ch3_3_3_grid_1.svg
