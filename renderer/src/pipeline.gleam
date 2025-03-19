@@ -1,21 +1,32 @@
-import desugarers/generate_lbp_links.{generate_lbp_links}
-import desugarers/add_attribute_to_if_child_of_but_no_overwrites.{add_attribute_to_if_child_of_but_no_overwrites}
-import desugarers/add_between_tag_and_text_node.{add_between_tag_and_text_node}
-import desugarers/find_replace.{find_replace}
-import gleam/option.{Some, None}
 import desugarers/absorb_next_sibling_while.{absorb_next_sibling_while}
-import desugarers/add_before_tags_but_not_first_child_tags.{add_before_tags_but_not_first_child_tags}
+import desugarers/add_attribute_to_if_child_of_but_no_overwrites.{
+  add_attribute_to_if_child_of_but_no_overwrites,
+}
+import desugarers/add_before_tags_but_not_first_child_tags.{
+  add_before_tags_but_not_first_child_tags,
+}
+import desugarers/add_between_tag_and_text_node.{add_between_tag_and_text_node}
 import desugarers/add_between_tags.{add_between_tags}
 import desugarers/add_counter_attributes.{add_counter_attributes}
-import desugarers/add_title_counters_and_titles_with_handle_assignments.{add_title_counters_and_titles_with_handle_assignments}
+import desugarers/add_title_counters_and_titles_with_handle_assignments.{
+  add_title_counters_and_titles_with_handle_assignments,
+}
 import desugarers/change_attribute_value.{change_attribute_value}
 import desugarers/concatenate_text_nodes.{concatenate_text_nodes}
-import desugarers/convert_int_attributes_to_float.{convert_int_attributes_to_float}
-import desugarers/counters_substitute_and_assign_handles.{counters_substitute_and_assign_handles}
+import desugarers/convert_int_attributes_to_float.{
+  convert_int_attributes_to_float,
+}
+import desugarers/counters_substitute_and_assign_handles.{
+  counters_substitute_and_assign_handles,
+}
+import desugarers/find_replace.{find_replace}
 import desugarers/fold_tags_into_text.{fold_tags_into_text}
 import desugarers/free_children.{free_children}
+import desugarers/generate_lbp_links.{generate_lbp_links}
 import desugarers/generate_lbp_table_of_contents.{generate_lbp_table_of_contents}
-import desugarers/group_consecutive_children_avoiding.{group_consecutive_children_avoiding}
+import desugarers/group_consecutive_children_avoiding.{
+  group_consecutive_children_avoiding,
+}
 import desugarers/handles_substitute.{handles_substitute}
 import desugarers/identity.{identity}
 import desugarers/insert_bookend_tags.{insert_bookend_tags}
@@ -24,15 +35,22 @@ import desugarers/pair_bookends.{pair_bookends}
 import desugarers/remove_attributes.{remove_attributes}
 import desugarers/remove_empty_chunks.{remove_empty_chunks}
 import desugarers/remove_empty_text_nodes.{remove_empty_text_nodes}
-import desugarers/remove_vertical_chunks_with_no_text_child.{remove_vertical_chunks_with_no_text_child}
-import desugarers/remove_starting_and_ending_empty_lines.{remove_starting_and_ending_empty_lines}
-import desugarers/remove_starting_and_ending_spaces.{remove_starting_and_ending_spaces}
+import desugarers/remove_starting_and_ending_empty_lines.{
+  remove_starting_and_ending_empty_lines,
+}
+import desugarers/remove_starting_and_ending_spaces.{
+  remove_starting_and_ending_spaces,
+}
+import desugarers/remove_vertical_chunks_with_no_text_child.{
+  remove_vertical_chunks_with_no_text_child,
+}
 import desugarers/rename_when_child_of.{rename_when_child_of}
 import desugarers/split_by_indexed_regexes.{split_by_indexed_regexes}
 import desugarers/unwrap_tags.{unwrap_tags}
-import desugarers/unwrap_tags_if_single_child.{unwrap_tags_if_single_child}
 import desugarers/unwrap_tags_if_descendants_of.{unwrap_tags_if_descendants_of}
+import desugarers/unwrap_tags_if_single_child.{unwrap_tags_if_single_child}
 import desugarers/wrap_math_with_no_break.{wrap_math_with_no_break}
+import gleam/option.{None, Some}
 import infrastructure.{type Pipe} as infra
 
 pub fn lbp_pipeline() -> List(Pipe) {
@@ -105,14 +123,12 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #("Math", "OpeningSingleDollar", "ClosingSingleDollar"),
       #("MathBlock", "OpeningDoubleDollar", "ClosingDoubleDollar"),
     ]),
-    fold_tags_into_text(
-      [
-        #("OpeningSingleDollar", "$"),
-        #("ClosingSingleDollar", "$"),
-        #("OpeningDoubleDollar", "$$"),
-        #("ClosingDoubleDollar", "$$"),
-      ]
-    ),
+    fold_tags_into_text([
+      #("OpeningSingleDollar", "$"),
+      #("ClosingSingleDollar", "$"),
+      #("OpeningDoubleDollar", "$$"),
+      #("ClosingDoubleDollar", "$$"),
+    ]),
     find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
     // ************************
     // AddTitleCounters *******
@@ -120,7 +136,14 @@ pub fn lbp_pipeline() -> List(Pipe) {
     // 7.
     add_title_counters_and_titles_with_handle_assignments([
       #("Chapter", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
-      #("Bootcamp", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
+      #(
+        "Bootcamp",
+        "ExampleCounter",
+        "Example",
+        "*Example ",
+        ".*",
+        "*Example.*",
+      ),
       #("Chapter", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
       #("Bootcamp", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
       #(
@@ -131,7 +154,14 @@ pub fn lbp_pipeline() -> List(Pipe) {
         ".*",
         "*Exercise.*",
       ),
-      #("Solution", "SolutionNoteCounter", "SolutionNote", "_Note ", "._", "_Note._"),
+      #(
+        "Solution",
+        "SolutionNoteCounter",
+        "SolutionNote",
+        "_Note ",
+        "._",
+        "_Note._",
+      ),
     ]),
     // ************************
     // VerticalChunk **********
@@ -141,50 +171,20 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #(
         "VerticalChunk",
         [
-          "Bootcamp",
-          "CentralDisplay",
-          "CentralDisplayItalic",
-          "Chapter",
-          "Example",
-          "Exercise",
-          "Exercises",
-          "Grid",
-          "Image", 
-          "ImageLeft",
-          "ImageRight",
-          "List",
-          "MathBlock", 
-          "Note",
-          "Pause",
-          "Section",
-          "Solution",
-          "SolutionNote",
-          "StarDivider",
-          "Table",
-          "TextParent",
-          "WriterlyBlankLine",
-          "center",
-          "li",
-          "ul",
-          "ol",
-          "table",
-          "colgroup",
-          "thead",
-          "tbody",
-          "tr",
-          "td",
-          "section",
+          "Bootcamp", "CentralDisplay", "CentralDisplayItalic", "Chapter",
+          "Example", "Exercise", "Exercises", "Grid", "Image", "ImageLeft",
+          "ImageRight", "List", "MathBlock", "Note", "Pause", "Section",
+          "Solution", "SolutionNote", "StarDivider", "Table", "TextParent",
+          "WriterlyBlankLine", "center", "li", "ul", "ol", "table", "colgroup",
+          "thead", "tbody", "tr", "td", "section",
         ],
-        [
-          "MathBlock",
-          "VerticalChunk",
-        ],
-      )
+        ["MathBlock", "VerticalChunk"],
+      ),
     ),
     unwrap_tags(["WriterlyBlankLine"]),
     rename_when_child_of([
       #("VerticalChunk", "Item", "List"),
-      #("VerticalChunk", "Item", "Grid")
+      #("VerticalChunk", "Item", "Grid"),
     ]),
     unwrap_tags(["WriterlyBlankLine"]),
     remove_empty_text_nodes(),
@@ -209,13 +209,11 @@ pub fn lbp_pipeline() -> List(Pipe) {
       ["ClosingDoubleUnderscore", "OpeningOrClosingDoubleUnderscore"],
       "CentralDisplayItalic",
     )),
-    fold_tags_into_text(
-      [
-        #("OpeningDoubleUnderscore", "__"),
-        #("ClosingDoubleUnderscore", "__"),
-        #("OpeningOrClosingDoubleUnderscore", "__"),
-      ],
-    ),
+    fold_tags_into_text([
+      #("OpeningDoubleUnderscore", "__"),
+      #("ClosingDoubleUnderscore", "__"),
+      #("OpeningOrClosingDoubleUnderscore", "__"),
+    ]),
     // ************************
     // _| |_ ******************
     // ************************
@@ -233,12 +231,10 @@ pub fn lbp_pipeline() -> List(Pipe) {
       ["ClosingCenterQuote"],
       "CentralDisplay",
     )),
-    fold_tags_into_text(
-      [
-        #("OpeningCenterQuote", "_|"),
-        #("ClosingCenterQuote", "|_"),
-      ],
-    ),
+    fold_tags_into_text([
+      #("OpeningCenterQuote", "_|"),
+      #("ClosingCenterQuote", "|_"),
+    ]),
     // ************************
     // break CentralDisplay &
     // CentralDisplayItalic out
@@ -287,21 +283,17 @@ pub fn lbp_pipeline() -> List(Pipe) {
       ["ClosingAsterisk", "OpeningOrClosingAsterisk"],
       "b",
     )),
-    fold_tags_into_text(
-      [
-        #("OpeningOrClosingUnderscore", "_"),
-        #("OpeningUnderscore", "_"),
-        #("ClosingUnderscore", "_"),
-        #("OpeningOrClosingAsterisk", "*"),
-        #("OpeningAsterisk", "*"),
-        #("ClosingAsterisk", "*"),
-      ],
+    fold_tags_into_text([
+      #("OpeningOrClosingUnderscore", "_"),
+      #("OpeningUnderscore", "_"),
+      #("ClosingUnderscore", "_"),
+      #("OpeningOrClosingAsterisk", "*"),
+      #("OpeningAsterisk", "*"),
+      #("ClosingAsterisk", "*"),
+    ]),
+    find_replace(
+      #([#("&ensp;", " "), #("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"]),
     ),
-    find_replace(#([
-      #("&ensp;", " "),
-      #("\\*", "*"),
-      #("\\_", "_"),
-    ], ["MathBlock", "Math"])),
     // ************************
     // misc *******************
     // ************************
@@ -337,8 +329,18 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #("ul", "ImageLeft"),
     ]),
     add_attribute_to_if_child_of_but_no_overwrites([
-      #("ImageRight", "MathBlock", "compensate_offset_x_for_large_text_columns", "true"),
-      #("ImageLeft", "MathBlock", "compensate_offset_x_for_large_text_columns", "true"),
+      #(
+        "ImageRight",
+        "MathBlock",
+        "compensate_offset_x_for_large_text_columns",
+        "true",
+      ),
+      #(
+        "ImageLeft",
+        "MathBlock",
+        "compensate_offset_x_for_large_text_columns",
+        "true",
+      ),
     ]),
     // ************************
     // VerticalChunk indents
@@ -390,8 +392,18 @@ pub fn lbp_pipeline() -> List(Pipe) {
     // ************************
     // contents
     // ************************
-    generate_lbp_table_of_contents(#("PanelAuthorSuppliedContent", "PanelTitle", "PanelItem", None)),
-    generate_lbp_table_of_contents(#("TOCAuthorSuppliedContent", "TOCTitle", "TOCItem", Some("Spacer"))),
-    generate_lbp_links()
+    generate_lbp_table_of_contents(#(
+      "PanelAuthorSuppliedContent",
+      "PanelTitle",
+      "PanelItem",
+      None,
+    )),
+    generate_lbp_table_of_contents(#(
+      "TOCAuthorSuppliedContent",
+      "TOCTitle",
+      "TOCItem",
+      Some("Spacer"),
+    )),
+    generate_lbp_links(),
   ]
 }
