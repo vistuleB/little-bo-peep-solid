@@ -239,10 +239,7 @@ fn cli_usage_supplementary() {
 
 pub fn main() {
   use amendments <- infra.on_error_on_ok(
-    vr.process_command_line_arguments(
-      argv.load().arguments,
-      [#("--prettier", True)],
-    ),
+    vr.process_command_line_arguments(argv.load().arguments, ["--prettier"]),
     fn (error) {
       io.println("")
       io.println("command line error: " <> ins(error))
@@ -258,13 +255,12 @@ pub fn main() {
     pipeline: pipeline.lbp_pipeline(),
     splitter: lbp_splitter,
     emitter: lbp_emitter,
-    prettifier: vr.prettier_prettifier,
+    prettifier: vr.guarded_prettier_prettifier(amendments.user_args),
   )
 
   let parameters = vr.RendererParameters(
     input_dir: "../src/content",
     output_dir: Some("../src"),
-    prettifying_option: False,
   )
     |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
 
