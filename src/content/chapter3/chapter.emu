@@ -1122,18 +1122,19 @@
             (the input, minus $1$) in place of “$x$” in 
             “$\,x/3 - \fl{x/3}$”, the formula for the 
             second graph. Then we multiply that by $3$ 
-            (to go from ”
-            
-            |> InlineImage
-                src images/svg_ch3_3_3_grid_1.svg
-                width 0.9em
-
-            ” to “
-
+            (to go from 
+            |> span
+                class nobreak
+                
+                ”
+                |> InlineImage
+                    src images/svg_ch3_3_3_grid_1.svg
+                    width 0.9em
+                ”
+            to “
             |> InlineImage
                 src images/svg_ch3_3_3_grid_2.svg
                 width 0.9em
-
             ”, namely), meaning that the final answer is
             $$
             3 \cdot ((x-1)/3 - \fl{(x-1)/3})
@@ -1479,23 +1480,19 @@
             |_
 
             because the arrow that originates at
-
             |> InlineImage
                 src images/svg_ch3_composition_icon_clubs.svg
                 width 1rem
                 y_anchor -4px
                 space_left true
                 space_right true
-
             in set $D$ lands at 
-            
             |> InlineImage
                 src images/svg_ch3_composition_icon_die_3.svg
                 width 1.25rem
                 y_anchor -4px
                 space_left true
                 space_right true
-            
             in set $C$,  and
 
             _|
@@ -1515,23 +1512,19 @@
             
             because, pursuing that path onwards, the arrow 
             that originates at
-            
             |> InlineImage
                 src images/svg_ch3_composition_icon_die_3.svg
                 width 1.25rem
                 y_anchor -4px
                 space_left true
                 space_right true
-
             in set $C$ lands at
-
             |> InlineImage
                 src images/svg_ch3_composition_icon_fence.svg
                 width 2.3rem
                 y_anchor -4px
                 space_left true
                 space_right true
-
             in set $B$, etc.
 
             Under this representation one can “compute”

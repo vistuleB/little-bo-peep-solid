@@ -2877,15 +2877,15 @@ const Rest = () => {
                 $3$
               </Math>
               {" "}
-              (to go from ”
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              <InlineImage
-                width="0.9em"
-                src="/images/svg_ch3_3_3_grid_1.svg" />
-              ” to “
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
+              (to go from{" "}
+              <span class="nobreak">
+                ”
+                <InlineImage
+                  width="0.9em"
+                  src="/images/svg_ch3_3_3_grid_1.svg" />
+                ”
+              </span>
+              to “
               <InlineImage
                 width="0.9em"
                 src="/images/svg_ch3_3_3_grid_2.svg" />
@@ -3677,8 +3677,6 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               because the arrow that originates at
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
               <InlineImage
                 space_right={true}
                 space_left={true}
@@ -3689,9 +3687,7 @@ const Rest = () => {
               <Math>
                 $D$
               </Math>
-              {" "}lands at
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
+              {" "}lands at{" "}
               <InlineImage
                 space_right={true}
                 space_left={true}
@@ -3733,8 +3729,6 @@ const Rest = () => {
             <VerticalChunk>
               because, pursuing that path onwards, the arrow 
               that originates at
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
               <InlineImage
                 space_right={true}
                 space_left={true}
@@ -3746,8 +3740,6 @@ const Rest = () => {
                 $C$
               </Math>
               {" "}lands at
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
               <InlineImage
                 space_right={true}
                 space_left={true}
