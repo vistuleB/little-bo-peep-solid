@@ -32,7 +32,6 @@ const ActionArrows = () => {
     });
   });
 
-  store.scrollY = store.scrollY;
   const exerciseBtnsPos = () => {
     if (!document.getElementById("exercises-btns"))
       return document.body.scrollHeight;
@@ -51,9 +50,9 @@ const ActionArrows = () => {
       if (startTime === null) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
       const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(window.scrollX, run);
+      window.scrollTo(store.scrollX, run);
       if (timeElapsed < duration) requestAnimationFrame(animation);
-      else window.scrollTo(window.scrollX, targetPosition);
+      else window.scrollTo(store.scrollX, targetPosition);
     }
 
     function easeInOutQuad(t: number, b: number, c: number, d: number) {
@@ -67,7 +66,7 @@ const ActionArrows = () => {
   }
 
   const handleUpClick = (_: MouseEvent) => {
-    let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50;
+    let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50; // see also BackupArrow in Solution.tsx
     let scrollTo = (store.scrollY < middleScroll + 100) ? 0 : middleScroll;
     smoothScrollTo(scrollTo, 100);
   };

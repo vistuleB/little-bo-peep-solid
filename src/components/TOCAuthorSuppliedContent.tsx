@@ -5,8 +5,6 @@ import { Spacer } from "./Spacer";
 const TOCAuthorSuppliedContent = () => {
   return (
     <>
-    <a href="/article/bootcamp1" class="prev_page hidden"></a> 
-    <a href="/article/chapter1" class="next_page hidden"></a>
       <a
         class="next_page"
         href="/article/chapter5" />

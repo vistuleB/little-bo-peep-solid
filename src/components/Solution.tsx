@@ -9,7 +9,7 @@ import {
   ParentComponent,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
-import { GREEN_DIV_HEIGHT, TEXT_X_PADDING } from "~/constants";
+import { GREEN_DIV_HEIGHT, MOBILE_MAX_WIDTH, TEXT_X_PADDING } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import { Spacer, SpacerSm, SpacerXs } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
@@ -267,6 +267,42 @@ const SolutionConsumer = (props: SolutionProps) => {
 };
 
 export const BackupArrow = () => {
+  // copied from ActionArrows:
+  const exerciseBtnsPos = () => {
+    if (!document.getElementById("exercises-btns"))
+      return document.body.scrollHeight;
+    const rect = document
+      .getElementById("exercises-btns")
+      ?.getBoundingClientRect()!;
+    return rect.y + store.scrollY;
+  };
+
+  // copied from ActionArrows:
+  function smoothScrollTo(targetPosition: number, duration: number) {
+    const startPosition = store.scrollY;
+    const distance = targetPosition - startPosition;
+    let startTime: DOMHighResTimeStamp | null = null;
+
+    function animation(currentTime: DOMHighResTimeStamp) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(store.scrollX, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+      else window.scrollTo(store.scrollX, targetPosition);
+    }
+
+    function easeInOutQuad(t: number, b: number, c: number, d: number) {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+  }
+
+  let { store } = useGlobalContext();
   return (
     <svg
       id="backup-btn"
@@ -277,7 +313,12 @@ export const BackupArrow = () => {
       xmlns="http://www.w3.org/2000/svg"
       class="tab cursor-pointer z-10"
       onClick={() => {
-        document?.getElementById("exo")?.scrollIntoView();
+        if (store.innerWidth > MOBILE_MAX_WIDTH) {
+          let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50;
+          smoothScrollTo(middleScroll, 100);
+        } else {
+          document?.getElementById("exo")?.scrollIntoView();
+        }
       }}>
       <path
         d="M35.4941 1H6.65545C3.53203 1 1 3.53203 1 6.65545V35.4941C1 38.6175 3.53203 41.1495 6.65545 41.1495H35.4941C38.6175 41.1495 41.1495 38.6175 41.1495 35.4941V6.65545C41.1495 3.53203 38.6175 1 35.4941 1Z"

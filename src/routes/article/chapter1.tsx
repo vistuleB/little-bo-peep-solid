@@ -99,7 +99,6 @@ const Rest = () => {
             offset_x="5em"
             offset_y="0em"
             src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
-            sp="sp"
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
