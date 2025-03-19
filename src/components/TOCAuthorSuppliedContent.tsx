@@ -7,7 +7,7 @@ const TOCAuthorSuppliedContent = () => {
     <>
       <a
         class="next_page"
-        href="/article/chapter5" />
+        href="/article/chapter1" />
       <a
         class="prev_page"
         href="/article/bootcamp1" />

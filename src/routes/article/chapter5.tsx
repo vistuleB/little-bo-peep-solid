@@ -551,7 +551,7 @@ const Rest = () => {
           {" "}(“Lagging” when you read the
           graphs from left to right.) It's because the ‘sin’
           particle follows in the trail blazed by the ‘cos’
-          particle, namely!
+          particle!
         </VerticalChunk>
       </Section>
       <Pause />

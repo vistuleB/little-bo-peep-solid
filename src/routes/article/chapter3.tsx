@@ -2878,18 +2878,22 @@ const Rest = () => {
               </Math>
               {" "}
               (to go from{" "}
-              <span class="nobreak">
-                ”
+              <NoBreak>
+                “
                 <InlineImage
                   width="0.9em"
                   src="/images/svg_ch3_3_3_grid_1.svg" />
                 ”
-              </span>
-              to “
-              <InlineImage
-                width="0.9em"
-                src="/images/svg_ch3_3_3_grid_2.svg" />
-              ”, namely), meaning that the final answer is
+              </NoBreak>
+              {" "}to{" "}
+              <NoBreak>
+                “
+                <InlineImage
+                  width="0.9em"
+                  src="/images/svg_ch3_3_3_grid_2.svg" />
+                ”,
+              </NoBreak>
+              {" "}namely), meaning that the final answer is
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -3179,13 +3183,13 @@ const Rest = () => {
                 src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg" />
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   (f \circ (g \circ h))(x) = \f((g \circ h)(x))
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               ...which already constitutes progress towards
               our goal, since only one copy of{" "}
               <NoBreak>
@@ -3199,23 +3203,23 @@ const Rest = () => {
               exists on the right-hand side! But
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   (g \circ h)(x) = g(h(x))
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               by the “definitional equation” again, so
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   f((g \circ h)(x)) = \f(g(h(x)))
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               ...and this completes the computation!
             </VerticalChunk>
             <Pause />
@@ -3273,13 +3277,13 @@ const Rest = () => {
               So the first step is...
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               ...by setting{" "}
               <NoBreak>
                 <Math>
@@ -3296,13 +3300,13 @@ const Rest = () => {
               is...
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   (f \circ g)(h(x)) = \f(g(h(x)))
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               ...by setting{" "}
               <NoBreak>
                 <Math>
@@ -3317,22 +3321,22 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}and while
-              replacing{" "}
+              {" "}and with
+              {" "}
               <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}by{" "}
-              <NoBreak>
-                “
+                ‘
                 <Math>
                   $h(x)$
                 </Math>
-                ”.
+                ’
+              </NoBreak>
+              {" "}in place of{" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $x$
+                </Math>
+                ’.
               </NoBreak>
             </VerticalChunk>
             <Pause />
@@ -3344,53 +3348,53 @@ const Rest = () => {
               The fact that
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   (f \circ (g \circ h))(x)
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               and
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   ((f \circ g) \circ h)(x)
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               both evaluate to
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   f(g(h(x)))
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               actually implies that
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   f \circ (g \circ h)
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               and
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   (f \circ g) \circ h
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               are the same function; this function is namely
               the function that maps{" "}
               <Math>
@@ -3408,13 +3412,13 @@ const Rest = () => {
               {" "}(or
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   x \ra f(g(h(x)))
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               in lambda notation).
             </VerticalChunk>
             <Pause />
@@ -3426,13 +3430,13 @@ const Rest = () => {
               Because of this, we can write
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
-                  f \circ g \circ half
+                  f \circ g \circ h
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               without any parentheses. (The point is: either
               way you parenthesize it you obtain the same 
               function, so why bother?)
@@ -3446,13 +3450,13 @@ const Rest = () => {
               The fact that
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   &#123;(a + b) + c = a + (b + c)&#125;
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               for all numbers{" "}
               <NoBreak>
                 <Math>
@@ -3482,13 +3486,13 @@ const Rest = () => {
               of addition; likewise, the fact that
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   (ab)c = a(bc)
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               for all numbers{" "}
               <NoBreak>
                 <Math>
@@ -3519,13 +3523,13 @@ const Rest = () => {
               the fact that
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              <CustomBlock style="font-size:1.1em">
+              <div style="font-size:1.1em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   &#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;
                   $$
                 </MathBlock>
-              </CustomBlock>
+              </div>
               for all functions{" "}
               <NoBreak>
                 <Math>

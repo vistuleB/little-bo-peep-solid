@@ -1125,16 +1125,20 @@
             (to go from 
             |> NoBreak
 
-                ”
+                “
                 |> InlineImage
                     src images/svg_ch3_3_3_grid_1.svg
                     width 0.9em
                 ”
-            to “
-            |> InlineImage
-                src images/svg_ch3_3_3_grid_2.svg
-                width 0.9em
-            ”, namely), meaning that the final answer is
+            &ensp;to 
+            |> NoBreak
+
+                “
+                |> InlineImage
+                    src images/svg_ch3_3_3_grid_2.svg
+                    width 0.9em
+                ”,
+            &ensp;namely), meaning that the final answer is
             $$
             3 \cdot ((x-1)/3 - \fl{(x-1)/3})
             $$
@@ -1243,8 +1247,8 @@
                 offset_x 1em
                 offset_y -0.5em
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 (f \circ (g \circ h))(x) = \f((g \circ h)(x))
@@ -1254,8 +1258,8 @@
             our goal, since only one copy of “$\circ$” 
             exists on the right-hand side! But
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 (g \circ h)(x) = g(h(x))
@@ -1263,8 +1267,8 @@
 
             by the “definitional equation” again, so
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 f((g \circ h)(x)) = \f(g(h(x)))
@@ -1301,8 +1305,8 @@
 
             So the first step is...
             
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
@@ -1312,23 +1316,23 @@
             the definitional equation, and the second step
             is...
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 (f \circ g)(h(x)) = \f(g(h(x)))
                 $$
             
-            ...by setting $r = f$, $s = g$, and while
-            replacing “$x$” by “$h(x)$”.
+            ...by setting $r = f$, $s = g$, and with
+            ‘$h(x)$’ in place of ‘$x$’.
         
             |> Pause
 
             _Note 1._
             The fact that
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 (f \circ (g \circ h))(x)
@@ -1336,8 +1340,8 @@
 
             and
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 ((f \circ g) \circ h)(x)
@@ -1345,8 +1349,8 @@
 
             both evaluate to
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 f(g(h(x)))
@@ -1354,8 +1358,8 @@
 
             actually implies that
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 f \circ (g \circ h)
@@ -1363,8 +1367,8 @@
 
             and
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 (f \circ g) \circ h
@@ -1374,8 +1378,8 @@
             the function that maps $x$ to $f(g(h(x)))$ for 
             all $x$ (or
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 x \ra f(g(h(x)))
@@ -1388,11 +1392,11 @@
             _Note 2._
             Because of this, we can write
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
-                f \circ g \circ half
+                f \circ g \circ h
                 $$
 
             without any parentheses. (The point is: either
@@ -1404,8 +1408,8 @@
             _Note 3._
             The fact that
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 {(a + b) + c = a + (b + c)}
@@ -1417,8 +1421,8 @@
 
             of addition; likewise, the fact that
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 (ab)c = a(bc)
@@ -1431,8 +1435,8 @@
             of multiplication; and again likewise,
             the fact that
 
-            |> CustomBlock
-                style font-size:1.1em
+            |> div
+                style font-size:1.1em;margin:1em 0em;
 
                 $$
                 {(f \circ g) \circ h  =  f \circ (g \circ h)}

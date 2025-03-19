@@ -39,11 +39,3 @@ export const Pause = () => {
 export const WriterlyBlankLine = () => {
   return <></>;
 };
-
-export const CustomBlock = (props: ParentProps & SharedProps) => {
-  return (
-    <span class={props.class} style={props.style}>
-      {props.children}
-    </span>
-  );
-};
