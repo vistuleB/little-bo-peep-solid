@@ -68,13 +68,13 @@ const ActionArrows = () => {
 
   const handleUpClick = (_: MouseEvent) => {
     let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50;
-    let scrollTo = (store.scrollY < middleScroll + 5) ? 0 : middleScroll;
+    let scrollTo = (store.scrollY < middleScroll + 100) ? 0 : middleScroll;
     smoothScrollTo(scrollTo, 100);
   };
 
   const handleDownClick = (_: MouseEvent) => {
     let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50;
-    let scrollTo = (store.scrollY > middleScroll - 5) ? document.body.scrollHeight : middleScroll;
+    let scrollTo = (store.scrollY > middleScroll - 100) ? document.body.scrollHeight : middleScroll;
     smoothScrollTo(scrollTo, 100);
   };
 
@@ -83,8 +83,11 @@ const ActionArrows = () => {
       id="scroll-btns"
       onMouseOver={() => set_hovered(true)}
       onMouseOut={() => set_hovered(false)}
-      style={{ opacity: hovered() ? 1 : opacity() }}
-      class="fixed bottom-3 left-2">
+      style={{
+        opacity: hovered() ? 1 : opacity(),
+        left: `${1500 - store.scrollX - 33}px`
+      }}
+      class="fixed bottom-3">
       <button
         onClick={handleUpClick}
         class={twJoin(
