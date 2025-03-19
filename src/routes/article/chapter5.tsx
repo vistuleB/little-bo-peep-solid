@@ -805,7 +805,7 @@ const Rest = () => {
           notwithstanding.)
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          However, note that
+          One can also note that
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -863,8 +863,10 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           to finish the computation),
-          which means that you only need to
-          remember the first two equations.
+          which means that one only needs to
+          remember the first two equations. Though,
+          in fact, one really just needs to remember 
+          the four-particle diagram!
         </VerticalChunk>
       </Section>
       <Pause />
@@ -1114,14 +1116,16 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}Each
+          {" "}
+          Since each
           derivative is obtained by moving to the next
-          particle in the order of rotation, i.e.,
-          by adding{" "}
+          particle in the order of rotation, each
+          derivative is obtained by adding{" "}
           <Math>
             $+\eta$
           </Math>
-          {" "}to the input!
+          {" "}to the
+          input!
         </VerticalChunk>
       </Section>
       <Pause />
@@ -1825,7 +1829,7 @@ const Rest = () => {
           in radians) in the second quadrant, and so on.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          For the remaining values, observe the 
+          For the remaining values we rely on the 
           existence of the following two equilateral
           triangles:
         </VerticalChunk>
@@ -3775,7 +3779,31 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          modulo a technicality, and
+          modulo a very small technicality (to do
+          with the fact that{" "}
+          <NoBreak>
+            <Math>
+              $&#123;1\over \infty&#125; \ne 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          or, to dig in a little, to do with the fact that
+          what people think of as{" "}
+          <NoBreak>
+            “
+            <Math>
+              $\pm\infty$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          is, in fact, an{" "}
+          <i>
+            undefined
+          </i>
+          {" "}value of the function),
+          and
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -3927,7 +3955,7 @@ const Rest = () => {
         <Image src="/images/svg_ch5_ch_secant_reinterpretation_4.svg" />
         <Pause />
         <VerticalChunk>
-          (But this fact is, somehow, not used as often.)
+          (But this fact is not used as often.)
         </VerticalChunk>
         <Pause />
         <VerticalChunk>

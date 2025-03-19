@@ -216,7 +216,7 @@
     (Clockwise vs. counterclockwise rotation
     notwithstanding.)
 
-    However, note that
+    One can also note that
     $$
     (-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'
     $$
@@ -240,8 +240,12 @@
     (-\!\cos)' = -\!\cos' = -(-\!\sin) = \sin
     $$
     to finish the computation),
-    which means that you only need to
-    remember the first two equations.
+    which means that one only needs to
+    remember the first two equations. Though,
+    in fact, one really just needs to remember 
+    the four-particle diagram!
+    !! (Or really,
+    !! just remember the four-particle diagram.)
 
 |> Section
 
@@ -356,10 +360,16 @@
     $$
     
     where “$^{(\ell)}$” denotes the $\ell$-th
-    derivative, for all $\ell \in \nn$. Each
+    derivative, for all $\ell \in \nn$. 
+    !! Each
+    !! derivative is obtained by moving to the next
+    !! particle in the order of rotation, i.e.,
+    !! by adding $+\eta$ to the input!
+    Since each
     derivative is obtained by moving to the next
-    particle in the order of rotation, i.e.,
-    by adding $+\eta$ to the input!
+    particle in the order of rotation, each
+    derivative is obtained by adding $+\eta$ to the
+    input!
 
 |> Section
 
@@ -726,7 +736,7 @@
 
     in radians) in the second quadrant, and so on.
 
-    For the remaining values, observe the 
+    For the remaining values we rely on the 
     existence of the following two equilateral
     triangles:
 
@@ -1600,7 +1610,12 @@
     \cot = {1\over \tan}
     $$
 
-    modulo a technicality, and
+    modulo a very small technicality (to do
+    with the fact that ${1\over \infty} \ne 0$,
+    or, to dig in a little, to do with the fact that
+    what people think of as “$\pm\infty$”
+    is, in fact, an _undefined_ value of the function),
+    and
 
     $$
     \tan \,=\, \sec \cdot \sin \,\,=\,\, {\sin\!\!\!\!\phantom{1}\over \cos}
@@ -1702,7 +1717,7 @@
     |> Image
         src images/svg_ch5_ch_secant_reinterpretation_4.svg
 
-    (But this fact is, somehow, not used as often.)
+    (But this fact is not used as often.)
 
     |> Pause
 
