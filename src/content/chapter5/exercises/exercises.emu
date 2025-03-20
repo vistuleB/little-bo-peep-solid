@@ -987,7 +987,7 @@
         Bt + C
         $$
 
-        is an amount of _clockwise_radians. The following 
+        is an amount of _clockwise_ radians. The following 
         diagram illustrates the two possibilities:
 
         |> Image

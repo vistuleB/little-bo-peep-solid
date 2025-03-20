@@ -6376,7 +6376,7 @@ const Rest = () => {
               <i>
                 clockwise
               </i>
-              radians. The following 
+              {" "}radians. The following 
               diagram illustrates the two possibilities:
             </VerticalChunk>
             <Pause />
