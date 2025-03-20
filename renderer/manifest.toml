@@ -16,7 +16,7 @@ packages = [
   { name = "snag", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "snag", source = "hex", outer_checksum = "7E9F06390040EB5FAB392CE642771484136F2EC103A92AE11BA898C8167E6E17" },
   { name = "tom", version = "1.1.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "tom", source = "hex", outer_checksum = "0910EE688A713994515ACAF1F486A4F05752E585B9E3209D8F35A85B234C2719" },
   { name = "vxml_parser", version = "1.0.0", build_tools = ["gleam"], requirements = ["blamedlines", "gleam_regexp", "gleam_stdlib", "simplifile", "xmlm"], source = "git", repo = "git@github.com:vistuleB/vxml_parser", commit = "1ba51fffae4314ab06b3a88f22578b126f3ead1a" },
-  { name = "writerly_parser", version = "1.0.0", build_tools = ["gleam"], requirements = ["blamedlines", "gleam_stdlib", "simplifile", "vxml_parser"], source = "git", repo = "git@github.com:vistuleB/writerly_parser", commit = "bf78f9979ce304053034bcf91111d34528a57ebc" },
+  { name = "writerly_parser", version = "1.0.0", build_tools = ["gleam"], requirements = ["blamedlines", "gleam_stdlib", "simplifile", "vxml_parser"], source = "git", repo = "git@github.com:vistuleB/writerly_parser", commit = "43cc0db84a3eb256a533f3a510f09e412402fd23" },
   { name = "xmlm", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "xmlm", source = "hex", outer_checksum = "295F483E1A930DC4C45ED0F07C3466C0A7381972C3C2FC64D66BD2FBB307ED6A" },
 ]
 
@@ -28,5 +28,6 @@ gleeunit = { version = ">= 1.0.0 and < 2.0.0" }
 lbp_desugaring = { git = "git@github.com:MrChaker/lbp_desugaring", ref = "main" }
 shellout = { version = ">= 1.6.0 and < 2.0.0" }
 simplifile = { version = ">= 2.2.0 and < 3.0.0" }
+vxml_parser = { git = "git@github.com:vistuleB/vxml_parser", ref = "main" }
 writerly_parser = { git = "git@github.com:vistuleB/writerly_parser", ref = "main" }
 xmlm = { version = ">= 1.0.0 and < 2.0.0" }
