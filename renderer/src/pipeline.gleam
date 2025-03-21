@@ -100,7 +100,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
     infra.l_m_r_1_3_indexed_regex("[^\\s({\\[\\*]|^", "\\*", "[\\s)}\\]]|$")
 
   [
-    unwrap_tags(["WriterlyBlurb"]),
     convert_int_attributes_to_float([#("", "line"), #("", "padding_left")]),
     // ************************
     // $$ *********************
