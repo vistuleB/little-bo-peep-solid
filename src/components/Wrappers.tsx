@@ -1,6 +1,4 @@
 import { ParentProps } from "solid-js";
-import { twJoin } from "tailwind-merge";
-import SharedProps from "./types/SharedProps";
 import { SectionDivider } from "./SectionDivider";
 import { useGlobalContext } from "~/store/StoreProvider";
 

@@ -13,6 +13,7 @@ const ActionArrows = () => {
   const [hovered, set_hovered] = createSignal(false);
 
   const calc_opacity = () => {
+    // prettier-ignore
     return Math.min(
       0.0,
       Math.max(0, 1.0 - (store.scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) / (HAMBURGER_MENU_SCROLLY_END_FADE - HAMBURGER_MENU_SCROLLY_START_FADE))
@@ -67,13 +68,16 @@ const ActionArrows = () => {
 
   const handleUpClick = (_: MouseEvent) => {
     let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50; // see also BackupArrow in Solution.tsx
-    let scrollTo = (store.scrollY < middleScroll + 100) ? 0 : middleScroll;
+    let scrollTo = store.scrollY < middleScroll + 100 ? 0 : middleScroll;
     smoothScrollTo(scrollTo, 100);
   };
 
   const handleDownClick = (_: MouseEvent) => {
     let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50;
-    let scrollTo = (store.scrollY > middleScroll - 100) ? document.body.scrollHeight : middleScroll;
+    let scrollTo =
+      store.scrollY > middleScroll - 100
+        ? document.body.scrollHeight
+        : middleScroll;
     smoothScrollTo(scrollTo, 100);
   };
 
@@ -84,25 +88,30 @@ const ActionArrows = () => {
       onMouseOut={() => set_hovered(false)}
       style={{
         opacity: hovered() ? 1 : opacity(),
-        left: `${1500 - store.scrollX - 33}px`
+        left: `${1500 - store.scrollX - 33}px`,
       }}
       class="fixed bottom-3">
       <button
         onClick={handleUpClick}
         class={twJoin(
           "block px-1",
-          store.scrollY > 1 ? "stroke-black hover:stroke-stone-600" : "stroke-stone-300",
-          "transition-all"
+          store.scrollY > 1
+            ? "stroke-black hover:stroke-stone-600"
+            : "stroke-stone-300",
+          "transition-all",
         )}>
-        <LeftArrow class="rotate-90" style="margin-bottom:-1.3rem" /> <LeftArrow class="rotate-90" style="" />
+        <LeftArrow class="rotate-90" style="margin-bottom:-1.3rem" />{" "}
+        <LeftArrow class="rotate-90" style="" />
       </button>
 
       <button
         onClick={handleDownClick}
         class={twJoin(
           "block px-1",
-          store.scrollY + store.innerHeight - store.scrollHeight < - 1 ? "stroke-black hover:stroke-stone-600" : "stroke-stone-300",
-          "transition-all"
+          store.scrollY + store.innerHeight - store.scrollHeight < -1
+            ? "stroke-black hover:stroke-stone-600"
+            : "stroke-stone-300",
+          "transition-all",
         )}>
         <LeftArrow class="rotate-[270deg]" style="margin-bottom:-1.3rem" />{" "}
         <LeftArrow class="rotate-[270deg]" style="" />

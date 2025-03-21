@@ -41,7 +41,7 @@ const ExercisesConsumer = (props: ExercisesProps) => {
 
   set_store(
     "transition_duration",
-    Array.from({ length: num_exercises }).map(() => 1000)
+    Array.from({ length: num_exercises }).map(() => 1000),
   );
 
   return (
@@ -50,8 +50,7 @@ const ExercisesConsumer = (props: ExercisesProps) => {
         id="exo"
         src="/images/separator.png"
         height="50px"
-        class="mt-[15px] mb-[40px]"
-      ></Image>
+        class="mt-[15px] mb-[40px]"></Image>
       <Switcher exercises={children_list.toArray()} />
       <div class="h-[31px]"></div>
       <For each={children_list.toArray()}>
@@ -62,9 +61,8 @@ const ExercisesConsumer = (props: ExercisesProps) => {
                 "exercise duration-500 ",
                 selected_exo() == index() + 1 || store.list_view
                   ? "opacity-100 h-auto overflow-visible transition-none"
-                  : "opacity-0 h-0 overflow-hidden transition-opacity"
-              )}
-            >
+                  : "opacity-0 h-0 overflow-hidden transition-opacity",
+              )}>
               {child}
             </div>
           );
@@ -121,7 +119,9 @@ const Switcher = (props: SwitcherProps) => {
 
   return (
     <TextParent>
-      <div id="exercises-btns" class="flex justify-center !text-xl gap-0 mt-[2px]">
+      <div
+        id="exercises-btns"
+        class="flex justify-center !text-xl gap-0 mt-[2px]">
         <svg
           width={`${2 + w}`}
           height={`${2 + w}`}
@@ -130,21 +130,19 @@ const Switcher = (props: SwitcherProps) => {
           xmlns="http://www.w3.org/2000/svg"
           class={twJoin(
             "tab cursor-pointer overflow-visible",
-            left_on() ? "" : "disabled"
+            left_on() ? "" : "disabled",
           )}
           onClick={() => {
             if (left_on()) {
               set_store("selected_exo", selected_exo() - 1);
             }
-          }}
-        >
+          }}>
           <path
             d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
             fill={left_on() ? "#f8fee0" : "#ebebeb"}
             stroke={left_on() ? "#000" : "#464646"}
             stroke-width="1.5"
-            stroke-miterlimit="2"
-          ></path>
+            stroke-miterlimit="2"></path>
           <path
             d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
             fill={left_on() ? "#000" : "#464646"}
@@ -159,8 +157,7 @@ const Switcher = (props: SwitcherProps) => {
         <svg
           width={`${gap}`}
           height={`${2 + w}`}
-          xmlns="http://www.w3.org/2000/svg"
-        ></svg>
+          xmlns="http://www.w3.org/2000/svg"></svg>
         <div class="relative w-fit">
           <svg
             width={`${2 + w}`}
@@ -170,34 +167,30 @@ const Switcher = (props: SwitcherProps) => {
             xmlns="http://www.w3.org/2000/svg"
             class={twJoin(
               "tab cursor-pointer overflow-visible",
-              right_on() ? "" : "disabled"
+              right_on() ? "" : "disabled",
             )}
             onClick={() => {
               if (right_on()) {
                 set_store("selected_exo", selected_exo() + 1);
               }
-            }}
-          >
+            }}>
             <path
               d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
               fill={right_on() ? "#f8fee0" : "#ebebeb"}
               stroke={right_on() ? "#000" : "#464646"}
               stroke-width="1.5"
-              stroke-miterlimit="2"
-            ></path>
+              stroke-miterlimit="2"></path>
             <path
               d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-              fill={right_on() ? "#000" : "#464646"}
-            ></path>
+              fill={right_on() ? "#000" : "#464646"}></path>
             <path
               d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}
-              fill={right_on() ? "#000" : "#464646"}
-            ></path>
+              fill={right_on() ? "#000" : "#464646"}></path>
           </svg>
           <svg
             class={twJoin(
               "toggle absolute cursor-pointer",
-              store.list_view ? "disabled" : ""
+              store.list_view ? "disabled" : "",
             )}
             style={`left:${w + toggle_gap}px;top:0px;`}
             width={`${c2c + 2 * r1 + 2}`}
@@ -206,8 +199,7 @@ const Switcher = (props: SwitcherProps) => {
             xmlns="http://www.w3.org/2000/svg"
             onClick={() => {
               set_store("list_view", !store.list_view);
-            }}
-          >
+            }}>
             <path
               d={`
                 M ${1 + r1 + c2c} ${w / 2 - r1}
@@ -220,8 +212,7 @@ const Switcher = (props: SwitcherProps) => {
               `}
               fill={store.list_view ? "#ebebeb" : "#f8fee0"}
               stroke={store.list_view ? "#464646" : "#000"}
-              stroke-width="1.5"
-            ></path>
+              stroke-width="1.5"></path>
             <circle
               cx={`${toggle_cx()}`}
               cy={`${w / 2}`}
@@ -229,8 +220,7 @@ const Switcher = (props: SwitcherProps) => {
               fill="#fff"
               stroke={store.list_view ? "#464646" : "#000"}
               stroke-width="1.5"
-              style={`transition:${toggle_transition}ms`}
-            ></circle>
+              style={`transition:${toggle_transition}ms`}></circle>
           </svg>
         </div>
       </div>

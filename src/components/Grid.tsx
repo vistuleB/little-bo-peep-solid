@@ -40,13 +40,13 @@ const Grid = (_props: GridProps) => {
       gap: "1rem",
       with_padding: true,
     },
-    _props
+    _props,
   );
 
-  const { store, } = useGlobalContext();
+  const { store } = useGlobalContext();
 
   props.cols = Math.max(props.cols, props.sm_cols, 1);
-  props.sm_cols = (props.sm_cols <= 0) ? props.cols : props.sm_cols;
+  props.sm_cols = props.sm_cols <= 0 ? props.cols : props.sm_cols;
 
   const children_array = children(() => props.children).toArray();
 
@@ -85,7 +85,7 @@ const Grid = (_props: GridProps) => {
         "margin-top": `${props.margin_top}px`,
         "margin-bottom": `${props.margin_bottom}px`,
         "padding-inline": props.with_padding ? `${TEXT_X_PADDING}px` : "0",
-        "width": `${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px`
+        width: `${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px`,
       }}>
       <div
         ref={parentSpan}
@@ -97,14 +97,19 @@ const Grid = (_props: GridProps) => {
           "grid-template-columns": `repeat(${cols()}, 1fr)`,
         }}>
         <For each={children_array}>
-          {
-            (child, index) => {
-              return <span class={twJoin(
-                "w-max",
-                children_array.length - index() < cols() && children_array.length % cols() !== 0 && "col-span-full w-max",
-              )}>{child}</span>
-            }
-          }
+          {(child, index) => {
+            return (
+              <span
+                class={twJoin(
+                  "w-max",
+                  children_array.length - index() < cols() &&
+                    children_array.length % cols() !== 0 &&
+                    "col-span-full w-max",
+                )}>
+                {child}
+              </span>
+            );
+          }}
         </For>
       </div>
     </div>

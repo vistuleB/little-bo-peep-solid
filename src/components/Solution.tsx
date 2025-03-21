@@ -9,7 +9,11 @@ import {
   ParentComponent,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
-import { GREEN_DIV_HEIGHT, MOBILE_MAX_WIDTH, TEXT_X_PADDING } from "~/constants";
+import {
+  GREEN_DIV_HEIGHT,
+  MOBILE_MAX_WIDTH,
+  TEXT_X_PADDING,
+} from "~/constants";
 import { twJoin } from "tailwind-merge";
 import { Spacer, SpacerSm, SpacerXs } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
@@ -74,7 +78,7 @@ const SolutionConsumer = (props: SolutionProps) => {
     set_content_height(ref?.clientHeight || 0);
   };
 
-  const reset_content_height_etc = (msg: string) => {
+  const reset_content_height_etc = () => {
     props.re_calculate_height; // re-calc on change
     if (ref?.clientHeight) {
       set_content_height(ref?.clientHeight || 0);
@@ -89,15 +93,15 @@ const SolutionConsumer = (props: SolutionProps) => {
   };
 
   createEffect(() => {
-    reset_content_height_etc("A");
+    reset_content_height_etc();
     setTimeout(() => {
-      reset_content_height_etc("50");
+      reset_content_height_etc();
     }, 50);
     setTimeout(() => {
-      reset_content_height_etc("100");
+      reset_content_height_etc();
     }, 100);
     setTimeout(() => {
-      reset_content_height_etc("500");
+      reset_content_height_etc();
     }, 500);
   });
 
@@ -168,18 +172,9 @@ const SolutionConsumer = (props: SolutionProps) => {
         <SolutionSVG
           solution_open={solution_open}
           onClick={() => {
+            // *** track if solution is fully opened ***
             if (handle()) {
               clearTimeout(handle()!);
-            }
-            set_solution_transition(
-              transition_duration()[props.solution_number - 1],
-            );
-            let element_pos =
-              window.innerHeight - (ref?.getBoundingClientRect()?.bottom || 0);
-            let should_scroll_to_button_first =
-              element_pos > GREEN_DIV_HEIGHT + 40 + 56;
-            if (solution_open() && should_scroll_to_button_first) {
-              document?.getElementById("exo")?.scrollIntoView();
             }
             if (solution_open()) {
               set_solution_fully_opened(false);
@@ -192,6 +187,22 @@ const SolutionConsumer = (props: SolutionProps) => {
               );
               set_handle(timeout_handle);
             }
+
+            // *** update transition duration ***
+            set_solution_transition(
+              transition_duration()[props.solution_number - 1],
+            );
+
+            // *** scroll to button ***
+            let element_pos =
+              window.innerHeight - (ref?.getBoundingClientRect()?.bottom || 0);
+            let should_scroll_to_button_first =
+              element_pos > GREEN_DIV_HEIGHT + 40 + 56;
+            if (solution_open() && should_scroll_to_button_first) {
+              document?.getElementById("exo")?.scrollIntoView();
+            }
+
+            // *** update main value ***
             set_store("solutions_open", (prev) => {
               prev[props.solution_number - 1] = !solution_open();
               return [...prev];
@@ -204,7 +215,8 @@ const SolutionConsumer = (props: SolutionProps) => {
                 String(solution_open()),
               );
             }
-            // solution transition should be not 0 only when button is clicked
+
+            // *** solution transition should be not 0 only when button is clicked ***
             setTimeout(
               () => {
                 set_solution_transition(0);

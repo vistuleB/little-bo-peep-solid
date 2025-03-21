@@ -8,9 +8,9 @@ type LazyImageProp = {
 };
 
 function LazyImage(
-  props: ParentProps & JSX.ImgHTMLAttributes<HTMLImageElement> & LazyImageProp
+  props: ParentProps & JSX.ImgHTMLAttributes<HTMLImageElement> & LazyImageProp,
 ) {
-  let {store} = useGlobalContext();
+  let { store } = useGlobalContext();
 
   return (
     <img
@@ -21,7 +21,8 @@ function LazyImage(
       alt={props.alt || ""}
       class={twJoin(
         props.class,
-        store.show_areas && (props.side_image ? "divide-vertically" : "divide-horizontally"),
+        store.show_areas &&
+          (props.side_image ? "divide-vertically" : "divide-horizontally"),
       )}
       style={props.style || ""}
       // loading="lazy"

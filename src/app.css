@@ -17,16 +17,9 @@
   src: url("/fonts/Baskerville-Italic.ttf");
 }
 
-/* @font-face {
-  font-family: "Clicker Script";
-  src: url("/fonts/ClickerScript-Regular.ttf");
-} */
-
 :root {
-  /* --background-rgb: #fdfdfd; */
   --background-rgb: #fff;
   --foreground-rgb: rgb(0, 0, 0);
-  /* --desktop-text-column-width: 520px; */
   --desktop-text-column-padding: 16px;
   --mobile-max-width: 900px;
 }
@@ -92,13 +85,21 @@ i {
 }
 
 .math {
-  display: inline; 
+  display: inline;
 }
 
-.spacer { height: 1.5rem; }
-.spacer-sm { height: 1rem; }
-.spacer-xs { height: 0.5rem; }
-.spacer-xxs { height: 0.25rem; }
+.spacer {
+  height: 1.5rem;
+}
+.spacer-sm {
+  height: 1rem;
+}
+.spacer-xs {
+  height: 0.5rem;
+}
+.spacer-xxs {
+  height: 0.25rem;
+}
 
 /* Mathjax */
 
@@ -318,91 +319,6 @@ table.first-line tr td:first-child {
   border-left: none;
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, 1fr);
-}
-.grid-cols-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid-cols-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid-cols-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-.grid-cols-5 {
-  grid-template-columns: repeat(5, 1fr);
-}
-.grid-cols-6 {
-  grid-template-columns: repeat(6, 1fr);
-}
-.grid-cols-7 {
-  grid-template-columns: repeat(7, 1fr);
-}
-.grid-cols-8 {
-  grid-template-columns: repeat(8, 1fr);
-}
-.grid-cols-9 {
-  grid-template-columns: repeat(9, 1fr);
-}
-.grid-cols-10 {
-  grid-template-columns: repeat(10, 1fr);
-}
-.grid-cols-11 {
-  grid-template-columns: repeat(11, 1fr);
-}
-.grid-cols-12 {
-  grid-template-columns: repeat(12, 1fr);
-}
-
-/* @media (min-width: 520px) {
-  .sm\:grid-cols-1 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .sm\:grid-cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .sm\:grid-cols-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .sm\:grid-cols-5 {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  .sm\:grid-cols-6 {
-    grid-template-columns: repeat(6, 1fr);
-  }
-  .sm\:grid-cols-7 {
-    grid-template-columns: repeat(7, 1fr);
-  }
-  .sm\:grid-cols-8 {
-    grid-template-columns: repeat(8, 1fr);
-  }
-  .sm\:grid-cols-9 {
-    grid-template-columns: repeat(9, 1fr);
-  }
-  .sm\:grid-cols-10 {
-    grid-template-columns: repeat(10, 1fr);
-  }
-  .sm\:grid-cols-11 {
-    grid-template-columns: repeat(11, 1fr);
-  }
-  .sm\:grid-cols-12 {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .center-on-mobile {
-    grid-column: 1/-1;
-  }
-
-  .gridColsWidth {
-    // DESKTOP_TEXT_WIDTH_WITH_MARGIN Constant
-    grid-template-columns: 1fr 588px 1fr;
-  }
-} */
-
 .nowrap,
 .nobreak,
 .nolinebreak {
@@ -416,7 +332,7 @@ table.first-line tr td:first-child {
     #d1d1f7 50%,
     #e6bbff 50%,
     #e6bbff 100%
-  )
+  );
 }
 
 .divide-vertically {
@@ -425,7 +341,7 @@ table.first-line tr td:first-child {
     #d1f7dc 0%,
     #d1f7dc 50%,
     #f9ffbb 50%,
-    #f9ffbb 100%,
+    #f9ffbb 100%
   );
 }
 
@@ -439,21 +355,10 @@ table.first-line tr td:first-child {
   position: relative;
 }
 
-
 .body_line {
   flex-grow: 1;
   height: 1em;
   background: left / 100% 1px;
-  /*
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="10"
-      height="20"
-      viewBox="0 0 10 20"
-      preserveAspectRatio="none">
-      <rect width="10" height="1" x="0" y="14.072"/>
-    </svg>
-  */
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20" preserveAspectRatio="none"><rect width="10" height="1" x="0" y="14.072"/></svg>');
   background-size: 100% 100%;
   margin: 0 0;
@@ -513,10 +418,10 @@ table.first-line tr td:first-child {
 }
 
 .ch4_inline_blackwhite_particles {
-  height:0.9em;
-  vertical-align:baseline;
-  overflow:visible;
-  padding-left:0px;
+  height: 0.9em;
+  vertical-align: baseline;
+  overflow: visible;
+  padding-left: 0px;
   display: inline;
   transform: translate(0em, 0.1em);
 }
@@ -530,15 +435,15 @@ ol.l1 > li {
   line-height: 1.8em;
 }
 ol.l1 > li:before {
-    content: "(" counter(list, lower-alpha ) ") ";
-    counter-increment: list;
-    position: absolute;
-    left: -0em;
-    display: block;
-    width: 2em; 
-    text-align: right;
-    font-family: "Baskerville Bold";
-    margin-left: 30px;
+  content: "(" counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  left: -0em;
+  display: block;
+  width: 2em;
+  text-align: right;
+  font-family: "Baskerville Bold";
+  margin-left: 30px;
 }
 
 .text-2rem {

@@ -203,7 +203,12 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(
           blame_us("lbp_fragment_emitter"),
           0,
-          "import { SectionDivider, StarDivider } from \"~/components/SectionDivider\";",
+          "import { SectionDivider } from \"~/components/SectionDivider\";",
+        ),
+         BlamedLine(
+          blame_us("lbp_fragment_emitter"),
+          0,
+          "import { StarDivider } from \"~/components/StarDivider\";",
         ),
         BlamedLine(
           blame_us("lbp_fragment_emitter"),

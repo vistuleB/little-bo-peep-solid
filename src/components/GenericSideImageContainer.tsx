@@ -16,4 +16,4 @@ const GenericSideImageContainer = (props: ParentProps & SharedProps) => {
   );
 };
 
-export default GenericSideImageContainer; 
+export default GenericSideImageContainer;

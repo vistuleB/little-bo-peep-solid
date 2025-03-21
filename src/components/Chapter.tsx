@@ -8,7 +8,7 @@ const Chapter = (props: any) => {
   let { set_store } = useGlobalContext();
   useScrollX();
   useSaveScroll();
-  
+
   const resetDimensions = () => {
     set_store("innerWidth", window.innerWidth);
     set_store("innerHeight", window.innerHeight);
@@ -22,7 +22,9 @@ const Chapter = (props: any) => {
     <>
       <ArticleTitle
         label={`Chapter ${props.number}: ` + props.title}
-        on_mobile_label={`Chapter ${props.number}: ` + (props.mobile_title || props.title)}
+        on_mobile_label={
+          `Chapter ${props.number}: ` + (props.mobile_title || props.title)
+        }
       />
       {props.children}
     </>

@@ -1,10 +1,11 @@
-import { TOCTitleLeftEndmarkSVG, TOCTitleRightEndmarkSVG } from "./TOCTitleEndmarks";
+import {
+  TOCTitleLeftEndmarkSVG,
+  TOCTitleRightEndmarkSVG,
+} from "./TOCTitleEndmarks";
 
 const PanelTitle = (props: { label: string }) => {
   return (
-    <h1 
-      class="font-baskerville-italic mt-[5px] mb-[7px] flex justify-between !text-3xl items-baseline !leading-9 "
-    >
+    <h1 class="font-baskerville-italic mt-[5px] mb-[7px] flex justify-between !text-3xl items-baseline !leading-9 ">
       <TOCTitleLeftEndmarkSVG />
       <span class="body_line" style="margin-right:0.6em;"></span>
       <span class="text-right">{props.label}</span>

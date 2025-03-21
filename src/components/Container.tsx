@@ -12,7 +12,6 @@ import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
 import ActionArrows from "./ActionArrows";
 
-
 const Container = (props: ParentProps) => {
   const env = import.meta.env.VITE_ENV;
   // can_click is for disabling click on page transition
@@ -36,7 +35,11 @@ const Container = (props: ParentProps) => {
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
-    let _dummy = store.scrollY + store.innerHeight + store.scrollHeight + store.scrollWidth;
+    let _dummy =
+      store.scrollY +
+      store.innerHeight +
+      store.scrollHeight +
+      store.scrollWidth;
   };
 
   createEffect(() => {
@@ -91,6 +94,7 @@ const Container = (props: ParentProps) => {
       document.getElementById("menu-btn"),
       ...document.querySelectorAll("#solution-btn"),
       ...document.querySelectorAll("#backup-btn"),
+      ...document.querySelectorAll("#option-btn"),
       document.getElementById("exercises-btns"),
       document.getElementById("scroll-btns"),
     ];

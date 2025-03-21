@@ -9,21 +9,18 @@ import {
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
 
-const ArticleTitle = (
-  props: {
-    label: string;
-    on_mobile_label?: string;
-    class?: string;
-  },
-) => {
+const ArticleTitle = (props: {
+  label: string;
+  on_mobile_label?: string;
+  class?: string;
+}) => {
   const { on_mobile } = useOnMobile();
-  const { store, } = useGlobalContext();
+  const { store } = useGlobalContext();
 
   return (
-    <div 
+    <div
       class="slice"
-      style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;`}
-      >
+      style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;`}>
       <h1
         class="text-2rem sm:text-4xl pt-5 sm:pt-4 pb-4"
         style={`margin-top: ${

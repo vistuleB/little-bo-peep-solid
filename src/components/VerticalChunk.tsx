@@ -7,18 +7,17 @@ import { useGlobalContext } from "../store/StoreProvider";
 const VerticalChunk = (
   props: ParentProps & SharedProps & { indent?: boolean },
 ) => {
-  const { store, } = useGlobalContext();
+  const { store } = useGlobalContext();
 
   return (
     <p
       class={twJoin(
-        "slice", 
+        "slice",
         props.indent && "indent-10",
         props.class,
-        store.show_areas && "divide-horizontally"
+        store.show_areas && "divide-horizontally",
       )}
-      style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;${props.style}`}
-    >
+      style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;${props.style}`}>
       {props.children}
     </p>
   );
