@@ -93,13 +93,31 @@ fn lbp_splitter(
   )
 }
 
+fn is_section(vxml: VXML) -> Bool {
+  infra.is_tag(vxml, "Section")
+}
+
+fn up_to_and_including_first_section(
+  previous: List(VXML),
+  upcoming: List(VXML)
+) -> #(List(VXML), List(VXML)) {
+  case upcoming {
+    [] -> #(previous, [])
+    [first, ..rest] -> {
+      case is_section(first) {
+        True -> #([first, ..previous], rest)
+        False -> up_to_and_including_first_section([first, ..previous], rest)
+      }
+    }
+  }
+}
+
 // splitting chapter vxmls for performance
 fn split_vxmls_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
   let assert V(b, t, a, children) = vxml
-  let assert [first, ..rest] = children
+  let #(before_rest, rest) = up_to_and_including_first_section([], children)
   let rest_tag = V(blame_us("rest tag"), "Rest", [], [])
-
-  #(V(b, t, a, [first, rest_tag]), rest)
+  #(V(b, t, a, [rest_tag, ..before_rest] |> list.reverse), rest)
 }
 
 fn lbp_chapter_bootcamp_common_emitter(

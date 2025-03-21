@@ -116,6 +116,7 @@ const PanelButton = () => {
                   ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
                   : "stroke-stone-300",
               )}
+              style=""
             />
           </button>
           <button
@@ -144,6 +145,7 @@ const PanelButton = () => {
                   ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
                   : "stroke-stone-300",
               )}
+              style=""
             />
           </button>
           <button

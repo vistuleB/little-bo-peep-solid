@@ -11,7 +11,8 @@ import Solution from "~/components/Solution";
 import Table from "~/components/Table";
 import Grid from "~/components/Grid";
 import { List, Item } from "~/components/List";
-import { SectionDivider, StarDivider } from "~/components/SectionDivider";
+import { SectionDivider } from "~/components/SectionDivider";
+import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
@@ -25,6 +26,56 @@ const Article = () => {
         <a
           class="next_page"
           href="/article/bootcamp1" />
+        <Section>
+          <VerticalChunk>
+            <b>
+              Terminology.
+            </b>
+            {" "}
+            The expression below is called a{" "}
+            <i>
+              power
+            </i>
+            ; 
+            the number at the bottom of the power is called
+            the{" "}
+            <i>
+              base
+            </i>
+            {" "}(of the power); the number at the top
+            is called the{" "}
+            <i>
+              exponent
+            </i>
+            :
+          </VerticalChunk>
+          <Pause />
+          <Image src="/images/svg_base_exponent.svg" />
+          <Pause />
+          <VerticalChunk>
+            The whole expression is read{" "}
+            <Math>
+              $\mathit&#123;10&#125;$
+            </Math>
+            {" "}{" "}
+            <i>
+              to the power
+            </i>
+            {" "}{" "}
+            <NoBreak>
+              <Math>
+                $\mathit&#123;3&#125;$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}and the
+            general process of taking a power is called{" "}
+            <i>
+              exponentiation
+            </i>
+            .
+          </VerticalChunk>
+        </Section>
         <Rest />
       </Bootcamp>
   </>);
@@ -34,56 +85,6 @@ const Rest = () => {
   const showMore = useShowMore();
   return(<>
     { showMore() && <>
-      <Section>
-        <VerticalChunk>
-          <b>
-            Terminology.
-          </b>
-          {" "}
-          The expression below is called a{" "}
-          <i>
-            power
-          </i>
-          ; 
-          the number at the bottom of the power is called
-          the{" "}
-          <i>
-            base
-          </i>
-          {" "}(of the power); the number at the top
-          is called the{" "}
-          <i>
-            exponent
-          </i>
-          :
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_base_exponent.svg" />
-        <Pause />
-        <VerticalChunk>
-          The whole expression is read{" "}
-          <Math>
-            $\mathit&#123;10&#125;$
-          </Math>
-          {" "}{" "}
-          <i>
-            to the power
-          </i>
-          {" "}{" "}
-          <NoBreak>
-            <Math>
-              $\mathit&#123;3&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}and the
-          general process of taking a power is called{" "}
-          <i>
-            exponentiation
-          </i>
-          .
-        </VerticalChunk>
-      </Section>
       <Pause />
       <Section>
         <VerticalChunk>
