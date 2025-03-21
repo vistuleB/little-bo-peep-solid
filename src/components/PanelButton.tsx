@@ -59,7 +59,6 @@ const PanelButton = () => {
     setTimeout(() => {
       set_nextDisabled(!document.querySelector(".next_page"));
       set_prevDisabled(!document.querySelector(".prev_page"));
-      console.log("yes u got this deployed");
     }, 50);
   });
 
