@@ -56,6 +56,10 @@ const PanelButton = () => {
     store.route; // re-run on route change
     set_nextDisabled(!document.querySelector(".next_page"));
     set_prevDisabled(!document.querySelector(".prev_page"));
+    setTimeout(() => {
+      set_nextDisabled(!document.querySelector(".next_page"));
+      set_prevDisabled(!document.querySelector(".prev_page"));
+    }, 50);
   });
 
   return (
