@@ -743,7 +743,7 @@
     f \circ g
     $$
 
-    goes back to Exercise 5 of Chapter 3, with
+    goes back to Exercise >>Chapter3Exercise5 of Chapter 3, with
     the little circle “$\circ$” being known as
     the _composition operator_, while the sum
 
@@ -757,7 +757,7 @@
     fg
     $$
 
-    of functions already appear in Exercise 18
+    of functions already appear in Exercise >>Chapter3Exercise18
     of Chapter 3, also. (On the other hand, the
     quotient (i.e. $f/g$) and difference (i.e.,
     $f - g$) of functions are defined above for

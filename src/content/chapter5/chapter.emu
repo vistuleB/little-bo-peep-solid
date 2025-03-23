@@ -2,7 +2,7 @@
 
     *Cos and Sin. (“Cosine” and “sine”.)*
     We've already encountered the ‘cos’ 
-    function in Exercise 7 of Chapter 3, e.g.. 
+    function in Exercise >>Chapter3Exercise7 of Chapter 3, e.g.. 
     It is the one that has this graph:
 
     |> Image
@@ -88,7 +88,7 @@
     \approx {11\over 7} = 1.\overline{571428}
     $$
 
-    in Exercise 24 of Chapter 3 (by direct inspection
+    in Exercise >>Chapter3Exercise21 of Chapter 3 (by direct inspection
     of the graph $y = \cos(x)$, for that matter,
     which may or may not be cheating), which agrees
     with the visual estimate $x \approx -1.6$. (But
@@ -194,7 +194,7 @@
         src images/svg_ch5_ch_four_curves.svg
 
     These are the same four curves that
-    appear in Exercise 12 of Chapter 4.
+    appear in Exercise >>Chapter4Exercise12 of Chapter 4.
     In particular,
     $$
     \sin' = \cos
@@ -221,7 +221,7 @@
     (-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'
     $$
     in general for any $f : \rr \ra \rr$ 
-    (cf. Exercise 20 and Exercise 10 of Chapter 4),
+    (cf. Exercise >>Chapter4Exercise20 and Exercise >>Chapter4Exercise10 of Chapter 4),
     which implies that
     $$
     (-\!\sin)' = -\!\sin'
@@ -271,7 +271,7 @@
     (“aye-tah”, Greek letter “eta”) is a
     constant that denotes the quarter-circumference
     of a unit circle, or about ${11\over 7}$.
-    (Cf. Exercise 24, Chapter 4.) You should
+    (Cf. Exercise >>Chapter4Exercise24, Chapter 4.) You should
     be able to verify each of these identities
     just by looking at them and thinking of the
     definitions of $\sin(x)$, $\cos(x)$—possibly
@@ -495,7 +495,7 @@
     __radian measure__
 
     of an angle was briefly touched upon in
-    Note 1 of Exercise 37, Chapter 4. 
+    Note 1 of Exercise >>Chapter4Exercise37, Chapter 4. 
     In short, it is a “scientific” measure
     of angles in which the value of an angle
     is the length of a circular arc subtended

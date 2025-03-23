@@ -1424,7 +1424,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b>
+            <b id={12925472613}>
               Exercise 1.
             </b>
             {" "}
@@ -2609,11 +2609,15 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b>
+            <b id={993511294416}>
               Exercise 2.
             </b>
             {" "}
-            In the solution to Exercise 1, we observed how 
+            In the solution to Exercise{" "}
+            <a href="/article/chapter1#12925472613">
+              1
+            </a>
+            , we observed how 
             the difference
           </VerticalChunk>
           <Pause />

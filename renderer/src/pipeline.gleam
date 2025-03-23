@@ -1,6 +1,16 @@
+import desugarers/generate_handles_attributes.{generate_handles_attributes}
 import desugarers/absorb_next_sibling_while.{absorb_next_sibling_while}
 import desugarers/add_attribute_to_if_child_of_but_no_overwrites.{
   add_attribute_to_if_child_of_but_no_overwrites,
+}
+import desugarers/handles_generate_ids.{
+  handles_generate_ids,
+}
+import desugarers/handles_generate_dictionary.{
+  handles_generate_dictionary,
+}
+import desugarers/define_article_output_path.{
+  define_article_output_path,
 }
 import desugarers/add_before_tags_but_not_first_child_tags.{
   add_before_tags_but_not_first_child_tags,
@@ -129,10 +139,21 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #("ClosingDoubleDollar", "$$"),
     ]),
     find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
+    // *******************************
+    // Attributes with numbers *******
+    // *******************************
+    add_counter_attributes([
+      #("Solution", "Exercises", "solution_number", 1),
+      #("Exercise", "Exercises", "exercise_number", 1),
+    ]),
     // ************************
     // AddTitleCounters *******
     // ************************
     // 7.
+
+    generate_handles_attributes(#("Chapter", "Exercise")),
+    generate_handles_attributes(#("Bootcamp", "Exercise")),
+
     add_title_counters_and_titles_with_handle_assignments([
       #("Chapter", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
       #(
@@ -299,9 +320,17 @@ pub fn lbp_pipeline() -> List(Pipe) {
     wrap_math_with_no_break(),
     unwrap_tags_if_single_child(["NoBreak"]),
     counters_substitute_and_assign_handles(),
+    handles_generate_ids(),
+    define_article_output_path(
+      #("Chapter", "/article/chapter", "path"),
+    ),
+    define_article_output_path(
+      #("Bootcamp", "/article/bootcamp", "path"),
+    ),
+    handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
     handles_substitute(),
-    add_counter_attributes([#("Solution", "Exercises", "solution_number", 1)]),
-    add_counter_attributes([#("Exercise", "Exercises", "exercise_number", 1)]),
+    unwrap_tags(["GrandWrapper"]),
+
     concatenate_text_nodes(),
     // ************************
     // VerticalChunk cleanup
@@ -387,7 +416,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
     // attribute cleanup
     // ************************
     change_attribute_value([#("src", "/()")]),
-    remove_attributes(["counter", "handle", "type", "t"]),
+    remove_attributes(["counter", "handle", "type", "t", "path"]),
     // ************************
     // contents
     // ************************

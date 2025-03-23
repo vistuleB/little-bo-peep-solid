@@ -1691,7 +1691,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          goes back to Exercise 5 of Chapter 3, with
+          goes back to Exercise{" "}
+          <a href="/article/chapter3#12279424306">
+            5
+          </a>
+          {" "}of Chapter 3, with
           the little circle{" "}
           <NoBreak>
             “
@@ -1725,7 +1729,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          of functions already appear in Exercise 18
+          of functions already appear in Exercise{" "}
+          <a href="/article/chapter3#8321224297">
+            18
+          </a>
+          {" "}
           of Chapter 3, also. (On the other hand, the
           quotient (i.e.{" "}
           <NoBreak>
@@ -1755,7 +1763,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b>
+            <b id={235316435}>
               Exercise 1.
             </b>
             {" "}
@@ -1812,7 +1820,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b>
+            <b id={8272215958}>
               Exercise 2.
             </b>
             {" "}
@@ -1865,7 +1873,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b>
+            <b id={5167449377}>
               Exercise 3.
             </b>
             {" "}
@@ -1877,7 +1885,11 @@ const Rest = () => {
           </CentralDisplayItalic>
           <Pause />
           <VerticalChunk>
-            derivative of the graph in Exercise 1.
+            derivative of the graph in Exercise{" "}
+            <a href="/article/chapter4#235316435">
+              1
+            </a>
+            .
           </VerticalChunk>
           <Pause />
           <Solution solution_number={3}>
@@ -1911,11 +1923,15 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b>
+            <b id={176474503}>
               Exercise 4.
             </b>
             {" "}
-            If we pretend that the graph of Exercise 1
+            If we pretend that the graph of Exercise{" "}
+            <a href="/article/chapter4#235316435">
+              1
+            </a>
+            {" "}
             depicts the{" "}
             <del>
               distance that a car has traveled
@@ -2007,7 +2023,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b>
+            <b id={5585129380}>
               Exercise 5.
             </b>
             {" "}
@@ -2203,7 +2219,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b>
+            <b id={83262166122}>
               Exercise 6.
             </b>
             {" "}
@@ -2328,7 +2344,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b>
+            <b id={52932665398}>
               Exercise 7.
             </b>
             {" "}
@@ -2452,7 +2468,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b>
+            <b id={96833154934}>
               Exercise 8.
             </b>
             {" "}
@@ -2611,7 +2627,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b>
+            <b id={31333737475}>
               Exercise 9.
             </b>
             {" "}
@@ -2629,7 +2645,11 @@ const Rest = () => {
               ,
             </NoBreak>
             {" "}analogously to
-            Exercise 10.
+            Exercise{" "}
+            <a href="/article/chapter4#12474818867">
+              10
+            </a>
+            .
           </VerticalChunk>
           <Pause />
           <Solution solution_number={9}>
@@ -2896,7 +2916,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b>
+            <b id={12474818867}>
               Exercise 10.
             </b>
             {" "}
@@ -2989,7 +3009,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b>
+            <b id={90465132830}>
               Exercise 11.
             </b>
             {" "}
@@ -3042,7 +3062,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b>
+            <b id={73725507535}>
               Exercise 12.
             </b>
             {" "}
@@ -3616,7 +3636,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b>
+            <b id={966212134}>
               Exercise 13.
             </b>
             {" "}
@@ -3764,7 +3784,11 @@ const Rest = () => {
               based on input-output behavior: two functions are
               equal if and only if every input is mapped to the
               same output under either function. See Note 6,
-              Exercise 9, Chapter 3.)
+              Exercise{" "}
+              <a href="/article/chapter3#505112884815">
+                9
+              </a>
+              , Chapter 3.)
             </VerticalChunk>
             <VerticalChunk indent={true}>
               Starting up,
@@ -3895,7 +3919,11 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
-              (if you recall that one) in Exercise 9 of Chapter 
+              (if you recall that one) in Exercise{" "}
+              <a href="/article/chapter3#505112884815">
+                9
+              </a>
+              {" "}of Chapter 
               3.
             </VerticalChunk>
             <Pause />
@@ -3934,7 +3962,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b>
+            <b id={97221455696}>
               Exercise 14.
             </b>
             {" "}
@@ -4181,7 +4209,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b>
+            <b id={55762589295}>
               Exercise 15.
             </b>
             {" "}
@@ -4428,7 +4456,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b>
+            <b id={24513588204}>
               Exercise 16.
             </b>
             {" "}
@@ -4437,7 +4465,11 @@ const Rest = () => {
               $(f \circ g)'$
             </Math>
             {" "}compute,
-            keeping the same setup as in Exercise 34?
+            keeping the same setup as in Exercise{" "}
+            <a href="/article/chapter4#15587057437">
+              34
+            </a>
+            ?
           </VerticalChunk>
           <Pause />
           <Solution solution_number={16}>
@@ -4497,7 +4529,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b>
+            <b id={83503801248}>
               Exercise 17.
             </b>
             {" "}
@@ -4620,7 +4652,11 @@ const Rest = () => {
                 </Math>
                 s,
               </NoBreak>
-              {" "}by Exercise 35):
+              {" "}by Exercise{" "}
+              <a href="/article/chapter4#420510009083">
+                35
+              </a>
+              ):
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4707,7 +4743,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b>
+            <b id={55364632769}>
               Exercise 18.
             </b>
             {" "}
@@ -4801,7 +4837,11 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              (For example, the solution to Exercise 36 can actually
+              (For example, the solution to Exercise{" "}
+              <a href="/article/chapter4#40910339844">
+                36
+              </a>
+              {" "}can actually
               be written
             </VerticalChunk>
             <Pause />
@@ -4932,7 +4972,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b>
+            <b id={99765222451}>
               Exercise 19.
             </b>
             {" "}
@@ -5050,7 +5090,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b>
+            <b id={42295716774}>
               Exercise 20.
             </b>
             {" "}
@@ -5063,12 +5103,20 @@ const Rest = () => {
           <Pause />
           <VerticalChunk>
             (velocity vector of the velocity vector)
-            of the particle from Exercise 39?
+            of the particle from Exercise{" "}
+            <a href="/article/chapter4#404012235548">
+              39
+            </a>
+            ?
           </VerticalChunk>
           <Pause />
           <Solution solution_number={20}>
             <VerticalChunk>
-              The velocity vector of Exercise 39 travels
+              The velocity vector of Exercise{" "}
+              <a href="/article/chapter4#404012235548">
+                39
+              </a>
+              {" "}travels
               in a circle of radius{" "}
               <Math>
                 $3$
@@ -5133,7 +5181,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b>
+            <b id={66036133744}>
               Exercise 21.
             </b>
             {" "}
@@ -5283,7 +5331,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={22}>
           <VerticalChunk>
-            <b>
+            <b id={42426843194}>
               Exercise 22.
             </b>
             {" "}
@@ -5778,7 +5826,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={23}>
           <VerticalChunk>
-            <b>
+            <b id={40398828502}>
               Exercise 23.
             </b>
             {" "}
@@ -5830,7 +5878,11 @@ const Rest = () => {
                 $3$
               </Math>
               {" "}the
-              angular velocity (cf. Exercise 37) is
+              angular velocity (cf. Exercise{" "}
+              <a href="/article/chapter4#661210977605">
+                37
+              </a>
+              ) is
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -5885,7 +5937,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={24}>
           <VerticalChunk>
-            <b>
+            <b id={66639241403}>
               Exercise 24.
             </b>
             {" "}
@@ -5966,7 +6018,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={25}>
           <VerticalChunk>
-            <b>
+            <b id={6610967737}>
               Exercise 25.
             </b>
             {" "}
@@ -6238,7 +6290,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={26}>
           <VerticalChunk>
-            <b>
+            <b id={818810864024}>
               Exercise 26.
             </b>
             {" "}
@@ -6285,7 +6337,11 @@ const Rest = () => {
             </Math>
             {" "}axis) of the two 
             particles. If we add also the graph of the position
-            of the red particle from Exercise 41 to this set of
+            of the red particle from Exercise{" "}
+            <a href="/article/chapter4#86614015402">
+              41
+            </a>
+            {" "}to this set of
             graphs, what symmetries
             exist altogether between the three graphs?
           </VerticalChunk>
@@ -6451,7 +6507,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={27}>
           <VerticalChunk>
-            <b>
+            <b id={60271383}>
               Exercise 27.
             </b>
             {" "}
@@ -6652,7 +6708,11 @@ const Rest = () => {
               </Math>
               {" "}centered at the origin, just like
               the particles discussed in the solution to
-              Exercise 12, that obey a similar set of
+              Exercise{" "}
+              <a href="/article/chapter4#73725507535">
+                12
+              </a>
+              , that obey a similar set of
               constraints
               (albeit with a different set of colors).
             </VerticalChunk>
@@ -6751,10 +6811,18 @@ const Rest = () => {
             <VerticalChunk>
               The behavior of such a particle is
               identical to the behavior of the red
-              particle from Exercise 41, 
+              particle from Exercise{" "}
+              <a href="/article/chapter4#86614015402">
+                41
+              </a>
+              , 
               except that the current
               “UNO particle” has a slight head-start over the
-              red particle from Exercise 41, being
+              red particle from Exercise{" "}
+              <a href="/article/chapter4#86614015402">
+                41
+              </a>
+              , being
               at position{" "}
               <Math>
                 $x = 2\sqrt&#123;5&#125;$
@@ -8279,7 +8347,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={28}>
           <VerticalChunk>
-            <b>
+            <b id={306219698}>
               Exercise 28.
             </b>
             {" "}
@@ -8313,7 +8381,11 @@ const Rest = () => {
           <Pause />
           <Solution solution_number={28}>
             <VerticalChunk>
-              Recall the curves from Exercise 12:
+              Recall the curves from Exercise{" "}
+              <a href="/article/chapter4#73725507535">
+                12
+              </a>
+              :
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch4_ex_cosine_recall.svg" />
@@ -8391,14 +8463,18 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}as discussed 
-              in Exercise 14 of Chapter 3. (Well, this shows
+              in Exercise{" "}
+              <a href="/article/chapter3#145517764086">
+                14
+              </a>
+              {" "}of Chapter 3. (Well, this shows
               one solution, at least.)
             </VerticalChunk>
           </Solution>
         </Exercise>
         <Exercise exercise_number={29}>
           <VerticalChunk>
-            <b>
+            <b id={2506565958}>
               Exercise 29.
             </b>
             {" "}
@@ -8661,14 +8737,26 @@ const Rest = () => {
               {" "}
               We never took the time to prove the associativity
               of function addition, but it is easy to prove! 
-              (For other proofs see Exercise 32, Exercise 33, as
-              well as Exercise 9, Chapter 3.)
+              (For other proofs see Exercise{" "}
+              <a href="/article/chapter4#9759374674">
+                32
+              </a>
+              , Exercise{" "}
+              <a href="/article/chapter4#53256127073">
+                33
+              </a>
+              , as
+              well as Exercise{" "}
+              <a href="/article/chapter3#505112884815">
+                9
+              </a>
+              , Chapter 3.)
             </VerticalChunk>
           </Solution>
         </Exercise>
         <Exercise exercise_number={30}>
           <VerticalChunk>
-            <b>
+            <b id={833713223}>
               Exercise 30.
             </b>
             {" "}
@@ -8695,7 +8783,11 @@ const Rest = () => {
             </Math>
             {" "}[“two
             x”] vertical dilation of the graph in Exercise
-            12.) Should we use a circle of radius{" "}
+            {" "}
+            <a href="/article/chapter4#73725507535">
+              12
+            </a>
+            .) Should we use a circle of radius{" "}
             <NoBreak>
               <Math>
                 $2$
@@ -8731,11 +8823,19 @@ const Rest = () => {
               to generate these curves. Also the
               values go through one cycle in the same 
               amount of time as the particles of
-              Exercise 12, but the circle has twice the 
+              Exercise{" "}
+              <a href="/article/chapter4#73725507535">
+                12
+              </a>
+              , but the circle has twice the 
               circumference (having twice the radius),
               so the particles are going twice as fast!
               (I.e.: speed 2, since the particles of
-              Exercise 12 have unit speed.)
+              Exercise{" "}
+              <a href="/article/chapter4#73725507535">
+                12
+              </a>
+              {" "}have unit speed.)
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
@@ -8767,11 +8867,15 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={31}>
           <VerticalChunk>
-            <b>
+            <b id={6619483776}>
               Exercise 31.
             </b>
             {" "}
-            Exercise 12 exhibits a function{" "}
+            Exercise{" "}
+            <a href="/article/chapter4#73725507535">
+              12
+            </a>
+            {" "}exhibits a function{" "}
             <NoBreak>
               <Math>
                 $f$
@@ -8878,7 +8982,11 @@ const Rest = () => {
           <Solution solution_number={31}>
             <VerticalChunk>
               We can naïvely try to imitiate how the
-              curves of Exercise 16 are generated by
+              curves of Exercise{" "}
+              <a href="/article/chapter4#24513588204">
+                16
+              </a>
+              {" "}are generated by
               placing five equally spaced particles
               around the unit circle (“the” unit circle
               is the one centered at{" "}
@@ -9594,7 +9702,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={32}>
           <VerticalChunk>
-            <b>
+            <b id={9759374674}>
               Exercise 32.
             </b>
             {" "}
@@ -10019,7 +10127,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={33}>
           <VerticalChunk>
-            <b>
+            <b id={53256127073}>
               Exercise 33.
             </b>
             {" "}
@@ -10223,7 +10331,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={34}>
           <VerticalChunk>
-            <b>
+            <b id={15587057437}>
               Exercise 34.
             </b>
             {" "}
@@ -10613,7 +10721,11 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is a Newton quotient (cf. Exercise 16),
+              is a Newton quotient (cf. Exercise{" "}
+              <a href="/article/chapter4#24513588204">
+                16
+              </a>
+              ),
               that approaches
             </VerticalChunk>
             <Pause />
@@ -10645,7 +10757,11 @@ const Rest = () => {
                 $t_0$
               </Math>
               {" "}(cf.
-              Exercise 16 Note 3), and
+              Exercise{" "}
+              <a href="/article/chapter4#24513588204">
+                16
+              </a>
+              {" "}Note 3), and
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch4_RATS_over_Dt_first_term.svg" />
@@ -11066,7 +11182,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={35}>
           <VerticalChunk>
-            <b>
+            <b id={420510009083}>
               Exercise 35.
             </b>
             {" "}
@@ -11139,13 +11255,17 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={36}>
           <VerticalChunk>
-            <b>
+            <b id={40910339844}>
               Exercise 36.
             </b>
             {" "}
             If we rewrite the “product rule” of Exercise
             17 in the same terse style as the “sum rule”
-            of Exercise 19, what do we obtain?
+            of Exercise{" "}
+            <a href="/article/chapter4#99765222451">
+              19
+            </a>
+            , what do we obtain?
           </VerticalChunk>
           <Pause />
           <Solution solution_number={36}>
@@ -11284,7 +11404,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={37}>
           <VerticalChunk>
-            <b>
+            <b id={661210977605}>
               Exercise 37.
             </b>
             {" "}
@@ -11357,7 +11477,11 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}mentioned in Exercise 10
+              {" "}mentioned in Exercise{" "}
+              <a href="/article/chapter4#12474818867">
+                10
+              </a>
+              {" "}
               for{" "}
               <NoBreak>
                 <Math>
@@ -11412,7 +11536,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={38}>
           <VerticalChunk>
-            <b>
+            <b id={65051142668}>
               Exercise 38.
             </b>
             {" "}
@@ -11590,7 +11714,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={39}>
           <VerticalChunk>
-            <b>
+            <b id={404012235548}>
               Exercise 39.
             </b>
             {" "}
@@ -11722,7 +11846,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={40}>
           <VerticalChunk>
-            <b>
+            <b id={660112916857}>
               Exercise 40.
             </b>
             {" "}
@@ -11778,7 +11902,11 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               This is seen to be a Newton quotient
-              (cf. Exercise 16)
+              (cf. Exercise{" "}
+              <a href="/article/chapter4#24513588204">
+                16
+              </a>
+              )
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -11803,7 +11931,11 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}per which
-              (Exercise 16 Note 3), the fraction approaches
+              (Exercise{" "}
+              <a href="/article/chapter4#24513588204">
+                16
+              </a>
+              {" "}Note 3), the fraction approaches
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -11942,7 +12074,11 @@ const Rest = () => {
                 $f : \rr \ra \rr$
               </Math>
               {" "}are mentioned in the solution
-              to Exercise 17.) Similarly for{" "}
+              to Exercise{" "}
+              <a href="/article/chapter4#83503801248">
+                17
+              </a>
+              .) Similarly for{" "}
               <NoBreak>
                 <Math>
                   $A_2(t_0 + h)$
@@ -11992,7 +12128,11 @@ const Rest = () => {
               each approaching a different value, then the 
               product-of-the-quantities will approach the 
               product-of-the-values—something not mentioned
-              in the solution to Exercise 17, but that might
+              in the solution to Exercise{" "}
+              <a href="/article/chapter4#83503801248">
+                17
+              </a>
+              , but that might
               have been.)
             </VerticalChunk>
             <VerticalChunk indent={true}>
@@ -12048,18 +12188,26 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={41}>
           <VerticalChunk>
-            <b>
+            <b id={86614015402}>
               Exercise 41.
             </b>
             {" "}
             The function below is also the red
-            curve from Exercise 12, known as the
+            curve from Exercise{" "}
+            <a href="/article/chapter4#73725507535">
+              12
+            </a>
+            , known as the
             {" "}
             <i>
               cosine function
             </i>
             {" "}(already encountered
-            in Chapter 3, Exercise 7). Knowing that
+            in Chapter 3, Exercise{" "}
+            <a href="/article/chapter3#929211579518">
+              7
+            </a>
+            ). Knowing that
             this function is the{" "}
             <NoBreak>
               <Math>
@@ -12237,7 +12385,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={42}>
           <VerticalChunk>
-            <b>
+            <b id={540715014852}>
               Exercise 42.
             </b>
             {" "}
@@ -12813,7 +12961,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={43}>
           <VerticalChunk>
-            <b>
+            <b id={230718533560}>
               Exercise 43.
             </b>
             {" "}
@@ -12895,7 +13043,11 @@ const Rest = () => {
             <Image src="/images/svg_ch4_pacman2_frankenstein_at_23_7.svg" />
             <Pause />
             <VerticalChunk>
-              The velocity vector (cf. Exercise 12) is therefore about
+              The velocity vector (cf. Exercise{" "}
+              <a href="/article/chapter4#73725507535">
+                12
+              </a>
+              ) is therefore about
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -12918,7 +13070,11 @@ const Rest = () => {
               </NoBreak>
               {" "}
               and the speed, being the length of the velocity
-              vector (cf. Exercise 12), is about
+              vector (cf. Exercise{" "}
+              <a href="/article/chapter4#73725507535">
+                12
+              </a>
+              ), is about
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -13182,7 +13338,11 @@ const Rest = () => {
                   $.$
                 </Math>
               </NoBreak>
-              {" "}Exercise 24), this would indicate that
+              {" "}Exercise{" "}
+              <a href="/article/chapter4#66639241403">
+                24
+              </a>
+              ), this would indicate that
               the curve (which is a quarter-circle, as 
               all curves in this maze) has radius
             </VerticalChunk>
@@ -13484,7 +13644,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={44}>
           <VerticalChunk>
-            <b>
+            <b id={951921638884}>
               Exercise 44.
             </b>
             {" "}

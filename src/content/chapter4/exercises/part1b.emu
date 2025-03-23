@@ -55,7 +55,7 @@
         based on input-output behavior: two functions are
         equal if and only if every input is mapped to the
         same output under either function. See Note 6,
-        Exercise 9, Chapter 3.)
+        Exercise >>Chapter3Exercise9, Chapter 3.)
 
         Starting up,
         
@@ -126,7 +126,7 @@
 
         __associativity of function composition__
 
-        (if you recall that one) in Exercise 9 of Chapter 
+        (if you recall that one) in Exercise >>Chapter3Exercise9 of Chapter 
         3.
 
         |> Pause
@@ -358,7 +358,7 @@
 |> Exercise
 
     What does $(f \circ g)'$ compute,
-    keeping the same setup as in Exercise 34?
+    keeping the same setup as in Exercise >>Chapter4Exercise34?
 
     |> Solution
 
@@ -418,7 +418,7 @@
         by the $1/10$ dollars-per-meter rate gives
         us the dollars-per-second rate at $t = 2$s (our 
         final answer—recall that $(f \circ g)'(2)$ is 
-        the dollars-per-second rate at $t = 2$s, by Exercise 35):
+        the dollars-per-second rate at $t = 2$s, by Exercise >>Chapter4Exercise35):
 
         $$
         \left({5\over 3\up{1}}\left[{\te{m} \over \te{s}}\right]\right) \times \left({1 \over 10\up{1}}\left[{\te{\$} \over \te{m}}\right]\right) = {5\over 30\up{1}}\left[{\te{\$} \over \te{s}}\right].
@@ -486,7 +486,7 @@
         the final dollars-per-second earning rate at time $t$
         (that is, $(f \circ g)'(t)$).
 
-        (For example, the solution to Exercise 36 can actually
+        (For example, the solution to Exercise >>Chapter4Exercise36 can actually
         be written
         
         $$
@@ -575,11 +575,11 @@
     __acceleration vector__
     
     (velocity vector of the velocity vector)
-    of the particle from Exercise 39?
+    of the particle from Exercise >>Chapter4Exercise39?
 
     |> Solution
 
-        The velocity vector of Exercise 39 travels
+        The velocity vector of Exercise >>Chapter4Exercise39 travels
         in a circle of radius $3$ in the same amount
         of time that the position vector 
         travels around a circle of radius $2$.
@@ -898,7 +898,7 @@
         Starting with the second part of the
         question, because the particles are going around 
         a circle of radius $3$ at speed $3$ the
-        angular velocity (cf. Exercise 37) is
+        angular velocity (cf. Exercise >>Chapter4Exercise37) is
         $$
         {\Large {3\over 3} = 1}
         $$
@@ -1099,7 +1099,7 @@
     position-as-a-function-of-time (time on the $x$
     axis, position on the $y$ axis) of the two 
     particles. If we add also the graph of the position
-    of the red particle from Exercise 41 to this set of
+    of the red particle from Exercise >>Chapter4Exercise41 to this set of
     graphs, what symmetries
     exist altogether between the three graphs?
 

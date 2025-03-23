@@ -953,7 +953,7 @@
             We would like to argue the correctness of 
             the following two-step process (divide the 
             input by $2$, apply the function from Exercise 
-            4):
+            >>Chapter3Exercise4):
 
             |> Image
                 src images/svg_ch3_ex_factory_roof_stretched_solution.svg
@@ -969,7 +969,7 @@
             $$
             ...as obtained by “sticking” $x/2$ (the halved 
             input) in place of “$x$” in “$\,x - \lfloor x \rfloor$”,
-            the formula for the function from Exercise 4.
+            the formula for the function from Exercise >>Chapter3Exercise4.
 
             |> Pause
 
@@ -1093,13 +1093,13 @@
             x - 2\fl{x/2}
             $$
             because all we have to do is to multiply 
-            Exercise 5's formula by $2$.
+            Exercise >>Chapter3Exercise5's formula by $2$.
 
             For the second graph, an answer is
             $$
             x/3 - \fl{x/3}
             $$
-            because the problem is similar to Exercise 5 
+            because the problem is similar to Exercise >>Chapter3Exercise5 
             except with a factor $3$ horizontal dilation.
 
             For the third graph, we will first stop to 
@@ -1287,7 +1287,7 @@
 
     |> Exercise
 
-        Same question as Exercise 17, but for 
+        Same question as Exercise >>Chapter3Exercise17, but for 
         “$f \circ (g \circ h)$” instead of 
         “$(f \circ g) \circ h$”.
 
@@ -1664,7 +1664,7 @@
 
     |> Exercise
 
-        Solve Exercise 10 using algebra _&_
+        Solve Exercise >>Chapter3Exercise10 using algebra _&_
         variables.
 
         |> Solution
@@ -1727,7 +1727,7 @@
         $$
         x^2 + 10x + 30 = 0
         $$
-        (cf$.$ Exercise 21) has no solutions $x \in \rr$.
+        (cf$.$ Exercise >>Chapter3Exercise21) has no solutions $x \in \rr$.
 
         |> Solution
 
@@ -1735,7 +1735,7 @@
             $$
             (x + 5)^2 + 5 = 0
             $$
-            by Exercise 21, but this implies
+            by Exercise >>Chapter3Exercise21, but this implies
             $$
             (x + 5)^2 = -5
             $$
@@ -2048,7 +2048,7 @@
             To complete the problem _as we were asked_, 
             however, we will use the fact that $y = Ax^2 + Bx$
             is obtained from $y = x^2$ by the following
-            sequence of transformations (cf. Exercise 14):
+            sequence of transformations (cf. Exercise >>Chapter3Exercise14):
 
             __1. vertical translation by $-{B^2 \over 4A^2}$__
 
@@ -2057,7 +2057,7 @@
             __3. vertical scaling by $A$__
 
             (We put the vertical translation first.)
-            By Exercise 15, the roots of $y = Ax^2 + Bx$ 
+            By Exercise >>Chapter3Exercise15, the roots of $y = Ax^2 + Bx$ 
             are thus at
             $$
             \tag{A}
@@ -2205,7 +2205,7 @@
             $$
             A\Big(x^2 + {B \over A}x + {C\over A}\Big)
             $$
-            and, similarly to Exercise 14, write
+            and, similarly to Exercise >>Chapter3Exercise14, write
             $$
             x^2 + {B \over A}x
             $$
@@ -2226,10 +2226,10 @@
             (We have endeavored to keep the minus sign 
             out front of the common denominator fraction 
             in order to maintain the most similarity with
-            the term “$-{B^2\over 4A}$” of Exercise 14,
+            the term “$-{B^2\over 4A}$” of Exercise >>Chapter3Exercise14,
             that also has a minus sign out front.)
            
-            By direct analogy with Exercise 14, the three
+            By direct analogy with Exercise >>Chapter3Exercise14, the three
             transformations are thus...
 
             __1. horizontal translation by $-{B \over 2A}$__
@@ -2263,7 +2263,7 @@
             y = Ax^2 + Bx + C
             $$
             is obtained from the curve $y = x^2$ by the following sequence of 
-            transformations (cf. Exercise 19):
+            transformations (cf. Exercise >>Chapter3Exercise19):
 
             __1. vertical translation by ${-{B^2 - 4AC \over 4A^2}}$__
 
@@ -2293,7 +2293,7 @@
             $$
             x = -{B \over 2A} \pm \sqrt{B^2 - 4AC \over 4A^2}
             $$
-            by Exercise 15. $\rightarrow$ ~The End~ $\leftarrow$
+            by Exercise >>Chapter3Exercise15. $\rightarrow$ ~The End~ $\leftarrow$
 
             |> Pause
 

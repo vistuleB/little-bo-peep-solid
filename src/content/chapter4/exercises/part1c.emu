@@ -113,7 +113,7 @@
         rotate at unit speed around their circle of
         radius $1$ centered at the origin, just like
         the particles discussed in the solution to
-        Exercise 12, that obey a similar set of
+        Exercise >>Chapter4Exercise12, that obey a similar set of
         constraints
         (albeit with a different set of colors). 
 
@@ -171,10 +171,10 @@
         
         The behavior of such a particle is
         identical to the behavior of the red
-        particle from Exercise 41, 
+        particle from Exercise >>Chapter4Exercise41, 
         except that the current
         “UNO particle” has a slight head-start over the
-        red particle from Exercise 41, being
+        red particle from Exercise >>Chapter4Exercise41, being
         at position $x = 2\sqrt{5}$ 
         instead of at position $x = 1$ at $t = 0$.
         (!!)
