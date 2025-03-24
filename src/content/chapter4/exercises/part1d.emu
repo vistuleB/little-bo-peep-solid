@@ -11,7 +11,7 @@
 
     |> Solution
 
-        Recall the curves from Exercise >>Chapter4Exercise12:
+        Recall the curves from Exercise 12:
 
         |> Image
             src images/svg_ch4_ex_cosine_recall.svg
@@ -49,7 +49,7 @@
         is the horizontal translate of $y = f(x)$ by $a$ 
         units to the left, in general for any function
         $f$ and constant $a \in \rr$, as discussed 
-        in Exercise >>Chapter3Exercise14 of Chapter 3. (Well, this shows
+        in Exercise 14 of Chapter 3. (Well, this shows
         one solution, at least.)
 
 
@@ -163,5 +163,5 @@
         _Note 1._
         We never took the time to prove the associativity
         of function addition, but it is easy to prove! 
-        (For other proofs see Exercise >>Chapter4Exercise32, Exercise >>Chapter4Exercise33, as
-        well as Exercise >>Chapter3Exercise9, Chapter 3.)
+        (For other proofs see Exercise 32, Exercise 33, as
+        well as Exercise 9, Chapter 3.)

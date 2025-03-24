@@ -398,7 +398,7 @@
         since, like the large-scale oscillation from the
         purple curve, it shares the same phase as $-\sin(x)$,
         and since, like the small-scale oscillation from
-        Exercise >>Chapter5Exercise3, it has an amplitude of $\approx 0.5$.
+        Exercise 3, it has an amplitude of $\approx 0.5$.
 
         Altogether, we get
 
@@ -863,7 +863,7 @@
 
         |> SolutionNote
 
-            The solution to Exercise >>Chapter5Exercise7 can be cast in terms of
+            The solution to Exercise 7 can be cast in terms of
             vector addition, with, specifically, the position
             vector of the point being equal to the sum of the
             position vector of the circle's center with the “radial
@@ -1379,7 +1379,7 @@
 
         |> SolutionNote
 
-            As mentioned in Note 1 of Exercise >>Chapter3Exercise21, 
+            As mentioned in Note 1 of Exercise 24, 
             Chapter 3, these approximations are about 
             half-a-part-in-a-thousand too large, or to 
             be more exact,
@@ -1744,7 +1744,7 @@
 |> Exercise
 
     The graph $y = \cos(x) + \sin(x)$ from
-    Exercise >>Chapter5Exercise5 has a maximum value greater than
+    Exercise 5 has a maximum value greater than
     $1$:
 
     |> Image
@@ -1879,7 +1879,7 @@
         \Large \sqrt{0.5} = {\sqrt{2} \over 2}
         $$
 
-        (cf. Exercise >>Chapter1Exercise1, Chapter 1). 
+        (cf. Exercise 1, Chapter 1). 
 
         |> SolutionNote
 
@@ -2152,7 +2152,7 @@
         $$
 
         in some region of the plane, similarly to 
-        Exercise >>Chapter5Exercise18, the larger (more positive)
+        Exercise 18, the larger (more positive)
         values show up in the first and third
         quadrants, while the smaller (more negative)
         values show up in the second and fourth 
@@ -2231,7 +2231,7 @@
             x \ra \sin x{}\cos x
             $$
 
-            discussed in Exercise >>Chapter5Exercise4 has maximum value
+            discussed in Exercise 4 has maximum value
 
             $$
             {1\over 2}
@@ -2255,7 +2255,7 @@
             $$
 
             ...(maybe more legibly); annotating the graph
-            given in Exercise >>Chapter5Exercise4:
+            given in Exercise 4:
 
             |> Image
                 src images/svg_ch5_ex_max_xy_graph.svg
@@ -2499,7 +2499,7 @@
             src images/svg_ch5_ex_tan_sq_AB_ratio_left_part.svg
 
         On the other hand, $A/C = \tan(\theta)$
-        also, by the result of Exercise >>Chapter5Exercise19 (whereby
+        also, by the result of Exercise 19 (whereby
         $\theta$ reappears as the top left angle of
         the middle-sized right triangle):
 
@@ -2556,7 +2556,7 @@
         _Solution 2._
         We decompose $A$ as $B + A'$
         where $A' = B - A$ is the “old $A$” from
-        Exercise >>Chapter5Exercise22:
+        Exercise 22:
 
         |> Image
             src images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg
@@ -2573,7 +2573,7 @@
         {A'\over B} = \tan^2(\theta)
         $$
 
-        by Exercise >>Chapter5Exercise22. (The End.)
+        by Exercise 22. (The End.)
 
         |> SolutionNote
 
@@ -2781,7 +2781,7 @@
 |> Exercise
 
     How would the graph of each of the compositions
-    from Exercise >>Chapter5Exercise26 compare to the graph of the 
+    from Exercise 26 compare to the graph of the 
     generic function $f$?
 
     |> Solution
@@ -2819,7 +2819,7 @@
 
                     vertically dilating (scaling) the graph of $f$ by a factor $B$.
 
-        (Cf. Exercise >>Chapter3Exercise7 of Chapter 3, Exercise >>Chapter3Exercise14 of 
+        (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
         Chapter 3.)
 
 |> Exercise
@@ -2924,7 +2924,7 @@
 
     |> Solution
 
-        We know from Exercise >>Chapter5Exercise21 that the 
+        We know from Exercise 21 that the 
         bump immediately to the right of $(0, 0)$ 
         on the graph $y = \cos(x)\sin(x)$ has 
         coordinates $(\eta/2, 0.5)$:
@@ -3096,7 +3096,7 @@
         !!     respectively effect a horizontal translation
         !!     of $-\eta/2$ and a vertical translation of $1/2$,
         !!     as pre- and post-processing steps respectively.
-        !!     (Cf. Exercise >>Chapter5Exercise28.)
+        !!     (Cf. Exercise 28.)
 
         !! (Or we might write...
 
@@ -3181,7 +3181,7 @@
         compression by $2$. 
         (See 
         the second case 
-        of Exercise >>Chapter5Exercise27, in particular.)
+        of Exercise 27, in particular.)
 
         (NB: If we do it the other way around, 
         putting the vertical scaling before the vertical 
@@ -3322,7 +3322,7 @@
         $$
         \sin x\cos x = {1\over 2}\sin(2x)
         $$
-        by Exercise >>Chapter5Exercise30 and since the substitution
+        by Exercise 30 and since the substitution
         of “$x$” by “$2x$” effects a horizontal
         compression by $2$, the answer is: 
         “a horizontal scaling by ${1\over 2}$ followed by a vertical scaling by ${1\over 2}$”,
@@ -3337,7 +3337,7 @@
     !! can turn [the graph] $y = \cos(x)$
     !! into [the graph] $y = \sin(x) + \cos(x)$?
     !! Prove your answer using algebra.
-    !! Building on the discoveries of Exercise >>Chapter5Exercise18,
+    !! Building on the discoveries of Exercise 18,
     !! conjecture a sequence of geometric transformations
     !! that maps $$y = \cos(x)$$
     !! onto $$y = \sin(x) + \cos(x)$$
@@ -3352,7 +3352,7 @@
     y = \sin x + \cos x
     $$
     ...? 
-    (Study Exercise >>Chapter5Exercise18, if you have no inspiration.)
+    (Study Exercise 18, if you have no inspiration.)
     (PS: Prove your answer.)
     !! ($\,$Justify your answer.)
 
@@ -3362,7 +3362,7 @@
         has period $4\eta$ just like $\sin$ or
         $\cos$, but, unlike $\sin$ and $\cos$,
         $\sin + \cos$ reaches a maximum of $\sqrt{2}$
-        at $x = \eta/2$, as uncovered in Exercise >>Chapter5Exercise18,
+        at $x = \eta/2$, as uncovered in Exercise 18,
         from which the following graphic is recovered:
 
         |> Image
@@ -3384,7 +3384,7 @@
         __1. horizontal translation to the right by $\eta/2$__
         __2. vertical scaling by $\sqrt{2}$__
         Now you might recall from previous discussions
-        (cf. Exercise >>Chapter3Exercise7 of Chapter 3, part 1 of Exercise >>Chapter5Exercise27
+        (cf. Exercise 7 of Chapter 3, part 1 of Exercise 27
         in this chapter) that
         $$
         x \ra f(x + a)
@@ -3569,7 +3569,7 @@
         $$
         \cos x + \sin x
         $$
-        (cf. Exercise >>Chapter5Exercise4) corresponds to the case
+        (cf. Exercise 4) corresponds to the case
         $$A_1 = A_2 = 1$$ of this exercise, and 
         in which case we can set
         $$W = \sqrt{2}$$ and 
@@ -3598,7 +3598,7 @@
                     src images/svg_ch5_ex_polar_discovery_cloud.svg
         
         ...was painstakingly uncovered 
-        in Exercise >>Chapter5Exercise33, if you recall.)
+        in Exercise 33, if you recall.)
 
 |> Exercise
 
@@ -3615,7 +3615,7 @@
 
     (NB: We have flipped ‘$\cos$’ and
     ‘$\sin$’ in the first expression, compared
-    to Exercise >>Chapter5Exercise34, and reducing to that exercise is
+    to Exercise 34, and reducing to that exercise is
     bound to produce a mess—solving from scratch is recommended!)
 
     |> Solution
@@ -3682,7 +3682,7 @@
 
 |> Exercise
 
-    Similarly to Exercise >>Chapter5Exercise9, suggest a
+    Similarly to Exercise 9, suggest a
     definition for the product
     
     $$

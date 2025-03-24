@@ -1921,7 +1921,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id={38418018648}>
+            <b>
               Exercise 1.
             </b>
             {" "}
@@ -1961,7 +1961,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id={11798173430}>
+            <b>
               Exercise 2.
             </b>
             {" "}
@@ -2012,7 +2012,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id={68288403872}>
+            <b>
               Exercise 3.
             </b>
             {" "}
@@ -2091,7 +2091,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id={17078806575}>
+            <b>
               Exercise 4.
             </b>
             {" "}
@@ -2311,7 +2311,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id={12279424306}>
+            <b>
               Exercise 5.
             </b>
             {" "}
@@ -2342,11 +2342,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}apply the function from Exercise 
-              {" "}
-              <a href="/article/chapter3#17078806575">
-                4
-              </a>
-              ):
+              4):
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch3_ex_factory_roof_stretched_solution.svg" />
@@ -2393,11 +2389,7 @@ const Rest = () => {
                 ”,
               </NoBreak>
               {" "}
-              the formula for the function from Exercise{" "}
-              <a href="/article/chapter3#17078806575">
-                4
-              </a>
-              .
+              the formula for the function from Exercise 4.
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
@@ -2759,7 +2751,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id={973510737263}>
+            <b>
               Exercise 6.
             </b>
             {" "}
@@ -2796,11 +2788,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               because all we have to do is to multiply 
-              Exercise{" "}
-              <a href="/article/chapter3#12279424306">
-                5
-              </a>
-              's formula by{" "}
+              Exercise 5's formula by{" "}
               <NoBreak>
                 <Math>
                   $2$
@@ -2819,11 +2807,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              because the problem is similar to Exercise{" "}
-              <a href="/article/chapter3#12279424306">
-                5
-              </a>
-              {" "}
+              because the problem is similar to Exercise 5 
               except with a factor{" "}
               <Math>
                 $3$
@@ -2947,7 +2931,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id={929211579518}>
+            <b>
               Exercise 7.
             </b>
             {" "}
@@ -3080,20 +3064,20 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id={911112109763}>
+            <b>
               Exercise 8.
             </b>
             {" "}
             Rewrite
           </VerticalChunk>
-          <div style="font-size:1.1em;margin:1em 0em;">
-            <MathBlock>
-              $$
-              \tag&#123;A&#125;(f \circ (g \circ h))(x)
-              $$
-            </MathBlock>
-          </div>
-          <VerticalChunk>
+          <VerticalChunk indent={true}>
+            <div style="font-size:1.1em;margin:1em 0em;">
+              <MathBlock>
+                $$
+                \tag&#123;A&#125;(f \circ (g \circ h))(x)
+                $$
+              </MathBlock>
+            </div>
             without using{" "}
             <NoBreak>
               “
@@ -3106,14 +3090,14 @@ const Rest = () => {
             “definitional equation of function 
             composition”, which is namely
           </VerticalChunk>
-          <div style="font-size:1.1em;margin:1em 0em;">
-            <MathBlock>
-              $$
-              \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
-              $$
-            </MathBlock>
-          </div>
-          <VerticalChunk>
+          <VerticalChunk indent={true}>
+            <div style="font-size:1.1em;margin:1em 0em;">
+              <MathBlock>
+                $$
+                \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
+                $$
+              </MathBlock>
+            </div>
             (where{" "}
             <Math>
               $r$
@@ -3199,14 +3183,14 @@ const Rest = () => {
                 popup={true}
                 src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg" />
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                (f \circ (g \circ h))(x) = \f((g \circ h)(x))
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  (f \circ (g \circ h))(x) = \f((g \circ h)(x))
+                  $$
+                </MathBlock>
+              </div>
               ...which already constitutes progress towards
               our goal, since only one copy of{" "}
               <NoBreak>
@@ -3219,24 +3203,24 @@ const Rest = () => {
               {" "}
               exists on the right-hand side! But
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                (g \circ h)(x) = g(h(x))
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  (g \circ h)(x) = g(h(x))
+                  $$
+                </MathBlock>
+              </div>
               by the “definitional equation” again, so
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                f((g \circ h)(x)) = \f(g(h(x)))
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  f((g \circ h)(x)) = \f(g(h(x)))
+                  $$
+                </MathBlock>
+              </div>
               ...and this completes the computation!
             </VerticalChunk>
             <Pause />
@@ -3254,15 +3238,11 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id={505112884815}>
+            <b>
               Exercise 9.
             </b>
             {" "}
-            Same question as Exercise{" "}
-            <a href="/article/chapter3#749220956887">
-              17
-            </a>
-            , but for 
+            Same question as Exercise 17, but for 
             {" "}
             <NoBreak>
               “
@@ -3297,14 +3277,14 @@ const Rest = () => {
             <VerticalChunk>
               So the first step is...
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
+                  $$
+                </MathBlock>
+              </div>
               ...by setting{" "}
               <NoBreak>
                 <Math>
@@ -3320,14 +3300,14 @@ const Rest = () => {
               the definitional equation, and the second step
               is...
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                (f \circ g)(h(x)) = \f(g(h(x)))
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  (f \circ g)(h(x)) = \f(g(h(x)))
+                  $$
+                </MathBlock>
+              </div>
               ...by setting{" "}
               <NoBreak>
                 <Math>
@@ -3368,54 +3348,54 @@ const Rest = () => {
               {" "}
               The fact that
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                (f \circ (g \circ h))(x)
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  (f \circ (g \circ h))(x)
+                  $$
+                </MathBlock>
+              </div>
               and
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                ((f \circ g) \circ h)(x)
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  ((f \circ g) \circ h)(x)
+                  $$
+                </MathBlock>
+              </div>
               both evaluate to
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                f(g(h(x)))
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  f(g(h(x)))
+                  $$
+                </MathBlock>
+              </div>
               actually implies that
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                f \circ (g \circ h)
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  f \circ (g \circ h)
+                  $$
+                </MathBlock>
+              </div>
               and
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                (f \circ g) \circ h
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  (f \circ g) \circ h
+                  $$
+                </MathBlock>
+              </div>
               are the same function; this function is namely
               the function that maps{" "}
               <Math>
@@ -3432,14 +3412,14 @@ const Rest = () => {
               </Math>
               {" "}(or
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                x \ra f(g(h(x)))
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  x \ra f(g(h(x)))
+                  $$
+                </MathBlock>
+              </div>
               in lambda notation).
             </VerticalChunk>
             <Pause />
@@ -3450,14 +3430,14 @@ const Rest = () => {
               {" "}
               Because of this, we can write
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                f \circ g \circ h
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  f \circ g \circ h
+                  $$
+                </MathBlock>
+              </div>
               without any parentheses. (The point is: either
               way you parenthesize it you obtain the same 
               function, so why bother?)
@@ -3470,14 +3450,14 @@ const Rest = () => {
               {" "}
               The fact that
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                &#123;(a + b) + c = a + (b + c)&#125;
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  &#123;(a + b) + c = a + (b + c)&#125;
+                  $$
+                </MathBlock>
+              </div>
               for all numbers{" "}
               <NoBreak>
                 <Math>
@@ -3506,14 +3486,14 @@ const Rest = () => {
             <VerticalChunk>
               of addition; likewise, the fact that
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                (ab)c = a(bc)
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  (ab)c = a(bc)
+                  $$
+                </MathBlock>
+              </div>
               for all numbers{" "}
               <NoBreak>
                 <Math>
@@ -3543,14 +3523,14 @@ const Rest = () => {
               of multiplication; and again likewise,
               the fact that
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                &#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  &#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;
+                  $$
+                </MathBlock>
+              </div>
               for all functions{" "}
               <NoBreak>
                 <Math>
@@ -3935,14 +3915,14 @@ const Rest = () => {
               </NoBreak>
               {" "}(The presence of an ordered pair
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                (a, b)
-                $$
-              </MathBlock>
-            </div>
-            <VerticalChunk>
+            <VerticalChunk indent={true}>
+              <div style="font-size:1.1em;margin:1em 0em;">
+                <MathBlock>
+                  $$
+                  (a, b)
+                  $$
+                </MathBlock>
+              </div>
               means that input{" "}
               <Math>
                 $a$
@@ -3982,7 +3962,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id={361416371969}>
+            <b>
               Exercise 10.
             </b>
             {" "}
@@ -4066,15 +4046,11 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id={894116659614}>
+            <b>
               Exercise 11.
             </b>
             {" "}
-            Solve Exercise{" "}
-            <a href="/article/chapter3#361416371969">
-              10
-            </a>
-            {" "}using algebra{" "}
+            Solve Exercise 10 using algebra{" "}
             <i>
               &
             </i>
@@ -4290,7 +4266,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id={76617243997}>
+            <b>
               Exercise 12.
             </b>
             {" "}
@@ -4310,11 +4286,7 @@ const Rest = () => {
                 $.$
               </Math>
             </NoBreak>
-            {" "}Exercise{" "}
-            <a href="/article/chapter3#39623501539">
-              21
-            </a>
-            ) has no solutions{" "}
+            {" "}Exercise 21) has no solutions{" "}
             <NoBreak>
               <Math>
                 $x \in \rr$
@@ -4335,11 +4307,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              by Exercise{" "}
-              <a href="/article/chapter3#39623501539">
-                21
-              </a>
-              , but this implies
+              by Exercise 21, but this implies
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4357,7 +4325,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id={27217462481}>
+            <b>
               Exercise 13.
             </b>
             {" "}
@@ -4445,7 +4413,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id={145517764086}>
+            <b>
               Exercise 14.
             </b>
             {" "}
@@ -4951,7 +4919,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id={409219474485}>
+            <b>
               Exercise 15.
             </b>
             {" "}
@@ -5157,7 +5125,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b id={615620046984}>
+            <b>
               Exercise 16.
             </b>
             {" "}
@@ -5353,11 +5321,7 @@ const Rest = () => {
                 $y = x^2$
               </Math>
               {" "}by the following
-              sequence of transformations (cf. Exercise{" "}
-              <a href="/article/chapter3#145517764086">
-                14
-              </a>
-              ):
+              sequence of transformations (cf. Exercise 14):
             </VerticalChunk>
             <Pause />
             <CentralDisplayItalic>
@@ -5386,11 +5350,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               (We put the vertical translation first.)
-              By Exercise{" "}
-              <a href="/article/chapter3#409219474485">
-                15
-              </a>
-              , the roots of{" "}
+              By Exercise 15, the roots of{" "}
               <Math>
                 $y = Ax^2 + Bx$
               </Math>
@@ -5504,7 +5464,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b id={749220956887}>
+            <b>
               Exercise 17.
             </b>
             {" "}
@@ -5587,7 +5547,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b id={8321224297}>
+            <b>
               Exercise 18.
             </b>
             {" "}
@@ -5824,7 +5784,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b id={50592185543}>
+            <b>
               Exercise 19.
             </b>
             {" "}
@@ -5898,11 +5858,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              and, similarly to Exercise{" "}
-              <a href="/article/chapter3#145517764086">
-                14
-              </a>
-              , write
+              and, similarly to Exercise 14, write
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -5959,19 +5915,11 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}of Exercise{" "}
-              <a href="/article/chapter3#145517764086">
-                14
-              </a>
-              ,
+              {" "}of Exercise 14,
               that also has a minus sign out front.)
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              By direct analogy with Exercise{" "}
-              <a href="/article/chapter3#145517764086">
-                14
-              </a>
-              , the three
+              By direct analogy with Exercise 14, the three
               transformations are thus...
             </VerticalChunk>
             <Pause />
@@ -6034,7 +5982,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b id={303222513866}>
+            <b>
               Exercise 20.
             </b>
             {" "}
@@ -6096,11 +6044,7 @@ const Rest = () => {
                 $y = x^2$
               </Math>
               {" "}by the following sequence of 
-              transformations (cf. Exercise{" "}
-              <a href="/article/chapter3#50592185543">
-                19
-              </a>
-              ):
+              transformations (cf. Exercise 19):
             </VerticalChunk>
             <Pause />
             <CentralDisplayItalic>
@@ -6185,11 +6129,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              by Exercise{" "}
-              <a href="/article/chapter3#409219474485">
-                15
-              </a>
-              .{" "}
+              by Exercise 15.{" "}
               <Math>
                 $\rightarrow$
               </Math>
@@ -6325,7 +6265,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b id={39623501539}>
+            <b>
               Exercise 21.
             </b>
             {" "}

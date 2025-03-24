@@ -898,10 +898,9 @@
             does $0.5$ go into $2$?)
 
     |> Exercise
-        test test
 
         Digressing on the second-to-last equation
-        in the solution to Exercise >>Chapter2Exercise2, explain why
+        in the solution to Exercise 2, explain why
 
         $$ y_0 - px_0 $$
 
