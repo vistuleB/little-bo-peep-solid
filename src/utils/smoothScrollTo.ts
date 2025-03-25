@@ -1,8 +1,4 @@
-// import { useGlobalContext } from "~/store/StoreProvider";
-
-// let { store } = useGlobalContext();
-
-function smoothScrollTo(targetPosition: number, duration: number) {
+const smoothScrollTo = (targetPosition: number, duration: number) => {
   const startPosition = window.scrollY;
   const distance = targetPosition - startPosition;
   let startTime: DOMHighResTimeStamp | null = null;
@@ -24,6 +20,6 @@ function smoothScrollTo(targetPosition: number, duration: number) {
   }
 
   requestAnimationFrame(animation);
-}
+};
 
 export default smoothScrollTo;

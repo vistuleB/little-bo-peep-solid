@@ -6,7 +6,6 @@ import {
   onCleanup,
   onMount,
   createContext,
-  ParentComponent,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import {
@@ -19,6 +18,8 @@ import { Spacer, SpacerSm, SpacerXs } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 import { createStore, SetStoreFunction } from "solid-js/store";
+import smoothScrollTo from "~/utils/smoothScrollTo";
+import exerciseBtnsPos from "~/utils/exerciseBtnsPos";
 
 type SolutionProps = ParentProps &
   SharedProps & {
@@ -279,41 +280,6 @@ const SolutionConsumer = (props: SolutionProps) => {
 };
 
 export const BackupArrow = () => {
-  // copied from ActionArrows:
-  const exerciseBtnsPos = () => {
-    if (!document.getElementById("exercises-btns"))
-      return document.body.scrollHeight;
-    const rect = document
-      .getElementById("exercises-btns")
-      ?.getBoundingClientRect()!;
-    return rect.y + store.scrollY;
-  };
-
-  // copied from ActionArrows:
-  function smoothScrollTo(targetPosition: number, duration: number) {
-    const startPosition = store.scrollY;
-    const distance = targetPosition - startPosition;
-    let startTime: DOMHighResTimeStamp | null = null;
-
-    function animation(currentTime: DOMHighResTimeStamp) {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(store.scrollX, run);
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-      else window.scrollTo(store.scrollX, targetPosition);
-    }
-
-    function easeInOutQuad(t: number, b: number, c: number, d: number) {
-      t /= d / 2;
-      if (t < 1) return (c / 2) * t * t + b;
-      t--;
-      return (-c / 2) * (t * (t - 2) - 1) + b;
-    }
-
-    requestAnimationFrame(animation);
-  }
-
   let { store } = useGlobalContext();
   return (
     <svg

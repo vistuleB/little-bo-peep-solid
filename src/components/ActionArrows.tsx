@@ -6,6 +6,8 @@ import {
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
+import exerciseBtnsPos from "~/utils/exerciseBtnsPos";
+import smoothScrollTo from "~/utils/smoothScrollTo";
 
 const ActionArrows = () => {
   const { store } = useGlobalContext();
@@ -32,39 +34,6 @@ const ActionArrows = () => {
       window.removeEventListener("scroll", handleScroll);
     });
   });
-
-  const exerciseBtnsPos = () => {
-    if (!document.getElementById("exercises-btns"))
-      return document.body.scrollHeight;
-    const rect = document
-      .getElementById("exercises-btns")
-      ?.getBoundingClientRect()!;
-    return rect.y + store.scrollY;
-  };
-
-  function smoothScrollTo(targetPosition: number, duration: number) {
-    const startPosition = store.scrollY;
-    const distance = targetPosition - startPosition;
-    let startTime: DOMHighResTimeStamp | null = null;
-
-    function animation(currentTime: DOMHighResTimeStamp) {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(store.scrollX, run);
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-      else window.scrollTo(store.scrollX, targetPosition);
-    }
-
-    function easeInOutQuad(t: number, b: number, c: number, d: number) {
-      t /= d / 2;
-      if (t < 1) return (c / 2) * t * t + b;
-      t--;
-      return (-c / 2) * (t * (t - 2) - 1) + b;
-    }
-
-    requestAnimationFrame(animation);
-  }
 
   const handleUpClick = (_: MouseEvent) => {
     let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50; // see also BackupArrow in Solution.tsx
