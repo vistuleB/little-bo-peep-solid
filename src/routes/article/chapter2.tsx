@@ -1552,7 +1552,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id={8516763947}>
+            <b id={4936764796}>
               Exercise 1.
             </b>
             {" "}
@@ -1647,7 +1647,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id={41287323757}>
+            <b id={75877324375}>
               Exercise 2.
             </b>
             {" "}
@@ -1904,7 +1904,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id={96128342296}>
+            <b id={91348348875}>
               Exercise 3.
             </b>
             {" "}
@@ -2077,13 +2077,15 @@ const Rest = () => {
           exercise_number={4}
           test="test">
           <VerticalChunk>
-            <b id={19809006556}>
+            <b id={35959002654}>
               Exercise 4.
             </b>
             {" "}
             Digressing on the second-to-last equation
             in the solution to Exercise{" "}
-            <a href="/article/chapter2#41287323757">
+            <a
+              class="exercise-link"
+              href="/article/chapter2#75877324375">
               2
             </a>
             , explain why

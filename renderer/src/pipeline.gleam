@@ -328,7 +328,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #("Bootcamp", "/article/bootcamp", "path"),
     ),
     handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
-    handles_substitute(),
+    handles_substitute([#("class", "exercise-link")]),
     unwrap_tags(["GrandWrapper"]),
 
     concatenate_text_nodes(),

@@ -19,7 +19,8 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 import { createStore, SetStoreFunction } from "solid-js/store";
 import smoothScrollTo from "~/utils/smoothScrollTo";
-import exerciseBtnsPos from "~/utils/exerciseBtnsPos";
+import exerciseBtnsPos from "~/utils/elementPosOnPage";
+import elementPosOnPage from "~/utils/elementPosOnPage";
 
 type SolutionProps = ParentProps &
   SharedProps & {
@@ -292,7 +293,10 @@ export const BackupArrow = () => {
       class="tab cursor-pointer z-10"
       onClick={() => {
         if (store.innerWidth > MOBILE_MAX_WIDTH) {
-          let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50;
+          let middleScroll =
+            elementPosOnPage(document.getElementById("exercises-btns")) -
+            window.innerHeight / 2 +
+            50;
           smoothScrollTo(middleScroll, 100);
         } else {
           document?.getElementById("exo")?.scrollIntoView();

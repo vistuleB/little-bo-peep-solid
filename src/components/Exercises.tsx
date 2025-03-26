@@ -9,6 +9,7 @@ import {
   useExercisesContext,
 } from "~/store/ExercisesStoreProvider";
 import TextParent from "~/components/TextParent";
+import useExerciseHandle from "~/hooks/useExerciseHandle";
 
 type ExercisesProps = ParentProps & SharedProps;
 
@@ -26,6 +27,8 @@ export const Exercises = (props: ExercisesProps) => {
 const ExercisesConsumer = (props: ExercisesProps) => {
   let children_list = children(() => props.children);
   useExercises(children_list.toArray().length);
+  useExerciseHandle();
+
   const { set_exercises_store: set_store, exercises_store: store } =
     useExercisesContext();
 
