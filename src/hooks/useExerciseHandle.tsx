@@ -1,11 +1,16 @@
 import { createEffect, onCleanup } from "solid-js";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
+import { useGlobalContext } from "~/store/StoreProvider";
 import elementPosOnPage from "~/utils/elementPosOnPage";
 import smoothScrollTo from "~/utils/smoothScrollTo";
 
 const useExerciseHandle = () => {
   const { exercises_store, set_exercises_store } = useExercisesContext();
+  const { store } = useGlobalContext();
 
+  const getHeight = (el: HTMLElement | null) => {
+    return el?.getBoundingClientRect().height || 0;
+  };
   const handleExerciseLink = (e: Event) => {
     e.preventDefault();
     const href = new URL((e.target as HTMLAnchorElement).href);
@@ -20,7 +25,12 @@ const useExerciseHandle = () => {
     // find exercise index with id
     let target_exo = document.getElementById(id);
     if (exercises_store.list_view) {
-      smoothScrollTo(elementPosOnPage(target_exo) - 50, 100);
+      smoothScrollTo(
+        elementPosOnPage(target_exo) -
+          store.innerHeight / 2 +
+          getHeight(target_exo) / 2,
+        100,
+      );
       return;
     }
     let exo_number = Number(target_exo?.innerText?.match(/\d+/)?.[0]);
