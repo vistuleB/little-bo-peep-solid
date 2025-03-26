@@ -1,4 +1,4 @@
-import { createEffect } from "solid-js";
+import { createEffect, onCleanup } from "solid-js";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 import elementPosOnPage from "~/utils/elementPosOnPage";
 import smoothScrollTo from "~/utils/smoothScrollTo";
@@ -25,16 +25,24 @@ const useExerciseHandle = () => {
     }
     let exo_number = Number(target_exo?.innerText?.match(/\d+/)?.[0]);
     set_exercises_store("selected_exo", exo_number);
-    smoothScrollTo(
-      elementPosOnPage(document.getElementById("exercises-btns")),
-      100,
-    );
+    if (target_exo && target_exo.getBoundingClientRect().top < 0) {
+      smoothScrollTo(
+        elementPosOnPage(document.getElementById("exercises-btns")),
+        100,
+      );
+    }
   };
 
   createEffect(() => {
     const links = document.querySelectorAll(".exercise-link");
     links.forEach((link) => {
       link.addEventListener("click", handleExerciseLink);
+    });
+
+    onCleanup(() => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleExerciseLink);
+      });
     });
   });
 };
