@@ -63,33 +63,9 @@ import desugarers/wrap_math_with_no_break.{wrap_math_with_no_break}
 import gleam/list
 import gleam/option.{None, Some}
 import infrastructure.{type Pipe}
-import indexed_regex_splitting as irs
 import prefabricated_pipelines as pp
 
 pub fn lbp_pipeline() -> List(Pipe) {
-  // _ _
-  let opening_single_underscore_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[\\s({\\[]|^", "_", "[^\\s)}\\]_]|$")
-
-  let opening_or_closing_single_underscore_indexed_regex_without_asterisks =
-    irs.l_m_r_1_3_indexed_regex("[^\\s({\\[\\*_]|^", "_", "[^\\s)}\\]\\*_]|$")
-
-  let opening_or_closing_single_underscore_indexed_regex_with_asterisks =
-    irs.l_m_r_1_3_indexed_regex("[^\\s({\\[_]|^", "_", "[^\\s)}\\]_]|$")
-
-  let closing_single_underscore_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[^\\s({\\[_]|^", "_", "[\\s)}\\]]|$")
-
-  // * *
-  let opening_single_asterisk_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[\\s({\\[]|^", "\\*", "[^\\s)}\\]\\*]|$")
-
-  let opening_or_closing_single_asterisk_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[^\\s({\\[\\*]|^", "\\*", "[^\\s)}\\]\\*]|$")
-
-  let closing_single_asterisk_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[^\\s({\\[\\*]|^", "\\*", "[\\s)}\\]]|$")
-
   [
     pp.create_mathblock_and_math_elements(
       [ pp.DoubleDollar ],
@@ -150,7 +126,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
     // ************************
     // _| |_ ******************
     // ************************
-    pp.asymmetric_delim_spitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
+    pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
       // ************************
       // break CentralDisplay &
@@ -162,47 +138,14 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("CentralDisplayItalic", "VerticalChunk"),
       ]),
       remove_vertical_chunks_with_no_text_child(),
-      // ************************
-      // _ & * ******************
-      // ************************
-      split_by_indexed_regexes(#(
-        [
-          // "_"
-          #(opening_or_closing_single_underscore_indexed_regex_without_asterisks, "OpeningOrClosingUnderscore"),
-          #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
-          #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
-          // "*"
-          #(opening_or_closing_single_asterisk_indexed_regex, "OpeningOrClosingAsterisk"),
-          #(opening_single_asterisk_indexed_regex, "OpeningAsterisk"),
-          #(closing_single_asterisk_indexed_regex, "ClosingAsterisk"),
-          // "_"
-          #(opening_or_closing_single_underscore_indexed_regex_with_asterisks, "OpeningOrClosingUnderscore"),
-          #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
-          #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
-        ],
-        ["MathBlock", "Math"],
-      )),
-      pair_bookends(#(
-        ["OpeningUnderscore", "OpeningOrClosingUnderscore"],
-        ["ClosingUnderscore", "OpeningOrClosingUnderscore"],
-        "i",
-      )),
-      pair_bookends(#(
-        ["OpeningAsterisk", "OpeningOrClosingAsterisk"],
-        ["ClosingAsterisk", "OpeningOrClosingAsterisk"],
-        "b",
-      )),
-      fold_tags_into_text([
-        #("OpeningOrClosingUnderscore", "_"),
-        #("OpeningUnderscore", "_"),
-        #("ClosingUnderscore", "_"),
-        #("OpeningOrClosingAsterisk", "*"),
-        #("OpeningAsterisk", "*"),
-        #("ClosingAsterisk", "*"),
-      ]),
-      find_replace(
-        #([#("&ensp;", " "), #("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"]),
-      ),
+    ],
+    // ************************
+    // _ & * ******************
+    // ************************
+    pp.symmetric_delim_splitting("_", "_", "i", ["Mathblock", "Math"]),
+    pp.symmetric_delim_splitting("\\*", "*", "b", ["Mathblock", "Math"]),
+    [
+      find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
       // ************************
       // misc *******************
       // ************************
