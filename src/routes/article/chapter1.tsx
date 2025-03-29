@@ -1424,7 +1424,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id={66865472468}>
+            <b id="_85135471959">
               Exercise 1.
             </b>
             {" "}
@@ -2609,14 +2609,14 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id={337211294040}>
+            <b id="_120211294435">
               Exercise 2.
             </b>
             {" "}
             In the solution to Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter1#66865472468">
+              href="/article/chapter1#_85135471959">
               1
             </a>
             , we observed how 

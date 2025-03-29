@@ -60,15 +60,18 @@ import desugarers/unwrap_tags.{unwrap_tags}
 import desugarers/unwrap_tags_if_descendants_of.{unwrap_tags_if_descendants_of}
 import desugarers/unwrap_tags_if_single_child.{unwrap_tags_if_single_child}
 import desugarers/wrap_math_with_no_break.{wrap_math_with_no_break}
+import gleam/list
 import gleam/option.{None, Some}
-import infrastructure.{type Pipe} as infra
+import infrastructure.{type Pipe}
 import indexed_regex_splitting as irs
+import prefabricated_pipelines as pp
 
 pub fn lbp_pipeline() -> List(Pipe) {
-  let double_dollar_indexed_regex =
-    irs.unescaped_suffix_indexed_regex("\\$\\$")
+  // let double_dollar_indexed_regex =
+  //   irs.unescaped_suffix_indexed_regex("\\$\\$")
 
-  let single_dollar_indexed_regex = irs.unescaped_suffix_indexed_regex("\\$")
+  // let single_dollar_indexed_regex =
+  //   irs.unescaped_suffix_indexed_regex("\\$")
 
   // __ __
   let opening_double_underscore_indexed_regex =
@@ -111,328 +114,306 @@ pub fn lbp_pipeline() -> List(Pipe) {
     irs.l_m_r_1_3_indexed_regex("[^\\s({\\[\\*]|^", "\\*", "[\\s)}\\]]|$")
 
   [
-    convert_int_attributes_to_float([#("", "line"), #("", "padding_left")]),
-    // ************************
-    // $$ *********************
-    // ************************
-    // 3.
-    split_by_indexed_regexes(
-      #([#(double_dollar_indexed_regex, "DoubleDollar")], []),
+    pp.create_mathblock_and_math_elements(
+      [ pp.DoubleDollar ],
+      [ pp.SingleDollar ],
+      #("$$", "$$"),
+      #("$", "$"),
     ),
-    pair_bookends(#(["DoubleDollar"], ["DoubleDollar"], "MathBlock")),
-    fold_tags_into_text([#("DoubleDollar", "$$")]),
-    // ************************
-    // $ **********************
-    // ************************
-    split_by_indexed_regexes(
-      #([#(single_dollar_indexed_regex, "SingleDollar")], ["MathBlock"]),
-    ),
-    pair_bookends(#(["SingleDollar"], ["SingleDollar"], "Math")),
-    fold_tags_into_text([#("SingleDollar", "$")]),
-    insert_bookend_tags([
-      #("Math", "OpeningSingleDollar", "ClosingSingleDollar"),
-      #("MathBlock", "OpeningDoubleDollar", "ClosingDoubleDollar"),
-    ]),
-    fold_tags_into_text([
-      #("OpeningSingleDollar", "$"),
-      #("ClosingSingleDollar", "$"),
-      #("OpeningDoubleDollar", "$$"),
-      #("ClosingDoubleDollar", "$$"),
-    ]),
-    find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
-    // *******************************
-    // Attributes with numbers *******
-    // *******************************
-    add_counter_attributes([
-      #("Solution", "Exercises", "solution_number", 1),
-      #("Exercise", "Exercises", "exercise_number", 1),
-    ]),
-    // ************************
-    // AddTitleCounters *******
-    // ************************
-    // 7.
+    [
+      find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
+      // *******************************
+      // Attributes with numbers *******
+      // *******************************
+      add_counter_attributes([
+        #("Solution", "Exercises", "solution_number", 1),
+        #("Exercise", "Exercises", "exercise_number", 1),
+      ]),
+      // ************************
+      // AddTitleCounters *******
+      // ************************
+      // 7.
 
-    generate_handles_attributes(#("Chapter", "Exercise")),
-    generate_handles_attributes(#("Bootcamp", "Exercise")),
+      generate_handles_attributes(#("Chapter", "Exercise")),
+      generate_handles_attributes(#("Bootcamp", "Exercise")),
 
-    add_title_counters_and_titles_with_handle_assignments([
-      #("Chapter", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
-      #(
-        "Bootcamp",
-        "ExampleCounter",
-        "Example",
-        "*Example ",
-        ".*",
-        "*Example.*",
+      add_title_counters_and_titles_with_handle_assignments([
+        #("Chapter", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
+        #(
+          "Bootcamp",
+          "ExampleCounter",
+          "Example",
+          "*Example ",
+          ".*",
+          "*Example.*",
+        ),
+        #("Chapter", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
+        #("Bootcamp", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
+        #(
+          "Exercises",
+          "ExerciseCounter",
+          "Exercise",
+          "*Exercise ",
+          ".*",
+          "*Exercise.*",
+        ),
+        #(
+          "Solution",
+          "SolutionNoteCounter",
+          "SolutionNote",
+          "_Note ",
+          "._",
+          "_Note._",
+        ),
+      ]),
+      // ************************
+      // VerticalChunk **********
+      // ************************
+      // 8.
+      group_consecutive_children_avoiding(
+        #(
+          "VerticalChunk",
+          [
+            "Bootcamp", "CentralDisplay", "CentralDisplayItalic", "Chapter",
+            "Example", "Exercise", "Exercises", "Grid", "Image", "ImageLeft",
+            "ImageRight", "List", "MathBlock", "Note", "Pause", "Section",
+            "Solution", "SolutionNote", "StarDivider", "Table", "TextParent",
+            "WriterlyBlankLine", "center", "li", "ul", "ol", "table", "colgroup",
+            "thead", "tbody", "tr", "td", "section",
+          ],
+          ["MathBlock", "VerticalChunk"],
+        ),
       ),
-      #("Chapter", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
-      #("Bootcamp", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
-      #(
-        "Exercises",
-        "ExerciseCounter",
-        "Exercise",
-        "*Exercise ",
-        ".*",
-        "*Exercise.*",
+      unwrap_tags(["WriterlyBlankLine"]),
+      rename_when_child_of([
+        #("VerticalChunk", "Item", "List"),
+        #("VerticalChunk", "Item", "Grid"),
+      ]),
+      unwrap_tags(["WriterlyBlankLine"]),
+      remove_empty_text_nodes(),
+      // ************************
+      // __ *********************
+      // ************************
+      split_by_indexed_regexes(
+        #(
+          [
+            #(opening_or_closing_double_underscore_indexed_regex, "OpeningOrClosingDoubleUnderscore"),
+            #(opening_double_underscore_indexed_regex, "OpeningDoubleUnderscore"),
+            #(closing_double_underscore_indexed_regex, "ClosingDoubleUnderscore"),
+          ],
+          ["MathBlock", "Math"],
+        ),
       ),
-      #(
-        "Solution",
-        "SolutionNoteCounter",
-        "SolutionNote",
-        "_Note ",
-        "._",
-        "_Note._",
+      pair_bookends(#(
+        ["OpeningDoubleUnderscore", "OpeningOrClosingDoubleUnderscore"],
+        ["ClosingDoubleUnderscore", "OpeningOrClosingDoubleUnderscore"],
+        "CentralDisplayItalic",
+      )),
+      fold_tags_into_text([
+        #("OpeningDoubleUnderscore", "__"),
+        #("ClosingDoubleUnderscore", "__"),
+        #("OpeningOrClosingDoubleUnderscore", "__"),
+      ]),
+      // ************************
+      // _| |_ ******************
+      // ************************
+      split_by_indexed_regexes(
+        #(
+          [
+            #(opening_central_quote_indexed_regex, "OpeningCenterQuote"),
+            #(closing_central_quote_indexed_regex, "ClosingCenterQuote"),
+          ],
+          ["MathBlock"],
+        ),
       ),
-    ]),
-    // ************************
-    // VerticalChunk **********
-    // ************************
-    // 8.
-    group_consecutive_children_avoiding(
-      #(
-        "VerticalChunk",
-        [
-          "Bootcamp", "CentralDisplay", "CentralDisplayItalic", "Chapter",
-          "Example", "Exercise", "Exercises", "Grid", "Image", "ImageLeft",
-          "ImageRight", "List", "MathBlock", "Note", "Pause", "Section",
-          "Solution", "SolutionNote", "StarDivider", "Table", "TextParent",
-          "WriterlyBlankLine", "center", "li", "ul", "ol", "table", "colgroup",
-          "thead", "tbody", "tr", "td", "section",
-        ],
-        ["MathBlock", "VerticalChunk"],
+      pair_bookends(#(
+        ["OpeningCenterQuote"],
+        ["ClosingCenterQuote"],
+        "CentralDisplay",
+      )),
+      fold_tags_into_text([
+        #("OpeningCenterQuote", "_|"),
+        #("ClosingCenterQuote", "|_"),
+      ]),
+      // ************************
+      // break CentralDisplay &
+      // CentralDisplayItalic out
+      // of VerticalChunk
+      // ************************
+      free_children([
+        #("CentralDisplay", "VerticalChunk"),
+        #("CentralDisplayItalic", "VerticalChunk"),
+      ]),
+      remove_vertical_chunks_with_no_text_child(),
+      // ************************
+      // _ & * ******************
+      // ************************
+      split_by_indexed_regexes(
+        #(
+          [
+            #(
+              opening_or_closing_single_underscore_indexed_regex_without_asterisks,
+              "OpeningOrClosingUnderscore",
+            ),
+            #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
+            #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
+            #(
+              opening_or_closing_single_asterisk_indexed_regex,
+              "OpeningOrClosingAsterisk",
+            ),
+            #(opening_single_asterisk_indexed_regex, "OpeningAsterisk"),
+            #(closing_single_asterisk_indexed_regex, "ClosingAsterisk"),
+            #(
+              opening_or_closing_single_underscore_indexed_regex_with_asterisks,
+              "OpeningOrClosingUnderscore",
+            ),
+            #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
+            #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
+          ],
+          ["MathBlock", "Math"],
+        ),
       ),
-    ),
-    unwrap_tags(["WriterlyBlankLine"]),
-    rename_when_child_of([
-      #("VerticalChunk", "Item", "List"),
-      #("VerticalChunk", "Item", "Grid"),
-    ]),
-    unwrap_tags(["WriterlyBlankLine"]),
-    remove_empty_text_nodes(),
-    // ************************
-    // __ *********************
-    // ************************
-    split_by_indexed_regexes(
-      #(
-        [
-          #(
-            opening_or_closing_double_underscore_indexed_regex,
-            "OpeningOrClosingDoubleUnderscore",
-          ),
-          #(opening_double_underscore_indexed_regex, "OpeningDoubleUnderscore"),
-          #(closing_double_underscore_indexed_regex, "ClosingDoubleUnderscore"),
-        ],
-        ["MathBlock", "Math"],
+      pair_bookends(#(
+        ["OpeningUnderscore", "OpeningOrClosingUnderscore"],
+        ["ClosingUnderscore", "OpeningOrClosingUnderscore"],
+        "i",
+      )),
+      pair_bookends(#(
+        ["OpeningAsterisk", "OpeningOrClosingAsterisk"],
+        ["ClosingAsterisk", "OpeningOrClosingAsterisk"],
+        "b",
+      )),
+      fold_tags_into_text([
+        #("OpeningOrClosingUnderscore", "_"),
+        #("OpeningUnderscore", "_"),
+        #("ClosingUnderscore", "_"),
+        #("OpeningOrClosingAsterisk", "*"),
+        #("OpeningAsterisk", "*"),
+        #("ClosingAsterisk", "*"),
+      ]),
+      find_replace(
+        #([#("&ensp;", " "), #("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"]),
       ),
-    ),
-    pair_bookends(#(
-      ["OpeningDoubleUnderscore", "OpeningOrClosingDoubleUnderscore"],
-      ["ClosingDoubleUnderscore", "OpeningOrClosingDoubleUnderscore"],
-      "CentralDisplayItalic",
-    )),
-    fold_tags_into_text([
-      #("OpeningDoubleUnderscore", "__"),
-      #("ClosingDoubleUnderscore", "__"),
-      #("OpeningOrClosingDoubleUnderscore", "__"),
-    ]),
-    // ************************
-    // _| |_ ******************
-    // ************************
-    split_by_indexed_regexes(
-      #(
-        [
-          #(opening_central_quote_indexed_regex, "OpeningCenterQuote"),
-          #(closing_central_quote_indexed_regex, "ClosingCenterQuote"),
-        ],
-        ["MathBlock"],
+      // ************************
+      // misc *******************
+      // ************************
+      wrap_math_with_no_break(),
+      unwrap_tags_if_single_child(["NoBreak"]),
+      counters_substitute_and_assign_handles(),
+      handles_generate_ids(),
+      define_article_output_path(
+        #("Chapter", "/article/chapter", "path"),
       ),
-    ),
-    pair_bookends(#(
-      ["OpeningCenterQuote"],
-      ["ClosingCenterQuote"],
-      "CentralDisplay",
-    )),
-    fold_tags_into_text([
-      #("OpeningCenterQuote", "_|"),
-      #("ClosingCenterQuote", "|_"),
-    ]),
-    // ************************
-    // break CentralDisplay &
-    // CentralDisplayItalic out
-    // of VerticalChunk
-    // ************************
-    free_children([
-      #("CentralDisplay", "VerticalChunk"),
-      #("CentralDisplayItalic", "VerticalChunk"),
-    ]),
-    remove_vertical_chunks_with_no_text_child(),
-    // ************************
-    // _ & * ******************
-    // ************************
-    split_by_indexed_regexes(
-      #(
-        [
-          #(
-            opening_or_closing_single_underscore_indexed_regex_without_asterisks,
-            "OpeningOrClosingUnderscore",
-          ),
-          #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
-          #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
-          #(
-            opening_or_closing_single_asterisk_indexed_regex,
-            "OpeningOrClosingAsterisk",
-          ),
-          #(opening_single_asterisk_indexed_regex, "OpeningAsterisk"),
-          #(closing_single_asterisk_indexed_regex, "ClosingAsterisk"),
-          #(
-            opening_or_closing_single_underscore_indexed_regex_with_asterisks,
-            "OpeningOrClosingUnderscore",
-          ),
-          #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
-          #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
-        ],
-        ["MathBlock", "Math"],
+      define_article_output_path(
+        #("Bootcamp", "/article/bootcamp", "path"),
       ),
-    ),
-    pair_bookends(#(
-      ["OpeningUnderscore", "OpeningOrClosingUnderscore"],
-      ["ClosingUnderscore", "OpeningOrClosingUnderscore"],
-      "i",
-    )),
-    pair_bookends(#(
-      ["OpeningAsterisk", "OpeningOrClosingAsterisk"],
-      ["ClosingAsterisk", "OpeningOrClosingAsterisk"],
-      "b",
-    )),
-    fold_tags_into_text([
-      #("OpeningOrClosingUnderscore", "_"),
-      #("OpeningUnderscore", "_"),
-      #("ClosingUnderscore", "_"),
-      #("OpeningOrClosingAsterisk", "*"),
-      #("OpeningAsterisk", "*"),
-      #("ClosingAsterisk", "*"),
-    ]),
-    find_replace(
-      #([#("&ensp;", " "), #("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"]),
-    ),
-    // ************************
-    // misc *******************
-    // ************************
-    wrap_math_with_no_break(),
-    unwrap_tags_if_single_child(["NoBreak"]),
-    counters_substitute_and_assign_handles(),
-    handles_generate_ids(),
-    define_article_output_path(
-      #("Chapter", "/article/chapter", "path"),
-    ),
-    define_article_output_path(
-      #("Bootcamp", "/article/bootcamp", "path"),
-    ),
-    handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
-    handles_substitute([#("class", "exercise-link")]),
-    unwrap_tags(["GrandWrapper"]),
+      handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
+      handles_substitute([#("class", "exercise-link")]),
+      unwrap_tags(["GrandWrapper"]),
 
-    concatenate_text_nodes(),
-    // ************************
-    // VerticalChunk cleanup
-    // ************************
-    remove_starting_and_ending_spaces(["VerticalChunk"]),
-    remove_starting_and_ending_empty_lines(["VerticalChunk"]),
-    unwrap_tags_if_descendants_of([#("VerticalChunk", ["td", "li"])]),
-    remove_empty_chunks(),
-    // ************************
-    // ImageLeft, ImageRight parent-finding
-    // ************************
-    absorb_next_sibling_while([
-      #("VerticalChunk", "ImageRight"),
-      #("VerticalChunk", "ImageLeft"),
-      #("MathBlock", "ImageRight"),
-      #("MathBlock", "ImageLeft"),
-      #("CentralDisplayItalic", "ImageRight"),
-      #("CentralDisplayItalic", "ImageLeft"),
-      #("CentralDisplay", "ImageRight"),
-      #("CentralDisplay", "ImageLeft"),
-      #("Image", "ImageRight"),
-      #("Image", "ImageLeft"),
-      #("ul", "ImageRight"),
-      #("ul", "ImageLeft"),
-    ]),
-    add_attribute_to_if_child_of_but_no_overwrites([
-      #(
-        "ImageRight",
-        "MathBlock",
-        "compensate_offset_x_for_large_text_columns",
-        "true",
-      ),
-      #(
-        "ImageLeft",
-        "MathBlock",
-        "compensate_offset_x_for_large_text_columns",
-        "true",
-      ),
-    ]),
-    // ************************
-    // VerticalChunk indents
-    // ************************
-    insert_indent(),
-    // ************************
-    // Add spacers
-    // ************************
-    add_between_tags([
-      #(#("MathBlock", "VerticalChunk"), "Pause", []),
-      #(#("Example", "VerticalChunk"), "Pause", []),
-      #(#("Note", "VerticalChunk"), "Pause", []),
-      #(#("SolutionNote", "VerticalChunk"), "Pause", []),
-      #(#("Image", "VerticalChunk"), "Pause", []),
-      #(#("Table", "VerticalChunk"), "Pause", []),
-      #(#("table", "VerticalChunk"), "Pause", []),
-      #(#("Grid", "VerticalChunk"), "Pause", []),
-      #(#("CentralDisplayItalic", "VerticalChunk"), "Pause", []),
-      #(#("CentralDisplay", "VerticalChunk"), "Pause", []),
-      #(#("List", "VerticalChunk"), "Pause", []),
-      #(#("StarDivider", "VerticalChunk"), "Pause", []),
-    ]),
-    identity(),
-    // (I forgot... why would raw text directly follow a MathBlock?)
-    add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
-    add_before_tags_but_not_first_child_tags([
-      #("Exercises", "Pause", []),
-      #("Example", "Pause", []),
-      #("Note", "Pause", []),
-      #("SolutionNote", "Pause", []),
-      #("Section", "Pause", []),
-      #("MathBlock", "Pause", []),
-      #("CentralDisplayItalic", "Pause", []),
-      #("CentralDisplay", "Pause", []),
-      #("Image", "Pause", []),
-      #("Table", "Pause", []),
-      #("table", "Pause", []),
-      #("Grid", "Pause", []),
-      #("Grid", "Pause", []),
-      #("Solution", "Pause", []),
-      #("List", "Pause", []),
-      #("StarDivider", "Pause", []),
-    ]),
-    // ************************
-    // attribute cleanup
-    // ************************
-    change_attribute_value([#("src", "/()")]),
-    remove_attributes(["counter", "handle", "type", "t", "path"]),
-    // ************************
-    // contents
-    // ************************
-    generate_lbp_table_of_contents(#(
-      "PanelAuthorSuppliedContent",
-      "PanelTitle",
-      "PanelItem",
-      None,
-    )),
-    generate_lbp_table_of_contents(#(
-      "TOCAuthorSuppliedContent",
-      "TOCTitle",
-      "TOCItem",
-      Some("Spacer"),
-    )),
-    generate_lbp_links(),
+      concatenate_text_nodes(),
+      // ************************
+      // VerticalChunk cleanup
+      // ************************
+      remove_starting_and_ending_spaces(["VerticalChunk"]),
+      remove_starting_and_ending_empty_lines(["VerticalChunk"]),
+      unwrap_tags_if_descendants_of([#("VerticalChunk", ["td", "li"])]),
+      remove_empty_chunks(),
+      // ************************
+      // ImageLeft, ImageRight parent-finding
+      // ************************
+      absorb_next_sibling_while([
+        #("VerticalChunk", "ImageRight"),
+        #("VerticalChunk", "ImageLeft"),
+        #("MathBlock", "ImageRight"),
+        #("MathBlock", "ImageLeft"),
+        #("CentralDisplayItalic", "ImageRight"),
+        #("CentralDisplayItalic", "ImageLeft"),
+        #("CentralDisplay", "ImageRight"),
+        #("CentralDisplay", "ImageLeft"),
+        #("Image", "ImageRight"),
+        #("Image", "ImageLeft"),
+        #("ul", "ImageRight"),
+        #("ul", "ImageLeft"),
+      ]),
+      add_attribute_to_if_child_of_but_no_overwrites([
+        #(
+          "ImageRight",
+          "MathBlock",
+          "compensate_offset_x_for_large_text_columns",
+          "true",
+        ),
+        #(
+          "ImageLeft",
+          "MathBlock",
+          "compensate_offset_x_for_large_text_columns",
+          "true",
+        ),
+      ]),
+      // ************************
+      // VerticalChunk indents
+      // ************************
+      insert_indent(),
+      // ************************
+      // Add spacers
+      // ************************
+      add_between_tags([
+        #(#("MathBlock", "VerticalChunk"), "Pause", []),
+        #(#("Example", "VerticalChunk"), "Pause", []),
+        #(#("Note", "VerticalChunk"), "Pause", []),
+        #(#("SolutionNote", "VerticalChunk"), "Pause", []),
+        #(#("Image", "VerticalChunk"), "Pause", []),
+        #(#("Table", "VerticalChunk"), "Pause", []),
+        #(#("table", "VerticalChunk"), "Pause", []),
+        #(#("Grid", "VerticalChunk"), "Pause", []),
+        #(#("CentralDisplayItalic", "VerticalChunk"), "Pause", []),
+        #(#("CentralDisplay", "VerticalChunk"), "Pause", []),
+        #(#("List", "VerticalChunk"), "Pause", []),
+        #(#("StarDivider", "VerticalChunk"), "Pause", []),
+      ]),
+      identity(),
+      // (I forgot... why would raw text directly follow a MathBlock?)
+      add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
+      add_before_tags_but_not_first_child_tags([
+        #("Exercises", "Pause", []),
+        #("Example", "Pause", []),
+        #("Note", "Pause", []),
+        #("SolutionNote", "Pause", []),
+        #("Section", "Pause", []),
+        #("MathBlock", "Pause", []),
+        #("CentralDisplayItalic", "Pause", []),
+        #("CentralDisplay", "Pause", []),
+        #("Image", "Pause", []),
+        #("Table", "Pause", []),
+        #("table", "Pause", []),
+        #("Grid", "Pause", []),
+        #("Grid", "Pause", []),
+        #("Solution", "Pause", []),
+        #("List", "Pause", []),
+        #("StarDivider", "Pause", []),
+      ]),
+      // ************************
+      // attribute cleanup
+      // ************************
+      change_attribute_value([#("src", "/()")]),
+      remove_attributes(["counter", "handle", "type", "t", "path"]),
+      // ************************
+      // contents
+      // ************************
+      generate_lbp_table_of_contents(#(
+        "PanelAuthorSuppliedContent",
+        "PanelTitle",
+        "PanelItem",
+        None,
+      )),
+      generate_lbp_table_of_contents(#(
+        "TOCAuthorSuppliedContent",
+        "TOCTitle",
+        "TOCItem",
+        Some("Spacer"),
+      )),
+      generate_lbp_links(),
+    ]
   ]
+  |> list.flatten
 }

@@ -296,7 +296,7 @@ const Rest = () => {
           {" "}by inspection, and (A) 
           is equivalent to the identity
           <ImageLeft
-            line={2.0}
+            line={2}
             src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
         </VerticalChunk>
         <Pause />
@@ -2008,7 +2008,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id={26098282462}>
+            <b id="_33438288983">
               Exercise 1.
             </b>
             {" "}
@@ -2117,7 +2117,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id={35988623883}>
+            <b id="_388622228">
               Exercise 2.
             </b>
             {" "}
@@ -2175,7 +2175,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id={9288793677}>
+            <b id="_33098791917">
               Exercise 3.
             </b>
             {" "}
@@ -2272,7 +2272,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id={88489251732}>
+            <b id="_45409256775">
               Exercise 4.
             </b>
             {" "}
@@ -2336,7 +2336,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id={38299481243}>
+            <b id="_75329485634">
               Exercise 5.
             </b>
             {" "}
@@ -2382,7 +2382,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id={66599656847}>
+            <b id="_4369657000">
               Exercise 6.
             </b>
             {" "}
@@ -2441,7 +2441,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id={27389868450}>
+            <b id="_1849862340">
               Exercise 7.
             </b>
             {" "}
@@ -2472,7 +2472,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id={56489942520}>
+            <b id="_29849946254">
               Exercise 8.
             </b>
             {" "}
@@ -2509,7 +2509,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id={212410022585}>
+            <b id="_258210026227">
               Exercise 9.
             </b>
             {" "}
@@ -2555,7 +2555,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id={193810156507}>
+            <b id="_986110158767">
               Exercise 10.
             </b>
             {" "}
@@ -2612,7 +2612,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id={527610383989}>
+            <b id="_920310383011">
               Exercise 11.
             </b>
             {" "}
@@ -2665,7 +2665,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id={121610593182}>
+            <b id="_994710599993">
               Exercise 12.
             </b>
             {" "}
@@ -2752,7 +2752,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id={585410872465}>
+            <b id="_29710872215">
               Exercise 13.
             </b>
             {" "}
@@ -2865,7 +2865,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id={792811425486}>
+            <b id="_808611423430">
               Exercise 14.
             </b>
             {" "}
@@ -3015,7 +3015,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id={873211926979}>
+            <b id="_695711925200">
               Exercise 15.
             </b>
             {" "}

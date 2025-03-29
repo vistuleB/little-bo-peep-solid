@@ -527,7 +527,7 @@ const Rest = () => {
           places, or, namely, to show that the fractions
           <ImageRight
             offset_x="-0.5em"
-            line={3.0}
+            line={3}
             src="/images/svg_ch2_ch_swap_cloud.svg" />
         </VerticalChunk>
         <Pause />
@@ -1143,7 +1143,7 @@ const Rest = () => {
           </NoBreak>
           <ImageRight
             offset_x="2rem"
-            line={1.0}
+            line={1}
             src="/images/svg_3_plus_minus_one_times_x_cloud.svg" />
         </VerticalChunk>
       </Section>
@@ -1552,7 +1552,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id={4386768011}>
+            <b id="_72126761499">
               Exercise 1.
             </b>
             {" "}
@@ -1647,7 +1647,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id={90517321949}>
+            <b id="_35787323333">
               Exercise 2.
             </b>
             {" "}
@@ -1904,7 +1904,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id={8144834333}>
+            <b id="_40848347807">
               Exercise 3.
             </b>
             {" "}
@@ -2077,7 +2077,7 @@ const Rest = () => {
           exercise_number={4}
           test="test">
           <VerticalChunk>
-            <b id={98269008299}>
+            <b id="_38739008539">
               Exercise 4.
             </b>
             {" "}
@@ -2085,7 +2085,7 @@ const Rest = () => {
             in the solution to Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter2#90517321949">
+              href="/article/chapter2#_35787323333">
               2
             </a>
             , explain why

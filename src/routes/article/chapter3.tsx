@@ -757,7 +757,7 @@ const Rest = () => {
             </NoBreak>
             <ImageLeft
               offset_y="0em"
-              line={-1.0}
+              line={-1}
               src="/images/svg_ch3_0.5625_cloud.svg" />
           </VerticalChunk>
         </Example>
@@ -1921,7 +1921,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id={37888017047}>
+            <b id="_88118014433">
               Exercise 1.
             </b>
             {" "}
@@ -1961,7 +1961,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id={58218178288}>
+            <b id="_50458175632">
               Exercise 2.
             </b>
             {" "}
@@ -2012,7 +2012,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id={61998402652}>
+            <b id="_492484050">
               Exercise 3.
             </b>
             {" "}
@@ -2091,7 +2091,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id={98218802108}>
+            <b id="_51758807981">
               Exercise 4.
             </b>
             {" "}
@@ -2311,7 +2311,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id={11919422025}>
+            <b id="_89079424460">
               Exercise 5.
             </b>
             {" "}
@@ -2345,7 +2345,7 @@ const Rest = () => {
               {" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#98218802108">
+                href="/article/chapter3#_51758807981">
                 4
               </a>
               ):
@@ -2398,7 +2398,7 @@ const Rest = () => {
               the formula for the function from Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#98218802108">
+                href="/article/chapter3#_51758807981">
                 4
               </a>
               .
@@ -2763,7 +2763,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id={3510731428}>
+            <b id="_678310734269">
               Exercise 6.
             </b>
             {" "}
@@ -2803,7 +2803,7 @@ const Rest = () => {
               Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#11919422025">
+                href="/article/chapter3#_89079424460">
                 5
               </a>
               's formula by{" "}
@@ -2828,7 +2828,7 @@ const Rest = () => {
               because the problem is similar to Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#11919422025">
+                href="/article/chapter3#_89079424460">
                 5
               </a>
               {" "}
@@ -2955,7 +2955,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id={985611579534}>
+            <b id="_763711573732">
               Exercise 7.
             </b>
             {" "}
@@ -3088,7 +3088,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id={460212103714}>
+            <b id="_66112106357">
               Exercise 8.
             </b>
             {" "}
@@ -3262,14 +3262,14 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id={453912887711}>
+            <b id="_884412881557">
               Exercise 9.
             </b>
             {" "}
             Same question as Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter3#258420957085">
+              href="/article/chapter3#_269520955169">
               17
             </a>
             , but for 
@@ -3992,7 +3992,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id={489216374734}>
+            <b id="_105616377988">
               Exercise 10.
             </b>
             {" "}
@@ -4076,14 +4076,14 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id={66421665952}>
+            <b id="_520516653229">
               Exercise 11.
             </b>
             {" "}
             Solve Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter3#489216374734">
+              href="/article/chapter3#_105616377988">
               10
             </a>
             {" "}using algebra{" "}
@@ -4302,7 +4302,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id={37791724882}>
+            <b id="_300417249581">
               Exercise 12.
             </b>
             {" "}
@@ -4325,7 +4325,7 @@ const Rest = () => {
             {" "}Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter3#203623504915">
+              href="/article/chapter3#_11322350316">
               21
             </a>
             ) has no solutions{" "}
@@ -4352,7 +4352,7 @@ const Rest = () => {
               by Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#203623504915">
+                href="/article/chapter3#_11322350316">
                 21
               </a>
               , but this implies
@@ -4373,7 +4373,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id={415517464490}>
+            <b id="_290717466571">
               Exercise 13.
             </b>
             {" "}
@@ -4461,7 +4461,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id={427717763528}>
+            <b id="_916817762720">
               Exercise 14.
             </b>
             {" "}
@@ -4967,7 +4967,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id={715919474685}>
+            <b id="_57301947799">
               Exercise 15.
             </b>
             {" "}
@@ -5173,7 +5173,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b id={300620044480}>
+            <b id="_167320047905">
               Exercise 16.
             </b>
             {" "}
@@ -5372,7 +5372,7 @@ const Rest = () => {
               sequence of transformations (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#427717763528">
+                href="/article/chapter3#_916817762720">
                 14
               </a>
               ):
@@ -5407,7 +5407,7 @@ const Rest = () => {
               By Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#715919474685">
+                href="/article/chapter3#_57301947799">
                 15
               </a>
               , the roots of{" "}
@@ -5524,7 +5524,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b id={258420957085}>
+            <b id="_269520955169">
               Exercise 17.
             </b>
             {" "}
@@ -5607,7 +5607,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b id={526921226872}>
+            <b id="_81321225553">
               Exercise 18.
             </b>
             {" "}
@@ -5844,7 +5844,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b id={876021857327}>
+            <b id="_201021858497">
               Exercise 19.
             </b>
             {" "}
@@ -5921,7 +5921,7 @@ const Rest = () => {
               and, similarly to Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#427717763528">
+                href="/article/chapter3#_916817762720">
                 14
               </a>
               , write
@@ -5984,7 +5984,7 @@ const Rest = () => {
               {" "}of Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#427717763528">
+                href="/article/chapter3#_916817762720">
                 14
               </a>
               ,
@@ -5994,7 +5994,7 @@ const Rest = () => {
               By direct analogy with Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#427717763528">
+                href="/article/chapter3#_916817762720">
                 14
               </a>
               , the three
@@ -6060,7 +6060,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b id={576022512099}>
+            <b id="_533522515786">
               Exercise 20.
             </b>
             {" "}
@@ -6125,7 +6125,7 @@ const Rest = () => {
               transformations (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#876021857327">
+                href="/article/chapter3#_201021858497">
                 19
               </a>
               ):
@@ -6216,7 +6216,7 @@ const Rest = () => {
               by Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#715919474685">
+                href="/article/chapter3#_57301947799">
                 15
               </a>
               .{" "}
@@ -6355,7 +6355,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b id={203623504915}>
+            <b id="_11322350316">
               Exercise 21.
             </b>
             {" "}
