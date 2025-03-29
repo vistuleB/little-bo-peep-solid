@@ -67,29 +67,6 @@ import indexed_regex_splitting as irs
 import prefabricated_pipelines as pp
 
 pub fn lbp_pipeline() -> List(Pipe) {
-  // let double_dollar_indexed_regex =
-  //   irs.unescaped_suffix_indexed_regex("\\$\\$")
-
-  // let single_dollar_indexed_regex =
-  //   irs.unescaped_suffix_indexed_regex("\\$")
-
-  // __ __
-  let opening_double_underscore_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[\\s]|^", "__", "[^\\s]|$")
-
-  let opening_or_closing_double_underscore_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[^\\s]|^", "__", "[^\\s]|$")
-
-  let closing_double_underscore_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[^\\s]|^", "__", "[\\s]|$")
-
-  // _| |_
-  let opening_central_quote_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[\\s]|^", "_\\|", "[^\\s]|$")
-
-  let closing_central_quote_indexed_regex =
-    irs.l_m_r_1_3_indexed_regex("[^\\s]|^", "\\|_", "[\\s]|$")
-
   // _ _
   let opening_single_underscore_indexed_regex =
     irs.l_m_r_1_3_indexed_regex("[\\s({\\[]|^", "_", "[^\\s)}\\]_]|$")
@@ -132,44 +109,19 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       // AddTitleCounters *******
       // ************************
-      // 7.
-
       generate_handles_attributes(#("Chapter", "Exercise")),
       generate_handles_attributes(#("Bootcamp", "Exercise")),
-
       add_title_counters_and_titles_with_handle_assignments([
         #("Chapter", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
-        #(
-          "Bootcamp",
-          "ExampleCounter",
-          "Example",
-          "*Example ",
-          ".*",
-          "*Example.*",
-        ),
+        #("Bootcamp", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
         #("Chapter", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
         #("Bootcamp", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
-        #(
-          "Exercises",
-          "ExerciseCounter",
-          "Exercise",
-          "*Exercise ",
-          ".*",
-          "*Exercise.*",
-        ),
-        #(
-          "Solution",
-          "SolutionNoteCounter",
-          "SolutionNote",
-          "_Note ",
-          "._",
-          "_Note._",
-        ),
+        #("Exercises", "ExerciseCounter", "Exercise", "*Exercise ", ".*", "*Exercise.*"),
+        #("Solution", "SolutionNoteCounter", "SolutionNote", "_Note ", "._", "_Note._"),
       ]),
       // ************************
       // VerticalChunk **********
       // ************************
-      // 8.
       group_consecutive_children_avoiding(
         #(
           "VerticalChunk",
@@ -185,56 +137,21 @@ pub fn lbp_pipeline() -> List(Pipe) {
         ),
       ),
       unwrap_tags(["WriterlyBlankLine"]),
+      remove_empty_text_nodes(),
       rename_when_child_of([
         #("VerticalChunk", "Item", "List"),
         #("VerticalChunk", "Item", "Grid"),
       ]),
-      unwrap_tags(["WriterlyBlankLine"]),
-      remove_empty_text_nodes(),
-      // ************************
-      // __ *********************
-      // ************************
-      split_by_indexed_regexes(
-        #(
-          [
-            #(opening_or_closing_double_underscore_indexed_regex, "OpeningOrClosingDoubleUnderscore"),
-            #(opening_double_underscore_indexed_regex, "OpeningDoubleUnderscore"),
-            #(closing_double_underscore_indexed_regex, "ClosingDoubleUnderscore"),
-          ],
-          ["MathBlock", "Math"],
-        ),
-      ),
-      pair_bookends(#(
-        ["OpeningDoubleUnderscore", "OpeningOrClosingDoubleUnderscore"],
-        ["ClosingDoubleUnderscore", "OpeningOrClosingDoubleUnderscore"],
-        "CentralDisplayItalic",
-      )),
-      fold_tags_into_text([
-        #("OpeningDoubleUnderscore", "__"),
-        #("ClosingDoubleUnderscore", "__"),
-        #("OpeningOrClosingDoubleUnderscore", "__"),
-      ]),
-      // ************************
-      // _| |_ ******************
-      // ************************
-      split_by_indexed_regexes(
-        #(
-          [
-            #(opening_central_quote_indexed_regex, "OpeningCenterQuote"),
-            #(closing_central_quote_indexed_regex, "ClosingCenterQuote"),
-          ],
-          ["MathBlock"],
-        ),
-      ),
-      pair_bookends(#(
-        ["OpeningCenterQuote"],
-        ["ClosingCenterQuote"],
-        "CentralDisplay",
-      )),
-      fold_tags_into_text([
-        #("OpeningCenterQuote", "_|"),
-        #("ClosingCenterQuote", "|_"),
-      ]),
+    ],
+    // ************************
+    // __ *********************
+    // ************************
+    pp.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
+    // ************************
+    // _| |_ ******************
+    // ************************
+    pp.asymmetric_delim_spitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
+    [
       // ************************
       // break CentralDisplay &
       // CentralDisplayItalic out
@@ -248,31 +165,23 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       // _ & * ******************
       // ************************
-      split_by_indexed_regexes(
-        #(
-          [
-            #(
-              opening_or_closing_single_underscore_indexed_regex_without_asterisks,
-              "OpeningOrClosingUnderscore",
-            ),
-            #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
-            #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
-            #(
-              opening_or_closing_single_asterisk_indexed_regex,
-              "OpeningOrClosingAsterisk",
-            ),
-            #(opening_single_asterisk_indexed_regex, "OpeningAsterisk"),
-            #(closing_single_asterisk_indexed_regex, "ClosingAsterisk"),
-            #(
-              opening_or_closing_single_underscore_indexed_regex_with_asterisks,
-              "OpeningOrClosingUnderscore",
-            ),
-            #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
-            #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
-          ],
-          ["MathBlock", "Math"],
-        ),
-      ),
+      split_by_indexed_regexes(#(
+        [
+          // "_"
+          #(opening_or_closing_single_underscore_indexed_regex_without_asterisks, "OpeningOrClosingUnderscore"),
+          #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
+          #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
+          // "*"
+          #(opening_or_closing_single_asterisk_indexed_regex, "OpeningOrClosingAsterisk"),
+          #(opening_single_asterisk_indexed_regex, "OpeningAsterisk"),
+          #(closing_single_asterisk_indexed_regex, "ClosingAsterisk"),
+          // "_"
+          #(opening_or_closing_single_underscore_indexed_regex_with_asterisks, "OpeningOrClosingUnderscore"),
+          #(opening_single_underscore_indexed_regex, "OpeningUnderscore"),
+          #(closing_single_underscore_indexed_regex, "ClosingUnderscore"),
+        ],
+        ["MathBlock", "Math"],
+      )),
       pair_bookends(#(
         ["OpeningUnderscore", "OpeningOrClosingUnderscore"],
         ["ClosingUnderscore", "OpeningOrClosingUnderscore"],

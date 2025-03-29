@@ -1552,7 +1552,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id="_72126761499">
+            <b id="_11346765088">
               Exercise 1.
             </b>
             {" "}
@@ -1647,7 +1647,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id="_35787323333">
+            <b id="_52927328572">
               Exercise 2.
             </b>
             {" "}
@@ -1904,7 +1904,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id="_40848347807">
+            <b id="_61958345686">
               Exercise 3.
             </b>
             {" "}
@@ -2077,7 +2077,7 @@ const Rest = () => {
           exercise_number={4}
           test="test">
           <VerticalChunk>
-            <b id="_38739008539">
+            <b id="_5771900308">
               Exercise 4.
             </b>
             {" "}
@@ -2085,7 +2085,7 @@ const Rest = () => {
             in the solution to Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter2#_35787323333">
+              href="/article/chapter2#_52927328572">
               2
             </a>
             , explain why
