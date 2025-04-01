@@ -55,7 +55,6 @@ import desugarers/remove_vertical_chunks_with_no_text_child.{
   remove_vertical_chunks_with_no_text_child,
 }
 import desugarers/rename_when_child_of.{rename_when_child_of}
-import desugarers/split_by_indexed_regexes.{split_by_indexed_regexes}
 import desugarers/unwrap_tags.{unwrap_tags}
 import desugarers/unwrap_tags_if_descendants_of.{unwrap_tags_if_descendants_of}
 import desugarers/unwrap_tags_if_single_child.{unwrap_tags_if_single_child}
@@ -70,8 +69,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
     pp.create_mathblock_and_math_elements(
       [ pp.DoubleDollar ],
       [ pp.SingleDollar ],
-      #("$$", "$$"),
-      #("$", "$"),
+      pp.DoubleDollar,
+      pp.SingleDollar,
     ),
     [
       find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
