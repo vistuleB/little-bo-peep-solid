@@ -170,7 +170,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ A = (x_1, y_1) $$
+          $$ A = (x
+          <i>
+            1, y
+          </i>
+          1) $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -178,7 +182,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ B = (x_2, y_2) $$
+          $$ B = (x
+          <i>
+            2, y
+          </i>
+          2) $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -186,7 +194,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 $$
+          $$ x
+          <i>
+            2 - x
+          </i>
+          1 $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -194,7 +206,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ y_2 - y_1 $$
+          $$ y
+          <i>
+            2 - y
+          </i>
+          1 $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -219,7 +235,15 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
+          \te&#123;slope&#125; = &#123;y
+          <i>
+            2 - y
+          </i>
+          1 \over x
+          <i>
+            2 - x
+          </i>
+          1&#125;
           $$
           <ImageRight
             offset_x="3em"
@@ -324,7 +348,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 $$
+          $$ x
+          <i>
+            2 - x
+          </i>
+          1 $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -332,7 +360,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ y_2 - y_1 $$
+          $$ y
+          <i>
+            2 - y
+          </i>
+          1 $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -354,7 +386,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 $$
+          $$ x
+          <i>
+            2 - x
+          </i>
+          1 $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -362,7 +398,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ y_2 - y_1 $$
+          $$ y
+          <i>
+            2 - y
+          </i>
+          1 $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -401,7 +441,15 @@ const Rest = () => {
               <td>
                 <MathBlock>
                   $$
-                  &#123;y_2-y_1 \over x_2-x_1&#125;
+                  &#123;y
+                  <i>
+                    2-y
+                  </i>
+                  1 \over x
+                  <i>
+                    2-x
+                  </i>
+                  1&#125;
                   $$
                 </MathBlock>
               </td>
@@ -527,12 +575,28 @@ const Rest = () => {
           places, or, namely, to show that the fractions
           <ImageRight
             offset_x="-0.5em"
-            line={3.0}
+            line={3}
             src="/images/svg_ch2_ch_swap_cloud.svg" />
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ &#123;y_2 - y_1 \over x_2 - x_1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y_1 - y_2 \over x_1 - x_2&#125; $$
+          $$ &#123;y
+          <i>
+            2 - y
+          </i>
+          1 \over x
+          <i>
+            2 - x
+          </i>
+          1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y
+          <i>
+            1 - y
+          </i>
+          2 \over x
+          <i>
+            1 - x
+          </i>
+          2&#125; $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -540,7 +604,31 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125; $$
+          $$ &#123;y
+          <i>
+            2 - y
+          </i>
+          1 \over x
+          <i>
+            2 - x
+          </i>
+          1&#125; = &#123;-(y
+          <i>
+            2 - y
+          </i>
+          1) \over -(x
+          <i>
+            2 - x
+          </i>
+          1)&#125; = &#123;y
+          <i>
+            1 - y
+          </i>
+          2 \over x
+          <i>
+            1 - x
+          </i>
+          2&#125; $$
           <ImageLeft
             offset_y="-60px"
             offset_x="2.5em"
@@ -553,7 +641,23 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ &#123;y_2 - y_1 \over x_2 - x_1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y_1 - y_2 \over x_1 - x_2&#125; $$
+          $$ &#123;y
+          <i>
+            2 - y
+          </i>
+          1 \over x
+          <i>
+            2 - x
+          </i>
+          1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y
+          <i>
+            1 - y
+          </i>
+          2 \over x
+          <i>
+            1 - x
+          </i>
+          2&#125; $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -572,7 +676,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 = 0 $$
+          $$ x
+          <i>
+            2 - x
+          </i>
+          1 = 0 $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -594,7 +702,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 = 0 $$
+          $$ x
+          <i>
+            2 - x
+          </i>
+          1 = 0 $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -613,7 +725,15 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <MathBlock>
-          $$ \frac&#123;y_2 - y_1&#125;&#123;x_2 - x_1&#125; = \frac&#123;0&#125;&#123;0&#125; $$
+          $$ \frac&#123;y
+          <i>
+            2 - y
+          </i>
+          1&#125;&#123;x
+          <i>
+            2 - x
+          </i>
+          1&#125; = \frac&#123;0&#125;&#123;0&#125; $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -651,7 +771,7 @@ const Rest = () => {
               src="/images/rise-run.svg" />
             ”),
           </span>
-          {" "}following such a picture:
+          &ensp;following such a picture:
         </VerticalChunk>
         <Pause />
         <Image src="/images/44.svg" />
@@ -1143,7 +1263,7 @@ const Rest = () => {
           </NoBreak>
           <ImageRight
             offset_x="2rem"
-            line={1.0}
+            line={1}
             src="/images/svg_3_plus_minus_one_times_x_cloud.svg" />
         </VerticalChunk>
       </Section>
@@ -1552,7 +1672,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id={4936764796}>
+            <b id="_88576763230">
               Exercise 1.
             </b>
             {" "}
@@ -1647,7 +1767,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id={75877324375}>
+            <b id="_687173276">
               Exercise 2.
             </b>
             {" "}
@@ -1682,7 +1802,11 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$ p = &#123;y - y_0 \over x - x_0&#125; $$
+              $$ p = &#123;y - y
+              <i>
+                0 \over x - x
+              </i>
+              0&#125; $$
               <ImageLeft
                 offset_y="103px"
                 offset_x="7.5em"
@@ -1695,7 +1819,11 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$ \,\,&#123;y - y_0 \over x - x_0&#125; $$
+              $$ \,\,&#123;y - y
+              <i>
+                0 \over x - x
+              </i>
+              0&#125; $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1729,7 +1857,11 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$ p = &#123;y - y_0 \over x - x_0&#125; $$
+              $$ p = &#123;y - y
+              <i>
+                0 \over x - x
+              </i>
+              0&#125; $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -1771,7 +1903,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              p = &#123;y - y_0 \over x - x_0&#125;
+              p = &#123;y - y
+              <i>
+                0 \over x - x
+              </i>
+              0&#125;
               $$
             </MathBlock>
             <Pause />
@@ -1789,7 +1925,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              p(x-x_0) = y-y_0
+              p(x-x
+              <i>
+                0) = y-y
+              </i>
+              0
               $$
             </MathBlock>
             <Pause />
@@ -1829,7 +1969,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              y - y_0 = p(x - x_0)
+              y - y
+              <i>
+                0 = p(x - x
+              </i>
+              0)
               $$
             </MathBlock>
             <Pause />
@@ -1839,7 +1983,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              y = p(x - x_0) + y_0
+              y = p(x - x
+              <i>
+                0) + y
+              </i>
+              0
               $$
             </MathBlock>
             <Pause />
@@ -1870,7 +2018,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              y = px + y_0 - px_0
+              y = px + y
+              <i>
+                0 - px
+              </i>
+              0
               $$
             </MathBlock>
             <Pause />
@@ -1904,7 +2056,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id={91348348875}>
+            <b id="_60728342244">
               Exercise 3.
             </b>
             {" "}
@@ -1912,7 +2064,7 @@ const Rest = () => {
             <del>
               an object
             </del>
-            {" "}a mosquito whose height over time is 
+            &ensp;a mosquito whose height over time is 
             given by this graph (use the same time interval 
             as the graph):
           </VerticalChunk>
@@ -2077,7 +2229,7 @@ const Rest = () => {
           exercise_number={4}
           test="test">
           <VerticalChunk>
-            <b id={35959002654}>
+            <b id="_77849001726">
               Exercise 4.
             </b>
             {" "}
@@ -2085,14 +2237,18 @@ const Rest = () => {
             in the solution to Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter2#75877324375">
+              href="/article/chapter2#_687173276">
               2
             </a>
             , explain why
           </VerticalChunk>
           <Pause />
           <MathBlock>
-            $$ y_0 - px_0 $$
+            $$ y
+            <i>
+              0 - px
+            </i>
+            0 $$
           </MathBlock>
           <Pause />
           <VerticalChunk>
@@ -2149,7 +2305,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              y_0 - px_0
+              y
+              <i>
+                0 - px
+              </i>
+              0
               $$
             </MathBlock>
             <Pause />
@@ -2217,7 +2377,11 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$ y_0 - px_0 $$
+              $$ y
+              <i>
+                0 - px
+              </i>
+              0 $$
             </MathBlock>
             <Pause />
             <VerticalChunk>

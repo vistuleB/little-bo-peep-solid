@@ -36,7 +36,7 @@ const Article = () => {
             function in Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter3#83531157529">
+              href="/article/chapter3#_30721157885">
               7
             </a>
             {" "}of Chapter 3, e.g.. 
@@ -378,7 +378,7 @@ const Article = () => {
             in Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter3#499723503913">
+              href="/article/chapter3#_29572350624">
               21
             </a>
             {" "}of Chapter 3 (by direct inspection
@@ -769,7 +769,7 @@ const Rest = () => {
           appear in Exercise{" "}
           <a
             class="exercise-link"
-            href="/article/chapter4#92865502141">
+            href="/article/chapter4#_3603550809">
             12
           </a>
           {" "}of Chapter 4.
@@ -842,13 +842,13 @@ const Rest = () => {
           (cf. Exercise{" "}
           <a
             class="exercise-link"
-            href="/article/chapter4#93405715572">
+            href="/article/chapter4#_47985716720">
             20
           </a>
           {" "}and Exercise{" "}
           <a
             class="exercise-link"
-            href="/article/chapter4#20604811982">
+            href="/article/chapter4#_37224814558">
             10
           </a>
           {" "}of Chapter 4),
@@ -961,7 +961,7 @@ const Rest = () => {
           (Cf. Exercise{" "}
           <a
             class="exercise-link"
-            href="/article/chapter4#51789241162">
+            href="/article/chapter4#_93369243955">
             24
           </a>
           , Chapter 4.) You should
@@ -1385,7 +1385,7 @@ const Rest = () => {
           Note 1 of Exercise{" "}
           <a
             class="exercise-link"
-            href="/article/chapter4#591410978741">
+            href="/article/chapter4#_9881097821">
             37
           </a>
           , Chapter 4. 
@@ -2613,11 +2613,11 @@ const Rest = () => {
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(y, x)
           </span>
-          {" "}not
+          &ensp;not
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(x, y)
           </span>
-          {" "}by some bizareness. (Well, actually a 
+          &ensp;by some bizareness. (Well, actually a 
           throwback to the fact that in this expression...
         </VerticalChunk>
         <Pause />
@@ -3088,7 +3088,15 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \overline&#123;s_1s_2&#125;\, &gt; \,\overline&#123;p_1p_2&#125;
+          \overline&#123;s
+          <i>
+            1s
+          </i>
+          2&#125;\, &gt; \,\overline&#123;p
+          <i>
+            1p
+          </i>
+          2&#125;
           $$
         </MathBlock>
         <Pause />
@@ -3585,7 +3593,11 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \,\sin(\theta_1 + \theta_2)\,
+          \,\sin(\theta
+          <i>
+            1 + \theta
+          </i>
+          2)\,
           $$
         </MathBlock>
         <Pause />
@@ -3595,7 +3607,11 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \,\cos(\theta_1 + \theta_2)\,
+          \,\cos(\theta
+          <i>
+            1 + \theta
+          </i>
+          2)\,
           $$
         </MathBlock>
         <Pause />
@@ -3902,11 +3918,11 @@ const Rest = () => {
           <span style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             PURPLE
           </span>
-          {" "}to the{" "}
+          &ensp;to the{" "}
           <span style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             LIME GREEN
           </span>
-          {" "}triangle 
+          &ensp;triangle 
           (hard to draw, because it is behind the 
           purple triangle!) in the following figure:
         </VerticalChunk>
@@ -3988,11 +4004,11 @@ const Rest = () => {
           <span style="white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             BURNT ORANGE
           </span>
-          {" "}to the{" "}
+          &ensp;to the{" "}
           <span style="white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             FAUX BORDEAUX
           </span>
-          {" "}triangle below:
+          &ensp;triangle below:
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_secant_reinterpretation_4.svg" />
@@ -4048,7 +4064,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id={253515767}>
+            <b id="_363018472">
               Exercise 1.
             </b>
             {" "}
@@ -4146,7 +4162,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id={1489286262}>
+            <b id="_7897284125">
               Exercise 2.
             </b>
             {" "}
@@ -4215,7 +4231,7 @@ const Rest = () => {
               function:
               <ImageLeft
                 src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
-                line={-2.0} />
+                line={-2} />
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg" />
@@ -4281,7 +4297,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id={5503839855}>
+            <b id="_179835253">
               Exercise 3.
             </b>
             {" "}
@@ -4340,7 +4356,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              x \ra a_2x^2 + a_1x + a_0
+              x \ra a
+              <i>
+                2x^2 + a
+              </i>
+              1x + a_0
               $$
             </MathBlock>
             <Pause />
@@ -4710,7 +4730,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id={45582319240}>
+            <b id="_8756231321">
               Exercise 4.
             </b>
             {" "}
@@ -5008,7 +5028,7 @@ const Rest = () => {
               Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#5503839855">
+                href="/article/chapter5#_179835253">
                 3
               </a>
               , it has an amplitude of{" "}
@@ -5038,7 +5058,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id={93414135213}>
+            <b id="_14594137518">
               Exercise 5.
             </b>
             {" "}
@@ -5162,7 +5182,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id={23654748396}>
+            <b id="_93894741243">
               Exercise 6.
             </b>
             {" "}
@@ -5244,7 +5264,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id={95065071153}>
+            <b id="_98245072244">
               Exercise 7.
             </b>
             {" "}
@@ -5548,7 +5568,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id={29426623154}>
+            <b id="_71596621174">
               Exercise 8.
             </b>
             {" "}
@@ -5702,7 +5722,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id={73137111881}>
+            <b id="_80167116080">
               Exercise 9.
             </b>
             {" "}
@@ -5747,7 +5767,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \vec&#123;u&#125; = (u_x, u_y)
+              \vec&#123;u&#125; = (u
+              <i>
+                x, u
+              </i>
+              y)
               $$
             </MathBlock>
             <Pause />
@@ -5757,7 +5781,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \vec&#123;v&#125; = (v_x, v_y)
+              \vec&#123;v&#125; = (v
+              <i>
+                x, v
+              </i>
+              y)
               $$
             </MathBlock>
             <Pause />
@@ -5767,7 +5795,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (u_x + v_x, u_y + v_y)
+              (u
+              <i>
+                x + v
+              </i>
+              x, u
+              <i>
+                y + v
+              </i>
+              y)
               $$
             </MathBlock>
             <Pause />
@@ -5954,7 +5990,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                u_x + v_x
+                u
+                <i>
+                  x + v
+                </i>
+                x
                 $$
               </MathBlock>
               <Pause />
@@ -5981,7 +6021,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                u_y + v_y
+                u
+                <i>
+                  y + v
+                </i>
+                y
                 $$
               </MathBlock>
               <Pause />
@@ -6089,7 +6133,7 @@ const Rest = () => {
                 The solution to Exercise{" "}
                 <a
                   class="exercise-link"
-                  href="/article/chapter5#95065071153">
+                  href="/article/chapter5#_98245072244">
                   7
                 </a>
                 {" "}can be cast in terms of
@@ -6107,7 +6151,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id={27918764315}>
+            <b id="_17728768197">
               Exercise 10.
             </b>
             {" "}
@@ -6220,11 +6264,7 @@ const Rest = () => {
                   <i>
                     angular speed
                   </i>
-                  /
-                  <i>
-                    angular frequency
-                  </i>
-                  {" "}(radians per 
+                  /_angular frequency_ (radians per 
                   unit time) and{" "}
                   <Math>
                     $C$
@@ -6492,7 +6532,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id={441310315155}>
+            <b id="_453010314566">
               Exercise 11.
             </b>
             {" "}
@@ -6614,7 +6654,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id={777110749742}>
+            <b id="_16410746824">
               Exercise 12.
             </b>
             {" "}
@@ -6698,7 +6738,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id={886111126110}>
+            <b id="_3811121082">
               Exercise 13.
             </b>
             {" "}
@@ -6815,7 +6855,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id={682711664904}>
+            <b id="_177611663682">
               Exercise 14.
             </b>
             {" "}
@@ -7305,7 +7345,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id={423613245042}>
+            <b id="_285513244772">
               Exercise 15.
             </b>
             {" "}
@@ -7403,7 +7443,7 @@ const Rest = () => {
                 As mentioned in Note 1 of Exercise{" "}
                 <a
                   class="exercise-link"
-                  href="/article/chapter3#499723503913">
+                  href="/article/chapter3#_29572350624">
                   21
                 </a>
                 , 
@@ -7552,7 +7592,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b id={155614553661}>
+            <b id="_538114558482">
               Exercise 16.
             </b>
             {" "}
@@ -8002,7 +8042,11 @@ const Rest = () => {
                 <Math>
                   $4$
                 </Math>
-                {" "}[miles*] (*say):
+                {" "}[miles
+                <b>
+                  ] (
+                </b>
+                say):
               </VerticalChunk>
               <Pause />
               <Image src="/images/svg_ch5_ex_big_division_big_subtraction_d.svg" />
@@ -8295,7 +8339,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b id={746017104620}>
+            <b id="_976517103787">
               Exercise 17.
             </b>
             {" "}
@@ -8369,7 +8413,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b id={982317445492}>
+            <b id="_384917448806">
               Exercise 18.
             </b>
             {" "}
@@ -8381,7 +8425,7 @@ const Rest = () => {
             Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter5#93414135213">
+              href="/article/chapter5#_14594137518">
               5
             </a>
             {" "}has a maximum value greater than
@@ -8699,7 +8743,7 @@ const Rest = () => {
               (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter1#105472712">
+                href="/article/chapter1#_43975466549">
                 1
               </a>
               , Chapter 1).
@@ -8833,7 +8877,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b id={777819257789}>
+            <b id="_138719252587">
               Exercise 19.
             </b>
             {" "}
@@ -8905,7 +8949,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b id={260319599856}>
+            <b id="_15219599683">
               Exercise 20.
             </b>
             {" "}
@@ -9002,7 +9046,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b id={48920071628}>
+            <b id="_682520077904">
               Exercise 21.
             </b>
             {" "}
@@ -9218,13 +9262,9 @@ const Rest = () => {
               <i>
                 ~
               </i>
-              ~
+              ~_disjoint
               <i>
-                disjoint
-              </i>
-              ~
-              <i>
-                ~
+                ~_~
               </i>
               {" "}curves, because it
               is the union of the{" "}
@@ -9337,7 +9377,7 @@ const Rest = () => {
               Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#982317445492">
+                href="/article/chapter5#_384917448806">
                 18
               </a>
               , the larger (more positive)
@@ -9495,7 +9535,7 @@ const Rest = () => {
                 discussed in Exercise{" "}
                 <a
                   class="exercise-link"
-                  href="/article/chapter5#45582319240">
+                  href="/article/chapter5#_8756231321">
                   4
                 </a>
                 {" "}has maximum value
@@ -9542,7 +9582,7 @@ const Rest = () => {
                 given in Exercise{" "}
                 <a
                   class="exercise-link"
-                  href="/article/chapter5#45582319240">
+                  href="/article/chapter5#_8756231321">
                   4
                 </a>
                 :
@@ -9614,7 +9654,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                x_0y_0 = 1
+                x
+                <i>
+                  0y
+                </i>
+                0 = 1
                 $$
               </MathBlock>
               <Pause />
@@ -9624,7 +9668,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                (2x_0)y_0 = 2
+                (2x
+                <i>
+                  0)y
+                </i>
+                0 = 2
                 $$
               </MathBlock>
               <Pause />
@@ -10024,7 +10072,15 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \Large (x_0, y_0) \in S \iff (y_0, x_0) \in S
+                \Large (x
+                <i>
+                  0, y
+                </i>
+                0) \in S \iff (y
+                <i>
+                  0, x
+                </i>
+                0) \in S
                 $$
               </MathBlock>
               <Pause />
@@ -10111,10 +10167,26 @@ const Rest = () => {
                 $$
                 \large
                 \begin&#123;align&#125;
-                \large     &amp; (x_0, y_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125; \\
-                \large\up&#123;1.4&#125; \iff&amp; \,x_0y_0 = C \\
-                \large\up&#123;1.4&#125; \iff&amp; \,y_0x_0 = C \\
-                \large\up&#123;1.4&#125; \iff&amp; (y_0, x_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125;
+                \large     &amp; (x
+                <i>
+                  0, y
+                </i>
+                0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125; \\
+                \large\up&#123;1.4&#125; \iff&amp; \,x
+                <i>
+                  0y
+                </i>
+                0 = C \\
+                \large\up&#123;1.4&#125; \iff&amp; \,y
+                <i>
+                  0x
+                </i>
+                0 = C \\
+                \large\up&#123;1.4&#125; \iff&amp; (y
+                <i>
+                  0, x
+                </i>
+                0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125;
                 \end&#123;align&#125;
                 $$
               </MathBlock>
@@ -10184,7 +10256,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={22}>
           <VerticalChunk>
-            <b id={402524816041}>
+            <b id="_180324817877">
               Exercise 22.
             </b>
             {" "}
@@ -10246,7 +10318,7 @@ const Rest = () => {
               also, by the result of Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#777819257789">
+                href="/article/chapter5#_138719252587">
                 19
               </a>
               {" "}(whereby
@@ -10283,7 +10355,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={23}>
           <VerticalChunk>
-            <b id={369025178368}>
+            <b id="_808325174285">
               Exercise 23.
             </b>
             {" "}
@@ -10398,7 +10470,7 @@ const Rest = () => {
               Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#402524816041">
+                href="/article/chapter5#_180324817877">
                 22
               </a>
               :
@@ -10430,7 +10502,7 @@ const Rest = () => {
               by Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#402524816041">
+                href="/article/chapter5#_180324817877">
                 22
               </a>
               . (The End.)
@@ -10485,7 +10557,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={24}>
           <VerticalChunk>
-            <b id={470325994962}>
+            <b id="_23725994260">
               Exercise 24.
             </b>
             {" "}
@@ -10613,7 +10685,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={25}>
           <VerticalChunk>
-            <b id={843426562028}>
+            <b id="_689326569716">
               Exercise 25.
             </b>
             {" "}
@@ -10686,7 +10758,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={26}>
           <VerticalChunk>
-            <b id={6826928426}>
+            <b id="_857926924091">
               Exercise 26.
             </b>
             {" "}
@@ -10893,7 +10965,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={27}>
           <VerticalChunk>
-            <b id={318027818533}>
+            <b id="_413027815694">
               Exercise 27.
             </b>
             {" "}
@@ -10901,7 +10973,7 @@ const Rest = () => {
             from Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter5#6826928426">
+              href="/article/chapter5#_857926924091">
               26
             </a>
             {" "}compare to the graph of the 
@@ -11002,13 +11074,13 @@ const Rest = () => {
               (Cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#83531157529">
+                href="/article/chapter3#_30721157885">
                 7
               </a>
               {" "}of Chapter 3, Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#440717762616">
+                href="/article/chapter3#_853717762991">
                 14
               </a>
               {" "}of 
@@ -11018,7 +11090,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={28}>
           <VerticalChunk>
-            <b id={242028256564}>
+            <b id="_714928257644">
               Exercise 28.
             </b>
             {" "}
@@ -11291,7 +11363,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={29}>
           <VerticalChunk>
-            <b id={349929095564}>
+            <b id="_106829092494">
               Exercise 29.
             </b>
             {" "}
@@ -11333,7 +11405,7 @@ const Rest = () => {
               We know from Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#48920071628">
+                href="/article/chapter5#_682520077904">
                 21
               </a>
               {" "}that the 
@@ -11475,10 +11547,14 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              \cos(x + \eta/2) &= \cos(x)\cos(\eta/2) - \sin(x)\sin(\eta/2) \\
-              &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) - \sin(x))
-              \end&#123;align*&#125;
+              \begin&#123;align
+              <b>
+                &#125;
+                \cos(x + \eta/2) &= \cos(x)\cos(\eta/2) - \sin(x)\sin(\eta/2) \\
+                &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) - \sin(x))
+                \end&#123;align
+              </b>
+              &#125;
               $$
             </MathBlock>
             <Pause />
@@ -11488,10 +11564,14 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              \sin(x + \eta/2) &= \cos(x)\sin(\eta/2) + \sin(x)\cos(\eta/2) \\
-              &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x))
-              \end&#123;align*&#125;
+              \begin&#123;align
+              <b>
+                &#125;
+                \sin(x + \eta/2) &= \cos(x)\sin(\eta/2) + \sin(x)\cos(\eta/2) \\
+                &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x))
+                \end&#123;align
+              </b>
+              &#125;
               $$
             </MathBlock>
             <Pause />
@@ -11511,13 +11591,17 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              &\sqrt&#123;0.5&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
-              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
-              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - (1 - \cos^2(x))) \\
-              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(2\cos^2(x) - 1) \\
-              \up&#123;1.6&#125; =\,\,&\cos^2(x) - &#123;1\over 2&#125; \\
-              \end&#123;align*&#125;
+              \begin&#123;align
+              <b>
+                &#125;
+                &\sqrt&#123;0.5&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
+                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
+                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - (1 - \cos^2(x))) \\
+                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(2\cos^2(x) - 1) \\
+                \up&#123;1.6&#125; =\,\,&\cos^2(x) - &#123;1\over 2&#125; \\
+                \end&#123;align
+              </b>
+              &#125;
               $$
             </MathBlock>
             <Pause />
@@ -11674,11 +11758,15 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \begin&#123;align*&#125;
-                \cos(x - \eta/2) &= \cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2) \\
-                \up&#123;1.6&#125; &=\,\, \cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;) \\
-                \up&#123;1.6&#125; &=\,\, \sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
-                \end&#123;align*&#125;
+                \begin&#123;align
+                <b>
+                  &#125;
+                  \cos(x - \eta/2) &= \cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2) \\
+                  \up&#123;1.6&#125; &=\,\, \cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;) \\
+                  \up&#123;1.6&#125; &=\,\, \sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+                  \end&#123;align
+                </b>
+                &#125;
                 $$
               </MathBlock>
               <Pause />
@@ -11698,12 +11786,16 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \begin&#123;align*&#125;
-                &\left(\sqrt&#123;0.5&#125;\cdot(\cos x + \sin x)\right)^2 \\
-                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2 x + 2\cos x\sin x +  \sin^2 x) \\
-                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(1 + 2\cos x\sin x) \\
-                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125; + \cos(x)\sin(x) \\
-                \end&#123;align*&#125;
+                \begin&#123;align
+                <b>
+                  &#125;
+                  &\left(\sqrt&#123;0.5&#125;\cdot(\cos x + \sin x)\right)^2 \\
+                  \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2 x + 2\cos x\sin x +  \sin^2 x) \\
+                  \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(1 + 2\cos x\sin x) \\
+                  \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125; + \cos(x)\sin(x) \\
+                  \end&#123;align
+                </b>
+                &#125;
                 $$
               </MathBlock>
               <Pause />
@@ -11714,11 +11806,15 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \begin&#123;align*&#125;
-                & -&#123;1\over 2&#125; + \cos^2(x - \eta/2) \\
-                \up&#123;1.7&#125; =\,\,&-&#123;1\over 2&#125; + \left(&#123;1\over 2&#125; + \cos(x)\sin(x)\right) \\
-                \up&#123;1.7&#125; =\,\,&\cos(x)\sin(x)
-                \end&#123;align*&#125;
+                \begin&#123;align
+                <b>
+                  &#125;
+                  & -&#123;1\over 2&#125; + \cos^2(x - \eta/2) \\
+                  \up&#123;1.7&#125; =\,\,&-&#123;1\over 2&#125; + \left(&#123;1\over 2&#125; + \cos(x)\sin(x)\right) \\
+                  \up&#123;1.7&#125; =\,\,&\cos(x)\sin(x)
+                  \end&#123;align
+                </b>
+                &#125;
                 $$
               </MathBlock>
               <Pause />
@@ -11730,7 +11826,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={30}>
           <VerticalChunk>
-            <b id={629431104557}>
+            <b id="_414331104763">
               Exercise 30.
             </b>
             {" "}
@@ -11945,7 +12041,7 @@ const Rest = () => {
               of Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#318027818533">
+                href="/article/chapter5#_413027815694">
                 27
               </a>
               , in particular.)
@@ -12072,12 +12168,16 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              \cos(2x) 
-              &= \cos(x + x) \\
-              &= \up&#123;1.6&#125; \cos(x)\cos(x) - \sin(x)\sin(x) \\
-              &= \up&#123;1.6&#125; \cos^2(x) - \sin^2(x)
-              \end&#123;align*&#125;
+              \begin&#123;align
+              <b>
+                &#125;
+                \cos(2x) 
+                &= \cos(x + x) \\
+                &= \up&#123;1.6&#125; \cos(x)\cos(x) - \sin(x)\sin(x) \\
+                &= \up&#123;1.6&#125; \cos^2(x) - \sin^2(x)
+                \end&#123;align
+              </b>
+              &#125;
               $$
             </MathBlock>
             <Pause />
@@ -12087,14 +12187,18 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              &#123;1 + \cos(2x)\over 2&#125; 
-              &= \up&#123;2.0&#125; &#123;1 + \cos^2(x) - \sin^2(x) \over 2&#125; \\
-              &= \up&#123;2.0&#125; &#123;(1 - \sin^2(x)) + \cos^2(x)\over 2&#125; \\
-              &= \up&#123;2.0&#125; &#123;\cos^2(x) + \cos^2(x)\over 2&#125; \\
-              &= \up&#123;2.0&#125; &#123;2\cos^2(x)\over 2&#125; \\
-              &= \up&#123;2.0&#125; \cos^2(x)
-              \end&#123;align*&#125;
+              \begin&#123;align
+              <b>
+                &#125;
+                &#123;1 + \cos(2x)\over 2&#125; 
+                &= \up&#123;2.0&#125; &#123;1 + \cos^2(x) - \sin^2(x) \over 2&#125; \\
+                &= \up&#123;2.0&#125; &#123;(1 - \sin^2(x)) + \cos^2(x)\over 2&#125; \\
+                &= \up&#123;2.0&#125; &#123;\cos^2(x) + \cos^2(x)\over 2&#125; \\
+                &= \up&#123;2.0&#125; &#123;2\cos^2(x)\over 2&#125; \\
+                &= \up&#123;2.0&#125; \cos^2(x)
+                \end&#123;align
+              </b>
+              &#125;
               $$
               <ImageLeft
                 offset_y="3%"
@@ -12121,7 +12225,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={31}>
           <VerticalChunk>
-            <b id={243932711106}>
+            <b id="_224632712474">
               Exercise 31.
             </b>
             {" "}
@@ -12165,11 +12269,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              \sin(2x) =&\,\, \sin(x + x) \\
-              \up&#123;1.6&#125; =&\,\, \cos x\sin x + \sin x\cos x \\
-              \up&#123;1.6&#125; =&\,\, 2\sin x\cos x
-              \end&#123;align*&#125;
+              \begin&#123;align
+              <b>
+                &#125;
+                \sin(2x) =&\,\, \sin(x + x) \\
+                \up&#123;1.6&#125; =&\,\, \cos x\sin x + \sin x\cos x \\
+                \up&#123;1.6&#125; =&\,\, 2\sin x\cos x
+                \end&#123;align
+              </b>
+              &#125;
               $$
             </MathBlock>
             <Pause />
@@ -12198,7 +12306,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={32}>
           <VerticalChunk>
-            <b id={986033127604}>
+            <b id="_881133122346">
               Exercise 32.
             </b>
             {" "}
@@ -12232,7 +12340,7 @@ const Rest = () => {
               by Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#629431104557">
+                href="/article/chapter5#_414331104763">
                 30
               </a>
               {" "}and since the substitution
@@ -12286,7 +12394,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={33}>
           <VerticalChunk>
-            <b id={800933339675}>
+            <b id="_8993333126">
               Exercise 33.
             </b>
             {" "}
@@ -12315,7 +12423,7 @@ const Rest = () => {
             (Study Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter5#982317445492">
+              href="/article/chapter5#_384917448806">
               18
             </a>
             , if you have no inspiration.)
@@ -12376,7 +12484,7 @@ const Rest = () => {
               {" "}as uncovered in Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#982317445492">
+                href="/article/chapter5#_384917448806">
                 18
               </a>
               ,
@@ -12459,13 +12567,13 @@ const Rest = () => {
               (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#83531157529">
+                href="/article/chapter3#_30721157885">
                 7
               </a>
               {" "}of Chapter 3, part 1 of Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#318027818533">
+                href="/article/chapter5#_413027815694">
                 27
               </a>
               {" "}
@@ -12557,15 +12665,19 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              &\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2 \cdot 0.5&#125;\cdot(\cos(x) + \sin(x)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;1&#125;\cdot(\cos(x) + \sin(x)) \\
-              \up&#123;1.6&#125; =&\,\, \cos(x) + \sin(x)
-              \end&#123;align*&#125;
+              \begin&#123;align
+              <b>
+                &#125;
+                &\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;)) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;2 \cdot 0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+                \up&#123;1.6&#125; =&\,\, \sqrt&#123;1&#125;\cdot(\cos(x) + \sin(x)) \\
+                \up&#123;1.6&#125; =&\,\, \cos(x) + \sin(x)
+                \end&#123;align
+              </b>
+              &#125;
               $$
             </MathBlock>
             <Pause />
@@ -12606,7 +12718,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={34}>
           <VerticalChunk>
-            <b id={354834459123}>
+            <b id="_40083445340">
               Exercise 34.
             </b>
             {" "}
@@ -12628,7 +12740,11 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            x \ra A_1\cos x + A_2\sin x
+            x \ra A
+            <i>
+              1\cos x + A
+            </i>
+            2\sin x
             $$
           </MathBlock>
           <Pause />
@@ -12751,7 +12867,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A_1\cos x + A_2\sin x
+              A
+              <i>
+                1\cos x + A
+              </i>
+              2\sin x
               $$
             </MathBlock>
             <Pause />
@@ -12955,7 +13075,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (A_1, A_2)
+              (A
+              <i>
+                1, A
+              </i>
+              2)
               $$
             </MathBlock>
             <Pause />
@@ -13016,7 +13140,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                W = \sqrt&#123;A_1^2 + A_2^2&#125;
+                W = \sqrt&#123;A
+                <i>
+                  1^2 + A
+                </i>
+                2^2&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -13027,9 +13155,25 @@ const Rest = () => {
               <MathBlock>
                 $$
                 -\psi = \begin&#123;cases&#125;
-                \arctan(A_2/A_1) & \te&#123;if &#125;\, A_1 \ne 0, \,\te&#123;else&#125; \\
-                \up&#123;1.2&#125;\te&#123;arccot&#125;(A_1/A_2) & \te&#123;if &#125;\, A_2 \ne 0, \,\te&#123;else&#125; \\
-                \up&#123;1.2&#125;\rm&#123;?&#125;       & \te&#123;if &#125;\, A_1 = 0, A_2 = 0
+                \arctan(A
+                <i>
+                  2/A
+                </i>
+                1) & \te&#123;if &#125;\, A
+                <i>
+                  1 \ne 0, \,\te&#123;else&#125; \\
+                  \up&#123;1.2&#125;\te&#123;arccot&#125;(A
+                </i>
+                1/A
+                <i>
+                  2) & \te&#123;if &#125;\, A
+                </i>
+                2 \ne 0, \,\te&#123;else&#125; \\
+                \up&#123;1.2&#125;\rm&#123;?&#125;       & \te&#123;if &#125;\, A
+                <i>
+                  1 = 0, A
+                </i>
+                2 = 0
                 \end&#123;cases&#125;
                 $$
               </MathBlock>
@@ -13043,7 +13187,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                W = -\sqrt&#123;A_1^2 + A_2^2&#125;
+                W = -\sqrt&#123;A
+                <i>
+                  1^2 + A
+                </i>
+                2^2&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -13076,14 +13224,18 @@ const Rest = () => {
               (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#45582319240">
+                href="/article/chapter5#_8756231321">
                 4
               </a>
               ) corresponds to the case
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$A_1 = A_2 = 1$$
+              $$A
+              <i>
+                1 = A
+              </i>
+              2 = 1$$
             </MathBlock>
             <Pause />
             <VerticalChunk>
@@ -13145,7 +13297,7 @@ const Rest = () => {
               in Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter5#800933339675">
+                href="/article/chapter5#_8993333126">
                 33
               </a>
               , if you recall.)
@@ -13154,7 +13306,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={35}>
           <VerticalChunk>
-            <b id={969436039581}>
+            <b id="_8245360367">
               Exercise 35.
             </b>
             {" "}
@@ -13163,7 +13315,11 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            A_1\sin x + A_2\cos x
+            A
+            <i>
+              1\sin x + A
+            </i>
+            2\cos x
             $$
           </MathBlock>
           <Pause />
@@ -13225,7 +13381,7 @@ const Rest = () => {
             to Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter5#354834459123">
+              href="/article/chapter5#_40083445340">
               34
             </a>
             , and reducing to that exercise is
@@ -13289,7 +13445,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A_1\cdot\sin x + A_2\cdot\cos x
+              A
+              <i>
+                1\cdot\sin x + A
+              </i>
+              2\cdot\cos x
               $$
             </MathBlock>
             <Pause />
@@ -13377,14 +13537,14 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={36}>
           <VerticalChunk>
-            <b id={555036831451}>
+            <b id="_735536838275">
               Exercise 36.
             </b>
             {" "}
             Similarly to Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter5#73137111881">
+              href="/article/chapter5#_80167116080">
               9
             </a>
             , suggest a
@@ -13418,7 +13578,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              c \cdot (v_x, v_y) = (c\rt&#123;0.1&#125;v_x, c\rt&#123;0.1&#125;v_y)
+              c \cdot (v
+              <i>
+                x, v
+              </i>
+              y) = (c\rt&#123;0.1&#125;v
+              <i>
+                x, c\rt&#123;0.1&#125;v
+              </i>
+              y)
               $$
             </MathBlock>
             <Pause />

@@ -1112,7 +1112,7 @@ const Rest = () => {
           <del>
             “the rate of change of the rate of change”.
           </del>
-          {" "}Sorry: “the rate of change of the slope”. 
+          &ensp;Sorry: “the rate of change of the slope”. 
           (Same difference.) Ergo, if the second derivative
           is positive, the slope is increasing; if the
           second derivative is negative, the slope is 
@@ -1694,7 +1694,7 @@ const Rest = () => {
           goes back to Exercise{" "}
           <a
             class="exercise-link"
-            href="/article/chapter3#23139425015">
+            href="/article/chapter3#_34909427954">
             5
           </a>
           {" "}of Chapter 3, with
@@ -1734,7 +1734,7 @@ const Rest = () => {
           of functions already appear in Exercise{" "}
           <a
             class="exercise-link"
-            href="/article/chapter3#828521227938">
+            href="/article/chapter3#_631021223179">
             18
           </a>
           {" "}
@@ -1767,7 +1767,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id={845713924}>
+            <b id="_22117884">
               Exercise 1.
             </b>
             {" "}
@@ -1824,7 +1824,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id={38218227}>
+            <b id="_475121731">
               Exercise 2.
             </b>
             {" "}
@@ -1877,7 +1877,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id={1059449331}>
+            <b id="_2628445158">
               Exercise 3.
             </b>
             {" "}
@@ -1892,7 +1892,7 @@ const Rest = () => {
             derivative of the graph in Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#845713924">
+              href="/article/chapter4#_22117884">
               1
             </a>
             .
@@ -1929,14 +1929,14 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id={907741066}>
+            <b id="_482745043">
               Exercise 4.
             </b>
             {" "}
             If we pretend that the graph of Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#845713924">
+              href="/article/chapter4#_22117884">
               1
             </a>
             {" "}
@@ -1945,7 +1945,7 @@ const Rest = () => {
               distance that a car has traveled
               as a function of time,
             </del>
-            {" "}position of a car as a function of 
+            &ensp;position of a car as a function of 
             time, with hours (hr) on the{" "}
             <NoBreak>
               <Math>
@@ -2031,7 +2031,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id={8071298617}>
+            <b id="_33011294827">
               Exercise 5.
             </b>
             {" "}
@@ -2227,7 +2227,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id={99242168686}>
+            <b id="_36272166810">
               Exercise 6.
             </b>
             {" "}
@@ -2352,7 +2352,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id={10152669838}>
+            <b id="_1867266363">
               Exercise 7.
             </b>
             {" "}
@@ -2476,7 +2476,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id={21593155822}>
+            <b id="_7713154391">
               Exercise 8.
             </b>
             {" "}
@@ -2635,7 +2635,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id={64083734}>
+            <b id="_13133735266">
               Exercise 9.
             </b>
             {" "}
@@ -2656,7 +2656,7 @@ const Rest = () => {
             Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#20604811982">
+              href="/article/chapter4#_37224814558">
               10
             </a>
             .
@@ -2926,7 +2926,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id={20604811982}>
+            <b id="_37224814558">
               Exercise 10.
             </b>
             {" "}
@@ -3019,7 +3019,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id={13345136908}>
+            <b id="_23125132543">
               Exercise 11.
             </b>
             {" "}
@@ -3072,7 +3072,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id={92865502141}>
+            <b id="_3603550809">
               Exercise 12.
             </b>
             {" "}
@@ -3646,7 +3646,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id={434919455}>
+            <b id="_292712317">
               Exercise 13.
             </b>
             {" "}
@@ -3797,7 +3797,7 @@ const Rest = () => {
               Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#135912883073">
+                href="/article/chapter3#_61112882905">
                 9
               </a>
               , Chapter 3.)
@@ -3934,7 +3934,7 @@ const Rest = () => {
               (if you recall that one) in Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#135912883073">
+                href="/article/chapter3#_61112882905">
                 9
               </a>
               {" "}of Chapter 
@@ -3976,7 +3976,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id={61271458229}>
+            <b id="_61001456857">
               Exercise 14.
             </b>
             {" "}
@@ -4223,7 +4223,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id={7024258898}>
+            <b id="_44522582515">
               Exercise 15.
             </b>
             {" "}
@@ -4470,7 +4470,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b id={34903589633}>
+            <b id="_96433585441">
               Exercise 16.
             </b>
             {" "}
@@ -4482,7 +4482,7 @@ const Rest = () => {
             keeping the same setup as in Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#92387051787">
+              href="/article/chapter4#_54617059149">
               34
             </a>
             ?
@@ -4545,7 +4545,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b id={87333807033}>
+            <b id="_81323801411">
               Exercise 17.
             </b>
             {" "}
@@ -4671,7 +4671,7 @@ const Rest = () => {
               {" "}by Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#13271000460">
+                href="/article/chapter4#_962310007266">
                 35
               </a>
               ):
@@ -4761,7 +4761,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b id={41234638230}>
+            <b id="_71604639868">
               Exercise 18.
             </b>
             {" "}
@@ -4858,7 +4858,7 @@ const Rest = () => {
               (For example, the solution to Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#780210338515">
+                href="/article/chapter4#_50210333475">
                 36
               </a>
               {" "}can actually
@@ -4992,7 +4992,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b id={18285229761}>
+            <b id="_4255226997">
               Exercise 19.
             </b>
             {" "}
@@ -5110,7 +5110,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b id={93405715572}>
+            <b id="_47985716720">
               Exercise 20.
             </b>
             {" "}
@@ -5126,7 +5126,7 @@ const Rest = () => {
             of the particle from Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#865912239981">
+              href="/article/chapter4#_721312233190">
               39
             </a>
             ?
@@ -5137,7 +5137,7 @@ const Rest = () => {
               The velocity vector of Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#865912239981">
+                href="/article/chapter4#_721312233190">
                 39
               </a>
               {" "}travels
@@ -5205,7 +5205,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b id={75456131196}>
+            <b id="_8236132559">
               Exercise 21.
             </b>
             {" "}
@@ -5355,7 +5355,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={22}>
           <VerticalChunk>
-            <b id={74406846769}>
+            <b id="_59796843628">
               Exercise 22.
             </b>
             {" "}
@@ -5850,7 +5850,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={23}>
           <VerticalChunk>
-            <b id={87588821839}>
+            <b id="_37498824918">
               Exercise 23.
             </b>
             {" "}
@@ -5905,7 +5905,7 @@ const Rest = () => {
               angular velocity (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#591410978741">
+                href="/article/chapter4#_9881097821">
                 37
               </a>
               ) is
@@ -5963,7 +5963,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={24}>
           <VerticalChunk>
-            <b id={51789241162}>
+            <b id="_93369243955">
               Exercise 24.
             </b>
             {" "}
@@ -6044,7 +6044,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={25}>
           <VerticalChunk>
-            <b id={91949674367}>
+            <b id="_67189671122">
               Exercise 25.
             </b>
             {" "}
@@ -6316,7 +6316,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={26}>
           <VerticalChunk>
-            <b id={459310864371}>
+            <b id="_187010866738">
               Exercise 26.
             </b>
             {" "}
@@ -6366,7 +6366,7 @@ const Rest = () => {
             of the red particle from Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#81914019584">
+              href="/article/chapter4#_602114016248">
               41
             </a>
             {" "}to this set of
@@ -6535,7 +6535,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={27}>
           <VerticalChunk>
-            <b id={105612907}>
+            <b id="_802014452">
               Exercise 27.
             </b>
             {" "}
@@ -6739,7 +6739,7 @@ const Rest = () => {
               Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#92865502141">
+                href="/article/chapter4#_3603550809">
                 12
               </a>
               , that obey a similar set of
@@ -6844,7 +6844,7 @@ const Rest = () => {
               particle from Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#81914019584">
+                href="/article/chapter4#_602114016248">
                 41
               </a>
               , 
@@ -6853,7 +6853,7 @@ const Rest = () => {
               red particle from Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#81914019584">
+                href="/article/chapter4#_602114016248">
                 41
               </a>
               , being
@@ -6876,7 +6876,7 @@ const Rest = () => {
               {" "}
               (!!)
               <ImageLeft
-                line={-1.0}
+                line={-1}
                 src="/images/svg_ch4_ex_circle_at_2_4_sqrt_20_cloud.svg" />
             </VerticalChunk>
             <VerticalChunk indent={true}>
@@ -7109,7 +7109,7 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              {" "}by setting...
+              &ensp;by setting...
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
@@ -8162,11 +8162,11 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              {" "}and{" "}
+              &ensp;and{" "}
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              {" "}are the translate of the white particle
+              &ensp;are the translate of the white particle
               positions at{" "}
               <Math>
                 $t = 0$
@@ -8192,11 +8192,11 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              {" "}and{" "}
+              &ensp;and{" "}
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              {" "}as they appear in the problem statement! I.e.,
+              &ensp;as they appear in the problem statement! I.e.,
               our newly-defined
               particles{" "}
               <InlineImage
@@ -8210,11 +8210,11 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              {" "}and{" "}
+              &ensp;and{" "}
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              {" "}are in the desired place at{" "}
+              &ensp;are in the desired place at{" "}
               <NoBreak>
                 <Math>
                   $t = 0$
@@ -8235,11 +8235,11 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p3_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              {" "}and{" "}
+              &ensp;and{" "}
               <InlineImage
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg"
                 class="ch4_inline_blackwhite_particles" />
-              {" "}“work” in the sense of satisfying all the conditions
+              &ensp;“work” in the sense of satisfying all the conditions
               of the problem statement, and are, indeed, the
               solution we seek.
             </VerticalChunk>
@@ -8381,7 +8381,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={28}>
           <VerticalChunk>
-            <b id={985419975}>
+            <b id="_61331974">
               Exercise 28.
             </b>
             {" "}
@@ -8418,7 +8418,7 @@ const Rest = () => {
               Recall the curves from Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#92865502141">
+                href="/article/chapter4#_3603550809">
                 12
               </a>
               :
@@ -8502,7 +8502,7 @@ const Rest = () => {
               in Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#440717762616">
+                href="/article/chapter3#_853717762991">
                 14
               </a>
               {" "}of Chapter 3. (Well, this shows
@@ -8512,7 +8512,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={29}>
           <VerticalChunk>
-            <b id={4167566392}>
+            <b id="_336856801">
               Exercise 29.
             </b>
             {" "}
@@ -8778,20 +8778,20 @@ const Rest = () => {
               (For other proofs see Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#62443741630">
+                href="/article/chapter4#_45223746680">
                 32
               </a>
               , Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#77956123522">
+                href="/article/chapter4#_41236127471">
                 33
               </a>
               , as
               well as Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter3#135912883073">
+                href="/article/chapter3#_61112882905">
                 9
               </a>
               , Chapter 3.)
@@ -8800,7 +8800,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={30}>
           <VerticalChunk>
-            <b id={511114630}>
+            <b id="_988915539">
               Exercise 30.
             </b>
             {" "}
@@ -8830,7 +8830,7 @@ const Rest = () => {
             {" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#92865502141">
+              href="/article/chapter4#_3603550809">
               12
             </a>
             .) Should we use a circle of radius{" "}
@@ -8872,7 +8872,7 @@ const Rest = () => {
               Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#92865502141">
+                href="/article/chapter4#_3603550809">
                 12
               </a>
               , but the circle has twice the 
@@ -8882,7 +8882,7 @@ const Rest = () => {
               Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#92865502141">
+                href="/article/chapter4#_3603550809">
                 12
               </a>
               {" "}have unit speed.)
@@ -8917,14 +8917,14 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={31}>
           <VerticalChunk>
-            <b id={164448794}>
+            <b id="_828481322">
               Exercise 31.
             </b>
             {" "}
             Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#92865502141">
+              href="/article/chapter4#_3603550809">
               12
             </a>
             {" "}exhibits a function{" "}
@@ -9037,7 +9037,7 @@ const Rest = () => {
               curves of Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#34903589633">
+                href="/article/chapter4#_96433585441">
                 16
               </a>
               {" "}are generated by
@@ -9756,7 +9756,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={32}>
           <VerticalChunk>
-            <b id={62443741630}>
+            <b id="_45223746680">
               Exercise 32.
             </b>
             {" "}
@@ -9973,7 +9973,7 @@ const Rest = () => {
               <del>
                 paths
               </del>
-              {" "}functions that look like so:
+              &ensp;functions that look like so:
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch4_17_actual_functions.svg" />
@@ -10127,8 +10127,12 @@ const Rest = () => {
                     blue
                   </span>
                   , particle 1, the last particle
-                  to be (noticeably*) “peeled off” from
-                  the circle (*all particles are 
+                  to be (noticeably
+                  <b>
+                    ) “peeled off” from
+                    the circle (
+                  </b>
+                  all particles are 
                   instantaneously peeled off from the 
                   circle to{" "}
                   <i>
@@ -10181,7 +10185,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={33}>
           <VerticalChunk>
-            <b id={77956123522}>
+            <b id="_41236127471">
               Exercise 33.
             </b>
             {" "}
@@ -10385,7 +10389,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={34}>
           <VerticalChunk>
-            <b id={92387051787}>
+            <b id="_54617059149">
               Exercise 34.
             </b>
             {" "}
@@ -10595,7 +10599,7 @@ const Rest = () => {
                   {" "}tail is sticking out of the
                   cat's mouth, and
                 </del>
-                {" "}when{" "}
+                &ensp;when{" "}
                 <Math>
                   $A$
                 </Math>
@@ -10770,7 +10774,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0)\over \Delta&#123;&#125;t&#125;
+              &#123;f(t
+              <i>
+                0 + \Delta&#123;&#125;t) - f(t
+              </i>
+              0)\over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10778,7 +10786,7 @@ const Rest = () => {
               is a Newton quotient (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#34903589633">
+                href="/article/chapter4#_96433585441">
                 16
               </a>
               ),
@@ -10816,7 +10824,7 @@ const Rest = () => {
               Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#34903589633">
+                href="/article/chapter4#_96433585441">
                 16
               </a>
               {" "}Note 3), and
@@ -10830,7 +10838,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0)\over \Delta&#123;&#125;t&#125;
+              &#123;f(t
+              <i>
+                0 + \Delta&#123;&#125;t) - f(t
+              </i>
+              0)\over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10868,7 +10880,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0) - A(t_0)B(t_0) \over \Delta&#123;&#125;t&#125;
+              &#123;A(t
+              <i>
+                0 + \Delta&#123;&#125;t)B(t
+              </i>
+              0) - A(t
+              <i>
+                0)B(t
+              </i>
+              0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10888,7 +10908,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              B(t_0)\cdot&#123;A(t_0 + \Delta&#123;&#125;t) - A(t_0) \over \Delta&#123;&#125;t&#125;
+              B(t
+              <i>
+                0)\cdot&#123;A(t
+              </i>
+              0 + \Delta&#123;&#125;t) - A(t_0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10898,7 +10922,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              B(t_0)\cdot&#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0) \over \Delta&#123;&#125;t&#125;
+              B(t
+              <i>
+                0)\cdot&#123;f(t
+              </i>
+              0 + \Delta&#123;&#125;t) - f(t_0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10915,7 +10943,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              B(t_0) \cdot A'(t_0)
+              B(t
+              <i>
+                0) \cdot A'(t
+              </i>
+              0)
               $$
             </MathBlock>
             <Pause />
@@ -10944,7 +10976,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A(t_0)B'(t_0)
+              A(t
+              <i>
+                0)B'(t
+              </i>
+              0)
               $$
             </MathBlock>
             <Pause />
@@ -10967,7 +11003,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0+\Delta&#123;&#125;t) - A(t_0+ \Delta&#123;&#125;t)B(t_0) \over \Delta&#123;&#125;t&#125;
+              &#123;A(t
+              <i>
+                0 + \Delta&#123;&#125;t)B(t
+              </i>
+              0+\Delta&#123;&#125;t) - A(t
+              <i>
+                0+ \Delta&#123;&#125;t)B(t
+              </i>
+              0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10977,7 +11021,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A(t_0 + \Delta&#123;&#125;t)\cdot&#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
+              A(t
+              <i>
+                0 + \Delta&#123;&#125;t)\cdot&#123;B(t
+              </i>
+              0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10995,7 +11043,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
+              &#123;B(t
+              <i>
+                0+\Delta&#123;&#125;t) - B(t
+              </i>
+              0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -11143,13 +11195,21 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              B(t_0)A'(t_0)
+              B(t
+              <i>
+                0)A'(t
+              </i>
+              0)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              A(t_0)B'(t_0)
+              A(t
+              <i>
+                0)B'(t
+              </i>
+              0)
               $$
             </MathBlock>
             <Pause />
@@ -11170,7 +11230,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
+              (AB)'(t
+              <i>
+                0) = B(t
+              </i>
+              0)A'(t
+              <i>
+                0) + A(t
+              </i>
+              0)B'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11214,7 +11282,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
+              (AB)'(t
+              <i>
+                0) = A'(t
+              </i>
+              0)B(t
+              <i>
+                0) + A(t
+              </i>
+              0)B'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11240,7 +11316,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={35}>
           <VerticalChunk>
-            <b id={13271000460}>
+            <b id="_962310007266">
               Exercise 35.
             </b>
             {" "}
@@ -11313,7 +11389,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={36}>
           <VerticalChunk>
-            <b id={780210338515}>
+            <b id="_50210333475">
               Exercise 36.
             </b>
             {" "}
@@ -11322,7 +11398,7 @@ const Rest = () => {
             of Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#18285229761">
+              href="/article/chapter4#_4255226997">
               19
             </a>
             , what do we obtain?
@@ -11335,7 +11411,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
+              (fg)'(t
+              <i>
+                0) = f'(t
+              </i>
+              0)g(t
+              <i>
+                0) + f(t
+              </i>
+              0)g'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11391,7 +11475,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
+              (fg)'(t
+              <i>
+                0) = f'(t
+              </i>
+              0)g(t
+              <i>
+                0) + f(t
+              </i>
+              0)g'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11417,7 +11509,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
+              (fg)'(t
+              <i>
+                0) = f'(t
+              </i>
+              0)g(t
+              <i>
+                0) + f(t
+              </i>
+              0)g'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11464,7 +11564,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={37}>
           <VerticalChunk>
-            <b id={591410978741}>
+            <b id="_9881097821">
               Exercise 37.
             </b>
             {" "}
@@ -11540,7 +11640,7 @@ const Rest = () => {
               {" "}mentioned in Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#20604811982">
+                href="/article/chapter4#_37224814558">
                 10
               </a>
               {" "}
@@ -11598,7 +11698,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={38}>
           <VerticalChunk>
-            <b id={116111424234}>
+            <b id="_280911425472">
               Exercise 38.
             </b>
             {" "}
@@ -11776,7 +11876,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={39}>
           <VerticalChunk>
-            <b id={865912239981}>
+            <b id="_721312233190">
               Exercise 39.
             </b>
             {" "}
@@ -11908,7 +12008,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={40}>
           <VerticalChunk>
-            <b id={853112917850}>
+            <b id="_523112911301">
               Exercise 40.
             </b>
             {" "}
@@ -11917,7 +12017,31 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
+            A
+            <i>
+              1(t
+            </i>
+            0 + h) \,\times\, \dots \,\times\, A
+            <i>
+              &#123;i-1&#125;(t
+            </i>
+            0 + h) \,\times\, &#123;A
+            <i>
+              i(t
+            </i>
+            0 + h) - A
+            <i>
+              i(t
+            </i>
+            0)\over h&#125; \,\times\, A
+            <i>
+              &#123;i + 1&#125;(t
+            </i>
+            0) \,\times\, \cdots  \,\times\, A
+            <i>
+              n(t
+            </i>
+            0)
             $$
             <ImageRight
               src="/images/svg_ch4_big_product_parchment_cloud.svg"
@@ -11967,7 +12091,7 @@ const Rest = () => {
               (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#34903589633">
+                href="/article/chapter4#_96433585441">
                 16
               </a>
               )
@@ -11998,7 +12122,7 @@ const Rest = () => {
               (Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#34903589633">
+                href="/article/chapter4#_96433585441">
                 16
               </a>
               {" "}Note 3), the fraction approaches
@@ -12006,7 +12130,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A_i'(t_0)
+              A
+              <i>
+                i'(t
+              </i>
+              0)
               $$
             </MathBlock>
             <Pause />
@@ -12107,7 +12235,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A_1(t_0 + h)
+              A
+              <i>
+                1(t
+              </i>
+              0 + h)
               $$
             </MathBlock>
             <Pause />
@@ -12117,7 +12249,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A_1(t_0)
+              A
+              <i>
+                1(t
+              </i>
+              0)
               $$
             </MathBlock>
             <Pause />
@@ -12143,7 +12279,7 @@ const Rest = () => {
               to Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#87333807033">
+                href="/article/chapter4#_81323801411">
                 17
               </a>
               .) Similarly for{" "}
@@ -12166,7 +12302,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h)
+              A
+              <i>
+                1(t
+              </i>
+              0 + h) \,\times\, \dots \,\times\, A
+              <i>
+                &#123;i-1&#125;(t
+              </i>
+              0 + h)
               $$
             </MathBlock>
             <Pause />
@@ -12176,7 +12320,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A_1(t_0) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0)
+              A
+              <i>
+                1(t
+              </i>
+              0) \,\times\, \dots \,\times\, A
+              <i>
+                &#123;i-1&#125;(t
+              </i>
+              0)
               $$
             </MathBlock>
             <Pause />
@@ -12199,7 +12351,7 @@ const Rest = () => {
               in the solution to Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#87333807033">
+                href="/article/chapter4#_81323801411">
                 17
               </a>
               , but that might
@@ -12258,7 +12410,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={41}>
           <VerticalChunk>
-            <b id={81914019584}>
+            <b id="_602114016248">
               Exercise 41.
             </b>
             {" "}
@@ -12266,7 +12418,7 @@ const Rest = () => {
             curve from Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter4#92865502141">
+              href="/article/chapter4#_3603550809">
               12
             </a>
             , known as the
@@ -12278,7 +12430,7 @@ const Rest = () => {
             in Chapter 3, Exercise{" "}
             <a
               class="exercise-link"
-              href="/article/chapter3#83531157529">
+              href="/article/chapter3#_30721157885">
               7
             </a>
             ). Knowing that
@@ -12459,7 +12611,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={42}>
           <VerticalChunk>
-            <b id={447915017169}>
+            <b id="_218315018192">
               Exercise 42.
             </b>
             {" "}
@@ -12583,11 +12735,11 @@ const Rest = () => {
               <del>
                 amount of travel
               </del>
-              {" "}{" "}
+              &ensp;
               <del>
                 during the
               </del>
-              {" "}six displacements:
+              &ensp;six displacements:
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
@@ -12670,7 +12822,7 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_pacman1_pellet6_inline.svg"
                 class="ch4_pacman1_inline_number_pellet" />
-              {" "}the next displacement, if you look back at
+              &ensp;the next displacement, if you look back at
               the graphs, is horizontal, so yes.) In fact,
               if you look at the maze,
             </VerticalChunk>
@@ -12840,11 +12992,11 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_pacman1_pellet2_inline.svg"
                 class="ch4_pacman1_inline_number_pellet" />
-              {" "}and{" "}
+              &ensp;and{" "}
               <InlineImage
                 src="/images/svg_ch4_pacman1_pellet4_inline.svg"
                 class="ch4_pacman1_inline_number_pellet" />
-              {" "}equal{" "}
+              &ensp;equal{" "}
               <Math>
                 $-3\te&#123;c&#125;$
               </Math>
@@ -12907,14 +13059,14 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_pacman1_pellet7_inline.svg"
                 class="ch4_pacman1_inline_number_pellet" />
-              {" "}is horizontal to the right the only possible
+              &ensp;is horizontal to the right the only possible
               remaining solution is the right-hand one,
               or else Pacman would collide with the ghost cage,
               with displacement
               <InlineImage
                 src="/images/svg_ch4_pacman1_pellet6_inline.svg"
                 class="ch4_pacman1_inline_number_pellet" />
-              {" "}equal to 6c not 7c, or else Pacman would 
+              &ensp;equal to 6c not 7c, or else Pacman would 
               collide with a wall:
             </VerticalChunk>
             <Pause />
@@ -12937,7 +13089,7 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_pacman1_pellet7_inline.svg"
                 class="ch4_pacman1_inline_number_pellet" />
-              {" "}brings Pacman all the way around the maze to
+              &ensp;brings Pacman all the way around the maze to
               the left edge of the ghost cage, like so...
             </VerticalChunk>
             <Pause />
@@ -12967,7 +13119,7 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_pacman1_pellet8_inline.svg"
                 class="ch4_pacman1_inline_number_pellet" />
-              {" "}must be{" "}
+              &ensp;must be{" "}
               <NoBreak>
                 <Math>
                   $-3$
@@ -13025,7 +13177,7 @@ const Rest = () => {
               <InlineImage
                 src="/images/svg_ch4_pacman1_pellet7_inline.svg"
                 class="ch4_pacman1_inline_number_pellet" />
-              {" "}and
+              &ensp;and
               <InlineImage
                 src="/images/svg_ch4_pacman1_pellet8_inline.svg"
                 class="ch4_pacman1_inline_number_pellet" />
@@ -13035,7 +13187,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={43}>
           <VerticalChunk>
-            <b id={985518534542}>
+            <b id="_661518535612">
               Exercise 43.
             </b>
             {" "}
@@ -13120,7 +13272,7 @@ const Rest = () => {
               The velocity vector (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#92865502141">
+                href="/article/chapter4#_3603550809">
                 12
               </a>
               ) is therefore about
@@ -13149,7 +13301,7 @@ const Rest = () => {
               vector (cf. Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#92865502141">
+                href="/article/chapter4#_3603550809">
                 12
               </a>
               ), is about
@@ -13419,7 +13571,7 @@ const Rest = () => {
               {" "}Exercise{" "}
               <a
                 class="exercise-link"
-                href="/article/chapter4#51789241162">
+                href="/article/chapter4#_93369243955">
                 24
               </a>
               ), this would indicate that
@@ -13724,7 +13876,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={44}>
           <VerticalChunk>
-            <b id={179621639561}>
+            <b id="_859421635677">
               Exercise 44.
             </b>
             {" "}
