@@ -6,9 +6,9 @@ import gleam/option.{Some}
 import gleam/string
 import infrastructure as infra
 import pipeline
-import vxml_parser.{type VXML, BlamedAttribute, V}
+import vxml.{type VXML, BlamedAttribute, V}
 import vxml_renderer as vr
-import writerly_parser as wp
+import writerly as wp
 
 const ins = string.inspect
 
@@ -252,7 +252,7 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "useSetRoute();"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return (<>"),
       ],
-      vxml_parser.vxml_to_jsx_blamed_lines(first_split, 6),
+      vxml.vxml_to_jsx_blamed_lines(first_split, 6),
       // first section loads immediatly
       [
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "</>);"),
@@ -269,7 +269,7 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return(<>"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 4, "{ showMore() && <>"),
       ],
-      vxml_parser.vxmls_to_jsx_blamed_lines(rest, 6),
+      vxml.vxmls_to_jsx_blamed_lines(rest, 6),
       // first section loads immediatly
       [
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "</> }"),
@@ -319,7 +319,7 @@ fn toc_emitter(
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
         BlamedLine(blame_us("toc_emitter"), 4, "<>"),
       ],
-      vxml_parser.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
+      vxml.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
       [
         BlamedLine(blame_us("toc_emitter"), 4, "</>"),
         BlamedLine(blame_us("toc_emitter"), 2, ");"),
@@ -363,7 +363,7 @@ fn panel_emitter(
         BlamedLine(blame_us("panel_emitter"), 2, "return ("),
         BlamedLine(blame_us("panel_emitter"), 4, "<>"),
       ],
-      vxml_parser.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
+      vxml.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
       [
         BlamedLine(blame_us("panel_emitter"), 4, "</>"),
         BlamedLine(blame_us("panel_emitter"), 2, ");"),
