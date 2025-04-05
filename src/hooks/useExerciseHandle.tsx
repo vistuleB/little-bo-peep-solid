@@ -13,24 +13,29 @@ const useExerciseHandle = () => {
   onMount(() => {
     if (searchParams && searchParams.id) {
       setTimeout(() => {
-        goToExo(searchParams.id as string);
+        goToExo(searchParams.id as string, false);
+      }, 50);
+      setTimeout(() => {
+        goToExo(searchParams.id as string, false);
       }, 500);
     }
   });
 
-  const getHeight = (el: HTMLElement | null) => {
-    return el?.getBoundingClientRect().height || 0;
+  const getGrandParentHeight = (el: HTMLElement | null) => {
+    return (
+      el?.parentElement?.parentElement?.getBoundingClientRect().height || 0
+    );
   };
 
-  const goToExo = (id: string) => {
+  const goToExo = (id: string, smoothScroll: boolean = true) => {
     // find exercise index with id
     let target_exo = document.getElementById(id);
     if (exercises_store.list_view) {
       smoothScrollTo(
         elementPosOnPage(target_exo) -
           store.innerHeight / 2 +
-          getHeight(target_exo) / 2,
-        100,
+          Math.min(getGrandParentHeight(target_exo) / 2, store.innerHeight / 2),
+        smoothScroll ? 100 : 0,
       );
       return;
     }
@@ -46,14 +51,17 @@ const useExerciseHandle = () => {
 
   const handleExerciseLink = (e: Event) => {
     e.preventDefault();
+
     const href = new URL((e.target as HTMLAnchorElement).href);
     const link_article = href.pathname.split("/").pop();
+
     const current_article = location.pathname.split("/").pop();
     const id = href.hash.slice(1);
 
     if (link_article !== current_article) {
       let custom_anchor = document.createElement("a");
       href.hash = "";
+
       href.searchParams.set("id", id);
       custom_anchor.href = href.href;
       custom_anchor.click();
