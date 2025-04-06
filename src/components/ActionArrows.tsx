@@ -6,8 +6,8 @@ import {
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
-import exerciseBtnsPos from "~/utils/exerciseBtnsPos";
 import smoothScrollTo from "~/utils/smoothScrollTo";
+import elementPosOnPage from "~/utils/elementPosOnPage";
 
 const ActionArrows = () => {
   const { store } = useGlobalContext();
@@ -36,13 +36,19 @@ const ActionArrows = () => {
   });
 
   const handleUpClick = (_: MouseEvent) => {
-    let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50; // see also BackupArrow in Solution.tsx
+    let middleScroll =
+      elementPosOnPage(document.getElementById("exercises-btns")) -
+      window.innerHeight / 2 +
+      50; // see also BackupArrow in Solution.tsx
     let scrollTo = store.scrollY < middleScroll + 100 ? 0 : middleScroll;
     smoothScrollTo(scrollTo, 100);
   };
 
   const handleDownClick = (_: MouseEvent) => {
-    let middleScroll = exerciseBtnsPos() - window.innerHeight / 2 + 50;
+    let middleScroll =
+      elementPosOnPage(document.getElementById("exercises-btns")) -
+      window.innerHeight / 2 +
+      50;
     let scrollTo =
       store.scrollY > middleScroll - 100
         ? document.body.scrollHeight
