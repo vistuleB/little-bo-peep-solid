@@ -1733,13 +1733,13 @@
             The two 
             non-right angles of a right triangle are, 
             therefore, complementary! 
-            !! (Not
+            (Not
 
-            !! __complimentary__
+            __complimentary__
 
-            !! which would indicate that the angles are
-            !! given to you for free—everything in math is
-            !! free, not just those angles!)
+            which would indicate that the angles are
+            given to you for free—everything in math is
+            free, not just those angles!)
 
 |> Exercise
 
@@ -3616,7 +3616,8 @@
     (NB: We have flipped ‘$\cos$’ and
     ‘$\sin$’ in the first expression, compared
     to Exercise 34, and reducing to that exercise is
-    bound to produce a mess—solving from scratch is recommended!)
+    likely to produce confusion. 
+    Solving from scratch is recommended.)
 
     |> Solution
 
@@ -3634,7 +3635,7 @@
 
         |> ImageRight
             src images/svg_ch5_ex_polar_discovery2_cloud.svg
-            offset_x 3em
+            offset_x 8em
 
         whereby multiplying by $W$ and collecting coefficients
         of $\sin x$, $\cos x$ gives
@@ -3682,6 +3683,80 @@
 
 |> Exercise
 
+    If aliens descended on Earth, captured everyone,
+    took you aside and told you that the fate of
+    humanity rested on your ability to “illustrate
+    powers of secant”, without further instructions,
+    what would you do?
+
+    |> Solution
+
+        Presumably the aliens are asking
+        for an illustration of the sequence
+
+        $$
+        \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
+        $$
+
+        for some fixed $\theta$, based on a geometric
+        interpretation of $\sec$. (Actually...
+
+        $$
+        1, \,\sec \theta, \,\sec^2(\theta), \,\sec^3(\theta),  \,\sec^4(\theta), \dots,
+        $$
+
+        ...we should start the sequence at $1$, since
+        $1 = \sec^0(\theta)$.) Here is a possibility that
+        echoes back to the first solution to Exercise 27:
+        
+        |> Image
+            src images/svg_ch5_ex_sec_powers_bounce.svg
+        
+        Starting with a length of $1$, bottom left,
+        successive multiplications by $\sec(\theta)$
+        are performed by “dropping a height up” onto
+        the opposite side of the angle $\theta$,
+        bouncing back and forth between the two sides.
+       
+        If we are willing to reproduce the angle
+        $\theta$ several times over,
+        another possibility is to draw a “snail stack”
+        of right triangles sharing a common vertex:
+       
+        |> Image
+            src images/svg_ch5_ex_sec_powers_snail.svg
+        
+        Or if we move the angle $\theta$ around from
+        one end of the previously obtained segment to
+        another, another somewhat exotic possibility is
+        this one:
+        
+        |> Image
+            src images/svg_ch5_ex_sec_powers_inverted_towers.svg
+        
+        We can also take a page from the geometric
+        interpretation of sec that is mentioned towards
+        the end of the chapter, and draw this figure:
+        
+        |> Image
+            src images/svg_ch5_ex_sec_powers_circles.svg
+        
+        (In which we are effectively using a circular arc
+        to each time realign the last obtained segment with 
+        horizontal.) In any case, with so many nice drawings,
+        you are bound to save humanity!
+  
+        |> SolutionNote
+        
+            One can note that the third diagram makes a cameo 
+            appearance within the second diagram (modulo scale):
+            
+            |> Image
+                src images/svg_ch5_ex_sec_powers_bounce_cameo.svg
+
+
+|> Exercise
+
     Similarly to Exercise 9, suggest a
     definition for the product
     
@@ -3715,13 +3790,13 @@
         applying the definition with $c = 2$,
         $\vec{v} = (10, 3.333)$.
 
-        !! |> Pause
-        !! _Example 2._ We have
-        !! $$
-        !! 2 \cdot (a, b) = (2a, 2b),
-        !! $$
-        !! for all $a, b \in \rr$, for an example
-        !! that is half-algebraic, half-numerical.
+        |> Pause
+        _Example 2._ We have
+        $$
+        2 \cdot (a, b) = (2a, 2b),
+        $$
+        for all $a, b \in \rr$, for an example
+        that is half-algebraic, half-numerical.
 
         |> SolutionNote
         

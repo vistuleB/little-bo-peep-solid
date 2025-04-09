@@ -1755,7 +1755,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id="_695118785">
+            <b id="_511717603">
               Exercise 1.
             </b>
             {" "}
@@ -1812,7 +1812,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id="_2847215052">
+            <b id="_6807213714">
               Exercise 2.
             </b>
             {" "}
@@ -1865,7 +1865,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id="_5388447264">
+            <b id="_443443516">
               Exercise 3.
             </b>
             {" "}
@@ -1911,7 +1911,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id="_3999745776">
+            <b id="_7125747955">
               Exercise 4.
             </b>
             {" "}
@@ -2007,7 +2007,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id="_54991294347">
+            <b id="_1231295979">
               Exercise 5.
             </b>
             {" "}
@@ -2203,7 +2203,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id="_67442164453">
+            <b id="_14382165769">
               Exercise 6.
             </b>
             {" "}
@@ -2328,7 +2328,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id="_60852664097">
+            <b id="_90942664406">
               Exercise 7.
             </b>
             {" "}
@@ -2452,7 +2452,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id="_59653153683">
+            <b id="_89093157605">
               Exercise 8.
             </b>
             {" "}
@@ -2611,7 +2611,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id="_72453733532">
+            <b id="_6387373223">
               Exercise 9.
             </b>
             {" "}
@@ -2896,7 +2896,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id="_68344815448">
+            <b id="_5905481270">
               Exercise 10.
             </b>
             {" "}
@@ -2989,7 +2989,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id="_36485137726">
+            <b id="_54565138667">
               Exercise 11.
             </b>
             {" "}
@@ -3042,7 +3042,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id="_53865502333">
+            <b id="_31635502920">
               Exercise 12.
             </b>
             {" "}
@@ -3616,7 +3616,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id="_27182">
+            <b id="_803714157">
               Exercise 13.
             </b>
             {" "}
@@ -3934,7 +3934,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id="_12191454370">
+            <b id="_36951458640">
               Exercise 14.
             </b>
             {" "}
@@ -4181,7 +4181,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id="_17622588196">
+            <b id="_60262585553">
               Exercise 15.
             </b>
             {" "}
@@ -4428,7 +4428,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b id="_28423584780">
+            <b id="_72113582755">
               Exercise 16.
             </b>
             {" "}
@@ -4497,7 +4497,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b id="_6497380751">
+            <b id="_8927380408">
               Exercise 17.
             </b>
             {" "}
@@ -4707,7 +4707,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b id="_83914639386">
+            <b id="_74384638433">
               Exercise 18.
             </b>
             {" "}
@@ -4932,7 +4932,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b id="_11265227158">
+            <b id="_72055227902">
               Exercise 19.
             </b>
             {" "}
@@ -5050,7 +5050,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b id="_2874571788">
+            <b id="_21555715255">
               Exercise 20.
             </b>
             {" "}
@@ -5133,7 +5133,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b id="_87126134319">
+            <b id="_77966137651">
               Exercise 21.
             </b>
             {" "}
@@ -5283,7 +5283,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={22}>
           <VerticalChunk>
-            <b id="_5466846179">
+            <b id="_83526846690">
               Exercise 22.
             </b>
             {" "}
@@ -5778,7 +5778,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={23}>
           <VerticalChunk>
-            <b id="_19448824617">
+            <b id="_94728828414">
               Exercise 23.
             </b>
             {" "}
@@ -5885,7 +5885,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={24}>
           <VerticalChunk>
-            <b id="_90979246852">
+            <b id="_32419249102">
               Exercise 24.
             </b>
             {" "}
@@ -5966,7 +5966,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={25}>
           <VerticalChunk>
-            <b id="_79479674515">
+            <b id="_35319672216">
               Exercise 25.
             </b>
             {" "}
@@ -6238,7 +6238,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={26}>
           <VerticalChunk>
-            <b id="_161108655">
+            <b id="_508610862041">
               Exercise 26.
             </b>
             {" "}
@@ -6451,7 +6451,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={27}>
           <VerticalChunk>
-            <b id="_773617831">
+            <b id="_118718572">
               Exercise 27.
             </b>
             {" "}
@@ -8279,7 +8279,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={28}>
           <VerticalChunk>
-            <b id="_570319083">
+            <b id="_519511572">
               Exercise 28.
             </b>
             {" "}
@@ -8398,7 +8398,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={29}>
           <VerticalChunk>
-            <b id="_3978561868">
+            <b id="_4409567106">
               Exercise 29.
             </b>
             {" "}
@@ -8668,7 +8668,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={30}>
           <VerticalChunk>
-            <b id="_293017259">
+            <b id="_512015742">
               Exercise 30.
             </b>
             {" "}
@@ -8767,7 +8767,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={31}>
           <VerticalChunk>
-            <b id="_2559483534">
+            <b id="_7859482833">
               Exercise 31.
             </b>
             {" "}
@@ -9594,7 +9594,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={32}>
           <VerticalChunk>
-            <b id="_74333744883">
+            <b id="_15733741627">
               Exercise 32.
             </b>
             {" "}
@@ -10023,7 +10023,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={33}>
           <VerticalChunk>
-            <b id="_31986125444">
+            <b id="_22646125461">
               Exercise 33.
             </b>
             {" "}
@@ -10227,7 +10227,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={34}>
           <VerticalChunk>
-            <b id="_95637053331">
+            <b id="_38777051620">
               Exercise 34.
             </b>
             {" "}
@@ -10612,11 +10612,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;f(t
-              <i>
-                0 + \Delta&#123;&#125;t) - f(t
-              </i>
-              0)\over \Delta&#123;&#125;t&#125;
+              &#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0)\over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10664,11 +10660,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;f(t
-              <i>
-                0 + \Delta&#123;&#125;t) - f(t
-              </i>
-              0)\over \Delta&#123;&#125;t&#125;
+              &#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0)\over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10706,15 +10698,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;A(t
-              <i>
-                0 + \Delta&#123;&#125;t)B(t
-              </i>
-              0) - A(t
-              <i>
-                0)B(t
-              </i>
-              0) \over \Delta&#123;&#125;t&#125;
+              &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0) - A(t_0)B(t_0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10734,11 +10718,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              B(t
-              <i>
-                0)\cdot&#123;A(t
-              </i>
-              0 + \Delta&#123;&#125;t) - A(t_0) \over \Delta&#123;&#125;t&#125;
+              B(t_0)\cdot&#123;A(t_0 + \Delta&#123;&#125;t) - A(t_0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10748,11 +10728,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              B(t
-              <i>
-                0)\cdot&#123;f(t
-              </i>
-              0 + \Delta&#123;&#125;t) - f(t_0) \over \Delta&#123;&#125;t&#125;
+              B(t_0)\cdot&#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10769,11 +10745,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              B(t
-              <i>
-                0) \cdot A'(t
-              </i>
-              0)
+              B(t_0) \cdot A'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -10802,11 +10774,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A(t
-              <i>
-                0)B'(t
-              </i>
-              0)
+              A(t_0)B'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -10829,15 +10797,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;A(t
-              <i>
-                0 + \Delta&#123;&#125;t)B(t
-              </i>
-              0+\Delta&#123;&#125;t) - A(t
-              <i>
-                0+ \Delta&#123;&#125;t)B(t
-              </i>
-              0) \over \Delta&#123;&#125;t&#125;
+              &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0+\Delta&#123;&#125;t) - A(t_0+ \Delta&#123;&#125;t)B(t_0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10847,11 +10807,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A(t
-              <i>
-                0 + \Delta&#123;&#125;t)\cdot&#123;B(t
-              </i>
-              0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
+              A(t_0 + \Delta&#123;&#125;t)\cdot&#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10869,11 +10825,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;B(t
-              <i>
-                0+\Delta&#123;&#125;t) - B(t
-              </i>
-              0) \over \Delta&#123;&#125;t&#125;
+              &#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
               $$
             </MathBlock>
             <Pause />
@@ -11021,21 +10973,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              B(t
-              <i>
-                0)A'(t
-              </i>
-              0)
+              B(t_0)A'(t_0)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              A(t
-              <i>
-                0)B'(t
-              </i>
-              0)
+              A(t_0)B'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11056,15 +11000,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (AB)'(t
-              <i>
-                0) = B(t
-              </i>
-              0)A'(t
-              <i>
-                0) + A(t
-              </i>
-              0)B'(t_0)
+              (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11108,15 +11044,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (AB)'(t
-              <i>
-                0) = A'(t
-              </i>
-              0)B(t
-              <i>
-                0) + A(t
-              </i>
-              0)B'(t_0)
+              (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11142,7 +11070,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={35}>
           <VerticalChunk>
-            <b id="_528310002488">
+            <b id="_978610004305">
               Exercise 35.
             </b>
             {" "}
@@ -11215,7 +11143,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={36}>
           <VerticalChunk>
-            <b id="_932310334297">
+            <b id="_108610338406">
               Exercise 36.
             </b>
             {" "}
@@ -11231,15 +11159,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (fg)'(t
-              <i>
-                0) = f'(t
-              </i>
-              0)g(t
-              <i>
-                0) + f(t
-              </i>
-              0)g'(t_0)
+              (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11295,15 +11215,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (fg)'(t
-              <i>
-                0) = f'(t
-              </i>
-              0)g(t
-              <i>
-                0) + f(t
-              </i>
-              0)g'(t_0)
+              (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11329,15 +11241,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (fg)'(t
-              <i>
-                0) = f'(t
-              </i>
-              0)g(t
-              <i>
-                0) + f(t
-              </i>
-              0)g'(t_0)
+              (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -11384,7 +11288,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={37}>
           <VerticalChunk>
-            <b id="_107910973436">
+            <b id="_654510977126">
               Exercise 37.
             </b>
             {" "}
@@ -11512,7 +11416,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={38}>
           <VerticalChunk>
-            <b id="_987111427265">
+            <b id="_203211423497">
               Exercise 38.
             </b>
             {" "}
@@ -11690,7 +11594,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={39}>
           <VerticalChunk>
-            <b id="_564512235514">
+            <b id="_208212235248">
               Exercise 39.
             </b>
             {" "}
@@ -11822,7 +11726,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={40}>
           <VerticalChunk>
-            <b id="_885512912495">
+            <b id="_692012913104">
               Exercise 40.
             </b>
             {" "}
@@ -11831,31 +11735,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            A
-            <i>
-              1(t
-            </i>
-            0 + h) \,\times\, \dots \,\times\, A
-            <i>
-              &#123;i-1&#125;(t
-            </i>
-            0 + h) \,\times\, &#123;A
-            <i>
-              i(t
-            </i>
-            0 + h) - A
-            <i>
-              i(t
-            </i>
-            0)\over h&#125; \,\times\, A
-            <i>
-              &#123;i + 1&#125;(t
-            </i>
-            0) \,\times\, \cdots  \,\times\, A
-            <i>
-              n(t
-            </i>
-            0)
+            A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
             $$
             <ImageRight
               src="/images/svg_ch4_big_product_parchment_cloud.svg"
@@ -11932,11 +11812,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A
-              <i>
-                i'(t
-              </i>
-              0)
+              A_i'(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -12037,11 +11913,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A
-              <i>
-                1(t
-              </i>
-              0 + h)
+              A_1(t_0 + h)
               $$
             </MathBlock>
             <Pause />
@@ -12051,11 +11923,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A
-              <i>
-                1(t
-              </i>
-              0)
+              A_1(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -12098,15 +11966,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A
-              <i>
-                1(t
-              </i>
-              0 + h) \,\times\, \dots \,\times\, A
-              <i>
-                &#123;i-1&#125;(t
-              </i>
-              0 + h)
+              A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h)
               $$
             </MathBlock>
             <Pause />
@@ -12116,15 +11976,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              A
-              <i>
-                1(t
-              </i>
-              0) \,\times\, \dots \,\times\, A
-              <i>
-                &#123;i-1&#125;(t
-              </i>
-              0)
+              A_1(t_0) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0)
               $$
             </MathBlock>
             <Pause />
@@ -12200,7 +12052,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={41}>
           <VerticalChunk>
-            <b id="_352414015356">
+            <b id="_86714019645">
               Exercise 41.
             </b>
             {" "}
@@ -12389,7 +12241,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={42}>
           <VerticalChunk>
-            <b id="_404015016333">
+            <b id="_681215013614">
               Exercise 42.
             </b>
             {" "}
@@ -12965,7 +12817,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={43}>
           <VerticalChunk>
-            <b id="_461918533515">
+            <b id="_60918533264">
               Exercise 43.
             </b>
             {" "}
@@ -13636,7 +13488,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={44}>
           <VerticalChunk>
-            <b id="_454721632697">
+            <b id="_576521631852">
               Exercise 44.
             </b>
             {" "}

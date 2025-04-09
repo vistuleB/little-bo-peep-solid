@@ -81,8 +81,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
     // ************************
     // _ & * ******************
     // ************************
-    pp.symmetric_delim_splitting("_", "_", "i", ["Mathblock", "Math"]),
-    pp.symmetric_delim_splitting("\\*", "*", "b", ["Mathblock", "Math"]),
+    pp.symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
+    pp.symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
     [
       dn.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
       // ************************
