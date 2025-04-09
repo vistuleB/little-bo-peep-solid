@@ -328,6 +328,7 @@ export const SolutionSVG = (props: BtnProps) => {
   return (
     <>
       <SpacerXs />
+      <SpacerXXs />
       <div id="solution-btn" onClick={props.onClick} class="cursor-pointer">
         <svg class="mx-auto h-[37px] overflow-visible">
           <g class="solution_button_svg">
@@ -380,6 +381,7 @@ export const SolutionSVG = (props: BtnProps) => {
         </svg>
       </div>
       <SpacerSm />
+      <SpacerXXs />
     </>
   );
 };
