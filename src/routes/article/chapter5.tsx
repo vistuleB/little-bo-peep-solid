@@ -4006,7 +4006,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id="_527915140">
+            <b id="_354015054">
               Exercise 1.
             </b>
             {" "}
@@ -4104,7 +4104,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id="_2848289967">
+            <b id="_9189282314">
               Exercise 2.
             </b>
             {" "}
@@ -4239,7 +4239,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id="_6915832164">
+            <b id="_5943838704">
               Exercise 3.
             </b>
             {" "}
@@ -4668,7 +4668,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id="_93672314326">
+            <b id="_75712311749">
               Exercise 4.
             </b>
             {" "}
@@ -4990,7 +4990,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id="_83714132423">
+            <b id="_36414134339">
               Exercise 5.
             </b>
             {" "}
@@ -5114,7 +5114,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id="_6456474534">
+            <b id="_24544747738">
               Exercise 6.
             </b>
             {" "}
@@ -5196,7 +5196,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id="_45935076458">
+            <b id="_19165074112">
               Exercise 7.
             </b>
             {" "}
@@ -5500,7 +5500,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id="_29176622143">
+            <b id="_28596621225">
               Exercise 8.
             </b>
             {" "}
@@ -5654,7 +5654,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id="_52677116634">
+            <b id="_45997115409">
               Exercise 9.
             </b>
             {" "}
@@ -6053,7 +6053,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id="_62168761084">
+            <b id="_63268763583">
               Exercise 10.
             </b>
             {" "}
@@ -6434,7 +6434,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id="_310510315303">
+            <b id="_574110312613">
               Exercise 11.
             </b>
             {" "}
@@ -6556,7 +6556,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id="_45710748950">
+            <b id="_278110748286">
               Exercise 12.
             </b>
             {" "}
@@ -6640,7 +6640,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id="_475711121708">
+            <b id="_165711128467">
               Exercise 13.
             </b>
             {" "}
@@ -6757,7 +6757,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id="_690411662699">
+            <b id="_747111663934">
               Exercise 14.
             </b>
             {" "}
@@ -7247,7 +7247,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id="_412113241818">
+            <b id="_262913241987">
               Exercise 15.
             </b>
             {" "}
@@ -7278,9 +7278,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
+              \displaylines&#123;
               \Large \up&#123;1.5&#125;&#123;22\over 7&#125; = 3.\overline&#123;142857&#125;\\
               \Large \up&#123;1.7&#125;&#123;33\over 7&#125; = 4.\overline&#123;714285&#125;\\
               \Large \up&#123;1.7&#125;&#123;44\over 7&#125; = 6.\overline&#123;285714&#125;
+              &#125;
               $$
             </MathBlock>
             <Pause />
@@ -7488,7 +7490,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b id="_342514554786">
+            <b id="_368114571945">
               Exercise 16.
             </b>
             {" "}
@@ -8235,7 +8237,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b id="_933317106726">
+            <b id="_150617123115">
               Exercise 17.
             </b>
             {" "}
@@ -8320,7 +8322,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b id="_832817445376">
+            <b id="_716717462361">
               Exercise 18.
             </b>
             {" "}
@@ -8772,7 +8774,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b id="_184019252091">
+            <b id="_733019272361">
               Exercise 19.
             </b>
             {" "}
@@ -8844,7 +8846,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b id="_466219599222">
+            <b id="_855019615861">
               Exercise 20.
             </b>
             {" "}
@@ -8941,7 +8943,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b id="_631520074054">
+            <b id="_816720093570">
               Exercise 21.
             </b>
             {" "}
@@ -10101,7 +10103,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={22}>
           <VerticalChunk>
-            <b id="_155924811954">
+            <b id="_819824833278">
               Exercise 22.
             </b>
             {" "}
@@ -10194,7 +10196,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={23}>
           <VerticalChunk>
-            <b id="_349425176564">
+            <b id="_24325198038">
               Exercise 23.
             </b>
             {" "}
@@ -10384,7 +10386,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={24}>
           <VerticalChunk>
-            <b id="_367225991408">
+            <b id="_313726018496">
               Exercise 24.
             </b>
             {" "}
@@ -10512,7 +10514,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={25}>
           <VerticalChunk>
-            <b id="_961326568484">
+            <b id="_320226581471">
               Exercise 25.
             </b>
             {" "}
@@ -10585,7 +10587,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={26}>
           <VerticalChunk>
-            <b id="_98162692593">
+            <b id="_211826948013">
               Exercise 26.
             </b>
             {" "}
@@ -10792,7 +10794,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={27}>
           <VerticalChunk>
-            <b id="_98272781619">
+            <b id="_498827833719">
               Exercise 27.
             </b>
             {" "}
@@ -10899,7 +10901,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={28}>
           <VerticalChunk>
-            <b id="_542825178">
+            <b id="_795528276003">
               Exercise 28.
             </b>
             {" "}
@@ -11172,7 +11174,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={29}>
           <VerticalChunk>
-            <b id="_838529096671">
+            <b id="_127829112330">
               Exercise 29.
             </b>
             {" "}
@@ -11605,7 +11607,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={30}>
           <VerticalChunk>
-            <b id="_759931105099">
+            <b id="_840331122451">
               Exercise 30.
             </b>
             {" "}
@@ -11990,7 +11992,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={31}>
           <VerticalChunk>
-            <b id="_705232716366">
+            <b id="_222632734561">
               Exercise 31.
             </b>
             {" "}
@@ -12067,7 +12069,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={32}>
           <VerticalChunk>
-            <b id="_9858331271">
+            <b id="_167433148864">
               Exercise 32.
             </b>
             {" "}
@@ -12149,7 +12151,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={33}>
           <VerticalChunk>
-            <b id="_240233335944">
+            <b id="_580833357465">
               Exercise 33.
             </b>
             {" "}
@@ -12445,7 +12447,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={34}>
           <VerticalChunk>
-            <b id="_94653445897">
+            <b id="_275634477250">
               Exercise 34.
             </b>
             {" "}
@@ -12981,7 +12983,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={35}>
           <VerticalChunk>
-            <b id="_934536035227">
+            <b id="_84663605590">
               Exercise 35.
             </b>
             {" "}
@@ -13199,7 +13201,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={36}>
           <VerticalChunk>
-            <b id="_759836843420">
+            <b id="_369436862356">
               Exercise 36.
             </b>
             {" "}
@@ -13351,8 +13353,1132 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={37}>
           <VerticalChunk>
-            <b id="_743337582109">
+            <b id="_13137606141">
               Exercise 37.
+            </b>
+            {" "}
+            What do similar illustrations look like for
+            powers of cosine, and for powers of tangent?
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={37}>
+            <VerticalChunk>
+              For cosines we can copy the same figures as
+              for secant, but go “in the other direction”:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_costan_powers_cos_bounce.svg" />
+            <Pause />
+            <Image
+              src="/images/svg_ch5_ex_costan_powers_cos_snail.svg"
+              style="margin-top:1.5em;" />
+            <Pause />
+            <Image src="/images/svg_ch5_ex_costan_powers_cos_inverted_towers.svg" />
+            <Pause />
+            <Image src="/images/svg_ch5_ex_costan_powers_circles.svg" />
+            <Pause />
+            <VerticalChunk>
+              For ‘tan’ it is possible to produce spirals:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_costan_powers_tan_48_big.svg" />
+            <Pause />
+            <Image src="/images/svg_ch5_ex_costan_powers_tan_48_big_other_spiral.svg" />
+            <Pause />
+            <VerticalChunk>
+              There is also a staircase possibility (nb:
+              the spirals will go inward, and the staircase
+              collapses to a point, if{" "}
+              <NoBreak>
+                <Math>
+                  $\theta &lt; \eta/2$
+                </Math>
+                ):
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_costan_powers_tan_48_wedge.svg" />
+            <Pause />
+            <VerticalChunk>
+              We can also do as in the second spiral,
+              and put the powers of{" "}
+              <Math>
+                $\tan(\theta)$
+              </Math>
+              {" "}on the
+              hypotenuses of the triangles...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_costan_powers_tan_48_other_wedge.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...since the size ratio of successive triangles
+              is{" "}
+              <NoBreak>
+                <Math>
+                  $\tan(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}by the first staircase drawing!
+              (In fact, we could have done this trick with
+              powers of sec/cos as well, relabeling some other
+              side of the triangle to be the power of{" "}
+              <NoBreak>
+                <Math>
+                  $\cos$
+                </Math>
+                .)
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Here are some examples of what we suggest at the
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_costan_powers_cos_snail_other_way.svg" />
+              <Pause />
+              <Image src="/images/svg_ch5_ex_costan_powers_cos_towers_other_way.svg" />
+              <Pause />
+              <VerticalChunk>
+                (To reiterate, this works because the triangles are all similar,
+                and the size ratio of one triangle to the previous—specifically,
+                the ratio of the hypotenuses—is
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\cos(\theta)$
+                  </Math>
+                  .)
+                </NoBreak>
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                To illustrate powers of
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cot(\theta)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                one can start from the illustrations for
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \tan(\theta)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                and replace the complementary angle by{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $\theta$
+                  </Math>
+                  ’.
+                </NoBreak>
+                {" "}
+                E.g.:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_costan_powers_cot_48_big.svg" />
+              <Pause />
+              <VerticalChunk>
+                Likewise, to illustrate powers of
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin(\theta)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                one can start with an illustration for powers of
+                {" "}
+                <Math>
+                  $\cos(\theta)$
+                </Math>
+                {" "}and reverse the role of{" "}
+                <Math>
+                  $\theta$
+                </Math>
+                {" "}and
+                its complement. E.g., with our two variations of the
+                snail:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_costan_powers_sin_snail.svg" />
+              <Pause />
+              <Image src="/images/svg_ch5_ex_costan_powers_sin_snail_other_way.svg" />
+              <Pause />
+              <VerticalChunk>
+                (Likewise to switch from an illustration of{" "}
+                <Math>
+                  $\sec$
+                </Math>
+                {" "}
+                to illustration of{" "}
+                <Math>
+                  $\csc$
+                </Math>
+                {" "}it suffices to move{" "}
+                <Math>
+                  $\theta$
+                </Math>
+                {" "}
+                around, not that aliens will ever descend on Earth and
+                ask us these things.)
+              </VerticalChunk>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={38}>
+          <VerticalChunk>
+            <b id="_611838586668">
+              Exercise 38.
+            </b>
+            {" "}
+            What sequence of geometric transformations
+            of the plane will map the graph
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$
+            y = \cos(x)
+            $$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            onto the graph...
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$
+            y = \cos(0.1x + 0.1)
+            $$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            ...?
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={38}>
+            <VerticalChunk>
+              Place{" "}
+              <Math>
+                $\cos(x + 0.1)$
+              </Math>
+              {" "}as an intermediate function
+              between{" "}
+              <Math>
+                $\cos(x)$
+              </Math>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $\cos(0.1x + 0.1)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              breaking the transformation into two steps:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \downarrow
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(x + 0.1)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \downarrow
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\cos(0.1x + 0.1).
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              The first step, going to{" "}
+              <NoBreak>
+                <Math>
+                  $\cos(x + 0.1)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}shifts 
+              the graph of cos left by{" "}
+              <Math>
+                $0.1$
+              </Math>
+              {" "}(cf. Exercise 1, 
+              Exercise 22); the second step dilates the 
+              resulting graph by a factor{" "}
+              <Math>
+                $10$
+              </Math>
+              {" "}horizontally, 
+              because the multiplication by{" "}
+              <Math>
+                $0.1$
+              </Math>
+              {" "}slows 
+              everything down by a factor{" "}
+              <NoBreak>
+                <Math>
+                  $10$
+                </Math>
+                .
+              </NoBreak>
+              {" "}Thus
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = \cos(0.1x + 0.1)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is obtained from{" "}
+              <Math>
+                $y = \cos(x)$
+              </Math>
+              {" "}by:
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              1. left translation by{" "}
+              <Math>
+                $0.1$
+              </Math>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              2. horizontal scaling by{" "}
+              <Math>
+                $10$
+              </Math>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              (Or “horizontal compression by{" "}
+              <NoBreak>
+                <Math>
+                  $0.1$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "}for 2.)
+            </VerticalChunk>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                One can also place{" "}
+                <Math>
+                  $\cos(0.1x)$
+                </Math>
+                {" "}as an 
+                intermediate function between{" "}
+                <Math>
+                  $\cos(x)$
+                </Math>
+                {" "}and 
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\cos(0.1x + 0.1)$
+                  </Math>
+                  :
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(x)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \downarrow
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(0.1x)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \downarrow
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \,\cos(0.1(x + 1)) = \cos(0.1x + 0.1).
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                In this case the first step, going to{" "}
+                <NoBreak>
+                  <Math>
+                    $\cos(0.1x)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                dilates the graph horizontally by a factor{" "}
+                <NoBreak>
+                  <Math>
+                    $10$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                while the second step, in which{" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "}is replaced 
+                by{" "}
+                <NoBreak>
+                  <Math>
+                    $x + 1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}shifts the resulting graph to the
+                left by{" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}and the obtained sequence is:
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                1. horizontal scaling by{" "}
+                <Math>
+                  $10$
+                </Math>
+                {" "}{" "}
+              </CentralDisplayItalic>
+              <Pause />
+              <CentralDisplayItalic>
+                2. left translation by{" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "}{" "}
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                (Indeed, this ends up performing the same overall
+                transformation of the plane as the first solution,
+                albeit decomposed differently in terms of its sub-steps.
+                Neither sequence is more correct than the other.)
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Take the following three-box assemblage, that 
+                computes{" "}
+                <NoBreak>
+                  <Math>
+                    $x \ra \cos(0.1x + 0.1)$
+                  </Math>
+                  :
+                </NoBreak>
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_cos_01x.svg" />
+              <Pause />
+              <VerticalChunk>
+                (The label of the middle box is pasted diagonally
+                above the box because of reasons of space.)
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                We can understand our first solution as gluing
+                the middle and right boxes onto the{" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $\cos$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "}box
+                one at a time, and observing the effect of each 
+                additional gluing on the graph:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_cos_01x_2.svg" />
+              <Pause />
+              <VerticalChunk>
+                On the other hand, if we perform the same
+                analysis on this alternate three-box sequence...
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_cos_01x_3.svg" />
+              <Pause />
+              <VerticalChunk>
+                ...that also computes{" "}
+                <NoBreak>
+                  <Math>
+                    $x \ra \cos(0.1x + 0.1)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                we recover our second solution:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_cos_01x_4.svg" />
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={39}>
+          <VerticalChunk>
+            <b id="_844839764119">
+              Exercise 39.
+            </b>
+            {" "}
+            More generally, how is the graph of
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$
+            x \ra \cos(Bx + C)
+            $$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            related to the graph of{" "}
+            <NoBreak>
+              <Math>
+                $\cos$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}for constants 
+            {" "}
+            <NoBreak>
+              <Math>
+                $B$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}{" "}
+            <NoBreak>
+              <Math>
+                $C \in \rr$
+              </Math>
+              ?
+            </NoBreak>
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={39}>
+            <VerticalChunk>
+              As in the solution to Exercise 37 place
+              {" "}
+              <Math>
+                $\cos(x + C)$
+              </Math>
+              {" "}as an intermediate function between
+              {" "}
+              <Math>
+                $\cos(x)$
+              </Math>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $\cos(Bx + C)$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \downarrow
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(x + C)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \downarrow
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(Bx + C)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              The first step effects a tranlation to the left by{" "}
+              <NoBreak>
+                <Math>
+                  $C$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              the second step (since it replaces{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}by{" "}
+              <NoBreak>
+                <Math>
+                  $Bx$
+                </Math>
+                )
+              </NoBreak>
+              {" "}effects
+              a horizontal compression by a factor{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}(speed-up by
+              factor{" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ),
+              </NoBreak>
+              {" "}so the following pair of steps, in order,
+              takes the graph{" "}
+              <Math>
+                $y = \cos(x)$
+              </Math>
+              {" "}to the graph{" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos(Bx + C)$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              1. horizontal translation by{" "}
+              <Math>
+                $-C$
+              </Math>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              2. horizontal scaling by{" "}
+              <Math>
+                $1/B$
+              </Math>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <StarDivider />
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Alternately, like Note 1 of Exercise 37, we can
+                stop at{" "}
+                <Math>
+                  $\cos(Bx)$
+                </Math>
+                {" "}as an intermediate point:
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(x)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \downarrow
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(Bx)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \downarrow
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(B(x + C/B)) = \cos(Bx + C)
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                This gives us the following alternate sequence:
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                1. horizontal scaling by{" "}
+                <Math>
+                  $1/B$
+                </Math>
+                {" "}{" "}
+              </CentralDisplayItalic>
+              <Pause />
+              <CentralDisplayItalic>
+                2. horizontal translation by{" "}
+                <Math>
+                  $-C/B$
+                </Math>
+                {" "}{" "}
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                ...which is different-but-equivalent, but 
+                generally considered inferior 
+                by virtue of involving the more complicated translation 
+                term,{" "}
+                <NoBreak>
+                  <Math>
+                    $-C/B$
+                  </Math>
+                  !
+                </NoBreak>
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                One says that translation and scaling  are
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                non-commutative
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                because it matters which of the two operations is performed 
+                first. If it didn't matter,
+                then both of our solutions would involve the 
+                same amount of translation, but they don't!
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                (Also:
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                translation and scaling don't commute
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                or
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                transation doesn't commute with scaling
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                ...all good sentences to use in the wild!)
+              </VerticalChunk>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={40}>
+          <VerticalChunk>
+            <b id="_934840635282">
+              Exercise 40.
+            </b>
+            {" "}
+            If
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$
+            A \ne 0
+            $$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            is a point on the{" "}
+            <Math>
+              $x$
+            </Math>
+            {" "}axis, how can we construct
+            the value
+          </VerticalChunk>
+          <Pause />
+          <MathBlock>
+            $$
+            1 / A
+            $$
+          </MathBlock>
+          <Pause />
+          <VerticalChunk>
+            by purely geometric means?
+            (We assume that{" "}
+            <NoBreak>
+              ‘
+              <Math>
+                $0$
+              </Math>
+              ’
+            </NoBreak>
+            {" "}and{" "}
+            <NoBreak>
+              ‘
+              <Math>
+                $1$
+              </Math>
+              ’
+            </NoBreak>
+            {" "}are also marked on the axis.)
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={40}>
+            <VerticalChunk>
+              The key is to view{" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <Math>
+                $1/A$
+              </Math>
+              {" "}as values of the form{" "}
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              A = \sec(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              1/A = \cos(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for some angle{" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}if{" "}
+              <NoBreak>
+                <Math>
+                  $|A| \geq 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}or
+              as values of the form
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              A = \cos(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              1/A = \sec(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for some angle{" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}if{" "}
+              <NoBreak>
+                <Math>
+                  $|A| \leq 1$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              In more detail, we make use of the fact that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              can be obtained as the intersection of the tangent
+              to the unit circle with the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis (we never discussed
+              this, you can't be faulted for missing it):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_one_over_A_secant_construction.svg">
+              <ImageRight src="/images/svg_ch5_ex_one_over_A_secant_construction_cloud.svg" />
+            </Image>
+            <Pause />
+            <VerticalChunk>
+              So the idea is, for example if{" "}
+              <NoBreak>
+                <Math>
+                  $|A| \geq 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}to draw
+              a tangent to the circle from{" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}then to drop a height
+              onto the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_one_over_A_secant_Agt1.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...the position obtained is the corresponding 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}and{" "}
+              <Math>
+                $\cos(\theta)\cdot\sec(\theta) = 1$
+              </Math>
+              {" "}&#x2705;.
+              If{" "}
+              <Math>
+                $|A| \leq 1$
+              </Math>
+              {" "}we can reverse the process, 
+              “dropping a height onto the circle”, and then finding
+              the intersection of the tangent at that point with
+              the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis! (Which will not work, as should be,
+              if and only if{" "}
+              <NoBreak>
+                <Math>
+                  $\cos(\theta) = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}a.k.a., if and only 
+              if{" "}
+              <NoBreak>
+                <Math>
+                  $A = 0$
+                </Math>
+                .)
+              </NoBreak>
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={41}>
+          <VerticalChunk>
+            <b id="_112841267961">
+              Exercise 41.
+            </b>
+            {" "}
+            In the following drawing at what
+            coordinates does the tangent to the circle
+            intersect the axes, as marked by the purple
+            triangles?
+          </VerticalChunk>
+          <Pause />
+          <Image src="/images/svg_ch5_ex_60_tangent.svg" />
+          <Pause />
+          <Solution solution_number={41}>
+            <VerticalChunk>
+              First we note that the{" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -
+              </NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinates
+              </NoBreak>
+              {" "}of
+              the point of tangency are{" "}
+              <Math>
+                $1/2$
+              </Math>
+              {" "}and 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;0.75&#125; = &#123;\sqrt&#123;3&#125;\over 2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}being{" "}
+              <Math>
+                $\cos(60^\circ)$
+              </Math>
+              {" "}
+              and{" "}
+              <Math>
+                $\sin(60^\circ)$
+              </Math>
+              {" "}respectively:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_60_tangent_with_coordinates.svg" />
+            <Pause />
+            <VerticalChunk>
+              But by Exercise 43 this implies that the coordinate 
+              of the intersectionj of the tangent is
+              <ImageRight src="/images/svg_ch5_ex_60_tangent_sec_cloud.svg" />
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 1/2&#125; = 2
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              with the{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis, and
+              <ImageRight src="/images/svg_ch5_ex_60_tangent_csc_cloud.svg" />
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over \sqrt&#123;3&#125;/2&#125; = &#123;2\over \sqrt&#123;3&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              with the{" "}
+              <Math>
+                $y$
+              </Math>
+              {" "}axis, reasoning symmetrically.
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={42}>
+          <VerticalChunk>
+            <b id="_989841686253">
+              Exercise 42.
             </b>
             {" "}
             Similarly to Exercise 9, suggest a
@@ -13379,7 +14505,7 @@ const Rest = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={37}>
+          <Solution solution_number={42}>
             <VerticalChunk>
               We define
             </VerticalChunk>

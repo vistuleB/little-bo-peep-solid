@@ -250,27 +250,24 @@ const SolutionConsumer = (props: SolutionProps) => {
           <SpacerXs />
           <SpacerXXs />
           {props.children}
-          <div
-            style={{
-              "transition-duration": `${solution_open() ? solution_transition() : 50}ms`,
-            }}
-            class={twJoin(
-              "flex items-center justify-center",
-              (!solution_open() || !solution_fully_opened()) && "opacity-0",
-              bot_div() && "delay-[2s]",
-            )}>
-            {" "}
-            {!store.list_view ||
-            props.solution_number === store.num_exercises ? (
+          {!store.list_view || props.solution_number === store.num_exercises ? (<>
+            <Spacer />
+            <div
+              style={{"transition-duration": `${solution_open() ? solution_transition() : 50}ms`}}
+              class={twJoin(
+                "flex items-center justify-center",
+                (!solution_open() || !solution_fully_opened()) && "opacity-0",
+                bot_div() && "delay-[2s]",
+              )}>
               <BackupArrow />
-            ) : (
-              <></>
-            )}
-          </div>
+            </div>
+          </>) : <></>}
         </div>
       </div>
-      <SpacerSm />
-      <SpacerXs />
+      {store.list_view && props.solution_number !== store.num_exercises ? (<>
+          <SpacerSm />
+          <SpacerXs />
+      </>): <></>}
       <div
         class="slice transition-all col-start-2"
         style={{

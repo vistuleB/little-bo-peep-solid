@@ -1340,9 +1340,11 @@
         From which...
 
         $$
+        \displaylines{
         \Large \up{1.5}{22\over 7} = 3.\overline{142857}\\
         \Large \up{1.7}{33\over 7} = 4.\overline{714285}\\
         \Large \up{1.7}{44\over 7} = 6.\overline{285714}
+        }
         $$
 
         ...because the digits of the quotient are,
@@ -3753,6 +3755,414 @@
             
             |> Image
                 src images/svg_ch5_ex_sec_powers_bounce_cameo.svg
+
+
+|> Exercise
+
+    What do similar illustrations look like for
+    powers of cosine, and for powers of tangent?
+  
+    |> Solution
+  
+        For cosines we can copy the same figures as
+        for secant, but go “in the other direction”:
+
+        |> Image
+            src images/svg_ch5_ex_costan_powers_cos_bounce.svg
+        |> Image
+            style margin-top:1.5em;
+            src images/svg_ch5_ex_costan_powers_cos_snail.svg
+        
+        |> Image 
+            src images/svg_ch5_ex_costan_powers_cos_inverted_towers.svg
+        |> Image 
+            src images/svg_ch5_ex_costan_powers_circles.svg
+        
+        For ‘tan’ it is possible to produce spirals:
+        
+        |> Image
+            src images/svg_ch5_ex_costan_powers_tan_48_big.svg
+        |> Image 
+            src images/svg_ch5_ex_costan_powers_tan_48_big_other_spiral.svg
+        
+        There is also a staircase possibility (nb:
+        the spirals will go inward, and the staircase
+        collapses to a point, if $\theta < \eta/2$):
+
+        |> Image 
+            src images/svg_ch5_ex_costan_powers_tan_48_wedge.svg
+        
+        We can also do as in the second spiral,
+        and put the powers of $\tan(\theta)$ on the
+        hypotenuses of the triangles...
+        
+        |> Image 
+            src images/svg_ch5_ex_costan_powers_tan_48_other_wedge.svg
+        
+        ...since the size ratio of successive triangles
+        is $\tan(\theta)$, by the first staircase drawing!
+        (In fact, we could have done this trick with
+        powers of sec/cos as well, relabeling some other
+        side of the triangle to be the power of $\cos$.)
+  
+        |> SolutionNote
+
+            Here are some examples of what we suggest at the
+
+            |> Image 
+                src images/svg_ch5_ex_costan_powers_cos_snail_other_way.svg
+            |> Image 
+                src images/svg_ch5_ex_costan_powers_cos_towers_other_way.svg
+
+            (To reiterate, this works because the triangles are all similar,
+            and the size ratio of one triangle to the previous—specifically,
+            the ratio of the hypotenuses—is
+            $\cos(\theta)$.)
+
+        |> SolutionNote
+
+            To illustrate powers of
+            $$
+            \cot(\theta)
+            $$
+            one can start from the illustrations for
+            $$
+            \tan(\theta)
+            $$
+            and replace the complementary angle by ‘$\theta$’.
+            E.g.:
+
+            |> Image 
+                src images/svg_ch5_ex_costan_powers_cot_48_big.svg
+
+            Likewise, to illustrate powers of
+            $$
+            \sin(\theta)
+            $$
+            one can start with an illustration for powers of
+            $\cos(\theta)$ and reverse the role of $\theta$ and
+            its complement. E.g., with our two variations of the
+            snail:
+    
+            |> Image 
+                src images/svg_ch5_ex_costan_powers_sin_snail.svg
+            |> Image 
+                src images/svg_ch5_ex_costan_powers_sin_snail_other_way.svg
+    
+            (Likewise to switch from an illustration of $\sec$ 
+            to illustration of $\csc$ it suffices to move $\theta$
+            around, not that aliens will ever descend on Earth and
+            ask us these things.)
+
+
+|> Exercise
+
+    What sequence of geometric transformations
+    of the plane will map the graph
+    $$
+    y = \cos(x)
+    $$
+    onto the graph...
+    $$
+    y = \cos(0.1x + 0.1)
+    $$
+    ...?
+
+    |> Solution
+
+        Place $\cos(x + 0.1)$ as an intermediate function
+        between $\cos(x)$ and $\cos(0.1x + 0.1)$,
+        breaking the transformation into two steps:
+
+        $$
+        \cos(x)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \cos(x + 0.1)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \,\cos(0.1x + 0.1).
+        $$
+
+        The first step, going to $\cos(x + 0.1)$, shifts 
+        the graph of cos left by $0.1$ (cf. Exercise 1, 
+        Exercise 22); the second step dilates the 
+        resulting graph by a factor $10$ horizontally, 
+        because the multiplication by $0.1$ slows 
+        everything down by a factor $10$. Thus
+
+        $$
+        y = \cos(0.1x + 0.1)
+        $$
+
+        is obtained from $y = \cos(x)$ by:
+
+        __1. left translation by $0.1$__
+        __2. horizontal scaling by $10$__
+
+        (Or “horizontal compression by $0.1$”, for 2.)
+
+        |> SolutionNote
+        
+            One can also place $\cos(0.1x)$ as an 
+            intermediate function between $\cos(x)$ and 
+            $\cos(0.1x + 0.1)$:
+            $$
+            \cos(x)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \cos(0.1x)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \,\cos(0.1(x + 1)) = \cos(0.1x + 0.1).
+            $$
+            In this case the first step, going to $\cos(0.1x)$,
+            dilates the graph horizontally by a factor $10$, 
+            while the second step, in which $x$ is replaced 
+            by $x + 1$, shifts the resulting graph to the
+            left by $1$, and the obtained sequence is:
+            
+            __1. horizontal scaling by $10$__
+            __2. left translation by $1$__
+            
+            (Indeed, this ends up performing the same overall
+            transformation of the plane as the first solution,
+            albeit decomposed differently in terms of its sub-steps.
+            Neither sequence is more correct than the other.)
+
+        |> SolutionNote
+
+            Take the following three-box assemblage, that 
+            computes $x \ra \cos(0.1x + 0.1)$:
+    
+            |> Image 
+                src images/svg_ch5_ex_cos_01x.svg
+
+            (The label of the middle box is pasted diagonally
+            above the box because of reasons of space.)
+
+            We can understand our first solution as gluing
+            the middle and right boxes onto the ‘$\cos$’ box
+            one at a time, and observing the effect of each 
+            additional gluing on the graph:
+    
+            |> Image 
+                src images/svg_ch5_ex_cos_01x_2.svg
+
+            On the other hand, if we perform the same
+            analysis on this alternate three-box sequence...
+    
+            |> Image 
+                src images/svg_ch5_ex_cos_01x_3.svg
+
+            ...that also computes $x \ra \cos(0.1x + 0.1)$,
+            we recover our second solution:
+    
+            |> Image 
+                src images/svg_ch5_ex_cos_01x_4.svg
+
+|> Exercise
+
+    More generally, how is the graph of
+    $$
+    x \ra \cos(Bx + C)
+    $$
+    related to the graph of $\cos$, for constants 
+    $B$, $C \in \rr$? 
+
+    |> Solution
+
+        As in the solution to Exercise 37 place
+        $\cos(x + C)$ as an intermediate function between
+        $\cos(x)$ and $\cos(Bx + C)$:
+
+        $$
+        \cos(x)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \cos(x + C)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \cos(Bx + C)
+        $$
+
+        The first step effects a tranlation to the left by $C$,
+        the second step (since it replaces $x$ by $Bx$) effects
+        a horizontal compression by a factor $B$ (speed-up by
+        factor $B$), so the following pair of steps, in order,
+        takes the graph $y = \cos(x)$ to the graph $y = \cos(Bx + C)$:
+
+        __1. horizontal translation by $-C$__
+        __2. horizontal scaling by $1/B$__
+
+        |> StarDivider
+
+        |> SolutionNote
+
+            Alternately, like Note 1 of Exercise 37, we can
+            stop at $\cos(Bx)$ as an intermediate point:
+
+            $$
+            \cos(x)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \cos(Bx)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \cos(B(x + C/B)) = \cos(Bx + C)
+            $$
+
+            This gives us the following alternate sequence:
+            __1. horizontal scaling by $1/B$__
+            __2. horizontal translation by $-C/B$__
+            ...which is different-but-equivalent, but 
+            generally considered inferior 
+            by virtue of involving the more complicated translation 
+            term, $-C/B$!
+
+        |> SolutionNote
+            
+            One says that translation and scaling  are
+            __non-commutative__
+            because it matters which of the two operations is performed 
+            first. If it didn't matter,
+            then both of our solutions would involve the 
+            same amount of translation, but they don't!
+           
+            (Also:
+            __translation and scaling don't commute__
+            or
+            __transation doesn't commute with scaling__
+            ...all good sentences to use in the wild!)
+
+
+|> Exercise
+
+    If
+    $$
+    A \ne 0
+    $$
+    is a point on the $x$ axis, how can we construct
+    the value
+    $$
+    1 / A
+    $$
+    by purely geometric means?
+    (We assume that ‘$0$’ and ‘$1$’ are also marked on the axis.)
+  
+    |> Solution
+
+        The key is to view $A$, $1/A$ as values of the form 
+        $$
+        A = \sec(\theta)
+        $$
+        $$
+        1/A = \cos(\theta)
+        $$
+        for some angle $\theta \in \rr$, if $|A| \geq 1$, or
+        as values of the form
+        $$
+        A = \cos(\theta)
+        $$
+        $$
+        1/A = \sec(\theta)
+        $$
+        for some angle $\theta \in \rr$, if $|A| \leq 1$.
+        In more detail, we make use of the fact that
+        $$
+        \sec(\theta)
+        $$
+        can be obtained as the intersection of the tangent
+        to the unit circle with the $x$ axis (we never discussed
+        this, you can't be faulted for missing it):
+        
+        |> Image
+            src images/svg_ch5_ex_one_over_A_secant_construction.svg
+
+        |> ImageRight
+            src images/svg_ch5_ex_one_over_A_secant_construction_cloud.svg
+
+        So the idea is, for example if $|A| \geq 1$, to draw
+        a tangent to the circle from $A$, then to drop a height
+        onto the $x$ axis:
+
+        |> Image
+            src images/svg_ch5_ex_one_over_A_secant_Agt1.svg
+
+        ...the position obtained is the corresponding 
+        $\cos(\theta)$, and $\cos(\theta)\cdot\sec(\theta) = 1$ &#x2705;.
+        If $|A| \leq 1$ we can reverse the process, 
+        “dropping a height onto the circle”, and then finding
+        the intersection of the tangent at that point with
+        the $x$ axis! (Which will not work, as should be,
+        if and only if $\cos(\theta) = 0$, a.k.a., if and only 
+        if $A = 0$.)
+
+
+|> Exercise
+
+    In the following drawing at what
+    coordinates does the tangent to the circle
+    intersect the axes, as marked by the purple
+    triangles?
+
+    |> Image 
+        src images/svg_ch5_ex_60_tangent.svg
+
+    |> Solution
+
+        First we note that the $x$- and $y$-coordinates of
+        the point of tangency are  $1/2$ and 
+        $\sqrt{0.75} = {\sqrt{3}\over 2}$, being $\cos(60^\circ)$
+        and $\sin(60^\circ)$ respectively:
+        
+        |> Image 
+            src images/svg_ch5_ex_60_tangent_with_coordinates.svg
+
+        But by Exercise 43 this implies that the coordinate 
+        of the intersectionj of the tangent is
+
+        |> ImageRight
+            src images/svg_ch5_ex_60_tangent_sec_cloud.svg
+
+        $$
+        {1\over 1/2} = 2
+        $$
+
+        with the $x$ axis, and
+
+        |> ImageRight 
+            src images/svg_ch5_ex_60_tangent_csc_cloud.svg
+
+        $$
+        {1\over \sqrt{3}/2} = {2\over \sqrt{3}}
+        $$
+
+        with the $y$ axis, reasoning symmetrically.
 
 
 |> Exercise
