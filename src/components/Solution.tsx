@@ -14,7 +14,7 @@ import {
   TEXT_X_PADDING,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
-import { Spacer, SpacerSm, SpacerXs } from "./Spacer";
+import { Spacer, SpacerSm, SpacerXs, SpacerXXs } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 import { createStore, SetStoreFunction } from "solid-js/store";
@@ -86,7 +86,7 @@ const SolutionConsumer = (props: SolutionProps) => {
       set_store("transition_duration", (prev) =>
         prev.map((val, i) =>
           i + 1 === props.solution_number
-            ? Math.min(ref?.clientHeight, 1000)
+            ? Math.min(ref?.clientHeight, 1000) * 0.8
             : val,
         ),
       );
@@ -247,8 +247,9 @@ const SolutionConsumer = (props: SolutionProps) => {
           style={{
             "transition-duration": `${solution_transition()}ms`,
           }}>
+          <SpacerXs />
+          <SpacerXXs />
           {props.children}
-          <Spacer />
           <div
             style={{
               "transition-duration": `${solution_open() ? solution_transition() : 50}ms`,
@@ -268,13 +269,16 @@ const SolutionConsumer = (props: SolutionProps) => {
           </div>
         </div>
       </div>
+      <SpacerSm />
+      <SpacerXs />
       <div
         class="slice transition-all col-start-2"
         style={{
           height: `${(!store.list_view || props.solution_number === store.num_exercises) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
           "background-color": global_store.show_areas ? "#00440050" : "",
           "transition-duration": `${green_div_transition()}ms`,
-        }}></div>
+        }}
+      ></div>
     </>
   );
 };
@@ -375,7 +379,6 @@ export const SolutionSVG = (props: BtnProps) => {
           </g>
         </svg>
       </div>
-      <SpacerSm />
       <SpacerSm />
     </>
   );
