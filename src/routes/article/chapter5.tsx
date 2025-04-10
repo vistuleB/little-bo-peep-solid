@@ -4006,7 +4006,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id="_205815704">
+            <b id="_170014776">
               Exercise 1.
             </b>
             {" "}
@@ -4104,7 +4104,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id="_406728159">
+            <b id="_9911282565">
               Exercise 2.
             </b>
             {" "}
@@ -4239,7 +4239,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id="_3495835568">
+            <b id="_2379838198">
               Exercise 3.
             </b>
             {" "}
@@ -4668,7 +4668,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id="_6512231178">
+            <b id="_2672315154">
               Exercise 4.
             </b>
             {" "}
@@ -4990,7 +4990,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id="_83644131542">
+            <b id="_11914136390">
               Exercise 5.
             </b>
             {" "}
@@ -5114,7 +5114,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id="_17654742248">
+            <b id="_1194743264">
               Exercise 6.
             </b>
             {" "}
@@ -5196,7 +5196,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id="_9061507224">
+            <b id="_99395073055">
               Exercise 7.
             </b>
             {" "}
@@ -5500,7 +5500,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id="_46356627442">
+            <b id="_8198662247">
               Exercise 8.
             </b>
             {" "}
@@ -5654,7 +5654,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id="_4477118373">
+            <b id="_64787118278">
               Exercise 9.
             </b>
             {" "}
@@ -6053,7 +6053,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id="_478765490">
+            <b id="_51728762157">
               Exercise 10.
             </b>
             {" "}
@@ -6434,7 +6434,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id="_308710318767">
+            <b id="_38210316247">
               Exercise 11.
             </b>
             {" "}
@@ -6556,7 +6556,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id="_484610743198">
+            <b id="_601410745742">
               Exercise 12.
             </b>
             {" "}
@@ -6640,7 +6640,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id="_520611129119">
+            <b id="_92611123223">
               Exercise 13.
             </b>
             {" "}
@@ -6757,7 +6757,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id="_449311667846">
+            <b id="_278211661459">
               Exercise 14.
             </b>
             {" "}
@@ -7247,7 +7247,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id="_51913249628">
+            <b id="_822113248852">
               Exercise 15.
             </b>
             {" "}
@@ -7490,7 +7490,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b id="_730214574054">
+            <b id="_862614579384">
               Exercise 16.
             </b>
             {" "}
@@ -8237,7 +8237,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b id="_241617129906">
+            <b id="_733817121909">
               Exercise 17.
             </b>
             {" "}
@@ -8322,7 +8322,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b id="_11501746193">
+            <b id="_207717468338">
               Exercise 18.
             </b>
             {" "}
@@ -8774,7 +8774,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b id="_91391927767">
+            <b id="_666219271191">
               Exercise 19.
             </b>
             {" "}
@@ -8846,7 +8846,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b id="_399719612186">
+            <b id="_252019619469">
               Exercise 20.
             </b>
             {" "}
@@ -8943,7 +8943,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b id="_939420098002">
+            <b id="_370620091901">
               Exercise 21.
             </b>
             {" "}
@@ -10103,7 +10103,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={22}>
           <VerticalChunk>
-            <b id="_493624833792">
+            <b id="_661824839886">
               Exercise 22.
             </b>
             {" "}
@@ -10196,7 +10196,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={23}>
           <VerticalChunk>
-            <b id="_796725198077">
+            <b id="_90625192609">
               Exercise 23.
             </b>
             {" "}
@@ -10386,7 +10386,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={24}>
           <VerticalChunk>
-            <b id="_101226012627">
+            <b id="_702826012992">
               Exercise 24.
             </b>
             {" "}
@@ -10514,7 +10514,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={25}>
           <VerticalChunk>
-            <b id="_732626588740">
+            <b id="_320026585463">
               Exercise 25.
             </b>
             {" "}
@@ -10587,7 +10587,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={26}>
           <VerticalChunk>
-            <b id="_11622694813">
+            <b id="_231326942857">
               Exercise 26.
             </b>
             {" "}
@@ -10794,7 +10794,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={27}>
           <VerticalChunk>
-            <b id="_2927834861">
+            <b id="_42727839055">
               Exercise 27.
             </b>
             {" "}
@@ -10901,7 +10901,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={28}>
           <VerticalChunk>
-            <b id="_114328273207">
+            <b id="_99372827235">
               Exercise 28.
             </b>
             {" "}
@@ -11174,7 +11174,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={29}>
           <VerticalChunk>
-            <b id="_877829112844">
+            <b id="_863429112273">
               Exercise 29.
             </b>
             {" "}
@@ -11607,7 +11607,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={30}>
           <VerticalChunk>
-            <b id="_636831124653">
+            <b id="_86031124069">
               Exercise 30.
             </b>
             {" "}
@@ -11992,7 +11992,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={31}>
           <VerticalChunk>
-            <b id="_28232733935">
+            <b id="_147132739172">
               Exercise 31.
             </b>
             {" "}
@@ -12069,7 +12069,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={32}>
           <VerticalChunk>
-            <b id="_958233148111">
+            <b id="_788033145111">
               Exercise 32.
             </b>
             {" "}
@@ -12151,7 +12151,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={33}>
           <VerticalChunk>
-            <b id="_86733352492">
+            <b id="_943733356808">
               Exercise 33.
             </b>
             {" "}
@@ -12447,7 +12447,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={34}>
           <VerticalChunk>
-            <b id="_997934477405">
+            <b id="_842534476503">
               Exercise 34.
             </b>
             {" "}
@@ -12983,7 +12983,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={35}>
           <VerticalChunk>
-            <b id="_91323605492">
+            <b id="_94936053062">
               Exercise 35.
             </b>
             {" "}
@@ -13201,7 +13201,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={36}>
           <VerticalChunk>
-            <b id="_184436869893">
+            <b id="_618736869083">
               Exercise 36.
             </b>
             {" "}
@@ -13353,7 +13353,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={37}>
           <VerticalChunk>
-            <b id="_208337607975">
+            <b id="_268237608896">
               Exercise 37.
             </b>
             {" "}
@@ -13551,7 +13551,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={38}>
           <VerticalChunk>
-            <b id="_298538589398">
+            <b id="_873538583282">
               Exercise 38.
             </b>
             {" "}
@@ -13890,7 +13890,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={39}>
           <VerticalChunk>
-            <b id="_16593976584">
+            <b id="_679939769163">
               Exercise 39.
             </b>
             {" "}
@@ -14165,7 +14165,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={40}>
           <VerticalChunk>
-            <b id="_651540639249">
+            <b id="_239240639359">
               Exercise 40.
             </b>
             {" "}
@@ -14384,7 +14384,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={41}>
           <VerticalChunk>
-            <b id="_885141263824">
+            <b id="_752741267128">
               Exercise 41.
             </b>
             {" "}
@@ -14477,7 +14477,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={42}>
           <VerticalChunk>
-            <b id="_204241685443">
+            <b id="_831841686501">
               Exercise 42.
             </b>
             {" "}
@@ -14615,12 +14615,772 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={43}>
           <VerticalChunk>
-            <b id="_7342424636">
+            <b id="_98142468335">
               Exercise 43.
             </b>
             {" "}
-            Similarly to Exercise 9, suggest a
-            definition for the product
+            Given the following sketch, to what angle
+            can the door be opened before it hits against 
+            the roof? (Hint: You will need to Google “how
+            to use arctan”, or “how to convert from polar
+            to Cartesian coordinates”.)
+          </VerticalChunk>
+          <Pause />
+          <Image src="/images/svg_ch5_ex_opening_door.svg" />
+          <Pause />
+          <VerticalChunk>
+            And:
+          </VerticalChunk>
+          <TextParent>
+            <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
+              <li>
+                all distances are in inches
+              </li>
+              <li>
+                assume half an inch from the edge of the door
+                to the center of its hinge
+              </li>
+              <li>
+                assume the door has negligible thicknesss
+              </li>
+            </ul>
+          </TextParent>
+          <Pause />
+          <Solution solution_number={43}>
+            <VerticalChunk>
+              We start by computing these lengths in the
+              original plane of the{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                -dimensional
+              </NoBreak>
+              {" "}drawing:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_opening_door_soln1.svg" />
+            <Pause />
+            <VerticalChunk>
+              (Nb: One can also compute the length marked ‘2’ as
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;42\over \tan(23^\circ)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              since{" "}
+              <NoBreak>
+                <Math>
+                  $\cot = 1/\tan$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}or
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              42\cdot \tan(67^\circ)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              since{" "}
+              <Math>
+                $67^\circ = 90^\circ - 23^\circ$
+              </Math>
+              {" "}is the complement
+              of{" "}
+              <NoBreak>
+                <Math>
+                  $23^\circ$
+                </Math>
+                .)
+              </NoBreak>
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Next, as
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              0.5
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is the distance from the side of the door to its
+              hinge, the door swings at a radius of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              38.5
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and the distance between the hinge's center
+              and the ceiling, measured horizontally at the top
+              of the door, is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              30.945 - 0.5 = 30.445...
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by subtracting from the length marked ‘5’.
+              We can draw the following overhead sketch of the situation
+              (not to scale, and keeping to{" "}
+              <Math>
+                $3$
+              </Math>
+              {" "}digits of accuracy):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_opening_door_overhead.svg" />
+            <Pause />
+            <VerticalChunk>
+              Here
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \arctan
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is a function that you can find notated as
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;\tan^&#123;-1&#125;\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              on your calculator (a questionable choice of notation,
+              because it is &lt;i&gt;not&lt;/i&gt; the same as{" "}
+              <NoBreak>
+                <Math>
+                  $1/\tan = \cot$
+                </Math>
+                ),
+              </NoBreak>
+              {" "}and
+              sometimes known as
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              tangent inverse
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              by the gallery, converts a fraction of the form
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\te&#123;opposite&#125;\over\te&#123;adjacent&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              into the corresponding angle whose tangent equals that 
+              fraction.
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              The final answer to the problem is...
+            </VerticalChunk>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  90^\circ + 52.26^\circ = 142.26^\circ
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <VerticalChunk>
+              ...because{" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "}only constitutes the amount of rotation
+              past{" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}per the drawing.
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={44}>
+          <VerticalChunk>
+            <b id="_48454359224">
+              Exercise 44.
+            </b>
+            {" "}
+            (Speaking of doors with negligible thickness.)
+            The sketch below shows the top view of a bomb
+            shelter door set in a corner near a wall, 
+            with distances in centimeters. 
+            How far can the door open when the big handle
+            is in the “open” position, shown in the figure?
+            How far can it open when the big handle is in
+            the “closed” position, shown by the dotted line?
+          </VerticalChunk>
+          <Pause />
+          <Image src="/images/svg_ch5_ex_bomb_shelter_door_tru_sizes.svg" />
+          <Pause />
+          <Solution solution_number={44}>
+            <VerticalChunk>
+              In the interest of mass-producing our results
+              we will write a general formula to compute 
+              {" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "}in terms of{" "}
+              <NoBreak>
+                <Math>
+                  $x_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <Math>
+                $y_0$
+              </Math>
+              {" "}and{" "}
+              <Math>
+                $z$
+              </Math>
+              {" "}in 
+              the following diagram (note that{" "}
+              <NoBreak>
+                <Math>
+                  $r = \sqrt&#123;x_0^2 + y_0^2&#125;$
+                </Math>
+                ):
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_bomb_shelter_door_alpha_x0y0.svg" />
+            <Pause />
+            <VerticalChunk>
+              We can decompose
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \alpha
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              as
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              90^\circ + \beta - \gamma
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              with{" "}
+              <Math>
+                $\beta$
+              </Math>
+              {" "}and{" "}
+              <Math>
+                $\gamma$
+              </Math>
+              {" "}as depicted here:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_bomb_shelter_door_alpha_decomposed.svg" />
+            <Pause />
+            <VerticalChunk>
+              By definition of{" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\arctan$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}(cf. Exercise 43), 
+              we have
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \gamma = \arctan(y_0/x_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \beta = \arctan(z/\sqrt&#123;r^2 - z^2&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              or
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \beta = \arctan(z/\sqrt&#123;x_0^2 + y_0^2 - z^2&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              directly in terms of{" "}
+              <NoBreak>
+                <Math>
+                  $z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <Math>
+                $x_0$
+              </Math>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $y_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}since
+              {" "}
+              <NoBreak>
+                <Math>
+                  $r^2 = x_0^2 + y_0^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}so
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \alpha = 90^\circ + \arctan(z/\sqrt&#123;x_0^2 + y_0^2 - z^2&#125;) - \arctan(y_0/x_0)
+              $$
+              <ImageRight
+                src="/images/svg_ch5_ex_bomb_shelter_door_alpha_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              which constitutes our “general formula”.
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              From this point, we apply the general formula with
+              {" "}
+              <NoBreak>
+                <Math>
+                  $z = 66 - 18 = 44$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <NoBreak>
+                <Math>
+                  $(x_0, y_0) = (60, 30)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <NoBreak>
+                <Math>
+                  $(x_0, y_0) = (93, 30)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}and
+              {" "}
+              <NoBreak>
+                <Math>
+                  $(x_0, y_0) = (108, 22)$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_bomb_shelter_annotated.svg" />
+            <Pause />
+            <VerticalChunk>
+              The three values of{" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "}obtained, respectively,
+              are...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \alpha = 90^\circ + \arctan(48/\sqrt&#123;60^2 + 30^2 - 48^2&#125;) - \arctan(30/60) = 109.1225\ldots^\circ
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \alpha = 90^\circ + \arctan(48/\sqrt&#123;93^2 + 30^2 - 48^2&#125;) - \arctan(30/93) = 101.5410\ldots^\circ
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \alpha = 90^\circ + \arctan(48/\sqrt&#123;108^2 + 22^2 - 48^2&#125;) - \arctan(22/108) = 104.3033\ldots^\circ
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...being, namely, upper bounds on the amount of
+              rotation of the door caused by a putative contact of 
+              the big handle in open position with the wall, of the 
+              big handle in closed position with the wall, and of 
+              the small handle with the wall.
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              (By the way: don't be confused by the fact that 
+              {" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "}is not an angle measured “from
+              horizontal”;{" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "}is still the amount of rotation (aperture)
+              undergone by the door, as it measures the amount of rotation
+              of a specific point attached to the door!)
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              In particular, since
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              104.3033\ldots &lt; 109.1225\ldots
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              the big handle is not the limiting factor when
+              the big handle is in open position, at which point
+              the small handle is the limiting factor and prevents
+              the door from opening more than{" "}
+              <NoBreak>
+                <Math>
+                  $104^\circ$
+                </Math>
+                -and-some,
+              </NoBreak>
+              {" "}
+              whereas since
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              101.5410\ldots &lt; 104.3033\ldots
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              the big handle becomes the limiting factor when it
+              is in closed position, at which point the door can
+              only open to{" "}
+              <NoBreak>
+                <Math>
+                  $101^\circ$
+                </Math>
+                -and-some!
+              </NoBreak>
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={45}>
+          <VerticalChunk>
+            <b id="_723744824944">
+              Exercise 45.
+            </b>
+            {" "}
+            If a sphere is projected directly outward onto
+            a cylinder abutting the sphere at the equator, with each
+            point remaining at its height, as pictured in the 
+            sketch and in the visualization below, by what factor are
+            areas stretched as a function of the latitude{" "}
+            <NoBreak>
+              <Math>
+                $\theta$
+              </Math>
+              ?
+            </NoBreak>
+          </VerticalChunk>
+          <Pause />
+          <Image src="/images/svg_ch5_ex_horizontal_projection_sphere_statement.svg" />
+          <Pause />
+          <Solution solution_number={45}>
+            <VerticalChunk>
+              Areas are scaled by a factor of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec(\theta) \cdot \cos(\theta) = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              because latitudes (circles that slice the sphere
+              horizontally) are stretched by a factor of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec(\theta)
+              $$
+              <ImageRight
+                src="/images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by the projection, whereas longitudes (the other ones, 
+              perpendicular to latitudes) are locally stretched by
+              a factor of...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...as depicted in this...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...sketch, and because the 
+              overall scaling in area is the latitudinal
+              scaling factor times the longitudinal
+              scaling factor. (Area = width{" "}
+              <Math>
+                $\times$
+              </Math>
+              {" "}height,
+              so you take the factor by which “width” scales,
+              times the factor by which “height” scales—presuming
+              your old “width” and “height” are still at right 
+              angle to one another after the projection, which
+              is the case here: longitudes and latitudes, that
+              are perpendicular on the sphere, project to 
+              lines and circles, respectively, that are 
+              perpendicular on the cylinder.)
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={46}>
+          <VerticalChunk>
+            <b id="_536545359865">
+              Exercise 46.
+            </b>
+            {" "}
+            Rank the{" "}
+            <Math>
+              $7$
+            </Math>
+            {" "}slices of this
+            sphere with unit radius from the greatest to
+            smallest area slice:
+          </VerticalChunk>
+          <Pause />
+          <Image src="/images/svg_ch5_ex_pez_sphere_statement.svg" />
+          <Pause />
+          <Solution solution_number={46}>
+            <VerticalChunk>
+              The three slices of height{" "}
+              <Math>
+                $1/3$
+              </Math>
+              {" "}have the same
+              area, as do the four slices of height{" "}
+              <NoBreak>
+                <Math>
+                  $1/4$
+                </Math>
+                .
+              </NoBreak>
+              {" "}But
+              naturally, the slices of height{" "}
+              <Math>
+                $1/3$
+              </Math>
+              {" "}have larger
+              area than the slices of height{" "}
+              <NoBreak>
+                <Math>
+                  $1/4$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                This holds because each slice has the same area
+                as the horizontal projection of that slice onto a cylinder
+                hugging the sphere, by Exercise 46, and because
+                the area of a cylinder slice only depends on its
+                height.
+                <ImageRight src="/images/svg_ch5_ex_pez_sphere_cloud.svg" />
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The slices of height{" "}
+                <Math>
+                  $1/3$
+                </Math>
+                {" "}have area exactly
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;1/3 \over 1/4&#125; = 4/3 = 1.333...
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                times the area of the slices of height{" "}
+                <NoBreak>
+                  <Math>
+                    $1/4$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                given that the area of a slice is directly
+                proportional to its height.
+              </VerticalChunk>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={47}>
+          <VerticalChunk>
+            <b id="_809445733166">
+              Exercise 47.
+            </b>
+            {" "}
+            Give a formula for the area of a sphere of
+            radius{" "}
+            <NoBreak>
+              <Math>
+                $r$
+              </Math>
+              .
+            </NoBreak>
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={47}>
+            <VerticalChunk>
+              The area of a sphere of radius{" "}
+              <Math>
+                $r$
+              </Math>
+              {" "}is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              4\eta\rt&#123;0.05&#125;r\cdot 2r = 8\eta\rt&#123;0.05&#125;r^2
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              because it is the same as the area of a cylinder
+              of radius{" "}
+              <Math>
+                $r$
+              </Math>
+              {" "}and and height{" "}
+              <NoBreak>
+                <Math>
+                  $2r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}by Exercise 46:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_sphere_area.svg" />
+            <Pause />
+            <VerticalChunk>
+              (Namely,
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              4\eta\rt&#123;0.05&#125;r\cdot 2r
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is the product “circumference{" "}
+              <Math>
+                $\times$
+              </Math>
+              {" "}height”
+              that gives the area of the cylinder.)
+            </VerticalChunk>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={48}>
+          <VerticalChunk>
+            <b id="_892045983760">
+              Exercise 48.
+            </b>
+            {" "}
+            Similarly to Exercise 9, suggest a definition for
+            the product
           </VerticalChunk>
           <Pause />
           <MathBlock>
@@ -14643,7 +15403,7 @@ const Rest = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={43}>
+          <Solution solution_number={48}>
             <VerticalChunk>
               We define
             </VerticalChunk>
@@ -14754,8 +15514,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                style="background-color:rgb(226 232 240);"
-                src="/images/svg_ch5_ex_c_times_vector_box.svg" />
+                src="/images/svg_ch5_ex_c_times_vector_box.svg"
+                style="background-color:rgb(226 232 240)" />
             </SolutionNote>
           </Solution>
         </Exercise>

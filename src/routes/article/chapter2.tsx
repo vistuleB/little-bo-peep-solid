@@ -1552,7 +1552,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id="_97746769481">
+            <b id="_39556762333">
               Exercise 1.
             </b>
             {" "}
@@ -1647,7 +1647,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id="_289773278">
+            <b id="_4257732226">
               Exercise 2.
             </b>
             {" "}
@@ -1904,7 +1904,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id="_75958346734">
+            <b id="_62968342567">
               Exercise 3.
             </b>
             {" "}
@@ -2075,7 +2075,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id="_50139003281">
+            <b id="_47569007198">
               Exercise 4.
             </b>
             {" "}

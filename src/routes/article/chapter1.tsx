@@ -1424,7 +1424,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id="_80295469203">
+            <b id="_9580546674">
               Exercise 1.
             </b>
             {" "}
@@ -2609,7 +2609,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id="_738811287507">
+            <b id="_29301128823">
               Exercise 2.
             </b>
             {" "}
