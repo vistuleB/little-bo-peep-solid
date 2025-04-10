@@ -4006,7 +4006,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id="_354015054">
+            <b id="_205815704">
               Exercise 1.
             </b>
             {" "}
@@ -4104,7 +4104,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id="_9189282314">
+            <b id="_406728159">
               Exercise 2.
             </b>
             {" "}
@@ -4239,7 +4239,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id="_5943838704">
+            <b id="_3495835568">
               Exercise 3.
             </b>
             {" "}
@@ -4668,7 +4668,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id="_75712311749">
+            <b id="_6512231178">
               Exercise 4.
             </b>
             {" "}
@@ -4990,7 +4990,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id="_36414134339">
+            <b id="_83644131542">
               Exercise 5.
             </b>
             {" "}
@@ -5114,7 +5114,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id="_24544747738">
+            <b id="_17654742248">
               Exercise 6.
             </b>
             {" "}
@@ -5196,7 +5196,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id="_19165074112">
+            <b id="_9061507224">
               Exercise 7.
             </b>
             {" "}
@@ -5500,7 +5500,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id="_28596621225">
+            <b id="_46356627442">
               Exercise 8.
             </b>
             {" "}
@@ -5654,7 +5654,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id="_45997115409">
+            <b id="_4477118373">
               Exercise 9.
             </b>
             {" "}
@@ -6053,7 +6053,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id="_63268763583">
+            <b id="_478765490">
               Exercise 10.
             </b>
             {" "}
@@ -6434,7 +6434,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id="_574110312613">
+            <b id="_308710318767">
               Exercise 11.
             </b>
             {" "}
@@ -6556,7 +6556,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id="_278110748286">
+            <b id="_484610743198">
               Exercise 12.
             </b>
             {" "}
@@ -6640,7 +6640,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id="_165711128467">
+            <b id="_520611129119">
               Exercise 13.
             </b>
             {" "}
@@ -6757,7 +6757,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id="_747111663934">
+            <b id="_449311667846">
               Exercise 14.
             </b>
             {" "}
@@ -7247,7 +7247,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id="_262913241987">
+            <b id="_51913249628">
               Exercise 15.
             </b>
             {" "}
@@ -7490,7 +7490,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b id="_368114571945">
+            <b id="_730214574054">
               Exercise 16.
             </b>
             {" "}
@@ -8237,7 +8237,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b id="_150617123115">
+            <b id="_241617129906">
               Exercise 17.
             </b>
             {" "}
@@ -8322,7 +8322,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b id="_716717462361">
+            <b id="_11501746193">
               Exercise 18.
             </b>
             {" "}
@@ -8774,7 +8774,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b id="_733019272361">
+            <b id="_91391927767">
               Exercise 19.
             </b>
             {" "}
@@ -8846,7 +8846,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b id="_855019615861">
+            <b id="_399719612186">
               Exercise 20.
             </b>
             {" "}
@@ -8943,7 +8943,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b id="_816720093570">
+            <b id="_939420098002">
               Exercise 21.
             </b>
             {" "}
@@ -10103,7 +10103,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={22}>
           <VerticalChunk>
-            <b id="_819824833278">
+            <b id="_493624833792">
               Exercise 22.
             </b>
             {" "}
@@ -10196,7 +10196,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={23}>
           <VerticalChunk>
-            <b id="_24325198038">
+            <b id="_796725198077">
               Exercise 23.
             </b>
             {" "}
@@ -10386,7 +10386,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={24}>
           <VerticalChunk>
-            <b id="_313726018496">
+            <b id="_101226012627">
               Exercise 24.
             </b>
             {" "}
@@ -10514,7 +10514,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={25}>
           <VerticalChunk>
-            <b id="_320226581471">
+            <b id="_732626588740">
               Exercise 25.
             </b>
             {" "}
@@ -10587,7 +10587,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={26}>
           <VerticalChunk>
-            <b id="_211826948013">
+            <b id="_11622694813">
               Exercise 26.
             </b>
             {" "}
@@ -10794,7 +10794,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={27}>
           <VerticalChunk>
-            <b id="_498827833719">
+            <b id="_2927834861">
               Exercise 27.
             </b>
             {" "}
@@ -10901,7 +10901,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={28}>
           <VerticalChunk>
-            <b id="_795528276003">
+            <b id="_114328273207">
               Exercise 28.
             </b>
             {" "}
@@ -11174,7 +11174,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={29}>
           <VerticalChunk>
-            <b id="_127829112330">
+            <b id="_877829112844">
               Exercise 29.
             </b>
             {" "}
@@ -11607,7 +11607,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={30}>
           <VerticalChunk>
-            <b id="_840331122451">
+            <b id="_636831124653">
               Exercise 30.
             </b>
             {" "}
@@ -11992,7 +11992,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={31}>
           <VerticalChunk>
-            <b id="_222632734561">
+            <b id="_28232733935">
               Exercise 31.
             </b>
             {" "}
@@ -12069,7 +12069,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={32}>
           <VerticalChunk>
-            <b id="_167433148864">
+            <b id="_958233148111">
               Exercise 32.
             </b>
             {" "}
@@ -12151,7 +12151,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={33}>
           <VerticalChunk>
-            <b id="_580833357465">
+            <b id="_86733352492">
               Exercise 33.
             </b>
             {" "}
@@ -12447,7 +12447,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={34}>
           <VerticalChunk>
-            <b id="_275634477250">
+            <b id="_997934477405">
               Exercise 34.
             </b>
             {" "}
@@ -12983,7 +12983,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={35}>
           <VerticalChunk>
-            <b id="_84663605590">
+            <b id="_91323605492">
               Exercise 35.
             </b>
             {" "}
@@ -13201,7 +13201,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={36}>
           <VerticalChunk>
-            <b id="_369436862356">
+            <b id="_184436869893">
               Exercise 36.
             </b>
             {" "}
@@ -13353,7 +13353,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={37}>
           <VerticalChunk>
-            <b id="_13137606141">
+            <b id="_208337607975">
               Exercise 37.
             </b>
             {" "}
@@ -13551,7 +13551,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={38}>
           <VerticalChunk>
-            <b id="_611838586668">
+            <b id="_298538589398">
               Exercise 38.
             </b>
             {" "}
@@ -13890,7 +13890,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={39}>
           <VerticalChunk>
-            <b id="_844839764119">
+            <b id="_16593976584">
               Exercise 39.
             </b>
             {" "}
@@ -14165,7 +14165,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={40}>
           <VerticalChunk>
-            <b id="_934840635282">
+            <b id="_651540639249">
               Exercise 40.
             </b>
             {" "}
@@ -14384,7 +14384,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={41}>
           <VerticalChunk>
-            <b id="_112841267961">
+            <b id="_885141263824">
               Exercise 41.
             </b>
             {" "}
@@ -14477,8 +14477,146 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={42}>
           <VerticalChunk>
-            <b id="_989841686253">
+            <b id="_204241685443">
               Exercise 42.
+            </b>
+            {" "}
+            Compute the vertical distance from{" "}
+            <Math>
+              $A$
+            </Math>
+            {" "}to{" "}
+            <Math>
+              $A'$
+            </Math>
+            {" "}
+            from the following set of blueprints for a shed with 
+            an angled inside wall (all distances in inches):
+          </VerticalChunk>
+          <Pause />
+          <Image src="/images/svg_ch5_ex_floorplan.svg" />
+          <Pause />
+          <Solution solution_number={42}>
+            <VerticalChunk>
+              We will compute the two green lengths, then the
+              red length, then the blue length, then add 130:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_floorplan_soln1.svg" />
+            <Pause />
+            <VerticalChunk>
+              Proceeding, the longer and smaller green lengths
+              are{" "}
+              <Math>
+                $112\rt&#123;0.1&#125; \cdot \sin(25.5^\circ\hlfbk)$
+              </Math>
+              {" "}
+              and{" "}
+              <Math>
+                $8\rt&#123;0.1&#125; \cdot \cos(25.5^\circ\hlfbk)$
+              </Math>
+              {" "}inches, 
+              respectively:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_floorplan_soln2.svg" />
+            <Pause />
+            <VerticalChunk>
+              The red length is therefore
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+              &\,\,268 - 8 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk) \\
+              \up&#123;1.6&#125; =&\,\,260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (inches) while the blue length is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (inches) and the final answer is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              130 + \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              inches, which comes out to
+              <ImageLeft src="/images/svg_ch5_ex_floorplan_computation_cloud.svg" />
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              212.65
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              minus some. (Approximating to{" "}
+              <NoBreak>
+                <Math>
+                  $1/100$
+                </Math>
+                -th
+              </NoBreak>
+              {" "}of an inch 
+              should be good enough for a construction site.)
+            </VerticalChunk>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Note that...
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(25.5^\circ) = 0.90258\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin(25.5^\circ) = 0.43051\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \tan(22^\circ) = 0.40402\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...and if you are not finding these values, then make sure
+                that your calculator is in “degree mode”. 
+                (Otherwise you have to manually 
+                convert the arguments to radians.)
+              </VerticalChunk>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={43}>
+          <VerticalChunk>
+            <b id="_7342424636">
+              Exercise 43.
             </b>
             {" "}
             Similarly to Exercise 9, suggest a
@@ -14505,7 +14643,7 @@ const Rest = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={42}>
+          <Solution solution_number={43}>
             <VerticalChunk>
               We define
             </VerticalChunk>

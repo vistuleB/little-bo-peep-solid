@@ -51,7 +51,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
           ["MathBlock", "VerticalChunk"],
         ),
       ),
-      dn.unwrap_tags(["WriterlyBlankLine"]),
+      dn.unwrap(["WriterlyBlankLine"]),
       dn.remove_empty_text_nodes(),
       dn.rename_when_child_of([
         #("VerticalChunk", "Item", "List"),
@@ -89,14 +89,14 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // misc *******************
       // ************************
       dn.wrap_math_with_no_break(),
-      dn.unwrap_tags_if_single_child(["NoBreak"]),
+      dn.unwrap_when_single_child(["NoBreak"]),
       dn.counters_substitute_and_assign_handles(),
       dn.handles_generate_ids(),
       dn.define_article_output_path(#("Chapter", "/article/chapter", "path")),
       dn.define_article_output_path(#("Bootcamp", "/article/bootcamp", "path")),
       dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
       dn.handles_substitute([#("class", "exercise-link")]),
-      dn.unwrap_tags(["GrandWrapper"]),
+      dn.unwrap(["GrandWrapper"]),
 
       dn.concatenate_text_nodes(),
       // ************************
@@ -104,7 +104,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
-      dn.unwrap_tags_if_descendants_of([#("VerticalChunk", ["td", "li"])]),
+      dn.unwrap_when_descendant_of([#("VerticalChunk", ["td", "li"])]),
       dn.remove_empty_chunks(),
       // ************************
       // ImageLeft, ImageRight parent-finding
@@ -123,7 +123,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("ul", "ImageRight"),
         #("ul", "ImageLeft"),
       ]),
-      dn.add_attribute_to_if_child_of_but_no_overwrites([
+      dn.add_attribute_when_child_of([
         #(
           "ImageRight",
           "MathBlock",
