@@ -1754,25 +1754,27 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <VerticalChunk>
-            <b id="_973915527">
-              Exercise 1.
-            </b>
-            {" "}
-            Sketch the derivative of a function with the
-            following graph (what{" "}
-            <i>
-              looks
-            </i>
-            {" "}like a sharp
-            corner{" "}
-            <i>
-              is
-            </i>
-            {" "}a sharp corner):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_slope_one_half_see_saw.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_66061432">
+                Exercise 1.
+              </b>
+              {" "}
+              Sketch the derivative of a function with the
+              following graph (what{" "}
+              <i>
+                looks
+              </i>
+              {" "}like a sharp
+              corner{" "}
+              <i>
+                is
+              </i>
+              {" "}a sharp corner):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_slope_one_half_see_saw.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
@@ -1811,32 +1813,34 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <VerticalChunk>
-            <b id="_1316219778">
-              Exercise 2.
-            </b>
-            {" "}
-            Would the derivative of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y = &#123;1\over x&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            be a very large negative number, or a very
-            large positive number, near{" "}
-            <NoBreak>
-              <Math>
-                $x = 0$
-              </Math>
-              ?
-            </NoBreak>
-            {" "}Or would
-            it depend on which side of 0 you are?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_2242214773">
+                Exercise 2.
+              </b>
+              {" "}
+              Would the derivative of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = &#123;1\over x&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              be a very large negative number, or a very
+              large positive number, near{" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ?
+              </NoBreak>
+              {" "}Or would
+              it depend on which side of 0 you are?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
@@ -1864,21 +1868,23 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={3}>
-          <VerticalChunk>
-            <b id="_9126441765">
-              Exercise 3.
-            </b>
-            {" "}
-            Sketch the
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            second
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            derivative of the graph in Exercise 1.
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_2582444559">
+                Exercise 3.
+              </b>
+              {" "}
+              Sketch the
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              second
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              derivative of the graph in Exercise 1.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
@@ -1910,37 +1916,39 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <VerticalChunk>
-            <b id="_1634744266">
-              Exercise 4.
-            </b>
-            {" "}
-            If we pretend that the graph of Exercise 1
-            depicts the{" "}
-            <del>
-              distance that a car has traveled
-              as a function of time,
-            </del>
-            &ensp;position of a car as a function of 
-            time, with hours (hr) on the{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -axis
-            </NoBreak>
-            {" "}
-            and kilometers (km) on the{" "}
-            <NoBreak>
-              <Math>
-                $y$
-              </Math>
-              -axis,
-            </NoBreak>
-            {" "}what
-            do the units become on the axes of the first
-            and second derivatives?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_9957746047">
+                Exercise 4.
+              </b>
+              {" "}
+              If we pretend that the graph of Exercise 1
+              depicts the{" "}
+              <del>
+                distance that a car has traveled
+                as a function of time,
+              </del>
+              &ensp;position of a car as a function of 
+              time, with hours (hr) on the{" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "}
+              and kilometers (km) on the{" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -axis,
+              </NoBreak>
+              {" "}what
+              do the units become on the axes of the first
+              and second derivatives?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
@@ -2006,20 +2014,22 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
-          <VerticalChunk>
-            <b id="_2537129556">
-              Exercise 5.
-            </b>
-            {" "}
-            Is the following equation correct, incorrect,
-            or nonsensical?
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (x \ra x + 1) \,+\, (u \ra 2u + 1) \,=\, (t \ra 3t + 2)
-            $$
-          </MathBlock>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_31491295717">
+                Exercise 5.
+              </b>
+              {" "}
+              Is the following equation correct, incorrect,
+              or nonsensical?
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra x + 1) \,+\, (u \ra 2u + 1) \,=\, (t \ra 3t + 2)
+              $$
+            </MathBlock>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
@@ -2202,16 +2212,18 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={6}>
-          <VerticalChunk>
-            <b id="_67562163932">
-              Exercise 6.
-            </b>
-            {" "}
-            Complete the missing units for each strip
-            below, based on those units that are given:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_missing_units.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_82112161605">
+                Exercise 6.
+              </b>
+              {" "}
+              Complete the missing units for each strip
+              below, based on those units that are given:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_missing_units.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
@@ -2327,39 +2339,41 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={7}>
-          <VerticalChunk>
-            <b id="_15282668934">
-              Exercise 7.
-            </b>
-            {" "}
-            Among the functions below, which is the
-            zeroth, first, and second derivative? 
-            (I.e., which is{" "}
-            <NoBreak>
-              <Math>
-                $f$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $f'$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and{" "}
-            <NoBreak>
-              <Math>
-                $f''$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            assuming that relationship exists.)
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_ex_position_by_time_find_the_order.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_12082669782">
+                Exercise 7.
+              </b>
+              {" "}
+              Among the functions below, which is the
+              zeroth, first, and second derivative? 
+              (I.e., which is{" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $f'$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $f''$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              assuming that relationship exists.)
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_ex_position_by_time_find_the_order.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
@@ -2451,41 +2465,43 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <VerticalChunk>
-            <b id="_36033154130">
-              Exercise 8.
-            </b>
-            {" "}
-            Given these graphs...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_sketch_the_middle_a.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...what can you say about{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_55133153856">
+                Exercise 8.
+              </b>
+              {" "}
+              Given these graphs...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_sketch_the_middle_a.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...what can you say about{" "}
+              <NoBreak>
+                <Math>
+                  $g'(x)$
+                </Math>
+                ?
+              </NoBreak>
+              {" "}
+              (Produce the best sketch of{" "}
               <Math>
                 $g'(x)$
               </Math>
-              ?
-            </NoBreak>
-            {" "}
-            (Produce the best sketch of{" "}
-            <Math>
-              $g'(x)$
-            </Math>
-            {" "}that
-            you can, taking into account all the
-            information above.) (Don't get us wrong:
-            You don't{" "}
-            <i>
-              need
-            </i>
-            {" "}the second derivative
-            to sketch the first derivative, but if
-            you're a human and not a machine, it can
-            help!)
-          </VerticalChunk>
+              {" "}that
+              you can, taking into account all the
+              information above.) (Don't get us wrong:
+              You don't{" "}
+              <i>
+                need
+              </i>
+              {" "}the second derivative
+              to sketch the first derivative, but if
+              you're a human and not a machine, it can
+              help!)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
@@ -2610,27 +2626,29 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={9}>
-          <VerticalChunk>
-            <b id="_65493734058">
-              Exercise 9.
-            </b>
-            {" "}
-            Given these graphs...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_sketch_the_middle_b.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...sketch{" "}
-            <NoBreak>
-              <Math>
-                $y = h'(x)$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}analogously to
-            Exercise 10.
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_21973732132">
+                Exercise 9.
+              </b>
+              {" "}
+              Given these graphs...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_sketch_the_middle_b.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...sketch{" "}
+              <NoBreak>
+                <Math>
+                  $y = h'(x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}analogously to
+              Exercise 10.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
@@ -2895,40 +2913,42 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <VerticalChunk>
-            <b id="_86404813584">
-              Exercise 10.
-            </b>
-            {" "}
-            If you scale the graph of a function{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}
-            vertically by a factor{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_74144819140">
+                Exercise 10.
+              </b>
+              {" "}
+              If you scale the graph of a function{" "}
               <Math>
-                $2$
+                $f$
               </Math>
-              —i.e.,
-            </NoBreak>
-            {" "}multiply
-            each output by{" "}
-            <NoBreak>
-              <Math>
-                $2$
-              </Math>
-              —is
-            </NoBreak>
-            {" "}the derivative 
-            also scaled by{" "}
-            <NoBreak>
-              <Math>
-                $2$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}
+              vertically by a factor{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                —i.e.,
+              </NoBreak>
+              {" "}multiply
+              each output by{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                —is
+              </NoBreak>
+              {" "}the derivative 
+              also scaled by{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
@@ -2988,25 +3008,27 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={11}>
-          <VerticalChunk>
-            <b id="_50465135281">
-              Exercise 11.
-            </b>
-            {" "}
-            Where is the rate of change of the function
-            below, on the part shown, greatest? And
-            where is the
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            rate of change of the rate of change
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            greatest?
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_narrow_and_less_narrow_bends.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_3665132369">
+                Exercise 11.
+              </b>
+              {" "}
+              Where is the rate of change of the function
+              below, on the part shown, greatest? And
+              where is the
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              rate of change of the rate of change
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              greatest?
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_narrow_and_less_narrow_bends.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
@@ -3041,16 +3063,18 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={12}>
-          <VerticalChunk>
-            <b id="_2816550386">
-              Exercise 12.
-            </b>
-            {" "}
-            In the following graph, which curve might 
-            be a derivative of which other curve?
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_cosine_curves.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_755550127">
+                Exercise 12.
+              </b>
+              {" "}
+              In the following graph, which curve might 
+              be a derivative of which other curve?
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_cosine_curves.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
@@ -3615,100 +3639,102 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={13}>
-          <VerticalChunk>
-            <b id="_330515649">
-              Exercise 13.
-            </b>
-            {" "}
-            Apply the definition
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            fg = (u \ra f(u)g(u))
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            of function multiplication
-            in order to show that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (fg)h = f(gh)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for all functions{" "}
-            <NoBreak>
-              <Math>
-                $f, g, h : \rr \ra \rr$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            or, namely, to show that
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            {" "}{" "}
-            <NoBreak>
-              (
-              <Math>
-                $f$
-              </Math>
-            </NoBreak>
-            {" "}times{" "}
-            <NoBreak>
-              <Math>
-                $g$
-              </Math>
-              )
-            </NoBreak>
-            {" "}times{" "}
-            <Math>
-              $h$
-            </Math>
-            {" "}{" "}
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            equals
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            {" "}{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}times{" "}
-            <NoBreak>
-              (
-              <Math>
-                $g$
-              </Math>
-            </NoBreak>
-            {" "}times{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_256318465">
+                Exercise 13.
+              </b>
+              {" "}
+              Apply the definition
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              fg = (u \ra f(u)g(u))
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              of function multiplication
+              in order to show that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (fg)h = f(gh)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for all functions{" "}
+              <NoBreak>
+                <Math>
+                  $f, g, h : \rr \ra \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              or, namely, to show that
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              {" "}{" "}
+              <NoBreak>
+                (
+                <Math>
+                  $f$
+                </Math>
+              </NoBreak>
+              {" "}times{" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                )
+              </NoBreak>
+              {" "}times{" "}
               <Math>
                 $h$
               </Math>
-              )
-            </NoBreak>
-            {" "}{" "}
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            for all functions{" "}
-            <NoBreak>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              equals
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              {" "}{" "}
               <Math>
-                $f, g, h : \rr \ra \rr$
+                $f$
               </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+              {" "}times{" "}
+              <NoBreak>
+                (
+                <Math>
+                  $g$
+                </Math>
+              </NoBreak>
+              {" "}times{" "}
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                )
+              </NoBreak>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              for all functions{" "}
+              <NoBreak>
+                <Math>
+                  $f, g, h : \rr \ra \rr$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
@@ -3933,69 +3959,71 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <VerticalChunk>
-            <b id="_98751459921">
-              Exercise 14.
-            </b>
-            {" "}
-            Prove that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f + g = g + f
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            fg = gf
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for all{" "}
-            <NoBreak>
-              <Math>
-                $f, g : \rr \ra \rr$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}using the fact that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            a + b = b + a
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            ab = ba
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for all{" "}
-            <NoBreak>
-              <Math>
-                $a, b \in \rr$
-              </Math>
-              .
-            </NoBreak>
-            {" "}
-            (Prove something for functions by using the
-            corresponding fact for numbers, namely.)
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_56531455043">
+                Exercise 14.
+              </b>
+              {" "}
+              Prove that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f + g = g + f
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              fg = gf
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for all{" "}
+              <NoBreak>
+                <Math>
+                  $f, g : \rr \ra \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}using the fact that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              a + b = b + a
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              ab = ba
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for all{" "}
+              <NoBreak>
+                <Math>
+                  $a, b \in \rr$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (Prove something for functions by using the
+              corresponding fact for numbers, namely.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
@@ -4180,63 +4208,65 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
-          <VerticalChunk>
-            <b id="_86152589761">
-              Exercise 15.
-            </b>
-            {" "}
-            A rat is running a fundraising race. The function
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large f : \rr \ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            gives the amount raised as a function of position;
-            specifically,{" "}
-            <Math>
-              $&#123;f(x)&#125;$
-            </Math>
-            {" "}is the total number of 
-            $'s earned by virtue of running 
-            {" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}meters from the start of the race; 
-            a second function
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large g : \rr \ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            gives the position of the rat as a function of time;
-            specifically,{" "}
-            <Math>
-              $&#123;g(t)&#125;$
-            </Math>
-            {" "}is the position from the start,
-            in meters, reached by the rat at{" "}
-            <Math>
-              $t$
-            </Math>
-            {" "}seconds after the
-            start of the race.
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            In this case, what does{" "}
-            <Math>
-              $f \circ g$
-            </Math>
-            {" "}compute?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_92622587306">
+                Exercise 15.
+              </b>
+              {" "}
+              A rat is running a fundraising race. The function
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large f : \rr \ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              gives the amount raised as a function of position;
+              specifically,{" "}
+              <Math>
+                $&#123;f(x)&#125;$
+              </Math>
+              {" "}is the total number of 
+              $'s earned by virtue of running 
+              {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}meters from the start of the race; 
+              a second function
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large g : \rr \ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              gives the position of the rat as a function of time;
+              specifically,{" "}
+              <Math>
+                $&#123;g(t)&#125;$
+              </Math>
+              {" "}is the position from the start,
+              in meters, reached by the rat at{" "}
+              <Math>
+                $t$
+              </Math>
+              {" "}seconds after the
+              start of the race.
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              In this case, what does{" "}
+              <Math>
+                $f \circ g$
+              </Math>
+              {" "}compute?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={15}>
             <VerticalChunk>
@@ -4427,18 +4457,20 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={16}>
-          <VerticalChunk>
-            <b id="_34283583795">
-              Exercise 16.
-            </b>
-            {" "}
-            What does{" "}
-            <Math>
-              $(f \circ g)'$
-            </Math>
-            {" "}compute,
-            keeping the same setup as in Exercise 34?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_46383585295">
+                Exercise 16.
+              </b>
+              {" "}
+              What does{" "}
+              <Math>
+                $(f \circ g)'$
+              </Math>
+              {" "}compute,
+              keeping the same setup as in Exercise 34?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={16}>
             <VerticalChunk>
@@ -4496,37 +4528,39 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={17}>
-          <VerticalChunk>
-            <b id="_65543804040">
-              Exercise 17.
-            </b>
-            {" "}
-            Continuing with the fundraising rat as in the 
-            previous two exercises, assume that the functions
-            {" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}have these graphs:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_f_g_actual_exercise_f.svg" />
-          <Pause />
-          <Image src="/images/svg_ch4_f_g_actual_exercise_g.svg" />
-          <Pause />
-          <VerticalChunk>
-            In this case what is{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_28723808835">
+                Exercise 17.
+              </b>
+              {" "}
+              Continuing with the fundraising rat as in the 
+              previous two exercises, assume that the functions
+              {" "}
               <Math>
-                $(f \circ g)'(2)$
+                $f$
               </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}and{" "}
+              <Math>
+                $g$
+              </Math>
+              {" "}have these graphs:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_f_g_actual_exercise_f.svg" />
+            <Pause />
+            <Image src="/images/svg_ch4_f_g_actual_exercise_g.svg" />
+            <Pause />
+            <VerticalChunk>
+              In this case what is{" "}
+              <NoBreak>
+                <Math>
+                  $(f \circ g)'(2)$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={17}>
             <VerticalChunk>
@@ -4706,48 +4740,50 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <VerticalChunk>
-            <b id="_62674632155">
-              Exercise 18.
-            </b>
-            {" "}
-            Conjecture a general formula for{" "}
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (f \circ g)'(t)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for arbitrary (differentiable, say) functions
-            {" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_15774637673">
+                Exercise 18.
+              </b>
+              {" "}
+              Conjecture a general formula for{" "}
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (f \circ g)'(t)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for arbitrary (differentiable, say) functions
+              {" "}
+              <NoBreak>
+                <Math>
+                  $f, g : \rr \ra \rr$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(If it helps, interpret{" "}
               <Math>
-                $f, g : \rr \ra \rr$
+                $f$
               </Math>
-              .
-            </NoBreak>
-            {" "}(If it helps, interpret{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}
-            and{" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}exactly as in the scenario of the fundraising
-            race,{" "}
-            <NoBreak>
-              cf
+              {" "}
+              and{" "}
               <Math>
-                $.$
+                $g$
               </Math>
-            </NoBreak>
-            {" "}Exercises 34-37.)
-          </VerticalChunk>
+              {" "}exactly as in the scenario of the fundraising
+              race,{" "}
+              <NoBreak>
+                cf
+                <Math>
+                  $.$
+                </Math>
+              </NoBreak>
+              {" "}Exercises 34-37.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={18}>
             <VerticalChunk>
@@ -4931,41 +4967,43 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={19}>
-          <VerticalChunk>
-            <b id="_81615224153">
-              Exercise 19.
-            </b>
-            {" "}
-            Sketch the velocity vector of a particle
-            going at three times unit speed (“speed{" "}
-            <NoBreak>
-              <Math>
-                $3$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}in common
-            parlance) clockwise around a circle of radius{" "}
-            <NoBreak>
-              <Math>
-                $2$
-              </Math>
-              .
-            </NoBreak>
-            {" "}
-            What path does the velocity vector describe 
-            over time? (I.e., if you cut-paste the velocity
-            vector back to the origin, so that its “tail” 
-            is at{" "}
-            <NoBreak>
-              <Math>
-                $(0, 0)$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}what curve does the far end of the
-            vector describe?) Over how much time?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_43685225283">
+                Exercise 19.
+              </b>
+              {" "}
+              Sketch the velocity vector of a particle
+              going at three times unit speed (“speed{" "}
+              <NoBreak>
+                <Math>
+                  $3$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}in common
+              parlance) clockwise around a circle of radius{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              What path does the velocity vector describe 
+              over time? (I.e., if you cut-paste the velocity
+              vector back to the origin, so that its “tail” 
+              is at{" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}what curve does the far end of the
+              vector describe?) Over how much time?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={19}>
             <VerticalChunk>
@@ -5049,22 +5087,24 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={20}>
-          <VerticalChunk>
-            <b id="_79515712205">
-              Exercise 20.
-            </b>
-            {" "}
-            What is the
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            acceleration vector
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            (velocity vector of the velocity vector)
-            of the particle from Exercise 39?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_47225718095">
+                Exercise 20.
+              </b>
+              {" "}
+              What is the
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              acceleration vector
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              (velocity vector of the velocity vector)
+              of the particle from Exercise 39?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={20}>
             <VerticalChunk>
@@ -5132,26 +5172,28 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={21}>
-          <VerticalChunk>
-            <b id="_65946139526">
-              Exercise 21.
-            </b>
-            {" "}
-            Sketch the velocity vector, acceleration vector,
-            and jerk vector of a particle going around a circle
-            of radius{" "}
-            <Math>
-              $3$
-            </Math>
-            {" "}at speed{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_16806138802">
+                Exercise 21.
+              </b>
+              {" "}
+              Sketch the velocity vector, acceleration vector,
+              and jerk vector of a particle going around a circle
+              of radius{" "}
               <Math>
-                $2$
+                $3$
               </Math>
-              .
-            </NoBreak>
-            {" "}(Clockwise, say.)
-          </VerticalChunk>
+              {" "}at speed{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(Clockwise, say.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={21}>
             <VerticalChunk>
@@ -5282,33 +5324,35 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={22}>
-          <VerticalChunk>
-            <b id="_4256845503">
-              Exercise 22.
-            </b>
-            {" "}
-            Sketch the velocity vector, acceleration vector,
-            and jerk vector of a particle going around a circle
-            of radius{" "}
-            <Math>
-              $r$
-            </Math>
-            {" "}at speed{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_70706842495">
+                Exercise 22.
+              </b>
+              {" "}
+              Sketch the velocity vector, acceleration vector,
+              and jerk vector of a particle going around a circle
+              of radius{" "}
               <Math>
-                $v$
+                $r$
               </Math>
-              .
-            </NoBreak>
-            {" "}
-            (You can assume say{" "}
-            <Math>
-              $v/r \approx 1.2$
-            </Math>
-            {" "}for the sake
-            of your sketch.) Give algebraic expressions for the 
-            lengths of the various vectors.
-          </VerticalChunk>
+              {" "}at speed{" "}
+              <NoBreak>
+                <Math>
+                  $v$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (You can assume say{" "}
+              <Math>
+                $v/r \approx 1.2$
+              </Math>
+              {" "}for the sake
+              of your sketch.) Give algebraic expressions for the 
+              lengths of the various vectors.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={22}>
             <VerticalChunk>
@@ -5777,45 +5821,47 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={23}>
-          <VerticalChunk>
-            <b id="_7921882810">
-              Exercise 23.
-            </b>
-            {" "}
-            Four particles are moving at speed{" "}
-            <Math>
-              $3$
-            </Math>
-            {" "}
-            around a circle of radius{" "}
-            <Math>
-              $3$
-            </Math>
-            {" "}centered at{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_88208829283">
+                Exercise 23.
+              </b>
+              {" "}
+              Four particles are moving at speed{" "}
               <Math>
-                $(0, 0)$
+                $3$
               </Math>
-              ,
-            </NoBreak>
-            {" "}
-            spaced out by{" "}
-            <NoBreak>
+              {" "}
+              around a circle of radius{" "}
               <Math>
-                $90^\circ$
+                $3$
               </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_ex_four_particles_radius_3.svg" />
-          <Pause />
-          <VerticalChunk>
-            Sketch the position vector, velocity vector,
-            acceleration vector, and jerk vector of each 
-            particle. What is the angular velocity of each 
-            particle?
-          </VerticalChunk>
+              {" "}centered at{" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              spaced out by{" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_ex_four_particles_radius_3.svg" />
+            <Pause />
+            <VerticalChunk>
+              Sketch the position vector, velocity vector,
+              acceleration vector, and jerk vector of each 
+              particle. What is the angular velocity of each 
+              particle?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={23}>
             <VerticalChunk>
@@ -5884,15 +5930,17 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={24}>
-          <VerticalChunk>
-            <b id="_72259242736">
-              Exercise 24.
-            </b>
-            {" "}
-            What are the dimensions of angular velocity?
-            (For example, the dimensions of velocity are
-            “length over time”, ([L/T]).)
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_6831924590">
+                Exercise 24.
+              </b>
+              {" "}
+              What are the dimensions of angular velocity?
+              (For example, the dimensions of velocity are
+              “length over time”, ([L/T]).)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={24}>
             <VerticalChunk>
@@ -5965,41 +6013,43 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={25}>
-          <VerticalChunk>
-            <b id="_31909673063">
-              Exercise 25.
-            </b>
-            {" "}
-            Imagine a single particle in a one-dimensional
-            world, whose velocity equals its position; at{" "}
-            <NoBreak>
-              <Math>
-                $t = 0$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            the particle is sitting at{" "}
-            <NoBreak>
-              <Math>
-                $x = 1$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_ex_one_particle_at_1.svg" />
-          <Pause />
-          <VerticalChunk>
-            If we play time backward, will the particle 
-            ever reach{" "}
-            <NoBreak>
-              <Math>
-                $x = 0$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_12859675256">
+                Exercise 25.
+              </b>
+              {" "}
+              Imagine a single particle in a one-dimensional
+              world, whose velocity equals its position; at{" "}
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              the particle is sitting at{" "}
+              <NoBreak>
+                <Math>
+                  $x = 1$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_ex_one_particle_at_1.svg" />
+            <Pause />
+            <VerticalChunk>
+              If we play time backward, will the particle 
+              ever reach{" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={25}>
             <VerticalChunk>
@@ -6237,58 +6287,60 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={26}>
-          <VerticalChunk>
-            <b id="_803310861391">
-              Exercise 26.
-            </b>
-            {" "}
-            Take a system of two particles on the real
-            line; at time{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_240210864271">
+                Exercise 26.
+              </b>
+              {" "}
+              Take a system of two particles on the real
+              line; at time{" "}
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}the first particle (yellow)
+              is at{" "}
+              <NoBreak>
+                <Math>
+                  $x = -1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}while the second one (blue)
+              is at{" "}
+              <NoBreak>
+                <Math>
+                  $x = 1$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_three_one_dimensional_particles.svg" />
+            <Pause />
+            <VerticalChunk>
+              If the velocity of the yellow particle is set to track
+              the position of the blue particle and vice-versa, 
+              give a qualitative sketch of the
+              position-as-a-function-of-time (time on the{" "}
               <Math>
-                $t = 0$
+                $x$
               </Math>
-              ,
-            </NoBreak>
-            {" "}the first particle (yellow)
-            is at{" "}
-            <NoBreak>
+              {" "}
+              axis, position on the{" "}
               <Math>
-                $x = -1$
+                $y$
               </Math>
-              ,
-            </NoBreak>
-            {" "}while the second one (blue)
-            is at{" "}
-            <NoBreak>
-              <Math>
-                $x = 1$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_three_one_dimensional_particles.svg" />
-          <Pause />
-          <VerticalChunk>
-            If the velocity of the yellow particle is set to track
-            the position of the blue particle and vice-versa, 
-            give a qualitative sketch of the
-            position-as-a-function-of-time (time on the{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}
-            axis, position on the{" "}
-            <Math>
-              $y$
-            </Math>
-            {" "}axis) of the two 
-            particles. If we add also the graph of the position
-            of the red particle from Exercise 41 to this set of
-            graphs, what symmetries
-            exist altogether between the three graphs?
-          </VerticalChunk>
+              {" "}axis) of the two 
+              particles. If we add also the graph of the position
+              of the red particle from Exercise 41 to this set of
+              graphs, what symmetries
+              exist altogether between the three graphs?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={26}>
             <VerticalChunk>
@@ -6450,54 +6502,56 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={27}>
-          <VerticalChunk>
-            <b id="_186019515">
-              Exercise 27.
-            </b>
-            {" "}
-            Four particles are placed 
-            at intervals of{" "}
-            <Math>
-              $90^\circ$
-            </Math>
-            {" "}
-            around a circle of radius{" "}
-            <Math>
-              $1$
-            </Math>
-            {" "}
-            centered at{" "}
-            <Math>
-              $(2, 4)$
-            </Math>
-            {" "}in the plane:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_circle_at_2_4.svg" />
-          <Pause />
-          <VerticalChunk>
-            The velocity of each particle is set to 
-            the position of the next particle clockwise
-            around the circle, with this relationship
-            maintained at all points in time.
-            If the configuration above shows time 
-            {" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_84612444">
+                Exercise 27.
+              </b>
+              {" "}
+              Four particles are placed 
+              at intervals of{" "}
               <Math>
-                $t = 0$
+                $90^\circ$
               </Math>
-              ,
-            </NoBreak>
-            {" "}how will the positions of the
-            particles evolve? Discuss both positive and 
-            negative values of{" "}
-            <NoBreak>
+              {" "}
+              around a circle of radius{" "}
               <Math>
-                $t$
+                $1$
               </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+              {" "}
+              centered at{" "}
+              <Math>
+                $(2, 4)$
+              </Math>
+              {" "}in the plane:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_circle_at_2_4.svg" />
+            <Pause />
+            <VerticalChunk>
+              The velocity of each particle is set to 
+              the position of the next particle clockwise
+              around the circle, with this relationship
+              maintained at all points in time.
+              If the configuration above shows time 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}how will the positions of the
+              particles evolve? Discuss both positive and 
+              negative values of{" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={27}>
             <VerticalChunk>
@@ -8278,38 +8332,40 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={28}>
-          <VerticalChunk>
-            <b id="_803816073">
-              Exercise 28.
-            </b>
-            {" "}
-            Find a nonzero function{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}and a nonzero
-            constant{" "}
-            <Math>
-              $a \in \rr$
-            </Math>
-            {" "}such that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f'(x) = f(x + a)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for all{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_630219365">
+                Exercise 28.
+              </b>
+              {" "}
+              Find a nonzero function{" "}
               <Math>
-                $x$
+                $f$
               </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+              {" "}and a nonzero
+              constant{" "}
+              <Math>
+                $a \in \rr$
+              </Math>
+              {" "}such that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f'(x) = f(x + a)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for all{" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={28}>
             <VerticalChunk>
@@ -8397,54 +8453,56 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={29}>
-          <VerticalChunk>
-            <b id="_2856569262">
-              Exercise 29.
-            </b>
-            {" "}
-            Express the...
-          </VerticalChunk>
-          <TextParent>
-            <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-              <li>
-                associativity of function composition
-              </li>
-              <li>
-                associativity of function multiplication
-              </li>
-              <li>
-                associativity of function addition
-              </li>
-              <li>
-                commutativity of function multiplication
-              </li>
-              <li>
-                commutativity of function addition
-              </li>
-            </ul>
+          <ExerciseStatement>
             <VerticalChunk>
-              ...as well as the...
+              <b id="_6497563823">
+                Exercise 29.
+              </b>
+              {" "}
+              Express the...
             </VerticalChunk>
-          </TextParent>
-          <TextParent>
-            <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-              <li>
-                associativity of real number multiplication
-              </li>
-              <li>
-                associativity of real number addition
-              </li>
-              <li>
-                commutativity of real number multiplication
-              </li>
-              <li>
-                commutativity of real number addition
-              </li>
-            </ul>
-          </TextParent>
-          <VerticalChunk>
-            ...in the form of self-contained, formal statements.
-          </VerticalChunk>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+                <li>
+                  associativity of function composition
+                </li>
+                <li>
+                  associativity of function multiplication
+                </li>
+                <li>
+                  associativity of function addition
+                </li>
+                <li>
+                  commutativity of function multiplication
+                </li>
+                <li>
+                  commutativity of function addition
+                </li>
+              </ul>
+              <VerticalChunk>
+                ...as well as the...
+              </VerticalChunk>
+            </TextParent>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+                <li>
+                  associativity of real number multiplication
+                </li>
+                <li>
+                  associativity of real number addition
+                </li>
+                <li>
+                  commutativity of real number multiplication
+                </li>
+                <li>
+                  commutativity of real number addition
+                </li>
+              </ul>
+            </TextParent>
+            <VerticalChunk>
+              ...in the form of self-contained, formal statements.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={29}>
             <VerticalChunk>
@@ -8667,47 +8725,49 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={30}>
-          <VerticalChunk>
-            <b id="_13518133">
-              Exercise 30.
-            </b>
-            {" "}
-            How can we generate the following set of
-            curves by rotating points around a circle,
-            and tracking their{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_446116698">
+                Exercise 30.
+              </b>
+              {" "}
+              How can we generate the following set of
+              curves by rotating points around a circle,
+              and tracking their{" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinates?
+              </NoBreak>
+              {" "}(This
+              graph is an exact{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                &#x200b;
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $x$
+                $\times$
               </Math>
-              -coordinates?
-            </NoBreak>
-            {" "}(This
-            graph is an exact{" "}
-            <NoBreak>
-              <Math>
-                $2$
-              </Math>
-              &#x200b;
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $\times$
-            </Math>
-            {" "}[“two
-            x”] vertical dilation of the graph in Exercise
-            12.) Should we use a circle of radius{" "}
-            <NoBreak>
-              <Math>
-                $2$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            or make the points go twice as fast? Or both?
-            Or something else yet?
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_scaled_cosine_curves.svg" />
+              {" "}[“two
+              x”] vertical dilation of the graph in Exercise
+              12.) Should we use a circle of radius{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              or make the points go twice as fast? Or both?
+              Or something else yet?
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_scaled_cosine_curves.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={30}>
             <VerticalChunk>
@@ -8766,114 +8826,116 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={31}>
-          <VerticalChunk>
-            <b id="_2326488661">
-              Exercise 31.
-            </b>
-            {" "}
-            Exercise 12 exhibits a function{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_980486082">
+                Exercise 31.
+              </b>
+              {" "}
+              Exercise 12 exhibits a function{" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                —in
+              </NoBreak>
+              {" "}fact,
+              four different functions{" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                —such
+              </NoBreak>
+              {" "}that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f' \ne f
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f'' \ne f
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f''' \ne f
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              but
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;(4)&#125; = f
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              surprise, surprise! Can you do the same with
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $5$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}instead of{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $4$
+                </Math>
+                ”?
+              </NoBreak>
+              {" "}I.e., find a function
+              {" "}
               <Math>
                 $f$
               </Math>
-              —in
-            </NoBreak>
-            {" "}fact,
-            four different functions{" "}
-            <NoBreak>
+              {" "}such that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;(n)&#125; \ne f
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for{" "}
               <Math>
-                $f$
+                $n = 1, 2, 3, 4$
               </Math>
-              —such
-            </NoBreak>
-            {" "}that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f' \ne f
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f'' \ne f
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f''' \ne f
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            but
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f^&#123;(4)&#125; = f
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            surprise, surprise! Can you do the same with
-            {" "}
-            <NoBreak>
-              “
-              <Math>
-                $5$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}instead of{" "}
-            <NoBreak>
-              “
-              <Math>
-                $4$
-              </Math>
-              ”?
-            </NoBreak>
-            {" "}I.e., find a function
-            {" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}such that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f^&#123;(n)&#125; \ne f
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for{" "}
-            <Math>
-              $n = 1, 2, 3, 4$
-            </Math>
-            {" "}but
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f^&#123;(5)&#125; = f
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...?
-          </VerticalChunk>
+              {" "}but
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;(5)&#125; = f
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={31}>
             <VerticalChunk>
@@ -9593,47 +9655,49 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={32}>
-          <VerticalChunk>
-            <b id="_22583746324">
-              Exercise 32.
-            </b>
-            {" "}
-            If we seek a function{" "}
-            <Math>
-              $f : \rr \ra \rr$
-            </Math>
-            {" "}
-            such that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f^&#123;(17)&#125; = f
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and such that{" "}
-            <Math>
-              $f \ne 0$
-            </Math>
-            {" "}(or:{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_20483748741">
+                Exercise 32.
+              </b>
+              {" "}
+              If we seek a function{" "}
               <Math>
-                $f \ne (x \ra 0)$
+                $f : \rr \ra \rr$
               </Math>
-              ,
-            </NoBreak>
-            {" "}
-            pedantically) and such that{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}grows relatively
-            slowly in either the positive or negative direction
-            of the number line, insofar as such things are 
-            concerned, what would our options be?
-          </VerticalChunk>
+              {" "}
+              such that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;(17)&#125; = f
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and such that{" "}
+              <Math>
+                $f \ne 0$
+              </Math>
+              {" "}(or:{" "}
+              <NoBreak>
+                <Math>
+                  $f \ne (x \ra 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              pedantically) and such that{" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}grows relatively
+              slowly in either the positive or negative direction
+              of the number line, insofar as such things are 
+              concerned, what would our options be?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={32}>
             <VerticalChunk>
@@ -10022,32 +10086,34 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={33}>
-          <VerticalChunk>
-            <b id="_98336122410">
-              Exercise 33.
-            </b>
-            {" "}
-            Add elements to the following drawing...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_newton_quotient_unfinished.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...such that it becomes a “complete”
-            illustration of this here algebraic 
-            expression...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(x+h) - f(x) \over h&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...and reveal the “geometric meaning” of
-            the expression, if any.
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_20196125927">
+                Exercise 33.
+              </b>
+              {" "}
+              Add elements to the following drawing...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_newton_quotient_unfinished.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...such that it becomes a “complete”
+              illustration of this here algebraic 
+              expression...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f(x+h) - f(x) \over h&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...and reveal the “geometric meaning” of
+              the expression, if any.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={33}>
             <VerticalChunk>
@@ -10226,289 +10292,291 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={34}>
-          <VerticalChunk>
-            <b id="_57097055464">
-              Exercise 34.
-            </b>
-            {" "}
-            In this exercise we consider two points
-            in time{" "}
-            <Math>
-              $t_0$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $t_0 + \Delta&#123;&#125;t$
-            </Math>
-            {" "}(here
-            {" "}
-            <NoBreak>
-              “
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              ”,
-            </NoBreak>
-            {" "}read “delta{" "}
-            <NoBreak>
-              <Math>
-                $t$
-              </Math>
-              ”,
-            </NoBreak>
-            {" "}is a
-            standard notation for a small amount of
-            time):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_RATS_timeline.svg" />
-          <Pause />
-          <VerticalChunk>
-            We also consider quantities{" "}
-            <Math>
-              $A$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}
-            that are changing with time;{" "}
-            <Math>
-              $A$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}
-            have some value at{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_68527053334">
+                Exercise 34.
+              </b>
+              {" "}
+              In this exercise we consider two points
+              in time{" "}
               <Math>
                 $t_0$
               </Math>
-              ,
-            </NoBreak>
-            {" "}and, say, grow
-            to be larger at{" "}
-            <NoBreak>
+              {" "}and{" "}
               <Math>
                 $t_0 + \Delta&#123;&#125;t$
               </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_RATS_timeline_with_A_B.svg" />
-          <Pause />
-          <VerticalChunk>
-            More specifically, we are interested in
-            the change in the value of the product
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large AB
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            over said course of time.
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            To introduce an unsolicited metaphor,
-            imagine{" "}
-            <Math>
-              $A$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}as
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_RATS_rats.svg" />
-          <Pause />
-          <VerticalChunk>
-            that are crossing a hallway surveyed by
-            a cat. One side of the hallway is time
-            {" "}
-            <NoBreak>
+              {" "}(here
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\Delta&#123;&#125;t$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "}read “delta{" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "}is a
+              standard notation for a small amount of
+              time):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_RATS_timeline.svg" />
+            <Pause />
+            <VerticalChunk>
+              We also consider quantities{" "}
               <Math>
-                $t_0$
+                $A$
               </Math>
-              ,
-            </NoBreak>
-            {" "}the other side of the hallway is
-            time{" "}
-            <NoBreak>
-              <Math>
-                $t_0 + \Delta&#123;&#125;t$
-              </Math>
-              .
-            </NoBreak>
-            {" "}So great is their
-            terror that{" "}
-            <Math>
-              $A$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}have decided to 
-            scurry across the hallway one at a time.
-            First{" "}
-            <Math>
-              $A$
-            </Math>
-            {" "}will go, then{" "}
-            <NoBreak>
+              {" "}and{" "}
               <Math>
                 $B$
               </Math>
-              .
-            </NoBreak>
-            {" "}In so, we 
-            can separate the following moments of 
-            interest (“moments” that exist inside the
-            metaphorical timeline of the story, not
-            on the{" "}
-            <NoBreak>
+              {" "}
+              that are changing with time;{" "}
               <Math>
-                $t$
+                $A$
               </Math>
-              -number
-            </NoBreak>
-            {" "}line, to be clear):
-            <ImageLeft
-              src="/images/svg_ch4_RATS_corridor_cloud.svg"
-              offset_y="-0.5em"
-              offset_x="0.5em" />
-          </VerticalChunk>
-          <TextParent>
-            <ol style="margin:0 1.5em 0.5em 2em;list-style:auto;list-style-position:outside;">
-              <li style="margin-top:0.5em">
-                when{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}and{" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "}are both still at{" "}
+              {" "}and{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}
+              have some value at{" "}
+              <NoBreak>
                 <Math>
                   $t_0$
                 </Math>
-              </li>
-              <li style="margin-top:0.5em">
-                when{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}has made it to{" "}
-                <NoBreak>
-                  <Math>
-                    $t_0 + \Delta&#123;&#125;t$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                and{" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "}is still at{" "}
-                <Math>
-                  $t_0$
-                </Math>
-              </li>
-              <li style="margin-top:0.5em">
-                <del>
-                  when{" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    's
-                  </NoBreak>
-                  {" "}tail is sticking out of the
-                  cat's mouth, and
-                </del>
-                &ensp;when{" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "}and{" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "}have both made it
-                to{" "}
+                ,
+              </NoBreak>
+              {" "}and, say, grow
+              to be larger at{" "}
+              <NoBreak>
                 <Math>
                   $t_0 + \Delta&#123;&#125;t$
                 </Math>
-              </li>
-            </ol>
-          </TextParent>
-          <VerticalChunk>
-            Correspondingly, the product
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large AB
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            changes in two increments: first as{" "}
-            <Math>
-              $A$
-            </Math>
-            {" "}
-            makes it to the other side of the hallway
-            (and{" "}
-            <Math>
-              $A$
-            </Math>
-            {" "}grows bigger); then as{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}joins
-            him/her (and{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}grows bigger). In an
-            equation:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_RATS_equation.svg" />
-          <Pause />
-          <VerticalChunk>
-            If we divide the above equation by{" "}
-            <Math>
-              $\Delta&#123;&#125;t$
-            </Math>
-            {" "}
-            and let{" "}
-            <Math>
-              $\Delta&#123;&#125;t$
-            </Math>
-            {" "}drop to{" "}
-            <NoBreak>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_RATS_timeline_with_A_B.svg" />
+            <Pause />
+            <VerticalChunk>
+              More specifically, we are interested in
+              the change in the value of the product
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large AB
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              over said course of time.
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              To introduce an unsolicited metaphor,
+              imagine{" "}
               <Math>
-                $0$
+                $A$
               </Math>
-              ,
-            </NoBreak>
-            {" "}what does
-            each term become?
-          </VerticalChunk>
+              {" "}and{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}as
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_RATS_rats.svg" />
+            <Pause />
+            <VerticalChunk>
+              that are crossing a hallway surveyed by
+              a cat. One side of the hallway is time
+              {" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}the other side of the hallway is
+              time{" "}
+              <NoBreak>
+                <Math>
+                  $t_0 + \Delta&#123;&#125;t$
+                </Math>
+                .
+              </NoBreak>
+              {" "}So great is their
+              terror that{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}and{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}have decided to 
+              scurry across the hallway one at a time.
+              First{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}will go, then{" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                .
+              </NoBreak>
+              {" "}In so, we 
+              can separate the following moments of 
+              interest (“moments” that exist inside the
+              metaphorical timeline of the story, not
+              on the{" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                -number
+              </NoBreak>
+              {" "}line, to be clear):
+              <ImageLeft
+                src="/images/svg_ch4_RATS_corridor_cloud.svg"
+                offset_y="-0.5em"
+                offset_x="0.5em" />
+            </VerticalChunk>
+            <TextParent>
+              <ol style="margin:0 1.5em 0.5em 2em;list-style:auto;list-style-position:outside;">
+                <li style="margin-top:0.5em">
+                  when{" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "}and{" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "}are both still at{" "}
+                  <Math>
+                    $t_0$
+                  </Math>
+                </li>
+                <li style="margin-top:0.5em">
+                  when{" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "}has made it to{" "}
+                  <NoBreak>
+                    <Math>
+                      $t_0 + \Delta&#123;&#125;t$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "}
+                  and{" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "}is still at{" "}
+                  <Math>
+                    $t_0$
+                  </Math>
+                </li>
+                <li style="margin-top:0.5em">
+                  <del>
+                    when{" "}
+                    <NoBreak>
+                      <Math>
+                        $B$
+                      </Math>
+                      's
+                    </NoBreak>
+                    {" "}tail is sticking out of the
+                    cat's mouth, and
+                  </del>
+                  &ensp;when{" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "}and{" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "}have both made it
+                  to{" "}
+                  <Math>
+                    $t_0 + \Delta&#123;&#125;t$
+                  </Math>
+                </li>
+              </ol>
+            </TextParent>
+            <VerticalChunk>
+              Correspondingly, the product
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large AB
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              changes in two increments: first as{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}
+              makes it to the other side of the hallway
+              (and{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}grows bigger); then as{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}joins
+              him/her (and{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}grows bigger). In an
+              equation:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_RATS_equation.svg" />
+            <Pause />
+            <VerticalChunk>
+              If we divide the above equation by{" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "}
+              and let{" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "}drop to{" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}what does
+              each term become?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={34}>
             <VerticalChunk>
@@ -11069,44 +11137,46 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={35}>
-          <VerticalChunk>
-            <b id="_824110008619">
-              Exercise 35.
-            </b>
-            {" "}
-            The identity
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (f + g)' = f' + g'
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            happens to be true for differentiable
-            functions{" "}
-            <NoBreak>
-              <Math>
-                $f$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $g$
-              </Math>
-              .
-            </NoBreak>
-            {" "}What English-language
-            aphorism can summarize it? (This identity
-            is known as the{" "}
-            <i>
-              sum rule
-            </i>
-            , by the way.)
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_7761000555">
+                Exercise 35.
+              </b>
+              {" "}
+              The identity
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (f + g)' = f' + g'
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              happens to be true for differentiable
+              functions{" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                .
+              </NoBreak>
+              {" "}What English-language
+              aphorism can summarize it? (This identity
+              is known as the{" "}
+              <i>
+                sum rule
+              </i>
+              , by the way.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={35}>
             <VerticalChunk>
@@ -11142,15 +11212,17 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={36}>
-          <VerticalChunk>
-            <b id="_99951033749">
-              Exercise 36.
-            </b>
-            {" "}
-            If we rewrite the “product rule” of Exercise
-            17 in the same terse style as the “sum rule”
-            of Exercise 19, what do we obtain?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_727410338206">
+                Exercise 36.
+              </b>
+              {" "}
+              If we rewrite the “product rule” of Exercise
+              17 in the same terse style as the “sum rule”
+              of Exercise 19, what do we obtain?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={36}>
             <VerticalChunk>
@@ -11287,52 +11359,54 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={37}>
-          <VerticalChunk>
-            <b id="_391610978429">
-              Exercise 37.
-            </b>
-            {" "}
-            If the identities
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (f + g)' = f' + g'
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (fg)' = f'g + fg'
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for differentiable{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_104210974953">
+                Exercise 37.
+              </b>
+              {" "}
+              If the identities
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (f + g)' = f' + g'
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (fg)' = f'g + fg'
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for differentiable{" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $f$
+                $g$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}are deemed 
-            “differentiation formulas”, then what is a
-            third “differentiation formula”{" "}
-            <i>
-              already 
-              encountered
-            </i>
-            {" "}(in possibly disguised form) prior 
-            to this point?
-          </VerticalChunk>
+              {" "}are deemed 
+              “differentiation formulas”, then what is a
+              third “differentiation formula”{" "}
+              <i>
+                already 
+                encountered
+              </i>
+              {" "}(in possibly disguised form) prior 
+              to this point?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={37}>
             <VerticalChunk>
@@ -11415,82 +11489,84 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={38}>
-          <VerticalChunk>
-            <b id="_811011425238">
-              Exercise 38.
-            </b>
-            {" "}
-            The solution to the previous exercise
-            erroneously assumes that the product of a
-            constant and a function has been defined. It
-            has not! Keeping in mind that the{" "}
-            <i>
-              sum
-            </i>
-            {" "}
-            of two functions{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_190811421598">
+                Exercise 38.
+              </b>
+              {" "}
+              The solution to the previous exercise
+              erroneously assumes that the product of a
+              constant and a function has been defined. It
+              has not! Keeping in mind that the{" "}
+              <i>
+                sum
+              </i>
+              {" "}
+              of two functions{" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $f$
+                $g: \rr \ra \rr$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $g: \rr \ra \rr$
-            </Math>
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f + g
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is defined by the equation
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f + g = (x \ra f(x) + g(x))
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            while their composition is defined by
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f \circ g = (x \ra f(g(x)))
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and so on, what is the similar, most logical
-            definition for
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            cf
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            where{" "}
-            <Math>
-              $c \in \rr$
-            </Math>
-            {" "}and{" "}
-            <NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f + g
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is defined by the equation
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f + g = (x \ra f(x) + g(x))
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              while their composition is defined by
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ g = (x \ra f(g(x)))
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and so on, what is the similar, most logical
+              definition for
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              cf
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              where{" "}
               <Math>
-                $f : \rr \ra \rr$
+                $c \in \rr$
               </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $f : \rr \ra \rr$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={38}>
             <VerticalChunk>
@@ -11593,100 +11669,102 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={39}>
-          <VerticalChunk>
-            <b id="_840812232425">
-              Exercise 39.
-            </b>
-            {" "}
-            The definition
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f + g = (x \ra f(x) + f(x))
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for a sum of functions{" "}
-            <Math>
-              $f, g : \rr \ra \rr$
-            </Math>
-            {" "}
-            can also be written
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (f + g)(x) = f(x) + g(x)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            in the sense that either of these equations tells
-            you how{" "}
-            <Math>
-              $f + g$
-            </Math>
-            {" "}acts on an arbitrary input. (Which
-            is what you need to do, to define a function. A
-            slight subtlety is that the definition
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f + g = (x \ra f(x) + f(x))
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            announces more clearly via its notation that 
-            {" "}
-            <NoBreak>
-              “
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_294912234464">
+                Exercise 39.
+              </b>
+              {" "}
+              The definition
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f + g = (x \ra f(x) + f(x))
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for a sum of functions{" "}
+              <Math>
+                $f, g : \rr \ra \rr$
+              </Math>
+              {" "}
+              can also be written
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (f + g)(x) = f(x) + g(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              in the sense that either of these equations tells
+              you how{" "}
               <Math>
                 $f + g$
               </Math>
-              ”
-            </NoBreak>
-            {" "}{" "}
-            <i>
-              is a function
-            </i>
-            {" "}and not some other
-            object, like a number, but this is a minor point.)
-            Rewrite the definitions of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f \circ g
-            $$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$
-            fg
-            $$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$
-            f/g
-            $$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$
-            f - g
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            in the style of the second equation. For extra
-            credit: use a different symbol each time to denote
-            the input.
-          </VerticalChunk>
+              {" "}acts on an arbitrary input. (Which
+              is what you need to do, to define a function. A
+              slight subtlety is that the definition
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f + g = (x \ra f(x) + f(x))
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              announces more clearly via its notation that 
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $f + g$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}{" "}
+              <i>
+                is a function
+              </i>
+              {" "}and not some other
+              object, like a number, but this is a minor point.)
+              Rewrite the definitions of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ g
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              fg
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f/g
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f - g
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              in the style of the second equation. For extra
+              credit: use a different symbol each time to denote
+              the input.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={39}>
             <VerticalChunk>
@@ -11725,52 +11803,54 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={40}>
-          <VerticalChunk>
-            <b id="_95721291372">
-              Exercise 40.
-            </b>
-            {" "}
-            What does...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
-            $$
-            <ImageRight
-              src="/images/svg_ch4_big_product_parchment_cloud.svg"
-              compensate_offset_x_for_large_text_columns={true} />
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...approach as{" "}
-            <Math>
-              $h$
-            </Math>
-            {" "}goes to{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_280412919505">
+                Exercise 40.
+              </b>
+              {" "}
+              What does...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
+              $$
+              <ImageRight
+                src="/images/svg_ch4_big_product_parchment_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true} />
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...approach as{" "}
               <Math>
-                $0$
+                $h$
               </Math>
-              ,
-            </NoBreak>
-            {" "}if{" "}
-            <Math>
-              $A_1, \dots, A_n$
-            </Math>
-            {" "}
-            {" "}
-            <Math>
-              $: \rr \ra \rr$
-            </Math>
-            {" "}are differentiable at the point{" "}
-            <NoBreak>
+              {" "}goes to{" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}if{" "}
               <Math>
-                $t_0$
+                $A_1, \dots, A_n$
               </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}
+              {" "}
+              <Math>
+                $: \rr \ra \rr$
+              </Math>
+              {" "}are differentiable at the point{" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={40}>
             <VerticalChunk>
@@ -12051,34 +12131,36 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={41}>
-          <VerticalChunk>
-            <b id="_448814011152">
-              Exercise 41.
-            </b>
-            {" "}
-            The function below is also the red
-            curve from Exercise 12, known as the
-            {" "}
-            <i>
-              cosine function
-            </i>
-            {" "}(already encountered
-            in Chapter 3, Exercise 7). Knowing that
-            this function is the{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -coordinate
-            </NoBreak>
-            {" "}of a
-            point rotating at unit speed around a unit
-            circle, find, by inspection of the graph,
-            a rational approximation to the circumference
-            of a unit circle.
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_cosine_for_eta.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_462014017281">
+                Exercise 41.
+              </b>
+              {" "}
+              The function below is also the red
+              curve from Exercise 12, known as the
+              {" "}
+              <i>
+                cosine function
+              </i>
+              {" "}(already encountered
+              in Chapter 3, Exercise 7). Knowing that
+              this function is the{" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "}of a
+              point rotating at unit speed around a unit
+              circle, find, by inspection of the graph,
+              a rational approximation to the circumference
+              of a unit circle.
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_cosine_for_eta.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={41}>
             <VerticalChunk>
@@ -12240,70 +12322,72 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <VerticalChunk>
-            <b id="_37715018675">
-              Exercise 42.
-            </b>
-            {" "}
-            The graphs below are the horizontal and
-            vertical velocities...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_pacman1_hor0.svg">
-            <ImageLeft
-              src="/images/svg_ch4_pacman1_x_prime_t_scloud.svg"
-              offset_y="1em" />
-          </Image>
-          <Pause />
-          <Image src="/images/svg_ch4_pacman1_ver0.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...of PACMAN, with unit of
-            distance of one “cell”, or “c”—the distance 
-            between two food pellets—and units of velocity 
-            of “cells per second”, or “c/s”—also,
-            {" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -coordinates
-            </NoBreak>
-            {" "}increase towards the right, 
-            and{" "}
-            <NoBreak>
-              <Math>
-                $y$
-              </Math>
-              -coordinates
-            </NoBreak>
-            {" "}increase towards the top:
-          </VerticalChunk>
-          <Pause />
-          <Image
-            src="/images/svg_ch4_pacman1_maze.svg"
-            height="590px" />
-          <Pause />
-          <VerticalChunk>
-            Where is Pacman at{" "}
-            <NoBreak>
-              <Math>
-                $t = 49$
-              </Math>
-              s?
-            </NoBreak>
-            {" "}(Note: Pacman 
-            is NOT assumed to be anywhere in particular at 
-            {" "}
-            <NoBreak>
-              <Math>
-                $t = 40$
-              </Math>
-              s—you
-            </NoBreak>
-            {" "}have to figure that out from the 
-            data!)
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_577415012716">
+                Exercise 42.
+              </b>
+              {" "}
+              The graphs below are the horizontal and
+              vertical velocities...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_pacman1_hor0.svg">
+              <ImageLeft
+                src="/images/svg_ch4_pacman1_x_prime_t_scloud.svg"
+                offset_y="1em" />
+            </Image>
+            <Pause />
+            <Image src="/images/svg_ch4_pacman1_ver0.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...of PACMAN, with unit of
+              distance of one “cell”, or “c”—the distance 
+              between two food pellets—and units of velocity 
+              of “cells per second”, or “c/s”—also,
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinates
+              </NoBreak>
+              {" "}increase towards the right, 
+              and{" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinates
+              </NoBreak>
+              {" "}increase towards the top:
+            </VerticalChunk>
+            <Pause />
+            <Image
+              src="/images/svg_ch4_pacman1_maze.svg"
+              height="590px" />
+            <Pause />
+            <VerticalChunk>
+              Where is Pacman at{" "}
+              <NoBreak>
+                <Math>
+                  $t = 49$
+                </Math>
+                s?
+              </NoBreak>
+              {" "}(Note: Pacman 
+              is NOT assumed to be anywhere in particular at 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $t = 40$
+                </Math>
+                s—you
+              </NoBreak>
+              {" "}have to figure that out from the 
+              data!)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={42}>
             <VerticalChunk>
@@ -12816,36 +12900,38 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={43}>
-          <VerticalChunk>
-            <b id="_892918535365">
-              Exercise 43.
-            </b>
-            {" "}
-            Same question, but for the following maze...
-          </VerticalChunk>
-          <Pause />
-          <Image
-            src="/images/svg_ch4_pacman2_maze.svg"
-            height="551px" />
-          <Pause />
-          <VerticalChunk>
-            ...and for the following velocity data, with the 
-            horizontal and vertical velocities
-            superimposed on one graph (just a cosmetic 
-            change—note that green is the vertical velocity)...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_pacman2_frankenstein.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...and asking for Pacman's position at{" "}
-            <NoBreak>
-              <Math>
-                $t = 34$
-              </Math>
-              s.
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_570818533001">
+                Exercise 43.
+              </b>
+              {" "}
+              Same question, but for the following maze...
+            </VerticalChunk>
+            <Pause />
+            <Image
+              src="/images/svg_ch4_pacman2_maze.svg"
+              height="551px" />
+            <Pause />
+            <VerticalChunk>
+              ...and for the following velocity data, with the 
+              horizontal and vertical velocities
+              superimposed on one graph (just a cosmetic 
+              change—note that green is the vertical velocity)...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_pacman2_frankenstein.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...and asking for Pacman's position at{" "}
+              <NoBreak>
+                <Math>
+                  $t = 34$
+                </Math>
+                s.
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={43}>
             <VerticalChunk>
@@ -13487,16 +13573,18 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={44}>
-          <VerticalChunk>
-            <b id="_11582163352">
-              Exercise 44.
-            </b>
-            {" "}
-            Describe what a function might look like
-            if its second derivative has this graph (broadly):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_one_long_line.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_558921631587">
+                Exercise 44.
+              </b>
+              {" "}
+              Describe what a function might look like
+              if its second derivative has this graph (broadly):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch4_one_long_line.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={44}>
             <VerticalChunk>

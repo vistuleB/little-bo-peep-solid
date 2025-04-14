@@ -4005,41 +4005,43 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <VerticalChunk>
-            <b id="_46719943">
-              Exercise 1.
-            </b>
-            {" "}
-            Is
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y =  \cos(x + 0.1)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            the shift of{" "}
-            <Math>
-              $y = \cos(x)$
-            </Math>
-            {" "}to the left by{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_305215265">
+                Exercise 1.
+              </b>
+              {" "}
+              Is
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y =  \cos(x + 0.1)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              the shift of{" "}
               <Math>
-                $0.1$
+                $y = \cos(x)$
               </Math>
-              ,
-            </NoBreak>
-            {" "}
-            or to the right by{" "}
-            <NoBreak>
-              <Math>
-                $0.1$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}to the left by{" "}
+              <NoBreak>
+                <Math>
+                  $0.1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              or to the right by{" "}
+              <NoBreak>
+                <Math>
+                  $0.1$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
@@ -4103,15 +4105,17 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <VerticalChunk>
-            <b id="_9831287871">
-              Exercise 2.
-            </b>
-            {" "}
-            Guesstimate a function with this graph:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_9679288511">
+                Exercise 2.
+              </b>
+              {" "}
+              Guesstimate a function with this graph:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
@@ -4238,19 +4242,21 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={3}>
-          <VerticalChunk>
-            <b id="_5077838679">
-              Exercise 3.
-            </b>
-            {" "}
-            Guesstimate a function with this graph (we can
-            tell you that the large-scale curve is a
-            parabola):
-          </VerticalChunk>
-          <Pause />
-          <Image
-            src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
-            style="margin-top:0.8em;margin-bottom:1em;" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_1323838291">
+                Exercise 3.
+              </b>
+              {" "}
+              Guesstimate a function with this graph (we can
+              tell you that the large-scale curve is a
+              parabola):
+            </VerticalChunk>
+            <Pause />
+            <Image
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
+              style="margin-top:0.8em;margin-bottom:1em;" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
@@ -4667,15 +4673,17 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <VerticalChunk>
-            <b id="_6908231349">
-              Exercise 4.
-            </b>
-            {" "}
-            Guesstimate a function with this graph:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_big_wave.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_66892316850">
+                Exercise 4.
+              </b>
+              {" "}
+              Guesstimate a function with this graph:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_big_wave.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
@@ -4989,51 +4997,53 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
-          <VerticalChunk>
-            <b id="_33584131312">
-              Exercise 5.
-            </b>
-            {" "}
-            Which function is most plausibly associated to
-            which graph?
-          </VerticalChunk>
-          <Pause />
-          <table
-            style="border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;"
-            class="slice">
-            <colgroup>
-              <col width={200} />
-              <col width={200} />
-            </colgroup>
-            <tbody>
-              <tr style="border-bottom:1px solid black;">
-                <td style="padding:0.5em 0;border-right:1px solid black">
-                  <Math>
-                    $x \ra \sin x \cdot \cos x$
-                  </Math>
-                </td>
-                <td style="padding:0.5em 0;">
-                  <Math>
-                    $x \ra \cos^2(x)$
-                  </Math>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:0.5em 0;border-right:1px solid black">
-                  <Math>
-                    $x \ra \sin^2(x)$
-                  </Math>
-                </td>
-                <td style="padding:0.5em 0;">
-                  <Math>
-                    $x \ra \sin x + \cos x$
-                  </Math>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_four_graphs.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_29414132774">
+                Exercise 5.
+              </b>
+              {" "}
+              Which function is most plausibly associated to
+              which graph?
+            </VerticalChunk>
+            <Pause />
+            <table
+              style="border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;"
+              class="slice">
+              <colgroup>
+                <col width={200} />
+                <col width={200} />
+              </colgroup>
+              <tbody>
+                <tr style="border-bottom:1px solid black;">
+                  <td style="padding:0.5em 0;border-right:1px solid black">
+                    <Math>
+                      $x \ra \sin x \cdot \cos x$
+                    </Math>
+                  </td>
+                  <td style="padding:0.5em 0;">
+                    <Math>
+                      $x \ra \cos^2(x)$
+                    </Math>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:0.5em 0;border-right:1px solid black">
+                    <Math>
+                      $x \ra \sin^2(x)$
+                    </Math>
+                  </td>
+                  <td style="padding:0.5em 0;">
+                    <Math>
+                      $x \ra \sin x + \cos x$
+                    </Math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_four_graphs.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
@@ -5113,14 +5123,16 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={6}>
-          <VerticalChunk>
-            <b id="_44254743278">
-              Exercise 6.
-            </b>
-            {" "}
-            Is the pythagorean identity apparent in the
-            graphs of the previous exercise?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_31004745802">
+                Exercise 6.
+              </b>
+              {" "}
+              Is the pythagorean identity apparent in the
+              graphs of the previous exercise?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
@@ -5195,22 +5207,24 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={7}>
-          <VerticalChunk>
-            <b id="_88295079653">
-              Exercise 7.
-            </b>
-            {" "}
-            Compute the ratio{" "}
-            <Math>
-              $A/B$
-            </Math>
-            {" "}assuming all same-colored
-            triangles are similar, with the help of a calculator:
-          </VerticalChunk>
-          <Pause />
-          <Image
-            src="/images/svg_ch5_ex_big_snail.svg"
-            style="width:500px;margin-top:1em;margin-bottom:1em;" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_79365076444">
+                Exercise 7.
+              </b>
+              {" "}
+              Compute the ratio{" "}
+              <Math>
+                $A/B$
+              </Math>
+              {" "}assuming all same-colored
+              triangles are similar, with the help of a calculator:
+            </VerticalChunk>
+            <Pause />
+            <Image
+              src="/images/svg_ch5_ex_big_snail.svg"
+              style="width:500px;margin-top:1em;margin-bottom:1em;" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
@@ -5499,62 +5513,64 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <VerticalChunk>
-            <b id="_23556623944">
-              Exercise 8.
-            </b>
-            {" "}
-            In the drawing below the oval is a circle of
-            radius{" "}
-            <Math>
-              $r$
-            </Math>
-            {" "}and the angle{" "}
-            <Math>
-              $\phi$
-            </Math>
-            {" "}is in “standard
-            position”, meaning that it opens counterclockwise
-            for a positive angle from the direction of the
-            positive{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis. What are the coordinates
-            of{" "}
-            <Math>
-              $P$
-            </Math>
-            {" "}in terms of{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_5126623147">
+                Exercise 8.
+              </b>
+              {" "}
+              In the drawing below the oval is a circle of
+              radius{" "}
               <Math>
                 $r$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $x_0$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $y_0$
-            </Math>
-            {" "}and{" "}
-            <NoBreak>
+              {" "}and the angle{" "}
               <Math>
                 $\phi$
               </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image
-            src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg"
-            style="margin-top:1em;margin-bottom:0.5em;" />
+              {" "}is in “standard
+              position”, meaning that it opens counterclockwise
+              for a positive angle from the direction of the
+              positive{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}axis. What are the coordinates
+              of{" "}
+              <Math>
+                $P$
+              </Math>
+              {" "}in terms of{" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $x_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <Math>
+                $y_0$
+              </Math>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $\phi$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image
+              src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg"
+              style="margin-top:1em;margin-bottom:0.5em;" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
@@ -5653,34 +5669,36 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={9}>
-          <VerticalChunk>
-            <b id="_4387113290">
-              Exercise 9.
-            </b>
-            {" "}
-            If a
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            vector
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            is{" "}
-            <i>
-              a pair of numbers
-            </i>
-            {" "}(in 2D), suggest a 
-            definition for the
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            sum
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            of two vectors. (The most logical definition wins.)
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_64687114713">
+                Exercise 9.
+              </b>
+              {" "}
+              If a
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              vector
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              is{" "}
+              <i>
+                a pair of numbers
+              </i>
+              {" "}(in 2D), suggest a 
+              definition for the
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              sum
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              of two vectors. (The most logical definition wins.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
@@ -6052,68 +6070,70 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <VerticalChunk>
-            <b id="_97278764524">
-              Exercise 10.
-            </b>
-            {" "}
-            If a particle in{" "}
-            <Math>
-              $\rr^2$
-            </Math>
-            {" "}(= “in the plane”)
-            has{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_14418769458">
+                Exercise 10.
+              </b>
+              {" "}
+              If a particle in{" "}
               <Math>
-                $x$
+                $\rr^2$
               </Math>
-              -coordinate
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            A\cdot\cos(Bt + C) + D
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            at time{" "}
-            <Math>
-              $t$
-            </Math>
-            {" "}what is the most likely motion
-            that the particle is undergoing? In that 
-            case, what is the geometric meaning of the
-            constants{" "}
-            <NoBreak>
+              {" "}(= “in the plane”)
+              has{" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              A\cdot\cos(Bt + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              at time{" "}
               <Math>
-                $A$
+                $t$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $B$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $C$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $D$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}what is the most likely motion
+              that the particle is undergoing? In that 
+              case, what is the geometric meaning of the
+              constants{" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $C$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $D$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
@@ -6433,21 +6453,23 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={11}>
-          <VerticalChunk>
-            <b id="_193010312479">
-              Exercise 11.
-            </b>
-            {" "}
-            Take a particle traveling around a 
-            circle at constant speed. What is the
-            number of cycles [full revolutions] per
-            {" "}
-            <Math>
-              $4\eta$
-            </Math>
-            {" "}units of time equal to, by 
-            another name?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_503910316361">
+                Exercise 11.
+              </b>
+              {" "}
+              Take a particle traveling around a 
+              circle at constant speed. What is the
+              number of cycles [full revolutions] per
+              {" "}
+              <Math>
+                $4\eta$
+              </Math>
+              {" "}units of time equal to, by 
+              another name?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
@@ -6555,19 +6577,21 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={12}>
-          <VerticalChunk>
-            <b id="_416510744452">
-              Exercise 12.
-            </b>
-            {" "}
-            Which of these angles is{" "}
-            <Math>
-              $0.2$
-            </Math>
-            {" "}radians?
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_0_2_radians_guess.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_9543107494">
+                Exercise 12.
+              </b>
+              {" "}
+              Which of these angles is{" "}
+              <Math>
+                $0.2$
+              </Math>
+              {" "}radians?
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_0_2_radians_guess.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
@@ -6639,33 +6663,35 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={13}>
-          <VerticalChunk>
-            <b id="_856211126924">
-              Exercise 13.
-            </b>
-            {" "}
-            What geometric ratios do
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \eta
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            4\eta
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            represent?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_864911126429">
+                Exercise 13.
+              </b>
+              {" "}
+              What geometric ratios do
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              4\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              represent?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
@@ -6756,23 +6782,25 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <VerticalChunk>
-            <b id="_210311661595">
-              Exercise 14.
-            </b>
-            {" "}
-            Compute
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;11\over 7&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            by hand using long division.
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_300311663972">
+                Exercise 14.
+              </b>
+              {" "}
+              Compute
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;11\over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by hand using long division.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
@@ -7246,23 +7274,25 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
-          <VerticalChunk>
-            <b id="_281713248872">
-              Exercise 15.
-            </b>
-            {" "}
-            Compute
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;22\over 7&#125;, \,\,\,\,\, &#123;33\over 7&#125;, \,\,\,\,\,\rm&#123;and&#125;\,\,\,\,\,&#123;44\over 7&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            by hand using long division.
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_282413242539">
+                Exercise 15.
+              </b>
+              {" "}
+              Compute
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;22\over 7&#125;, \,\,\,\,\, &#123;33\over 7&#125;, \,\,\,\,\,\rm&#123;and&#125;\,\,\,\,\,&#123;44\over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by hand using long division.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={15}>
             <VerticalChunk>
@@ -7489,40 +7519,42 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={16}>
-          <VerticalChunk>
-            <b id="_220014571643">
-              Exercise 16.
-            </b>
-            {" "}
-            To close our division skills: use the
-            table below to compute the integer part and
-            the first three digits past the decimal point
-            (no rounding based on the fourth digit) of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            15542486476949/777
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            by hand, using long division. What is the
-            new (last) remainder when the quotient reaches
-            the 3rd digit after the decimal point, and what 
-            equation is implied from the quotient and the 
-            new (last) remainder at that point?
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \begin&#123;array&#125;&#123;c|cc&#125;
-            \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
-            \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
-            \\
-            \end&#123;array&#125;
-            $$
-          </MathBlock>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_339814574376">
+                Exercise 16.
+              </b>
+              {" "}
+              To close our division skills: use the
+              table below to compute the integer part and
+              the first three digits past the decimal point
+              (no rounding based on the fourth digit) of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              15542486476949/777
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by hand, using long division. What is the
+              new (last) remainder when the quotient reaches
+              the 3rd digit after the decimal point, and what 
+              equation is implied from the quotient and the 
+              new (last) remainder at that point?
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;array&#125;&#123;c|cc&#125;
+              \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
+              \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
+              \\
+              \end&#123;array&#125;
+              $$
+            </MathBlock>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={16}>
             <VerticalChunk>
@@ -8236,22 +8268,24 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={17}>
-          <VerticalChunk>
-            <b id="_130317125036">
-              Exercise 17.
-            </b>
-            {" "}
-            What is the angle marked ‘?’, as a function
-            of{" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_angle_sum_180.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_910517121038">
+                Exercise 17.
+              </b>
+              {" "}
+              What is the angle marked ‘?’, as a function
+              of{" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_angle_sum_180.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={17}>
             <VerticalChunk>
@@ -8321,36 +8355,38 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <VerticalChunk>
-            <b id="_993117464613">
-              Exercise 18.
-            </b>
-            {" "}
-            The graph{" "}
-            <Math>
-              $y = \cos(x) + \sin(x)$
-            </Math>
-            {" "}from
-            Exercise 5 has a maximum value greater than
-            {" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_26311746349">
+                Exercise 18.
+              </b>
+              {" "}
+              The graph{" "}
               <Math>
-                $1$
+                $y = \cos(x) + \sin(x)$
               </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_maximum_of_sin_plus_cos.svg" />
-          <Pause />
-          <VerticalChunk>
-            What is this maximum value, and for which
-            value(s) of{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}is it achieved?
-          </VerticalChunk>
+              {" "}from
+              Exercise 5 has a maximum value greater than
+              {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_maximum_of_sin_plus_cos.svg" />
+            <Pause />
+            <VerticalChunk>
+              What is this maximum value, and for which
+              value(s) of{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}is it achieved?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={18}>
             <VerticalChunk>
@@ -8773,22 +8809,24 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={19}>
-          <VerticalChunk>
-            <b id="_939119278600">
-              Exercise 19.
-            </b>
-            {" "}
-            What is the angle marked ‘?’, as a function of
-            {" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_angle_sum_180_followup.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_89281927679">
+                Exercise 19.
+              </b>
+              {" "}
+              What is the angle marked ‘?’, as a function of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_angle_sum_180_followup.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={19}>
             <VerticalChunk>
@@ -8845,24 +8883,26 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={20}>
-          <VerticalChunk>
-            <b id="_909619611833">
-              Exercise 20.
-            </b>
-            {" "}
-            Argue that, in the following figure, the
-            angle marked ‘?’ equals{" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}the angle at 
-            the center of the circle:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_tangent_angle_v2.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_651619612488">
+                Exercise 20.
+              </b>
+              {" "}
+              Argue that, in the following figure, the
+              angle marked ‘?’ equals{" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}the angle at 
+              the center of the circle:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_tangent_angle_v2.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={20}>
             <VerticalChunk>
@@ -8942,168 +8982,170 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={21}>
-          <VerticalChunk>
-            <b id="_671420099953">
-              Exercise 21.
-            </b>
-            {" "}
-            If each of these dotted lines...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_max_xy_x_plus_y_isosets.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...is a so-called
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            isoset
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            (also:{" "}
-            <i>
-              isoline
-            </i>
-            ,{" "}
-            <i>
-              contour line
-            </i>
-            ,{" "}
-            <i>
-              isoquant
-            </i>
-            ,
-            {" "}
-            <i>
-              isosurface
-            </i>
-            ,{" "}
-            <i>
-              isovalue line
-            </i>
-            , or{" "}
-            <i>
-              isovalue set
-            </i>
-            {" "}
-            {" "}
-            <NoBreak>
-              <Math>
-                $\rt&#123;0.1&#125;$
-              </Math>
-              )
-            </NoBreak>
-            {" "}of the two-variable function
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f : \rr^2\ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            given by
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f(x, y) = x + y
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            then what are similar
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            isosets
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            (man, we like this word! of the two-variable
-            function
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            g : \rr^2\ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            given by
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            g(x, y) = xy
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...?
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            [In human terms: draw solutions of the equation
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            xy = C
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            in{" "}
-            <Math>
-              $\rr^2$
-            </Math>
-            {" "}for some different values of
-            {" "}
-            <NoBreak>
-              <Math>
-                $C \in \rr$
-              </Math>
-              .]
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Next: Use any geometric insights gleaned from
-            these
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            isosets
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            (😍😍😍) to find the maximum value of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sin\theta&#123;&#125;\cos\theta
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for{" "}
-            <NoBreak>
-              <Math>
-                $\theta \in \rr$
-              </Math>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_730120091214">
+                Exercise 21.
+              </b>
+              {" "}
+              If each of these dotted lines...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_max_xy_x_plus_y_isosets.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...is a so-called
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              isoset
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              (also:{" "}
+              <i>
+                isoline
+              </i>
+              ,{" "}
+              <i>
+                contour line
+              </i>
+              ,{" "}
+              <i>
+                isoquant
+              </i>
               ,
-            </NoBreak>
-            {" "}and specify the set of
-            values of{" "}
-            <Math>
-              $\theta$
-            </Math>
-            {" "}for which the maximum is 
-            attained.
-          </VerticalChunk>
+              {" "}
+              <i>
+                isosurface
+              </i>
+              ,{" "}
+              <i>
+                isovalue line
+              </i>
+              , or{" "}
+              <i>
+                isovalue set
+              </i>
+              {" "}
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\rt&#123;0.1&#125;$
+                </Math>
+                )
+              </NoBreak>
+              {" "}of the two-variable function
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f : \rr^2\ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              given by
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f(x, y) = x + y
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              then what are similar
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              isosets
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              (man, we like this word! of the two-variable
+              function
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              g : \rr^2\ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              given by
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              g(x, y) = xy
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...?
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              [In human terms: draw solutions of the equation
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              xy = C
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              in{" "}
+              <Math>
+                $\rr^2$
+              </Math>
+              {" "}for some different values of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $C \in \rr$
+                </Math>
+                .]
+              </NoBreak>
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Next: Use any geometric insights gleaned from
+              these
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              isosets
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              (😍😍😍) to find the maximum value of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin\theta&#123;&#125;\cos\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for{" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}and specify the set of
+              values of{" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "}for which the maximum is 
+              attained.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={21}>
             <VerticalChunk>
@@ -10102,25 +10144,27 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={22}>
-          <VerticalChunk>
-            <b id="_159824833239">
-              Exercise 22.
-            </b>
-            {" "}
-            Express{" "}
-            <Math>
-              $A/B$
-            </Math>
-            {" "}as a function of{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_176624833567">
+                Exercise 22.
+              </b>
+              {" "}
+              Express{" "}
               <Math>
-                $\theta$
+                $A/B$
               </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg" />
+              {" "}as a function of{" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={22}>
             <VerticalChunk>
@@ -10195,25 +10239,27 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={23}>
-          <VerticalChunk>
-            <b id="_110725194272">
-              Exercise 23.
-            </b>
-            {" "}
-            Express{" "}
-            <Math>
-              $A/B$
-            </Math>
-            {" "}as a function of{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_665525192952">
+                Exercise 23.
+              </b>
+              {" "}
+              Express{" "}
               <Math>
-                $\theta$
+                $A/B$
               </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg" />
+              {" "}as a function of{" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={23}>
             <VerticalChunk>
@@ -10385,81 +10431,83 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={24}>
-          <VerticalChunk>
-            <b id="_85502601180">
-              Exercise 24.
-            </b>
-            {" "}
-            In general,{" "}
-            <Math>
-              $\sec(\theta)$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $\tan(\theta)$
-            </Math>
-            {" "}
-            are defined for all{" "}
-            <Math>
-              $\theta$
-            </Math>
-            {" "}such that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \cos(\theta) \ne 0
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            with the definitions being...
-          </VerticalChunk>
-          <center style="margin-top:1em;margin-bottom:1em;">
-            <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
-              <MathBlock>
-                $$
-                \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                \,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
-                $$
-              </MathBlock>
-            </div>
-          </center>
-          <VerticalChunk>
-            ...for all{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_339026017967">
+                Exercise 24.
+              </b>
+              {" "}
+              In general,{" "}
               <Math>
-                $\theta \in \rr$
+                $\sec(\theta)$
               </Math>
-              .
-            </NoBreak>
-            {" "}(I.e., if the fraction is undefined,
-            then the function is undefined.)
-            Use these definitions 
-            to prove that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            1 + \tan^2(\theta) = \sec^2(\theta)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for all 
-            {" "}
-            <NoBreak>
+              {" "}and{" "}
               <Math>
-                $\theta \in \dom \tan = \dom \sec$
+                $\tan(\theta)$
               </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+              {" "}
+              are defined for all{" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "}such that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\theta) \ne 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              with the definitions being...
+            </VerticalChunk>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
+                  $$
+                </MathBlock>
+                <Pause />
+                <MathBlock>
+                  $$
+                  \,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <VerticalChunk>
+              ...for all{" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \rr$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(I.e., if the fraction is undefined,
+              then the function is undefined.)
+              Use these definitions 
+              to prove that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              1 + \tan^2(\theta) = \sec^2(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for all 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \dom \tan = \dom \sec$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={24}>
             <VerticalChunk>
@@ -10513,33 +10561,35 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={25}>
-          <VerticalChunk>
-            <b id="_490326589917">
-              Exercise 25.
-            </b>
-            {" "}
-            Run the computation of the
-            previous exercise backwards, starting with
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sec^2(\theta)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            at the near end, and ending with
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$1 + \tan^2(\theta)$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            at the far end. (No peeking back at the solution of
-            that exercise.)
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_837726582836">
+                Exercise 25.
+              </b>
+              {" "}
+              Run the computation of the
+              previous exercise backwards, starting with
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec^2(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              at the near end, and ending with
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$1 + \tan^2(\theta)$$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              at the far end. (No peeking back at the solution of
+              that exercise.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={25}>
             <VerticalChunk>
@@ -10586,60 +10636,62 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={26}>
-          <VerticalChunk>
-            <b id="_451426949744">
-              Exercise 26.
-            </b>
-            {" "}
-            Here are four function compositions
-            depicted as “function box” diagrams, with
-            inputs coming in the right and outputs
-            going out the left (with{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}being some generic
-            function):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_four_compositions.svg" />
-          <Pause />
-          <VerticalChunk>
-            Rewrite each case:
-          </VerticalChunk>
-          <TextParent>
-            <ol
-              style="margin-top:0.5em;"
-              class="l1">
-              <li>
-                using the composition{" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $\circ$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "}operator;
-              </li>
-              <li>
-                as an expression of the form
-                <Pause />
-                <MathBlock>
-                  $$x \ra \dots$$
-                </MathBlock>
-                <Pause />
-                for some value of{" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $\dots$
-                  </Math>
-                  ”.
-                </NoBreak>
-              </li>
-            </ol>
-          </TextParent>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_388026943401">
+                Exercise 26.
+              </b>
+              {" "}
+              Here are four function compositions
+              depicted as “function box” diagrams, with
+              inputs coming in the right and outputs
+              going out the left (with{" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}being some generic
+              function):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_four_compositions.svg" />
+            <Pause />
+            <VerticalChunk>
+              Rewrite each case:
+            </VerticalChunk>
+            <TextParent>
+              <ol
+                style="margin-top:0.5em;"
+                class="l1">
+                <li>
+                  using the composition{" "}
+                  <NoBreak>
+                    “
+                    <Math>
+                      $\circ$
+                    </Math>
+                    ”
+                  </NoBreak>
+                  {" "}operator;
+                </li>
+                <li>
+                  as an expression of the form
+                  <Pause />
+                  <MathBlock>
+                    $$x \ra \dots$$
+                  </MathBlock>
+                  <Pause />
+                  for some value of{" "}
+                  <NoBreak>
+                    “
+                    <Math>
+                      $\dots$
+                    </Math>
+                    ”.
+                  </NoBreak>
+                </li>
+              </ol>
+            </TextParent>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={26}>
             <VerticalChunk>
@@ -10793,21 +10845,23 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={27}>
-          <VerticalChunk>
-            <b id="_627527831361">
-              Exercise 27.
-            </b>
-            {" "}
-            How would the graph of each of the compositions
-            from Exercise 26 compare to the graph of the 
-            generic function{" "}
-            <NoBreak>
-              <Math>
-                $f$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_875927836221">
+                Exercise 27.
+              </b>
+              {" "}
+              How would the graph of each of the compositions
+              from Exercise 26 compare to the graph of the 
+              generic function{" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={27}>
             <VerticalChunk>
@@ -10900,67 +10954,69 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={28}>
-          <VerticalChunk>
-            <b id="_207728278017">
-              Exercise 28.
-            </b>
-            {" "}
-            Prove that{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_164828279578">
+                Exercise 28.
+              </b>
+              {" "}
+              Prove that{" "}
+              <NoBreak>
+                <Math>
+                  $\cos\cdot\sin$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $\cos^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}and{" "}
               <Math>
-                $\cos\cdot\sin$
+                $\sin^2$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
+              {" "}
+              are periodic mod{" "}
+              <NoBreak>
+                <Math>
+                  $2\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}where a function{" "}
               <Math>
-                $\cos^2$
+                $f$
               </Math>
-              ,
-            </NoBreak>
-            {" "}and{" "}
-            <Math>
-              $\sin^2$
-            </Math>
-            {" "}
-            are periodic mod{" "}
-            <NoBreak>
-              <Math>
-                $2\eta$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}where a function{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}is 
-            “periodic mod{" "}
-            <NoBreak>
-              <Math>
-                $T$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}if
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(x + T) = f(x)&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for all{" "}
-            <NoBreak>
-              <Math>
-                $x \in \rr$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+              {" "}is 
+              “periodic mod{" "}
+              <NoBreak>
+                <Math>
+                  $T$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}if
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f(x + T) = f(x)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for all{" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={28}>
             <VerticalChunk>
@@ -11173,43 +11229,45 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={29}>
-          <VerticalChunk>
-            <b id="_251329115908">
-              Exercise 29.
-            </b>
-            {" "}
-            Given the graphs{" "}
-            <Math>
-              $y = \cos(x)\sin(x)$
-            </Math>
-            {" "}and 
-            {" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_919629119997">
+                Exercise 29.
+              </b>
+              {" "}
+              Given the graphs{" "}
               <Math>
-                $y = \cos^2(x)$
+                $y = \cos(x)\sin(x)$
               </Math>
-              ...
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...it{" "}
-            <i>
-              appears
-            </i>
-            {" "}that one graph is a
-            translate of the other; if this were 
-            really so, what would the exact amounts
-            of translation be? (Vertical{" "}
-            <i>
-              &
-            </i>
-            {" "}horizontal.)
-            What algebraic identity would this imply? How to
-            prove this identity?
-          </VerticalChunk>
+              {" "}and 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos^2(x)$
+                </Math>
+                ...
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...it{" "}
+              <i>
+                appears
+              </i>
+              {" "}that one graph is a
+              translate of the other; if this were 
+              really so, what would the exact amounts
+              of translation be? (Vertical{" "}
+              <i>
+                &
+              </i>
+              {" "}horizontal.)
+              What algebraic identity would this imply? How to
+              prove this identity?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={29}>
             <VerticalChunk>
@@ -11606,38 +11664,40 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={30}>
-          <VerticalChunk>
-            <b id="_279631123794">
-              Exercise 30.
-            </b>
-            {" "}
-            It also seems from the graphs that{" "}
-            <Math>
-              $y = \cos^2(x)$
-            </Math>
-            {" "}
-            is a{" "}
-            <i>
-              sinusoid
-            </i>
-            , i.e., some combination of a
-            scaling and translation of{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_427231124878">
+                Exercise 30.
+              </b>
+              {" "}
+              It also seems from the graphs that{" "}
               <Math>
-                $y = \cos(x)$
+                $y = \cos^2(x)$
               </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison.svg" />
-          <Pause />
-          <VerticalChunk>
-            If so, what scaling and translation operations,
-            more exactly, can be conjectured to relate the 
-            two graphs? Can you prove this geometric relationship 
-            by algebra?
-          </VerticalChunk>
+              {" "}
+              is a{" "}
+              <i>
+                sinusoid
+              </i>
+              , i.e., some combination of a
+              scaling and translation of{" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos(x)$
+                </Math>
+                :
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison.svg" />
+            <Pause />
+            <VerticalChunk>
+              If so, what scaling and translation operations,
+              more exactly, can be conjectured to relate the 
+              two graphs? Can you prove this geometric relationship 
+              by algebra?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={30}>
             <VerticalChunk>
@@ -11991,33 +12051,35 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={31}>
-          <VerticalChunk>
-            <b id="_195932736070">
-              Exercise 31.
-            </b>
-            {" "}
-            Relate
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sin(x)\cos(x)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            to
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sin(2x)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            with the help of the angle-sum formulas.
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_448832736038">
+                Exercise 31.
+              </b>
+              {" "}
+              Relate
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(x)\cos(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              to
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              with the help of the angle-sum formulas.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={31}>
             <VerticalChunk>
@@ -12068,25 +12130,27 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={32}>
-          <VerticalChunk>
-            <b id="_519633142152">
-              Exercise 32.
-            </b>
-            {" "}
-            What sequence of geometric transformations
-            can turn [the graph]{" "}
-            <Math>
-              $y = \sin(x)$
-            </Math>
-            {" "}
-            into [the graph]{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_702833149085">
+                Exercise 32.
+              </b>
+              {" "}
+              What sequence of geometric transformations
+              can turn [the graph]{" "}
               <Math>
-                $y = \sin(x)\cos(x)$
+                $y = \sin(x)$
               </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}
+              into [the graph]{" "}
+              <NoBreak>
+                <Math>
+                  $y = \sin(x)\cos(x)$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={32}>
             <VerticalChunk>
@@ -12150,36 +12214,38 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={33}>
-          <VerticalChunk>
-            <b id="_176033358859">
-              Exercise 33.
-            </b>
-            {" "}
-            What sequence of geometric transformations
-            maps the graph
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y = \cos x
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            onto the graph
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y = \sin x + \cos x
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...? 
-            (Study Exercise 18, if you have no inspiration.)
-            (PS: Prove your answer.)
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_1233358902">
+                Exercise 33.
+              </b>
+              {" "}
+              What sequence of geometric transformations
+              maps the graph
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = \cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              onto the graph
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = \sin x + \cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...? 
+              (Study Exercise 18, if you have no inspiration.)
+              (PS: Prove your answer.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={33}>
             <VerticalChunk>
@@ -12446,98 +12512,100 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={34}>
-          <VerticalChunk>
-            <b id="_503034479196">
-              Exercise 34.
-            </b>
-            {" "}
-            Prove that for every{" "}
-            <NoBreak>
-              <Math>
-                $A_1$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $A_2 \in \rr$
-              </Math>
-              ,
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x \ra A_1\cos x + A_2\sin x
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            equals
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x \ra W\cdot \cos(x + \psi)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for some appropriate constants{" "}
-            <Math>
-              $W$
-            </Math>
-            {" "}and{" "}
-            <NoBreak>
-              <Math>
-                $\psi$
-              </Math>
-              .
-            </NoBreak>
-            {" "}(That shall
-            be functions of{" "}
-            <NoBreak>
-              <Math>
-                $A_1$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $A_2$
-              </Math>
-              .)
-            </NoBreak>
-            {" "}Also: draw a deep analogy
-            to polar coordinates, regarding the transform that gives
-            {" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_766034479671">
+                Exercise 34.
+              </b>
+              {" "}
+              Prove that for every{" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $A_2 \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra A_1\cos x + A_2\sin x
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              equals
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra W\cdot \cos(x + \psi)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for some appropriate constants{" "}
               <Math>
                 $W$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $\psi$
-            </Math>
-            {" "}as a function of{" "}
-            <NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $\psi$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(That shall
+              be functions of{" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $A_2$
+                </Math>
+                .)
+              </NoBreak>
+              {" "}Also: draw a deep analogy
+              to polar coordinates, regarding the transform that gives
+              {" "}
+              <NoBreak>
+                <Math>
+                  $W$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $A_1$
+                $\psi$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $A_2$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+              {" "}as a function of{" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $A_2$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={34}>
             <VerticalChunk>
@@ -12982,79 +13050,81 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={35}>
-          <VerticalChunk>
-            <b id="_872836051882">
-              Exercise 35.
-            </b>
-            {" "}
-            If we attempt to express
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            A_1\sin x + A_2\cos x
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            in the form
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            W\cdot\sin(x + \psi)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            then what does the relationship
-            between{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_6016360511">
+                Exercise 35.
+              </b>
+              {" "}
+              If we attempt to express
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              A_1\sin x + A_2\cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              in the form
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              W\cdot\sin(x + \psi)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              then what does the relationship
+              between{" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $A_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $A_1$
+                $W$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
+              {" "}and{" "}
               <Math>
-                $A_2$
+                $\psi$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $W$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $\psi$
-            </Math>
-            {" "}become?
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            (NB: We have flipped{" "}
-            <NoBreak>
-              ‘
-              <Math>
-                $\cos$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}and
-            {" "}
-            <NoBreak>
-              ‘
-              <Math>
-                $\sin$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}in the first expression, compared
-            to Exercise 34, and reducing to that exercise is
-            likely to produce confusion. 
-            Solving from scratch is recommended.)
-          </VerticalChunk>
+              {" "}become?
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              (NB: We have flipped{" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\cos$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}and
+              {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\sin$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}in the first expression, compared
+              to Exercise 34, and reducing to that exercise is
+              likely to produce confusion. 
+              Solving from scratch is recommended.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={35}>
             <VerticalChunk>
@@ -13200,17 +13270,19 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={36}>
-          <VerticalChunk>
-            <b id="_430936867579">
-              Exercise 36.
-            </b>
-            {" "}
-            If aliens descended on Earth, captured everyone,
-            took you aside and told you that the fate of
-            humanity rested on your ability to “illustrate
-            powers of secant”, without further instructions,
-            what would you do?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_159336869646">
+                Exercise 36.
+              </b>
+              {" "}
+              If aliens descended on Earth, captured everyone,
+              took you aside and told you that the fate of
+              humanity rested on your ability to “illustrate
+              powers of secant”, without further instructions,
+              what would you do?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={36}>
             <VerticalChunk>
@@ -13352,14 +13424,16 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={37}>
-          <VerticalChunk>
-            <b id="_502037606049">
-              Exercise 37.
-            </b>
-            {" "}
-            What do similar illustrations look like for
-            powers of cosine, and for powers of tangent?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_405737604750">
+                Exercise 37.
+              </b>
+              {" "}
+              What do similar illustrations look like for
+              powers of cosine, and for powers of tangent?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={37}>
             <VerticalChunk>
@@ -13550,34 +13624,36 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={38}>
-          <VerticalChunk>
-            <b id="_35938587979">
-              Exercise 38.
-            </b>
-            {" "}
-            What sequence of geometric transformations
-            of the plane will map the graph
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y = \cos(x)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            onto the graph...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y = \cos(0.1x + 0.1)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_747838589972">
+                Exercise 38.
+              </b>
+              {" "}
+              What sequence of geometric transformations
+              of the plane will map the graph
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = \cos(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              onto the graph...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = \cos(0.1x + 0.1)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={38}>
             <VerticalChunk>
@@ -13889,44 +13965,46 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={39}>
-          <VerticalChunk>
-            <b id="_365439765192">
-              Exercise 39.
-            </b>
-            {" "}
-            More generally, how is the graph of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x \ra \cos(Bx + C)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            related to the graph of{" "}
-            <NoBreak>
-              <Math>
-                $\cos$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}for constants 
-            {" "}
-            <NoBreak>
-              <Math>
-                $B$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $C \in \rr$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_348739769390">
+                Exercise 39.
+              </b>
+              {" "}
+              More generally, how is the graph of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \cos(Bx + C)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              related to the graph of{" "}
+              <NoBreak>
+                <Math>
+                  $\cos$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}for constants 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $C \in \rr$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={39}>
             <VerticalChunk>
@@ -14164,55 +14242,57 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={40}>
-          <VerticalChunk>
-            <b id="_105040633535">
-              Exercise 40.
-            </b>
-            {" "}
-            If
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            A \ne 0
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is a point on the{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis, how can we construct
-            the value
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            1 / A
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            by purely geometric means?
-            (We assume that{" "}
-            <NoBreak>
-              ‘
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_614340633345">
+                Exercise 40.
+              </b>
+              {" "}
+              If
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              A \ne 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is a point on the{" "}
               <Math>
-                $0$
+                $x$
               </Math>
-              ’
-            </NoBreak>
-            {" "}and{" "}
-            <NoBreak>
-              ‘
-              <Math>
-                $1$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}are also marked on the axis.)
-          </VerticalChunk>
+              {" "}axis, how can we construct
+              the value
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              1 / A
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by purely geometric means?
+              (We assume that{" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $0$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}are also marked on the axis.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={40}>
             <VerticalChunk>
@@ -14383,18 +14463,20 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={41}>
-          <VerticalChunk>
-            <b id="_435541266454">
-              Exercise 41.
-            </b>
-            {" "}
-            In the following drawing at what
-            coordinates does the tangent to the circle
-            intersect the axes, as marked by the purple
-            triangles?
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_60_tangent.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_998541261815">
+                Exercise 41.
+              </b>
+              {" "}
+              In the following drawing at what
+              coordinates does the tangent to the circle
+              intersect the axes, as marked by the purple
+              triangles?
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_60_tangent.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={41}>
             <VerticalChunk>
@@ -14476,25 +14558,27 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <VerticalChunk>
-            <b id="_381141688863">
-              Exercise 42.
-            </b>
-            {" "}
-            Compute the vertical distance from{" "}
-            <Math>
-              $A$
-            </Math>
-            {" "}to{" "}
-            <Math>
-              $A'$
-            </Math>
-            {" "}
-            from the following set of blueprints for a shed with 
-            an angled inside wall (all distances in inches):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_floorplan.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_973441688190">
+                Exercise 42.
+              </b>
+              {" "}
+              Compute the vertical distance from{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}to{" "}
+              <Math>
+                $A'$
+              </Math>
+              {" "}
+              from the following set of blueprints for a shed with 
+              an angled inside wall (all distances in inches):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_floorplan.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={42}>
             <VerticalChunk>
@@ -14614,37 +14698,39 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={43}>
-          <VerticalChunk>
-            <b id="_137342469119">
-              Exercise 43.
-            </b>
-            {" "}
-            Given the following sketch, to what angle
-            can the door be opened before it hits against 
-            the roof? (Hint: You will need to Google “how
-            to use arctan”, or “how to convert from polar
-            to Cartesian coordinates”.)
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_opening_door.svg" />
-          <Pause />
-          <VerticalChunk>
-            And:
-          </VerticalChunk>
-          <TextParent>
-            <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
-              <li>
-                all distances are in inches
-              </li>
-              <li>
-                assume half an inch from the edge of the door
-                to the center of its hinge
-              </li>
-              <li>
-                assume the door has negligible thicknesss
-              </li>
-            </ul>
-          </TextParent>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_570042463797">
+                Exercise 43.
+              </b>
+              {" "}
+              Given the following sketch, to what angle
+              can the door be opened before it hits against 
+              the roof? (Hint: You will need to Google “how
+              to use arctan”, or “how to convert from polar
+              to Cartesian coordinates”.)
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_opening_door.svg" />
+            <Pause />
+            <VerticalChunk>
+              And:
+            </VerticalChunk>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
+                <li>
+                  all distances are in inches
+                </li>
+                <li>
+                  assume half an inch from the edge of the door
+                  to the center of its hinge
+                </li>
+                <li>
+                  assume the door has negligible thicknesss
+                </li>
+              </ul>
+            </TextParent>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={43}>
             <VerticalChunk>
@@ -14828,22 +14914,24 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={44}>
-          <VerticalChunk>
-            <b id="_176243598447">
-              Exercise 44.
-            </b>
-            {" "}
-            (Speaking of doors with negligible thickness.)
-            The sketch below shows the top view of a bomb
-            shelter door set in a corner near a wall, 
-            with distances in centimeters. 
-            How far can the door open when the big handle
-            is in the “open” position, shown in the figure?
-            How far can it open when the big handle is in
-            the “closed” position, shown by the dotted line?
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_bomb_shelter_door_tru_sizes.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_428243591974">
+                Exercise 44.
+              </b>
+              {" "}
+              (Speaking of doors with negligible thickness.)
+              The sketch below shows the top view of a bomb
+              shelter door set in a corner near a wall, 
+              with distances in centimeters. 
+              How far can the door open when the big handle
+              is in the “open” position, shown in the figure?
+              How far can it open when the big handle is in
+              the “closed” position, shown by the dotted line?
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_bomb_shelter_door_tru_sizes.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={44}>
             <VerticalChunk>
@@ -15126,25 +15214,27 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={45}>
-          <VerticalChunk>
-            <b id="_637844821092">
-              Exercise 45.
-            </b>
-            {" "}
-            If a sphere is projected directly outward onto
-            a cylinder abutting the sphere at the equator, with each
-            point remaining at its height, as pictured in the 
-            sketch and in the visualization below, by what factor are
-            areas stretched as a function of the latitude{" "}
-            <NoBreak>
-              <Math>
-                $\theta$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_horizontal_projection_sphere_statement.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_908344827034">
+                Exercise 45.
+              </b>
+              {" "}
+              If a sphere is projected directly outward onto
+              a cylinder abutting the sphere at the equator, with each
+              point remaining at its height, as pictured in the 
+              sketch and in the visualization below, by what factor are
+              areas stretched as a function of the latitude{" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_horizontal_projection_sphere_statement.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={45}>
             <VerticalChunk>
@@ -15211,21 +15301,23 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={46}>
-          <VerticalChunk>
-            <b id="_342245375891">
-              Exercise 46.
-            </b>
-            {" "}
-            Rank the{" "}
-            <Math>
-              $7$
-            </Math>
-            {" "}slices of this
-            sphere with unit radius from the greatest to
-            smallest area slice:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ex_pez_sphere_statement.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_572745376566">
+                Exercise 46.
+              </b>
+              {" "}
+              Rank the{" "}
+              <Math>
+                $7$
+              </Math>
+              {" "}slices of this
+              sphere with unit radius from the greatest to
+              smallest area slice:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_pez_sphere_statement.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={46}>
             <VerticalChunk>
@@ -15306,20 +15398,22 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={47}>
-          <VerticalChunk>
-            <b id="_13945756332">
-              Exercise 47.
-            </b>
-            {" "}
-            Give a formula for the area of a sphere of
-            radius{" "}
-            <NoBreak>
-              <Math>
-                $r$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_31154575158">
+                Exercise 47.
+              </b>
+              {" "}
+              Give a formula for the area of a sphere of
+              radius{" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={47}>
             <VerticalChunk>
@@ -15375,19 +15469,21 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={48}>
-          <VerticalChunk>
-            <b id="_77746002397">
-              Exercise 48.
-            </b>
-            {" "}
-            Give a formula for the volume of a sphere of
-            radius{" "}
-            <Math>
-              $r$
-            </Math>
-            {" "}using the fact that the volume of
-            a cone is “one third base times height”.
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_334446005482">
+                Exercise 48.
+              </b>
+              {" "}
+              Give a formula for the volume of a sphere of
+              radius{" "}
+              <Math>
+                $r$
+              </Math>
+              {" "}using the fact that the volume of
+              a cone is “one third base times height”.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={48}>
             <VerticalChunk>
@@ -15933,34 +16029,36 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={49}>
-          <VerticalChunk>
-            <b id="_888048763813">
-              Exercise 49.
-            </b>
-            {" "}
-            Similarly to Exercise 9, suggest a definition for
-            the product
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            c\cdot\vec&#123;v&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            of a vector{" "}
-            <Math>
-              $\vec&#123;v&#125;$
-            </Math>
-            {" "}by a real number{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_314948767080">
+                Exercise 49.
+              </b>
+              {" "}
+              Similarly to Exercise 9, suggest a definition for
+              the product
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              c\cdot\vec&#123;v&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              of a vector{" "}
               <Math>
-                $c$
+                $\vec&#123;v&#125;$
               </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+              {" "}by a real number{" "}
+              <NoBreak>
+                <Math>
+                  $c$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={49}>
             <VerticalChunk>

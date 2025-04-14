@@ -1,6 +1,26 @@
-import { createEffect, createSignal } from "solid-js";
+import { useSearchParams } from "@solidjs/router";
+import { createEffect, createSignal, onMount } from "solid-js";
+import useScrollToInChapter from "./useScrollToInChapter";
 
-const useSaveScroll = () => {
+const useCheckedSaveScroll = () => {
+  const [searchParams, _] = useSearchParams();
+  if (searchParams.id) {
+    const scrollToInChapter = useScrollToInChapter();
+
+    onMount(() => {
+      if (searchParams && searchParams.id) {
+        setTimeout(() => {
+          scrollToInChapter(searchParams.id as string, false);
+        }, 50);
+        setTimeout(() => {
+          scrollToInChapter(searchParams.id as string, false);
+        }, 500);
+      }
+    });
+
+    return;
+  }
+
   const [scroll, set_scroll] = createSignal<number | null>(null);
 
   createEffect(() => {
@@ -37,4 +57,4 @@ const useSaveScroll = () => {
   });
 };
 
-export default useSaveScroll;
+export default useCheckedSaveScroll;

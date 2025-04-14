@@ -6,7 +6,8 @@ import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
 import Image from "~/components/Image";
 import InlineImage from "~/components/InlineImage";
-import { Exercise, Exercises } from "~/components/Exercises";
+import { Exercise, Exercises, ExerciseStatement } from "~/components/Exercises";
+import InChapterLink from "~/components/InChapterLink";
 import Solution from "~/components/Solution";
 import Table from "~/components/Table";
 import Grid from "~/components/Grid";
@@ -23,9 +24,6 @@ const Article = () => {
       <Chapter
         number={1}
         title="A Few Refreshers">
-        <a
-          class="next_page"
-          href="/article/chapter2" />
         <a
           class="prev_page"
           href="/" />
@@ -1423,74 +1421,76 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <VerticalChunk>
-            <b id="_95375466510">
-              Exercise 1.
-            </b>
-            {" "}
-            True or false (and, if possible, explain):
-          </VerticalChunk>
-          <Pause />
-          <Grid
-            center_on_overflow={true}
-            sm_cutoff={520}
-            sm_cols={2}
-            cols={3}>
-            <Item>
-              a.{" "}
-              <Math>
-                $ 0.9^2 &lt; 0.9 $
-              </Math>
-            </Item>
-            <Item>
-              b.{" "}
-              <Math>
-                $ \sqrt&#123;0.01&#125; = 0.1 $
-              </Math>
-            </Item>
-            <Item>
-              c.{" "}
-              <Math>
-                $ \sqrt[2]&#123;\up&#123;0.8&#125;\sqrt[3]&#123;2&#125;&#125; = \sqrt[3]&#123;\up&#123;0.8&#125;\sqrt[2]&#123;2&#125;&#125; $
-              </Math>
-            </Item>
-            <Item>
-              d.{" "}
-              <Math>
-                $&#123;\sqrt&#123;2&#125; \over \up&#123;0.55&#125;2&#125; = \sqrt&#123;0.5&#125;$
-              </Math>
-            </Item>
-            <Item>
-              e.{" "}
-              <Math>
-                $ &#123;1 \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;0.5&#125; $
-              </Math>
-            </Item>
-            <Item>
-              f.{" "}
-              <Math>
-                $ 2^&#123;30&#125; &gt; 1000^3 $
-              </Math>
-            </Item>
-            <Item>
-              g.{" "}
-              <Math>
-                $ &#123;1 \over 0.95&#125; &gt; 1.05 $
-              </Math>
-            </Item>
-            <Item>
-              h.{" "}
-              <Math>
-                $ (-1)^&#123;101&#125; = -1 $
-              </Math>
-            </Item>
-            <Item>
-              i.{" "}
-              <Math>
-                $ &#123;100 \over \up&#123;0.5&#125;99&#125; &lt; &#123;101 \over \up&#123;0.5&#125;100&#125; $
-              </Math>
-            </Item>
-          </Grid>
+          <ExerciseStatement id="_558546845">
+            <VerticalChunk>
+              <b>
+                Exercise 1.
+              </b>
+              {" "}
+              True or false (and, if possible, explain):
+            </VerticalChunk>
+            <Pause />
+            <Grid
+              center_on_overflow={true}
+              sm_cutoff={520}
+              sm_cols={2}
+              cols={3}>
+              <Item>
+                a.{" "}
+                <Math>
+                  $ 0.9^2 &lt; 0.9 $
+                </Math>
+              </Item>
+              <Item>
+                b.{" "}
+                <Math>
+                  $ \sqrt&#123;0.01&#125; = 0.1 $
+                </Math>
+              </Item>
+              <Item>
+                c.{" "}
+                <Math>
+                  $ \sqrt[2]&#123;\up&#123;0.8&#125;\sqrt[3]&#123;2&#125;&#125; = \sqrt[3]&#123;\up&#123;0.8&#125;\sqrt[2]&#123;2&#125;&#125; $
+                </Math>
+              </Item>
+              <Item>
+                d.{" "}
+                <Math>
+                  $&#123;\sqrt&#123;2&#125; \over \up&#123;0.55&#125;2&#125; = \sqrt&#123;0.5&#125;$
+                </Math>
+              </Item>
+              <Item>
+                e.{" "}
+                <Math>
+                  $ &#123;1 \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;0.5&#125; $
+                </Math>
+              </Item>
+              <Item>
+                f.{" "}
+                <Math>
+                  $ 2^&#123;30&#125; &gt; 1000^3 $
+                </Math>
+              </Item>
+              <Item>
+                g.{" "}
+                <Math>
+                  $ &#123;1 \over 0.95&#125; &gt; 1.05 $
+                </Math>
+              </Item>
+              <Item>
+                h.{" "}
+                <Math>
+                  $ (-1)^&#123;101&#125; = -1 $
+                </Math>
+              </Item>
+              <Item>
+                i.{" "}
+                <Math>
+                  $ &#123;100 \over \up&#123;0.5&#125;99&#125; &lt; &#123;101 \over \up&#123;0.5&#125;100&#125; $
+                </Math>
+              </Item>
+            </Grid>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
@@ -2608,64 +2608,70 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <VerticalChunk>
-            <b id="_542211284896">
-              Exercise 2.
-            </b>
-            {" "}
-            In the solution to Exercise 1, we observed how 
-            the difference
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is{" "}
-            <i>
-              roughly
-            </i>
-            {" "}{" "}
-            <Math>
-              $1/n^2$
-            </Math>
-            {" "}for large{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b>
+                Exercise 2.
+              </b>
+              {" "}
+              In the solution to Exercise{" "}
+              <InChapterLink href="/article/chapter1#_558546845">
+                1
+              </InChapterLink>
+              , we observed how 
+              the difference
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is{" "}
+              <i>
+                roughly
+              </i>
+              {" "}{" "}
               <Math>
-                $n$
+                $1/n^2$
               </Math>
-              .
-            </NoBreak>
-            {" "}But how 
-            far off is this exactly? (I.e., what is the
-            difference between{" "}
-            <Math>
-              $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
-            </Math>
-            {" "}
-            and{" "}
-            <NoBreak>
+              {" "}for large{" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                .
+              </NoBreak>
+              {" "}But how 
+              far off is this exactly? (I.e., what is the
+              difference between{" "}
               <Math>
-                $&#123;1 \over n^2&#125;$
+                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
               </Math>
-              ?)
-            </NoBreak>
-            {" "}And{" "}
-            <i>
-              roughly
-            </i>
-            {" "}how much is
-            this far-offness, for large{" "}
-            <NoBreak>
-              <Math>
-                $n$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}
+              and{" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1 \over n^2&#125;$
+                </Math>
+                ?)
+              </NoBreak>
+              {" "}And{" "}
+              <i>
+                roughly
+              </i>
+              {" "}how much is
+              this far-offness, for large{" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>

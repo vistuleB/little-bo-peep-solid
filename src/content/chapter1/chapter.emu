@@ -544,6 +544,7 @@
 |> Exercises
 
     |> Exercise
+        handle TrueOrFalse
 
         True or false (and, if possible, explain):
 
@@ -1127,7 +1128,7 @@
 
     |> Exercise
 
-        In the solution to Exercise 1, we observed how 
+        In the solution to Exercise >>TrueOrFalse, we observed how 
         the difference
 
         $$

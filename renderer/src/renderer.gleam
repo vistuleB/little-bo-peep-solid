@@ -196,7 +196,12 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(
           blame_us("lbp_fragment_emitter"),
           0,
-          "import { Exercise, Exercises } from \"~/components/Exercises\";",
+          "import { Exercise, Exercises, ExerciseStatement } from \"~/components/Exercises\";",
+        ),
+        BlamedLine(
+          blame_us("lbp_fragment_emitter"),
+          0,
+          "import InChapterLink from \"~/components/InChapterLink\";",
         ),
         BlamedLine(
           blame_us("lbp_fragment_emitter"),

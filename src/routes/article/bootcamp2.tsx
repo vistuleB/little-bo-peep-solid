@@ -2007,28 +2007,30 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <VerticalChunk>
-            <b id="_6118284576">
-              Exercise 1.
-            </b>
-            {" "}
-            Compute{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_87428289971">
+                Exercise 1.
+              </b>
+              {" "}
+              Compute{" "}
+              <NoBreak>
+                <Math>
+                  $2^&#123;-2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $2^&#123;-2&#125;$
+                $2^&#123;-3&#125;$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $2^&#123;-3&#125;$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $2^&#123;-4&#125;$
-            </Math>
-            {" "}by hand.
-          </VerticalChunk>
+              {" "}and{" "}
+              <Math>
+                $2^&#123;-4&#125;$
+              </Math>
+              {" "}by hand.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
@@ -2116,17 +2118,19 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <VerticalChunk>
-            <b id="_8628627231">
-              Exercise 2.
-            </b>
-            {" "}
-            Compute{" "}
-            <Math>
-              $100/16$
-            </Math>
-            {" "}by hand.
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_76618629517">
+                Exercise 2.
+              </b>
+              {" "}
+              Compute{" "}
+              <Math>
+                $100/16$
+              </Math>
+              {" "}by hand.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
@@ -2174,18 +2178,20 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={3}>
-          <VerticalChunk>
-            <b id="_92638796313">
-              Exercise 3.
-            </b>
-            {" "}
-            If “万” is Chinese for{" "}
-            <i>
-              ten thousand
-            </i>
-            , what is “万万” in English?
-            What about “万万万”?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_70778797612">
+                Exercise 3.
+              </b>
+              {" "}
+              If “万” is Chinese for{" "}
+              <i>
+                ten thousand
+              </i>
+              , what is “万万” in English?
+              What about “万万万”?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
@@ -2271,14 +2277,16 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <VerticalChunk>
-            <b id="_54819258333">
-              Exercise 4.
-            </b>
-            {" "}
-            How many millimeters in a kilometer? 
-            How many kilometers in a millimeter?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_29009253852">
+                Exercise 4.
+              </b>
+              {" "}
+              How many millimeters in a kilometer? 
+              How many kilometers in a millimeter?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
@@ -2335,17 +2343,19 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
-          <VerticalChunk>
-            <b id="_46379481664">
-              Exercise 5.
-            </b>
-            {" "}
-            How many kilometers is{" "}
-            <Math>
-              $10^&#123;24&#125;$
-            </Math>
-            {" "}millimeters?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_5601948532">
+                Exercise 5.
+              </b>
+              {" "}
+              How many kilometers is{" "}
+              <Math>
+                $10^&#123;24&#125;$
+              </Math>
+              {" "}millimeters?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
@@ -2381,19 +2391,21 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={6}>
-          <VerticalChunk>
-            <b id="_42669659456">
-              Exercise 6.
-            </b>
-            {" "}
-            If the US yearly budget is{" "}
-            <Math>
-              $4$
-            </Math>
-            {" "}trillion
-            dollars, what percentage of the budget is
-            one hundred billion $?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_52459659223">
+                Exercise 6.
+              </b>
+              {" "}
+              If the US yearly budget is{" "}
+              <Math>
+                $4$
+              </Math>
+              {" "}trillion
+              dollars, what percentage of the budget is
+              one hundred billion $?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
@@ -2440,17 +2452,19 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={7}>
-          <VerticalChunk>
-            <b id="_39059866096">
-              Exercise 7.
-            </b>
-            {" "}
-            What is the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
-            {" "}of one trillion?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_57229861192">
+                Exercise 7.
+              </b>
+              {" "}
+              What is the logarithm base{" "}
+              <Math>
+                $10$
+              </Math>
+              {" "}of one trillion?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
@@ -2471,23 +2485,25 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <VerticalChunk>
-            <b id="_46459943910">
-              Exercise 8.
-            </b>
-            {" "}
-            What is the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
-            {" "}of{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_88099947127">
+                Exercise 8.
+              </b>
+              {" "}
+              What is the logarithm base{" "}
               <Math>
-                $1$
+                $10$
               </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}of{" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
@@ -2508,21 +2524,23 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={9}>
-          <VerticalChunk>
-            <b id="_340710027170">
-              Exercise 9.
-            </b>
-            {" "}
-            What is the logarithm base{" "}
-            <Math>
-              $10$
-            </Math>
-            {" "}of:{" "}
-            <i>
-              a trillion times a billion times a million times a thousand
-            </i>
-            ?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_558210026286">
+                Exercise 9.
+              </b>
+              {" "}
+              What is the logarithm base{" "}
+              <Math>
+                $10$
+              </Math>
+              {" "}of:{" "}
+              <i>
+                a trillion times a billion times a million times a thousand
+              </i>
+              ?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
@@ -2554,19 +2572,21 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <VerticalChunk>
-            <b id="_607710151206">
-              Exercise 10.
-            </b>
-            {" "}
-            Evaluate:
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; 
-            $$
-          </MathBlock>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_56310154223">
+                Exercise 10.
+              </b>
+              {" "}
+              Evaluate:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; 
+              $$
+            </MathBlock>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
@@ -2611,21 +2631,23 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={11}>
-          <VerticalChunk>
-            <b id="_363010388840">
-              Exercise 11.
-            </b>
-            {" "}
-            How many{" "}
-            <i>
-              millibits
-            </i>
-            {" "}in a{" "}
-            <i>
-              gigabyte
-            </i>
-            ?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_840310388569">
+                Exercise 11.
+              </b>
+              {" "}
+              How many{" "}
+              <i>
+                millibits
+              </i>
+              {" "}in a{" "}
+              <i>
+                gigabyte
+              </i>
+              ?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
@@ -2664,68 +2686,70 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={12}>
-          <VerticalChunk>
-            <b id="_296310597125">
-              Exercise 12.
-            </b>
-            {" "}
-            It so happens that{" "}
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large 6.25
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (i.e., the value of{" "}
-            <NoBreak>
-              <Math>
-                $100/16$
-              </Math>
-              )
-            </NoBreak>
-            {" "}is also
-            famous for being equal to{" "}
-            <NoBreak>
-              <Math>
-                $2.5^2$
-              </Math>
-              .
-            </NoBreak>
-            {" "}(You can 
-            verify that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large 25^2 = 625
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            and, by shifting two decimal places, one
-            finds{" "}
-            <NoBreak>
-              <Math>
-                $2.5^2 = 6.25$
-              </Math>
-              .)
-            </NoBreak>
-            {" "}Can you elucidate
-            why it would be that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large &#123;100 \over 16&#125; = 2.5^2
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            by using some kind of algebra?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_32410596343">
+                Exercise 12.
+              </b>
+              {" "}
+              It so happens that{" "}
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 6.25
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (i.e., the value of{" "}
+              <NoBreak>
+                <Math>
+                  $100/16$
+                </Math>
+                )
+              </NoBreak>
+              {" "}is also
+              famous for being equal to{" "}
+              <NoBreak>
+                <Math>
+                  $2.5^2$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(You can 
+              verify that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 25^2 = 625
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              and, by shifting two decimal places, one
+              finds{" "}
+              <NoBreak>
+                <Math>
+                  $2.5^2 = 6.25$
+                </Math>
+                .)
+              </NoBreak>
+              {" "}Can you elucidate
+              why it would be that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;100 \over 16&#125; = 2.5^2
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              by using some kind of algebra?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
@@ -2751,40 +2775,42 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={13}>
-          <VerticalChunk>
-            <b id="_409710878624">
-              Exercise 13.
-            </b>
-            {" "}
-            Prove that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large &#123;10^n \over \vphantom&#123;10^&#123;A^n&#125;&#125;10^m&#125; = 10^&#123;n-m&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for all integers{" "}
-            <Math>
-              $n$
-            </Math>
-            {" "}and{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_56121087722">
+                Exercise 13.
+              </b>
+              {" "}
+              Prove that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;10^n \over \vphantom&#123;10^&#123;A^n&#125;&#125;10^m&#125; = 10^&#123;n-m&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for all integers{" "}
               <Math>
-                $m$
+                $n$
               </Math>
-              .
-            </NoBreak>
-            {" "}(You can
-            take for granted any identity that is stated
-            in this{" "}
-            <del>
-              chapter
-            </del>
-            &ensp;bootcamp.)
-          </VerticalChunk>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $m$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(You can
+              take for granted any identity that is stated
+              in this{" "}
+              <del>
+                chapter
+              </del>
+              &ensp;bootcamp.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
@@ -2864,65 +2890,67 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <VerticalChunk>
-            <b id="_145411423073">
-              Exercise 14.
-            </b>
-            {" "}
-            Rewrite each of these expressions...{" "}
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large &#123;L \over T&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large &#123;M (L/T) \over T&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right) 
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...in the form...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large M^aL^bT^c
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...for some integer exponents{" "}
-            <NoBreak>
-              <Math>
-                $a$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $b$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $c$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_382711422389">
+                Exercise 14.
+              </b>
+              {" "}
+              Rewrite each of these expressions...{" "}
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;L \over T&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;M (L/T) \over T&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right) 
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...in the form...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large M^aL^bT^c
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...for some integer exponents{" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $b$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $c$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
@@ -3014,84 +3042,86 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
-          <VerticalChunk>
-            <b id="_384511923347">
-              Exercise 15.
-            </b>
-            {" "}
-            Find integers{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_623011927616">
+                Exercise 15.
+              </b>
+              {" "}
+              Find integers{" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $a$
+                $b$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $b$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $c$
-            </Math>
-            {" "}such that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large v^aF^b\mu^c\rho = 1
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            where{" "}
-            <NoBreak>
+              {" "}and{" "}
               <Math>
-                $v$
+                $c$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
+              {" "}such that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large v^aF^b\mu^c\rho = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              where{" "}
+              <NoBreak>
+                <Math>
+                  $v$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $F$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $F$
+                $\mu$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $\mu$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $\rho$
-            </Math>
-            {" "}are defined as below.
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large v = &#123;L \over T&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large F = &#123;ML \over T^2&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large \mu = &#123;M \over TL &#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large \rho = &#123;M \over L^3&#125;
-            $$
-          </MathBlock>
+              {" "}and{" "}
+              <Math>
+                $\rho$
+              </Math>
+              {" "}are defined as below.
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large v = &#123;L \over T&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large F = &#123;ML \over T^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \mu = &#123;M \over TL &#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \rho = &#123;M \over L^3&#125;
+              $$
+            </MathBlock>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={15}>
             <VerticalChunk>

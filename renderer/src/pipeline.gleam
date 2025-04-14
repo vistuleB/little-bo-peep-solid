@@ -24,8 +24,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       // AddTitleCounters *******
       // ************************
-      dn.generate_handles_attributes(#("Chapter", "Exercise")),
-      dn.generate_handles_attributes(#("Bootcamp", "Exercise")),
       dn.add_title_counters_and_titles_with_handle_assignments([
         #("Chapter", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
         #("Bootcamp", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
@@ -90,12 +88,13 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       dn.wrap_math_with_no_break(),
       dn.unwrap_when_single_child(["NoBreak"]),
+      dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
       dn.counters_substitute_and_assign_handles(),
       dn.handles_generate_ids(),
       dn.define_article_output_path(#("Chapter", "/article/chapter", "path")),
       dn.define_article_output_path(#("Bootcamp", "/article/bootcamp", "path")),
       dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
-      dn.handles_substitute([#("class", "exercise-link")]),
+      dn.handles_substitute([]),
       dn.unwrap(["GrandWrapper"]),
 
       dn.concatenate_text_nodes(),
@@ -106,6 +105,11 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
       dn.unwrap_when_descendant_of([#("VerticalChunk", ["td", "li"])]),
       dn.remove_empty_chunks(),
+      // ************************
+      // ExerciseStatement handle
+      // ************************
+      dn.cut_paste_attribute_from_first_child_to_self(#("ExerciseStatement", "id")),
+
       // ************************
       // ImageLeft, ImageRight parent-finding
       // ************************

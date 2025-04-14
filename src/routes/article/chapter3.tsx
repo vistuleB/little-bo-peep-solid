@@ -1924,14 +1924,16 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <VerticalChunk>
-            <b id="_73938015888">
-              Exercise 1.
-            </b>
-            {" "}
-            How can you define the absolute value 
-            function using “definition by cases”?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_388801610">
+                Exercise 1.
+              </b>
+              {" "}
+              How can you define the absolute value 
+              function using “definition by cases”?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
@@ -1964,14 +1966,16 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <VerticalChunk>
-            <b id="_77148179806">
-              Exercise 2.
-            </b>
-            {" "}
-            How can you define the absolute value 
-            function using an “ordinary” algebraic formula?
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_82588172585">
+                Exercise 2.
+              </b>
+              {" "}
+              How can you define the absolute value 
+              function using an “ordinary” algebraic formula?
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
@@ -2015,45 +2019,47 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={3}>
-          <VerticalChunk>
-            <b id="_87798406166">
-              Exercise 3.
-            </b>
-            {" "}
-            Evaluate:
-          </VerticalChunk>
-          <Pause />
-          <Grid
-            column_first={true}
-            with_padding={false}
-            place_items="start"
-            sm_cols={1}
-            cols={2}>
-            <Item>
-              i.{" "}
-              <Math>
-                $(\lambda u.u^3)(0.5)$
-              </Math>
-            </Item>
-            <Item>
-              ii.{" "}
-              <Math>
-                $(u \ra u^2)(x + 1)$
-              </Math>
-            </Item>
-            <Item>
-              iii.{" "}
-              <Math>
-                $(\lambda t.t - 1)(100) \cdot (\lambda t.t + 1)(100)$
-              </Math>
-            </Item>
-            <Item>
-              iv.{" "}
-              <Math>
-                $(u \ra u^2)(a + b)$
-              </Math>
-            </Item>
-          </Grid>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_91528403452">
+                Exercise 3.
+              </b>
+              {" "}
+              Evaluate:
+            </VerticalChunk>
+            <Pause />
+            <Grid
+              column_first={true}
+              with_padding={false}
+              place_items="start"
+              sm_cols={1}
+              cols={2}>
+              <Item>
+                i.{" "}
+                <Math>
+                  $(\lambda u.u^3)(0.5)$
+                </Math>
+              </Item>
+              <Item>
+                ii.{" "}
+                <Math>
+                  $(u \ra u^2)(x + 1)$
+                </Math>
+              </Item>
+              <Item>
+                iii.{" "}
+                <Math>
+                  $(\lambda t.t - 1)(100) \cdot (\lambda t.t + 1)(100)$
+                </Math>
+              </Item>
+              <Item>
+                iv.{" "}
+                <Math>
+                  $(u \ra u^2)(a + b)$
+                </Math>
+              </Item>
+            </Grid>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
@@ -2094,83 +2100,85 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <VerticalChunk>
-            <b id="_65778802992">
-              Exercise 4.
-            </b>
-            {" "}
-            The{" "}
-            <i>
-              floor
-            </i>
-            {" "}of a real number{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_4148809526">
+                Exercise 4.
+              </b>
+              {" "}
+              The{" "}
+              <i>
+                floor
+              </i>
+              {" "}of a real number{" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}written
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \lfloor x \rfloor,
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is the greatest integer less than or equal 
+              to{" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                .
+              </NoBreak>
+              {" "}(Start at{" "}
               <Math>
                 $x$
               </Math>
-              ,
-            </NoBreak>
-            {" "}written
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \lfloor x \rfloor,
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is the greatest integer less than or equal 
-            to{" "}
-            <NoBreak>
+              {" "}and travel left on the 
+              number line until you meet an integer; but if
+              {" "}
               <Math>
                 $x$
               </Math>
-              .
-            </NoBreak>
-            {" "}(Start at{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}and travel left on the 
-            number line until you meet an integer; but if
-            {" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}is already an integer, stay there; the 
-            place you land is{" "}
-            <NoBreak>
-              <Math>
-                $\lfloor x \rfloor$
-              </Math>
-              .)
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Sketch the graph{" "}
-            <NoBreak>
-              <Math>
-                $y = \floor&#123;x&#125;$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Secondly, find a formula for a function whose
-            graph looks like this, where you are allowed
-            to use{" "}
-            <NoBreak>
-              “
-              <Math>
-                $\floor&#123;x&#125;$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}in your formula:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_ex_factory_roof_graph.svg" />
+              {" "}is already an integer, stay there; the 
+              place you land is{" "}
+              <NoBreak>
+                <Math>
+                  $\lfloor x \rfloor$
+                </Math>
+                .)
+              </NoBreak>
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Sketch the graph{" "}
+              <NoBreak>
+                <Math>
+                  $y = \floor&#123;x&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Secondly, find a formula for a function whose
+              graph looks like this, where you are allowed
+              to use{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\floor&#123;x&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}in your formula:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch3_ex_factory_roof_graph.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
@@ -2314,25 +2322,27 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
-          <VerticalChunk>
-            <b id="_2604942104">
-              Exercise 5.
-            </b>
-            {" "}
-            Find the formula for a function whose graph 
-            looks like this, again using the floor function
-            {" "}
-            <NoBreak>
-              ‘
-              <Math>
-                $\lfloor \cdot \rfloor$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}as a building block:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_ex_factory_roof_stretched.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_881942291">
+                Exercise 5.
+              </b>
+              {" "}
+              Find the formula for a function whose graph 
+              looks like this, again using the floor function
+              {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\lfloor \cdot \rfloor$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}as a building block:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch3_ex_factory_roof_stretched.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
@@ -2754,16 +2764,18 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={6}>
-          <VerticalChunk>
-            <b id="_389710736239">
-              Exercise 6.
-            </b>
-            {" "}
-            Find formulas for functions whose graphs look 
-            like these:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_ex_three_factories.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_902410739034">
+                Exercise 6.
+              </b>
+              {" "}
+              Find formulas for functions whose graphs look 
+              like these:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch3_ex_three_factories.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
@@ -2934,52 +2946,54 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={7}>
-          <VerticalChunk>
-            <b id="_216611576672">
-              Exercise 7.
-            </b>
-            {" "}
-            If
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \cos \dblcol \rr \ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (the “hollow dot colon” means that{" "}
-            <NoBreak>
-              <Math>
-                $\dom \cos = \rr$
-              </Math>
-              )
-            </NoBreak>
-            {" "}
-            is a function whose graph looks like so...
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_cosine.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...then does the function...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;x \ra \cos(1000x)&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...have a graph that looks like a bunch of very tight 
-            bumps, or, instead, very flat{" "}
-            <i>
-              &
-            </i>
-            {" "}spaced-out bumps??
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_65611576576">
+                Exercise 7.
+              </b>
+              {" "}
+              If
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos \dblcol \rr \ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (the “hollow dot colon” means that{" "}
+              <NoBreak>
+                <Math>
+                  $\dom \cos = \rr$
+                </Math>
+                )
+              </NoBreak>
+              {" "}
+              is a function whose graph looks like so...
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch3_cosine.svg" />
+            <Pause />
+            <VerticalChunk>
+              ...then does the function...
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;x \ra \cos(1000x)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              ...have a graph that looks like a bunch of very tight 
+              bumps, or, instead, very flat{" "}
+              <i>
+                &
+              </i>
+              {" "}spaced-out bumps??
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
@@ -3067,83 +3081,85 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <VerticalChunk>
-            <b id="_96012106715">
-              Exercise 8.
-            </b>
-            {" "}
-            Rewrite
-          </VerticalChunk>
-          <div style="font-size:1.1em;margin:1em 0em;">
-            <MathBlock>
-              $$
-              \tag&#123;A&#125;(f \circ (g \circ h))(x)
-              $$
-            </MathBlock>
-          </div>
-          <VerticalChunk>
-            without using{" "}
-            <NoBreak>
-              “
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_732512104696">
+                Exercise 8.
+              </b>
+              {" "}
+              Rewrite
+            </VerticalChunk>
+            <div style="font-size:1.1em;margin:1em 0em;">
+              <MathBlock>
+                $$
+                \tag&#123;A&#125;(f \circ (g \circ h))(x)
+                $$
+              </MathBlock>
+            </div>
+            <VerticalChunk>
+              without using{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\circ$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "}using only the 
+              “definitional equation of function 
+              composition”, which is namely
+            </VerticalChunk>
+            <div style="font-size:1.1em;margin:1em 0em;">
+              <MathBlock>
+                $$
+                \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
+                $$
+              </MathBlock>
+            </div>
+            <VerticalChunk>
+              (where{" "}
               <Math>
-                $\circ$
+                $r$
               </Math>
-              ”,
-            </NoBreak>
-            {" "}using only the 
-            “definitional equation of function 
-            composition”, which is namely
-          </VerticalChunk>
-          <div style="font-size:1.1em;margin:1em 0em;">
-            <MathBlock>
-              $$
-              \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
-              $$
-            </MathBlock>
-          </div>
-          <VerticalChunk>
-            (where{" "}
-            <Math>
-              $r$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $s$
-            </Math>
-            {" "}are functions); plz
-            note that you will have to apply (AA) 
-            {" "}
-            <i>
-              twice
-            </i>
-            , as each application of (AA) 
-            makes{" "}
-            <i>
-              one
-            </i>
-            {" "}copy of the symbol{" "}
-            <NoBreak>
-              “
+              {" "}and{" "}
               <Math>
-                $\circ$
+                $s$
               </Math>
-              ”
-            </NoBreak>
-            {" "}
-            disappear, and (A) contains{" "}
-            <i>
-              two
-            </i>
-            {" "}copies of 
-            {" "}
-            <NoBreak>
-              “
-              <Math>
-                $\circ$
-              </Math>
-              ”!!
-            </NoBreak>
-          </VerticalChunk>
+              {" "}are functions); plz
+              note that you will have to apply (AA) 
+              {" "}
+              <i>
+                twice
+              </i>
+              , as each application of (AA) 
+              makes{" "}
+              <i>
+                one
+              </i>
+              {" "}copy of the symbol{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\circ$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              disappear, and (A) contains{" "}
+              <i>
+                two
+              </i>
+              {" "}copies of 
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\circ$
+                </Math>
+                ”!!
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
@@ -3241,30 +3257,32 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={9}>
-          <VerticalChunk>
-            <b id="_454012888376">
-              Exercise 9.
-            </b>
-            {" "}
-            Same question as Exercise 17, but for 
-            {" "}
-            <NoBreak>
-              “
-              <Math>
-                $f \circ (g \circ h)$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}instead of 
-            {" "}
-            <NoBreak>
-              “
-              <Math>
-                $(f \circ g) \circ h$
-              </Math>
-              ”.
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_118912889119">
+                Exercise 9.
+              </b>
+              {" "}
+              Same question as Exercise 17, but for 
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $f \circ (g \circ h)$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}instead of 
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $(f \circ g) \circ h$
+                </Math>
+                ”.
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
@@ -3965,48 +3983,50 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <VerticalChunk>
-            <b id="_949316373169">
-              Exercise 10.
-            </b>
-            {" "}
-            Show that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x^2 + 10x + 30
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            can be written in the form{" "}
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (x + \dots)^2 + \,\dots
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for some numbers{" "}
-            <NoBreak>
-              “
-              <Math>
-                $\dots$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}and{" "}
-            <NoBreak>
-              “
-              <Math>
-                $\dots$
-              </Math>
-              ”.
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_9616378683">
+                Exercise 10.
+              </b>
+              {" "}
+              Show that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x^2 + 10x + 30
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              can be written in the form{" "}
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (x + \dots)^2 + \,\dots
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for some numbers{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\dots$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\dots$
+                </Math>
+                ”.
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
@@ -4049,18 +4069,20 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={11}>
-          <VerticalChunk>
-            <b id="_27071665129">
-              Exercise 11.
-            </b>
-            {" "}
-            Solve Exercise 10 using algebra{" "}
-            <i>
-              &
-            </i>
-            {" "}
-            variables.
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_59271665236">
+                Exercise 11.
+              </b>
+              {" "}
+              Solve Exercise 10 using algebra{" "}
+              <i>
+                &
+              </i>
+              {" "}
+              variables.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
@@ -4269,35 +4291,37 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={12}>
-          <VerticalChunk>
-            <b id="_621817249777">
-              Exercise 12.
-            </b>
-            {" "}
-            Show that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x^2 + 10x + 30 = 0
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            <NoBreak>
-              (cf
-              <Math>
-                $.$
-              </Math>
-            </NoBreak>
-            {" "}Exercise 21) has no solutions{" "}
-            <NoBreak>
-              <Math>
-                $x \in \rr$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_102017246056">
+                Exercise 12.
+              </b>
+              {" "}
+              Show that
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x^2 + 10x + 30 = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              <NoBreak>
+                (cf
+                <Math>
+                  $.$
+                </Math>
+              </NoBreak>
+              {" "}Exercise 21) has no solutions{" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
@@ -4328,29 +4352,31 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={13}>
-          <VerticalChunk>
-            <b id="_276317462977">
-              Exercise 13.
-            </b>
-            {" "}
-            Show that{" "}
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            x^2 + 10x - 30 = 0
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            has two solutions{" "}
-            <NoBreak>
-              <Math>
-                $x \in \rr$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_78881746317">
+                Exercise 13.
+              </b>
+              {" "}
+              Show that{" "}
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              x^2 + 10x - 30 = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              has two solutions{" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
@@ -4416,52 +4442,54 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <VerticalChunk>
-            <b id="_63817762279">
-              Exercise 14.
-            </b>
-            {" "}
-            What sequence of geometric transformations
-            (rotations, translations, scalings, etc) 
-            maps the curve
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;y = x^2&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            onto
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;y = Ax^2 + Bx&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for constants{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_49517765444">
+                Exercise 14.
+              </b>
+              {" "}
+              What sequence of geometric transformations
+              (rotations, translations, scalings, etc) 
+              maps the curve
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;y = x^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              onto
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;y = Ax^2 + Bx&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for constants{" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $A$
+                $B$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}such that{" "}
-            <NoBreak>
-              <Math>
-                $A \ne 0$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}such that{" "}
+              <NoBreak>
+                <Math>
+                  $A \ne 0$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
@@ -4922,93 +4950,95 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
-          <VerticalChunk>
-            <b id="_673719476291">
-              Exercise 15.
-            </b>
-            {" "}
-            Let{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_660419478635">
+                Exercise 15.
+              </b>
+              {" "}
+              Let{" "}
+              <NoBreak>
+                <Math>
+                  $x_0 \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $x_0 \in \rr$
+                $y_0 \in \rr$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $y_0 \in \rr$
-            </Math>
-            {" "}and 
-            {" "}
-            <Math>
-              $a \in \rr$
-            </Math>
-            {" "}with{" "}
-            <NoBreak>
+              {" "}and 
+              {" "}
               <Math>
-                $y_0 \geq 0$
+                $a \in \rr$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $a \ne 0.$
-            </Math>
-            {" "}
-            If you apply these transformations...
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            1. vertical translation by{" "}
-            <Math>
-              $-y_0$
-            </Math>
-            {" "}{" "}
-          </CentralDisplayItalic>
-          <Pause />
-          <CentralDisplayItalic>
-            2. horizontal translation by{" "}
-            <Math>
-              $x_0$
-            </Math>
-            {" "}{" "}
-          </CentralDisplayItalic>
-          <Pause />
-          <CentralDisplayItalic>
-            3. vertical scaling by{" "}
-            <Math>
-              $a$
-            </Math>
-            {" "}{" "}
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            ...to the curve{" "}
-            <NoBreak>
+              {" "}with{" "}
+              <NoBreak>
+                <Math>
+                  $y_0 \geq 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $y = x^2$
+                $a \ne 0.$
               </Math>
-              ,
-            </NoBreak>
-            {" "}what are the 
-            roots of the final curve that you obtain?
-            (Nb:{" "}
-            <i>
-              Roots
-            </i>
-            {" "}are values of{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}such 
-            that{" "}
-            <NoBreak>
+              {" "}
+              If you apply these transformations...
+            </VerticalChunk>
+            <Pause />
+            <CentralDisplayItalic>
+              1. vertical translation by{" "}
               <Math>
-                $y = 0$
+                $-y_0$
               </Math>
-              .)
-            </NoBreak>
-          </VerticalChunk>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              2. horizontal translation by{" "}
+              <Math>
+                $x_0$
+              </Math>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              3. vertical scaling by{" "}
+              <Math>
+                $a$
+              </Math>
+              {" "}{" "}
+            </CentralDisplayItalic>
+            <Pause />
+            <VerticalChunk>
+              ...to the curve{" "}
+              <NoBreak>
+                <Math>
+                  $y = x^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}what are the 
+              roots of the final curve that you obtain?
+              (Nb:{" "}
+              <i>
+                Roots
+              </i>
+              {" "}are values of{" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}such 
+              that{" "}
+              <NoBreak>
+                <Math>
+                  $y = 0$
+                </Math>
+                .)
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={15}>
             <VerticalChunk>
@@ -5128,41 +5158,43 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={16}>
-          <VerticalChunk>
-            <b id="_821420043525">
-              Exercise 16.
-            </b>
-            {" "}
-            Use the results of the previous two exercises
-            to find the value(s) of{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}such that 
-            {" "}
-            <Math>
-              $Ax^2 + Bx = 0$
-            </Math>
-            {" "}for constants{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_952420045060">
+                Exercise 16.
+              </b>
+              {" "}
+              Use the results of the previous two exercises
+              to find the value(s) of{" "}
               <Math>
-                $A$
+                $x$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $B$
-            </Math>
-            {" "}such 
-            that{" "}
-            <NoBreak>
+              {" "}such that 
+              {" "}
               <Math>
-                $A \ne 0$
+                $Ax^2 + Bx = 0$
               </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+              {" "}for constants{" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}such 
+              that{" "}
+              <NoBreak>
+                <Math>
+                  $A \ne 0$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={16}>
             <VerticalChunk>
@@ -5467,57 +5499,59 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={17}>
-          <VerticalChunk>
-            <b id="_71592095774">
-              Exercise 17.
-            </b>
-            {" "}
-            True or false{" "}
-            <NoBreak>
-              (
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_433620956251">
+                Exercise 17.
+              </b>
+              {" "}
+              True or false{" "}
+              <NoBreak>
+                (
+                <Math>
+                  $f$
+                </Math>
+              </NoBreak>
+              {" "}and{" "}
               <Math>
-                $f$
+                $g$
               </Math>
-            </NoBreak>
-            {" "}and{" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}are functions):
-          </VerticalChunk>
-          <Pause />
-          <Grid
-            column_first={true}
-            with_padding={false}
-            place_items="start"
-            center_on_overflow={true}
-            sm_cols={1}
-            cols={2}>
-            <Item>
-              i.{" "}
-              <Math>
-                $f \circ g = (x \ra f(g(x)))$
-              </Math>
-            </Item>
-            <Item>
-              ii.{" "}
-              <Math>
-                $g \circ f = (x \ra f(g(x)))$
-              </Math>
-            </Item>
-            <Item>
-              iii.{" "}
-              <Math>
-                $f \circ g = (x \ra g(f(x)))$
-              </Math>
-            </Item>
-            <Item>
-              iv.{" "}
-              <Math>
-                $g \circ f = (x \ra g(f(x)))$
-              </Math>
-            </Item>
-          </Grid>
+              {" "}are functions):
+            </VerticalChunk>
+            <Pause />
+            <Grid
+              column_first={true}
+              with_padding={false}
+              place_items="start"
+              center_on_overflow={true}
+              sm_cols={1}
+              cols={2}>
+              <Item>
+                i.{" "}
+                <Math>
+                  $f \circ g = (x \ra f(g(x)))$
+                </Math>
+              </Item>
+              <Item>
+                ii.{" "}
+                <Math>
+                  $g \circ f = (x \ra f(g(x)))$
+                </Math>
+              </Item>
+              <Item>
+                iii.{" "}
+                <Math>
+                  $f \circ g = (x \ra g(f(x)))$
+                </Math>
+              </Item>
+              <Item>
+                iv.{" "}
+                <Math>
+                  $g \circ f = (x \ra g(f(x)))$
+                </Math>
+              </Item>
+            </Grid>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={17}>
             <VerticalChunk>
@@ -5550,180 +5584,182 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <VerticalChunk>
-            <b id="_404321229554">
-              Exercise 18.
-            </b>
-            {" "}
-            If{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}are functions then we define 
-            (and not just us but people in general)
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f + g
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            to be
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            t \ra f(t) + g(t)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (use{" "}
-            <NoBreak>
-              ‘
-              <Math>
-                $x$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}if you like), 
-            i.e., to be the function that applies{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}and
-            {" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}separately and then takes the sum,
-            and we define{" "}
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            fg
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            to be
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            z \ra f(z)g(z)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (use{" "}
-            <NoBreak>
-              ‘
-              <Math>
-                $t$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}if you like, hehe),
-            i.e., to be the function that applies{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}and 
-            {" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}separately and then takes the product.
-            (These definitions are similar to how we define
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f \circ g
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            to be
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            u \ra f(g(u))
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for the symbol{" "}
-            <NoBreak>
-              “
-              <Math>
-                $\circ$
-              </Math>
-              ”,
-            </NoBreak>
-            {" "}except that now we 
-            are defining the{" "}
-            <i>
-              sum
-            </i>
-            {" "}and{" "}
-            <i>
-              product
-            </i>
-            {" "}of functions,
-            instead of their{" "}
-            <i>
-              composition
-            </i>
-            , namely.)
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Given these definitions, which of the following
-            equalities hold, in general for all functions{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_922821222681">
+                Exercise 18.
+              </b>
+              {" "}
+              If{" "}
               <Math>
                 $f$
               </Math>
-              ,
-            </NoBreak>
-            {" "}
-            {" "}
-            <Math>
-              $g$
-            </Math>
-            {" "}and{" "}
-            <NoBreak>
+              {" "}and{" "}
               <Math>
-                $h$
+                $g$
               </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$f \circ (g + h) = (x \ra f(g(x) + h(x)))$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(g + h) \circ f = (x \ra h(f(x)) + g(f(x)))$$
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$(g + h) \circ f = (x \ra (g + h)(f(x)))$$
-          </MathBlock>
+              {" "}are functions then we define 
+              (and not just us but people in general)
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f + g
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              to be
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              t \ra f(t) + g(t)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (use{" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $x$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}if you like), 
+              i.e., to be the function that applies{" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}and
+              {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "}separately and then takes the sum,
+              and we define{" "}
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              fg
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              to be
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              z \ra f(z)g(z)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (use{" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $t$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}if you like, hehe),
+              i.e., to be the function that applies{" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}and 
+              {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "}separately and then takes the product.
+              (These definitions are similar to how we define
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ g
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              to be
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              u \ra f(g(u))
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for the symbol{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\circ$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "}except that now we 
+              are defining the{" "}
+              <i>
+                sum
+              </i>
+              {" "}and{" "}
+              <i>
+                product
+              </i>
+              {" "}of functions,
+              instead of their{" "}
+              <i>
+                composition
+              </i>
+              , namely.)
+            </VerticalChunk>
+            <VerticalChunk indent={true}>
+              Given these definitions, which of the following
+              equalities hold, in general for all functions{" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$f \circ (g + h) = (x \ra f(g(x) + h(x)))$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$(g + h) \circ f = (x \ra h(f(x)) + g(f(x)))$$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$(g + h) \circ f = (x \ra (g + h)(f(x)))$$
+            </MathBlock>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={18}>
             <VerticalChunk>
@@ -5787,58 +5823,60 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={19}>
-          <VerticalChunk>
-            <b id="_317721855377">
-              Exercise 19.
-            </b>
-            {" "}
-            What sequence of geometric transformations 
-            of length no more than 3 maps
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y = x^2
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            onto
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            y = Ax^2 + Bx + C
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for constants{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_978421852076">
+                Exercise 19.
+              </b>
+              {" "}
+              What sequence of geometric transformations 
+              of length no more than 3 maps
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = x^2
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              onto
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              y = Ax^2 + Bx + C
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for constants{" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $A$
+                $C$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $B$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $C$
-            </Math>
-            {" "}such that{" "}
-            <NoBreak>
-              <Math>
-                $A \ne 0$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}such that{" "}
+              <NoBreak>
+                <Math>
+                  $A \ne 0$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={19}>
             <VerticalChunk>
@@ -5985,51 +6023,53 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={20}>
-          <VerticalChunk>
-            <b id="_388522513913">
-              Exercise 20.
-            </b>
-            {" "}
-            What are the roots (i.e., solutions){" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}of
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            Ax^2 + Bx + C = 0
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            for constants{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_417522512916">
+                Exercise 20.
+              </b>
+              {" "}
+              What are the roots (i.e., solutions){" "}
               <Math>
-                $A$
+                $x$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <NoBreak>
+              {" "}of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              Ax^2 + Bx + C = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              for constants{" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}{" "}
               <Math>
-                $B$
+                $C$
               </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $C$
-            </Math>
-            {" "}such that{" "}
-            <NoBreak>
-              <Math>
-                $A \ne 0$
-              </Math>
-              ?
-            </NoBreak>
-          </VerticalChunk>
+              {" "}such that{" "}
+              <NoBreak>
+                <Math>
+                  $A \ne 0$
+                </Math>
+                ?
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={20}>
             <VerticalChunk>
@@ -6268,28 +6308,30 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={21}>
-          <VerticalChunk>
-            <b id="_384423508377">
-              Exercise 21.
-            </b>
-            {" "}
-            Summon your senses of extrapolation{" "}
-            <i>
-              &
-            </i>
-            {" "}
-            imagination to evaluate this expression:
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (Hint: The answer is a specific real number.)
-          </VerticalChunk>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_122323506815">
+                Exercise 21.
+              </b>
+              {" "}
+              Summon your senses of extrapolation{" "}
+              <i>
+                &
+              </i>
+              {" "}
+              imagination to evaluate this expression:
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              (Hint: The answer is a specific real number.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={21}>
             <VerticalChunk>

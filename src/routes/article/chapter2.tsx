@@ -1551,24 +1551,26 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <VerticalChunk>
-            <b id="_83246764779">
-              Exercise 1.
-            </b>
-            {" "}
-            True or false: Lines of slope{" "}
-            <Math>
-              $-&#123;1 \over 2&#125;$
-            </Math>
-            {" "}
-            are perpendicular to lines of slope{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_49546766251">
+                Exercise 1.
+              </b>
+              {" "}
+              True or false: Lines of slope{" "}
               <Math>
-                $2$
+                $-&#123;1 \over 2&#125;$
               </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
+              {" "}
+              are perpendicular to lines of slope{" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                .
+              </NoBreak>
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
@@ -1646,26 +1648,28 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <VerticalChunk>
-            <b id="_76157322913">
-              Exercise 2.
-            </b>
-            {" "}
-            Find the general equation of a line of slope
-            {" "}
-            <Math>
-              $p$
-            </Math>
-            {" "}passing through a point{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_45917324795">
+                Exercise 2.
+              </b>
+              {" "}
+              Find the general equation of a line of slope
+              {" "}
               <Math>
-                $(x_0, y_0)$
+                $p$
               </Math>
-              .
-            </NoBreak>
-            {" "}
-            (Hint: Start from the slope formula.)
-          </VerticalChunk>
+              {" "}passing through a point{" "}
+              <NoBreak>
+                <Math>
+                  $(x_0, y_0)$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (Hint: Start from the slope formula.)
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
@@ -1903,21 +1907,23 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={3}>
-          <VerticalChunk>
-            <b id="_81768346037">
-              Exercise 3.
-            </b>
-            {" "}
-            Plot the vertical velocity of{" "}
-            <del>
-              an object
-            </del>
-            &ensp;a mosquito whose height over time is 
-            given by this graph (use the same time interval 
-            as the graph):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/1.svg" />
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_39678345719">
+                Exercise 3.
+              </b>
+              {" "}
+              Plot the vertical velocity of{" "}
+              <del>
+                an object
+              </del>
+              &ensp;a mosquito whose height over time is 
+              given by this graph (use the same time interval 
+              as the graph):
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/1.svg" />
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
@@ -2074,39 +2080,41 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <VerticalChunk>
-            <b id="_55369007182">
-              Exercise 4.
-            </b>
-            {" "}
-            Digressing on the second-to-last equation
-            in the solution to Exercise 2, explain why
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$ y_0 - px_0 $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is the{" "}
-            <NoBreak>
+          <ExerciseStatement>
+            <VerticalChunk>
+              <b id="_3232900893">
+                Exercise 4.
+              </b>
+              {" "}
+              Digressing on the second-to-last equation
+              in the solution to Exercise 2, explain why
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$ y_0 - px_0 $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              is the{" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -intercept
+              </NoBreak>
+              {" "}of the line of slope{" "}
               <Math>
-                $y$
+                $p$
               </Math>
-              -intercept
-            </NoBreak>
-            {" "}of the line of slope{" "}
-            <Math>
-              $p$
-            </Math>
-            {" "}
-            through the point{" "}
-            <Math>
-              $(x_0,y_0)$
-            </Math>
-            {" "}by using a drawing
-            and “rise equals slope times run”.
-          </VerticalChunk>
+              {" "}
+              through the point{" "}
+              <Math>
+                $(x_0,y_0)$
+              </Math>
+              {" "}by using a drawing
+              and “rise equals slope times run”.
+            </VerticalChunk>
+          </ExerciseStatement>
           <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>

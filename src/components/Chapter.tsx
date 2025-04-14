@@ -1,16 +1,14 @@
 import ArticleTitle from "~/components/ArticleTitle";
 import useScrollX from "~/hooks/useScrollX";
-import useSaveScroll from "~/hooks/useSaveScroll";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { onMount } from "solid-js";
-import { useSearchParams } from "@solidjs/router";
+import useCheckedSaveScroll from "~/hooks/useCheckedSaveScroll";
 
 const Chapter = (props: any) => {
   let { set_store } = useGlobalContext();
-  const [searchParams, _] = useSearchParams();
 
   useScrollX();
-  if (!searchParams.id) useSaveScroll();
+  useCheckedSaveScroll();
 
   const resetDimensions = () => {
     set_store("innerWidth", window.innerWidth);
