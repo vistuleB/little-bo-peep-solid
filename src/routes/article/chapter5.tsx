@@ -1838,7 +1838,7 @@ const Rest = () => {
         <Image src="/images/svg_ch5_ch_main_angles_two_equilateral_triangles.svg" />
         <Pause />
         <VerticalChunk>
-          These triangles imply that the the unique 
+          The first triangle implies that the the unique 
           point on the unit circle with{" "}
           <NoBreak>
             <Math>
@@ -1860,7 +1860,7 @@ const Rest = () => {
           <Math>
             $x$
           </Math>
-          {" "}axis, and that the unique point
+          {" "}axis, while the second triangle implies that the unique point
           on the unit circle with{" "}
           <NoBreak>
             <Math>
@@ -4006,7 +4006,7 @@ const Rest = () => {
       <Exercises>
         <Exercise exercise_number={1}>
           <VerticalChunk>
-            <b id="_170014776">
+            <b id="_46719943">
               Exercise 1.
             </b>
             {" "}
@@ -4104,7 +4104,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={2}>
           <VerticalChunk>
-            <b id="_9911282565">
+            <b id="_9831287871">
               Exercise 2.
             </b>
             {" "}
@@ -4239,7 +4239,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={3}>
           <VerticalChunk>
-            <b id="_2379838198">
+            <b id="_5077838679">
               Exercise 3.
             </b>
             {" "}
@@ -4668,7 +4668,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={4}>
           <VerticalChunk>
-            <b id="_2672315154">
+            <b id="_6908231349">
               Exercise 4.
             </b>
             {" "}
@@ -4990,7 +4990,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={5}>
           <VerticalChunk>
-            <b id="_11914136390">
+            <b id="_33584131312">
               Exercise 5.
             </b>
             {" "}
@@ -5114,7 +5114,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={6}>
           <VerticalChunk>
-            <b id="_1194743264">
+            <b id="_44254743278">
               Exercise 6.
             </b>
             {" "}
@@ -5196,7 +5196,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={7}>
           <VerticalChunk>
-            <b id="_99395073055">
+            <b id="_88295079653">
               Exercise 7.
             </b>
             {" "}
@@ -5500,7 +5500,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={8}>
           <VerticalChunk>
-            <b id="_8198662247">
+            <b id="_23556623944">
               Exercise 8.
             </b>
             {" "}
@@ -5654,7 +5654,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={9}>
           <VerticalChunk>
-            <b id="_64787118278">
+            <b id="_4387113290">
               Exercise 9.
             </b>
             {" "}
@@ -6053,7 +6053,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={10}>
           <VerticalChunk>
-            <b id="_51728762157">
+            <b id="_97278764524">
               Exercise 10.
             </b>
             {" "}
@@ -6434,7 +6434,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={11}>
           <VerticalChunk>
-            <b id="_38210316247">
+            <b id="_193010312479">
               Exercise 11.
             </b>
             {" "}
@@ -6556,7 +6556,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={12}>
           <VerticalChunk>
-            <b id="_601410745742">
+            <b id="_416510744452">
               Exercise 12.
             </b>
             {" "}
@@ -6640,7 +6640,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={13}>
           <VerticalChunk>
-            <b id="_92611123223">
+            <b id="_856211126924">
               Exercise 13.
             </b>
             {" "}
@@ -6757,7 +6757,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={14}>
           <VerticalChunk>
-            <b id="_278211661459">
+            <b id="_210311661595">
               Exercise 14.
             </b>
             {" "}
@@ -7247,7 +7247,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={15}>
           <VerticalChunk>
-            <b id="_822113248852">
+            <b id="_281713248872">
               Exercise 15.
             </b>
             {" "}
@@ -7490,7 +7490,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={16}>
           <VerticalChunk>
-            <b id="_862614579384">
+            <b id="_220014571643">
               Exercise 16.
             </b>
             {" "}
@@ -8237,7 +8237,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={17}>
           <VerticalChunk>
-            <b id="_733817121909">
+            <b id="_130317125036">
               Exercise 17.
             </b>
             {" "}
@@ -8322,7 +8322,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={18}>
           <VerticalChunk>
-            <b id="_207717468338">
+            <b id="_993117464613">
               Exercise 18.
             </b>
             {" "}
@@ -8774,7 +8774,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={19}>
           <VerticalChunk>
-            <b id="_666219271191">
+            <b id="_939119278600">
               Exercise 19.
             </b>
             {" "}
@@ -8846,7 +8846,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={20}>
           <VerticalChunk>
-            <b id="_252019619469">
+            <b id="_909619611833">
               Exercise 20.
             </b>
             {" "}
@@ -8943,7 +8943,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={21}>
           <VerticalChunk>
-            <b id="_370620091901">
+            <b id="_671420099953">
               Exercise 21.
             </b>
             {" "}
@@ -10103,7 +10103,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={22}>
           <VerticalChunk>
-            <b id="_661824839886">
+            <b id="_159824833239">
               Exercise 22.
             </b>
             {" "}
@@ -10196,7 +10196,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={23}>
           <VerticalChunk>
-            <b id="_90625192609">
+            <b id="_110725194272">
               Exercise 23.
             </b>
             {" "}
@@ -10386,7 +10386,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={24}>
           <VerticalChunk>
-            <b id="_702826012992">
+            <b id="_85502601180">
               Exercise 24.
             </b>
             {" "}
@@ -10514,7 +10514,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={25}>
           <VerticalChunk>
-            <b id="_320026585463">
+            <b id="_490326589917">
               Exercise 25.
             </b>
             {" "}
@@ -10587,7 +10587,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={26}>
           <VerticalChunk>
-            <b id="_231326942857">
+            <b id="_451426949744">
               Exercise 26.
             </b>
             {" "}
@@ -10794,7 +10794,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={27}>
           <VerticalChunk>
-            <b id="_42727839055">
+            <b id="_627527831361">
               Exercise 27.
             </b>
             {" "}
@@ -10901,7 +10901,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={28}>
           <VerticalChunk>
-            <b id="_99372827235">
+            <b id="_207728278017">
               Exercise 28.
             </b>
             {" "}
@@ -11174,7 +11174,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={29}>
           <VerticalChunk>
-            <b id="_863429112273">
+            <b id="_251329115908">
               Exercise 29.
             </b>
             {" "}
@@ -11607,7 +11607,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={30}>
           <VerticalChunk>
-            <b id="_86031124069">
+            <b id="_279631123794">
               Exercise 30.
             </b>
             {" "}
@@ -11992,7 +11992,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={31}>
           <VerticalChunk>
-            <b id="_147132739172">
+            <b id="_195932736070">
               Exercise 31.
             </b>
             {" "}
@@ -12069,7 +12069,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={32}>
           <VerticalChunk>
-            <b id="_788033145111">
+            <b id="_519633142152">
               Exercise 32.
             </b>
             {" "}
@@ -12151,7 +12151,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={33}>
           <VerticalChunk>
-            <b id="_943733356808">
+            <b id="_176033358859">
               Exercise 33.
             </b>
             {" "}
@@ -12447,7 +12447,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={34}>
           <VerticalChunk>
-            <b id="_842534476503">
+            <b id="_503034479196">
               Exercise 34.
             </b>
             {" "}
@@ -12983,7 +12983,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={35}>
           <VerticalChunk>
-            <b id="_94936053062">
+            <b id="_872836051882">
               Exercise 35.
             </b>
             {" "}
@@ -13201,7 +13201,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={36}>
           <VerticalChunk>
-            <b id="_618736869083">
+            <b id="_430936867579">
               Exercise 36.
             </b>
             {" "}
@@ -13353,7 +13353,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={37}>
           <VerticalChunk>
-            <b id="_268237608896">
+            <b id="_502037606049">
               Exercise 37.
             </b>
             {" "}
@@ -13551,7 +13551,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={38}>
           <VerticalChunk>
-            <b id="_873538583282">
+            <b id="_35938587979">
               Exercise 38.
             </b>
             {" "}
@@ -13890,7 +13890,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={39}>
           <VerticalChunk>
-            <b id="_679939769163">
+            <b id="_365439765192">
               Exercise 39.
             </b>
             {" "}
@@ -14165,7 +14165,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={40}>
           <VerticalChunk>
-            <b id="_239240639359">
+            <b id="_105040633535">
               Exercise 40.
             </b>
             {" "}
@@ -14384,7 +14384,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={41}>
           <VerticalChunk>
-            <b id="_752741267128">
+            <b id="_435541266454">
               Exercise 41.
             </b>
             {" "}
@@ -14477,7 +14477,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={42}>
           <VerticalChunk>
-            <b id="_831841686501">
+            <b id="_381141688863">
               Exercise 42.
             </b>
             {" "}
@@ -14615,7 +14615,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={43}>
           <VerticalChunk>
-            <b id="_98142468335">
+            <b id="_137342469119">
               Exercise 43.
             </b>
             {" "}
@@ -14829,7 +14829,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={44}>
           <VerticalChunk>
-            <b id="_48454359224">
+            <b id="_176243598447">
               Exercise 44.
             </b>
             {" "}
@@ -15127,7 +15127,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={45}>
           <VerticalChunk>
-            <b id="_723744824944">
+            <b id="_637844821092">
               Exercise 45.
             </b>
             {" "}
@@ -15168,13 +15168,14 @@ const Rest = () => {
               $$
               <ImageRight
                 src="/images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg"
+                offset_x="9em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              by the projection, whereas longitudes (the other ones, 
-              perpendicular to latitudes) are locally stretched by
-              a factor of...
+              by the projection, whereas longitudes (the other
+              ones, perpendicular to latitudes) are locally stretched 
+              by a factor of...
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -15211,7 +15212,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={46}>
           <VerticalChunk>
-            <b id="_536545359865">
+            <b id="_342245375891">
               Exercise 46.
             </b>
             {" "}
@@ -15306,7 +15307,7 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={47}>
           <VerticalChunk>
-            <b id="_809445733166">
+            <b id="_13945756332">
               Exercise 47.
             </b>
             {" "}
@@ -15375,8 +15376,566 @@ const Rest = () => {
         </Exercise>
         <Exercise exercise_number={48}>
           <VerticalChunk>
-            <b id="_892045983760">
+            <b id="_77746002397">
               Exercise 48.
+            </b>
+            {" "}
+            Give a formula for the volume of a sphere of
+            radius{" "}
+            <Math>
+              $r$
+            </Math>
+            {" "}using the fact that the volume of
+            a cone is “one third base times height”.
+          </VerticalChunk>
+          <Pause />
+          <Solution solution_number={48}>
+            <VerticalChunk>
+              The basic idea is that we can view the
+              sphere as being made up of many cones:
+            </VerticalChunk>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_sphere_volume_idea.svg" />
+            <Pause />
+            <VerticalChunk>
+              When we add up the volume
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 3&#125;\times \rm&#123;base&#125; \times \rm&#123;height&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              over all these cones, each height is nearly{" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              so what we really need is the sum of
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 3&#125;\times \rm&#123;base&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              over all the cones, which comes out to
+            </VerticalChunk>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 3&#125;\times (&#123;\rm sphere\,\,area&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <VerticalChunk>
+              because the sum of all the areas of the bases
+              is the sphere area. (Everything speaking 
+              approximately, for many fine cones, in the 
+              limit of our imagination as they become 
+              infinitely fine.) (*Where each ‘base’ stands
+              for the shaved-off, “flattened” version of the 
+              base.) So multiplying the height{" "}
+              <Math>
+                $r$
+              </Math>
+              {" "}back in, 
+              we find
+            </VerticalChunk>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  V = &#123;1\over 3&#125;\times (&#123;\rm sphere\,\,area&#125;) \times r = &#123;8\over 3&#125;\eta\rt&#123;.1&#125;r^3
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <VerticalChunk>
+              for the volume{" "}
+              <Math>
+                $V$
+              </Math>
+              {" "}of the sphere, using the fact that
+              the sphere area{" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}is
+            </VerticalChunk>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  A = 8\eta\rt&#123;.05&#125;r^2
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <VerticalChunk>
+              by Exercise 49.
+            </VerticalChunk>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                To formalize the argument, consider that
+                we can approximate the volume of the sphere
+                by finitely many cones with triangular bases,
+                by triangulating the surface of the sphere:
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <Image src="/images/svg_ch5_ex_sphere_tetrahedrons.svg">
+              <VerticalChunk>
+                Note that a cone with a triangular base is
+                just a
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                tetrahedron
+                <ImageLeft src="/images/svg_ch5_ex_sphere_volume_cones_cloud.svg" />
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                where “tetrahedron” means “four-sided shape”. 
+                (There is only 1 way to pull off a four-sided 
+                shape in 3D: to make all sides triangles.)
+                So the volume of the sphere is approximated
+                by the sum of the volumes of the tetrahedrons,
+                a.k.a. cones.
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                Define the
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                mesh size
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                of such a set of tetrahedrons to be the largest
+                sidelength of any tetrahedron base.
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                (The smaller the mesh size, the more pointed
+                the tetrahedrons.)
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                For the current 
+                discussion we take it for granted that as the 
+                mesh size shrinks, the sum of the volumes of
+                the cones (= tetrahedrons) converges to the 
+                volume of sphere.
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                (Or take the limit, as the mesh size shrinks,
+                of the sum of the volume of the tetrahedrons 
+                to be the &lt;i&gt;definition&lt;/i&gt; of the “volume of the 
+                sphere”—that's just as well, since we don't have 
+                any other competing notion of “volume of the sphere”,
+                at the moment.)
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                Here is a closer look at a single tetrahedron 
+                {" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $h_i$
+                  </Math>
+                </NoBreak>
+                {" "}is the height of the tetrahedron):
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_sphere_volume_closeup.svg" />
+              <Pause />
+              <VerticalChunk>
+                One observes that
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                B_i \leq A_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                where
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                B_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                is the base of the tetrahedron and
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                A_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                is the projection of the base onto the surface
+                of the sphere from the center of the sphere, and 
+                that
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                h_i \leq r
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                where
+                {" "}
+                <Math>
+                  $
+                  h_i
+                  $
+                </Math>
+                {" "}
+                is the height of the tetrahedron, and{" "}
+                <Math>
+                  $r$
+                </Math>
+                {" "}is the
+                radius of sphere. On the other hand, it is not hard
+                to convince oneself that
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                B_i \geq 0.9A_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                and
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                h_i \geq 0.9r
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                for all of the tetrahedrons, if the mesh size is 
+                sufficiently small; even,
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                B_i \geq 0.99A_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                and
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                h_i \geq 0.99r
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                for all of the tetrahedrons simultaenously,
+                &lt;i&gt;if the mesh size is sufficiently small&lt;/i&gt;; even,
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                B_i \geq 0.99999A_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                and
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                h_i \geq 0.99999r
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                for all... if etc.
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                (Or as mathematicians would put it: “for all{" "}
+                <Math>
+                  $\e &gt; 0$
+                </Math>
+                {" "}
+                there exists an{" "}
+                <Math>
+                  $s &gt; 0$
+                </Math>
+                {" "}such that
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                B_i \geq (1-\e)A_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                and
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                h_i \geq (1-\e)r
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                for all of the tetrahedrons, if the mesh size less than{" "}
+                <NoBreak>
+                  <Math>
+                    $s$
+                  </Math>
+                  .”)
+                </NoBreak>
+                {" "}
+                (“For all... there exists... such that... if... .”)
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                This implies that
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                [nb: fast-foward to Exercise 38 if you have never
+                seen{" "}
+                <NoBreak>
+                  <Math>
+                    $\sum$
+                  </Math>
+                  -notation,
+                </NoBreak>
+                {" "}but this basically reads 
+                “sum from{" "}
+                <Math>
+                  $i$
+                </Math>
+                {" "}equals{" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "}up to{" "}
+                <NoBreak>
+                  <Math>
+                    $N$
+                  </Math>
+                  ”]
+                </NoBreak>
+                {" "}which is the 
+                total volume of the tetrahedrons, where{" "}
+                <Math>
+                  $N$
+                </Math>
+                {" "}denotes
+                the number of tetrahedrons and{" "}
+                <NoBreak>
+                  <Math>
+                    $B_i$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <Math>
+                  $h_i$
+                </Math>
+                {" "}are the 
+                base and height of the{" "}
+                <NoBreak>
+                  <Math>
+                    $i$
+                  </Math>
+                  -th
+                </NoBreak>
+                {" "}tetrahedron, is 
+                sandwiched between
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_i r
+                $$
+                <ImageRight
+                  src="/images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg"
+                  offset_x="5em"
+                  compensate_offset_x_for_large_text_columns={true} />
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                above, and
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r
+                $$
+                <ImageLeft
+                  src="/images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg"
+                  offset_x="2.5em"
+                  compensate_offset_x_for_large_text_columns={true} />
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                below, for sufficiently small mesh size; but
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sum_&#123;i=1&#125;^N A_i = A
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                where{" "}
+                <Math>
+                  $A = 8\eta\rt&#123;.05&#125;r^2$
+                </Math>
+                {" "}is the total area 
+                of the sphere, and so
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                is sandwiched between
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_ir = &#123;1\over 3&#125;\cdot r\cdot \sum_&#123;i=1&#125;^N A_i = &#123;1\over 3&#125;Ar
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                above, and
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r = (0.99999)^2&#123;1\over 3&#125;Ar
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                below; or, nicely put in a double inequality:
+              </VerticalChunk>
+              <center style="margin-top:1em;margin-bottom:1em;">
+                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                  <MathBlock>
+                    $$
+                    &#123;1\over 3&#125;Ar \geq \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i \geq (0.99999)^2&#123;1\over 3&#125;Ar
+                    $$
+                  </MathBlock>
+                </div>
+              </center>
+              <VerticalChunk>
+                ...but we could replace{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $0.99999$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}by any other
+                constant less that{" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "}[yah no: because of the square,
+                we need to say “between{" "}
+                <Math>
+                  $0$
+                </Math>
+                {" "}and{" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ”]
+                </NoBreak>
+                {" "}by further 
+                shrinking the size of the mesh, which implies that
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                must converge to
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;1\over 3&#125;Ar
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                as the mesh size goes to zero—it cannot converge to
+                something greater than, nor less than, this number!
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                (And
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;1\over 3&#125;Ar = &#123;1\over 3&#125;\cdot 8\eta\rt&#123;.05&#125;r^2\cdot r = &#123;8\over 3&#125;\eta\rt&#123;.05&#125;r^3
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                not to forget.)
+              </VerticalChunk>
+            </Image>
+          </Solution>
+        </Exercise>
+        <Exercise exercise_number={49}>
+          <VerticalChunk>
+            <b id="_888048763813">
+              Exercise 49.
             </b>
             {" "}
             Similarly to Exercise 9, suggest a definition for
@@ -15403,7 +15962,7 @@ const Rest = () => {
             </NoBreak>
           </VerticalChunk>
           <Pause />
-          <Solution solution_number={48}>
+          <Solution solution_number={49}>
             <VerticalChunk>
               We define
             </VerticalChunk>

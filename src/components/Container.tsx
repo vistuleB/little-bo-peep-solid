@@ -134,6 +134,7 @@ const Container = (props: ParentProps) => {
         });
         return;
       }
+
       if (
         e.clientY >= screenHeight * 0.6 &&
         window.scrollY + window.innerHeight < document.body.scrollHeight
@@ -143,10 +144,12 @@ const Container = (props: ParentProps) => {
         });
         return;
       }
+
       if (clientXBasedOnScrollWidth < 1500) {
         (document.querySelector(".prev_page") as HTMLAnchorElement)?.click();
         return;
       }
+
       if (clientXBasedOnScrollWidth > 1500 + DESKTOP_COLUMN_WIDTH) {
         (document.querySelector(".next_page") as HTMLAnchorElement)?.click();
         return;
@@ -179,7 +182,8 @@ const Container = (props: ParentProps) => {
     <div
       id="Container"
       class="pb-14 -z-10 relative"
-      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}>
+      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}
+    >
       <EarlyImages />
       <Nav />
       <div
@@ -188,7 +192,8 @@ const Container = (props: ParentProps) => {
             left: (store.scrollWidth - store.innerWidth) / 2,
             behavior: "smooth",
           });
-        }}>
+        }}
+      >
         {props.children}
       </div>
       <SVGDefs />

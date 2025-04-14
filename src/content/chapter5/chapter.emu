@@ -743,10 +743,17 @@
     |> Image
         src images/svg_ch5_ch_main_angles_two_equilateral_triangles.svg
 
-    These triangles imply that the the unique 
+    !! These triangles imply that the the unique 
+    !! point on the unit circle with $x$-coordinate
+    !! $0.5$ in the first quadrant is at $60^\circ\hlfbk$
+    !! from the $x$ axis, and that the unique point
+    !! on the unit circle with $y$-coordinate $0.5$
+    !! in the first quadrant is at $30^\circ\hlfbk$ 
+    !! from the $x$ axis; but since
+    The first triangle implies that the the unique 
     point on the unit circle with $x$-coordinate
     $0.5$ in the first quadrant is at $60^\circ\hlfbk$
-    from the $x$ axis, and that the unique point
+    from the $x$ axis, while the second triangle implies that the unique point
     on the unit circle with $y$-coordinate $0.5$
     in the first quadrant is at $30^\circ\hlfbk$ 
     from the $x$ axis; but since

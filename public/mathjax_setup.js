@@ -22,6 +22,7 @@ window.MathJax = {
       ww: "\\mathbb{W}",
       qq: "\\mathbb{Q}",
       te: "\\text",
+      e: "\\varepsilon",
       dom: "\\text{dom}\\,",
       degree: "\\text{deg}\\,",
       f: "\\Rule{0.12em}{0.8pt}{-0.8pt}f",
