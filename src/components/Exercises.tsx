@@ -233,7 +233,7 @@ export const Exercise = (props: ExerciseProps) => {
   return <div>{props.children}</div>;
 };
 
-export const ExerciseStatement = (props: ParentProps) => {
+export const ExerciseStatement = (props: any) => {
   let { children, ...rest } = props;
   return (
     <div class="exo-statement" {...rest}>

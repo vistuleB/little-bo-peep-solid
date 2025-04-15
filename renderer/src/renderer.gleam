@@ -161,7 +161,7 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(
           blame_us("lbp_fragment_emitter"),
           0,
-          "import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from \"~/components/Wrappers\";",
+          "import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from \"~/components/Wrappers\";",
         ),
         BlamedLine(
           blame_us("lbp_fragment_emitter"),
