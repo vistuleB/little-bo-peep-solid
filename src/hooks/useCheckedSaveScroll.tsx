@@ -1,9 +1,16 @@
 import { useSearchParams } from "@solidjs/router";
 import { createEffect, createSignal, onMount } from "solid-js";
 import useScrollToInChapter from "./useScrollToInChapter";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 const useCheckedSaveScroll = () => {
   const [searchParams, _] = useSearchParams();
+  const { set_store } = useGlobalContext();
+
+  onMount(() => {
+    set_store("saved_scroll_finished", false);
+  });
+
   if (searchParams.id) {
     const scrollToInChapter = useScrollToInChapter();
 
@@ -11,10 +18,8 @@ const useCheckedSaveScroll = () => {
       if (searchParams && searchParams.id) {
         setTimeout(() => {
           scrollToInChapter(searchParams.id as string, false);
-        }, 50);
-        setTimeout(() => {
-          scrollToInChapter(searchParams.id as string, false);
-        }, 500);
+          set_store("saved_scroll_finished", true);
+        }, 100);
       }
     });
 
@@ -22,13 +27,12 @@ const useCheckedSaveScroll = () => {
   }
 
   const [scroll, set_scroll] = createSignal<number | null>(null);
-
   createEffect(() => {
     const update = (e: Event) => {
       set_scroll(window.scrollY);
     };
 
-    requestAnimationFrame(() => {
+    setTimeout(() => {
       const article = location.pathname.split("/").pop();
       set_scroll(Number(localStorage.getItem(`${article}_scroll`) || "0"));
 
@@ -38,9 +42,10 @@ const useCheckedSaveScroll = () => {
           Number(scroll()),
         );
       }
+      set_store("saved_scroll_finished", true);
 
       window.addEventListener("scroll", update);
-    });
+    }, 100);
 
     return () => {
       window.removeEventListener("scroll", update);

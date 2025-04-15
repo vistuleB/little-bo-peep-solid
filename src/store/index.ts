@@ -14,6 +14,7 @@ type Store = {
   scrollY: number;
   route: string;
   content_loaded: boolean;
+  saved_scroll_finished: boolean;
 };
 
 const [store, set_store] = createStore<Store>({
@@ -29,12 +30,10 @@ const [store, set_store] = createStore<Store>({
   scrollX: window.scrollX,
   scrollY: window.scrollY,
   route: "",
-  content_loaded: false
+  content_loaded: false,
+  saved_scroll_finished: false,
 });
 
-export {
-  store,
-  set_store,
-};
+export { store, set_store };
 
 export type { Store };
