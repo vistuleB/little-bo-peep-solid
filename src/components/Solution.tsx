@@ -54,6 +54,41 @@ export const Solution = (props: ParentProps & SolutionProps) => {
   );
 };
 
+const SpaceBetweenStatementAndSolutionButton = () => (
+  <>
+    <SpacerXs />
+    <SpacerXXs />
+  </>
+);
+
+const SpaceAfterSolutionButtonAlwaysShowing = () => (
+  <>
+    <SpacerSm />
+    <SpacerXXs />
+  </>
+);
+
+const ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing = () => (
+  <>
+    <SpacerSm />
+    <SpacerXs />
+  </>
+);
+
+const SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing =
+  () => (
+    <>
+      <SpacerSm />
+      <SpacerXs />
+    </>
+  );
+
+const SpaceBeforeBackupArrow = () => (
+  <>
+    <Spacer />
+  </>
+);
+
 const SolutionConsumer = (props: SolutionProps) => {
   let button_ref: HTMLDivElement | undefined;
   let ref: HTMLDivElement | undefined;
@@ -170,6 +205,7 @@ const SolutionConsumer = (props: SolutionProps) => {
         ref={button_ref}
         class="relative"
         style={`padding-inline: ${TEXT_X_PADDING}`}>
+        <SpaceBetweenStatementAndSolutionButton />
         <SolutionSVG
           solution_open={solution_open}
           onClick={() => {
@@ -226,6 +262,7 @@ const SolutionConsumer = (props: SolutionProps) => {
             );
           }}
         />
+        <SpaceAfterSolutionButtonAlwaysShowing />
       </div>
       <div
         class={twJoin(
@@ -247,35 +284,42 @@ const SolutionConsumer = (props: SolutionProps) => {
           style={{
             "transition-duration": `${solution_transition()}ms`,
           }}>
-          <SpacerXs />
-          <SpacerXXs />
+          <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           {props.children}
-          {!store.list_view || props.solution_number === store.num_exercises ? (<>
-            <Spacer />
-            <div
-              style={{"transition-duration": `${solution_open() ? solution_transition() : 50}ms`}}
-              class={twJoin(
-                "flex items-center justify-center",
-                (!solution_open() || !solution_fully_opened()) && "opacity-0",
-                bot_div() && "delay-[2s]",
-              )}>
-              <BackupArrow />
-            </div>
-          </>) : <></>}
+          {!store.list_view || props.solution_number === store.num_exercises ? (
+            <>
+              <SpaceBeforeBackupArrow />
+              <div
+                style={{
+                  "transition-duration": `${solution_open() ? solution_transition() : 50}ms`,
+                }}
+                class={twJoin(
+                  "flex items-center justify-center",
+                  (!solution_open() || !solution_fully_opened()) && "opacity-0",
+                  bot_div() && "delay-[2s]",
+                )}>
+                <BackupArrow />
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
-      {store.list_view && props.solution_number !== store.num_exercises ? (<>
-          <SpacerSm />
-          <SpacerXs />
-      </>): <></>}
+      {store.list_view && props.solution_number !== store.num_exercises ? (
+        <>
+          <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
+        </>
+      ) : (
+        <></>
+      )}
       <div
         class="slice transition-all col-start-2"
         style={{
           height: `${(!store.list_view || props.solution_number === store.num_exercises) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
           "background-color": global_store.show_areas ? "#00440050" : "",
           "transition-duration": `${green_div_transition()}ms`,
-        }}
-      ></div>
+        }}></div>
     </>
   );
 };
@@ -324,8 +368,6 @@ type BtnProps = {
 export const SolutionSVG = (props: BtnProps) => {
   return (
     <>
-      <SpacerXs />
-      <SpacerXXs />
       <div id="solution-btn" onClick={props.onClick} class="cursor-pointer">
         <svg class="mx-auto h-[37px] overflow-visible">
           <g class="solution_button_svg">
@@ -377,8 +419,6 @@ export const SolutionSVG = (props: BtnProps) => {
           </g>
         </svg>
       </div>
-      <SpacerSm />
-      <SpacerXXs />
     </>
   );
 };
