@@ -4864,13 +4864,13 @@
             as the mesh size goes to zero—it cannot converge to
             something greater than, nor less than, this number!
        
-            (And
+            !! (And
         
-            $$
-            {1\over 3}Ar = {1\over 3}\cdot 8\eta\rt{.05}r^2\cdot r = {8\over 3}\eta\rt{.05}r^3
-            $$
+            !! $$
+            !! {1\over 3}Ar = {1\over 3}\cdot 8\eta\rt{.05}r^2\cdot r = {8\over 3}\eta\rt{.05}r^3
+            !! $$
         
-            not to forget.)
+            !! not to forget.)
 
 
 |> Exercise
@@ -4922,10 +4922,11 @@
         |> SolutionNote
         
             In some sense, the vector “wins” over the 
-            number, in that their conjoint baby is a vector:
+            number, in that their conjoint baby is a vector,
+            not a number.
 
-            |> Image
-                style background-color:rgb(226 232 240)
-                src images/svg_ch5_ex_c_times_vector_box.svg
+            !! |> Image
+            !!     style background-color:rgb(226 232 240)
+            !!     src images/svg_ch5_ex_c_times_vector_box.svg
 
 

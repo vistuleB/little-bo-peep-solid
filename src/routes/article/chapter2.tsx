@@ -6,7 +6,8 @@ import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
 import Image from "~/components/Image";
 import InlineImage from "~/components/InlineImage";
-import { Exercise, Exercises } from "~/components/Exercises";
+import { Exercise, Exercises, ExerciseStatement } from "~/components/Exercises";
+import InChapterLink from "~/components/InChapterLink";
 import Solution from "~/components/Solution";
 import Table from "~/components/Table";
 import Grid from "~/components/Grid";
@@ -1553,7 +1554,7 @@ const Rest = () => {
         <Exercise exercise_number={1}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_49546766251">
+              <b>
                 Exercise 1.
               </b>
               {" "}
@@ -1650,7 +1651,7 @@ const Rest = () => {
         <Exercise exercise_number={2}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_45917324795">
+              <b>
                 Exercise 2.
               </b>
               {" "}
@@ -1909,7 +1910,7 @@ const Rest = () => {
         <Exercise exercise_number={3}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_39678345719">
+              <b>
                 Exercise 3.
               </b>
               {" "}
@@ -2082,7 +2083,7 @@ const Rest = () => {
         <Exercise exercise_number={4}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_3232900893">
+              <b>
                 Exercise 4.
               </b>
               {" "}
