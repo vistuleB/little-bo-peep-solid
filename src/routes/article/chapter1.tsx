@@ -25,6 +25,9 @@ const Article = () => {
         number={1}
         title="A Few Refreshers">
         <a
+          class="next_page"
+          href="/article/chapter2" />
+        <a
           class="prev_page"
           href="/" />
         <Section>
@@ -1421,7 +1424,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_558546845">
+          <ExerciseStatement id="_8789546840">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2615,7 +2618,7 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to Exercise{" "}
-              <InChapterLink href="/article/chapter1#_558546845">
+              <InChapterLink href="/article/chapter1#_8789546840">
                 1
               </InChapterLink>
               , we observed how 

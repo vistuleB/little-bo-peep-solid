@@ -6,7 +6,8 @@ import { Math, MathBlock } from "~/components/Math";
 import { ImageRight, ImageLeft } from "~/components/SideImage";
 import Image from "~/components/Image";
 import InlineImage from "~/components/InlineImage";
-import { Exercise, Exercises } from "~/components/Exercises";
+import { Exercise, Exercises, ExerciseStatement } from "~/components/Exercises";
+import InChapterLink from "~/components/InChapterLink";
 import Solution from "~/components/Solution";
 import Table from "~/components/Table";
 import Grid from "~/components/Grid";
@@ -2009,7 +2010,7 @@ const Rest = () => {
         <Exercise exercise_number={1}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_87428289971">
+              <b>
                 Exercise 1.
               </b>
               {" "}
@@ -2120,7 +2121,7 @@ const Rest = () => {
         <Exercise exercise_number={2}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_76618629517">
+              <b>
                 Exercise 2.
               </b>
               {" "}
@@ -2180,7 +2181,7 @@ const Rest = () => {
         <Exercise exercise_number={3}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_70778797612">
+              <b>
                 Exercise 3.
               </b>
               {" "}
@@ -2279,7 +2280,7 @@ const Rest = () => {
         <Exercise exercise_number={4}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_29009253852">
+              <b>
                 Exercise 4.
               </b>
               {" "}
@@ -2345,7 +2346,7 @@ const Rest = () => {
         <Exercise exercise_number={5}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_5601948532">
+              <b>
                 Exercise 5.
               </b>
               {" "}
@@ -2393,7 +2394,7 @@ const Rest = () => {
         <Exercise exercise_number={6}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_52459659223">
+              <b>
                 Exercise 6.
               </b>
               {" "}
@@ -2454,7 +2455,7 @@ const Rest = () => {
         <Exercise exercise_number={7}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_57229861192">
+              <b>
                 Exercise 7.
               </b>
               {" "}
@@ -2487,7 +2488,7 @@ const Rest = () => {
         <Exercise exercise_number={8}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_88099947127">
+              <b>
                 Exercise 8.
               </b>
               {" "}
@@ -2526,7 +2527,7 @@ const Rest = () => {
         <Exercise exercise_number={9}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_558210026286">
+              <b>
                 Exercise 9.
               </b>
               {" "}
@@ -2574,7 +2575,7 @@ const Rest = () => {
         <Exercise exercise_number={10}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_56310154223">
+              <b>
                 Exercise 10.
               </b>
               {" "}
@@ -2633,7 +2634,7 @@ const Rest = () => {
         <Exercise exercise_number={11}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_840310388569">
+              <b>
                 Exercise 11.
               </b>
               {" "}
@@ -2688,7 +2689,7 @@ const Rest = () => {
         <Exercise exercise_number={12}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_32410596343">
+              <b>
                 Exercise 12.
               </b>
               {" "}
@@ -2777,7 +2778,7 @@ const Rest = () => {
         <Exercise exercise_number={13}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_56121087722">
+              <b>
                 Exercise 13.
               </b>
               {" "}
@@ -2892,7 +2893,7 @@ const Rest = () => {
         <Exercise exercise_number={14}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_382711422389">
+              <b>
                 Exercise 14.
               </b>
               {" "}
@@ -3044,7 +3045,7 @@ const Rest = () => {
         <Exercise exercise_number={15}>
           <ExerciseStatement>
             <VerticalChunk>
-              <b id="_623011927616">
+              <b>
                 Exercise 15.
               </b>
               {" "}

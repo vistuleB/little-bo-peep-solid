@@ -23,6 +23,7 @@ export const Exercises = (props: ExercisesProps) => {
     </ExercisesStoreProvider>
   );
 };
+
 const ExercisesConsumer = (props: ExercisesProps) => {
   let children_list = children(() => props.children);
   useExercises(children_list.toArray().length);
