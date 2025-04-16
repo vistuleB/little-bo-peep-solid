@@ -21,10 +21,8 @@ const useScrollToInChapter = () => {
     return inside;
   };
 
-  const getGrandParentHeight = (el: HTMLElement | null) => {
-    return (
-      el?.parentElement?.parentElement?.getBoundingClientRect().height || 0
-    );
+  const getHeight = (el: HTMLElement | null) => {
+    return el?.getBoundingClientRect().height || 0;
   };
 
   const scrollToInChapter = (
@@ -46,8 +44,8 @@ const useScrollToInChapter = () => {
     if (exercises_store.list_view) {
       smoothScrollTo(
         elementPosOnPage(target) -
-          store.innerHeight / 2 +
-          Math.min(getGrandParentHeight(target) / 2, store.innerHeight / 2),
+          store.innerHeight / 2 + // step 1:  center top of element on screen
+          Math.min(getHeight(target) / 2, store.innerHeight / 2), // if target height is bigger than screen step 1 is reveresed | else the target itself is centered on screen
         smoothScroll ? 100 : 0,
       );
       return;
