@@ -1,5 +1,5 @@
 import Chapter from "~/components/Chapter";
-import { Section, Note, SolutionNote, Example, NoBreak, CustomBlock, Pause, WriterlyBlankLine } from "~/components/Wrappers";
+import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import TextParent from "~/components/TextParent";
 import { Math, MathBlock } from "~/components/Math";
@@ -1424,7 +1424,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_8789546840">
+          <ExerciseStatement id="_30185468174">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2618,7 +2618,7 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to Exercise{" "}
-              <InChapterLink href="/article/chapter1#_8789546840">
+              <InChapterLink href="/article/chapter1#_30185468174">
                 1
               </InChapterLink>
               , we observed how 

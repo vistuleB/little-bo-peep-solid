@@ -8,7 +8,6 @@ const InChapterLink = (props: ParentProps & { href: string }) => {
     e.preventDefault();
     const href = new URL((e.target as HTMLAnchorElement).href);
     const id = href.hash.slice(1);
-    console.log(id);
     scrollToInChapter(id, true);
   };
 

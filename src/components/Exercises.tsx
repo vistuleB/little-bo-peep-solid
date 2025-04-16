@@ -5,8 +5,8 @@ import { JSX } from "solid-js/h/jsx-runtime";
 import { twJoin } from "tailwind-merge";
 import useExercises from "~/hooks/useExercises";
 import {
-  ExercisesStoreProvider,
   useExercisesContext,
+  useExercisesStateHelpers,
 } from "~/store/ExercisesStoreProvider";
 import TextParent from "~/components/TextParent";
 
@@ -18,14 +18,17 @@ type ExerciseProps = ParentProps & {
 
 export const Exercises = (props: ExercisesProps) => {
   let children_list = children(() => props.children);
-  useExercises(children_list.toArray().length);
+  let num_exercises = children_list.toArray().length;
+
+  useExercises(num_exercises);
 
   const { set_exercises_store: set_store, exercises_store: store } =
     useExercisesContext();
+  const { initExercisesState } = useExercisesStateHelpers();
 
   let selected_exo = () => store.selected_exo;
-  let num_exercises = children_list.toArray().length;
-  set_store("num_exercises", num_exercises);
+  // set_store("num_exercises", num_exercises);
+  initExercisesState(num_exercises);
 
   if (selected_exo() > num_exercises) {
     set_store("selected_exo", num_exercises);
@@ -33,10 +36,10 @@ export const Exercises = (props: ExercisesProps) => {
     set_store("selected_exo", 1);
   }
 
-  set_store(
-    "transition_duration",
-    Array.from({ length: num_exercises }).map(() => 1000),
-  );
+  // set_store(
+  //   "transition_duration",
+  //   Array.from({ length: num_exercises }).map(() => 1000),
+  // );
 
   return (
     <>

@@ -16,7 +16,10 @@ import {
 import { twJoin } from "tailwind-merge";
 import { Spacer, SpacerSm, SpacerXs, SpacerXXs } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
-import { useExercisesContext } from "~/store/ExercisesStoreProvider";
+import {
+  useExercisesContext,
+  useExercisesStateHelpers,
+} from "~/store/ExercisesStoreProvider";
 import { createStore, SetStoreFunction } from "solid-js/store";
 import smoothScrollTo from "~/utils/smoothScrollTo";
 import elementPosOnPage from "~/utils/elementPosOnPage";
@@ -95,9 +98,12 @@ const SolutionConsumer = (props: SolutionProps) => {
   let { store: global_store, set_store: set_global_store } = useGlobalContext();
   const { set_exercises_store: set_store, exercises_store: store } =
     useExercisesContext();
+  const { updateExerciseByIndex } = useExercisesStateHelpers();
 
-  const solution_open = () => store.solutions_open[props.solution_number - 1];
-  let transition_duration = () => store.transition_duration;
+  const solution_open = () =>
+    store.exercises[props.solution_number - 1]?.solution_open;
+  let transition_duration = () =>
+    store.exercises[props.solution_number - 1]?.transition_duration;
 
   let [content_height, set_content_height] = createSignal(0);
   let [bot_div, set_bot_div] = createSignal(false);
@@ -118,13 +124,10 @@ const SolutionConsumer = (props: SolutionProps) => {
     props.re_calculate_height; // re-calc on change
     if (ref?.clientHeight) {
       set_content_height(ref?.clientHeight || 0);
-      set_store("transition_duration", (prev) =>
-        prev.map((val, i) =>
-          i + 1 === props.solution_number
-            ? Math.min(ref?.clientHeight, 1000) * 0.8
-            : val,
-        ),
-      );
+      updateExerciseByIndex(props.solution_number - 1, {
+        field: "transition_duration",
+        value: Math.min(ref?.clientHeight, 1000) * 0.8,
+      });
     }
   };
 
@@ -144,20 +147,14 @@ const SolutionConsumer = (props: SolutionProps) => {
   createEffect(() => {
     if (solution_open()) {
       window.addEventListener("scroll", handleResize);
-      setTimeout(
-        () => {
-          set_bot_div(false);
-        },
-        transition_duration()[props.solution_number - 1],
-      );
+      setTimeout(() => {
+        set_bot_div(false);
+      }, transition_duration());
     } else {
       window.removeEventListener("scroll", handleResize);
-      setTimeout(
-        () => {
-          set_bot_div(true);
-        },
-        transition_duration()[props.solution_number - 1],
-      );
+      setTimeout(() => {
+        set_bot_div(true);
+      }, transition_duration());
     }
 
     onCleanup(() => window.removeEventListener("scroll", handleResize));
@@ -180,15 +177,10 @@ const SolutionConsumer = (props: SolutionProps) => {
   createEffect(() => {
     // green div transition
     if (solution_fully_opened() || !solution_open()) {
-      set_green_div_transition(
-        transition_duration()[props.solution_number - 1],
-      );
-      setTimeout(
-        () => {
-          set_green_div_transition(0);
-        },
-        transition_duration()[props.solution_number - 1],
-      );
+      set_green_div_transition(transition_duration());
+      setTimeout(() => {
+        set_green_div_transition(0);
+      }, transition_duration());
     }
   });
 
@@ -216,19 +208,14 @@ const SolutionConsumer = (props: SolutionProps) => {
             if (solution_open()) {
               set_solution_fully_opened(false);
             } else {
-              let timeout_handle = setTimeout(
-                () => {
-                  set_solution_fully_opened(true);
-                },
-                transition_duration()[props.solution_number - 1],
-              );
+              let timeout_handle = setTimeout(() => {
+                set_solution_fully_opened(true);
+              }, transition_duration());
               set_handle(timeout_handle);
             }
 
             // *** update transition duration ***
-            set_solution_transition(
-              transition_duration()[props.solution_number - 1],
-            );
+            set_solution_transition(transition_duration());
 
             // *** scroll to button ***
             let element_pos =
@@ -240,9 +227,9 @@ const SolutionConsumer = (props: SolutionProps) => {
             }
 
             // *** update main value ***
-            set_store("solutions_open", (prev) => {
-              prev[props.solution_number - 1] = !solution_open();
-              return [...prev];
+            updateExerciseByIndex(props.solution_number - 1, {
+              field: "solution_open",
+              value: !solution_open(),
             });
             if (store.list_view) {
               // update localstorage for the solution . as useExercises hook only updates the selectedExo which works only in carousel view
@@ -254,12 +241,9 @@ const SolutionConsumer = (props: SolutionProps) => {
             }
 
             // *** solution transition should be not 0 only when button is clicked ***
-            setTimeout(
-              () => {
-                set_solution_transition(0);
-              },
-              transition_duration()[props.solution_number - 1],
-            );
+            setTimeout(() => {
+              set_solution_transition(0);
+            }, transition_duration());
           }}
         />
         <SpaceAfterSolutionButtonAlwaysShowing />

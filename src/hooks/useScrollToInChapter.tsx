@@ -1,4 +1,7 @@
-import { useExercisesContext } from "~/store/ExercisesStoreProvider";
+import {
+  useExercisesContext,
+  useExercisesStateHelpers,
+} from "~/store/ExercisesStoreProvider";
 import elementPosOnPage from "../utils/elementPosOnPage";
 import smoothScrollTo from "../utils/smoothScrollTo";
 import { useGlobalContext } from "~/store/StoreProvider";
@@ -6,6 +9,7 @@ import { useGlobalContext } from "~/store/StoreProvider";
 const useScrollToInChapter = () => {
   const { exercises_store, set_exercises_store } = useExercisesContext();
   const { store } = useGlobalContext();
+  const { updateExerciseByIndex } = useExercisesStateHelpers();
 
   const isInsideElementWithClass = (
     parentClass: string,
@@ -53,9 +57,10 @@ const useScrollToInChapter = () => {
 
     // check if taget is inside solution
     if (isInsideElementWithClass("solution", target)) {
-      set_exercises_store("solutions_open", (prev) =>
-        prev.map((sol, i) => (i + 1 === exo_number ? true : sol)),
-      );
+      updateExerciseByIndex(exo_number - 1, {
+        field: "solution_open",
+        value: true,
+      });
     }
 
     if (exercises_store.list_view) {
