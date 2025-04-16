@@ -182,13 +182,10 @@ const Container = (props: ParentProps) => {
     <div
       id="Container"
       class="pb-14 -z-10 relative"
-      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px;`}>
+      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px; opacity: ${store.saved_scroll_finished ? "1" : "0"}`}>
       <EarlyImages />
       <Nav />
       <div
-        style={{
-          opacity: store.saved_scroll_finished ? "1" : "0",
-        }}
         onClick={() => {
           window.scroll({
             left: (store.scrollWidth - store.innerWidth) / 2,
