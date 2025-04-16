@@ -5,14 +5,13 @@ import {
   onCleanup,
   mergeProps,
   ParentProps,
-  useContext,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import LazyImage from "./LazyImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
-import { SolutionContext } from "./Solution";
-import { StoreProvider, useGlobalContext } from "~/store/StoreProvider";
+import { useGlobalContext } from "~/store/StoreProvider";
+import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
 
 type ImageProps = ParentProps &
   SharedProps & {
@@ -33,7 +32,8 @@ const Image = (props: ImageProps) => {
   const [innerWidth, set_innerWidth] = createSignal(0);
   let [after_first_click, set_after_first_click] = createSignal(false);
   let image_ref: HTMLImageElement | undefined;
-  const { set_solution_store } = useContext(SolutionContext) || {};
+  const { set_height_change_listener_store } =
+    useHeightChangeListenerContext() || {};
   const { store } = useGlobalContext();
 
   props = mergeProps(
@@ -138,7 +138,10 @@ const Image = (props: ImageProps) => {
               set_recent_click(0);
             }, 100);
             set_innerWidth(window.innerWidth); // (refreshing for safety, since we have all these bugs)
-            set_solution_store?.("re_calculate_height", (prev) => !prev);
+            set_height_change_listener_store?.(
+              "re_calculate_height",
+              (prev) => !prev,
+            );
           }}
           class={twJoin(
             "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",

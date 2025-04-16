@@ -5,7 +5,6 @@ import {
   ParentProps,
   onCleanup,
   onMount,
-  createContext,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import {
@@ -20,42 +19,15 @@ import {
   useExercisesContext,
   useExercisesStateHelpers,
 } from "~/store/ExercisesStoreProvider";
-import { createStore, SetStoreFunction } from "solid-js/store";
 import smoothScrollTo from "~/utils/smoothScrollTo";
 import elementPosOnPage from "~/utils/elementPosOnPage";
+import { HeightChangeListenerProvider } from "~/store/HeightChangeListenerProvider";
 
 type SolutionProps = ParentProps &
   SharedProps & {
     solution_number: number;
     re_calculate_height?: boolean;
   };
-
-type SolutionStore = {
-  re_calculate_height: boolean;
-};
-export const SolutionContext = createContext<{
-  solution_store: SolutionStore;
-  set_solution_store: SetStoreFunction<SolutionStore>;
-}>();
-
-const [solution_store, set_solution_store] = createStore({
-  re_calculate_height: false,
-});
-
-export const Solution = (props: ParentProps & SolutionProps) => {
-  return (
-    <SolutionContext.Provider
-      value={{
-        solution_store,
-        set_solution_store,
-      }}>
-      <SolutionConsumer
-        re_calculate_height={solution_store.re_calculate_height}
-        {...props}
-      />
-    </SolutionContext.Provider>
-  );
-};
 
 const SpaceBetweenStatementAndSolutionButton = () => (
   <>
@@ -92,7 +64,7 @@ const SpaceBeforeBackupArrow = () => (
   </>
 );
 
-const SolutionConsumer = (props: SolutionProps) => {
+export const Solution = (props: SolutionProps) => {
   let button_ref: HTMLDivElement | undefined;
   let ref: HTMLDivElement | undefined;
   let { store: global_store, set_store: set_global_store } = useGlobalContext();
@@ -192,7 +164,7 @@ const SolutionConsumer = (props: SolutionProps) => {
   });
 
   return (
-    <>
+    <HeightChangeListenerProvider>
       <div
         ref={button_ref}
         class="relative"
@@ -304,7 +276,7 @@ const SolutionConsumer = (props: SolutionProps) => {
           "background-color": global_store.show_areas ? "#00440050" : "",
           "transition-duration": `${green_div_transition()}ms`,
         }}></div>
-    </>
+    </HeightChangeListenerProvider>
   );
 };
 
