@@ -17,14 +17,6 @@ type ExerciseProps = ParentProps & {
 };
 
 export const Exercises = (props: ExercisesProps) => {
-  return (
-    <ExercisesStoreProvider>
-      <ExercisesConsumer {...props} />
-    </ExercisesStoreProvider>
-  );
-};
-
-const ExercisesConsumer = (props: ExercisesProps) => {
   let children_list = children(() => props.children);
   useExercises(children_list.toArray().length);
 

@@ -7,15 +7,18 @@ const useScrollToInChapter = () => {
   const { exercises_store, set_exercises_store } = useExercisesContext();
   const { store } = useGlobalContext();
 
-  const isInsideExo = (target: HTMLElement | null): boolean => {
-    const exos = document.querySelectorAll(".exercise");
+  const isInsideElementWithClass = (
+    parentClass: string,
+    target: HTMLElement | null,
+  ): boolean => {
+    const parents = document.querySelectorAll("." + parentClass);
 
-    if (!exos || !target) {
+    if (!parents || !target) {
       return false;
     }
 
     let inside = false;
-    exos.forEach((exo) => {
+    parents.forEach((exo) => {
       exo.contains(target) && (inside = true);
     });
     return inside;
@@ -25,14 +28,20 @@ const useScrollToInChapter = () => {
     return el?.getBoundingClientRect().height || 0;
   };
 
-  const scrollToInChapter = (
+  const calculateTargetCenterOnPage = (target: HTMLElement | null) =>
+    elementPosOnPage(target) -
+    store.innerHeight / 2 + // step 1:  center top of element on screen
+    Math.min(getHeight(target) / 2, store.innerHeight / 2); // if target height is bigger than screen step 1 is reveresed | else the target itself is centered on screen
+
+  const scrollToInChapter = async (
     targetId: string,
     smoothScroll: boolean = true,
   ) => {
     const target = document.getElementById(targetId);
     const scrollDuration = smoothScroll ? 100 : 0;
+
     // check if target is not inside exercise
-    if (!isInsideExo(target)) {
+    if (!isInsideElementWithClass("exercise", target)) {
       // just scroll to the target
       smoothScrollTo(
         elementPosOnPage(target) - store.innerHeight / 2,
@@ -40,23 +49,30 @@ const useScrollToInChapter = () => {
       );
       return;
     }
+    const exo_number = Number(target?.innerText?.match(/\d+/)?.[0]);
+
+    // check if taget is inside solution
+    if (isInsideElementWithClass("solution", target)) {
+      set_exercises_store("solutions_open", (prev) =>
+        prev.map((sol, i) => (i + 1 === exo_number ? true : sol)),
+      );
+    }
 
     if (exercises_store.list_view) {
       smoothScrollTo(
-        elementPosOnPage(target) -
-          store.innerHeight / 2 + // step 1:  center top of element on screen
-          Math.min(getHeight(target) / 2, store.innerHeight / 2), // if target height is bigger than screen step 1 is reveresed | else the target itself is centered on screen
+        calculateTargetCenterOnPage(target),
         smoothScroll ? 100 : 0,
       );
       return;
     }
-    let exo_number = Number(target?.innerText?.match(/\d+/)?.[0]);
+
     set_exercises_store("selected_exo", exo_number);
-    if (target && target.getBoundingClientRect().top < 0) {
-      smoothScrollTo(
-        elementPosOnPage(document.getElementById("exercises-btns")),
-        100,
-      );
+    if (
+      target &&
+      (target.getBoundingClientRect().top < 0 ||
+        target.getBoundingClientRect().bottom > store.innerHeight)
+    ) {
+      smoothScrollTo(calculateTargetCenterOnPage(target), 100);
     }
   };
 

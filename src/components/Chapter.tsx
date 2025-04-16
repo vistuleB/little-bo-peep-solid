@@ -3,6 +3,7 @@ import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { onMount } from "solid-js";
 import useCheckedSaveScroll from "~/hooks/useCheckedSaveScroll";
+import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
 
 const Chapter = (props: any) => {
   let { set_store } = useGlobalContext();
@@ -27,7 +28,7 @@ const Chapter = (props: any) => {
           `Chapter ${props.number}: ` + (props.mobile_title || props.title)
         }
       />
-      {props.children}
+      <ExercisesStoreProvider>{props.children}</ExercisesStoreProvider>
     </>
   );
 };
