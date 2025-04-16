@@ -5,6 +5,7 @@ import {
   ParentProps,
   onCleanup,
   onMount,
+  Setter,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import {
@@ -65,7 +66,6 @@ const SpaceBeforeBackupArrow = () => (
 );
 
 export const Solution = (props: SolutionProps) => {
-  let button_ref: HTMLDivElement | undefined;
   let ref: HTMLDivElement | undefined;
   let { store: global_store, set_store: set_global_store } = useGlobalContext();
   const { set_exercises_store: set_store, exercises_store: store } =
@@ -165,61 +165,17 @@ export const Solution = (props: SolutionProps) => {
 
   return (
     <HeightChangeListenerProvider>
-      <div
-        ref={button_ref}
-        class="relative"
-        style={`padding-inline: ${TEXT_X_PADDING}`}>
-        <SpaceBetweenStatementAndSolutionButton />
-        <SolutionSVG
-          solution_open={solution_open}
-          onClick={() => {
-            // *** track if solution is fully opened ***
-            if (handle()) {
-              clearTimeout(handle()!);
-            }
-            if (solution_open()) {
-              set_solution_fully_opened(false);
-            } else {
-              let timeout_handle = setTimeout(() => {
-                set_solution_fully_opened(true);
-              }, transition_duration());
-              set_handle(timeout_handle);
-            }
-
-            // *** update transition duration ***
-            set_solution_transition(transition_duration());
-
-            // *** scroll to button ***
-            let element_pos =
-              window.innerHeight - (ref?.getBoundingClientRect()?.bottom || 0);
-            let should_scroll_to_button_first =
-              element_pos > GREEN_DIV_HEIGHT + 40 + 56;
-            if (solution_open() && should_scroll_to_button_first) {
-              document?.getElementById("exo")?.scrollIntoView();
-            }
-
-            // *** update main value ***
-            updateExerciseByIndex(props.solution_number - 1, {
-              field: "solution_open",
-              value: !solution_open(),
-            });
-            if (store.list_view) {
-              // update localstorage for the solution . as useExercises hook only updates the selectedExo which works only in carousel view
-              let article = location.pathname.split("/").pop();
-              localStorage.setItem(
-                `${article}_exo_${props.solution_number}_opened`,
-                String(solution_open()),
-              );
-            }
-
-            // *** solution transition should be not 0 only when button is clicked ***
-            setTimeout(() => {
-              set_solution_transition(0);
-            }, transition_duration());
-          }}
-        />
-        <SpaceAfterSolutionButtonAlwaysShowing />
-      </div>
+      <SpaceBetweenStatementAndSolutionButton />
+      <SolutionButton
+        handle={handle}
+        set_handle={set_handle}
+        set_solution_fully_opened={set_solution_fully_opened}
+        set_solution_transition={set_solution_transition}
+        solution_number={props.solution_number}
+      />
+      <SpaceAfterSolutionButtonAlwaysShowing />
+      <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
+      {/* Actual Solution */}
       <div
         class={twJoin(
           "solution relative transition-all",
@@ -240,35 +196,33 @@ export const Solution = (props: SolutionProps) => {
           style={{
             "transition-duration": `${solution_transition()}ms`,
           }}>
-          <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           {props.children}
-          {!store.list_view || props.solution_number === store.num_exercises ? (
-            <>
-              <SpaceBeforeBackupArrow />
-              <div
-                style={{
-                  "transition-duration": `${solution_open() ? solution_transition() : 50}ms`,
-                }}
-                class={twJoin(
-                  "flex items-center justify-center",
-                  (!solution_open() || !solution_fully_opened()) && "opacity-0",
-                  bot_div() && "delay-[2s]",
-                )}>
-                <BackupArrow />
-              </div>
-            </>
-          ) : (
-            <></>
-          )}
         </div>
       </div>
-      {store.list_view && props.solution_number !== store.num_exercises ? (
-        <>
-          <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
-        </>
-      ) : (
-        <></>
+
+      {/* Possible backup arrow */}
+      {!store.list_view ||
+        (props.solution_number === store.num_exercises && (
+          <>
+            <SpaceBeforeBackupArrow />
+            <div
+              style={{
+                "transition-duration": `${solution_open() ? solution_transition() : 50}ms`,
+              }}
+              class={twJoin(
+                "flex items-center justify-center",
+                (!solution_open() || !solution_fully_opened()) && "opacity-0",
+                bot_div() && "delay-[2s]",
+              )}>
+              <BackupArrow />
+            </div>
+          </>
+        ))}
+
+      {store.list_view && props.solution_number !== store.num_exercises && (
+        <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
       )}
+      {/* Greem Div */}
       <div
         class="slice transition-all col-start-2"
         style={{
@@ -277,6 +231,81 @@ export const Solution = (props: SolutionProps) => {
           "transition-duration": `${green_div_transition()}ms`,
         }}></div>
     </HeightChangeListenerProvider>
+  );
+};
+
+type SolutionBtnProps = {
+  handle: Accessor<ReturnType<typeof setTimeout> | null>;
+  set_handle: Setter<ReturnType<typeof setTimeout> | null>;
+  solution_number: number;
+  set_solution_fully_opened: Setter<boolean>;
+  set_solution_transition: Setter<number>;
+};
+
+const SolutionButton = (props: SolutionBtnProps) => {
+  const { exercises_store: store } = useExercisesContext();
+  const { updateExerciseByIndex } = useExercisesStateHelpers();
+
+  const solution_open = () =>
+    store.exercises[props.solution_number - 1]?.solution_open;
+  const transition_duration = () =>
+    store.exercises[props.solution_number - 1]?.transition_duration;
+  let ref: HTMLDivElement | undefined;
+
+  const { set_handle, set_solution_fully_opened, set_solution_transition } =
+    props;
+
+  return (
+    <div ref={ref} class="relative" style={`padding-inline: ${TEXT_X_PADDING}`}>
+      <SolutionSVG
+        solution_open={solution_open}
+        onClick={() => {
+          // *** track if solution is fully opened ***
+          if (props.handle()) {
+            clearTimeout(props.handle()!);
+          }
+          if (solution_open()) {
+            set_solution_fully_opened(false);
+          } else {
+            let timeout_handle = setTimeout(() => {
+              set_solution_fully_opened(true);
+            }, transition_duration());
+            set_handle(timeout_handle);
+          }
+
+          // *** update transition duration ***
+          set_solution_transition(transition_duration());
+
+          // *** scroll to button ***
+          let element_pos =
+            window.innerHeight - (ref?.getBoundingClientRect()?.bottom || 0);
+          let should_scroll_to_button_first =
+            element_pos > GREEN_DIV_HEIGHT + 40 + 56;
+          if (solution_open() && should_scroll_to_button_first) {
+            document?.getElementById("exo")?.scrollIntoView();
+          }
+
+          // *** update main value ***
+          updateExerciseByIndex(props.solution_number - 1, {
+            field: "solution_open",
+            value: !solution_open(),
+          });
+          if (store.list_view) {
+            // update localstorage for the solution . as useExercises hook only updates the selectedExo which works only in carousel view
+            let article = location.pathname.split("/").pop();
+            localStorage.setItem(
+              `${article}_exo_${props.solution_number}_opened`,
+              String(solution_open()),
+            );
+          }
+
+          // *** solution transition should be not 0 only when button is clicked ***
+          setTimeout(() => {
+            set_solution_transition(0);
+          }, transition_duration());
+        }}
+      />
+    </div>
   );
 };
 
@@ -316,12 +345,12 @@ export const BackupArrow = () => {
   );
 };
 
-type BtnProps = {
+type SolutionSVGProps = {
   onClick: () => void;
   solution_open: Accessor<boolean>;
 };
 
-export const SolutionSVG = (props: BtnProps) => {
+export const SolutionSVG = (props: SolutionSVGProps) => {
   return (
     <>
       <div id="solution-btn" onClick={props.onClick} class="cursor-pointer">
