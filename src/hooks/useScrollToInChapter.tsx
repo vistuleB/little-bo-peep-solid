@@ -11,6 +11,28 @@ const useScrollToInChapter = () => {
   const { store } = useGlobalContext();
   const { updateExerciseByIndex } = useExercisesStateHelpers();
 
+  const getClosestExerciseParentIndex = (
+    target: HTMLElement | null,
+  ): number => {
+    if (!target) return -1;
+
+    let current: HTMLElement | null = target;
+    const allExercises = document.querySelectorAll(".exercise");
+
+    while (current) {
+      if (current.classList.contains("exercise")) {
+        // Find position of this exercise among all exercises
+        const position = Array.from(allExercises).findIndex(
+          (ex) => ex === current,
+        );
+        return position + 1;
+      }
+      current = current.parentElement;
+    }
+
+    return -1;
+  };
+
   const isInsideElementWithClass = (
     parentClass: string,
     target: HTMLElement | null,
@@ -53,7 +75,7 @@ const useScrollToInChapter = () => {
       );
       return;
     }
-    const exo_number = Number(target?.innerText?.match(/\d+/)?.[0]);
+    const exo_number = getClosestExerciseParentIndex(target);
 
     // check if taget is inside solution
     if (isInsideElementWithClass("solution", target)) {
