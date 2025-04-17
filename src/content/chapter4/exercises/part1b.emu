@@ -672,7 +672,7 @@
         |> StarDivider
 
         |> Pause
-        _Note 1._
+        _Note CircleRadiiPattern<<NoteCounter._
         If the particle's original path is centered at
         $(0, 0)$ then that path constitutes a fourth
         circle obeying the same pattern

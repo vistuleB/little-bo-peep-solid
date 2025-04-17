@@ -6,8 +6,8 @@ const InChapterLink = (props: ParentProps & { href: string }) => {
 
   const handleClick = (e: Event) => {
     e.preventDefault();
-    const href = new URL((e.target as HTMLAnchorElement).href);
-    const id = href.hash.slice(1);
+    const url = new URL((e.target as HTMLAnchorElement).href);
+    const id = url.searchParams.get("id") || "";
     scrollToInChapter(id, true);
   };
 

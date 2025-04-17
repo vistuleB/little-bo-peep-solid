@@ -666,12 +666,12 @@
         if $h$ is negative, by the way.)
 
         |> Pause
-        _Note 1._ 
+        _Note ::++NoteCounter._ 
         A fraction of this form is called a _Newton
         quotient_.
     
         |> Pause
-        _Note 2._
+        _Note ::++NoteCounter._
         The pale brown line is sometimes known as
         the _secant_ [through $(x, f(x))$, $(x+h, f(x+h))$].
         “Secant” is a general term for “line passing
@@ -679,7 +679,7 @@
         curve”.
     
         |> Pause
-        _Note 3._
+        _Note LimitOfNewtonQuotient<<::++NoteCounter._
         If we let $h$ drop to $0$, and if $f$ is
         differentiable at $x$, the 
         Newton-quotient-a.k.a.-slope-of-the-secant
@@ -836,7 +836,7 @@
         
         as $\Delta{}t$ approaches $0$, assuming
         $f$ is differentiable at $t_0$ (cf.
-        Exercise 16 Note 3), and
+        Exercise 16 Note >>LimitOfNewtonQuotient), and
 
         |> Image
             src images/svg_ch4_RATS_over_Dt_first_term.svg
@@ -1127,7 +1127,7 @@
         for $c = 2$.
 
         |> Pause
-        _Note 1._
+        _Note DifferentiationFormulasClarification<<::++NoteCounter._
         You can also write 
         
         $$

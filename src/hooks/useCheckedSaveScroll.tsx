@@ -1,10 +1,11 @@
-import { useSearchParams } from "@solidjs/router";
+import { useLocation, useSearchParams } from "@solidjs/router";
 import { createEffect, createSignal, onMount } from "solid-js";
 import useScrollToInChapter from "./useScrollToInChapter";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 const useCheckedSaveScroll = () => {
   const [searchParams, _] = useSearchParams();
+  const location = useLocation();
   const { set_store } = useGlobalContext();
 
   onMount(() => {
@@ -15,12 +16,10 @@ const useCheckedSaveScroll = () => {
     const scrollToInChapter = useScrollToInChapter();
 
     onMount(() => {
-      if (searchParams && searchParams.id) {
-        setTimeout(() => {
-          scrollToInChapter(searchParams.id as string, false);
-          set_store("saved_scroll_finished", true);
-        }, 100);
-      }
+      setTimeout(() => {
+        scrollToInChapter(searchParams.id as string, false);
+        set_store("saved_scroll_finished", true);
+      }, 200);
     });
 
     return;

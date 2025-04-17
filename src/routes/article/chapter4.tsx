@@ -5301,7 +5301,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               <i>
-                Note 1.
+                Note CircleRadiiPattern&lt;&lt;NoteCounter.
               </i>
               {" "}
               If the particle's original path is centered at
@@ -10221,7 +10221,7 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
-              <i>
+              <i id="_4096828435">
                 Note 3.
               </i>
               {" "}
@@ -10718,7 +10718,11 @@ const Rest = () => {
                 $t_0$
               </Math>
               {" "}(cf.
-              Exercise 16 Note 3), and
+              Exercise 16 Note{" "}
+              <InChapterLink href="/article/chapter4?id=_4096828435">
+                3
+              </InChapterLink>
+              ), and
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch4_RATS_over_Dt_first_term.svg" />
@@ -11447,8 +11451,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
-              <i>
-                Note 1.
+              <i id="_682011305944">
+                Note 4.
               </i>
               {" "}
               You can also write

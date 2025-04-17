@@ -1347,7 +1347,11 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           of an angle was briefly touched upon in
-          Note 1 of Exercise 37, Chapter 4. 
+          Note{" "}
+          <a href="/article/chapter4?id=_682011305944">
+            4
+          </a>
+          {" "}of Exercise 37, Chapter 4. 
           In short, it is a “scientific” measure
           of angles in which the value of an angle
           is the length of a circular arc subtended
@@ -14559,7 +14563,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_596641681049">
+          <ExerciseStatement id="_183741689947">
             <VerticalChunk>
               <b>
                 Exercise 42.

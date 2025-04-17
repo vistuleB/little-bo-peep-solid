@@ -1,46 +1,7 @@
-import ArticleTitle from "~/components/ArticleTitle";
-import useScrollX from "~/hooks/useScrollX";
-import { useGlobalContext } from "~/store/StoreProvider";
-import { onMount } from "solid-js";
-import useCheckedSaveScroll from "~/hooks/useCheckedSaveScroll";
-import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
+import AbstractArticle from "./AbstractArticle";
 
 const Bootcamp = (props: any) => {
-  let { store, set_store } = useGlobalContext();
-
-  useScrollX();
-  useCheckedSaveScroll();
-
-  const resetDimensions = () => {
-    set_store("innerWidth", window.innerWidth);
-    set_store("innerHeight", window.innerHeight);
-    set_store("scrollWidth", document.body.scrollWidth);
-    set_store("scrollHeight", document.body.scrollHeight);
-    let _dummy =
-      store.scrollY +
-      store.innerHeight +
-      store.scrollHeight +
-      store.scrollWidth;
-  };
-
-  onMount(() => {
-    resetDimensions();
-    setTimeout(resetDimensions, 50);
-    setTimeout(resetDimensions, 500);
-  });
-
-  return (
-    <>
-      <div class="first_child_of_chapter"></div>
-      <ArticleTitle
-        label={`Bootcamp ${props.number}: ` + props.title}
-        on_mobile_label={
-          `Bootcamp ${props.number}: ` + (props.mobile_title || props.title)
-        }
-      />
-      <ExercisesStoreProvider>{props.children}</ExercisesStoreProvider>
-    </>
-  );
+  return <AbstractArticle>{props.children}</AbstractArticle>;
 };
 
 export default Bootcamp;
