@@ -289,7 +289,7 @@
         seconds after the start of the race.
 
         |> Pause
-        _Note 1._
+        _Note ::++NoteCounter._
         In even more detail,
         $$
         g(t)
@@ -313,7 +313,7 @@
         by definition of “$\circ$”.
 
         |> Pause
-        _Note 2._
+        _Note ::++NoteCounter._
         If it helps, 
         here is a pictorialization of the 
         “units transformation pipeline” that 
@@ -323,7 +323,7 @@
             src images/svg_ch4_f_g_composition_units.svg
 
         |> Pause
-        _Note 3._
+        _Note TotalEarnings<<::++NoteCounter._
         To emphasize, $f(x)$ is the
 
         __~ total ~__

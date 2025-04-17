@@ -1348,8 +1348,8 @@ const Rest = () => {
         <VerticalChunk>
           of an angle was briefly touched upon in
           Note{" "}
-          <a href="/article/chapter4?id=_682011305944">
-            4
+          <a href="/article/chapter4?id=_781911306336">
+            10
           </a>
           {" "}of Exercise 37, Chapter 4. 
           In short, it is a “scientific” measure
@@ -14563,7 +14563,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_183741689947">
+          <ExerciseStatement id="_30541682170">
             <VerticalChunk>
               <b>
                 Exercise 42.

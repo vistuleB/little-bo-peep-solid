@@ -4383,7 +4383,7 @@ const Rest = () => {
             <Image src="/images/svg_ch4_f_g_composition_units.svg" />
             <Pause />
             <VerticalChunk>
-              <i>
+              <i id="_38073268921">
                 Note 3.
               </i>
               {" "}
@@ -9407,7 +9407,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               <i>
-                Note 1.
+                Note 4.
               </i>
               {" "}
               If you graph the{" "}
@@ -9434,7 +9434,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               <i>
-                Note 2.
+                Note 5.
               </i>
               {" "}
               There is nothing special about 
@@ -9476,8 +9476,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
-              <i>
-                Note 3.
+              <i id="_50553056190">
+                Note 6.
               </i>
               {" "}
               It is worth noting that, in fact, the 
@@ -10179,7 +10179,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               <i>
-                Note 1.
+                Note 7.
               </i>
               {" "}
               A fraction of this form is called a{" "}
@@ -10192,7 +10192,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               <i>
-                Note 2.
+                Note 8.
               </i>
               {" "}
               The pale brown line is sometimes known as
@@ -10221,8 +10221,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
-              <i id="_4096828435">
-                Note 3.
+              <i id="_54056822043">
+                Note 9.
               </i>
               {" "}
               If we let{" "}
@@ -10719,7 +10719,7 @@ const Rest = () => {
               </Math>
               {" "}(cf.
               Exercise 16 Note{" "}
-              <InChapterLink href="/article/chapter4?id=_4096828435">
+              <InChapterLink href="/article/chapter4?id=_38073268921">
                 3
               </InChapterLink>
               ), and
@@ -11451,8 +11451,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
-              <i id="_682011305944">
-                Note 4.
+              <i id="_781911306336">
+                Note 10.
               </i>
               {" "}
               You can also write

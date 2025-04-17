@@ -281,7 +281,7 @@
         $f''''' = f^{(5)}$ equals $f$.
 
         |> Pause
-        _Note 1._
+        _Note ::++NoteCounter._
         If you graph the $x$-coordinates of the
         5 particles over time, each in their 
         color, you get a graph like so, in which
@@ -294,7 +294,7 @@
             src images/svg_ch4_5_euler_final_graph.svg
 
         |> Pause
-        _Note 2._
+        _Note ::++NoteCounter._
         There is nothing special about 
         $x$-coordinates vis-à-vis $y$-coordinates.
         You can also define $f(t)$ to be, e.g.,
@@ -302,7 +302,7 @@
         at time $t$.
 
         |> Pause
-        _Note 3._
+        _Note SeparationOfCoordinates<<::++NoteCounter._
         It is worth noting that, in fact, the 
         $x$- and $y$-coordinates live separate
         lives. The rate of change of each 
@@ -836,7 +836,7 @@
         
         as $\Delta{}t$ approaches $0$, assuming
         $f$ is differentiable at $t_0$ (cf.
-        Exercise 16 Note >>LimitOfNewtonQuotient), and
+        Exercise 16 Note >>TotalEarnings), and
 
         |> Image
             src images/svg_ch4_RATS_over_Dt_first_term.svg
