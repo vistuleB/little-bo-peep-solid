@@ -10,7 +10,6 @@ type ExerciseState = {
 interface Store {
   selected_exo: number;
   exercises: ExerciseState[];
-  num_exercises: number;
   list_view: boolean;
 }
 
@@ -18,7 +17,6 @@ interface Store {
 const [exercises_store, set_exercises_store] = createStore<Store>({
   selected_exo: 0,
   exercises: [],
-  num_exercises: 0,
   list_view: window.innerWidth > MOBILE_MAX_WIDTH,
 });
 

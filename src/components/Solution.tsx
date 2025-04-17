@@ -74,8 +74,9 @@ export const Solution = (props: SolutionProps) => {
 
   const solution_open = () =>
     store.exercises[props.solution_number - 1]?.solution_open;
-  let transition_duration = () =>
+  const transition_duration = () =>
     store.exercises[props.solution_number - 1]?.transition_duration;
+  const num_exercises = () => store.exercises.length;
 
   let [content_height, set_content_height] = createSignal(0);
   let [bot_div, set_bot_div] = createSignal(false);
@@ -174,7 +175,6 @@ export const Solution = (props: SolutionProps) => {
         solution_number={props.solution_number}
       />
       <SpaceAfterSolutionButtonAlwaysShowing />
-      <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
       {/* Actual Solution */}
       <div
         class={twJoin(
@@ -187,6 +187,7 @@ export const Solution = (props: SolutionProps) => {
           "transition-duration": `${solution_transition()}ms`,
           "transition-property": "height",
         }}>
+        <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
         <div
           ref={ref}
           class={twJoin(
@@ -202,7 +203,7 @@ export const Solution = (props: SolutionProps) => {
 
       {/* Possible backup arrow */}
       {!store.list_view ||
-        (props.solution_number === store.num_exercises && (
+        (props.solution_number === num_exercises() && (
           <>
             <SpaceBeforeBackupArrow />
             <div
@@ -219,14 +220,14 @@ export const Solution = (props: SolutionProps) => {
           </>
         ))}
 
-      {store.list_view && props.solution_number !== store.num_exercises && (
+      {store.list_view && props.solution_number !== num_exercises() && (
         <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
       )}
       {/* Greem Div */}
       <div
         class="slice transition-all col-start-2"
         style={{
-          height: `${(!store.list_view || props.solution_number === store.num_exercises) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
+          height: `${(!store.list_view || props.solution_number === num_exercises()) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
           "background-color": global_store.show_areas ? "#00440050" : "",
           "transition-duration": `${green_div_transition()}ms`,
         }}></div>

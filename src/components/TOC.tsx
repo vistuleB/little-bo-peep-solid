@@ -2,10 +2,12 @@ import TOCAuthorSuppliedContent from "./TOCAuthorSuppliedContent";
 import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { onMount } from "solid-js";
+import useCheckedSaveScroll from "~/hooks/useCheckedSaveScroll";
 
 const TOC = () => {
   let { set_store } = useGlobalContext();
   useScrollX();
+  useCheckedSaveScroll();
 
   const resetDimensions = () => {
     set_store("innerWidth", window.innerWidth);

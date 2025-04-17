@@ -27,7 +27,6 @@ export const Exercises = (props: ExercisesProps) => {
   const { initExercisesState } = useExercisesStateHelpers();
 
   let selected_exo = () => store.selected_exo;
-  // set_store("num_exercises", num_exercises);
   initExercisesState(num_exercises);
 
   if (selected_exo() > num_exercises) {
@@ -35,11 +34,6 @@ export const Exercises = (props: ExercisesProps) => {
   } else if (selected_exo() < 1) {
     set_store("selected_exo", 1);
   }
-
-  // set_store(
-  //   "transition_duration",
-  //   Array.from({ length: num_exercises }).map(() => 1000),
-  // );
 
   return (
     <>
