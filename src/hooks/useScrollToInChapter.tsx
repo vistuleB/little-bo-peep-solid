@@ -61,10 +61,9 @@ const useScrollToInChapter = () => {
 
   const scrollToInChapter = async (
     targetId: string,
-    smoothScroll: boolean = true,
+    scrollDuration: number = 100,
   ) => {
     const target = document.getElementById(targetId);
-    const scrollDuration = smoothScroll ? 100 : 0;
 
     // check if target is not inside exercise
     if (!isInsideElementWithClass("exercise", target)) {
@@ -86,10 +85,7 @@ const useScrollToInChapter = () => {
     }
 
     if (exercises_store.list_view) {
-      smoothScrollTo(
-        calculateTargetCenterOnPage(target),
-        smoothScroll ? 100 : 0,
-      );
+      smoothScrollTo(calculateTargetCenterOnPage(target), scrollDuration);
       return;
     }
 

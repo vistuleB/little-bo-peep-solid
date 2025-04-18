@@ -17,7 +17,7 @@ const useCheckedSaveScroll = () => {
 
     onMount(() => {
       setTimeout(() => {
-        scrollToInChapter(searchParams.id as string, false);
+        scrollToInChapter(searchParams.id as string);
         set_store("saved_scroll_finished", true);
       }, 200);
     });
