@@ -128,7 +128,7 @@ const Container = (props: ParentProps) => {
       let screenHeight = window.innerHeight;
       let clientXBasedOnScrollWidth = window.scrollX + e.clientX;
 
-      if (e.clientY <= screenHeight * 0.3 && window.scrollY != 0) {
+      if (e.clientY <= screenHeight * 0.25 && window.scrollY != 0) {
         window.scrollBy({
           top: -screenHeight,
         });
@@ -136,7 +136,7 @@ const Container = (props: ParentProps) => {
       }
 
       if (
-        e.clientY >= screenHeight * 0.6 &&
+        e.clientY >= screenHeight * 0.75 &&
         window.scrollY + window.innerHeight < document.body.scrollHeight
       ) {
         window.scrollBy({
