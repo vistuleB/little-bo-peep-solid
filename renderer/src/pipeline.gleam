@@ -109,7 +109,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ExerciseStatement handle
       // ************************
       dn.cut_paste_attribute_from_first_child_to_self(#("ExerciseStatement", "id")),
-
+      dn.cut_paste_attribute_from_first_child_to_self(#("SolutionNote", "id")),
       // ************************
       // ImageLeft, ImageRight parent-finding
       // ************************

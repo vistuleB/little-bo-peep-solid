@@ -22,8 +22,8 @@ export const Note = (props: ParentProps) => {
   return <>{props.children}</>;
 };
 
-export const SolutionNote = (props: ParentProps) => {
-  return <>{props.children}</>;
+export const SolutionNote = (props: ParentProps & { id: string }) => {
+  return <div id={props.id}>{props.children}</div>;
 };
 
 export const NoBreak = (props: ParentProps) => {
