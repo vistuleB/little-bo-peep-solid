@@ -4327,7 +4327,7 @@
         $$
 
         on your calculator (a questionable choice of notation,
-        because it is <i>not</i> the same as $1/\tan = \cot$), and
+        because it is _not_ the same as $1/\tan = \cot$), and
         sometimes known as
 
         __tangent inverse__
@@ -4705,7 +4705,7 @@
 
             (Or take the limit, as the mesh size shrinks,
             of the sum of the volume of the tetrahedrons 
-            to be the <i>definition</i> of the “volume of the 
+            to be the _definition_ of the “volume of the 
             sphere”—that's just as well, since we don't have 
             any other competing notion of “volume of the sphere”,
             at the moment.)
@@ -4758,7 +4758,7 @@
             h_i \geq 0.99r
             $$
             for all of the tetrahedrons simultaenously,
-            <i>if the mesh size is sufficiently small</i>; even,
+            _if the mesh size is sufficiently small_; even,
             $$
             B_i \geq 0.99999A_i
             $$
