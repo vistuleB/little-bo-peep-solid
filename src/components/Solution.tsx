@@ -187,7 +187,6 @@ export const Solution = (props: SolutionProps) => {
           "transition-duration": `${solution_transition()}ms`,
           "transition-property": "height",
         }}>
-        <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
         <div
           ref={ref}
           class={twJoin(
@@ -197,28 +196,28 @@ export const Solution = (props: SolutionProps) => {
           style={{
             "transition-duration": `${solution_transition()}ms`,
           }}>
+          <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           {props.children}
         </div>
       </div>
 
       {/* Possible backup arrow */}
-      {!store.list_view ||
-        (props.solution_number === num_exercises() && (
-          <>
-            <SpaceBeforeBackupArrow />
-            <div
-              style={{
-                "transition-duration": `${solution_open() ? solution_transition() : 50}ms`,
-              }}
-              class={twJoin(
-                "flex items-center justify-center",
-                (!solution_open() || !solution_fully_opened()) && "opacity-0",
-                bot_div() && "delay-[2s]",
-              )}>
-              <BackupArrow />
-            </div>
-          </>
-        ))}
+      {(!store.list_view || props.solution_number === num_exercises()) && (
+        <>
+          <SpaceBeforeBackupArrow />
+          <div
+            style={{
+              "transition-duration": `${solution_open() ? solution_transition() : 50}ms`,
+            }}
+            class={twJoin(
+              "flex items-center justify-center",
+              (!solution_open() || !solution_fully_opened()) && "opacity-0",
+              bot_div() && "delay-[2s]",
+            )}>
+            <BackupArrow />
+          </div>
+        </>
+      )}
 
       {store.list_view && props.solution_number !== num_exercises() && (
         <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
@@ -282,7 +281,11 @@ const SolutionButton = (props: SolutionBtnProps) => {
             window.innerHeight - (ref?.getBoundingClientRect()?.bottom || 0);
           let should_scroll_to_button_first =
             element_pos > GREEN_DIV_HEIGHT + 40 + 56;
-          if (solution_open() && should_scroll_to_button_first) {
+          if (
+            solution_open() &&
+            should_scroll_to_button_first &&
+            !store.list_view
+          ) {
             document?.getElementById("exo")?.scrollIntoView();
           }
 
