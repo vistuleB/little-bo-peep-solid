@@ -15,6 +15,7 @@ type Store = {
   route: string;
   content_loaded: boolean;
   saved_scroll_finished: boolean;
+  scroll_is_at_0: boolean;
 };
 
 const [store, set_store] = createStore<Store>({
@@ -32,6 +33,7 @@ const [store, set_store] = createStore<Store>({
   route: "",
   content_loaded: false,
   saved_scroll_finished: false,
+  scroll_is_at_0: false,
 });
 
 export { store, set_store };

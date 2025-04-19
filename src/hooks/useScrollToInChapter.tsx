@@ -97,6 +97,7 @@ const useScrollToInChapter = () => {
     ) {
       smoothScrollTo(calculateTargetCenterOnPage(target), 100);
     }
+    Promise.resolve();
   };
 
   return scrollToInChapter;

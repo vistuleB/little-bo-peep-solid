@@ -6,7 +6,7 @@ import { useGlobalContext } from "~/store/StoreProvider";
 const useCheckedSaveScroll = () => {
   const [searchParams, _] = useSearchParams();
   const location = useLocation();
-  const { set_store } = useGlobalContext();
+  const { store, set_store } = useGlobalContext();
 
   onMount(() => {
     set_store("saved_scroll_finished", false);
@@ -16,8 +16,8 @@ const useCheckedSaveScroll = () => {
     const scrollToInChapter = useScrollToInChapter();
 
     onMount(() => {
-      setTimeout(() => {
-        scrollToInChapter(searchParams.id as string);
+      setTimeout(async () => {
+        await scrollToInChapter(searchParams.id as string);
         set_store("saved_scroll_finished", true);
       }, 200);
     });
@@ -44,7 +44,7 @@ const useCheckedSaveScroll = () => {
       set_store("saved_scroll_finished", true);
 
       window.addEventListener("scroll", update);
-    }, 100);
+    }, 1000);
 
     return () => {
       window.removeEventListener("scroll", update);

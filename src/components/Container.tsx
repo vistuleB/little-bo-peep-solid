@@ -11,6 +11,7 @@ import SVGDefs from "./SVGDefs";
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
 import ActionArrows from "./ActionArrows";
+import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
 
 const Container = (props: ParentProps) => {
   const env = import.meta.env.VITE_ENV;
@@ -24,6 +25,7 @@ const Container = (props: ParentProps) => {
   // const [scrollWidth, set_scrollWidth] = createSignal(0);
   let { on_mobile } = useOnMobile();
   let { store, set_store } = useGlobalContext();
+  useScrollIsAt0();
 
   const handleScroll = () => {
     set_store("scrollY", window.scrollY);
@@ -182,7 +184,7 @@ const Container = (props: ParentProps) => {
     <div
       id="Container"
       class="pb-14 -z-10 relative"
-      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px; opacity: ${store.saved_scroll_finished ? "1" : "0"}`}>
+      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}>
       <EarlyImages />
       <Nav />
       <div
