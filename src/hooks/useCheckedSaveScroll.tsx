@@ -44,7 +44,7 @@ const useCheckedSaveScroll = () => {
       set_store("saved_scroll_finished", true);
 
       window.addEventListener("scroll", update);
-    }, 1000);
+    }, 100);
 
     return () => {
       window.removeEventListener("scroll", update);
