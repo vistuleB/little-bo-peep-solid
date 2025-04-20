@@ -276,19 +276,6 @@ const SolutionButton = (props: SolutionBtnProps) => {
           // *** update transition duration ***
           set_solution_transition(transition_duration());
 
-          // *** scroll to button ***
-          let element_pos =
-            window.innerHeight - (ref?.getBoundingClientRect()?.bottom || 0);
-          let should_scroll_to_button_first =
-            element_pos > GREEN_DIV_HEIGHT + 40 + 56;
-          if (
-            solution_open() &&
-            should_scroll_to_button_first &&
-            !store.list_view
-          ) {
-            document?.getElementById("exo")?.scrollIntoView();
-          }
-
           // *** update main value ***
           updateExerciseByIndex(props.solution_number - 1, {
             field: "solution_open",
