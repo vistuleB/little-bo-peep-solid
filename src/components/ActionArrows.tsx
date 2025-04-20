@@ -69,14 +69,13 @@ const ActionArrows = () => {
       <button
         onClick={handleUpClick}
         class={twJoin(
-          "block px-1",
+          "block px-1 mb-1",
           store.scrollY > 1
             ? "stroke-black hover:stroke-stone-600"
             : "stroke-stone-300",
           "transition-all",
         )}>
-        <LeftArrow class="rotate-90" style="margin-bottom:-1.3rem" />{" "}
-        <LeftArrow class="rotate-90" style="" />
+        <DoubleUpArrow />
       </button>
 
       <button
@@ -88,10 +87,49 @@ const ActionArrows = () => {
             : "stroke-stone-300",
           "transition-all",
         )}>
-        <LeftArrow class="rotate-[270deg]" style="margin-bottom:-1.3rem" />{" "}
-        <LeftArrow class="rotate-[270deg]" style="" />
+        <DoubleDownArrow />
       </button>
     </div>
+  );
+};
+
+const sw = 2.6;
+const cdx = 4;
+const adx = 8;
+const ady = 8;
+const un = 30 / 2;
+
+const DoubleUpArrow = (props: { class?: string; style?: string }) => {
+  return (
+    <svg class={props.class} width="30" height="40" viewBox="0 0 30 30">
+      <path
+        d={`M${un + ady} ${un + adx} L${un} ${un} L${un - ady} ${un + adx}`}
+        stroke-linecap="round"
+        stroke-width={sw}
+        fill="none"></path>
+      <path
+        d={`M${un + ady} ${un + adx + 8} L${un} ${un + 8} L${un - ady} ${un + adx + 8}`}
+        stroke-linecap="round"
+        stroke-width={sw}
+        fill="none"></path>
+    </svg>
+  );
+};
+
+const DoubleDownArrow = (props: { class?: string; style?: string }) => {
+  return (
+    <svg class={props.class} width="30" height="40" viewBox="0 0 30 30">
+      <path
+        d={`M${un + ady} ${un - adx} L${un} ${un} L${un - ady} ${un - adx}`}
+        stroke-linecap="round"
+        stroke-width={sw}
+        fill="none"></path>
+      <path
+        d={`M${un + ady} ${un - adx - 8} L${un} ${un - 8} L${un - ady} ${un - adx - 8}`}
+        stroke-linecap="round"
+        stroke-width={sw}
+        fill="none"></path>
+    </svg>
   );
 };
 
