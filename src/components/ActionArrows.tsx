@@ -62,24 +62,31 @@ const ActionArrows = () => {
       onMouseOver={() => set_hovered(true)}
       onMouseOut={() => set_hovered(false)}
       style={{
-        opacity: hovered() ? 1 : opacity(),
+        // opacity: hovered() ? 1 : opacity(),
         left: `${1500 - store.scrollX - 33}px`,
       }}
       class="fixed bottom-3">
       <button
         onClick={handleUpClick}
+        style={{
+          "background-color": store.show_areas ? "#fff000" : "transparent",
+        }}
         class={twJoin(
-          "block px-1 mb-1",
+          "block px-1 mb-4",
           store.scrollY > 1
             ? "stroke-black hover:stroke-stone-600"
             : "stroke-stone-300",
           "transition-all",
         )}>
-        <DoubleUpArrow />
+        <DoubleUpArrow 
+         />
       </button>
 
       <button
         onClick={handleDownClick}
+        style={{
+          "background-color": store.show_areas ? "#fff000" : "transparent",
+        }}
         class={twJoin(
           "block px-1",
           store.scrollY + store.innerHeight - store.scrollHeight < -1
@@ -96,19 +103,24 @@ const ActionArrows = () => {
 const sw = 2.6;
 const cdx = 4;
 const adx = 8;
-const ady = 8;
+const ady = 8; 
 const un = 30 / 2;
 
 const DoubleUpArrow = (props: { class?: string; style?: string }) => {
+  const { store } = useGlobalContext();
+
   return (
-    <svg class={props.class} width="30" height="40" viewBox="0 0 30 30">
+    <svg style={{
+      "background-color": store.show_areas ? "#ffc0cb" : "transparent",
+    }} class={props.class} width="30" height="30" viewBox="0 5 30 35">
       <path
         d={`M${un + ady} ${un + adx} L${un} ${un} L${un - ady} ${un + adx}`}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"></path>
+        fill="none"
+        ></path>
       <path
-        d={`M${un + ady} ${un + adx + 8} L${un} ${un + 8} L${un - ady} ${un + adx + 8}`}
+        d={`M${un + ady} ${un + adx + 10} L${un} ${un + 10} L${un - ady} ${un + adx + 10}`}
         stroke-linecap="round"
         stroke-width={sw}
         fill="none"></path>
@@ -117,15 +129,19 @@ const DoubleUpArrow = (props: { class?: string; style?: string }) => {
 };
 
 const DoubleDownArrow = (props: { class?: string; style?: string }) => {
+  const { store } = useGlobalContext();
+
   return (
-    <svg class={props.class} width="30" height="40" viewBox="0 0 30 30">
+    <svg style={{
+      "background-color": store.show_areas ? "#ffc0cb" : "transparent",
+    }} class={props.class} width="30" height="30" viewBox="0 -15 30 35">
       <path
         d={`M${un + ady} ${un - adx} L${un} ${un} L${un - ady} ${un - adx}`}
         stroke-linecap="round"
         stroke-width={sw}
         fill="none"></path>
       <path
-        d={`M${un + ady} ${un - adx - 8} L${un} ${un - 8} L${un - ady} ${un - adx - 8}`}
+        d={`M${un + ady} ${un - adx - 10} L${un} ${un - 10} L${un - ady} ${un - adx - 10}`}
         stroke-linecap="round"
         stroke-width={sw}
         fill="none"></path>
