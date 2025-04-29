@@ -89,13 +89,16 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.wrap_math_with_no_break(),
       dn.unwrap_when_single_child(["NoBreak"]),
       dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
-      dn.counters_substitute_and_assign_handles(),
+      dn.counters_substitute_and_assign_handles2(),
       dn.handles_generate_ids(),
       dn.define_article_output_path(#("Chapter", "/article/chapter", "path")),
       dn.define_article_output_path(#("Bootcamp", "/article/bootcamp", "path")),
       dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
       dn.handles_substitute([]),
       dn.unwrap(["GrandWrapper"]),
+      // dn.rearrange_links([
+      //   #("Exercise <a href=\"1\">_1_</a>.<a href=\"2\">2</a>", "<a href=\"2\">Exercise _2_</a>"),
+      // ]),
 
       dn.concatenate_text_nodes(),
       // ************************
@@ -204,6 +207,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
         Some("Spacer"),
       )),
       dn.generate_lbp_links(),
+      dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node()
     ]
   ]
   |> list.flatten
