@@ -89,7 +89,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.wrap_math_with_no_break(),
       dn.unwrap_when_single_child(["NoBreak"]),
       dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
-      dn.counters_substitute_and_assign_handles2(),
+      dn.counters_substitute_and_assign_handles(),
       dn.handles_generate_ids(),
       dn.define_article_output_path(#("Chapter", "/article/chapter", "path")),
       dn.define_article_output_path(#("Bootcamp", "/article/bootcamp", "path")),
