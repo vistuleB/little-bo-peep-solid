@@ -96,10 +96,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
       dn.handles_substitute([]),
       dn.unwrap(["GrandWrapper"]),
-      // dn.rearrange_links([
-      //   #("Exercise <a href=\"1\">_1_</a>.<a href=\"2\">2</a>", "<a href=\"2\">Exercise _2_</a>"),
-      // ]),
-
       dn.concatenate_text_nodes(),
       // ************************
       // VerticalChunk cleanup

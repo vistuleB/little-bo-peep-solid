@@ -4383,7 +4383,7 @@ const Rest = () => {
             <Image src="/images/svg_ch4_f_g_composition_units.svg" />
             <Pause />
             <VerticalChunk>
-              <i id="_53673261024">
+              <i id="_47843266366">
                 Note 3.
               </i>
               {" "}
@@ -5652,7 +5652,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_71048155954">
+            <SolutionNote id="_62728155">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6058,7 +6058,7 @@ const Rest = () => {
               examine how long it would take
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see Note{" "}
-              <InChapterLink href="/article/chapter4?id=_213610618026">
+              <InChapterLink href="/article/chapter4?id=_983410619295">
                 1
               </InChapterLink>
               ):
@@ -6234,7 +6234,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_213610618026">
+            <SolutionNote id="_983410619295">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -9480,7 +9480,7 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
-              <i id="_55303059076">
+              <i id="_51413058863">
                 Note 6.
               </i>
               {" "}
@@ -10225,7 +10225,7 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
-              <i id="_5645682517">
+              <i id="_5226821343">
                 Note 9.
               </i>
               {" "}
@@ -10723,7 +10723,7 @@ const Rest = () => {
               </Math>
               {" "}(cf.
               Exercise 16 Note{" "}
-              <InChapterLink href="/article/chapter4?id=_53673261024">
+              <InChapterLink href="/article/chapter4?id=_47843266366">
                 3
               </InChapterLink>
               ), and
@@ -11455,7 +11455,7 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
-              <i id="_375011304190">
+              <i id="_929811304059">
                 Note 10.
               </i>
               {" "}
