@@ -24,13 +24,24 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       // AddTitleCounters *******
       // ************************
-      dn.add_title_counters_and_titles_with_handle_assignments([
-        #("Chapter", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
-        #("Bootcamp", "ExampleCounter", "Example", "*Example ", ".*", "*Example.*"),
-        #("Chapter", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
-        #("Bootcamp", "NoteCounter", "Note", "_Note ", "._", "_Note._"),
-        #("Exercises", "ExerciseCounter", "Exercise", "*Exercise ", ".*", "*Exercise.*"),
-        #("Solution", "SolutionNoteCounter", "SolutionNote", "_Note ", "._", "_Note._"),
+      dn.add_attributes([
+        #("Chapter", "counter", "ExampleCounter"),
+        #("Chapter", "counter", "NoteCounter"),
+        #("Bootcamp", "counter", "ExampleCounter"),
+        #("Exercises", "counter", "ExerciseCounter"),
+        #("Solution", "counter", "SolutionNoteCounter"),
+      ]),
+      dn.associate_counter_by_prepending_incrementing_attribute([
+        #("Example", "ExampleCounter"),
+        #("Exercise", "ExerciseCounter"),
+        #("SolutionNote", "SolutionNoteCounter"),
+        #("Note", "NoteCounter"),
+      ]),
+      dn.prepend_text([
+        #("Example", "*Example ::øøExampleCounter.*"),
+        #("Exercise", "*Exercise ::øøExerciseCounter.*"),
+        #("SolutionNote", "_Note ::øøSolutionNoteCounter._"),
+        #("Note", "_Note ::øøNoteCounter._"),
       ]),
       // ************************
       // VerticalChunk **********
@@ -190,7 +201,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // attribute cleanup
       // ************************
       dn.change_attribute_value([#("src", "/()")]),
-      dn.remove_attributes(["counter", "handle", "type", "t", "path"]),
+      dn.remove_attributes(["counter", "handle", "type", "t", "path", "."]),
       // ************************
       // contents
       // ************************
