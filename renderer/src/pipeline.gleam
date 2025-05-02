@@ -107,10 +107,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
       dn.handles_substitute([]),
       dn.unwrap(["GrandWrapper"]),
-      // dn.rearrange_links([
-      //   #("Exercise <a href=\"1\">_1_</a>.<a href=\"2\">2</a>", "<a href=\"2\">Exercise _2_</a>"),
-      // ]),
-
       dn.concatenate_text_nodes(),
       // ************************
       // VerticalChunk cleanup
@@ -218,7 +214,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
         Some("Spacer"),
       )),
       dn.generate_lbp_links(),
-      dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node()
+      dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
     ]
   ]
   |> list.flatten

@@ -1348,7 +1348,7 @@ const Rest = () => {
         <VerticalChunk>
           of an angle was briefly touched upon in
           Note{" "}
-          <a href="/article/chapter4?id=_375011304190">
+          <a href="/article/chapter4?id=_929811304059">
             10
           </a>
           {" "}of Exercise 37, Chapter 4. 
@@ -14563,7 +14563,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_593541688320">
+          <ExerciseStatement id="_157441688610">
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -14860,7 +14860,11 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               on your calculator (a questionable choice of notation,
-              because it is &lt;i&gt;not&lt;/i&gt; the same as{" "}
+              because it is{" "}
+              <i>
+                not
+              </i>
+              {" "}the same as{" "}
               <NoBreak>
                 <Math>
                   $1/\tan = \cot$
@@ -15642,7 +15646,11 @@ const Rest = () => {
               <VerticalChunk indent={true}>
                 (Or take the limit, as the mesh size shrinks,
                 of the sum of the volume of the tetrahedrons 
-                to be the &lt;i&gt;definition&lt;/i&gt; of the “volume of the 
+                to be the{" "}
+                <i>
+                  definition
+                </i>
+                {" "}of the “volume of the 
                 sphere”—that's just as well, since we don't have 
                 any other competing notion of “volume of the sphere”,
                 at the moment.)
@@ -15760,7 +15768,11 @@ const Rest = () => {
               <Pause />
               <VerticalChunk>
                 for all of the tetrahedrons simultaenously,
-                &lt;i&gt;if the mesh size is sufficiently small&lt;/i&gt;; even,
+                {" "}
+                <i>
+                  if the mesh size is sufficiently small
+                </i>
+                ; even,
               </VerticalChunk>
               <Pause />
               <MathBlock>
