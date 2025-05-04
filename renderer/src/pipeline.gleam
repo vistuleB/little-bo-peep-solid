@@ -118,8 +118,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       // ExerciseStatement handle
       // ************************
-      dn.cut_paste_attribute_from_first_child_to_self(#("ExerciseStatement", "id")),
-      dn.cut_paste_attribute_from_first_child_to_self(#("SolutionNote", "id")),
+      dn.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
+      dn.cut_paste_attribute_from_self_to_child(#("Solution", "SolutionNote", "id")),
       // ************************
       // ImageLeft, ImageRight parent-finding
       // ************************
@@ -214,7 +214,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
         Some("Spacer"),
       )),
       dn.generate_lbp_links(),
-      dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
+      dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(), 
     ]
   ]
   |> list.flatten
