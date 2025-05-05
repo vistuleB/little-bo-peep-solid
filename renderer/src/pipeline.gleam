@@ -116,11 +116,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.unwrap_when_descendant_of([#("VerticalChunk", ["td", "li"])]),
       dn.remove_empty_chunks(),
       // ************************
-      // ExerciseStatement handle
-      // ************************
-      dn.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
-      dn.cut_paste_attribute_from_self_to_child(#("Solution", "SolutionNote", "id")),
-      // ************************
       // ImageLeft, ImageRight parent-finding
       // ************************
       dn.absorb_next_sibling_while([
@@ -198,6 +193,10 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       dn.change_attribute_value([#("src", "/()")]),
       dn.remove_attributes(["counter", "handle", "type", "t", "path", "."]),
+
+      dn.rearrange_links([
+        #("Exercise <a href=\"1\">_1_</a>.<a href=\"2\">_2_</a>", "<a href=\"2\">Exercise _1_ . _2_</a>")
+      ]),
       // ************************
       // contents
       // ************************
@@ -214,7 +213,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
         Some("Spacer"),
       )),
       dn.generate_lbp_links(),
-      dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(), 
+      dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
+     
     ]
   ]
   |> list.flatten
