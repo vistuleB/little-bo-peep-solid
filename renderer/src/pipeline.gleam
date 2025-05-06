@@ -194,9 +194,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.change_attribute_value([#("src", "/()")]),
       dn.remove_attributes(["counter", "handle", "type", "t", "path", "."]),
 
-      dn.rearrange_links([
-        #("Exercise <a href=\"1\">_1_</a>.<a href=\"2\">_2_</a>", "<a href=\"2\">Exercise _1_ . _2_</a>")
-      ]),
       // ************************
       // contents
       // ************************
