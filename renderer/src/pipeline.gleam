@@ -12,24 +12,26 @@ pub fn lbp_pipeline() -> List(Pipe) {
     ),
     [
       dn.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
-      // *******************************
-      // Attributes with numbers *******
-      // *******************************
-      dn.add_counter_attributes([
-        #("Solution", "Exercises", "solution_number", 1),
-        #("Exercise", "Exercises", "exercise_number", 1),
-      ]),
+     
       // ************************
       // AddTitleCounters *******
       // ************************
       dn.add_attributes([
+        #("Book", "counter", "ChapterCounter"),
+        #("Book", "counter", "BootcampCounter"),
         #("Chapter", "counter", "ExampleCounter"),
         #("Chapter", "counter", "NoteCounter"),
         #("Bootcamp", "counter", "ExampleCounter"),
         #("Exercises", "counter", "ExerciseCounter"),
         #("Solution", "counter", "SolutionNoteCounter"),
+        #("Chapter", "path", "/article/chapter::øøChapterCounter"),
+        #("Bootcamp", "path", "/article/bootcamp::øøBootcampCounter"),
+        #("Exercise", "exercise_number", "::øøExerciseCounter"),
+        #("Solution", "solution_number", "::øøExerciseCounter"),
       ]),
       dn.associate_counter_by_prepending_incrementing_attribute([
+        #("Chapter", "ChapterCounter"),
+        #("Bootcamp", "BootcampCounter"),
         #("Example", "ExampleCounter"),
         #("Exercise", "ExerciseCounter"),
         #("SolutionNote", "SolutionNoteCounter"),
@@ -100,8 +102,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
       dn.counters_substitute_and_assign_handles(),
       dn.handles_generate_ids(),
-      dn.define_article_output_path(#("Chapter", "/article/chapter", "path")),
-      dn.define_article_output_path(#("Bootcamp", "/article/bootcamp", "path")),
       dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
       dn.handles_substitute([]),
       dn.unwrap(["GrandWrapper"]),
