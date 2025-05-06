@@ -7,10 +7,8 @@ import desugarer_names as dn
 pub fn lbp_pipeline() -> List(Pipe) {
   [
     pp.create_mathblock_and_math_elements(
-      [ pp.DoubleDollar ],
-      [ pp.SingleDollar ],
-      pp.DoubleDollar,
-      pp.SingleDollar,
+      #([ pp.DoubleDollar ], pp.DoubleDollar),
+      #([ pp.SingleDollar ], pp.SingleDollar)
     ),
     [
       dn.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
