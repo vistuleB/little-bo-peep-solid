@@ -106,6 +106,10 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.handles_substitute([]),
       dn.unwrap(["GrandWrapper"]),
       dn.concatenate_text_nodes(),
+      dn.cut_paste_attribute_from_self_to_child(
+        #("Exercise", "ExerciseStatement", "id"),
+      ),
+
       // ************************
       // VerticalChunk cleanup
       // ************************
