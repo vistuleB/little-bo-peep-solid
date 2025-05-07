@@ -323,6 +323,7 @@
             src images/svg_ch4_f_g_composition_units.svg
 
         |> Pause
+
         _Note TotalEarnings<<::++NoteCounter._
         To emphasize, $f(x)$ is the
 

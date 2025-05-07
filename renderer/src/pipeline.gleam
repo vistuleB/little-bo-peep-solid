@@ -1,3 +1,4 @@
+import desugarers/identity
 import gleam/list
 import gleam/option.{None, Some}
 import infrastructure.{type Pipe}
@@ -6,16 +7,22 @@ import desugarer_names as dn
 
 pub fn lbp_pipeline() -> List(Pipe) {
   [
+    // ****
+    // create Math, MathBlock, then replace
+    // escaped dollar signs with ordinary dollars
+    // ****
     pp.create_mathblock_and_math_elements(
       #([ pp.DoubleDollar ], pp.DoubleDollar),
-      #([ pp.SingleDollar ], pp.SingleDollar)
+      #([ pp.SingleDollar ], pp.SingleDollar),
     ),
     [
       dn.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
-     
-      // ************************
-      // AddTitleCounters *******
-      // ************************
+    ],
+    // ****
+    // setting up counters and 
+    // counter-related titles
+    // ****
+    [
       dn.add_attributes([
         #("Book", "counter", "ChapterCounter"),
         #("Book", "counter", "BootcampCounter"),
@@ -43,9 +50,18 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("SolutionNote", "_Note ::øøSolutionNoteCounter._"),
         #("Note", "_Note ::øøNoteCounter._"),
       ]),
-      // ************************
-      // VerticalChunk **********
-      // ************************
+      dn.counters_substitute_and_assign_handles(),
+      dn.handles_generate_ids(),
+      dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
+      dn.handles_substitute([]),
+      dn.unwrap(["GrandWrapper"]),
+    ],
+    // ****
+    // get rid of 'WriterlyBlankLine',
+    // replace with parenting notion of
+    // VerticalChunk (paragraph abstraction) instead
+    // ****
+    [
       dn.group_consecutive_children_avoiding(
         #(
           "VerticalChunk",
@@ -57,54 +73,38 @@ pub fn lbp_pipeline() -> List(Pipe) {
             "WriterlyBlankLine", "center", "li", "ul", "ol", "table", "colgroup",
             "thead", "tbody", "tr", "td", "section",
           ],
-          ["MathBlock", "VerticalChunk"],
+          ["MathBlock", "VerticalChunk", "CentralDisplay", "CentralDisplayItalic"],
         ),
       ),
       dn.unwrap(["WriterlyBlankLine"]),
-      dn.remove_empty_text_nodes(),
-      dn.rename_when_child_of([
-        #("VerticalChunk", "Item", "List"),
-        #("VerticalChunk", "Item", "Grid"),
-      ]),
     ],
-    // ************************
-    // __ *********************
-    // ************************
+    // ****
+    // parse '__', '_|' delimiters, break
+    // new elements out of parent VerticalChunk
+    // ****
     pp.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
-    // ************************
-    // _| |_ ******************
-    // ************************
     pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
-      // ************************
-      // break CentralDisplay &
-      // CentralDisplayItalic out
-      // of VerticalChunk
-      // ************************
       dn.free_children([
         #("CentralDisplay", "VerticalChunk"),
         #("CentralDisplayItalic", "VerticalChunk"),
       ]),
-      dn.remove_vertical_chunks_with_no_text_child(),
     ],
-    // ************************
-    // _ & * ******************
-    // ************************
+    // ****
+    // parse _, * delims
+    // ****
     pp.symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
     pp.symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
     [
       dn.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
-      // ************************
-      // misc *******************
-      // ************************
+    ],
+    // ****
+    // misc + not-so misc...
+    // ****
+    [
       dn.wrap_math_with_no_break(),
       dn.unwrap_when_single_child(["NoBreak"]),
       dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
-      dn.counters_substitute_and_assign_handles(),
-      dn.handles_generate_ids(),
-      dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
-      dn.handles_substitute([]),
-      dn.unwrap(["GrandWrapper"]),
       dn.concatenate_text_nodes(),
       dn.cut_paste_attribute_from_self_to_child(
         #("Exercise", "ExerciseStatement", "id"),
@@ -115,7 +115,13 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
+      dn.remove_empty_text_nodes(),
+      dn.unwrap_vertical_chunks_with_no_text_child(),
       dn.unwrap_when_descendant_of([#("VerticalChunk", ["td", "li"])]),
+      dn.rename_when_child_of([
+        #("VerticalChunk", "Item", "List"),
+        #("VerticalChunk", "Item", "Grid"),
+      ]),
       dn.remove_empty_chunks(),
       // ************************
       // ImageLeft, ImageRight parent-finding
@@ -169,7 +175,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #(#("List", "VerticalChunk"), "Pause", []),
         #(#("StarDivider", "VerticalChunk"), "Pause", []),
       ]),
-      dn.identity(),
       // (I forgot... why would raw text directly follow a MathBlock?)
       dn.add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
       dn.add_before_tags_but_not_first_child_tags([
@@ -195,7 +200,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       dn.change_attribute_value([#("src", "/()")]),
       dn.remove_attributes(["counter", "handle", "type", "t", "path", "."]),
-
       // ************************
       // contents
       // ************************
