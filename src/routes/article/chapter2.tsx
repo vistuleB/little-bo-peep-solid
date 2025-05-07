@@ -133,7 +133,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section>
+      <Section id="_6062426862">
         <VerticalChunk>
           <b>
             Measuring Slope.
@@ -315,7 +315,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="_39751155661">
         <VerticalChunk>
           <b>
             Sign Combinations.
@@ -632,7 +632,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="_20613256279">
         <VerticalChunk>
           <b>
             “Rise over Run”.
@@ -724,8 +724,6 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <Math>
             $\Delta y$
           </Math>
@@ -879,14 +877,12 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
-          {" "}{" "}
           <NoBreak>
             <Math>
               $y$
             </Math>
             -intercept
           </NoBreak>
-          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -911,14 +907,12 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
-          {" "}{" "}
           <NoBreak>
             <Math>
               $y$
             </Math>
             -intercept
           </NoBreak>
-          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -1005,7 +999,6 @@ const Rest = () => {
             </Math>
             —
           </NoBreak>
-          {" "}{" "}
           <Math>
             $a$
           </Math>
@@ -1398,7 +1391,6 @@ const Rest = () => {
               </Math>
               m
             </NoBreak>
-            {" "}{" "}
             <NoBreak>
               <Math>
                 $/$
@@ -1456,7 +1448,9 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section divider={false}>
+      <Section
+        divider={false}
+        id="_35056317831">
         <VerticalChunk>
           <b>
             Postscript: Units vs Dimensions.

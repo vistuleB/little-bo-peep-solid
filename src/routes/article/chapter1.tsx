@@ -25,6 +25,9 @@ const Article = () => {
         number={1}
         title="A Few Refreshers">
         <a
+          class="next_page"
+          href="/article/chapter2" />
+        <a
           class="prev_page"
           href="/" />
         <Section>
@@ -528,7 +531,6 @@ const Rest = () => {
               </Math>
               ).
             </NoBreak>
-            {" "}{" "}
           </Item>
           <Item>
             The size obtained when something of size 
@@ -540,7 +542,6 @@ const Rest = () => {
               </Math>
               ).
             </NoBreak>
-            {" "}{" "}
           </Item>
           <Item>
             The number of times that{" "}
@@ -574,7 +575,6 @@ const Rest = () => {
               </Math>
               ).
             </NoBreak>
-            {" "}{" "}
           </Item>
         </List>
         <Pause />
@@ -1420,8 +1420,10 @@ const Rest = () => {
       </Section>
       <Pause />
       <Exercises>
-        <Exercise exercise_number={1}>
-          <ExerciseStatement id="_83485463894">
+        <Exercise
+          exercise_number={1}
+          id="_45325466025">
+          <ExerciseStatement>
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2123,81 +2125,51 @@ const Rest = () => {
             <Grid
               place_items="end"
               cols={3}>
-              <Item>
-                <Math>
-                  $ (-1)^1 = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ (-1) = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ -1 $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ (-1)^2 = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ (-1)\times (-1) = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ 1 $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ (-1)^3 = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ (-1)\times(-1)\times (-1) = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ -1 $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ (-1)^4 = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ (-1)\times(-1)\times(-1)\times(-1) = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ 1 $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ (-1)^5 = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ \,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) = $
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $ -1 $
-                </Math>
-              </Item>
+              <Math>
+                $ (-1)^1 = $
+              </Math>
+              <Math>
+                $ (-1) = $
+              </Math>
+              <Math>
+                $ -1 $
+              </Math>
+              <Math>
+                $ (-1)^2 = $
+              </Math>
+              <Math>
+                $ (-1)\times (-1) = $
+              </Math>
+              <Math>
+                $ 1 $
+              </Math>
+              <Math>
+                $ (-1)^3 = $
+              </Math>
+              <Math>
+                $ (-1)\times(-1)\times (-1) = $
+              </Math>
+              <Math>
+                $ -1 $
+              </Math>
+              <Math>
+                $ (-1)^4 = $
+              </Math>
+              <Math>
+                $ (-1)\times(-1)\times(-1)\times(-1) = $
+              </Math>
+              <Math>
+                $ 1 $
+              </Math>
+              <Math>
+                $ (-1)^5 = $
+              </Math>
+              <Math>
+                $ \,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) = $
+              </Math>
+              <Math>
+                $ -1 $
+              </Math>
             </Grid>
             <Pause />
             <VerticalChunk>
@@ -2615,7 +2587,7 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to Exercise{" "}
-              <InChapterLink href="/article/chapter1?id=_83485463894">
+              <InChapterLink href="/article/chapter1?id=_45325466025">
                 1
               </InChapterLink>
               , we observed how 

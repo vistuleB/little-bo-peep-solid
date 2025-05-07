@@ -985,7 +985,6 @@ const Rest = () => {
           <Math>
             $\rr$
           </Math>
-          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -1325,7 +1324,6 @@ const Rest = () => {
               </Math>
               ”.
             </NoBreak>
-            {" "}{" "}
           </b>
           {" "}
           The difference between
@@ -1527,7 +1525,6 @@ const Rest = () => {
               </Math>
               ”.
             </NoBreak>
-            {" "}{" "}
           </b>
           {" "}
           Technically,
@@ -2268,8 +2265,6 @@ const Rest = () => {
                 </Math>
                 -coordinate
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $\floor&#123;x&#125;$
@@ -2497,7 +2492,6 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplayItalic>
-              {" "}{" "}
               <NoBreak>
                 “
                 <Math>
@@ -2511,7 +2505,6 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -2700,7 +2693,6 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              {" "}{" "}
               <NoBreak>
                 “
                 <Math>
@@ -2718,7 +2710,6 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -3683,7 +3674,6 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              {" "}{" "}
               <Math>
                 $\Large h($
               </Math>
@@ -3700,7 +3690,6 @@ const Rest = () => {
                 y_anchor="-3px"
                 width="1.25rem"
                 src="/images/svg_ch3_composition_icon_die_3.svg" />
-              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -3733,8 +3722,6 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              {" "}
-              {" "}
               <Math>
                 $\Large g(h($
               </Math>
@@ -3751,7 +3738,6 @@ const Rest = () => {
                 y_anchor="-4px"
                 width="2.3rem"
                 src="/images/svg_ch3_composition_icon_fence.svg" />
-              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -4614,7 +4600,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4647,7 +4632,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4812,7 +4796,6 @@ const Rest = () => {
               <Math>
                 $&#123;B\over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4831,7 +4814,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B\over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4857,7 +4839,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -4865,7 +4846,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -4873,7 +4853,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4993,7 +4972,6 @@ const Rest = () => {
               <Math>
                 $-y_0$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5001,7 +4979,6 @@ const Rest = () => {
               <Math>
                 $x_0$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5009,7 +4986,6 @@ const Rest = () => {
               <Math>
                 $a$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5366,7 +5342,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B^2 \over 4A^2&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5374,7 +5349,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5382,7 +5356,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5731,8 +5704,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <Math>
                 $g$
               </Math>
@@ -5971,7 +5942,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5979,7 +5949,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5987,7 +5956,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5999,7 +5967,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6007,7 +5974,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6015,7 +5981,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -6097,7 +6062,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6105,7 +6069,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6113,7 +6076,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplay>

@@ -53,8 +53,6 @@ const Article = () => {
               </Math>
               ,
             </NoBreak>
-            {" "}
-            {" "}
             <Math>
               $\sin(x)$
             </Math>
@@ -80,14 +78,12 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <CentralDisplayItalic>
-            {" "}{" "}
             <NoBreak>
               <Math>
                 $x$
               </Math>
               -coordinate
             </NoBreak>
-            {" "}{" "}
           </CentralDisplayItalic>
           <Pause />
           <VerticalChunk>
@@ -99,14 +95,12 @@ const Article = () => {
           </VerticalChunk>
           <Pause />
           <CentralDisplayItalic>
-            {" "}{" "}
             <NoBreak>
               <Math>
                 $y$
               </Math>
               -coordinate
             </NoBreak>
-            {" "}{" "}
           </CentralDisplayItalic>
           <Pause />
           <VerticalChunk>
@@ -162,8 +156,6 @@ const Article = () => {
               </Math>
               ,
             </NoBreak>
-            {" "}
-            {" "}
             <NoBreak>
               <Math>
                 $\sin(&#123;1\over 2&#125;) \approx 0.5$
@@ -323,8 +315,6 @@ const Article = () => {
               </Math>
               ,
             </NoBreak>
-            {" "}
-            {" "}
             <NoBreak>
               <Math>
                 $\sin(x) = -1$
@@ -666,7 +656,6 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplay>
-          {" "}{" "}
           <NoBreak>
             “
             <Math>
@@ -674,7 +663,6 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}{" "}
         </CentralDisplay>
         <Pause />
         <VerticalChunk>
@@ -883,7 +871,6 @@ const Rest = () => {
               </Math>
               ”.
             </NoBreak>
-            {" "}{" "}
           </b>
           {" "}
           One has
@@ -1348,7 +1335,7 @@ const Rest = () => {
         <VerticalChunk>
           of an angle was briefly touched upon in
           Note{" "}
-          <a href="/article/chapter4?id=_929811304059">
+          <a href="/article/chapter4?id=_661911303893">
             10
           </a>
           {" "}of Exercise 37, Chapter 4. 
@@ -1655,8 +1642,6 @@ const Rest = () => {
               </Math>
               ,
             </NoBreak>
-            {" "}
-            {" "}
             <Math>
               $\mathbf&#123;45^\circ&#125;$
             </Math>
@@ -1667,7 +1652,6 @@ const Rest = () => {
               </Math>
               .
             </NoBreak>
-            {" "}{" "}
           </b>
           {" "}
           Note that every point of the form
@@ -1851,8 +1835,6 @@ const Rest = () => {
             </Math>
             -coordinate
           </NoBreak>
-          {" "}
-          {" "}
           <Math>
             $0.5$
           </Math>
@@ -2585,7 +2567,6 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplay>
-          {" "}{" "}
           <NoBreak>
             “
             <Math>
@@ -2593,7 +2574,6 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}{" "}
         </CentralDisplay>
         <Pause />
         <VerticalChunk>
@@ -3150,7 +3130,6 @@ const Rest = () => {
           One can polish a few more details by noting that:
         </VerticalChunk>
         <p style="text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;">
-          {" "}{" "}
           <b>
             (i)
           </b>
@@ -3164,7 +3143,6 @@ const Rest = () => {
           {" "}clear the arc);
         </p>
         <p style="text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;">
-          {" "}{" "}
           <b>
             (ii)
           </b>
@@ -3501,8 +3479,6 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <Math>
             $0 \leq \theta_2 \leq \eta$
           </Math>
@@ -3515,16 +3491,12 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <NoBreak>
             <Math>
               $\cos(\theta_1\!\rt&#123;0.1&#125;)$
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <Math>
             $\sin(\theta_2\!\rt&#123;0.1&#125;)$
           </Math>
@@ -3614,8 +3586,6 @@ const Rest = () => {
           <i>
             all
           </i>
-          {" "}
-          {" "}
           <NoBreak>
             <Math>
               $\theta_1$
@@ -4213,7 +4183,6 @@ const Rest = () => {
                 </Math>
                 &#x200b;
               </NoBreak>
-              {" "}{" "}
               <NoBreak>
                 <Math>
                   $\times$
@@ -5771,11 +5740,9 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <VerticalChunk>
-              <i>
-                Example 1.
-              </i>
-            </VerticalChunk>
+            <i>
+              Example 1.
+            </i>
             <Pause />
             <MathBlock>
               $$
@@ -5876,8 +5843,6 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}
-                {" "}
                 <NoBreak>
                   <Math>
                     $u_y$
@@ -6505,7 +6470,6 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplayItalic>
-              {" "}{" "}
               <Math>
                 $x$
               </Math>
@@ -6521,7 +6485,6 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplayItalic>
-              {" "}{" "}
               <Math>
                 $x\cdot 4\eta&#123;&#125;$
               </Math>
@@ -6537,7 +6500,6 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplayItalic>
-              {" "}{" "}
               <Math>
                 $x$
               </Math>
@@ -6645,8 +6607,6 @@ const Rest = () => {
                 </Math>
                 ”,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 “
                 <Math>
@@ -8717,8 +8677,6 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}
-                {" "}
                 <NoBreak>
                   <Math>
                     $y_0 = \sin(\eta/2)$
@@ -8765,8 +8723,6 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}
-                {" "}
                 <NoBreak>
                   <Math>
                     $x = 9\eta/2$
@@ -9261,12 +9217,9 @@ const Rest = () => {
               \,x = 0\,
               $$
             </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                or
-              </i>
-            </VerticalChunk>
+            <i>
+              or
+            </i>
             <Pause />
             <MathBlock>
               $$
@@ -9672,14 +9625,12 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <CentralDisplayItalic>
-                {" "}{" "}
                 <NoBreak>
                   <Math>
                     $(a, b)$
                   </Math>
                   -dilation
                 </NoBreak>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
@@ -9733,14 +9684,12 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <CentralDisplayItalic>
-                {" "}{" "}
                 <NoBreak>
                   <Math>
                     $(3, 1)$
                   </Math>
                   -dilation
                 </NoBreak>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
@@ -9763,14 +9712,12 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <CentralDisplayItalic>
-                {" "}{" "}
                 <NoBreak>
                   <Math>
                     $(1, 3)$
                   </Math>
                   -dilation
                 </NoBreak>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
@@ -9793,14 +9740,12 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <CentralDisplayItalic>
-                {" "}{" "}
                 <NoBreak>
                   <Math>
                     $(\sqrt&#123;3&#125;, \sqrt&#123;3&#125;)$
                   </Math>
                   -dilation
                 </NoBreak>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
@@ -9822,14 +9767,12 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <CentralDisplayItalic>
-                {" "}{" "}
                 <NoBreak>
                   <Math>
                     $(12, &#123;1\over 4&#125;)$
                   </Math>
                   -dilation
                 </NoBreak>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
@@ -9866,14 +9809,12 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <CentralDisplayItalic>
-                {" "}{" "}
                 <NoBreak>
                   <Math>
                     $(-1, -1)$
                   </Math>
                   -dilation
                 </NoBreak>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
@@ -12286,8 +12227,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <Math>
                 $\sin + \cos$
               </Math>
@@ -12367,7 +12306,6 @@ const Rest = () => {
               <Math>
                 $\eta/2$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -12375,7 +12313,6 @@ const Rest = () => {
               <Math>
                 $\sqrt&#123;2&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -12811,8 +12748,6 @@ const Rest = () => {
                 </Math>
                 ’,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 ‘
                 <Math>
@@ -13766,7 +13701,6 @@ const Rest = () => {
               <Math>
                 $0.1$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -13774,7 +13708,6 @@ const Rest = () => {
               <Math>
                 $10$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -13888,7 +13821,6 @@ const Rest = () => {
                 <Math>
                   $10$
                 </Math>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <CentralDisplayItalic>
@@ -13896,7 +13828,6 @@ const Rest = () => {
                 <Math>
                   $1$
                 </Math>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
@@ -14114,7 +14045,6 @@ const Rest = () => {
               <Math>
                 $-C$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -14122,7 +14052,6 @@ const Rest = () => {
               <Math>
                 $1/B$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <StarDivider />
@@ -14180,7 +14109,6 @@ const Rest = () => {
                 <Math>
                   $1/B$
                 </Math>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <CentralDisplayItalic>
@@ -14188,7 +14116,6 @@ const Rest = () => {
                 <Math>
                   $-C/B$
                 </Math>
-                {" "}{" "}
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
@@ -14562,8 +14489,10 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={42}>
-          <ExerciseStatement id="_157441688610">
+        <Exercise
+          exercise_number={42}
+          id="_114941687692">
+          <ExerciseStatement>
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -15109,8 +15038,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $(x_0, y_0) = (93, 30)$
@@ -16129,8 +16056,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $\vec&#123;v&#125; = (10, 3.333)$
