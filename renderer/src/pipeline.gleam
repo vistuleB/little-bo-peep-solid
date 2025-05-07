@@ -1,3 +1,4 @@
+import desugarers/identity
 import gleam/list
 import gleam/option.{None, Some}
 import infrastructure.{type Pipe}
@@ -49,6 +50,11 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("SolutionNote", "_Note ::øøSolutionNoteCounter._"),
         #("Note", "_Note ::øøNoteCounter._"),
       ]),
+      dn.counters_substitute_and_assign_handles(),
+      dn.handles_generate_ids(),
+      dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
+      dn.handles_substitute([]),
+      dn.unwrap(["GrandWrapper"]),
     ],
     // ****
     // get rid of 'WriterlyBlankLine',
@@ -99,11 +105,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.wrap_math_with_no_break(),
       dn.unwrap_when_single_child(["NoBreak"]),
       dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
-      dn.counters_substitute_and_assign_handles(),
-      dn.handles_generate_ids(),
-      dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
-      dn.handles_substitute([]),
-      dn.unwrap(["GrandWrapper"]),
       dn.concatenate_text_nodes(),
       dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),

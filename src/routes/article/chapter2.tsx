@@ -133,7 +133,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section id="_6062426862">
+      <Section id="_5836427692">
         <VerticalChunk>
           <b>
             Measuring Slope.
@@ -315,7 +315,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_39751155661">
+      <Section id="_49971154132">
         <VerticalChunk>
           <b>
             Sign Combinations.
@@ -632,7 +632,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_20613256279">
+      <Section id="_34723256299">
         <VerticalChunk>
           <b>
             “Rise over Run”.
@@ -1450,7 +1450,7 @@ const Rest = () => {
       <Pause />
       <Section
         divider={false}
-        id="_35056317831">
+        id="_29856318898">
         <VerticalChunk>
           <b>
             Postscript: Units vs Dimensions.

@@ -1422,7 +1422,7 @@ const Rest = () => {
       <Exercises>
         <Exercise
           exercise_number={1}
-          id="_45325466025">
+          id="_49915464802">
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2587,7 +2587,7 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to Exercise{" "}
-              <InChapterLink href="/article/chapter1?id=_45325466025">
+              <InChapterLink href="/article/chapter1?id=_49915464802">
                 1
               </InChapterLink>
               , we observed how 

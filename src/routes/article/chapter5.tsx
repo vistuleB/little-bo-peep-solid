@@ -1335,7 +1335,7 @@ const Rest = () => {
         <VerticalChunk>
           of an angle was briefly touched upon in
           Note{" "}
-          <a href="/article/chapter4?id=_661911303893">
+          <a href="/article/chapter4?id=_565811172214">
             10
           </a>
           {" "}of Exercise 37, Chapter 4. 
@@ -14491,7 +14491,7 @@ const Rest = () => {
         </Exercise>
         <Exercise
           exercise_number={42}
-          id="_114941687692">
+          id="_337141689003">
           <ExerciseStatement>
             <VerticalChunk>
               <b>
