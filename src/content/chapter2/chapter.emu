@@ -1,12 +1,12 @@
 |> Section
-
+    test test
+    
     *Slopes.*
-    The _slope_ of a line is a mathematical measure
-    of how “steep” a line is. Here are a few examples
-    (for an explanation of the values, see below):
+    Exercise >>TrueOrFalse.>>EXO2 
+    The _slope_ of a line
 
-    |> Image
-        src images/svg_ch2_ch_collection_of_examples.svg
+|> Image
+    src images/svg_ch2_ch_collection_of_examples.svg
 
     To explain, the slope of a line is...
 
