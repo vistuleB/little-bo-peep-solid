@@ -1,4 +1,3 @@
-import desugarers/identity
 import gleam/list
 import gleam/option.{None, Some}
 import infrastructure.{type Pipe}
@@ -200,9 +199,11 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       dn.change_attribute_value([#("src", "/()")]),
       dn.remove_attributes(["counter", "handle", "type", "t", "path", "."]),
-
-      dn.rearrange_links([
-        #("Exercise <a href=\"1\">_1_</a>.<a href=\"2\">_2_</a>", "<a href=\"2\">Exercise _1_ . _2_</a>")
+      // dn.rearrange_links([
+      //   #("Exercise <a href=\"1\">_1_</a>.<a href=\"2\">_2_</a>", "<a href=\"2\">Exercise _1_._2_</a>")
+      // ]),
+      dn.rearrange_links_v2([
+        #("Exercise <a href='1'>_1_</a>.<a href=2>_2_</a>", "<a href=2>Exercise _1_._2_</a>")
       ]),
       // ************************
       // contents
@@ -221,7 +222,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       )),
       dn.generate_lbp_links(),
       dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
-     
     ]
   ]
   |> list.flatten
