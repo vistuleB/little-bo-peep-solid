@@ -5,27 +5,27 @@
     corner _is_ a sharp corner):
 
     |> Image
-        src images/svg_ch4_slope_one_half_see_saw.svg
-    
+        src=images/svg_ch4_slope_one_half_see_saw.svg
+
     |> Solution
 
         That would be:
 
         |> Image
-            src images/svg_ch4_slope_one_half_see_saw_derivative.svg
+            src=images/svg_ch4_slope_one_half_see_saw_derivative.svg
 
         (The derivative is $1/2$ when the slope is $1/2$,
-        is $-1/2$ when the slope is $-1/2$, and is 
+        is $-1/2$ when the slope is $-1/2$, and is
         undefined at the corners.)
 
 |> Exercise
 
     Would the derivative of
-    
+
     $$
     y = {1\over x}
     $$
-    
+
     be a very large negative number, or a very
     large positive number, near $x = 0$? Or would
     it depend on which side of 0 you are?
@@ -35,8 +35,8 @@
         The graph of $y = {1 \over x}$ looks like so:
 
         |> Image
-            src images/svg_ch4_one_over_x.svg
-    
+            src=images/svg_ch4_one_over_x.svg
+
         As one can see, the slope is very negative
         near $x = 0$, on either side. So the answer is:
         “very large negative”.
@@ -44,21 +44,21 @@
 |> Exercise
 
     Sketch the
-    
+
     __second__
-    
+
     derivative of the graph in Exercise 1.
-    
+
     |> Solution
 
         The second derivative is zero wherever the
         first derivative is flat, and is undefined
         wherever the first derivative is undefined;
-        this gives the second derivative the following 
+        this gives the second derivative the following
         pockmarked appearance:
 
         |> Image
-            src images/svg_ch4_slope_one_half_see_saw_second_derivative.svg
+            src=images/svg_ch4_slope_one_half_see_saw_second_derivative.svg
 
         |> Pause
 
@@ -69,18 +69,18 @@
         |> Pause
 
         _Note 2._
-        “first derivative” is a synonym of “derivative”. 
+        “first derivative” is a synonym of “derivative”.
 
 |> Exercise
 
     If we pretend that the graph of Exercise 1
-    depicts the 
+    depicts the
     |> del
-    
+
         distance that a car has traveled
         as a function of time,
-    &ensp;position of a car as a function of 
-    time, with hours (hr) on the $x$-axis 
+    &ensp;position of a car as a function of
+    time, with hours (hr) on the $x$-axis
     and kilometers (km) on the $y$-axis, what
     do the units become on the axes of the first
     and second derivatives?
@@ -89,20 +89,20 @@
 
         The units on the $y$ axis become kilometers,
         kilometers per hour, and kilometers per
-        hours squared, including the first graph 
+        hours squared, including the first graph
         (each time
         another derivative is taken, divide the
-        units of the $y$ axis by the units of the 
+        units of the $y$ axis by the units of the
         $x$ axis):
 
         |> Image
-            src images/svg_ch4_slope_one_half_see_saw_with_units.svg
+            src=images/svg_ch4_slope_one_half_see_saw_with_units.svg
 
         |> Image
-            src images/svg_ch4_slope_one_half_see_saw_with_units_derivative.svg
+            src=images/svg_ch4_slope_one_half_see_saw_with_units_derivative.svg
 
         |> Image
-            src images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg
+            src=images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg
 
         |> StarDivider
 
@@ -114,14 +114,14 @@
 
         |> SolutionNote
 
-            In a more physically realistic scenario the corners 
-            !! on the position-as-a-function-of-time graph 
+            In a more physically realistic scenario the corners
+            !! on the position-as-a-function-of-time graph
             are rounded off a bit while the velocity and
             acceleration remain continuous, albeit with steep
             slopes and sharp peaks. (Maybe...
 
             |> Image
-                src images/svg_ch4_ex_car_position_rounded.svg
+                src=images/svg_ch4_ex_car_position_rounded.svg
 
             ..something like this.)
 
@@ -130,7 +130,7 @@
 
     Is the following equation correct, incorrect,
     or nonsensical?
-    
+
     $$
     (x \ra x + 1) \,+\, (u \ra 2u + 1) \,=\, (t \ra 3t + 2)
     $$
@@ -145,25 +145,25 @@
         $$
 
         is a
-        
+
         __sum of functions__
-    
+
         because $x \ra x + 1$ and $u \ra 2u + 1$ are
         both functions. Now by definition, the sum
-        
+
         $$
         f + g
         $$
-        
+
         of functions $f$ and $g$ is the function
-        
+
         $$
         x \ra f(x) + g(x)
         $$
-        
+
         that maps a number to the sum of the individual
         values of the functions. So—for example—
-        
+
         $$
         \begin{align}
         & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(5) \\
@@ -172,9 +172,9 @@
         =& \,\,\,3\cdot 5 + 2 = 17 \up{1.5}
         \end{align}
         $$
-        
+
         and—with a general input $t$—
-        
+
         $$
         \begin{align}
         & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(t) \\
@@ -183,13 +183,13 @@
         =& \,\,\,3t + 2 \up{1.5}
         \end{align}
         $$
-        
+
         which implies that, indeed,
-        
+
         $$
         (x \ra x + 1) \,+\, (u \ra 2u + 1)
         $$
-        
+
         is the function that maps each real number $t$ to $3t + 2$,
         i.e., is equal to the function $t \ra 3t + 2$. (!!)
 
@@ -219,46 +219,46 @@
     below, based on those units that are given:
 
     |> Image
-        src images/svg_ch4_missing_units.svg
+        src=images/svg_ch4_missing_units.svg
 
     |> Solution
 
-        The pattern to respect is that, each time 
+        The pattern to respect is that, each time
         you take a derivative, the units on the $x$
         axis stay the same, while the units on the
-        $y$ axis become divided by those on the $x$ 
+        $y$ axis become divided by those on the $x$
         axis. This gives the unique solutions:
 
         |> Image
-            src images/svg_ch4_missing_units_solution.svg
+            src=images/svg_ch4_missing_units_solution.svg
 
         |> Pause
         _Note 1._
         A unit of “$1$” is a
-        
+
         __dimensionless__
-        
-        unit. Dimensionless units arise when 
+
+        unit. Dimensionless units arise when
         quantities are divided by like quantities.
-        Think of dimensionless quantities as “pure 
+        Think of dimensionless quantities as “pure
         fractions” or “pure ratios”. (Percentages
         are dimensionless—in fact the term
-        
+
         __percentage__
-        
+
         is synonymous with
 
         __dimensionless ratio__
-    
-        though if you spoke to people about 
-        “dimensionless ratios” they would look at 
+
+        though if you spoke to people about
+        “dimensionless ratios” they would look at
         you funny. Also percentages are a system of
-        notation, whereby the symbol “%” means 
-        “divide the preceding number by 100, in 
-        order to discover the numerical value of 
+        notation, whereby the symbol “%” means
+        “divide the preceding number by 100, in
+        order to discover the numerical value of
         the ratio I'm talking about”.) (To drive
-        it home: In Chinese, the written expressions 
-        “$23\%$” and “$23/100$” are 
+        it home: In Chinese, the written expressions
+        “$23\%$” and “$23/100$” are
         indistinguishable when read out loud; they
         are both  read “$23$ over $100$”; that is
         the simple _&_ correct way!)
@@ -266,24 +266,24 @@
 |> Exercise
 
     Among the functions below, which is the
-    zeroth, first, and second derivative? 
-    (I.e., which is $f$, $f'$, and $f''$, 
+    zeroth, first, and second derivative?
+    (I.e., which is $f$, $f'$, and $f''$,
     assuming that relationship exists.)
 
     |> Image
-        src images/svg_ch4_ex_position_by_time_find_the_order.svg
+        src=images/svg_ch4_ex_position_by_time_find_the_order.svg
 
     |> Solution
 
-        The graphs are already in the right order: 
-        if “$f$” is the original function 
-        then $f$ is on the left, $f'$ is in the 
+        The graphs are already in the right order:
+        if “$f$” is the original function
+        then $f$ is on the left, $f'$ is in the
         middle, and $f''$ is on the right:
 
         |> Image
-            src images/svg_ch4_ex_position_by_time_find_the_order_answer.svg
+            src=images/svg_ch4_ex_position_by_time_find_the_order_answer.svg
 
-        For example, the graph on the left 
+        For example, the graph on the left
         has a slope that starts at $\sim\!-1$ and
         ends at $\sim\!1$, while those are the
         values at which the graph in the middle
@@ -292,7 +292,7 @@
         derivative of the graph on the left!):
 
         |> Image
-            src images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg
+            src=images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg
 
         Moreover the middle graph has slope
         close to $0$ at either end, and some
@@ -301,15 +301,15 @@
         on the right:
 
         |> Image
-            src images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg
+            src=images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg
 
         (Taking one more derivative would produce a
         zigzag, by the way.)
 
         |> ImageRight
-            src images/svg_ch4_ex_position_by_time_find_the_order_cloud.svg
-            offset_y -0.1em
-            offset_x -0.5em
+            src=images/svg_ch4_ex_position_by_time_find_the_order_cloud.svg
+            offset_y=-0.1em
+            offset_x= -0.5em
 
 
 |> Exercise
@@ -317,7 +317,7 @@
     Given these graphs...
 
     |> Image
-        src images/svg_ch4_sketch_the_middle_a.svg
+        src=images/svg_ch4_sketch_the_middle_a.svg
 
     ...what can you say about $g'(x)$?
     (Produce the best sketch of $g'(x)$ that
@@ -335,39 +335,39 @@
         at $x = -2$, $x = 0$ and $x = 2$ respectively:
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_a_sol1.svg
+            src=images/svg_ch4_sketch_the_middle_a_sol1.svg
 
         This already gives us three points from which
-        to interpolate a basic approximation to the graph 
+        to interpolate a basic approximation to the graph
         $y = g'(x)$:
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_a_sol2.svg
+            src=images/svg_ch4_sketch_the_middle_a_sol2.svg
 
         But the graph of $g''(x)$ indicates more,
-        namely that $g'(x)$ has a slope that rises 
-        from $\approx 0.2$ near the left edge of 
-        the graph up to $1.3$ at $x = 0.5$, before 
+        namely that $g'(x)$ has a slope that rises
+        from $\approx 0.2$ near the left edge of
+        the graph up to $1.3$ at $x = 0.5$, before
         falling again to $0.6$ past $x = 2$:
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_a_sol3.svg
+            src=images/svg_ch4_sketch_the_middle_a_sol3.svg
 
         As a second step, we thus “bend into shape”
         our previous sketch to produce these slopes...
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_a_sol4.svg
+            src=images/svg_ch4_sketch_the_middle_a_sol4.svg
 
-        ...achieving our final answer. 
+        ...achieving our final answer.
 
         |> Pause
 
-        _Note 1._ For reference, the actual 
+        _Note 1._ For reference, the actual
         derivative looks like so:
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_a_sol5.svg
+            src=images/svg_ch4_sketch_the_middle_a_sol5.svg
 
 
 |> Exercise
@@ -375,24 +375,24 @@
     Given these graphs...
 
     |> Image
-        src images/svg_ch4_sketch_the_middle_b.svg
+        src=images/svg_ch4_sketch_the_middle_b.svg
 
     ...sketch $y = h'(x)$, analogously to
     Exercise 10.
 
     |> Solution
-        
+
         Firstly, the graph of $h(x)$ seems to have
         slope $0$ around $x = 0.6$...
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol1.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol1.svg
 
         ...which gives us one data point on the
         curve $y = h'(x)$ to start with...
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol2.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol2.svg
 
         ...moreover, by the graph of $h''(x)$,
         the slope of $h'(x)$ is near $-1/3$ on an
@@ -400,73 +400,73 @@
         $[-0.85,0.7]$....
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol3.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol3.svg
 
         ...so, as a second step, we can extend
         the graph of $h'(x)$ by a segment of slope
         $-1/3$ on this interval:
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol4.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol4.svg
 
         |> ImageLeft
-            src images/svg_ch4_sketch_the_middle_b_cloud.svg
+            src=images/svg_ch4_sketch_the_middle_b_cloud.svg
 
         (To achieve a passable slope of $-1/3$ we
-        modeled ourselves on a nearby grid segment.) 
+        modeled ourselves on a nearby grid segment.)
         Next, $h(x)$ has slope $\approx 1.2$ at
         $x = -2$, and slope $\approx -0.9$ (?) at
         $x = 2$:
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol5.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol5.svg
 
         This gives us two more points on the graph
         $y = h'(x)$:
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol6.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol6.svg
 
         Then, because the second derivative has
         value $\approx -1/3$ for $x \leq -1.6$
         (about) and for $x \geq 1.5$ (about)...
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol7.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol7.svg
 
         ...we extend these two new data points by
         segments of slope $-1/3$...
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol8.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol8.svg
 
-        ...on the relevant intervals. (I.e., for 
-        $x \leq -1.6$ and for $x \geq 1.5$.) The 
-        last step is to join the existing segments 
-        by some kind of “connector curves” of 
+        ...on the relevant intervals. (I.e., for
+        $x \leq -1.6$ and for $x \geq 1.5$.) The
+        last step is to join the existing segments
+        by some kind of “connector curves” of
         yet-to-be-determined shape:
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol9.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol9.svg
 
-        Since $h''(x)$ shows that the two 
+        Since $h''(x)$ shows that the two
         connectors have slopes of about $-1/3$
         at their edges and slopes of about $-1.4$
         and $-1.6$ (respectively) near their
         middles...
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol10.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol10.svg
 
         ...our final answer, given by the
-        following sketch, is obtained by 
+        following sketch, is obtained by
         “bending into shape” the connector curves...
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol11.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol11.svg
 
         ...to give them a slope of $-1/3$ at
-        their endpoints, and slopes of $-1.4$, 
+        their endpoints, and slopes of $-1.4$,
         $-1.6$, respectively, in their middles.
 
         |> Pause
@@ -475,25 +475,25 @@
         Here is the actual graph of $h'$:
 
         |> Image
-            src images/svg_ch4_sketch_the_middle_b_sol12.svg
+            src=images/svg_ch4_sketch_the_middle_b_sol12.svg
 
 
 |> Exercise
 
     If you scale the graph of a function $f$
     vertically by a factor $2$—i.e., multiply
-    each output by $2$—is the derivative 
+    each output by $2$—is the derivative
     also scaled by $2$?
 
     |> Solution
 
         Yes, this is the case. For a joke way
-        of seeing it, here is a graph of a 
+        of seeing it, here is a graph of a
         putative function $f$, before and after
         scaling:
 
         |> Image
-            src images/svg_ch4_scaling_figure.svg
+            src=images/svg_ch4_scaling_figure.svg
 
         The second graph truly is the first
         graph vertically scaled by a factor $2$,
@@ -521,7 +521,7 @@
     greatest?
 
     |> Image
-        src images/svg_ch4_narrow_and_less_narrow_bends.svg
+        src=images/svg_ch4_narrow_and_less_narrow_bends.svg
 
     |> Solution
 
@@ -530,30 +530,30 @@
         of the curve:
 
         |> Image
-            src images/svg_ch4_narrow_and_less_narrow_bends_steepest.svg
+            src=images/svg_ch4_narrow_and_less_narrow_bends_steepest.svg
 
         On the other hand,
-        
+
         __the rate of change of the rate of change__
-        
+
         [a.k.a., second derivative] is the rate
         of change  of the slope, and that will
         be greatest at the first bend of the curve,
-        where the slope is changing at the fastest 
+        where the slope is changing at the fastest
         rate:
 
         |> Image
-            src images/svg_ch4_narrow_and_less_narrow_bends_curviest.svg
+            src=images/svg_ch4_narrow_and_less_narrow_bends_curviest.svg
 
         (Well, believe us or not, but we're right!)
 
 |> Exercise
 
-    In the following graph, which curve might 
+    In the following graph, which curve might
     be a derivative of which other curve?
 
     |> Image
-        src images/svg_ch4_cosine_curves.svg
+        src=images/svg_ch4_cosine_curves.svg
 
     |> Solution
 
@@ -562,13 +562,13 @@
         blue is the derivative of the red:
 
         |> Image
-            src images/svg_ch4_cosine_curves_blue_red_only.svg
+            src=images/svg_ch4_cosine_curves_blue_red_only.svg
 
         Likewise, the derivative of the blue
         is the yellow, the derivative of the yellow
-        is the green, and the derivative of the 
+        is the green, and the derivative of the
         green is the red, at which point it starts
-        all over again! (For example, the 
+        all over again! (For example, the
         _fifth_ derivative of the red curve
         is the blue, because the _fourth_
         derivative of the red curve is itself.)
@@ -577,8 +577,8 @@
 
         _Note 1._
         After all, the slope of these curves
-        keeps oscillating between two fixed 
-        values—the “most slanted up” and the 
+        keeps oscillating between two fixed
+        values—the “most slanted up” and the
         “most slanted down”—so their derivatives
         were always going to have an oscillatory
         pattern, as well.
@@ -595,7 +595,7 @@
         bump, not the other way around:
 
         |> Image
-            src images/svg_ch4_cosine_curves_cresting.svg
+            src=images/svg_ch4_cosine_curves_cresting.svg
 
         |> Pause
 
@@ -606,13 +606,13 @@
         $x$- and $y$-axes:
 
         |> Image
-            src images/svg_ch4_cosine_curves_two_dimensional_vel.svg
+            src=images/svg_ch4_cosine_curves_two_dimensional_vel.svg
 
         The velocities of the two shadows
         encode the overall “two-dimensional”
-        velocity of the particle. (No need for 
-        quotes, really: the velocity _is_ 
-        two-dimensional.) 
+        velocity of the particle. (No need for
+        quotes, really: the velocity _is_
+        two-dimensional.)
 
         Here's another point of view: just like
 
@@ -621,74 +621,74 @@
         known as the _position vector_ by
         the way, where “vector” is a term of art
         for “pair of numbers”—so the
-        
+
         __velocity__
-        
+
         is encoded by a pair of numbers—equally
         known as the _velocity vector_—which
         is no coincidence, because the first
         coordinate of the
-        
+
         __velocity vector__
-        
+
         is the derivative of the first coordinate
         of the
-        
+
         __position vector__
-        
+
         and likewise for the second coordinate—two
         coordinates, two rates of change!
 
         Geometrically, if we use the $x$- and
-        $y$-components $v_x$ and $v_y$ of the 
-        velocity to draw an arrow emanating 
+        $y$-components $v_x$ and $v_y$ of the
+        velocity to draw an arrow emanating
         from a point on the curve, this arrow
         is tangent to the curve, and the
 
         |> ImageRight
-            src images/svg_ch4_cosine_curves_tangent_velocity_cloud.svg
+            src=images/svg_ch4_cosine_curves_tangent_velocity_cloud.svg
 
         __length__
-        
+
         of the arrow is the
-        
+
         __speed__
-        
+
         of the particle at that moment in time.
         More precisely, if you let the particle
-        drift at the exact same $x$- and 
+        drift at the exact same $x$- and
         $y$-velocities $v_x$ and $v_y$ that you
         measured at the root of the arrow for
-        one unit of time, the particle would 
+        one unit of time, the particle would
         cover exactly the length of the arrow
-        in that one unit of time, no more no less, 
+        in that one unit of time, no more no less,
         because the particle would cover $v_x$
         units in $x$ and $v_y$ units in $y$.
         And speed being
-        
+
         __distance per unit time__
-        
+
         the length of the arrow is, therefore,
         the speed!
 
         Now consider not one but four particles,
         going around a unit circle in clockwise
-        fashion, 90° apart in phase, at unit 
-        speed (“unit speed” = speed 1, “unit 
+        fashion, 90° apart in phase, at unit
+        speed (“unit speed” = speed 1, “unit
         circle” = radius 1) (ps: We center the
         circle at the origin):
 
         |> Image
-            src images/svg_ch4_cosine_curves_unit_circle.svg
+            src=images/svg_ch4_cosine_curves_unit_circle.svg
 
         The
 
         __position vectors__
-        
+
         of the particles are as follows:
 
         |> Image
-            src images/svg_ch4_cosine_curves_unit_circle_position_vectors.svg
+            src=images/svg_ch4_cosine_curves_unit_circle_position_vectors.svg
 
         (You can't really see it so well, but
         each arrow originates at $(0, 0)$.) While
@@ -699,10 +699,10 @@
         are as follows:
 
         |> Image
-            src images/svg_ch4_cosine_curves_unit_circle_velocity_vectors.svg
+            src=images/svg_ch4_cosine_curves_unit_circle_velocity_vectors.svg
 
-        (Like the position vectors, the 
-        velocity vectors keep changing instant by 
+        (Like the position vectors, the
+        velocity vectors keep changing instant by
         instant—this is the subtlety of calculus!)
         The velocity vectors have length $1$ because
         the speed is $1$, _&_ are brushed
@@ -710,7 +710,7 @@
 
         (Nb: When we draw a vector as an arrow
         we mean that the first coordinate of the
-        vector is equal to the horizontal 
+        vector is equal to the horizontal
         displacement from the tail of the arrow
         to the head of the arrow, and likewise
         that the second coordinate is equal to the
@@ -718,17 +718,17 @@
         arrow to the head of the arrow.)
 
         |> ImageRight
-            src images/svg_ch4_cosine_curves_vector_illustration_cloud.svg
+            src=images/svg_ch4_cosine_curves_vector_illustration_cloud.svg
 
-        Due to the 90° rotations and uniform 
+        Due to the 90° rotations and uniform
         lengths of $1$, one particle's velocity
         vector is another particle's position
         vector; as one example, the red particle's
-        velocity vector is the blue particle's 
+        velocity vector is the blue particle's
         position vector:
 
         |> Image
-            src images/svg_ch4_cosine_curves_unit_circle_equality.svg
+            src=images/svg_ch4_cosine_curves_unit_circle_equality.svg
 
         From the $x$-coordinates, for example,
 
@@ -746,7 +746,7 @@
         as “rate of change of the $x$-coordinate”.
 
         Concretely, if you graph the
-        $x$-coordinates of the red and blue 
+        $x$-coordinates of the red and blue
         particles on the same graph, the rate of
         change of the red particle's $x$-coordinate
         will equal the value of the blue particle's
@@ -761,7 +761,7 @@
         at time $t = 0$:
 
         |> Image
-            src images/svg_ch4_cosine_curves_verified.svg
+            src=images/svg_ch4_cosine_curves_verified.svg
 
         If we add the $x$-coordinates of the green
         and yellow particles, we find the graph
@@ -770,15 +770,15 @@
         |> Pause
 
         _Note 4._
-        If needed, here is an illustration of 
+        If needed, here is an illustration of
         one $360^\circ$ rotation of the particles
-        of Note 3,  with each curve being an 
+        of Note 3,  with each curve being an
         $x$-coordinate:
 
         |> Image
-            src images/svg_ch4_cosine_curves_rolling_wheel.svg
+            src=images/svg_ch4_cosine_curves_rolling_wheel.svg
 
-        (If the above just looks like a 
+        (If the above just looks like a
         confusing mess then don't sweat it—it's
         not that important.)
 
@@ -789,13 +789,13 @@
         figure again:
 
         |> Image
-            src images/svg_ch4_cosine_curves_cresting.svg
+            src=images/svg_ch4_cosine_curves_cresting.svg
 
         The derivative is
 
         __ahead__
 
-        of the red particle, so that 
+        of the red particle, so that
         $x$-coordinates you see _now_ on the
         blue particle will be seen _a little later_
         on the red particle! (In particular, if you
@@ -804,6 +804,5 @@
         but you would have to reverse the order of
         the particles around the circle to keep the
         blue particle ahead of the red particle,
-        the yellow particle ahead of the blue 
+        the yellow particle ahead of the blue
         particle, etc.)
-

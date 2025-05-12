@@ -1,52 +1,52 @@
 |> Image
-    src images/svg_ch4_ch_polaroids.svg
+    src=images/svg_ch4_ch_polaroids.svg
 
 |> Section
 
     *Definitions.*
     The _derivative_ of a function
-    
+
     $$
-    f : \rr \ra \rr 
+    f : \rr \ra \rr
     $$
 
     is a (new) function
-    
+
     $$
     f' : \rr \ra \rr
     $$
-    
-    that gives the slope of $f$ at each point. 
+
+    that gives the slope of $f$ at each point.
     In other words
-    
+
     $$
     f'(a)
     $$
-    
+
     is the slope of the graph $y = f(x)$ at
     $x = a$. And—surprise!—each pair of graphs
     above is a pair of the form $y = f(x)$ [$=$
     “before”], $y = f'(x)$ [$=$ “after”]. (Meaning,
-    the “after” graph records the slope of the 
+    the “after” graph records the slope of the
     “before” graph.) E.g.:
 
     |> Image
-        src images/svg_ch4_ch_explanation1.svg
+        src=images/svg_ch4_ch_explanation1.svg
 
-    Note that $f'\!$ (read “$f$ prime”) remains 
-    undefined where $y = f(x)$ has a sharp “corner” 
-    and no well-defined slope. By opposition, if 
-    there is a well-defined tangent line to 
+    Note that $f'\!$ (read “$f$ prime”) remains
+    undefined where $y = f(x)$ has a sharp “corner”
+    and no well-defined slope. By opposition, if
+    there is a well-defined tangent line to
     $y = f(x)$ at $x = a$ the slope of this
     tangent line supplies the value of $f'(a)$:
 
     |> Image
-        src images/svg_ch4_ch_explanation2.svg
+        src=images/svg_ch4_ch_explanation2.svg
 
     !! |> ImageRight
-    !!     offset_y -17em
-    !!     offset_x -13em
-    !!     src images/svg_ch4_ch_explanation2_cloud.svg
+    !!     offset_y=-17em
+    !!     offset_x=-13em
+    !!     src=images/svg_ch4_ch_explanation2_cloud.svg
 
 |> Section
 
@@ -57,18 +57,18 @@
     f'(a) = \te{[slope of tangent line to $y = f(x)$ at $x = a$]}
     $$
 
-    ...with the understanding that $f'(a)$ is 
-    undefined if a tangent line does not exist 
-    or if the tangent is vertical. 
+    ...with the understanding that $f'(a)$ is
+    undefined if a tangent line does not exist
+    or if the tangent is vertical.
     Also note that
     the endpoint of a curve does not count
     as having a tangent, and leaves a missing
     value for the derivative:
 
     |> Image
-        src images/svg_ch4_ch_one_sided_tangent.svg
+        src=images/svg_ch4_ch_one_sided_tangent.svg
 
-    (In other words, what one might describe as 
+    (In other words, what one might describe as
     “half-tangents” do not actually count as tangents.)
 
 |> Section
@@ -78,15 +78,15 @@
 
     __differentiable__
 
-    if $\dom\,f' = \dom\,f$. Also, if $a, b \in \rr$, 
+    if $\dom\,f' = \dom\,f$. Also, if $a, b \in \rr$,
     $a < b$, $f$ is
-    
+
     __differentiable on $[a,b]$__
-    
+
     if $[a,b] \subseteq \dom \,f'$. Lastly, $f$ is
-    
+
     __differentiable at $a$__
-    
+
     if $a \in \dom\,f'$.
 
 |> Section
@@ -97,31 +97,31 @@
     (the one with the closed endpoints):
 
     |> Image
-        src images/svg_ch4_ch_curve_to_sketch.svg
+        src=images/svg_ch4_ch_curve_to_sketch.svg
 
-    One method is simply to eyeball the slope at 
-    a few points along the curve, plot these 
+    One method is simply to eyeball the slope at
+    a few points along the curve, plot these
     values and interpolate:
-    
+
     |> Image
-        src images/svg_ch4_ch_curve_to_sketch_sketch.svg
+        src=images/svg_ch4_ch_curve_to_sketch_sketch.svg
 
     |> ImageRight
-        src images/svg_ch4_ch_curve_to_sketch_cloud.svg
-        offset_y 36%
-        offset_x -15%
+        src=images/svg_ch4_ch_curve_to_sketch_cloud.svg
+        offset_y=36%
+        offset_x= -15%
 
     ...voilà!
-    
+
     An alternate approach is to start by
     determining intervals on which the derivative
-    is positive and negative, and then to 
-    interpolate via the largest (respectively, 
-    smallest) value of the derivative in each 
+    is positive and negative, and then to
+    interpolate via the largest (respectively,
+    smallest) value of the derivative in each
     interval:
 
     |> Image
-        src images/svg_ch4_ch_second_sketch.svg
+        src=images/svg_ch4_ch_second_sketch.svg
 
     The result (at bottom right)
     is a charming “robosketch” of the true
@@ -132,12 +132,12 @@
 |> Section
 
     *Derivative of a constant function.*
-    A constant function is a function of the form 
+    A constant function is a function of the form
     $$
     x \ra B
     $$
     for some $B \in \rr$ independent of $x$.
-    The graph of the constant function is the line 
+    The graph of the constant function is the line
     $$
     y = B
     $$
@@ -148,8 +148,8 @@
     $$
 
     |> ImageLeft
-        src images/svg_ch4_ch_constant_derivative_cloud.svg
-        offset_x 8em
+        src=images/svg_ch4_ch_constant_derivative_cloud.svg
+        offset_x= 8em
 
     because at each $x$-value you find a slope of
     $0$, when you look up (down?) at the graph.
@@ -166,11 +166,11 @@
 
     __~ the derivative of a constant function
     is the zero function ~__
-    
+
     or, more shortly,
-    
+
     __~ the derivative of a constant is zero ~__
- 
+
     (the way people usually state it).
 
 |> Section
@@ -181,7 +181,7 @@
     x \ra Ax + B
     $$
     for constants $A$, $B \in \rr$.
-    The graph of $x \ra Ax + B$ is a line of 
+    The graph of $x \ra Ax + B$ is a line of
     slope $A$, so
 
     $$
@@ -189,8 +189,8 @@
     $$
 
     |> ImageLeft
-        src images/svg_ch4_ch_affine_derivative_cloud.svg
-        offset_x 7em
+        src=images/svg_ch4_ch_affine_derivative_cloud.svg
+        offset_x= 7em
 
     because the slope of a line of slope $A$ is
     $A$, no matter where you put yourself on the
@@ -200,18 +200,18 @@
     trace of $B$'s value—and for the same reason
     that $B$ effects a vertical translation, which
     does not change the slope of anything.)
-    
+
     In words:
-    
-    __~ the derivative of the affine function 
+
+    __~ the derivative of the affine function
     $y = ax + b$ is the constant function $y = a$ ~__
 
     Or, flexing our linguistic prowess a tad more:
 
-    __~ the derivative of an affine function is 
+    __~ the derivative of an affine function is
     the coefficient of its linear term ~__
-    
-    (The “linear term” of $y = ax + b$ is $ax$, 
+
+    (The “linear term” of $y = ax + b$ is $ax$,
     of coefficient $a$.)
 
     |> Example
@@ -239,51 +239,51 @@
         with $A = -1$, $B = 12$.
 
 |> Section
-    type caba
+    type=caba
 
     *Units of the Derivative.*
     If units are present, we have
-    
+
     $$
     \te{$y$ axis units for $f'$} \,= {\te{$y$ axis units for $\f$} \over \te{$x$ axis units for $\f$}}
     $$
-    
+
     because a value output by $\f'$ is the
     _slope_ of a tangent line attached to the
     graph $y = f(x)$, and
-    
+
     $$
     \te{$x$ axis units for $f'$}\, = \rt{0.02}\,\te{$x$ axis units for $f$}
     $$
-    
-    because an input for $\f'$ is, originally, 
+
+    because an input for $\f'$ is, originally,
     an input for $\f$.
 
-    For example, if the “before” graph has units 
+    For example, if the “before” graph has units
     of...
 
     |> TextParent
-        style margin-top:1em;margin-bottom:1em;
+        style=margin-top:1em;margin-bottom:1em;
         |> ul
-            style list-style-type:disc;
+            style=list-style-type:disc;
             |> li
-                style margin:0 60px;
+                style=margin:0 60px;
 
-                seconds on the $x$ axis, meters on the 
+                seconds on the $x$ axis, meters on the
                 $y$ axis
 
     ...then the “after” graph will have units of...
 
     |> ImageRight
-        src images/svg_ch4_ch_units1_cloud.svg
-        offset_y -0.6em
-    
+        src=images/svg_ch4_ch_units1_cloud.svg
+        offset_y=-0.6em
+
     |> TextParent
-        style margin-top:1em;margin-bottom:1em;
+        style=margin-top:1em;margin-bottom:1em;
         |> ul
-            style list-style-type:disc;
+            style=list-style-type:disc;
             |> li
-                style margin:0 60px;
+                style=margin:0 60px;
 
                 seconds on the $x$ axis, meters per
                 second on the $y$ axis
@@ -291,27 +291,27 @@
     ...while if the “before” graph has units of...
 
     |> TextParent
-        style margin-top:1em;margin-bottom:1em;
+        style=margin-top:1em;margin-bottom:1em;
         |> ul
-            style list-style-type:disc;
+            style=list-style-type:disc;
             |> li
-                style margin:0 60px;
+                style=margin:0 60px;
 
                 apples on the $x$ axis, oranges on the
                 $y$ axis
-    
+
     ...then the “after” graph will have units of...
 
     |> ImageLeft
-        src images/svg_ch4_ch_units2_cloud.svg
-        offset_y 0.6em
+        src=images/svg_ch4_ch_units2_cloud.svg
+        offset_y=0.6em
 
     |> TextParent
-        style margin-top:1em;margin-bottom:1em;
+        style=margin-top:1em;margin-bottom:1em;
         |> ul
-            style list-style-type:disc;
+            style=list-style-type:disc;
             |> li
-                style margin:0 60px;
+                style=margin:0 60px;
 
                 apples on the $x$ axis, oranges per apple
                 on the $y$ axis
@@ -322,7 +322,7 @@
     to $f'$ as the
 
     __rate of change__
-    
+
     of $f$, or, depending, as the
 
     __instantaneous__
@@ -353,13 +353,13 @@
     $$
 
     these being, namely, the _third_, _fourth_
-    and _fifth_ derivatives of $f$. One can also 
+    and _fifth_ derivatives of $f$. One can also
     write
-    
+
     $$
     f^{(n)}
     $$
-    
+
     for the $n$-th derivative of $f$, so that, for
     example,
 
@@ -374,7 +374,7 @@
     $$
 
     but with the advantage that you don't have to
-    squint and start re-counting the apostrophes 
+    squint and start re-counting the apostrophes
     several times over.
 
     |> Example
@@ -386,9 +386,9 @@
         $$
 
         |> ImageRight
-            src images/svg_ch4_3x_plus_one_and_second_cloud.svg
-            offset_x 6em
-            offset_y 0.1em
+            src=images/svg_ch4_3x_plus_one_and_second_cloud.svg
+            offset_x=6em
+            offset_y=0.1em
 
     because, firstly,
 
@@ -412,7 +412,7 @@
     inside. (Physically difficult.)
 
     |> Example
-        type trash
+        type=trash
 
         More generally,
 
@@ -426,48 +426,48 @@
         __~ the second derivative of an affine function is zero ~__
 
         !! |> ImageLeft
-        !!     src images/svg_ch4_ch_adding_statements_cloud.svg
+        !!     src=images/svg_ch4_ch_adding_statements_cloud.svg
         !!     line 1
 
     |> StarDivider
-        style margin-top:1.5em;margin-bottom:0em
+        style=margin-top:1.5em;margin-bottom:0em
 
 |> Section
 
     *Geometric interpretation of the second derivative.*
     The sign of the second derivative—whether
     it is positive or negative—indicates whether
-    a graph is “bending upwards” or “bending 
+    a graph is “bending upwards” or “bending
     downwards”. Upward-bending graphs have a positive
     second derivative, whereas downward-bending graphs
     have a negative second derivative:
 
     |> Image
-        src images/svg_ch4_bendiness.svg
+        src=images/svg_ch4_bendiness.svg
 
-    Reason like this: the second derivative is 
+    Reason like this: the second derivative is
     |> del
 
         “the rate of change of the rate of change”.
-    &ensp;Sorry: “the rate of change of the slope”. 
+    &ensp;Sorry: “the rate of change of the slope”.
     (Same difference.) Ergo, if the second derivative
     is positive, the slope is increasing; if the
-    second derivative is negative, the slope is 
+    second derivative is negative, the slope is
     decreasing. Moreover, an
-        
+
     __increasing__
 
     slope gives curves a “bending upwards” shape, while a
 
     __decreasing__
-    
+
     slope gives curves a “bending downward” shape!
-    
+
     To emphasize, if the second derivative is some
 
     _|LARGE POSITIVE NUMBER|_
 
-    then the slope is increasing at that rate, 
+    then the slope is increasing at that rate,
     which could result in a sharp bend upwards
     in the graph (unless you are near vertical
     already—you can't see the difference between
@@ -476,11 +476,11 @@
     matter).
 
     Likewise, if the second derivative is some
-    
+
     _|LARGE NEGATIVE NUMBER|_
 
-    then the slope is decreasing at [the absolute 
-    value of] that rate, which could result in 
+    then the slope is decreasing at [the absolute
+    value of] that rate, which could result in
     a sharp bend downwards in the graph (unless
     you are near vertical already, once again,
     because verticality can disguise the presence
@@ -490,14 +490,14 @@
 |> Section
 
     *Vocabulary #1.*
-    Curves with increasing (technically: 
-    _nondecreasing_) slope are called _convex_, 
-    while curves with decreasing (technically: 
+    Curves with increasing (technically:
+    _nondecreasing_) slope are called _convex_,
+    while curves with decreasing (technically:
     _nonincreasing_) slope are called _concave_.
     Viz:
-    
+
     |> Image
-        src images/svg_ch4_ch_convex_concave.svg
+        src=images/svg_ch4_ch_convex_concave.svg
 
     *Vocabulary #2.*
     An _inflection point_ is a point at the
@@ -505,23 +505,23 @@
     of a graph:
 
     |> Image
-        src images/svg_ch4_ch_inflection_point.svg
+        src=images/svg_ch4_ch_inflection_point.svg
 
     |> Example
 
         The fact that
-        
+
         $$
         (x \ra 3x + 1)'' = (x \ra 0)
         $$
-        
+
         indicates that the graph
-        
+
         $$
         y = 3x + 1
         $$
-        
-        is neither “bending upwards” nor “bending 
+
+        is neither “bending upwards” nor “bending
         downwards”—$0$ is neither positive, nor negative.
 
 |> Section
@@ -530,25 +530,25 @@
     A graph of the form...
 
     |> Image
-        src images/svg_ch4_ch_position_by_time.svg
+        src=images/svg_ch4_ch_position_by_time.svg
 
     ...describes _position as a function of time_
     (look at the units); the derivative...
 
     |> Image
-        src images/svg_ch4_ch_position_by_time_der.svg
+        src=images/svg_ch4_ch_position_by_time_der.svg
 
     |> ImageRight
-        src images/svg_ch4_ch_position_by_time_cloud.svg
+        src=images/svg_ch4_ch_position_by_time_cloud.svg
 
     ...describes _velocity as a function of time_;
     finally, the second derivative...
 
     |> Image
-        src images/svg_ch4_ch_position_by_time_der_der.svg
+        src=images/svg_ch4_ch_position_by_time_der_der.svg
 
     |> ImageLeft
-        src images/svg_ch4_ch_position_by_time_der_cloud.svg
+        src=images/svg_ch4_ch_position_by_time_der_cloud.svg
 
     ...describes
 
@@ -557,30 +557,30 @@
     also known as the
 
     __acceleration__
-    
+
     as a function of time.
-    
+
     Note that the units on the $y$ axis of the
     second derivative are given by
 
     $$
-    {\te{$y$ axis units for $f'$} \over \te{$x$ axis units for $f'$}} = 
-    {\te{m}/\te{s} \over \te{s}} = 
+    {\te{$y$ axis units for $f'$} \over \te{$x$ axis units for $f'$}} =
+    {\te{m}/\te{s} \over \te{s}} =
     {\te{m} \over \rt{0.1}\te{s}\!{\,}^2}
     $$
 
     because $f'' = (f')'$. The point is, a tangent
     to the graph $y = f'(t)$ has a “rise” measured
-    in meters per second and a “run” measured in 
+    in meters per second and a “run” measured in
     seconds:
-    
+
     |> Image
-        src images/svg_ch4_ch_position_by_time_tangent.svg
-    
+        src=images/svg_ch4_ch_position_by_time_tangent.svg
+
     The ratio “rise over run” has the form
 
     $$
-    {\te{m}/\te{s} \over \te{s}} 
+    {\te{m}/\te{s} \over \te{s}}
     = {\te{m} \over \te{s}} \times {1 \over \te{s}}
     = {\te{m} \over \te{s}\!{\,}^2}
     $$
@@ -594,11 +594,11 @@
     $$
 
     is, indeed, an acceleration, in that acceleration
-    is defined as “the increase in velocity per unit 
+    is defined as “the increase in velocity per unit
     time”.
 
     To summarize:
-    
+
     __~ velocity is the derivative of position ~__
 
     __~ acceleration is the derivative of velocity ~__
@@ -611,15 +611,15 @@
     {\te{m} \over \,\te{s}\!{\,}^2}
     $$
     can be read
-    
+
     __meters per second squared__
 
     which sounds pretty cryptic, unfortunately, or
-    
+
     __meters per second per second__
 
     which is better, or (slight difference!)
-    
+
     __meters per second, per second__
 
     which is even better because it “shows” acceleration
@@ -630,11 +630,11 @@
 
         Over a period of $10$s, an object that is
         accelerating at a constant rate of
-        
+
         $$
         2{\te{m}/\te{s}\!{\,}^2}
         $$
-        
+
         increases its velocity by
 
         $$
@@ -642,22 +642,22 @@
         $$
 
         |> ImageRight
-            src images/svg_ch4_ch_units_cancellation_cloud.svg
-            offset_x 5em
-        
+            src=images/svg_ch4_ch_units_cancellation_cloud.svg
+            offset_x=5em
+
         according to the template
-        
+
         $$
         (\te{rate of change}) \times \te{(amount of time)}\\
         = \te{(amount of change)}
         $$
-        
+
         or, more specifically,
 
         $$
         (\te{acceleration}) \times (\te{amount of time}) =\\ (\te{change in velocity})
         $$
-        
+
         since acceleration is the rate of change of
         velocity.
 
@@ -671,7 +671,7 @@
     __jerk__
 
     in physics. The units of jerk (or “the”
-    units of jerk, since any units of same 
+    units of jerk, since any units of same
     _dimension_ would do as well) are
 
     $$
@@ -688,9 +688,9 @@
     is being gained or lost _per second_.
 
     The word “jerk” is aptly chosen,
-    too, considering that people don't lose 
-    balance under constant acceleration, but, 
-    rather, when some some _jerk_ occurs in 
+    too, considering that people don't lose
+    balance under constant acceleration, but,
+    rather, when some some _jerk_ occurs in
     the movement of their train or subway car,
     etc. In fact,
 
@@ -700,7 +700,7 @@
 
     __zero jerk__
 
-    are synonymous, insofar as the everyday 
+    are synonymous, insofar as the everyday
     world is concerned—which is good, because
     these notions are also equivalent in the
     mathematical realm, what with jerk being
@@ -736,7 +736,7 @@
     f - g = (x \ra f(x) - g(x))
     $$
 
-    with each equation being a _definition_. 
+    with each equation being a _definition_.
     The notation
 
     $$
