@@ -1494,7 +1494,7 @@
                 src=images/svg_ch3_composition_icon_die_3.svg
                 width=1.25rem
                 y_anchor=-4px
-                space_left true
+                space_left=true
                 space_left=true
             in set $C$,  and
 
@@ -1509,7 +1509,7 @@
                 src=images/svg_ch3_composition_icon_fence.svg
                 width=2.3rem
                 y_anchor=-4px
-                space_left true
+                space_left=true
                 space_left=true
             |_
 
