@@ -1495,7 +1495,7 @@
                 width=1.25rem
                 y_anchor=-4px
                 space_left=true
-                space_left=true
+                space_right=true
             in set $C$,  and
 
             _|
@@ -1510,7 +1510,7 @@
                 width=2.3rem
                 y_anchor=-4px
                 space_left=true
-                space_left=true
+                space_right=true
             |_
 
             because, pursuing that path onwards, the arrow
