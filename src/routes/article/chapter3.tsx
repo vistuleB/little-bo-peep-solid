@@ -3705,7 +3705,7 @@ const Rest = () => {
               {" "}lands at
               <InlineImage
                 space_left={true}
-                space_left true=""
+                space_left={true}
                 y_anchor="-4px"
                 width="1.25rem"
                 src="/images/svg_ch3_composition_icon_die_3.svg" />
@@ -3732,7 +3732,7 @@ const Rest = () => {
               </Math>
               <InlineImage
                 space_left={true}
-                space_left true=""
+                space_left={true}
                 y_anchor="-4px"
                 width="2.3rem"
                 src="/images/svg_ch3_composition_icon_fence.svg" />
