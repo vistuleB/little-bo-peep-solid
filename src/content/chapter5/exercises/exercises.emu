@@ -60,7 +60,7 @@
         function:
 
         |> ImageLeft
-            line -2
+            line=-2
             src=images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg
 
         |> Image
@@ -2909,7 +2909,7 @@
             (We mean: likewise for “$\sin^2$” and “$\cos^2$”.)
 
 |> Exercise
-    t tt
+    t=tt
 
     Given the graphs $y = \cos(x)\sin(x)$ and
     $y = \cos^2(x)$...
@@ -3110,7 +3110,7 @@
 
 
 |> Exercise
-    t tt
+    t=tt
 
     It also seems from the graphs that $y = \cos^2(x)$
     is a _sinusoid_, i.e., some combination of a
@@ -3271,7 +3271,7 @@
 
 
 |> Exercise
-    t tt
+    t=tt
 
     Relate
     $$
@@ -3312,7 +3312,7 @@
 
 
 |> Exercise
-    t tt
+    t=tt
 
     What sequence of geometric transformations
     can turn [the graph] $y = \sin(x)$
@@ -3333,7 +3333,7 @@
 
 
 |> Exercise
-    t tt
+    t=tt
 
     !! What sequence of geometric transformations
     !! can turn [the graph] $y = \cos(x)$

@@ -427,7 +427,7 @@
 
         !! |> ImageLeft
         !!     src=images/svg_ch4_ch_adding_statements_cloud.svg
-        !!     line 1
+        !!     line=1
 
     |> StarDivider
         style=margin-top:1.5em;margin-bottom:0em

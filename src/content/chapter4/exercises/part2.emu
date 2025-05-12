@@ -213,8 +213,8 @@
         |> ImageLeft
             offset_x= 1.5em
             src=images/svg_ch4_5_euler_spiral_figure.svg
-            children_x 50%
-            children_y 2em
+            children_x=50%
+            children_y=2em
 
             |> span
                 font-size=1.4em

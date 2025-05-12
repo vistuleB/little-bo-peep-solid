@@ -1487,15 +1487,15 @@
                 src=images/svg_ch3_composition_icon_clubs.svg
                 width=1rem
                 y_anchor=-4px
-                space_left true
-                space_right true
+                space_left=true
+                space_right=true
             in set $D$ lands at
             |> InlineImage
                 src=images/svg_ch3_composition_icon_die_3.svg
                 width=1.25rem
                 y_anchor=-4px
                 space_left true
-                space_right true
+                space_left=true
             in set $C$,  and
 
             _|
@@ -1510,7 +1510,7 @@
                 width=2.3rem
                 y_anchor=-4px
                 space_left true
-                space_right true
+                space_left=true
             |_
 
             because, pursuing that path onwards, the arrow
@@ -1519,15 +1519,15 @@
                 src=images/svg_ch3_composition_icon_die_3.svg
                 width=1.25rem
                 y_anchor=-4px
-                space_left true
-                space_right true
+                space_left=true
+                space_right=true
             in set $C$ lands at
             |> InlineImage
                 src=images/svg_ch3_composition_icon_fence.svg
                 width=2.3rem
                 y_anchor=-4px
-                space_left true
-                space_right true
+                space_left=true
+                space_right=true
             in set $B$, etc.
 
             Under this representation one can “compute”
