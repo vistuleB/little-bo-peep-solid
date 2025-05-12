@@ -83,7 +83,7 @@
 
     |> ImageLeft
         src=images/svg_bt2_bt_10_to_the_minus_0_cloud.svg
-        line 2
+        line=2
 
     $$
     \Large 10^{-n}10^n = 1 \tag{AA}
@@ -655,8 +655,8 @@
 
     |> Table
         class=first-line
-        margin-top 1em
-        margin-bottom 1em
+        margin-top=1em
+        margin-bottom=1em
         |> colgroup
             |> col
                 width=120px
