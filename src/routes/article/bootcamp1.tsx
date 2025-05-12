@@ -53,13 +53,13 @@ const Article = () => {
               </Math>
               ”
             </NoBreak>
-            {" "}of a collection of 
+            {" "}of a collection of
             elements, otherwise known as a{" "}
             <i>
               set
             </i>
             .
-            For example, this is a set containing the 
+            For example, this is a set containing the
             numbers{" "}
             <NoBreak>
               <Math>
@@ -158,9 +158,9 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          as in, for example, the buttons and clock 
-          display and door handle of a microwave oven) 
-          of a set consists of just one functionality: 
+          as in, for example, the buttons and clock
+          display and door handle of a microwave oven)
+          of a set consists of just one functionality:
           a set can answer questions of the form
         </VerticalChunk>
         <Pause />
@@ -295,7 +295,7 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           depending on one's mood and/or tastes.]
-          As in all of mathematics, any such statement 
+          As in all of mathematics, any such statement
           evaluates to either “true” or “false”.
           For example,
         </VerticalChunk>
@@ -313,7 +313,7 @@ const Rest = () => {
           <i>
             is
           </i>
-          {" "}an element of the set 
+          {" "}an element of the set
           {" "}
           <NoBreak>
             <Math>
@@ -354,7 +354,7 @@ const Rest = () => {
             Set Equality.
           </b>
           {" "}
-          Two sets are deemed to be 
+          Two sets are deemed to be
           equal if and only if they
           answer the same to
           all “do you contain ...?” questions.
@@ -427,8 +427,8 @@ const Rest = () => {
           they are by definition the same.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          (These examples demonstrate that human notation 
-          is redundant: there are several different ways of 
+          (These examples demonstrate that human notation
+          is redundant: there are several different ways of
           writing down the same set. They also demonstrate
           that sets do not keep track of the
         </VerticalChunk>
@@ -450,9 +450,9 @@ const Rest = () => {
           of the “API” of a set.)
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          Moreover, any empty set is equal to any other 
-          empty set. Equality follows because both sets 
-          answer all questions the same way: they both 
+          Moreover, any empty set is equal to any other
+          empty set. Equality follows because both sets
+          answer all questions the same way: they both
           answer “no” to everything. So there is
         </VerticalChunk>
         <Pause />
@@ -857,7 +857,7 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}means “or”. (You can figure out the 
+          {" "}means “or”. (You can figure out the
           similar definition for the intersection of two sets
           if we tell you that
         </VerticalChunk>

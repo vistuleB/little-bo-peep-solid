@@ -133,7 +133,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section id="_5836427692">
+      <Section id="_5440421489">
         <VerticalChunk>
           <b>
             Measuring Slope.
@@ -315,7 +315,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_49971154132">
+      <Section id="_6229115228">
         <VerticalChunk>
           <b>
             Sign Combinations.
@@ -632,7 +632,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_34723256299">
+      <Section id="_90203256609">
         <VerticalChunk>
           <b>
             “Rise over Run”.
@@ -1061,7 +1061,7 @@ const Rest = () => {
           <Math>
             $c \in \rr$
           </Math>
-          {" "}is a constant, 
+          {" "}is a constant,
           similarly to the more familiar equation
           <ImageLeft
             offset_x="1em"
@@ -1450,7 +1450,7 @@ const Rest = () => {
       <Pause />
       <Section
         divider={false}
-        id="_29856318898">
+        id="_71576317603">
         <VerticalChunk>
           <b>
             Postscript: Units vs Dimensions.
@@ -1908,12 +1908,12 @@ const Rest = () => {
                 Exercise 3.
               </b>
               {" "}
-              Plot the vertical velocity of{" "}
+              Plot the vertical velocity of
               <del>
                 an object
               </del>
-              &ensp;a mosquito whose height over time is 
-              given by this graph (use the same time interval 
+              &ensp;a mosquito whose height over time is
+              given by this graph (use the same time interval
               as the graph):
             </VerticalChunk>
             <Pause />

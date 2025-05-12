@@ -33,8 +33,8 @@ const Article = () => {
               Cos and Sin. (“Cosine” and “sine”.)
             </b>
             {" "}
-            We've already encountered the ‘cos’ 
-            function in Exercise 7 of Chapter 3, e.g.. 
+            We've already encountered the ‘cos’
+            function in Exercise 7 of Chapter 3, e.g..
             It is the one that has this graph:
           </VerticalChunk>
           <Pause />
@@ -210,7 +210,7 @@ const Article = () => {
           <Image src="/images/svg_ch5_ch_unit_circle_@0.5_smaller.svg" />
           <Pause />
           <VerticalChunk>
-            As a second example, the graphs indicate that 
+            As a second example, the graphs indicate that
             {" "}
             <NoBreak>
               <Math>
@@ -295,7 +295,7 @@ const Article = () => {
           <Image src="/images/svg_ch5_ch_unit_circle_@-3_smaller.svg" />
           <Pause />
           <VerticalChunk>
-            For a last example, 
+            For a last example,
             note that there appears
             to be a value of{" "}
             <Math>
@@ -340,7 +340,7 @@ const Article = () => {
             <Math>
               $(0, -1)$
             </Math>
-            {" "}is 
+            {" "}is
             one-quarter of the unit circle clockwise from{" "}
             <NoBreak>
               <Math>
@@ -631,7 +631,7 @@ const Rest = () => {
             $\sin$
           </Math>
           {" "}particle,
-          meaning that the 
+          meaning that the
           {" "}
           <NoBreak>
             “
@@ -712,8 +712,8 @@ const Rest = () => {
           <Math>
             $y = \cos(x)$
           </Math>
-          {" "}with two new equally-spaced curves; 
-          note that 
+          {" "}with two new equally-spaced curves;
+          note that
           {" "}
           <Math>
             $\cos$
@@ -855,7 +855,7 @@ const Rest = () => {
           to finish the computation),
           which means that one only needs to
           remember the first two equations. Though,
-          in fact, one really just needs to remember 
+          in fact, one really just needs to remember
           the four-particle diagram!
         </VerticalChunk>
       </Section>
@@ -998,7 +998,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          ...that follow because one full turn 
+          ...that follow because one full turn
           around the circle brings you back to the
           same position, whereas a half-turn brings
           you around  to your{" "}
@@ -1006,7 +1006,7 @@ const Rest = () => {
             antipode
           </i>
           {" "}(where
-          both coordinates are negated), and these 
+          both coordinates are negated), and these
           two more...
         </VerticalChunk>
         <Pause />
@@ -1030,7 +1030,7 @@ const Rest = () => {
           </b>
           {" "}
           Note that the derivatives of
-          sin and cos can also be expressed by 
+          sin and cos can also be expressed by
           the [possibly more “logical”] formulas
         </VerticalChunk>
         <Pause />
@@ -1335,10 +1335,10 @@ const Rest = () => {
         <VerticalChunk>
           of an angle was briefly touched upon in
           Note{" "}
-          <a href="/article/chapter4?id=_565811172214">
+          <a href="/article/chapter4?id=_406311172598">
             10
           </a>
-          {" "}of Exercise 37, Chapter 4. 
+          {" "}of Exercise 37, Chapter 4.
           In short, it is a “scientific” measure
           of angles in which the value of an angle
           is the length of a circular arc subtended
@@ -1417,7 +1417,7 @@ const Rest = () => {
           <i>
             rotation
           </i>
-          , 
+          ,
           because there is a “positive” direction—and
           you can also say{" "}
           <i>
@@ -1525,7 +1525,7 @@ const Rest = () => {
             Auto-converting degrees to radians.
           </b>
           {" "}
-          We will consider the degree notation 
+          We will consider the degree notation
           {" "}
           <NoBreak>
             “
@@ -1709,7 +1709,7 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           ...look like this.) Vice-versa, every point
-          on the unit circle has the form (*) for some 
+          on the unit circle has the form (*) for some
           {" "}
           <Math>
             $0 \leq x \leq 1$
@@ -1819,7 +1819,7 @@ const Rest = () => {
           in radians) in the second quadrant, and so on.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          For the remaining values we rely on the 
+          For the remaining values we rely on the
           existence of the following two equilateral
           triangles:
         </VerticalChunk>
@@ -1827,7 +1827,7 @@ const Rest = () => {
         <Image src="/images/svg_ch5_ch_main_angles_two_equilateral_triangles.svg" />
         <Pause />
         <VerticalChunk>
-          The first triangle implies that the the unique 
+          The first triangle implies that the the unique
           point on the unit circle with{" "}
           <NoBreak>
             <Math>
@@ -1879,7 +1879,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          (surprise!), the two points in question must be 
+          (surprise!), the two points in question must be
           the afore-shown
         </VerticalChunk>
         <Pause />
@@ -2068,7 +2068,7 @@ const Rest = () => {
             Scaling the circle.
           </b>
           {" "}
-          In the following diagram, the coordinates 
+          In the following diagram, the coordinates
           of the point{" "}
           <Math>
             $P$
@@ -2203,7 +2203,7 @@ const Rest = () => {
           <Math>
             $P$
           </Math>
-          {" "}in the plane are a pair of 
+          {" "}in the plane are a pair of
           numbers
         </VerticalChunk>
         <Pause />
@@ -2246,7 +2246,7 @@ const Rest = () => {
               <Math>
                 $\theta$
               </Math>
-              {" "}is “the” counterclockwise angle 
+              {" "}is “the” counterclockwise angle
               from the positive{" "}
               <Math>
                 $x$
@@ -2452,8 +2452,8 @@ const Rest = () => {
             .
           </NoBreak>
           {" "}
-          (It's right there in the promise of what 
-          it means to be a valid polar coordinate 
+          (It's right there in the promise of what
+          it means to be a valid polar coordinate
           {" "}
           <NoBreak>
             <Math>
@@ -2463,12 +2463,12 @@ const Rest = () => {
           </NoBreak>
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          Conversely, to recover the polar 
+          Conversely, to recover the polar
           coordinates{" "}
           <Math>
             $(r, \theta)$
           </Math>
-          {" "}from the cartesian 
+          {" "}from the cartesian
           coordinates{" "}
           <NoBreak>
             <Math>
@@ -2486,12 +2486,12 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          by the Pythagorean theorem, but the 
+          by the Pythagorean theorem, but the
           formula for{" "}
           <Math>
             $\theta$
           </Math>
-          {" "}is not so cheerful—out 
+          {" "}is not so cheerful—out
           of completeness, we can jot it down
           anyway, for your entertainment:
         </VerticalChunk>
@@ -2507,7 +2507,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          ...where “arctan”, “arccot” are 
+          ...where “arctan”, “arccot” are
           some-functions-or-other-to-be-discussed-later.
         </VerticalChunk>
         <Pause />
@@ -2517,7 +2517,7 @@ const Rest = () => {
           </i>
           {" "}
           Popular programming languages such as
-          python offer a function named{" "}
+          python offer a function named
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2
           </span>
@@ -2525,17 +2525,17 @@ const Rest = () => {
           <i>
             argument
           </i>
-          {" "}(see 
+          {" "}(see
           Vocabulary below){" "}
           <Math>
             $\theta$
           </Math>
-          {" "}of a given pair 
+          {" "}of a given pair
           {" "}
           <Math>
             $(x, y)$
           </Math>
-          {" "}out of the box, without you having to 
+          {" "}out of the box, without you having to
           worry about which of{" "}
           <Math>
             $x$
@@ -2554,7 +2554,7 @@ const Rest = () => {
           {" "}etc.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          But the call goes{" "}
+          But the call goes
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(y, x)
           </span>
@@ -2562,7 +2562,7 @@ const Rest = () => {
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(x, y)
           </span>
-          &ensp;by some bizareness. (Well, actually a 
+          &ensp;by some bizareness. (Well, actually a
           throwback to the fact that in this expression...
         </VerticalChunk>
         <Pause />
@@ -2600,7 +2600,7 @@ const Rest = () => {
             Vocabulary.
           </i>
           {" "}
-          The first coordinate of a polar 
+          The first coordinate of a polar
           coordinate—colloquially,{" "}
           <NoBreak>
             “
@@ -2609,7 +2609,7 @@ const Rest = () => {
             </Math>
             ”—is
           </NoBreak>
-          {" "}called the 
+          {" "}called the
           {" "}
           <i>
             radius
@@ -2647,7 +2647,7 @@ const Rest = () => {
           </b>
           {" "}
           Hopefully, the following figure should seem
-          believable-and/or-familiar, at this point 
+          believable-and/or-familiar, at this point
           (it's a scaled-up/down unit circle):
         </VerticalChunk>
         <Pause />
@@ -2751,7 +2751,7 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            by following two ‘cos’ arrows (i.e., 
+            by following two ‘cos’ arrows (i.e.,
             two hypotenuse-to-adjacent arrows) starting
             from the sidelength of{" "}
             <NoBreak>
@@ -2785,8 +2785,8 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            by following one ‘cos’ and then two ‘sin’ 
-            arrows, starting from the sidelength of 
+            by following one ‘cos’ and then two ‘sin’
+            arrows, starting from the sidelength of
             {" "}
             <NoBreak>
               <Math>
@@ -2805,8 +2805,8 @@ const Rest = () => {
           </b>
           {" "}
           There is a somewhat infamous diagram similar
-          to the diagrams of examples 5 and 6; to draw the 
-          diagram, start with a “snail shell” stack of 
+          to the diagrams of examples 5 and 6; to draw the
+          diagram, start with a “snail shell” stack of
           two right triangles:
         </VerticalChunk>
         <Pause />
@@ -2818,7 +2818,7 @@ const Rest = () => {
           <Math>
             $90^\circ$
           </Math>
-          {" "}towards the bigger one; 
+          {" "}towards the bigger one;
           we end up with two pairs of parallel sides:
         </VerticalChunk>
         <Pause />
@@ -2828,8 +2828,8 @@ const Rest = () => {
           Therefore, if we snap a scaled copy of the
           smaller triangle onto the remaining non-hypotenuse
           side of the bigger triangle, we end up with a
-          flush side consisting of a single straight 
-          segment (you can also think in terms of 
+          flush side consisting of a single straight
+          segment (you can also think in terms of
           angles that add up to{" "}
           <NoBreak>
             <Math>
@@ -2843,7 +2843,7 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           We finish off the diagram by setting the
-          hypotenuse of the original big triangle to 
+          hypotenuse of the original big triangle to
           have length{" "}
           <NoBreak>
             <Math>
@@ -2856,7 +2856,7 @@ const Rest = () => {
         <Image src="/images/svg_ch5_ch_snail_stack_4.svg" />
         <Pause />
         <VerticalChunk>
-          This completes the diagram. Note that it is 
+          This completes the diagram. Note that it is
           possible for the sum of{" "}
           <Math>
             $\theta_1$
@@ -2882,12 +2882,12 @@ const Rest = () => {
           <Math>
             $\theta_1$
           </Math>
-          {" "}and 
+          {" "}and
           {" "}
           <Math>
             $\theta_2$
           </Math>
-          {" "}are individually in the range from 
+          {" "}are individually in the range from
           {" "}
           <Math>
             $0$
@@ -2899,8 +2899,8 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}(Being “proper angles” of right 
-          triangles.) (You can now contemplate what the 
+          {" "}(Being “proper angles” of right
+          triangles.) (You can now contemplate what the
           “utility” of the diagram might be!)
         </VerticalChunk>
       </Section>
@@ -2911,12 +2911,12 @@ const Rest = () => {
             The Abercrombie inequality.
           </b>
           {" "}
-          Take an ordinary angle of aperture less than 
+          Take an ordinary angle of aperture less than
           {" "}
           <Math>
             $180^\circ\hlfbk$
           </Math>
-          {" "}with a circular arc drawn 
+          {" "}with a circular arc drawn
           inside and a line segment spanning the two
           sides of the angle that clears the arc:
         </VerticalChunk>
@@ -2943,7 +2943,7 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           in the language of the above figure, i.e.,
-          that the length of the segment is 
+          that the length of the segment is
           at least
           the length of the arc.
         </VerticalChunk>
@@ -2978,20 +2978,20 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}we could then 
+          {" "}we could then
           find the length{" "}
           <Math>
             $P$
           </Math>
-          {" "}of a polygonal line 
+          {" "}of a polygonal line
           approximating the arc...
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_abercrombie_with_P.svg" />
         <Pause />
         <VerticalChunk>
-          ...because such polygonal lines can 
-          approximate the arc arbitrarily closely, i.e., 
+          ...because such polygonal lines can
+          approximate the arc arbitrarily closely, i.e.,
           have lengths that come arbitrarily close to
           {" "}
           <NoBreak>
@@ -3001,12 +3001,12 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}on the number line from the left. 
-          (This constitutes our “axiomatic” belief 
-          about the  nature of curved length.) But this 
-          will be a contradiction, because we claim 
-          that each segment of the polygonal line has 
-          length less than its corresponding “shadow” 
+          {" "}on the number line from the left.
+          (This constitutes our “axiomatic” belief
+          about the  nature of curved length.) But this
+          will be a contradiction, because we claim
+          that each segment of the polygonal line has
+          length less than its corresponding “shadow”
           on the segment of length{" "}
           <NoBreak>
             <Math>
@@ -3019,7 +3019,7 @@ const Rest = () => {
         <Image src="/images/svg_ch5_ch_abercrombie_shadows.svg" />
         <Pause />
         <VerticalChunk>
-          ...this last claim follows from the following 
+          ...this last claim follows from the following
           diagram:
         </VerticalChunk>
         <Pause />
@@ -3044,8 +3044,8 @@ const Rest = () => {
           <Math>
             $s_2$
           </Math>
-          {" "}are separated by a 
-          pair of parallel lines that are at distance 
+          {" "}are separated by a
+          pair of parallel lines that are at distance
           {" "}
           <Math>
             $\overline&#123;p_1p_2&#125;$
@@ -3062,7 +3062,7 @@ const Rest = () => {
           <Math>
             $s_2$
           </Math>
-          {" "}is 
+          {" "}is
           not on either of the parallel lines (or else
           we would have{" "}
           <NoBreak>
@@ -3078,7 +3078,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}and 
+          {" "}and
           the segment{" "}
           <Math>
             $s_1s_2$
@@ -3090,7 +3090,7 @@ const Rest = () => {
           <Math>
             $P$
           </Math>
-          {" "}has length 
+          {" "}has length
           less than its corresponding “shadow segment”
           on the crossover segment of length{" "}
           <NoBreak>
@@ -3099,7 +3099,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}from 
+          {" "}from
           which{" "}
           <NoBreak>
             <Math>
@@ -3107,14 +3107,14 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}from which this arrangement 
+          {" "}from which this arrangement
           of values...
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_abercrombie_to_the_left_second.svg" />
         <Pause />
         <VerticalChunk>
-          ...on the number line is an impossibility, 
+          ...on the number line is an impossibility,
           i.e.,{" "}
           <NoBreak>
             <Math>
@@ -3133,7 +3133,7 @@ const Rest = () => {
           <b>
             (i)
           </b>
-          {" "}the segment can be tangent to the 
+          {" "}the segment can be tangent to the
           arc at one point, the proof will still go
           through (so the segment does not need to
           {" "}
@@ -3146,7 +3146,7 @@ const Rest = () => {
           <b>
             (ii)
           </b>
-          {" "}as long as the angle is nonzero, 
+          {" "}as long as the angle is nonzero,
           and the arc has nonzero radius, the
           length of the segment will be STRICTLY
           GREATER than the length of the arc,
@@ -3157,10 +3157,10 @@ const Rest = () => {
           <b>
             (ii)
           </b>
-          {" "}can be seen by 
-          comparing the segment to a two-segment 
-          assemblage that is shorter than the segment 
-          itself, but still-as-long-as-the-arc, by virtue 
+          {" "}can be seen by
+          comparing the segment to a two-segment
+          assemblage that is shorter than the segment
+          itself, but still-as-long-as-the-arc, by virtue
           of the original inequality.)
         </VerticalChunk>
       </Section>
@@ -3171,7 +3171,7 @@ const Rest = () => {
             The “Fisher sandwich”.
           </b>
           {" "}
-          The “Fisher sandwich”—we don't make these 
+          The “Fisher sandwich”—we don't make these
           terms up—states that
         </VerticalChunk>
         <Pause />
@@ -3190,7 +3190,7 @@ const Rest = () => {
             .
           </NoBreak>
           {" "}
-          The Fisher sandwich is so-called because 
+          The Fisher sandwich is so-called because
           it “sandwiches”{" "}
           <Math>
             $\theta$
@@ -3288,7 +3288,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}which is the 
+          {" "}which is the
           case when{" "}
           <Math>
             $\theta$
@@ -3349,7 +3349,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          on the other hand. Together, this implies 
+          on the other hand. Together, this implies
           {" "}
           <NoBreak>
             <Math>
@@ -3414,7 +3414,7 @@ const Rest = () => {
           </NoBreak>
           {" "}the adjacent-to-hypotenuse
           multiplicative factor (don't be confused by the
-          presence of two possible triangles to which 
+          presence of two possible triangles to which
           this can be applied); then,
         </VerticalChunk>
         <Pause />
@@ -3426,7 +3426,7 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           brings one over to the right-hand segment
-          from the pink hypotenuse, being the 
+          from the pink hypotenuse, being the
           hypotenuse-to-opposite multiplicative
           factor.
         </VerticalChunk>
@@ -3441,7 +3441,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          then follows from the “polished” version 
+          then follows from the “polished” version
           of the Abercrombie inequality. (The version
           that allows the segment to be tangent to the
           arc, and that claims a strict inequality.)
@@ -3454,10 +3454,10 @@ const Rest = () => {
             The angle-sum formulas.
           </b>
           {" "}
-          In the “famous diagram” from above there 
-          are a total of four different ways to 
-          reach an outer edge by means of ‘cos’ 
-          and ‘sin’ arrows while starting from the 
+          In the “famous diagram” from above there
+          are a total of four different ways to
+          reach an outer edge by means of ‘cos’
+          and ‘sin’ arrows while starting from the
           edge of length{" "}
           <NoBreak>
             <Math>
@@ -3465,7 +3465,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}reaching each of the 
+          {" "}reaching each of the
           four other outer edges precisely once:
         </VerticalChunk>
         <Pause />
@@ -3482,8 +3482,8 @@ const Rest = () => {
           <Math>
             $0 \leq \theta_2 \leq \eta$
           </Math>
-          {" "}because of 
-          the way the figure is constructed, which 
+          {" "}because of
+          the way the figure is constructed, which
           implies that{" "}
           <NoBreak>
             <Math>
@@ -3535,8 +3535,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          make an appearance as coordinates, and 
-          that these coordinates can be expressed as 
+          make an appearance as coordinates, and
+          that these coordinates can be expressed as
           sums or differences of the four outer edges:
         </VerticalChunk>
         <Pause />
@@ -3573,7 +3573,7 @@ const Rest = () => {
             $\theta_2$
           </Math>
           {" "}as may
-          appear in such a figure, i.e., for 
+          appear in such a figure, i.e., for
           {" "}
           <NoBreak>
             <Math>
@@ -3581,7 +3581,7 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}In 
+          {" "}In
           fact, these two formulas hold for{" "}
           <i>
             all
@@ -3599,19 +3599,19 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}They are 
+          {" "}They are
           known as the{" "}
           <i>
             angle-sum formulas
           </i>
-          . Also 
+          . Also
           note the “pattern” of the angle-sum formulas:
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_angle_sum_formulas_by_heart.svg" />
         <Pause />
         <VerticalChunk>
-          The point of remembering these patterns 
+          The point of remembering these patterns
           is that, on their own, these patterns are
         </VerticalChunk>
         <Pause />
@@ -3632,25 +3632,25 @@ const Rest = () => {
             The missing arrows.
           </b>
           {" "}
-          ‘sin’ and ‘cos’ only constitute two out 
-          of six ratios that exist among the sides 
-          of a right triangle. The four “missing ratios” 
+          ‘sin’ and ‘cos’ only constitute two out
+          of six ratios that exist among the sides
+          of a right triangle. The four “missing ratios”
           are hereby drawn:
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_missing_arrows_veiled.svg" />
         <Pause />
         <VerticalChunk>
-          In fact, there is a dedicated, named function 
-          that computes each of the six ratios. We shall 
-          now reveal the names of the four missing 
+          In fact, there is a dedicated, named function
+          that computes each of the six ratios. We shall
+          now reveal the names of the four missing
           functions (!!):
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_missing_arrows_unveiled.svg" />
         <Pause />
         <VerticalChunk>
-          Here 
+          Here
           “sec” is short for{" "}
           <i>
             secant
@@ -3703,7 +3703,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          takes you from ‘adjacent’ to ‘opposite’, 
+          takes you from ‘adjacent’ to ‘opposite’,
           and multiplying by
         </VerticalChunk>
         <Pause />
@@ -3737,8 +3737,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          as multiplying by ‘cos’ undoes the work 
-          of multiplying by ‘sec’, and likewise for 
+          as multiplying by ‘cos’ undoes the work
+          of multiplying by ‘sec’, and likewise for
           ‘sin’ and ‘csc’; also,
         </VerticalChunk>
         <Pause />
@@ -3796,11 +3796,11 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           since one way to reach ‘opposite’ from
-          ‘adjacent’ is to go via ‘hypotenuse’, and 
-          vice-versa for reaching ‘adjacent’ from 
+          ‘adjacent’ is to go via ‘hypotenuse’, and
+          vice-versa for reaching ‘adjacent’ from
           ‘opposite’. (In fact, the next-to-last
-          identity played a role in our proof of the 
-          Fisher sandwich.) (Indeed: the Fisher 
+          identity played a role in our proof of the
+          Fisher sandwich.) (Indeed: the Fisher
           sandwich can be written...
         </VerticalChunk>
         <Pause />
@@ -3831,23 +3831,23 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          is also the multiplicative factor that takes you from the{" "}
+          is also the multiplicative factor that takes you from the
           <span style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             PURPLE
           </span>
-          &ensp;to the{" "}
+          &ensp;to the
           <span style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             LIME GREEN
           </span>
-          &ensp;triangle 
-          (hard to draw, because it is behind the 
+          &ensp;triangle
+          (hard to draw, because it is behind the
           purple triangle!) in the following figure:
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_secant_reinterpretation_1.svg" />
         <Pause />
         <VerticalChunk>
-          Indeed, the scaling factor that is needed 
+          Indeed, the scaling factor that is needed
           to turn the purple into the lime green
           triangle is the solution{" "}
           <Math>
@@ -3888,7 +3888,7 @@ const Rest = () => {
         <Image src="/images/svg_ch5_ch_secant_reinterpretation_2.svg" />
         <Pause />
         <VerticalChunk>
-          ...was always going to equal 
+          ...was always going to equal
           this multiplicative factor...
         </VerticalChunk>
         <Pause />
@@ -3917,11 +3917,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          is the multiplicative factor that takes you from the{" "}
+          is the multiplicative factor that takes you from the
           <span style="white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             BURNT ORANGE
           </span>
-          &ensp;to the{" "}
+          &ensp;to the
           <span style="white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             FAUX BORDEAUX
           </span>
@@ -3939,7 +3939,7 @@ const Rest = () => {
             Note on calculators.
           </b>
           {" "}
-          Your calculator has “degree mode” and 
+          Your calculator has “degree mode” and
           “radian mode”. If your calculator tells
           you that
         </VerticalChunk>
@@ -3958,7 +3958,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}instead of being 
+          {" "}instead of being
           a number close to{" "}
           <NoBreak>
             <Math>
@@ -3973,7 +3973,7 @@ const Rest = () => {
             $1.57$
           </Math>
           {" "}as a number of degrees, instead of
-          as a number of radians! (Be sure, in any 
+          as a number of radians! (Be sure, in any
           case, that you're in the mode that you want.)
         </VerticalChunk>
       </Section>
@@ -4103,7 +4103,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               (Or in the technical sense of taking the sum
-              of two functions, to be more exact—that is what 
+              of two functions, to be more exact—that is what
               the sum of two functions looks like, pictorialized!)
             </VerticalChunk>
             <VerticalChunk indent={true}>
@@ -4148,7 +4148,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              as we can count on the graph of the original 
+              as we can count on the graph of the original
               function:
               <ImageLeft
                 src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
@@ -4166,7 +4166,7 @@ const Rest = () => {
               <Math>
                 $x = 0$
               </Math>
-              {" "}to 
+              {" "}to
               {" "}
               <NoBreak>
                 <Math>
@@ -4174,7 +4174,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}the “bumpy function” is therefore 
+              {" "}the “bumpy function” is therefore
               (roughly, from what we can see) a{" "}
               <NoBreak>
                 “
@@ -4337,8 +4337,8 @@ const Rest = () => {
                 .
               </NoBreak>
               {" "}
-              (And specifically 
-              without a 
+              (And specifically
+              without a
               {" "}
               <NoBreak>
                 “
@@ -4444,7 +4444,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}we get{" "}
+              {" "}we get
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4507,7 +4507,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}which is half the
-              amplitude of 
+              amplitude of
               sine/cosine:
             </VerticalChunk>
             <Pause />
@@ -4520,15 +4520,15 @@ const Rest = () => {
               <Math>
                 $x = 0$
               </Math>
-              {" "}we find 
+              {" "}we find
               more or less exactly
               the{" "}
               <i>
                 bottom
               </i>
               {" "}of a
-              bump, 
-              so altogether 
+              bump,
+              so altogether
               we can use a function of the form
             </VerticalChunk>
             <Pause />
@@ -4544,7 +4544,7 @@ const Rest = () => {
               <Math>
                 $0.5$
               </Math>
-              {" "}gives us 
+              {" "}gives us
               the desired amplitude and where the{" "}
               <NoBreak>
                 ‘
@@ -4595,7 +4595,7 @@ const Rest = () => {
               <Math>
                 $B$
               </Math>
-              {" "}full cycles 
+              {" "}full cycles
               per interval of length{" "}
               <Math>
                 $4\eta$
@@ -4620,7 +4620,7 @@ const Rest = () => {
               style="margin-top:0.8em;margin-bottom:1em;" />
             <Pause />
             <VerticalChunk>
-              So an estimate for the 
+              So an estimate for the
               second function
               would be...
             </VerticalChunk>
@@ -4673,16 +4673,16 @@ const Rest = () => {
               <Math>
                 $(0, 0)$
               </Math>
-              {" "}sloping down) plus a sinusoid. To 
-              estimate the slope of the linear function we can 
-              take two points in like relation to the sinusoid, 
+              {" "}sloping down) plus a sinusoid. To
+              estimate the slope of the linear function we can
+              take two points in like relation to the sinusoid,
               draw a line between them and estimate the slope:
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch5_ex_big_wave_purple_blue_with_1_4.svg" />
             <Pause />
             <VerticalChunk>
-              This makes the linear function portion of the purple 
+              This makes the linear function portion of the purple
               curve
             </VerticalChunk>
             <Pause />
@@ -4696,7 +4696,7 @@ const Rest = () => {
               or thereabouts.
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              To model the sinusoid portion of the large-scale 
+              To model the sinusoid portion of the large-scale
               purple curve we need more measurements, such as
               the total height of the sinusoid from top of
               bump to bottom of trough; we can add a third “bottom
@@ -4810,9 +4810,9 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_big_wave_minus_2sin_x.svg" />
             <Pause />
             <VerticalChunk>
-              ...and, from there, all that remains is to 
-              “slow down” the oscillation to match the 
-              aquamarine graph—the “slowing down” is what 
+              ...and, from there, all that remains is to
+              “slow down” the oscillation to match the
+              aquamarine graph—the “slowing down” is what
               {" "}
               <Math>
                 $B$
@@ -4824,12 +4824,12 @@ const Rest = () => {
               <Math>
                 $B$
               </Math>
-              {" "}must be, we must measure 
+              {" "}must be, we must measure
               the cycle length (it is, admittedly, hard to
-              accurately determine the position of the top 
-              of each large-scale bump, but we do our best by 
-              basing ourselves off of what appear to be identical 
-              patterns in the small-scale oscillations at 
+              accurately determine the position of the top
+              of each large-scale bump, but we do our best by
+              basing ourselves off of what appear to be identical
+              patterns in the small-scale oscillations at
               the top of each large-scale bump):
             </VerticalChunk>
             <Pause />
@@ -4847,7 +4847,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               the period of the large-scale sinusoid is near
-              twice the period of sin or cos; i.e., we need to 
+              twice the period of sin or cos; i.e., we need to
               “slow down”
             </VerticalChunk>
             <Pause />
@@ -4899,12 +4899,12 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               for our approximation to the purple curve, putting
-              the linear and sinusoidal parts together. Now we 
+              the linear and sinusoidal parts together. Now we
               move on from the purple curve.)
             </VerticalChunk>
             <VerticalChunk indent={true}>
               It remains to add in the small-scale oscillation
-              from the original curve; we can do the tedious 
+              from the original curve; we can do the tedious
               part first, and count the number cycles in an
               interval of length{" "}
               <NoBreak>
@@ -4923,7 +4923,7 @@ const Rest = () => {
               <Math>
                 $\approx 19$
               </Math>
-              {" "}times the frequency of an ordinary 
+              {" "}times the frequency of an ordinary
               sine or cosine, and we can model the small-scale
               oscillation by
             </VerticalChunk>
@@ -4964,8 +4964,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              as our “guesstimate”, while adding the linear 
-              function, the large-scale sinusoid, and the small-scale 
+              as our “guesstimate”, while adding the linear
+              function, the large-scale sinusoid, and the small-scale
               sinusoid together.
             </VerticalChunk>
           </Solution>
@@ -5053,12 +5053,12 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                It is, indeed, intriguing that all of these 
+                It is, indeed, intriguing that all of these
                 functions appear to be
                 <i>
                   sinusoids
                 </i>
-                . (Formally defined 
+                . (Formally defined
                 as a function of the form{" "}
                 <Math>
                   $x \ra A\cdot \sin(Bx + C) + D$
@@ -5110,7 +5110,7 @@ const Rest = () => {
           <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
-              Yes. 
+              Yes.
               Imagine two wooden cutouts made
               from the graphs of{" "}
               <NoBreak>
@@ -5145,7 +5145,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}the cutouts 
+              {" "}the cutouts
               fit together to make
               the constant function{" "}
               <Math>
@@ -5203,7 +5203,7 @@ const Rest = () => {
           <Solution solution_number={7}>
             <VerticalChunk>
               What we want is the multiplicative ratio that
-              would take us from the bottom to the top side of 
+              would take us from the bottom to the top side of
               this quadrilateral, so that we can multiply by that
               ratio over and over again:
             </VerticalChunk>
@@ -5219,7 +5219,7 @@ const Rest = () => {
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
-              and we must break them into smaller parts that 
+              and we must break them into smaller parts that
               {" "}
               <i>
                 are
@@ -5232,7 +5232,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               The multiplicative ratios that correspond to the
-              first and third arrows (in arrow-order from bottom 
+              first and third arrows (in arrow-order from bottom
               to top) are
             </VerticalChunk>
             <Pause />
@@ -5268,8 +5268,8 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               because these are the opposite (no pun intended),
-              i.e.,“opposite-to-hypotenuse” arrows. The “big grey 
-              arrow” ratio from two diagrams ago is obtained by multiplying 
+              i.e.,“opposite-to-hypotenuse” arrows. The “big grey
+              arrow” ratio from two diagrams ago is obtained by multiplying
               these four small-arrow ratios together, or
             </VerticalChunk>
             <Pause />
@@ -5336,7 +5336,7 @@ const Rest = () => {
               <Math>
                 $36$
               </Math>
-              {" "}is the 
+              {" "}is the
               number of times that the quadrilateral
               repeats within the spiral, we find
             </VerticalChunk>
@@ -5360,7 +5360,7 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}seems plausibly to be about one-third of 
+              {" "}seems plausibly to be about one-third of
               {" "}
               <NoBreak>
                 <Math>
@@ -5398,7 +5398,7 @@ const Rest = () => {
               <Pause />
               <VerticalChunk>
                 teachers typically want to see such expressions
-                evualuated out, to make sure that you and your 
+                evualuated out, to make sure that you and your
                 calculator form a good team. (And, to be fair,
                 catching one's own calculator mistakes by virtue
                 of spotting a nonsensical number is a skill in
@@ -5414,7 +5414,7 @@ const Rest = () => {
                 {" "}
                 Instead of counting the number of times that the
                 quadrilateral appears in the double spiral by hand
-                one can 
+                one can
                 calculate the amount of rotation between one
                 quadrilateral and the next, which is this purple angle:
               </VerticalChunk>
@@ -5562,7 +5562,7 @@ const Rest = () => {
                 </Math>
                 -coordinates
               </NoBreak>
-              {" "}are 
+              {" "}are
               respectively
             </VerticalChunk>
             <Pause />
@@ -5597,7 +5597,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is the difference from the center of the 
+              is the difference from the center of the
               circle to{" "}
               <Math>
                 $P$
@@ -5661,7 +5661,7 @@ const Rest = () => {
               <i>
                 a pair of numbers
               </i>
-              {" "}(in 2D), suggest a 
+              {" "}(in 2D), suggest a
               definition for the
             </VerticalChunk>
             <Pause />
@@ -5725,7 +5725,7 @@ const Rest = () => {
               <Math>
                 $\vec&#123;v&#125;$
               </Math>
-              {" "}and whose 
+              {" "}and whose
               second coordinate is the sum of the second coordinates
               of{" "}
               <Math>
@@ -5943,8 +5943,8 @@ const Rest = () => {
               <Image src="/images/svg_ch5_ex_vector_sum_uy_plus_vy.svg" />
               <Pause />
               <VerticalChunk>
-                ...component displacements; moreover, both 
-                concatenations may be simultaneously obtained by 
+                ...component displacements; moreover, both
+                concatenations may be simultaneously obtained by
                 concatenating the original{" "}
                 <Math>
                   $\vec&#123;u&#125;$
@@ -5969,13 +5969,13 @@ const Rest = () => {
                 <Math>
                   $\vec&#123;u&#125;$
                 </Math>
-                {" "}to 
+                {" "}to
                 the tail of{" "}
                 <Math>
                   $\vec&#123;v&#125;$
                 </Math>
-                {" "}in the afore-mentioned 
-                concatenation, because of how we defined 
+                {" "}in the afore-mentioned
+                concatenation, because of how we defined
                 {" "}
                 <NoBreak>
                   <Math>
@@ -6072,7 +6072,7 @@ const Rest = () => {
                 $t$
               </Math>
               {" "}what is the most likely motion
-              that the particle is undergoing? In that 
+              that the particle is undergoing? In that
               case, what is the geometric meaning of the
               constants{" "}
               <NoBreak>
@@ -6151,17 +6151,17 @@ const Rest = () => {
                   <Math>
                     $B$
                   </Math>
-                  {" "}is the counterclockwise 
+                  {" "}is the counterclockwise
                   {" "}
                   <i>
                     angular speed
                   </i>
-                  /_angular frequency_ (radians per 
+                  /_angular frequency_ (radians per
                   unit time) and{" "}
                   <Math>
                     $C$
                   </Math>
-                  {" "}is the counterclockwise 
+                  {" "}is the counterclockwise
                   starting angle{" "}
                   <NoBreak>
                     (
@@ -6170,7 +6170,7 @@ const Rest = () => {
                     </Math>
                     )
                   </NoBreak>
-                  {" "}of the particle, as 
+                  {" "}of the particle, as
                   measured from a translate of the positive{" "}
                   <Math>
                     $x$
@@ -6189,19 +6189,19 @@ const Rest = () => {
                   <Math>
                     $-B$
                   </Math>
-                  {" "}is the counterclockwise 
-                  angular speed/angular frequency of the particle 
+                  {" "}is the counterclockwise
+                  angular speed/angular frequency of the particle
                   and{" "}
                   <Math>
                     $-C$
                   </Math>
-                  {" "}is the counterclockwise starting angle 
-                  of the particle, as measured from a translate of 
+                  {" "}is the counterclockwise starting angle
+                  of the particle, as measured from a translate of
                   the positive{" "}
                   <Math>
                     $x$
                   </Math>
-                  {" "}axis going through the center 
+                  {" "}axis going through the center
                   of the circle
                 </li>
               </ul>
@@ -6250,8 +6250,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is an amount of radians, because anything 
-              fed to ‘cos’ is an amount of radians; and so 
+              is an amount of radians, because anything
+              fed to ‘cos’ is an amount of radians; and so
               {" "}
               <Math>
                 $B$
@@ -6268,8 +6268,8 @@ const Rest = () => {
             </VerticalChunk>
             <VerticalChunk indent={true}>
               However, said “increase” in radians can be
-              associated to either clockwise or a 
-              counterclockwise motion, there is no telling. 
+              associated to either clockwise or a
+              counterclockwise motion, there is no telling.
               (Quite aside from the fact that{" "}
               <Math>
                 $B$
@@ -6348,7 +6348,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is an amount of counterclockwise radians; per 
+              is an amount of counterclockwise radians; per
               the other,
             </VerticalChunk>
             <Pause />
@@ -6363,7 +6363,7 @@ const Rest = () => {
               <i>
                 clockwise
               </i>
-              {" "}radians. The following 
+              {" "}radians. The following
               diagram illustrates the two possibilities:
             </VerticalChunk>
             <Pause />
@@ -6376,16 +6376,16 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg" />
             <Pause />
             <VerticalChunk>
-              ...to put everything in terms of 
-              counterclockwise-ness.) This accounts for 
-              the two solutions listed above. (But it can 
-              only be one of those two solutions, having made 
-              the “Occam's razor” assumption that the 
-              particle is traveling at uniform speed around 
-              a circle.) (Nb: In particular, “uniform speed” 
-              precludes sudden reversals of direction at either 
-              end of the circle, if you were at all thinking 
-              of that, for speed would be undefined at 
+              ...to put everything in terms of
+              counterclockwise-ness.) This accounts for
+              the two solutions listed above. (But it can
+              only be one of those two solutions, having made
+              the “Occam's razor” assumption that the
+              particle is traveling at uniform speed around
+              a circle.) (Nb: In particular, “uniform speed”
+              precludes sudden reversals of direction at either
+              end of the circle, if you were at all thinking
+              of that, for speed would be undefined at
               those points where direction is reversed.)
             </VerticalChunk>
             <Pause />
@@ -6402,8 +6402,8 @@ const Rest = () => {
               <Image src="/images/svg_ch5_ex_Bt_plus_C_black_on_white.svg" />
               <Pause />
               <VerticalChunk>
-                ...and imagine the vertical line scanning 
-                to the left and to the right again as it 
+                ...and imagine the vertical line scanning
+                to the left and to the right again as it
                 tracks the{" "}
                 <NoBreak>
                   <Math>
@@ -6411,12 +6411,12 @@ const Rest = () => {
                   </Math>
                   -coordinate
                 </NoBreak>
-                {" "}of a particle going 
-                around the circle, unseen. Then there is one 
-                clockwise particle that tracks with the line, 
-                and one counterclockwise particle that tracks 
-                with the line, but no more, insofar as 
-                non-direction-reversing particles are 
+                {" "}of a particle going
+                around the circle, unseen. Then there is one
+                clockwise particle that tracks with the line,
+                and one counterclockwise particle that tracks
+                with the line, but no more, insofar as
+                non-direction-reversing particles are
                 concerned!
               </VerticalChunk>
             </SolutionNote>
@@ -6429,14 +6429,14 @@ const Rest = () => {
                 Exercise 11.
               </b>
               {" "}
-              Take a particle traveling around a 
+              Take a particle traveling around a
               circle at constant speed. What is the
               number of cycles [full revolutions] per
               {" "}
               <Math>
                 $4\eta$
               </Math>
-              {" "}units of time equal to, by 
+              {" "}units of time equal to, by
               another name?
             </VerticalChunk>
           </ExerciseStatement>
@@ -6562,7 +6562,7 @@ const Rest = () => {
           <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
-              An angle is{" "}
+              An angle is
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -6582,7 +6582,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              the length of the radius; 
+              the length of the radius;
               proceeding by elimination—many things are obviously
               not{" "}
               <Math>
@@ -6596,8 +6596,8 @@ const Rest = () => {
               style="margin-top:1em;margin-bottom:1em;" />
             <Pause />
             <VerticalChunk>
-              If you zoom in 
-              a little bit 
+              If you zoom in
+              a little bit
               you can actually see
               {" "}
               <NoBreak>
@@ -6665,7 +6665,7 @@ const Rest = () => {
                 $\eta$
               </Math>
               {" "}was defined
-              as the quarter-circumference of a unit circle, 
+              as the quarter-circumference of a unit circle,
               more generally,
             </VerticalChunk>
             <Pause />
@@ -6676,7 +6676,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is the quarter-circumference of a circle (any 
+              is the quarter-circumference of a circle (any
               circle) divided by its radius, and, correspondingly,
             </VerticalChunk>
             <Pause />
@@ -6687,7 +6687,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is the circumference of a circle (any circle) 
+              is the circumference of a circle (any circle)
               divided by its radius.
             </VerticalChunk>
             <Pause />
@@ -6697,7 +6697,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                As one consequence, it follows that the circumference 
+                As one consequence, it follows that the circumference
                 of a circle is
               </VerticalChunk>
               <Pause />
@@ -6726,7 +6726,7 @@ const Rest = () => {
                 <Math>
                   $\eta$
                 </Math>
-                {" "}and 
+                {" "}and
                 {" "}
                 <Math>
                   $4\eta$
@@ -6740,7 +6740,7 @@ const Rest = () => {
                   $4\eta$
                 </Math>
                 {" "}
-                as the radian values of a right angle and a full angle, 
+                as the radian values of a right angle and a full angle,
                 respectively.
               </VerticalChunk>
             </SolutionNote>
@@ -6771,8 +6771,8 @@ const Rest = () => {
             <VerticalChunk>
               Here is the division in American notation
               overlayed on top of a “Plaza” wallpaper to
-              help demarcate the different columns of 
-              digits (in American notation each column 
+              help demarcate the different columns of
+              digits (in American notation each column
               of digits is associated to a power of{" "}
               <NoBreak>
                 <Math>
@@ -6781,16 +6781,16 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              with both the numerator and the quotient 
-              [the result] living inside the same set of 
-              columns, and only the denominator living 
+              with both the numerator and the quotient
+              [the result] living inside the same set of
+              columns, and only the denominator living
               outside, in a time-space porthole of its own):
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch5_ex_11_over_7_longhand_eloise.svg" />
             <Pause />
             <VerticalChunk>
-              The division stops when we see the same 
+              The division stops when we see the same
               remainder twice—here{" "}
               <NoBreak>
                 ‘
@@ -6799,14 +6799,14 @@ const Rest = () => {
                 </Math>
                 ’
               </NoBreak>
-              {" "}reappears, which 
-              means that the next digit of the quotient 
+              {" "}reappears, which
+              means that the next digit of the quotient
               will be{" "}
               <Math>
                 $5$
               </Math>
-              {" "}(like the second digit of the 
-              quotient, that we obtained back when we had 
+              {" "}(like the second digit of the
+              quotient, that we obtained back when we had
               a remainder of{" "}
               <NoBreak>
                 <Math>
@@ -6818,10 +6818,10 @@ const Rest = () => {
               <Math>
                 $7$
               </Math>
-              {" "}(the 
-              third digit of the quotient), etc—digits will 
-              repeat and the “final” quotient when we let 
-              the division unravel infinitely far to the right 
+              {" "}(the
+              third digit of the quotient), etc—digits will
+              repeat and the “final” quotient when we let
+              the division unravel infinitely far to the right
               will be
             </VerticalChunk>
             <div style="font-size:1.65em;margin:1em 0;">
@@ -6832,7 +6832,7 @@ const Rest = () => {
               </MathBlock>
             </div>
             <VerticalChunk>
-              ...where the decimal point is after the 
+              ...where the decimal point is after the
               first{" "}
               <NoBreak>
                 ‘
@@ -6878,7 +6878,7 @@ const Rest = () => {
                 style="margin-top:0.8em;margin-bottom:1.4em;" />
               <Pause />
               <VerticalChunk>
-                We take the first digit of the numerator, 
+                We take the first digit of the numerator,
                 which is{" "}
                 <NoBreak>
                   ‘
@@ -6899,7 +6899,7 @@ const Rest = () => {
                   </Math>
                   ?”,
                 </NoBreak>
-                {" "}we will write the answer 
+                {" "}we will write the answer
                 here:
               </VerticalChunk>
               <Pause />
@@ -6953,7 +6953,7 @@ const Rest = () => {
                 <Math>
                   $7$
                 </Math>
-                {" "}go into 
+                {" "}go into
                 {" "}
                 <NoBreak>
                   <Math>
@@ -7186,7 +7186,7 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}but 
+                {" "}but
                 the teacher at the board will often say{" "}
                 <NoBreak>
                   “
@@ -7284,7 +7284,7 @@ const Rest = () => {
             <VerticalChunk>
               ...because the digits of the quotient are,
               in each case, about to
-              restart from the first digit 
+              restart from the first digit
               after the decimal point.
             </VerticalChunk>
             <Pause />
@@ -7339,9 +7339,9 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                As mentioned in Note 1 of Exercise 24, 
-                Chapter 3, these approximations are about 
-                half-a-part-in-a-thousand too large, or to 
+                As mentioned in Note 1 of Exercise 24,
+                Chapter 3, these approximations are about
+                half-a-part-in-a-thousand too large, or to
                 be more exact,
               </VerticalChunk>
               <Pause />
@@ -7505,8 +7505,8 @@ const Rest = () => {
             <VerticalChunk>
               by hand, using long division. What is the
               new (last) remainder when the quotient reaches
-              the 3rd digit after the decimal point, and what 
-              equation is implied from the quotient and the 
+              the 3rd digit after the decimal point, and what
+              equation is implied from the quotient and the
               new (last) remainder at that point?
             </VerticalChunk>
             <Pause />
@@ -7761,7 +7761,7 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}ask “how many 
+                {" "}ask “how many
                 times does{" "}
                 <Math>
                   $777$
@@ -7773,7 +7773,7 @@ const Rest = () => {
                   </Math>
                   ?”,
                 </NoBreak>
-                {" "}the answer will go 
+                {" "}the answer will go
                 here:
               </VerticalChunk>
               <Pause />
@@ -7794,7 +7794,7 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}ask “how many 
+                {" "}ask “how many
                 times does{" "}
                 <Math>
                   $777$
@@ -7806,7 +7806,7 @@ const Rest = () => {
                   </Math>
                   ?”,
                 </NoBreak>
-                {" "}the answer will go 
+                {" "}the answer will go
                 here:
               </VerticalChunk>
               <Pause />
@@ -7827,7 +7827,7 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}ask “how many 
+                {" "}ask “how many
                 times does{" "}
                 <Math>
                   $777$
@@ -7839,7 +7839,7 @@ const Rest = () => {
                   </Math>
                   ?”,
                 </NoBreak>
-                {" "}the answer will go 
+                {" "}the answer will go
                 here:
               </VerticalChunk>
               <Pause />
@@ -7909,7 +7909,7 @@ const Rest = () => {
               <Pause />
               <VerticalChunk>
                 Starting from the right end of the subtraction, we ask
-                “by how much (or how little) does a car need to be 
+                “by how much (or how little) does a car need to be
                 driven backwards, to turn the{" "}
                 <NoBreak>
                   ‘
@@ -8290,7 +8290,7 @@ const Rest = () => {
                 <Math>
                   $\eta$
                 </Math>
-                {" "}are 
+                {" "}are
                 called{" "}
                 <i>
                   complementary
@@ -8300,10 +8300,10 @@ const Rest = () => {
                 <i>
                   complement
                 </i>
-                {" "}of the other. 
-                The two 
-                non-right angles of a right triangle are, 
-                therefore, complementary! 
+                {" "}of the other.
+                The two
+                non-right angles of a right triangle are,
+                therefore, complementary!
                 (Not
               </VerticalChunk>
               <Pause />
@@ -8380,12 +8380,12 @@ const Rest = () => {
                 $\rr^2$
               </Math>
               {" "}can be understood as a
-              certain vertical displacement added to a 
+              certain vertical displacement added to a
               certain horizontal displacement, but where
               the sum is numerical. (Not vectorial.)
               To realize the sum geometrically we must
               either align the vertical displacement to be
-              horizontal, or else align the horizontal 
+              horizontal, or else align the horizontal
               displacement to be vertical:
             </VerticalChunk>
             <Pause />
@@ -8404,7 +8404,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              can be found as the intersection of a line of 
+              can be found as the intersection of a line of
               angle{" "}
               <Math>
                 $-45^\circ$
@@ -8433,7 +8433,7 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_x_plus_y_intersections.svg" />
             <Pause />
             <VerticalChunk>
-              (By the way: when we say “line of angle 
+              (By the way: when we say “line of angle
               {" "}
               <NoBreak>
                 <Math>
@@ -8461,7 +8461,7 @@ const Rest = () => {
               <Math>
                 $\rr^2$
               </Math>
-              {" "}according to the value of the coordinate 
+              {" "}according to the value of the coordinate
               sum...
             </VerticalChunk>
             <Pause />
@@ -8490,7 +8490,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               If we are confined to some region of the plane
-              and we need to find a point that maximizes the 
+              and we need to find a point that maximizes the
               coordinate sum we must go as far up and to the
               right as possible, towards brown—whereas
               to minimize the sum we must go as far down and
@@ -8514,7 +8514,7 @@ const Rest = () => {
                 </Math>
                 -
               </NoBreak>
-              {" "}and 
+              {" "}and
               {" "}
               <NoBreak>
                 <Math>
@@ -8534,12 +8534,12 @@ const Rest = () => {
             <VerticalChunk>
               that is a point on the unit circle. In other words,
               the unit circle is “the region of the plane” (cf.
-              previous paragraph) to which we are confined—we 
+              previous paragraph) to which we are confined—we
               must choose a value of{" "}
               <Math>
                 $x$
               </Math>
-              {" "}that puts us as far 
+              {" "}that puts us as far
               “up and to the right” as possible on the circle.
               That value is...{" "}
               <Math>
@@ -8555,7 +8555,7 @@ const Rest = () => {
               <Math>
                 $4\eta$
               </Math>
-              {" "}added, 
+              {" "}added,
               making the set of solutions{" "}
               <Math>
                 $x$
@@ -8708,7 +8708,7 @@ const Rest = () => {
                   </Math>
                   -value
                 </NoBreak>
-                {" "}of the maximum is therefore 
+                {" "}of the maximum is therefore
                 {" "}
                 <NoBreak>
                   <Math>
@@ -8815,13 +8815,13 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}because 
+              {" "}because
               it is the complement of{" "}
               <Math>
                 $\theta$
               </Math>
               {" "}via the smallest
-              right triangle present), the sought-for angle 
+              right triangle present), the sought-for angle
               makes up{" "}
               <NoBreak>
                 <Math>
@@ -8836,9 +8836,9 @@ const Rest = () => {
             <VerticalChunk>
               (In one case we use the fact that the
               medium-sized triangle is a right triangle,
-              in another case that the smallest-size 
+              in another case that the smallest-size
               triangle is a right triangle—and in both cases
-              that the original, largest triangle is a 
+              that the original, largest triangle is a
               right triangle.)
             </VerticalChunk>
           </Solution>
@@ -8858,7 +8858,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}the angle at 
+              {" "}the angle at
               the center of the circle:
             </VerticalChunk>
             <Pause />
@@ -8867,7 +8867,7 @@ const Rest = () => {
           <Pause />
           <Solution solution_number={20}>
             <VerticalChunk>
-              The ending and starting half-lines of the 
+              The ending and starting half-lines of the
               angle marked ‘?’ are both{" "}
               <Math>
                 $90^\circ$
@@ -8920,7 +8920,7 @@ const Rest = () => {
                   <Math>
                     $x$
                   </Math>
-                  {" "}axis to 
+                  {" "}axis to
                   the radial vector
                   equals the counterclockwise angle from the positive
                   {" "}
@@ -8931,7 +8931,7 @@ const Rest = () => {
                 </i>
               </VerticalChunk>
               <VerticalChunk indent={true}>
-                (Nb: When we say the “radial vector” and 
+                (Nb: When we say the “radial vector” and
                 “counterclockwise tangent” we mean those objects that
                 are illustrated here:)
               </VerticalChunk>
@@ -8988,8 +8988,6 @@ const Rest = () => {
               <i>
                 isovalue set
               </i>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $\rt&#123;0.1&#125;$
@@ -9103,7 +9101,7 @@ const Rest = () => {
               <Math>
                 $\theta$
               </Math>
-              {" "}for which the maximum is 
+              {" "}for which the maximum is
               attained.
             </VerticalChunk>
           </ExerciseStatement>
@@ -9122,15 +9120,15 @@ const Rest = () => {
             <VerticalChunk>
               (lambda-notation for a two-variable function)
               have this general appearance (it depends on
-              the window and on the exact isosets that 
-              you choose to  draw—we chose a few 
+              the window and on the exact isosets that
+              you choose to  draw—we chose a few
               different random ones):
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch5_ex_max_xy_xy_isosets.svg" />
             <Pause />
             <VerticalChunk>
-              Note that each isoset consists of the union of TWO 
+              Note that each isoset consists of the union of TWO
               disjoint curves, except for the isoset
             </VerticalChunk>
             <Pause />
@@ -9191,7 +9189,7 @@ const Rest = () => {
               <Math>
                 $0$
               </Math>
-              {" "}if and only if one of the 
+              {" "}if and only if one of the
               numbers is{" "}
               <NoBreak>
                 <Math>
@@ -9270,18 +9268,18 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              in some region of the plane, similarly to 
+              in some region of the plane, similarly to
               Exercise 18, the larger (more positive)
               values show up in the first and third
               quadrants, while the smaller (more negative)
-              values show up in the second and fourth 
+              values show up in the second and fourth
               quadrants:
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch5_ex_max_xy_rainbow.svg" />
             <Pause />
             <VerticalChunk>
-              Of particular interest to us: at a given 
+              Of particular interest to us: at a given
               distance from the origin, the line
             </VerticalChunk>
             <Pause />
@@ -9314,7 +9312,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              will reach its maximum at those values of 
+              will reach its maximum at those values of
               {" "}
               <Math>
                 $\theta$
@@ -9328,12 +9326,12 @@ const Rest = () => {
               <Math>
                 $(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)$
               </Math>
-              {" "}or 
+              {" "}or
               {" "}
               <Math>
                 $(-\sqrt&#123;0.5&#125;, -\sqrt&#123;0.5&#125;)$
               </Math>
-              {" "}on the unit circle; 
+              {" "}on the unit circle;
               these values of{" "}
               <Math>
                 $\theta$
@@ -9478,7 +9476,7 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                For completeness, here is a closer look at 
+                For completeness, here is a closer look at
                 the isoset{" "}
                 <NoBreak>
                   <Math>
@@ -9700,7 +9698,7 @@ const Rest = () => {
                   </Math>
                   ]
                 </NoBreak>
-                {" "}of 
+                {" "}of
                 {" "}
                 <NoBreak>
                   <Math>
@@ -9826,7 +9824,7 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "}
-                a fact that is also known as the “central 
+                a fact that is also known as the “central
                 symmetry” of{" "}
                 <NoBreak>
                   <Math>
@@ -9853,7 +9851,7 @@ const Rest = () => {
                   </Math>
                   -dilation
                 </NoBreak>
-                {" "}of 
+                {" "}of
                 itself.)
               </VerticalChunk>
               <VerticalChunk indent={true}>
@@ -9947,7 +9945,7 @@ const Rest = () => {
                 <Math>
                   $S$
                 </Math>
-                {" "}if and only if 
+                {" "}if and only if
                 {" "}
                 <Math>
                   $(y_0, x_0)$
@@ -9999,7 +9997,7 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}by 
+                {" "}by
                 commutativity of multiplication. This observation
                 constitutes the “proof” that each isoset is
                 mirror symmetric through{" "}
@@ -10083,7 +10081,7 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "}so there is nothing “new”
-                to prove here, except to make this observation 
+                to prove here, except to make this observation
                 about composition!
               </VerticalChunk>
             </SolutionNote>
@@ -10361,8 +10359,8 @@ const Rest = () => {
                 <Math>
                   $\theta$
                 </Math>
-                {" "}covered by these 
-                diagrams. (The same identity holds more 
+                {" "}covered by these
+                diagrams. (The same identity holds more
                 generally than just those{" "}
                 <NoBreak>
                   <Math>
@@ -10433,7 +10431,7 @@ const Rest = () => {
               </NoBreak>
               {" "}(I.e., if the fraction is undefined,
               then the function is undefined.)
-              Use these definitions 
+              Use these definitions
               to prove that
             </VerticalChunk>
             <Pause />
@@ -10444,7 +10442,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              for all 
+              for all
               {" "}
               <NoBreak>
                 <Math>
@@ -10558,7 +10556,7 @@ const Rest = () => {
               </div>
             </center>
             <VerticalChunk>
-              (Ta-daa!) (It's slightly harder in this 
+              (Ta-daa!) (It's slightly harder in this
               direction, when you have to think of
               turning the{" "}
               <NoBreak>
@@ -10774,7 +10772,7 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}as the dummy variable 
+              {" "}as the dummy variable
               because we were{" "}
               <i>
                 told
@@ -10798,7 +10796,7 @@ const Rest = () => {
               </b>
               {" "}
               How would the graph of each of the compositions
-              from Exercise 26 compare to the graph of the 
+              from Exercise 26 compare to the graph of the
               generic function{" "}
               <NoBreak>
                 <Math>
@@ -10894,7 +10892,7 @@ const Rest = () => {
               </ul>
             </TextParent>
             <VerticalChunk>
-              (Cf. Exercise 7 of Chapter 3, Exercise 14 of 
+              (Cf. Exercise 7 of Chapter 3, Exercise 14 of
               Chapter 3.)
             </VerticalChunk>
           </Solution>
@@ -10936,7 +10934,7 @@ const Rest = () => {
               <Math>
                 $f$
               </Math>
-              {" "}is 
+              {" "}is
               “periodic mod{" "}
               <NoBreak>
                 <Math>
@@ -11185,7 +11183,7 @@ const Rest = () => {
               <Math>
                 $y = \cos(x)\sin(x)$
               </Math>
-              {" "}and 
+              {" "}and
               {" "}
               <NoBreak>
                 <Math>
@@ -11203,7 +11201,7 @@ const Rest = () => {
                 appears
               </i>
               {" "}that one graph is a
-              translate of the other; if this were 
+              translate of the other; if this were
               really so, what would the exact amounts
               of translation be? (Vertical{" "}
               <i>
@@ -11217,7 +11215,7 @@ const Rest = () => {
           <Pause />
           <Solution solution_number={29}>
             <VerticalChunk>
-              We know from Exercise 21 that the 
+              We know from Exercise 21 that the
               bump immediately to the right of{" "}
               <Math>
                 $(0, 0)$
@@ -11227,7 +11225,7 @@ const Rest = () => {
               <Math>
                 $y = \cos(x)\sin(x)$
               </Math>
-              {" "}has 
+              {" "}has
               coordinates{" "}
               <NoBreak>
                 <Math>
@@ -11245,17 +11243,17 @@ const Rest = () => {
               <Math>
                 $-\eta/2$
               </Math>
-              {" "}units horizontally and 
+              {" "}units horizontally and
               {" "}
               <Math>
                 $&#123;1\over 2&#125;$
               </Math>
-              {" "}units vertically maps the graph 
+              {" "}units vertically maps the graph
               {" "}
               <Math>
                 $y = \sin(x)\cos(x)$
               </Math>
-              {" "}onto the graph 
+              {" "}onto the graph
               {" "}
               <NoBreak>
                 <Math>
@@ -11301,7 +11299,7 @@ const Rest = () => {
               <Math>
                 $\sin(x)\cos(x)$
               </Math>
-              {" "}effects horizontal 
+              {" "}effects horizontal
               translation of the graph by{" "}
               <NoBreak>
                 <Math>
@@ -11314,7 +11312,7 @@ const Rest = () => {
               <Math>
                 $&#123;1\over 2&#125;$
               </Math>
-              {" "}to the result 
+              {" "}to the result
               effects a vertical translation by{" "}
               <NoBreak>
                 <Math>
@@ -11421,7 +11419,7 @@ const Rest = () => {
               <Math>
                 $y = \cos^2(x)$
               </Math>
-              {" "}truly is the translate of 
+              {" "}truly is the translate of
               {" "}
               <NoBreak>
                 <Math>
@@ -11530,7 +11528,7 @@ const Rest = () => {
                 </i>
                 {" "}
                 The identity from the previous note can also
-                be proved via the angle-sum formulas; since{" "}
+                be proved via the angle-sum formulas; since
               </VerticalChunk>
               <Pause />
               <MathBlock>
@@ -11589,7 +11587,7 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <VerticalChunk>
-                using the pythagorean identity in the third equality, 
+                using the pythagorean identity in the third equality,
                 and
               </VerticalChunk>
               <Pause />
@@ -11639,8 +11637,8 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               If so, what scaling and translation operations,
-              more exactly, can be conjectured to relate the 
-              two graphs? Can you prove this geometric relationship 
+              more exactly, can be conjectured to relate the
+              two graphs? Can you prove this geometric relationship
               by algebra?
             </VerticalChunk>
           </ExerciseStatement>
@@ -11823,13 +11821,13 @@ const Rest = () => {
                 .
               </NoBreak>
               {" "}
-              (See 
-              the second case 
+              (See
+              the second case
               of Exercise 27, in particular.)
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              (NB: If we do it the other way around, 
-              putting the vertical scaling before the vertical 
+              (NB: If we do it the other way around,
+              putting the vertical scaling before the vertical
               translation, we obtain{" "}
               <NoBreak>
                 “
@@ -11950,7 +11948,7 @@ const Rest = () => {
             <MathBlock>
               $$
               \begin&#123;align*&#125;
-              \cos(2x) 
+              \cos(2x)
               &= \cos(x + x) \\
               &= \up&#123;1.6&#125; \cos(x)\cos(x) - \sin(x)\sin(x) \\
               &= \up&#123;1.6&#125; \cos^2(x) - \sin^2(x)
@@ -11965,7 +11963,7 @@ const Rest = () => {
             <MathBlock>
               $$
               \begin&#123;align*&#125;
-              &#123;1 + \cos(2x)\over 2&#125; 
+              &#123;1 + \cos(2x)\over 2&#125;
               &= \up&#123;2.0&#125; &#123;1 + \cos^2(x) - \sin^2(x) \over 2&#125; \\
               &= \up&#123;2.0&#125; &#123;(1 - \sin^2(x)) + \cos^2(x)\over 2&#125; \\
               &= \up&#123;2.0&#125; &#123;\cos^2(x) + \cos^2(x)\over 2&#125; \\
@@ -11981,7 +11979,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...as conjectured! 
+              ...as conjectured!
               (In particular,{" "}
               <Math>
                 $\cos^2(x)$
@@ -12135,7 +12133,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}the answer is: 
+              {" "}the answer is:
               “a horizontal scaling by{" "}
               <Math>
                 $&#123;1\over 2&#125;$
@@ -12187,7 +12185,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...? 
+              ...?
               (Study Exercise 18, if you have no inspiration.)
               (PS: Prove your answer.)
             </VerticalChunk>
@@ -12607,7 +12605,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              we see that 
+              we see that
               {" "}
               <Math>
                 $W \cos(x + \psi)$
@@ -12630,7 +12628,7 @@ const Rest = () => {
               <Math>
                 $\psi$
               </Math>
-              {" "}such that{" "}
+              {" "}such that
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -12646,7 +12644,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...that we can actually rewrite{" "}
+              ...that we can actually rewrite
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -12681,7 +12679,7 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "}But the above 
+              {" "}But the above
               two
               equations are very similar to
             </VerticalChunk>
@@ -12699,7 +12697,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              that give the transformation 
+              that give the transformation
               from polar coordinates{" "}
               <Math>
                 $(r, \theta)$
@@ -12713,7 +12711,7 @@ const Rest = () => {
                 ;
               </NoBreak>
               {" "}in fact these are the
-              exact same equations, except that we have 
+              exact same equations, except that we have
               {" "}
               <NoBreak>
                 ‘
@@ -12730,8 +12728,6 @@ const Rest = () => {
                 </Math>
                 ’,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 ‘
                 <Math>
@@ -12835,7 +12831,7 @@ const Rest = () => {
               In particular,
               since every pair of Cartesian coordinates
               has a corresponding pair of polar coordinates
-              (in fact, many corresponding pairs!), 
+              (in fact, many corresponding pairs!),
               we will
               always be able to find{" "}
               <NoBreak>
@@ -12849,7 +12845,7 @@ const Rest = () => {
                 $\psi$
               </Math>
               {" "}such as to
-              match the equations above, 
+              match the equations above,
               which concludes the problem.
             </VerticalChunk>
             <Pause />
@@ -12897,7 +12893,7 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <VerticalChunk>
-                would work as well, 
+                would work as well,
                 if we add
                 {" "}
                 <Math>
@@ -12930,7 +12926,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              of this exercise, and 
+              of this exercise, and
               in which case we can set
             </VerticalChunk>
             <Pause />
@@ -12939,7 +12935,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              and{" "}
+              and
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -12984,7 +12980,7 @@ const Rest = () => {
               </div>
             </center>
             <VerticalChunk>
-              ...was painstakingly uncovered 
+              ...was painstakingly uncovered
               in Exercise 33, if you recall.)
             </VerticalChunk>
           </Solution>
@@ -13061,7 +13057,7 @@ const Rest = () => {
               </NoBreak>
               {" "}in the first expression, compared
               to Exercise 34, and reducing to that exercise is
-              likely to produce confusion. 
+              likely to produce confusion.
               Solving from scratch is recommended.)
             </VerticalChunk>
           </ExerciseStatement>
@@ -13344,7 +13340,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               (In which we are effectively using a circular arc
-              to each time realign the last obtained segment with 
+              to each time realign the last obtained segment with
               horizontal.) In any case, with so many nice drawings,
               you are bound to save humanity!
             </VerticalChunk>
@@ -13355,7 +13351,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                One can note that the third diagram makes a cameo 
+                One can note that the third diagram makes a cameo
                 appearance within the second diagram (modulo scale):
               </VerticalChunk>
               <Pause />
@@ -13655,23 +13651,23 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}shifts 
+              {" "}shifts
               the graph of cos left by{" "}
               <Math>
                 $0.1$
               </Math>
-              {" "}(cf. Exercise 1, 
-              Exercise 22); the second step dilates the 
+              {" "}(cf. Exercise 1,
+              Exercise 22); the second step dilates the
               resulting graph by a factor{" "}
               <Math>
                 $10$
               </Math>
-              {" "}horizontally, 
+              {" "}horizontally,
               because the multiplication by{" "}
               <Math>
                 $0.1$
               </Math>
-              {" "}slows 
+              {" "}slows
               everything down by a factor{" "}
               <NoBreak>
                 <Math>
@@ -13731,12 +13727,12 @@ const Rest = () => {
                 <Math>
                   $\cos(0.1x)$
                 </Math>
-                {" "}as an 
+                {" "}as an
                 intermediate function between{" "}
                 <Math>
                   $\cos(x)$
                 </Math>
-                {" "}and 
+                {" "}and
                 {" "}
                 <NoBreak>
                   <Math>
@@ -13797,7 +13793,7 @@ const Rest = () => {
                 <Math>
                   $x$
                 </Math>
-                {" "}is replaced 
+                {" "}is replaced
                 by{" "}
                 <NoBreak>
                   <Math>
@@ -13844,7 +13840,7 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                Take the following three-box assemblage, that 
+                Take the following three-box assemblage, that
                 computes{" "}
                 <NoBreak>
                   <Math>
@@ -13871,7 +13867,7 @@ const Rest = () => {
                   ’
                 </NoBreak>
                 {" "}box
-                one at a time, and observing the effect of each 
+                one at a time, and observing the effect of each
                 additional gluing on the graph:
               </VerticalChunk>
               <Pause />
@@ -13924,7 +13920,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}for constants 
+              {" "}for constants
               {" "}
               <NoBreak>
                 <Math>
@@ -14119,9 +14115,9 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
-                ...which is different-but-equivalent, but 
-                generally considered inferior 
-                by virtue of involving the more complicated translation 
+                ...which is different-but-equivalent, but
+                generally considered inferior
+                by virtue of involving the more complicated translation
                 term,{" "}
                 <NoBreak>
                   <Math>
@@ -14146,9 +14142,9 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
-                because it matters which of the two operations is performed 
+                because it matters which of the two operations is performed
                 first. If it didn't matter,
-                then both of our solutions would involve the 
+                then both of our solutions would involve the
                 same amount of translation, but they don't!
               </VerticalChunk>
               <VerticalChunk indent={true}>
@@ -14239,7 +14235,7 @@ const Rest = () => {
               <Math>
                 $1/A$
               </Math>
-              {" "}as values of the form{" "}
+              {" "}as values of the form
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -14351,7 +14347,7 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_one_over_A_secant_Agt1.svg" />
             <Pause />
             <VerticalChunk>
-              ...the position obtained is the corresponding 
+              ...the position obtained is the corresponding
               {" "}
               <NoBreak>
                 <Math>
@@ -14368,7 +14364,7 @@ const Rest = () => {
               <Math>
                 $|A| \leq 1$
               </Math>
-              {" "}we can reverse the process, 
+              {" "}we can reverse the process,
               “dropping a height onto the circle”, and then finding
               the intersection of the tangent at that point with
               the{" "}
@@ -14383,7 +14379,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}a.k.a., if and only 
+              {" "}a.k.a., if and only
               if{" "}
               <NoBreak>
                 <Math>
@@ -14431,7 +14427,7 @@ const Rest = () => {
               <Math>
                 $1/2$
               </Math>
-              {" "}and 
+              {" "}and
               {" "}
               <NoBreak>
                 <Math>
@@ -14454,7 +14450,7 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_60_tangent_with_coordinates.svg" />
             <Pause />
             <VerticalChunk>
-              But by Exercise 43 this implies that the coordinate 
+              But by Exercise 43 this implies that the coordinate
               of the intersectionj of the tangent is
               <ImageRight src="/images/svg_ch5_ex_60_tangent_sec_cloud.svg" />
             </VerticalChunk>
@@ -14489,10 +14485,8 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise
-          exercise_number={42}
-          id="_337141689003">
-          <ExerciseStatement>
+        <Exercise exercise_number={42}>
+          <ExerciseStatement id="_113241688892">
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -14507,7 +14501,7 @@ const Rest = () => {
                 $A'$
               </Math>
               {" "}
-              from the following set of blueprints for a shed with 
+              from the following set of blueprints for a shed with
               an angled inside wall (all distances in inches):
             </VerticalChunk>
             <Pause />
@@ -14533,7 +14527,7 @@ const Rest = () => {
               <Math>
                 $8\rt&#123;0.1&#125; \cdot \cos(25.5^\circ\hlfbk)$
               </Math>
-              {" "}inches, 
+              {" "}inches,
               respectively:
             </VerticalChunk>
             <Pause />
@@ -14591,7 +14585,7 @@ const Rest = () => {
                 </Math>
                 -th
               </NoBreak>
-              {" "}of an inch 
+              {" "}of an inch
               should be good enough for a construction site.)
             </VerticalChunk>
             <Pause />
@@ -14624,8 +14618,8 @@ const Rest = () => {
               <Pause />
               <VerticalChunk>
                 ...and if you are not finding these values, then make sure
-                that your calculator is in “degree mode”. 
-                (Otherwise you have to manually 
+                that your calculator is in “degree mode”.
+                (Otherwise you have to manually
                 convert the arguments to radians.)
               </VerticalChunk>
             </SolutionNote>
@@ -14639,7 +14633,7 @@ const Rest = () => {
               </b>
               {" "}
               Given the following sketch, to what angle
-              can the door be opened before it hits against 
+              can the door be opened before it hits against
               the roof? (Hint: You will need to Google “how
               to use arctan”, or “how to convert from polar
               to Cartesian coordinates”.)
@@ -14819,7 +14813,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              into the corresponding angle whose tangent equals that 
+              into the corresponding angle whose tangent equals that
               fraction.
             </VerticalChunk>
             <VerticalChunk indent={true}>
@@ -14860,8 +14854,8 @@ const Rest = () => {
               {" "}
               (Speaking of doors with negligible thickness.)
               The sketch below shows the top view of a bomb
-              shelter door set in a corner near a wall, 
-              with distances in centimeters. 
+              shelter door set in a corner near a wall,
+              with distances in centimeters.
               How far can the door open when the big handle
               is in the “open” position, shown in the figure?
               How far can it open when the big handle is in
@@ -14874,7 +14868,7 @@ const Rest = () => {
           <Solution solution_number={44}>
             <VerticalChunk>
               In the interest of mass-producing our results
-              we will write a general formula to compute 
+              we will write a general formula to compute
               {" "}
               <Math>
                 $\alpha$
@@ -14894,7 +14888,7 @@ const Rest = () => {
               <Math>
                 $z$
               </Math>
-              {" "}in 
+              {" "}in
               the following diagram (note that{" "}
               <NoBreak>
                 <Math>
@@ -14949,7 +14943,7 @@ const Rest = () => {
                 </Math>
                 ’
               </NoBreak>
-              {" "}(cf. Exercise 43), 
+              {" "}(cf. Exercise 43),
               we have
             </VerticalChunk>
             <Pause />
@@ -15030,8 +15024,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $(x_0, y_0) = (60, 30)$
@@ -15085,13 +15077,13 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               ...being, namely, upper bounds on the amount of
-              rotation of the door caused by a putative contact of 
-              the big handle in open position with the wall, of the 
-              big handle in closed position with the wall, and of 
+              rotation of the door caused by a putative contact of
+              the big handle in open position with the wall, of the
+              big handle in closed position with the wall, and of
               the small handle with the wall.
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              (By the way: don't be confused by the fact that 
+              (By the way: don't be confused by the fact that
               {" "}
               <Math>
                 $\alpha$
@@ -15158,7 +15150,7 @@ const Rest = () => {
               {" "}
               If a sphere is projected directly outward onto
               a cylinder abutting the sphere at the equator, with each
-              point remaining at its height, as pictured in the 
+              point remaining at its height, as pictured in the
               sketch and in the visualization below, by what factor are
               areas stretched as a function of the latitude{" "}
               <NoBreak>
@@ -15200,7 +15192,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               by the projection, whereas longitudes (the other
-              ones, perpendicular to latitudes) are locally stretched 
+              ones, perpendicular to latitudes) are locally stretched
               by a factor of...
             </VerticalChunk>
             <Pause />
@@ -15217,7 +15209,7 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg" />
             <Pause />
             <VerticalChunk>
-              ...sketch, and because the 
+              ...sketch, and because the
               overall scaling in area is the latitudinal
               scaling factor times the longitudinal
               scaling factor. (Area = width{" "}
@@ -15227,11 +15219,11 @@ const Rest = () => {
               {" "}height,
               so you take the factor by which “width” scales,
               times the factor by which “height” scales—presuming
-              your old “width” and “height” are still at right 
+              your old “width” and “height” are still at right
               angle to one another after the projection, which
               is the case here: longitudes and latitudes, that
-              are perpendicular on the sphere, project to 
-              lines and circles, respectively, that are 
+              are perpendicular on the sphere, project to
+              lines and circles, respectively, that are
               perpendicular on the cylinder.)
             </VerticalChunk>
           </Solution>
@@ -15469,16 +15461,16 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               because the sum of all the areas of the bases
-              is the sphere area. (Everything speaking 
-              approximately, for many fine cones, in the 
-              limit of our imagination as they become 
+              is the sphere area. (Everything speaking
+              approximately, for many fine cones, in the
+              limit of our imagination as they become
               infinitely fine.) (*Where each ‘base’ stands
-              for the shaved-off, “flattened” version of the 
+              for the shaved-off, “flattened” version of the
               base.) So multiplying the height{" "}
               <Math>
                 $r$
               </Math>
-              {" "}back in, 
+              {" "}back in,
               we find
             </VerticalChunk>
             <center style="margin-top:1em;margin-bottom:1em;">
@@ -15540,8 +15532,8 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <VerticalChunk>
-                where “tetrahedron” means “four-sided shape”. 
-                (There is only 1 way to pull off a four-sided 
+                where “tetrahedron” means “four-sided shape”.
+                (There is only 1 way to pull off a four-sided
                 shape in 3D: to make all sides triangles.)
                 So the volume of the sphere is approximated
                 by the sum of the volumes of the tetrahedrons,
@@ -15564,26 +15556,26 @@ const Rest = () => {
                 the tetrahedrons.)
               </VerticalChunk>
               <VerticalChunk indent={true}>
-                For the current 
-                discussion we take it for granted that as the 
+                For the current
+                discussion we take it for granted that as the
                 mesh size shrinks, the sum of the volumes of
-                the cones (= tetrahedrons) converges to the 
+                the cones (= tetrahedrons) converges to the
                 volume of sphere.
               </VerticalChunk>
               <VerticalChunk indent={true}>
                 (Or take the limit, as the mesh size shrinks,
-                of the sum of the volume of the tetrahedrons 
+                of the sum of the volume of the tetrahedrons
                 to be the{" "}
                 <i>
                   definition
                 </i>
-                {" "}of the “volume of the 
-                sphere”—that's just as well, since we don't have 
+                {" "}of the “volume of the
+                sphere”—that's just as well, since we don't have
                 any other competing notion of “volume of the sphere”,
                 at the moment.)
               </VerticalChunk>
               <VerticalChunk indent={true}>
-                Here is a closer look at a single tetrahedron 
+                Here is a closer look at a single tetrahedron
                 {" "}
                 <NoBreak>
                   (
@@ -15628,7 +15620,7 @@ const Rest = () => {
               <Pause />
               <VerticalChunk>
                 is the projection of the base onto the surface
-                of the sphere from the center of the sphere, and 
+                of the sphere from the center of the sphere, and
                 that
               </VerticalChunk>
               <Pause />
@@ -15673,7 +15665,7 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <VerticalChunk>
-                for all of the tetrahedrons, if the mesh size is 
+                for all of the tetrahedrons, if the mesh size is
                 sufficiently small; even,
               </VerticalChunk>
               <Pause />
@@ -15780,7 +15772,7 @@ const Rest = () => {
                   </Math>
                   -notation,
                 </NoBreak>
-                {" "}but this basically reads 
+                {" "}but this basically reads
                 “sum from{" "}
                 <Math>
                   $i$
@@ -15796,7 +15788,7 @@ const Rest = () => {
                   </Math>
                   ”]
                 </NoBreak>
-                {" "}which is the 
+                {" "}which is the
                 total volume of the tetrahedrons, where{" "}
                 <Math>
                   $N$
@@ -15813,7 +15805,7 @@ const Rest = () => {
                 <Math>
                   $h_i$
                 </Math>
-                {" "}are the 
+                {" "}are the
                 base and height of the{" "}
                 <NoBreak>
                   <Math>
@@ -15821,7 +15813,7 @@ const Rest = () => {
                   </Math>
                   -th
                 </NoBreak>
-                {" "}tetrahedron, is 
+                {" "}tetrahedron, is
                 sandwiched between
               </VerticalChunk>
               <Pause />
@@ -15864,7 +15856,7 @@ const Rest = () => {
                 <Math>
                   $A = 8\eta\rt&#123;.05&#125;r^2$
                 </Math>
-                {" "}is the total area 
+                {" "}is the total area
                 of the sphere, and so
               </VerticalChunk>
               <Pause />
@@ -15932,7 +15924,7 @@ const Rest = () => {
                   </Math>
                   ”]
                 </NoBreak>
-                {" "}by further 
+                {" "}by further
                 shrinking the size of the mesh, which implies that
               </VerticalChunk>
               <Pause />
@@ -16095,7 +16087,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                In some sense, the vector “wins” over the 
+                In some sense, the vector “wins” over the
                 number, in that their conjoint baby is a vector,
                 not a number.
               </VerticalChunk>
