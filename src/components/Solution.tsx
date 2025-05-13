@@ -67,6 +67,8 @@ const SpaceBeforeBackupArrow = () => (
 
 export const Solution = (props: SolutionProps) => {
   let ref: HTMLDivElement | undefined;
+  let buttonRef: HTMLDivElement | undefined;
+
   let { store: global_store, set_store: set_global_store } = useGlobalContext();
   const { set_exercises_store: set_store, exercises_store: store } =
     useExercisesContext();
@@ -162,6 +164,22 @@ export const Solution = (props: SolutionProps) => {
     setTimeout(() => {
       set_solution_fully_opened(solution_open());
     }, 100);
+
+    // Typesetting solution mathjax when solution button is in-view . this helps to get rid of lag when openning solution
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          (window as any).MathJax.typesetPromise([ref]);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "300px",
+      },
+    );
+
+    if (buttonRef) observer.observe(buttonRef);
+    onCleanup(() => observer.disconnect());
   });
 
   return (
@@ -173,6 +191,7 @@ export const Solution = (props: SolutionProps) => {
         set_solution_fully_opened={set_solution_fully_opened}
         set_solution_transition={set_solution_transition}
         solution_number={props.solution_number}
+        ref={buttonRef}
       />
       <SpaceAfterSolutionButtonAlwaysShowing />
       {/* Actual Solution */}
@@ -190,12 +209,8 @@ export const Solution = (props: SolutionProps) => {
         <div
           ref={ref}
           class={twJoin(
-            "transition-transform",
-            !solution_open() && "-translate-y-full",
-          )}
-          style={{
-            "transition-duration": `${solution_transition()}ms`,
-          }}>
+            "transition-transform absolute bottom-0 left-1/2 -translate-x-1/2",
+          )}>
           <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           {props.children}
         </div>
@@ -240,6 +255,7 @@ type SolutionBtnProps = {
   solution_number: number;
   set_solution_fully_opened: Setter<boolean>;
   set_solution_transition: Setter<number>;
+  ref: HTMLDivElement | undefined;
 };
 
 const SolutionButton = (props: SolutionBtnProps) => {
@@ -250,13 +266,15 @@ const SolutionButton = (props: SolutionBtnProps) => {
     store.exercises[props.solution_number - 1]?.solution_open;
   const transition_duration = () =>
     store.exercises[props.solution_number - 1]?.transition_duration;
-  let ref: HTMLDivElement | undefined;
 
   const { set_handle, set_solution_fully_opened, set_solution_transition } =
     props;
 
   return (
-    <div ref={ref} class="relative" style={`padding-inline: ${TEXT_X_PADDING}`}>
+    <div
+      ref={props.ref}
+      class="relative"
+      style={`padding-inline: ${TEXT_X_PADDING}`}>
       <SolutionSVG
         solution_open={solution_open}
         onClick={() => {
