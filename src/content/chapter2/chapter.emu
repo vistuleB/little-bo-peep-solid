@@ -4,6 +4,12 @@
     *Slopes.*
     Exercise >>TrueOrFalse.>>EXO2 
     The _slope_ of a line
+    Exercise >>TrueOrFalse.
+    |> a 
+        href link
+
+        yoyo1
+    end
 
 |> Image
     src images/svg_ch2_ch_collection_of_examples.svg
