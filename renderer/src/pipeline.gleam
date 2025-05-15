@@ -203,9 +203,12 @@ pub fn lbp_pipeline() -> List(Pipe) {
       //   #("Exercise <a href=\"1\">_1_</a>.<a href=\"2\">_2_</a>", "<a href=\"2\">Exercise _1_._2_</a>")
       // ]),
       dn.rearrange_links([
-        #("Exercise <a href='1'>_1_</a>.<a href=2>_2_</a>", "<a class='e-link' href='2'>Exercise _1_._2_</a>"),
+        #("Chapter <a href='1'>_1_</a>, Exercise <a href='2'>_2_</a>", "<a class='e-link' href='2'>Chapter _1_ , Exercise _2_</a>"),
         #("Chapter <a href='1'>_1_</a>", "<a class='c-link' href='1'>Chapter _1_</a>"),
-        #("Exercises <a href=1>_1_</a> and <a href=2>_2_</a>", "Exercises <a href=1 class=e-link>_1_</a> and <a href=2 class=e-link>_2_</a>")
+        #("Exercise <a href='1'>_1_</a>.<a href=2>_2_</a>", "<a class='e-link' href='2'>Exercise _1_._2_</a>"),
+        #("Exercise <a href='1'>_1_</a>", "<a class='e-link' href='1'>Exercise _1_</a>"),
+        #("Note <a href='1'>_1_</a>", "<a class='n-link' href='1'>Note _1_</a>"),
+        #("Exercises <a href=1>_1_</a> and <a href=2>_2_</a>", "Exercises <a href=1 class=e-link>_1_</a> and <a href=2 class=e-link>_2_</a>"),
       ]),
       // ************************
       // contents
