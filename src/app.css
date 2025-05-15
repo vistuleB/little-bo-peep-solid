@@ -450,3 +450,17 @@ ol.l1 > li:before {
   font-size: 2rem;
   line-height: 2.2rem;
 }
+
+.e-link:hover {
+  background-color: #ffd42a;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 10px;
+}
+
+.c-link:hover {
+  background-color: #47ddff;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 10px;
+}
