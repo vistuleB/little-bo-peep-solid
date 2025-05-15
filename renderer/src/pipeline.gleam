@@ -204,7 +204,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ]),
       dn.rearrange_links([
         #("Exercise <a href='1'>_1_</a>.<a href=2>_2_</a>", "<a class='e-link' href='2'>Exercise _1_._2_</a>"),
-        #("Chapter <a href='1'>_1_</a>", "<a class='c-link' href='2'>Chapter _1_</a>")
+        #("Chapter <a href='1'>_1_</a>", "<a class='c-link' href='1'>Chapter _1_</a>"),
+        #("Exercises <a href=1>_1_</a> and <a href=2>_2_</a>", "Exercises <a href=1 class=e-link>_1_</a> and <a href=2 class=e-link>_2_</a>")
       ]),
       // ************************
       // contents
