@@ -133,7 +133,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section id="_5836427692">
+      <Section id="_2446425880">
         <VerticalChunk>
           <b>
             Measuring Slope.
@@ -315,7 +315,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_49971154132">
+      <Section id="_23471158549">
         <VerticalChunk>
           <b>
             Sign Combinations.
@@ -632,7 +632,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_34723256299">
+      <Section id="_83553253195">
         <VerticalChunk>
           <b>
             “Rise over Run”.
@@ -1061,7 +1061,7 @@ const Rest = () => {
           <Math>
             $c \in \rr$
           </Math>
-          {" "}is a constant, 
+          {" "}is a constant,
           similarly to the more familiar equation
           <ImageLeft
             offset_x="1em"
@@ -1450,7 +1450,7 @@ const Rest = () => {
       <Pause />
       <Section
         divider={false}
-        id="_29856318898">
+        id="_50296316254">
         <VerticalChunk>
           <b>
             Postscript: Units vs Dimensions.
@@ -1566,7 +1566,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
               This is true, as illustrated by the following
@@ -1665,7 +1664,6 @@ const Rest = () => {
               (Hint: Start from the slope formula.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
               A point{" "}
@@ -1908,18 +1906,17 @@ const Rest = () => {
                 Exercise 3.
               </b>
               {" "}
-              Plot the vertical velocity of{" "}
+              Plot the vertical velocity of
               <del>
                 an object
               </del>
-              &ensp;a mosquito whose height over time is 
-              given by this graph (use the same time interval 
+              &ensp;a mosquito whose height over time is
+              given by this graph (use the same time interval
               as the graph):
             </VerticalChunk>
             <Pause />
             <Image src="/images/1.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
               Here is the “official” graph of the (vertical)
@@ -2110,7 +2107,6 @@ const Rest = () => {
               and “rise equals slope times run”.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
               E.g.:

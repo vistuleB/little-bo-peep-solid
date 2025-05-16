@@ -190,7 +190,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("table", "Pause", []),
         #("Grid", "Pause", []),
         #("Grid", "Pause", []),
-        #("Solution", "Pause", []),
         #("List", "Pause", []),
         #("StarDivider", "Pause", []),
       ]),

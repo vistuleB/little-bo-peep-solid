@@ -1,5 +1,5 @@
 |> Section
-    test test
+    test=test
     
     previous was Chapter >>FewRefreshers
 
@@ -9,9 +9,8 @@
     another example is
     Chapter >>FewRefreshers, Exercise >>TrueOrFalse
 
-
-|> Image
-    src images/svg_ch2_ch_collection_of_examples.svg
+    |> Image
+        src=images/svg_ch2_ch_collection_of_examples.svg
 
     To explain, the slope of a line is...
 
@@ -32,20 +31,20 @@
     it goes up by $1$ unit for each unit to the right:
 
     |> Image
-        src images/slope_1_example.svg
+        src=images/slope_1_example.svg
 
     On the other hand, the line below has slope
     $-0.5$, because it goes up by _minus_ $0.5$ units
     with each unit to the right:
 
     |> Image
-        src images/slope_0.5_example.svg
+        src=images/slope_0.5_example.svg
 
     (Etc.)
 
 
 |> Section
-    handle measuring
+    handle=measuring
 
     *Measuring Slope.*
     The slope of a line is also the ratio of vertical
@@ -53,7 +52,7 @@
     distinct points $A$, $B$ on the line:
 
     |> Image
-        src images/31.svg
+        src=images/31.svg
 
     $$ \te{slope} = {\te{vertical change from A to B} \over \te{horizontal change from A to B}} $$
 
@@ -85,9 +84,9 @@
     $$
 
     |> ImageRight
-        src images/32.svg
-        offset_y -0.7em
-        offset_x 3em
+        src=images/32.svg
+        offset_y=-0.7em
+        offset_x= 3em
 
     more succinctly. We call this the _slope formula_.
 
@@ -118,7 +117,7 @@
     is the horizontal change from $A$ to $B$.)
 
 |> Section
-    handle table
+    handle=table
 
     *Sign Combinations.*
     Technically, quantities such as
@@ -147,17 +146,17 @@
     arise (lines of slope zero not included):
 
     |> Table
-        class lines
-        style margin-top:0.5em;margin-bottom:0.5em;
+        class=lines
+        style=margin-top:0.5em;margin-bottom:0.5em;
         |> colgroup
             |> col
-                width 120
+                width=120
             |> col
-                width 120
+                width=120
             |> col
-                width 120
+                width=120
             |> col
-                width 120
+                width=120
         |> tbody
             |> tr
                 |> td
@@ -171,9 +170,9 @@
                 |> td
 
                     |> img
-                        src images/33.svg
-                        width 50
-                        style padding-top:7px;padding-bottom:7px;
+                        src=images/33.svg
+                        width=50
+                        style=padding-top:7px;padding-bottom:7px;
 
                 |> td
 
@@ -193,8 +192,8 @@
                 |> td
 
                     |> img
-                        src images/34.svg
-                        style margin-top:7px;margin-bottom:7px;width:105px;
+                        src=images/34.svg
+                        style=margin-top:7px;margin-bottom:7px;width:105px;
 
                 |> td
 
@@ -214,9 +213,9 @@
                 |> td
 
                     |> img
-                        src images/35.svg
-                        width 105
-                        style margin-top:7px;margin-bottom:7px;
+                        src=images/35.svg
+                        width=105
+                        style=margin-top:7px;margin-bottom:7px;
 
                 |> td
 
@@ -236,9 +235,9 @@
                 |> td
 
                     |> img
-                        src images/36.svg
-                        width 105
-                        style margin-top:7px;margin-bottom:7px;
+                        src=images/36.svg
+                        width=105
+                        style=margin-top:7px;margin-bottom:7px;
 
                 |> td
 
@@ -257,9 +256,9 @@
 
                 |> td
                     |> img
-                        src images/37.svg
-                        width 105
-                        style margin-top:7px;margin-bottom:7px;
+                        src=images/37.svg
+                        width=105
+                        style=margin-top:7px;margin-bottom:7px;
 
                 |> td
 
@@ -273,9 +272,9 @@
     places, or, namely, to show that the fractions
 
     |> ImageRight
-        src images/svg_ch2_ch_swap_cloud.svg
-        line 3
-        offset_x -0.5em
+        src=images/svg_ch2_ch_swap_cloud.svg
+        line=3
+        offset_x= -0.5em
 
     $$ {y_2 - y_1 \over x_2 - x_1}\qquad\,\,\,\,\,\te{and}\,\,\,\,\,\qquad{y_1 - y_2 \over x_1 - x_2} $$
 
@@ -284,9 +283,9 @@
     $$ {y_2 - y_1 \over x_2 - x_1} = {-(y_2 - y_1) \over -(x_2 - x_1)} = {y_1 - y_2 \over x_1 - x_2} $$
 
     |> ImageLeft
-        src images/39.svg
-        offset_x 2.5em
-        offset_y -60px
+        src=images/39.svg
+        offset_x= 2.5em
+        offset_y=-60px
 
     which verifies this hypothesis. In particular,
 
@@ -309,7 +308,7 @@
     line:
 
     |> Image
-        src images/40.svg
+        src=images/40.svg
 
     Indeed, vertical lines have _undefined_ slope.
     Moreover the bad case
@@ -328,21 +327,21 @@
     lines pass through any given point!
 
 |> Section
-    handle rise
+    handle=rise
 
     *“Rise over Run”.*
     Some people remember the slope formula as “slope
     equals rise over run” (i.e., “$\te{slope} =$
     |> span
-        class nobreak
+        class=nobreak
         |> InlineImage
-            src images/rise-run.svg
-            width 28px
+            src=images/rise-run.svg
+            width=28px
         ”),
     &ensp;following such a picture:
 
     |> Image
-        src images/44.svg
+        src=images/44.svg
 
     In this context, note that, in physics, a
     one-dimensional displacement is measured as
@@ -359,7 +358,7 @@
     also include this picture:
 
     |> Image
-        src images/47.svg
+        src=images/47.svg
 
     Then “rise” and “run” have their signs flipped,
     but the ratio rise-over-run is the same, as
@@ -404,7 +403,7 @@
     or “run equals rise over slope”. Thus:
 
     |> Image
-        src images/48.svg
+        src=images/48.svg
 
     ...as can sometimes be useful to know.
 
@@ -419,7 +418,7 @@
     the Cartesian plane. E.g.:
 
     |> Image
-        src images/svg_ch2_ch_line_equations.svg
+        src=images/svg_ch2_ch_line_equations.svg
 
     Note that, assuming said $y = ax + b$, one has
 
@@ -471,13 +470,13 @@
 
     $$x = c$$
 
-    (see Fig. 1) where $c \in \rr$ is a constant, 
+    (see Fig. 1) where $c \in \rr$ is a constant,
     similarly to the more familiar equation
 
     |> ImageLeft
-        src images/svg_ch2_ch_vertical_line_equation.svg
-        offset_y -6em
-        offset_x 1em
+        src=images/svg_ch2_ch_vertical_line_equation.svg
+        offset_y=-6em
+        offset_x= 1em
 
     $$y = b$$
 
@@ -498,9 +497,9 @@
     and slope $-1$.
 
     |> ImageRight
-        src images/svg_3_plus_minus_one_times_x_cloud.svg
-        line 1
-        offset_x 2rem
+        src=images/svg_3_plus_minus_one_times_x_cloud.svg
+        line=1
+        offset_x= 2rem
 
 |> Section
 
@@ -530,7 +529,7 @@
     in seconds:
 
     |> Image
-        src images/52.svg
+        src=images/52.svg
 
     The slope of the graph is $0.75$ _meters per
     second_ because the balloon's height increases by
@@ -581,7 +580,7 @@
     gives us...
 
     |> Image
-        src images/53.svg
+        src=images/53.svg
 
     ...these formulas, commonly useful in “applied”
     problems.
@@ -619,9 +618,9 @@
         $$
 
         |> ImageRight
-            src images/svg_ch2_ch_units_cloud.svg
-            offset_x -6rem
-            style width:930px
+            src=images/svg_ch2_ch_units_cloud.svg
+            offset_x=-6rem
+            style=width:930px
 
         following the template
 
@@ -634,8 +633,8 @@
         found in the third line of the table.
 
 |> Section
-    divider false
-    handle unitsvsdimensions
+    divider=false
+    handle=unitsvsdimensions
 
     *Postscript: Units vs Dimensions.*
     Comparing
@@ -689,18 +688,18 @@
             pair of lines:
 
             |> Image
-                src images/55.svg
-                class relative w-fit
+                src=images/55.svg
+                class=relative w-fit
 
                 |> ImageRight
-                    src images/56.svg
-                    offset_y 5rem
-                    offset_x -1.3rem
+                    src=images/56.svg
+                    offset_y=5rem
+                    offset_x= -1.3rem
 
                 |> ImageLeft
-                    src images/57.svg
-                    offset_x -8rem
-                    offset_y 8rem
+                    src=images/57.svg
+                    offset_x= -8rem
+                    offset_y=8rem
 
             In more detail, the two triangles are related
             by a $90^\circ$ rotation and so, likewise,
@@ -713,25 +712,25 @@
                 all $p \ne 0$. By a similar drawing:
 
                 |> Image
-                    src images/58.svg
-                    class relative w-fit
+                    src=images/58.svg
+                    class=relative w-fit
 
                     |> ImageRight
-                        src images/59.svg
-                        offset_y 27%
-                        offset_x -10%
+                        src=images/59.svg
+                        offset_y=27%
+                        offset_x= -10%
 
                     |> ImageLeft
-                        src images/60.svg
-                        offset_x -24%
-                        offset_y 33%
+                        src=images/60.svg
+                        offset_x= -24%
+                        offset_y=33%
 
                 |> StarDivider
 
-            !! (If the axes are oriented the usual way then 
+            !! (If the axes are oriented the usual way then
             !! the above drawing covers all the cases $p > 0$,
             !! whereas if we flip the two number axes to point
-            !! down/left the above drawing covers all the cases 
+            !! down/left the above drawing covers all the cases
             !! $p < 0$—magic!)
 
     |> Exercise
@@ -748,9 +747,9 @@
             $$ p = {y - y_0 \over x - x_0} $$
 
             |> ImageLeft
-                src images/svg_ch2_ex_x0_y0_line_equation_cloud.svg
-                offset_x 7.5em
-                offset_y 103px
+                src=images/svg_ch2_ex_x0_y0_line_equation_cloud.svg
+                offset_x= 7.5em
+                offset_y=103px
 
             because
 
@@ -799,9 +798,9 @@
             $$
 
             |> ImageRight
-                src images/svg_slope_times_run_equals_rise_cloud.svg
-                offset_x 2.5rem
-                offset_y -0.5rem
+                src=images/svg_slope_times_run_equals_rise_cloud.svg
+                offset_x=2.5rem
+                offset_y=-0.5rem
 
             which can also make it easy to remember!
 
@@ -838,16 +837,16 @@
 
     |> Exercise
 
-        Plot the vertical velocity of 
+        Plot the vertical velocity of
         |> del
 
             an object
-        &ensp;a mosquito whose height over time is 
-        given by this graph (use the same time interval 
+        &ensp;a mosquito whose height over time is
+        given by this graph (use the same time interval
         as the graph):
 
         |> Image
-            src images/1.svg
+            src=images/1.svg
 
         |> Solution
 
@@ -855,7 +854,7 @@
             velocity:
 
             |> Image
-                src images/64.svg
+                src=images/64.svg
 
             On each interval, the velocity is rate of
             change of the height, i.e., the _slope_ of
@@ -878,7 +877,7 @@
             this type
 
             |> Image
-                src images/svg_empty_circle_alone.svg
+                src=images/svg_empty_circle_alone.svg
 
             indicates a “missing” value. Specifically, in
             our case, the vertical velocity is _undefined_
@@ -918,7 +917,7 @@
             E.g.:
 
             |> Image
-                src images/66.svg
+                src=images/66.svg
 
             The rise from the $y$-intercept to $(x_0, y_0)$
             is $px_0$, as found by “rise equals slope times

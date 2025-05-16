@@ -37,7 +37,7 @@ const Article = () => {
             <i>
               power
             </i>
-            ; 
+            ;
             the number at the bottom of the power is called
             the{" "}
             <i>
@@ -294,7 +294,7 @@ const Rest = () => {
           <Math>
             $n = 0$
           </Math>
-          {" "}by inspection, and (A) 
+          {" "}by inspection, and (A)
           is equivalent to the identity
           <ImageLeft
             line={2}
@@ -399,7 +399,7 @@ const Rest = () => {
           <Math>
             $b$
           </Math>
-          {" "}are reciprocal, 
+          {" "}are reciprocal,
           then these equations are satisfied...
         </VerticalChunk>
         <Pause />
@@ -566,7 +566,7 @@ const Rest = () => {
           <Math>
             $0$
           </Math>
-          {" "}is zero, 
+          {" "}is zero,
           but when it comes to{" "}
           <NoBreak>
             <Math>
@@ -601,7 +601,7 @@ const Rest = () => {
           </NoBreak>
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          Note that mathematicians sometimes refer 
+          Note that mathematicians sometimes refer
           to a power with an exponent of{" "}
           <Math>
             $0$
@@ -625,7 +625,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          in the sense that “all products start at 
+          in the sense that “all products start at
           {" "}
           <NoBreak>
             <Math>
@@ -826,7 +826,7 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}This is known as “the third law 
+          {" "}This is known as “the third law
           of exponents”.
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -930,8 +930,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          by the third law of exponents, the second way already has  
-          “its own” notation, and therefore the convention is that...{" "}
+          by the third law of exponents, the second way already has
+          “its own” notation, and therefore the convention is that...
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -941,7 +941,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          ...absolutely always means...{" "}
+          ...absolutely always means...
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -1357,7 +1357,7 @@ const Rest = () => {
         <Image src="/images/svg_two_blue_one_image_equation.svg" />
         <Pause />
         <VerticalChunk>
-          ...and so on, which is a possible trick to check 
+          ...and so on, which is a possible trick to check
           one's work and avoid mistakes.
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -1497,8 +1497,8 @@ const Rest = () => {
         </Table>
         <Pause />
         <VerticalChunk>
-          (Funny how the prefixes switch from 
-          ending in ‘i’ to ending in ‘o’ after 
+          (Funny how the prefixes switch from
+          ending in ‘i’ to ending in ‘o’ after
           {" "}
           <NoBreak>
             <Math>
@@ -1518,7 +1518,7 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           are smaller than the smallest animal
-          cells (human red blood cells, which 
+          cells (human red blood cells, which
           are among the smallest animal cells,
           have a diameter of
           {" "}
@@ -1723,7 +1723,7 @@ const Rest = () => {
               $\!\hspace&#123;0.1ex&#125;\rm&#123;c&#125;$
             </Math>
           </NoBreak>
-          {" "}“kilo” = thousand], 
+          {" "}“kilo” = thousand],
           while a
         </VerticalChunk>
         <Pause />
@@ -1740,7 +1740,7 @@ const Rest = () => {
             </Math>
           </NoBreak>
           {" "}“tera” = trillion].
-          (In case you don't know, by the way, 
+          (In case you don't know, by the way,
           a
         </VerticalChunk>
         <Pause />
@@ -1773,7 +1773,7 @@ const Rest = () => {
             Logarithms base 10.
           </b>
           {" "}
-          Every positive number can be uniquely 
+          Every positive number can be uniquely
           written as “ten to the power something”.
           This “something” will heretofore be called
           the{" "}
@@ -1783,7 +1783,7 @@ const Rest = () => {
               $\mathit&#123;10&#125;$
             </Math>
           </i>
-          {" "}of that 
+          {" "}of that
           (positive) number.
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -1852,7 +1852,7 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            under an extended definition of exponentiation that allows us to 
+            under an extended definition of exponentiation that allows us to
             compute{" "}
             <Math>
               $10^x$
@@ -1865,7 +1865,7 @@ const Rest = () => {
               .
             </NoBreak>
             {" "}
-            So{" "}
+            So
           </VerticalChunk>
           <Pause />
           <MathBlock>
@@ -1905,7 +1905,7 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            under the same extended definition, so{" "}
+            under the same extended definition, so
           </VerticalChunk>
           <Pause />
           <MathBlock>
@@ -2028,7 +2028,6 @@ const Rest = () => {
               {" "}by hand.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
               Since{" "}
@@ -2073,7 +2072,7 @@ const Rest = () => {
                 <Math>
                   $0.125$
                 </Math>
-                {" "}can be viewed 
+                {" "}can be viewed
                 as twelve hundredths plus{" "}
                 <Math>
                   $5$
@@ -2084,7 +2083,7 @@ const Rest = () => {
               <Image src="/images/svg_0.125_twelve_5.svg" />
               <Pause />
               <VerticalChunk>
-                Half of twelve hundredths is six hundredths, and 
+                Half of twelve hundredths is six hundredths, and
                 half of{" "}
                 <Math>
                   $5$
@@ -2128,7 +2127,6 @@ const Rest = () => {
               {" "}by hand.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
               We have
@@ -2189,7 +2187,6 @@ const Rest = () => {
               What about “万万万”?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
               “万万” is “ten thousand ten thousand”, or
@@ -2210,8 +2207,8 @@ const Rest = () => {
               <Math>
                 $10^8 = 10^2 \times 10^6$
               </Math>
-              {" "}is a hundred times a 
-              million. Similarly, “万万万” is{" "}
+              {" "}is a hundred times a
+              million. Similarly, “万万万” is
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2245,9 +2242,9 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
-              directly leads us to “hundred million” 
+              directly leads us to “hundred million”
               without having to use exponents, since ten
-              times ten is a hundred and since a thousand 
+              times ten is a hundred and since a thousand
               times a thousand is a million.
             </VerticalChunk>
             <VerticalChunk indent={true}>
@@ -2280,18 +2277,17 @@ const Rest = () => {
                 Exercise 4.
               </b>
               {" "}
-              How many millimeters in a kilometer? 
+              How many millimeters in a kilometer?
               How many kilometers in a millimeter?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
               There are{" "}
               <Math>
                 $10^3$
               </Math>
-              {" "}millimeters in a meter 
+              {" "}millimeters in a meter
               (
               <i>
                 milli
@@ -2301,7 +2297,7 @@ const Rest = () => {
                 $10^3$
               </Math>
               {" "}meters
-              in a kilometer, so there are 
+              in a kilometer, so there are
               {" "}
               <Math>
                 $10^3 \times 10^3 = 10^6$
@@ -2319,17 +2315,17 @@ const Rest = () => {
               a millimeter.
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              (Or you can run the reverse reasoning: 
+              (Or you can run the reverse reasoning:
               There are{" "}
               <Math>
                 $10^&#123;-3&#125;$
               </Math>
-              {" "}kilometers in a meter, 
+              {" "}kilometers in a meter,
               and{" "}
               <Math>
                 $10^&#123;-3&#125;$
               </Math>
-              {" "}meters in a millimeter, 
+              {" "}meters in a millimeter,
               so{" "}
               <Math>
                 $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
@@ -2353,7 +2349,6 @@ const Rest = () => {
               {" "}millimeters?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
               We have
@@ -2366,7 +2361,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              by the previous problem, so{" "}
+              by the previous problem, so
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2403,14 +2398,13 @@ const Rest = () => {
               one hundred billion $?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
               One hundred billion is{" "}
               <Math>
                 $10\%$
               </Math>
-              {" "}of one trillion [cf.: 
+              {" "}of one trillion [cf.:
               {" "}
               <NoBreak>
                 <Math>
@@ -2462,7 +2456,6 @@ const Rest = () => {
               {" "}of one trillion?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
               <NoBreak>
@@ -2501,7 +2494,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
               <NoBreak>
@@ -2538,10 +2530,9 @@ const Rest = () => {
               ?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
-              Since{" "}
+              Since
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2580,11 +2571,10 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; 
+              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125;
               $$
             </MathBlock>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
               We have
@@ -2645,7 +2635,6 @@ const Rest = () => {
               ?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
               Presumably, there are{" "}
@@ -2655,7 +2644,7 @@ const Rest = () => {
               {" "}“millibits”
               (whatever those are, we can go along with
               the joke here) in one bit. Since there are
-              eight bits in a byte, and a million bytes 
+              eight bits in a byte, and a million bytes
               in a gigabyte, this means that there would
               be
             </VerticalChunk>
@@ -2672,12 +2661,12 @@ const Rest = () => {
                 $8$
               </Math>
               {" "}billion “millibits” per gigabyte.
-              (But to reiterate, there is no such thing 
+              (But to reiterate, there is no such thing
               as a “millibit”; a bit is a{" "}
               <i>
                 discrete
               </i>
-              —i.e., 
+              —i.e.,
               indivisible—unit of computer memory.)
             </VerticalChunk>
           </Solution>
@@ -2689,7 +2678,7 @@ const Rest = () => {
                 Exercise 12.
               </b>
               {" "}
-              It so happens that{" "}
+              It so happens that
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2714,7 +2703,7 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "}(You can 
+              {" "}(You can
               verify that
             </VerticalChunk>
             <Pause />
@@ -2747,7 +2736,6 @@ const Rest = () => {
               by using some kind of algebra?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
               One has
@@ -2801,17 +2789,16 @@ const Rest = () => {
               </NoBreak>
               {" "}(You can
               take for granted any identity that is stated
-              in this{" "}
+              in this
               <del>
                 chapter
               </del>
               &ensp;bootcamp.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
-              Here is the “proof” that your professor is 
+              Here is the “proof” that your professor is
               hoping for:
             </VerticalChunk>
             <Pause />
@@ -2838,9 +2825,9 @@ const Rest = () => {
                 Notes.
               </i>
               {" "}
-              The identity proved in this exercise, 
-              when generalized to any base, 
-              is one of the “laws of exponents”, whose complete list 
+              The identity proved in this exercise,
+              when generalized to any base,
+              is one of the “laws of exponents”, whose complete list
               (even more-than-complete, other sources list fewer laws)
               is as follows (minus fine print):
             </VerticalChunk>
@@ -2849,7 +2836,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               The first law can be recognized as “additivity of exponents”
-              while the second law 
+              while the second law
               is the above-mentioned generalization of this exercise's result.
               (Nb: Concerning the next-to-last law, note that,{" "}
               <i>
@@ -2860,7 +2847,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \left(&#123;a\over b&#125;\right)^&#123;\!-1&#125; = &#123;1 \over \left( &#123;a \over b&#125;\right)&#125; 
+              \Large \left(&#123;a\over b&#125;\right)^&#123;\!-1&#125; = &#123;1 \over \left( &#123;a \over b&#125;\right)&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2893,7 +2880,7 @@ const Rest = () => {
                 Exercise 14.
               </b>
               {" "}
-              Rewrite each of these expressions...{" "}
+              Rewrite each of these expressions...
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2910,7 +2897,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right) 
+              \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right)
               $$
             </MathBlock>
             <Pause />
@@ -2948,7 +2935,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
               We have (#1)
@@ -3119,7 +3105,6 @@ const Rest = () => {
               $$
             </MathBlock>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={15}>
             <VerticalChunk>
               Firstly we can rewrite{" "}
@@ -3286,7 +3271,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              and so on.) This expression equals{" "}
+              and so on.) This expression equals
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -3361,8 +3346,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...are satisfied! Adding the second and 
-              third equation together, we find{" "}
+              ...are satisfied! Adding the second and
+              third equation together, we find
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -3378,7 +3363,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               and adding this last equation to the first
-              equation above, we find{" "}
+              equation above, we find
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -3448,7 +3433,7 @@ const Rest = () => {
                 $c = -2$
               </Math>
               {" "}in our second equation above
-              gives us{" "}
+              gives us
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -3470,7 +3455,7 @@ const Rest = () => {
                 .
               </NoBreak>
               {" "}
-              (One can finally check that 
+              (One can finally check that
               setting{" "}
               <NoBreak>
                 <Math>
@@ -3520,7 +3505,7 @@ const Rest = () => {
                 </Math>
                 ;
               </NoBreak>
-              {" "}we have discovered that{" "}
+              {" "}we have discovered that
             </VerticalChunk>
             <Pause />
             <MathBlock>

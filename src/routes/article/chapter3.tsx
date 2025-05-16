@@ -94,7 +94,7 @@ const Article = () => {
               </Math>
               ”,
             </NoBreak>
-            {" "}and that's 
+            {" "}and that's
             important) for the result of passing an input
             {" "}
             <Math>
@@ -276,7 +276,7 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           is not a type of function, but a type of
-          notation  that enables one to define a function 
+          notation  that enables one to define a function
           without giving it a name, such as{" "}
           <NoBreak>
             “
@@ -285,8 +285,8 @@ const Rest = () => {
             </Math>
             ”.
           </NoBreak>
-          {" "}In fact 
-          there are two different mainstream notations, in 
+          {" "}In fact
+          there are two different mainstream notations, in
           this instance. One notation writes
         </VerticalChunk>
         <Pause />
@@ -323,8 +323,8 @@ const Rest = () => {
           <i>
             the same
           </i>
-          {" "}function, because 
-          it specifies the same in-out mapping—a thing 
+          {" "}function, because
+          it specifies the same in-out mapping—a thing
           goes to its square—also by the way, the symbol
         </VerticalChunk>
         <Pause />
@@ -335,7 +335,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          is the Greek letter “lambda”, giving its name 
+          is the Greek letter “lambda”, giving its name
           to the topic) while the other notation writes
         </VerticalChunk>
         <Pause />
@@ -377,7 +377,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          ...the same as an equation of the form 
+          ...the same as an equation of the form
           {" "}
           <NoBreak>
             “
@@ -416,19 +416,19 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          (Etc.) (Indeed, to emphasize again, the variable 
-          denoting the input does not matter: it is just a 
-          placeholder, and you obtain the same output, and 
+          (Etc.) (Indeed, to emphasize again, the variable
+          denoting the input does not matter: it is just a
+          placeholder, and you obtain the same output, and
           the same{" "}
           <i>
             function
           </i>
-          , no matter what symbol 
+          , no matter what symbol
           you choose.
           <b>
             ) (\
           </b>
-          As long as you don't collide 
+          As long as you don't collide
           with other existing variable names.)
         </VerticalChunk>
       </Section>
@@ -439,7 +439,7 @@ const Rest = () => {
             Definition by cases.
           </b>
           {" "}
-          Sometimes a function is defined by an expression 
+          Sometimes a function is defined by an expression
           of the form
         </VerticalChunk>
         <Pause />
@@ -455,8 +455,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          where the right-hand side is a list of mutually 
-          exclusive cases to consider according to the 
+          where the right-hand side is a list of mutually
+          exclusive cases to consider according to the
           value of{" "}
           <NoBreak>
             <Math>
@@ -502,7 +502,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125; 
+            \te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125;
             3.5 & \te&#123;if $x = 0$&#125;,\\
             2.5\up&#123;1.1&#125; & \te&#123;if $x = 1$&#125;,\\
             \te&#123;undefined&#125;\up&#123;1.1&#125; & \te&#123;if $x \ne 0, 1$&#125;
@@ -531,7 +531,7 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            aaand... and these are the only two values of 
+            aaand... and these are the only two values of
             {" "}
             <Math>
               $x$
@@ -543,7 +543,7 @@ const Rest = () => {
                 $(x)$
               </Math>
             </NoBreak>
-            {" "}is defined, as 
+            {" "}is defined, as
             specified.
           </VerticalChunk>
         </Example>
@@ -555,20 +555,20 @@ const Rest = () => {
             On arbitrariness.
           </b>
           {" "}
-          While a function such as VX-11/78A might seem 
-          completely arbitrary, one lesson from the former 
+          While a function such as VX-11/78A might seem
+          completely arbitrary, one lesson from the former
           example is that functions{" "}
           <i>
             can
           </i>
-          {" "}be 
-          completely arbitrary! In fact, there are only 
-          two “ground rules” to respect in order for 
+          {" "}be
+          completely arbitrary! In fact, there are only
+          two “ground rules” to respect in order for
           something to qualify as a function:{" "}
           <b>
             (i)
           </b>
-          {" "}to 
+          {" "}to
           output
         </VerticalChunk>
         <Pause />
@@ -581,7 +581,7 @@ const Rest = () => {
           <b>
             (ii)
           </b>
-          {" "}to return 
+          {" "}to return
           the
         </VerticalChunk>
         <Pause />
@@ -630,8 +630,8 @@ const Rest = () => {
             </Math>
             -coordinate
           </NoBreak>
-          {" "}of 
-          the point is the value of the input, while the 
+          {" "}of
+          the point is the value of the input, while the
           {" "}
           <NoBreak>
             <Math>
@@ -639,7 +639,7 @@ const Rest = () => {
             </Math>
             -coordinate
           </NoBreak>
-          {" "}is the value of the corresponding 
+          {" "}is the value of the corresponding
           output.
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -649,7 +649,7 @@ const Rest = () => {
         <Image src="/images/svg_ch3_vx1178A.svg" />
         <Pause />
         <VerticalChunk>
-          The graph has only two points, because VX-78/11A 
+          The graph has only two points, because VX-78/11A
           is defined at only two values. One point is...
         </VerticalChunk>
         <Pause />
@@ -667,7 +667,7 @@ const Rest = () => {
           <Math>
             $0$
           </Math>
-          {" "}to 
+          {" "}to
           {" "}
           <NoBreak>
             <Math>
@@ -720,7 +720,7 @@ const Rest = () => {
             <Math>
               $x = -1$
             </Math>
-            {" "}to 
+            {" "}to
             {" "}
             <NoBreak>
               <Math>
@@ -733,8 +733,8 @@ const Rest = () => {
           <Image src="/images/svg_ch3_ch_x_squared_1.svg" />
           <Pause />
           <VerticalChunk>
-            Among all the points on this graph that we 
-            could discuss, let us name, say, the point 
+            Among all the points on this graph that we
+            could discuss, let us name, say, the point
             {" "}
             <NoBreak>
               <Math>
@@ -747,12 +747,12 @@ const Rest = () => {
           <Image src="/images/svg_ch3_ch_x_squared_2.svg" />
           <Pause />
           <VerticalChunk>
-            ...which finds itself on the graph, namely, 
+            ...which finds itself on the graph, namely,
             because the square of{" "}
             <Math>
               $0.75$
             </Math>
-            {" "}is 
+            {" "}is
             {" "}
             <NoBreak>
               <Math>
@@ -836,8 +836,6 @@ const Rest = () => {
               </Math>
               ,
             </NoBreak>
-            {" "}
-            {" "}
             <NoBreak>
               <Math>
                 $1$
@@ -853,14 +851,14 @@ const Rest = () => {
               Example 4.
             </b>
             {" "}
-            If DM-1700 (another weirdly named function) is 
+            If DM-1700 (another weirdly named function) is
             defined by
           </VerticalChunk>
           <Pause />
           <MathBlock>
             $$
-            \te&#123;DM-1700&#125;(x) = 
-            \begin&#123;cases&#125; 
+            \te&#123;DM-1700&#125;(x) =
+            \begin&#123;cases&#125;
             0             & \te&#123;if $x \leq 0$ or $x \geq 1$&#125;,\\
             1 - x\up&#123;1.1&#125; & \te&#123;if $0 &lt; x &lt; 1$&#125;
             \end&#123;cases&#125;
@@ -903,8 +901,8 @@ const Rest = () => {
             <Math>
               $g : \rr \ra \rr$
             </Math>
-            {" "}(we are going to explain 
-            this notation imminently) is the function given 
+            {" "}(we are going to explain
+            this notation imminently) is the function given
             by
           </VerticalChunk>
           <Pause />
@@ -927,7 +925,7 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <VerticalChunk>
-            because the square root of a number is defined 
+            because the square root of a number is defined
             if and only if that number is{" "}
             <i>
               nonnegative
@@ -1004,7 +1002,7 @@ const Rest = () => {
             <Math>
               $f$
             </Math>
-            {" "}is a subset of 
+            {" "}is a subset of
             the set of real numbers
           </i>
           ] and that
@@ -1060,7 +1058,7 @@ const Rest = () => {
             </Math>
             )
           </NoBreak>
-          {" "}and 
+          {" "}and
           that
         </VerticalChunk>
         <Pause />
@@ -1093,7 +1091,7 @@ const Rest = () => {
             The Vertical Line Test.
           </b>
           {" "}
-          As it turns out, the term “graph” just means 
+          As it turns out, the term “graph” just means
           “set of points in the plane”. So a
         </VerticalChunk>
         <Pause />
@@ -1102,9 +1100,9 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          (as described above) is just one particular 
-          kind of “graph” among other things that are 
-          also called “graphs”, but that are not 
+          (as described above) is just one particular
+          kind of “graph” among other things that are
+          also called “graphs”, but that are not
           function graphs.
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -1125,10 +1123,10 @@ const Rest = () => {
           </NoBreak>
           {" "}{" "}
           <i>
-            set of points 
+            set of points
             in the plane
           </i>
-          ] is a function graph if and 
+          ] is a function graph if and
           only if every{" "}
           <NoBreak>
             <Math>
@@ -1136,7 +1134,7 @@ const Rest = () => {
             </Math>
             -value
           </NoBreak>
-          {" "}(a.k.a., input) 
+          {" "}(a.k.a., input)
           corresponds to at most one{" "}
           <NoBreak>
             <Math>
@@ -1144,8 +1142,8 @@ const Rest = () => {
             </Math>
             -value
           </NoBreak>
-          {" "}(a.k.a., 
-          output). In other words, every vertical line 
+          {" "}(a.k.a.,
+          output). In other words, every vertical line
           should intersect the graph at most once.
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -1156,8 +1154,8 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           is a function graph (or locally at least, from
-          what we can see), because every vertical line 
-          intersects the graph at most once, but this 
+          what we can see), because every vertical line
+          intersects the graph at most once, but this
           graph...
         </VerticalChunk>
         <Pause />
@@ -1168,13 +1166,13 @@ const Rest = () => {
         </Image>
         <Pause />
         <VerticalChunk>
-          ...is not the graph of any function, because 
-          some vertical lines intersect the graph more 
+          ...is not the graph of any function, because
+          some vertical lines intersect the graph more
           than once.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          (Oops. To backtrack and quickly clarify a small 
-          matter, an empty circle at the end of a segment, 
+          (Oops. To backtrack and quickly clarify a small
+          matter, an empty circle at the end of a segment,
           in the vein of the previous figure...
         </VerticalChunk>
         <Pause />
@@ -1188,7 +1186,7 @@ const Rest = () => {
             excluded
           </i>
           {" "}
-          from the graph. A filled circle, by opposition, 
+          from the graph. A filled circle, by opposition,
           means that the point is included!)
         </VerticalChunk>
         <Pause />
@@ -1208,7 +1206,7 @@ const Rest = () => {
           <Image src="/images/svg_ch3_ch_upper_semicircle.svg" />
           <Pause />
           <VerticalChunk>
-            ...passes the vertical line test, and, hence, 
+            ...passes the vertical line test, and, hence,
             defines a function.
           </VerticalChunk>
         </Example>
@@ -1225,7 +1223,7 @@ const Rest = () => {
           <Image src="/images/svg_ch3_ch_factory_function.svg" />
           <Pause />
           <VerticalChunk>
-            ...because it passes the vertical line test, 
+            ...because it passes the vertical line test,
             while this graph does not define a function...
           </VerticalChunk>
           <Pause />
@@ -1236,7 +1234,7 @@ const Rest = () => {
             <i>
               not
             </i>
-            {" "}pass the vertical 
+            {" "}pass the vertical
             line test!
           </VerticalChunk>
         </Example>
@@ -1253,13 +1251,13 @@ const Rest = () => {
           <i>
             discontinuities
           </i>
-          : a place where the function 
+          : a place where the function
           experiences a sudden “jump” in value.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          For a famous example of a “naturally” occurring 
-          discontinuity (that we feel compelled to 
-          mention, for some reason) we need look no 
+          For a famous example of a “naturally” occurring
+          discontinuity (that we feel compelled to
+          mention, for some reason) we need look no
           further than the function
         </VerticalChunk>
         <Pause />
@@ -1275,7 +1273,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          0^x = 
+          0^x =
           \begin&#123;cases&#125; 0 & \te&#123;if &#125; x &gt; 0\\
           1 & \te&#123;if &#125; x = 0\\
           \te&#123;undefined&#125; & \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;
@@ -1369,7 +1367,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}to make it 
+          {" "}to make it
           well-defined at all.) Likewise, if{" "}
           <NoBreak>
             <Math>
@@ -1422,7 +1420,7 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}in front 
+          {" "}in front
           of{" "}
           <NoBreak>
             “
@@ -1439,7 +1437,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          and which is namely the function whose rule is: 
+          and which is namely the function whose rule is:
           apply{" "}
           <NoBreak>
             <Math>
@@ -1461,7 +1459,7 @@ const Rest = () => {
           <i>
             an equality between functions
           </i>
-          . 
+          .
           (You cannot use this equality to
         </VerticalChunk>
         <Pause />
@@ -1473,9 +1471,9 @@ const Rest = () => {
           <Math>
             $f$
           </Math>
-          {" "}because that would lead to a circular 
-          definition. But that doesn't make the equality 
-          any less true. And btw, you can go “one layer 
+          {" "}because that would lead to a circular
+          definition. But that doesn't make the equality
+          any less true. And btw, you can go “one layer
           deeper”:
         </VerticalChunk>
         <Pause />
@@ -1491,7 +1489,7 @@ const Rest = () => {
             $f = (t \ra f(t))$
           </Math>
           {" "}
-          in the second equality. You could keep going, 
+          in the second equality. You could keep going,
           replacing each time{" "}
           <NoBreak>
             “
@@ -1500,8 +1498,8 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}by a self-referential 
-          expression, but the process is not intrinsically 
+          {" "}by a self-referential
+          expression, but the process is not intrinsically
           useful.)
         </VerticalChunk>
       </Section>
@@ -1541,10 +1539,10 @@ const Rest = () => {
           <i>
             value
           </i>
-          {" "}(not a function) and the way 
-          logicians think of it, philosophically speaking, 
-          is like so: at inception, every symbol has 
-          some default value attached, absent any other 
+          {" "}(not a function) and the way
+          logicians think of it, philosophically speaking,
+          is like so: at inception, every symbol has
+          some default value attached, absent any other
           context.
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -1566,7 +1564,7 @@ const Rest = () => {
           <i>
             value
           </i>
-          . 
+          .
           So{" "}
           <NoBreak>
             “
@@ -1583,13 +1581,13 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}are very (VERY) 
+          {" "}are very (VERY)
           different, qualitatively speaking.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          But including the arrow everywhere is 
+          But including the arrow everywhere is
           impractical and even pedantic, so, in the end,
-          you might see us refer to an expression such as, 
+          you might see us refer to an expression such as,
           e.g.,
         </VerticalChunk>
         <Pause />
@@ -1638,7 +1636,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          are arbitrary constants, also known as the 
+          are arbitrary constants, also known as the
           {" "}
           <i>
             coefficients
@@ -1664,7 +1662,7 @@ const Rest = () => {
           </NoBreak>
           {" "}
           (Otherwise, work your way down until you find
-          a nonzero coefficient—if there are none, because 
+          a nonzero coefficient—if there are none, because
           the polynomial is just the constant{" "}
           <NoBreak>
             <Math>
@@ -1672,12 +1670,12 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}then 
+          {" "}then
           the degree is{" "}
           <i>
             minus infinity
           </i>
-          .) (We're not 
+          .) (We're not
           kidding.)
         </VerticalChunk>
         <VerticalChunk indent={true}>
@@ -1714,8 +1712,8 @@ const Rest = () => {
           is a polynomial of degree 100.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          Polynomials of low degree have their own 
-          special names, as inventoried in the following 
+          Polynomials of low degree have their own
+          special names, as inventoried in the following
           table:
         </VerticalChunk>
         <Pause />
@@ -1751,7 +1749,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
-          is sometimes substituted. But if we say 
+          is sometimes substituted. But if we say
           “linear” we mean a function of the form
         </VerticalChunk>
         <Pause />
@@ -1769,7 +1767,7 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}This is more 
+          {" "}This is more
           restricted than an affine function, because
           there is no constant{" "}
           <NoBreak>
@@ -1811,7 +1809,7 @@ const Rest = () => {
           <i>
             quadratic
           </i>
-          , 
+          ,
           {" "}
           <i>
             linear
@@ -1820,7 +1818,7 @@ const Rest = () => {
           <i>
             constant
           </i>
-          {" "}terms of the 
+          {" "}terms of the
           polynomial, respectively. If you see
         </VerticalChunk>
         <Pause />
@@ -1841,7 +1839,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}not 
+          {" "}not
           {" "}
           <NoBreak>
             <Math>
@@ -1928,11 +1926,10 @@ const Rest = () => {
                 Exercise 1.
               </b>
               {" "}
-              How can you define the absolute value 
+              How can you define the absolute value
               function using “definition by cases”?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
               The absolute value function is
@@ -1970,11 +1967,10 @@ const Rest = () => {
                 Exercise 2.
               </b>
               {" "}
-              How can you define the absolute value 
+              How can you define the absolute value
               function using an “ordinary” algebraic formula?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
               We have
@@ -2010,8 +2006,8 @@ const Rest = () => {
                 Note 1.
               </i>
               {" "}
-              This definition is less ad-hoc than might seem, 
-              being a 1-dimensional form of the Pythagorean 
+              This definition is less ad-hoc than might seem,
+              being a 1-dimensional form of the Pythagorean
               theorem.
             </VerticalChunk>
           </Solution>
@@ -2058,7 +2054,6 @@ const Rest = () => {
               </Item>
             </Grid>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
               The answers are:
@@ -2125,7 +2120,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              is the greatest integer less than or equal 
+              is the greatest integer less than or equal
               to{" "}
               <NoBreak>
                 <Math>
@@ -2137,13 +2132,13 @@ const Rest = () => {
               <Math>
                 $x$
               </Math>
-              {" "}and travel left on the 
+              {" "}and travel left on the
               number line until you meet an integer; but if
               {" "}
               <Math>
                 $x$
               </Math>
-              {" "}is already an integer, stay there; the 
+              {" "}is already an integer, stay there; the
               place you land is{" "}
               <NoBreak>
                 <Math>
@@ -2177,7 +2172,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch3_ex_factory_roof_graph.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
               As{" "}
@@ -2213,7 +2207,7 @@ const Rest = () => {
               <Math>
                 $\floor&#123;1&#125; = 1$
               </Math>
-              {" "}because the 
+              {" "}because the
               greatest integer less than or equal to{" "}
               <Math>
                 $1$
@@ -2246,8 +2240,8 @@ const Rest = () => {
               and so on.)
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              For the second part note that the following 
-              two displacements, excerpted from the “factory 
+              For the second part note that the following
+              two displacements, excerpted from the “factory
               roof” graph in the statement, are equal:
             </VerticalChunk>
             <Pause />
@@ -2271,7 +2265,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}so the horizontal displacement is{" "}
+              {" "}so the horizontal displacement is
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2281,7 +2275,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              so the equation of the graph is{" "}
+              so the equation of the graph is
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2302,8 +2296,8 @@ const Rest = () => {
               <i>
                 is
               </i>
-              {" "}the 
-              vertical displacement, given that the vertical 
+              {" "}the
+              vertical displacement, given that the vertical
               displacement starts at{" "}
               <NoBreak>
                 <Math>
@@ -2324,7 +2318,7 @@ const Rest = () => {
                 Exercise 5.
               </b>
               {" "}
-              Find the formula for a function whose graph 
+              Find the formula for a function whose graph
               looks like this, again using the floor function
               {" "}
               <NoBreak>
@@ -2339,11 +2333,10 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch3_ex_factory_roof_stretched.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
-              We would like to argue the correctness of 
-              the following two-step process (divide the 
+              We would like to argue the correctness of
+              the following two-step process (divide the
               input by{" "}
               <NoBreak>
                 <Math>
@@ -2351,7 +2344,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}apply the function from Exercise 
+              {" "}apply the function from Exercise
               4):
             </VerticalChunk>
             <Pause />
@@ -2359,14 +2352,14 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               Indeed, the two graphs featured above differ
-              only by a horizontal dilation; dividing the 
+              only by a horizontal dilation; dividing the
               input by{" "}
               <Math>
                 $2$
               </Math>
-              {" "}“undoes” the dilation, at which 
+              {" "}“undoes” the dilation, at which
               point it suffices to apply the function pictured
-              in the second graph; having declared our method 
+              in the second graph; having declared our method
               correct, the answer is thus...
             </VerticalChunk>
             <Pause />
@@ -2381,7 +2374,7 @@ const Rest = () => {
               <Math>
                 $x/2$
               </Math>
-              {" "}(the halved 
+              {" "}(the halved
               input) in place of{" "}
               <NoBreak>
                 “
@@ -2437,7 +2430,7 @@ const Rest = () => {
               src="/images/png_ch3_desmos_composition_2_b.png" />
             <Pause />
             <VerticalChunk>
-              What you see above (the graph in orange) is 
+              What you see above (the graph in orange) is
               the so-called
             </VerticalChunk>
             <Pause />
@@ -2446,7 +2439,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
-              of the functions 
+              of the functions
               {" "}
               <Math>
                 $\f$
@@ -2458,7 +2451,7 @@ const Rest = () => {
                 </Math>
                 ;
               </NoBreak>
-              {" "}in more detail, if we switch the 
+              {" "}in more detail, if we switch the
               “input tube” and “output tube” sides of a function...
             </VerticalChunk>
             <Pause />
@@ -2508,7 +2501,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
-              (mathematicians have to invent a notation for 
+              (mathematicians have to invent a notation for
               everything—that little circle{" "}
               <NoBreak>
                 “
@@ -2517,7 +2510,7 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}is called 
+              {" "}is called
               the{" "}
               <i>
                 composition operator
@@ -2538,7 +2531,7 @@ const Rest = () => {
                 </Math>
                 's
               </NoBreak>
-              {" "}box, 
+              {" "}box,
               like so:
             </VerticalChunk>
             <Pause />
@@ -2679,7 +2672,7 @@ const Rest = () => {
                 Note 4.
               </i>
               {" "}
-              Amusingly—or not—both sides of{" "}
+              Amusingly—or not—both sides of
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2762,20 +2755,19 @@ const Rest = () => {
                 Exercise 6.
               </b>
               {" "}
-              Find formulas for functions whose graphs look 
+              Find formulas for functions whose graphs look
               like these:
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch3_ex_three_factories.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
-              For the first graph,{" "}
+              For the first graph,
               <del>
-                the{" "}
+                the
               </del>
-              an answer is{" "}
+              an answer is
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -2795,7 +2787,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              because all we have to do is to multiply 
+              because all we have to do is to multiply
               Exercise 5's formula by{" "}
               <NoBreak>
                 <Math>
@@ -2815,7 +2807,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              because the problem is similar to Exercise 5 
+              because the problem is similar to Exercise 5
               except with a factor{" "}
               <Math>
                 $3$
@@ -2823,7 +2815,7 @@ const Rest = () => {
               {" "}horizontal dilation.
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              For the third graph, we will first stop to 
+              For the third graph, we will first stop to
               find a formula  for the function depicted
               here:
             </VerticalChunk>
@@ -2871,7 +2863,7 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}in 
+              {" "}in
               {" "}
               <NoBreak>
                 “
@@ -2880,13 +2872,13 @@ const Rest = () => {
                 </Math>
                 ”,
               </NoBreak>
-              {" "}the formula for the 
+              {" "}the formula for the
               second graph. Then we multiply that by{" "}
               <Math>
                 $3$
               </Math>
               {" "}
-              (to go from{" "}
+              (to go from
               <NoBreak>
                 “
                 <InlineImage
@@ -2894,7 +2886,7 @@ const Rest = () => {
                   src="/images/svg_ch3_3_3_grid_1.svg" />
                 ”
               </NoBreak>
-              &ensp;to{" "}
+              &ensp;to
               <NoBreak>
                 “
                 <InlineImage
@@ -2916,7 +2908,7 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$   
+              $$
               (x - 1) - 3\fl&#123;(x-1)/3&#125;
               $$
             </MathBlock>
@@ -2932,7 +2924,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              though we personally prefer the previous 
+              though we personally prefer the previous
               form, it being more “talkative”.)
             </VerticalChunk>
           </Solution>
@@ -2978,7 +2970,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              ...have a graph that looks like a bunch of very tight 
+              ...have a graph that looks like a bunch of very tight
               bumps, or, instead, very flat{" "}
               <i>
                 &
@@ -2986,7 +2978,6 @@ const Rest = () => {
               {" "}spaced-out bumps??
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
               Consider how to “read off” a value of{" "}
@@ -3058,12 +3049,12 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}so that 
+              {" "}so that
               {" "}
               <Math>
                 $\cos(1000x)$
               </Math>
-              {" "}must “cycle” much faster through 
+              {" "}must “cycle” much faster through
               values than{" "}
               <Math>
                 $\cos(x)$
@@ -3097,8 +3088,8 @@ const Rest = () => {
                 </Math>
                 ”,
               </NoBreak>
-              {" "}using only the 
-              “definitional equation of function 
+              {" "}using only the
+              “definitional equation of function
               composition”, which is namely
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
@@ -3118,12 +3109,12 @@ const Rest = () => {
                 $s$
               </Math>
               {" "}are functions); plz
-              note that you will have to apply (AA) 
+              note that you will have to apply (AA)
               {" "}
               <i>
                 twice
               </i>
-              , as each application of (AA) 
+              , as each application of (AA)
               makes{" "}
               <i>
                 one
@@ -3141,7 +3132,7 @@ const Rest = () => {
               <i>
                 two
               </i>
-              {" "}copies of 
+              {" "}copies of
               {" "}
               <NoBreak>
                 “
@@ -3152,7 +3143,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
               Setting{" "}
@@ -3241,7 +3231,7 @@ const Rest = () => {
                 Note 1.
               </i>
               {" "}
-              We can collect both steps of the computation 
+              We can collect both steps of the computation
               into a single string of equalities:
             </VerticalChunk>
             <Pause />
@@ -3255,7 +3245,7 @@ const Rest = () => {
                 Exercise 9.
               </b>
               {" "}
-              Same question as Exercise 17, but for 
+              Same question as Exercise 17, but for
               {" "}
               <NoBreak>
                 “
@@ -3264,7 +3254,7 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}instead of 
+              {" "}instead of
               {" "}
               <NoBreak>
                 “
@@ -3275,14 +3265,13 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
               We will again evaluate the “outer”
               composition operator first and the “inner”
               composition operator second, where the “outer”
               composition operator is the one that is fewer
-              pairs of parentheses away from the outside 
+              pairs of parentheses away from the outside
               world:
             </VerticalChunk>
             <Pause />
@@ -3419,7 +3408,7 @@ const Rest = () => {
               <Math>
                 $f(g(h(x)))$
               </Math>
-              {" "}for 
+              {" "}for
               all{" "}
               <Math>
                 $x$
@@ -3453,7 +3442,7 @@ const Rest = () => {
             </div>
             <VerticalChunk>
               without any parentheses. (The point is: either
-              way you parenthesize it you obtain the same 
+              way you parenthesize it you obtain the same
               function, so why bother?)
             </VerticalChunk>
             <Pause />
@@ -3563,7 +3552,7 @@ const Rest = () => {
               <Math>
                 $h$
               </Math>
-              {" "}is known 
+              {" "}is known
               as the
             </VerticalChunk>
             <Pause />
@@ -3586,7 +3575,7 @@ const Rest = () => {
                 &
               </i>
               {" "}understand
-              the associativity of function composition 
+              the associativity of function composition
               uses this picture:
             </VerticalChunk>
             <Pause />
@@ -3618,7 +3607,7 @@ const Rest = () => {
               <Math>
                 $D$
               </Math>
-              {" "}are sets 
+              {" "}are sets
               while the arrows encode functions{" "}
               <NoBreak>
                 <Math>
@@ -3635,7 +3624,7 @@ const Rest = () => {
               <Math>
                 $h$
               </Math>
-              {" "}that, respectively in reverse order, 
+              {" "}that, respectively in reverse order,
               go from{" "}
               <Math>
                 $D$
@@ -3704,7 +3693,7 @@ const Rest = () => {
               <Math>
                 $D$
               </Math>
-              {" "}lands at{" "}
+              {" "}lands at
               <InlineImage
                 space_right={true}
                 space_left={true}
@@ -3741,7 +3730,7 @@ const Rest = () => {
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
-              because, pursuing that path onwards, the arrow 
+              because, pursuing that path onwards, the arrow
               that originates at
               <InlineImage
                 space_right={true}
@@ -3780,7 +3769,7 @@ const Rest = () => {
               <Math>
                 $C$
               </Math>
-              {" "}in the middle 
+              {" "}in the middle
               right, then do the same with set{" "}
               <Math>
                 $B$
@@ -3820,7 +3809,7 @@ const Rest = () => {
                 ”
               </NoBreak>
               {" "}
-              while the second corresponds to the 
+              while the second corresponds to the
               parenthetization{" "}
               <NoBreak>
                 “
@@ -3830,14 +3819,14 @@ const Rest = () => {
                 ”.
               </NoBreak>
               {" "}
-              Intuitively, the reason they come out the 
-              same (in “step 6”, bottom left) is because 
-              each final arrow in the last diagram comes 
-              from a path-of-arrows in the original 
-              diagram, and the order in which the 
-              waypoints along a path are “straightened” 
-              (or “collapsed”) does not affect the origin 
-              point or destination point of the final 
+              Intuitively, the reason they come out the
+              same (in “step 6”, bottom left) is because
+              each final arrow in the last diagram comes
+              from a path-of-arrows in the original
+              diagram, and the order in which the
+              waypoints along a path are “straightened”
+              (or “collapsed”) does not affect the origin
+              point or destination point of the final
               arrow.
             </VerticalChunk>
             <Pause />
@@ -3846,20 +3835,20 @@ const Rest = () => {
                 Note 5.
               </i>
               {" "}
-              The last series of diagrams might leave one 
-              with the impression that the composition of 
+              The last series of diagrams might leave one
+              with the impression that the composition of
               two or more functions can be “precomputed”
-              by looking ahead along the path of yellow arrows. 
-              Just so you know, computers do not generically 
-              do this. For reason, computers are not given 
-              functions as tables of input-output values to 
-              know by heart but rather as “recipes” (synonyms: 
-              algorithms, code, programs) that allow them 
-              to compute an output for any given input. 
-              Moreover, there is no general way of flattening 
-              two recipes into a single, shorter one—when 
-              composing two functions the computer has, in 
-              general, no choice but to diligently apply 
+              by looking ahead along the path of yellow arrows.
+              Just so you know, computers do not generically
+              do this. For reason, computers are not given
+              functions as tables of input-output values to
+              know by heart but rather as “recipes” (synonyms:
+              algorithms, code, programs) that allow them
+              to compute an output for any given input.
+              Moreover, there is no general way of flattening
+              two recipes into a single, shorter one—when
+              composing two functions the computer has, in
+              general, no choice but to diligently apply
               each recipe in order—the first function first,
               the second function second.
             </VerticalChunk>
@@ -3869,7 +3858,7 @@ const Rest = () => {
                 Note 6.
               </i>
               {" "}
-              We have taken for granted the fact that two 
+              We have taken for granted the fact that two
               functions{" "}
               <Math>
                 $f$
@@ -3879,11 +3868,11 @@ const Rest = () => {
                 $g$
               </Math>
               {" "}are “equal” if and only
-              if they produce the same outupt for every 
-              input but this is a actually subtle thing 
-              that has to do with how functions are defined 
-              “under the hood”. Specifically, mathematicians 
-              view functions as{" "}
+              if they produce the same outupt for every
+              input but this is a actually subtle thing
+              that has to do with how functions are defined
+              “under the hood”. Specifically, mathematicians
+              view functions as
               <del>
                 long
               </del>
@@ -3910,7 +3899,7 @@ const Rest = () => {
               <Math>
                 $3.5$
               </Math>
-              {" "}and maps 
+              {" "}and maps
               {" "}
               <Math>
                 $1$
@@ -3943,8 +3932,8 @@ const Rest = () => {
                 </Math>
                 .)
               </NoBreak>
-              {" "}So 
-              two functions are equal if and only if they 
+              {" "}So
+              two functions are equal if and only if they
               are equal
             </VerticalChunk>
             <Pause />
@@ -3960,11 +3949,11 @@ const Rest = () => {
               function, that might cause two functions to
               be considered unequal even if they produce the
               same output on every input—producing the same
-              output on every input implies that the{" "}
+              output on every input implies that the
               <del>
                 list of
               </del>
-              &ensp;set of ordered pairs is equal, and, perforce, 
+              &ensp;set of ordered pairs is equal, and, perforce,
               that the two functions are equal!!
             </VerticalChunk>
           </Solution>
@@ -3986,7 +3975,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              can be written in the form{" "}
+              can be written in the form
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4014,7 +4003,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
               The answer is
@@ -4070,7 +4058,6 @@ const Rest = () => {
               variables.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
               Put an unknown{" "}
@@ -4090,7 +4077,7 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}for the 
+              {" "}for the
               second set of dots. Then
             </VerticalChunk>
             <Pause />
@@ -4112,7 +4099,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              In order for this equation to hold as an 
+              In order for this equation to hold as an
               equality between polynomials (i.e., for all
               {" "}
               <NoBreak>
@@ -4125,15 +4112,15 @@ const Rest = () => {
               <Math>
                 $x^2$
               </Math>
-              {" "}on both 
-              sides of the equation must be equal, the 
+              {" "}on both
+              sides of the equation must be equal, the
               coefficients of{" "}
               <Math>
                 $x$
               </Math>
               {" "}on both sides of the
               equation must be equal, and the constant
-              terms on boths of the equation must be 
+              terms on boths of the equation must be
               equal—this gives us
             </VerticalChunk>
             <Pause />
@@ -4168,7 +4155,7 @@ const Rest = () => {
                 </Math>
                 ),
               </NoBreak>
-              {" "}and{" "}
+              {" "}and
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4209,7 +4196,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}and 
+              {" "}and
               {" "}
               <NoBreak>
                 <Math>
@@ -4257,7 +4244,7 @@ const Rest = () => {
                 $V$
               </Math>
               {" "}that
-              satisfies{" "}
+              satisfies
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4309,7 +4296,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
               The equation is equivalent to
@@ -4345,7 +4331,7 @@ const Rest = () => {
                 Exercise 13.
               </b>
               {" "}
-              Show that{" "}
+              Show that
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4364,7 +4350,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
               The equation can be written
@@ -4436,7 +4421,7 @@ const Rest = () => {
               </b>
               {" "}
               What sequence of geometric transformations
-              (rotations, translations, scalings, etc) 
+              (rotations, translations, scalings, etc)
               maps the curve
             </VerticalChunk>
             <Pause />
@@ -4477,7 +4462,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
               Write
@@ -4623,7 +4607,7 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "}The second step 
+              {" "}The second step
               effects a
             </VerticalChunk>
             <Pause />
@@ -4643,7 +4627,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}because we add 
+              {" "}because we add
               {" "}
               <Math>
                 $-&#123;B^2 \over 4A^2&#125;$
@@ -4665,7 +4649,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
-              step, in that we mess with the input (i.e., 
+              step, in that we mess with the input (i.e.,
               {" "}
               <NoBreak>
                 <Math>
@@ -4673,7 +4657,7 @@ const Rest = () => {
                 </Math>
                 ),
               </NoBreak>
-              {" "}instead of adding on (or “multiplying 
+              {" "}instead of adding on (or “multiplying
               on”) to the current value of{" "}
               <NoBreak>
                 <Math>
@@ -4683,7 +4667,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              To understand how a preprocessing step 
+              To understand how a preprocessing step
               affects the shape of a graph, note that, more
               generally, a graph of the form
             </VerticalChunk>
@@ -4722,7 +4706,7 @@ const Rest = () => {
                 $a$
               </Math>
               {" "}
-              is, thus, the further{" "}
+              is, thus, the further
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4758,7 +4742,7 @@ const Rest = () => {
               <Math>
                 $20$
               </Math>
-              {" "}with something larger, that position (i.e., 
+              {" "}with something larger, that position (i.e.,
               {" "}
               <NoBreak>
                 <Math>
@@ -4818,7 +4802,7 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               more elegantly put. (The second formulation
-              doesn't assume a particular orientation of the 
+              doesn't assume a particular orientation of the
               {" "}
               <NoBreak>
                 <Math>
@@ -4863,7 +4847,7 @@ const Rest = () => {
               You could do the vertical translation
               before the horizontal translation,
               geometrically it comes out the same.
-              That order of geometric transformations 
+              That order of geometric transformations
               would correspond to the following sequence
               of algebraic transformations:
             </VerticalChunk>
@@ -4915,8 +4899,8 @@ const Rest = () => {
               <i>
                 second
               </i>
-              {" "}step is a 
-              preprocessing step. (I.e., a step that 
+              {" "}step is a
+              preprocessing step. (I.e., a step that
               replaces{" "}
               <NoBreak>
                 “
@@ -4947,7 +4931,7 @@ const Rest = () => {
               <Math>
                 $y_0 \in \rr$
               </Math>
-              {" "}and 
+              {" "}and
               {" "}
               <Math>
                 $a \in \rr$
@@ -4996,7 +4980,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}what are the 
+              {" "}what are the
               roots of the final curve that you obtain?
               (Nb:{" "}
               <i>
@@ -5006,7 +4990,7 @@ const Rest = () => {
               <Math>
                 $x$
               </Math>
-              {" "}such 
+              {" "}such
               that{" "}
               <NoBreak>
                 <Math>
@@ -5016,10 +5000,9 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={15}>
             <VerticalChunk>
-              Start by noting that the point 
+              Start by noting that the point
               {" "}
               <Math>
                 $(\sqrt&#123;y_0&#125;, y_0)$
@@ -5050,7 +5033,7 @@ const Rest = () => {
                 $y_0;$
               </Math>
               {" "}
-              here is a sketch of the situation before 
+              here is a sketch of the situation before
               anything happens:
             </VerticalChunk>
             <Pause />
@@ -5097,8 +5080,8 @@ const Rest = () => {
               src="/images/svg_ch3_ex_x0_y0_step2.svg" />
             <Pause />
             <VerticalChunk>
-              Lastly, vertical scaling does not affect 
-              the position of the roots, because it 
+              Lastly, vertical scaling does not affect
+              the position of the roots, because it
               stretches the graph{" "}
               <i>
                 about
@@ -5146,7 +5129,7 @@ const Rest = () => {
               <Math>
                 $x$
               </Math>
-              {" "}such that 
+              {" "}such that
               {" "}
               <Math>
                 $Ax^2 + Bx = 0$
@@ -5162,7 +5145,7 @@ const Rest = () => {
               <Math>
                 $B$
               </Math>
-              {" "}such 
+              {" "}such
               that{" "}
               <NoBreak>
                 <Math>
@@ -5172,7 +5155,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={16}>
             <VerticalChunk>
               Well,
@@ -5194,7 +5176,7 @@ const Rest = () => {
               <i>
                 don't need
               </i>
-              {" "}the previous 
+              {" "}the previous
               exercises for one of the roots at least—actually,
             </VerticalChunk>
             <Pause />
@@ -5215,7 +5197,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              and so one of the roots is{" "}
+              and so one of the roots is
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -5323,7 +5305,7 @@ const Rest = () => {
               <i>
                 as we were asked
               </i>
-              , 
+              ,
               however, we will use the fact that{" "}
               <Math>
                 $y = Ax^2 + Bx$
@@ -5376,7 +5358,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              which looks a little different than our 
+              which looks a little different than our
               previous result of{" "}
               <Math>
                 $x = 0$
@@ -5410,7 +5392,7 @@ const Rest = () => {
               <Math>
                 $&#123;B\over 2A&#125;$
               </Math>
-              {" "}could be 
+              {" "}could be
               negative, the{" "}
               <NoBreak>
                 “
@@ -5419,7 +5401,7 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}on either side of 
+              {" "}on either side of
               the equation means that the{" "}
               <i>
                 set
@@ -5526,7 +5508,6 @@ const Rest = () => {
               </Item>
             </Grid>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={17}>
             <VerticalChunk>
               The true statements are i, iv, because
@@ -5534,7 +5515,7 @@ const Rest = () => {
               <Math>
                 $f \circ g$
               </Math>
-              {" "}is the function that maps an 
+              {" "}is the function that maps an
               input{" "}
               <Math>
                 $x$
@@ -5546,7 +5527,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}and symmetrically 
+              {" "}and symmetrically
               for{" "}
               <NoBreak>
                 <Math>
@@ -5572,7 +5553,7 @@ const Rest = () => {
               <Math>
                 $g$
               </Math>
-              {" "}are functions then we define 
+              {" "}are functions then we define
               (and not just us but people in general)
             </VerticalChunk>
             <Pause />
@@ -5601,7 +5582,7 @@ const Rest = () => {
                 </Math>
                 ’
               </NoBreak>
-              {" "}if you like), 
+              {" "}if you like),
               i.e., to be the function that applies{" "}
               <Math>
                 $f$
@@ -5612,7 +5593,7 @@ const Rest = () => {
                 $g$
               </Math>
               {" "}separately and then takes the sum,
-              and we define{" "}
+              and we define
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -5645,7 +5626,7 @@ const Rest = () => {
               <Math>
                 $f$
               </Math>
-              {" "}and 
+              {" "}and
               {" "}
               <Math>
                 $g$
@@ -5679,7 +5660,7 @@ const Rest = () => {
                 </Math>
                 ”,
               </NoBreak>
-              {" "}except that now we 
+              {" "}except that now we
               are defining the{" "}
               <i>
                 sum
@@ -5732,10 +5713,9 @@ const Rest = () => {
               $$(g + h) \circ f = (x \ra (g + h)(f(x)))$$
             </MathBlock>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={18}>
             <VerticalChunk>
-              The first equality is false because the 
+              The first equality is false because the
               right-hand side is actually
             </VerticalChunk>
             <Pause />
@@ -5755,7 +5735,7 @@ const Rest = () => {
               </NoBreak>
               {" "}the second equality is
               true; the third equality is true even though you
-              would expect the right-hand side to be written{" "}
+              would expect the right-hand side to be written
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -5801,7 +5781,7 @@ const Rest = () => {
                 Exercise 19.
               </b>
               {" "}
-              What sequence of geometric transformations 
+              What sequence of geometric transformations
               of length no more than 3 maps
             </VerticalChunk>
             <Pause />
@@ -5849,7 +5829,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={19}>
             <VerticalChunk>
               Write
@@ -5907,7 +5886,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              or{" "}
+              or
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -5918,8 +5897,8 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               by putting things on a common denominator.
-              (We have endeavored to keep the minus sign 
-              out front of the common denominator fraction 
+              (We have endeavored to keep the minus sign
+              out front of the common denominator fraction
               in order to maintain the most similarity with
               the term{" "}
               <NoBreak>
@@ -6036,7 +6015,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={20}>
             <VerticalChunk>
               The curve
@@ -6053,7 +6031,7 @@ const Rest = () => {
               <Math>
                 $y = x^2$
               </Math>
-              {" "}by the following sequence of 
+              {" "}by the following sequence of
               transformations (cf. Exercise 19):
             </VerticalChunk>
             <Pause />
@@ -6107,7 +6085,7 @@ const Rest = () => {
               <i>
                 upward
               </i>
-              , 
+              ,
               the curve detaches from the{" "}
               <Math>
                 $x$
@@ -6171,7 +6149,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              as one set of two values equalling another 
+              as one set of two values equalling another
               set of two values, if and only if
             </VerticalChunk>
             <Pause />
@@ -6182,7 +6160,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              or{" "}
+              or
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -6241,8 +6219,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              does not exist, alerting you to the absence 
-              of roots, if you try to use the first formula 
+              does not exist, alerting you to the absence
+              of roots, if you try to use the first formula
               we gave. Also
             </VerticalChunk>
             <Pause />
@@ -6295,7 +6273,6 @@ const Rest = () => {
               (Hint: The answer is a specific real number.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={21}>
             <VerticalChunk>
               ...in an expression such as...
@@ -6395,8 +6372,8 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               ...(in this case the result is not a number,
-              but a function—a function is a mathematical 
-              object like another, after all); in an 
+              but a function—a function is a mathematical
+              object like another, after all); in an
               expression such as...
             </VerticalChunk>
             <Pause />
@@ -6439,7 +6416,7 @@ const Rest = () => {
               <Math>
                 $8$
               </Math>
-              {" "}become respectively the 
+              {" "}become respectively the
               values to use for{" "}
               <Math>
                 $x$
@@ -6482,7 +6459,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}the 
+              {" "}the
               {" "}
               <Math>
                 $x$
