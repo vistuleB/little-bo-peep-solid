@@ -1930,7 +1930,6 @@ const Rest = () => {
               function using “definition by cases”?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
               The absolute value function is
@@ -1972,7 +1971,6 @@ const Rest = () => {
               function using an “ordinary” algebraic formula?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
               We have
@@ -2056,7 +2054,6 @@ const Rest = () => {
               </Item>
             </Grid>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
               The answers are:
@@ -2175,7 +2172,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch3_ex_factory_roof_graph.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
               As{" "}
@@ -2337,7 +2333,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch3_ex_factory_roof_stretched.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
               We would like to argue the correctness of
@@ -2766,7 +2761,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch3_ex_three_factories.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
               For the first graph,
@@ -2984,7 +2978,6 @@ const Rest = () => {
               {" "}spaced-out bumps??
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
               Consider how to “read off” a value of{" "}
@@ -3150,7 +3143,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
               Setting{" "}
@@ -3273,7 +3265,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
               We will again evaluate the “outer”
@@ -3704,7 +3695,7 @@ const Rest = () => {
               </Math>
               {" "}lands at
               <InlineImage
-                space_left={true}
+                space_right={true}
                 space_left={true}
                 y_anchor="-4px"
                 width="1.25rem"
@@ -3731,7 +3722,7 @@ const Rest = () => {
                 $\Large&#123;&#125;))&#123;&#125;=$
               </Math>
               <InlineImage
-                space_left={true}
+                space_right={true}
                 space_left={true}
                 y_anchor="-4px"
                 width="2.3rem"
@@ -4012,7 +4003,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
               The answer is
@@ -4068,7 +4058,6 @@ const Rest = () => {
               variables.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
               Put an unknown{" "}
@@ -4307,7 +4296,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
               The equation is equivalent to
@@ -4362,7 +4350,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
               The equation can be written
@@ -4475,7 +4462,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
               Write
@@ -5014,7 +5000,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={15}>
             <VerticalChunk>
               Start by noting that the point
@@ -5170,7 +5155,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={16}>
             <VerticalChunk>
               Well,
@@ -5524,7 +5508,6 @@ const Rest = () => {
               </Item>
             </Grid>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={17}>
             <VerticalChunk>
               The true statements are i, iv, because
@@ -5730,7 +5713,6 @@ const Rest = () => {
               $$(g + h) \circ f = (x \ra (g + h)(f(x)))$$
             </MathBlock>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={18}>
             <VerticalChunk>
               The first equality is false because the
@@ -5847,7 +5829,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={19}>
             <VerticalChunk>
               Write
@@ -6034,7 +6015,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={20}>
             <VerticalChunk>
               The curve
@@ -6293,7 +6273,6 @@ const Rest = () => {
               (Hint: The answer is a specific real number.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={21}>
             <VerticalChunk>
               ...in an expression such as...

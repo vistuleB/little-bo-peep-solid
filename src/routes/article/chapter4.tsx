@@ -1772,7 +1772,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_slope_one_half_see_saw.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
               That would be:
@@ -1838,7 +1837,6 @@ const Rest = () => {
               it depend on which side of 0 you are?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
               The graph of{" "}
@@ -1882,7 +1880,6 @@ const Rest = () => {
               derivative of the graph in Exercise 1.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
               The second derivative is zero wherever the
@@ -1946,7 +1943,6 @@ const Rest = () => {
               and second derivatives?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
               The units on the{" "}
@@ -2027,7 +2023,6 @@ const Rest = () => {
               $$
             </MathBlock>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
               The equation makes sense and is true.
@@ -2221,7 +2216,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_missing_units.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
               The pattern to respect is that, each time
@@ -2371,7 +2365,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_ex_position_by_time_find_the_order.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
               The graphs are already in the right order:
@@ -2499,7 +2492,6 @@ const Rest = () => {
               help!)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
               To start with, the slope of{" "}
@@ -2646,7 +2638,6 @@ const Rest = () => {
               Exercise 10.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
               Firstly, the graph of{" "}
@@ -2944,7 +2935,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
               Yes, this is the case. For a joke way
@@ -3024,7 +3014,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_narrow_and_less_narrow_bends.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
               The rate of change is the slope, which
@@ -3070,7 +3059,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_cosine_curves.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
               As it happens—and by the exact method
@@ -3726,7 +3714,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
               It is necessary and sufficient to show that
@@ -4015,7 +4002,6 @@ const Rest = () => {
               corresponding fact for numbers, namely.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
               Given an arbitrary{" "}
@@ -4258,10 +4244,9 @@ const Rest = () => {
               {" "}compute?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution
             solution_number={15}
-            id="_9723283774">
+            id="_49192837085">
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -4464,7 +4449,6 @@ const Rest = () => {
               keeping the same setup as in Exercise 34?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={16}>
             <VerticalChunk>
               It computes the dollars-per-second earnings rate
@@ -4554,7 +4538,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={17}>
             <VerticalChunk>
               At{" "}
@@ -4777,7 +4760,6 @@ const Rest = () => {
               {" "}Exercises 34-37.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={18}>
             <VerticalChunk>
               The sought-for formula is
@@ -4997,7 +4979,6 @@ const Rest = () => {
               vector describe?) Over how much time?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={19}>
             <VerticalChunk>
               The velocity vector is an arrow of length{" "}
@@ -5098,7 +5079,6 @@ const Rest = () => {
               of the particle from Exercise 39?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={20}>
             <VerticalChunk>
               The velocity vector of Exercise 39 travels
@@ -5187,7 +5167,6 @@ const Rest = () => {
               {" "}(Clockwise, say.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={21}>
             <VerticalChunk>
               The velocity vector has length{" "}
@@ -5346,7 +5325,6 @@ const Rest = () => {
               lengths of the various vectors.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={22}>
             <VerticalChunk>
               While the particle goes around a circle of
@@ -5644,7 +5622,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_17028162030">
+            <SolutionNote id="_11778166923">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -5855,7 +5833,6 @@ const Rest = () => {
               particle?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={23}>
             <VerticalChunk>
               Starting with the second part of the
@@ -5934,7 +5911,6 @@ const Rest = () => {
               “length over time”, ([L/T]).)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={24}>
             <VerticalChunk>
               <i>
@@ -6043,14 +6019,13 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={25}>
             <VerticalChunk>
               Going back in time,
               examine how long it would take
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see Note{" "}
-              <InChapterLink href="/article/chapter4?id=_399710623816">
+              <InChapterLink href="/article/chapter4?id=_497010627940">
                 1
               </InChapterLink>
               ):
@@ -6226,7 +6201,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_399710623816">
+            <SolutionNote id="_497010627940">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6338,7 +6313,6 @@ const Rest = () => {
               exist altogether between the three graphs?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={26}>
             <VerticalChunk>
               For{" "}
@@ -6547,7 +6521,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={27}>
             <VerticalChunk>
               At{" "}
@@ -8179,7 +8152,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={28}>
             <VerticalChunk>
               Recall the curves from Exercise 12:
@@ -8316,7 +8288,6 @@ const Rest = () => {
               ...in the form of self-contained, formal statements.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={29}>
             <VerticalChunk>
               For the functions:
@@ -8571,7 +8542,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_scaled_cosine_curves.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={30}>
             <VerticalChunk>
               The values oscillate between{" "}
@@ -8739,10 +8709,9 @@ const Rest = () => {
               ...?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution
             solution_number={31}
-            id="_9477913881">
+            id="_3580912084">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9503,7 +9472,6 @@ const Rest = () => {
               concerned, what would our options be?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={32}>
             <VerticalChunk>
               Take{" "}
@@ -9919,10 +9887,9 @@ const Rest = () => {
               the expression, if any.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution
             solution_number={33}
-            id="_9946307242">
+            id="_25246301626">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10384,7 +10351,6 @@ const Rest = () => {
               each term become?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={34}>
             <VerticalChunk>
               Dividing by{" "}
@@ -10525,7 +10491,7 @@ const Rest = () => {
               </Math>
               {" "}(cf.
               Exercise 16 Note{" "}
-              <InChapterLink href="/article/chapter4?id=_9723283774">
+              <InChapterLink href="/article/chapter4?id=_49192837085">
                 3
               </InChapterLink>
               ), and
@@ -10988,7 +10954,6 @@ const Rest = () => {
               , by the way.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={35}>
             <VerticalChunk>
               One can say
@@ -11034,7 +10999,6 @@ const Rest = () => {
               of Exercise 19, what do we obtain?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={36}>
             <VerticalChunk>
               The form of...
@@ -11218,10 +11182,9 @@ const Rest = () => {
               to this point?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution
             solution_number={37}
-            id="_406311172598">
+            id="_70011172463">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>
@@ -11380,7 +11343,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={38}>
             <VerticalChunk>
               The “logical” definition is:
@@ -11578,7 +11540,6 @@ const Rest = () => {
               the input.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={39}>
             <VerticalChunk>
               E.g.:
@@ -11662,7 +11623,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={40}>
             <VerticalChunk>
               We can start with the fraction in the
@@ -11972,7 +11932,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_cosine_for_eta.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={41}>
             <VerticalChunk>
               Because the particle is going at unit speed the
@@ -12199,7 +12158,6 @@ const Rest = () => {
               data!)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={42}>
             <VerticalChunk>
               Let's start by examining Pacman's first six displacements,
@@ -12741,7 +12699,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={43}>
             <VerticalChunk>
               It seems well-advised to start by heuristically verifying
@@ -13392,7 +13349,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_one_long_line.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={44}>
             <VerticalChunk>
               As the second derivative is the

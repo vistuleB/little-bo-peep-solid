@@ -1335,7 +1335,7 @@ const Rest = () => {
         <VerticalChunk>
           of an angle was briefly touched upon in
           Note{" "}
-          <a href="/article/chapter4?id=_406311172598">
+          <a href="/article/chapter4?id=_70011172463">
             10
           </a>
           {" "}of Exercise 37, Chapter 4.
@@ -4017,7 +4017,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
               The function{" "}
@@ -4091,7 +4090,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
               It appears that the function is “a line plus
@@ -4231,7 +4229,6 @@ const Rest = () => {
               src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
               style="margin-top:0.8em;margin-bottom:1em;" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
               Having intimated that the answer is the sum of
@@ -4658,7 +4655,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_big_wave.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
               First we estimate a function for the large-scale
@@ -5018,7 +5014,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_four_graphs.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
               The culprits are:
@@ -5107,7 +5102,6 @@ const Rest = () => {
               graphs of the previous exercise?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
               Yes.
@@ -5199,7 +5193,6 @@ const Rest = () => {
               src="/images/svg_ch5_ex_big_snail.svg"
               style="width:500px;margin-top:1em;margin-bottom:1em;" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
               What we want is the multiplicative ratio that
@@ -5545,7 +5538,6 @@ const Rest = () => {
               src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg"
               style="margin-top:1em;margin-bottom:0.5em;" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
               The{" "}
@@ -5673,7 +5665,6 @@ const Rest = () => {
               of two vectors. (The most logical definition wins.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
               The standard definition is that the sum
@@ -6104,7 +6095,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
               The simplest motion that would produce such
@@ -6440,7 +6430,6 @@ const Rest = () => {
               another name?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
               Let
@@ -6559,7 +6548,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_0_2_radians_guess.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
               An angle is
@@ -6657,7 +6645,6 @@ const Rest = () => {
               represent?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
               While{" "}
@@ -6766,7 +6753,6 @@ const Rest = () => {
               by hand using long division.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
               Here is the division in American notation
@@ -7258,7 +7244,6 @@ const Rest = () => {
               by hand using long division.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={15}>
             <VerticalChunk>
               The divisions, pursued up to the point where
@@ -7520,7 +7505,6 @@ const Rest = () => {
               $$
             </MathBlock>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={16}>
             <VerticalChunk>
               Here is the long division, pursued up to
@@ -8251,7 +8235,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_angle_sum_180.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={17}>
             <VerticalChunk>
               It is{" "}
@@ -8352,7 +8335,6 @@ const Rest = () => {
               {" "}is it achieved?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={18}>
             <VerticalChunk>
               The sum
@@ -8788,7 +8770,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_angle_sum_180_followup.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={19}>
             <VerticalChunk>
               It is{" "}
@@ -8864,7 +8845,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_tangent_angle_v2.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={20}>
             <VerticalChunk>
               The ending and starting half-lines of the
@@ -9105,7 +9085,6 @@ const Rest = () => {
               attained.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={21}>
             <VerticalChunk>
               The isosets of
@@ -10109,7 +10088,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={22}>
             <VerticalChunk>
               We shall use the height{" "}
@@ -10204,7 +10182,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={23}>
             <VerticalChunk>
               Here are two solutions:
@@ -10452,7 +10429,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={24}>
             <VerticalChunk>
               Let{" "}
@@ -10534,7 +10510,6 @@ const Rest = () => {
               that exercise.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={25}>
             <VerticalChunk>
               Viz:
@@ -10636,7 +10611,6 @@ const Rest = () => {
               </ol>
             </TextParent>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={26}>
             <VerticalChunk>
               <b>
@@ -10806,7 +10780,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={27}>
             <VerticalChunk>
               For reference, the four functions are:
@@ -10961,7 +10934,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={28}>
             <VerticalChunk>
               We have
@@ -11212,7 +11184,6 @@ const Rest = () => {
               prove this identity?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={29}>
             <VerticalChunk>
               We know from Exercise 21 that the
@@ -11642,7 +11613,6 @@ const Rest = () => {
               by algebra?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={30}>
             <VerticalChunk>
               Since{" "}
@@ -12024,7 +11994,6 @@ const Rest = () => {
               with the help of the angle-sum formulas.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={31}>
             <VerticalChunk>
               The angle-sum formula for sin is
@@ -12095,7 +12064,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={32}>
             <VerticalChunk>
               Since
@@ -12190,7 +12158,6 @@ const Rest = () => {
               (PS: Prove your answer.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={33}>
             <VerticalChunk>
               Note that{" "}
@@ -12546,7 +12513,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={34}>
             <VerticalChunk>
               One approach is to expand
@@ -13061,7 +13027,6 @@ const Rest = () => {
               Solving from scratch is recommended.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={35}>
             <VerticalChunk>
               Expanding
@@ -13219,7 +13184,6 @@ const Rest = () => {
               what would you do?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={36}>
             <VerticalChunk>
               Presumably the aliens are asking
@@ -13370,7 +13334,6 @@ const Rest = () => {
               powers of cosine, and for powers of tangent?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={37}>
             <VerticalChunk>
               For cosines we can copy the same figures as
@@ -13590,7 +13553,6 @@ const Rest = () => {
               ...?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={38}>
             <VerticalChunk>
               Place{" "}
@@ -13937,7 +13899,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={39}>
             <VerticalChunk>
               As in the solution to Exercise 37 place
@@ -14221,7 +14182,6 @@ const Rest = () => {
               {" "}are also marked on the axis.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={40}>
             <VerticalChunk>
               The key is to view{" "}
@@ -14405,7 +14365,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_60_tangent.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={41}>
             <VerticalChunk>
               First we note that the{" "}
@@ -14486,7 +14445,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_113241688892">
+          <ExerciseStatement id="_68834168341">
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -14507,7 +14466,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_floorplan.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={42}>
             <VerticalChunk>
               We will compute the two green lengths, then the
@@ -14659,7 +14617,6 @@ const Rest = () => {
               </ul>
             </TextParent>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={43}>
             <VerticalChunk>
               We start by computing these lengths in the
@@ -14864,7 +14821,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_bomb_shelter_door_tru_sizes.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={44}>
             <VerticalChunk>
               In the interest of mass-producing our results
@@ -15163,7 +15119,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_horizontal_projection_sphere_statement.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={45}>
             <VerticalChunk>
               Areas are scaled by a factor of
@@ -15246,7 +15201,6 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch5_ex_pez_sphere_statement.svg" />
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={46}>
             <VerticalChunk>
               The three slices of height{" "}
@@ -15342,7 +15296,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={47}>
             <VerticalChunk>
               The area of a sphere of radius{" "}
@@ -15412,7 +15365,6 @@ const Rest = () => {
               a cone is “one third base times height”.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={48}>
             <VerticalChunk>
               The basic idea is that we can view the
@@ -15982,7 +15934,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={49}>
             <VerticalChunk>
               We define

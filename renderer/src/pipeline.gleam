@@ -1,4 +1,3 @@
-import desugarers/identity
 import gleam/list
 import gleam/option.{None, Some}
 import infrastructure.{type Pipe}
@@ -191,7 +190,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("table", "Pause", []),
         #("Grid", "Pause", []),
         #("Grid", "Pause", []),
-        #("Solution", "Pause", []),
         #("List", "Pause", []),
         #("StarDivider", "Pause", []),
       ]),

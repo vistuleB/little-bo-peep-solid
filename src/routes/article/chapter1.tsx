@@ -1419,7 +1419,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_78335461126">
+          <ExerciseStatement id="_27535464898">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1489,7 +1489,6 @@ const Rest = () => {
               </Item>
             </Grid>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
               Part by part:
@@ -2583,7 +2582,7 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to Exercise{" "}
-              <InChapterLink href="/article/chapter1?id=_78335461126">
+              <InChapterLink href="/article/chapter1?id=_27535464898">
                 1
               </InChapterLink>
               , we observed how
@@ -2640,7 +2639,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
               Since

@@ -9,6 +9,7 @@ import {
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import {
+  DESKTOP_COLUMN_WIDTH,
   GREEN_DIV_HEIGHT,
   MOBILE_MAX_WIDTH,
   TEXT_X_PADDING,
@@ -32,6 +33,7 @@ type SolutionProps = ParentProps &
 
 const SpaceBetweenStatementAndSolutionButton = () => (
   <>
+    <Spacer />
     <SpacerXs />
     <SpacerXXs />
   </>
@@ -47,7 +49,6 @@ const SpaceAfterSolutionButtonAlwaysShowing = () => (
 const ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing = () => (
   <>
     <SpacerSm />
-    <SpacerXs />
   </>
 );
 
@@ -174,7 +175,7 @@ export const Solution = (props: SolutionProps) => {
         }
       },
       {
-        rootMargin: "300px",
+        rootMargin: "1000px",
       },
     );
 
@@ -208,12 +209,16 @@ export const Solution = (props: SolutionProps) => {
         }}>
         <div
           ref={ref}
-          class={twJoin(
-            "transition-transform absolute bottom-0 left-1/2 -translate-x-1/2",
-          )}>
+          class={twJoin("absolute bottom-0 left-1/2 -translate-x-1/2")}>
           <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           {props.children}
         </div>
+        <div
+          style={`width:${global_store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : global_store.innerWidth}px;`}
+          class={twJoin(
+            "absolute top-0 left-1/2 -translate-x-1/2 spacer-100 bg-bg",
+            solution_fully_opened() && "opacity-0",
+          )}></div>
       </div>
 
       {/* Possible backup arrow */}

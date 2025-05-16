@@ -2028,7 +2028,6 @@ const Rest = () => {
               {" "}by hand.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={1}>
             <VerticalChunk>
               Since{" "}
@@ -2128,7 +2127,6 @@ const Rest = () => {
               {" "}by hand.
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={2}>
             <VerticalChunk>
               We have
@@ -2189,7 +2187,6 @@ const Rest = () => {
               What about “万万万”?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={3}>
             <VerticalChunk>
               “万万” is “ten thousand ten thousand”, or
@@ -2284,7 +2281,6 @@ const Rest = () => {
               How many kilometers in a millimeter?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={4}>
             <VerticalChunk>
               There are{" "}
@@ -2353,7 +2349,6 @@ const Rest = () => {
               {" "}millimeters?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={5}>
             <VerticalChunk>
               We have
@@ -2403,7 +2398,6 @@ const Rest = () => {
               one hundred billion $?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={6}>
             <VerticalChunk>
               One hundred billion is{" "}
@@ -2462,7 +2456,6 @@ const Rest = () => {
               {" "}of one trillion?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={7}>
             <VerticalChunk>
               <NoBreak>
@@ -2501,7 +2494,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={8}>
             <VerticalChunk>
               <NoBreak>
@@ -2538,7 +2530,6 @@ const Rest = () => {
               ?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={9}>
             <VerticalChunk>
               Since
@@ -2584,7 +2575,6 @@ const Rest = () => {
               $$
             </MathBlock>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={10}>
             <VerticalChunk>
               We have
@@ -2645,7 +2635,6 @@ const Rest = () => {
               ?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={11}>
             <VerticalChunk>
               Presumably, there are{" "}
@@ -2747,7 +2736,6 @@ const Rest = () => {
               by using some kind of algebra?
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={12}>
             <VerticalChunk>
               One has
@@ -2808,7 +2796,6 @@ const Rest = () => {
               &ensp;bootcamp.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={13}>
             <VerticalChunk>
               Here is the “proof” that your professor is
@@ -2948,7 +2935,6 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={14}>
             <VerticalChunk>
               We have (#1)
@@ -3119,7 +3105,6 @@ const Rest = () => {
               $$
             </MathBlock>
           </ExerciseStatement>
-          <Pause />
           <Solution solution_number={15}>
             <VerticalChunk>
               Firstly we can rewrite{" "}

@@ -31,7 +31,7 @@ export const NoBreak = (props: ParentProps) => {
 };
 
 export const Pause = () => {
-  return <div class="spacer" />;
+  return <div class="spacer-150" />;
 };
 
 export const WriterlyBlankLine = () => {
