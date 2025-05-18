@@ -8,7 +8,11 @@ export default createHandler(() => (
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
+          {import.meta.env.VITE_ENV === "DEV" ? (
+            <link rel="icon" href="/favicon_dev.svg" />
+          ) : (
+            <link rel="icon" href="/favicon_prod.svg" />
+          )}
           <meta
             name="viewport"
             content="width=device-width,initial-scale=1.0,minimum-scale=1"
@@ -29,9 +33,7 @@ export default createHandler(() => (
         {/* needed width:0 to avoid an overlapping 
         div that was fucking with pointer events: */}
         <body style="width:0;">
-          <div id="app">
-            {children}
-          </div>
+          <div id="app">{children}</div>
           {scripts}
         </body>
       </html>
