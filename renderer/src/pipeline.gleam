@@ -104,7 +104,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.wrap_math_with_no_break(),
       dn.unwrap_when_single_child(["NoBreak"]),
       dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
-      dn.concatenate_text_nodes(),
       dn.cut_paste_attribute_from_self_to_child(
         #("Exercise", "ExerciseStatement", "id"),
       ),
@@ -112,9 +111,9 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       // VerticalChunk cleanup
       // ************************
+      dn.concatenate_text_nodes(),
       dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
-      dn.remove_empty_text_nodes(),
       dn.unwrap_vertical_chunks_with_no_text_child(),
       dn.unwrap_when_descendant_of([#("VerticalChunk", ["td", "li"])]),
       dn.rename_when_child_of([
