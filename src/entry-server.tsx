@@ -8,7 +8,20 @@ export default createHandler(() => (
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          {import.meta.env.VITE_ENV === "DEV" ? (
+          {import.meta.env.VITE_ENV === "LOCAL" ? (
+            <>
+              <link rel="icon" href="/favicon-local.ico" />
+              <link
+                rel="apple-touch-icon"
+                sizes="180x180"
+                href="/apple-touch-icon-local.png"
+              />
+              <link
+                rel="apple-touch-startup-image"
+                href="/apple-touch-icon-local.png"
+              />
+            </>
+          ) : import.meta.env.VITE_ENV === "DEV" ? (
             <>
               <link rel="icon" href="/favicon-dev.ico" />
               <link
