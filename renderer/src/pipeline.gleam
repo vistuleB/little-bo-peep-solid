@@ -108,7 +108,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.cut_paste_attribute_from_self_to_child(
         #("Exercise", "ExerciseStatement", "id"),
       ),
-
       // ************************
       // VerticalChunk cleanup
       // ************************
@@ -209,6 +208,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Note <a href='1'>_1_</a>", "<a class='n-link' href='1'>Note _1_</a>"),
         #("Exercises <a href=1>_1_</a> and <a href=2>_2_</a>", "Exercises <a href=1 class=e-link>_1_</a> and <a href=2 class=e-link>_2_</a>"),
       ]),
+      dn.identity(),      
       // ************************
       // contents
       // ************************
