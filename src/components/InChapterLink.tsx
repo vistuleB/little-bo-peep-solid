@@ -1,7 +1,9 @@
 import { ParentProps } from "solid-js";
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 
-const InChapterLink = (props: ParentProps & { href: string }) => {
+const InChapterLink = (
+  props: ParentProps & { href: string; class: string },
+) => {
   const scrollToInChapter = useScrollToInChapter();
 
   const handleClick = (e: Event) => {
@@ -12,7 +14,7 @@ const InChapterLink = (props: ParentProps & { href: string }) => {
   };
 
   return (
-    <a href={props.href} onClick={handleClick}>
+    <a href={props.href} class={props.class} onClick={handleClick}>
       {props.children}
     </a>
   );
