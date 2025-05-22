@@ -147,12 +147,18 @@ const Container = (props: ParentProps) => {
         return;
       }
 
-      if (clientXBasedOnScrollWidth < 1500) {
+      if (
+        clientXBasedOnScrollWidth <
+        window.scrollX + window.innerWidth * 0.1
+      ) {
         (document.querySelector(".prev_page") as HTMLAnchorElement)?.click();
         return;
       }
 
-      if (clientXBasedOnScrollWidth > 1500 + DESKTOP_COLUMN_WIDTH) {
+      if (
+        clientXBasedOnScrollWidth >
+        window.scrollX + window.innerWidth * 0.9
+      ) {
         (document.querySelector(".next_page") as HTMLAnchorElement)?.click();
         return;
       }
