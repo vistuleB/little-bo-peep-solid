@@ -192,28 +192,6 @@ span .MathJax_SVG {
 
 /* solution svg css */
 
-.solution_button_svg {
-  transform: translateX(32%);
-}
-
-.solution_button_inscription {
-  transform: translateY(-35px);
-  margin: auto;
-  display: block;
-  width: fit-content;
-}
-
-.notes_header_inscription {
-  position: absolute;
-  left: 242px;
-  top: 37px;
-  pointer-events: none;
-}
-
-.solution_button_div {
-  height: 51px;
-}
-
 .pointing_finger_backhand {
   fill: white;
   stroke: white;
@@ -406,10 +384,6 @@ table.first-line tr td:first-child {
 
 .bg-yellowish-dark {
   background-color: rgba(170, 170, 50, 0.7);
-}
-
-#Container {
-  overflow: hidden;
 }
 
 .toc_item {
