@@ -282,7 +282,7 @@ const SolutionButton = (props: SolutionBtnProps) => {
   const transition_duration = () =>
     store.exercises[props.solution_number - 1]?.transition_duration;
   const transition_duration_with_safety_margin = () =>
-    store.exercises[props.solution_number - 1]?.transition_duration + 20;
+    store.exercises[props.solution_number - 1]?.transition_duration + 50;
   const { set_handle, set_solution_fully_opened, set_solution_transition } =
     props;
 
@@ -305,6 +305,7 @@ const SolutionButton = (props: SolutionBtnProps) => {
             set_solution_fully_opened(false);
           } else {
             let timeout_handle = setTimeout(() => {
+              window.scrollBy(0, 0.1);
               set_solution_fully_opened(true);
             }, transition_duration_with_safety_margin());
             set_handle(timeout_handle);
