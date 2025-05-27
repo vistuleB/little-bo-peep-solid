@@ -1,0 +1,55 @@
+import { createSignal } from "solid-js";
+import SectionsBreadcrumbsAuthorSuppliedContent from "./SectionsBreadcrumbsAuthorSuppliedContent";
+import { useGlobalContext } from "~/store/StoreProvider";
+import { HAMBURGER_MENU_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
+
+const SectionsBreadcrumbs = () => {
+  const [visible, setVisible] = createSignal(true);
+  const [recentlyClosed, setRecentlyClosed] = createSignal(false);
+  const { store } = useGlobalContext();
+  const top = 80;
+  const delta = 20;
+  const sticky = () => store.scrollY > top - delta;
+
+  return (
+    <div
+      id="breadcrumbs"
+      style={{
+        opacity: visible() && store.innerWidth >= MOBILE_MAX_WIDTH ? 1 : 0,
+        transition: "opacity 0.5s ease-in-out",
+        "z-index": 100,
+        position: sticky() ? "fixed" : "absolute",
+        top: (sticky() ? delta : top) + "px",
+        left: sticky()
+          ? "0"
+          : (store.scrollWidth - store.innerWidth) / 2 + "px",
+        width: "fit-content",
+        display: "flex",
+        gap: "28px",
+        padding: "0 20px",
+      }}
+      onMouseOver={() => setVisible(!recentlyClosed())}
+      onMouseLeave={() => setRecentlyClosed(false)}>
+      <SectionsBreadcrumbsAuthorSuppliedContent />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        onClick={() => {
+          setVisible(false);
+          setRecentlyClosed(true);
+        }}>
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </div>
+  );
+};
+
+export default SectionsBreadcrumbs;
