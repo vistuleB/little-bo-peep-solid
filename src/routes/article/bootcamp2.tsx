@@ -30,7 +30,7 @@ const Article = () => {
         <a
           class="next_page"
           href="/article/bootcamp1" />
-        <Section>
+        <Section section_number={1}>
           <VerticalChunk>
             <b>
               Terminology.
@@ -90,7 +90,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section>
+      <Section section_number={2}>
         <VerticalChunk>
           <b>
             Integer powers of 10.
@@ -436,7 +436,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={3}>
         <VerticalChunk>
           <b>
             Other bases.
@@ -652,7 +652,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={4}>
         <VerticalChunk>
           <b>
             Additivity of exponents.
@@ -772,7 +772,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={5}>
         <VerticalChunk>
           <b>
             The third law of exponents.
@@ -959,7 +959,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={6}>
         <VerticalChunk>
           <b>
             Famous powers of 10.
@@ -1205,7 +1205,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={7}>
         <VerticalChunk>
           <b>
             Negative exponent prefixes.
@@ -1582,7 +1582,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={8}>
         <VerticalChunk>
           <b>
             Positive exponent prefixes.
@@ -1772,7 +1772,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={9}>
         <VerticalChunk>
           <b>
             Logarithms base 10.

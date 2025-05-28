@@ -80,7 +80,7 @@ const Article = () => {
         <a
           class="prev_page"
           href="/article/chapter1" />
-        <Section>
+        <Section section_number={1}>
           <VerticalChunk>
             <b>
               Slopes.
@@ -183,7 +183,9 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section id="_4200426772">
+      <Section
+        section_number={2}
+        id="_8202422679">
         <VerticalChunk>
           <b>
             Measuring Slope.
@@ -365,7 +367,9 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_99551156755">
+      <Section
+        section_number={3}
+        id="_82301151233">
         <VerticalChunk>
           <b>
             Sign Combinations.
@@ -613,7 +617,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={4}>
         <VerticalChunk>
           <b>
             Pathological Cases.
@@ -682,7 +686,9 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_42803251508">
+      <Section
+        section_number={5}
+        id="_38273256591">
         <VerticalChunk>
           <b>
             “Rise over Run”.
@@ -816,7 +822,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={6}>
         <VerticalChunk>
           <b>
             Solving for “rise” and “run”.
@@ -863,7 +869,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={7}>
         <VerticalChunk>
           <b>
             Slopes and Line Equations.
@@ -1200,7 +1206,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={8}>
         <VerticalChunk>
           <b>
             Slopes and Units.
@@ -1508,8 +1514,9 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section
+        section_number={9}
         divider={false}
-        id="_26886313080">
+        id="_86246311053">
         <VerticalChunk>
           <b>
             Postscript: Units vs Dimensions.

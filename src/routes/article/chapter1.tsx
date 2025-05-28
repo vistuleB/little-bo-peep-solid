@@ -60,7 +60,7 @@ const Article = () => {
         <a
           class="prev_page"
           href="/" />
-        <Section>
+        <Section section_number={1}>
           <VerticalChunk>
             <b>
               Square Roots.
@@ -533,7 +533,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section>
+      <Section section_number={2}>
         <VerticalChunk>
           <b>
             Fractions and Division.
@@ -751,7 +751,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={3}>
         <VerticalChunk>
           <b>
             Distributivity.
@@ -1331,7 +1331,9 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section divider={false}>
+      <Section
+        section_number={4}
+        divider={false}>
         <VerticalChunk>
           <b>
             Epilogue.
@@ -1404,7 +1406,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={5}>
         <VerticalChunk>
           <b>
             Vocabulary.
@@ -1451,7 +1453,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_225462785">
+          <ExerciseStatement id="_57525461897">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2614,7 +2616,7 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to Exercise{" "}
-              <InChapterLink href="/article/chapter1?id=_225462785">
+              <InChapterLink href="/article/chapter1?id=_57525461897">
                 1
               </InChapterLink>
               , we observed how

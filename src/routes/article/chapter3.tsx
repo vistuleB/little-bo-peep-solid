@@ -130,7 +130,7 @@ const Article = () => {
         <a
           class="prev_page"
           href="/article/chapter2" />
-        <Section>
+        <Section section_number={1}>
           <VerticalChunk>
             <b>
               Syntax.
@@ -361,7 +361,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section>
+      <Section section_number={2}>
         <VerticalChunk>
           <b>
             Lambda functions.
@@ -533,7 +533,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={3}>
         <VerticalChunk>
           <b>
             Definition by cases.
@@ -649,7 +649,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={4}>
         <VerticalChunk>
           <b>
             On arbitrariness.
@@ -707,7 +707,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={5}>
         <VerticalChunk>
           <b>
             Graphs.
@@ -868,7 +868,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={6}>
         <VerticalChunk>
           <b>
             Domains.
@@ -1053,7 +1053,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={7}>
         <VerticalChunk>
           <b>
             “From/To” Notation.
@@ -1188,7 +1188,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={8}>
         <VerticalChunk>
           <b>
             The Vertical Line Test.
@@ -1343,7 +1343,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={9}>
         <VerticalChunk>
           <b>
             A Famous Discontinuity.
@@ -1406,7 +1406,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={10}>
         <VerticalChunk>
           <b>
             Distinguishing{" "}
@@ -1608,7 +1608,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={11}>
         <VerticalChunk>
           <b>
             Distinguishing{" "}
@@ -1707,7 +1707,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={12}>
         <VerticalChunk>
           <b>
             Polynomials.
@@ -1888,7 +1888,7 @@ const Rest = () => {
           style="margin-top:-0.6em;margin-bottom:-0.4em" />
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={13}>
         <VerticalChunk>
           <b>
             Quadratic, linear, and constant terms.

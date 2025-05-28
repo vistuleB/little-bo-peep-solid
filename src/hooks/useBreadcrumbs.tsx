@@ -1,40 +1,31 @@
-import { createEffect, createSignal, onMount } from "solid-js";
-import { useGlobalContext } from "~/store/StoreProvider";
-import elementPosOnPage from "~/utils/elementPosOnPage";
+import { onCleanup, onMount } from "solid-js";
 
 const useBreadcrumbs = () => {
-  const { store } = useGlobalContext();
-  const [sectionsPositions, setSectionsPositions] = createSignal<number[]>([]);
-  const highlightedSection = () => {
-    const indexOfNextSection = sectionsPositions().findIndex(
-      (pos) => pos >= store.scrollY + 50,
-    );
-
-    return Math.max(
-      0,
-      indexOfNextSection === -1
-        ? sectionsPositions().length - 1
-        : indexOfNextSection - 1,
-    );
-  };
-
   onMount(async () => {
-    await setTimeout(() => {}, 5000);
-    const sections = document.querySelectorAll(".section");
-    setSectionsPositions(
-      Array.from(sections).map((section) =>
-        elementPosOnPage(section as HTMLElement),
-      ),
-    );
-  });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let section_idx = Number(entry.target.getAttribute("id")) - 1;
+          document.querySelectorAll(".breadcrumb")?.forEach((el) => {
+            el.classList.remove("highlighted");
+          });
 
-  createEffect(() => {
-    document.querySelectorAll(".breadcrumb")?.forEach((el) => {
-      el.classList.remove("highlighted");
+          document
+            .getElementById("breadcrumb-" + section_idx)
+            ?.classList.add("highlighted");
+        }
+      },
+      {
+        rootMargin: "-600px",
+      },
+    );
+
+    await setTimeout(() => {}, 2000);
+    document.getElementById("breadcrumb-0")?.classList.add("highlighted");
+    document.querySelectorAll(".section").forEach((section) => {
+      observer.observe(section);
     });
-    document
-      .getElementById("breadcrumb-" + highlightedSection())
-      ?.classList.add("highlighted");
+    onCleanup(() => observer.disconnect());
   });
 };
 

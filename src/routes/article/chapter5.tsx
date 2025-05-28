@@ -147,7 +147,7 @@ const Article = () => {
         <a
           class="prev_page"
           href="/article/chapter4" />
-        <Section>
+        <Section section_number={1}>
           <VerticalChunk>
             <b>
               Cos and Sin. (“Cosine” and “sine”.)
@@ -677,7 +677,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section>
+      <Section section_number={2}>
         <VerticalChunk>
           <b>
             Derivatives.
@@ -992,7 +992,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={3}>
         <VerticalChunk>
           <b>
             Even/odd identities, and identities with{" "}
@@ -1156,7 +1156,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={4}>
         <VerticalChunk>
           <b>
             Relation to derivatives.
@@ -1251,7 +1251,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={5}>
         <VerticalChunk>
           <b>
             The pythagorean identity.
@@ -1452,7 +1452,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={6}>
         <VerticalChunk>
           <b>
             Inputs as radians.
@@ -1468,7 +1468,7 @@ const Rest = () => {
         <VerticalChunk>
           of an angle was briefly touched upon in
           Note{" "}
-          <a href="/article/chapter4?id=_882411175786">
+          <a href="/article/chapter4?id=_572811172925">
             10
           </a>
           {" "}of Exercise 37, Chapter 4.
@@ -1652,7 +1652,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={7}>
         <VerticalChunk>
           <b>
             Auto-converting degrees to radians.
@@ -1765,7 +1765,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={8}>
         <VerticalChunk>
           <b>
             Sines and cosines of{" "}
@@ -2200,7 +2200,7 @@ const Rest = () => {
         <Image src="/images/svg_ch5_ch_main_angles_third.svg" />
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={9}>
         <VerticalChunk>
           <b>
             Scaling the circle.
@@ -2323,7 +2323,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={10}>
         <VerticalChunk>
           <b>
             Polar coordinates.
@@ -2559,7 +2559,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={11}>
         <VerticalChunk>
           <b>
             Change-of-coordinate formulas.
@@ -2780,7 +2780,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={12}>
         <VerticalChunk>
           <b>
             Right triangles.
@@ -2938,7 +2938,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={13}>
         <VerticalChunk>
           <b>
             A famous diagram.
@@ -3045,7 +3045,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={14}>
         <VerticalChunk>
           <b>
             The Abercrombie inequality.
@@ -3307,7 +3307,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={15}>
         <VerticalChunk>
           <b>
             The “Fisher sandwich”.
@@ -3590,7 +3590,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={16}>
         <VerticalChunk>
           <b>
             The angle-sum formulas.
@@ -3776,7 +3776,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={17}>
         <VerticalChunk>
           <b>
             The missing arrows.
@@ -3965,7 +3965,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section section_number={18}>
         <VerticalChunk>
           <b>
             Secant: a second view.
@@ -14693,7 +14693,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_613341686741">
+          <ExerciseStatement id="_502041689570">
             <VerticalChunk>
               <b>
                 Exercise 42.

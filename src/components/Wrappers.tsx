@@ -2,13 +2,15 @@ import { ParentProps } from "solid-js";
 import { SectionDivider } from "./SectionDivider";
 import { useGlobalContext } from "~/store/StoreProvider";
 
-export const Section = (props: ParentProps & { divider?: boolean }) => {
-  const { store, set_store } = useGlobalContext();
+export const Section = (
+  props: ParentProps & { divider?: boolean; section_number: number },
+) => {
+  const { store } = useGlobalContext();
   const show_section_dividers = () => store.show_section_dividers;
 
   return (
     <>
-      <span class="section"></span>
+      <span class="section w-full block" id={`${props.section_number}`}></span>
       <>{props.children}</>
       {show_section_dividers() && <SectionDivider />}
     </>
