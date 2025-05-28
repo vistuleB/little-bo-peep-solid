@@ -23,10 +23,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
           ? "0"
           : (store.scrollWidth - store.innerWidth) / 2 + "px",
         width: "fit-content",
-        display: "flex",
-        gap: "28px",
         padding: "0 20px",
-        "font-size": "14px",
         "max-width": "300px",
       }}
       onMouseOver={() => setVisible(!recentlyClosed())}
