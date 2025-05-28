@@ -39,13 +39,14 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="mt-2"
+        class="mt-2 cursor-pointer"
         onClick={() => {
           setVisible(false);
           setRecentlyClosed(true);
         }}>
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
+        <circle cx="12" cy="12" r="9"></circle>
+        <line x1="15" y1="9" x2="9" y2="15"></line>
+        <line x1="9" y1="9" x2="15" y2="15"></line>
       </svg>
     </div>
   );
