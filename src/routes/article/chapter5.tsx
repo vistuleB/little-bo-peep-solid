@@ -1334,9 +1334,11 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           of an angle was briefly touched upon in
-          Note{" "}
-          <a href="/article/chapter4?id=_70011172463">
-            10
+          {" "}
+          <a
+            href="/article/chapter4?id=_988711176075"
+            class="n-link">
+            Note 10
           </a>
           {" "}of Exercise 37, Chapter 4.
           In short, it is a “scientific” measure
@@ -14445,7 +14447,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_68834168341">
+          <ExerciseStatement id="_10084168775">
             <VerticalChunk>
               <b>
                 Exercise 42.

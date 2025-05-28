@@ -1,9 +1,9 @@
 |> Section
+    test=test
+    handle=t1t1 3
+    
 
-    *Slopes.*
-    The _slope_ of a line is a mathematical measure
-    of how “steep” a line is. Here are a few examples
-    (for an explanation of the values, see below):
+|> Section
 
     |> Image
         src=images/svg_ch2_ch_collection_of_examples.svg
