@@ -836,6 +836,8 @@ const Rest = () => {
               </Math>
               ,
             </NoBreak>
+            {" "}
+            {" "}
             <NoBreak>
               <Math>
                 $1$
@@ -983,6 +985,7 @@ const Rest = () => {
           <Math>
             $\rr$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -1322,6 +1325,7 @@ const Rest = () => {
               </Math>
               ”.
             </NoBreak>
+            {" "}{" "}
           </b>
           {" "}
           The difference between
@@ -1523,6 +1527,7 @@ const Rest = () => {
               </Math>
               ”.
             </NoBreak>
+            {" "}{" "}
           </b>
           {" "}
           Technically,
@@ -2259,6 +2264,8 @@ const Rest = () => {
                 </Math>
                 -coordinate
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 <Math>
                   $\floor&#123;x&#125;$
@@ -2485,6 +2492,7 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplayItalic>
+              {" "}{" "}
               <NoBreak>
                 “
                 <Math>
@@ -2498,6 +2506,7 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -2686,6 +2695,7 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
+              {" "}{" "}
               <NoBreak>
                 “
                 <Math>
@@ -2703,6 +2713,7 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -3073,11 +3084,15 @@ const Rest = () => {
               Rewrite
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 \tag&#123;A&#125;(f \circ (g \circ h))(x)
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               without using{" "}
@@ -3093,11 +3108,15 @@ const Rest = () => {
               composition”, which is namely
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               (where{" "}
@@ -3186,11 +3205,15 @@ const Rest = () => {
                 src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg" />
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 (f \circ (g \circ h))(x) = \f((g \circ h)(x))
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               ...which already constitutes progress towards
@@ -3206,21 +3229,29 @@ const Rest = () => {
               exists on the right-hand side! But
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 (g \circ h)(x) = g(h(x))
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               by the “definitional equation” again, so
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 f((g \circ h)(x)) = \f(g(h(x)))
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               ...and this completes the computation!
@@ -3281,11 +3312,15 @@ const Rest = () => {
               So the first step is...
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               ...by setting{" "}
@@ -3304,11 +3339,15 @@ const Rest = () => {
               is...
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 (f \circ g)(h(x)) = \f(g(h(x)))
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               ...by setting{" "}
@@ -3352,51 +3391,71 @@ const Rest = () => {
               The fact that
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 (f \circ (g \circ h))(x)
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               and
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 ((f \circ g) \circ h)(x)
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               both evaluate to
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 f(g(h(x)))
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               actually implies that
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 f \circ (g \circ h)
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               and
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 (f \circ g) \circ h
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               are the same function; this function is namely
@@ -3416,11 +3475,15 @@ const Rest = () => {
               {" "}(or
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 x \ra f(g(h(x)))
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               in lambda notation).
@@ -3434,11 +3497,15 @@ const Rest = () => {
               Because of this, we can write
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 f \circ g \circ h
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               without any parentheses. (The point is: either
@@ -3454,11 +3521,15 @@ const Rest = () => {
               The fact that
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 &#123;(a + b) + c = a + (b + c)&#125;
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               for all numbers{" "}
@@ -3490,11 +3561,15 @@ const Rest = () => {
               of addition; likewise, the fact that
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 (ab)c = a(bc)
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               for all numbers{" "}
@@ -3527,11 +3602,15 @@ const Rest = () => {
               the fact that
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 &#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               for all functions{" "}
@@ -3663,22 +3742,27 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
+              {" "}{" "}
               <Math>
                 $\Large h($
               </Math>
+              {" "}{" "}
               <InlineImage
                 y_anchor="-3px"
                 width="1rem"
                 src="/images/svg_ch3_composition_icon_clubs.svg" />
+              {" "}{" "}
               <Math>
                 $\Large&#123;&#125;) =$
               </Math>
+              {" "}{" "}
               <InlineImage
                 margin_right=".5rem"
                 margin_left=".5rem"
                 y_anchor="-3px"
                 width="1.25rem"
                 src="/images/svg_ch3_composition_icon_die_3.svg" />
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -3711,22 +3795,28 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
+              {" "}
+              {" "}
               <Math>
                 $\Large g(h($
               </Math>
+              {" "}{" "}
               <InlineImage
                 y_anchor="-3px"
                 width="1rem"
                 src="/images/svg_ch3_composition_icon_clubs.svg" />
+              {" "}{" "}
               <Math>
                 $\Large&#123;&#125;))&#123;&#125;=$
               </Math>
+              {" "}{" "}
               <InlineImage
                 space_right={true}
                 space_left={true}
                 y_anchor="-4px"
                 width="2.3rem"
                 src="/images/svg_ch3_composition_icon_fence.svg" />
+              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -3914,11 +4004,15 @@ const Rest = () => {
               {" "}(The presence of an ordered pair
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
+              {" "}{" "}
+              <Pause />
               <MathBlock>
                 $$
                 (a, b)
                 $$
               </MathBlock>
+              <Pause />
+              {" "}{" "}
             </div>
             <VerticalChunk>
               means that input{" "}
@@ -4584,6 +4678,7 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4616,6 +4711,7 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4780,6 +4876,7 @@ const Rest = () => {
               <Math>
                 $&#123;B\over 2A&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4798,6 +4895,7 @@ const Rest = () => {
               <Math>
                 $-&#123;B\over 2A&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4823,6 +4921,7 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -4830,6 +4929,7 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -4837,6 +4937,7 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4956,6 +5057,7 @@ const Rest = () => {
               <Math>
                 $-y_0$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -4963,6 +5065,7 @@ const Rest = () => {
               <Math>
                 $x_0$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -4970,6 +5073,7 @@ const Rest = () => {
               <Math>
                 $a$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5324,6 +5428,7 @@ const Rest = () => {
               <Math>
                 $-&#123;B^2 \over 4A^2&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5331,6 +5436,7 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5338,6 +5444,7 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5685,6 +5792,8 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <Math>
                 $g$
               </Math>
@@ -5921,6 +6030,7 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5928,6 +6038,7 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5935,6 +6046,7 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5946,6 +6058,7 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5953,6 +6066,7 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5960,6 +6074,7 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -6040,6 +6155,7 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6047,6 +6163,7 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6054,6 +6171,7 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
+              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplay>

@@ -224,6 +224,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $A$
           </Math>
@@ -231,6 +232,7 @@ const Rest = () => {
           <Math>
             $x$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -238,6 +240,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $A$
           </Math>
@@ -249,6 +252,7 @@ const Rest = () => {
             </Math>
             ?”
           </NoBreak>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -256,6 +260,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $x$
           </Math>
@@ -263,6 +268,7 @@ const Rest = () => {
           <Math>
             $A$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -270,6 +276,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $x$
           </Math>
@@ -277,6 +284,7 @@ const Rest = () => {
           <Math>
             $A$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -284,6 +292,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $x$
           </Math>
@@ -291,6 +300,7 @@ const Rest = () => {
           <Math>
             $A$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -837,6 +847,7 @@ const Rest = () => {
           <Math>
             $B$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>

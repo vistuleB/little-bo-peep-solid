@@ -622,6 +622,7 @@ const Rest = () => {
           <Math>
             $\mathit&#123;1&#125;$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -1528,6 +1529,7 @@ const Rest = () => {
             </Math>
             ~
           </NoBreak>
+          {" "}{" "}
           <Math>
             $9$
           </Math>
@@ -1782,6 +1784,7 @@ const Rest = () => {
             <Math>
               $\mathit&#123;10&#125;$
             </Math>
+            {" "}{" "}
           </i>
           {" "}of that
           (positive) number.
@@ -1810,6 +1813,7 @@ const Rest = () => {
           <Math>
             $\mathit&#123;2&#125;$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -3499,6 +3503,8 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 <Math>
                   $c = -2$
