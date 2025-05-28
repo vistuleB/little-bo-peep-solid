@@ -1,9 +1,4 @@
 |> Section
-    test=test
-    handle=t1t1 3
-    
-
-|> Section
 
     |> Image
         src=images/svg_ch2_ch_collection_of_examples.svg

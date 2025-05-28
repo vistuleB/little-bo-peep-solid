@@ -1,16 +1,4 @@
 |> Section
-    test=test
-    handle=ttt 1
-    handle=t2t2t2 2
-    
-    !! In Chapter >>t1t1.
- 
-    In Exercise >>ttt.>>t2t2t2
-    Chapter >>t2t2t2.
-    Exercises >>ttt and >>t2t2t2 of
-    Chapter >>t1t1.
-
-|> Section
 
     *Square Roots.*
     You might remember that “minus times minus
@@ -18,8 +6,6 @@
     (Why? The enemy of my enemy is my friend.)
     So any nonzero number multiplied by itself
     is positive. For example,
-
-|> Section
 
     $$
     (-2) \times (-2) = 4
