@@ -15,11 +15,14 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
+import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
+import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 
 const Article = () => {
   useSetRoute();
+  useBreadcrumbs();
   return (<>
       <Bootcamp
         number={1}
@@ -224,6 +227,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $A$
           </Math>
@@ -231,6 +235,7 @@ const Rest = () => {
           <Math>
             $x$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -238,6 +243,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $A$
           </Math>
@@ -249,6 +255,7 @@ const Rest = () => {
             </Math>
             ?”
           </NoBreak>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -256,6 +263,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $x$
           </Math>
@@ -263,6 +271,7 @@ const Rest = () => {
           <Math>
             $A$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -270,6 +279,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $x$
           </Math>
@@ -277,6 +287,7 @@ const Rest = () => {
           <Math>
             $A$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -284,6 +295,7 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <Math>
             $x$
           </Math>
@@ -291,6 +303,7 @@ const Rest = () => {
           <Math>
             $A$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -837,6 +850,7 @@ const Rest = () => {
           <Math>
             $B$
           </Math>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>

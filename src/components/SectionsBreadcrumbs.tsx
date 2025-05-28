@@ -1,9 +1,8 @@
-import { createSignal } from "solid-js";
-import SectionsBreadcrumbsAuthorSuppliedContent from "./SectionsBreadcrumbsAuthorSuppliedContent";
+import { createSignal, ParentProps } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
-import { HAMBURGER_MENU_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
+import { MOBILE_MAX_WIDTH } from "~/constants";
 
-const SectionsBreadcrumbs = () => {
+const SectionsBreadcrumbs = (props: ParentProps) => {
   const [visible, setVisible] = createSignal(true);
   const [recentlyClosed, setRecentlyClosed] = createSignal(false);
   const { store } = useGlobalContext();
@@ -27,20 +26,23 @@ const SectionsBreadcrumbs = () => {
         display: "flex",
         gap: "28px",
         padding: "0 20px",
+        "font-size": "14px",
+        "max-width": "300px",
       }}
       onMouseOver={() => setVisible(!recentlyClosed())}
       onMouseLeave={() => setRecentlyClosed(false)}>
-      <SectionsBreadcrumbsAuthorSuppliedContent />
+      <ul>{props.children}</ul>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="16"
+        height="16"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
+        class="mt-2"
         onClick={() => {
           setVisible(false);
           setRecentlyClosed(true);

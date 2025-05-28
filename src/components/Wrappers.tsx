@@ -8,6 +8,7 @@ export const Section = (props: ParentProps & { divider?: boolean }) => {
 
   return (
     <>
+      <span class="section"></span>
       <>{props.children}</>
       {show_section_dividers() && <SectionDivider />}
     </>

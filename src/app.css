@@ -424,3 +424,7 @@ ol.l1 > li:before {
   font-size: 2rem;
   line-height: 2.2rem;
 }
+
+.highlighted {
+  color: red;
+}

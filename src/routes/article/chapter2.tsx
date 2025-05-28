@@ -15,15 +15,65 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
+import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
+import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 
 const Article = () => {
   useSetRoute();
+  useBreadcrumbs();
   return (<>
       <Chapter
         number={2}
         title="Slopes">
+        <SectionsBreadcrumbs>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-0">
+            slopes
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-1">
+            measuring slope
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-2">
+            sign combinations
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-3">
+            pathological cases
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-4">
+            “rise over run”
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-5">
+            solving for “rise” and “run”
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-6">
+            slopes and line equations
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-7">
+            slopes and units
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-8">
+            postscript: units vs dimensions
+          </li>
+        </SectionsBreadcrumbs>
         <a
           class="next_page"
           href="/article/chapter3" />
@@ -133,7 +183,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section id="_2446425880">
+      <Section id="_4200426772">
         <VerticalChunk>
           <b>
             Measuring Slope.
@@ -315,7 +365,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_23471158549">
+      <Section id="_99551156755">
         <VerticalChunk>
           <b>
             Sign Combinations.
@@ -632,7 +682,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_83553253195">
+      <Section id="_42803251508">
         <VerticalChunk>
           <b>
             “Rise over Run”.
@@ -646,6 +696,7 @@ const Rest = () => {
               $\te&#123;slope&#125; =$
             </Math>
           </NoBreak>
+          {" "}{" "}
           <span class="nobreak">
             <InlineImage
               width="28px"
@@ -724,6 +775,8 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
+          {" "}
+          {" "}
           <Math>
             $\Delta y$
           </Math>
@@ -877,12 +930,14 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <NoBreak>
             <Math>
               $y$
             </Math>
             -intercept
           </NoBreak>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -907,12 +962,14 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
+          {" "}{" "}
           <NoBreak>
             <Math>
               $y$
             </Math>
             -intercept
           </NoBreak>
+          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -999,6 +1056,7 @@ const Rest = () => {
             </Math>
             —
           </NoBreak>
+          {" "}{" "}
           <Math>
             $a$
           </Math>
@@ -1391,6 +1449,7 @@ const Rest = () => {
               </Math>
               m
             </NoBreak>
+            {" "}{" "}
             <NoBreak>
               <Math>
                 $/$
@@ -1450,7 +1509,7 @@ const Rest = () => {
       <Pause />
       <Section
         divider={false}
-        id="_50296316254">
+        id="_26886313080">
         <VerticalChunk>
           <b>
             Postscript: Units vs Dimensions.
