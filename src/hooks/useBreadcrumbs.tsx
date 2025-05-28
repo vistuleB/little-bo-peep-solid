@@ -1,30 +1,72 @@
 import { onCleanup, onMount } from "solid-js";
 
 const useBreadcrumbs = () => {
+  const highlight = (section_id: string) => {
+    let section_index_str = section_id?.slice("section-".length) || "";
+    let section_idx = Number(section_index_str) - 1;
+
+    document.querySelectorAll(".breadcrumb")?.forEach((el) => {
+      el.classList.remove("highlighted");
+    });
+    document
+      .getElementById("breadcrumb-" + section_idx)
+      ?.classList.add("highlighted");
+  };
+
   onMount(async () => {
+    await setTimeout(() => {}, 2000); // to be safe
+    const sections = document.querySelectorAll("section");
+    const sectionVisibility = new Map();
+    sections.forEach((section) => {
+      sectionVisibility.set(section.id, { element: section, isVisible: false });
+    });
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        console.log(Number(entry.target.getAttribute("id")) - 1);
-        if (entry.isIntersecting) {
-          let section_idx = Number(entry.target.getAttribute("id")) - 1;
-          document.querySelectorAll(".breadcrumb")?.forEach((el) => {
-            el.classList.remove("highlighted");
+      (entries) => {
+        let anyVisible = false;
+
+        entries.forEach((entry) => {
+          const sectionId = entry.target.id;
+          sectionVisibility.set(sectionId, {
+            ...sectionVisibility.get(sectionId),
+            isVisible: entry.isIntersecting,
+          });
+        });
+
+        // Find the first visible section (prioritize top-most)
+        for (const [sectionId, data] of sectionVisibility) {
+          if (data.isVisible) {
+            highlight(sectionId);
+            anyVisible = true;
+            break;
+          }
+        }
+
+        // If no section is visible, find closest to viewport top
+        if (!anyVisible) {
+          let closestSection: HTMLElement | null = null;
+          let minDistance = Infinity;
+
+          sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            const distance = Math.abs(rect.top);
+
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestSection = section;
+            }
           });
 
-          document
-            .getElementById("breadcrumb-" + section_idx)
-            ?.classList.add("highlighted");
+          if (closestSection) highlight((closestSection as HTMLElement).id);
         }
       },
       {
         threshold: 0,
-        rootMargin: "-20% 0px -80% 0px",
+        rootMargin: "-50% 0px -20% 0px",
       },
     );
 
-    await setTimeout(() => {}, 2000);
-    document.getElementById("breadcrumb-0")?.classList.add("highlighted");
-    document.querySelectorAll("section").forEach((section) => {
+    sections.forEach((section) => {
       observer.observe(section);
     });
     onCleanup(() => observer.disconnect());

@@ -31,47 +31,65 @@ const Article = () => {
           <li
             class="breadcrumb"
             id="breadcrumb-0">
-            slopes
+            <InChapterLink href="?id=section-1">
+              slopes
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-1">
-            measuring slope
+            <InChapterLink href="?id=section-2">
+              measuring slope
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-2">
-            sign combinations
+            <InChapterLink href="?id=section-3">
+              sign combinations
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-3">
-            pathological cases
+            <InChapterLink href="?id=section-4">
+              pathological cases
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-4">
-            “rise over run”
+            <InChapterLink href="?id=section-5">
+              “rise over run”
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-5">
-            solving for “rise” and “run”
+            <InChapterLink href="?id=section-6">
+              solving for “rise” and “run”
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-6">
-            slopes and line equations
+            <InChapterLink href="?id=section-7">
+              slopes and line equations
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-7">
-            slopes and units
+            <InChapterLink href="?id=section-8">
+              slopes and units
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-8">
-            postscript: units vs dimensions
+            <InChapterLink href="?id=section-9">
+              postscript: units vs dimensions
+            </InChapterLink>
           </li>
         </SectionsBreadcrumbs>
         <a
@@ -80,7 +98,7 @@ const Article = () => {
         <a
           class="prev_page"
           href="/article/chapter1" />
-        <Section section_number={1}>
+        <Section id="section-1">
           <VerticalChunk>
             <b>
               Slopes.
@@ -184,8 +202,8 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section
-        section_number={2}
-        id="_8202422679">
+        id="section-2"
+        id="_7327424815">
         <VerticalChunk>
           <b>
             Measuring Slope.
@@ -368,8 +386,8 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section
-        section_number={3}
-        id="_82301151233">
+        id="section-3"
+        id="_24961151340">
         <VerticalChunk>
           <b>
             Sign Combinations.
@@ -617,7 +635,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={4}>
+      <Section id="section-4">
         <VerticalChunk>
           <b>
             Pathological Cases.
@@ -687,8 +705,8 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section
-        section_number={5}
-        id="_38273256591">
+        id="section-5"
+        id="_19423255569">
         <VerticalChunk>
           <b>
             “Rise over Run”.
@@ -822,7 +840,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={6}>
+      <Section id="section-6">
         <VerticalChunk>
           <b>
             Solving for “rise” and “run”.
@@ -869,7 +887,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={7}>
+      <Section id="section-7">
         <VerticalChunk>
           <b>
             Slopes and Line Equations.
@@ -1206,7 +1224,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={8}>
+      <Section id="section-8">
         <VerticalChunk>
           <b>
             Slopes and Units.
@@ -1514,9 +1532,9 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section
-        section_number={9}
+        id="section-9"
         divider={false}
-        id="_86246311053">
+        id="_27006319154">
         <VerticalChunk>
           <b>
             Postscript: Units vs Dimensions.

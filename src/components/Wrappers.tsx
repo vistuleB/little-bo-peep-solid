@@ -3,14 +3,14 @@ import { SectionDivider } from "./SectionDivider";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 export const Section = (
-  props: ParentProps & { divider?: boolean; section_number: number },
+  props: ParentProps & { divider?: boolean; id: number },
 ) => {
   const { store } = useGlobalContext();
   const show_section_dividers = () => store.show_section_dividers;
 
   return (
     <>
-      <section id={`${props.section_number}`}>{props.children}</section>
+      <section id={`${props.id}`}>{props.children}</section>
       {show_section_dividers() && <SectionDivider />}
     </>
   );

@@ -31,27 +31,37 @@ const Article = () => {
           <li
             class="breadcrumb"
             id="breadcrumb-0">
-            square roots
+            <InChapterLink href="?id=section-1">
+              square roots
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-1">
-            fractions and division
+            <InChapterLink href="?id=section-2">
+              fractions and division
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-2">
-            distributivity
+            <InChapterLink href="?id=section-3">
+              distributivity
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-3">
-            epilogue
+            <InChapterLink href="?id=section-4">
+              epilogue
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-4">
-            vocabulary
+            <InChapterLink href="?id=section-5">
+              vocabulary
+            </InChapterLink>
           </li>
         </SectionsBreadcrumbs>
         <a
@@ -60,7 +70,7 @@ const Article = () => {
         <a
           class="prev_page"
           href="/" />
-        <Section section_number={1}>
+        <Section id="section-1">
           <VerticalChunk>
             <b>
               Square Roots.
@@ -533,7 +543,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section section_number={2}>
+      <Section id="section-2">
         <VerticalChunk>
           <b>
             Fractions and Division.
@@ -751,7 +761,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={3}>
+      <Section id="section-3">
         <VerticalChunk>
           <b>
             Distributivity.
@@ -1332,7 +1342,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section
-        section_number={4}
+        id="section-4"
         divider={false}>
         <VerticalChunk>
           <b>
@@ -1406,7 +1416,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={5}>
+      <Section id="section-5">
         <VerticalChunk>
           <b>
             Vocabulary.
@@ -1453,7 +1463,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_57525461897">
+          <ExerciseStatement id="_84095463490">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2616,7 +2626,7 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to Exercise{" "}
-              <InChapterLink href="/article/chapter1?id=_57525461897">
+              <InChapterLink href="/article/chapter1?id=_84095463490">
                 1
               </InChapterLink>
               , we observed how

@@ -31,97 +31,123 @@ const Article = () => {
           <li
             class="breadcrumb"
             id="breadcrumb-0">
-            syntax
+            <InChapterLink href="?id=section-1">
+              syntax
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-1">
-            lambda functions
+            <InChapterLink href="?id=section-2">
+              lambda functions
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-2">
-            definition by cases
+            <InChapterLink href="?id=section-3">
+              definition by cases
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-3">
-            on arbitrariness
+            <InChapterLink href="?id=section-4">
+              on arbitrariness
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-4">
-            graphs
+            <InChapterLink href="?id=section-5">
+              graphs
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-5">
-            domains
+            <InChapterLink href="?id=section-6">
+              domains
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-6">
-            “from/to” notation
+            <InChapterLink href="?id=section-7">
+              “from/to” notation
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-7">
-            the vertical line test
+            <InChapterLink href="?id=section-8">
+              the vertical line test
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-8">
-            a famous discontinuity
+            <InChapterLink href="?id=section-9">
+              a famous discontinuity
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-9">
-            distinguishing{" "}
-            <NoBreak>
-              “
-              <Math>
-                $f$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}and{" "}
-            <NoBreak>
-              “
-              <Math>
-                $f(x)$
-              </Math>
-              ”
-            </NoBreak>
+            <InChapterLink href="?id=section-10">
+              distinguishing{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $f$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $f(x)$
+                </Math>
+                ”
+              </NoBreak>
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-10">
-            distinguishing{" "}
-            <NoBreak>
-              “
-              <Math>
-                $x^3$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}and{" "}
-            <NoBreak>
-              “
-              <Math>
-                $x \ra x^3$
-              </Math>
-              ”
-            </NoBreak>
+            <InChapterLink href="?id=section-11">
+              distinguishing{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x^3$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x \ra x^3$
+                </Math>
+                ”
+              </NoBreak>
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-11">
-            polynomials
+            <InChapterLink href="?id=section-12">
+              polynomials
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-12">
-            quadratic, linear, and constant terms
+            <InChapterLink href="?id=section-13">
+              quadratic, linear, and constant terms
+            </InChapterLink>
           </li>
         </SectionsBreadcrumbs>
         <a
@@ -130,7 +156,7 @@ const Article = () => {
         <a
           class="prev_page"
           href="/article/chapter2" />
-        <Section section_number={1}>
+        <Section id="section-1">
           <VerticalChunk>
             <b>
               Syntax.
@@ -361,7 +387,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section section_number={2}>
+      <Section id="section-2">
         <VerticalChunk>
           <b>
             Lambda functions.
@@ -533,7 +559,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={3}>
+      <Section id="section-3">
         <VerticalChunk>
           <b>
             Definition by cases.
@@ -649,7 +675,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section section_number={4}>
+      <Section id="section-4">
         <VerticalChunk>
           <b>
             On arbitrariness.
@@ -707,7 +733,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={5}>
+      <Section id="section-5">
         <VerticalChunk>
           <b>
             Graphs.
@@ -868,7 +894,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section section_number={6}>
+      <Section id="section-6">
         <VerticalChunk>
           <b>
             Domains.
@@ -1053,7 +1079,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section section_number={7}>
+      <Section id="section-7">
         <VerticalChunk>
           <b>
             “From/To” Notation.
@@ -1188,7 +1214,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={8}>
+      <Section id="section-8">
         <VerticalChunk>
           <b>
             The Vertical Line Test.
@@ -1343,7 +1369,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section section_number={9}>
+      <Section id="section-9">
         <VerticalChunk>
           <b>
             A Famous Discontinuity.
@@ -1406,7 +1432,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={10}>
+      <Section id="section-10">
         <VerticalChunk>
           <b>
             Distinguishing{" "}
@@ -1608,7 +1634,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={11}>
+      <Section id="section-11">
         <VerticalChunk>
           <b>
             Distinguishing{" "}
@@ -1707,7 +1733,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={12}>
+      <Section id="section-12">
         <VerticalChunk>
           <b>
             Polynomials.
@@ -1888,7 +1914,7 @@ const Rest = () => {
           style="margin-top:-0.6em;margin-bottom:-0.4em" />
       </Section>
       <Pause />
-      <Section section_number={13}>
+      <Section id="section-13">
         <VerticalChunk>
           <b>
             Quadratic, linear, and constant terms.

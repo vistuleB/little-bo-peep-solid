@@ -31,62 +31,86 @@ const Article = () => {
           <li
             class="breadcrumb"
             id="breadcrumb-0">
-            definitions
+            <InChapterLink href="?id=section-1">
+              definitions
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-1">
-            section 1
+            <InChapterLink href="?id=section-2">
+              section 1
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-2">
-            vocabulary
+            <InChapterLink href="?id=section-3">
+              vocabulary
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-3">
-            sketching a derivative
+            <InChapterLink href="?id=section-4">
+              sketching a derivative
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-4">
-            derivative of a constant function
+            <InChapterLink href="?id=section-5">
+              derivative of a constant function
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-5">
-            derivative of an affine function
+            <InChapterLink href="?id=section-6">
+              derivative of an affine function
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-6">
-            units of the derivative
+            <InChapterLink href="?id=section-7">
+              units of the derivative
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-7">
-            the second derivative
+            <InChapterLink href="?id=section-8">
+              the second derivative
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-8">
-            geometric interpretation of the second derivative
+            <InChapterLink href="?id=section-9">
+              geometric interpretation of the second derivative
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-9">
-            vocabulary #1
+            <InChapterLink href="?id=section-10">
+              vocabulary #1
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-10">
-            the second derivative of position
+            <InChapterLink href="?id=section-11">
+              the second derivative of position
+            </InChapterLink>
           </li>
           <li
             class="breadcrumb"
             id="breadcrumb-11">
-            the jerk
+            <InChapterLink href="?id=section-12">
+              the jerk
+            </InChapterLink>
           </li>
         </SectionsBreadcrumbs>
         <a
@@ -97,7 +121,7 @@ const Article = () => {
           href="/article/chapter3" />
         <Image src="/images/svg_ch4_ch_polaroids.svg" />
         <Pause />
-        <Section section_number={1}>
+        <Section id="section-1">
           <VerticalChunk>
             <b>
               Definitions.
@@ -235,7 +259,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section section_number={2}>
+      <Section id="section-2">
         <VerticalChunk>
           In fact, we can
           succinctly describe the derivative by...
@@ -269,7 +293,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={3}>
+      <Section id="section-3">
         <VerticalChunk>
           <b>
             Vocabulary.
@@ -358,7 +382,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={4}>
+      <Section id="section-4">
         <VerticalChunk>
           <b>
             Sketching a Derivative.
@@ -406,7 +430,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={5}>
+      <Section id="section-5">
         <VerticalChunk>
           <b>
             Derivative of a constant function.
@@ -522,7 +546,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={6}>
+      <Section id="section-6">
         <VerticalChunk>
           <b>
             Derivative of an affine function.
@@ -757,7 +781,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section section_number={7}>
+      <Section id="section-7">
         <VerticalChunk>
           <b>
             Units of the Derivative.
@@ -942,7 +966,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={8}>
+      <Section id="section-8">
         <VerticalChunk>
           <b>
             The second derivative.
@@ -1157,7 +1181,7 @@ const Rest = () => {
         <StarDivider style="margin-top:1.5em;margin-bottom:0em" />
       </Section>
       <Pause />
-      <Section section_number={9}>
+      <Section id="section-9">
         <VerticalChunk>
           <b>
             Geometric interpretation of the second derivative.
@@ -1254,7 +1278,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={10}>
+      <Section id="section-10">
         <VerticalChunk>
           <b>
             Vocabulary #1.
@@ -1340,7 +1364,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section section_number={11}>
+      <Section id="section-11">
         <VerticalChunk>
           <b>
             The Second Derivative of Position.
@@ -1605,7 +1629,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section section_number={12}>
+      <Section id="section-12">
         <VerticalChunk>
           <b>
             The Jerk.
@@ -4321,7 +4345,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={15}
-            id="_729283819">
+            id="_214283827">
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -5697,7 +5721,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_16768165786">
+            <SolutionNote id="_31358168252">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6100,7 +6124,7 @@ const Rest = () => {
               examine how long it would take
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see Note{" "}
-              <InChapterLink href="/article/chapter4?id=_638610623781">
+              <InChapterLink href="/article/chapter4?id=_3310622446">
                 1
               </InChapterLink>
               ):
@@ -6276,7 +6300,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_638610623781">
+            <SolutionNote id="_3310622446">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -9100,7 +9124,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={31}
-            id="_2807913047">
+            id="_4140915676">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -10278,7 +10302,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={33}
-            id="_61036306966">
+            id="_31066304632">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10880,7 +10904,7 @@ const Rest = () => {
               </Math>
               {" "}(cf.
               Exercise 16 Note{" "}
-              <InChapterLink href="/article/chapter4?id=_729283819">
+              <InChapterLink href="/article/chapter4?id=_214283827">
                 3
               </InChapterLink>
               ), and
@@ -11573,7 +11597,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={37}
-            id="_572811172925">
+            id="_348711172046">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>

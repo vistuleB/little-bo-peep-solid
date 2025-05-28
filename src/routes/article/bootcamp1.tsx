@@ -33,7 +33,7 @@ const Article = () => {
         <a
           class="prev_page"
           href="/article/bootcamp2" />
-        <Section section_number={1}>
+        <Section id="section-1">
           <VerticalChunk>
             <b>
               Notation.
@@ -146,7 +146,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section section_number={2}>
+      <Section id="section-2">
         <VerticalChunk>
           <b>
             What it does.
@@ -361,7 +361,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={3}>
+      <Section id="section-3">
         <VerticalChunk>
           <b>
             Set Equality.
@@ -487,7 +487,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={4}>
+      <Section id="section-4">
         <VerticalChunk>
           <b>
             Second notation for the empty set.
@@ -519,7 +519,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={5}>
+      <Section id="section-5">
         <VerticalChunk>
           <b>
             Sets within sets.
@@ -634,7 +634,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={6}>
+      <Section id="section-6">
         <VerticalChunk>
           <b>
             Set union and set intersection.
@@ -887,7 +887,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={7}>
+      <Section id="section-7">
         <VerticalChunk>
           <b>
             Sets encountered in calculus.
@@ -1062,7 +1062,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section section_number={8}>
+      <Section id="section-8">
         <VerticalChunk>
           <b>
             Sets not encountered in calculus.
