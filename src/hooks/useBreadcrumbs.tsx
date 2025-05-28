@@ -4,6 +4,7 @@ const useBreadcrumbs = () => {
   onMount(async () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        console.log(Number(entry.target.getAttribute("id")) - 1);
         if (entry.isIntersecting) {
           let section_idx = Number(entry.target.getAttribute("id")) - 1;
           document.querySelectorAll(".breadcrumb")?.forEach((el) => {
@@ -16,13 +17,14 @@ const useBreadcrumbs = () => {
         }
       },
       {
-        rootMargin: "-600px",
+        threshold: 0,
+        rootMargin: "-20% 0px -80% 0px",
       },
     );
 
     await setTimeout(() => {}, 2000);
     document.getElementById("breadcrumb-0")?.classList.add("highlighted");
-    document.querySelectorAll(".section").forEach((section) => {
+    document.querySelectorAll("section").forEach((section) => {
       observer.observe(section);
     });
     onCleanup(() => observer.disconnect());

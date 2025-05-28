@@ -10,8 +10,7 @@ export const Section = (
 
   return (
     <>
-      <span class="section w-full block" id={`${props.section_number}`}></span>
-      <>{props.children}</>
+      <section id={`${props.section_number}`}>{props.children}</section>
       {show_section_dividers() && <SectionDivider />}
     </>
   );
