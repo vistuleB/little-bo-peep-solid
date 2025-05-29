@@ -69,30 +69,33 @@
 
     As $n$ successive divisions
     by $10$ is the same as one division by $10^n$, one also has
-    $$
-    \Large 10^{-n} = {1 \over 10^{\hspace{0.2ex}n}}\tag{A}
-    $$
+    |> MathBlock
+        handle=10_to_the_minus_n A
+
+        \Large 10^{-n} = {1 \over 10^{\hspace{0.2ex}n}}\tag{A}
+
     for every positive integer $n$, which gives an alternate means of computing $10^{-n}$.
-    Moreover, (A) actually holds for
+    Moreover, (>>10_to_the_minus_n) actually holds for
 
     __every__
 
     integer $n$, which is mildly important. In more
-    detail, (A) holds for $n = 0$ by inspection, and (A)
+    detail, (>>10_to_the_minus_n) holds for $n = 0$ by inspection, and (>>10_to_the_minus_n)
     is equivalent to the identity
 
     |> ImageLeft
         src=images/svg_bt2_bt_10_to_the_minus_0_cloud.svg
         line=2
 
-    $$
-    \Large 10^{-n}10^n = 1 \tag{AA}
-    $$
+    |> MathBlock
+        handle=10_to_the_minus_n_reworked AA
+
+        \Large 10^{-n}10^n = 1 \tag{AA}
 
     which holds for $n$ if and only if it holds for
     $-n$. (By which we mean: replacing “$n$” by “$-n$”
-    in (AA) lands you right back on (AA), due to the fact
-    that $-{(-n)} = n$.) (So, namely, if (AA) holds for all
+    in (>>10_to_the_minus_n_reworked) lands you right back on (>>10_to_the_minus_n_reworked), due to the fact
+    that $-{(-n)} = n$.) (So, namely, if (>>10_to_the_minus_n_reworked) holds for all
     positive values of $\hspace{0.05em}n$, then it holds
     for all negative values of $n$, as well.)
 
@@ -1092,11 +1095,11 @@
         $$
         for all integers $n$ and $m$. (You can
         take for granted any identity that is stated
-        in this
+        in this 
         |> del
 
             chapter
-        &ensp;bootcamp.)
+        \ bootcamp.)
 
         |> Solution
 
@@ -1110,8 +1113,9 @@
             $$
             \Large {1 \over 10^m} = 10^{-m}
             $$
-            stated earlier in the chapter as (A), while the third equality uses
-            additivity of exponents, also stated earlier. (So: We are only using “known”
+            stated earlier in the chapter as (>>10_to_the_minus_n), 
+            while the third equality uses additivity of exponents, 
+            also stated earlier. (So: We are only using “known”
             facts, alongside some ordinary arithmetic.)
 
             |> Pause
