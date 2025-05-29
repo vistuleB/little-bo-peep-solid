@@ -425,6 +425,10 @@ ol.l1 > li:before {
   line-height: 2.2rem;
 }
 
+.handle-in-chapter-link:hover, .handle-out-of-chapter-link:hover {
+  text-decoration: underline;
+}
+
 .e-link:hover {
   background-color: #ffd42a;
   padding: 5px;
