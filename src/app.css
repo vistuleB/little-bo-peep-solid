@@ -425,11 +425,7 @@ ol.l1 > li:before {
   line-height: 2.2rem;
 }
 
-.in-chapter-link:hover {
-  text-decoration: underline;
-}
-
-a:hover {
+.handle-in-chapter-link:hover, .handle-out-of-chapter-link:hover {
   text-decoration: underline;
 }
 
