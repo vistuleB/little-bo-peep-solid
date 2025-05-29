@@ -3,12 +3,14 @@ import { JSX } from "solid-js/jsx-runtime";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
 
-type LazyImageProp = {
+type ImageOrSideImageProp = {
   side_image?: boolean;
 };
 
-function LazyImage(
-  props: ParentProps & JSX.ImgHTMLAttributes<HTMLImageElement> & LazyImageProp,
+function ImageOrSideImage(
+  props: ParentProps &
+    JSX.ImgHTMLAttributes<HTMLImageElement> &
+    ImageOrSideImageProp,
 ) {
   let { store } = useGlobalContext();
 
@@ -25,9 +27,8 @@ function LazyImage(
           (props.side_image ? "divide-vertically" : "divide-horizontally"),
       )}
       style={props.style || ""}
-      // loading="lazy"
     />
   );
 }
 
-export default LazyImage;
+export default ImageOrSideImage;

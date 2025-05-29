@@ -8,7 +8,7 @@ import {
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
-import LazyImage from "./LazyImage";
+import ImageOrSideImage from "./ImageOrSideImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
@@ -106,21 +106,15 @@ const Image = (props: ImageProps) => {
 
   return (
     <ScaleProvider scale={scale}>
-      <div
-        id={props.id}
-        class={twJoin("left-1/2 -translate-x-1/2 relative w-fit", props.class)}
-        style={{
-          height: props.height,
-          width: props.width,
-        }}>
-        <LazyImage
+      <div id={props.id} class={twJoin("w-fit relative m-auto", props.class)}>
+        <ImageOrSideImage
           ref={image_ref}
           onLoad={() => {
             window.requestAnimationFrame(() => {
               set_should_be_scaled_down(true);
             });
           }}
-          onClick={(_) => {
+          onClick={() => {
             // should we scale? (if it's the first click we should def. scale up)
             const should_be_scaled_down =
               our_on_mobile() && !scaled_down() && after_first_click();
@@ -144,6 +138,7 @@ const Image = (props: ImageProps) => {
             );
           }}
           class={twJoin(
+            props.class,
             "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
             our_on_mobile() &&
               (scale().scale < 1 || !after_first_click()) &&
@@ -165,8 +160,9 @@ const Image = (props: ImageProps) => {
 
             after_first_click() && "transition-all",
           )}
-          style={props.style}
+          style={`width:${props.width};height:${props.height};${props.style}`}
           src={props.src}
+          side_image={false}
         />
         {props.children}
       </div>
