@@ -9,11 +9,10 @@ import {
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "../store/StoreProvider";
-import { set_store } from "~/store";
 
 const PanelButton = () => {
   const { on_mobile } = useOnMobile();
-  const { store } = useGlobalContext();
+  const { store, set_store } = useGlobalContext();
   const open = () => store.panel_opened;
 
   const getNextArticle = () => {
