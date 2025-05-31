@@ -460,14 +460,8 @@ pub fn main() {
 
   let _ = shellout.command(
     run: "rm",
-    in: "..",
-    with: ["-rf", "./src/routes/article", "./src/components/TOCAuthorSuppliedContent.tsx", "./src/components/PanelAuthorSuppliedContent.tsx"],
-    opt: [],
-  )
-  let _ = shellout.command(
-    run: "mkdir",
-    in: "..",
-    with: ["-p", "./src/routes/article"],
+    in: ".",
+    with: ["../src/article/*", "../src/components/TOCAuthorSuppliedContent.tsx", "../src/components/PanelAuthorSuppliedContent.tsx"],
     opt: [],
   )
 
@@ -475,4 +469,6 @@ pub fn main() {
     Ok(Nil) -> Nil
     Error(error) -> io.println("\nrenderer error: " <> ins(error) <> "\n")
   }
+
+  Nil
 }
