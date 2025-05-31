@@ -15,22 +15,149 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
+import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
+import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 
 const Article = () => {
   useSetRoute();
+  useBreadcrumbs();
   return (<>
       <Chapter
         number={3}
-        title="Functions">
+        title="Functions"
+        id="_285016571">
+        <SectionsBreadcrumbs>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-0">
+            <InChapterLink href="?id=section-1">
+              syntax
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-1">
+            <InChapterLink href="?id=section-2">
+              lambda functions
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-2">
+            <InChapterLink href="?id=section-3">
+              definition by cases
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-3">
+            <InChapterLink href="?id=section-4">
+              on arbitrariness
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-4">
+            <InChapterLink href="?id=section-5">
+              graphs
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-5">
+            <InChapterLink href="?id=section-6">
+              domains
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-6">
+            <InChapterLink href="?id=section-7">
+              “from/to” notation
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-7">
+            <InChapterLink href="?id=section-8">
+              the vertical line test
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-8">
+            <InChapterLink href="?id=section-9">
+              a famous discontinuity
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-9">
+            <InChapterLink href="?id=section-10">
+              distinguishing{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $f$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $f(x)$
+                </Math>
+                ”
+              </NoBreak>
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-10">
+            <InChapterLink href="?id=section-11">
+              distinguishing{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x^3$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}and{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x \ra x^3$
+                </Math>
+                ”
+              </NoBreak>
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-11">
+            <InChapterLink href="?id=section-12">
+              polynomials
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-12">
+            <InChapterLink href="?id=section-13">
+              quadratic, linear, and constant terms
+            </InChapterLink>
+          </li>
+        </SectionsBreadcrumbs>
         <a
           class="next_page"
           href="/article/chapter4" />
         <a
           class="prev_page"
           href="/article/chapter2" />
-        <Section>
+        <Section id="section-1">
           <VerticalChunk>
             <b>
               Syntax.
@@ -261,7 +388,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section>
+      <Section id="section-2">
         <VerticalChunk>
           <b>
             Lambda functions.
@@ -433,7 +560,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-3">
         <VerticalChunk>
           <b>
             Definition by cases.
@@ -549,7 +676,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-4">
         <VerticalChunk>
           <b>
             On arbitrariness.
@@ -607,7 +734,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-5">
         <VerticalChunk>
           <b>
             Graphs.
@@ -768,7 +895,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-6">
         <VerticalChunk>
           <b>
             Domains.
@@ -953,7 +1080,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-7">
         <VerticalChunk>
           <b>
             “From/To” Notation.
@@ -1088,7 +1215,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-8">
         <VerticalChunk>
           <b>
             The Vertical Line Test.
@@ -1243,7 +1370,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-9">
         <VerticalChunk>
           <b>
             A Famous Discontinuity.
@@ -1306,7 +1433,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-10">
         <VerticalChunk>
           <b>
             Distinguishing{" "}
@@ -1508,7 +1635,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-11">
         <VerticalChunk>
           <b>
             Distinguishing{" "}
@@ -1607,7 +1734,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-12">
         <VerticalChunk>
           <b>
             Polynomials.
@@ -1788,7 +1915,7 @@ const Rest = () => {
           style="margin-top:-0.6em;margin-bottom:-0.4em" />
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-13">
         <VerticalChunk>
           <b>
             Quadratic, linear, and constant terms.
@@ -5646,7 +5773,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_424021222564">
             <VerticalChunk>
               <b>
                 Exercise 18.

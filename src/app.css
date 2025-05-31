@@ -425,7 +425,22 @@ ol.l1 > li:before {
   line-height: 2.2rem;
 }
 
-.handle-in-chapter-link:hover, .handle-out-of-chapter-link:hover {
+.breadcrumb {
+  text-shadow:
+    -3px 0 #fff,
+    0 3px #fff,
+    3px 0 #fff,
+    0 -3px #fff;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.highlighted {
+  color: red;
+}
+
+.handle-in-chapter-link:hover,
+.handle-out-of-chapter-link:hover {
   text-decoration: underline;
 }
 

@@ -15,19 +15,175 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
+import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
+import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 
 const Article = () => {
   useSetRoute();
+  useBreadcrumbs();
   return (<>
       <Chapter
         number={5}
         title="The Trigonometric Functions">
+        <SectionsBreadcrumbs>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-0">
+            <InChapterLink href="?id=section-1">
+              cos and sin. (“cosine” and “sine”.)
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-1">
+            <InChapterLink href="?id=section-2">
+              derivatives
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-2">
+            <InChapterLink href="?id=section-3">
+              even/odd identities, and identities with{" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\eta$
+                </Math>
+                ”
+              </NoBreak>
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-3">
+            <InChapterLink href="?id=section-4">
+              relation to derivatives
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-4">
+            <InChapterLink href="?id=section-5">
+              the pythagorean identity
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-5">
+            <InChapterLink href="?id=section-6">
+              inputs as radians
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-6">
+            <InChapterLink href="?id=section-7">
+              auto-converting degrees to radians
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-7">
+            <InChapterLink href="?id=section-8">
+              sines and cosines of{" "}
+              <NoBreak>
+                <Math>
+                  $\mathbf&#123;30^\circ&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <Math>
+                $\mathbf&#123;45^\circ&#125;$
+              </Math>
+              {" "}and{" "}
+              <NoBreak>
+                <Math>
+                  $\mathbf&#123;60^\circ&#125;$
+                </Math>
+                {" "}{" "}
+              </NoBreak>
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-8">
+            <InChapterLink href="?id=section-9">
+              scaling the circle
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-9">
+            <InChapterLink href="?id=section-10">
+              polar coordinates
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-10">
+            <InChapterLink href="?id=section-11">
+              change-of-coordinate formulas
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-11">
+            <InChapterLink href="?id=section-12">
+              right triangles
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-12">
+            <InChapterLink href="?id=section-13">
+              a famous diagram
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-13">
+            <InChapterLink href="?id=section-14">
+              the abercrombie inequality
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-14">
+            <InChapterLink href="?id=section-15">
+              the gregorinovich sandwich
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-15">
+            <InChapterLink href="?id=section-16">
+              the angle-sum formulas
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-16">
+            <InChapterLink href="?id=section-17">
+              the missing arrows
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-17">
+            <InChapterLink href="?id=section-18">
+              secant: a second view
+            </InChapterLink>
+          </li>
+        </SectionsBreadcrumbs>
         <a
           class="prev_page"
           href="/article/chapter4" />
-        <Section>
+        <Section id="section-1">
           <VerticalChunk>
             <b>
               Cos and Sin. (“Cosine” and “sine”.)
@@ -557,7 +713,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section>
+      <Section id="section-2">
         <VerticalChunk>
           <b>
             Derivatives.
@@ -872,7 +1028,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-3">
         <VerticalChunk>
           <b>
             Even/odd identities, and identities with{" "}
@@ -1036,7 +1192,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-4">
         <VerticalChunk>
           <b>
             Relation to derivatives.
@@ -1131,7 +1287,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-5">
         <VerticalChunk>
           <b>
             The pythagorean identity.
@@ -1332,7 +1488,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-6">
         <VerticalChunk>
           <b>
             Inputs as radians.
@@ -1349,8 +1505,8 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_160911174631"
-            class="n-link">
+            href="/article/chapter4?id=_349611176243"
+            class="handle-out-of-chapter-link">
             Note 10
           </a>
           {" "}of Exercise 37, Chapter 4.
@@ -1534,7 +1690,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-7">
         <VerticalChunk>
           <b>
             Auto-converting degrees to radians.
@@ -1647,7 +1803,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-8">
         <VerticalChunk>
           <b>
             Sines and cosines of{" "}
@@ -2082,7 +2238,7 @@ const Rest = () => {
         <Image src="/images/svg_ch5_ch_main_angles_third.svg" />
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-9">
         <VerticalChunk>
           <b>
             Scaling the circle.
@@ -2205,7 +2361,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-10">
         <VerticalChunk>
           <b>
             Polar coordinates.
@@ -2441,7 +2597,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-11">
         <VerticalChunk>
           <b>
             Change-of-coordinate formulas.
@@ -2574,15 +2730,15 @@ const Rest = () => {
           {" "}etc.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          But the call goes
+          But the call goes{" "}
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(y, x)
           </span>
-          &ensp;not
+          \ not{" "}
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(x, y)
           </span>
-          &ensp;by some bizareness. (Well, actually a
+          \ by some bizareness. (Well, actually a
           throwback to the fact that in this expression...
         </VerticalChunk>
         <Pause />
@@ -2662,7 +2818,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-12">
         <VerticalChunk>
           <b>
             Right triangles.
@@ -2820,7 +2976,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-13">
         <VerticalChunk>
           <b>
             A famous diagram.
@@ -2927,7 +3083,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-14">
         <VerticalChunk>
           <b>
             The Abercrombie inequality.
@@ -3151,31 +3307,33 @@ const Rest = () => {
         <VerticalChunk indent={true}>
           One can polish a few more details by noting that:
         </VerticalChunk>
-        <p style="text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;">
-          {" "}{" "}
-          <b>
-            (i)
-          </b>
-          {" "}the segment can be tangent to the
-          arc at one point, the proof will still go
-          through (so the segment does not need to
-          {" "}
-          <i>
-            strictly
-          </i>
-          {" "}clear the arc);
-        </p>
-        <p style="text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;">
-          {" "}{" "}
-          <b>
-            (ii)
-          </b>
-          {" "}as long as the angle is nonzero,
-          and the arc has nonzero radius, the
-          length of the segment will be STRICTLY
-          GREATER than the length of the arc,
-          not just greater-or-equal-to
-        </p>
+        <TextParent>
+          <p style="text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;">
+            {" "}{" "}
+            <b>
+              (i)
+            </b>
+            {" "}the segment can be tangent to the
+            arc at one point, the proof will still go
+            through (so the segment does not need to
+            {" "}
+            <i>
+              strictly
+            </i>
+            {" "}clear the arc);
+          </p>
+          <p style="text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;">
+            {" "}{" "}
+            <b>
+              (ii)
+            </b>
+            {" "}as long as the angle is nonzero,
+            and the arc has nonzero radius, the
+            length of the segment will be STRICTLY
+            GREATER than the length of the arc,
+            not just greater-or-equal-to
+          </p>
+        </TextParent>
         <VerticalChunk>
           (Point{" "}
           <b>
@@ -3189,14 +3347,14 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-15">
         <VerticalChunk>
           <b>
-            The “Fisher sandwich”.
+            The Gregorinovich sandwich.
           </b>
           {" "}
-          The “Fisher sandwich”—we don't make these
-          terms up—states that
+          The “Gregorinovich sandwich”—sometimes
+          Gr_i_gorinovich—states that
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -3214,7 +3372,7 @@ const Rest = () => {
             .
           </NoBreak>
           {" "}
-          The Fisher sandwich is so-called because
+          The Gregorinovich sandwich is so-called because
           it “sandwiches”{" "}
           <Math>
             $\theta$
@@ -3472,7 +3630,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-16">
         <VerticalChunk>
           <b>
             The angle-sum formulas.
@@ -3658,7 +3816,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-17">
         <VerticalChunk>
           <b>
             The missing arrows.
@@ -3796,7 +3954,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "}
-          or, to dig in a little, to do with the fact that
+          or to do with the fact that
           what people think of as{" "}
           <NoBreak>
             “
@@ -3832,22 +3990,23 @@ const Rest = () => {
           vice-versa for reaching ‘adjacent’ from
           ‘opposite’. (In fact, the next-to-last
           identity played a role in our proof of the
-          Fisher sandwich.) (Indeed: the Fisher
-          sandwich can be written...
+          Gregorinovich sandwich.) (Indeed,
         </VerticalChunk>
         <Pause />
         <MathBlock>
           $$
-          \te&#123;“&#125;\sin(\theta)&lt; \theta&lt; \tan(\theta)\rt&#123;0.1&#125;\te&#123;”&#125;
+          %\sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
+          \sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
           $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          ...in this form, as well!)
+          is another way of writing the Grigorinovich
+          sandwich.)
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-18">
         <VerticalChunk>
           <b>
             Secant: a second view.
@@ -3867,11 +4026,11 @@ const Rest = () => {
           <span style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             PURPLE
           </span>
-          &ensp;to the
+          \ to the{" "}
           <span style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             LIME GREEN
           </span>
-          &ensp;triangle
+          \ triangle
           (hard to draw, because it is behind the
           purple triangle!) in the following figure:
         </VerticalChunk>
@@ -14575,7 +14734,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_3285416841">
+          <ExerciseStatement id="_885541688728">
             <VerticalChunk>
               <b>
                 Exercise 42.

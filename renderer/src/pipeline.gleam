@@ -28,13 +28,16 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Book", "counter", "BootcampCounter"),
         #("Chapter", "counter", "ExampleCounter"),
         #("Chapter", "counter", "NoteCounter"),
+        #("Chapter", "counter", "SectionCounter"),
         #("Bootcamp", "counter", "ExampleCounter"),
+        #("Bootcamp", "counter", "SectionCounter"),
         #("Exercises", "counter", "ExerciseCounter"),
         #("Solution", "counter", "SolutionNoteCounter"),
         #("Chapter", "path", "/article/chapter::øøChapterCounter"),
         #("Bootcamp", "path", "/article/bootcamp::øøBootcampCounter"),
         #("Exercise", "exercise_number", "::øøExerciseCounter"),
         #("Solution", "solution_number", "::øøExerciseCounter"),
+        #("Section", "id", "section-::++SectionCounter"),
       ]),
       dn.associate_counter_by_prepending_incrementing_attribute([
         #("Chapter", "ChapterCounter"),
@@ -229,6 +232,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
         Some("Spacer"),
       )),
       dn.generate_lbp_links(),
+      dn.generate_lbp_sections_breadcrumbs(),
       dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
     ]
   ]

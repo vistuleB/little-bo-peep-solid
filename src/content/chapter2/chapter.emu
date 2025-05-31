@@ -1,5 +1,10 @@
 |> Section
 
+    *Slopes.*
+    The _slope_ of a line is a mathematical measure
+    of how “steep” a line is. Here are a few examples
+    (for an explanation of the values, see below):
+
     |> Image
         src=images/svg_ch2_ch_collection_of_examples.svg
 

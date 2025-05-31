@@ -15,23 +15,63 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
+import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
+import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 
 const Article = () => {
   useSetRoute();
+  useBreadcrumbs();
   return (<>
       <Chapter
         number={1}
         title="A Few Refreshers"
-        id="_802817059">
+        id="_356414540">
+        <SectionsBreadcrumbs>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-0">
+            <InChapterLink href="?id=section-1">
+              square roots
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-1">
+            <InChapterLink href="?id=section-2">
+              fractions and division
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-2">
+            <InChapterLink href="?id=section-3">
+              distributivity
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-3">
+            <InChapterLink href="?id=section-4">
+              epilogue
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-4">
+            <InChapterLink href="?id=section-5">
+              vocabulary
+            </InChapterLink>
+          </li>
+        </SectionsBreadcrumbs>
         <a
           class="next_page"
           href="/article/chapter2" />
         <a
           class="prev_page"
           href="/" />
-        <Section>
+        <Section id="section-1">
           <VerticalChunk>
             <b>
               Square Roots.
@@ -504,7 +544,7 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section>
+      <Section id="section-2">
         <VerticalChunk>
           <b>
             Fractions and Division.
@@ -722,7 +762,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-3">
         <VerticalChunk>
           <b>
             Distributivity.
@@ -1302,7 +1342,9 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section divider={false}>
+      <Section
+        id="section-4"
+        divider={false}>
         <VerticalChunk>
           <b>
             Epilogue.
@@ -1375,7 +1417,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-5">
         <VerticalChunk>
           <b>
             Vocabulary.
@@ -1422,7 +1464,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_61595463455">
+          <ExerciseStatement id="_5591546580">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2578,7 +2620,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement id="_864311296198">
+          <ExerciseStatement>
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2586,12 +2628,12 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_61595463455"
-                class="e-link">
+                href="/article/chapter1?id=_5591546580"
+                class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
-              , we observed how
-              the difference
+              , we 
+              observed how the difference
             </VerticalChunk>
             <Pause />
             <MathBlock>

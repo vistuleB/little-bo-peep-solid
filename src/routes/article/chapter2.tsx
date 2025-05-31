@@ -15,22 +15,104 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
+import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
+import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 
 const Article = () => {
   useSetRoute();
+  useBreadcrumbs();
   return (<>
       <Chapter
         number={2}
         title="Slopes">
+        <SectionsBreadcrumbs>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-0">
+            <InChapterLink href="?id=section-1">
+              slopes
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-1">
+            <InChapterLink href="?id=section-2">
+              measuring slope
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-2">
+            <InChapterLink href="?id=section-3">
+              sign combinations
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-3">
+            <InChapterLink href="?id=section-4">
+              pathological cases
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-4">
+            <InChapterLink href="?id=section-5">
+              “rise over run”
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-5">
+            <InChapterLink href="?id=section-6">
+              solving for “rise” and “run”
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-6">
+            <InChapterLink href="?id=section-7">
+              slopes and line equations
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-7">
+            <InChapterLink href="?id=section-8">
+              slopes and units
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-8">
+            <InChapterLink href="?id=section-9">
+              postscript: units vs dimensions
+            </InChapterLink>
+          </li>
+        </SectionsBreadcrumbs>
         <a
           class="next_page"
           href="/article/chapter3" />
         <a
           class="prev_page"
           href="/article/chapter1" />
-        <Section>
+        <Section id="section-1">
+          <VerticalChunk>
+            <b>
+              Slopes.
+            </b>
+            {" "}
+            The{" "}
+            <i>
+              slope
+            </i>
+            {" "}of a line is a mathematical measure
+            of how “steep” a line is. Here are a few examples
+            (for an explanation of the values, see below):
+          </VerticalChunk>
+          <Pause />
           <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
           <Pause />
           <VerticalChunk>
@@ -119,7 +201,9 @@ const Rest = () => {
   return(<>
     { showMore() && <>
       <Pause />
-      <Section id="_2961377672">
+      <Section
+        id="section-2"
+        id="section-2">
         <VerticalChunk>
           <b>
             Measuring Slope.
@@ -301,7 +385,9 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_13141106384">
+      <Section
+        id="section-3"
+        id="section-3">
         <VerticalChunk>
           <b>
             Sign Combinations.
@@ -549,7 +635,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-4">
         <VerticalChunk>
           <b>
             Pathological Cases.
@@ -618,7 +704,9 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="_18413208181">
+      <Section
+        id="section-5"
+        id="section-5">
         <VerticalChunk>
           <b>
             “Rise over Run”.
@@ -752,7 +840,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-6">
         <VerticalChunk>
           <b>
             Solving for “rise” and “run”.
@@ -799,7 +887,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-7">
         <VerticalChunk>
           <b>
             Slopes and Line Equations.
@@ -1136,7 +1224,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section>
+      <Section id="section-8">
         <VerticalChunk>
           <b>
             Slopes and Units.
@@ -1444,8 +1532,9 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section
+        id="section-9"
         divider={false}
-        id="_86746266961">
+        id="section-9">
         <VerticalChunk>
           <b>
             Postscript: Units vs Dimensions.
@@ -1637,7 +1726,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_4907328835">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -1971,7 +2060,13 @@ const Rest = () => {
                 Note 1.
               </i>
               {" "}
-              As explained in Chapter 3, an empty circle of
+              As explained in{" "}
+              <a
+                href="/article/chapter3?id=_285016571"
+                class="handle-out-of-chapter-link">
+                Chapter 3
+              </a>
+              , an empty circle of
               this type
             </VerticalChunk>
             <Pause />
@@ -2074,11 +2169,19 @@ const Rest = () => {
               </b>
               {" "}
               Digressing on the second-to-last equation
-              in the solution to Exercise 2, explain why
+              in the solution to{" "}
+              <InChapterLink
+                href="/article/chapter2?id=_4907328835"
+                class="handle-in-chapter-link">
+                Exercise 2
+              </InChapterLink>
+              , explain why
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$ y_0 - px_0 $$
+              $$
+              y_0 - px_0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
