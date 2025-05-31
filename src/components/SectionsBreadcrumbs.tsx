@@ -3,7 +3,7 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import { MOBILE_MAX_WIDTH } from "~/constants";
 
 const SectionsBreadcrumbs = (props: ParentProps) => {
-  const [visible, setVisible] = createSignal(true);
+  const [visible, setVisible] = createSignal(false);
   const [recentlyClosed, setRecentlyClosed] = createSignal(false);
   const { store } = useGlobalContext();
   const top = 80;
