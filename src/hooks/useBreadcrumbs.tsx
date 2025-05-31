@@ -14,7 +14,7 @@ const useBreadcrumbs = () => {
   };
 
   onMount(async () => {
-    await new Promise((resolve) => setTimeout(resolve, 2000)); // to be safe
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // to be safe
     const sections = document.querySelectorAll("section");
     const sectionVisibility = new Map();
     sections.forEach((section) => {
