@@ -1145,6 +1145,7 @@
             for all $a, b \ne 0$, by some principle of elementary arithmetic.)
 
     |> Exercise
+        handle=MLTrewrite
 
         Rewrite each of these expressions...
         $$
@@ -1218,8 +1219,8 @@
 
             Firstly we can rewrite $v$, $F$, $\mu$, $\rho$
             in the canonical form $M^xL^yT^z$
-            for integers $x$, $y$, $z$ (as in the previous
-            exercise):
+            for integers $x$, $y$, $z$ (as in Exercise
+            >>MLTrewrite):
             $$
             \Large v = LT^{-1} \vphantom{\rho = ML^{-3}}
             $$

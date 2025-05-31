@@ -1,4 +1,5 @@
 |> Exercise
+    handle=seeSaw
 
     Sketch the derivative of a function with the
     following graph (what _looks_ like a sharp
@@ -47,7 +48,7 @@
 
     __second__
 
-    derivative of the graph in Exercise 1.
+    derivative of the graph in Exercise >>seeSaw.
 
     |> Solution
 
@@ -73,13 +74,13 @@
 
 |> Exercise
 
-    If we pretend that the graph of Exercise 1
+    If we pretend that the graph of Exercise >>seeSaw
     depicts the
     |> del
 
         distance that a car has traveled
         as a function of time,
-    &ensp;position of a car as a function of
+    \ position of a car as a function of
     time, with hours (hr) on the $x$-axis
     and kilometers (km) on the $y$-axis, what
     do the units become on the axes of the first
@@ -115,15 +116,14 @@
         |> SolutionNote
 
             In a more physically realistic scenario the corners
-            !! on the position-as-a-function-of-time graph
             are rounded off a bit while the velocity and
             acceleration remain continuous, albeit with steep
-            slopes and sharp peaks. (Maybe...
+            slopes and sharp peaks. (This...
 
             |> Image
                 src=images/svg_ch4_ex_car_position_rounded.svg
 
-            ..something like this.)
+            ...idea.)
 
 
 |> Exercise

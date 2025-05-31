@@ -2120,6 +2120,7 @@
             for $g \circ f$.
 
     |> Exercise
+        handle=functionOperationsEx
 
         If $f$ and $g$ are functions then we define
         (and not just us but people in general)
