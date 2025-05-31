@@ -17,11 +17,9 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
         opacity: visible() && store.innerWidth >= MOBILE_MAX_WIDTH ? 1 : 0,
         transition: "opacity 0.5s ease-in-out",
         "z-index": 100,
-        position: sticky() ? "fixed" : "absolute",
-        top: (sticky() ? delta : top) + "px",
-        left: sticky()
-          ? "0"
-          : (store.scrollWidth - store.innerWidth) / 2 + "px",
+        position: "fixed",
+        top: (sticky() ? delta : top - store.scrollY) + "px",
+        left: "0",
         width: "fit-content",
         padding: "0 20px",
         "max-width": "300px",
