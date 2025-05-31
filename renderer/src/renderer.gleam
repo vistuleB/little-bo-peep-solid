@@ -1,3 +1,4 @@
+import shellout
 import argv
 import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
 import gleam/io
@@ -457,12 +458,18 @@ pub fn main() {
       renderer.pipeline,
     )
 
-  // let res = shellout.command(
-  //   run: "rm",
-  //   in: ".",
-  //   with: ["../src/routes/article/*"],
-  //   opt: [],
-  // )
+  let _ = shellout.command(
+    run: "rm",
+    in: "..",
+    with: ["-rf", "./src/routes/article", "./src/components/TOCAuthorSuppliedContent.tsx", "./src/components/PanelAuthorSuppliedContent.tsx"],
+    opt: [],
+  )
+  let _ = shellout.command(
+    run: "mkdir",
+    in: "..",
+    with: ["-p", "./src/routes/article"],
+    opt: [],
+  )
 
   case vr.run_renderer(renderer, parameters, debug_options) {
     Ok(Nil) -> Nil
