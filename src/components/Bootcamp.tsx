@@ -3,7 +3,7 @@ import ArticleTitle from "./ArticleTitle";
 
 const Bootcamp = (props: any) => {
   return (
-    <AbstractArticle>
+    <AbstractArticle id={props.id}>
       <div class="first_child_of_chapter"></div>
       <ArticleTitle
         label={`Bootcamp ${props.number}: ` + props.title}
