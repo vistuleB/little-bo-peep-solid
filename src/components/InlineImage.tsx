@@ -1,34 +1,40 @@
-import { ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import ImageOrSideImage from "./ImageOrSideImage";
+import styleJoin from "~/utils/styleJoin";
 
 type InlineImageProps = SharedProps & {
   src: string;
   width?: string;
   height?: string;
-  y_anchor?: string;
-  margin_left?: string;
-  margin_right?: string;
-  space_right?: boolean;
-  space_left?: boolean;
+  top?: string;
+  right?: string;
+  bottom?: string;
+  left?: string;
+  marginLeft?: string;
+  marginRight?: string;
 };
 
 const InlineImage = (props: InlineImageProps) => {
   return (
     <>
-      {props.space_left && ` `}
       <ImageOrSideImage
         loading="lazy"
         class={`bg-cover inline-block relative ${props.class}`}
-        style={{
-          width: props.width,
-          height: props.height,
-          "margin-left": props.margin_left,
-          "margin-right": props.margin_right,
-          top: props.y_anchor,
-        }}
-        src={props.src}></ImageOrSideImage>
-      {props.space_right && ` `}
+        style={styleJoin(
+          {
+            width: props.width,
+            height: props.height,
+            top: props.top,
+            right: props.right,
+            bottom: props.bottom,
+            left: props.left,
+            marginLeft: props.marginLeft,
+            marginRight: props.marginRight,
+          },
+          props.style
+        )}
+        src={props.src}
+      ></ImageOrSideImage>
     </>
   );
 };

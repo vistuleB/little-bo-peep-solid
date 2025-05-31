@@ -8,6 +8,11 @@
 }
 
 @font-face {
+  font-family: "Baskerville";
+  src: url("/fonts/Baskerville-Regular.ttf");
+}
+
+@font-face {
   font-family: "Baskerville Bold";
   src: url("/fonts/Baskerville-Bold.ttf");
 }

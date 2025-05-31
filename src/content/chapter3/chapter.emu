@@ -878,6 +878,7 @@
                 iv. $(a + b)^2 = a^2 + 2ab + b^2$
 
     |> Exercise
+        handle=floorTheFirst
 
         The _floor_ of a real number $x$, written
 
@@ -953,7 +954,7 @@
             We would like to argue the correctness of
             the following two-step process (divide the
             input by $2$, apply the function from Exercise
-            4):
+            >>floorTheFirst):
 
             |> Image
                 src=images/svg_ch3_ex_factory_roof_stretched_solution.svg
@@ -969,7 +970,7 @@
             $$
             ...as obtained by “sticking” $x/2$ (the halved
             input) in place of “$x$” in “$\,x - \lfloor x \rfloor$”,
-            the formula for the function from Exercise 4.
+            the formula for the function from Exercise >>floorTheFirst.
 
             |> Pause
 
@@ -1080,11 +1081,11 @@
 
         |> Solution
 
-            For the first graph,
+            For the first graph, 
             |> del
 
                 the
-            an answer is
+            \ an answer is
             $$
             2 \cdot(x/2 - \fl{x/2})
             $$
@@ -1122,23 +1123,28 @@
             (the input, minus $1$) in place of “$x$” in
             “$\,x/3 - \fl{x/3}$”, the formula for the
             second graph. Then we multiply that by $3$
-            (to go from
+            (to go from 
             |> NoBreak
 
                 “
                 |> InlineImage
                     src=images/svg_ch3_3_3_grid_1.svg
                     width=0.9em
+                    bottom=0.2em
+                    margin-left=3em
+                    !! margin-right=3em
+                    !! style=transform:translate(0,-0.2em);
                 ”
-            &ensp;to
+            \ to 
             |> NoBreak
 
                 “
                 |> InlineImage
                     src=images/svg_ch3_3_3_grid_2.svg
                     width=0.9em
+                    style=transform:translate(0,-0.2em);
                 ”,
-            &ensp;namely), meaning that the final answer is
+            \ namely), meaning that the final answer is
             $$
             3 \cdot ((x-1)/3 - \fl{(x-1)/3})
             $$
@@ -1160,7 +1166,7 @@
         $$
         \cos \dblcol \rr \ra \rr
         $$
-        (the “hollow dot colon” means that $\dom \cos = \rr$)
+        (the “hollow dot” colon means that $\dom \cos = \rr$)
         is a function whose graph looks like so...
 
         |> Image
@@ -1472,63 +1478,53 @@
             |> InlineImage
                 src=images/svg_ch3_composition_icon_clubs.svg
                 width=1rem
-                y_anchor=-3px
+                top=-3px
             $\Large{}) =$
             |> InlineImage
                 src=images/svg_ch3_composition_icon_die_3.svg
                 width=1.25rem
                 y_anchor=-3px
-                margin_left=.5rem
-                margin_right=.5rem
+                margin-left=.5rem
+                margin-right=.5rem
             |_
 
             because the arrow that originates at
             |> InlineImage
                 src=images/svg_ch3_composition_icon_clubs.svg
                 width=1rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
-            in set $D$ lands at
+                top=-4px
+            \ in set $D$ lands at
             |> InlineImage
                 src=images/svg_ch3_composition_icon_die_3.svg
                 width=1.25rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
-            in set $C$,  and
+                top=-4px
+            \ in set $C$,  and
 
             _|
-            $\Large g(h($
+            $\Large g(h($ 
             |> InlineImage
                 src=images/svg_ch3_composition_icon_clubs.svg
                 width=1rem
-                y_anchor=-3px
-            $\Large{})){}=$
+                top=-3px
+            $\Large{})){}=$ 
             |> InlineImage
                 src=images/svg_ch3_composition_icon_fence.svg
                 width=2.3rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
+                top=-4px
             |_
 
             because, pursuing that path onwards, the arrow
-            that originates at
+            that originates at 
             |> InlineImage
                 src=images/svg_ch3_composition_icon_die_3.svg
                 width=1.25rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
-            in set $C$ lands at
+                top=-4px
+            \ in set $C$ lands at 
             |> InlineImage
                 src=images/svg_ch3_composition_icon_fence.svg
                 width=2.3rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
-            in set $B$, etc.
+                top=-4px
+            \ in set $B$, etc.
 
             Under this representation one can “compute”
             $f \circ g \circ h$ by gluing arrows end-to-end.
@@ -1593,11 +1589,11 @@
             |> del
 
                 long
-            &ensp;
+            \ 
             |> del
 
                 lists of
-            &ensp;sets of ordered pairs; for example—conceptual
+            \ sets of ordered pairs; for example—conceptual
             cold water shock ahead—
 
             $$
