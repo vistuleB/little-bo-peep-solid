@@ -1,13 +1,14 @@
 import { createSignal, ParentProps } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
-import { MOBILE_MAX_WIDTH } from "~/constants";
+import { HAMBURGER_MENU_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
 
 const SectionsBreadcrumbs = (props: ParentProps) => {
   const [visible, setVisible] = createSignal(true);
   const [recentlyClosed, setRecentlyClosed] = createSignal(false);
   const { store } = useGlobalContext();
-  const top = 80;
-  const delta = 20;
+
+  const delta = 18;
+  const top = HAMBURGER_MENU_HEIGHT + delta;
   const sticky = () => store.scrollY > top - delta;
 
   return (
@@ -21,7 +22,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
         top: (sticky() ? delta : top - store.scrollY) + "px",
         left: "0",
         width: "fit-content",
-        padding: "0 20px",
+        padding: "0 26px",
         "max-width": "300px",
       }}
       onMouseOver={() => setVisible(!recentlyClosed())}
