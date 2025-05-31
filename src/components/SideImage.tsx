@@ -7,7 +7,7 @@ import {
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
-import LazyImage from "./LazyImage";
+import ImageOrSideImage from "./ImageOrSideImage";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useScale } from "~/store/ScaleProvider";
 import { DESKTOP_COLUMN_WIDTH, MOBILE_MAX_WIDTH } from "~/constants";
@@ -103,7 +103,7 @@ const SideImage = (props: InternalSideImageProps) => {
           "z-index": 20,
         }}
         class="flex shrink-0 transition-opacity duration-300 lg:transition-none lg:opacity-100 absolute w-max">
-        <LazyImage
+        <ImageOrSideImage
           class={twJoin(props.class, !props.width && "max-w-max", "cloud")}
           style={props.style}
           src={props.src}

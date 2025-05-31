@@ -155,7 +155,7 @@ const Article = () => {
             class="breadcrumb"
             id="breadcrumb-14">
             <InChapterLink href="?id=section-15">
-              the “fisher sandwich”
+              the gregorinovich sandwich
             </InChapterLink>
           </li>
           <li
@@ -1503,9 +1503,11 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           of an angle was briefly touched upon in
-          Note{" "}
-          <a href="/article/chapter4?id=_744411179104">
-            10
+          {" "}
+          <a
+            href="/article/chapter4?id=_349611176243"
+            class="handle-out-of-chapter-link">
+            Note 10
           </a>
           {" "}of Exercise 37, Chapter 4.
           In short, it is a “scientific” measure
@@ -2728,15 +2730,15 @@ const Rest = () => {
           {" "}etc.
         </VerticalChunk>
         <VerticalChunk indent={true}>
-          But the call goes
+          But the call goes{" "}
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(y, x)
           </span>
-          &ensp;not
+          \ not{" "}
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(x, y)
           </span>
-          &ensp;by some bizareness. (Well, actually a
+          \ by some bizareness. (Well, actually a
           throwback to the fact that in this expression...
         </VerticalChunk>
         <Pause />
@@ -3305,31 +3307,33 @@ const Rest = () => {
         <VerticalChunk indent={true}>
           One can polish a few more details by noting that:
         </VerticalChunk>
-        <p style="text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;">
-          {" "}{" "}
-          <b>
-            (i)
-          </b>
-          {" "}the segment can be tangent to the
-          arc at one point, the proof will still go
-          through (so the segment does not need to
-          {" "}
-          <i>
-            strictly
-          </i>
-          {" "}clear the arc);
-        </p>
-        <p style="text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;">
-          {" "}{" "}
-          <b>
-            (ii)
-          </b>
-          {" "}as long as the angle is nonzero,
-          and the arc has nonzero radius, the
-          length of the segment will be STRICTLY
-          GREATER than the length of the arc,
-          not just greater-or-equal-to
-        </p>
+        <TextParent>
+          <p style="text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;">
+            {" "}{" "}
+            <b>
+              (i)
+            </b>
+            {" "}the segment can be tangent to the
+            arc at one point, the proof will still go
+            through (so the segment does not need to
+            {" "}
+            <i>
+              strictly
+            </i>
+            {" "}clear the arc);
+          </p>
+          <p style="text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;">
+            {" "}{" "}
+            <b>
+              (ii)
+            </b>
+            {" "}as long as the angle is nonzero,
+            and the arc has nonzero radius, the
+            length of the segment will be STRICTLY
+            GREATER than the length of the arc,
+            not just greater-or-equal-to
+          </p>
+        </TextParent>
         <VerticalChunk>
           (Point{" "}
           <b>
@@ -3346,11 +3350,11 @@ const Rest = () => {
       <Section id="section-15">
         <VerticalChunk>
           <b>
-            The “Fisher sandwich”.
+            The Gregorinovich sandwich.
           </b>
           {" "}
-          The “Fisher sandwich”—we don't make these
-          terms up—states that
+          The “Gregorinovich sandwich”—sometimes
+          Gr_i_gorinovich—states that
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -3368,7 +3372,7 @@ const Rest = () => {
             .
           </NoBreak>
           {" "}
-          The Fisher sandwich is so-called because
+          The Gregorinovich sandwich is so-called because
           it “sandwiches”{" "}
           <Math>
             $\theta$
@@ -3950,7 +3954,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "}
-          or, to dig in a little, to do with the fact that
+          or to do with the fact that
           what people think of as{" "}
           <NoBreak>
             “
@@ -3986,18 +3990,19 @@ const Rest = () => {
           vice-versa for reaching ‘adjacent’ from
           ‘opposite’. (In fact, the next-to-last
           identity played a role in our proof of the
-          Fisher sandwich.) (Indeed: the Fisher
-          sandwich can be written...
+          Gregorinovich sandwich.) (Indeed,
         </VerticalChunk>
         <Pause />
         <MathBlock>
           $$
-          \te&#123;“&#125;\sin(\theta)&lt; \theta&lt; \tan(\theta)\rt&#123;0.1&#125;\te&#123;”&#125;
+          %\sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
+          \sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
           $$
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          ...in this form, as well!)
+          is another way of writing the Grigorinovich
+          sandwich.)
         </VerticalChunk>
       </Section>
       <Pause />
@@ -4021,11 +4026,11 @@ const Rest = () => {
           <span style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             PURPLE
           </span>
-          &ensp;to the
+          \ to the{" "}
           <span style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             LIME GREEN
           </span>
-          &ensp;triangle
+          \ triangle
           (hard to draw, because it is behind the
           purple triangle!) in the following figure:
         </VerticalChunk>
@@ -14729,7 +14734,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_686241688014">
+          <ExerciseStatement id="_885541688728">
             <VerticalChunk>
               <b>
                 Exercise 42.

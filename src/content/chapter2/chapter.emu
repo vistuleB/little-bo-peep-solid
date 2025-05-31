@@ -730,6 +730,7 @@
             !! $p < 0$—magic!)
 
     |> Exercise
+        handle=y0LineEquation
 
         Find the general equation of a line of slope
         $p$ passing through a point $(x_0, y_0)$.
@@ -869,7 +870,7 @@
             |> Pause
 
             _Note 1._
-            As explained in Chapter 3, an empty circle of
+            As explained in Chapter >>FunctionsCh, an empty circle of
             this type
 
             |> Image
@@ -900,9 +901,11 @@
     |> Exercise
 
         Digressing on the second-to-last equation
-        in the solution to Exercise 2, explain why
+        in the solution to Exercise >>y0LineEquation, explain why
 
-        $$ y_0 - px_0 $$
+        $$
+        y_0 - px_0
+        $$
 
         is the $y$-intercept of the line of slope $p$
         through the point $(x_0,y_0)$ by using a drawing

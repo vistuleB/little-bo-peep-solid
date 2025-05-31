@@ -26,7 +26,8 @@ const Article = () => {
   return (<>
       <Chapter
         number={1}
-        title="A Few Refreshers">
+        title="A Few Refreshers"
+        id="_356414540">
         <SectionsBreadcrumbs>
           <li
             class="breadcrumb"
@@ -1463,7 +1464,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_43795467598">
+          <ExerciseStatement id="_5591546580">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2625,12 +2626,14 @@ const Rest = () => {
                 Exercise 2.
               </b>
               {" "}
-              In the solution to Exercise{" "}
-              <InChapterLink href="/article/chapter1?id=_43795467598">
-                1
+              In the solution to{" "}
+              <InChapterLink
+                href="/article/chapter1?id=_5591546580"
+                class="handle-in-chapter-link">
+                Exercise 1
               </InChapterLink>
-              , we observed how
-              the difference
+              , we 
+              observed how the difference
             </VerticalChunk>
             <Pause />
             <MathBlock>

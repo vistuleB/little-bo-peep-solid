@@ -82,7 +82,10 @@ const Checkbox = (props: {
 }) => {
   return (
     <div
-      onClick={() => props.onChange(!props.value)}
+      onClick={(e) => {
+        e.stopPropagation();
+        props.onChange(!props.value)
+      }}
       class={`w-5 h-5 border border-solid border-black rounded flex items-center justify-center cursor-pointer ${
         props.value
           ? "bg-[#c1ebff] hover:bg-[#9ac1d3]"

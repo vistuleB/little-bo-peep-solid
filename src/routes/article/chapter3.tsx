@@ -26,7 +26,8 @@ const Article = () => {
   return (<>
       <Chapter
         number={3}
-        title="Functions">
+        title="Functions"
+        id="_285016571">
         <SectionsBreadcrumbs>
           <li
             class="breadcrumb"
@@ -5772,7 +5773,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_424021222564">
             <VerticalChunk>
               <b>
                 Exercise 18.

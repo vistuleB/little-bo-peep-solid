@@ -48,8 +48,6 @@
     !!     offset_x=-13em
     !!     src=images/svg_ch4_ch_explanation2_cloud.svg
 
-|> Section
-
     In fact, we can
     succinctly describe the derivative by...
 
@@ -445,7 +443,7 @@
     |> Image
         src=images/svg_ch4_bendiness.svg
 
-    Reason like this: the second derivative is
+    Reason like this: the second derivative is 
     |> del
 
         “the rate of change of the rate of change”.
@@ -538,14 +536,14 @@
     |> Image
         src=images/svg_ch4_ch_position_by_time_der.svg
 
-    |> ImageRight
-        src=images/svg_ch4_ch_position_by_time_cloud.svg
+    !! |> ImageRight
+    !!     src=images/svg_ch4_ch_position_by_time_cloud.svg
 
     ...describes _velocity as a function of time_;
     finally, the second derivative...
 
-    |> Image
-        src=images/svg_ch4_ch_position_by_time_der_der.svg
+    !! |> Image
+    !!     src=images/svg_ch4_ch_position_by_time_der_der.svg
 
     |> ImageLeft
         src=images/svg_ch4_ch_position_by_time_der_cloud.svg
@@ -652,11 +650,11 @@
         = \te{(amount of change)}
         $$
 
-        or, more specifically,
+        !! or, more specifically,
 
-        $$
-        (\te{acceleration}) \times (\te{amount of time}) =\\ (\te{change in velocity})
-        $$
+        !! $$
+        !! (\te{acceleration}) \times (\te{amount of time}) =\\ (\te{change in velocity})
+        !! $$
 
         since acceleration is the rate of change of
         velocity.
@@ -688,11 +686,12 @@
     is being gained or lost _per second_.
 
     The word “jerk” is aptly chosen,
-    too, considering that people don't lose
-    balance under constant acceleration, but,
-    rather, when some some _jerk_ occurs in
-    the movement of their train or subway car,
-    etc. In fact,
+    too, considering that 
+    !! people don't lose
+    !! balance under constant acceleration, but,
+    !! rather, when some some _jerk_ occurs in
+    !! the movement of their train or subway car,
+    !! etc. In fact,
 
     __constant acceleration__
 
@@ -701,7 +700,11 @@
     __zero jerk__
 
     are synonymous, insofar as the everyday
-    world is concerned—which is good, because
+    world is concerned. 
+    (You don't lose balance under constant
+    acceleration, right?) (No! You lose
+    balance when some _jerk_ occurs!!)
+    Which is good, because
     these notions are also equivalent in the
     mathematical realm, what with jerk being
     the derivative of acceleration!
@@ -757,8 +760,8 @@
     fg
     $$
 
-    of functions already appear in Exercise 18
-    of Chapter 3, also. (On the other hand, the
+    of functions already appear in Exercise >>functionOperationsEx
+    of Chapter >>FunctionsCh, also. (On the other hand, the
     quotient (i.e. $f/g$) and difference (i.e.,
     $f - g$) of functions are defined above for
     the first time, even if the definitions might

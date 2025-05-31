@@ -14,6 +14,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       #([ pp.DoubleDollar ], pp.DoubleDollar),
       #([ pp.SingleDollar ], pp.SingleDollar),
     ),
+    [dn.identity()],      
     [
       dn.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
     ],
@@ -110,7 +111,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.cut_paste_attribute_from_self_to_child(
         #("Exercise", "ExerciseStatement", "id"),
       ),
-
       // ************************
       // VerticalChunk cleanup
       // ************************
@@ -200,6 +200,22 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       dn.change_attribute_value([#("src", "/()")]),
       dn.remove_attributes(["counter", "handle", "type", "t", "path", "."]),
+      // dn.rearrange_links([
+      //   #("Chapter <a href='1'>_1_</a>, Exercise <a href='2'>_2_</a>", "<a class='e-link' href='2'>Chapter _1_, Exercise _2_</a>"),
+      //   #("Chapter <a href='1'>_1_</a>", "<a class='c-link' href='1'>Chapter _1_</a>"),
+      //   #("Exercise <a href='1'>_1_</a>.<a href=2>_2_</a>", "<a class='e-link' href='2'>Exercise _1_._2_</a>"),
+      //   #("Exercise <a href='1'>_1_</a>", "<a class='e-link' href='1'>Exercise _1_</a>"),
+      //   #("Note <a href='1'>_1_</a>", "<a class='n-link' href='1'>Note _1_</a>"),
+      //   #("Exercises <a href=1>_1_</a> and <a href=2>_2_</a>", "Exercises <a href=1 class=e-link>_1_</a> and <a href=2 class=e-link>_2_</a>"),
+      // ]),
+      dn.rearrange_links([
+        #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
+        #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
+        #("Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=1>Exercise _1_ of Chapter _2_</a>"),
+        #("Chapter <a href=1>_1_</a>", "<a href=1>Chapter _1_</a>"),
+        #("Exercise <a href=1>_1_</a>", "<a href=1>Exercise _1_</a>"),
+        #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
+      ]),
       // ************************
       // contents
       // ************************

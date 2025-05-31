@@ -1052,17 +1052,17 @@
     $(x, y)$ out of the box, without you having to
     worry about which of $x$ or $y$ is $0$, etc.
 
-    But the call goes
+    But the call goes 
     |> span
         style=font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
 
         atan2(y, x)
-    &ensp;not
+    \ not 
     |> span
         style=font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
 
         atan2(x, y)
-    &ensp;by some bizareness. (Well, actually a
+    \ by some bizareness. (Well, actually a
     throwback to the fact that in this expression...
 
     _|“$\arctan(y/x)$”|_
@@ -1309,22 +1309,23 @@
 
     One can polish a few more details by noting that:
 
-    |> p
-        style=text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;
+    |> TextParent
+        |> p
+            style=text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;
 
-        *(i)* the segment can be tangent to the
-        arc at one point, the proof will still go
-        through (so the segment does not need to
-        _strictly_ clear the arc);
+            *(i)* the segment can be tangent to the
+            arc at one point, the proof will still go
+            through (so the segment does not need to
+            _strictly_ clear the arc);
 
-    |> p
-        style=text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;
+        |> p
+            style=text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;
 
-        *(ii)* as long as the angle is nonzero,
-        and the arc has nonzero radius, the
-        length of the segment will be STRICTLY
-        GREATER than the length of the arc,
-        not just greater-or-equal-to
+            *(ii)* as long as the angle is nonzero,
+            and the arc has nonzero radius, the
+            length of the segment will be STRICTLY
+            GREATER than the length of the arc,
+            not just greater-or-equal-to
 
     (Point *(ii)* can be seen by
     comparing the segment to a two-segment
@@ -1334,16 +1335,16 @@
 
 |> Section
 
-    *The “Fisher sandwich”.*
-    The “Fisher sandwich”—we don't make these
-    terms up—states that
+    *The Gregorinovich sandwich.*
+    The “Gregorinovich sandwich”—sometimes
+    Gr_i_gorinovich—states that
 
     $$
     \sin(\theta) \,<\, \theta \,<\, {\sin(\theta)\over\cos(\theta)}
     $$
 
     for all $0 < \theta < \eta$.
-    The Fisher sandwich is so-called because
+    The Gregorinovich sandwich is so-called because
     !! $\theta$ is “sandwiched”
     it “sandwiches” $\theta$
     between
@@ -1373,10 +1374,10 @@
     when $\cos(\theta)$ is close to $0$, which is the
     case when $\theta$ is close to $\eta$.)
 
-    !! The Fisher sandwich
+    !! The Gregorinovich sandwich
     !! consists of two separate
     !! inequalities that require two separate proofs.
-    !! The Fisher
+    !! The Gregorinovich
     !! sandwich is so-called because it consists of
 
     !! _|TWO|_
@@ -1619,7 +1620,7 @@
 
     modulo a very small technicality (to do
     with the fact that ${1\over \infty} \ne 0$,
-    or, to dig in a little, to do with the fact that
+    or to do with the fact that
     what people think of as “$\pm\infty$”
     is, in fact, an _undefined_ value of the function),
     and
@@ -1636,14 +1637,16 @@
     vice-versa for reaching ‘adjacent’ from
     ‘opposite’. (In fact, the next-to-last
     identity played a role in our proof of the
-    Fisher sandwich.) (Indeed: the Fisher
-    sandwich can be written...
+    Gregorinovich sandwich.) (Indeed,
 
     $$
-    \te{“}\sin(\theta)&lt; \theta&lt; \tan(\theta)\rt{0.1}\te{”}
+    %\sin(\theta) < \theta < \tan(\theta)\rt{0.1}
+    \sin(\theta) < \theta < \tan(\theta)\rt{0.1}
     $$
 
-    ...in this form, as well!)
+    !! ...in this form, as well!)
+    is another way of writing the Grigorinovich
+    sandwich.)
 
 |> Section
 
@@ -1659,12 +1662,12 @@
         style=background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
 
         PURPLE
-    &ensp;to the
+    \ to the 
     |> span
         style=white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
 
         LIME GREEN
-    &ensp;triangle
+    \ triangle
     (hard to draw, because it is behind the
     purple triangle!) in the following figure:
 

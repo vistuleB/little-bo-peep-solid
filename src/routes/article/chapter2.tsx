@@ -1726,7 +1726,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_4907328835">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2060,7 +2060,13 @@ const Rest = () => {
                 Note 1.
               </i>
               {" "}
-              As explained in Chapter 3, an empty circle of
+              As explained in{" "}
+              <a
+                href="/article/chapter3?id=_285016571"
+                class="handle-out-of-chapter-link">
+                Chapter 3
+              </a>
+              , an empty circle of
               this type
             </VerticalChunk>
             <Pause />
@@ -2163,11 +2169,19 @@ const Rest = () => {
               </b>
               {" "}
               Digressing on the second-to-last equation
-              in the solution to Exercise 2, explain why
+              in the solution to{" "}
+              <InChapterLink
+                href="/article/chapter2?id=_4907328835"
+                class="handle-in-chapter-link">
+                Exercise 2
+              </InChapterLink>
+              , explain why
             </VerticalChunk>
             <Pause />
             <MathBlock>
-              $$ y_0 - px_0 $$
+              $$
+              y_0 - px_0
+              $$
             </MathBlock>
             <Pause />
             <VerticalChunk>

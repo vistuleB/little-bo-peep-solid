@@ -255,10 +255,8 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock>
-          $$
-          \Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;
-          $$
+        <MathBlock id="_1870728628">
+          $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -277,7 +275,13 @@ const Rest = () => {
             .
           </NoBreak>
           {" "}
-          Moreover, (A) actually holds for
+          Moreover, (
+          <InChapterLink
+            href="/article/bootcamp2?id=_1870728628"
+            class="handle-in-chapter-link">
+            A
+          </InChapterLink>
+          ) actually holds for
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
@@ -293,21 +297,31 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "}which is mildly important. In more
-          detail, (A) holds for{" "}
+          detail, (
+          <InChapterLink
+            href="/article/bootcamp2?id=_1870728628"
+            class="handle-in-chapter-link">
+            A
+          </InChapterLink>
+          ) holds for{" "}
           <Math>
             $n = 0$
           </Math>
-          {" "}by inspection, and (A)
+          {" "}by inspection, and (
+          <InChapterLink
+            href="/article/bootcamp2?id=_1870728628"
+            class="handle-in-chapter-link">
+            A
+          </InChapterLink>
+          )
           is equivalent to the identity
           <ImageLeft
             line={2}
             src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
         </VerticalChunk>
         <Pause />
-        <MathBlock>
-          $$
-          \Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;
-          $$
+        <MathBlock id="_9592905046">
+          $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -340,7 +354,19 @@ const Rest = () => {
             ”
           </NoBreak>
           {" "}
-          in (AA) lands you right back on (AA), due to the fact
+          in (
+          <InChapterLink
+            href="/article/bootcamp2?id=_9592905046"
+            class="handle-in-chapter-link">
+            AA
+          </InChapterLink>
+          ) lands you right back on (
+          <InChapterLink
+            href="/article/bootcamp2?id=_9592905046"
+            class="handle-in-chapter-link">
+            AA
+          </InChapterLink>
+          ), due to the fact
           that{" "}
           <NoBreak>
             <Math>
@@ -348,7 +374,13 @@ const Rest = () => {
             </Math>
             .)
           </NoBreak>
-          {" "}(So, namely, if (AA) holds for all
+          {" "}(So, namely, if (
+          <InChapterLink
+            href="/article/bootcamp2?id=_9592905046"
+            class="handle-in-chapter-link">
+            AA
+          </InChapterLink>
+          ) holds for all
           positive values of{" "}
           <NoBreak>
             <Math>
@@ -414,7 +446,20 @@ const Rest = () => {
         <Pause />
         <VerticalChunk>
           ...and any one of these equations implies the other two.
-          Thus, either of (A) and (AA) expresses the
+          Thus, either of (
+          <InChapterLink
+            href="/article/bootcamp2?id=_1870728628"
+            class="handle-in-chapter-link">
+            A
+          </InChapterLink>
+          ) and (
+          <InChapterLink
+            href="/article/bootcamp2?id=_9592905046"
+            class="handle-in-chapter-link">
+            AA
+          </InChapterLink>
+          )
+          expresses the
         </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
@@ -2796,11 +2841,11 @@ const Rest = () => {
               </NoBreak>
               {" "}(You can
               take for granted any identity that is stated
-              in this
+              in this{" "}
               <del>
                 chapter
               </del>
-              &ensp;bootcamp.)
+              \ bootcamp.)
             </VerticalChunk>
           </ExerciseStatement>
           <Solution solution_number={13}>
@@ -2822,8 +2867,15 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              stated earlier in the chapter as (A), while the third equality uses
-              additivity of exponents, also stated earlier. (So: We are only using “known”
+              stated earlier in the chapter as (
+              <InChapterLink
+                href="/article/bootcamp2?id=_1870728628"
+                class="handle-in-chapter-link">
+                A
+              </InChapterLink>
+              ), 
+              while the third equality uses additivity of exponents, 
+              also stated earlier. (So: We are only using “known”
               facts, alongside some ordinary arithmetic.)
             </VerticalChunk>
             <Pause />
@@ -2881,7 +2933,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_470211475292">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3163,8 +3215,13 @@ const Rest = () => {
               <Math>
                 $z$
               </Math>
-              {" "}(as in the previous
-              exercise):
+              {" "}(as in{" "}
+              <InChapterLink
+                href="/article/bootcamp2?id=_470211475292"
+                class="handle-in-chapter-link">
+                Exercise 14
+              </InChapterLink>
+              ):
             </VerticalChunk>
             <Pause />
             <MathBlock>
