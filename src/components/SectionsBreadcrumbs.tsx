@@ -11,22 +11,13 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
   const top = HAMBURGER_MENU_HEIGHT + delta;
   const sticky = () => store.scrollY > top - delta;
 
-  const {
-    getPrevArticle,
-    prevDisabled,
-    set_prevDisabled,
-    getNextArticle,
-    nextDisabled,
-    set_nextDisabled,
-  } = usePrevNextArticle();
+  const { getPrevArticle, prevDisabled, getNextArticle, nextDisabled } =
+    usePrevNextArticle();
 
   return (
     <div
       id="breadcrumbs"
       style={{
-        opacity: visible() && store.innerWidth >= MOBILE_MAX_WIDTH ? 1 : 0,
-        transition: "opacity 0.5s ease-in-out",
-        "z-index": 100,
         position: "fixed",
         top: (sticky() ? delta : top - store.scrollY) + "px",
         left: "0",
@@ -36,34 +27,41 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       }}
       onMouseOver={() => setVisible(!recentlyClosed())}
       onMouseLeave={() => setRecentlyClosed(false)}>
-      <ul>
-        <li class="breadcrumb-prev-next flex gap-2">
-          <span
-            class={twJoin(
-              prevDisabled() && "!text-gray-600 cursor-default",
-              "underline cursor-pointer",
-            )}
-            onClick={getPrevArticle}>
-            &lt;&lt;prev
-          </span>
-          <span
-            class={twJoin(
-              nextDisabled() && "!text-gray-600 cursor-default",
-              "underline cursor-pointer",
-            )}
-            onClick={getNextArticle}>
-            next&gt;&gt;
-          </span>
-        </li>
-        {props.children}
-      </ul>
-      <CloseCircleIcon
-        class="mt-2 cursor-pointer"
-        onClick={() => {
-          setVisible(false);
-          setRecentlyClosed(true);
-        }}
-      />
+      <div
+        style={{
+          transform: `translateY(${visible() ? "0" : "-100%"})`,
+          opacity: visible() && store.innerWidth >= MOBILE_MAX_WIDTH ? 1 : 0,
+          transition: "all 0.5s ease-in-out",
+        }}>
+        <ul>
+          <li class="breadcrumb-prev-next flex gap-2">
+            <span
+              class={twJoin(
+                prevDisabled() && "!text-gray-600 cursor-default",
+                "underline cursor-pointer",
+              )}
+              onClick={getPrevArticle}>
+              &lt;&lt;prev
+            </span>
+            <span
+              class={twJoin(
+                nextDisabled() && "!text-gray-600 cursor-default",
+                "underline cursor-pointer",
+              )}
+              onClick={getNextArticle}>
+              next&gt;&gt;
+            </span>
+          </li>
+          {props.children}
+        </ul>
+        <CloseCircleIcon
+          class="mt-2 cursor-pointer"
+          onClick={() => {
+            setVisible(false);
+            setRecentlyClosed(true);
+          }}
+        />
+      </div>
     </div>
   );
 };
