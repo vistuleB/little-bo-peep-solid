@@ -9,26 +9,23 @@ import {
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "../store/StoreProvider";
+import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 
 const PanelButton = () => {
   const { on_mobile } = useOnMobile();
   const { store, set_store } = useGlobalContext();
   const open = () => store.panel_opened;
 
-  const getNextArticle = () => {
-    let a = document.querySelector(".next_page") as HTMLAnchorElement;
-    a?.click();
-  };
-
-  const getPrevArticle = () => {
-    let a = document.querySelector(".prev_page") as HTMLAnchorElement;
-    a?.click();
-  };
+  const {
+    getPrevArticle,
+    prevDisabled,
+    set_prevDisabled,
+    getNextArticle,
+    nextDisabled,
+    set_nextDisabled,
+  } = usePrevNextArticle();
 
   const [opacity, set_opacity] = createSignal(1);
-  const [prevDisabled, set_prevDisabled] = createSignal(false);
-  const [nextDisabled, set_nextDisabled] = createSignal(false);
-
   const calc_opacity = () => {
     // prettier-ignore
     return Math.min(
@@ -49,16 +46,6 @@ const PanelButton = () => {
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);
     });
-  });
-
-  createEffect(() => {
-    store.route; // re-run on route change
-    set_nextDisabled(!document.querySelector(".next_page"));
-    set_prevDisabled(!document.querySelector(".prev_page"));
-    setTimeout(() => {
-      set_nextDisabled(!document.querySelector(".next_page"));
-      set_prevDisabled(!document.querySelector(".prev_page"));
-    }, 50);
   });
 
   return (

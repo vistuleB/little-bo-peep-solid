@@ -11,6 +11,15 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
   const top = HAMBURGER_MENU_HEIGHT + delta;
   const sticky = () => store.scrollY > top - delta;
 
+  const {
+    getPrevArticle,
+    prevDisabled,
+    set_prevDisabled,
+    getNextArticle,
+    nextDisabled,
+    set_nextDisabled,
+  } = usePrevNextArticle();
+
   return (
     <div
       id="breadcrumbs"
@@ -27,7 +36,27 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       }}
       onMouseOver={() => setVisible(!recentlyClosed())}
       onMouseLeave={() => setRecentlyClosed(false)}>
-      <ul>{props.children}</ul>
+      <ul>
+        <li class="breadcrumb-prev-next flex gap-2">
+          <span
+            class={twJoin(
+              prevDisabled() && "!text-gray-600 cursor-default",
+              "underline cursor-pointer",
+            )}
+            onClick={getPrevArticle}>
+            &lt;&lt;prev
+          </span>
+          <span
+            class={twJoin(
+              nextDisabled() && "!text-gray-600 cursor-default",
+              "underline cursor-pointer",
+            )}
+            onClick={getNextArticle}>
+            next&gt;&gt;
+          </span>
+        </li>
+        {props.children}
+      </ul>
       <CloseCircleIcon
         class="mt-2 cursor-pointer"
         onClick={() => {
@@ -40,6 +69,8 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
 };
 
 import { Component } from "solid-js";
+import usePrevNextArticle from "~/hooks/usePrevNextArticle";
+import { twJoin } from "tailwind-merge";
 
 type CloseCircleIconProps = {
   class?: string;

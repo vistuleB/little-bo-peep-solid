@@ -27,6 +27,78 @@ const Article = () => {
       <Bootcamp
         number={2}
         title="Powers of 10">
+        <SectionsBreadcrumbs>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-0">
+            <InChapterLink href="?id=section-1">
+              terminology
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-1">
+            <InChapterLink href="?id=section-2">
+              integer powers of 10
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-2">
+            <InChapterLink href="?id=section-3">
+              other bases
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-3">
+            <InChapterLink href="?id=section-4">
+              additivity of exponents
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-4">
+            <InChapterLink href="?id=section-5">
+              the third law of exponents
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-5">
+            <InChapterLink href="?id=section-6">
+              famous powers of 10
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-6">
+            <InChapterLink href="?id=section-7">
+              negative exponent prefixes
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-7">
+            <InChapterLink href="?id=section-8">
+              positive exponent prefixes
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-8">
+            <InChapterLink href="?id=section-9">
+              logarithms base 10
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-9">
+            <InChapterLink href="?id=exercises">
+              exercises
+            </InChapterLink>
+          </li>
+        </SectionsBreadcrumbs>
         <a
           class="next_page"
           href="/article/bootcamp1" />
@@ -255,7 +327,7 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_1870728628">
+        <MathBlock id="_3580724356">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -277,7 +349,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1870728628"
+            href="/article/bootcamp2?id=_3580724356"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -299,7 +371,7 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1870728628"
+            href="/article/bootcamp2?id=_3580724356"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -309,7 +381,7 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1870728628"
+            href="/article/bootcamp2?id=_3580724356"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -320,7 +392,7 @@ const Rest = () => {
             src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_9592905046">
+        <MathBlock id="_5352906754">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -356,13 +428,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_9592905046"
+            href="/article/bootcamp2?id=_5352906754"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_9592905046"
+            href="/article/bootcamp2?id=_5352906754"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -376,7 +448,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_9592905046"
+            href="/article/bootcamp2?id=_5352906754"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -448,13 +520,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1870728628"
+            href="/article/bootcamp2?id=_3580724356"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_9592905046"
+            href="/article/bootcamp2?id=_5352906754"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -2869,7 +2941,7 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1870728628"
+                href="/article/bootcamp2?id=_3580724356"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -2933,7 +3005,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement id="_470211475292">
+          <ExerciseStatement id="_197111479462">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3217,7 +3289,7 @@ const Rest = () => {
               </Math>
               {" "}(as in{" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_470211475292"
+                href="/article/bootcamp2?id=_197111479462"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>

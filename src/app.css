@@ -425,7 +425,8 @@ ol.l1 > li:before {
   line-height: 2.2rem;
 }
 
-.breadcrumb {
+.breadcrumb,
+.breadcrumb-prev-next {
   text-shadow:
     -3px 0 #fff,
     0 3px #fff,
@@ -433,6 +434,12 @@ ol.l1 > li:before {
     0 -3px #fff;
   font-size: 14px;
   font-family: sans-serif;
+}
+
+.breadcrumb:not(.highlighted):hover,
+.breadcrumb-prev-next span:hover,
+.panel-item:hover {
+  color: #19124c;
 }
 
 .highlighted {

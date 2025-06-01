@@ -179,6 +179,13 @@ const Article = () => {
               secant: a second view
             </InChapterLink>
           </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-18">
+            <InChapterLink href="?id=exercises">
+              exercises
+            </InChapterLink>
+          </li>
         </SectionsBreadcrumbs>
         <a
           class="prev_page"
@@ -1505,7 +1512,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_349611176243"
+            href="/article/chapter4?id=_782211172532"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14734,7 +14741,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_885541688728">
+          <ExerciseStatement id="_735641689878">
             <VerticalChunk>
               <b>
                 Exercise 42.

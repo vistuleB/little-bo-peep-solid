@@ -91,6 +91,13 @@ const Article = () => {
               postscript: units vs dimensions
             </InChapterLink>
           </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-9">
+            <InChapterLink href="?id=exercises">
+              exercises
+            </InChapterLink>
+          </li>
         </SectionsBreadcrumbs>
         <a
           class="next_page"
@@ -1726,7 +1733,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement id="_4907328835">
+          <ExerciseStatement id="_29647324669">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2062,7 +2069,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_285016571"
+                href="/article/chapter3?id=_987315550"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2171,7 +2178,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_4907328835"
+                href="/article/chapter2?id=_29647324669"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

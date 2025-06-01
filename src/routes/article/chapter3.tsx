@@ -27,7 +27,7 @@ const Article = () => {
       <Chapter
         number={3}
         title="Functions"
-        id="_285016571">
+        id="_987315550">
         <SectionsBreadcrumbs>
           <li
             class="breadcrumb"
@@ -148,6 +148,13 @@ const Article = () => {
             id="breadcrumb-12">
             <InChapterLink href="?id=section-13">
               quadratic, linear, and constant terms
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-13">
+            <InChapterLink href="?id=exercises">
+              exercises
             </InChapterLink>
           </li>
         </SectionsBreadcrumbs>
@@ -5773,7 +5780,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <ExerciseStatement id="_424021222564">
+          <ExerciseStatement id="_30721223055">
             <VerticalChunk>
               <b>
                 Exercise 18.

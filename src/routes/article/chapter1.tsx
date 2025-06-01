@@ -27,7 +27,7 @@ const Article = () => {
       <Chapter
         number={1}
         title="A Few Refreshers"
-        id="_356414540">
+        id="_983515500">
         <SectionsBreadcrumbs>
           <li
             class="breadcrumb"
@@ -62,6 +62,13 @@ const Article = () => {
             id="breadcrumb-4">
             <InChapterLink href="?id=section-5">
               vocabulary
+            </InChapterLink>
+          </li>
+          <li
+            class="breadcrumb"
+            id="breadcrumb-5">
+            <InChapterLink href="?id=exercises">
+              exercises
             </InChapterLink>
           </li>
         </SectionsBreadcrumbs>
@@ -1464,7 +1471,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_5591546580">
+          <ExerciseStatement id="_64735461257">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2628,7 +2635,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_5591546580"
+                href="/article/chapter1?id=_64735461257"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
