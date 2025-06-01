@@ -68,10 +68,7 @@ const useScrollToInChapter = () => {
     // check if target is not inside exercise
     if (!isInsideElementWithClass("exercise", target)) {
       // just scroll to the target
-      smoothScrollTo(
-        elementPosOnPage(target) - store.innerHeight / 2,
-        scrollDuration,
-      );
+      smoothScrollTo(calculateTargetCenterOnPage(target), scrollDuration);
       return;
     }
     const exo_number = getClosestExerciseParentIndex(target);
