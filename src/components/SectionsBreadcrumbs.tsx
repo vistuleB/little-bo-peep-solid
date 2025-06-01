@@ -28,26 +28,56 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       onMouseOver={() => setVisible(!recentlyClosed())}
       onMouseLeave={() => setRecentlyClosed(false)}>
       <ul>{props.children}</ul>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+      <CloseCircleIcon
         class="mt-2 cursor-pointer"
         onClick={() => {
           setVisible(false);
           setRecentlyClosed(true);
-        }}>
-        <circle cx="12" cy="12" r="9"></circle>
-        <line x1="15" y1="9" x2="9" y2="15"></line>
-        <line x1="9" y1="9" x2="15" y2="15"></line>
-      </svg>
+        }}
+      />
     </div>
+  );
+};
+
+import { Component } from "solid-js";
+
+type CloseCircleIconProps = {
+  class?: string;
+  onClick?: () => void;
+};
+
+const CloseCircleIcon: Component<CloseCircleIconProps> = (props) => {
+  const iconSize = 28;
+  const circleRadius = 24;
+  const crossSize = 10;
+  const strokeWidth = 2.5;
+  const strokeColor = "currentColor";
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={iconSize}
+      height={iconSize}
+      viewBox={`0 0 ${iconSize * 2} ${iconSize * 2}`}
+      fill="none"
+      stroke={strokeColor}
+      stroke-width={strokeWidth}
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class={props.class}
+      onClick={props.onClick}>
+      <circle cx={iconSize} cy={iconSize} r={circleRadius}></circle>
+      <line
+        x1={iconSize + crossSize}
+        y1={iconSize - crossSize}
+        x2={iconSize - crossSize}
+        y2={iconSize + crossSize}></line>
+      <line
+        x1={iconSize - crossSize}
+        y1={iconSize - crossSize}
+        x2={iconSize + crossSize}
+        y2={iconSize + crossSize}></line>
+    </svg>
   );
 };
 
