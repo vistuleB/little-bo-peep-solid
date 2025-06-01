@@ -2,15 +2,21 @@ import { onCleanup, onMount } from "solid-js";
 
 const useBreadcrumbs = () => {
   const highlight = (section_id: string) => {
-    let section_index_str = section_id?.slice("section-".length) || "";
-    let section_idx = Number(section_index_str) - 1;
+    let breadcrumbs = document.querySelectorAll(".breadcrumb");
 
-    document.querySelectorAll(".breadcrumb")?.forEach((el) => {
+    let to_highlight: HTMLElement | null = null;
+    if (section_id === "exercises") {
+      to_highlight = breadcrumbs.item(breadcrumbs.length - 1) as HTMLElement;
+    } else {
+      let section_index_str = section_id?.slice("section-".length) || "";
+      let section_idx = Number(section_index_str) - 1;
+      to_highlight = document.getElementById("breadcrumb-" + section_idx);
+    }
+
+    breadcrumbs.forEach((el) => {
       el.classList.remove("highlighted");
     });
-    document
-      .getElementById("breadcrumb-" + section_idx)
-      ?.classList.add("highlighted");
+    to_highlight?.classList.add("highlighted");
   };
 
   onMount(async () => {
@@ -53,7 +59,7 @@ const useBreadcrumbs = () => {
 
             if (distance < minDistance) {
               minDistance = distance;
-              closestSection = section;
+              closestSection = section as HTMLElement;
             }
           });
 
