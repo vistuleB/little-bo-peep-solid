@@ -1454,6 +1454,7 @@
                 of function composition.
 
             |> SolutionNote
+                test=test
 
                 One of the best ways to explain _&_ understand
                 the associativity of function composition
@@ -1492,7 +1493,7 @@
                     src=images/svg_ch3_composition_icon_die_3.svg
                     width=1.25rem
                     top=-4px
-                \ in set $C$,  and
+                \ in set $C$, and
 
                 _|
                 $\Large g(h($
@@ -1500,11 +1501,13 @@
                     src=images/svg_ch3_composition_icon_clubs.svg
                     width=1rem
                     top=-3px
-                $\Large{})){}=$
+                $\Large{})) =$
                 |> InlineImage
                     src=images/svg_ch3_composition_icon_fence.svg
                     width=2.3rem
                     top=-4px
+                    marginLeft=.5rem
+                    marginRight=.5rem
                 |_
 
                 because, pursuing that path onwards, the arrow
@@ -1548,7 +1551,8 @@
                 waypoints along a path are “straightened”
                 (or “collapsed”) does not affect the origin
                 point or destination point of the final
-                arrow.
+                arrow. $x$
+                more stuff
 
             |> SolutionNote
 
