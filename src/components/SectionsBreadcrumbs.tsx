@@ -19,6 +19,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       id="breadcrumbs"
       style={{
         position: "fixed",
+        "z-index": 1,
         top: (sticky() ? delta : top - store.scrollY) + "px",
         left: "0",
         width: "fit-content",

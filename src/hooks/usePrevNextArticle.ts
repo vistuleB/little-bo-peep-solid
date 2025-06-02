@@ -16,14 +16,19 @@ const usePrevNextArticle = () => {
     }, 50);
   });
 
-  const getNextArticle = () => {
-    let a = document.querySelector(".next_page") as HTMLAnchorElement;
-    a?.click();
+  const getNextArticle = async () => {
+    setTimeout(() => {
+      let a = document.querySelector(".next_page") as HTMLAnchorElement;
+      a?.click();
+    }, 50);
   };
 
-  const getPrevArticle = () => {
-    let a = document.querySelector(".prev_page") as HTMLAnchorElement;
-    a?.click();
+  const getPrevArticle = async () => {
+    setTimeout(() => {
+      let a = document.querySelector(".prev_page") as HTMLAnchorElement;
+      console.log(a);
+      a?.click();
+    }, 50);
   };
 
   return {
