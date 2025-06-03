@@ -15,7 +15,7 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
+import SectionsBreadcrumbs, {BreadcrumbItem} from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
@@ -28,90 +28,90 @@ const Article = () => {
         number={4}
         title="Derivatives">
         <SectionsBreadcrumbs>
-          <li
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-0">
             <InChapterLink href="?id=section-1">
               definitions
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-1">
             <InChapterLink href="?id=section-2">
               vocabulary
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-2">
             <InChapterLink href="?id=section-3">
               sketching a derivative
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-3">
             <InChapterLink href="?id=section-4">
               derivative of a constant function
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-4">
             <InChapterLink href="?id=section-5">
               derivative of an affine function
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-5">
             <InChapterLink href="?id=section-6">
               units of the derivative
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-6">
             <InChapterLink href="?id=section-7">
               the second derivative
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-7">
             <InChapterLink href="?id=section-8">
               geometric interpretation of the second derivative
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-8">
             <InChapterLink href="?id=section-9">
               vocabulary #1
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-9">
             <InChapterLink href="?id=section-10">
               the second derivative of position
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-10">
             <InChapterLink href="?id=section-11">
               the jerk
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-11">
             <InChapterLink href="?id=exercises">
               exercises
             </InChapterLink>
-          </li>
+          </BreadcrumbItem>
         </SectionsBreadcrumbs>
         <a
           class="next_page"
@@ -790,7 +790,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \te&#123;$y$ axis units for $f'$&#125; \,= &#123;\te&#123;$y$ axis units for $\f$&#125; \over \te&#123;$x$ axis units for $\f$&#125;&#125;
+          te&#123;$y$ axis units for $f'$&#125; \,= &#123;\te&#123;$y$ axis units for $\f$&#125; \over \te&#123;$x$ axis units for $\f$&#125;&#125;
           $$
         </MathBlock>
         <Pause />
@@ -817,7 +817,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \te&#123;$x$ axis units for $f'$&#125;\, = \rt&#123;0.02&#125;\,\te&#123;$x$ axis units for $f$&#125;
+          te&#123;$x$ axis units for $f'$&#125;\, = \rt&#123;0.02&#125;\,\te&#123;$x$ axis units for $f$&#125;
           $$
         </MathBlock>
         <Pause />
@@ -998,7 +998,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \,\,\,f'' = (f')'.
+          ,\,\,f'' = (f')'.
           $$
         </MathBlock>
         <Pause />
@@ -1008,11 +1008,11 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;align&#125;
-          \up&#123;0.95&#125;f''' &= (f'')'\\
-          \up&#123;1.25&#125;f'''' &= (f''')'\\
-          \up&#123;1.25&#125;f''''\psa' &= (f'''')'\\
-          \end&#123;align&#125;
+          begin&#123;align&#125;
+          up&#123;0.95&#125;f''' &= (f'')'\\
+          up&#123;1.25&#125;f'''' &= (f''')'\\
+          up&#123;1.25&#125;f''''\psa' &= (f'''')'\\
+          end&#123;align&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1155,7 +1155,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \,\,\,(x \ra ax + b)'' = (x \ra 0)
+            ,\,\,(x \ra ax + b)'' = (x \ra 0)
             $$
           </MathBlock>
           <Pause />
@@ -1799,7 +1799,7 @@ const Rest = () => {
         <VerticalChunk>
           of functions already appear in{" "}
           <a
-            href="/article/chapter3?id=_30721223055"
+            href="/article/chapter3?id=_623721221806"
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1831,7 +1831,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_877113322">
+          <ExerciseStatement id="_86581637">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1959,7 +1959,7 @@ const Rest = () => {
             <VerticalChunk>
               derivative of the graph in{" "}
               <InChapterLink
-                href="/article/chapter4?id=_877113322"
+                href="/article/chapter4?id=_86581637"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2004,7 +2004,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of{" "}
               <InChapterLink
-                href="/article/chapter4?id=_877113322"
+                href="/article/chapter4?id=_86581637"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2014,7 +2014,7 @@ const Rest = () => {
                 distance that a car has traveled
                 as a function of time,
               </del>
-              \ position of a car as a function of
+              {" "}position of a car as a function of
               time, with hours (hr) on the{" "}
               <NoBreak>
                 <Math>
@@ -2179,12 +2179,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
+              begin&#123;align&#125;
               & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(5) \\
               =& \,\,\,(x \ra x + 1)(5) + (u \ra 2u + 1)(5) \up&#123;1.5&#125; \\
               =& \,\,\,(5 + 1) + (2\cdot 5 + 1) \up&#123;1.5&#125; \\
               =& \,\,\,3\cdot 5 + 2 = 17 \up&#123;1.5&#125;
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2200,12 +2200,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
+              begin&#123;align&#125;
               & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(t) \\
               =& \,\,\,(x \ra x + 1)(t) + (u \ra 2u + 1)(t) \up&#123;1.5&#125; \\
               =& \,\,\,(t + 1) + (2t + 1) \up&#123;1.5&#125; \\
               =& \,\,\,3t + 2 \up&#123;1.5&#125;
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2263,12 +2263,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
+              begin&#123;align&#125;
               & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(x) \\
               =& \,\,\,(x \ra x + 1)(x) + (u \ra 2u + 1)(x) \up&#123;1.5&#125; \\
               =& \,\,\,(x + 1) + (2x + 1) \up&#123;1.5&#125; \\
               =& \,\,\,3x + 2 \up&#123;1.5&#125;
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2543,7 +2543,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <ExerciseStatement id="_5766315870">
+          <ExerciseStatement id="_93673154298">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -2725,7 +2725,7 @@ const Rest = () => {
               {" "}analogously to
               {" "}
               <InChapterLink
-                href="/article/chapter4?id=_5766315870"
+                href="/article/chapter4?id=_93673154298"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -2995,7 +2995,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <ExerciseStatement id="_72804823098">
+          <ExerciseStatement id="_97294821165">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4218,11 +4218,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
+              begin&#123;align&#125;
               (fg)(u) &= f(u) \cdot g(u) \\
               &= g(u) \cdot f(u) \up&#123;1.5&#125;\\
               &= (gf)(u) \up&#123;1.5&#125;
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4296,7 +4296,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large f : \rr \ra \rr
+              Large f : \rr \ra \rr
               $$
             </MathBlock>
             <Pause />
@@ -4307,46 +4307,54 @@ const Rest = () => {
                 $&#123;f(x)&#125;$
               </Math>
               {" "}is the total number of
-              $'s earned by virtue of running
               {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}meters from the start of the race;
-              a second function
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large g : \rr \ra \rr
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              gives the position of the rat as a function of time;
-              specifically,{" "}
-              <Math>
-                $&#123;g(t)&#125;$
-              </Math>
-              {" "}is the position from the start,
-              in meters, reached by the rat at{" "}
-              <Math>
-                $t$
-              </Math>
-              {" "}seconds after the
-              start of the race.
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              In this case, what does{" "}
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "}compute?
+              <NoBreak>
+                <Math>
+                  $'s earned by virtue of running
+                  $
+                </Math>
+                x
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $ meters from the start of the race;
+                  a second function
+                  {" "}
+                  <Pause />
+                  <MathBlock>
+                    $$
+                    Large g : \rr \ra \rr
+                    $$
+                  </MathBlock>
+                  <Pause />
+                  {" "}
+                  gives the position of the rat as a function of time;
+                  specifically, $
+                </Math>
+                &#123;g(t)&#125;
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $ is the position from the start,
+                  in meters, reached by the rat at $
+                </Math>
+                t
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $ seconds after the
+                  start of the race.
+                  In this case, what does $
+                </Math>
+                f
+              </NoBreak>
+              {" "}\circ g$ compute?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution
-            solution_number={15}
-            id="_3910949189">
+          <Solution solution_number={15}>
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -4402,125 +4410,115 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              $'s in total, by definition of{" "}
               <NoBreak>
                 <Math>
-                  $f$
+                  $'s in total, by definition of $
                 </Math>
-                .
+                f
               </NoBreak>
-              {" "}
-              And
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              f(g(t))
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              is
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \circ g)(t)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by definition of{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”.
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              If it helps,
-              here is a pictorialization of the
-              “units transformation pipeline” that
-              occurs inside{" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
-                  $f \circ g$
+                  $.
+                  And
+                  {" "}
+                  <Pause />
+                  <MathBlock>
+                    $$
+                    f(g(t))
+                    $$
+                  </MathBlock>
+                  <Pause />
+                  {" "}
+                  is
+                  {" "}
+                  <MathBlock>
+                    $$
+                    (f \circ g)(t)
+                    $$
+                  </MathBlock>
+                  <Pause />
+                  {" "}
+                  by definition of “$
                 </Math>
-                :
+                \circ
               </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch4_f_g_composition_units.svg" />
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 3.
-              </i>
-              {" "}
-              To emphasize,{" "}
-              <Math>
-                $f(x)$
-              </Math>
-              {" "}is the
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              ~ total ~
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              amount earned when position{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}is reached.
-              In real life{" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
-                  $f$
+                  $”.
+                  <Pause />
+                  _Note 2._
+                  If it helps,
+                  here is a pictorialization of the
+                  “units transformation pipeline” that
+                  occurs inside $
                 </Math>
-                's
+                f
               </NoBreak>
-              {" "}
-              graph might therefore look something like this,
-              while inventing some numbers:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch4_f_g_first_example_of_f.svg" />
-            <Pause />
-            <VerticalChunk>
-              In the above the rat earns{" "}
+              {" "}\circ{" "}
+              <NoBreak>
+                g
+                <Math id="_725211318901">
+                  $:
+                  <Pause />
+                  <Image src="/images/svg_ch4_f_g_composition_units.svg" />
+                  <Pause />
+                  _Note 3._
+                  To emphasize, $
+                </Math>
+                f(x)
+              </NoBreak>
+              {" "}{" "}
               <NoBreak>
                 <Math>
-                  $\te&#123;\$&#125;$
+                  $ is the
+                  __~ total ~__
+                  amount earned when position $
                 </Math>
-                3
+                x
               </NoBreak>
-              {" "}for the
-              first 50m, after which the dollar-per-meter
-              rate is reduced.
-              Or{" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}could look like this, with discrete
-              “unlocks”:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch4_f_g_second_example_of_f.svg" />
-            <Pause />
-            <VerticalChunk>
-              In our mathematicians' imaginations, however,{" "}
-              <Math>
-                $f$
-              </Math>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $ is reached.
+                  In real life $
+                </Math>
+                f
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $'s
+                  graph might therefore look something like this,
+                  while inventing some numbers:
+                  <Pause />
+                  <Image src="/images/svg_ch4_f_g_first_example_of_f.svg" />
+                  In the above the rat earns $
+                </Math>
+                \te&#123;$&#125;
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $3 for the
+                  first 50m, after which the dollar-per-meter
+                  rate is reduced.
+                  Or $
+                </Math>
+                f
+              </NoBreak>
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $ could look like this, with discrete
+                  “unlocks”:
+                  <Pause />
+                  <Image src="/images/svg_ch4_f_g_second_example_of_f.svg" />
+                  In our mathematicians' imaginations, however, $
+                </Math>
+                f$
+              </NoBreak>
               {" "}
               might also look like this, nice and differentiable,
               with periods of negative slope (corresponding to
@@ -4735,7 +4733,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \left(&#123;5\over 3\up&#123;1&#125;&#125;\left[&#123;\te&#123;m&#125; \over \te&#123;s&#125;&#125;\right]\right) \times \left(&#123;1 \over 10\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;m&#125;&#125;\right]\right) = &#123;5\over 30\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;s&#125;&#125;\right].
+              left(&#123;5\over 3\up&#123;1&#125;&#125;\left[&#123;\te&#123;m&#125; \over \te&#123;s&#125;&#125;\right]\right) \times \left(&#123;1 \over 10\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;m&#125;&#125;\right]\right) = &#123;5\over 30\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;s&#125;&#125;\right].
               $$
               <ImageRight
                 src="/images/svg_ch4_f_g_actual_exercise_cloud.svg"
@@ -5311,7 +5309,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 2 \cdot &#123;2\over 3&#125; = &#123;4\over 3&#125;
+              Large 2 \cdot &#123;2\over 3&#125; = &#123;4\over 3&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5336,7 +5334,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;4\over 3&#125;\cdot &#123;2\over 3&#125; = &#123;8 \over 9&#125;
+              Large &#123;4\over 3&#125;\cdot &#123;2\over 3&#125; = &#123;8 \over 9&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5460,7 +5458,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;v \over r&#125;
+              Large &#123;v \over r&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5472,7 +5470,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;v \over r&#125;
+              Large &#123;v \over r&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5487,7 +5485,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large v \cdot &#123;v \over r&#125; = &#123;v^2 \over r&#125;
+              Large v \cdot &#123;v \over r&#125; = &#123;v^2 \over r&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5520,7 +5518,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125;
+              Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5532,7 +5530,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;v \over r&#125;
+              Large &#123;v \over r&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5543,7 +5541,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125; = &#123;v \over r&#125;
+              Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125; = &#123;v \over r&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5554,7 +5552,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;\te&#123;length of acceleration vector&#125;\over \te&#123;radius&#125;&#125;
+              Large &#123;\te&#123;length of acceleration vector&#125;\over \te&#123;radius&#125;&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5565,7 +5563,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;\te&#123;length of acceleration vector&#125;\over \te&#123;radius of velocity vector circle&#125;&#125;
+              Large &#123;\te&#123;length of acceleration vector&#125;\over \te&#123;radius of velocity vector circle&#125;&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5722,7 +5720,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_24716272738">
+            <SolutionNote id="_441516272442">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -5773,7 +5771,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \Large &#123;\te&#123;number of radii per unit time&#125;&#125;
+                Large &#123;\te&#123;number of radii per unit time&#125;&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -5783,7 +5781,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \Large &#123;\te&#123;radii per unit time&#125;&#125;
+                Large &#123;\te&#123;radii per unit time&#125;&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -6126,7 +6124,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see{" "}
               <InChapterLink
-                href="/article/chapter4?id=_7261187365"
+                href="/article/chapter4?id=_84281873415"
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6303,7 +6301,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_7261187365">
+            <SolutionNote id="_84281873415">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6547,7 +6545,7 @@ const Rest = () => {
               {" "}
               <Math>
                 $
-                \pm 1
+                pm 1
                 $
               </Math>
               {" "}
@@ -9127,7 +9125,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={31}
-            id="_1392913610">
+            id="_736991961">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -10305,7 +10303,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={33}
-            id="_98106309352">
+            id="_58006308553">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10565,7 +10563,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large AB
+              Large AB
               $$
             </MathBlock>
             <Pause />
@@ -10716,7 +10714,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large AB
+              Large AB
               $$
             </MathBlock>
             <Pause />
@@ -10908,7 +10906,7 @@ const Rest = () => {
               {" "}(cf.
               Exercise 16{" "}
               <InChapterLink
-                href="/article/chapter4?id=_3910949189"
+                href="/article/chapter4?id=_725211318901"
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -11602,7 +11600,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={37}
-            id="_782211172532">
+            id="_82211176726">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>
@@ -12404,7 +12402,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;11 \over 7&#125;
+              Large &#123;11 \over 7&#125;
               $$
             </MathBlock>
             <Pause />
@@ -12415,7 +12413,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125;
+              Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125;
               $$
             </MathBlock>
             <Pause />
@@ -12461,7 +12459,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;44 \over 7&#125; = 6.285714\dots
+              Large &#123;44 \over 7&#125; = 6.285714\dots
               $$
             </MathBlock>
             <Pause />
@@ -12486,7 +12484,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;11 \over 7&#125; = 1.571428\dots
+              Large &#123;11 \over 7&#125; = 1.571428\dots
               $$
             </MathBlock>
             <Pause />
@@ -12605,7 +12603,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \pm 6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;
+              pm 6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;
               $$
             </MathBlock>
             <Pause />
@@ -12828,7 +12826,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \pm&#123;&#125;0.2\te&#123;s&#125;
+              pm&#123;&#125;0.2\te&#123;s&#125;
               $$
             </MathBlock>
             <Pause />
@@ -13141,7 +13139,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \approx 6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;
+              approx 6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;
               $$
             </MathBlock>
             <Pause />
@@ -13213,7 +13211,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sqrt&#123;4.8^2 + 4.8^2&#125; = \sqrt&#123;2&#125; \times 4.8 = 6.788...
+              sqrt&#123;4.8^2 + 4.8^2&#125; = \sqrt&#123;2&#125; \times 4.8 = 6.788...
               $$
               <ImageLeft
                 src="/images/svg_ch4_pacman2_4_point_8_cloud.svg"
@@ -13275,7 +13273,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sqrt&#123;6.5^2 + 2^2&#125; = \sqrt&#123;46.25&#125; = 6.800...
+              sqrt&#123;6.5^2 + 2^2&#125; = \sqrt&#123;46.25&#125; = 6.800...
               $$
             </MathBlock>
             <Pause />
@@ -13316,7 +13314,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sqrt&#123;3^2 + 6.2^2&#125; = \sqrt&#123;47.44&#125; = 6.888
+              sqrt&#123;3^2 + 6.2^2&#125; = \sqrt&#123;47.44&#125; = 6.888
               $$
             </MathBlock>
             <Pause />
@@ -13331,7 +13329,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sqrt&#123;5.6^2 + 3.6^2&#125; = \sqrt&#123;44.32&#125; = 6.657
+              sqrt&#123;5.6^2 + 3.6^2&#125; = \sqrt&#123;44.32&#125; = 6.657
               $$
             </MathBlock>
             <Pause />
@@ -13363,7 +13361,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sqrt&#123;2.6^2 + 6.2^2&#125; = \sqrt&#123;45.2&#125; = 6.723...
+              sqrt&#123;2.6^2 + 6.2^2&#125; = \sqrt&#123;45.2&#125; = 6.723...
               $$
             </MathBlock>
             <Pause />
@@ -13459,7 +13457,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \approx &#123;11 \over 7&#125;
+              approx &#123;11 \over 7&#125;
               $$
             </MathBlock>
             <Pause />
@@ -13479,7 +13477,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \approx &#123;20.25\te&#123;c&#125; \over 11/7&#125; = &#123;7 \times 20.25\te&#123;c&#125; \over 11&#125; = &#123;141.75\te&#123;c&#125; \over 11&#125; = 12.886...\te&#123;c&#125;
+              approx &#123;20.25\te&#123;c&#125; \over 11/7&#125; = &#123;7 \times 20.25\te&#123;c&#125; \over 11&#125; = &#123;141.75\te&#123;c&#125; \over 11&#125; = 12.886...\te&#123;c&#125;
               $$
             </MathBlock>
             <Pause />
@@ -13888,7 +13886,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large a
+              Large a
               $$
             </MathBlock>
             <Pause />
@@ -13907,7 +13905,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large c
+              Large c
               $$
             </MathBlock>
             <Pause />
@@ -13918,7 +13916,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large c + a
+              Large c + a
               $$
             </MathBlock>
             <Pause />
@@ -13934,7 +13932,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large (c + a) + (-a) = c
+              Large (c + a) + (-a) = c
               $$
             </MathBlock>
             <Pause />
@@ -14108,7 +14106,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1.6c
+              Large 1.6c
               $$
             </MathBlock>
             <Pause />
@@ -14139,7 +14137,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1.6(c + a)
+              Large 1.6(c + a)
               $$
             </MathBlock>
             <Pause />
@@ -14167,7 +14165,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large c
+              Large c
               $$
             </MathBlock>
             <Pause />
@@ -14184,7 +14182,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large c + a
+              Large c + a
               $$
             </MathBlock>
             <Pause />
@@ -14211,7 +14209,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1.6c
+              Large 1.6c
               $$
             </MathBlock>
             <Pause />
@@ -14232,7 +14230,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1.6(a + c)
+              Large 1.6(a + c)
               $$
             </MathBlock>
             <Pause />
@@ -14309,7 +14307,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1.6\cdot (c + &#123;a\over 2&#125;)
+              Large 1.6\cdot (c + &#123;a\over 2&#125;)
               $$
             </MathBlock>
             <Pause />
@@ -14320,7 +14318,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1.6
+              Large 1.6
               $$
             </MathBlock>
             <Pause />
@@ -14332,7 +14330,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large c + &#123;a \over 2&#125;
+              Large c + &#123;a \over 2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -14365,7 +14363,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1.6\cdot (c + &#123;a\over 2&#125;)
+              Large 1.6\cdot (c + &#123;a\over 2&#125;)
               $$
             </MathBlock>
             <Pause />

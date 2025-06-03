@@ -26,7 +26,6 @@ const usePrevNextArticle = () => {
   const getPrevArticle = async () => {
     setTimeout(() => {
       let a = document.querySelector(".prev_page") as HTMLAnchorElement;
-      console.log(a);
       a?.click();
     }, 50);
   };

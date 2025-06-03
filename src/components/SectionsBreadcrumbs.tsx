@@ -1,6 +1,11 @@
 import { createSignal, ParentProps } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { HAMBURGER_MENU_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
+import { Component } from "solid-js";
+import usePrevNextArticle from "~/hooks/usePrevNextArticle";
+import { twJoin } from "tailwind-merge";
+import SharedProps from "./types/SharedProps";
+import OutlinedText from "./OutlinedText";
 
 const SectionsBreadcrumbs = (props: ParentProps) => {
   const [visible, setVisible] = createSignal(true);
@@ -19,7 +24,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       id="breadcrumbs"
       style={{
         position: "fixed",
-        "z-index": 1,
+        "z-index": 30,
         top: (sticky() ? delta : top - store.scrollY) + "px",
         left: "0",
         width: "fit-content",
@@ -30,28 +35,28 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       onMouseLeave={() => setRecentlyClosed(false)}>
       <div
         style={{
-          transform: `translateY(${visible() ? "0" : "-100%"})`,
+          transform: `translateY(${visible() ? "0" : "-120%"})`,
           opacity: visible() && store.innerWidth >= MOBILE_MAX_WIDTH ? 1 : 0,
           transition: "all 0.5s ease-in-out",
         }}>
         <ul>
           <li class="breadcrumb-prev-next flex gap-2">
-            <span
+            <OutlinedText
+              onClick={getPrevArticle}
               class={twJoin(
                 prevDisabled() && "!text-gray-600 cursor-default",
                 "underline cursor-pointer",
-              )}
-              onClick={getPrevArticle}>
+              )}>
               &lt;&lt;prev
-            </span>
-            <span
+            </OutlinedText>
+            <OutlinedText
+              onClick={getNextArticle}
               class={twJoin(
                 nextDisabled() && "!text-gray-600 cursor-default",
                 "underline cursor-pointer",
-              )}
-              onClick={getNextArticle}>
+              )}>
               next&gt;&gt;
-            </span>
+            </OutlinedText>
           </li>
           {props.children}
         </ul>
@@ -67,9 +72,15 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
   );
 };
 
-import { Component } from "solid-js";
-import usePrevNextArticle from "~/hooks/usePrevNextArticle";
-import { twJoin } from "tailwind-merge";
+export const BreadcrumbItem = (props: ParentProps & SharedProps) => {
+  return (
+    <>
+      <li id={props.id} class={props.class}>
+        <OutlinedText>{props.children}</OutlinedText>
+      </li>
+    </>
+  );
+};
 
 type CloseCircleIconProps = {
   class?: string;

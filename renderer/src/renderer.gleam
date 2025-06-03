@@ -241,7 +241,7 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(
           blame_us("lbp_fragment_emitter"),
           0,
-          "import SectionsBreadcrumbs from \"~/components/SectionsBreadcrumbs\";",
+          "import SectionsBreadcrumbs, {BreadcrumbItem} from \"~/components/SectionsBreadcrumbs\";",
         ),
         BlamedLine(
           blame_us("lbp_fragment_emitter"),

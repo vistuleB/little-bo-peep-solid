@@ -15,7 +15,7 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
+import SectionsBreadcrumbs, {BreadcrumbItem} from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
@@ -27,72 +27,72 @@ const Article = () => {
       <Chapter
         number={3}
         title="Functions"
-        id="_987315550">
+        id="_16311582">
         <SectionsBreadcrumbs>
-          <li
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-0">
             <InChapterLink href="?id=section-1">
               syntax
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-1">
             <InChapterLink href="?id=section-2">
               lambda functions
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-2">
             <InChapterLink href="?id=section-3">
               definition by cases
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-3">
             <InChapterLink href="?id=section-4">
               on arbitrariness
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-4">
             <InChapterLink href="?id=section-5">
               graphs
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-5">
             <InChapterLink href="?id=section-6">
               domains
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-6">
             <InChapterLink href="?id=section-7">
               “from/to” notation
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-7">
             <InChapterLink href="?id=section-8">
               the vertical line test
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-8">
             <InChapterLink href="?id=section-9">
               a famous discontinuity
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-9">
             <InChapterLink href="?id=section-10">
@@ -113,8 +113,8 @@ const Article = () => {
                 ”
               </NoBreak>
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-10">
             <InChapterLink href="?id=section-11">
@@ -135,28 +135,28 @@ const Article = () => {
                 ”
               </NoBreak>
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-11">
             <InChapterLink href="?id=section-12">
               polynomials
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-12">
             <InChapterLink href="?id=section-13">
               quadratic, linear, and constant terms
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-13">
             <InChapterLink href="?id=exercises">
               exercises
             </InChapterLink>
-          </li>
+          </BreadcrumbItem>
         </SectionsBreadcrumbs>
         <a
           class="next_page"
@@ -426,7 +426,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \lambda&#123;&#125;x.x^2
+          lambda&#123;&#125;x.x^2
           $$
         </MathBlock>
         <Pause />
@@ -448,7 +448,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \lambda&#123;&#125;z.z^2
+          lambda&#123;&#125;z.z^2
           $$
         </MathBlock>
         <Pause />
@@ -464,7 +464,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Huge \lambda
+          Huge \lambda
           $$
         </MathBlock>
         <Pause />
@@ -580,11 +580,11 @@ const Rest = () => {
         <MathBlock>
           $$
           x \ra \begin&#123;cases&#125;
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \vdots & \vdots\\
-          \ldots & \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;
+          ldots & \te&#123;if $\ldots$&#125;\\
+          ldots & \te&#123;if $\ldots$&#125;\\
+          vdots & \vdots\\
+          ldots & \te&#123;$\ldots$&#125;
+          end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
@@ -604,11 +604,11 @@ const Rest = () => {
         <MathBlock>
           $$
           g(x) = \begin&#123;cases&#125;
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \vdots & \vdots\\
-          \ldots & \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;
+          ldots & \te&#123;if $\ldots$&#125;\\
+          ldots & \te&#123;if $\ldots$&#125;\\
+          vdots & \vdots\\
+          ldots & \te&#123;$\ldots$&#125;
+          end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
@@ -636,11 +636,11 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125;
+            te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125;
             3.5 & \te&#123;if $x = 0$&#125;,\\
             2.5\up&#123;1.1&#125; & \te&#123;if $x = 1$&#125;,\\
-            \te&#123;undefined&#125;\up&#123;1.1&#125; & \te&#123;if $x \ne 0, 1$&#125;
-            \end&#123;cases&#125;
+            te&#123;undefined&#125;\up&#123;1.1&#125; & \te&#123;if $x \ne 0, 1$&#125;
+            end&#123;cases&#125;
             $$
           </MathBlock>
           <Pause />
@@ -650,7 +650,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;VX-11/78A&#125;(0) = 3.5,
+            te&#123;VX-11/78A&#125;(0) = 3.5,
             $$
           </MathBlock>
           <Pause />
@@ -660,7 +660,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;VX-11/78A&#125;(1) = 2.5,
+            te&#123;VX-11/78A&#125;(1) = 2.5,
             $$
           </MathBlock>
           <Pause />
@@ -923,7 +923,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \dom\, f
+          dom\, f
           $$
         </MathBlock>
         <Pause />
@@ -951,7 +951,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;
+            dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;
             $$
           </MathBlock>
           <Pause />
@@ -993,11 +993,11 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;DM-1700&#125;(x) =
-            \begin&#123;cases&#125;
+            te&#123;DM-1700&#125;(x) =
+            begin&#123;cases&#125;
             0             & \te&#123;if $x \leq 0$ or $x \geq 1$&#125;,\\
             1 - x\up&#123;1.1&#125; & \te&#123;if $0 &lt; x &lt; 1$&#125;
-            \end&#123;cases&#125;
+            end&#123;cases&#125;
             $$
           </MathBlock>
           <Pause />
@@ -1007,7 +1007,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr
+            dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr
             $$
           </MathBlock>
           <Pause />
@@ -1054,9 +1054,9 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \begin&#123;align&#125;
-            \dom\, g &\,=\, [1, \infty)
-            \end&#123;align&#125;
+            begin&#123;align&#125;
+            dom\, g &\,=\, [1, \infty)
+            end&#123;align&#125;
             $$
           </MathBlock>
           <Pause />
@@ -1128,7 +1128,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \dom f \subseteq \rr
+          dom f \subseteq \rr
           $$
         </MathBlock>
         <Pause />
@@ -1147,7 +1147,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \&#123;f(x) : x \in \dom f\&#125; \subseteq \rr
+          &#123;f(x) : x \in \dom f\&#125; \subseteq \rr
           $$
         </MathBlock>
         <Pause />
@@ -1179,7 +1179,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \dom f \subseteq A
+          dom f \subseteq A
           $$
         </MathBlock>
         <Pause />
@@ -1201,7 +1201,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \&#123;f(x) : x \in \dom f\&#125; \subseteq B
+          &#123;f(x) : x \in \dom f\&#125; \subseteq B
           $$
         </MathBlock>
         <Pause />
@@ -1400,7 +1400,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large x \ra 0^x
+          Large x \ra 0^x
           $$
         </MathBlock>
         <Pause />
@@ -1411,9 +1411,9 @@ const Rest = () => {
         <MathBlock>
           $$
           0^x =
-          \begin&#123;cases&#125; 0 & \te&#123;if &#125; x &gt; 0\\
+          begin&#123;cases&#125; 0 & \te&#123;if &#125; x &gt; 0\\
           1 & \te&#123;if &#125; x = 0\\
-          \te&#123;undefined&#125; & \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;
+          te&#123;undefined&#125; & \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1858,16 +1858,16 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;array&#125;&#123;c|c|c&#125;
-          \,\,\,\,\te&#123;degree&#125;\,\,\,\, & \te&#123;name&#125; & \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
+          begin&#123;array&#125;&#123;c|c|c&#125;
+          ,\,\,\,\te&#123;degree&#125;\,\,\,\, & \te&#123;name&#125; & \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
           -\infty & \te&#123;zero&#125; & 0\Rule&#123;0pt&#125;&#123;1.1em&#125;&#123;0.0em&#125;\\
-          \te&#123;0&#125; & \te&#123;constant&#125; & 1 + \sqrt&#123;5&#125;\\
-          \te&#123;1&#125; & \te&#123;affine&#125; & 10x - 1\\
-          \te&#123;2&#125; & \,\,\,\,\te&#123;quadratic&#125;\,\,\,\, & x^2 - 1\\
-          \te&#123;3&#125; & \te&#123;cubic&#125; & x^3 - 1\\
-          \te&#123;4&#125; & \te&#123;quartic&#125; & 1 - x^4\\
-          \te&#123;5&#125; & \te&#123;quintic&#125; & x^5
-          \end&#123;array&#125;
+          te&#123;0&#125; & \te&#123;constant&#125; & 1 + \sqrt&#123;5&#125;\\
+          te&#123;1&#125; & \te&#123;affine&#125; & 10x - 1\\
+          te&#123;2&#125; & \,\,\,\,\te&#123;quadratic&#125;\,\,\,\, & x^2 - 1\\
+          te&#123;3&#125; & \te&#123;cubic&#125; & x^3 - 1\\
+          te&#123;4&#125; & \te&#123;quartic&#125; & 1 - x^4\\
+          te&#123;5&#125; & \te&#123;quintic&#125; & x^5
+          end&#123;array&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2254,7 +2254,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \lfloor x \rfloor,
+              lfloor x \rfloor,
               $$
             </MathBlock>
             <Pause />
@@ -2749,7 +2749,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,&#123;(f \circ g)(x) = f(g(x))&#125;.
+              ,&#123;(f \circ g)(x) = f(g(x))&#125;.
               $$
             </MathBlock>
             <Pause />
@@ -3086,7 +3086,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos \dblcol \rr \ra \rr
+              cos \dblcol \rr \ra \rr
               $$
             </MathBlock>
             <Pause />
@@ -3222,7 +3222,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \tag&#123;A&#125;(f \circ (g \circ h))(x)
+                tag&#123;A&#125;(f \circ (g \circ h))(x)
                 $$
               </MathBlock>
               <Pause />
@@ -3246,7 +3246,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
+                tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
                 $$
               </MathBlock>
               <Pause />
@@ -4248,11 +4248,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
-              \,\,\,\,(x + 5)^2
+              begin&#123;align&#125;
+              ,\,\,\,(x + 5)^2
               &= x^2 + (2\cdot 5)x + 5^2 \\
               &= \up&#123;1.4&#125; x^2 + 10x + 25
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4622,7 +4622,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,x + 5 = \pm\sqrt&#123;55&#125;
+              ,x + 5 = \pm\sqrt&#123;55&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4632,7 +4632,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,x = -5 \pm\sqrt&#123;55&#125;
+              ,x = -5 \pm\sqrt&#123;55&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5593,7 +5593,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \tag&#123;A&#125;
+              tag&#123;A&#125;
               x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;
               $$
             </MathBlock>
@@ -5614,7 +5614,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
+              pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5624,7 +5624,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
+              left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5780,7 +5780,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <ExerciseStatement id="_30721223055">
+          <ExerciseStatement id="_623721221806">
             <VerticalChunk>
               <b>
                 Exercise 18.
@@ -6109,7 +6109,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;
+              Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -6386,7 +6386,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
+              pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
               $$
             </MathBlock>
             <Pause />
@@ -6396,7 +6396,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \pm E = \pm F
+              pm E = \pm F
               $$
             </MathBlock>
             <Pause />
@@ -6466,7 +6466,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
+              sqrt&#123;B^2 - 4AC \over 4A^2&#125;
               $$
             </MathBlock>
             <Pause />

@@ -15,7 +15,7 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
+import SectionsBreadcrumbs, {BreadcrumbItem} from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
@@ -28,76 +28,76 @@ const Article = () => {
         number={2}
         title="Powers of 10">
         <SectionsBreadcrumbs>
-          <li
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-0">
             <InChapterLink href="?id=section-1">
               terminology
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-1">
             <InChapterLink href="?id=section-2">
               integer powers of 10
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-2">
             <InChapterLink href="?id=section-3">
               other bases
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-3">
             <InChapterLink href="?id=section-4">
               additivity of exponents
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-4">
             <InChapterLink href="?id=section-5">
               the third law of exponents
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-5">
             <InChapterLink href="?id=section-6">
               famous powers of 10
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-6">
             <InChapterLink href="?id=section-7">
               negative exponent prefixes
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-7">
             <InChapterLink href="?id=section-8">
               positive exponent prefixes
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-8">
             <InChapterLink href="?id=section-9">
               logarithms base 10
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-9">
             <InChapterLink href="?id=exercises">
               exercises
             </InChapterLink>
-          </li>
+          </BreadcrumbItem>
         </SectionsBreadcrumbs>
         <a
           class="next_page"
@@ -173,7 +173,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;\hspace&#123;0.2ex&#125;n&#125;
+          Large 10^&#123;\hspace&#123;0.2ex&#125;n&#125;
           $$
         </MathBlock>
         <Pause />
@@ -200,7 +200,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;-n&#125;
+          Large 10^&#123;-n&#125;
           $$
         </MathBlock>
         <Pause />
@@ -230,31 +230,31 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 10^4 = 1 \times 10 \times 10 \times 10 \times 10 = 10000
+          Large 10^4 = 1 \times 10 \times 10 \times 10 \times 10 = 10000
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 10^3 = 1 \times 10 \times 10 \times 10 = 1000
+          Large 10^3 = 1 \times 10 \times 10 \times 10 = 1000
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 10^2 = 1 \times 10 \times 10 = 100
+          Large 10^2 = 1 \times 10 \times 10 = 100
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 10^1 = 1 \times 10 = 10
+          Large 10^1 = 1 \times 10 = 10
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 10^0 = 1 = 1
+          Large 10^0 = 1 = 1
           $$
           <ImageLeft
             offset_x="4em"
@@ -282,25 +282,25 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;-1&#125; = 1\,/\,10 = 0.1
+          Large 10^&#123;-1&#125; = 1\,/\,10 = 0.1
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;-2&#125; = (1\,/\, 10)\,/\,10 = 0.01
+          Large 10^&#123;-2&#125; = (1\,/\, 10)\,/\,10 = 0.01
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;-3&#125; = ((1\,/\, 10)\,/\,10)\,/\,10 = 0.001
+          Large 10^&#123;-3&#125; = ((1\,/\, 10)\,/\,10)\,/\,10 = 0.001
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;-4&#125; = (((1\,/\, 10)\,/\,10)\,/\, 10)\,/\, 10 = 0.0001
+          Large 10^&#123;-4&#125; = (((1\,/\, 10)\,/\,10)\,/\, 10)\,/\, 10 = 0.0001
           $$
         </MathBlock>
         <Pause />
@@ -327,8 +327,8 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_3580724356">
-          $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
+        <MathBlock id="_6009723231">
+          $$Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -349,7 +349,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_3580724356"
+            href="/article/bootcamp2?id=_6009723231"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -371,7 +371,7 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_3580724356"
+            href="/article/bootcamp2?id=_6009723231"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -381,7 +381,7 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_3580724356"
+            href="/article/bootcamp2?id=_6009723231"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -392,8 +392,8 @@ const Rest = () => {
             src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_5352906754">
-          $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
+        <MathBlock id="_8013902053">
+          $$Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
         <VerticalChunk>
@@ -428,13 +428,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_5352906754"
+            href="/article/bootcamp2?id=_8013902053"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_5352906754"
+            href="/article/bootcamp2?id=_8013902053"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -448,7 +448,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_5352906754"
+            href="/article/bootcamp2?id=_8013902053"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -489,7 +489,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large ab = 1
+          Large ab = 1
           $$
         </MathBlock>
         <Pause />
@@ -512,7 +512,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large ab = 1 \qquad a = &#123;1 \over b&#125; \qquad b = &#123;1 \over a&#125;
+          Large ab = 1 \qquad a = &#123;1 \over b&#125; \qquad b = &#123;1 \over a&#125;
           $$
         </MathBlock>
         <Pause />
@@ -520,13 +520,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_3580724356"
+            href="/article/bootcamp2?id=_6009723231"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_5352906754"
+            href="/article/bootcamp2?id=_8013902053"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -565,7 +565,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 2^&#123;-2&#125;
+          Large 2^&#123;-2&#125;
           $$
         </MathBlock>
         <Pause />
@@ -606,7 +606,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 0^&#123;-2&#125;
+          Large 0^&#123;-2&#125;
           $$
         </MathBlock>
         <Pause />
@@ -659,25 +659,25 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 0^3 = 1 \times 0 \times 0 \times 0 = 0
+          Large 0^3 = 1 \times 0 \times 0 \times 0 = 0
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 0^2 = 1 \times 0 \times 0 = 0
+          Large 0^2 = 1 \times 0 \times 0 = 0
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 0^1 = 1 \times 0 = 0
+          Large 0^1 = 1 \times 0 = 0
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \Large 0^0 = 1 = 1
+          Large 0^0 = 1 = 1
           $$
         </MathBlock>
         <Pause />
@@ -780,7 +780,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;13&#125; \times 10^&#123;14&#125; = 10^&#123;\hspace&#123;0.1ex&#125;27&#125;
+          Large 10^&#123;13&#125; \times 10^&#123;14&#125; = 10^&#123;\hspace&#123;0.1ex&#125;27&#125;
           $$
         </MathBlock>
         <Pause />
@@ -821,7 +821,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;\hspace&#123;0.1ex&#125;n&#125; \times 10^&#123;\hspace&#123;0.1ex&#125;m&#125; = 10^&#123;\hspace&#123;0.1ex&#125;n + m&#125;
+          Large 10^&#123;\hspace&#123;0.1ex&#125;n&#125; \times 10^&#123;\hspace&#123;0.1ex&#125;m&#125; = 10^&#123;\hspace&#123;0.1ex&#125;n + m&#125;
           $$
         </MathBlock>
         <Pause />
@@ -900,7 +900,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large (10^&#123;13&#125;)^&#123;14&#125; = 10^&#123;13\cdot 14&#125;
+          Large (10^&#123;13&#125;)^&#123;14&#125; = 10^&#123;13\cdot 14&#125;
           $$
         </MathBlock>
         <Pause />
@@ -931,7 +931,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large (10^n)^m = 10^&#123;nm&#125;
+          Large (10^n)^m = 10^&#123;nm&#125;
           $$
         </MathBlock>
         <Pause />
@@ -956,7 +956,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large a^&#123;b^&#123;c&#125;&#125;
+          Large a^&#123;b^&#123;c&#125;&#125;
           $$
         </MathBlock>
         <Pause />
@@ -984,7 +984,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large a^&#123;\left(b^&#123;c&#125;\right)&#125;
+          Large a^&#123;\left(b^&#123;c&#125;\right)&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1015,7 +1015,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large (a^&#123;b&#125;)^&#123;c&#125;
+          Large (a^&#123;b&#125;)^&#123;c&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1046,7 +1046,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large a^&#123;bc&#125;
+          Large a^&#123;bc&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1057,7 +1057,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large a^&#123;b^c&#125;
+          Large a^&#123;b^c&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1067,7 +1067,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large a^&#123;\left(b^c\right)&#125;
+          Large a^&#123;\left(b^c\right)&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1269,7 +1269,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 1000 \times 1000 = 1000\hspace&#123;0.3ex&#125;000
+          Large 1000 \times 1000 = 1000\hspace&#123;0.3ex&#125;000
           $$
         </MathBlock>
         <Pause />
@@ -1279,7 +1279,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 10^3 \times 10^3 = 10^6
+          Large 10^3 \times 10^3 = 10^6
           $$
         </MathBlock>
         <Pause />
@@ -1915,7 +1915,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 100
+          Large 100
           $$
         </MathBlock>
         <Pause />
@@ -1942,7 +1942,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 2
+          Large 2
           $$
         </MathBlock>
         <Pause />
@@ -1971,7 +1971,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large 99 = 10^&#123;1.99563519...&#125;
+            Large 99 = 10^&#123;1.99563519...&#125;
             $$
           </MathBlock>
           <Pause />
@@ -1994,7 +1994,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large 1.99563519...
+            Large 1.99563519...
             $$
           </MathBlock>
           <Pause />
@@ -2024,7 +2024,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large 98 = 10^&#123;1.99122607...&#125;
+            Large 98 = 10^&#123;1.99122607...&#125;
             $$
           </MathBlock>
           <Pause />
@@ -2034,7 +2034,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large 1.99122607...
+            Large 1.99122607...
             $$
           </MathBlock>
           <Pause />
@@ -2064,7 +2064,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large 0.1 = 10^&#123;-1&#125;
+            Large 0.1 = 10^&#123;-1&#125;
             $$
           </MathBlock>
           <Pause />
@@ -2098,7 +2098,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large 0.00001 = 10^&#123;-5&#125;
+            Large 0.00001 = 10^&#123;-5&#125;
             $$
             <ImageRight
               offset_x="0em"
@@ -2166,19 +2166,19 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 2^&#123;-2&#125; = &#123;2^&#123;-1&#125;\over 2&#125; = &#123;0.5 \over 2&#125; = 0.25
+              Large 2^&#123;-2&#125; = &#123;2^&#123;-1&#125;\over 2&#125; = &#123;0.5 \over 2&#125; = 0.25
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large 2^&#123;-3&#125; = &#123;2^&#123;-2&#125;\over 2&#125; = &#123;0.25 \over 2&#125; = 0.125
+              Large 2^&#123;-3&#125; = &#123;2^&#123;-2&#125;\over 2&#125; = &#123;0.25 \over 2&#125; = 0.125
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large 2^&#123;-4&#125; = &#123;2^&#123;-3&#125;\over 2&#125; = &#123;0.125 \over 2&#125; = 0.0625
+              Large 2^&#123;-4&#125; = &#123;2^&#123;-3&#125;\over 2&#125; = &#123;0.125 \over 2&#125; = 0.0625
               $$
             </MathBlock>
             <Pause />
@@ -2258,7 +2258,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;1 \over 16&#125; = &#123;1 \over 2\cdot 2\cdot 2\cdot 2&#125; = 2^&#123;-4&#125; = 0.0625
+              Large &#123;1 \over 16&#125; = &#123;1 \over 2\cdot 2\cdot 2\cdot 2&#125; = 2^&#123;-4&#125; = 0.0625
               $$
             </MathBlock>
             <Pause />
@@ -2268,7 +2268,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;100 \over 16&#125; = 100 \cdot &#123;1 \over 16&#125; = 100\cdot 0.0625 = 6.25
+              Large &#123;100 \over 16&#125; = 100 \cdot &#123;1 \over 16&#125; = 100\cdot 0.0625 = 6.25
               $$
             </MathBlock>
             <Pause />
@@ -2318,7 +2318,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 10^4 \times 10^4 = 10^8
+              Large 10^4 \times 10^4 = 10^8
               $$
             </MathBlock>
             <Pause />
@@ -2337,7 +2337,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 10^4 \times 10^4 \times 10^4 = 10^&#123;12&#125;
+              Large 10^4 \times 10^4 \times 10^4 = 10^&#123;12&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2480,7 +2480,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1\textrm&#123;mm&#125; = 10^&#123;-6&#125;\textrm&#123;km&#125;
+              Large 1\textrm&#123;mm&#125; = 10^&#123;-6&#125;\textrm&#123;km&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2490,7 +2490,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 10^&#123;24&#125; \textrm&#123;mm&#125; = 10^&#123;24&#125;\cdot 10^&#123;-6&#125;\textrm&#123;km&#125; = 10^&#123;18&#125;\textrm&#123;km&#125;
+              Large 10^&#123;24&#125; \textrm&#123;mm&#125; = 10^&#123;24&#125;\cdot 10^&#123;-6&#125;\textrm&#123;km&#125; = 10^&#123;18&#125;\textrm&#123;km&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2661,7 +2661,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 10^&#123;12&#125;\times 10^&#123;9&#125;\times 10^&#123;6&#125;\times 10^3 = 10^&#123;12+9+6+3&#125;
+              Large 10^&#123;12&#125;\times 10^&#123;9&#125;\times 10^&#123;6&#125;\times 10^3 = 10^&#123;12+9+6+3&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2695,7 +2695,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125;
+              Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125;
               $$
             </MathBlock>
           </ExerciseStatement>
@@ -2706,7 +2706,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; = &#123;10^&#123;6-12+10&#125; \over 10^&#123;-4 -4&#125;&#125; = &#123;10^4 \over 10^&#123;-8&#125;&#125;
+              Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; = &#123;10^&#123;6-12+10&#125; \over 10^&#123;-4 -4&#125;&#125; = &#123;10^4 \over 10^&#123;-8&#125;&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2716,7 +2716,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;10^4 \over 10^&#123;-8&#125;&#125; = 10^4 \cdot &#123;1 \over 10^&#123;-8&#125;&#125; = 10^4\cdot 10^&#123;-(-8)&#125;
+              Large &#123;10^4 \over 10^&#123;-8&#125;&#125; = 10^4 \cdot &#123;1 \over 10^&#123;-8&#125;&#125; = 10^4\cdot 10^&#123;-(-8)&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2726,7 +2726,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 10^4\cdot 10^&#123;-(-8)&#125; = 10^4\cdot 10^8 = 10^&#123;4 + 8&#125; = 10^&#123;12&#125;
+              Large 10^4\cdot 10^&#123;-(-8)&#125; = 10^4\cdot 10^8 = 10^&#123;4 + 8&#125; = 10^&#123;12&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2775,7 +2775,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1000 \times 8 \times 10^6 = 8 \times 10^9
+              Large 1000 \times 8 \times 10^6 = 8 \times 10^9
               $$
             </MathBlock>
             <Pause />
@@ -2807,7 +2807,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 6.25
+              Large 6.25
               $$
             </MathBlock>
             <Pause />
@@ -2833,7 +2833,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 25^2 = 625
+              Large 25^2 = 625
               $$
             </MathBlock>
             <Pause />
@@ -2852,7 +2852,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;100 \over 16&#125; = 2.5^2
+              Large &#123;100 \over 16&#125; = 2.5^2
               $$
             </MathBlock>
             <Pause />
@@ -2867,7 +2867,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;100 \over 16&#125; = &#123;10^2 \over 4^2&#125; = \left(\!&#123;10\over 4&#125;\!\right)^&#123;\!\!2&#125; = \left(\!&#123;5\over 2&#125;\!\right)^&#123;\!\!2&#125;
+              Large &#123;100 \over 16&#125; = &#123;10^2 \over 4^2&#125; = \left(\!&#123;10\over 4&#125;\!\right)^&#123;\!\!2&#125; = \left(\!&#123;5\over 2&#125;\!\right)^&#123;\!\!2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2895,7 +2895,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;10^n \over \vphantom&#123;10^&#123;A^n&#125;&#125;10^m&#125; = 10^&#123;n-m&#125;
+              Large &#123;10^n \over \vphantom&#123;10^&#123;A^n&#125;&#125;10^m&#125; = 10^&#123;n-m&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2917,7 +2917,7 @@ const Rest = () => {
               <del>
                 chapter
               </del>
-              \ bootcamp.)
+              {" "}bootcamp.)
             </VerticalChunk>
           </ExerciseStatement>
           <Solution solution_number={13}>
@@ -2934,14 +2934,14 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;1 \over 10^m&#125; = 10^&#123;-m&#125;
+              Large &#123;1 \over 10^m&#125; = 10^&#123;-m&#125;
               $$
             </MathBlock>
             <Pause />
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_3580724356"
+                href="/article/bootcamp2?id=_6009723231"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -2978,7 +2978,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \left(&#123;a\over b&#125;\right)^&#123;\!-1&#125; = &#123;1 \over \left( &#123;a \over b&#125;\right)&#125;
+              Large \left(&#123;a\over b&#125;\right)^&#123;\!-1&#125; = &#123;1 \over \left( &#123;a \over b&#125;\right)&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2988,7 +2988,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;1 \over \left( &#123;a \over b&#125;\right)&#125; = &#123;b \over a&#125;
+              Large &#123;1 \over \left( &#123;a \over b&#125;\right)&#125; = &#123;b \over a&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3005,7 +3005,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement id="_197111479462">
+          <ExerciseStatement id="_300511478907">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3016,19 +3016,19 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;L \over T&#125;
+              Large &#123;L \over T&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;M (L/T) \over T&#125;
+              Large &#123;M (L/T) \over T&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right)
+              Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right)
               $$
             </MathBlock>
             <Pause />
@@ -3038,7 +3038,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large M^aL^bT^c
+              Large M^aL^bT^c
               $$
             </MathBlock>
             <Pause />
@@ -3073,7 +3073,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;L \over T&#125; = LT^&#123;-1&#125; = M^0L^1T^&#123;-1&#125;
+              Large &#123;L \over T&#125; = LT^&#123;-1&#125; = M^0L^1T^&#123;-1&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3083,7 +3083,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;L \over T&#125; = L\cdot &#123;1\over T&#125; = LT^&#123;-1&#125;
+              Large &#123;L \over T&#125; = L\cdot &#123;1\over T&#125; = LT^&#123;-1&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3093,7 +3093,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;M (L/T) \over T&#125; = MLT^&#123;-2&#125; = M^1L^1T^&#123;-2&#125;
+              Large &#123;M (L/T) \over T&#125; = MLT^&#123;-2&#125; = M^1L^1T^&#123;-2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3103,7 +3103,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;L/T \over T&#125; = &#123;L\over T&#125;\cdot&#123;1 \over T&#125; = &#123;L \over T^2&#125; = LT^&#123;-2&#125;
+              Large &#123;L/T \over T&#125; = &#123;L\over T&#125;\cdot&#123;1 \over T&#125; = &#123;L \over T^2&#125; = LT^&#123;-2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3113,7 +3113,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right) = ML^&#123;-1&#125;T^&#123;-1&#125; = M^1L^&#123;-1&#125;T^&#123;-1&#125;
+              Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right) = ML^&#123;-1&#125;T^&#123;-1&#125; = M^1L^&#123;-1&#125;T^&#123;-1&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3123,7 +3123,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large L^2&#123;L/T\over L&#125; = L^2&#123;1/T \over 1&#125; = &#123;L^2\over T&#125;
+              Large L^2&#123;L/T\over L&#125; = L^2&#123;1/T \over 1&#125; = &#123;L^2\over T&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3133,7 +3133,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \left.&#123;ML \over T^2 &#125; \right/ &#123;L^2\over T&#125; = &#123;ML\over T^2&#125;\cdot &#123;T\over L^2&#125; = &#123;M \over TL&#125; = MT^&#123;-1&#125;L^&#123;-1&#125;
+              Large \left.&#123;ML \over T^2 &#125; \right/ &#123;L^2\over T&#125; = &#123;ML\over T^2&#125;\cdot &#123;T\over L^2&#125; = &#123;M \over TL&#125; = MT^&#123;-1&#125;L^&#123;-1&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3182,7 +3182,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large v^aF^b\mu^c\rho = 1
+              Large v^aF^b\mu^c\rho = 1
               $$
             </MathBlock>
             <Pause />
@@ -3214,25 +3214,25 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large v = &#123;L \over T&#125;
+              Large v = &#123;L \over T&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large F = &#123;ML \over T^2&#125;
+              Large F = &#123;ML \over T^2&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large \mu = &#123;M \over TL &#125;
+              Large \mu = &#123;M \over TL &#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large \rho = &#123;M \over L^3&#125;
+              Large \rho = &#123;M \over L^3&#125;
               $$
             </MathBlock>
           </ExerciseStatement>
@@ -3289,7 +3289,7 @@ const Rest = () => {
               </Math>
               {" "}(as in{" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_197111479462"
+                href="/article/bootcamp2?id=_300511478907"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -3298,25 +3298,25 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large v = LT^&#123;-1&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
+              Large v = LT^&#123;-1&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large F = MLT^&#123;-2&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
+              Large F = MLT^&#123;-2&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large \mu = MT^&#123;-1&#125;L^&#123;-1&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
+              Large \mu = MT^&#123;-1&#125;L^&#123;-1&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large \rho = ML^&#123;-3&#125;
+              Large \rho = ML^&#123;-3&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3353,25 +3353,25 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large v^a = L^aT^&#123;-a&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
+              Large v^a = L^aT^&#123;-a&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large F^b = M^&#123;b&#125;L^bT^&#123;-2b&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
+              Large F^b = M^&#123;b&#125;L^bT^&#123;-2b&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large \mu^c = M^cT^&#123;-c&#125;L^&#123;-c&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
+              Large \mu^c = M^cT^&#123;-c&#125;L^&#123;-c&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large \rho = ML^&#123;-3&#125;
+              Large \rho = ML^&#123;-3&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3393,7 +3393,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large M^&#123;b+c+1&#125;L^&#123;a+b-c-3&#125;T^&#123;-a-2b-c&#125;
+              Large M^&#123;b+c+1&#125;L^&#123;a+b-c-3&#125;T^&#123;-a-2b-c&#125;
               $$
             </MathBlock>
             <Pause />
@@ -3412,7 +3412,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1
+              Large 1
               $$
             </MathBlock>
             <Pause />
@@ -3465,19 +3465,19 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large b + c + 1 = 0
+              Large b + c + 1 = 0
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large a + b - c - 3 = 0
+              Large a + b - c - 3 = 0
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large -a -2b - c = 0
+              Large -a -2b - c = 0
               $$
             </MathBlock>
             <Pause />
@@ -3488,7 +3488,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large -b -2c -3 = 0
+              Large -b -2c -3 = 0
               $$
               <ImageRight
                 offset_x="0.5em"
@@ -3504,7 +3504,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large -c -2 = 0
+              Large -c -2 = 0
               $$
             </MathBlock>
             <Pause />
@@ -3534,7 +3534,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large b + (-2) + 1 = 0
+              Large b + (-2) + 1 = 0
               $$
             </MathBlock>
             <Pause />
@@ -3544,7 +3544,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large b - 1 = 0
+              Large b - 1 = 0
               $$
             </MathBlock>
             <Pause />
@@ -3574,7 +3574,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large a + 1 - (-2) - 3 = 0
+              Large a + 1 - (-2) - 3 = 0
               $$
             </MathBlock>
             <Pause />
@@ -3648,7 +3648,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large v^0 F^1 \mu^&#123;-2&#125; \rho = 1
+              Large v^0 F^1 \mu^&#123;-2&#125; \rho = 1
               $$
             </MathBlock>
             <Pause />
@@ -3685,7 +3685,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large F\mu^&#123;-2&#125;\rho = 1
+              Large F\mu^&#123;-2&#125;\rho = 1
               $$
             </MathBlock>
             <Pause />

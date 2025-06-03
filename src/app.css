@@ -427,11 +427,7 @@ ol.l1 > li:before {
 
 .breadcrumb,
 .breadcrumb-prev-next {
-  text-shadow:
-    -3px 0 #fff,
-    0 3px #fff,
-    3px 0 #fff,
-    0 -3px #fff;
+  position: relative;
   font-size: 14px;
   font-family: sans-serif;
 }

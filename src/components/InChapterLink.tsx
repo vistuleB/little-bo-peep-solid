@@ -3,7 +3,7 @@ import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { twJoin } from "tailwind-merge";
 
 const InChapterLink = (
-  props: ParentProps & { href: string; class: string },
+  props: ParentProps & { href: string; class?: string },
 ) => {
   const scrollToInChapter = useScrollToInChapter();
 
@@ -15,7 +15,10 @@ const InChapterLink = (
   };
 
   return (
-    <a href={props.href} class={twJoin(props.class, "in-chapter-link")} onClick={handleClick}>
+    <a
+      href={props.href}
+      class={twJoin(props.class, "in-chapter-link")}
+      onClick={handleClick}>
       {props.children}
     </a>
   );

@@ -3,7 +3,7 @@ import { SectionDivider } from "./SectionDivider";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 export const Section = (
-  props: ParentProps & { divider?: boolean; id: number },
+  props: ParentProps & { divider?: boolean; id?: string },
 ) => {
   const { store } = useGlobalContext();
   const show_section_dividers = () => store.show_section_dividers;

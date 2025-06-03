@@ -15,7 +15,7 @@ import { List, Item } from "~/components/List";
 import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs from "~/components/SectionsBreadcrumbs";
+import SectionsBreadcrumbs, {BreadcrumbItem} from "~/components/SectionsBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
@@ -28,21 +28,21 @@ const Article = () => {
         number={5}
         title="The Trigonometric Functions">
         <SectionsBreadcrumbs>
-          <li
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-0">
             <InChapterLink href="?id=section-1">
               cos and sin. (“cosine” and “sine”.)
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-1">
             <InChapterLink href="?id=section-2">
               derivatives
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-2">
             <InChapterLink href="?id=section-3">
@@ -55,36 +55,36 @@ const Article = () => {
                 ”
               </NoBreak>
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-3">
             <InChapterLink href="?id=section-4">
               relation to derivatives
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-4">
             <InChapterLink href="?id=section-5">
               the pythagorean identity
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-5">
             <InChapterLink href="?id=section-6">
               inputs as radians
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-6">
             <InChapterLink href="?id=section-7">
               auto-converting degrees to radians
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-7">
             <InChapterLink href="?id=section-8">
@@ -108,84 +108,84 @@ const Article = () => {
                 {" "}{" "}
               </NoBreak>
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-8">
             <InChapterLink href="?id=section-9">
               scaling the circle
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-9">
             <InChapterLink href="?id=section-10">
               polar coordinates
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-10">
             <InChapterLink href="?id=section-11">
               change-of-coordinate formulas
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-11">
             <InChapterLink href="?id=section-12">
               right triangles
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-12">
             <InChapterLink href="?id=section-13">
               a famous diagram
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-13">
             <InChapterLink href="?id=section-14">
               the abercrombie inequality
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-14">
             <InChapterLink href="?id=section-15">
               the gregorinovich sandwich
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-15">
             <InChapterLink href="?id=section-16">
               the angle-sum formulas
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-16">
             <InChapterLink href="?id=section-17">
               the missing arrows
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-17">
             <InChapterLink href="?id=section-18">
               secant: a second view
             </InChapterLink>
-          </li>
-          <li
+          </BreadcrumbItem>
+          <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-18">
             <InChapterLink href="?id=exercises">
               exercises
             </InChapterLink>
-          </li>
+          </BreadcrumbItem>
         </SectionsBreadcrumbs>
         <a
           class="prev_page"
@@ -528,7 +528,7 @@ const Article = () => {
           <Pause />
           <MathBlock>
             $$
-            \approx &#123;11\over 7&#125; = 1.\overline&#123;571428&#125;
+            approx &#123;11\over 7&#125; = 1.\overline&#123;571428&#125;
             $$
           </MathBlock>
           <Pause />
@@ -573,7 +573,7 @@ const Article = () => {
           <Pause />
           <MathBlock>
             $$
-            \sin(x)
+            sin(x)
             $$
           </MathBlock>
           <Pause />
@@ -924,13 +924,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin' = \cos
+          sin' = \cos
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \cos' = -\!\sin
+          cos' = -\!\sin
           $$
         </MathBlock>
         <Pause />
@@ -1054,12 +1054,12 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \displaylines&#123;
-          \up&#123;1.0&#125;\cos(-x) = \cos(x) \\
-          \up&#123;1.7&#125;\sin(-x) = -\sin(x) \\
-          \up&#123;1.7&#125;\sin(x + \eta) = \cos(x) \\
-          \up&#123;1.7&#125;\cos(x - \eta) = \sin(x) \\
-          \up&#123;1.7&#125;\dn&#123;0.5&#125;\cos(\eta/2 + x) = \sin(\eta/2 - x)
+          displaylines&#123;
+          up&#123;1.0&#125;\cos(-x) = \cos(x) \\
+          up&#123;1.7&#125;\sin(-x) = -\sin(x) \\
+          up&#123;1.7&#125;\sin(x + \eta) = \cos(x) \\
+          up&#123;1.7&#125;\cos(x - \eta) = \sin(x) \\
+          up&#123;1.7&#125;\dn&#123;0.5&#125;\cos(\eta/2 + x) = \sin(\eta/2 - x)
           &#125;
           $$
         </MathBlock>
@@ -1077,7 +1077,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large \eta
+          Large \eta
           $$
         </MathBlock>
         <Pause />
@@ -1132,7 +1132,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin(\eta - x) = \cos(x)
+          sin(\eta - x) = \cos(x)
           $$
         </MathBlock>
         <Pause />
@@ -1142,7 +1142,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(\eta - x) = \sin(x)
+          cos(\eta - x) = \sin(x)
           $$
         </MathBlock>
         <Pause />
@@ -1164,11 +1164,11 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \displaylines&#123;
-          \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
-          \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
-          \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
-          \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
+          displaylines&#123;
+          up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
+          up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
+          up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
+          up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
           &#125;
           $$
         </MathBlock>
@@ -1188,8 +1188,8 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \displaylines&#123;\up&#123;1.0&#125;\cos(x + \eta) = -\!\sin(x) \\
-          \up&#123;1.7&#125;\sin(x - \eta) = -\!\cos(x)&#125;
+          displaylines&#123;\up&#123;1.0&#125;\cos(x + \eta) = -\!\sin(x) \\
+          up&#123;1.7&#125;\sin(x - \eta) = -\!\cos(x)&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1212,13 +1212,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin'(x) = \sin(x + \eta)
+          sin'(x) = \sin(x + \eta)
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \cos'(x) = \cos(x + \eta)
+          cos'(x) = \cos(x + \eta)
           $$
         </MathBlock>
         <Pause />
@@ -1228,13 +1228,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin(x + \eta) = \cos(x)
+          sin(x + \eta) = \cos(x)
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \cos(x + \eta) = -\!\sin(x)
+          cos(x + \eta) = -\!\sin(x)
           $$
         </MathBlock>
         <Pause />
@@ -1247,13 +1247,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin^&#123;(\ell)&#125;(x) = \sin(x + \ell\eta)
+          sin^&#123;(\ell)&#125;(x) = \sin(x + \ell\eta)
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \cos^&#123;(\ell)&#125;(x) = \cos(x + \ell\eta)
+          cos^&#123;(\ell)&#125;(x) = \cos(x + \ell\eta)
           $$
         </MathBlock>
         <Pause />
@@ -1326,7 +1326,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos^2(x) + \sin^2(x) = 1 \tag&#123;*&#125;
+          cos^2(x) + \sin^2(x) = 1 \tag&#123;*&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1364,7 +1364,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin^2(x) + \cos^2(x)
+          sin^2(x) + \cos^2(x)
           $$
         </MathBlock>
         <Pause />
@@ -1375,7 +1375,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin^2(y)
+          sin^2(y)
           $$
         </MathBlock>
         <Pause />
@@ -1395,7 +1395,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos^2(y)
+          cos^2(y)
           $$
         </MathBlock>
         <Pause />
@@ -1456,7 +1456,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin^2(\theta) - \cos^2(\theta)
+          sin^2(\theta) - \cos^2(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -1486,7 +1486,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \,\cos^2(\theta) - \sin^2(\theta),
+          ,\cos^2(\theta) - \sin^2(\theta),
           $$
         </MathBlock>
         <Pause />
@@ -1512,7 +1512,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_782211172532"
+            href="/article/chapter4?id=_82211176726"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -1736,7 +1736,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \eta\over 90
+          eta\over 90
           $$
         </MathBlock>
         <Pause />
@@ -1772,7 +1772,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(90^\circ\hlfbk)
+          cos(90^\circ\hlfbk)
           $$
         </MathBlock>
         <Pause />
@@ -1782,7 +1782,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(\eta)
+          cos(\eta)
           $$
         </MathBlock>
         <Pause />
@@ -1795,7 +1795,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(\eta) = 0
+          cos(\eta) = 0
           $$
         </MathBlock>
         <Pause />
@@ -1938,13 +1938,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          cos(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          sin(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1954,13 +1954,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(\eta/2) = \sqrt&#123;0.5&#125;
+          cos(\eta/2) = \sqrt&#123;0.5&#125;
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(\eta/2) = \sqrt&#123;0.5&#125;
+          sin(\eta/2) = \sqrt&#123;0.5&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1970,13 +1970,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(135^\circ\hlfbk) = -\sqrt&#123;0.5&#125;
+          cos(135^\circ\hlfbk) = -\sqrt&#123;0.5&#125;
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(135^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          sin(135^\circ\hlfbk) = \sqrt&#123;0.5&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1986,13 +1986,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(1.5\eta) = -\sqrt&#123;0.5&#125;
+          cos(1.5\eta) = -\sqrt&#123;0.5&#125;
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(1.5\eta) = \sqrt&#123;0.5&#125;
+          sin(1.5\eta) = \sqrt&#123;0.5&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2057,7 +2057,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sqrt&#123;0.25&#125; = 0.5
+          sqrt&#123;0.25&#125; = 0.5
           $$
         </MathBlock>
         <Pause />
@@ -2089,13 +2089,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(60^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          cos(60^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(60^\circ\hlfbk) = \sqrt&#123;0.75&#125;
+          sin(60^\circ\hlfbk) = \sqrt&#123;0.75&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2105,13 +2105,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(30^\circ\hlfbk) = \sqrt&#123;0.75&#125;,
+          cos(30^\circ\hlfbk) = \sqrt&#123;0.75&#125;,
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(30^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          sin(30^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
           $$
         </MathBlock>
         <Pause />
@@ -2121,13 +2121,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(2\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          cos(2\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(2\eta/3) = \sqrt&#123;0.75&#125;
+          sin(2\eta/3) = \sqrt&#123;0.75&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2137,13 +2137,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(\eta/3) = \sqrt&#123;0.75&#125;,
+          cos(\eta/3) = \sqrt&#123;0.75&#125;,
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;)
+          sin(\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;)
           $$
         </MathBlock>
         <Pause />
@@ -2156,13 +2156,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(120^\circ\hlfbk) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
+          cos(120^\circ\hlfbk) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(120^\circ\hlfbk) = \sqrt&#123;0.75&#125;
+          sin(120^\circ\hlfbk) = \sqrt&#123;0.75&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2172,13 +2172,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(4\eta/3) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
+          cos(4\eta/3) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \sin(4\eta/3) = \sqrt&#123;0.75&#125;
+          sin(4\eta/3) = \sqrt&#123;0.75&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2195,7 +2195,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
+          sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2205,7 +2205,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sqrt&#123;0.75&#125; = &#123;\sqrt&#123;3&#125;\over 2&#125;
+          sqrt&#123;0.75&#125; = &#123;\sqrt&#123;3&#125;\over 2&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2615,8 +2615,8 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \displaylines&#123;x = r \cos(\theta)\\
-          \up&#123;1.3&#125;y = r \sin(\theta)&#125;
+          displaylines&#123;x = r \cos(\theta)\\
+          up&#123;1.3&#125;y = r \sin(\theta)&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2681,11 +2681,11 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \theta = \begin&#123;cases&#125;
-          \arctan(y/x)&amp;\te&#123;if &#125;\, x \ne 0, \,\te&#123;else&#125; \\
-          \up&#123;1.2&#125;\te&#123;arccot&#125;(x/y) &amp;\te&#123;if &#125;\, y \ne 0, \,\te&#123;else&#125; \\
-          \up&#123;1.2&#125;\rm&#123;?&#125; &amp;\te&#123;if &#125;\, x = 0, y = 0
-          \end&#123;cases&#125;
+          theta = \begin&#123;cases&#125;
+          arctan(y/x)&amp;\te&#123;if &#125;\, x \ne 0, \,\te&#123;else&#125; \\
+          up&#123;1.2&#125;\te&#123;arccot&#125;(x/y) &amp;\te&#123;if &#125;\, y \ne 0, \,\te&#123;else&#125; \\
+          up&#123;1.2&#125;\rm&#123;?&#125; &amp;\te&#123;if &#125;\, x = 0, y = 0
+          end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2741,11 +2741,11 @@ const Rest = () => {
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(y, x)
           </span>
-          \ not{" "}
+          {" "}not{" "}
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(x, y)
           </span>
-          \ by some bizareness. (Well, actually a
+          {" "}by some bizareness. (Well, actually a
           throwback to the fact that in this expression...
         </VerticalChunk>
         <Pause />
@@ -3216,7 +3216,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \overline&#123;s_1s_2&#125;\, &gt; \,\overline&#123;p_1p_2&#125;
+          overline&#123;s_1s_2&#125;\, &gt; \,\overline&#123;p_1p_2&#125;
           $$
         </MathBlock>
         <Pause />
@@ -3366,7 +3366,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin(\theta) \,&lt;\, \theta \,&lt;\, &#123;\sin(\theta)\over\cos(\theta)&#125;
+          sin(\theta) \,&lt;\, \theta \,&lt;\, &#123;\sin(\theta)\over\cos(\theta)&#125;
           $$
         </MathBlock>
         <Pause />
@@ -3390,7 +3390,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin(\theta)
+          sin(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -3425,7 +3425,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(\theta)
+          cos(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -3496,7 +3496,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin(\theta) \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; \theta
+          sin(\theta) \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; \theta
           $$
         </MathBlock>
         <Pause />
@@ -3518,7 +3518,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \theta &gt; L
+          theta &gt; L
           $$
         </MathBlock>
         <Pause />
@@ -3609,7 +3609,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sin(\theta)
+          sin(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -3715,7 +3715,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \,\sin(\theta_1 + \theta_2)\,
+          ,\sin(\theta_1 + \theta_2)\,
           $$
         </MathBlock>
         <Pause />
@@ -3725,7 +3725,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \,\cos(\theta_1 + \theta_2)\,
+          ,\cos(\theta_1 + \theta_2)\,
           $$
         </MathBlock>
         <Pause />
@@ -3875,7 +3875,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sec(\theta)
+          sec(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -3885,7 +3885,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \csc(\theta)
+          csc(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -3895,7 +3895,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \tan(\theta)
+          tan(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -3906,7 +3906,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cot(\theta)
+          cot(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -3919,7 +3919,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sec = &#123;1\over \cos&#125;
+          sec = &#123;1\over \cos&#125;
           $$
         </MathBlock>
         <Pause />
@@ -3929,7 +3929,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \csc = &#123;1\over \sin&#125;
+          csc = &#123;1\over \sin&#125;
           $$
         </MathBlock>
         <Pause />
@@ -3941,13 +3941,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \,\tan = &#123;1\over \cot&#125;,
+          ,\tan = &#123;1\over \cot&#125;,
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \cot = &#123;1\over \tan&#125;
+          cot = &#123;1\over \tan&#125;
           $$
         </MathBlock>
         <Pause />
@@ -3981,13 +3981,13 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \tan \,=\, \sec \cdot \sin \,\,=\,\, &#123;\sin\!\!\!\!\phantom&#123;1&#125;\over \cos&#125;
+          tan \,=\, \sec \cdot \sin \,\,=\,\, &#123;\sin\!\!\!\!\phantom&#123;1&#125;\over \cos&#125;
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          \cot \,=\, \csc \cdot \cos \,\,=\,\, &#123;\cos\!\!\!\!\phantom&#123;1&#125;\over \sin&#125;
+          cot \,=\, \csc \cdot \cos \,\,=\,\, &#123;\cos\!\!\!\!\phantom&#123;1&#125;\over \sin&#125;
           $$
         </MathBlock>
         <Pause />
@@ -4003,7 +4003,7 @@ const Rest = () => {
         <MathBlock>
           $$
           %\sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
-          \sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
+          sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
           $$
         </MathBlock>
         <Pause />
@@ -4024,7 +4024,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sec(\theta)
+          sec(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -4033,11 +4033,11 @@ const Rest = () => {
           <span style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             PURPLE
           </span>
-          \ to the{" "}
+          {" "}to the{" "}
           <span style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             LIME GREEN
           </span>
-          \ triangle
+          {" "}triangle
           (hard to draw, because it is behind the
           purple triangle!) in the following figure:
         </VerticalChunk>
@@ -4110,7 +4110,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \csc(\theta)
+          csc(\theta)
           $$
         </MathBlock>
         <Pause />
@@ -4144,7 +4144,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos(1.57)
+          cos(1.57)
           $$
         </MathBlock>
         <Pause />
@@ -5357,7 +5357,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos^2(x) + \sin^2(x) = 1
+              cos^2(x) + \sin^2(x) = 1
               $$
             </MathBlock>
             <Pause />
@@ -5430,13 +5430,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin(68^\circ\hlfbk)
+              sin(68^\circ\hlfbk)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \sin(59^\circ\hlfbk)
+              sin(59^\circ\hlfbk)
               $$
             </MathBlock>
             <Pause />
@@ -5448,13 +5448,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \csc(71^\circ\hlfbk)
+              csc(71^\circ\hlfbk)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \csc(60^\circ\hlfbk)
+              csc(60^\circ\hlfbk)
               $$
             </MathBlock>
             <Pause />
@@ -5467,7 +5467,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin(68^\circ\hlfbk)\times\csc(71^\circ\hlfbk)\times\sin(59^\circ\hlfbk)\times\csc(60^\circ\hlfbk)
+              sin(68^\circ\hlfbk)\times\csc(71^\circ\hlfbk)\times\sin(59^\circ\hlfbk)\times\csc(60^\circ\hlfbk)
               $$
             </MathBlock>
             <Pause />
@@ -5584,7 +5584,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \left(&#123;\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)&#125;\right)^&#123;\!36&#125;
+                left(&#123;\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)&#125;\right)^&#123;\!36&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -5871,7 +5871,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \vec&#123;u&#125; + \vec&#123;v&#125;
+              vec&#123;u&#125; + \vec&#123;v&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5881,7 +5881,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \vec&#123;u&#125; = (u_x, u_y)
+              vec&#123;u&#125; = (u_x, u_y)
               $$
             </MathBlock>
             <Pause />
@@ -5891,7 +5891,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \vec&#123;v&#125; = (v_x, v_y)
+              vec&#123;v&#125; = (v_x, v_y)
               $$
             </MathBlock>
             <Pause />
@@ -5936,7 +5936,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \vec&#123;u&#125; = (100, 100)
+              vec&#123;u&#125; = (100, 100)
               $$
             </MathBlock>
             <Pause />
@@ -5946,7 +5946,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \vec&#123;v&#125; = (1, -1)
+              vec&#123;v&#125; = (1, -1)
               $$
             </MathBlock>
             <Pause />
@@ -5956,7 +5956,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
+              ,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
               $$
               <ImageRight
                 offset_x="1em"
@@ -6833,7 +6833,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \eta
+              eta
               $$
             </MathBlock>
             <Pause />
@@ -6864,7 +6864,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \eta
+              eta
               $$
             </MathBlock>
             <Pause />
@@ -7476,10 +7476,10 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \displaylines&#123;
-              \Large \up&#123;1.5&#125;&#123;22\over 7&#125; = 3.\overline&#123;142857&#125;\\
-              \Large \up&#123;1.7&#125;&#123;33\over 7&#125; = 4.\overline&#123;714285&#125;\\
-              \Large \up&#123;1.7&#125;&#123;44\over 7&#125; = 6.\overline&#123;285714&#125;
+              displaylines&#123;
+              Large \up&#123;1.5&#125;&#123;22\over 7&#125; = 3.\overline&#123;142857&#125;\\
+              Large \up&#123;1.7&#125;&#123;33\over 7&#125; = 4.\overline&#123;714285&#125;\\
+              Large \up&#123;1.7&#125;&#123;44\over 7&#125; = 6.\overline&#123;285714&#125;
               &#125;
               $$
             </MathBlock>
@@ -7502,11 +7502,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \displaylines&#123;
-                \Large         \eta  \approx&#123;11\over 7&#125;\\
-                \Large \up&#123;1.7&#125;2\eta \approx&#123;22\over 7&#125;\\
-                \Large \up&#123;1.7&#125;3\eta \approx&#123;33\over 7&#125;\\
-                \Large \up&#123;1.7&#125;4\eta \approx&#123;44\over 7&#125;
+                displaylines&#123;
+                Large         \eta  \approx&#123;11\over 7&#125;\\
+                Large \up&#123;1.7&#125;2\eta \approx&#123;22\over 7&#125;\\
+                Large \up&#123;1.7&#125;3\eta \approx&#123;33\over 7&#125;\\
+                Large \up&#123;1.7&#125;4\eta \approx&#123;44\over 7&#125;
                 &#125;
                 $$
               </MathBlock>
@@ -7517,11 +7517,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \displaylines&#123;
-                \Large         \eta \approx  1.\overline&#123;571428&#125;\\
-                \Large \up&#123;1.7&#125;2\eta \approx 3.\overline&#123;142857&#125;\\
-                \Large \up&#123;1.7&#125;3\eta \approx 4.\overline&#123;714285&#125;\\
-                \Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;&#125;
+                displaylines&#123;
+                Large         \eta \approx  1.\overline&#123;571428&#125;\\
+                Large \up&#123;1.7&#125;2\eta \approx 3.\overline&#123;142857&#125;\\
+                Large \up&#123;1.7&#125;3\eta \approx 4.\overline&#123;714285&#125;\\
+                Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -7550,7 +7550,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \approx 0.0004
+                approx 0.0004
                 $$
               </MathBlock>
               <Pause />
@@ -7560,7 +7560,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \approx 1.\overline&#123;571428&#125; \cdot 0.0004 \approx 0.0006
+                approx 1.\overline&#123;571428&#125; \cdot 0.0004 \approx 0.0006
                 $$
               </MathBlock>
               <Pause />
@@ -7570,7 +7570,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \approx 1.\overline&#123;571428&#125;
+                approx 1.\overline&#123;571428&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -7587,7 +7587,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \approx 3.\overline&#123;142857&#125; \cdot 0.0004 \approx 0.0012
+                approx 3.\overline&#123;142857&#125; \cdot 0.0004 \approx 0.0012
                 $$
               </MathBlock>
               <Pause />
@@ -7597,7 +7597,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \approx 3.\overline&#123;142857&#125;
+                approx 3.\overline&#123;142857&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -7614,7 +7614,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \approx 4.\overline&#123;714285&#125; \cdot 0.0004 \approx 0.0019
+                approx 4.\overline&#123;714285&#125; \cdot 0.0004 \approx 0.0019
                 $$
               </MathBlock>
               <Pause />
@@ -7624,7 +7624,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \approx 4.\overline&#123;714285&#125;
+                approx 4.\overline&#123;714285&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -7641,7 +7641,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \approx 6.\overline&#123;285714&#125; \cdot 0.0004 \approx 0.0025
+                approx 6.\overline&#123;285714&#125; \cdot 0.0004 \approx 0.0025
                 $$
               </MathBlock>
               <Pause />
@@ -7651,7 +7651,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \approx 6.\overline&#123;285714&#125;
+                approx 6.\overline&#123;285714&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -7669,11 +7669,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \displaylines&#123;
-                \Large         \eta \approx  1.5708\\
-                \Large \up&#123;1.7&#125;2\eta \approx 3.1416\\
-                \Large \up&#123;1.7&#125;3\eta \approx 4.7123\\
-                \Large \up&#123;1.7&#125;4\eta \approx 6.2832&#125;
+                displaylines&#123;
+                Large         \eta \approx  1.5708\\
+                Large \up&#123;1.7&#125;2\eta \approx 3.1416\\
+                Large \up&#123;1.7&#125;3\eta \approx 4.7123\\
+                Large \up&#123;1.7&#125;4\eta \approx 6.2832&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -7715,11 +7715,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;array&#125;&#123;c|cc&#125;
-              \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
-              \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
-              \\
-              \end&#123;array&#125;
+              begin&#123;array&#125;&#123;c|cc&#125;
+              up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
+              up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
+              \
+              end&#123;array&#125;
               $$
             </MathBlock>
           </ExerciseStatement>
@@ -8467,7 +8467,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \theta + (\eta - \theta) + \eta = 2\eta
+              theta + (\eta - \theta) + \eta = 2\eta
               $$
             </MathBlock>
             <Pause />
@@ -8702,7 +8702,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(x) + \sin(x)
+              cos(x) + \sin(x)
               $$
             </MathBlock>
             <Pause />
@@ -8765,7 +8765,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \&#123;\eta/2 + 4\eta&#123;&#125;k : k \in \zz\&#125;
+              Large \&#123;\eta/2 + 4\eta&#123;&#125;k : k \in \zz\&#125;
               $$
             </MathBlock>
             <Pause />
@@ -8816,10 +8816,10 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large
-              \begin&#123;align&#125;
+              Large
+              begin&#123;align&#125;
               &amp;\,\, \cos(\eta/2) + \sin(\eta/2)\\ =&\,\,\up&#123;1.5&#125;  \sqrt&#123;0.5&#125; + \sqrt&#123;0.5&#125;\\ =&\,\,\up&#123;1.5&#125; \sqrt&#123;2&#125;
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -8831,7 +8831,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \Large \cos(\eta/2) = \sin(\eta/2) = \sqrt&#123;0.5&#125;
+                Large \cos(\eta/2) = \sin(\eta/2) = \sqrt&#123;0.5&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -8843,7 +8843,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \sqrt&#123;0.5&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;
+              Large \sqrt&#123;0.5&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -8862,7 +8862,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \Large \cos(\eta/2) + \sin(\eta/2) = \sqrt&#123;2&#125;
+                Large \cos(\eta/2) + \sin(\eta/2) = \sqrt&#123;2&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -8955,13 +8955,13 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \Large &#123;\eta\over 2&#125; + 4\eta = &#123;\eta\over 2&#125; + &#123;8\eta\over 2&#125; = &#123;9\eta\over 2&#125;
+                Large &#123;\eta\over 2&#125; + 4\eta = &#123;\eta\over 2&#125; + &#123;8\eta\over 2&#125; = &#123;9\eta\over 2&#125;
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \Large
+                Large
                 &#123;\eta\over 2&#125; - 4\eta = &#123;\eta\over 2&#125; - &#123;8\eta\over 2&#125; = -&#123;7\eta\over 2&#125;
                 $$
               </MathBlock>
@@ -9292,7 +9292,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin\theta&#123;&#125;\cos\theta
+              sin\theta&#123;&#125;\cos\theta
               $$
             </MathBlock>
             <Pause />
@@ -9351,7 +9351,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \&#123;(x, y) \in \rr^2 : xy = 0 \&#125;
+              &#123;(x, y) \in \rr^2 : xy = 0 \&#125;
               $$
             </MathBlock>
             <Pause />
@@ -9419,7 +9419,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,x = 0\,
+              ,x = 0\,
               $$
             </MathBlock>
             <i>
@@ -9428,7 +9428,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,y = 0
+              ,y = 0
               $$
             </MathBlock>
             <Pause />
@@ -9514,7 +9514,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos\theta\,\sin\theta
+              cos\theta\,\sin\theta
               $$
             </MathBlock>
             <Pause />
@@ -9548,8 +9548,8 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\
-              \Large \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125;\up&#123;1.5&#125;
+              Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\
+              Large \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125;\up&#123;1.5&#125;
               $$
             </MathBlock>
             <Pause />
@@ -9565,7 +9565,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \cos\theta\,\sin\theta
+              Large \cos\theta\,\sin\theta
               $$
             </MathBlock>
             <Pause />
@@ -9575,7 +9575,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
+              Large \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -9585,7 +9585,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large (-\sqrt&#123;0.5&#125;) \cdot (-\sqrt&#123;0.5&#125;) = &#123;1\over 2&#125;
+              Large (-\sqrt&#123;0.5&#125;) \cdot (-\sqrt&#123;0.5&#125;) = &#123;1\over 2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -9596,7 +9596,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\ \Large \up&#123;1.5&#125;= \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
+              Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\ \Large \up&#123;1.5&#125;= \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
               $$
             </MathBlock>
             <Pause />
@@ -9643,7 +9643,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \Large \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
+                Large \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -9653,7 +9653,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \large \dots,\,\, -&#123;7\eta\over 2&#125;,\,\, -&#123;3\eta\over 2&#125;,\,\, &#123;\dn&#123;0.25&#125;\eta \over 2&#125;,\,\, &#123;5\eta \over 2&#125;,\,\, &#123;9\eta \over 2&#125;,\,\, \dots
+                large \dots,\,\, -&#123;7\eta\over 2&#125;,\,\, -&#123;3\eta\over 2&#125;,\,\, &#123;\dn&#123;0.25&#125;\eta \over 2&#125;,\,\, &#123;5\eta \over 2&#125;,\,\, &#123;9\eta \over 2&#125;,\,\, \dots
                 $$
               </MathBlock>
               <Pause />
@@ -9663,7 +9663,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \large \dots,\,\, &#123;-3.5\eta&#125;,\,\, &#123;-1.5\eta&#125;,\,\, &#123;0.5\eta&#125;,\,\, &#123;2.5\eta&#125;,\,\, &#123;4.5\eta&#125;,\,\, \dots
+                large \dots,\,\, &#123;-3.5\eta&#125;,\,\, &#123;-1.5\eta&#125;,\,\, &#123;0.5\eta&#125;,\,\, &#123;2.5\eta&#125;,\,\, &#123;4.5\eta&#125;,\,\, \dots
                 $$
               </MathBlock>
               <Pause />
@@ -10148,7 +10148,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \Large (x_0, y_0) \in S \iff (y_0, x_0) \in S
+                Large (x_0, y_0) \in S \iff (y_0, x_0) \in S
                 $$
               </MathBlock>
               <Pause />
@@ -10233,13 +10233,13 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \large
-                \begin&#123;align&#125;
-                \large     &amp; (x_0, y_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125; \\
-                \large\up&#123;1.4&#125; \iff&amp; \,x_0y_0 = C \\
-                \large\up&#123;1.4&#125; \iff&amp; \,y_0x_0 = C \\
-                \large\up&#123;1.4&#125; \iff&amp; (y_0, x_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125;
-                \end&#123;align&#125;
+                large
+                begin&#123;align&#125;
+                large     &amp; (x_0, y_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125; \\
+                large\up&#123;1.4&#125; \iff&amp; \,x_0y_0 = C \\
+                large\up&#123;1.4&#125; \iff&amp; \,y_0x_0 = C \\
+                large\up&#123;1.4&#125; \iff&amp; (y_0, x_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125;
+                end&#123;align&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -10385,7 +10385,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
+              tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
               $$
             </MathBlock>
             <Pause />
@@ -10560,7 +10560,7 @@ const Rest = () => {
                   <Pause />
                   <MathBlock>
                     $$
-                    \sec^2(\theta) = 1 + \tan^2(\theta)
+                    sec^2(\theta) = 1 + \tan^2(\theta)
                     $$
                   </MathBlock>
                   <Pause />
@@ -10620,7 +10620,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(\theta) \ne 0
+              cos(\theta) \ne 0
               $$
             </MathBlock>
             <Pause />
@@ -10633,7 +10633,7 @@ const Rest = () => {
                 <Pause />
                 <MathBlock>
                   $$
-                  \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
+                  ,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
                   $$
                 </MathBlock>
                 <Pause />
@@ -10641,7 +10641,7 @@ const Rest = () => {
                 {" "}
                 <MathBlock>
                   $$
-                  \,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
+                  ,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
                   $$
                 </MathBlock>
                 <Pause />
@@ -10693,7 +10693,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(\theta) \ne 0
+              cos(\theta) \ne 0
               $$
             </MathBlock>
             <Pause />
@@ -10713,15 +10713,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
+              begin&#123;align&#125;
               1 + \tan^2(\theta)
-              \,\,&=\,\, 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
+              ,\,&=\,\, 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
               &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
               &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
               &amp;=\,\, \up&#123;2&#125; &#123;1\over \cos^2(\theta)&#125; \\
               &amp;=\,\, \up&#123;2&#125; \left(&#123;1\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
               &amp;=\,\, \up&#123;2&#125; \sec^2(\theta)
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -10743,7 +10743,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sec^2(\theta)
+              sec^2(\theta)
               $$
             </MathBlock>
             <Pause />
@@ -10770,14 +10770,14 @@ const Rest = () => {
                 <Pause />
                 <MathBlock>
                   $$
-                  \begin&#123;align&#125;
-                  \sec^2(\theta)
-                  \,\,&=\,\, &#123;1\over \cos^2(\theta)&#125; \\
+                  begin&#123;align&#125;
+                  sec^2(\theta)
+                  ,\,&=\,\, &#123;1\over \cos^2(\theta)&#125; \\
                   &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
                   &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
                   &amp;=\,\, \up&#123;2&#125; 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
                   &amp;=\,\, \up&#123;2&#125;1 + \tan^2(\theta).
-                  \end&#123;align&#125;
+                  end&#123;align&#125;
                   $$
                 </MathBlock>
                 <Pause />
@@ -11041,25 +11041,25 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \te&#123;1.&#125;\,\, x \ra f(x + A)
+              te&#123;1.&#125;\,\, x \ra f(x + A)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \te&#123;2.&#125;\,\, x \ra f(Bx)
+              te&#123;2.&#125;\,\, x \ra f(Bx)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \te&#123;3.&#125;\,\, x \ra f(x) + A
+              te&#123;3.&#125;\,\, x \ra f(x) + A
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \te&#123;4.&#125;\,\, x \ra Bf(x)
+              te&#123;4.&#125;\,\, x \ra Bf(x)
               $$
             </MathBlock>
             <Pause />
@@ -11195,13 +11195,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
+              begin&#123;align&#125;
               &amp;\,\,\, (\cos\cdot\sin)(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;\cos(x + 2\eta)\cdot\sin(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;(-\cos(x))\cdot(-\sin(x))\\
               =&\,\,\, \up&#123;1.2&#125;\cos(x)\cdot\sin(x)\\
               =&\,\,\, \up&#123;1.2&#125;(\cos\cdot\sin)(x)
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -11218,7 +11218,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(x + 2\eta) = -\cos(x)
+              cos(x + 2\eta) = -\cos(x)
               $$
             </MathBlock>
             <Pause />
@@ -11228,7 +11228,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin(x + 2\eta) = -\sin(x)
+              sin(x + 2\eta) = -\sin(x)
               $$
             </MathBlock>
             <Pause />
@@ -11245,13 +11245,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
+              begin&#123;align&#125;
               &amp;\,\,\, \cos^2(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;\cos(x + 2\eta)\cdot\cos(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;(-\cos(x))\cdot(-\cos(x))\\
               =&\,\,\, \up&#123;1.2&#125;\cos(x)\cdot\cos(x)\\
               =&\,\,\, \up&#123;1.2&#125;\cos^2(x)
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -11268,13 +11268,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
+              begin&#123;align&#125;
               &amp;\,\,\, \sin^2(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;\sin(x + 2\eta)\cdot\sin(x + 2\eta)\\
               =&\,\,\, \up&#123;1.2&#125;(-\sin(x))\cdot(-\sin(x))\\
               =&\,\,\, \up&#123;1.2&#125;\sin(x)\cdot\sin(x)\\
               =&\,\,\, \up&#123;1.2&#125;\sin^2(x)
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -11299,7 +11299,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \te&#123;“&#125;\cos\cdot\sin\te&#123;”&#125;
+                te&#123;“&#125;\cos\cdot\sin\te&#123;”&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -11309,7 +11309,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \te&#123;“&#125;\rt&#123;0.1&#125;x \ra \cos(x)\sin(x)\rt&#123;0.1&#125;\te&#123;”&#125;
+                te&#123;“&#125;\rt&#123;0.1&#125;x \ra \cos(x)\sin(x)\rt&#123;0.1&#125;\te&#123;”&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -11372,7 +11372,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \cos(x + 2\eta)\cdot\sin(x+2\eta)
+                cos(x + 2\eta)\cdot\sin(x+2\eta)
                 $$
               </MathBlock>
               <Pause />
@@ -11499,7 +11499,7 @@ const Rest = () => {
                 <Pause />
                 <MathBlock>
                   $$
-                  \cos^2(x) = &#123;1\over 2&#125; + \cos(x + \eta/2)\sin(x + \eta/2)
+                  cos^2(x) = &#123;1\over 2&#125; + \cos(x + \eta/2)\sin(x + \eta/2)
                   $$
                 </MathBlock>
                 <Pause />
@@ -11557,13 +11557,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+              cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \sin(A + B) = \cos(A)\sin(B) + \sin(A)\cos(B)
+              sin(A + B) = \cos(A)\sin(B) + \sin(A)\cos(B)
               $$
             </MathBlock>
             <Pause />
@@ -11573,7 +11573,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,\cos(\eta/2) = \sin(\eta/2) = \sqrt&#123;0.5&#125;,
+              ,\cos(\eta/2) = \sin(\eta/2) = \sqrt&#123;0.5&#125;,
               $$
             </MathBlock>
             <Pause />
@@ -11583,10 +11583,10 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              \cos(x + \eta/2) &= \cos(x)\cos(\eta/2) - \sin(x)\sin(\eta/2) \\
+              begin&#123;align*&#125;
+              cos(x + \eta/2) &= \cos(x)\cos(\eta/2) - \sin(x)\sin(\eta/2) \\
               &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) - \sin(x))
-              \end&#123;align*&#125;
+              end&#123;align*&#125;
               $$
             </MathBlock>
             <Pause />
@@ -11596,10 +11596,10 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              \sin(x + \eta/2) &= \cos(x)\sin(\eta/2) + \sin(x)\cos(\eta/2) \\
+              begin&#123;align*&#125;
+              sin(x + \eta/2) &= \cos(x)\sin(\eta/2) + \sin(x)\cos(\eta/2) \\
               &= \up&#123;1.6&#125;\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x))
-              \end&#123;align*&#125;
+              end&#123;align*&#125;
               $$
             </MathBlock>
             <Pause />
@@ -11609,7 +11609,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(x + \eta/2)\sin(x + \eta/2)
+              cos(x + \eta/2)\sin(x + \eta/2)
               $$
             </MathBlock>
             <Pause />
@@ -11619,13 +11619,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              begin&#123;align*&#125;
               &\sqrt&#123;0.5&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
-              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
-              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - (1 - \cos^2(x))) \\
-              \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(2\cos^2(x) - 1) \\
-              \up&#123;1.6&#125; =\,\,&\cos^2(x) - &#123;1\over 2&#125; \\
-              \end&#123;align*&#125;
+              up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - \sin^2(x)) \\
+              up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2(x) - (1 - \cos^2(x))) \\
+              up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(2\cos^2(x) - 1) \\
+              up&#123;1.6&#125; =\,\,&\cos^2(x) - &#123;1\over 2&#125; \\
+              end&#123;align*&#125;
               $$
             </MathBlock>
             <Pause />
@@ -11687,7 +11687,7 @@ const Rest = () => {
                   <Pause />
                   <MathBlock>
                     $$
-                    \,- &#123;1\over 2&#125; + \cos^2(x - \eta/2) = \cos(x)\sin(x).
+                    ,- &#123;1\over 2&#125; + \cos^2(x - \eta/2) = \cos(x)\sin(x).
                     $$
                   </MathBlock>
                   <Pause />
@@ -11766,7 +11766,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+                cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
                 $$
               </MathBlock>
               <Pause />
@@ -11776,7 +11776,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sin(-\eta/2) = -\sqrt&#123;0.5&#125;
+                sin(-\eta/2) = -\sqrt&#123;0.5&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -11786,11 +11786,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \begin&#123;align*&#125;
-                \cos(x - \eta/2) &= \cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2) \\
-                \up&#123;1.6&#125; &=\,\, \cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;) \\
-                \up&#123;1.6&#125; &=\,\, \sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
-                \end&#123;align*&#125;
+                begin&#123;align*&#125;
+                cos(x - \eta/2) &= \cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2) \\
+                up&#123;1.6&#125; &=\,\, \cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;) \\
+                up&#123;1.6&#125; &=\,\, \sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+                end&#123;align*&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -11800,7 +11800,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \cos^2(x - \eta/2)
+                cos^2(x - \eta/2)
                 $$
               </MathBlock>
               <Pause />
@@ -11810,12 +11810,12 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \begin&#123;align*&#125;
+                begin&#123;align*&#125;
                 &\left(\sqrt&#123;0.5&#125;\cdot(\cos x + \sin x)\right)^2 \\
-                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2 x + 2\cos x\sin x +  \sin^2 x) \\
-                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(1 + 2\cos x\sin x) \\
-                \up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125; + \cos(x)\sin(x) \\
-                \end&#123;align*&#125;
+                up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(\cos^2 x + 2\cos x\sin x +  \sin^2 x) \\
+                up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125;\cdot(1 + 2\cos x\sin x) \\
+                up&#123;1.6&#125; =\,\,&&#123;1\over 2&#125; + \cos(x)\sin(x) \\
+                end&#123;align*&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -11826,11 +11826,11 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \begin&#123;align*&#125;
+                begin&#123;align*&#125;
                 & -&#123;1\over 2&#125; + \cos^2(x - \eta/2) \\
-                \up&#123;1.7&#125; =\,\,&-&#123;1\over 2&#125; + \left(&#123;1\over 2&#125; + \cos(x)\sin(x)\right) \\
-                \up&#123;1.7&#125; =\,\,&\cos(x)\sin(x)
-                \end&#123;align*&#125;
+                up&#123;1.7&#125; =\,\,&-&#123;1\over 2&#125; + \left(&#123;1\over 2&#125; + \cos(x)\sin(x)\right) \\
+                up&#123;1.7&#125; =\,\,&\cos(x)\sin(x)
+                end&#123;align*&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -11975,13 +11975,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large\cos(x)
+              Large\cos(x)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large\downarrow
+              Large\downarrow
               $$
               <ImageRight
                 offset_x="4em"
@@ -11991,13 +11991,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large\cos(2x)
+              Large\cos(2x)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large\downarrow
+              Large\downarrow
               $$
               <ImageRight
                 offset_x="4em"
@@ -12007,13 +12007,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 1 + \cos(2x)
+              Large 1 + \cos(2x)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large\downarrow
+              Large\downarrow
               $$
               <ImageRight
                 offset_x="4em"
@@ -12023,7 +12023,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large&#123;1 + \cos(2x)\over 2&#125;
+              Large&#123;1 + \cos(2x)\over 2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -12083,43 +12083,43 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large\cos(x)
+              Large\cos(x)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large\downarrow
+              Large\downarrow
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large\cos(2x)
+              Large\cos(2x)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large\downarrow
+              Large\downarrow
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large&#123;1\over 2&#125;\cos(2x)
+              Large&#123;1\over 2&#125;\cos(2x)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large\downarrow
+              Large\downarrow
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \Large&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x)
+              Large&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x)
               $$
             </MathBlock>
             <Pause />
@@ -12159,7 +12159,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+              cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
               $$
             </MathBlock>
             <Pause />
@@ -12183,12 +12183,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              \cos(2x)
+              begin&#123;align*&#125;
+              cos(2x)
               &= \cos(x + x) \\
               &= \up&#123;1.6&#125; \cos(x)\cos(x) - \sin(x)\sin(x) \\
               &= \up&#123;1.6&#125; \cos^2(x) - \sin^2(x)
-              \end&#123;align*&#125;
+              end&#123;align*&#125;
               $$
             </MathBlock>
             <Pause />
@@ -12198,14 +12198,14 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              begin&#123;align*&#125;
               &#123;1 + \cos(2x)\over 2&#125;
               &= \up&#123;2.0&#125; &#123;1 + \cos^2(x) - \sin^2(x) \over 2&#125; \\
               &= \up&#123;2.0&#125; &#123;(1 - \sin^2(x)) + \cos^2(x)\over 2&#125; \\
               &= \up&#123;2.0&#125; &#123;\cos^2(x) + \cos^2(x)\over 2&#125; \\
               &= \up&#123;2.0&#125; &#123;2\cos^2(x)\over 2&#125; \\
               &= \up&#123;2.0&#125; \cos^2(x)
-              \end&#123;align*&#125;
+              end&#123;align*&#125;
               $$
               <ImageLeft
                 offset_y="3%"
@@ -12242,7 +12242,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin(x)\cos(x)
+              sin(x)\cos(x)
               $$
             </MathBlock>
             <Pause />
@@ -12252,7 +12252,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin(2x)
+              sin(2x)
               $$
             </MathBlock>
             <Pause />
@@ -12267,7 +12267,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin(A+B) = \cos A\sin B + \sin A\cos B
+              sin(A+B) = \cos A\sin B + \sin A\cos B
               $$
             </MathBlock>
             <Pause />
@@ -12277,11 +12277,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              \sin(2x) =&\,\, \sin(x + x) \\
-              \up&#123;1.6&#125; =&\,\, \cos x\sin x + \sin x\cos x \\
-              \up&#123;1.6&#125; =&\,\, 2\sin x\cos x
-              \end&#123;align*&#125;
+              begin&#123;align*&#125;
+              sin(2x) =&\,\, \sin(x + x) \\
+              up&#123;1.6&#125; =&\,\, \cos x\sin x + \sin x\cos x \\
+              up&#123;1.6&#125; =&\,\, 2\sin x\cos x
+              end&#123;align*&#125;
               $$
             </MathBlock>
             <Pause />
@@ -12294,7 +12294,7 @@ const Rest = () => {
                 <Pause />
                 <MathBlock>
                   $$
-                  \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
+                  sin x\cos x = &#123;1\over 2&#125;\sin(2x)
                   $$
                 </MathBlock>
                 <Pause />
@@ -12341,7 +12341,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
+              sin x\cos x = &#123;1\over 2&#125;\sin(2x)
               $$
             </MathBlock>
             <Pause />
@@ -12608,7 +12608,7 @@ const Rest = () => {
                 <Pause />
                 <MathBlock>
                   $$
-                  \sqrt&#123;2&#125;\cdot \cos(x - \eta/2)
+                  sqrt&#123;2&#125;\cdot \cos(x - \eta/2)
                   $$
                 </MathBlock>
                 <Pause />
@@ -12639,7 +12639,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(A + B) = \cos A\cos B - \sin A\sin B
+              cos(A + B) = \cos A\cos B - \sin A\sin B
               $$
             </MathBlock>
             <Pause />
@@ -12649,15 +12649,15 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              begin&#123;align*&#125;
               &\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;2 \cdot 0.5&#125;\cdot(\cos(x) + \sin(x)) \\
-              \up&#123;1.6&#125; =&\,\, \sqrt&#123;1&#125;\cdot(\cos(x) + \sin(x)) \\
-              \up&#123;1.6&#125; =&\,\, \cos(x) + \sin(x)
-              \end&#123;align*&#125;
+              up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
+              up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;)) \\
+              up&#123;1.6&#125; =&\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+              up&#123;1.6&#125; =&\,\, \sqrt&#123;2 \cdot 0.5&#125;\cdot(\cos(x) + \sin(x)) \\
+              up&#123;1.6&#125; =&\,\, \sqrt&#123;1&#125;\cdot(\cos(x) + \sin(x)) \\
+              up&#123;1.6&#125; =&\,\, \cos(x) + \sin(x)
+              end&#123;align*&#125;
               $$
             </MathBlock>
             <Pause />
@@ -12676,7 +12676,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sqrt&#123;2&#125;\cdot \sqrt&#123;0.5&#125; = 1
+                sqrt&#123;2&#125;\cdot \sqrt&#123;0.5&#125; = 1
                 $$
               </MathBlock>
               <Pause />
@@ -12686,7 +12686,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
+                sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -12798,7 +12798,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(x + \psi)
+              cos(x + \psi)
               $$
             </MathBlock>
             <Pause />
@@ -12808,7 +12808,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(x)\cos(\psi) - \sin(x)\sin(\psi)
+              cos(x)\cos(\psi) - \sin(x)\sin(\psi)
               $$
             </MathBlock>
             <Pause />
@@ -12834,7 +12834,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \up&#123;1.4&#125;(W \cdot \cos \psi)\cdot\cos(x) - (W \cdot \sin \psi) \cdot \sin(x)
+              up&#123;1.4&#125;(W \cdot \cos \psi)\cdot\cos(x) - (W \cdot \sin \psi) \cdot \sin(x)
               $$
             </MathBlock>
             <Pause />
@@ -12877,7 +12877,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \phantom&#123;-&#125;W\cdot\cos(\psi) = A_1
+              phantom&#123;-&#125;W\cdot\cos(\psi) = A_1
               $$
             </MathBlock>
             <Pause />
@@ -13120,10 +13120,10 @@ const Rest = () => {
               <MathBlock>
                 $$
                 -\psi = \begin&#123;cases&#125;
-                \arctan(A_2/A_1) & \te&#123;if &#125;\, A_1 \ne 0, \,\te&#123;else&#125; \\
-                \up&#123;1.2&#125;\te&#123;arccot&#125;(A_1/A_2) & \te&#123;if &#125;\, A_2 \ne 0, \,\te&#123;else&#125; \\
-                \up&#123;1.2&#125;\rm&#123;?&#125;       & \te&#123;if &#125;\, A_1 = 0, A_2 = 0
-                \end&#123;cases&#125;
+                arctan(A_2/A_1) & \te&#123;if &#125;\, A_1 \ne 0, \,\te&#123;else&#125; \\
+                up&#123;1.2&#125;\te&#123;arccot&#125;(A_1/A_2) & \te&#123;if &#125;\, A_2 \ne 0, \,\te&#123;else&#125; \\
+                up&#123;1.2&#125;\rm&#123;?&#125;       & \te&#123;if &#125;\, A_1 = 0, A_2 = 0
+                end&#123;cases&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -13161,7 +13161,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos x + \sin x
+              cos x + \sin x
               $$
             </MathBlock>
             <Pause />
@@ -13221,7 +13221,7 @@ const Rest = () => {
                 <Pause />
                 <MathBlock>
                   $$
-                  \cos x + \sin x = \sqrt&#123;2&#125;\cdot\cos(x - \eta/2)
+                  cos x + \sin x = \sqrt&#123;2&#125;\cdot\cos(x - \eta/2)
                   $$
                 </MathBlock>
                 <Pause />
@@ -13318,7 +13318,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin(x + \psi)
+              sin(x + \psi)
               $$
             </MathBlock>
             <Pause />
@@ -13328,7 +13328,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sin x\cos \psi + \cos x\sin \psi
+              sin x\cos \psi + \cos x\sin \psi
               $$
               <ImageRight
                 offset_x="8em"
@@ -13430,7 +13430,7 @@ const Rest = () => {
                 <Pause />
                 <MathBlock>
                   $$
-                  \sin(x) + \cos(x) = \sqrt&#123;2&#125;\cdot\sin(x + \eta/2)
+                  sin(x) + \cos(x) = \sqrt&#123;2&#125;\cdot\sin(x + \eta/2)
                   $$
                 </MathBlock>
                 <Pause />
@@ -13480,7 +13480,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
+              sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
               $$
             </MathBlock>
             <Pause />
@@ -13731,7 +13731,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \cot(\theta)
+                cot(\theta)
                 $$
               </MathBlock>
               <Pause />
@@ -13741,7 +13741,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \tan(\theta)
+                tan(\theta)
                 $$
               </MathBlock>
               <Pause />
@@ -13766,7 +13766,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sin(\theta)
+                sin(\theta)
                 $$
               </MathBlock>
               <Pause />
@@ -13865,31 +13865,31 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(x)
+              cos(x)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \downarrow
+              downarrow
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \cos(x + 0.1)
+              cos(x + 0.1)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \downarrow
+              downarrow
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \,\cos(0.1x + 0.1).
+              ,\cos(0.1x + 0.1).
               $$
             </MathBlock>
             <Pause />
@@ -13996,31 +13996,31 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \cos(x)
+                cos(x)
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \downarrow
+                downarrow
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \cos(0.1x)
+                cos(0.1x)
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \downarrow
+                downarrow
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \,\cos(0.1(x + 1)) = \cos(0.1x + 0.1).
+                ,\cos(0.1(x + 1)) = \cos(0.1x + 0.1).
                 $$
               </MathBlock>
               <Pause />
@@ -14214,31 +14214,31 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(x)
+              cos(x)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \downarrow
+              downarrow
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \cos(x + C)
+              cos(x + C)
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \downarrow
+              downarrow
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \cos(Bx + C)
+              cos(Bx + C)
               $$
             </MathBlock>
             <Pause />
@@ -14323,31 +14323,31 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \cos(x)
+                cos(x)
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \downarrow
+                downarrow
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \cos(Bx)
+                cos(Bx)
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \downarrow
+                downarrow
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \cos(B(x + C/B)) = \cos(Bx + C)
+                cos(B(x + C/B)) = \cos(Bx + C)
                 $$
               </MathBlock>
               <Pause />
@@ -14558,7 +14558,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sec(\theta)
+              sec(\theta)
               $$
             </MathBlock>
             <Pause />
@@ -14741,7 +14741,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_735641689878">
+          <ExerciseStatement id="_199741689386">
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -14793,10 +14793,10 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              begin&#123;align*&#125;
               &\,\,268 - 8 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk) \\
-              \up&#123;1.6&#125; =&\,\,260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)
-              \end&#123;align*&#125;
+              up&#123;1.6&#125; =&\,\,260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)
+              end&#123;align*&#125;
               $$
             </MathBlock>
             <Pause />
@@ -14806,7 +14806,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+              tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
               $$
             </MathBlock>
             <Pause />
@@ -14854,19 +14854,19 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \cos(25.5^\circ) = 0.90258\dots
+                cos(25.5^\circ) = 0.90258\dots
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \sin(25.5^\circ) = 0.43051\dots
+                sin(25.5^\circ) = 0.43051\dots
                 $$
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
-                \tan(22^\circ) = 0.40402\dots
+                tan(22^\circ) = 0.40402\dots
                 $$
               </MathBlock>
               <Pause />
@@ -15020,7 +15020,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \arctan
+              arctan
               $$
             </MathBlock>
             <Pause />
@@ -15030,7 +15030,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \te&#123;“&#125;\tan^&#123;-1&#125;\te&#123;”&#125;
+              te&#123;“&#125;\tan^&#123;-1&#125;\te&#123;”&#125;
               $$
             </MathBlock>
             <Pause />
@@ -15162,7 +15162,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \alpha
+              alpha
               $$
             </MathBlock>
             <Pause />
@@ -15205,7 +15205,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \gamma = \arctan(y_0/x_0)
+              gamma = \arctan(y_0/x_0)
               $$
             </MathBlock>
             <Pause />
@@ -15215,7 +15215,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \beta = \arctan(z/\sqrt&#123;r^2 - z^2&#125;)
+              beta = \arctan(z/\sqrt&#123;r^2 - z^2&#125;)
               $$
             </MathBlock>
             <Pause />
@@ -15225,7 +15225,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \beta = \arctan(z/\sqrt&#123;x_0^2 + y_0^2 - z^2&#125;)
+              beta = \arctan(z/\sqrt&#123;x_0^2 + y_0^2 - z^2&#125;)
               $$
             </MathBlock>
             <Pause />
@@ -15261,7 +15261,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \alpha = 90^\circ + \arctan(z/\sqrt&#123;x_0^2 + y_0^2 - z^2&#125;) - \arctan(y_0/x_0)
+              alpha = 90^\circ + \arctan(z/\sqrt&#123;x_0^2 + y_0^2 - z^2&#125;) - \arctan(y_0/x_0)
               $$
               <ImageRight
                 src="/images/svg_ch5_ex_bomb_shelter_door_alpha_cloud.svg"
@@ -15319,19 +15319,19 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \alpha = 90^\circ + \arctan(48/\sqrt&#123;60^2 + 30^2 - 48^2&#125;) - \arctan(30/60) = 109.1225\ldots^\circ
+              alpha = 90^\circ + \arctan(48/\sqrt&#123;60^2 + 30^2 - 48^2&#125;) - \arctan(30/60) = 109.1225\ldots^\circ
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \alpha = 90^\circ + \arctan(48/\sqrt&#123;93^2 + 30^2 - 48^2&#125;) - \arctan(30/93) = 101.5410\ldots^\circ
+              alpha = 90^\circ + \arctan(48/\sqrt&#123;93^2 + 30^2 - 48^2&#125;) - \arctan(30/93) = 101.5410\ldots^\circ
               $$
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
-              \alpha = 90^\circ + \arctan(48/\sqrt&#123;108^2 + 22^2 - 48^2&#125;) - \arctan(22/108) = 104.3033\ldots^\circ
+              alpha = 90^\circ + \arctan(48/\sqrt&#123;108^2 + 22^2 - 48^2&#125;) - \arctan(22/108) = 104.3033\ldots^\circ
               $$
             </MathBlock>
             <Pause />
@@ -15430,7 +15430,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sec(\theta) \cdot \cos(\theta) = 1
+              sec(\theta) \cdot \cos(\theta) = 1
               $$
             </MathBlock>
             <Pause />
@@ -15441,7 +15441,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sec(\theta)
+              sec(\theta)
               $$
               <ImageRight
                 src="/images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg"
@@ -15457,7 +15457,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos(\theta)
+              cos(\theta)
               $$
             </MathBlock>
             <Pause />
@@ -16023,7 +16023,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
+                sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
                 $$
               </MathBlock>
               <Pause />
@@ -16083,7 +16083,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_i r
+                sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_i r
                 $$
                 <ImageRight
                   src="/images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg"
@@ -16097,7 +16097,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r
+                sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r
                 $$
                 <ImageLeft
                   src="/images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg"
@@ -16111,7 +16111,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sum_&#123;i=1&#125;^N A_i = A
+                sum_&#123;i=1&#125;^N A_i = A
                 $$
               </MathBlock>
               <Pause />
@@ -16126,7 +16126,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
+                sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
                 $$
               </MathBlock>
               <Pause />
@@ -16136,7 +16136,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_ir = &#123;1\over 3&#125;\cdot r\cdot \sum_&#123;i=1&#125;^N A_i = &#123;1\over 3&#125;Ar
+                sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_ir = &#123;1\over 3&#125;\cdot r\cdot \sum_&#123;i=1&#125;^N A_i = &#123;1\over 3&#125;Ar
                 $$
               </MathBlock>
               <Pause />
@@ -16146,7 +16146,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r = (0.99999)^2&#123;1\over 3&#125;Ar
+                sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r = (0.99999)^2&#123;1\over 3&#125;Ar
                 $$
               </MathBlock>
               <Pause />
@@ -16198,7 +16198,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
+                sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
                 $$
               </MathBlock>
               <Pause />

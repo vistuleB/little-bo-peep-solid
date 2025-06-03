@@ -35,3 +35,4 @@ generated
 content_watcher/build
 renderer_gleam/build
 
+api
