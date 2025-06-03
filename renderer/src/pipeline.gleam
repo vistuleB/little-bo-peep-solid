@@ -1,6 +1,6 @@
 import gleam/list
 import gleam/option.{None, Some}
-import infrastructure.{type Pipe}
+import infrastructure.{type Pipe} as infra
 import prefabricated_pipelines as pp
 import desugarer_names as dn
 
@@ -11,8 +11,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
     // escaped dollar signs with ordinary dollars
     // ****
     pp.create_mathblock_and_math_elements(
-      #([ pp.DoubleDollar ], pp.DoubleDollar),
-      #([ pp.SingleDollar ], pp.SingleDollar),
+      #([ infra.DoubleDollar ], infra.DoubleDollar),
+      #([ infra.SingleDollar ], infra.SingleDollar),
     ),
     [
       dn.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
