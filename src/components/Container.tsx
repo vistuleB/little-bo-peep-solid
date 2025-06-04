@@ -12,6 +12,7 @@ import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
 import ActionArrows from "./ActionArrows";
 import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
+import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 
 const Container = (props: ParentProps) => {
   const env = import.meta.env.VITE_ENV;
@@ -25,6 +26,8 @@ const Container = (props: ParentProps) => {
   // const [scrollWidth, set_scrollWidth] = createSignal(0);
   let { on_mobile } = useOnMobile();
   let { store, set_store } = useGlobalContext();
+  const { getPrevArticle, getNextArticle } = usePrevNextArticle();
+
   useScrollIsAt0();
 
   const handleScroll = () => {
@@ -152,7 +155,7 @@ const Container = (props: ParentProps) => {
         clientXBasedOnScrollWidth <
         window.scrollX + window.innerWidth * 0.1
       ) {
-        (document.querySelector(".prev_page") as HTMLAnchorElement)?.click();
+        getPrevArticle();
         return;
       }
 
@@ -160,7 +163,7 @@ const Container = (props: ParentProps) => {
         clientXBasedOnScrollWidth >
         window.scrollX + window.innerWidth * 0.9
       ) {
-        (document.querySelector(".next_page") as HTMLAnchorElement)?.click();
+        getNextArticle();
         return;
       }
     };

@@ -2,7 +2,7 @@ import { createEffect, createSignal } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 const usePrevNextArticle = () => {
-  const { store } = useGlobalContext();
+  const { store, set_store } = useGlobalContext();
   const [prevDisabled, set_prevDisabled] = createSignal(false);
   const [nextDisabled, set_nextDisabled] = createSignal(false);
 
@@ -16,14 +16,16 @@ const usePrevNextArticle = () => {
     }, 50);
   });
 
-  const getNextArticle = async () => {
+  const getNextArticle = async (from_breadcrumb: boolean = false) => {
+    set_store("toc_breadcrumbs_visible", from_breadcrumb);
     setTimeout(() => {
       let a = document.querySelector(".next_page") as HTMLAnchorElement;
       a?.click();
     }, 50);
   };
 
-  const getPrevArticle = async () => {
+  const getPrevArticle = async (from_breadcrumb: boolean = false) => {
+    set_store("toc_breadcrumbs_visible", from_breadcrumb);
     setTimeout(() => {
       let a = document.querySelector(".prev_page") as HTMLAnchorElement;
       a?.click();

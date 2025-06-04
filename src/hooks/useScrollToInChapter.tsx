@@ -59,16 +59,32 @@ const useScrollToInChapter = () => {
     store.innerHeight / 2 + // step 1:  center top of element on screen
     Math.min(getHeight(target) / 2, store.innerHeight / 2); // if target height is bigger than screen step 1 is reveresed | else the target itself is centered on screen
 
+  const firstSectionEdgeCase = (target: HTMLElement | null) => {
+    if (!target || target.id !== "section-1") return false;
+    return true;
+  };
+
+  const exercisesEdgeCase = (target: HTMLElement | null) => {
+    if (!target || target.id !== "exercises") return target;
+    return target?.querySelectorAll(".exercise")?.item(0) as HTMLElement;
+  };
+
   const scrollToInChapter = async (
     targetId: string,
     scrollDuration: number = 100,
   ) => {
-    const target = document.getElementById(targetId);
+    let target = document.getElementById(targetId);
+    target = exercisesEdgeCase(target);
 
     // check if target is not inside exercise
     if (!isInsideElementWithClass("exercise", target)) {
       // just scroll to the target
-      smoothScrollTo(calculateTargetCenterOnPage(target), scrollDuration);
+      smoothScrollTo(
+        firstSectionEdgeCase(target)
+          ? 0
+          : calculateTargetCenterOnPage(target) - 20, // 20 for safe margin
+        scrollDuration,
+      );
       return;
     }
     const exo_number = getClosestExerciseParentIndex(target);

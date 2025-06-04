@@ -7,9 +7,8 @@ import { twJoin } from "tailwind-merge";
 import SharedProps from "./types/SharedProps";
 import OutlinedText from "./OutlinedText";
 
-const SectionsBreadcrumbs = (props: ParentProps) => {
+const SectionsBreadcrumbs = (props: ParentProps & { fixed?: boolean }) => {
   const [visible, setVisible] = createSignal(true);
-  const [recentlyClosed, setRecentlyClosed] = createSignal(false);
   const { store } = useGlobalContext();
 
   const delta = 18;
@@ -30,9 +29,17 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
         width: "fit-content",
         padding: "0 26px",
         "max-width": "300px",
-      }}
-      onMouseOver={() => setVisible(!recentlyClosed())}
-      onMouseLeave={() => setRecentlyClosed(false)}>
+      }}>
+      <div
+        style={{
+          border: store.show_areas ? "5px solid rgb(198, 75, 75)" : "none",
+          width: "150px",
+          height: "200px",
+          position: "absolute",
+          top: "0",
+          left: "0",
+        }}
+        onMouseOver={() => setVisible(true)}></div>
       <div
         style={{
           transform: `translateY(${visible() ? "0" : "-120%"})`,
@@ -42,7 +49,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
         <ul>
           <li class="breadcrumb-prev-next flex gap-2">
             <OutlinedText
-              onClick={getPrevArticle}
+              onClick={() => getPrevArticle(true)}
               class={twJoin(
                 prevDisabled() && "!text-gray-600 cursor-default",
                 "underline cursor-pointer",
@@ -50,7 +57,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
               &lt;&lt;prev
             </OutlinedText>
             <OutlinedText
-              onClick={getNextArticle}
+              onClick={() => getNextArticle(true)}
               class={twJoin(
                 nextDisabled() && "!text-gray-600 cursor-default",
                 "underline cursor-pointer",
@@ -60,13 +67,14 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
           </li>
           {props.children}
         </ul>
-        <CloseCircleIcon
-          class="mt-2 cursor-pointer"
-          onClick={() => {
-            setVisible(false);
-            setRecentlyClosed(true);
-          }}
-        />
+        {!props.fixed && (
+          <CloseCircleIcon
+            class="mt-2 cursor-pointer"
+            onClick={() => {
+              setVisible(false);
+            }}
+          />
+        )}
       </div>
     </div>
   );
