@@ -432,6 +432,12 @@ ol.l1 > li:before {
   font-family: sans-serif;
 }
 
+.breadcrumb a {
+  text-indent: -1em;
+  padding-left: 1em;
+  display: block;
+}
+
 .breadcrumb:not(.highlighted):hover,
 .breadcrumb-prev-next span:hover,
 .panel-item:hover {
