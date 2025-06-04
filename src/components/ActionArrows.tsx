@@ -1,5 +1,4 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
-import { LeftArrow } from "./PanelButton";
 import {
   HAMBURGER_MENU_SCROLLY_END_FADE,
   HAMBURGER_MENU_SCROLLY_START_FADE,
@@ -65,8 +64,7 @@ const ActionArrows = () => {
         opacity: hovered() ? 1 : opacity(),
         left: `${1500 - store.scrollX - 33}px`,
       }}
-      class="fixed bottom-3"
-    >
+      class="fixed bottom-3">
       <button
         onClick={handleUpClick}
         style={{
@@ -77,9 +75,8 @@ const ActionArrows = () => {
           store.scrollY > 1
             ? "stroke-black hover:stroke-stone-600"
             : "stroke-stone-300",
-          "transition-all"
-        )}
-      >
+          "transition-all",
+        )}>
         <DoubleUpArrowSVG />
       </button>
       <button
@@ -92,9 +89,8 @@ const ActionArrows = () => {
           store.scrollY + store.innerHeight - store.scrollHeight < -1
             ? "stroke-black hover:stroke-stone-600"
             : "stroke-stone-300",
-          "transition-all"
-        )}
-      >
+          "transition-all",
+        )}>
         <DoubleDownArrowSVG />
       </button>
     </div>
@@ -119,8 +115,7 @@ const DoubleUpArrowSVG = (props: { class?: string; style?: string }) => {
       class={props.class}
       width="30"
       height="30"
-      viewBox="0 5 30 35"
-    >
+      viewBox="0 5 30 35">
       <path
         d={`
           M${un - adx} ${un + cdy + ady} l${adx} ${-ady} ${adx} ${ady}
@@ -128,8 +123,7 @@ const DoubleUpArrowSVG = (props: { class?: string; style?: string }) => {
         `}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"
-      ></path>
+        fill="none"></path>
     </svg>
   );
 };
@@ -145,8 +139,7 @@ const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
       class={props.class}
       width="30"
       height="30"
-      viewBox="0 -15 30 35"
-    >
+      viewBox="0 -15 30 35">
       <path
         d={`
           M${un - adx} ${un - cdy - ady} l${adx} ${ady} ${adx} ${-ady}
@@ -154,8 +147,7 @@ const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
         `}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"
-      ></path>
+        fill="none"></path>
     </svg>
   );
 };

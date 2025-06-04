@@ -215,9 +215,9 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // contents
       // ************************
       dn.generate_lbp_table_of_contents(#(
-        "PanelAuthorSuppliedContent",
-        "PanelTitle",
-        "PanelItem",
+        "HamburgerPanelAuthorSuppliedContents",
+        "HamburgerPanelTitle",
+        "HamburgerPanelItem",
         None,
       )),
       dn.generate_lbp_table_of_contents(#(

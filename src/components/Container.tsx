@@ -90,7 +90,7 @@ const Container = (props: ParentProps) => {
     });
 
     const preventActionOn = () => [
-      document.getElementById("sidebar"),
+      document.getElementById("hamburger_panel"),
       document.getElementById("prev-btn"),
       document.getElementById("next-btn"),
       document.getElementById("menu-btn"),

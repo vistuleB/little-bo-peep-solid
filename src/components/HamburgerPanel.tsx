@@ -1,10 +1,9 @@
 import { HAMBURGER_MENU_HEIGHT } from "~/constants";
-import { useGlobalContext } from "~/store/StoreProvider";
-import { Store } from "~/store";
-import PanelTableOfContents from "./PanelAuthorSuppliedContent";
-import PanelTitle from "./PanelTitle";
+import { Store, useGlobalContext } from "~/store/StoreProvider";
+import PanelTableOfContents from "./HamburgerPanelAuthorSuppliedContents";
+import HamburgerPanelTitle from "./HamburgerPanelTitle";
 
-const Panel = () => {
+const HamburgerPanel = () => {
   const { store } = useGlobalContext();
   const menu_closed = () => !store.panel_opened;
   const env = import.meta.env.VITE_ENV;
@@ -19,7 +18,7 @@ const Panel = () => {
 
   return (
     <div
-      id="sidebar"
+      id="hamburger_panel"
       class="w-full z-50 fixed translate-x-0 translate-y-0 right-0 top-14 flex self-start font-baskerville text-xl leading-3 sm:leading-5 select-none transition ease-linear duration-300 scrollbar-hidden"
       classList={{
         "duration-500": menu_closed(),
@@ -42,7 +41,7 @@ const Panel = () => {
           <PanelTableOfContents />
           {env === "DEV" || env === "LOCAL" ? (
             <div id="options">
-              <PanelTitle label="Options" />
+              <HamburgerPanelTitle label="Options" />
               <Option label="Areas" state_key="show_areas" />
               <Option
                 label="Section Dividers"
@@ -84,7 +83,7 @@ const Checkbox = (props: {
     <div
       onClick={(e) => {
         e.stopPropagation();
-        props.onChange(!props.value)
+        props.onChange(!props.value);
       }}
       class={`w-5 h-5 border border-solid border-black rounded flex items-center justify-center cursor-pointer ${
         props.value
@@ -116,4 +115,4 @@ const Checkbox = (props: {
   );
 };
 
-export default Panel;
+export default HamburgerPanel;

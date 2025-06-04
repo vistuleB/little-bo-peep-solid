@@ -31,10 +31,9 @@ const InlineImage = (props: InlineImageProps) => {
             marginLeft: props.marginLeft,
             marginRight: props.marginRight,
           },
-          props.style
+          props.style,
         )}
-        src={props.src}
-      ></ImageOrSideImage>
+        src={props.src}></ImageOrSideImage>
     </>
   );
 };

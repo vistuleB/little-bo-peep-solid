@@ -6,19 +6,19 @@ import { Meta, MetaProvider } from "@solidjs/meta";
 
 import "./app.css";
 import { StoreProvider } from "./store/StoreProvider";
-import PanelButton from "./components/PanelButton";
-import Panel from "./components/Panel";
+import HamburgerButton from "./components/HamburgerButton";
+import HamburgerPanel from "./components/HamburgerPanel";
 
 export default function App() {
   return (
     <MetaProvider>
       <Meta property="og:image" content="images/lbp_preview.png"></Meta>
       <StoreProvider>
-        <Router 
+        <Router
           root={(props) => (
             <>
-              <PanelButton />
-              <Panel />
+              <HamburgerButton />
+              <HamburgerPanel />
               <Container>
                 <Suspense>{props.children}</Suspense>
               </Container>

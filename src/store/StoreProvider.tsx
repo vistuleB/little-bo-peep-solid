@@ -7,7 +7,7 @@ import {
 import { SetStoreFunction } from "solid-js/store";
 import { createStore } from "solid-js/store";
 
-type Store = {
+export type Store = {
   panel_opened: boolean;
   show_section_dividers: boolean;
   show_areas: boolean;

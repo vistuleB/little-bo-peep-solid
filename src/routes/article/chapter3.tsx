@@ -27,7 +27,7 @@ const Article = () => {
       <Chapter
         number={3}
         title="Functions"
-        id="_285016571">
+        id="_790511853">
         <SectionsBreadcrumbs>
           <li
             class="breadcrumb"
@@ -419,7 +419,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \lambda&#123;&#125;x.x^2
+          lambda&#123;&#125;x.x^2
           $$
         </MathBlock>
         <Pause />
@@ -441,7 +441,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \lambda&#123;&#125;z.z^2
+          lambda&#123;&#125;z.z^2
           $$
         </MathBlock>
         <Pause />
@@ -457,7 +457,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Huge \lambda
+          Huge \lambda
           $$
         </MathBlock>
         <Pause />
@@ -573,11 +573,11 @@ const Rest = () => {
         <MathBlock>
           $$
           x \ra \begin&#123;cases&#125;
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \vdots & \vdots\\
-          \ldots & \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;
+          ldots & \te&#123;if $\ldots$&#125;\\
+          ldots & \te&#123;if $\ldots$&#125;\\
+          vdots & \vdots\\
+          ldots & \te&#123;$\ldots$&#125;
+          end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
@@ -597,11 +597,11 @@ const Rest = () => {
         <MathBlock>
           $$
           g(x) = \begin&#123;cases&#125;
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \ldots & \te&#123;if $\ldots$&#125;\\
-          \vdots & \vdots\\
-          \ldots & \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;
+          ldots & \te&#123;if $\ldots$&#125;\\
+          ldots & \te&#123;if $\ldots$&#125;\\
+          vdots & \vdots\\
+          ldots & \te&#123;$\ldots$&#125;
+          end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
@@ -629,11 +629,11 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125;
+            te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125;
             3.5 & \te&#123;if $x = 0$&#125;,\\
             2.5\up&#123;1.1&#125; & \te&#123;if $x = 1$&#125;,\\
-            \te&#123;undefined&#125;\up&#123;1.1&#125; & \te&#123;if $x \ne 0, 1$&#125;
-            \end&#123;cases&#125;
+            te&#123;undefined&#125;\up&#123;1.1&#125; & \te&#123;if $x \ne 0, 1$&#125;
+            end&#123;cases&#125;
             $$
           </MathBlock>
           <Pause />
@@ -643,7 +643,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;VX-11/78A&#125;(0) = 3.5,
+            te&#123;VX-11/78A&#125;(0) = 3.5,
             $$
           </MathBlock>
           <Pause />
@@ -653,7 +653,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;VX-11/78A&#125;(1) = 2.5,
+            te&#123;VX-11/78A&#125;(1) = 2.5,
             $$
           </MathBlock>
           <Pause />
@@ -916,7 +916,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \dom\, f
+          dom\, f
           $$
         </MathBlock>
         <Pause />
@@ -944,7 +944,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;
+            dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;
             $$
           </MathBlock>
           <Pause />
@@ -963,8 +963,6 @@ const Rest = () => {
               </Math>
               ,
             </NoBreak>
-            {" "}
-            {" "}
             <NoBreak>
               <Math>
                 $1$
@@ -986,11 +984,11 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;DM-1700&#125;(x) =
-            \begin&#123;cases&#125;
+            te&#123;DM-1700&#125;(x) =
+            begin&#123;cases&#125;
             0             & \te&#123;if $x \leq 0$ or $x \geq 1$&#125;,\\
             1 - x\up&#123;1.1&#125; & \te&#123;if $0 &lt; x &lt; 1$&#125;
-            \end&#123;cases&#125;
+            end&#123;cases&#125;
             $$
           </MathBlock>
           <Pause />
@@ -1000,7 +998,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr
+            dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr
             $$
           </MathBlock>
           <Pause />
@@ -1047,9 +1045,9 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \begin&#123;align&#125;
-            \dom\, g &\,=\, [1, \infty)
-            \end&#123;align&#125;
+            begin&#123;align&#125;
+            dom\, g &\,=\, [1, \infty)
+            end&#123;align&#125;
             $$
           </MathBlock>
           <Pause />
@@ -1112,7 +1110,6 @@ const Rest = () => {
           <Math>
             $\rr$
           </Math>
-          {" "}{" "}
         </CentralDisplayItalic>
         <Pause />
         <VerticalChunk>
@@ -1121,7 +1118,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \dom f \subseteq \rr
+          dom f \subseteq \rr
           $$
         </MathBlock>
         <Pause />
@@ -1140,7 +1137,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \&#123;f(x) : x \in \dom f\&#125; \subseteq \rr
+          &#123;f(x) : x \in \dom f\&#125; \subseteq \rr
           $$
         </MathBlock>
         <Pause />
@@ -1172,7 +1169,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \dom f \subseteq A
+          dom f \subseteq A
           $$
         </MathBlock>
         <Pause />
@@ -1194,7 +1191,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \&#123;f(x) : x \in \dom f\&#125; \subseteq B
+          &#123;f(x) : x \in \dom f\&#125; \subseteq B
           $$
         </MathBlock>
         <Pause />
@@ -1393,7 +1390,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large x \ra 0^x
+          Large x \ra 0^x
           $$
         </MathBlock>
         <Pause />
@@ -1404,9 +1401,9 @@ const Rest = () => {
         <MathBlock>
           $$
           0^x =
-          \begin&#123;cases&#125; 0 & \te&#123;if &#125; x &gt; 0\\
+          begin&#123;cases&#125; 0 & \te&#123;if &#125; x &gt; 0\\
           1 & \te&#123;if &#125; x = 0\\
-          \te&#123;undefined&#125; & \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;
+          te&#123;undefined&#125; & \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1452,7 +1449,6 @@ const Rest = () => {
               </Math>
               ”.
             </NoBreak>
-            {" "}{" "}
           </b>
           {" "}
           The difference between
@@ -1654,7 +1650,6 @@ const Rest = () => {
               </Math>
               ”.
             </NoBreak>
-            {" "}{" "}
           </b>
           {" "}
           Technically,
@@ -1851,16 +1846,16 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;array&#125;&#123;c|c|c&#125;
-          \,\,\,\,\te&#123;degree&#125;\,\,\,\, & \te&#123;name&#125; & \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
+          begin&#123;array&#125;&#123;c|c|c&#125;
+          ,\,\,\,\te&#123;degree&#125;\,\,\,\, & \te&#123;name&#125; & \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
           -\infty & \te&#123;zero&#125; & 0\Rule&#123;0pt&#125;&#123;1.1em&#125;&#123;0.0em&#125;\\
-          \te&#123;0&#125; & \te&#123;constant&#125; & 1 + \sqrt&#123;5&#125;\\
-          \te&#123;1&#125; & \te&#123;affine&#125; & 10x - 1\\
-          \te&#123;2&#125; & \,\,\,\,\te&#123;quadratic&#125;\,\,\,\, & x^2 - 1\\
-          \te&#123;3&#125; & \te&#123;cubic&#125; & x^3 - 1\\
-          \te&#123;4&#125; & \te&#123;quartic&#125; & 1 - x^4\\
-          \te&#123;5&#125; & \te&#123;quintic&#125; & x^5
-          \end&#123;array&#125;
+          te&#123;0&#125; & \te&#123;constant&#125; & 1 + \sqrt&#123;5&#125;\\
+          te&#123;1&#125; & \te&#123;affine&#125; & 10x - 1\\
+          te&#123;2&#125; & \,\,\,\,\te&#123;quadratic&#125;\,\,\,\, & x^2 - 1\\
+          te&#123;3&#125; & \te&#123;cubic&#125; & x^3 - 1\\
+          te&#123;4&#125; & \te&#123;quartic&#125; & 1 - x^4\\
+          te&#123;5&#125; & \te&#123;quintic&#125; & x^5
+          end&#123;array&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2225,7 +2220,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_37008808520">
             <VerticalChunk>
               <b>
                 Exercise 4.
@@ -2247,7 +2242,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \lfloor x \rfloor,
+              lfloor x \rfloor,
               $$
             </MathBlock>
             <Pause />
@@ -2391,8 +2386,6 @@ const Rest = () => {
                 </Math>
                 -coordinate
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $\floor&#123;x&#125;$
@@ -2446,7 +2439,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_10669431975">
             <VerticalChunk>
               <b>
                 Exercise 5.
@@ -2478,8 +2471,13 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}apply the function from Exercise
-              4):
+              {" "}apply the function from{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_37008808520"
+                class="handle-in-chapter-link">
+                Exercise 4
+              </InChapterLink>
+              ):
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch3_ex_factory_roof_stretched_solution.svg" />
@@ -2526,7 +2524,13 @@ const Rest = () => {
                 ”,
               </NoBreak>
               {" "}
-              the formula for the function from Exercise 4.
+              the formula for the function from{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_37008808520"
+                class="handle-in-chapter-link">
+                Exercise 4
+              </InChapterLink>
+              .
             </VerticalChunk>
             <Pause />
             <VerticalChunk>
@@ -2619,7 +2623,6 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplayItalic>
-              {" "}{" "}
               <NoBreak>
                 “
                 <Math>
@@ -2633,7 +2636,6 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -2742,7 +2744,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,&#123;(f \circ g)(x) = f(g(x))&#125;.
+              ,&#123;(f \circ g)(x) = f(g(x))&#125;.
               $$
             </MathBlock>
             <Pause />
@@ -2822,7 +2824,6 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
-              {" "}{" "}
               <NoBreak>
                 “
                 <Math>
@@ -2840,7 +2841,6 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}{" "}
             </CentralDisplay>
             <Pause />
             <VerticalChunk>
@@ -2926,7 +2926,13 @@ const Rest = () => {
             <Pause />
             <VerticalChunk>
               because all we have to do is to multiply
-              Exercise 5's formula by{" "}
+              {" "}
+              <InChapterLink
+                href="/article/chapter3?id=_10669431975"
+                class="handle-in-chapter-link">
+                Exercise 5
+              </InChapterLink>
+              's formula by{" "}
               <NoBreak>
                 <Math>
                   $2$
@@ -2945,7 +2951,13 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              because the problem is similar to Exercise 5
+              because the problem is similar to{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_10669431975"
+                class="handle-in-chapter-link">
+                Exercise 5
+              </InChapterLink>
+              {" "}
               except with a factor{" "}
               <Math>
                 $3$
@@ -3016,23 +3028,25 @@ const Rest = () => {
                 $3$
               </Math>
               {" "}
-              (to go from
+              (to go from{" "}
               <NoBreak>
                 “
                 <InlineImage
+                  bottom="0.15em"
                   width="0.9em"
                   src="/images/svg_ch3_3_3_grid_1.svg" />
-                ”
+                ”{" "}
               </NoBreak>
-              &ensp;to
+              to{" "}
               <NoBreak>
                 “
                 <InlineImage
+                  bottom="0.15em"
                   width="0.9em"
                   src="/images/svg_ch3_3_3_grid_2.svg" />
-                ”,
+                ”,{" "}
               </NoBreak>
-              &ensp;namely), meaning that the final answer is
+              namely), meaning that the final answer is
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -3079,7 +3093,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \cos \dblcol \rr \ra \rr
+              cos \dblcol \rr \ra \rr
               $$
             </MathBlock>
             <Pause />
@@ -3202,7 +3216,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_774412139995">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -3211,15 +3225,11 @@ const Rest = () => {
               Rewrite
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
               <MathBlock>
                 $$
-                \tag&#123;A&#125;(f \circ (g \circ h))(x)
+                tag&#123;A&#125;(f \circ (g \circ h))(x)
                 $$
               </MathBlock>
-              <Pause />
-              {" "}{" "}
             </div>
             <VerticalChunk>
               without using{" "}
@@ -3235,15 +3245,11 @@ const Rest = () => {
               composition”, which is namely
             </VerticalChunk>
             <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
               <MathBlock>
                 $$
-                \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
+                tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
                 $$
               </MathBlock>
-              <Pause />
-              {" "}{" "}
             </div>
             <VerticalChunk>
               (where{" "}
@@ -3326,21 +3332,17 @@ const Rest = () => {
               {" "}
               in (AA) yields
               <ImageLeft
-                offset_y="-0.5em"
                 offset_x="1em"
+                y_anchor={1}
                 popup={true}
                 src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg" />
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
+            <div style="font-size:1.1em;margin:0.8em 0em;">
               <MathBlock>
                 $$
                 (f \circ (g \circ h))(x) = \f((g \circ h)(x))
                 $$
               </MathBlock>
-              <Pause />
-              {" "}{" "}
             </div>
             <VerticalChunk>
               ...which already constitutes progress towards
@@ -3355,30 +3357,22 @@ const Rest = () => {
               {" "}
               exists on the right-hand side! But
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
+            <div style="font-size:1.1em;margin:0.8em 0em;">
               <MathBlock>
                 $$
                 (g \circ h)(x) = g(h(x))
                 $$
               </MathBlock>
-              <Pause />
-              {" "}{" "}
             </div>
             <VerticalChunk>
               by the “definitional equation” again, so
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
+            <div style="font-size:1.1em;margin:0.8em 0em;">
               <MathBlock>
                 $$
                 f((g \circ h)(x)) = \f(g(h(x)))
                 $$
               </MathBlock>
-              <Pause />
-              {" "}{" "}
             </div>
             <VerticalChunk>
               ...and this completes the computation!
@@ -3403,7 +3397,13 @@ const Rest = () => {
                 Exercise 9.
               </b>
               {" "}
-              Same question as Exercise 17, but for
+              Same question as{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_774412139995"
+                class="handle-in-chapter-link">
+                Exercise 8
+              </InChapterLink>
+              , but for
               {" "}
               <NoBreak>
                 “
@@ -3438,16 +3438,12 @@ const Rest = () => {
             <VerticalChunk>
               So the first step is...
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
+            <div style="font-size:1.1em;margin:0.8em 0em;">
               <MathBlock>
                 $$
                 ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
                 $$
               </MathBlock>
-              <Pause />
-              {" "}{" "}
             </div>
             <VerticalChunk>
               ...by setting{" "}
@@ -3465,16 +3461,12 @@ const Rest = () => {
               the definitional equation, and the second step
               is...
             </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
+            <div style="font-size:1.1em;margin:0.8em 0em;">
               <MathBlock>
                 $$
                 (f \circ g)(h(x)) = \f(g(h(x)))
                 $$
               </MathBlock>
-              <Pause />
-              {" "}{" "}
             </div>
             <VerticalChunk>
               ...by setting{" "}
@@ -3510,677 +3502,631 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
             <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              The fact that
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                (f \circ (g \circ h))(x)
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              and
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                ((f \circ g) \circ h)(x)
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              both evaluate to
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                f(g(h(x)))
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              actually implies that
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                f \circ (g \circ h)
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              and
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                (f \circ g) \circ h
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              are the same function; this function is namely
-              the function that maps{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}to{" "}
-              <Math>
-                $f(g(h(x)))$
-              </Math>
-              {" "}for
-              all{" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}(or
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra f(g(h(x)))
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              in lambda notation).
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              Because of this, we can write
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                f \circ g \circ h
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              without any parentheses. (The point is: either
-              way you parenthesize it you obtain the same
-              function, so why bother?)
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 3.
-              </i>
-              {" "}
-              The fact that
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;(a + b) + c = a + (b + c)&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              for all numbers{" "}
-              <NoBreak>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The fact that
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  (f \circ (g \circ h))(x)
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                and
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  ((f \circ g) \circ h)(x)
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                both evaluate to
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  f(g(h(x)))
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                actually implies that
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  f \circ (g \circ h)
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                and
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  (f \circ g) \circ h
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                are the same function; this function is namely
+                the function that maps{" "}
                 <Math>
-                  $a$
+                  $x$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
+                {" "}to{" "}
                 <Math>
-                  $b$
+                  $f(g(h(x)))$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $c$
-              </Math>
-              {" "}is known as the
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              associativity
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              of addition; likewise, the fact that
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                (ab)c = a(bc)
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              for all numbers{" "}
-              <NoBreak>
+                {" "}for
+                all{" "}
                 <Math>
-                  $a$
+                  $x$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $b$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $c$
-              </Math>
-              {" "}is known as the
-            </VerticalChunk>
+                {" "}(or
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  x \ra f(g(h(x)))
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                in lambda notation).
+              </VerticalChunk>
+            </SolutionNote>
             <Pause />
-            <CentralDisplayItalic>
-              associativity
-            </CentralDisplayItalic>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Because of this, we can write
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  f \circ g \circ h
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                without any parentheses. (The point is: either
+                way you parenthesize it you obtain the same
+                function, so why bother?)
+              </VerticalChunk>
+            </SolutionNote>
             <Pause />
-            <VerticalChunk>
-              of multiplication; and again likewise,
-              the fact that
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              for all functions{" "}
-              <NoBreak>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                The fact that
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  &#123;(a + b) + c = a + (b + c)&#125;
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                for all numbers{" "}
+                <NoBreak>
+                  <Math>
+                    $a$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $b$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
                 <Math>
-                  $f$
+                  $c$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
+                {" "}is known as the
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                associativity
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                of addition; likewise, the fact that
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  (ab)c = a(bc)
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                for all numbers{" "}
+                <NoBreak>
+                  <Math>
+                    $a$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $b$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <Math>
+                  $c$
+                </Math>
+                {" "}is known as the
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                associativity
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                of multiplication; and again likewise,
+                the fact that
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  &#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                for all functions{" "}
+                <NoBreak>
+                  <Math>
+                    $f$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <Math>
+                  $h$
+                </Math>
+                {" "}is known
+                as the
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                associativity
+                <ImageRight src="/images/svg_ch3_ex_associativity_cloud.svg" />
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                of function composition.
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote test="test">
+              <VerticalChunk>
+                <i>
+                  Note 4.
+                </i>
+                {" "}
+                One of the best ways to explain{" "}
+                <i>
+                  &
+                </i>
+                {" "}understand
+                the associativity of function composition
+                uses this picture:
+              </VerticalChunk>
+              <Pause />
+              <Image src="/images/svg_ch3_truth_be_said.svg" />
+              <Pause />
+              <VerticalChunk>
+                In the above{" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
+                <Math>
+                  $D$
+                </Math>
+                {" "}are sets
+                while the arrows encode functions{" "}
+                <NoBreak>
+                  <Math>
+                    $f$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
                 <Math>
                   $g$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $h$
-              </Math>
-              {" "}is known
-              as the
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              associativity
-              <ImageRight src="/images/svg_ch3_ex_associativity_cloud.svg" />
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              of function composition.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 4.
-              </i>
-              {" "}
-              One of the best ways to explain{" "}
-              <i>
-                &
-              </i>
-              {" "}understand
-              the associativity of function composition
-              uses this picture:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_ch3_truth_be_said.svg" />
-            <Pause />
-            <VerticalChunk>
-              In the above{" "}
-              <NoBreak>
+                {" "}
+                and{" "}
                 <Math>
-                  $A$
+                  $h$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
+                {" "}that, respectively in reverse order,
+                go from{" "}
                 <Math>
-                  $B$
+                  $D$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <NoBreak>
+                {" "}to{" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}{" "}
                 <Math>
                   $C$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $D$
-              </Math>
-              {" "}are sets
-              while the arrows encode functions{" "}
-              <NoBreak>
+                {" "}to{" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}and{" "}
+                <Math>
+                  $B$
+                </Math>
+                {" "}to{" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                For example,
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplay>
+                <Math>
+                  $\Large h($
+                </Math>
+                <InlineImage
+                  top="-3px"
+                  width="1rem"
+                  src="/images/svg_ch3_composition_icon_clubs.svg" />
+                <Math>
+                  $\Large&#123;&#125;) =$
+                </Math>
+                <InlineImage
+                  marginRight=".5rem"
+                  marginLeft=".5rem"
+                  top="-3px"
+                  width="1.25rem"
+                  src="/images/svg_ch3_composition_icon_die_3.svg" />
+              </CentralDisplay>
+              <Pause />
+              <VerticalChunk>
+                because the arrow that originates at{" "}
+                <InlineImage
+                  top="-4px"
+                  width="1rem"
+                  src="/images/svg_ch3_composition_icon_clubs.svg" />
+                {" "}in set{" "}
+                <Math>
+                  $D$
+                </Math>
+                {" "}lands at{" "}
+                <InlineImage
+                  top="-4px"
+                  width="1.25rem"
+                  src="/images/svg_ch3_composition_icon_die_3.svg" />
+                {" "}in set{" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}and
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplay>
+                <Math>
+                  $\Large g(h($
+                </Math>
+                <InlineImage
+                  top="-3px"
+                  width="1rem"
+                  src="/images/svg_ch3_composition_icon_clubs.svg" />
+                <Math>
+                  $\Large&#123;&#125;)) =$
+                </Math>
+                <InlineImage
+                  marginRight=".5rem"
+                  marginLeft=".5rem"
+                  top="-4px"
+                  width="2.3rem"
+                  src="/images/svg_ch3_composition_icon_fence.svg" />
+              </CentralDisplay>
+              <Pause />
+              <VerticalChunk>
+                because, pursuing that path onwards, the arrow
+                that originates at{" "}
+                <InlineImage
+                  top="-4px"
+                  width="1.25rem"
+                  src="/images/svg_ch3_composition_icon_die_3.svg" />
+                {" "}in set{" "}
+                <Math>
+                  $C$
+                </Math>
+                {" "}lands at{" "}
+                <InlineImage
+                  top="-4px"
+                  width="2.3rem"
+                  src="/images/svg_ch3_composition_icon_fence.svg" />
+                {" "}in set{" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}etc.
+              </VerticalChunk>
+              <VerticalChunk indent={true}>
+                Under this representation one can “compute”
+                {" "}
+                <Math>
+                  $f \circ g \circ h$
+                </Math>
+                {" "}by gluing arrows end-to-end.
+                First, say, obliviate set{" "}
+                <Math>
+                  $C$
+                </Math>
+                {" "}in the middle
+                right, then do the same with set{" "}
+                <Math>
+                  $B$
+                </Math>
+                {" "}in the
+                middle left:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                width="2000px"
+                src="/images/svg_ch3_truth_be_said_right_first.svg" />
+              <Pause />
+              <VerticalChunk>
+                We can also get rid of{" "}
+                <Math>
+                  $B$
+                </Math>
+                {" "}first,{" "}
+                <Math>
+                  $C$
+                </Math>
+                {" "}second:
+              </VerticalChunk>
+              <Pause />
+              <Image
+                width="2000px"
+                src="/images/svg_ch3_truth_be_said_left_first.svg" />
+              <Pause />
+              <VerticalChunk>
+                The first order of computation corresponds
+                to the parenthetization{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f \circ (g \circ h)$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}
+                while the second corresponds to the
+                parenthetization{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $(f \circ g) \circ h$
+                  </Math>
+                  ”.
+                </NoBreak>
+                {" "}
+                Intuitively, the reason they come out the
+                same (in “step 6”, bottom left) is because
+                each final arrow in the last diagram comes
+                from a path-of-arrows in the original
+                diagram, and the order in which the
+                waypoints along a path are “straightened”
+                (or “collapsed”) does not affect the origin
+                point or destination point of the final
+                arrow.{" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "}
+                more stuff
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 5.
+                </i>
+                {" "}
+                The last series of diagrams might leave one
+                with the impression that the composition of
+                two or more functions can be “precomputed”
+                by looking ahead along the path of yellow arrows.
+                Just so you know, computers do not generically
+                do this. For reason, computers are not given
+                functions as tables of input-output values to
+                know by heart but rather as “recipes” (synonyms:
+                algorithms, code, programs) that allow them
+                to compute an output for any given input.
+                Moreover, there is no general way of flattening
+                two recipes into a single, shorter one—when
+                composing two functions the computer has, in
+                general, no choice but to diligently apply
+                each recipe in order—the first function first,
+                the second function second.
+              </VerticalChunk>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 6.
+                </i>
+                {" "}
+                We have taken for granted the fact that two
+                functions{" "}
                 <Math>
                   $f$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $g$
-              </Math>
-              {" "}
-              and{" "}
-              <Math>
-                $h$
-              </Math>
-              {" "}that, respectively in reverse order,
-              go from{" "}
-              <Math>
-                $D$
-              </Math>
-              {" "}to{" "}
-              <NoBreak>
+                {" "}and{" "}
                 <Math>
-                  $C$
+                  $g$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}{" "}
-              <Math>
-                $C$
-              </Math>
-              {" "}to{" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and{" "}
-              <Math>
-                $B$
-              </Math>
-              {" "}to{" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              For example,
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplay>
-              {" "}{" "}
-              <Math>
-                $\Large h($
-              </Math>
-              {" "}{" "}
-              <InlineImage
-                y_anchor="-3px"
-                width="1rem"
-                src="/images/svg_ch3_composition_icon_clubs.svg" />
-              {" "}{" "}
-              <Math>
-                $\Large&#123;&#125;) =$
-              </Math>
-              {" "}{" "}
-              <InlineImage
-                margin_right=".5rem"
-                margin_left=".5rem"
-                y_anchor="-3px"
-                width="1.25rem"
-                src="/images/svg_ch3_composition_icon_die_3.svg" />
-              {" "}{" "}
-            </CentralDisplay>
-            <Pause />
-            <VerticalChunk>
-              because the arrow that originates at
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="1rem"
-                src="/images/svg_ch3_composition_icon_clubs.svg" />
-              in set{" "}
-              <Math>
-                $D$
-              </Math>
-              {" "}lands at
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="1.25rem"
-                src="/images/svg_ch3_composition_icon_die_3.svg" />
-              in set{" "}
-              <NoBreak>
-                <Math>
-                  $C$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}and
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplay>
-              {" "}
-              {" "}
-              <Math>
-                $\Large g(h($
-              </Math>
-              {" "}{" "}
-              <InlineImage
-                y_anchor="-3px"
-                width="1rem"
-                src="/images/svg_ch3_composition_icon_clubs.svg" />
-              {" "}{" "}
-              <Math>
-                $\Large&#123;&#125;))&#123;&#125;=$
-              </Math>
-              {" "}{" "}
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="2.3rem"
-                src="/images/svg_ch3_composition_icon_fence.svg" />
-              {" "}{" "}
-            </CentralDisplay>
-            <Pause />
-            <VerticalChunk>
-              because, pursuing that path onwards, the arrow
-              that originates at
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="1.25rem"
-                src="/images/svg_ch3_composition_icon_die_3.svg" />
-              in set{" "}
-              <Math>
-                $C$
-              </Math>
-              {" "}lands at
-              <InlineImage
-                space_right={true}
-                space_left={true}
-                y_anchor="-4px"
-                width="2.3rem"
-                src="/images/svg_ch3_composition_icon_fence.svg" />
-              in set{" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}etc.
-            </VerticalChunk>
-            <VerticalChunk indent={true}>
-              Under this representation one can “compute”
-              {" "}
-              <Math>
-                $f \circ g \circ h$
-              </Math>
-              {" "}by gluing arrows end-to-end.
-              First, say, obliviate set{" "}
-              <Math>
-                $C$
-              </Math>
-              {" "}in the middle
-              right, then do the same with set{" "}
-              <Math>
-                $B$
-              </Math>
-              {" "}in the
-              middle left:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="2000px"
-              src="/images/svg_ch3_truth_be_said_right_first.svg" />
-            <Pause />
-            <VerticalChunk>
-              We can also get rid of{" "}
-              <Math>
-                $B$
-              </Math>
-              {" "}first,{" "}
-              <Math>
-                $C$
-              </Math>
-              {" "}second:
-            </VerticalChunk>
-            <Pause />
-            <Image
-              width="2000px"
-              src="/images/svg_ch3_truth_be_said_left_first.svg" />
-            <Pause />
-            <VerticalChunk>
-              The first order of computation corresponds
-              to the parenthetization{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f \circ (g \circ h)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              while the second corresponds to the
-              parenthetization{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $(f \circ g) \circ h$
-                </Math>
-                ”.
-              </NoBreak>
-              {" "}
-              Intuitively, the reason they come out the
-              same (in “step 6”, bottom left) is because
-              each final arrow in the last diagram comes
-              from a path-of-arrows in the original
-              diagram, and the order in which the
-              waypoints along a path are “straightened”
-              (or “collapsed”) does not affect the origin
-              point or destination point of the final
-              arrow.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 5.
-              </i>
-              {" "}
-              The last series of diagrams might leave one
-              with the impression that the composition of
-              two or more functions can be “precomputed”
-              by looking ahead along the path of yellow arrows.
-              Just so you know, computers do not generically
-              do this. For reason, computers are not given
-              functions as tables of input-output values to
-              know by heart but rather as “recipes” (synonyms:
-              algorithms, code, programs) that allow them
-              to compute an output for any given input.
-              Moreover, there is no general way of flattening
-              two recipes into a single, shorter one—when
-              composing two functions the computer has, in
-              general, no choice but to diligently apply
-              each recipe in order—the first function first,
-              the second function second.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 6.
-              </i>
-              {" "}
-              We have taken for granted the fact that two
-              functions{" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}and{" "}
-              <Math>
-                $g$
-              </Math>
-              {" "}are “equal” if and only
-              if they produce the same outupt for every
-              input but this is a actually subtle thing
-              that has to do with how functions are defined
-              “under the hood”. Specifically, mathematicians
-              view functions as
-              <del>
-                long
-              </del>
-              &ensp;
-              <del>
-                lists of
-              </del>
-              &ensp;sets of ordered pairs; for example—conceptual
-              cold water shock ahead—
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\textrm&#123;VX-11/78A&#125; = \&#123;(0, 3.5), (1, 2.5)\&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              because VX-11/78A maps{" "}
-              <Math>
-                $0$
-              </Math>
-              {" "}to{" "}
-              <Math>
-                $3.5$
-              </Math>
-              {" "}and maps
-              {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}to{" "}
-              <NoBreak>
-                <Math>
-                  $2.5$
-                </Math>
-                .
-              </NoBreak>
-              {" "}(The presence of an ordered pair
-            </VerticalChunk>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              {" "}{" "}
+                {" "}are “equal” if and only
+                if they produce the same outupt for every
+                input but this is a actually subtle thing
+                that has to do with how functions are defined
+                “under the hood”. Specifically, mathematicians
+                view functions as{" "}
+                <del>
+                  long
+                </del>
+                {" "}{" "}
+                <del>
+                  lists of
+                </del>
+                {" "}sets of ordered pairs; for example—conceptual
+                cold water shock ahead—
+              </VerticalChunk>
               <Pause />
               <MathBlock>
                 $$
-                (a, b)
+                &#123;\textrm&#123;VX-11/78A&#125; = \&#123;(0, 3.5), (1, 2.5)\&#125;&#125;
                 $$
               </MathBlock>
               <Pause />
-              {" "}{" "}
-            </div>
-            <VerticalChunk>
-              means that input{" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}produces output{" "}
-              <NoBreak>
+              <VerticalChunk>
+                because VX-11/78A maps{" "}
                 <Math>
-                  $b$
+                  $0$
                 </Math>
-                .)
-              </NoBreak>
-              {" "}So
-              two functions are equal if and only if they
-              are equal
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              as sets of ordered pairs
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              because the set of ordered pairs is the
-              underlying “thing” that the function is. In
-              particular, there is no notion of a “formula”
-              or of a “procedure” being attached to a
-              function, that might cause two functions to
-              be considered unequal even if they produce the
-              same output on every input—producing the same
-              output on every input implies that the
-              <del>
-                list of
-              </del>
-              &ensp;set of ordered pairs is equal, and, perforce,
-              that the two functions are equal!!
-            </VerticalChunk>
+                {" "}to{" "}
+                <Math>
+                  $3.5$
+                </Math>
+                {" "}and maps
+                {" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "}to{" "}
+                <NoBreak>
+                  <Math>
+                    $2.5$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}(The presence of an ordered pair
+              </VerticalChunk>
+              <div style="font-size:1.1em;margin:0.8em 0em;">
+                <MathBlock>
+                  $$
+                  (a, b)
+                  $$
+                </MathBlock>
+              </div>
+              <VerticalChunk>
+                means that input{" "}
+                <Math>
+                  $a$
+                </Math>
+                {" "}produces output{" "}
+                <NoBreak>
+                  <Math>
+                    $b$
+                  </Math>
+                  .)
+                </NoBreak>
+                {" "}So
+                two functions are equal if and only if they
+                are equal
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                as sets of ordered pairs
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                because the set of ordered pairs is the
+                underlying “thing” that the function is. In
+                particular, there is no notion of a “formula”
+                or of a “procedure” being attached to a
+                function, that might cause two functions to
+                be considered unequal even if they produce the
+                same output on every input—producing the same
+                output on every input implies that the
+                <del>
+                  list of
+                </del>
+                {" "}set of ordered pairs is equal, and, perforce,
+                that the two functions are equal!!
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_529716291198">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4241,11 +4187,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
-              \,\,\,\,(x + 5)^2
+              begin&#123;align&#125;
+              ,\,\,\,(x + 5)^2
               &= x^2 + (2\cdot 5)x + 5^2 \\
               &= \up&#123;1.4&#125; x^2 + 10x + 25
-              \end&#123;align&#125;
+              end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4271,12 +4217,18 @@ const Rest = () => {
                 Exercise 11.
               </b>
               {" "}
-              Solve Exercise 10 using algebra{" "}
+              Solve{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_529716291198"
+                class="handle-in-chapter-link">
+                Exercise 10
+              </InChapterLink>
+              {" "}using
+              algebra{" "}
               <i>
                 &
               </i>
-              {" "}
-              variables.
+              {" "}variables.
             </VerticalChunk>
           </ExerciseStatement>
           <Solution solution_number={11}>
@@ -4508,7 +4460,13 @@ const Rest = () => {
                   $.$
                 </Math>
               </NoBreak>
-              {" "}Exercise 21) has no solutions{" "}
+              {" "}{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_529716291198"
+                class="handle-in-chapter-link">
+                Exercise 10
+              </InChapterLink>
+              ) has no solutions{" "}
               <NoBreak>
                 <Math>
                   $x \in \rr$
@@ -4529,7 +4487,13 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              by Exercise 21, but this implies
+              by{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_529716291198"
+                class="handle-in-chapter-link">
+                Exercise 10
+              </InChapterLink>
+              , but this implies
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -4615,7 +4579,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,x + 5 = \pm\sqrt&#123;55&#125;
+              ,x + 5 = \pm\sqrt&#123;55&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4625,7 +4589,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \,x = -5 \pm\sqrt&#123;55&#125;
+              ,x = -5 \pm\sqrt&#123;55&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4635,7 +4599,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_807917697746">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -4805,7 +4769,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -4838,7 +4801,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5003,7 +4965,6 @@ const Rest = () => {
               <Math>
                 $&#123;B\over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5022,7 +4983,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B\over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5048,7 +5008,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5056,7 +5015,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5064,85 +5022,86 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              You could do the vertical translation
-              before the horizontal translation,
-              geometrically it comes out the same.
-              That order of geometric transformations
-              would correspond to the following sequence
-              of algebraic transformations:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = x^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\downarrow&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = x^2 - &#123;B^2 \over 4A^2&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\downarrow&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\downarrow&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...in which the{" "}
-              <i>
-                second
-              </i>
-              {" "}step is a
-              preprocessing step. (I.e., a step that
-              replaces{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}with something else.)
-            </VerticalChunk>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                You could do the vertical translation
+                before the horizontal translation,
+                geometrically it comes out the same.
+                That order of geometric transformations
+                would correspond to the following sequence
+                of algebraic transformations:
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;y = x^2&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;\downarrow&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;y = x^2 - &#123;B^2 \over 4A^2&#125;&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;\downarrow&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;\downarrow&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                ...in which the{" "}
+                <i>
+                  second
+                </i>
+                {" "}step is a
+                preprocessing step. (I.e., a step that
+                replaces{" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $x$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}with something else.)
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_102119401945">
             <VerticalChunk>
               <b>
                 Exercise 15.
@@ -5184,7 +5143,6 @@ const Rest = () => {
               <Math>
                 $-y_0$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5192,7 +5150,6 @@ const Rest = () => {
               <Math>
                 $x_0$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5200,7 +5157,6 @@ const Rest = () => {
               <Math>
                 $a$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -5547,7 +5503,13 @@ const Rest = () => {
                 $y = x^2$
               </Math>
               {" "}by the following
-              sequence of transformations (cf. Exercise 14):
+              sequence of transformations (cf.{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_807917697746"
+                class="handle-in-chapter-link">
+                Exercise 14
+              </InChapterLink>
+              ):
             </VerticalChunk>
             <Pause />
             <CentralDisplayItalic>
@@ -5555,7 +5517,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B^2 \over 4A^2&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5563,7 +5524,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -5571,12 +5531,17 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
               (We put the vertical translation first.)
-              By Exercise 15, the roots of{" "}
+              By{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_102119401945"
+                class="handle-in-chapter-link">
+                Exercise 15
+              </InChapterLink>
+              , the roots of{" "}
               <Math>
                 $y = Ax^2 + Bx$
               </Math>
@@ -5586,7 +5551,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \tag&#123;A&#125;
+              tag&#123;A&#125;
               x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;
               $$
             </MathBlock>
@@ -5607,7 +5572,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
+              pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5617,7 +5582,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
+              left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5773,7 +5738,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <ExerciseStatement id="_424021222564">
+          <ExerciseStatement id="_961321167909">
             <VerticalChunk>
               <b>
                 Exercise 18.
@@ -5821,8 +5786,8 @@ const Rest = () => {
               <Math>
                 $f$
               </Math>
-              {" "}and
               {" "}
+              and{" "}
               <Math>
                 $g$
               </Math>
@@ -5919,8 +5884,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <Math>
                 $g$
               </Math>
@@ -6011,7 +5974,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={19}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_232421799446">
             <VerticalChunk>
               <b>
                 Exercise 19.
@@ -6087,7 +6050,13 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              and, similarly to Exercise 14, write
+              and, similarly to{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_807917697746"
+                class="handle-in-chapter-link">
+                Exercise 14
+              </InChapterLink>
+              , write
             </VerticalChunk>
             <Pause />
             <MathBlock>
@@ -6102,7 +6071,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;
+              Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -6144,11 +6113,23 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}of Exercise 14,
+              {" "}of{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_807917697746"
+                class="handle-in-chapter-link">
+                Exercise 14
+              </InChapterLink>
+              ,
               that also has a minus sign out front.)
             </VerticalChunk>
             <VerticalChunk indent={true}>
-              By direct analogy with Exercise 14, the three
+              By direct analogy with{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_807917697746"
+                class="handle-in-chapter-link">
+                Exercise 14
+              </InChapterLink>
+              , the three
               transformations are thus...
             </VerticalChunk>
             <Pause />
@@ -6157,7 +6138,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6165,7 +6145,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6173,7 +6152,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -6185,7 +6163,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6193,7 +6170,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6201,7 +6177,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <VerticalChunk>
@@ -6282,7 +6257,6 @@ const Rest = () => {
               <Math>
                 $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6290,7 +6264,6 @@ const Rest = () => {
               <Math>
                 $-&#123;B \over 2A&#125;$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
@@ -6298,7 +6271,6 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "}{" "}
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplay>
@@ -6359,7 +6331,13 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <VerticalChunk>
-              by Exercise 15.{" "}
+              by{" "}
+              <InChapterLink
+                href="/article/chapter3?id=_102119401945"
+                class="handle-in-chapter-link">
+                Exercise 15
+              </InChapterLink>
+              .{" "}
               <Math>
                 $\rightarrow$
               </Math>
@@ -6369,128 +6347,138 @@ const Rest = () => {
               </Math>
             </VerticalChunk>
             <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              In fact,
-            </VerticalChunk>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                In fact,
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                (square both sides of the equation—in general,
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                pm E = \pm F
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                as one set of two values equalling another
+                set of two values, if and only if
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                |E| = |F|
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                or
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                E^2 = F^2
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                —so that's why we say “square both sides”),
+                so the formula for the roots can also be written
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                x = -&#123;B \over 2A&#125; \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                or
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                x = &#123;&#123;-B \pm \sqrt&#123;B^2 - 4AC&#125;&#125; \over 2A&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                as briefly flashed by, e.g., in{" "}
+                <a
+                  href="/article/chapter1?id=_981918928"
+                  class="handle-out-of-chapter-link">
+                  Chapter 1
+                </a>
+                .
+              </VerticalChunk>
+            </SolutionNote>
             <Pause />
-            <MathBlock>
-              $$
-              \pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (square both sides of the equation—in general,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \pm E = \pm F
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as one set of two values equalling another
-              set of two values, if and only if
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              |E| = |F|
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              E^2 = F^2
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              —so that's why we say “square both sides”),
-              so the formula for the roots can also be written
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x = -&#123;B \over 2A&#125; \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              x = &#123;&#123;-B \pm \sqrt&#123;B^2 - 4AC&#125;&#125; \over 2A&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              as briefly flashed by, e.g., in Chapter 1.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              If
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              then
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              does not exist, alerting you to the absence
-              of roots, if you try to use the first formula
-              we gave. Also
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0\iff B^2 - 4AC &lt; 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              because{" "}
-              <Math>
-                $4A^2 &gt; 0$
-              </Math>
-              {" "}for all{" "}
-              <NoBreak>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                If
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                then
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                sqrt&#123;B^2 - 4AC \over 4A^2&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                does not exist, alerting you to the absence
+                of roots, if you try to use the first formula
+                we gave. Also
+              </VerticalChunk>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0\iff B^2 - 4AC &lt; 0
+                $$
+              </MathBlock>
+              <Pause />
+              <VerticalChunk>
+                because{" "}
                 <Math>
-                  $A \ne 0$
+                  $4A^2 &gt; 0$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}
-              so the second set of formulas would alert you
-              to the absence of roots in that case, as well.
-            </VerticalChunk>
+                {" "}for all{" "}
+                <NoBreak>
+                  <Math>
+                    $A \ne 0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                so the second set of formulas would alert you
+                to the absence of roots in that case, as well.
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={21}>

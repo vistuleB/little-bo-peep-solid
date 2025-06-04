@@ -20,7 +20,7 @@ const setUpParentAndWidth = (
   document.body.appendChild(parent);
 };
 
-const PanelItem = (props: {
+const HamburgerPanelItem = (props: {
   href: string;
   label: string;
   on_mobile?: string;
@@ -125,4 +125,4 @@ export function ConditionalLink(props: ConditionalLinkProps) {
   return <A {...rest} onClick={handleClick} />;
 }
 
-export default PanelItem;
+export default HamburgerPanelItem;

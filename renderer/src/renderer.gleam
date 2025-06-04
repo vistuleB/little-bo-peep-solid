@@ -17,7 +17,7 @@ type FragmentType {
   Chapter(Int)
   Bootcamp(Int)
   TOCAuthorSuppliedContent
-  PanelAuthorSuppliedContent
+  HamburgerPanelAuthorSuppliedContents
 }
 
 type LBPSplitterError {
@@ -51,7 +51,7 @@ fn lbp_splitter(
   )
 
   use panel_vxml <- infra.on_error_on_ok(
-    infra.unique_child_with_tag(root, "PanelAuthorSuppliedContent"),
+    infra.unique_child_with_tag(root, "HamburgerPanelAuthorSuppliedContents"),
     with_on_error: fn(error) {
       case error {
         infra.MoreThanOne -> Error(MoreThanOnePanelAuthorSuppliedContent)
@@ -64,7 +64,7 @@ fn lbp_splitter(
     list.flatten([
       [
         #("components/TOCAuthorSuppliedContent.tsx", toc_vxml, TOCAuthorSuppliedContent),
-        #("components/PanelAuthorSuppliedContent.tsx", panel_vxml, PanelAuthorSuppliedContent),
+        #("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
       ],
       list.index_map(chapter_vxmls, fn(c, index) {
         #("routes/article/chapter" <> ins(index + 1) <> ".tsx", c, Chapter(index + 1))
@@ -248,18 +248,18 @@ fn panel_emitter(
         BlamedLine(
           blame_us("panel_emitter"),
           0,
-          "import PanelTitle from \"./PanelTitle\";",
+          "import HamburgerPanelTitle from \"./HamburgerPanelTitle\";",
         ),
         BlamedLine(
           blame_us("panel_emitter"),
           0,
-          "import PanelItem from \"./PanelItem\";",
+          "import HamburgerPanelItem from \"./HamburgerPanelItem\";",
         ),
         BlamedLine(blame_us("panel_emitter"), 0, ""),
         BlamedLine(
           blame_us("panel_emitter"),
           0,
-          "const PanelAuthorSuppliedContent = () => {",
+          "const HamburgerPanelAuthorSuppliedContents = () => {",
         ),
         BlamedLine(blame_us("panel_emitter"), 2, "return ("),
         BlamedLine(blame_us("panel_emitter"), 4, "<>"),
@@ -273,7 +273,7 @@ fn panel_emitter(
         BlamedLine(
           blame_us("panel_emitter"),
           0,
-          "export default PanelAuthorSuppliedContent;",
+          "export default HamburgerPanelAuthorSuppliedContents;",
         ),
       ],
     ])
@@ -291,7 +291,7 @@ fn lbp_emitter(
     Bootcamp(n) ->
       lbp_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
     TOCAuthorSuppliedContent -> toc_emitter(path, vxml, fragment_type)
-    PanelAuthorSuppliedContent -> panel_emitter(path, vxml, fragment_type)
+    HamburgerPanelAuthorSuppliedContents -> panel_emitter(path, vxml, fragment_type)
   }
 }
 
@@ -345,7 +345,7 @@ pub fn main() {
   let _ = shellout.command(
     run: "rm",
     in: ".",
-    with: ["../src/article/*", "../src/components/TOCAuthorSuppliedContent.tsx", "../src/components/PanelAuthorSuppliedContent.tsx"],
+    with: ["../src/article/*", "../src/components/TOCAuthorSuppliedContent.tsx", "../src/components/HamburgerPanelAuthorSuppliedContents.tsx"],
     opt: [],
   )
 
