@@ -1,7 +1,7 @@
 import { HAMBURGER_MENU_HEIGHT } from "~/constants";
 import { Store, useGlobalContext } from "~/store/StoreProvider";
-import PanelTableOfContents from "./HamburgerPanelAuthorSuppliedContents";
 import HamburgerPanelTitle from "./HamburgerPanelTitle";
+import HamburgerPanelAuthorSuppliedContents from "./HamburgerPanelAuthorSuppliedContents";
 
 const HamburgerPanel = () => {
   const { store } = useGlobalContext();
@@ -19,41 +19,31 @@ const HamburgerPanel = () => {
   return (
     <div
       id="hamburger_panel"
-      class="w-full z-50 fixed translate-x-0 translate-y-0 right-0 top-14 flex self-start font-baskerville text-xl leading-3 sm:leading-5 select-none transition ease-linear duration-300 scrollbar-hidden"
       classList={{
         "duration-500": menu_closed(),
         "duration-200": !menu_closed(),
       }}
+      onMouseEnter={() => toggle_scroll("hidden")}
+      onMouseLeave={() => toggle_scroll("auto")}
+      onTouchStart={() => toggle_scroll("hidden")}
+      onTouchEnd={() => toggle_scroll("auto")}
       style={{
+        "min-height": `calc(100vh - ${HAMBURGER_MENU_HEIGHT - 1.0}px)`,
+        height: `calc(100vh - ${HAMBURGER_MENU_HEIGHT}px)`,
         transform: `translateX(${menu_closed() ? "100%" : "0"})`,
-      }}>
-      <div
-        onMouseEnter={() => toggle_scroll("hidden")}
-        onMouseLeave={() => toggle_scroll("auto")}
-        onTouchStart={() => toggle_scroll("hidden")}
-        onTouchEnd={() => toggle_scroll("auto")}
-        style={{
-          "min-height": `calc(100vh - ${HAMBURGER_MENU_HEIGHT - 1.0}px)`,
-          height: `calc(100vh - ${HAMBURGER_MENU_HEIGHT}px)`,
-        }}
-        class="select-none overscroll-none absolute right-0 w-[16rem] sm:w-[22rem] z-40 bg-stone-100 overflow-scroll translate-y-0 sm:translate-y-[-1px]">
-        <div class="select-none scrollbar-hidden sm:h-full pt-[0.6em] px-[1em] overflow-y-hidden [&ul]:mb-[8px] [&ul]:p-0">
-          <PanelTableOfContents />
-          {env === "DEV" || env === "LOCAL" ? (
-            <div id="options">
-              <HamburgerPanelTitle label="Options" />
-              <Option label="Areas" state_key="show_areas" />
-              <Option
-                label="Section Dividers"
-                state_key="show_section_dividers"
-              />
-              <Option label="Squiggles" state_key="show_squiggles" />
-            </div>
-          ) : (
-            <></>
-          )}
+      }}
+      class="text-xl leading-3 sm:leading-5 z-50 fixed right-0 top-14 scrollbar-hidden select-none overscroll-none w-[16rem] sm:w-[22rem] bg-stone-100 overflow-y-scroll translate-y-0 sm:translate-y-[-1px] pt-[0.6em] px-[1em] [&ul]:mb-[8px] [&ul]:p-0">
+      <HamburgerPanelAuthorSuppliedContents />
+      {env === "DEV" || env === "LOCAL" ? (
+        <div id="options">
+          <HamburgerPanelTitle label="Options" />
+          <Option label="Areas" state_key="show_areas" />
+          <Option label="Section Dividers" state_key="show_section_dividers" />
+          <Option label="Squiggles" state_key="show_squiggles" />
         </div>
-      </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
