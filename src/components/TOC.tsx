@@ -1,4 +1,4 @@
-import TOCAuthorSuppliedContents from "./TOCAuthorSuppliedContent";
+import TOCAuthorSuppliedContents from "./TOCAuthorSuppliedContents";
 import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { onMount } from "solid-js";
