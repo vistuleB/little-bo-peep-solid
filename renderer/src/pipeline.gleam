@@ -221,7 +221,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
         None,
       )),
       dn.generate_lbp_table_of_contents(#(
-        "TOCAuthorSuppliedContent",
+        "TOCAuthorSuppliedContents",
         "TOCTitle",
         "TOCItem",
         Some("Spacer"),

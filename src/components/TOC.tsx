@@ -1,4 +1,4 @@
-import TOCAuthorSuppliedContent from "./TOCAuthorSuppliedContent";
+import TOCAuthorSuppliedContents from "./TOCAuthorSuppliedContent";
 import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { onMount } from "solid-js";
@@ -27,7 +27,7 @@ const TOC = () => {
         class="mt-[3.3rem] mb-[2.3rem] sm:mb-[2.6rem] mx-auto">
         <TitleSVG />
       </div>
-      <TOCAuthorSuppliedContent />
+      <TOCAuthorSuppliedContents />
     </div>
   );
 };
