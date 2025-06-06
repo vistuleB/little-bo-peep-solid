@@ -8,6 +8,9 @@ dist
 .netlify
 .vinxi
 
+# Editor
+.zed/
+
 # Environment
 .env
 .env*.local
