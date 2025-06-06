@@ -107,7 +107,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
     // ****
     [
       dn.wrap_math_with_no_break(),
-      dn.unwrap_when_single_child(["NoBreak"]),
+      dn.unwrap_when_zero_or_one_children(["NoBreak"]),
       dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
       dn.cut_paste_attribute_from_self_to_child(
         #("Exercise", "ExerciseStatement", "id"),
