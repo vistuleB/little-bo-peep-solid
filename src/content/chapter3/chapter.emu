@@ -1454,7 +1454,6 @@
                 of function composition.
 
             |> SolutionNote
-                test=test
 
                 One of the best ways to explain _&_ understand
                 the associativity of function composition
