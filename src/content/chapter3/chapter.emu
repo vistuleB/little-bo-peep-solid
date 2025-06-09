@@ -1478,8 +1478,8 @@
                     src=images/svg_ch3_composition_icon_die_3.svg
                     width=1.25rem
                     top=-3px
-                    marginLeft=.5rem
-                    marginRight=.5rem
+                    margin-left=.5rem
+                    margin-right=.5rem
                 |_
 
                 because the arrow that originates at 
@@ -1505,8 +1505,8 @@
                     src=images/svg_ch3_composition_icon_fence.svg
                     width=2.3rem
                     top=-4px
-                    marginLeft=.5rem
-                    marginRight=.5rem
+                    margin-left=.5rem
+                    margin-right=.5rem
                 |_
 
                 because, pursuing that path onwards, the arrow

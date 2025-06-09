@@ -158,6 +158,10 @@ pub fn lbp_pipeline() -> List(Pipe) {
           "true",
         ),
       ]),
+      dn.rename_attributes([
+        #("margin-left", "marginLeft"),
+        #("margin-right", "marginRight"),
+      ]),
       // ************************
       // VerticalChunk indents
       // ************************
