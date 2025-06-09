@@ -6,7 +6,6 @@ import {
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
 import smoothScrollTo from "~/utils/smoothScrollTo";
-import elementPosOnPage from "~/utils/elementPosOnPage";
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 
