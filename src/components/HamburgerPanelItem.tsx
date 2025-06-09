@@ -5,7 +5,7 @@ import { useGlobalContext } from "~/store/StoreProvider";
 
 const setUpParentAndWidth = (
   parent: HTMLDivElement,
-  span: HTMLSpanElement,
+  span: HTMLSpanElement
 ): void => {
   parent.style.width = MOBILE_MAX_WIDTH + "px";
   parent.style.position = "absolute";
@@ -20,7 +20,7 @@ const setUpParentAndWidth = (
   document.body.appendChild(parent);
 };
 
-const PanelItem = (props: {
+const HamburgerPanelItem = (props: {
   href: string;
   label: string;
   on_mobile?: string;
@@ -30,7 +30,7 @@ const PanelItem = (props: {
   const [our_width, set_our_width] = createSignal(
     store.innerWidth > MOBILE_MAX_WIDTH
       ? DESKTOP_COLUMN_WIDTH
-      : store.innerWidth,
+      : store.innerWidth
   );
 
   const parentDiv = document.createElement("div");
@@ -51,7 +51,7 @@ const PanelItem = (props: {
     set_our_width(
       store.innerWidth > MOBILE_MAX_WIDTH
         ? DESKTOP_COLUMN_WIDTH
-        : store.innerWidth,
+        : store.innerWidth
     );
     if (props.label === "The Trigonometric Functions") {
       if (true) {
@@ -75,7 +75,8 @@ const PanelItem = (props: {
             left: (store.scrollWidth - store.innerWidth) / 2,
             behavior: "instant",
           });
-        }}>
+        }}
+      >
         <span class="block">{props.article_type}</span>
         <span class="dots"></span>
         <span class="text-right">{first_half()}</span>
@@ -92,7 +93,8 @@ const PanelItem = (props: {
               left: (store.scrollWidth - store.innerWidth) / 2,
               behavior: "instant",
             });
-          }}>
+          }}
+        >
           <span class="dots !w-auto"></span>
           <span class="text-right">{second_half()}</span>
         </ConditionalLink>
@@ -125,4 +127,4 @@ export function ConditionalLink(props: ConditionalLinkProps) {
   return <A {...rest} onClick={handleClick} />;
 }
 
-export default PanelItem;
+export default HamburgerPanelItem;

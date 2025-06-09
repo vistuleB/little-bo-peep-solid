@@ -878,6 +878,7 @@
                 iv. $(a + b)^2 = a^2 + 2ab + b^2$
 
     |> Exercise
+        handle=floorExercise
 
         The _floor_ of a real number $x$, written
 
@@ -940,6 +941,7 @@
             equal.
 
     |> Exercise
+        handle=floorExercise2
 
         Find the formula for a function whose graph
         looks like this, again using the floor function
@@ -953,7 +955,7 @@
             We would like to argue the correctness of
             the following two-step process (divide the
             input by $2$, apply the function from Exercise
-            4):
+            >>floorExercise):
 
             |> Image
                 src=images/svg_ch3_ex_factory_roof_stretched_solution.svg
@@ -969,7 +971,7 @@
             $$
             ...as obtained by “sticking” $x/2$ (the halved
             input) in place of “$x$” in “$\,x - \lfloor x \rfloor$”,
-            the formula for the function from Exercise 4.
+            the formula for the function from Exercise >>floorExercise.
 
             |> Pause
 
@@ -1093,13 +1095,13 @@
             x - 2\fl{x/2}
             $$
             because all we have to do is to multiply
-            Exercise 5's formula by $2$.
+            Exercise >>floorExercise2's formula by $2$.
 
             For the second graph, an answer is
             $$
             x/3 - \fl{x/3}
             $$
-            because the problem is similar to Exercise 5
+            because the problem is similar to Exercise >>floorExercise2
             except with a factor $3$ horizontal dilation.
 
             For the third graph, we will first stop to
@@ -1122,23 +1124,25 @@
             (the input, minus $1$) in place of “$x$” in
             “$\,x/3 - \fl{x/3}$”, the formula for the
             second graph. Then we multiply that by $3$
-            (to go from
+            (to go from 
             |> NoBreak
 
                 “
                 |> InlineImage
                     src=images/svg_ch3_3_3_grid_1.svg
                     width=0.9em
-                ”
-            &ensp;to
+                    bottom=0.15em
+                ” 
+            to 
             |> NoBreak
 
                 “
                 |> InlineImage
                     src=images/svg_ch3_3_3_grid_2.svg
                     width=0.9em
-                ”,
-            &ensp;namely), meaning that the final answer is
+                    bottom=0.15em
+                ”, 
+            namely), meaning that the final answer is
             $$
             3 \cdot ((x-1)/3 - \fl{(x-1)/3})
             $$
@@ -1152,7 +1156,6 @@
             $$
             though we personally prefer the previous
             form, it being more “talkative”.)
-
 
     |> Exercise
 
@@ -1208,6 +1211,7 @@
             values than $\cos(x)$ does.
 
     |> Exercise
+        handle=compComp
 
         Rewrite
 
@@ -1244,11 +1248,11 @@
             |> ImageLeft
                 src=images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg
                 popup=true
-                offset_x= 1em
-                offset_y=-0.5em
+                y_anchor=1
+                offset_x=1em
 
             |> div
-                style=font-size:1.1em;margin:1em 0em;
+                style=font-size:1.1em;margin:0.8em 0em;
 
                 $$
                 (f \circ (g \circ h))(x) = \f((g \circ h)(x))
@@ -1259,7 +1263,7 @@
             exists on the right-hand side! But
 
             |> div
-                style=font-size:1.1em;margin:1em 0em;
+                style=font-size:1.1em;margin:0.8em 0em;
 
                 $$
                 (g \circ h)(x) = g(h(x))
@@ -1268,7 +1272,7 @@
             by the “definitional equation” again, so
 
             |> div
-                style=font-size:1.1em;margin:1em 0em;
+                style=font-size:1.1em;margin:0.8em 0em;
 
                 $$
                 f((g \circ h)(x)) = \f(g(h(x)))
@@ -1287,7 +1291,7 @@
 
     |> Exercise
 
-        Same question as Exercise 17, but for
+        Same question as Exercise >>compComp, but for
         “$f \circ (g \circ h)$” instead of
         “$(f \circ g) \circ h$”.
 
@@ -1306,7 +1310,7 @@
             So the first step is...
 
             |> div
-                style=font-size:1.1em;margin:1em 0em;
+                style=font-size:1.1em;margin:0.8em 0em;
 
                 $$
                 ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
@@ -1317,7 +1321,7 @@
             is...
 
             |> div
-                style=font-size:1.1em;margin:1em 0em;
+                style=font-size:1.1em;margin:0.8em 0em;
 
                 $$
                 (f \circ g)(h(x)) = \f(g(h(x)))
@@ -1326,315 +1330,303 @@
             ...by setting $r = f$, $s = g$, and with
             ‘$h(x)$’ in place of ‘$x$’.
 
-            |> Pause
+            |> SolutionNote
 
-            _Note 1._
-            The fact that
+                The fact that
 
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    (f \circ (g \circ h))(x)
+                    $$
+
+                and
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    ((f \circ g) \circ h)(x)
+                    $$
+
+                both evaluate to
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    f(g(h(x)))
+                    $$
+
+                actually implies that
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    f \circ (g \circ h)
+                    $$
+
+                and
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    (f \circ g) \circ h
+                    $$
+
+                are the same function; this function is namely
+                the function that maps $x$ to $f(g(h(x)))$ for
+                all $x$ (or
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    x \ra f(g(h(x)))
+                    $$
+
+                in lambda notation).
+
+            |> SolutionNote
+            
+                Because of this, we can write
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    f \circ g \circ h
+                    $$
+
+                without any parentheses. (The point is: either
+                way you parenthesize it you obtain the same
+                function, so why bother?)
+
+            |> SolutionNote
+
+                The fact that
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    {(a + b) + c = a + (b + c)}
+                    $$
+
+                for all numbers $a$, $b$, $c$ is known as the
+
+                __associativity__
+
+                of addition; likewise, the fact that
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    (ab)c = a(bc)
+                    $$
+
+                for all numbers $a$, $b$, $c$ is known as the
+
+                __associativity__
+
+                of multiplication; and again likewise,
+                the fact that
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    {(f \circ g) \circ h  =  f \circ (g \circ h)}
+                    $$
+
+                for all functions $f$, $g$, $h$ is known
+                as the
+
+                __associativity__
+
+                |> ImageRight
+                    src=images/svg_ch3_ex_associativity_cloud.svg
+
+                of function composition.
+
+            |> SolutionNote
+
+                One of the best ways to explain _&_ understand
+                the associativity of function composition
+                uses this picture:
+
+                |> Image
+                    src=images/svg_ch3_truth_be_said.svg
+
+                In the above $A$, $B$, $C$, $D$ are sets
+                while the arrows encode functions $f$, $g$
+                and $h$ that, respectively in reverse order,
+                go from $D$ to $C$, $C$ to $B$, and $B$ to $A$.
+                For example,
+
+                _|$\Large h($
+                |> InlineImage
+                    src=images/svg_ch3_composition_icon_clubs.svg
+                    width=1rem
+                    top=-3px
+                $\Large{}) =$
+                |> InlineImage
+                    src=images/svg_ch3_composition_icon_die_3.svg
+                    width=1.25rem
+                    top=-3px
+                    marginLeft=.5rem
+                    marginRight=.5rem
+                |_
+
+                because the arrow that originates at 
+                |> InlineImage
+                    src=images/svg_ch3_composition_icon_clubs.svg
+                    width=1rem
+                    top=-4px
+                \ in set $D$ lands at 
+                |> InlineImage
+                    src=images/svg_ch3_composition_icon_die_3.svg
+                    width=1.25rem
+                    top=-4px
+                \ in set $C$, and
+
+                _|
+                $\Large g(h($
+                |> InlineImage
+                    src=images/svg_ch3_composition_icon_clubs.svg
+                    width=1rem
+                    top=-3px
+                $\Large{})) =$
+                |> InlineImage
+                    src=images/svg_ch3_composition_icon_fence.svg
+                    width=2.3rem
+                    top=-4px
+                    marginLeft=.5rem
+                    marginRight=.5rem
+                |_
+
+                because, pursuing that path onwards, the arrow
+                that originates at 
+                |> InlineImage
+                    src=images/svg_ch3_composition_icon_die_3.svg
+                    width=1.25rem
+                    top=-4px
+                \ in set $C$ lands at 
+                |> InlineImage
+                    src=images/svg_ch3_composition_icon_fence.svg
+                    width=2.3rem
+                    top=-4px
+                \ in set $B$, etc.
+
+                Under this representation one can “compute”
+                $f \circ g \circ h$ by gluing arrows end-to-end.
+                First, say, obliviate set $C$ in the middle
+                right, then do the same with set $B$ in the
+                middle left:
+
+                |> Image
+                    src=images/svg_ch3_truth_be_said_right_first.svg
+                    width=2000px
+
+                We can also get rid of $B$ first, $C$ second:
+
+                |> Image
+                    src=images/svg_ch3_truth_be_said_left_first.svg
+                    width=2000px
+
+                The first order of computation corresponds
+                to the parenthetization “$f \circ (g \circ h)$”
+                while the second corresponds to the
+                parenthetization “$(f \circ g) \circ h$”.
+                Intuitively, the reason they come out the
+                same (in “step 6”, bottom left) is because
+                each final arrow in the last diagram comes
+                from a path-of-arrows in the original
+                diagram, and the order in which the
+                waypoints along a path are “straightened”
+                (or “collapsed”) does not affect the origin
+                point or destination point of the final
+                arrow. $x$
+                more stuff
+
+            |> SolutionNote
+
+                The last series of diagrams might leave one
+                with the impression that the composition of
+                two or more functions can be “precomputed”
+                by looking ahead along the path of yellow arrows.
+                Just so you know, computers do not generically
+                do this. For reason, computers are not given
+                functions as tables of input-output values to
+                know by heart but rather as “recipes” (synonyms:
+                algorithms, code, programs) that allow them
+                to compute an output for any given input.
+                Moreover, there is no general way of flattening
+                two recipes into a single, shorter one—when
+                composing two functions the computer has, in
+                general, no choice but to diligently apply
+                each recipe in order—the first function first,
+                the second function second.
+
+            |> SolutionNote
+
+                We have taken for granted the fact that two
+                functions $f$ and $g$ are “equal” if and only
+                if they produce the same outupt for every
+                input but this is a actually subtle thing
+                that has to do with how functions are defined
+                “under the hood”. Specifically, mathematicians
+                view functions as 
+                |> del
+
+                    long
+                \ 
+                |> del
+
+                    lists of
+                \ sets of ordered pairs; for example—conceptual
+                cold water shock ahead—
 
                 $$
-                (f \circ (g \circ h))(x)
+                {\textrm{VX-11/78A} = \{(0, 3.5), (1, 2.5)\}}
                 $$
 
-            and
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                ((f \circ g) \circ h)(x)
-                $$
-
-            both evaluate to
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                f(g(h(x)))
-                $$
-
-            actually implies that
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                f \circ (g \circ h)
-                $$
-
-            and
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                (f \circ g) \circ h
-                $$
-
-            are the same function; this function is namely
-            the function that maps $x$ to $f(g(h(x)))$ for
-            all $x$ (or
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                x \ra f(g(h(x)))
-                $$
-
-            in lambda notation).
-
-            |> Pause
-
-            _Note 2._
-            Because of this, we can write
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                f \circ g \circ h
-                $$
-
-            without any parentheses. (The point is: either
-            way you parenthesize it you obtain the same
-            function, so why bother?)
-
-            |> Pause
-
-            _Note 3._
-            The fact that
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                {(a + b) + c = a + (b + c)}
-                $$
-
-            for all numbers $a$, $b$, $c$ is known as the
-
-            __associativity__
-
-            of addition; likewise, the fact that
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                (ab)c = a(bc)
-                $$
-
-            for all numbers $a$, $b$, $c$ is known as the
-
-            __associativity__
-
-            of multiplication; and again likewise,
-            the fact that
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                {(f \circ g) \circ h  =  f \circ (g \circ h)}
-                $$
-
-            for all functions $f$, $g$, $h$ is known
-            as the
-
-            __associativity__
-
-            |> ImageRight
-                src=images/svg_ch3_ex_associativity_cloud.svg
-
-            of function composition.
-
-            |> Pause
-
-            _Note 4._
-            One of the best ways to explain _&_ understand
-            the associativity of function composition
-            uses this picture:
-
-            |> Image
-                src=images/svg_ch3_truth_be_said.svg
-
-            In the above $A$, $B$, $C$, $D$ are sets
-            while the arrows encode functions $f$, $g$
-            and $h$ that, respectively in reverse order,
-            go from $D$ to $C$, $C$ to $B$, and $B$ to $A$.
-            For example,
-
-            _|$\Large h($
-            |> InlineImage
-                src=images/svg_ch3_composition_icon_clubs.svg
-                width=1rem
-                y_anchor=-3px
-            $\Large{}) =$
-            |> InlineImage
-                src=images/svg_ch3_composition_icon_die_3.svg
-                width=1.25rem
-                y_anchor=-3px
-                margin_left=.5rem
-                margin_right=.5rem
-            |_
-
-            because the arrow that originates at
-            |> InlineImage
-                src=images/svg_ch3_composition_icon_clubs.svg
-                width=1rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
-            in set $D$ lands at
-            |> InlineImage
-                src=images/svg_ch3_composition_icon_die_3.svg
-                width=1.25rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
-            in set $C$,  and
-
-            _|
-            $\Large g(h($
-            |> InlineImage
-                src=images/svg_ch3_composition_icon_clubs.svg
-                width=1rem
-                y_anchor=-3px
-            $\Large{})){}=$
-            |> InlineImage
-                src=images/svg_ch3_composition_icon_fence.svg
-                width=2.3rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
-            |_
-
-            because, pursuing that path onwards, the arrow
-            that originates at
-            |> InlineImage
-                src=images/svg_ch3_composition_icon_die_3.svg
-                width=1.25rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
-            in set $C$ lands at
-            |> InlineImage
-                src=images/svg_ch3_composition_icon_fence.svg
-                width=2.3rem
-                y_anchor=-4px
-                space_left=true
-                space_right=true
-            in set $B$, etc.
-
-            Under this representation one can “compute”
-            $f \circ g \circ h$ by gluing arrows end-to-end.
-            First, say, obliviate set $C$ in the middle
-            right, then do the same with set $B$ in the
-            middle left:
-
-            |> Image
-                src=images/svg_ch3_truth_be_said_right_first.svg
-                width=2000px
-
-            We can also get rid of $B$ first, $C$ second:
-
-            |> Image
-                src=images/svg_ch3_truth_be_said_left_first.svg
-                width=2000px
-
-            The first order of computation corresponds
-            to the parenthetization “$f \circ (g \circ h)$”
-            while the second corresponds to the
-            parenthetization “$(f \circ g) \circ h$”.
-            Intuitively, the reason they come out the
-            same (in “step 6”, bottom left) is because
-            each final arrow in the last diagram comes
-            from a path-of-arrows in the original
-            diagram, and the order in which the
-            waypoints along a path are “straightened”
-            (or “collapsed”) does not affect the origin
-            point or destination point of the final
-            arrow.
-
-            |> Pause
-
-            _Note 5._
-            The last series of diagrams might leave one
-            with the impression that the composition of
-            two or more functions can be “precomputed”
-            by looking ahead along the path of yellow arrows.
-            Just so you know, computers do not generically
-            do this. For reason, computers are not given
-            functions as tables of input-output values to
-            know by heart but rather as “recipes” (synonyms:
-            algorithms, code, programs) that allow them
-            to compute an output for any given input.
-            Moreover, there is no general way of flattening
-            two recipes into a single, shorter one—when
-            composing two functions the computer has, in
-            general, no choice but to diligently apply
-            each recipe in order—the first function first,
-            the second function second.
-
-            |> Pause
-
-            _Note 6._
-            We have taken for granted the fact that two
-            functions $f$ and $g$ are “equal” if and only
-            if they produce the same outupt for every
-            input but this is a actually subtle thing
-            that has to do with how functions are defined
-            “under the hood”. Specifically, mathematicians
-            view functions as
-            |> del
-
-                long
-            &ensp;
-            |> del
-
-                lists of
-            &ensp;sets of ordered pairs; for example—conceptual
-            cold water shock ahead—
-
-            $$
-            {\textrm{VX-11/78A} = \{(0, 3.5), (1, 2.5)\}}
-            $$
-
-            because VX-11/78A maps $0$ to $3.5$ and maps
-            $1$ to $2.5$. (The presence of an ordered pair
-
-            |> div
-                style=font-size:1.1em;margin:1em 0em;
-
-                $$
-                (a, b)
-                $$
-
-            means that input $a$ produces output $b$.) So
-            two functions are equal if and only if they
-            are equal
-
-            __as sets of ordered pairs__
-
-            because the set of ordered pairs is the
-            underlying “thing” that the function is. In
-            particular, there is no notion of a “formula”
-            or of a “procedure” being attached to a
-            function, that might cause two functions to
-            be considered unequal even if they produce the
-            same output on every input—producing the same
-            output on every input implies that the
-            |> del
-
-                list of
-            &ensp;set of ordered pairs is equal, and, perforce,
-            that the two functions are equal!!
+                because VX-11/78A maps $0$ to $3.5$ and maps
+                $1$ to $2.5$. (The presence of an ordered pair
+
+                |> div
+                    style=font-size:1.1em;margin:0.8em 0em;
+
+                    $$
+                    (a, b)
+                    $$
+
+                means that input $a$ produces output $b$.) So
+                two functions are equal if and only if they
+                are equal
+
+                __as sets of ordered pairs__
+
+                because the set of ordered pairs is the
+                underlying “thing” that the function is. In
+                particular, there is no notion of a “formula”
+                or of a “procedure” being attached to a
+                function, that might cause two functions to
+                be considered unequal even if they produce the
+                same output on every input—producing the same
+                output on every input implies that the
+                |> del
+
+                    list of
+                \ set of ordered pairs is equal, and, perforce,
+                that the two functions are equal!!
 
     |> Exercise
+        handle=completeSquare1st
 
         Show that
         $$
@@ -1664,8 +1656,8 @@
 
     |> Exercise
 
-        Solve Exercise 10 using algebra _&_
-        variables.
+        Solve Exercise >>completeSquare1st using
+        algebra _&_ variables.
 
         |> Solution
 
@@ -1727,7 +1719,7 @@
         $$
         x^2 + 10x + 30 = 0
         $$
-        (cf$.$ Exercise 21) has no solutions $x \in \rr$.
+        (cf$.$ Exercise >>completeSquare1st) has no solutions $x \in \rr$.
 
         |> Solution
 
@@ -1735,7 +1727,7 @@
             $$
             (x + 5)^2 + 5 = 0
             $$
-            by Exercise 21, but this implies
+            by Exercise >>completeSquare1st, but this implies
             $$
             (x + 5)^2 = -5
             $$
@@ -1774,6 +1766,7 @@
             constituting two distinct solutions.
 
     |> Exercise
+        handle=seqAB
 
         What sequence of geometric transformations
         (rotations, translations, scalings, etc)
@@ -1910,41 +1903,41 @@
 
             __3. vertical scaling by $A$__
 
-            |> Pause
+            |> SolutionNote
 
-            _Note 1._
-            You could do the vertical translation
-            before the horizontal translation,
-            geometrically it comes out the same.
-            That order of geometric transformations
-            would correspond to the following sequence
-            of algebraic transformations:
-            $$
-            {y = x^2}
-            $$
-            $$
-            {\downarrow}
-            $$
-            $$
-            {y = x^2 - {B^2 \over 4A^2}}
-            $$
-            $$
-            {\downarrow}
-            $$
-            $$
-            {y = \,\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}}
-            $$
-            $$
-            {\downarrow}
-            $$
-            $$
-            {y = A\left[\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}\right]}
-            $$
-            ...in which the _second_ step is a
-            preprocessing step. (I.e., a step that
-            replaces “$x$” with something else.)
+                You could do the vertical translation
+                before the horizontal translation,
+                geometrically it comes out the same.
+                That order of geometric transformations
+                would correspond to the following sequence
+                of algebraic transformations:
+                $$
+                {y = x^2}
+                $$
+                $$
+                {\downarrow}
+                $$
+                $$
+                {y = x^2 - {B^2 \over 4A^2}}
+                $$
+                $$
+                {\downarrow}
+                $$
+                $$
+                {y = \,\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}}
+                $$
+                $$
+                {\downarrow}
+                $$
+                $$
+                {y = A\left[\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}\right]}
+                $$
+                ...in which the _second_ step is a
+                preprocessing step. (I.e., a step that
+                replaces “$x$” with something else.)
 
     |> Exercise
+        handle=seqx0y0a
 
         Let $x_0 \in \rr$, $y_0 \in \rr$ and
         $a \in \rr$ with $y_0 \geq 0$, $a \ne 0.$
@@ -2048,7 +2041,7 @@
             To complete the problem _as we were asked_,
             however, we will use the fact that $y = Ax^2 + Bx$
             is obtained from $y = x^2$ by the following
-            sequence of transformations (cf. Exercise 14):
+            sequence of transformations (cf. Exercise >>seqAB):
 
             __1. vertical translation by $-{B^2 \over 4A^2}$__
 
@@ -2057,7 +2050,7 @@
             __3. vertical scaling by $A$__
 
             (We put the vertical translation first.)
-            By Exercise 15, the roots of $y = Ax^2 + Bx$
+            By Exercise >>seqx0y0a, the roots of $y = Ax^2 + Bx$
             are thus at
             $$
             \tag{A}
@@ -2132,8 +2125,8 @@
         t \ra f(t) + g(t)
         $$
         (use ‘$x$’ if you like),
-        i.e., to be the function that applies $f$ and
-        $g$ separately and then takes the sum,
+        i.e., to be the function that applies $f$
+        and $g$ separately and then takes the sum,
         and we define
         $$
         fg
@@ -2182,8 +2175,8 @@
             commutative, so it doesn't matter); the fourth
             equality is true: it is the definition of “$\circ$”.
 
-
     |> Exercise
+        handle=seqABC
 
         What sequence of geometric transformations
         of length no more than 3 maps
@@ -2206,7 +2199,7 @@
             $$
             A\Big(x^2 + {B \over A}x + {C\over A}\Big)
             $$
-            and, similarly to Exercise 14, write
+            and, similarly to Exercise >>seqAB, write
             $$
             x^2 + {B \over A}x
             $$
@@ -2227,10 +2220,10 @@
             (We have endeavored to keep the minus sign
             out front of the common denominator fraction
             in order to maintain the most similarity with
-            the term “$-{B^2\over 4A}$” of Exercise 14,
+            the term “$-{B^2\over 4A}$” of Exercise >>seqAB,
             that also has a minus sign out front.)
 
-            By direct analogy with Exercise 14, the three
+            By direct analogy with Exercise >>seqAB, the three
             transformations are thus...
 
             __1. horizontal translation by $-{B \over 2A}$__
@@ -2294,59 +2287,57 @@
             $$
             x = -{B \over 2A} \pm \sqrt{B^2 - 4AC \over 4A^2}
             $$
-            by Exercise 15. $\rightarrow$ ~The End~ $\leftarrow$
+            by Exercise >>seqx0y0a. $\rightarrow$ ~The End~ $\leftarrow$
 
-            |> Pause
+            |> SolutionNote
 
-            _Note 1._
-            In fact,
-            $$
-            \pm\sqrt{B^2 - 4AC \over 4A^2} = \pm {\sqrt{B^2 - 4AC} \over 2A}
-            $$
-            (square both sides of the equation—in general,
-            $$
-            \pm E = \pm F
-            $$
-            as one set of two values equalling another
-            set of two values, if and only if
-            $$
-            |E| = |F|
-            $$
-            or
-            $$
-            E^2 = F^2
-            $$
-            —so that's why we say “square both sides”),
-            so the formula for the roots can also be written
-            $$
-            x = -{B \over 2A} \pm {\sqrt{B^2 - 4AC} \over 2A}
-            $$
-            or
-            $$
-            x = {{-B \pm \sqrt{B^2 - 4AC}} \over 2A}
-            $$
-            as briefly flashed by, e.g., in Chapter 1.
+                In fact,
+                $$
+                \pm\sqrt{B^2 - 4AC \over 4A^2} = \pm {\sqrt{B^2 - 4AC} \over 2A}
+                $$
+                (square both sides of the equation—in general,
+                $$
+                \pm E = \pm F
+                $$
+                as one set of two values equalling another
+                set of two values, if and only if
+                $$
+                |E| = |F|
+                $$
+                or
+                $$
+                E^2 = F^2
+                $$
+                —so that's why we say “square both sides”),
+                so the formula for the roots can also be written
+                $$
+                x = -{B \over 2A} \pm {\sqrt{B^2 - 4AC} \over 2A}
+                $$
+                or
+                $$
+                x = {{-B \pm \sqrt{B^2 - 4AC}} \over 2A}
+                $$
+                as briefly flashed by, e.g., in Chapter >>Refreshers.
 
-            |> Pause
+            |> SolutionNote
 
-            _Note 2._
-            If
-            $$
-            {B^2 - 4AC \over 4A^2} < 0
-            $$
-            then
-            $$
-            \sqrt{B^2 - 4AC \over 4A^2}
-            $$
-            does not exist, alerting you to the absence
-            of roots, if you try to use the first formula
-            we gave. Also
-            $$
-            {B^2 - 4AC \over 4A^2} < 0\iff B^2 - 4AC < 0
-            $$
-            because $4A^2 > 0$ for all $A \ne 0$,
-            so the second set of formulas would alert you
-            to the absence of roots in that case, as well.
+                If
+                $$
+                {B^2 - 4AC \over 4A^2} < 0
+                $$
+                then
+                $$
+                \sqrt{B^2 - 4AC \over 4A^2}
+                $$
+                does not exist, alerting you to the absence
+                of roots, if you try to use the first formula
+                we gave. Also
+                $$
+                {B^2 - 4AC \over 4A^2} < 0\iff B^2 - 4AC < 0
+                $$
+                because $4A^2 > 0$ for all $A \ne 0$,
+                so the second set of formulas would alert you
+                to the absence of roots in that case, as well.
 
     |> Exercise
 

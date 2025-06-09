@@ -3,7 +3,7 @@ import {
   TOCTitleRightEndmarkSVG,
 } from "./TOCTitleEndmarks";
 
-const PanelTitle = (props: { label: string }) => {
+const HamburgerPanelTitle = (props: { label: string }) => {
   return (
     <h1 class="font-baskerville-italic mt-[5px] mb-[7px] flex justify-between !text-3xl items-baseline !leading-9 ">
       <TOCTitleLeftEndmarkSVG />
@@ -15,4 +15,4 @@ const PanelTitle = (props: { label: string }) => {
   );
 };
 
-export default PanelTitle;
+export default HamburgerPanelTitle;

@@ -1,5 +1,4 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
-import { LeftArrow } from "./PanelButton";
 import {
   HAMBURGER_MENU_SCROLLY_END_FADE,
   HAMBURGER_MENU_SCROLLY_START_FADE,

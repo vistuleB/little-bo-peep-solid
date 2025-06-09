@@ -4,9 +4,10 @@ import useScrollX from "~/hooks/useScrollX";
 import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
 import { useGlobalContext } from "~/store/StoreProvider";
 
-const AbstractArticle = (props: ParentProps) => {
+const AbstractArticle = (props: ParentProps & { id?: string }) => {
   return (
     <ExercisesStoreProvider>
+      <span id={props.id}></span>
       <ExercisesStoreConsumer>{props.children}</ExercisesStoreConsumer>
     </ExercisesStoreProvider>
   );

@@ -1,4 +1,4 @@
-src/routes/article
+src/routes/article/*
 src/components/*AuthorSupplied*
 
 dist
@@ -7,6 +7,9 @@ dist
 .vercel
 .netlify
 .vinxi
+
+# Editor
+.zed/
 
 # Environment
 .env

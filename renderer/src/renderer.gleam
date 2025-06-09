@@ -1,3 +1,4 @@
+import shellout
 import argv
 import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
 import gleam/io
@@ -15,15 +16,15 @@ const ins = string.inspect
 type FragmentType {
   Chapter(Int)
   Bootcamp(Int)
-  TOCAuthorSuppliedContent
-  PanelAuthorSuppliedContent
+  TOCAuthorSuppliedContents
+  HamburgerPanelAuthorSuppliedContents
 }
 
 type LBPSplitterError {
-  NoTOCAuthorSuppliedContent
-  MoreThanOneTOCAuthorSuppliedContent
-  NoPanelAuthorSuppliedContent
-  MoreThanOnePanelAuthorSuppliedContent
+  NoTOCAuthorSuppliedContents
+  MoreThanOneTOCAuthorSuppliedContents
+  NoPanelAuthorSuppliedContents
+  MoreThanOneHamburgerPanelAuthorSuppliedContents
 }
 
 type LBPEmitterError {
@@ -40,21 +41,21 @@ fn lbp_splitter(
   let chapter_vxmls = infra.children_with_tag(root, "Chapter")
   let bootcamp_vxmls = infra.children_with_tag(root, "Bootcamp")
   use toc_vxml <- infra.on_error_on_ok(
-    infra.unique_child_with_tag(root, "TOCAuthorSuppliedContent"),
+    infra.unique_child_with_tag(root, "TOCAuthorSuppliedContents"),
     with_on_error: fn(error) {
       case error {
-        infra.MoreThanOne -> Error(MoreThanOneTOCAuthorSuppliedContent)
-        infra.LessThanOne -> Error(NoTOCAuthorSuppliedContent)
+        infra.MoreThanOne -> Error(MoreThanOneTOCAuthorSuppliedContents)
+        infra.LessThanOne -> Error(NoTOCAuthorSuppliedContents)
       }
     },
   )
 
   use panel_vxml <- infra.on_error_on_ok(
-    infra.unique_child_with_tag(root, "PanelAuthorSuppliedContent"),
+    infra.unique_child_with_tag(root, "HamburgerPanelAuthorSuppliedContents"),
     with_on_error: fn(error) {
       case error {
-        infra.MoreThanOne -> Error(MoreThanOnePanelAuthorSuppliedContent)
-        infra.LessThanOne -> Error(NoPanelAuthorSuppliedContent)
+        infra.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
+        infra.LessThanOne -> Error(NoPanelAuthorSuppliedContents)
       }
     },
   )
@@ -62,32 +63,14 @@ fn lbp_splitter(
   Ok(
     list.flatten([
       [
-        #(
-          "components/TOCAuthorSuppliedContent.tsx",
-          toc_vxml,
-          TOCAuthorSuppliedContent,
-        ),
-      ],
-      [
-        #(
-          "components/PanelAuthorSuppliedContent.tsx",
-          panel_vxml,
-          PanelAuthorSuppliedContent,
-        ),
+        #("components/TOCAuthorSuppliedContents.tsx", toc_vxml, TOCAuthorSuppliedContents),
+        #("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
       ],
       list.index_map(chapter_vxmls, fn(c, index) {
-        #(
-          "routes/article/chapter" <> ins(index + 1) <> ".tsx",
-          c,
-          Chapter(index + 1),
-        )
+        #("routes/article/chapter" <> ins(index + 1) <> ".tsx", c, Chapter(index + 1))
       }),
       list.index_map(bootcamp_vxmls, fn(c, index) {
-        #(
-          "routes/article/bootcamp" <> ins(index + 1) <> ".tsx",
-          c,
-          Bootcamp(index + 1),
-        )
+        #("routes/article/bootcamp" <> ins(index + 1) <> ".tsx", c, Bootcamp(index + 1))
       }),
     ]),
   )
@@ -143,121 +126,33 @@ fn lbp_chapter_bootcamp_common_emitter(
       [
         case fragment_type {
           Chapter(_) ->
-            BlamedLine(
-              blame_us("lbp_fragment_emitter"),
-              0,
-              "import Chapter from \"~/components/Chapter\";",
-            )
+            BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import Chapter from \"~/components/Chapter\";")
           Bootcamp(_) ->
-            BlamedLine(
-              blame_us("lbp_fragment_emitter"),
-              0,
-              "import Bootcamp from \"~/components/Bootcamp\";",
-            )
+            BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import Bootcamp from \"~/components/Bootcamp\";")
           _ -> panic as "bad fragment_type"
         },
       ],
       [
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from \"~/components/Wrappers\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import { CentralDisplay, CentralDisplayItalic } from \"~/components/Delimiters\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import TextParent from \"~/components/TextParent\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import { Math, MathBlock } from \"~/components/Math\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import { ImageRight, ImageLeft } from \"~/components/SideImage\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import Image from \"~/components/Image\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import InlineImage from \"~/components/InlineImage\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import { Exercise, Exercises, ExerciseStatement } from \"~/components/Exercises\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import InChapterLink from \"~/components/InChapterLink\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import Solution from \"~/components/Solution\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import Table from \"~/components/Table\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import Grid from \"~/components/Grid\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import { List, Item } from \"~/components/List\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import { SectionDivider } from \"~/components/SectionDivider\";",
-        ),
-         BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import { StarDivider } from \"~/components/StarDivider\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import VerticalChunk from \"~/components/VerticalChunk\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import SectionsBreadcrumbs, {BreadcrumbItem} from \"~/components/SectionsBreadcrumbs\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import useSetRoute from \"~/hooks/useSetRoute\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import useShowMore from \"~/hooks/useShowMore\";",
-        ),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "import useBreadcrumbs from \"~/hooks/useBreadcrumbs\";",
-        ),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from \"~/components/Wrappers\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { CentralDisplay, CentralDisplayItalic } from \"~/components/Delimiters\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import TextParent from \"~/components/TextParent\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { Math, MathBlock } from \"~/components/Math\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { ImageRight, ImageLeft } from \"~/components/SideImage\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import Image from \"~/components/Image\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import InlineImage from \"~/components/InlineImage\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { Exercise, Exercises, ExerciseStatement } from \"~/components/Exercises\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import InChapterLink from \"~/components/InChapterLink\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import Solution from \"~/components/Solution\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import Table from \"~/components/Table\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import Grid from \"~/components/Grid\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { List, Item } from \"~/components/List\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { SectionDivider } from \"~/components/SectionDivider\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { StarDivider } from \"~/components/StarDivider\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import VerticalChunk from \"~/components/VerticalChunk\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import SectionsBreadcrumbs from \"~/components/SectionsBreadcrumbs\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useSetRoute from \"~/hooks/useSetRoute\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useBreadcrumbs from \"~/hooks/useBreadcrumbs\";"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, ""),
         BlamedLine(
           blame_us("lbp_fragment_emitter"),
@@ -274,14 +169,8 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "</>);"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "};"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, ""),
-      ],
-      [
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "const Rest = () => {"),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          2,
-          "const showMore = useShowMore();",
-        ),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 2, "const showMore = useShowMore();"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return(<>"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 4, "{ showMore() && <>"),
       ],
@@ -292,11 +181,7 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "</>);"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "};"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, ""),
-        BlamedLine(
-          blame_us("lbp_fragment_emitter"),
-          0,
-          "export default Article;",
-        ),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "export default Article;"),
       ],
     ])
 
@@ -330,7 +215,7 @@ fn toc_emitter(
         BlamedLine(
           blame_us("toc_emitter"),
           0,
-          "const TOCAuthorSuppliedContent = () => {",
+          "const TOCAuthorSuppliedContents = () => {",
         ),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
         BlamedLine(blame_us("toc_emitter"), 4, "<>"),
@@ -344,7 +229,7 @@ fn toc_emitter(
         BlamedLine(
           blame_us("toc_emitter"),
           0,
-          "export default TOCAuthorSuppliedContent;",
+          "export default TOCAuthorSuppliedContents;",
         ),
       ],
     ])
@@ -363,18 +248,18 @@ fn panel_emitter(
         BlamedLine(
           blame_us("panel_emitter"),
           0,
-          "import PanelTitle from \"./PanelTitle\";",
+          "import HamburgerPanelTitle from \"./HamburgerPanelTitle\";",
         ),
         BlamedLine(
           blame_us("panel_emitter"),
           0,
-          "import PanelItem from \"./PanelItem\";",
+          "import HamburgerPanelItem from \"./HamburgerPanelItem\";",
         ),
         BlamedLine(blame_us("panel_emitter"), 0, ""),
         BlamedLine(
           blame_us("panel_emitter"),
           0,
-          "const PanelAuthorSuppliedContent = () => {",
+          "const HamburgerPanelAuthorSuppliedContents = () => {",
         ),
         BlamedLine(blame_us("panel_emitter"), 2, "return ("),
         BlamedLine(blame_us("panel_emitter"), 4, "<>"),
@@ -388,7 +273,7 @@ fn panel_emitter(
         BlamedLine(
           blame_us("panel_emitter"),
           0,
-          "export default PanelAuthorSuppliedContent;",
+          "export default HamburgerPanelAuthorSuppliedContents;",
         ),
       ],
     ])
@@ -405,8 +290,8 @@ fn lbp_emitter(
       lbp_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
     Bootcamp(n) ->
       lbp_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
-    TOCAuthorSuppliedContent -> toc_emitter(path, vxml, fragment_type)
-    PanelAuthorSuppliedContent -> panel_emitter(path, vxml, fragment_type)
+    TOCAuthorSuppliedContents -> toc_emitter(path, vxml, fragment_type)
+    HamburgerPanelAuthorSuppliedContents -> panel_emitter(path, vxml, fragment_type)
   }
 }
 
@@ -457,12 +342,12 @@ pub fn main() {
       renderer.pipeline,
     )
 
-  // let res = shellout.command(
-  //   run: "rm",
-  //   in: ".",
-  //   with: ["../src/routes/article/*"],
-  //   opt: [],
-  // )
+  let _ = shellout.command(
+    run: "rm",
+    in: ".",
+    with: ["../src/article/*", "../src/components/TOCAuthorSuppliedContents.tsx", "../src/components/HamburgerPanelAuthorSuppliedContents.tsx"],
+    opt: [],
+  )
 
   case vr.run_renderer(renderer, parameters, debug_options) {
     Ok(Nil) -> Nil

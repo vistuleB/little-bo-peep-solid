@@ -1,4 +1,4 @@
-import TOCAuthorSuppliedContent from "./TOCAuthorSuppliedContent";
+import TOCAuthorSuppliedContents from "./TOCAuthorSuppliedContents";
 import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { onMount } from "solid-js";
@@ -31,7 +31,7 @@ const TOC = () => {
       {store.toc_breadcrumbs_visible && (
         <SectionsBreadcrumbs fixed={true}></SectionsBreadcrumbs>
       )}
-      <TOCAuthorSuppliedContent />
+      <TOCAuthorSuppliedContents />
     </div>
   );
 };
