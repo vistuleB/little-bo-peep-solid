@@ -5,7 +5,7 @@ import { twJoin } from "tailwind-merge";
 const InChapterLink = (
   props: ParentProps & { href: string; class?: string },
 ) => {
-  const scrollToInChapter = useScrollToInChapter();
+  const { scrollToInChapter } = useScrollToInChapter();
 
   const handleClick = (e: Event) => {
     e.preventDefault();

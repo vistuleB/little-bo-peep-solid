@@ -149,7 +149,7 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { SectionDivider } from \"~/components/SectionDivider\";"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import { StarDivider } from \"~/components/StarDivider\";"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import VerticalChunk from \"~/components/VerticalChunk\";"),
-        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import SectionsBreadcrumbs from \"~/components/SectionsBreadcrumbs\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import SectionsBreadcrumbs, { BreadcrumbItem } from \"~/components/SectionsBreadcrumbs\";"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useSetRoute from \"~/hooks/useSetRoute\";"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useBreadcrumbs from \"~/hooks/useBreadcrumbs\";"),

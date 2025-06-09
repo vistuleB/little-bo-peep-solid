@@ -3,12 +3,14 @@ import useCheckedSaveScroll from "~/hooks/useCheckedSaveScroll";
 import useScrollX from "~/hooks/useScrollX";
 import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
 import { useGlobalContext } from "~/store/StoreProvider";
+import ActionArrows from "./ActionArrows";
 
 const AbstractArticle = (props: ParentProps & { id?: string }) => {
   return (
     <ExercisesStoreProvider>
       <span id={props.id}></span>
       <ExercisesStoreConsumer>{props.children}</ExercisesStoreConsumer>
+      <ActionArrows />
     </ExercisesStoreProvider>
   );
 };

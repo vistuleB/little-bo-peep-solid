@@ -28,9 +28,7 @@ const TOC = () => {
         class="mt-[3.3rem] mb-[2.3rem] sm:mb-[2.6rem] mx-auto">
         <TitleSVG />
       </div>
-      {store.toc_breadcrumbs_visible && (
-        <SectionsBreadcrumbs fixed={true}></SectionsBreadcrumbs>
-      )}
+      {store.toc_breadcrumbs_visible && <SectionsBreadcrumbs />}
       <TOCAuthorSuppliedContents />
     </div>
   );

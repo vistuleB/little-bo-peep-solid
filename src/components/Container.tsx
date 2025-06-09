@@ -10,7 +10,6 @@ import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
-import ActionArrows from "./ActionArrows";
 import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
 import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 
@@ -207,7 +206,6 @@ const Container = (props: ParentProps) => {
         {props.children}
       </div>
       <SVGDefs />
-      <ActionArrows />
     </div>
   );
 };

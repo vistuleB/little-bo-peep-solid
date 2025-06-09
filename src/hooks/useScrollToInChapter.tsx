@@ -66,7 +66,14 @@ const useScrollToInChapter = () => {
 
   const exercisesEdgeCase = (target: HTMLElement | null) => {
     if (!target || target.id !== "exercises") return target;
-    return target?.querySelectorAll(".exercise")?.item(0) as HTMLElement;
+    return target?.querySelectorAll(".exo-statement")?.item(0) as HTMLElement;
+  };
+
+  const addSafeMarginForLongTarget = (target: HTMLElement | null) => {
+    if (!target) return 0;
+    if (getHeight(target) > store.innerHeight)
+      return calculateTargetCenterOnPage(target) - 20; // 20 for safe margin
+    return calculateTargetCenterOnPage(target);
   };
 
   const scrollToInChapter = async (
@@ -80,9 +87,7 @@ const useScrollToInChapter = () => {
     if (!isInsideElementWithClass("exercise", target)) {
       // just scroll to the target
       smoothScrollTo(
-        firstSectionEdgeCase(target)
-          ? 0
-          : calculateTargetCenterOnPage(target) - 20, // 20 for safe margin
+        firstSectionEdgeCase(target) ? 0 : addSafeMarginForLongTarget(target),
         scrollDuration,
       );
       return;
@@ -113,7 +118,7 @@ const useScrollToInChapter = () => {
     Promise.resolve();
   };
 
-  return scrollToInChapter;
+  return { scrollToInChapter, calculateTargetCenterOnPage };
 };
 
 export default useScrollToInChapter;

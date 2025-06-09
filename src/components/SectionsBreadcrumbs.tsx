@@ -7,8 +7,10 @@ import { twJoin } from "tailwind-merge";
 import SharedProps from "./types/SharedProps";
 import OutlinedText from "./OutlinedText";
 
-const SectionsBreadcrumbs = (props: ParentProps & { fixed?: boolean }) => {
+const SectionsBreadcrumbs = (props: ParentProps) => {
   const [visible, setVisible] = createSignal(true);
+  const [recentlyClosed, setRecentlyClosed] = createSignal(false);
+
   const { store } = useGlobalContext();
 
   const delta = 18;
@@ -30,16 +32,32 @@ const SectionsBreadcrumbs = (props: ParentProps & { fixed?: boolean }) => {
         padding: "0 26px",
         "max-width": "300px",
       }}>
+      {/* Ultra Hot corner */}
       <div
         style={{
-          border: store.show_areas ? "5px solid rgb(198, 75, 75)" : "none",
+          border: store.show_areas ? "5px solid rgb(181, 25, 25)" : "none",
+          width: "50px",
+          height: "50px",
+          position: "absolute",
+          top: -1 * delta + "px",
+          left: "0",
+          "z-index": 20,
+        }}
+        onMouseOver={() => setVisible(true)}></div>
+
+      {/* Hot corner */}
+      <div
+        style={{
+          border: store.show_areas ? "5px solid rgb(249, 150, 150)" : "none",
           width: "150px",
           height: "200px",
           position: "absolute",
-          top: "0",
+          top: -1 * delta + "px",
           left: "0",
         }}
-        onMouseOver={() => setVisible(true)}></div>
+        onMouseOver={() => setVisible(!recentlyClosed())}
+        onMouseLeave={() => setRecentlyClosed(false)}></div>
+
       <div
         style={{
           transform: `translateY(${visible() ? "0" : "-120%"})`,
@@ -67,14 +85,13 @@ const SectionsBreadcrumbs = (props: ParentProps & { fixed?: boolean }) => {
           </li>
           {props.children}
         </ul>
-        {!props.fixed && (
-          <CloseCircleIcon
-            class="mt-2 cursor-pointer"
-            onClick={() => {
-              setVisible(false);
-            }}
-          />
-        )}
+        <CloseCircleIcon
+          class="mt-2 cursor-pointer"
+          onClick={() => {
+            setVisible(false);
+            setRecentlyClosed(true);
+          }}
+        />
       </div>
     </div>
   );
