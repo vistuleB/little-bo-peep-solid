@@ -46,10 +46,7 @@ const ActionArrows = () => {
 
   const handleUpClick = (_: MouseEvent) => {
     let middleScroll = calculateTargetCenterOnPage(selectedExercise());
-    let scrollTo =
-      store.scrollY < middleScroll + 100
-        ? 0
-        : calculateTargetCenterOnPage(selectedExercise());
+    let scrollTo = store.scrollY < middleScroll + 100 ? 0 : middleScroll + 50;
     smoothScrollTo(scrollTo, 100);
   };
 
@@ -58,7 +55,7 @@ const ActionArrows = () => {
     let scrollTo =
       store.scrollY > middleScroll - 100
         ? document.body.scrollHeight
-        : calculateTargetCenterOnPage(selectedExercise());
+        : middleScroll + 50;
 
     smoothScrollTo(scrollTo, 100);
   };

@@ -1,4 +1,11 @@
-import { createSignal, ParentProps } from "solid-js";
+import {
+  children,
+  createSignal,
+  JSX,
+  onCleanup,
+  onMount,
+  ParentProps,
+} from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { HAMBURGER_MENU_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
 import { Component } from "solid-js";
@@ -9,7 +16,8 @@ import OutlinedText from "./OutlinedText";
 
 const SectionsBreadcrumbs = (props: ParentProps) => {
   const [visible, setVisible] = createSignal(true);
-  const [recentlyClosed, setRecentlyClosed] = createSignal(false);
+  const [outSideHovered, setOutSideHovered] = createSignal(false);
+  let children_list = children(() => props.children).toArray();
 
   const { store } = useGlobalContext();
 
@@ -20,80 +28,113 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
   const { getPrevArticle, prevDisabled, getNextArticle, nextDisabled } =
     usePrevNextArticle();
 
+  onMount(() => {
+    const isMouseOverElement = (
+      element: HTMLElement | null,
+      { x, y }: MouseEvent,
+    ) => {
+      if (!element) return false;
+
+      const rect = element.getBoundingClientRect();
+      return (
+        x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom
+      );
+    };
+
+    const hotCorner = document.getElementById("hot-corner");
+
+    const handler = (e: MouseEvent) => {
+      if (isMouseOverElement(hotCorner, e)) {
+        setTimeout(() => {
+          setOutSideHovered(false);
+        }, 100);
+        return;
+      }
+      setOutSideHovered(true);
+    };
+
+    document.body.addEventListener("mouseover", handler);
+    onCleanup(() => {
+      document.body.removeEventListener("mouseover", handler);
+    });
+  });
+
   return (
-    <div
-      id="breadcrumbs"
-      style={{
-        position: "fixed",
-        "z-index": 30,
-        top: (sticky() ? delta : top - store.scrollY) + "px",
-        left: "0",
-        width: "fit-content",
-        padding: "0 26px",
-        "max-width": "300px",
-      }}>
+    <>
       {/* Ultra Hot corner */}
       <div
         style={{
           border: store.show_areas ? "5px solid rgb(181, 25, 25)" : "none",
-          width: "50px",
+          width: "150px",
           height: "50px",
-          position: "absolute",
-          top: -1 * delta + "px",
+          position: "fixed",
+          top: (sticky() ? 0 : HAMBURGER_MENU_HEIGHT - store.scrollY) + "px",
           left: "0",
           "z-index": 20,
         }}
-        onMouseOver={() => setVisible(true)}></div>
-
+        onMouseEnter={() => setVisible(true)}></div>
       {/* Hot corner */}
       <div
+        id="hot-corner"
         style={{
           border: store.show_areas ? "5px solid rgb(249, 150, 150)" : "none",
           width: "150px",
           height: "200px",
-          position: "absolute",
-          top: -1 * delta + "px",
+          position: "fixed",
+          top: (sticky() ? 0 : HAMBURGER_MENU_HEIGHT - store.scrollY) + "px",
           left: "0",
+          "z-index": 10,
         }}
-        onMouseOver={() => setVisible(!recentlyClosed())}
-        onMouseLeave={() => setRecentlyClosed(false)}></div>
-
+        onMouseEnter={() => {
+          setVisible(visible() || outSideHovered());
+        }}></div>
       <div
+        id="breadcrumbs"
         style={{
-          transform: `translateY(${visible() ? "0" : "-120%"})`,
-          opacity: visible() && store.innerWidth >= MOBILE_MAX_WIDTH ? 1 : 0,
-          transition: "all 0.5s ease-in-out",
+          position: "fixed",
+          "z-index": visible() ? 20 : 0,
+          top: (sticky() ? delta : top - store.scrollY) + "px",
+          left: "0",
+          width: "fit-content",
+          padding: "0 26px",
+          "max-width": "300px",
         }}>
-        <ul>
-          <li class="breadcrumb-prev-next flex gap-2">
-            <OutlinedText
-              onClick={() => getPrevArticle(true)}
-              class={twJoin(
-                prevDisabled() && "!text-gray-600 cursor-default",
-                "underline cursor-pointer",
-              )}>
-              &lt;&lt;prev
-            </OutlinedText>
-            <OutlinedText
-              onClick={() => getNextArticle(true)}
-              class={twJoin(
-                nextDisabled() && "!text-gray-600 cursor-default",
-                "underline cursor-pointer",
-              )}>
-              next&gt;&gt;
-            </OutlinedText>
-          </li>
-          {props.children}
-        </ul>
-        <CloseCircleIcon
-          class="mt-2 cursor-pointer"
-          onClick={() => {
-            setVisible(false);
-            setRecentlyClosed(true);
-          }}
-        />
+        <div
+          style={{
+            transform: `translateY(${visible() ? "0" : "-120%"})`,
+            opacity: visible() && store.innerWidth >= MOBILE_MAX_WIDTH ? 1 : 0,
+            transition: `all ${Math.min(300 + children_list.length * 50, 600)}ms ease-in-out`,
+          }}>
+          <ul>
+            <li class="breadcrumb-prev-next flex gap-2">
+              <OutlinedText
+                onClick={() => getPrevArticle(true)}
+                class={twJoin(
+                  prevDisabled() && "!text-gray-600 cursor-default",
+                  "underline cursor-pointer",
+                )}>
+                &lt;&lt;prev
+              </OutlinedText>
+              <OutlinedText
+                onClick={() => getNextArticle(true)}
+                class={twJoin(
+                  nextDisabled() && "!text-gray-600 cursor-default",
+                  "underline cursor-pointer",
+                )}>
+                next&gt;&gt;
+              </OutlinedText>
+            </li>
+            {props.children}
+          </ul>
+          <CloseCircleIcon
+            class="mt-2 cursor-pointer"
+            onClick={() => {
+              setVisible(false);
+            }}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -107,12 +148,9 @@ export const BreadcrumbItem = (props: ParentProps & SharedProps) => {
   );
 };
 
-type CloseCircleIconProps = {
-  class?: string;
-  onClick?: () => void;
-};
-
-const CloseCircleIcon: Component<CloseCircleIconProps> = (props) => {
+const CloseCircleIcon: Component<JSX.SvgSVGAttributes<SVGSVGElement>> = (
+  props,
+) => {
   const iconSize = 28;
   const circleRadius = 24;
   const crossSize = 10;
@@ -131,6 +169,7 @@ const CloseCircleIcon: Component<CloseCircleIconProps> = (props) => {
       stroke-linecap="round"
       stroke-linejoin="round"
       class={props.class}
+      onMouseOver={props.onMouseOver}
       onClick={props.onClick}>
       <circle cx={iconSize} cy={iconSize} r={circleRadius}></circle>
       <line
