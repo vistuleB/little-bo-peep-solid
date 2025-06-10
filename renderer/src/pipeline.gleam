@@ -74,6 +74,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
             "Solution", "SolutionNote", "StarDivider", "Table", "TextParent",
             "WriterlyBlankLine", "center", "li", "ul", "ol", "table", "colgroup",
             "thead", "tbody", "tr", "td", "section",
+            "DebugScope",
           ],
           ["MathBlock", "VerticalChunk", "CentralDisplay", "CentralDisplayItalic"],
         ),
@@ -232,7 +233,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
       )),
       dn.generate_lbp_links(),
       dn.generate_lbp_sections_breadcrumbs(),
-      dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
+      // dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
+      dn.unwrap(["DebugScope"])
     ]
   ]
   |> list.flatten
