@@ -116,7 +116,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // VerticalChunk cleanup
       // ************************
       dn.concatenate_text_nodes(),
-      dn.remove_empty_text_nodes(),
+      dn.remove_text_nodes_with_singleton_empty_line(),
       dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
       dn.remove_empty_chunks(),
