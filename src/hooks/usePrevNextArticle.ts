@@ -17,7 +17,6 @@ const usePrevNextArticle = () => {
   });
 
   const getNextArticle = async (from_breadcrumb: boolean = false) => {
-    set_store("toc_breadcrumbs_visible", from_breadcrumb);
     setTimeout(() => {
       let a = document.querySelector(".next_page") as HTMLAnchorElement;
       a?.click();
@@ -25,7 +24,6 @@ const usePrevNextArticle = () => {
   };
 
   const getPrevArticle = async (from_breadcrumb: boolean = false) => {
-    set_store("toc_breadcrumbs_visible", from_breadcrumb);
     setTimeout(() => {
       let a = document.querySelector(".prev_page") as HTMLAnchorElement;
       a?.click();

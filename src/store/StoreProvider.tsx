@@ -23,7 +23,6 @@ export type Store = {
   content_loaded: boolean;
   saved_scroll_finished: boolean;
   scroll_is_at_0: boolean;
-  toc_breadcrumbs_visible: boolean;
 };
 
 const [store, set_store] = createStore<Store>({
@@ -42,7 +41,6 @@ const [store, set_store] = createStore<Store>({
   content_loaded: false,
   saved_scroll_finished: false,
   scroll_is_at_0: false,
-  toc_breadcrumbs_visible: false,
 });
 
 const StoreContext = createContext<{
