@@ -66,14 +66,26 @@ const useScrollToInChapter = () => {
 
   const exercisesEdgeCase = (target: HTMLElement | null) => {
     if (!target || target.id !== "exercises") return target;
-    return target?.querySelectorAll(".exo-statement")?.item(0) as HTMLElement;
+    return target
+      ?.querySelectorAll(".exo-statement")
+      ?.item(
+        exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
+      ) as HTMLElement;
   };
 
   const addSafeMarginForLongTarget = (target: HTMLElement | null) => {
     if (!target) return 0;
-    if (getHeight(target) > store.innerHeight)
-      return calculateTargetCenterOnPage(target) - 20; // 20 for safe margin
-    return calculateTargetCenterOnPage(target);
+    let scrollTo = calculateTargetCenterOnPage(target);
+    if (getHeight(target) > store.innerHeight) {
+      scrollTo -= 20; // for safe margin
+    }
+
+    // another edge case for exo-statement
+    if (target.classList.contains("exo-statement")) {
+      scrollTo += 50;
+    }
+
+    return scrollTo;
   };
 
   const scrollToInChapter = async (
@@ -103,7 +115,7 @@ const useScrollToInChapter = () => {
     }
 
     if (exercises_store.list_view) {
-      smoothScrollTo(calculateTargetCenterOnPage(target), scrollDuration);
+      smoothScrollTo(addSafeMarginForLongTarget(target), scrollDuration);
       return;
     }
 
@@ -113,7 +125,7 @@ const useScrollToInChapter = () => {
       (target.getBoundingClientRect().top < 0 ||
         target.getBoundingClientRect().bottom > store.innerHeight)
     ) {
-      smoothScrollTo(calculateTargetCenterOnPage(target), 100);
+      smoothScrollTo(addSafeMarginForLongTarget(target), 100);
     }
     Promise.resolve();
   };
