@@ -18,7 +18,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
     ],
     // ****
-    // setting up counters and 
+    // setting up counters and
     // counter-related titles
     // ****
     [
@@ -166,7 +166,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       // VerticalChunk indents
       // ************************
-      dn.insert_indent(),
+      dn.add_attribute_to_second_of_kind(#("VerticalChunk", "indent", "true")),
       // ************************
       // Add spacers
       // ************************
