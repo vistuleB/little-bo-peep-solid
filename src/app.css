@@ -59,7 +59,7 @@ b {
   font-family: "Baskerville Bold";
 }
 
-i {
+i, em {
   font-family: "Baskerville Italic";
   font-style: normal;
 }
@@ -438,6 +438,11 @@ ol.l1 > li:before {
     0 -3px #fff;
   font-size: 14px;
   font-family: sans-serif;
+}
+
+.breadcrumb i, .breadcrumb em {
+  font-family: sans-serif;
+  font-style: italic;
 }
 
 .highlighted {
