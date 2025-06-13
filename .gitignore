@@ -1,5 +1,3 @@
-src/routes/article/*
-src/components/*AuthorSupplied*
 
 dist
 .solid
