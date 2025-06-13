@@ -68,7 +68,7 @@ const HamburgerPanelItem = (props: {
     <>
       <ConditionalLink
         href={`/article/${props.href}`}
-        class="flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
+        class="panel-item flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
         onSameRoute={(e) => {
           e.preventDefault();
           window.scroll({
@@ -86,7 +86,7 @@ const HamburgerPanelItem = (props: {
       ) : (
         <ConditionalLink
           href={`/article/${props.href}`}
-          class="flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
+          class="panel-item flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
           onSameRoute={(e) => {
             e.preventDefault();
             window.scroll({

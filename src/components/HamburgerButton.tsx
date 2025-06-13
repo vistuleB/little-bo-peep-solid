@@ -9,6 +9,7 @@ import {
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "../store/StoreProvider";
+import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 
 const HeaderBarRightHandSideButtons = () => {
   return (
@@ -59,7 +60,7 @@ const ButtonsContainer = (props: ParentProps) => {
             !on_mobile() &&
             store.scrollX + store.innerWidth >=
               store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2 &&
-            "h-[10rem]"
+            "h-[10rem]",
         )}
         style={{
           width: "134px",
@@ -69,21 +70,18 @@ const ButtonsContainer = (props: ParentProps) => {
               : store.show_areas
                 ? "#fff000"
                 : "#fff",
-        }}
-      ></div>
+        }}></div>
       <div
         class={twJoin(
           "fixed right-0 z-50 h-14",
           !on_mobile() &&
             !open() &&
             store.scrollY < 2 * HAMBURGER_MENU_HEIGHT &&
-            "border-b"
-        )}
-      >
+            "border-b",
+        )}>
         <div
           class="select-none flex items-center justify-center h-8 m-3 hover:!opacity-100"
-          style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}
-        >
+          style={{ opacity: !open() && !on_mobile() ? opacity() : 1 }}>
           {props.children}
         </div>
       </div>
@@ -116,7 +114,7 @@ const HeaderBarLeftArrowButton = () => {
       class={twJoin(
         !on_mobile() && "mr-2",
         on_mobile() && "mr-4",
-        prevDisabled() && "cursor-default"
+        prevDisabled() && "cursor-default",
       )}
       onMouseOver={() => {
         set_prevDisabled(!document.querySelector(".prev_page"));
@@ -128,13 +126,12 @@ const HeaderBarLeftArrowButton = () => {
       }}
       style={{
         "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
-      }}
-    >
+      }}>
       <HeaderBarLeftArrowIcon
         class={twMerge(
           !prevDisabled()
             ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
-            : "stroke-stone-300"
+            : "stroke-stone-300",
         )}
         style=""
       />
@@ -165,7 +162,7 @@ const HeaderBarRightArrowButton = () => {
       class={twJoin(
         !on_mobile() && "mr-3",
         on_mobile() && "mr-4",
-        nextDisabled() && "cursor-default"
+        nextDisabled() && "cursor-default",
       )}
       onMouseOver={() => {
         set_nextDisabled(!document.querySelector(".next_page"));
@@ -177,13 +174,12 @@ const HeaderBarRightArrowButton = () => {
       }}
       style={{
         "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
-      }}
-    >
+      }}>
       <HeaderBarRightArrowIcon
         class={twMerge(
           !nextDisabled()
             ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
-            : "stroke-stone-300"
+            : "stroke-stone-300",
         )}
         style=""
       />
@@ -203,8 +199,7 @@ const HamburgerButton = () => {
       }}
       style={{
         "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
-      }}
-    >
+      }}>
       <HamburgerButtonIcon
         class="fill-[rgb(30,30,30)] hover:fill-stone-600"
         open={open()}
@@ -230,14 +225,12 @@ export const HeaderBarLeftArrowIcon = (props: {
       width="30"
       height="30"
       viewBox="0 0 30 30"
-      style={props.style}
-    >
+      style={props.style}>
       <path
         d={`M${un - cdx + adx} ${un - ady} L${un - cdx} ${un} L${un - cdx + adx} ${un + ady}`}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"
-      ></path>
+        fill="none"></path>
     </svg>
   );
 };
@@ -249,14 +242,12 @@ const HeaderBarRightArrowIcon = (props: { class: string; style: string }) => {
       width="30"
       height="30"
       viewBox="0 0 30 30"
-      style={props.style}
-    >
+      style={props.style}>
       <path
         d={`M${un + cdx - adx} ${un - ady} L${un + cdx} ${un} L${un + cdx - adx} ${un + ady}`}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"
-      ></path>
+        fill="none"></path>
     </svg>
   );
 };
@@ -271,8 +262,7 @@ const HamburgerButtonIcon = (props: { open: boolean; class: string }) => {
         height="3"
         rx="1.5"
         ry="1.5"
-        class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}
-      ></rect>
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}></rect>
       <rect
         x="5"
         y="13.5"
@@ -280,8 +270,7 @@ const HamburgerButtonIcon = (props: { open: boolean; class: string }) => {
         height="3"
         rx="1.5"
         ry="1.5"
-        class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}
-      ></rect>
+        class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}></rect>
       <rect
         x="5"
         y="21"
@@ -289,8 +278,7 @@ const HamburgerButtonIcon = (props: { open: boolean; class: string }) => {
         height="3"
         rx="1.5"
         ry="1.5"
-        class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}
-      ></rect>
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}></rect>
     </svg>
   );
 };

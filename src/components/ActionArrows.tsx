@@ -6,10 +6,12 @@ import {
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
 import smoothScrollTo from "~/utils/smoothScrollTo";
-import elementPosOnPage from "~/utils/elementPosOnPage";
+import useScrollToInChapter from "~/hooks/useScrollToInChapter";
+import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 
 const ActionArrows = () => {
   const { store } = useGlobalContext();
+  const { exercises_store } = useExercisesContext();
   const [opacity, set_opacity] = createSignal(1);
   const [hovered, set_hovered] = createSignal(false);
 
@@ -34,24 +36,27 @@ const ActionArrows = () => {
     });
   });
 
+  const { calculateTargetCenterOnPage } = useScrollToInChapter();
+  const selectedExercise = () =>
+    document
+      .querySelectorAll(".exo-statement")
+      .item(
+        exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
+      ) as HTMLElement;
+
   const handleUpClick = (_: MouseEvent) => {
-    let middleScroll =
-      elementPosOnPage(document.getElementById("exercises-btns")) -
-      window.innerHeight / 2 +
-      50; // see also BackupArrow in Solution.tsx
-    let scrollTo = store.scrollY < middleScroll + 100 ? 0 : middleScroll;
+    let middleScroll = calculateTargetCenterOnPage(selectedExercise());
+    let scrollTo = store.scrollY < middleScroll + 100 ? 0 : middleScroll + 50;
     smoothScrollTo(scrollTo, 100);
   };
 
   const handleDownClick = (_: MouseEvent) => {
-    let middleScroll =
-      elementPosOnPage(document.getElementById("exercises-btns")) -
-      window.innerHeight / 2 +
-      50;
+    let middleScroll = calculateTargetCenterOnPage(selectedExercise());
     let scrollTo =
       store.scrollY > middleScroll - 100
         ? document.body.scrollHeight
-        : middleScroll;
+        : middleScroll + 50;
+
     smoothScrollTo(scrollTo, 100);
   };
 

@@ -4,9 +4,10 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import { onMount } from "solid-js";
 import useCheckedSaveScroll from "~/hooks/useCheckedSaveScroll";
 import useSetRoute from "~/hooks/useSetRoute";
+import SectionsBreadcrumbs from "./SectionsBreadcrumbs";
 
 const TOC = () => {
-  let { set_store } = useGlobalContext();
+  let { store, set_store } = useGlobalContext();
   useScrollX();
   useCheckedSaveScroll();
   useSetRoute();
@@ -27,6 +28,7 @@ const TOC = () => {
         class="mt-[3.3rem] mb-[2.3rem] sm:mb-[2.6rem] mx-auto">
         <TitleSVG />
       </div>
+      <SectionsBreadcrumbs />
       <TOCAuthorSuppliedContents />
     </div>
   );

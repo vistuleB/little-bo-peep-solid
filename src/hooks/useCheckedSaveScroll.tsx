@@ -13,7 +13,7 @@ const useCheckedSaveScroll = () => {
   });
 
   if (searchParams.id) {
-    const scrollToInChapter = useScrollToInChapter();
+    const { scrollToInChapter } = useScrollToInChapter();
 
     onMount(() => {
       setTimeout(async () => {

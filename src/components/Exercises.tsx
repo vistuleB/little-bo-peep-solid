@@ -44,21 +44,23 @@ export const Exercises = (props: ExercisesProps) => {
         class="mt-[15px] mb-[40px]"></Image>
       <Switcher exercises={children_list.toArray()} />
       <div class="h-[31px]"></div>
-      <For each={children_list.toArray()}>
-        {(child, index) => {
-          return (
-            <div
-              class={twJoin(
-                "exercise duration-500 ",
-                selected_exo() == index() + 1 || store.list_view
-                  ? "opacity-100 h-auto overflow-visible transition-none"
-                  : "opacity-0 h-0 overflow-hidden transition-opacity",
-              )}>
-              {child}
-            </div>
-          );
-        }}
-      </For>
+      <section id="exercises">
+        <For each={children_list.toArray()}>
+          {(child, index) => {
+            return (
+              <div
+                class={twJoin(
+                  "exercise duration-500 ",
+                  selected_exo() == index() + 1 || store.list_view
+                    ? "opacity-100 h-auto overflow-visible transition-none"
+                    : "opacity-0 h-0 overflow-hidden transition-opacity",
+                )}>
+                {child}
+              </div>
+            );
+          }}
+        </For>
+      </section>
     </>
   );
 };

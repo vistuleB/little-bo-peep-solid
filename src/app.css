@@ -59,7 +59,8 @@ b {
   font-family: "Baskerville Bold";
 }
 
-i, em {
+i,
+em {
   font-family: "Baskerville Italic";
   font-style: normal;
 }
@@ -430,17 +431,27 @@ ol.l1 > li:before {
   line-height: 2.2rem;
 }
 
-.breadcrumb {
-  text-shadow:
-    -3px 0 #fff,
-    0 3px #fff,
-    3px 0 #fff,
-    0 -3px #fff;
+.breadcrumb,
+.breadcrumb-prev-next {
+  position: relative;
   font-size: 14px;
   font-family: sans-serif;
 }
 
-.breadcrumb i, .breadcrumb em {
+.breadcrumb a {
+  text-indent: -1em;
+  padding-left: 1em;
+  display: block;
+}
+
+.breadcrumb:not(.highlighted):hover,
+.breadcrumb-prev-next span:hover,
+.panel-item:hover {
+  color: #19124c;
+}
+
+.breadcrumb i,
+.breadcrumb em {
   font-family: sans-serif;
   font-style: italic;
 }

@@ -59,17 +59,47 @@ const useScrollToInChapter = () => {
     store.innerHeight / 2 + // step 1:  center top of element on screen
     Math.min(getHeight(target) / 2, store.innerHeight / 2); // if target height is bigger than screen step 1 is reveresed | else the target itself is centered on screen
 
+  const firstSectionEdgeCase = (target: HTMLElement | null) => {
+    if (!target || target.id !== "section-1") return false;
+    return true;
+  };
+
+  const exercisesEdgeCase = (target: HTMLElement | null) => {
+    if (!target || target.id !== "exercises") return target;
+    return target
+      ?.querySelectorAll(".exo-statement")
+      ?.item(
+        exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
+      ) as HTMLElement;
+  };
+
+  const addSafeMarginForLongTarget = (target: HTMLElement | null) => {
+    if (!target) return 0;
+    let scrollTo = calculateTargetCenterOnPage(target);
+    if (getHeight(target) > store.innerHeight) {
+      scrollTo -= 20; // for safe margin
+    }
+
+    // another edge case for exo-statement
+    if (target.classList.contains("exo-statement")) {
+      scrollTo += 50;
+    }
+
+    return scrollTo;
+  };
+
   const scrollToInChapter = async (
     targetId: string,
     scrollDuration: number = 100,
   ) => {
-    const target = document.getElementById(targetId);
+    let target = document.getElementById(targetId);
+    target = exercisesEdgeCase(target);
 
     // check if target is not inside exercise
     if (!isInsideElementWithClass("exercise", target)) {
       // just scroll to the target
       smoothScrollTo(
-        elementPosOnPage(target) - store.innerHeight / 2,
+        firstSectionEdgeCase(target) ? 0 : addSafeMarginForLongTarget(target),
         scrollDuration,
       );
       return;
@@ -85,7 +115,7 @@ const useScrollToInChapter = () => {
     }
 
     if (exercises_store.list_view) {
-      smoothScrollTo(calculateTargetCenterOnPage(target), scrollDuration);
+      smoothScrollTo(addSafeMarginForLongTarget(target), scrollDuration);
       return;
     }
 
@@ -95,12 +125,12 @@ const useScrollToInChapter = () => {
       (target.getBoundingClientRect().top < 0 ||
         target.getBoundingClientRect().bottom > store.innerHeight)
     ) {
-      smoothScrollTo(calculateTargetCenterOnPage(target), 100);
+      smoothScrollTo(addSafeMarginForLongTarget(target), 100);
     }
     Promise.resolve();
   };
 
-  return scrollToInChapter;
+  return { scrollToInChapter, calculateTargetCenterOnPage };
 };
 
 export default useScrollToInChapter;
