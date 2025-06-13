@@ -13,9 +13,13 @@ import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 import { twJoin } from "tailwind-merge";
 import SharedProps from "./types/SharedProps";
 import OutlinedText from "./OutlinedText";
+import { useLocalStorage } from "solidjs-hooks";
 
 const SectionsBreadcrumbs = (props: ParentProps) => {
-  const [visible, setVisible] = createSignal(true);
+  const [visible, setVisible] = useLocalStorage(
+    "sections-breadcrumbs-visible",
+    true,
+  );
   const [outSideHovered, setOutSideHovered] = createSignal(false);
   let children_list = children(() => props.children).toArray();
 
@@ -91,13 +95,13 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       <div
         id="breadcrumbs"
         style={{
-          position: "fixed",
+          position: sticky() ? "fixed" : "absolute",
           "z-index": visible() ? 25 : 0,
-          top: (sticky() ? delta : top - store.scrollY) + "px",
-          left: "0",
+          top: (sticky() ? delta : top) + "px",
           width: "fit-content",
           padding: "0 26px",
           "max-width": "300px",
+          left: sticky() ? "0" : store.scrollX + "px",
         }}>
         <div
           style={{
