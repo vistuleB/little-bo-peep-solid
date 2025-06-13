@@ -142,7 +142,7 @@
     denoting the input does not matter: it is just a
     placeholder, and you obtain the same output, and
     the same _function_, no matter what symbol
-    you choose.*) (\*As long as you don't collide
+    you choose.*) (*As long as you don't collide
     with other existing variable names.)
 
 
@@ -1478,8 +1478,8 @@
                     src=images/svg_ch3_composition_icon_die_3.svg
                     width=1.25rem
                     top=-3px
-                    marginLeft=.5rem
-                    marginRight=.5rem
+                    margin-left=.5rem
+                    margin-right=.5rem
                 |_
 
                 because the arrow that originates at 
@@ -1505,8 +1505,8 @@
                     src=images/svg_ch3_composition_icon_fence.svg
                     width=2.3rem
                     top=-4px
-                    marginLeft=.5rem
-                    marginRight=.5rem
+                    margin-left=.5rem
+                    margin-right=.5rem
                 |_
 
                 because, pursuing that path onwards, the arrow

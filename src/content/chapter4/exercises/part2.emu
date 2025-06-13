@@ -25,25 +25,18 @@
         (I.e.: speed 2, since the particles of
         Exercise 12 have unit speed.)
 
-        |> Pause
+        |> SolutionNote
 
-        _Note 1._
-        In this and in the previous exercise the
-        units of time and distance are “anonymous”:
-        distance could be meters, kilometers, or
-        anything, and time could be seconds, hours,
-        etc—it doesn't matter. However, one should
-        be aware that what amounts to
+            In this and in the previous exercise the
+            units of time and distance are “anonymous”:
+            distance could be meters, kilometers, or
+            anything, and time could be seconds, hours,
+            etc—it doesn't matter. Either way,
 
-        __unit speed__
+            __unit speed__
 
-        under one set of units is no longer “unit
-        speed” under a different set of units—this
-        is not a “physical” property of the
-        particles, but, rather, a “mathematical”
-        property that holds only for one specific
-        “tweaking” of the units.
-
+            means that one unit of distance is traveled
+            per unit of time, whatever the units are.
 
 |> Exercise
 
@@ -514,9 +507,10 @@
 
         |> TextParent
             |> ul
-                style=margin:20px 20px 0px 50px
+                style=margin:20px 20px 20px 50px;list-style-type:disc;
 
                 |> li
+                    style=margin-bottom:10px;
 
                     the red arrows indicate which particle
                     takes its velocity from the position
@@ -571,14 +565,13 @@
 
         |> TextParent
             |> ul
-                style=margin:1em 1em 0em 2.5em
+                style=margin:20px 20px 20px 50px;list-style-type:disc;
 
                 |> li
-
-                    in
+                    style=margin-bottom:10px;
+                    in 
                     |> span
                         style=border:1px solid blue
-
                         blue
                     , particle 1, the last particle
                     to be (noticeably*) “peeled off” from
@@ -589,11 +582,9 @@
                     the next, that affects the next, etc)
 
                 |> li
-
-                    in
+                    in 
                     |> span
                         style=border:1px solid red
-
                         red
                     , particle 14, the _first_ particle
                     to leave the circle—but because its

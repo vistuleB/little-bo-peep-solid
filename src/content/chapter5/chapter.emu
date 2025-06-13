@@ -1334,10 +1334,14 @@
     of the original inequality.)
 
 |> Section
-
+    
     *The Gregorinovich sandwich.*
     The “Gregorinovich sandwich”—sometimes
-    Gr_i_gorinovich—states that
+    Gr_
+    |> span
+        style=text-decoration:underline
+        i
+    _gorinovich—states that
 
     $$
     \sin(\theta) \,<\, \theta \,<\, {\sin(\theta)\over\cos(\theta)}
@@ -1372,7 +1376,7 @@
     $\cos(\theta)$ will make you
     _|DRAMATICALLY BIGGER|_
     when $\cos(\theta)$ is close to $0$, which is the
-    case when $\theta$ is close to $\eta$.)
+    case when $\theta$ is close to $\eta$, $0 < \theta < \eta$.)
 
     !! The Gregorinovich sandwich
     !! consists of two separate
@@ -1657,19 +1661,18 @@
     \sec(\theta)
     $$
 
-    is also the multiplicative factor that takes you from the
+    is also the multiplicative factor that takes 
+    you from the 
     |> span
         style=background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
-
         PURPLE
     \ to the 
     |> span
         style=white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
-
         LIME GREEN
-    \ triangle
-    (hard to draw, because it is behind the
-    purple triangle!) in the following figure:
+    \ triangle (hard to draw, because it is
+    behind the purple triangle!) in the following
+    figure:
 
     |> Image
         src=images/svg_ch5_ch_secant_reinterpretation_1.svg
@@ -1712,24 +1715,24 @@
     \csc(\theta)
     $$
 
-    is the multiplicative factor that takes you from the
+    is the multiplicative factor that takes you 
+    from the 
     |> span
         style=white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
-
         BURNT ORANGE
-    &ensp;to the
+    \ to the 
     |> span
         style=white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
 
         FAUX BORDEAUX
-    &ensp;triangle below:
+    \ triangle below:
 
     |> Image
         src=images/svg_ch5_ch_secant_reinterpretation_4.svg
 
     (But this fact is not used as often.)
 
-    |> Pause
+|> Section
 
     *Note on calculators.*
     Your calculator has “degree mode” and

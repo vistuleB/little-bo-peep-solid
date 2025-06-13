@@ -18,7 +18,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
     ],
     // ****
-    // setting up counters and 
+    // setting up counters and
     // counter-related titles
     // ****
     [
@@ -74,6 +74,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
             "Solution", "SolutionNote", "StarDivider", "Table", "TextParent",
             "WriterlyBlankLine", "center", "li", "ul", "ol", "table", "colgroup",
             "thead", "tbody", "tr", "td", "section",
+            "DebugScope",
           ],
           ["MathBlock", "VerticalChunk", "CentralDisplay", "CentralDisplayItalic"],
         ),
@@ -116,7 +117,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // VerticalChunk cleanup
       // ************************
       dn.concatenate_text_nodes(),
-      dn.remove_empty_text_nodes(),
+      dn.remove_text_nodes_with_singleton_empty_line(),
       dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
       dn.remove_empty_chunks(),
@@ -158,10 +159,14 @@ pub fn lbp_pipeline() -> List(Pipe) {
           "true",
         ),
       ]),
+      dn.rename_attributes([
+        #("margin-left", "marginLeft"),
+        #("margin-right", "marginRight"),
+      ]),
       // ************************
       // VerticalChunk indents
       // ************************
-      dn.insert_indent(),
+      dn.add_attribute_to_second_of_kind(#("VerticalChunk", "indent", "true")),
       // ************************
       // Add spacers
       // ************************
@@ -228,7 +233,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
       )),
       dn.generate_lbp_links(),
       dn.generate_lbp_sections_breadcrumbs(),
-      dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
+      // dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
+      dn.unwrap(["DebugScope"])
     ]
   ]
   |> list.flatten

@@ -59,7 +59,8 @@ b {
   font-family: "Baskerville Bold";
 }
 
-i {
+i,
+em {
   font-family: "Baskerville Italic";
   font-style: normal;
 }
@@ -447,6 +448,12 @@ ol.l1 > li:before {
 .breadcrumb-prev-next span:hover,
 .panel-item:hover {
   color: #19124c;
+}
+
+.breadcrumb i,
+.breadcrumb em {
+  font-family: sans-serif;
+  font-style: italic;
 }
 
 .highlighted {
