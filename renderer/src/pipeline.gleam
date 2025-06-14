@@ -52,11 +52,11 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("SolutionNote", "_Note ::øøSolutionNoteCounter._"),
         #("Note", "_Note ::øøNoteCounter._"),
       ]),
-      dn.counters_substitute_and_assign_handles(),
-      dn.handles_generate_ids(),
-      dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
-      dn.handles_substitute([]),
-      dn.unwrap(["GrandWrapper"]),
+      // dn.counters_substitute_and_assign_handles(),
+      // dn.handles_generate_ids(),
+      // dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
+      // dn.handles_substitute([]),
+      // dn.unwrap(["GrandWrapper"]),
     ],
     // ****
     // get rid of 'WriterlyBlankLine',
@@ -117,7 +117,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // VerticalChunk cleanup
       // ************************
       dn.concatenate_text_nodes(),
-      dn.remove_text_nodes_with_singleton_empty_line(),
+      // dn.remove_text_nodes_with_singleton_empty_line(),
       dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
       dn.remove_empty_chunks(),
@@ -166,7 +166,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       // VerticalChunk indents
       // ************************
-      dn.add_attribute_to_second_of_kind(#("VerticalChunk", "indent", "true")),
+      // dn.add_attribute_to_second_of_kind(#("VerticalChunk", "indent", "true")),
       // ************************
       // Add spacers
       // ************************

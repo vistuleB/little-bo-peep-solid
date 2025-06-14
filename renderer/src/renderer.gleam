@@ -1,3 +1,4 @@
+import simplifile
 import shellout
 import argv
 import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
@@ -5,11 +6,13 @@ import gleam/io
 import gleam/list
 import gleam/option.{Some}
 import gleam/string
+import gleam/dict
 import infrastructure as infra
 import pipeline
 import vxml.{type VXML, BlamedAttribute, V}
 import vxml_renderer as vr
 import writerly as wp
+import gleam/otp/actor.{stop}
 
 const ins = string.inspect
 
@@ -300,15 +303,56 @@ fn cli_usage_supplementary() {
   io.println("         -> run npm prettier on emitted content")
 }
 
+const input_dir = "../src/content"
+const output_dir = "../src"
+
+fn rename_files(from_ext: String, to_ext: String, dir: String) -> Nil {
+  use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
+    io.println("error reading directory" <> ins(error))
+    Nil
+  })
+
+  dir_children
+  |> list.each(fn(child) {
+    let child = dir <> "/" <> child
+    case simplifile.is_file(child) {
+      Ok(True) -> {
+        let _ = simplifile.rename(child, child |> string.replace(from_ext, to_ext))
+        io.println("Renamed " <> child <> " to " <> child |> string.replace(from_ext, to_ext))
+      }
+      Ok(False) -> rename_files(from_ext, to_ext, child)
+      Error(_) -> Nil
+    }
+  })
+}
+
 pub fn main() {
   use amendments <- infra.on_error_on_ok(
-    vr.process_command_line_arguments(argv.load().arguments, ["--prettier"]),
+    vr.process_command_line_arguments(argv.load().arguments, ["--prettier", "--emu-to-wly", "--wly-to-emu"]),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
       io.println("")
       vr.cli_usage()
       cli_usage_supplementary()
+    },
+  )
+
+  use _ <- infra.on_error_on_ok(
+    dict.get(amendments.user_args, "--emu-to-wly"),
+    with_on_ok: fn(_) {
+      rename_files(".emu", ".wly", input_dir)
+      let _ = stop()
+      Nil
+    },
+  )
+
+  use _ <- infra.on_error_on_ok(
+    dict.get(amendments.user_args, "--wly-to-emu"),
+    with_on_ok: fn(_) {
+      rename_files(".wly", ".emu", input_dir)
+      let _ = stop()
+      Nil
     },
   )
 
@@ -330,8 +374,8 @@ pub fn main() {
 
   let parameters =
     vr.RendererParameters(
-      input_dir: "../src/content",
-      output_dir: Some("../src"),
+      input_dir: input_dir,
+      output_dir: Some(output_dir),
     )
     |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
 
@@ -345,7 +389,7 @@ pub fn main() {
   let _ = shellout.command(
     run: "rm",
     in: ".",
-    with: ["../src/article/*", "../src/components/TOCAuthorSuppliedContents.tsx", "../src/components/HamburgerPanelAuthorSuppliedContents.tsx"],
+    with: [output_dir <> "/article/*", output_dir <> "/components/TOCAuthorSuppliedContents.tsx", output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"],
     opt: [],
   )
 
