@@ -23,7 +23,7 @@ export const Math = (props: ParentProps) => {
 
   return (
     <span
-      class="inline-flex indent-0 transition-opacity"
+      class="math inline-flex indent-0 transition-opacity"
       style={{ opacity: visible() ? "100" : "0" }}
       ref={ref}>
       {props.children}
@@ -54,7 +54,7 @@ export const MathBlock = (props: ParentProps) => {
 
   return (
     <div
-      class="mathblock transition-opacity"
+      class="math mathblock transition-opacity"
       style={{ opacity: visible() ? "100" : "0" }}
       ref={ref}>
       {props.children}

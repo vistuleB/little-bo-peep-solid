@@ -29,6 +29,8 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
   const top = HAMBURGER_MENU_HEIGHT + delta;
   const sticky = () => store.scrollY > top - delta;
 
+  let ref: HTMLUListElement | undefined;
+
   const { getPrevArticle, prevDisabled, getNextArticle, nextDisabled } =
     usePrevNextArticle();
 
@@ -56,6 +58,11 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       }
       setOutSideHovered(true);
     };
+
+    (window as any).MathJax.typesetPromise([ref]);
+    ref?.querySelectorAll(".math").forEach((math) => {
+      (math as HTMLElement).style.opacity = "1";
+    });
 
     document.body.addEventListener("mouseover", handler);
     onCleanup(() => {
@@ -109,7 +116,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
             opacity: visible() && store.innerWidth >= MOBILE_MAX_WIDTH ? 1 : 0,
             transition: `all ${Math.min(300 + children_list.length * 50, 600)}ms ease-in-out`,
           }}>
-          <ul>
+          <ul ref={ref}>
             <li class="breadcrumb-prev-next flex gap-2">
               <OutlinedText
                 onClick={() => getPrevArticle(true)}
