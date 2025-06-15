@@ -95,6 +95,8 @@ const Article = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <Math>
                 $\mathbf&#123;45^\circ&#125;$
               </Math>
@@ -180,6 +182,13 @@ const Article = () => {
           <BreadcrumbItem
             class="breadcrumb"
             id="breadcrumb-18">
+            <InChapterLink href="?id=section-19">
+              note on calculators
+            </InChapterLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem
+            class="breadcrumb"
+            id="breadcrumb-19">
             <InChapterLink href="?id=exercises">
               exercises
             </InChapterLink>
@@ -214,6 +223,8 @@ const Article = () => {
               </Math>
               ,
             </NoBreak>
+            {" "}
+            {" "}
             <Math>
               $\sin(x)$
             </Math>
@@ -317,6 +328,8 @@ const Article = () => {
               </Math>
               ,
             </NoBreak>
+            {" "}
+            {" "}
             <NoBreak>
               <Math>
                 $\sin(&#123;1\over 2&#125;) \approx 0.5$
@@ -476,6 +489,8 @@ const Article = () => {
               </Math>
               ,
             </NoBreak>
+            {" "}
+            {" "}
             <NoBreak>
               <Math>
                 $\sin(x) = -1$
@@ -1497,7 +1512,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_4222"
+            href="/article/chapter4?id=_24_3225"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -1805,6 +1820,8 @@ const Rest = () => {
               </Math>
               ,
             </NoBreak>
+            {" "}
+            {" "}
             <Math>
               $\mathbf&#123;45^\circ&#125;$
             </Math>
@@ -1998,6 +2015,8 @@ const Rest = () => {
             </Math>
             -coordinate
           </NoBreak>
+          {" "}
+          {" "}
           <Math>
             $0.5$
           </Math>
@@ -3337,7 +3356,13 @@ const Rest = () => {
           </b>
           {" "}
           The “Gregorinovich sandwich”—sometimes
-          Gr_i_gorinovich—states that
+          Gr
+          <i>
+            <span
+              i=""
+              style="text-decoration:underline" />
+          </i>
+          gorinovich—states that
         </VerticalChunk>
         <Pause />
         <MathBlock>
@@ -3462,6 +3487,13 @@ const Rest = () => {
           <NoBreak>
             <Math>
               $\eta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}{" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
             </Math>
             .)
           </NoBreak>
@@ -3644,6 +3676,8 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
+          {" "}
+          {" "}
           <Math>
             $0 \leq \theta_2 \leq \eta$
           </Math>
@@ -3656,12 +3690,16 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
+          {" "}
+          {" "}
           <NoBreak>
             <Math>
               $\cos(\theta_1\!\rt&#123;0.1&#125;)$
             </Math>
             ,
           </NoBreak>
+          {" "}
+          {" "}
           <Math>
             $\sin(\theta_2\!\rt&#123;0.1&#125;)$
           </Math>
@@ -3751,6 +3789,8 @@ const Rest = () => {
           <i>
             all
           </i>
+          {" "}
+          {" "}
           <NoBreak>
             <Math>
               $\theta_1$
@@ -3997,17 +4037,18 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          is also the multiplicative factor that takes you from the
-          <span style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            PURPLE
-          </span>
+          is also the multiplicative factor that takes 
+          you from the{" "}
+          <span
+            PURPLE=""
+            style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;" />
           {" "}to the{" "}
-          <span style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            LIME GREEN
-          </span>
-          {" "}triangle
-          (hard to draw, because it is behind the
-          purple triangle!) in the following figure:
+          <span
+            LIME GREEN=""
+            style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;" />
+          {" "}triangle (hard to draw, because it is
+          behind the purple triangle!) in the following
+          figure:
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_secant_reinterpretation_1.svg" />
@@ -4083,15 +4124,16 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <VerticalChunk>
-          is the multiplicative factor that takes you from the
-          <span style="white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            BURNT ORANGE
-          </span>
-          &ensp;to the
+          is the multiplicative factor that takes you 
+          from the{" "}
+          <span
+            BURNT ORANGE=""
+            style="white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;" />
+          {" "}to the{" "}
           <span style="white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
             FAUX BORDEAUX
           </span>
-          &ensp;triangle below:
+          {" "}triangle below:
         </VerticalChunk>
         <Pause />
         <Image src="/images/svg_ch5_ch_secant_reinterpretation_4.svg" />
@@ -4099,7 +4141,9 @@ const Rest = () => {
         <VerticalChunk>
           (But this fact is not used as often.)
         </VerticalChunk>
-        <Pause />
+      </Section>
+      <Pause />
+      <Section id="section-19">
         <VerticalChunk>
           <b>
             Note on calculators.
@@ -6000,6 +6044,8 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
+                {" "}
+                {" "}
                 <NoBreak>
                   <Math>
                     $u_y$
@@ -6312,7 +6358,11 @@ const Rest = () => {
                   <i>
                     angular speed
                   </i>
-                  /_angular frequency_ (radians per
+                  /
+                  <i>
+                    angular frequency
+                  </i>
+                  {" "}(radians per
                   unit time) and{" "}
                   <Math>
                     $C$
@@ -6761,6 +6811,8 @@ const Rest = () => {
                 </Math>
                 ”,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 “
                 <Math>
@@ -8087,11 +8139,7 @@ const Rest = () => {
                 <Math>
                   $4$
                 </Math>
-                {" "}[miles
-                <b>
-                  ] (
-                </b>
-                say):
+                {" "}[miles*] (*say):
               </VerticalChunk>
               <Pause />
               <Image src="/images/svg_ch5_ex_big_division_big_subtraction_d.svg" />
@@ -8825,6 +8873,8 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
+                {" "}
+                {" "}
                 <NoBreak>
                   <Math>
                     $y_0 = \sin(\eta/2)$
@@ -8871,6 +8921,8 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
+                {" "}
+                {" "}
                 <NoBreak>
                   <Math>
                     $x = 9\eta/2$
@@ -9134,6 +9186,8 @@ const Rest = () => {
               <i>
                 isovalue set
               </i>
+              {" "}
+              {" "}
               <NoBreak>
                 <Math>
                   $\rt&#123;0.1&#125;$
@@ -9305,9 +9359,13 @@ const Rest = () => {
               <i>
                 ~
               </i>
-              ~_disjoint
+              ~
               <i>
-                ~_~
+                disjoint
+              </i>
+              ~
+              <i>
+                ~
               </i>
               {" "}curves, because it
               is the union of the{" "}
@@ -10557,6 +10615,8 @@ const Rest = () => {
                   $$
                 </MathBlock>
                 <Pause />
+                {" "}
+                {" "}
                 <MathBlock>
                   $$
                   ,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
@@ -12358,6 +12418,8 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <Math>
                 $\sin + \cos$
               </Math>
@@ -12860,6 +12922,8 @@ const Rest = () => {
                 </Math>
                 ’,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 ‘
                 <Math>
@@ -12876,6 +12940,8 @@ const Rest = () => {
                 </Math>
                 ’,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 ‘
                 <Math>
@@ -14611,7 +14677,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_25_7946">
+          <ExerciseStatement id="_25_3789">
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -15146,12 +15212,16 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 <Math>
                   $(x_0, y_0) = (60, 30)$
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 <Math>
                   $(x_0, y_0) = (93, 30)$
@@ -16165,6 +16235,8 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 <Math>
                   $\vec&#123;v&#125; = (10, 3.333)$

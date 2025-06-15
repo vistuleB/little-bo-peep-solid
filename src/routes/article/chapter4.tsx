@@ -323,6 +323,8 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
+          {" "}
+          {" "}
           <NoBreak>
             <Math>
               $a &lt; b$
@@ -1795,7 +1797,7 @@ const Rest = () => {
         <VerticalChunk>
           of functions already appear in{" "}
           <a
-            href="/article/chapter3?id=_13_1624"
+            href="/article/chapter3?id=_13_3184"
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1827,7 +1829,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_16_6541">
+          <ExerciseStatement id="_16_5094">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1955,7 +1957,7 @@ const Rest = () => {
             <VerticalChunk>
               derivative of the graph in{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_6541"
+                href="/article/chapter4?id=_16_5094"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2000,7 +2002,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_6541"
+                href="/article/chapter4?id=_16_5094"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2539,7 +2541,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <ExerciseStatement id="_17_6609">
+          <ExerciseStatement id="_17_2107">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -2721,7 +2723,7 @@ const Rest = () => {
               {" "}analogously to
               {" "}
               <InChapterLink
-                href="/article/chapter4?id=_17_6609"
+                href="/article/chapter4?id=_17_2107"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -2962,6 +2964,8 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 <Math>
                   $-1.6$
@@ -2989,7 +2993,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <ExerciseStatement id="_18_2905">
+          <ExerciseStatement id="_18_8448">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4444,7 +4448,7 @@ const Rest = () => {
               {" "}\circ{" "}
               <NoBreak>
                 g
-                <Math id="_19_1979">
+                <Math id="_19_4428">
                   $:
                   <Pause />
                   <Image src="/images/svg_ch4_f_g_composition_units.svg" />
@@ -5700,7 +5704,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_20_9566">
+            <SolutionNote id="_20_5872">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6104,7 +6108,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see{" "}
               <InChapterLink
-                href="/article/chapter4?id=_21_6692"
+                href="/article/chapter4?id=_21_5568"
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6281,7 +6285,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_21_6692">
+            <SolutionNote id="_21_5568">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -8651,31 +8655,28 @@ const Rest = () => {
               Exercise 12 have unit speed.)
             </VerticalChunk>
             <Pause />
-            <VerticalChunk>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              In this and in the previous exercise the
-              units of time and distance are “anonymous”:
-              distance could be meters, kilometers, or
-              anything, and time could be seconds, hours,
-              etc—it doesn't matter. However, one should
-              be aware that what amounts to
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              unit speed
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              under one set of units is no longer “unit
-              speed” under a different set of units—this
-              is not a “physical” property of the
-              particles, but, rather, a “mathematical”
-              property that holds only for one specific
-              “tweaking” of the units.
-            </VerticalChunk>
+            <SolutionNote>
+              <VerticalChunk>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                In this and in the previous exercise the
+                units of time and distance are “anonymous”:
+                distance could be meters, kilometers, or
+                anything, and time could be seconds, hours,
+                etc—it doesn't matter. Either way,
+              </VerticalChunk>
+              <Pause />
+              <CentralDisplayItalic>
+                unit speed
+              </CentralDisplayItalic>
+              <Pause />
+              <VerticalChunk>
+                means that one unit of distance is traveled
+                per unit of time, whatever the units are.
+              </VerticalChunk>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise exercise_number={31}>
@@ -8791,7 +8792,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={31}
-            id="_22_5742">
+            id="_22_2009">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9799,8 +9800,8 @@ const Rest = () => {
               that:
             </VerticalChunk>
             <TextParent>
-              <ul style="margin:20px 20px 0px 50px">
-                <li>
+              <ul style="margin:20px 20px 20px 50px;list-style-type:disc;">
+                <li style="margin-bottom:10px;">
                   the red arrows indicate which particle
                   takes its velocity from the position
                   of which other particle; for example,
@@ -9875,19 +9876,15 @@ const Rest = () => {
               in this figure:
             </VerticalChunk>
             <TextParent>
-              <ul style="margin:1em 1em 0em 2.5em">
-                <li>
-                  in
-                  <span style="border:1px solid blue">
-                    blue
-                  </span>
+              <ul style="margin:20px 20px 20px 50px;list-style-type:disc;">
+                <li style="margin-bottom:10px;">
+                  in{" "}
+                  <span
+                    blue=""
+                    style="border:1px solid blue" />
                   , particle 1, the last particle
-                  to be (noticeably
-                  <b>
-                    ) “peeled off” from
-                    the circle (
-                  </b>
-                  all particles are
+                  to be (noticeably*) “peeled off” from
+                  the circle (*all particles are
                   instantaneously peeled off from the
                   circle to{" "}
                   <i>
@@ -9898,10 +9895,10 @@ const Rest = () => {
                   the next, that affects the next, etc)
                 </li>
                 <li>
-                  in
-                  <span style="border:1px solid red">
-                    red
-                  </span>
+                  in{" "}
+                  <span
+                    red=""
+                    style="border:1px solid red" />
                   , particle 14, the{" "}
                   <i>
                     first
@@ -9969,7 +9966,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={33}
-            id="_23_9355">
+            id="_23_9975">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10572,7 +10569,7 @@ const Rest = () => {
               {" "}(cf.
               Exercise 16{" "}
               <InChapterLink
-                href="/article/chapter4?id=_19_1979"
+                href="/article/chapter4?id=_19_4428"
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -11266,7 +11263,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={37}
-            id="_24_4222">
+            id="_24_3225">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>
@@ -11693,6 +11690,8 @@ const Rest = () => {
               <Math>
                 $A_1, \dots, A_n$
               </Math>
+              {" "}
+              {" "}
               <Math>
                 $: \rr \ra \rr$
               </Math>
@@ -13147,6 +13146,8 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <Math>
                 $9$
               </Math>

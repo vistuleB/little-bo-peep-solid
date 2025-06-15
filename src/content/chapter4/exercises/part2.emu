@@ -569,6 +569,7 @@
 
                 |> li
                     style=margin-bottom:10px;
+
                     in 
                     |> span
                         style=border:1px solid blue
@@ -582,6 +583,7 @@
                     the next, that affects the next, etc)
 
                 |> li
+                
                     in 
                     |> span
                         style=border:1px solid red
