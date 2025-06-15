@@ -317,7 +317,12 @@ fn rename_files(from_ext: String, to_ext: String, dir: String) -> Nil {
     let child = dir <> "/" <> child
     case simplifile.is_file(child) {
       Ok(True) -> {
-        let _ = simplifile.rename(child, child |> string.replace(from_ext, to_ext))
+        let _ = shellout.command(
+          run: "git",
+          in: ".",
+          with: ["mv", child, child |> string.replace(from_ext, to_ext)],
+          opt: [],
+        )
         io.println("Renamed " <> child <> " to " <> child |> string.replace(from_ext, to_ext))
       }
       Ok(False) -> rename_files(from_ext, to_ext, child)
@@ -326,9 +331,35 @@ fn rename_files(from_ext: String, to_ext: String, dir: String) -> Nil {
   })
 }
 
+fn delete_files(ext: String,  dir: String) -> Nil {
+  use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
+    io.println("error reading directory" <> ins(error))
+    Nil
+  })
+
+  dir_children
+  |> list.each(fn(child) {
+    let child = dir <> "/" <> child
+
+    case simplifile.is_file(child), string.ends_with(child, ext) {
+      Ok(True), True -> {
+        let _ = shellout.command(
+          run: "git",
+          in: ".",
+          with: ["rm", "-f", "--cached", child],
+          opt: [],
+        )
+        io.println("Deleted " <> child)
+      }
+      Ok(False), _ -> delete_files(ext, child)
+      _, _ -> Nil
+    }
+  })
+}
+
 pub fn main() {
   use amendments <- infra.on_error_on_ok(
-    vr.process_command_line_arguments(argv.load().arguments, ["--prettier", "--emu-to-wly", "--wly-to-emu"]),
+    vr.process_command_line_arguments(argv.load().arguments, ["--prettier", "--emu-to-wly", "--wly-to-emu", "--delete-wly", "--delete-emu"]),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
@@ -351,6 +382,24 @@ pub fn main() {
     dict.get(amendments.user_args, "--wly-to-emu"),
     with_on_ok: fn(_) {
       rename_files(".wly", ".emu", input_dir)
+      let _ = stop()
+      Nil
+    },
+  )
+
+    use _ <- infra.on_error_on_ok(
+    dict.get(amendments.user_args, "--delete-wly"),
+    with_on_ok: fn(_) {
+      delete_files(".wly", input_dir)
+      let _ = stop()
+      Nil
+    },
+  )
+
+  use _ <- infra.on_error_on_ok(
+    dict.get(amendments.user_args, "--delete-emu"),
+    with_on_ok: fn(_) {
+      delete_files(".emu", input_dir)
       let _ = stop()
       Nil
     },
