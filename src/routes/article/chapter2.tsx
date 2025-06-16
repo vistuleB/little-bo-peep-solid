@@ -277,6 +277,7 @@ const Rest = () => {
           are the horizontal{" "}
           <i>
             &amp;
+            &amp;
           </i>
           {" "}the vertical change,
           respectively, from{" "}
@@ -295,6 +296,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
+          \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
           \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
           $$
           <ImageRight
@@ -577,6 +579,7 @@ const Rest = () => {
                 <MathBlock>
                   $$
                   \frac&#123;+&#125;&#123;-&#125; = \,-
+                  \frac&#123;+&#125;&#123;-&#125; = \,-
                   $$
                 </MathBlock>
               </td>
@@ -728,6 +731,7 @@ const Rest = () => {
             ”),
           </span>
           &amp;ensp;following such a picture:
+          &amp;ensp;following such a picture:
         </VerticalChunk>
         <Pause />
         <Image src="/images/44.svg" />
@@ -739,6 +743,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
+          \left(&#123;\te&#123;coordinate&#125; \atop \te&#123;at arrival&#125;&#125;\right)\,\, - \,\,\left(&#123;\te&#123;coordinate&#125; \atop \te&#123;at start&#125;&#125;\right)
           \left(&#123;\te&#123;coordinate&#125; \atop \te&#123;at arrival&#125;&#125;\right)\,\, - \,\,\left(&#123;\te&#123;coordinate&#125; \atop \te&#123;at start&#125;&#125;\right)
           $$
         </MathBlock>
@@ -787,6 +792,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
+          \te&#123;slope&#125; = \frac&#123;\Delta y&#125;&#123;\Delta x&#125;
           \te&#123;slope&#125; = \frac&#123;\Delta y&#125;&#123;\Delta x&#125;
           $$
         </MathBlock>
@@ -852,6 +858,7 @@ const Rest = () => {
         <MathBlock>
           $$
           \te&#123;slope&#125; = &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;
+          \te&#123;slope&#125; = &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;
           $$
         </MathBlock>
         <Pause />
@@ -861,6 +868,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
+          \te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;
           \te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;
           $$
         </MathBlock>
@@ -872,6 +880,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
+          \te&#123;run&#125; = &#123;\te&#123;rise&#125; \over \te&#123;slope&#125;&#125;
           \te&#123;run&#125; = &#123;\te&#123;rise&#125; \over \te&#123;slope&#125;&#125;
           $$
         </MathBlock>
@@ -1323,6 +1332,7 @@ const Rest = () => {
         <MathBlock>
           $$
           \te&#123;slope&#125; \left(\!= &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;\right) = &#123;3\te&#123;m&#125; \over 4\te&#123;s&#125;&#125; = 0.75\te&#123;m&#125;/\te&#123;s&#125;
+          \te&#123;slope&#125; \left(\!= &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;\right) = &#123;3\te&#123;m&#125; \over 4\te&#123;s&#125;&#125; = 0.75\te&#123;m&#125;/\te&#123;s&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1453,8 +1463,11 @@ const Rest = () => {
             $$
             \begin&#123;array&#125;&#123;c&#125;
             \rt&#123;0.08&#125;
+            \begin&#123;array&#125;&#123;c&#125;
+            \rt&#123;0.08&#125;
             (\te&#123;rate of change&#125;) \times \te&#123;(amount of time)&#125;\\
             = \te&#123;(amount of change)&#125;\rt&#123;0.05&#125;
+            \end&#123;array&#125;
             \end&#123;array&#125;
             $$
           </MathBlock>
@@ -1499,6 +1512,7 @@ const Rest = () => {
           <MathBlock>
             $$
             \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
+            \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
             $$
             <ImageRight
               style="width:930px"
@@ -1513,6 +1527,9 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
+            \te&#123;“&#125;\rt&#123;0.1&#125;
+            \te&#123;amount of time&#125; \,\,=\,\, \frac&#123;\!\rt&#123;0.15&#125;\te&#123;amount of change&#125;\!\rt&#123;0.1&#125;&#125;&#123;\te&#123;rate of change&#125;&#125;
+            \rt&#123;0.1&#125;\te&#123;”&#125;
             \te&#123;“&#125;\rt&#123;0.1&#125;
             \te&#123;amount of time&#125; \,\,=\,\, \frac&#123;\!\rt&#123;0.15&#125;\te&#123;amount of change&#125;\!\rt&#123;0.1&#125;&#125;&#123;\te&#123;rate of change&#125;&#125;
             \rt&#123;0.1&#125;\te&#123;”&#125;
@@ -1719,7 +1736,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement id="_6_6238">
+          <ExerciseStatement id="_6_8264">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -1881,6 +1898,7 @@ const Rest = () => {
             <MathBlock>
               $$
               \te&#123;“&#125;\te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;\te&#123;”&#125;
+              \te&#123;“&#125;\te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;\te&#123;”&#125;
               $$
               <ImageRight
                 offset_y="-0.5rem"
@@ -1988,6 +2006,7 @@ const Rest = () => {
                 an object
               </del>
               &amp;ensp;a mosquito whose height over time is
+              &amp;ensp;a mosquito whose height over time is
               given by this graph (use the same time interval
               as the graph):
             </VerticalChunk>
@@ -2055,7 +2074,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_15_5009"
+                href="/article/chapter3?id=_15_6597"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2164,7 +2183,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_6238"
+                href="/article/chapter2?id=_6_8264"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

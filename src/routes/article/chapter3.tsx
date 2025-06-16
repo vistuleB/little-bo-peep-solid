@@ -27,7 +27,7 @@ const Article = () => {
       <Chapter
         number={3}
         title="Functions"
-        id="_15_5009">
+        id="_15_6597">
         <SectionsBreadcrumbs>
           <BreadcrumbItem
             class="breadcrumb"
@@ -427,6 +427,7 @@ const Rest = () => {
         <MathBlock>
           $$
           \lambda&#123;&#125;x.x^2
+          \lambda&#123;&#125;x.x^2
           $$
         </MathBlock>
         <Pause />
@@ -449,6 +450,7 @@ const Rest = () => {
         <MathBlock>
           $$
           \lambda&#123;&#125;z.z^2
+          \lambda&#123;&#125;z.z^2
           $$
         </MathBlock>
         <Pause />
@@ -464,6 +466,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
+          \Huge \lambda
           \Huge \lambda
           $$
         </MathBlock>
@@ -581,6 +584,11 @@ const Rest = () => {
           \vdots &amp; \vdots\\
           \ldots &amp; \te&#123;$\ldots$&#125;
           \end&#123;cases&#125;
+          \ldots &amp; \te&#123;if $\ldots$&#125;\\
+          \ldots &amp; \te&#123;if $\ldots$&#125;\\
+          \vdots &amp; \vdots\\
+          \ldots &amp; \te&#123;$\ldots$&#125;
+          \end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
@@ -600,6 +608,11 @@ const Rest = () => {
         <MathBlock>
           $$
           g(x) = \begin&#123;cases&#125;
+          \ldots &amp; \te&#123;if $\ldots$&#125;\\
+          \ldots &amp; \te&#123;if $\ldots$&#125;\\
+          \vdots &amp; \vdots\\
+          \ldots &amp; \te&#123;$\ldots$&#125;
+          \end&#123;cases&#125;
           \ldots &amp; \te&#123;if $\ldots$&#125;\\
           \ldots &amp; \te&#123;if $\ldots$&#125;\\
           \vdots &amp; \vdots\\
@@ -637,6 +650,11 @@ const Rest = () => {
             2.5\up&#123;1.1&#125; &amp; \te&#123;if $x = 1$&#125;,\\
             \te&#123;undefined&#125;\up&#123;1.1&#125; &amp; \te&#123;if $x \ne 0, 1$&#125;
             \end&#123;cases&#125;
+            \te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125;
+            3.5 &amp; \te&#123;if $x = 0$&#125;,\\
+            2.5\up&#123;1.1&#125; &amp; \te&#123;if $x = 1$&#125;,\\
+            \te&#123;undefined&#125;\up&#123;1.1&#125; &amp; \te&#123;if $x \ne 0, 1$&#125;
+            \end&#123;cases&#125;
             $$
           </MathBlock>
           <Pause />
@@ -647,6 +665,7 @@ const Rest = () => {
           <MathBlock>
             $$
             \te&#123;VX-11/78A&#125;(0) = 3.5,
+            \te&#123;VX-11/78A&#125;(0) = 3.5,
             $$
           </MathBlock>
           <Pause />
@@ -656,6 +675,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
+            \te&#123;VX-11/78A&#125;(1) = 2.5,
             \te&#123;VX-11/78A&#125;(1) = 2.5,
             $$
           </MathBlock>
@@ -920,6 +940,7 @@ const Rest = () => {
         <MathBlock>
           $$
           \dom\, f
+          \dom\, f
           $$
         </MathBlock>
         <Pause />
@@ -947,6 +968,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
+            \dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;
             \dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;
             $$
           </MathBlock>
@@ -994,6 +1016,11 @@ const Rest = () => {
             0             &amp; \te&#123;if $x \leq 0$ or $x \geq 1$&#125;,\\
             1 - x\up&#123;1.1&#125; &amp; \te&#123;if $0 &lt; x &lt; 1$&#125;
             \end&#123;cases&#125;
+            \te&#123;DM-1700&#125;(x) =
+            \begin&#123;cases&#125;
+            0             &amp; \te&#123;if $x \leq 0$ or $x \geq 1$&#125;,\\
+            1 - x\up&#123;1.1&#125; &amp; \te&#123;if $0 &lt; x &lt; 1$&#125;
+            \end&#123;cases&#125;
             $$
           </MathBlock>
           <Pause />
@@ -1003,6 +1030,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
+            \dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr
             \dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr
             $$
           </MathBlock>
@@ -1050,6 +1078,9 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
+            \begin&#123;align&#125;
+            \dom\, g &amp;\,=\, [1, \infty)
+            \end&#123;align&#125;
             \begin&#123;align&#125;
             \dom\, g &amp;\,=\, [1, \infty)
             \end&#123;align&#125;
@@ -1124,6 +1155,7 @@ const Rest = () => {
         <MathBlock>
           $$
           \dom f \subseteq \rr
+          \dom f \subseteq \rr
           $$
         </MathBlock>
         <Pause />
@@ -1142,6 +1174,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
+          \&#123;f(x) : x \in \dom f\&#125; \subseteq \rr
           \&#123;f(x) : x \in \dom f\&#125; \subseteq \rr
           $$
         </MathBlock>
@@ -1175,6 +1208,7 @@ const Rest = () => {
         <MathBlock>
           $$
           \dom f \subseteq A
+          \dom f \subseteq A
           $$
         </MathBlock>
         <Pause />
@@ -1196,6 +1230,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
+          \&#123;f(x) : x \in \dom f\&#125; \subseteq B
           \&#123;f(x) : x \in \dom f\&#125; \subseteq B
           $$
         </MathBlock>
@@ -1396,6 +1431,7 @@ const Rest = () => {
         <MathBlock>
           $$
           \Large x \ra 0^x
+          \Large x \ra 0^x
           $$
         </MathBlock>
         <Pause />
@@ -1406,6 +1442,9 @@ const Rest = () => {
         <MathBlock>
           $$
           0^x =
+          \begin&#123;cases&#125; 0 &amp; \te&#123;if &#125; x &gt; 0\\
+          1 &amp; \te&#123;if &#125; x = 0\\
+          \te&#123;undefined&#125; &amp; \te&#123;if &#125;x &amp;lt; 0 \end&#123;cases&#125;
           \begin&#123;cases&#125; 0 &amp; \te&#123;if &#125; x &gt; 0\\
           1 &amp; \te&#123;if &#125; x = 0\\
           \te&#123;undefined&#125; &amp; \te&#123;if &#125;x &amp;lt; 0 \end&#123;cases&#125;
@@ -1861,6 +1900,16 @@ const Rest = () => {
           \te&#123;4&#125; &amp; \te&#123;quartic&#125; &amp; 1 - x^4\\
           \te&#123;5&#125; &amp; \te&#123;quintic&#125; &amp; x^5
           \end&#123;array&#125;
+          \begin&#123;array&#125;&#123;c|c|c&#125;
+          \,\,\,\,\te&#123;degree&#125;\,\,\,\, &amp; \te&#123;name&#125; &amp; \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
+          -\infty &amp; \te&#123;zero&#125; &amp; 0\Rule&#123;0pt&#125;&#123;1.1em&#125;&#123;0.0em&#125;\\
+          \te&#123;0&#125; &amp; \te&#123;constant&#125; &amp; 1 + \sqrt&#123;5&#125;\\
+          \te&#123;1&#125; &amp; \te&#123;affine&#125; &amp; 10x - 1\\
+          \te&#123;2&#125; &amp; \,\,\,\,\te&#123;quadratic&#125;\,\,\,\, &amp; x^2 - 1\\
+          \te&#123;3&#125; &amp; \te&#123;cubic&#125; &amp; x^3 - 1\\
+          \te&#123;4&#125; &amp; \te&#123;quartic&#125; &amp; 1 - x^4\\
+          \te&#123;5&#125; &amp; \te&#123;quintic&#125; &amp; x^5
+          \end&#123;array&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2070,6 +2119,7 @@ const Rest = () => {
             <MathBlock>
               $$
               x \ra \begin&#123;cases&#125; x &amp; \te&#123;if $x \geq 0$,&#125;\\ -x\!\!\up&#123;1.2&#125; &amp; \te&#123;if $x &lt; 0$&#125;\end&#123;cases&#125;
+              x \ra \begin&#123;cases&#125; x &amp; \te&#123;if $x \geq 0$,&#125;\\ -x\!\!\up&#123;1.2&#125; &amp; \te&#123;if $x &lt; 0$&#125;\end&#123;cases&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2225,7 +2275,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <ExerciseStatement id="_7_1986">
+          <ExerciseStatement id="_7_3499">
             <VerticalChunk>
               <b>
                 Exercise 4.
@@ -2247,6 +2297,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
+              \lfloor x \rfloor,
               \lfloor x \rfloor,
               $$
             </MathBlock>
@@ -2446,7 +2497,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
-          <ExerciseStatement id="_8_8911">
+          <ExerciseStatement id="_8_6908">
             <VerticalChunk>
               <b>
                 Exercise 5.
@@ -2480,7 +2531,7 @@ const Rest = () => {
               </NoBreak>
               {" "}apply the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_1986"
+                href="/article/chapter3?id=_7_3499"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2533,7 +2584,7 @@ const Rest = () => {
               {" "}
               the formula for the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_1986"
+                href="/article/chapter3?id=_7_3499"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2752,6 +2803,7 @@ const Rest = () => {
             <MathBlock>
               $$
               \,&#123;(f \circ g)(x) = f(g(x))&#125;.
+              \,&#123;(f \circ g)(x) = f(g(x))&#125;.
               $$
             </MathBlock>
             <Pause />
@@ -2935,7 +2987,7 @@ const Rest = () => {
               because all we have to do is to multiply
               {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_8911"
+                href="/article/chapter3?id=_8_6908"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -2960,7 +3012,7 @@ const Rest = () => {
             <VerticalChunk>
               because the problem is similar to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_8911"
+                href="/article/chapter3?id=_8_6908"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -3101,6 +3153,7 @@ const Rest = () => {
             <MathBlock>
               $$
               \cos \dblcol \rr \ra \rr
+              \cos \dblcol \rr \ra \rr
               $$
             </MathBlock>
             <Pause />
@@ -3132,6 +3185,7 @@ const Rest = () => {
               ...have a graph that looks like a bunch of very tight
               bumps, or, instead, very flat{" "}
               <i>
+                &amp;
                 &amp;
               </i>
               {" "}spaced-out bumps??
@@ -3223,7 +3277,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <ExerciseStatement id="_9_7499">
+          <ExerciseStatement id="_9_7253">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -3234,6 +3288,7 @@ const Rest = () => {
             <div style="font-size:1.1em;margin:1em 0em;">
               <MathBlock>
                 $$
+                \tag&#123;A&#125;(f \circ (g \circ h))(x)
                 \tag&#123;A&#125;(f \circ (g \circ h))(x)
                 $$
               </MathBlock>
@@ -3254,6 +3309,7 @@ const Rest = () => {
             <div style="font-size:1.1em;margin:1em 0em;">
               <MathBlock>
                 $$
+                \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
                 \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
                 $$
               </MathBlock>
@@ -3406,7 +3462,7 @@ const Rest = () => {
               {" "}
               Same question as{" "}
               <InChapterLink
-                href="/article/chapter3?id=_9_7499"
+                href="/article/chapter3?id=_9_7253"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -3744,6 +3800,7 @@ const Rest = () => {
                 {" "}
                 One of the best ways to explain{" "}
                 <i>
+                  &amp;
                   &amp;
                 </i>
                 {" "}understand
@@ -4135,7 +4192,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <ExerciseStatement id="_10_2064">
+          <ExerciseStatement id="_10_2820">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4201,6 +4258,11 @@ const Rest = () => {
               &amp;= x^2 + (2\cdot 5)x + 5^2 \\
               &amp;= \up&#123;1.4&#125; x^2 + 10x + 25
               \end&#123;align&#125;
+              \begin&#123;align&#125;
+              \,\,\,\,(x + 5)^2
+              &amp;= x^2 + (2\cdot 5)x + 5^2 \\
+              &amp;= \up&#123;1.4&#125; x^2 + 10x + 25
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4228,13 +4290,14 @@ const Rest = () => {
               {" "}
               Solve{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_2064"
+                href="/article/chapter3?id=_10_2820"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
               {" "}using
               algebra{" "}
               <i>
+                &amp;
                 &amp;
               </i>
               {" "}variables.
@@ -4471,7 +4534,7 @@ const Rest = () => {
               </NoBreak>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_2064"
+                href="/article/chapter3?id=_10_2820"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4498,7 +4561,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_2064"
+                href="/article/chapter3?id=_10_2820"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4589,6 +4652,7 @@ const Rest = () => {
             <MathBlock>
               $$
               \,x + 5 = \pm\sqrt&#123;55&#125;
+              \,x + 5 = \pm\sqrt&#123;55&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4599,6 +4663,7 @@ const Rest = () => {
             <MathBlock>
               $$
               \,x = -5 \pm\sqrt&#123;55&#125;
+              \,x = -5 \pm\sqrt&#123;55&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4608,7 +4673,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement id="_11_3611">
+          <ExerciseStatement id="_11_2067">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -5110,7 +5175,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
-          <ExerciseStatement id="_12_6080">
+          <ExerciseStatement id="_12_5373">
             <VerticalChunk>
               <b>
                 Exercise 15.
@@ -5514,7 +5579,7 @@ const Rest = () => {
               {" "}by the following
               sequence of transformations (cf.{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_3611"
+                href="/article/chapter3?id=_11_2067"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -5546,7 +5611,7 @@ const Rest = () => {
               (We put the vertical translation first.)
               By{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_6080"
+                href="/article/chapter3?id=_12_5373"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -5560,6 +5625,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
+              \tag&#123;A&#125;
               \tag&#123;A&#125;
               x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;
               $$
@@ -5582,6 +5648,7 @@ const Rest = () => {
             <MathBlock>
               $$
               \pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
+              \pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
               $$
             </MathBlock>
             <Pause />
@@ -5591,6 +5658,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
+              \left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
               \left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
               $$
             </MathBlock>
@@ -5747,7 +5815,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <ExerciseStatement id="_13_1763">
+          <ExerciseStatement id="_13_943">
             <VerticalChunk>
               <b>
                 Exercise 18.
@@ -5985,7 +6053,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={19}>
-          <ExerciseStatement id="_14_7688">
+          <ExerciseStatement id="_14_6427">
             <VerticalChunk>
               <b>
                 Exercise 19.
@@ -6063,7 +6131,7 @@ const Rest = () => {
             <VerticalChunk>
               and, similarly to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_3611"
+                href="/article/chapter3?id=_11_2067"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6082,6 +6150,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
+              \Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;
               \Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;
               $$
             </MathBlock>
@@ -6126,7 +6195,7 @@ const Rest = () => {
               </NoBreak>
               {" "}of{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_3611"
+                href="/article/chapter3?id=_11_2067"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6136,7 +6205,7 @@ const Rest = () => {
             <VerticalChunk indent={true}>
               By direct analogy with{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_3611"
+                href="/article/chapter3?id=_11_2067"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6344,7 +6413,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_6080"
+                href="/article/chapter3?id=_12_5373"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -6370,6 +6439,7 @@ const Rest = () => {
               <MathBlock>
                 $$
                 \pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
+                \pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
                 $$
               </MathBlock>
               <Pause />
@@ -6379,6 +6449,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
+                \pm E = \pm F
                 \pm E = \pm F
                 $$
               </MathBlock>
@@ -6428,7 +6499,7 @@ const Rest = () => {
               <VerticalChunk>
                 as briefly flashed by, e.g., in{" "}
                 <a
-                  href="/article/chapter1?id=_5_2588"
+                  href="/article/chapter1?id=_5_8057"
                   class="handle-out-of-chapter-link">
                   Chapter 1
                 </a>
@@ -6457,6 +6528,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
+                \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
                 \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
                 $$
               </MathBlock>
@@ -6501,6 +6573,7 @@ const Rest = () => {
               {" "}
               Summon your senses of extrapolation{" "}
               <i>
+                &amp;
                 &amp;
               </i>
               {" "}

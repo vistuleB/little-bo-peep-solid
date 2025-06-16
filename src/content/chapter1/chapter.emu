@@ -20,8 +20,9 @@
     are both positive. But $\sqrt{4}$ is, by
     definition, the unique _nonnegative_
     solution to $x^2 = 4$.
-    Hence—at possible _contrario_ to murky half-baked
-    thoughts of yesteryear—
+    Hence—
+    !! at possible _contrario_ to murky half-baked
+    !! thoughts of yesteryear—
 
     $$\sqrt{(-2)^2} = 2$$
 
@@ -207,13 +208,16 @@
     allow, we would like to see how large $71/40$
     really is (one second!):
 
-    $$
-    \begin{align}
-    {71 \over 40} \,&=\, {40 + 30 + 1 \over 40} \,=\, {40 \over 40} + {30 \over 40} + {1 \over 40}\\
-    \,&=\, 1 + {3 \over 4} + {1 \over 4}\!\cdot \!{1 \over 10}\up{1.5}\\
-    \,&=\, 1 + 0.75 + 0.025 = 1.775\up{1.5}
-    \end{align}
-    $$
+    |> DebugScope
+        test=test
+
+        $$
+        \begin{align}
+        {71 \over 40} \,&=\, {40 + 30 + 1 \over 40} \,=\, {40 \over 40} + {30 \over 40} + {1 \over 40}\\
+        \,&=\, 1 + {3 \over 4} + {1 \over 4}\!\cdot \!{1 \over 10}\up{1.5}\\
+        \,&=\, 1 + 0.75 + 0.025 = 1.775\up{1.5}
+        \end{align}
+        $$
 
     ...so we find, among others, that $71$ is exactly
     $77.5\%$ greater than $40$. (Interesting, no?)
