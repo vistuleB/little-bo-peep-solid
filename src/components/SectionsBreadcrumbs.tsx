@@ -16,14 +16,15 @@ import OutlinedText from "./OutlinedText";
 import { useLocalStorage } from "solidjs-hooks";
 
 const SectionsBreadcrumbs = (props: ParentProps) => {
+  const { store } = useGlobalContext();
   const [visible, setVisible] = useLocalStorage(
     "sections-breadcrumbs-visible",
     true,
   );
+  const shouldBeVisible = () =>
+    visible() && store.innerWidth >= MOBILE_MAX_WIDTH;
   const [outSideHovered, setOutSideHovered] = createSignal(false);
   let children_list = children(() => props.children).toArray();
-
-  const { store } = useGlobalContext();
 
   const delta = 18;
   const top = HAMBURGER_MENU_HEIGHT + delta;
@@ -112,8 +113,8 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
         }}>
         <div
           style={{
-            transform: `translateY(${visible() ? "0" : "-120%"})`,
-            opacity: visible() && store.innerWidth >= MOBILE_MAX_WIDTH ? 1 : 0,
+            transform: `translateY(${shouldBeVisible() ? "0" : "-120%"})`,
+            opacity: shouldBeVisible() ? 1 : 0,
             transition: `all ${Math.min(300 + children_list.length * 50, 600)}ms ease-in-out`,
           }}>
           <ul ref={ref}>
