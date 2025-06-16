@@ -199,32 +199,12 @@ fn toc_emitter(
   let lines =
     list.flatten([
       [
-        BlamedLine(
-        blame_us("toc_emitter"),
-        0,
-        "import TOC from \"~/components/TOC\";",
-        ),
-        BlamedLine(
-          blame_us("toc_emitter"),
-          0,
-          "import TOCTitle from \"~/components/TOCTitle\";",
-        ),
-        BlamedLine(
-          blame_us("toc_emitter"),
-          0,
-          "import TOCItem from \"~/components/TOCItem\";",
-        ),
-        BlamedLine(
-          blame_us("toc_emitter"),
-          0,
-          "import { Spacer } from \"~/components/Spacer\";",
-        ),
+        BlamedLine(blame_us("toc_emitter"), 0, "import TOC from \"~/components/TOC\";"),
+        BlamedLine(blame_us("toc_emitter"), 0, "import TOCTitle from \"~/components/TOCTitle\";"),
+        BlamedLine(blame_us("toc_emitter"), 0, "import TOCItem from \"~/components/TOCItem\";"),
+        BlamedLine(blame_us("toc_emitter"), 0, "import { Spacer } from \"~/components/Spacer\";"),
         BlamedLine(blame_us("toc_emitter"), 0, ""),
-        BlamedLine(
-          blame_us("toc_emitter"),
-          0,
-          "export default function Home() {",
-        ),
+        BlamedLine(blame_us("toc_emitter"), 0, "export default function Home() {"),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
         BlamedLine(blame_us("toc_emitter"), 4, "<TOC>"),
       ],
@@ -248,22 +228,10 @@ fn panel_emitter(
   let lines =
     list.flatten([
       [
-        BlamedLine(
-          blame_us("panel_emitter"),
-          0,
-          "import HamburgerPanelTitle from \"./HamburgerPanelTitle\";",
-        ),
-        BlamedLine(
-          blame_us("panel_emitter"),
-          0,
-          "import HamburgerPanelItem from \"./HamburgerPanelItem\";",
-        ),
+        BlamedLine(blame_us("panel_emitter"), 0, "import HamburgerPanelTitle from \"./HamburgerPanelTitle\";"),
+        BlamedLine(blame_us("panel_emitter"), 0, "import HamburgerPanelItem from \"./HamburgerPanelItem\";"),
         BlamedLine(blame_us("panel_emitter"), 0, ""),
-        BlamedLine(
-          blame_us("panel_emitter"),
-          0,
-          "const HamburgerPanelAuthorSuppliedContents = () => {",
-        ),
+        BlamedLine(blame_us("panel_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
         BlamedLine(blame_us("panel_emitter"), 2, "return ("),
         BlamedLine(blame_us("panel_emitter"), 4, "<>"),
       ],
@@ -273,11 +241,7 @@ fn panel_emitter(
         BlamedLine(blame_us("panel_emitter"), 2, ");"),
         BlamedLine(blame_us("panel_emitter"), 0, "};"),
         BlamedLine(blame_us("panel_emitter"), 0, ""),
-        BlamedLine(
-          blame_us("panel_emitter"),
-          0,
-          "export default HamburgerPanelAuthorSuppliedContents;",
-        ),
+        BlamedLine(blame_us("panel_emitter"), 0, "export default HamburgerPanelAuthorSuppliedContents;"),
       ],
     ])
 
