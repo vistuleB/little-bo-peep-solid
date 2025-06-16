@@ -66,7 +66,7 @@ fn lbp_splitter(
   Ok(
     list.flatten([
       [
-        #("components/TOCAuthorSuppliedContents.tsx", toc_vxml, TOCAuthorSuppliedContents),
+        #("routes/index.tsx", toc_vxml, TOCAuthorSuppliedContents),
         #("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
       ],
       list.index_map(chapter_vxmls, fn(c, index) {
@@ -200,40 +200,40 @@ fn toc_emitter(
     list.flatten([
       [
         BlamedLine(
-          blame_us("toc_emitter"),
-          0,
-          "import TOCTitle from \"./TOCTitle\";",
+        blame_us("toc_emitter"),
+        0,
+        "import TOC from \"~/components/TOC\";",
         ),
         BlamedLine(
           blame_us("toc_emitter"),
           0,
-          "import TOCItem from \"./TOCItem\";",
+          "import TOCTitle from \"~/components/TOCTitle\";",
         ),
         BlamedLine(
           blame_us("toc_emitter"),
           0,
-          "import { Spacer } from \"./Spacer\";",
+          "import TOCItem from \"~/components/TOCItem\";",
+        ),
+        BlamedLine(
+          blame_us("toc_emitter"),
+          0,
+          "import { Spacer } from \"~/components/Spacer\";",
         ),
         BlamedLine(blame_us("toc_emitter"), 0, ""),
         BlamedLine(
           blame_us("toc_emitter"),
           0,
-          "const TOCAuthorSuppliedContents = () => {",
+          "export default function Home() {",
         ),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
-        BlamedLine(blame_us("toc_emitter"), 4, "<>"),
+        BlamedLine(blame_us("toc_emitter"), 4, "<TOC>"),
       ],
       vxml.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
       [
-        BlamedLine(blame_us("toc_emitter"), 4, "</>"),
+        BlamedLine(blame_us("toc_emitter"), 4, "</TOC>"),
         BlamedLine(blame_us("toc_emitter"), 2, ");"),
         BlamedLine(blame_us("toc_emitter"), 0, "};"),
         BlamedLine(blame_us("toc_emitter"), 0, ""),
-        BlamedLine(
-          blame_us("toc_emitter"),
-          0,
-          "export default TOCAuthorSuppliedContents;",
-        ),
       ],
     ])
 
