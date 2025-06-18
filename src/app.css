@@ -27,6 +27,7 @@
   --foreground-rgb: rgb(0, 0, 0);
   --desktop-text-column-padding: 16px;
   --mobile-max-width: 900px;
+  --toc-label-stroke-color: oklch(97% 0.001 106.424); /* bg-stone-100 */
 }
 
 .bg-bg {
@@ -493,7 +494,7 @@ ol.l1 > li:before {
 .toc-item-title-outline {
     position:absolute;
     right:0;
-    -webkit-text-stroke:1.1rem white;
+    -webkit-text-stroke:1.1rem var(--toc-label-stroke-color);
     max-width:calc(100% - 40px);
     z-index:-1;
 }

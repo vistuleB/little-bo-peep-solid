@@ -24,8 +24,10 @@ const TOCItem = (props: {
             <span class="toc-item-lead-dots">..........................................................................................................................................................................</span>
           </div>
         </div>
-        <div class="toc-item-title-outline">{props.label}</div>
-        <div class="toc-item-title">{props.label}</div>
+        <div class="toc-item-title-outline" style="--toc-label-stroke-color: white" aria-hidden="true">{props.label}</div>
+        <div class="toc-item-title">
+        <a href={`/article/${props.href}`}><span>{props.label}</span></a>
+        </div>
     </div>
   );
 };

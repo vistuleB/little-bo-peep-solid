@@ -1,4 +1,5 @@
 import { JSX } from "solid-js";
+import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { A, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 
@@ -10,24 +11,49 @@ const HamburgerPanelItem = (props: {
 }) => {
   const { store } = useGlobalContext();
 
+  const our_width = () =>
+    store.innerWidth > MOBILE_MAX_WIDTH
+      ? DESKTOP_COLUMN_WIDTH
+      : store.innerWidth;
   return (
-    <ConditionalLink
-      href={`/article/${props.href}`}
-      class="panel-item flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
-      onSameRoute={(e) => {
-        e.preventDefault();
-        window.scroll({
-          left: (store.scrollWidth - store.innerWidth) / 2,
-          behavior: "instant",
-        });
-      }}
-    >
-      <div class="relative w-full inline-flex items-baseline">
-        <span class="">{props.article_type}</span>
-        <span class="dots sm:min-w-[0rem] md:min-w-[2rem] lg:min-w-[4.4rem]"></span>
-        <span class="whitespace-normal text-right">{props.label}</span>
+    <div class="panel-item flex items-baseline justify-between leading-9 sm:leading-8 text-2xl">
+      <div
+        class="relative m-auto"
+        style={`width:${our_width() - 32}px;direction:rtl;`}
+      >
+        <div class="toc-item-lead-wrapper">
+          <div>
+            {" "}
+            {/* somehow this wrapper div is useful for base-alignment */}
+            <span>{props.article_type}</span>
+            <span class="toc-item-lead-dots">
+              ..........................................................................................................................................................................
+            </span>
+          </div>
+        </div>
+        <div
+          class="toc-item-title-outline"
+          style="--toc-label-stroke-color: oklch(97% 0.001 106.424)"
+          aria-hidden="true"
+        >
+          {props.label}
+        </div>
+        <div class="toc-item-title">
+          <ConditionalLink
+            href={`/article/${props.href}`}
+            onSameRoute={(e) => {
+              e.preventDefault();
+              window.scroll({
+                left: (store.scrollWidth - store.innerWidth) / 2,
+                behavior: "instant",
+              });
+            }}
+          >
+            <span>{props.label}</span>
+          </ConditionalLink>
+        </div>
       </div>
-    </ConditionalLink>
+    </div>
   );
 };
 
