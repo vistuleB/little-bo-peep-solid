@@ -307,12 +307,12 @@ fn delete_files(ext: String,  dir: String) -> Nil {
 
     case simplifile.is_file(child), string.ends_with(child, ext) {
       Ok(True), True -> {
-        // let _ = shellout.command(
-        //   run: "git",
-        //   in: ".",
-        //   with: ["rm", "-f", child],
-        //   opt: [],
-        // )
+        let _ = shellout.command(
+          run: "git",
+          in: ".",
+          with: ["rm", "-f", "--cached", child],
+          opt: [],
+        )
         let _ = shellout.command(
           run: "rm",
           in: ".",
