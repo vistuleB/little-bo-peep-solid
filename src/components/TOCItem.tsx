@@ -24,12 +24,8 @@ const TOCItem = (props: {
             <span class="toc-item-lead-dots">..........................................................................................................................................................................</span>
           </div>
         </div>
-        <div class="toc-item-title-outline">
-          <p>{props.label}</p>
-        </div>
-        <div class="toc-item-title">
-          <p>{props.label}</p>
-        </div>
+        <div class="toc-item-title-outline">{props.label}</div>
+        <div class="toc-item-title">{props.label}</div>
     </div>
   );
 };
