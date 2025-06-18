@@ -15,16 +15,22 @@ const TOCItem = (props: {
       : store.innerWidth;
 
   return (
-    <a
-      href={`/article/${props.href}`}
-      class="text-column flex items-baseline justify-between !leading-[2.4rem] text-3xl"
-      style={`width:${our_width()}px;`}>
-      <div class="w-full inline-flex items-baseline">
-        <span class="">{props.article_type}</span>
-        <span class="dots min-w-[5rem] lg:min-w-[12rem]"></span>
-        <span class="text-right">{props.label}</span>
-      </div>
-    </a>
+    <div
+      class="relative m-auto leading-[2.4rem] text-3xl"
+      style={`width:${our_width() - 32}px;direction:rtl;`}>
+        <div class="toc-item-lead-wrapper">
+          <div> {/* somehow this wrapper div is useful for base-alignment */}
+            <span>{props.article_type}</span>
+            <span class="toc-item-lead-dots">..........................................................................................................................................................................</span>
+          </div>
+        </div>
+        <div class="toc-item-title-outline">
+          <p>{props.label}</p>
+        </div>
+        <div class="toc-item-title">
+          <p>{props.label}</p>
+        </div>
+    </div>
   );
 };
 

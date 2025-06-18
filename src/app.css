@@ -474,3 +474,31 @@ ol.l1 > li:before {
   margin: -5px;
   border-radius: 10px;
 }
+
+.toc-item-lead-wrapper {
+  position: absolute;
+  direction: ltr;
+  display: flex;
+  width:100%;
+  overflow:hidden;
+  z-index:-2;
+}
+
+.toc-item-lead-dots {
+  margin-left:6px;
+  font-size:0.7em;
+  letter-spacing: 2px;
+}
+
+.toc-item-title-outline {
+    position:absolute;
+    right:0;
+    -webkit-text-stroke:1.1rem white;
+    max-width:calc(100% - 40px);
+    z-index:-1;
+}
+
+.toc-item-title {
+  max-width: calc(100% - 40px);
+  align-items: right;
+}
