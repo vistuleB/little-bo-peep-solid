@@ -1,4 +1,8 @@
-import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
+import {
+  MOBILE_MAX_WIDTH,
+  DESKTOP_COLUMN_WIDTH,
+  DEFAULT_PAGE_MARGIN,
+} from "~/constants";
 import {
   ParentProps,
   createEffect,
@@ -193,7 +197,8 @@ const Container = (props: ParentProps) => {
     <div
       id="Container"
       class="pb-14 -z-10 relative overflow-hidden"
-      style={`width:${3000 + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}>
+      style={`width:${2 * DEFAULT_PAGE_MARGIN + (store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth)}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}
+    >
       <EarlyImages />
       <Nav />
       <div
@@ -202,7 +207,8 @@ const Container = (props: ParentProps) => {
             left: (store.scrollWidth - store.innerWidth) / 2,
             behavior: "smooth",
           });
-        }}>
+        }}
+      >
         {props.children}
       </div>
       <SVGDefs />
