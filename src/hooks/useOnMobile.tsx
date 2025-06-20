@@ -1,10 +1,5 @@
 import type { Accessor } from "solid-js";
-import {
-  createSignal,
-  createRenderEffect,
-  onCleanup,
-  createEffect,
-} from "solid-js";
+import { createSignal, onCleanup, createEffect } from "solid-js";
 import { MOBILE_MAX_WIDTH } from "../constants";
 
 function useOnMobile() : { on_mobile: Accessor<boolean> } {

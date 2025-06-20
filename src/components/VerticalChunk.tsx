@@ -1,8 +1,8 @@
-import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "../store/StoreProvider";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const VerticalChunk = (
   props: ParentProps & SharedProps & { indent?: boolean },
@@ -17,7 +17,7 @@ const VerticalChunk = (
         props.class,
         store.show_areas && "divide-horizontally",
       )}
-      style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;${props.style}`}>
+      style={`width:${mainColumnWidth()}px;${props.style}`}>
       {props.children}
     </p>
   );

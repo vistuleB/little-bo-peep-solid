@@ -1,13 +1,11 @@
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import {
-  MOBILE_MAX_WIDTH,
-  DESKTOP_COLUMN_WIDTH,
   CHAPTER_TITLE_BOTTOM_MARGIN_DESKTOP,
   CHAPTER_TITLE_BOTTOM_MARGIN_MOBILE,
   CHAPTER_TITLE_TOP_MARGIN_DESKTOP,
   CHAPTER_TITLE_TOP_MARGIN_MOBILE,
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
-import { useGlobalContext } from "~/store/StoreProvider";
 
 const ArticleTitle = (props: {
   label: string;
@@ -15,12 +13,9 @@ const ArticleTitle = (props: {
   class?: string;
 }) => {
   const { on_mobile } = useOnMobile();
-  const { store } = useGlobalContext();
 
   return (
-    <div
-      class="slice"
-      style={`width:${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px;`}>
+    <div class="slice" style={`width:${mainColumnWidth()}px;`}>
       <h1
         class="text-2rem sm:text-4xl pt-5 sm:pt-4 pb-4"
         style={`margin-top: ${
@@ -31,7 +26,8 @@ const ArticleTitle = (props: {
           on_mobile()
             ? CHAPTER_TITLE_BOTTOM_MARGIN_MOBILE
             : CHAPTER_TITLE_BOTTOM_MARGIN_DESKTOP
-        }px`}>
+        }px`}
+      >
         <span class="sm:hidden">
           {on_mobile() ? props.on_mobile_label : props.label}
         </span>

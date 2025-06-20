@@ -1,4 +1,4 @@
-import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
+import { MOBILE_MAX_WIDTH } from "~/constants";
 import {
   mergeProps,
   ParentProps,
@@ -12,6 +12,7 @@ import SharedProps from "./types/SharedProps";
 import { TEXT_X_PADDING } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 type GridProps = ParentProps &
   SharedProps & {
@@ -40,7 +41,7 @@ const Grid = (_props: GridProps) => {
       gap: "1rem",
       with_padding: true,
     },
-    _props,
+    _props
   );
 
   const { store } = useGlobalContext();
@@ -85,8 +86,9 @@ const Grid = (_props: GridProps) => {
         "margin-top": `${props.margin_top}px`,
         "margin-bottom": `${props.margin_bottom}px`,
         "padding-inline": props.with_padding ? `${TEXT_X_PADDING}px` : "0",
-        width: `${store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : store.innerWidth}px`,
-      }}>
+        width: `${mainColumnWidth()}px`,
+      }}
+    >
       <div
         ref={parentSpan}
         class={`slice !grid list-none`}
@@ -95,7 +97,8 @@ const Grid = (_props: GridProps) => {
           "place-items": props.place_items,
           gap: props.gap,
           "grid-template-columns": `repeat(${cols()}, 1fr)`,
-        }}>
+        }}
+      >
         <For each={children_array}>
           {(child, index) => {
             return (
@@ -104,8 +107,9 @@ const Grid = (_props: GridProps) => {
                   "w-max",
                   children_array.length - index() < cols() &&
                     children_array.length % cols() !== 0 &&
-                    "col-span-full w-max",
-                )}>
+                    "col-span-full w-max"
+                )}
+              >
                 {child}
               </span>
             );
