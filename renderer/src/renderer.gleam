@@ -206,11 +206,9 @@ fn toc_emitter(
         BlamedLine(blame_us("toc_emitter"), 0, ""),
         BlamedLine(blame_us("toc_emitter"), 0, "export default function Home() {"),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
-        BlamedLine(blame_us("toc_emitter"), 4, "<TOC>"),
       ],
-      vxml.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
+      vxml.vxml_to_jsx_blamed_lines(fragment , 6),
       [
-        BlamedLine(blame_us("toc_emitter"), 4, "</TOC>"),
         BlamedLine(blame_us("toc_emitter"), 2, ");"),
         BlamedLine(blame_us("toc_emitter"), 0, "};"),
         BlamedLine(blame_us("toc_emitter"), 0, ""),
@@ -408,7 +406,7 @@ pub fn main() {
   let _ = shellout.command(
     run: "rm",
     in: ".",
-    with: [output_dir <> "/article/*", output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"],
+    with: [output_dir <> "/article/*", output_dir <> "/components/index.tsx", output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"],
     opt: [],
   )
 
