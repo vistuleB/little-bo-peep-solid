@@ -19,13 +19,13 @@ const ins = string.inspect
 type FragmentType {
   Chapter(Int)
   Bootcamp(Int)
-  TOCAuthorSuppliedContents
+  TOC
   HamburgerPanelAuthorSuppliedContents
 }
 
 type LBPSplitterError {
-  NoTOCAuthorSuppliedContents
-  MoreThanOneTOCAuthorSuppliedContents
+  NoTOC
+  MoreThanOneTOC
   NoPanelAuthorSuppliedContents
   MoreThanOneHamburgerPanelAuthorSuppliedContents
 }
@@ -44,11 +44,11 @@ fn lbp_splitter(
   let chapter_vxmls = infra.children_with_tag(root, "Chapter")
   let bootcamp_vxmls = infra.children_with_tag(root, "Bootcamp")
   use toc_vxml <- infra.on_error_on_ok(
-    infra.unique_child_with_tag(root, "TOCAuthorSuppliedContents"),
+    infra.unique_child_with_tag(root, "TOC"),
     with_on_error: fn(error) {
       case error {
-        infra.MoreThanOne -> Error(MoreThanOneTOCAuthorSuppliedContents)
-        infra.LessThanOne -> Error(NoTOCAuthorSuppliedContents)
+        infra.MoreThanOne -> Error(MoreThanOneTOC)
+        infra.LessThanOne -> Error(NoTOC)
       }
     },
   )
@@ -66,7 +66,7 @@ fn lbp_splitter(
   Ok(
     list.flatten([
       [
-        #("routes/index.tsx", toc_vxml, TOCAuthorSuppliedContents),
+        #("routes/index.tsx", toc_vxml, TOC),
         #("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
       ],
       list.index_map(chapter_vxmls, fn(c, index) {
@@ -257,7 +257,7 @@ fn lbp_emitter(
       lbp_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
     Bootcamp(n) ->
       lbp_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
-    TOCAuthorSuppliedContents -> toc_emitter(path, vxml, fragment_type)
+    TOC -> toc_emitter(path, vxml, fragment_type)
     HamburgerPanelAuthorSuppliedContents -> panel_emitter(path, vxml, fragment_type)
   }
 }
@@ -408,7 +408,7 @@ pub fn main() {
   let _ = shellout.command(
     run: "rm",
     in: ".",
-    with: [output_dir <> "/article/*", output_dir <> "/components/TOCAuthorSuppliedContents.tsx", output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"],
+    with: [output_dir <> "/article/*", output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"],
     opt: [],
   )
 

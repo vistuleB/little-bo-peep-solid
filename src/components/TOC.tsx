@@ -1,4 +1,3 @@
-import TOCAuthorSuppliedContents from "./TOCAuthorSuppliedContents";
 import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { onMount, ParentProps } from "solid-js";
@@ -7,7 +6,7 @@ import useSetRoute from "~/hooks/useSetRoute";
 import SectionsBreadcrumbs from "./SectionsBreadcrumbs";
 
 const TOC = (props: ParentProps) => {
-  let { store, set_store } = useGlobalContext();
+  let { set_store } = useGlobalContext();
   useScrollX();
   useCheckedSaveScroll();
   useSetRoute();
