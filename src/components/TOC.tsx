@@ -11,8 +11,14 @@ const TOC = (props: ParentProps) => {
   useCheckedSaveScroll();
   useSetRoute();
 
+  // TOC sets pageNecessaryMargin to 0
+  set_store("pageNecessaryMargin", 0);
+
   const resetDimensions = () => {
-    set_store("innerWidth", window.innerWidth);
+    set_store(
+      "innerWidth",
+      document.documentElement.clientWidth || window.innerWidth,
+    );
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);

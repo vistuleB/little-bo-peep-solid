@@ -35,7 +35,10 @@ const Container = (props: ParentProps) => {
   };
 
   const handleResize = () => {
-    set_store("innerWidth", window.innerWidth);
+    set_store(
+      "innerWidth",
+      document.documentElement.clientWidth || window.innerWidth,
+    );
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
@@ -197,22 +200,44 @@ const Container = (props: ParentProps) => {
     });
   });
 
+  const containerWidth = () => {
+    return Math.max(
+      store.innerWidth,
+      2 * store.pageNecessaryMargin + mainColumnWidth(),
+    );
+  };
+
   return (
     <div
       id="Container"
       class="pb-14 -z-10 relative overflow-hidden"
-      style={`width:${2 * PAGE_DEFAULT_MARGIN + mainColumnWidth()}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}
-    >
+      style={`width:${containerWidth()}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}>
       <EarlyImages />
+      {/* Show margin areas when show_areas is true */}
+      {store.show_areas && store.pageNecessaryMargin > 0 && (
+        <>
+          <div
+            style={`position: absolute; top: 0; left: 0; width: ${store.pageNecessaryMargin}px; height: 100%; background-color: rgba(255, 0, 0, 0.2); border: 2px solid red; pointer-events: none; z-index: 1000;`}
+          />
+          <div
+            style={`position: absolute; top: 0; right: 0; width: ${store.pageNecessaryMargin}px; height: 100%; background-color: rgba(255, 0, 0, 0.2); border: 2px solid red; pointer-events: none; z-index: 1000;`}
+          />
+        </>
+      )}
       <Nav />
       <div
         onClick={() => {
+          // let containerWidth = Math.max(
+          //   store.innerWidth,
+          //   2 * store.pageNecessaryMargin + mainColumnWidth(store),
+          // );
+          // if (containerWidth > store.innerWidth) {
           window.scroll({
             left: (store.scrollWidth - store.innerWidth) / 2,
             behavior: "smooth",
           });
-        }}
-      >
+          // }
+        }}>
         {props.children}
       </div>
       <SVGDefs />

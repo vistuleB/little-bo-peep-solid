@@ -5,7 +5,17 @@ import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
 import { useGlobalContext } from "~/store/StoreProvider";
 import ActionArrows from "./ActionArrows";
 
-const AbstractArticle = (props: ParentProps & { id?: string }) => {
+const AbstractArticle = (
+  props: ParentProps & {
+    id?: string;
+    pageNecessaryMargin?: number;
+  },
+) => {
+  let { set_store } = useGlobalContext();
+
+  // Set pageNecessaryMargin in store, defaulting to 0 if not provided
+  set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
+
   return (
     <ExercisesStoreProvider>
       <span id={props.id}></span>
@@ -22,7 +32,10 @@ const ExercisesStoreConsumer = (props: ParentProps) => {
   useCheckedSaveScroll();
 
   const resetDimensions = () => {
-    set_store("innerWidth", window.innerWidth);
+    set_store(
+      "innerWidth",
+      document.documentElement.clientWidth || window.innerWidth,
+    );
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);

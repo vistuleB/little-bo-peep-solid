@@ -26,8 +26,9 @@ const Article = () => {
   return (<>
       <Chapter
         number={1}
+        page-necessary-margin={0}
         title="A Few Refreshers"
-        id="_5_3166">
+        id="_5_8346">
         <SectionsBreadcrumbs>
           <BreadcrumbItem
             class="breadcrumb"
@@ -1464,7 +1465,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_4_6314">
+          <ExerciseStatement id="_4_1626">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2628,7 +2629,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_6314"
+                href="/article/chapter1?id=_4_1626"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
