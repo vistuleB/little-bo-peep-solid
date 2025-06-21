@@ -227,7 +227,7 @@ const Container = (props: ParentProps) => {
         </>
       )}
       {/* Show maxElementWidth area when show_areas is true */}
-      {store.show_areas && store.maxElementWidth > 0 && (
+      {store.show_areas && (
         <div
           style={`position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: ${store.maxElementWidth}px; height: 100%; background-color: rgba(0, 255, 0, 0.2); border: 2px solid green; pointer-events: none; z-index: 999;`}
         />
