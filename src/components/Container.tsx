@@ -219,10 +219,10 @@ const Container = (props: ParentProps) => {
       {store.show_areas && store.pageNecessaryMargin > 0 && (
         <>
           <div
-            style={`position: absolute; top: 0; left: ${effectiveMarginWidth() - store.pageNecessaryMargin}px; width: ${store.pageNecessaryMargin}px; height: 100%; background-color: rgba(255, 0, 0, 0.2); border: 2px solid red; pointer-events: none; z-index: 1000;`}
+            style={`position:absolute;top:0;left:${effectiveMarginWidth() - store.pageNecessaryMargin}px; width:${store.pageNecessaryMargin}px;height:100%;background-color:rgba(255, 0, 0, 0.2);border:2px solid red;pointer-events:none;z-index:1000;`}
           />
           <div
-            style={`position:absolute;top: 0;right:${effectiveMarginWidth() - store.pageNecessaryMargin}px;width:${store.pageNecessaryMargin}px;height:100%;background-color:rgba(255, 0, 0, 0.2);border: 2px solid red;pointer-events:none; z-index:1000;`}
+            style={`position:absolute;top:0;right:${effectiveMarginWidth() - store.pageNecessaryMargin}px;width:${store.pageNecessaryMargin}px;height:100%;background-color:rgba(255, 0, 0, 0.2);border: 2px solid red;pointer-events:none;z-index:1000;`}
           />
         </>
       )}
