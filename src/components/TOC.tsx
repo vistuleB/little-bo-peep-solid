@@ -5,7 +5,12 @@ import useCheckedSaveScroll from "~/hooks/useCheckedSaveScroll";
 import useSetRoute from "~/hooks/useSetRoute";
 import SectionsBreadcrumbs from "./SectionsBreadcrumbs";
 
-const TOC = (props: ParentProps) => {
+const TOC = (
+  props: ParentProps & {
+    "next-page"?: string;
+    "prev-page"?: string;
+  },
+) => {
   let { set_store } = useGlobalContext();
   useScrollX();
   useCheckedSaveScroll();
@@ -28,6 +33,8 @@ const TOC = (props: ParentProps) => {
 
   return (
     <div>
+      <a class="next_page hidden" href={props["next-page"]}></a>
+      <a class="prev_page hidden" href={props["prev-page"]}></a>
       <div
         style="width:100vw"
         class="mt-[3.3rem] mb-[2.3rem] sm:mb-[2.6rem] mx-auto">

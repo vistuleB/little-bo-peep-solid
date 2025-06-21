@@ -6,7 +6,9 @@ const Chapter = (props: any) => {
     <AbstractArticle
       id={props.id}
       pageNecessaryMargin={props["page-necessary-margin"]}
-      maxElementWidth={props["max-element-width"]}>
+      maxElementWidth={props["max-element-width"]}
+      prevPage={props["prev-page"]}
+      nextPage={props["next-page"]}>
       <ArticleTitle
         label={`Chapter ${props.number}: ` + props.title}
         on_mobile_label={

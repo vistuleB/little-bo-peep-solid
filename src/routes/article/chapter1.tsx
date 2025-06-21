@@ -26,10 +26,12 @@ const Article = () => {
   return (<>
     <Chapter
       number={1}
+      next-page="/article/chapter2"
+      prev-page="/"
       max-element-width={500}
       page-necessary-margin={610}
       title="A Few Refreshers"
-      id="_5_1587">
+      id="_5_4109">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -74,12 +76,6 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <a
-        class="next_page"
-        href="/article/chapter2" />
-      <a
-        class="prev_page"
-        href="/" />
       <Section id="section-1">
         <VerticalChunk>
           <b>
@@ -1466,7 +1462,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_4_9431">
+          <ExerciseStatement id="_4_1792">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2630,7 +2626,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_9431"
+                href="/article/chapter1?id=_4_1792"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>

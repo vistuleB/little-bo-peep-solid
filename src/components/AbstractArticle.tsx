@@ -10,27 +10,11 @@ const AbstractArticle = (
     id?: string;
     pageNecessaryMargin?: number;
     maxElementWidth?: number;
+    nextPage?: string;
+    prevPage?: string;
   },
 ) => {
-  let { set_store } = useGlobalContext();
-
-  // Set pageNecessaryMargin in store, defaulting to 0 if not provided
-  set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
-
-  // Set maxElementWidth in store, defaulting to 0 if not provided
-  set_store("maxElementWidth", props.maxElementWidth || 0);
-
-  return (
-    <ExercisesStoreProvider>
-      <span id={props.id}></span>
-      <ExercisesStoreConsumer>{props.children}</ExercisesStoreConsumer>
-      <ActionArrows />
-    </ExercisesStoreProvider>
-  );
-};
-
-const ExercisesStoreConsumer = (props: ParentProps) => {
-  let { store, set_store } = useGlobalContext();
+  let { set_store, store } = useGlobalContext();
 
   useScrollX();
   useCheckedSaveScroll();
@@ -43,6 +27,10 @@ const ExercisesStoreConsumer = (props: ParentProps) => {
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
+
+    set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
+    set_store("maxElementWidth", props.maxElementWidth || 0);
+
     let _dummy =
       store.scrollY +
       store.innerHeight +
@@ -56,7 +44,15 @@ const ExercisesStoreConsumer = (props: ParentProps) => {
     setTimeout(resetDimensions, 500);
   });
 
-  return <>{props.children}</>;
+  return (
+    <ExercisesStoreProvider>
+      {props.nextPage && <a class="next_page hidden" href={props.nextPage}></a>}
+      {props.prevPage && <a class="prev_page hidden" href={props.prevPage}></a>}
+      <span id={props.id}></span>
+      {props.children}
+      <ActionArrows />
+    </ExercisesStoreProvider>
+  );
 };
 
 export default AbstractArticle;

@@ -26,6 +26,8 @@ const Article = () => {
   return (<>
     <Bootcamp
       number={1}
+      next-page="/"
+      prev-page="/article/bootcamp2"
       max-element-width={800}
       page-necessary-margin={160}
       title="Sets">
@@ -87,12 +89,6 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <a
-        class="next_page"
-        href="/" />
-      <a
-        class="prev_page"
-        href="/article/bootcamp2" />
       <Section id="section-1">
         <VerticalChunk>
           <b>
