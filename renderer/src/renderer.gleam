@@ -26,7 +26,7 @@ type FragmentType {
 type LBPSplitterError {
   NoTOC
   MoreThanOneTOC
-  NoPanelAuthorSuppliedContents
+  NoHamburgerPanelAuthorSuppliedContents
   MoreThanOneHamburgerPanelAuthorSuppliedContents
 }
 
@@ -47,8 +47,8 @@ fn lbp_splitter(
     infra.unique_child_with_tag(root, "TOC"),
     with_on_error: fn(error) {
       case error {
-        infra.MoreThanOne -> Error(MoreThanOneTOC)
         infra.LessThanOne -> Error(NoTOC)
+        infra.MoreThanOne -> Error(MoreThanOneTOC)
       }
     },
   )
@@ -57,8 +57,8 @@ fn lbp_splitter(
     infra.unique_child_with_tag(root, "HamburgerPanelAuthorSuppliedContents"),
     with_on_error: fn(error) {
       case error {
+        infra.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
         infra.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
-        infra.LessThanOne -> Error(NoPanelAuthorSuppliedContents)
       }
     },
   )
@@ -166,7 +166,7 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "useBreadcrumbs();"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return (<>"),
       ],
-      vxml.vxml_to_jsx_blamed_lines(first_split, 6),
+      vxml.vxml_to_jsx_blamed_lines(first_split, 4),
       // first section loads immediatly
       [
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "</>);"),
@@ -207,7 +207,7 @@ fn toc_emitter(
         BlamedLine(blame_us("toc_emitter"), 0, "export default function Home() {"),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
       ],
-      vxml.vxml_to_jsx_blamed_lines(fragment , 6),
+      vxml.vxml_to_jsx_blamed_lines(fragment , 4),
       [
         BlamedLine(blame_us("toc_emitter"), 2, ");"),
         BlamedLine(blame_us("toc_emitter"), 0, "};"),
@@ -406,7 +406,11 @@ pub fn main() {
   let _ = shellout.command(
     run: "rm",
     in: ".",
-    with: [output_dir <> "/article/*", output_dir <> "/components/index.tsx", output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"],
+    with: [
+      output_dir <> "/article/*",
+      output_dir <> "/components/index.tsx",
+      output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"
+    ],
     opt: [],
   )
 

@@ -21,8 +21,6 @@ const Container = (props: ParentProps) => {
   // add_imports and table of contents
   const [marginMode, set_marginMode] = createSignal(false);
 
-  // const [innerWidth, set_innerWidth] = createSignal(0);
-  // const [scrollWidth, set_scrollWidth] = createSignal(0);
   let { on_mobile } = useOnMobile();
   let { store, set_store } = useGlobalContext();
   const { getPrevArticle, getNextArticle } = usePrevNextArticle();
@@ -208,6 +206,10 @@ const Container = (props: ParentProps) => {
     );
   };
 
+  const effectiveMarginWidth = () => {
+    return (containerWidth() - mainColumnWidth()) / 2;
+  }
+
   return (
     <div
       id="Container"
@@ -218,10 +220,10 @@ const Container = (props: ParentProps) => {
       {store.show_areas && store.pageNecessaryMargin > 0 && (
         <>
           <div
-            style={`position: absolute; top: 0; left: 0; width: ${store.pageNecessaryMargin}px; height: 100%; background-color: rgba(255, 0, 0, 0.2); border: 2px solid red; pointer-events: none; z-index: 1000;`}
+            style={`position:absolute;top:0;left:${effectiveMarginWidth() - store.pageNecessaryMargin}px; width:${store.pageNecessaryMargin}px;height:100%;background-color:rgba(255, 0, 0, 0.2);border:2px solid red;pointer-events:none;z-index:1000;`}
           />
           <div
-            style={`position: absolute; top: 0; right: 0; width: ${store.pageNecessaryMargin}px; height: 100%; background-color: rgba(255, 0, 0, 0.2); border: 2px solid red; pointer-events: none; z-index: 1000;`}
+            style={`position:absolute;top:0;right:${effectiveMarginWidth() - store.pageNecessaryMargin}px;width:${store.pageNecessaryMargin}px;height:100%;background-color:rgba(255, 0, 0, 0.2);border: 2px solid red;pointer-events:none;z-index:1000;`}
           />
         </>
       )}
@@ -234,16 +236,10 @@ const Container = (props: ParentProps) => {
       <Nav />
       <div
         onClick={() => {
-          // let containerWidth = Math.max(
-          //   store.innerWidth,
-          //   2 * store.pageNecessaryMargin + mainColumnWidth(store),
-          // );
-          // if (containerWidth > store.innerWidth) {
           window.scroll({
             left: (store.scrollWidth - store.innerWidth) / 2,
             behavior: "smooth",
           });
-          // }
         }}>
         {props.children}
       </div>
