@@ -166,7 +166,7 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "useBreadcrumbs();"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return (<>"),
       ],
-      vxml.vxml_to_jsx_blamed_lines(first_split, 6),
+      vxml.vxml_to_jsx_blamed_lines(first_split, 4),
       // first section loads immediatly
       [
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "</>);"),
