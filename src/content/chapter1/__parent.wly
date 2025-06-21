@@ -1,4 +1,5 @@
 |> Chapter
     title=A Few Refreshers
     handle=Refreshers
-    page-necessary-margin=2000
+    page-necessary-margin=0
+    max-element-width=500 

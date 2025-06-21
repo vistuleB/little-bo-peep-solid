@@ -26,6 +26,7 @@ const Article = () => {
   return (<>
       <Bootcamp
         number={1}
+        max-element-width={800}
         page-necessary-margin={2000}
         title="Sets">
         <SectionsBreadcrumbs>

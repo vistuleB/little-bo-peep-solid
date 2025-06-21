@@ -26,6 +26,7 @@ const Article = () => {
   return (<>
       <Chapter
         number={2}
+        max-element-width={900}
         page-necessary-margin={1000}
         title="Slopes">
         <SectionsBreadcrumbs>
@@ -1720,7 +1721,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement id="_6_4893">
+          <ExerciseStatement id="_6_821">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2056,7 +2057,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_15_4639"
+                href="/article/chapter3?id=_15_5997"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2165,7 +2166,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_4893"
+                href="/article/chapter2?id=_6_821"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

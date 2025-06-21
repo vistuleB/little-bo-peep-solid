@@ -9,12 +9,16 @@ const AbstractArticle = (
   props: ParentProps & {
     id?: string;
     pageNecessaryMargin?: number;
+    maxElementWidth?: number;
   },
 ) => {
   let { set_store } = useGlobalContext();
 
   // Set pageNecessaryMargin in store, defaulting to 0 if not provided
   set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
+
+  // Set maxElementWidth in store, defaulting to 0 if not provided
+  set_store("maxElementWidth", props.maxElementWidth || 0);
 
   return (
     <ExercisesStoreProvider>

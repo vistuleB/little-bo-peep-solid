@@ -5,7 +5,8 @@ const Bootcamp = (props: any) => {
   return (
     <AbstractArticle
       id={props.id}
-      pageNecessaryMargin={props["page-necessary-margin"]}>
+      pageNecessaryMargin={props["page-necessary-margin"]}
+      maxElementWidth={props["max-element-width"]}>
       <div class="first_child_of_chapter"></div>
       <ArticleTitle
         label={`Bootcamp ${props.number}: ` + props.title}
