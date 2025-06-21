@@ -25,6 +25,8 @@ export type Store = {
   scroll_is_at_0: boolean;
   pageNecessaryMargin: number;
   maxElementWidth: number;
+  nextPage: string;
+  prevPage: string;
 };
 
 const [store, set_store] = createStore<Store>({
@@ -45,6 +47,8 @@ const [store, set_store] = createStore<Store>({
   scroll_is_at_0: false,
   pageNecessaryMargin: 0,
   maxElementWidth: 0,
+  nextPage: "",
+  prevPage: "",
 });
 
 const StoreContext = createContext<{

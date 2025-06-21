@@ -30,6 +30,8 @@ const AbstractArticle = (
 
     set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
     set_store("maxElementWidth", props.maxElementWidth || 0);
+    set_store("nextPage", props.nextPage || "");
+    set_store("prevPage", props.prevPage || "");
 
     let _dummy =
       store.scrollY +
@@ -46,8 +48,6 @@ const AbstractArticle = (
 
   return (
     <ExercisesStoreProvider>
-      {props.nextPage && <a class="next_page hidden" href={props.nextPage}></a>}
-      {props.prevPage && <a class="prev_page hidden" href={props.prevPage}></a>}
       <span id={props.id}></span>
       {props.children}
       <ActionArrows />

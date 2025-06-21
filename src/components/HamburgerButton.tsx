@@ -92,21 +92,7 @@ const ButtonsContainer = (props: ParentProps) => {
 const HeaderBarLeftArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
-
-  const getPrevArticle = () => {
-    let a = document.querySelector(".prev_page") as HTMLAnchorElement;
-    a?.click();
-  };
-
-  const [prevDisabled, set_prevDisabled] = createSignal(false);
-
-  createEffect(() => {
-    store.route; // re-run on route change
-    set_prevDisabled(!document.querySelector(".prev_page"));
-    setTimeout(() => {
-      set_prevDisabled(!document.querySelector(".prev_page"));
-    }, 50);
-  });
+  const { getPrevArticle, prevDisabled } = usePrevNextArticle();
 
   return (
     <button
@@ -116,9 +102,6 @@ const HeaderBarLeftArrowButton = () => {
         on_mobile() && "mr-4",
         prevDisabled() && "cursor-default",
       )}
-      onMouseOver={() => {
-        set_prevDisabled(!document.querySelector(".prev_page"));
-      }}
       onClick={(e) => {
         e.stopPropagation();
         e.stopImmediatePropagation();
@@ -143,18 +126,7 @@ const HeaderBarRightArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
 
-  const getNextArticle = () => {
-    let a = document.querySelector(".next_page") as HTMLAnchorElement;
-    a?.click();
-  };
-  const [nextDisabled, set_nextDisabled] = createSignal(false);
-  createEffect(() => {
-    store.route; // re-run on route change
-    set_nextDisabled(!document.querySelector(".next_page"));
-    setTimeout(() => {
-      set_nextDisabled(!document.querySelector(".next_page"));
-    }, 50);
-  });
+  const { getNextArticle, nextDisabled } = usePrevNextArticle();
 
   return (
     <button
@@ -164,9 +136,6 @@ const HeaderBarRightArrowButton = () => {
         on_mobile() && "mr-4",
         nextDisabled() && "cursor-default",
       )}
-      onMouseOver={() => {
-        set_nextDisabled(!document.querySelector(".next_page"));
-      }}
       onClick={(e) => {
         e.stopPropagation();
         e.stopImmediatePropagation();

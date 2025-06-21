@@ -27,14 +27,14 @@ const TOC = (
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
+    set_store("nextPage", props["next-page"] || "");
+    set_store("prevPage", props["prev-page"] || "");
   };
 
   onMount(() => resetDimensions());
 
   return (
     <div>
-      <a class="next_page hidden" href={props["next-page"]}></a>
-      <a class="prev_page hidden" href={props["prev-page"]}></a>
       <div
         style="width:100vw"
         class="mt-[3.3rem] mb-[2.3rem] sm:mb-[2.6rem] mx-auto">
