@@ -8,6 +8,7 @@ import { twJoin } from "tailwind-merge";
 import smoothScrollTo from "~/utils/smoothScrollTo";
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const ActionArrows = () => {
   const { store } = useGlobalContext();
@@ -60,6 +61,18 @@ const ActionArrows = () => {
     smoothScrollTo(scrollTo, 100);
   };
 
+  const containerWidth = () => {
+    return Math.max(
+      store.innerWidth,
+      store.maxElementWidth + 60,
+      mainColumnWidth() + 2 * store.pageNecessaryMargin,
+    );
+  };
+
+  const effectiveMarginWidth = () => {
+    return (containerWidth() - mainColumnWidth()) / 2;
+  }
+
   return (
     <div
       id="scroll-btns"
@@ -67,7 +80,7 @@ const ActionArrows = () => {
       onMouseOut={() => set_hovered(false)}
       style={{
         opacity: hovered() ? 1 : opacity(),
-        left: `${1500 - store.scrollX - 33}px`,
+        left: `${effectiveMarginWidth() - store.scrollX - 33}px`,
       }}
       class="fixed bottom-3">
       <button
