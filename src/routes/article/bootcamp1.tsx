@@ -24,180 +24,180 @@ const Article = () => {
   useSetRoute();
   useBreadcrumbs();
   return (<>
-      <Bootcamp
-        number={1}
-        max-element-width={800}
-        page-necessary-margin={2000}
-        title="Sets">
-        <SectionsBreadcrumbs>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-0">
-            <InChapterLink href="?id=section-1">
-              notation
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-1">
-            <InChapterLink href="?id=section-2">
-              what it does
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-2">
-            <InChapterLink href="?id=section-3">
-              set equality
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-3">
-            <InChapterLink href="?id=section-4">
-              second notation for the empty set
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-4">
-            <InChapterLink href="?id=section-5">
-              sets within sets
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-5">
-            <InChapterLink href="?id=section-6">
-              set union and set intersection
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-6">
-            <InChapterLink href="?id=section-7">
-              sets encountered in calculus
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-7">
-            <InChapterLink href="?id=section-8">
-              sets not encountered in calculus
-            </InChapterLink>
-          </BreadcrumbItem>
-        </SectionsBreadcrumbs>
-        <a
-          class="next_page"
-          href="/" />
-        <a
-          class="prev_page"
-          href="/article/bootcamp2" />
-        <Section id="section-1">
-          <VerticalChunk>
-            <b>
-              Notation.
-            </b>
-            {" "}
-            Curly braces typically denote the beginning
-            {" "}
-            <NoBreak>
-              “
-              <Math>
-                $\&#123;$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}and ending{" "}
-            <NoBreak>
-              “
-              <Math>
-                $\&#125;$
-              </Math>
-              ”
-            </NoBreak>
-            {" "}of a collection of
-            elements, otherwise known as a{" "}
-            <i>
-              set
-            </i>
-            .
-            For example, this is a set containing the
-            numbers{" "}
-            <NoBreak>
-              <Math>
-                $1$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
+    <Bootcamp
+      number={1}
+      max-element-width={800}
+      page-necessary-margin={160}
+      title="Sets">
+      <SectionsBreadcrumbs>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-0">
+          <InChapterLink href="?id=section-1">
+            notation
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-1">
+          <InChapterLink href="?id=section-2">
+            what it does
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-2">
+          <InChapterLink href="?id=section-3">
+            set equality
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            second notation for the empty set
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-4">
+          <InChapterLink href="?id=section-5">
+            sets within sets
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-5">
+          <InChapterLink href="?id=section-6">
+            set union and set intersection
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-6">
+          <InChapterLink href="?id=section-7">
+            sets encountered in calculus
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-7">
+          <InChapterLink href="?id=section-8">
+            sets not encountered in calculus
+          </InChapterLink>
+        </BreadcrumbItem>
+      </SectionsBreadcrumbs>
+      <a
+        class="next_page"
+        href="/" />
+      <a
+        class="prev_page"
+        href="/article/bootcamp2" />
+      <Section id="section-1">
+        <VerticalChunk>
+          <b>
+            Notation.
+          </b>
+          {" "}
+          Curly braces typically denote the beginning
+          {" "}
+          <NoBreak>
+            “
             <Math>
-              $2$
+              $\&#123;$
             </Math>
-            {" "}and{" "}
+            ”
+          </NoBreak>
+          {" "}and ending{" "}
+          <NoBreak>
+            “
             <Math>
-              $3$
+              $\&#125;$
             </Math>
-            {" "}(and nothing else):
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large\&#123;1, 2, 3\&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            Also,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large\&#123;1\&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is a set containing just the number{" "}
-            <NoBreak>
-              <Math>
-                $1$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}while
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large\&#123;1, 3\&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is a set containing just the numbers{" "}
+            ”
+          </NoBreak>
+          {" "}of a collection of
+          elements, otherwise known as a{" "}
+          <i>
+            set
+          </i>
+          .
+          For example, this is a set containing the
+          numbers{" "}
+          <NoBreak>
             <Math>
               $1$
             </Math>
-            {" "}
-            and{" "}
-            <NoBreak>
-              <Math>
-                $3$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}etc. Even,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$\Large\&#123;\&#125;$$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is an{" "}
-            <i>
-              empty
-            </i>
-            {" "}set, a set with no elements!
-          </VerticalChunk>
-        </Section>
-        <Rest />
-      </Bootcamp>
+            ,
+          </NoBreak>
+          {" "}{" "}
+          <Math>
+            $2$
+          </Math>
+          {" "}and{" "}
+          <Math>
+            $3$
+          </Math>
+          {" "}(and nothing else):
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;1, 2, 3\&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          Also,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;1\&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is a set containing just the number{" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}while
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;1, 3\&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is a set containing just the numbers{" "}
+          <Math>
+            $1$
+          </Math>
+          {" "}
+          and{" "}
+          <NoBreak>
+            <Math>
+              $3$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}etc. Even,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;\&#125;$$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is an{" "}
+          <i>
+            empty
+          </i>
+          {" "}set, a set with no elements!
+        </VerticalChunk>
+      </Section>
+      <Rest />
+    </Bootcamp>
   </>);
 };
 

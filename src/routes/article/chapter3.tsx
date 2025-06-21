@@ -24,371 +24,371 @@ const Article = () => {
   useSetRoute();
   useBreadcrumbs();
   return (<>
-      <Chapter
-        number={3}
-        max-element-width={1500}
-        page-necessary-margin={600}
-        title="Functions"
-        id="_15_5997">
-        <SectionsBreadcrumbs>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-0">
-            <InChapterLink href="?id=section-1">
-              syntax
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-1">
-            <InChapterLink href="?id=section-2">
-              lambda functions
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-2">
-            <InChapterLink href="?id=section-3">
-              definition by cases
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-3">
-            <InChapterLink href="?id=section-4">
-              on arbitrariness
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-4">
-            <InChapterLink href="?id=section-5">
-              graphs
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-5">
-            <InChapterLink href="?id=section-6">
-              domains
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-6">
-            <InChapterLink href="?id=section-7">
-              “from/to” notation
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-7">
-            <InChapterLink href="?id=section-8">
-              the vertical line test
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-8">
-            <InChapterLink href="?id=section-9">
-              a famous discontinuity
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-9">
-            <InChapterLink href="?id=section-10">
-              distinguishing{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}and{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f(x)$
-                </Math>
-                ”
-              </NoBreak>
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-10">
-            <InChapterLink href="?id=section-11">
-              distinguishing{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x^3$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}and{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x \ra x^3$
-                </Math>
-                ”
-              </NoBreak>
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-11">
-            <InChapterLink href="?id=section-12">
-              polynomials
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-12">
-            <InChapterLink href="?id=section-13">
-              quadratic, linear, and constant terms
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-13">
-            <InChapterLink href="?id=exercises">
-              exercises
-            </InChapterLink>
-          </BreadcrumbItem>
-        </SectionsBreadcrumbs>
-        <a
-          class="next_page"
-          href="/article/chapter4" />
-        <a
-          class="prev_page"
-          href="/article/chapter2" />
-        <Section id="section-1">
-          <VerticalChunk>
-            <b>
-              Syntax.
-            </b>
-            {" "}
-            A
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            function
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            is a “rule” for transforming inputs (usually
-            numbers) into outputs (usually numbers as well).
-            One can think of a function as a box with an
-            “input tube” and an “output tube”:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch3_f_box.svg" />
-          <Pause />
-          <VerticalChunk>
-            An input goes in via the input tube, is
-            processed according to the function's rule,
-            and the result comes out the other side.
-            (Metaphorically speaking.)
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            In the above picture, the name of the function
-            is{" "}
+    <Chapter
+      number={3}
+      max-element-width={1500}
+      page-necessary-margin={700}
+      title="Functions"
+      id="_15_7707">
+      <SectionsBreadcrumbs>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-0">
+          <InChapterLink href="?id=section-1">
+            syntax
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-1">
+          <InChapterLink href="?id=section-2">
+            lambda functions
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-2">
+          <InChapterLink href="?id=section-3">
+            definition by cases
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            on arbitrariness
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-4">
+          <InChapterLink href="?id=section-5">
+            graphs
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-5">
+          <InChapterLink href="?id=section-6">
+            domains
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-6">
+          <InChapterLink href="?id=section-7">
+            “from/to” notation
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-7">
+          <InChapterLink href="?id=section-8">
+            the vertical line test
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-8">
+          <InChapterLink href="?id=section-9">
+            a famous discontinuity
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-9">
+          <InChapterLink href="?id=section-10">
+            distinguishing{" "}
             <NoBreak>
               “
               <Math>
                 $f$
               </Math>
-              ”.
+              ”
             </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            Notation-wise, one writes
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(x)&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            (which is read{" "}
+            {" "}and{" "}
             <NoBreak>
               “
               <Math>
-                $f$
+                $f(x)$
               </Math>
+              ”
             </NoBreak>
-            {" "}of{" "}
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-10">
+          <InChapterLink href="?id=section-11">
+            distinguishing{" "}
             <NoBreak>
+              “
               <Math>
-                $x$
+                $x^3$
               </Math>
-              ”,
+              ”
             </NoBreak>
-            {" "}and that's
-            important) for the result of passing an input
-            {" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}to a function{" "}
+            {" "}and{" "}
             <NoBreak>
+              “
               <Math>
-                $f$
+                $x \ra x^3$
               </Math>
-              .
+              ”
             </NoBreak>
-            {" "}For example, if the rule
-            according to which{" "}
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-11">
+          <InChapterLink href="?id=section-12">
+            polynomials
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-12">
+          <InChapterLink href="?id=section-13">
+            quadratic, linear, and constant terms
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-13">
+          <InChapterLink href="?id=exercises">
+            exercises
+          </InChapterLink>
+        </BreadcrumbItem>
+      </SectionsBreadcrumbs>
+      <a
+        class="next_page"
+        href="/article/chapter4" />
+      <a
+        class="prev_page"
+        href="/article/chapter2" />
+      <Section id="section-1">
+        <VerticalChunk>
+          <b>
+            Syntax.
+          </b>
+          {" "}
+          A
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          function
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          is a “rule” for transforming inputs (usually
+          numbers) into outputs (usually numbers as well).
+          One can think of a function as a box with an
+          “input tube” and an “output tube”:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch3_f_box.svg" />
+        <Pause />
+        <VerticalChunk>
+          An input goes in via the input tube, is
+          processed according to the function's rule,
+          and the result comes out the other side.
+          (Metaphorically speaking.)
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          In the above picture, the name of the function
+          is{" "}
+          <NoBreak>
+            “
             <Math>
               $f$
             </Math>
-            {" "}processes inputs is
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            the output is the square of the input
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            then
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(2) = 4&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            <NoBreak>
-              [“
-              <Math>
-                $f$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
+            ”.
+          </NoBreak>
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          Notation-wise, one writes
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;f(x)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          (which is read{" "}
+          <NoBreak>
+            “
             <Math>
-              $2$
+              $f$
             </Math>
-            {" "}equals{" "}
-            <NoBreak>
-              <Math>
-                $4$
-              </Math>
-              ”]
-            </NoBreak>
-            {" "}because{" "}
-            <NoBreak>
-              <Math>
-                $2^2 = 4$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(3) = 9&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            <NoBreak>
-              [“
-              <Math>
-                $f$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
-            <Math>
-              $3$
-            </Math>
-            {" "}equals{" "}
-            <NoBreak>
-              <Math>
-                $9$
-              </Math>
-              ”]
-            </NoBreak>
-            {" "}because{" "}
-            <NoBreak>
-              <Math>
-                $3^2 = 9$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123; f(0.1) = 0.01&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            [...] because{" "}
-            <NoBreak>
-              <Math>
-                $0.1^2 = 0.01$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and so on. Also,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            &#123;f(x) = x^2&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            <NoBreak>
-              [“
-              <Math>
-                $f$
-              </Math>
-            </NoBreak>
-            {" "}of{" "}
+          </NoBreak>
+          {" "}of{" "}
+          <NoBreak>
             <Math>
               $x$
             </Math>
-            {" "}equals{" "}
-            <NoBreak>
-              <Math>
-                $x^2$
-              </Math>
-              ”]
-            </NoBreak>
-            {" "}more generally, which
-            is actually the
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            definition
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            of{" "}
-            <NoBreak>
-              <Math>
-                $f$
-              </Math>
-              !!
-            </NoBreak>
-            {" "}(Stated algebraically.)
-          </VerticalChunk>
-        </Section>
-        <Rest />
-      </Chapter>
+            ”,
+          </NoBreak>
+          {" "}and that's
+          important) for the result of passing an input
+          {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}to a function{" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            .
+          </NoBreak>
+          {" "}For example, if the rule
+          according to which{" "}
+          <Math>
+            $f$
+          </Math>
+          {" "}processes inputs is
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          the output is the square of the input
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          then
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;f(2) = 4&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          <NoBreak>
+            [“
+            <Math>
+              $f$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <Math>
+            $2$
+          </Math>
+          {" "}equals{" "}
+          <NoBreak>
+            <Math>
+              $4$
+            </Math>
+            ”]
+          </NoBreak>
+          {" "}because{" "}
+          <NoBreak>
+            <Math>
+              $2^2 = 4$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}and
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;f(3) = 9&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          <NoBreak>
+            [“
+            <Math>
+              $f$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <Math>
+            $3$
+          </Math>
+          {" "}equals{" "}
+          <NoBreak>
+            <Math>
+              $9$
+            </Math>
+            ”]
+          </NoBreak>
+          {" "}because{" "}
+          <NoBreak>
+            <Math>
+              $3^2 = 9$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}and
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123; f(0.1) = 0.01&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          [...] because{" "}
+          <NoBreak>
+            <Math>
+              $0.1^2 = 0.01$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}and so on. Also,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;f(x) = x^2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          <NoBreak>
+            [“
+            <Math>
+              $f$
+            </Math>
+          </NoBreak>
+          {" "}of{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}equals{" "}
+          <NoBreak>
+            <Math>
+              $x^2$
+            </Math>
+            ”]
+          </NoBreak>
+          {" "}more generally, which
+          is actually the
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          definition
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          of{" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            !!
+          </NoBreak>
+          {" "}(Stated algebraically.)
+        </VerticalChunk>
+      </Section>
+      <Rest />
+    </Chapter>
   </>);
 };
 
@@ -2227,7 +2227,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <ExerciseStatement id="_7_3791">
+          <ExerciseStatement id="_7_8707">
             <VerticalChunk>
               <b>
                 Exercise 4.
@@ -2448,7 +2448,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
-          <ExerciseStatement id="_8_6831">
+          <ExerciseStatement id="_8_8579">
             <VerticalChunk>
               <b>
                 Exercise 5.
@@ -2482,7 +2482,7 @@ const Rest = () => {
               </NoBreak>
               {" "}apply the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_3791"
+                href="/article/chapter3?id=_7_8707"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2535,7 +2535,7 @@ const Rest = () => {
               {" "}
               the formula for the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_3791"
+                href="/article/chapter3?id=_7_8707"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2937,7 +2937,7 @@ const Rest = () => {
               because all we have to do is to multiply
               {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_6831"
+                href="/article/chapter3?id=_8_8579"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -2962,7 +2962,7 @@ const Rest = () => {
             <VerticalChunk>
               because the problem is similar to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_6831"
+                href="/article/chapter3?id=_8_8579"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -3225,7 +3225,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <ExerciseStatement id="_9_7093">
+          <ExerciseStatement id="_9_1750">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -3408,7 +3408,7 @@ const Rest = () => {
               {" "}
               Same question as{" "}
               <InChapterLink
-                href="/article/chapter3?id=_9_7093"
+                href="/article/chapter3?id=_9_1750"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -4137,7 +4137,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <ExerciseStatement id="_10_2987">
+          <ExerciseStatement id="_10_7673">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4230,7 +4230,7 @@ const Rest = () => {
               {" "}
               Solve{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_2987"
+                href="/article/chapter3?id=_10_7673"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4473,7 +4473,7 @@ const Rest = () => {
               </NoBreak>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_2987"
+                href="/article/chapter3?id=_10_7673"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4500,7 +4500,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_2987"
+                href="/article/chapter3?id=_10_7673"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4610,7 +4610,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement id="_11_7792">
+          <ExerciseStatement id="_11_5984">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -5112,7 +5112,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
-          <ExerciseStatement id="_12_7119">
+          <ExerciseStatement id="_12_5768">
             <VerticalChunk>
               <b>
                 Exercise 15.
@@ -5516,7 +5516,7 @@ const Rest = () => {
               {" "}by the following
               sequence of transformations (cf.{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_7792"
+                href="/article/chapter3?id=_11_5984"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -5548,7 +5548,7 @@ const Rest = () => {
               (We put the vertical translation first.)
               By{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_7119"
+                href="/article/chapter3?id=_12_5768"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -5749,7 +5749,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <ExerciseStatement id="_13_2340">
+          <ExerciseStatement id="_13_4284">
             <VerticalChunk>
               <b>
                 Exercise 18.
@@ -5987,7 +5987,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={19}>
-          <ExerciseStatement id="_14_1469">
+          <ExerciseStatement id="_14_4658">
             <VerticalChunk>
               <b>
                 Exercise 19.
@@ -6065,7 +6065,7 @@ const Rest = () => {
             <VerticalChunk>
               and, similarly to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_7792"
+                href="/article/chapter3?id=_11_5984"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6128,7 +6128,7 @@ const Rest = () => {
               </NoBreak>
               {" "}of{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_7792"
+                href="/article/chapter3?id=_11_5984"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6138,7 +6138,7 @@ const Rest = () => {
             <VerticalChunk indent={true}>
               By direct analogy with{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_7792"
+                href="/article/chapter3?id=_11_5984"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6346,7 +6346,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_7119"
+                href="/article/chapter3?id=_12_5768"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -6430,7 +6430,7 @@ const Rest = () => {
               <VerticalChunk>
                 as briefly flashed by, e.g., in{" "}
                 <a
-                  href="/article/chapter1?id=_5_8161"
+                  href="/article/chapter1?id=_5_1587"
                   class="handle-out-of-chapter-link">
                   Chapter 1
                 </a>

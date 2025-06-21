@@ -24,699 +24,699 @@ const Article = () => {
   useSetRoute();
   useBreadcrumbs();
   return (<>
-      <Chapter
-        number={5}
-        max-element-width={1000}
-        page-necessary-margin={650}
-        title="The Trigonometric Functions">
-        <SectionsBreadcrumbs>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-0">
-            <InChapterLink href="?id=section-1">
-              cos and sin. (“cosine” and “sine”.)
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-1">
-            <InChapterLink href="?id=section-2">
-              derivatives
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-2">
-            <InChapterLink href="?id=section-3">
-              even/odd identities, and identities with{" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\eta$
-                </Math>
-                ”
-              </NoBreak>
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-3">
-            <InChapterLink href="?id=section-4">
-              relation to derivatives
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-4">
-            <InChapterLink href="?id=section-5">
-              the pythagorean identity
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-5">
-            <InChapterLink href="?id=section-6">
-              inputs as radians
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-6">
-            <InChapterLink href="?id=section-7">
-              auto-converting degrees to radians
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-7">
-            <InChapterLink href="?id=section-8">
-              sines and cosines of{" "}
-              <NoBreak>
-                <Math>
-                  $\mathbf&#123;30^\circ&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              {" "}
+    <Chapter
+      number={5}
+      max-element-width={1000}
+      page-necessary-margin={950}
+      title="The Trigonometric Functions">
+      <SectionsBreadcrumbs>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-0">
+          <InChapterLink href="?id=section-1">
+            cos and sin. (“cosine” and “sine”.)
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-1">
+          <InChapterLink href="?id=section-2">
+            derivatives
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-2">
+          <InChapterLink href="?id=section-3">
+            even/odd identities, and identities with{" "}
+            <NoBreak>
+              “
               <Math>
-                $\mathbf&#123;45^\circ&#125;$
+                $\eta$
               </Math>
-              {" "}and{" "}
-              <NoBreak>
-                <Math>
-                  $\mathbf&#123;60^\circ&#125;$
-                </Math>
-                {" "}{" "}
-              </NoBreak>
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-8">
-            <InChapterLink href="?id=section-9">
-              scaling the circle
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-9">
-            <InChapterLink href="?id=section-10">
-              polar coordinates
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-10">
-            <InChapterLink href="?id=section-11">
-              change-of-coordinate formulas
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-11">
-            <InChapterLink href="?id=section-12">
-              right triangles
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-12">
-            <InChapterLink href="?id=section-13">
-              a famous diagram
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-13">
-            <InChapterLink href="?id=section-14">
-              the abercrombie inequality
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-14">
-            <InChapterLink href="?id=section-15">
-              the gregorinovich sandwich
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-15">
-            <InChapterLink href="?id=section-16">
-              the angle-sum formulas
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-16">
-            <InChapterLink href="?id=section-17">
-              the missing arrows
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-17">
-            <InChapterLink href="?id=section-18">
-              secant: a second view
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-18">
-            <InChapterLink href="?id=section-19">
-              note on calculators
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-19">
-            <InChapterLink href="?id=exercises">
-              exercises
-            </InChapterLink>
-          </BreadcrumbItem>
-        </SectionsBreadcrumbs>
-        <a
-          class="prev_page"
-          href="/article/chapter4" />
-        <Section id="section-1">
-          <VerticalChunk>
-            <b>
-              Cos and Sin. (“Cosine” and “sine”.)
-            </b>
-            {" "}
-            We've already encountered the ‘cos’
-            function in Exercise 7 of Chapter 3, e.g..
-            It is the one that has this graph:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_cosine.svg" />
-          <Pause />
-          <VerticalChunk>
-            It has a close cousin named ‘sin’.
-            While{" "}
-            <Math>
-              $\cos(x)$
-            </Math>
-            {" "}“tops off” at{" "}
+              ”
+            </NoBreak>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            relation to derivatives
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-4">
+          <InChapterLink href="?id=section-5">
+            the pythagorean identity
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-5">
+          <InChapterLink href="?id=section-6">
+            inputs as radians
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-6">
+          <InChapterLink href="?id=section-7">
+            auto-converting degrees to radians
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-7">
+          <InChapterLink href="?id=section-8">
+            sines and cosines of{" "}
             <NoBreak>
               <Math>
-                $x = 0$
+                $\mathbf&#123;30^\circ&#125;$
               </Math>
               ,
             </NoBreak>
             {" "}
             {" "}
             <Math>
-              $\sin(x)$
+              $\mathbf&#123;45^\circ&#125;$
             </Math>
-            {" "}goes diagonally through the point
-            {" "}
+            {" "}and{" "}
             <NoBreak>
               <Math>
-                $(0, 0)$
+                $\mathbf&#123;60^\circ&#125;$
               </Math>
-              :
+              {" "}{" "}
             </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_cosine_and_sine.svg" />
-          <Pause />
-          <VerticalChunk>
-            As far as standard definitions go,
-            {" "}
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-8">
+          <InChapterLink href="?id=section-9">
+            scaling the circle
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-9">
+          <InChapterLink href="?id=section-10">
+            polar coordinates
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-10">
+          <InChapterLink href="?id=section-11">
+            change-of-coordinate formulas
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-11">
+          <InChapterLink href="?id=section-12">
+            right triangles
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-12">
+          <InChapterLink href="?id=section-13">
+            a famous diagram
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-13">
+          <InChapterLink href="?id=section-14">
+            the abercrombie inequality
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-14">
+          <InChapterLink href="?id=section-15">
+            the gregorinovich sandwich
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-15">
+          <InChapterLink href="?id=section-16">
+            the angle-sum formulas
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-16">
+          <InChapterLink href="?id=section-17">
+            the missing arrows
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-17">
+          <InChapterLink href="?id=section-18">
+            secant: a second view
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-18">
+          <InChapterLink href="?id=section-19">
+            note on calculators
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-19">
+          <InChapterLink href="?id=exercises">
+            exercises
+          </InChapterLink>
+        </BreadcrumbItem>
+      </SectionsBreadcrumbs>
+      <a
+        class="prev_page"
+        href="/article/chapter4" />
+      <Section id="section-1">
+        <VerticalChunk>
+          <b>
+            Cos and Sin. (“Cosine” and “sine”.)
+          </b>
+          {" "}
+          We've already encountered the ‘cos’
+          function in Exercise 7 of Chapter 3, e.g..
+          It is the one that has this graph:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_cosine.svg" />
+        <Pause />
+        <VerticalChunk>
+          It has a close cousin named ‘sin’.
+          While{" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "}“tops off” at{" "}
+          <NoBreak>
             <Math>
-              $\cos(x)$
+              $x = 0$
             </Math>
-            {" "}is the
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -coordinate
-            </NoBreak>
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            and{" "}
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "}goes diagonally through the point
+          {" "}
+          <NoBreak>
             <Math>
-              $\sin(x)$
+              $(0, 0)$
             </Math>
-            {" "}is the
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            <NoBreak>
-              <Math>
-                $y$
-              </Math>
-              -coordinate
-            </NoBreak>
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            of a point{" "}
+            :
+          </NoBreak>
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_cosine_and_sine.svg" />
+        <Pause />
+        <VerticalChunk>
+          As far as standard definitions go,
+          {" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "}is the
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          <NoBreak>
             <Math>
               $x$
             </Math>
-            {" "}units counterclockwise from
-            {" "}
+            -coordinate
+          </NoBreak>
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          and{" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "}is the
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          <NoBreak>
             <Math>
-              $(1, 0)$
+              $y$
             </Math>
-            {" "}on the unit circle. (Nb: “a”
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            unit circle
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            is a circle of radius{" "}
-            <NoBreak>
-              <Math>
-                $1$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}while “the” unit
-            circle is the circle of radius{" "}
+            -coordinate
+          </NoBreak>
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          of a point{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}units counterclockwise from
+          {" "}
+          <Math>
+            $(1, 0)$
+          </Math>
+          {" "}on the unit circle. (Nb: “a”
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          unit circle
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          is a circle of radius{" "}
+          <NoBreak>
             <Math>
               $1$
             </Math>
-            {" "}centered
-            at{" "}
-            <NoBreak>
-              <Math>
-                $(0, 0)$
-              </Math>
-              .)
-            </NoBreak>
-            {" "}For example, if we look at{" "}
-            <NoBreak>
-              <Math>
-                $x = &#123;1\over 2&#125;$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            we see{" "}
-            <NoBreak>
-              <Math>
-                $\cos(&#123;1\over 2&#125;) \approx 0.9$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            {" "}
-            <NoBreak>
-              <Math>
-                $\sin(&#123;1\over 2&#125;) \approx 0.5$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_cosine_and_sine_@0.5.svg" />
-          <Pause />
-          <VerticalChunk>
-            Per the definitions,
-            the point half a unit
-            counterclockwise from{" "}
+            ,
+          </NoBreak>
+          {" "}while “the” unit
+          circle is the circle of radius{" "}
+          <Math>
+            $1$
+          </Math>
+          {" "}centered
+          at{" "}
+          <NoBreak>
+            <Math>
+              $(0, 0)$
+            </Math>
+            .)
+          </NoBreak>
+          {" "}For example, if we look at{" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;1\over 2&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          we see{" "}
+          <NoBreak>
+            <Math>
+              $\cos(&#123;1\over 2&#125;) \approx 0.9$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <NoBreak>
+            <Math>
+              $\sin(&#123;1\over 2&#125;) \approx 0.5$
+            </Math>
+            :
+          </NoBreak>
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_cosine_and_sine_@0.5.svg" />
+        <Pause />
+        <VerticalChunk>
+          Per the definitions,
+          the point half a unit
+          counterclockwise from{" "}
+          <Math>
+            $(1, 0)$
+          </Math>
+          {" "}on the unit
+          circle has coordinates{" "}
+          <Math>
+            $\approx 0.9$
+          </Math>
+          {" "}in{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}
+          and{" "}
+          <Math>
+            $\approx 0.5$
+          </Math>
+          {" "}in{" "}
+          <Math>
+            $y$
+          </Math>
+          {" "}(or actually{" "}
+          <Math>
+            $0.87758...$
+          </Math>
+          {" "}
+          and{" "}
+          <NoBreak>
+            <Math>
+              $0.47942...$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}it turns out, as we can know by
+          a calculator equipped with ‘sin’ and ‘cos’):
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_unit_circle_@0.5_smaller.svg" />
+        <Pause />
+        <VerticalChunk>
+          As a second example, the graphs indicate that
+          {" "}
+          <NoBreak>
+            <Math>
+              $\sin(-3) \approx -0.2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}{" "}
+          <Math>
+            $\cos(-3) \approx -0.99$
+          </Math>
+          {" "}
+          (or something very close to{" "}
+          <NoBreak>
+            <Math>
+              $-1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}in any case):
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_cosine_and_sine_@-3.svg" />
+        <Pause />
+        <VerticalChunk>
+          Indeed, going{" "}
+          <Math>
+            $-3$
+          </Math>
+          {" "}units counterclockwise—which
+          means, going{" "}
+          <Math>
+            $3$
+          </Math>
+          {" "}units clockwise—on the unit
+          circle, starting from{" "}
+          <NoBreak>
             <Math>
               $(1, 0)$
             </Math>
-            {" "}on the unit
-            circle has coordinates{" "}
-            <Math>
-              $\approx 0.9$
-            </Math>
-            {" "}in{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}
-            and{" "}
-            <Math>
-              $\approx 0.5$
-            </Math>
-            {" "}in{" "}
+            ,
+          </NoBreak>
+          {" "}brings us to a point
+          with{" "}
+          <NoBreak>
             <Math>
               $y$
             </Math>
-            {" "}(or actually{" "}
-            <Math>
-              $0.87758...$
-            </Math>
-            {" "}
-            and{" "}
-            <NoBreak>
-              <Math>
-                $0.47942...$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}it turns out, as we can know by
-            a calculator equipped with ‘sin’ and ‘cos’):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_unit_circle_@0.5_smaller.svg" />
-          <Pause />
-          <VerticalChunk>
-            As a second example, the graphs indicate that
-            {" "}
-            <NoBreak>
-              <Math>
-                $\sin(-3) \approx -0.2$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}{" "}
-            <Math>
-              $\cos(-3) \approx -0.99$
-            </Math>
-            {" "}
-            (or something very close to{" "}
-            <NoBreak>
-              <Math>
-                $-1$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}in any case):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_cosine_and_sine_@-3.svg" />
-          <Pause />
-          <VerticalChunk>
-            Indeed, going{" "}
-            <Math>
-              $-3$
-            </Math>
-            {" "}units counterclockwise—which
-            means, going{" "}
-            <Math>
-              $3$
-            </Math>
-            {" "}units clockwise—on the unit
-            circle, starting from{" "}
-            <NoBreak>
-              <Math>
-                $(1, 0)$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}brings us to a point
-            with{" "}
-            <NoBreak>
-              <Math>
-                $y$
-              </Math>
-              -
-            </NoBreak>
-            {" "}and{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -coordinates
-            </NoBreak>
-            {" "}of{" "}
-            <Math>
-              $\approx -0.2$
-            </Math>
-            {" "}
-            and{" "}
-            <Math>
-              $\approx -0.99$
-            </Math>
-            {" "}respectively (or{" "}
-            <Math>
-              $-0.1411...$
-            </Math>
-            {" "}
-            and{" "}
-            <NoBreak>
-              <Math>
-                $-0.989992...$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}to be exact, it turns out):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_unit_circle_@-3_smaller.svg" />
-          <Pause />
-          <VerticalChunk>
-            For a last example,
-            note that there appears
-            to be a value of{" "}
+            -
+          </NoBreak>
+          {" "}and{" "}
+          <NoBreak>
             <Math>
               $x$
             </Math>
-            {" "}near{" "}
-            <NoBreak>
-              <Math>
-                $-1.6$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}where{" "}
-            <NoBreak>
-              <Math>
-                $\cos(x) = 0$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
-            {" "}
-            <NoBreak>
-              <Math>
-                $\sin(x) = -1$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_cosine_and_sine_@minus_eta.svg" />
-          <Pause />
-          <VerticalChunk>
-            Some thought reveals that this value of{" "}
+            -coordinates
+          </NoBreak>
+          {" "}of{" "}
+          <Math>
+            $\approx -0.2$
+          </Math>
+          {" "}
+          and{" "}
+          <Math>
+            $\approx -0.99$
+          </Math>
+          {" "}respectively (or{" "}
+          <Math>
+            $-0.1411...$
+          </Math>
+          {" "}
+          and{" "}
+          <NoBreak>
+            <Math>
+              $-0.989992...$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}to be exact, it turns out):
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_unit_circle_@-3_smaller.svg" />
+        <Pause />
+        <VerticalChunk>
+          For a last example,
+          note that there appears
+          to be a value of{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}near{" "}
+          <NoBreak>
+            <Math>
+              $-1.6$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}where{" "}
+          <NoBreak>
+            <Math>
+              $\cos(x) = 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <NoBreak>
+            <Math>
+              $\sin(x) = -1$
+            </Math>
+            :
+          </NoBreak>
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_cosine_and_sine_@minus_eta.svg" />
+        <Pause />
+        <VerticalChunk>
+          Some thought reveals that this value of{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}
+          would be{" "}
+          <i>
+            minus one-quarter the circumference
+            of a unit circle
+          </i>
+          , because{" "}
+          <Math>
+            $(0, -1)$
+          </Math>
+          {" "}is
+          one-quarter of the unit circle clockwise from{" "}
+          <NoBreak>
+            <Math>
+              $(1, 0)$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          Note that one-quarter the circumference of a unit
+          circle was estimated to be
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          \approx &#123;11\over 7&#125; = 1.\overline&#123;571428&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          in Exercise 24 of Chapter 3 (by direct inspection
+          of the graph{" "}
+          <NoBreak>
+            <Math>
+              $y = \cos(x)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}for that matter,
+          which may or may not be cheating), which agrees
+          with the visual estimate{" "}
+          <NoBreak>
+            <Math>
+              $x \approx -1.6$
+            </Math>
+            .
+          </NoBreak>
+          {" "}(But
+          that value would be namely{" "}
+          <NoBreak>
+            <Math>
+              $x = -1.57...$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}not
+          {" "}
+          <NoBreak>
+            <Math>
+              $x = -1.6$
+            </Math>
+            .)
+          </NoBreak>
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          In another possible definition,
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is defined as the{" "}
+          <NoBreak>
             <Math>
               $x$
             </Math>
-            {" "}
-            would be{" "}
-            <i>
-              minus one-quarter the circumference
-              of a unit circle
-            </i>
-            , because{" "}
+            -coordinate
+          </NoBreak>
+          {" "}of a point that
+          is{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}units counterclockwise from{" "}
+          <Math>
+            $(0, -1)$
+          </Math>
+          {" "}on
+          the unit circle. In this case,{" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "}and
+          {" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "}are both defined by{" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinates:
+          </NoBreak>
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_unit_circle_with_new_definition.svg" />
+        <Pause />
+        <VerticalChunk>
+          In more detail, if you tilt your head  sideways,
+          you will see that the{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}axis looks, from the
+          vantage point of{" "}
+          <NoBreak>
             <Math>
               $(0, -1)$
             </Math>
-            {" "}is
-            one-quarter of the unit circle clockwise from{" "}
-            <NoBreak>
-              <Math>
-                $(1, 0)$
-              </Math>
-              .
-            </NoBreak>
-            {" "}
-            Note that one-quarter the circumference of a unit
-            circle was estimated to be
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \approx &#123;11\over 7&#125; = 1.\overline&#123;571428&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            in Exercise 24 of Chapter 3 (by direct inspection
-            of the graph{" "}
-            <NoBreak>
-              <Math>
-                $y = \cos(x)$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}for that matter,
-            which may or may not be cheating), which agrees
-            with the visual estimate{" "}
-            <NoBreak>
-              <Math>
-                $x \approx -1.6$
-              </Math>
-              .
-            </NoBreak>
-            {" "}(But
-            that value would be namely{" "}
-            <NoBreak>
-              <Math>
-                $x = -1.57...$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}not
-            {" "}
-            <NoBreak>
-              <Math>
-                $x = -1.6$
-              </Math>
-              .)
-            </NoBreak>
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            In another possible definition,
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \sin(x)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is defined as the{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -coordinate
-            </NoBreak>
-            {" "}of a point that
-            is{" "}
+            ,
+          </NoBreak>
+          {" "}the same as the{" "}
+          <Math>
+            $y$
+          </Math>
+          {" "}
+          axis looks from the vantage point of{" "}
+          <NoBreak>
+            <Math>
+              $(1, 0)$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          So the old and new definitions of{" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "}are
+          equivalent! (👍👍)
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          In particular,{" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "}and{" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "}can also
+          be understood as the{" "}
+          <NoBreak>
             <Math>
               $x$
             </Math>
-            {" "}units counterclockwise from{" "}
+            -coordinates
+          </NoBreak>
+          {" "}of two
+          particles on the unit circle such that the ‘sin’
+          particle is one-quarter-turn behind the{" "}
+          <NoBreak>
+            ‘
             <Math>
-              $(0, -1)$
+              $\cos$
             </Math>
-            {" "}on
-            the unit circle. In this case,{" "}
+            ’
+          </NoBreak>
+          {" "}
+          particle:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_unit_circle_with_sin_and_cos_particles.svg" />
+        <Pause />
+        <VerticalChunk>
+          ...to be contrasted with our first definition,
+          employing a single point projected onto
+          two different axes:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch5_ch_unit_circle_with_sincos_particle.svg" />
+        <Pause />
+        <VerticalChunk>
+          The second definition (former diagram) explains
+          why values of{" "}
+          <Math>
+            $\sin$
+          </Math>
+          {" "}lag a fixed amount behind
+          values of{" "}
+          <NoBreak>
             <Math>
-              $\sin(x)$
+              $\cos$
             </Math>
-            {" "}and
-            {" "}
-            <Math>
-              $\cos(x)$
-            </Math>
-            {" "}are both defined by{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -coordinates:
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_unit_circle_with_new_definition.svg" />
-          <Pause />
-          <VerticalChunk>
-            In more detail, if you tilt your head  sideways,
-            you will see that the{" "}
-            <Math>
-              $x$
-            </Math>
-            {" "}axis looks, from the
-            vantage point of{" "}
-            <NoBreak>
-              <Math>
-                $(0, -1)$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}the same as the{" "}
-            <Math>
-              $y$
-            </Math>
-            {" "}
-            axis looks from the vantage point of{" "}
-            <NoBreak>
-              <Math>
-                $(1, 0)$
-              </Math>
-              .
-            </NoBreak>
-            {" "}
-            So the old and new definitions of{" "}
-            <Math>
-              $\sin(x)$
-            </Math>
-            {" "}are
-            equivalent! (👍👍)
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            In particular,{" "}
-            <Math>
-              $\sin(x)$
-            </Math>
-            {" "}and{" "}
-            <Math>
-              $\cos(x)$
-            </Math>
-            {" "}can also
-            be understood as the{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -coordinates
-            </NoBreak>
-            {" "}of two
-            particles on the unit circle such that the ‘sin’
-            particle is one-quarter-turn behind the{" "}
-            <NoBreak>
-              ‘
-              <Math>
-                $\cos$
-              </Math>
-              ’
-            </NoBreak>
-            {" "}
-            particle:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_unit_circle_with_sin_and_cos_particles.svg" />
-          <Pause />
-          <VerticalChunk>
-            ...to be contrasted with our first definition,
-            employing a single point projected onto
-            two different axes:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch5_ch_unit_circle_with_sincos_particle.svg" />
-          <Pause />
-          <VerticalChunk>
-            The second definition (former diagram) explains
-            why values of{" "}
-            <Math>
-              $\sin$
-            </Math>
-            {" "}lag a fixed amount behind
-            values of{" "}
-            <NoBreak>
-              <Math>
-                $\cos$
-              </Math>
-              .
-            </NoBreak>
-            {" "}(“Lagging” when you read the
-            graphs from left to right.) It's because the ‘sin’
-            particle follows in the trail blazed by the ‘cos’
-            particle!
-          </VerticalChunk>
-        </Section>
-        <Rest />
-      </Chapter>
+            .
+          </NoBreak>
+          {" "}(“Lagging” when you read the
+          graphs from left to right.) It's because the ‘sin’
+          particle follows in the trail blazed by the ‘cos’
+          particle!
+        </VerticalChunk>
+      </Section>
+      <Rest />
+    </Chapter>
   </>);
 };
 
@@ -1514,7 +1514,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_973"
+            href="/article/chapter4?id=_24_1929"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14679,7 +14679,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_25_8739">
+          <ExerciseStatement id="_25_992">
             <VerticalChunk>
               <b>
                 Exercise 42.
