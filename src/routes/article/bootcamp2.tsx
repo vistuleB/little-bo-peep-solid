@@ -24,136 +24,136 @@ const Article = () => {
   useSetRoute();
   useBreadcrumbs();
   return (<>
-      <Bootcamp
-        number={2}
-        title="Powers of 10">
-        <SectionsBreadcrumbs>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-0">
-            <InChapterLink href="?id=section-1">
-              terminology
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-1">
-            <InChapterLink href="?id=section-2">
-              integer powers of 10
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-2">
-            <InChapterLink href="?id=section-3">
-              other bases
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-3">
-            <InChapterLink href="?id=section-4">
-              additivity of exponents
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-4">
-            <InChapterLink href="?id=section-5">
-              the third law of exponents
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-5">
-            <InChapterLink href="?id=section-6">
-              famous powers of 10
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-6">
-            <InChapterLink href="?id=section-7">
-              negative exponent prefixes
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-7">
-            <InChapterLink href="?id=section-8">
-              positive exponent prefixes
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-8">
-            <InChapterLink href="?id=section-9">
-              logarithms base 10
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-9">
-            <InChapterLink href="?id=exercises">
-              exercises
-            </InChapterLink>
-          </BreadcrumbItem>
-        </SectionsBreadcrumbs>
-        <a
-          class="next_page"
-          href="/article/bootcamp1" />
-        <Section id="section-1">
-          <VerticalChunk>
-            <b>
-              Terminology.
-            </b>
-            {" "}
-            The expression below is called a{" "}
-            <i>
-              power
-            </i>
-            ;
-            the number at the bottom of the power is called
-            the{" "}
-            <i>
-              base
-            </i>
-            {" "}(of the power); the number at the top
-            is called the{" "}
-            <i>
-              exponent
-            </i>
-            :
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_base_exponent.svg" />
-          <Pause />
-          <VerticalChunk>
-            The whole expression is read{" "}
+    <Bootcamp
+      number={2}
+      next-page="/article/bootcamp1"
+      max-element-width={1200}
+      page-necessary-margin={270}
+      title="Powers of 10">
+      <SectionsBreadcrumbs>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-0">
+          <InChapterLink href="?id=section-1">
+            terminology
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-1">
+          <InChapterLink href="?id=section-2">
+            integer powers of 10
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-2">
+          <InChapterLink href="?id=section-3">
+            other bases
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            additivity of exponents
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-4">
+          <InChapterLink href="?id=section-5">
+            the third law of exponents
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-5">
+          <InChapterLink href="?id=section-6">
+            famous powers of 10
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-6">
+          <InChapterLink href="?id=section-7">
+            negative exponent prefixes
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-7">
+          <InChapterLink href="?id=section-8">
+            positive exponent prefixes
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-8">
+          <InChapterLink href="?id=section-9">
+            logarithms base 10
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-9">
+          <InChapterLink href="?id=exercises">
+            exercises
+          </InChapterLink>
+        </BreadcrumbItem>
+      </SectionsBreadcrumbs>
+      <Section id="section-1">
+        <VerticalChunk>
+          <b>
+            Terminology.
+          </b>
+          {" "}
+          The expression below is called a{" "}
+          <i>
+            power
+          </i>
+          ;
+          the number at the bottom of the power is called
+          the{" "}
+          <i>
+            base
+          </i>
+          {" "}(of the power); the number at the top
+          is called the{" "}
+          <i>
+            exponent
+          </i>
+          :
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_base_exponent.svg" />
+        <Pause />
+        <VerticalChunk>
+          The whole expression is read{" "}
+          <Math>
+            $\mathit&#123;10&#125;$
+          </Math>
+          {" "}{" "}
+          <i>
+            to the power
+          </i>
+          {" "}{" "}
+          <NoBreak>
             <Math>
-              $\mathit&#123;10&#125;$
+              $\mathit&#123;3&#125;$
             </Math>
-            {" "}{" "}
-            <i>
-              to the power
-            </i>
-            {" "}{" "}
-            <NoBreak>
-              <Math>
-                $\mathit&#123;3&#125;$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}and the
-            general process of taking a power is called{" "}
-            <i>
-              exponentiation
-            </i>
-            .
-          </VerticalChunk>
-        </Section>
-        <Rest />
-      </Bootcamp>
+            ,
+          </NoBreak>
+          {" "}and the
+          general process of taking a power is called{" "}
+          <i>
+            exponentiation
+          </i>
+          .
+        </VerticalChunk>
+      </Section>
+      <Rest />
+    </Bootcamp>
   </>);
 };
 
@@ -327,7 +327,7 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_1_8243">
+        <MathBlock id="_1_7011">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -349,7 +349,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_8243"
+            href="/article/bootcamp2?id=_1_7011"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -371,7 +371,7 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_8243"
+            href="/article/bootcamp2?id=_1_7011"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -381,7 +381,7 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_8243"
+            href="/article/bootcamp2?id=_1_7011"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -392,7 +392,7 @@ const Rest = () => {
             src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_2_1082">
+        <MathBlock id="_2_7854">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -428,13 +428,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_1082"
+            href="/article/bootcamp2?id=_2_7854"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_1082"
+            href="/article/bootcamp2?id=_2_7854"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -448,7 +448,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_1082"
+            href="/article/bootcamp2?id=_2_7854"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -520,13 +520,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_8243"
+            href="/article/bootcamp2?id=_1_7011"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_1082"
+            href="/article/bootcamp2?id=_2_7854"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -2937,7 +2937,7 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1_8243"
+                href="/article/bootcamp2?id=_1_7011"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -3001,7 +3001,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement id="_3_3811">
+          <ExerciseStatement id="_3_6119">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3285,7 +3285,7 @@ const Rest = () => {
               </Math>
               {" "}(as in{" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_3811"
+                href="/article/bootcamp2?id=_3_6119"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>

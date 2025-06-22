@@ -2,6 +2,24 @@ import { JSX } from "solid-js";
 import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { A, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { MOBILE_MAX_WIDTH } from "~/constants";
+
+const setUpParentAndWidth = (
+  parent: HTMLDivElement,
+  span: HTMLSpanElement,
+): void => {
+  parent.style.width = MOBILE_MAX_WIDTH + "px";
+  parent.style.position = "absolute";
+  parent.style.top = "0px";
+  parent.style.visibility = "hidden";
+  span.style.font = "Baskerville, serif";
+  span.style.fontSize = "1.875rem";
+  span.style.height = "auto";
+  span.style.width = "auto";
+  span.style.whiteSpace = "nowrap";
+  parent.appendChild(span);
+  document.body.appendChild(parent);
+};
 
 const HamburgerPanelItem = (props: {
   href: string;
@@ -16,42 +34,21 @@ const HamburgerPanelItem = (props: {
       ? DESKTOP_COLUMN_WIDTH
       : store.innerWidth;
   return (
-    <div class="panel-item flex items-baseline justify-between leading-9 sm:leading-8 text-2xl">
-      <div
-        class="relative m-auto"
-        style={`width:${our_width() - 32}px;direction:rtl;`}
-      >
-        <div class="toc-item-lead-wrapper">
-          <div>
-            {" "}
-            {/* somehow this wrapper div is useful for base-alignment */}
-            <span>{props.article_type}</span>
-            <span class="toc-item-lead-dots">
-              ..........................................................................................................................................................................
-            </span>
-          </div>
-        </div>
-        <div
-          class="toc-item-title-outline"
-          style="--toc-label-stroke-color: oklch(97% 0.001 106.424)"
-          aria-hidden="true"
-        >
-          {props.label}
-        </div>
-        <div class="toc-item-title">
-          <ConditionalLink
-            href={`/article/${props.href}`}
-            onSameRoute={(e) => {
-              e.preventDefault();
-              window.scroll({
-                left: (store.scrollWidth - store.innerWidth) / 2,
-                behavior: "instant",
-              });
-            }}
-          >
-            <span>{props.label}</span>
-          </ConditionalLink>
-        </div>
+    <ConditionalLink
+      href={`/article/${props.href}`}
+      class="panel-item flex items-baseline justify-between leading-9 sm:leading-8 text-2xl"
+      onSameRoute={(e) => {
+        e.preventDefault();
+        window.scroll({
+          left: (store.scrollWidth - store.innerWidth) / 2,
+          behavior: "instant",
+        });
+      }}
+    >
+      <div class="relative w-full inline-flex items-baseline">
+        <span class="">{props.article_type}</span>
+        <span class="dots sm:min-w-[0rem] md:min-w-[2rem] lg:min-w-[4.4rem]"></span>
+        <span class="whitespace-normal text-right">{props.label}</span>
       </div>
     </div>
   );

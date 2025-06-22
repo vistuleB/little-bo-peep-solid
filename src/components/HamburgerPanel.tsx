@@ -77,7 +77,7 @@ const ClearCache = () => {
       id="clear-cache-btn"
       onClick={handleClear}
       class="flex justify-between items-center text-2xl pb-1.5 sm:pb-2 cursor-pointer hover:text-blue-600">
-      <p>Clear Cache / Cookies</p>
+      <p>Clear Cache/Cookies</p>
       <div class="w-5 h-5 flex items-center justify-center">
         <svg
           width="16"

@@ -3,7 +3,12 @@ import ArticleTitle from "./ArticleTitle";
 
 const Chapter = (props: any) => {
   return (
-    <AbstractArticle id={props.id}>
+    <AbstractArticle
+      id={props.id}
+      pageNecessaryMargin={props["page-necessary-margin"]}
+      maxElementWidth={props["max-element-width"]}
+      prevPage={props["prev-page"]}
+      nextPage={props["next-page"]}>
       <ArticleTitle
         label={`Chapter ${props.number}: ` + props.title}
         on_mobile_label={

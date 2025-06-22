@@ -392,7 +392,7 @@ type SolutionSVGProps = {
 export const SolutionSVG = (props: SolutionSVGProps) => {
   return (
     <>
-      <div onClick={props.onClick} class="cursor-pointer">
+      <div onClick={props.onClick} class="cursor-pointer w-fit m-auto">
         <svg class="mx-auto h-[37px] overflow-visible">
           <g transform="translate(96, 0)">
             <rect

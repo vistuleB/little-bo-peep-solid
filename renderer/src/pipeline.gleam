@@ -226,12 +226,12 @@ pub fn lbp_pipeline() -> List(Pipe) {
         None,
       )),
       dn.generate_lbp_table_of_contents(#(
-        "TOCAuthorSuppliedContents",
+        "TOC",
         "TOCTitle",
         "TOCItem",
         Some("Spacer"),
       )),
-      dn.generate_lbp_links(),
+      dn.generate_lbp_prev_next_attributes(),
       dn.generate_lbp_sections_breadcrumbs(),
       // dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
       dn.unwrap(["DebugScope"])

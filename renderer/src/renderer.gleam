@@ -19,14 +19,14 @@ const ins = string.inspect
 type FragmentType {
   Chapter(Int)
   Bootcamp(Int)
-  TOCAuthorSuppliedContents
+  TOC
   HamburgerPanelAuthorSuppliedContents
 }
 
 type LBPSplitterError {
-  NoTOCAuthorSuppliedContents
-  MoreThanOneTOCAuthorSuppliedContents
-  NoPanelAuthorSuppliedContents
+  NoTOC
+  MoreThanOneTOC
+  NoHamburgerPanelAuthorSuppliedContents
   MoreThanOneHamburgerPanelAuthorSuppliedContents
 }
 
@@ -44,11 +44,11 @@ fn lbp_splitter(
   let chapter_vxmls = infra.children_with_tag(root, "Chapter")
   let bootcamp_vxmls = infra.children_with_tag(root, "Bootcamp")
   use toc_vxml <- infra.on_error_on_ok(
-    infra.unique_child_with_tag(root, "TOCAuthorSuppliedContents"),
+    infra.unique_child_with_tag(root, "TOC"),
     with_on_error: fn(error) {
       case error {
-        infra.MoreThanOne -> Error(MoreThanOneTOCAuthorSuppliedContents)
-        infra.LessThanOne -> Error(NoTOCAuthorSuppliedContents)
+        infra.LessThanOne -> Error(NoTOC)
+        infra.MoreThanOne -> Error(MoreThanOneTOC)
       }
     },
   )
@@ -57,8 +57,8 @@ fn lbp_splitter(
     infra.unique_child_with_tag(root, "HamburgerPanelAuthorSuppliedContents"),
     with_on_error: fn(error) {
       case error {
+        infra.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
         infra.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
-        infra.LessThanOne -> Error(NoPanelAuthorSuppliedContents)
       }
     },
   )
@@ -66,7 +66,7 @@ fn lbp_splitter(
   Ok(
     list.flatten([
       [
-        #("routes/index.tsx", toc_vxml, TOCAuthorSuppliedContents),
+        #("routes/index.tsx", toc_vxml, TOC),
         #("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
       ],
       list.index_map(chapter_vxmls, fn(c, index) {
@@ -166,7 +166,7 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "useBreadcrumbs();"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "return (<>"),
       ],
-      vxml.vxml_to_jsx_blamed_lines(first_split, 6),
+      vxml.vxml_to_jsx_blamed_lines(first_split, 4),
       // first section loads immediatly
       [
         BlamedLine(blame_us("lbp_fragment_emitter"), 2, "</>);"),
@@ -206,11 +206,9 @@ fn toc_emitter(
         BlamedLine(blame_us("toc_emitter"), 0, ""),
         BlamedLine(blame_us("toc_emitter"), 0, "export default function Home() {"),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
-        BlamedLine(blame_us("toc_emitter"), 4, "<TOC>"),
       ],
-      vxml.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
+      vxml.vxml_to_jsx_blamed_lines(fragment , 4),
       [
-        BlamedLine(blame_us("toc_emitter"), 4, "</TOC>"),
         BlamedLine(blame_us("toc_emitter"), 2, ");"),
         BlamedLine(blame_us("toc_emitter"), 0, "};"),
         BlamedLine(blame_us("toc_emitter"), 0, ""),
@@ -257,7 +255,7 @@ fn lbp_emitter(
       lbp_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
     Bootcamp(n) ->
       lbp_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
-    TOCAuthorSuppliedContents -> toc_emitter(path, vxml, fragment_type)
+    TOC -> toc_emitter(path, vxml, fragment_type)
     HamburgerPanelAuthorSuppliedContents -> panel_emitter(path, vxml, fragment_type)
   }
 }
@@ -408,7 +406,11 @@ pub fn main() {
   let _ = shellout.command(
     run: "rm",
     in: ".",
-    with: [output_dir <> "/article/*", output_dir <> "/components/TOCAuthorSuppliedContents.tsx", output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"],
+    with: [
+      output_dir <> "/article/*",
+      output_dir <> "/components/index.tsx",
+      output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"
+    ],
     opt: [],
   )
 

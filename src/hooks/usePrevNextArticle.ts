@@ -1,3 +1,4 @@
+import { useNavigate } from "@solidjs/router";
 import { createEffect, createSignal } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 
@@ -5,28 +6,29 @@ const usePrevNextArticle = () => {
   const { store, set_store } = useGlobalContext();
   const [prevDisabled, set_prevDisabled] = createSignal(false);
   const [nextDisabled, set_nextDisabled] = createSignal(false);
+  const navigate = useNavigate();
 
   createEffect(() => {
     store.route; // re-run on route change
-    set_nextDisabled(!document.querySelector(".next_page"));
-    set_prevDisabled(!document.querySelector(".prev_page"));
+    set_nextDisabled(store.nextPage === "");
+    set_prevDisabled(store.prevPage === "");
     setTimeout(() => {
-      set_nextDisabled(!document.querySelector(".next_page"));
-      set_prevDisabled(!document.querySelector(".prev_page"));
+      set_nextDisabled(store.nextPage === "");
+      set_prevDisabled(store.prevPage === "");
     }, 50);
   });
 
   const getNextArticle = async (from_breadcrumb: boolean = false) => {
+    if (store.nextPage === "") return;
     setTimeout(() => {
-      let a = document.querySelector(".next_page") as HTMLAnchorElement;
-      a?.click();
+      navigate(store.nextPage);
     }, 50);
   };
 
   const getPrevArticle = async (from_breadcrumb: boolean = false) => {
+    if (store.prevPage === "") return;
     setTimeout(() => {
-      let a = document.querySelector(".prev_page") as HTMLAnchorElement;
-      a?.click();
+      navigate(store.prevPage);
     }, 50);
   };
 

@@ -24,265 +24,263 @@ const Article = () => {
   useSetRoute();
   useBreadcrumbs();
   return (<>
-      <Chapter
-        number={4}
-        title="Derivatives">
-        <SectionsBreadcrumbs>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-0">
-            <InChapterLink href="?id=section-1">
-              definitions
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-1">
-            <InChapterLink href="?id=section-2">
-              vocabulary
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-2">
-            <InChapterLink href="?id=section-3">
-              sketching a derivative
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-3">
-            <InChapterLink href="?id=section-4">
-              derivative of a constant function
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-4">
-            <InChapterLink href="?id=section-5">
-              derivative of an affine function
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-5">
-            <InChapterLink href="?id=section-6">
-              units of the derivative
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-6">
-            <InChapterLink href="?id=section-7">
-              the second derivative
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-7">
-            <InChapterLink href="?id=section-8">
-              geometric interpretation of the second derivative
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-8">
-            <InChapterLink href="?id=section-9">
-              vocabulary #1
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-9">
-            <InChapterLink href="?id=section-10">
-              the second derivative of position
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-10">
-            <InChapterLink href="?id=section-11">
-              the jerk
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-11">
-            <InChapterLink href="?id=exercises">
-              exercises
-            </InChapterLink>
-          </BreadcrumbItem>
-        </SectionsBreadcrumbs>
-        <a
-          class="next_page"
-          href="/article/chapter5" />
-        <a
-          class="prev_page"
-          href="/article/chapter3" />
-        <Image src="/images/svg_ch4_ch_polaroids.svg" />
+    <Chapter
+      number={4}
+      next-page="/article/chapter5"
+      prev-page="/article/chapter3"
+      max-element-width={700}
+      page-necessary-margin={1450}
+      title="Derivatives">
+      <SectionsBreadcrumbs>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-0">
+          <InChapterLink href="?id=section-1">
+            definitions
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-1">
+          <InChapterLink href="?id=section-2">
+            vocabulary
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-2">
+          <InChapterLink href="?id=section-3">
+            sketching a derivative
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            derivative of a constant function
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-4">
+          <InChapterLink href="?id=section-5">
+            derivative of an affine function
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-5">
+          <InChapterLink href="?id=section-6">
+            units of the derivative
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-6">
+          <InChapterLink href="?id=section-7">
+            the second derivative
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-7">
+          <InChapterLink href="?id=section-8">
+            geometric interpretation of the second derivative
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-8">
+          <InChapterLink href="?id=section-9">
+            vocabulary #1
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-9">
+          <InChapterLink href="?id=section-10">
+            the second derivative of position
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-10">
+          <InChapterLink href="?id=section-11">
+            the jerk
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-11">
+          <InChapterLink href="?id=exercises">
+            exercises
+          </InChapterLink>
+        </BreadcrumbItem>
+      </SectionsBreadcrumbs>
+      <Image src="/images/svg_ch4_ch_polaroids.svg" />
+      <Pause />
+      <Section id="section-1">
+        <VerticalChunk>
+          <b>
+            Definitions.
+          </b>
+          {" "}
+          The{" "}
+          <i>
+            derivative
+          </i>
+          {" "}of a function
+        </VerticalChunk>
         <Pause />
-        <Section id="section-1">
-          <VerticalChunk>
-            <b>
-              Definitions.
-            </b>
-            {" "}
-            The{" "}
-            <i>
-              derivative
-            </i>
-            {" "}of a function
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f : \rr \ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is a (new) function
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f' : \rr \ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            that gives the slope of{" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}at each point.
-            In other words
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f'(a)
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is the slope of the graph{" "}
-            <Math>
-              $y = f(x)$
-            </Math>
-            {" "}at
-            {" "}
-            <NoBreak>
-              <Math>
-                $x = a$
-              </Math>
-              .
-            </NoBreak>
-            {" "}And—surprise!—each pair of graphs
-            above is a pair of the form{" "}
-            <Math>
-              $y = f(x)$
-            </Math>
-            {" "}{" "}
-            <NoBreak>
-              [
-              <Math>
-                $=$
-              </Math>
-            </NoBreak>
-            {" "}
-            “before”],{" "}
-            <Math>
-              $y = f'(x)$
-            </Math>
-            {" "}{" "}
-            <NoBreak>
-              [
-              <Math>
-                $=$
-              </Math>
-            </NoBreak>
-            {" "}“after”]. (Meaning,
-            the “after” graph records the slope of the
-            “before” graph.) E.g.:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_ch_explanation1.svg" />
-          <Pause />
-          <VerticalChunk>
-            Note that{" "}
-            <Math>
-              $f'\!$
-            </Math>
-            {" "}(read{" "}
-            <NoBreak>
-              “
-              <Math>
-                $f$
-              </Math>
-            </NoBreak>
-            {" "}prime”) remains
-            undefined where{" "}
-            <Math>
-              $y = f(x)$
-            </Math>
-            {" "}has a sharp “corner”
-            and no well-defined slope. By opposition, if
-            there is a well-defined tangent line to
-            {" "}
-            <Math>
-              $y = f(x)$
-            </Math>
-            {" "}at{" "}
+        <MathBlock>
+          $$
+          f : \rr \ra \rr
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is a (new) function
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          f' : \rr \ra \rr
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          that gives the slope of{" "}
+          <Math>
+            $f$
+          </Math>
+          {" "}at each point.
+          In other words
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          f'(a)
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          is the slope of the graph{" "}
+          <Math>
+            $y = f(x)$
+          </Math>
+          {" "}at
+          {" "}
+          <NoBreak>
             <Math>
               $x = a$
             </Math>
-            {" "}the slope of this
-            tangent line supplies the value of{" "}
-            <NoBreak>
-              <Math>
-                $f'(a)$
-              </Math>
-              :
-            </NoBreak>
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_ch_explanation2.svg" />
-          <Pause />
-          <VerticalChunk>
-            In fact, we can
-            succinctly describe the derivative by...
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            f'(a) = \te&#123;[slope of tangent line to $y = f(x)$ at $x = a$]&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            ...with the understanding that{" "}
+            .
+          </NoBreak>
+          {" "}And—surprise!—each pair of graphs
+          above is a pair of the form{" "}
+          <Math>
+            $y = f(x)$
+          </Math>
+          {" "}{" "}
+          <NoBreak>
+            [
+            <Math>
+              $=$
+            </Math>
+          </NoBreak>
+          {" "}
+          “before”],{" "}
+          <Math>
+            $y = f'(x)$
+          </Math>
+          {" "}{" "}
+          <NoBreak>
+            [
+            <Math>
+              $=$
+            </Math>
+          </NoBreak>
+          {" "}“after”]. (Meaning,
+          the “after” graph records the slope of the
+          “before” graph.) E.g.:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch4_ch_explanation1.svg" />
+        <Pause />
+        <VerticalChunk>
+          Note that{" "}
+          <Math>
+            $f'\!$
+          </Math>
+          {" "}(read{" "}
+          <NoBreak>
+            “
+            <Math>
+              $f$
+            </Math>
+          </NoBreak>
+          {" "}prime”) remains
+          undefined where{" "}
+          <Math>
+            $y = f(x)$
+          </Math>
+          {" "}has a sharp “corner”
+          and no well-defined slope. By opposition, if
+          there is a well-defined tangent line to
+          {" "}
+          <Math>
+            $y = f(x)$
+          </Math>
+          {" "}at{" "}
+          <Math>
+            $x = a$
+          </Math>
+          {" "}the slope of this
+          tangent line supplies the value of{" "}
+          <NoBreak>
             <Math>
               $f'(a)$
             </Math>
-            {" "}is
-            undefined if a tangent line does not exist
-            or if the tangent is vertical.
-            Also note that
-            the endpoint of a curve does not count
-            as having a tangent, and leaves a missing
-            value for the derivative:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch4_ch_one_sided_tangent.svg" />
-          <Pause />
-          <VerticalChunk>
-            (In other words, what one might describe as
-            “half-tangents” do not actually count as tangents.)
-          </VerticalChunk>
-        </Section>
-        <Rest />
-      </Chapter>
+            :
+          </NoBreak>
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch4_ch_explanation2.svg" />
+        <Pause />
+        <VerticalChunk>
+          In fact, we can
+          succinctly describe the derivative by...
+        </VerticalChunk>
+        <Pause />
+        <MathBlock>
+          $$
+          f'(a) = \te&#123;[slope of tangent line to $y = f(x)$ at $x = a$]&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <VerticalChunk>
+          ...with the understanding that{" "}
+          <Math>
+            $f'(a)$
+          </Math>
+          {" "}is
+          undefined if a tangent line does not exist
+          or if the tangent is vertical.
+          Also note that
+          the endpoint of a curve does not count
+          as having a tangent, and leaves a missing
+          value for the derivative:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch4_ch_one_sided_tangent.svg" />
+        <Pause />
+        <VerticalChunk>
+          (In other words, what one might describe as
+          “half-tangents” do not actually count as tangents.)
+        </VerticalChunk>
+      </Section>
+      <Rest />
+    </Chapter>
   </>);
 };
 
@@ -1797,7 +1795,7 @@ const Rest = () => {
         <VerticalChunk>
           of functions already appear in{" "}
           <a
-            href="/article/chapter3?id=_13_3139"
+            href="/article/chapter3?id=_13_4200"
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1829,7 +1827,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_16_7286">
+          <ExerciseStatement id="_16_5098">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1957,7 +1955,7 @@ const Rest = () => {
             <VerticalChunk>
               derivative of the graph in{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_7286"
+                href="/article/chapter4?id=_16_5098"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2002,7 +2000,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_7286"
+                href="/article/chapter4?id=_16_5098"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2541,7 +2539,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <ExerciseStatement id="_17_3725">
+          <ExerciseStatement id="_17_5634">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -2723,7 +2721,7 @@ const Rest = () => {
               {" "}analogously to
               {" "}
               <InChapterLink
-                href="/article/chapter4?id=_17_3725"
+                href="/article/chapter4?id=_17_5634"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -2993,7 +2991,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <ExerciseStatement id="_18_4373">
+          <ExerciseStatement id="_18_5996">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4340,7 +4338,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={15}
-            id="_19_976">
+            id="_19_7710">
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -5716,7 +5714,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_20_9853">
+            <SolutionNote id="_20_6720">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6120,7 +6118,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see{" "}
               <InChapterLink
-                href="/article/chapter4?id=_21_4387"
+                href="/article/chapter4?id=_21_9552"
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6297,7 +6295,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_21_4387">
+            <SolutionNote id="_21_9552">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -8804,7 +8802,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={31}
-            id="_22_354">
+            id="_22_2459">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9978,7 +9976,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={33}
-            id="_23_6392">
+            id="_23_1875">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10581,7 +10579,7 @@ const Rest = () => {
               {" "}(cf.
               Exercise 16{" "}
               <InChapterLink
-                href="/article/chapter4?id=_19_976"
+                href="/article/chapter4?id=_19_7710"
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -11275,7 +11273,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={37}
-            id="_24_1131">
+            id="_24_9907">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>

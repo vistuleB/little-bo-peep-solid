@@ -24,182 +24,180 @@ const Article = () => {
   useSetRoute();
   useBreadcrumbs();
   return (<>
-      <Chapter
-        number={2}
-        title="Slopes">
-        <SectionsBreadcrumbs>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-0">
-            <InChapterLink href="?id=section-1">
-              definition
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-1">
-            <InChapterLink href="?id=section-2">
-              measuring slope
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-2">
-            <InChapterLink href="?id=section-3">
-              sign combinations
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-3">
-            <InChapterLink href="?id=section-4">
-              pathological cases
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-4">
-            <InChapterLink href="?id=section-5">
-              “rise over run”
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-5">
-            <InChapterLink href="?id=section-6">
-              solving for “rise” and “run”
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-6">
-            <InChapterLink href="?id=section-7">
-              slopes and line equations
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-7">
-            <InChapterLink href="?id=section-8">
-              slopes and units
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-8">
-            <InChapterLink href="?id=section-9">
-              postscript: units vs dimensions
-            </InChapterLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem
-            class="breadcrumb"
-            id="breadcrumb-9">
-            <InChapterLink href="?id=exercises">
-              exercises
-            </InChapterLink>
-          </BreadcrumbItem>
-        </SectionsBreadcrumbs>
-        <a
-          class="next_page"
-          href="/article/chapter3" />
-        <a
-          class="prev_page"
-          href="/article/chapter1" />
-        <Section id="section-1">
-          <VerticalChunk>
-            <b>
-              Definition.
-            </b>
-            {" "}The{" "}
-            <i>
-              slope
-            </i>
-            {" "}of a line is a
-            mathematical measure of how “steep” a line is.
-            Here are a few examples (for an explanation of
-            the values, see below):
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
-          <Pause />
-          <VerticalChunk>
-            To explain, the slope of a line is...
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            the number of units the line goes up with each
-            unit to the right
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            ...assuming that numbers on the{" "}
-            <NoBreak>
-              <Math>
-                $y$
-              </Math>
-              -axis
-            </NoBreak>
-            {" "}increase
-            going up and that numbers on the{" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -axis
-            </NoBreak>
-            {" "}increase
-            going right, as is usually the case. One can also
-            describe slope as...
-          </VerticalChunk>
-          <Pause />
-          <CentralDisplayItalic>
-            the amount of vertical change per unit of
-            horizontal change
-          </CentralDisplayItalic>
-          <Pause />
-          <VerticalChunk>
-            ...more elegant!
-          </VerticalChunk>
-          <VerticalChunk indent={true}>
-            For example, the line below has slope 1, because
-            it goes up by{" "}
+    <Chapter
+      number={2}
+      next-page="/article/chapter3"
+      prev-page="/article/chapter1"
+      max-element-width={900}
+      page-necessary-margin={1040}
+      title="Slopes">
+      <SectionsBreadcrumbs>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-0">
+          <InChapterLink href="?id=section-1">
+            definition
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-1">
+          <InChapterLink href="?id=section-2">
+            measuring slope
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-2">
+          <InChapterLink href="?id=section-3">
+            sign combinations
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            pathological cases
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-4">
+          <InChapterLink href="?id=section-5">
+            “rise over run”
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-5">
+          <InChapterLink href="?id=section-6">
+            solving for “rise” and “run”
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-6">
+          <InChapterLink href="?id=section-7">
+            slopes and line equations
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-7">
+          <InChapterLink href="?id=section-8">
+            slopes and units
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-8">
+          <InChapterLink href="?id=section-9">
+            postscript: units vs dimensions
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          class="breadcrumb"
+          id="breadcrumb-9">
+          <InChapterLink href="?id=exercises">
+            exercises
+          </InChapterLink>
+        </BreadcrumbItem>
+      </SectionsBreadcrumbs>
+      <Section id="section-1">
+        <VerticalChunk>
+          <b>
+            Definition.
+          </b>
+          {" "}The{" "}
+          <i>
+            slope
+          </i>
+          {" "}of a line is a
+          mathematical measure of how “steep” a line is.
+          Here are a few examples (for an explanation of
+          the values, see below):
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
+        <Pause />
+        <VerticalChunk>
+          To explain, the slope of a line is...
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          the number of units the line goes up with each
+          unit to the right
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          ...assuming that numbers on the{" "}
+          <NoBreak>
             <Math>
-              $1$
+              $y$
             </Math>
-            {" "}unit for each unit to the right:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/slope_1_example.svg" />
-          <Pause />
-          <VerticalChunk>
-            On the other hand, the line below has slope
-            {" "}
-            <NoBreak>
-              <Math>
-                $-0.5$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}because it goes up by{" "}
-            <i>
-              minus
-            </i>
-            {" "}{" "}
+            -axis
+          </NoBreak>
+          {" "}increase
+          going up and that numbers on the{" "}
+          <NoBreak>
             <Math>
-              $0.5$
+              $x$
             </Math>
-            {" "}units
-            with each unit to the right:
-          </VerticalChunk>
-          <Pause />
-          <Image src="/images/slope_0.5_example.svg" />
-          <Pause />
-          <VerticalChunk>
-            (Etc.)
-          </VerticalChunk>
-        </Section>
-        <Rest />
-      </Chapter>
+            -axis
+          </NoBreak>
+          {" "}increase
+          going right, as is usually the case. One can also
+          describe slope as...
+        </VerticalChunk>
+        <Pause />
+        <CentralDisplayItalic>
+          the amount of vertical change per unit of
+          horizontal change
+        </CentralDisplayItalic>
+        <Pause />
+        <VerticalChunk>
+          ...more elegant!
+        </VerticalChunk>
+        <VerticalChunk indent={true}>
+          For example, the line below has slope 1, because
+          it goes up by{" "}
+          <Math>
+            $1$
+          </Math>
+          {" "}unit for each unit to the right:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/slope_1_example.svg" />
+        <Pause />
+        <VerticalChunk>
+          On the other hand, the line below has slope
+          {" "}
+          <NoBreak>
+            <Math>
+              $-0.5$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}because it goes up by{" "}
+          <i>
+            minus
+          </i>
+          {" "}{" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "}units
+          with each unit to the right:
+        </VerticalChunk>
+        <Pause />
+        <Image src="/images/slope_0.5_example.svg" />
+        <Pause />
+        <VerticalChunk>
+          (Etc.)
+        </VerticalChunk>
+      </Section>
+      <Rest />
+    </Chapter>
   </>);
 };
 
@@ -1719,7 +1717,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement id="_6_882">
+          <ExerciseStatement id="_6_2019">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2055,7 +2053,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_15_1998"
+                href="/article/chapter3?id=_15_1302"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2164,7 +2162,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_882"
+                href="/article/chapter2?id=_6_2019"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

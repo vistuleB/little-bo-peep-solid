@@ -1,3 +1,5 @@
 |> Chapter
     title=Functions
     handle=FunctionsCh
+    page-necessary-margin=700
+    max-element-width=1500
