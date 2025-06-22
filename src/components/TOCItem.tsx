@@ -16,7 +16,8 @@ const TOCItem = (props: {
 
   return (
     <div
-      class="relative m-auto leading-[2.4rem] text-3xl"
+      onclick={() => {window.location.href = `/article/${props.href}`}}
+      class="cursor-pointer relative m-auto leading-[2.4rem] text-3xl"
       style={`width:${our_width() - 32}px;direction:rtl;`}>
         <div class="toc-item-lead-wrapper">
           <div>
@@ -26,7 +27,7 @@ const TOCItem = (props: {
         </div>
         <div class="toc-item-title-outline" style="--toc-label-stroke-color: white" aria-hidden="true">{props.label}</div>
         <div class="toc-item-title">
-          <a href={`/article/${props.href}`}><span>{props.label}</span></a>
+          <span>{props.label}</span>
         </div>
     </div>
   );
