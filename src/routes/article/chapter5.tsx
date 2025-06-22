@@ -198,6 +198,7 @@ const Article = () => {
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <Section id="section-1">
+        Cos and Sin. (“Cosine” and “sine”.)
         <VerticalChunk>
           <b>
             Cos and Sin. (“Cosine” and “sine”.)
@@ -724,6 +725,7 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
+        Derivatives.
         <VerticalChunk>
           <b>
             Derivatives.
@@ -1037,6 +1039,14 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
+        Even/odd identities, and identities with{" "}
+        <NoBreak>
+          “
+          <Math>
+            $\eta$
+          </Math>
+          ”.
+        </NoBreak>
         <VerticalChunk>
           <b>
             Even/odd identities, and identities with{" "}
@@ -1200,6 +1210,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-4">
+        Relation to derivatives.
         <VerticalChunk>
           <b>
             Relation to derivatives.
@@ -1295,6 +1306,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
+        The pythagorean identity.
         <VerticalChunk>
           <b>
             The pythagorean identity.
@@ -1496,6 +1508,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-6">
+        Inputs as radians.
         <VerticalChunk>
           <b>
             Inputs as radians.
@@ -1512,7 +1525,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_9907"
+            href="/article/chapter4?id=_24_4538"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -1698,6 +1711,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-7">
+        Auto-converting degrees to radians.
         <VerticalChunk>
           <b>
             Auto-converting degrees to radians.
@@ -1811,6 +1825,25 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-8">
+        Sines and cosines of{" "}
+        <NoBreak>
+          <Math>
+            $\mathbf&#123;30^\circ&#125;$
+          </Math>
+          ,
+        </NoBreak>
+        {" "}
+        {" "}
+        <Math>
+          $\mathbf&#123;45^\circ&#125;$
+        </Math>
+        {" "}and{" "}
+        <NoBreak>
+          <Math>
+            $\mathbf&#123;60^\circ&#125;$
+          </Math>
+          .
+        </NoBreak>
         <VerticalChunk>
           <b>
             Sines and cosines of{" "}
@@ -2245,6 +2278,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-9">
+        Scaling the circle.
         <VerticalChunk>
           <b>
             Scaling the circle.
@@ -2368,6 +2402,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-10">
+        Polar coordinates.
         <VerticalChunk>
           <b>
             Polar coordinates.
@@ -2604,6 +2639,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-11">
+        Change-of-coordinate formulas.
         <VerticalChunk>
           <b>
             Change-of-coordinate formulas.
@@ -2823,6 +2859,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-12">
+        Right triangles.
         <VerticalChunk>
           <b>
             Right triangles.
@@ -2981,6 +3018,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-13">
+        A famous diagram.
         <VerticalChunk>
           <b>
             A famous diagram.
@@ -3088,6 +3126,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-14">
+        The Abercrombie inequality.
         <VerticalChunk>
           <b>
             The Abercrombie inequality.
@@ -3350,6 +3389,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-15">
+        The Gregorinovich sandwich.
         <VerticalChunk>
           <b>
             The Gregorinovich sandwich.
@@ -3646,6 +3686,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-16">
+        The angle-sum formulas.
         <VerticalChunk>
           <b>
             The angle-sum formulas.
@@ -3832,6 +3873,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-17">
+        The missing arrows.
         <VerticalChunk>
           <b>
             The missing arrows.
@@ -4022,6 +4064,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-18">
+        Secant: a second view.
         <VerticalChunk>
           <b>
             Secant: a second view.
@@ -4144,6 +4187,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-19">
+        Note on calculators.
         <VerticalChunk>
           <b>
             Note on calculators.
@@ -14677,7 +14721,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_25_4278">
+          <ExerciseStatement id="_25_5672">
             <VerticalChunk>
               <b>
                 Exercise 42.

@@ -90,6 +90,7 @@ const Article = () => {
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <Section id="section-1">
+        Notation.
         <VerticalChunk>
           <b>
             Notation.
@@ -203,6 +204,7 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
+        What it does.
         <VerticalChunk>
           <b>
             What it does.
@@ -408,6 +410,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
+        Set Equality.
         <VerticalChunk>
           <b>
             Set Equality.
@@ -534,6 +537,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-4">
+        Second notation for the empty set.
         <VerticalChunk>
           <b>
             Second notation for the empty set.
@@ -566,6 +570,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
+        Sets within sets.
         <VerticalChunk>
           <b>
             Sets within sets.
@@ -681,6 +686,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-6">
+        Set union and set intersection.
         <VerticalChunk>
           <b>
             Set union and set intersection.
@@ -933,6 +939,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-7">
+        Sets encountered in calculus.
         <VerticalChunk>
           <b>
             Sets encountered in calculus.
@@ -1108,6 +1115,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-8">
+        Sets not encountered in calculus.
         <VerticalChunk>
           <b>
             Sets not encountered in calculus.

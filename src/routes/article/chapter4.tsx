@@ -120,6 +120,7 @@ const Article = () => {
       <Image src="/images/svg_ch4_ch_polaroids.svg" />
       <Pause />
       <Section id="section-1">
+        Definitions.
         <VerticalChunk>
           <b>
             Definitions.
@@ -290,6 +291,7 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
+        Vocabulary.
         <VerticalChunk>
           <b>
             Vocabulary.
@@ -377,6 +379,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
+        Sketching a Derivative.
         <VerticalChunk>
           <b>
             Sketching a Derivative.
@@ -425,6 +428,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-4">
+        Derivative of a constant function.
         <VerticalChunk>
           <b>
             Derivative of a constant function.
@@ -541,6 +545,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
+        Derivative of an affine function.
         <VerticalChunk>
           <b>
             Derivative of an affine function.
@@ -776,6 +781,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-6">
+        Units of the Derivative.
         <VerticalChunk>
           <b>
             Units of the Derivative.
@@ -961,6 +967,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-7">
+        The second derivative.
         <VerticalChunk>
           <b>
             The second derivative.
@@ -1176,6 +1183,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-8">
+        Geometric interpretation of the second derivative.
         <VerticalChunk>
           <b>
             Geometric interpretation of the second derivative.
@@ -1273,6 +1281,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-9">
+        Vocabulary #1.
         <VerticalChunk>
           <b>
             Vocabulary #1.
@@ -1359,6 +1368,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-10">
+        The Second Derivative of Position.
         <VerticalChunk>
           <b>
             The Second Derivative of Position.
@@ -1608,6 +1618,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-11">
+        The Jerk.
         <VerticalChunk>
           <b>
             The Jerk.
@@ -1795,7 +1806,7 @@ const Rest = () => {
         <VerticalChunk>
           of functions already appear in{" "}
           <a
-            href="/article/chapter3?id=_13_4200"
+            href="/article/chapter3?id=_13_1930"
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1827,7 +1838,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_16_5098">
+          <ExerciseStatement id="_16_9582">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1955,7 +1966,7 @@ const Rest = () => {
             <VerticalChunk>
               derivative of the graph in{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_5098"
+                href="/article/chapter4?id=_16_9582"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2000,7 +2011,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_5098"
+                href="/article/chapter4?id=_16_9582"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2539,7 +2550,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <ExerciseStatement id="_17_5634">
+          <ExerciseStatement id="_17_9322">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -2721,7 +2732,7 @@ const Rest = () => {
               {" "}analogously to
               {" "}
               <InChapterLink
-                href="/article/chapter4?id=_17_5634"
+                href="/article/chapter4?id=_17_9322"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -2991,7 +3002,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <ExerciseStatement id="_18_5996">
+          <ExerciseStatement id="_18_3112">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4338,7 +4349,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={15}
-            id="_19_7710">
+            id="_19_3388">
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -5714,7 +5725,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_20_6720">
+            <SolutionNote id="_20_1390">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6118,7 +6129,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see{" "}
               <InChapterLink
-                href="/article/chapter4?id=_21_9552"
+                href="/article/chapter4?id=_21_6947"
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6295,7 +6306,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_21_9552">
+            <SolutionNote id="_21_6947">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -8802,7 +8813,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={31}
-            id="_22_2459">
+            id="_22_8038">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9976,7 +9987,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={33}
-            id="_23_1875">
+            id="_23_1981">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10579,7 +10590,7 @@ const Rest = () => {
               {" "}(cf.
               Exercise 16{" "}
               <InChapterLink
-                href="/article/chapter4?id=_19_7710"
+                href="/article/chapter4?id=_19_3388"
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -11273,7 +11284,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={37}
-            id="_24_9907">
+            id="_24_4538">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>

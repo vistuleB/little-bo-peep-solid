@@ -31,7 +31,7 @@ const Article = () => {
       max-element-width={500}
       page-necessary-margin={610}
       title="A Few Refreshers"
-      id="_5_4109">
+      id="_5_2852">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -77,6 +77,7 @@ const Article = () => {
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <Section id="section-1">
+        Square Roots.
         <VerticalChunk>
           <b>
             Square Roots.
@@ -545,6 +546,7 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
+        Fractions and Division.
         <VerticalChunk>
           <b>
             Fractions and Division.
@@ -761,6 +763,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
+        Distributivity.
         <VerticalChunk>
           <b>
             Distributivity.
@@ -1343,6 +1346,7 @@ const Rest = () => {
       <Section
         id="section-4"
         divider={false}>
+        Epilogue.
         <VerticalChunk>
           <b>
             Epilogue.
@@ -1416,6 +1420,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
+        Vocabulary.
         <VerticalChunk>
           <b>
             Vocabulary.
@@ -1462,7 +1467,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_4_1792">
+          <ExerciseStatement id="_4_6681">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2626,7 +2631,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_1792"
+                href="/article/chapter1?id=_4_6681"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
