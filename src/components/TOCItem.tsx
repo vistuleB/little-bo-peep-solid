@@ -16,19 +16,28 @@ const TOCItem = (props: {
 
   return (
     <div
-      onclick={() => {window.location.href = `/article/${props.href}`}}
+      onclick={() => {
+        window.location.href = `/article/${props.href}`;
+      }}
       class="cursor-pointer relative m-auto leading-[2.4rem] text-3xl"
-      style={`width:${our_width() - 32}px;direction:rtl;`}>
-        <div class="toc-item-lead-wrapper">
-          <div>
-            <span>{props.article_type}</span>
-            <span class="toc-item-lead-dots">..........................................................................................................................................................................</span>
-          </div>
+      style={`width:${our_width() - 32}px;direction:rtl;`}
+    >
+      <div class="toc-item-lead-wrapper">
+        <div>
+          <span>{props.article_type}</span>
+          <span class="toc-item-lead-dots">
+            ..........................................................................................................................................................................
+          </span>
         </div>
-        <div class="toc-item-title-outline" style="--toc-label-stroke-color: white" aria-hidden="true">{props.label}</div>
-        <div class="toc-item-title">
-          <span>{props.label}</span>
-        </div>
+      </div>
+      <div
+        class="toc-item-title-outline"
+        style="--toc-label-stroke-color: white"
+        aria-hidden="true"
+      >
+        {props.label}
+      </div>
+      <div class="toc-item-title">{props.label}</div>
     </div>
   );
 };

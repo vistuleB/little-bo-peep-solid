@@ -11,10 +11,6 @@ const HamburgerPanelItem = (props: {
 }) => {
   const { store } = useGlobalContext();
 
-  const our_width = () =>
-    store.innerWidth > MOBILE_MAX_WIDTH
-      ? DESKTOP_COLUMN_WIDTH
-      : store.innerWidth;
   return (
     <ConditionalLink
       href={`/article/${props.href}`}
@@ -27,10 +23,7 @@ const HamburgerPanelItem = (props: {
       }}
     >
       <div class="panel-item flex items-baseline justify-between leading-9 sm:leading-8 text-2xl">
-        <div
-          class="relative m-auto"
-          style={`width:${our_width() - 32}px;direction:rtl;`}
-        >
+        <div class="relative m-auto" style={`width:100%;direction:rtl;`}>
           <div class="toc-item-lead-wrapper">
             <div>
               {/* somehow this wrapper div is useful for base-alignment */}
