@@ -1,5 +1,5 @@
-import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const TOCItem = (props: {
   href: string;
@@ -9,18 +9,13 @@ const TOCItem = (props: {
 }) => {
   const { store } = useGlobalContext();
 
-  const our_width = () =>
-    store.innerWidth > MOBILE_MAX_WIDTH
-      ? DESKTOP_COLUMN_WIDTH
-      : store.innerWidth;
-
   return (
     <div
       onclick={() => {
         window.location.href = `/article/${props.href}`;
       }}
       class="cursor-pointer relative m-auto leading-[2.4rem] text-3xl"
-      style={`width:${our_width() - 32}px;direction:rtl;`}
+      style={`width:${mainColumnWidth() - 32}px;direction:rtl;`}
     >
       <div class="toc-item-lead-wrapper">
         <div>

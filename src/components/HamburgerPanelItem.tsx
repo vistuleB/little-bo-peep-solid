@@ -1,5 +1,4 @@
 import { JSX } from "solid-js";
-import { MOBILE_MAX_WIDTH, DESKTOP_COLUMN_WIDTH } from "~/constants";
 import { A, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 
