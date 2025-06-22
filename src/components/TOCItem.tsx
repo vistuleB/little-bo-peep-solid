@@ -1,5 +1,4 @@
-import { useGlobalContext } from "~/store/StoreProvider";
-import mainColumnWidth from "~/hooks/useMainColumnWidth";
+import TextParent from "./TextParent";
 
 const TOCItem = (props: {
   href: string;
@@ -7,33 +6,33 @@ const TOCItem = (props: {
   on_mobile?: string;
   article_type: any;
 }) => {
-  const { store } = useGlobalContext();
-
   return (
-    <div
-      onclick={() => {
-        window.location.href = `/article/${props.href}`;
-      }}
-      class="cursor-pointer relative m-auto leading-[2.4rem] text-3xl"
-      style={`width:${mainColumnWidth() - 32}px;direction:rtl;`}
-    >
-      <div class="toc-item-lead-wrapper">
-        <div>
-          <span>{props.article_type}</span>
-          <span class="toc-item-lead-dots">
-            ..........................................................................................................................................................................
-          </span>
-        </div>
-      </div>
+    <TextParent>
       <div
-        class="toc-item-title-outline"
-        style="--toc-label-stroke-color: white"
-        aria-hidden="true"
+        onclick={() => {
+          window.location.href = `/article/${props.href}`;
+        }}
+        class="cursor-pointer relative m-auto leading-[2.4rem] text-3xl"
+        style="direction:rtl"
       >
-        {props.label}
+        <div class="toc-item-lead-wrapper">
+          <div>
+            <span>{props.article_type}</span>
+            <span class="toc-item-lead-dots">
+              ..........................................................................................................................................................................
+            </span>
+          </div>
+        </div>
+        <div
+          class="toc-item-title-outline"
+          style="--toc-label-stroke-color: white"
+          aria-hidden="true"
+        >
+          {props.label}
+        </div>
+        <div class="toc-item-title">{props.label}</div>
       </div>
-      <div class="toc-item-title">{props.label}</div>
-    </div>
+    </TextParent>
   );
 };
 
