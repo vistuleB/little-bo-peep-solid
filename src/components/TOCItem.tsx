@@ -1,4 +1,4 @@
-import TextParent from "./TextParent";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const TOCItem = (props: {
   href: string;
@@ -7,7 +7,10 @@ const TOCItem = (props: {
   article_type: any;
 }) => {
   return (
-    <TextParent>
+    <div
+      class="text-column"
+      style={`width:${mainColumnWidth()}px;`}
+    >
       <div
         onclick={() => {
           window.location.href = `/article/${props.href}`;
@@ -32,7 +35,7 @@ const TOCItem = (props: {
         </div>
         <div class="toc-item-title">{props.label}</div>
       </div>
-    </TextParent>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ export const SectionDivider = () => {
   return (
     <>
       <Spacer />
-      <img class="slice" src="/images/section_divider.svg" />
+      <img class="text-column" src="/images/section_divider.svg" />
     </>
   );
 };

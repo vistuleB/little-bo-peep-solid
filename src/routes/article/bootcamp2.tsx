@@ -329,7 +329,7 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_1_9077">
+        <MathBlock id="_1_1755">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -351,7 +351,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_9077"
+            href="/article/bootcamp2?id=_1_1755"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -373,7 +373,7 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_9077"
+            href="/article/bootcamp2?id=_1_1755"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -383,7 +383,7 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_9077"
+            href="/article/bootcamp2?id=_1_1755"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -394,7 +394,7 @@ const Rest = () => {
             src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_2_6769">
+        <MathBlock id="_2_361">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -430,13 +430,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6769"
+            href="/article/bootcamp2?id=_2_361"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6769"
+            href="/article/bootcamp2?id=_2_361"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -450,7 +450,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6769"
+            href="/article/bootcamp2?id=_2_361"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -522,13 +522,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_9077"
+            href="/article/bootcamp2?id=_1_1755"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6769"
+            href="/article/bootcamp2?id=_2_361"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -2946,7 +2946,7 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1_9077"
+                href="/article/bootcamp2?id=_1_1755"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -3010,7 +3010,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement id="_3_8366">
+          <ExerciseStatement id="_3_7362">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3294,7 +3294,7 @@ const Rest = () => {
               </Math>
               {" "}(as in{" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_8366"
+                href="/article/bootcamp2?id=_3_7362"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>

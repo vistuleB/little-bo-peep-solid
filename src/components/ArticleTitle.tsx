@@ -15,7 +15,10 @@ const ArticleTitle = (props: {
   const { on_mobile } = useOnMobile();
 
   return (
-    <div class="slice" style={`width:${mainColumnWidth()}px;`}>
+    <div 
+      class="text-column"
+      style={`width:${mainColumnWidth()}px;`}
+    >
       <h1
         class="text-2rem sm:text-4xl pt-5 sm:pt-4 pb-4"
         style={`margin-top: ${

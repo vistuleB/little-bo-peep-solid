@@ -81,7 +81,7 @@ const Grid = (_props: GridProps) => {
 
   return (
     <div
-      class={`slice ${props.class}`}
+      class={`text-column ${props.class}`}
       style={{
         "margin-top": `${props.margin_top}px`,
         "margin-bottom": `${props.margin_bottom}px`,
@@ -90,7 +90,7 @@ const Grid = (_props: GridProps) => {
       }}>
       <div
         ref={parentSpan}
-        class={`slice !grid list-none`}
+        class={`text-column !grid list-none`}
         style={{
           animation: "appear 2s ease 0s 1 normal forwards",
           "place-items": props.place_items,

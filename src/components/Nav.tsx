@@ -32,7 +32,7 @@ const Title = () => {
   return (
     <div class="select-none w-full h-full" id="Header">
       <div
-        class="text-3xl self-end mt-auto mb-auto py-2 slice"
+        class="text-3xl self-end mt-auto mb-auto py-2 text-column"
         style={`width:${mainColumnWidth()}px;transform:translate(0, 0.2em);`}
       >
         <a href="/" onClick={() => setRoute("/")}>

@@ -12,7 +12,7 @@ export const CentralDisplay = (
     <div
       class={twJoin(
         props.class,
-        "slice text-center block",
+        "text-column text-center block",
         store.show_areas && "bg-[#ebe3a0b0]"
       )}
       style={`width:${mainColumnWidth()}px;${props.style}`}
@@ -32,7 +32,7 @@ export const CentralDisplayItalic = (
     <div
       class={twJoin(
         props.class,
-        "slice text-center block pl-[2em] pr-[2em]",
+        "text-column text-center block pl-[2em] pr-[2em]",
         store.show_areas && "bg-[#ebe3a0b0]"
       )}
       style={`width:${mainColumnWidth()}px;`}

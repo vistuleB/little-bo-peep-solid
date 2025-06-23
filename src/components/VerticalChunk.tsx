@@ -12,7 +12,7 @@ const VerticalChunk = (
   return (
     <p
       class={twJoin(
-        "slice",
+        "text-column",
         props.indent && "indent-10",
         props.class,
         store.show_areas && "divide-horizontally",
