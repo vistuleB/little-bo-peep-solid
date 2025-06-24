@@ -32,7 +32,7 @@ const HamburgerPanel = () => {
         height: `calc(100vh - ${HAMBURGER_MENU_HEIGHT}px)`,
         transform: `translateX(${menu_closed() ? "100%" : "0"})`,
       }}
-      class="text-xl leading-3 sm:leading-5 z-50 fixed right-0 top-14 scrollbar-hidden select-none overscroll-none w-[16rem] sm:w-[20rem] bg-stone-100 overflow-y-scroll translate-y-0 sm:translate-y-[-1px] pt-[0.6em] px-[1em] [&ul]:mb-[8px] [&ul]:p-0">
+      class="text-xl leading-3 sm:leading-5 z-50 fixed right-0 top-14 scrollbar-hidden select-none overscroll-none w-[17rem] sm:w-[20rem] bg-stone-100 overflow-y-scroll translate-y-0 sm:translate-y-[-1px] pt-[0.6em] px-[1em] [&ul]:mb-[8px] [&ul]:p-0">
       <HamburgerPanelAuthorSuppliedContents />
       {env === "DEV" || env === "LOCAL" ? (
         <div id="options">
