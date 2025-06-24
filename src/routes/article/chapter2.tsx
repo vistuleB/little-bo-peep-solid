@@ -104,7 +104,6 @@ const Article = () => {
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <Section id="section-1">
-        Definition.
         <VerticalChunk>
           <b>
             Definition.
@@ -208,7 +207,6 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
-        Measuring Slope.
         <VerticalChunk>
           <b>
             Measuring Slope.
@@ -391,7 +389,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
-        Sign Combinations.
         <VerticalChunk>
           <b>
             Sign Combinations.
@@ -640,7 +637,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-4">
-        Pathological Cases.
         <VerticalChunk>
           <b>
             Pathological Cases.
@@ -710,7 +706,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
-        “Rise over Run”.
         <VerticalChunk>
           <b>
             “Rise over Run”.
@@ -844,7 +839,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-6">
-        Solving for “rise” and “run”.
         <VerticalChunk>
           <b>
             Solving for “rise” and “run”.
@@ -892,7 +886,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-7">
-        Slopes and Line Equations.
         <VerticalChunk>
           <b>
             Slopes and Line Equations.
@@ -1225,7 +1218,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-8">
-        Slopes and Units.
         <VerticalChunk>
           <b>
             Slopes and Units.
@@ -1534,7 +1526,6 @@ const Rest = () => {
       <Section
         id="section-9"
         divider={false}>
-        Postscript: Units vs Dimensions.
         <VerticalChunk>
           <b>
             Postscript: Units vs Dimensions.
@@ -1726,7 +1717,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement id="_6_1880">
+          <ExerciseStatement id="_6_1069">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2062,7 +2053,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_15_4512"
+                href="/article/chapter3?id=_15_6291"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2171,7 +2162,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_1880"
+                href="/article/chapter2?id=_6_1069"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
