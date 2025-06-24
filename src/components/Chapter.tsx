@@ -9,12 +9,12 @@ const Chapter = (props: any) => {
       maxElementWidth={props["max-element-width"]}
       prevPage={props["prev-page"]}
       nextPage={props["next-page"]}>
-      <ArticleTitle
+      {/* <ArticleTitle
         label={`Chapter ${props.number}: ` + props.title}
         on_mobile_label={
           `Chapter ${props.number}: ` + (props.mobile_title || props.title)
         }
-      />
+      /> */}
       {props.children}
     </AbstractArticle>
   );

@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitleNewStyle from "~/components/ArticleTitleNewStyle";
 
 const Article = () => {
   useSetRoute();
@@ -102,6 +103,10 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitleNewStyle>
+        Powers of 10
+      </ArticleTitleNewStyle>
+      <Pause />
       <Section id="section-1">
         <VerticalChunk>
           <b>
@@ -327,7 +332,11 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
+<<<<<<< HEAD
         <MathBlock id="_1_7606">
+=======
+        <MathBlock id="_1_4448">
+>>>>>>> fbd2226 (first pass)
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -349,7 +358,11 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
+<<<<<<< HEAD
             href="/article/bootcamp2?id=_1_7606"
+=======
+            href="/article/bootcamp2?id=_1_4448"
+>>>>>>> fbd2226 (first pass)
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -371,7 +384,11 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
+<<<<<<< HEAD
             href="/article/bootcamp2?id=_1_7606"
+=======
+            href="/article/bootcamp2?id=_1_4448"
+>>>>>>> fbd2226 (first pass)
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -381,7 +398,11 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
+<<<<<<< HEAD
             href="/article/bootcamp2?id=_1_7606"
+=======
+            href="/article/bootcamp2?id=_1_4448"
+>>>>>>> fbd2226 (first pass)
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -392,7 +413,11 @@ const Rest = () => {
             src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
         </VerticalChunk>
         <Pause />
+<<<<<<< HEAD
         <MathBlock id="_2_5678">
+=======
+        <MathBlock id="_2_3810">
+>>>>>>> fbd2226 (first pass)
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -428,13 +453,21 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
+<<<<<<< HEAD
             href="/article/bootcamp2?id=_2_5678"
+=======
+            href="/article/bootcamp2?id=_2_3810"
+>>>>>>> fbd2226 (first pass)
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
+<<<<<<< HEAD
             href="/article/bootcamp2?id=_2_5678"
+=======
+            href="/article/bootcamp2?id=_2_3810"
+>>>>>>> fbd2226 (first pass)
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -448,7 +481,11 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
+<<<<<<< HEAD
             href="/article/bootcamp2?id=_2_5678"
+=======
+            href="/article/bootcamp2?id=_2_3810"
+>>>>>>> fbd2226 (first pass)
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -520,13 +557,21 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
+<<<<<<< HEAD
             href="/article/bootcamp2?id=_1_7606"
+=======
+            href="/article/bootcamp2?id=_1_4448"
+>>>>>>> fbd2226 (first pass)
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
+<<<<<<< HEAD
             href="/article/bootcamp2?id=_2_5678"
+=======
+            href="/article/bootcamp2?id=_2_3810"
+>>>>>>> fbd2226 (first pass)
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -2937,12 +2982,16 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
+<<<<<<< HEAD
                 href="/article/bootcamp2?id=_1_7606"
+=======
+                href="/article/bootcamp2?id=_1_4448"
+>>>>>>> fbd2226 (first pass)
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
-              ), 
-              while the third equality uses additivity of exponents, 
+              ),
+              while the third equality uses additivity of exponents,
               also stated earlier. (So: We are only using “known”
               facts, alongside some ordinary arithmetic.)
             </VerticalChunk>
@@ -3001,7 +3050,11 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
+<<<<<<< HEAD
           <ExerciseStatement id="_3_1534">
+=======
+          <ExerciseStatement id="_3_3924">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               <b>
                 Exercise 14.

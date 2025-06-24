@@ -94,6 +94,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("CentralDisplay", "VerticalChunk"),
         #("CentralDisplayItalic", "VerticalChunk"),
       ]),
+      dn.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitleNewStyle", "title")),
+      dn.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitleNewStyle", "title")),
     ],
     // ****
     // parse _, * delims

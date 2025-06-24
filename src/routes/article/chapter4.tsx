@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitleNewStyle from "~/components/ArticleTitleNewStyle";
 
 const Article = () => {
   useSetRoute();
@@ -117,6 +118,10 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitleNewStyle>
+        Derivatives
+      </ArticleTitleNewStyle>
+      <Pause />
       <Image src="/images/svg_ch4_ch_polaroids.svg" />
       <Pause />
       <Section id="section-1">
@@ -1795,7 +1800,11 @@ const Rest = () => {
         <VerticalChunk>
           of functions already appear in{" "}
           <a
+<<<<<<< HEAD
             href="/article/chapter3?id=_13_5321"
+=======
+            href="/article/chapter3?id=_13_928"
+>>>>>>> fbd2226 (first pass)
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1827,7 +1836,11 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
+<<<<<<< HEAD
           <ExerciseStatement id="_16_8820">
+=======
+          <ExerciseStatement id="_16_2460">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1955,7 +1968,11 @@ const Rest = () => {
             <VerticalChunk>
               derivative of the graph in{" "}
               <InChapterLink
+<<<<<<< HEAD
                 href="/article/chapter4?id=_16_8820"
+=======
+                href="/article/chapter4?id=_16_2460"
+>>>>>>> fbd2226 (first pass)
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2000,7 +2017,11 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of{" "}
               <InChapterLink
+<<<<<<< HEAD
                 href="/article/chapter4?id=_16_8820"
+=======
+                href="/article/chapter4?id=_16_2460"
+>>>>>>> fbd2226 (first pass)
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2539,7 +2560,11 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
+<<<<<<< HEAD
           <ExerciseStatement id="_17_1526">
+=======
+          <ExerciseStatement id="_17_797">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -2721,7 +2746,11 @@ const Rest = () => {
               {" "}analogously to
               {" "}
               <InChapterLink
+<<<<<<< HEAD
                 href="/article/chapter4?id=_17_1526"
+=======
+                href="/article/chapter4?id=_17_797"
+>>>>>>> fbd2226 (first pass)
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -2991,7 +3020,11 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
+<<<<<<< HEAD
           <ExerciseStatement id="_18_9795">
+=======
+          <ExerciseStatement id="_18_2210">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4338,7 +4371,11 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={15}
+<<<<<<< HEAD
             id="_19_3937">
+=======
+            id="_19_1735">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -5714,7 +5751,11 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
+<<<<<<< HEAD
             <SolutionNote id="_20_3638">
+=======
+            <SolutionNote id="_20_5128">
+>>>>>>> fbd2226 (first pass)
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6118,7 +6159,11 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see{" "}
               <InChapterLink
+<<<<<<< HEAD
                 href="/article/chapter4?id=_21_9901"
+=======
+                href="/article/chapter4?id=_21_6702"
+>>>>>>> fbd2226 (first pass)
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6295,7 +6340,11 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
+<<<<<<< HEAD
             <SolutionNote id="_21_9901">
+=======
+            <SolutionNote id="_21_6702">
+>>>>>>> fbd2226 (first pass)
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -8802,7 +8851,11 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={31}
+<<<<<<< HEAD
             id="_22_757">
+=======
+            id="_22_3569">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9976,7 +10029,11 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={33}
+<<<<<<< HEAD
             id="_23_3153">
+=======
+            id="_23_9343">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10579,7 +10636,11 @@ const Rest = () => {
               {" "}(cf.
               Exercise 16{" "}
               <InChapterLink
+<<<<<<< HEAD
                 href="/article/chapter4?id=_19_3937"
+=======
+                href="/article/chapter4?id=_19_1735"
+>>>>>>> fbd2226 (first pass)
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -11273,7 +11334,11 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution
             solution_number={37}
+<<<<<<< HEAD
             id="_24_4094">
+=======
+            id="_24_6584">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>

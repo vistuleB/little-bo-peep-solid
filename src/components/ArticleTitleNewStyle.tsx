@@ -6,19 +6,15 @@ import {
   CHAPTER_TITLE_TOP_MARGIN_MOBILE,
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
+import { ParentProps } from "solid-js";
 
-const ArticleTitle = (props: {
-  label: string;
-  on_mobile_label?: string;
+const ArticleTitleNewStyle = (props: ParentProps & {
   class?: string;
 }) => {
   const { on_mobile } = useOnMobile();
 
   return (
-    <div
-      class="text-column"
-      style={`width:${mainColumnWidth()}px;`}
-    >
+    <div class="slice" style={`width:${mainColumnWidth()}px;`}>
       <h1
         class="text-2rem sm:text-4xl pt-5 sm:pt-4 pb-4"
         style={`margin-top: ${
@@ -31,13 +27,12 @@ const ArticleTitle = (props: {
             : CHAPTER_TITLE_BOTTOM_MARGIN_DESKTOP
         }px`}
       >
-        <span class="sm:hidden">
-          {on_mobile() ? props.on_mobile_label : props.label}
+        <span class="">
+          {props.children}
         </span>
-        <span class="hidden sm:block">{props.label}</span>
       </h1>
     </div>
   );
 };
 
-export default ArticleTitle;
+export default ArticleTitleNewStyle;

@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitleNewStyle from "~/components/ArticleTitleNewStyle";
 
 const Article = () => {
   useSetRoute();
@@ -196,6 +197,10 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitleNewStyle>
+        The Trigonometric Functions
+      </ArticleTitleNewStyle>
+      <Pause />
       <Section id="section-1">
         <VerticalChunk>
           <b>
@@ -1511,7 +1516,11 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
+<<<<<<< HEAD
             href="/article/chapter4?id=_24_4094"
+=======
+            href="/article/chapter4?id=_24_6584"
+>>>>>>> fbd2226 (first pass)
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14676,7 +14685,11 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
+<<<<<<< HEAD
           <ExerciseStatement id="_25_4541">
+=======
+          <ExerciseStatement id="_25_3767">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               <b>
                 Exercise 42.

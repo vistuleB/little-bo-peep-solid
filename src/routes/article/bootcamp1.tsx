@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitleNewStyle from "~/components/ArticleTitleNewStyle";
 
 const Article = () => {
   useSetRoute();
@@ -89,6 +90,10 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitleNewStyle>
+        Sets
+      </ArticleTitleNewStyle>
+      <Pause />
       <Section id="section-1">
         <VerticalChunk>
           <b>

@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitleNewStyle from "~/components/ArticleTitleNewStyle";
 
 const Article = () => {
   useSetRoute();
@@ -76,6 +77,9 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitleNewStyle>
+        A Few Refreshers
+      </ArticleTitleNewStyle>
       <Section id="section-1">
         <VerticalChunk>
           <b>
@@ -2632,7 +2636,7 @@ const Rest = () => {
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
-              , we 
+              , we
               observed how the difference
             </VerticalChunk>
             <Pause />

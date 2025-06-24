@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitleNewStyle from "~/components/ArticleTitleNewStyle";
 
 const Article = () => {
   useSetRoute();
@@ -103,6 +104,10 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitleNewStyle>
+        Slopes
+      </ArticleTitleNewStyle>
+      <Pause />
       <Section id="section-1">
         <VerticalChunk>
           <b>
@@ -1717,7 +1722,11 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
+<<<<<<< HEAD
           <ExerciseStatement id="_6_1069">
+=======
+          <ExerciseStatement id="_6_2976">
+>>>>>>> fbd2226 (first pass)
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2051,6 +2060,7 @@ const Rest = () => {
                 Note 1.
               </i>
               {" "}
+<<<<<<< HEAD
               As explained in{" "}
               <a
                 href="/article/chapter3?id=_15_6291"
@@ -2058,6 +2068,9 @@ const Rest = () => {
                 Chapter 3
               </a>
               , an empty circle of
+=======
+              As explained in Chapter &gt;&gt;, an empty circle of
+>>>>>>> fbd2226 (first pass)
               this type
             </VerticalChunk>
             <Pause />
@@ -2162,7 +2175,11 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
+<<<<<<< HEAD
                 href="/article/chapter2?id=_6_1069"
+=======
+                href="/article/chapter2?id=_6_2976"
+>>>>>>> fbd2226 (first pass)
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
