@@ -28,9 +28,9 @@ const Article = () => {
     <Bootcamp
       number={2}
       next-page="/article/bootcamp1"
-      max-element-width={1200}
+      title="Powers of 10"
       page-necessary-margin={270}
-      title="Powers of 10">
+      max-element-width={1200}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -262,9 +262,9 @@ const Rest = () => {
           \Large 10^0 = 1 = 1
           $$
           <ImageLeft
-            offset_x="4em"
-            offset_y="-0.2em"
             src="/images/svg_bt2_bt_alert_cloud.svg"
+            offset_y="-0.2em"
+            offset_x="4em"
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
@@ -332,11 +332,7 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-<<<<<<< HEAD
-        <MathBlock id="_1_7606">
-=======
-        <MathBlock id="_1_4448">
->>>>>>> fbd2226 (first pass)
+        <MathBlock id="_1_6073">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -358,11 +354,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-<<<<<<< HEAD
-            href="/article/bootcamp2?id=_1_7606"
-=======
-            href="/article/bootcamp2?id=_1_4448"
->>>>>>> fbd2226 (first pass)
+            href="/article/bootcamp2?id=_1_6073"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -384,11 +376,7 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
-<<<<<<< HEAD
-            href="/article/bootcamp2?id=_1_7606"
-=======
-            href="/article/bootcamp2?id=_1_4448"
->>>>>>> fbd2226 (first pass)
+            href="/article/bootcamp2?id=_1_6073"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -398,26 +386,18 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
-<<<<<<< HEAD
-            href="/article/bootcamp2?id=_1_7606"
-=======
-            href="/article/bootcamp2?id=_1_4448"
->>>>>>> fbd2226 (first pass)
+            href="/article/bootcamp2?id=_1_6073"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           )
           is equivalent to the identity
           <ImageLeft
-            line={2}
-            src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
+            src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
+            line={2} />
         </VerticalChunk>
         <Pause />
-<<<<<<< HEAD
-        <MathBlock id="_2_5678">
-=======
-        <MathBlock id="_2_3810">
->>>>>>> fbd2226 (first pass)
+        <MathBlock id="_2_7419">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -453,21 +433,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-<<<<<<< HEAD
-            href="/article/bootcamp2?id=_2_5678"
-=======
-            href="/article/bootcamp2?id=_2_3810"
->>>>>>> fbd2226 (first pass)
+            href="/article/bootcamp2?id=_2_7419"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-<<<<<<< HEAD
-            href="/article/bootcamp2?id=_2_5678"
-=======
-            href="/article/bootcamp2?id=_2_3810"
->>>>>>> fbd2226 (first pass)
+            href="/article/bootcamp2?id=_2_7419"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -481,11 +453,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
-<<<<<<< HEAD
-            href="/article/bootcamp2?id=_2_5678"
-=======
-            href="/article/bootcamp2?id=_2_3810"
->>>>>>> fbd2226 (first pass)
+            href="/article/bootcamp2?id=_2_7419"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -557,21 +525,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-<<<<<<< HEAD
-            href="/article/bootcamp2?id=_1_7606"
-=======
-            href="/article/bootcamp2?id=_1_4448"
->>>>>>> fbd2226 (first pass)
+            href="/article/bootcamp2?id=_1_6073"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-<<<<<<< HEAD
-            href="/article/bootcamp2?id=_2_5678"
-=======
-            href="/article/bootcamp2?id=_2_3810"
->>>>>>> fbd2226 (first pass)
+            href="/article/bootcamp2?id=_2_7419"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -1768,9 +1728,9 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <Table
-          margin-bottom="1em"
+          class="first-line"
           margin-top="1em"
-          class="first-line">
+          margin-bottom="1em">
           <colgroup>
             <col width="120px" />
             <col width="120px" />
@@ -2142,8 +2102,8 @@ const Rest = () => {
             \Large 0.00001 = 10^&#123;-5&#125;
             $$
             <ImageRight
-              offset_x="0em"
               src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
+              offset_x="0em"
               compensate_offset_x_for_large_text_columns={true} />
           </MathBlock>
           <Pause />
@@ -2982,16 +2942,12 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-<<<<<<< HEAD
-                href="/article/bootcamp2?id=_1_7606"
-=======
-                href="/article/bootcamp2?id=_1_4448"
->>>>>>> fbd2226 (first pass)
+                href="/article/bootcamp2?id=_1_6073"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
-              ),
-              while the third equality uses additivity of exponents,
+              ), 
+              while the third equality uses additivity of exponents, 
               also stated earlier. (So: We are only using “known”
               facts, alongside some ordinary arithmetic.)
             </VerticalChunk>
@@ -3050,11 +3006,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-<<<<<<< HEAD
-          <ExerciseStatement id="_3_1534">
-=======
-          <ExerciseStatement id="_3_3924">
->>>>>>> fbd2226 (first pass)
+          <ExerciseStatement id="_3_3401">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3338,7 +3290,7 @@ const Rest = () => {
               </Math>
               {" "}(as in{" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_1534"
+                href="/article/bootcamp2?id=_3_3401"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -3540,9 +3492,9 @@ const Rest = () => {
               \Large -b -2c -3 = 0
               $$
               <ImageRight
-                offset_x="0.5em"
-                offset_y="-0.5em"
                 src="/images/svg_bt2_ex_equation_addition_cloud.svg"
+                offset_y="-0.5em"
+                offset_x="0.5em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />

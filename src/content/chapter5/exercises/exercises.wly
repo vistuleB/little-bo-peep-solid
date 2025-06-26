@@ -1,5 +1,4 @@
 |> Exercise
-
     Is
 
     $$
@@ -10,7 +9,6 @@
     or to the right by $0.1$?
 
     |> Solution
-
         The function $x \ra \cos(x + 0.1)$ fetches its values
 
         __in the future__
@@ -448,7 +446,6 @@
         src=images/svg_ch5_ex_four_graphs.svg
 
     |> Solution
-
         The culprits are:
 
         |> Image
@@ -465,14 +462,12 @@
         (Then imagine summing together, squaring, etc.)
 
         |> SolutionNote
-
             It is, indeed, intriguing that all of these
             functions appear to be_sinusoids_. (Formally defined
             as a function of the form $x \ra A\cdot \sin(Bx + C) + D$
             for some constants $A$, $B$, $C$, $D \in \rr$.)
 
 |> Exercise
-
     Is the pythagorean identity apparent in the
     graphs of the previous exercise?
 

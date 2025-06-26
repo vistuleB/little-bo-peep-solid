@@ -1,4 +1,5 @@
 |> Section
+    test=test
 
     *Square Roots.*
     You might remember that “minus times minus
@@ -17,6 +18,9 @@
     2 \times 2 = 4
     $$
 
+|> Section
+
+    *dummy*
     are both positive. But $\sqrt{4}$ is, by
     definition, the unique _nonnegative_
     solution to $x^2 = 4$.
@@ -539,10 +543,8 @@
     are good things to multiply together.)
 
 |> Exercises
-
     |> Exercise
         handle=TrueOrFalse
-
         True or false (and, if possible, explain):
 
         |> Grid
@@ -570,7 +572,6 @@
             i. $ {100 \over \up{0.5}99} < {101 \over \up{0.5}100} $
 
         |> Solution
-
             Part by part:
 
             |> Pause
