@@ -48,7 +48,7 @@ const AbstractArticle = (
 
   return (
     <ExercisesStoreProvider>
-      <span id={props.id}></span>
+      <span id={props.id} class="id_span"></span>
       {props.children}
       <ActionArrows />
     </ExercisesStoreProvider>

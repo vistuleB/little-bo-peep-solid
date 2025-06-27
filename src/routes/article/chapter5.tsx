@@ -19,7 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
-import ArticleTitleNewStyle from "~/components/ArticleTitleNewStyle";
+import ArticleTitle from "~/components/ArticleTitle";
 
 const Article = () => {
   useSetRoute();
@@ -197,9 +197,9 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitleNewStyle>
+      <ArticleTitle banner="Chapter 5:">
         The Trigonometric Functions
-      </ArticleTitleNewStyle>
+      </ArticleTitle>
       <Section id="section-1">
         <VerticalChunk>
           <b>
@@ -1515,7 +1515,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_2643"
+            href="/article/chapter4?id=_24_5958"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14680,7 +14680,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_25_581">
+          <ExerciseStatement id="_25_5240">
             <VerticalChunk>
               <b>
                 Exercise 42.

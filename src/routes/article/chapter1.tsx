@@ -19,7 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
-import ArticleTitleNewStyle from "~/components/ArticleTitleNewStyle";
+import ArticleTitle from "~/components/ArticleTitle";
 
 const Article = () => {
   useSetRoute();
@@ -32,7 +32,7 @@ const Article = () => {
       title="A _Few_ Refreshers"
       page-necessary-margin={610}
       max-element-width={500}
-      id="_5_2236">
+      id="_5_1526">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -45,52 +45,45 @@ const Article = () => {
           class="breadcrumb"
           id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            dummy
+            fractions and division
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem
           class="breadcrumb"
           id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
-            fractions and division
+            distributivity
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem
           class="breadcrumb"
           id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
-            distributivity
+            epilogue
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem
           class="breadcrumb"
           id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
-            epilogue
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">
             vocabulary
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem
           class="breadcrumb"
-          id="breadcrumb-6">
+          id="breadcrumb-5">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitleNewStyle>
+      <ArticleTitle banner="Chapter 1:">
         A{" "}
         <i>
           Few
         </i>
         {" "}Refreshers
-      </ArticleTitleNewStyle>
+      </ArticleTitle>
       <Section id="section-1">
         <VerticalChunk>
           <b>
@@ -119,23 +112,8 @@ const Article = () => {
           2 \times 2 = 4
           $$
         </MathBlock>
-      </Section>
-      <Rest />
-    </Chapter>
-  </>);
-};
-
-const Rest = () => {
-  const showMore = useShowMore();
-  return(<>
-    { showMore() && <>
-      <Pause />
-      <Section id="section-2">
+        <Pause />
         <VerticalChunk>
-          <b>
-            dummy
-          </b>
-          {" "}
           are both positive. But{" "}
           <Math>
             $\sqrt&#123;4&#125;$
@@ -564,8 +542,17 @@ const Rest = () => {
           </NoBreak>
         </VerticalChunk>
       </Section>
+      <Rest />
+    </Chapter>
+  </>);
+};
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return(<>
+    { showMore() && <>
       <Pause />
-      <Section id="section-3">
+      <Section id="section-2">
         <VerticalChunk>
           <b>
             Fractions and Division.
@@ -783,7 +770,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="section-4">
+      <Section id="section-3">
         <VerticalChunk>
           <b>
             Distributivity.
@@ -1365,7 +1352,7 @@ const Rest = () => {
       <Pause />
       <Section
         divider={false}
-        id="section-5">
+        id="section-4">
         <VerticalChunk>
           <b>
             Epilogue.
@@ -1438,7 +1425,7 @@ const Rest = () => {
         </VerticalChunk>
       </Section>
       <Pause />
-      <Section id="section-6">
+      <Section id="section-5">
         <VerticalChunk>
           <b>
             Vocabulary.
@@ -1485,7 +1472,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_4_82">
+          <ExerciseStatement id="_4_4063">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2649,7 +2636,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_82"
+                href="/article/chapter1?id=_4_4063"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>

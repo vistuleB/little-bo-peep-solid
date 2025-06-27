@@ -19,7 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
-import ArticleTitleNewStyle from "~/components/ArticleTitleNewStyle";
+import ArticleTitle from "~/components/ArticleTitle";
 
 const Article = () => {
   useSetRoute();
@@ -104,9 +104,9 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitleNewStyle>
+      <ArticleTitle banner="Chapter 2:">
         Slopes
-      </ArticleTitleNewStyle>
+      </ArticleTitle>
       <Section id="section-1">
         <VerticalChunk>
           <b>
@@ -1721,7 +1721,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement id="_6_9543">
+          <ExerciseStatement id="_6_2860">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2160,7 +2160,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_9543"
+                href="/article/chapter2?id=_6_2860"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

@@ -1,6 +1,6 @@
 import TOC from "~/components/TOC";
 import TOCTitle from "~/components/TOCTitle";
-import TOCItemNewStyle from "~/components/TOCItemNewStyle";
+import TOCItem from "~/components/TOCItem";
 import { Spacer } from "~/components/Spacer";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <div id="chapter">
         <TOCTitle label="Chapters" />
         <ul>
-          <TOCItemNewStyle
+          <TOCItem
             article_type={1}
             href="chapter1">
             A{" "}
@@ -19,43 +19,43 @@ export default function Home() {
               Few
             </i>
             {" "}Refreshers
-          </TOCItemNewStyle>
-          <TOCItemNewStyle
+          </TOCItem>
+          <TOCItem
             article_type={2}
             href="chapter2">
             Slopes
-          </TOCItemNewStyle>
-          <TOCItemNewStyle
+          </TOCItem>
+          <TOCItem
             article_type={3}
             href="chapter3">
             Functions
-          </TOCItemNewStyle>
-          <TOCItemNewStyle
+          </TOCItem>
+          <TOCItem
             article_type={4}
             href="chapter4">
             Derivatives
-          </TOCItemNewStyle>
-          <TOCItemNewStyle
+          </TOCItem>
+          <TOCItem
             article_type={5}
             href="chapter5">
             The Trigonometric Functions
-          </TOCItemNewStyle>
+          </TOCItem>
         </ul>
       </div>
       <Spacer />
       <div id="bootcamp">
         <TOCTitle label="Bootcamps" />
         <ul>
-          <TOCItemNewStyle
+          <TOCItem
             article_type={1}
             href="bootcamp1">
             Sets
-          </TOCItemNewStyle>
-          <TOCItemNewStyle
+          </TOCItem>
+          <TOCItem
             article_type={2}
             href="bootcamp2">
             Powers of 10
-          </TOCItemNewStyle>
+          </TOCItem>
         </ul>
       </div>
     </TOC>

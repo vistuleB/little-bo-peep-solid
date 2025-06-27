@@ -1,5 +1,4 @@
 import AbstractArticle from "./AbstractArticle";
-import ArticleTitle from "./ArticleTitle";
 
 const Chapter = (props: any) => {
   return (
@@ -8,13 +7,8 @@ const Chapter = (props: any) => {
       pageNecessaryMargin={props["page-necessary-margin"]}
       maxElementWidth={props["max-element-width"]}
       prevPage={props["prev-page"]}
-      nextPage={props["next-page"]}>
-      {/* <ArticleTitle
-        label={`Chapter ${props.number}: ` + props.title}
-        on_mobile_label={
-          `Chapter ${props.number}: ` + (props.mobile_title || props.title)
-        }
-      /> */}
+      nextPage={props["next-page"]}
+    >
       {props.children}
     </AbstractArticle>
   );
