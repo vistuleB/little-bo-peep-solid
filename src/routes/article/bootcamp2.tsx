@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitle from "~/components/ArticleTitle";
 
 const Article = () => {
   useSetRoute();
@@ -27,9 +28,9 @@ const Article = () => {
     <Bootcamp
       number={2}
       next-page="/article/bootcamp1"
-      max-element-width={1200}
+      title="Powers of 10"
       page-necessary-margin={270}
-      title="Powers of 10">
+      max-element-width={1200}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -102,8 +103,10 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitle banner="Bootcamp 2:">
+        Powers of 10
+      </ArticleTitle>
       <Section id="section-1">
-        Terminology.
         <VerticalChunk>
           <b>
             Terminology.
@@ -164,7 +167,6 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
-        Integer powers of 10.
         <VerticalChunk>
           <b>
             Integer powers of 10.
@@ -259,9 +261,9 @@ const Rest = () => {
           \Large 10^0 = 1 = 1
           $$
           <ImageLeft
-            offset_x="4em"
-            offset_y="-0.2em"
             src="/images/svg_bt2_bt_alert_cloud.svg"
+            offset_y="-0.2em"
+            offset_x="4em"
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
@@ -329,7 +331,7 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_1_9077">
+        <MathBlock id="_1_5747">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -351,7 +353,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_9077"
+            href="/article/bootcamp2?id=_1_5747"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -373,7 +375,7 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_9077"
+            href="/article/bootcamp2?id=_1_5747"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -383,18 +385,18 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_9077"
+            href="/article/bootcamp2?id=_1_5747"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           )
           is equivalent to the identity
           <ImageLeft
-            line={2}
-            src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg" />
+            src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
+            line={2} />
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_2_6769">
+        <MathBlock id="_2_2481">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -430,13 +432,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6769"
+            href="/article/bootcamp2?id=_2_2481"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6769"
+            href="/article/bootcamp2?id=_2_2481"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -450,7 +452,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6769"
+            href="/article/bootcamp2?id=_2_2481"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -522,13 +524,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_9077"
+            href="/article/bootcamp2?id=_1_5747"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6769"
+            href="/article/bootcamp2?id=_2_2481"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -556,7 +558,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
-        Other bases.
         <VerticalChunk>
           <b>
             Other bases.
@@ -772,7 +773,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-4">
-        Additivity of exponents.
         <VerticalChunk>
           <b>
             Additivity of exponents.
@@ -893,7 +893,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
-        The third law of exponents.
         <VerticalChunk>
           <b>
             The third law of exponents.
@@ -1081,7 +1080,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-6">
-        Famous powers of 10.
         <VerticalChunk>
           <b>
             Famous powers of 10.
@@ -1328,7 +1326,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-7">
-        Negative exponent prefixes.
         <VerticalChunk>
           <b>
             Negative exponent prefixes.
@@ -1705,7 +1702,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-8">
-        Positive exponent prefixes.
         <VerticalChunk>
           <b>
             Positive exponent prefixes.
@@ -1731,9 +1727,9 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <Table
-          margin-bottom="1em"
+          class="first-line"
           margin-top="1em"
-          class="first-line">
+          margin-bottom="1em">
           <colgroup>
             <col width="120px" />
             <col width="120px" />
@@ -1896,7 +1892,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-9">
-        Logarithms base 10.
         <VerticalChunk>
           <b>
             Logarithms base 10.
@@ -2106,8 +2101,8 @@ const Rest = () => {
             \Large 0.00001 = 10^&#123;-5&#125;
             $$
             <ImageRight
-              offset_x="0em"
               src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
+              offset_x="0em"
               compensate_offset_x_for_large_text_columns={true} />
           </MathBlock>
           <Pause />
@@ -2946,7 +2941,7 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1_9077"
+                href="/article/bootcamp2?id=_1_5747"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -3010,7 +3005,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement id="_3_8366">
+          <ExerciseStatement id="_3_2263">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3294,7 +3289,7 @@ const Rest = () => {
               </Math>
               {" "}(as in{" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_8366"
+                href="/article/bootcamp2?id=_3_2263"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -3496,9 +3491,9 @@ const Rest = () => {
               \Large -b -2c -3 = 0
               $$
               <ImageRight
-                offset_x="0.5em"
-                offset_y="-0.5em"
                 src="/images/svg_bt2_ex_equation_addition_cloud.svg"
+                offset_y="-0.5em"
+                offset_x="0.5em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />

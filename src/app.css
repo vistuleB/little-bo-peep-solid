@@ -78,13 +78,6 @@ em {
   padding-right: var(--desktop-text-column-padding);
 }
 
-.slice {
-  position: relative;
-  margin-inline: auto;
-  padding-left: var(--desktop-text-column-padding);
-  padding-right: var(--desktop-text-column-padding);
-}
-
 .mathblock {
   position: relative;
   width: fit-content;

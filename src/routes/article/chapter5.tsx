@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitle from "~/components/ArticleTitle";
 
 const Article = () => {
   useSetRoute();
@@ -27,9 +28,9 @@ const Article = () => {
     <Chapter
       number={5}
       prev-page="/article/chapter4"
-      max-element-width={1000}
+      title="The Trigonometric Functions"
       page-necessary-margin={950}
-      title="The Trigonometric Functions">
+      max-element-width={1000}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -108,7 +109,6 @@ const Article = () => {
               <Math>
                 $\mathbf&#123;60^\circ&#125;$
               </Math>
-              {" "}{" "}
             </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
@@ -197,8 +197,10 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitle banner="Chapter 5:">
+        The Trigonometric Functions
+      </ArticleTitle>
       <Section id="section-1">
-        Cos and Sin. (“Cosine” and “sine”.)
         <VerticalChunk>
           <b>
             Cos and Sin. (“Cosine” and “sine”.)
@@ -725,7 +727,6 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
-        Derivatives.
         <VerticalChunk>
           <b>
             Derivatives.
@@ -1039,14 +1040,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
-        Even/odd identities, and identities with{" "}
-        <NoBreak>
-          “
-          <Math>
-            $\eta$
-          </Math>
-          ”.
-        </NoBreak>
         <VerticalChunk>
           <b>
             Even/odd identities, and identities with{" "}
@@ -1210,7 +1203,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-4">
-        Relation to derivatives.
         <VerticalChunk>
           <b>
             Relation to derivatives.
@@ -1306,7 +1298,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
-        The pythagorean identity.
         <VerticalChunk>
           <b>
             The pythagorean identity.
@@ -1508,7 +1499,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-6">
-        Inputs as radians.
         <VerticalChunk>
           <b>
             Inputs as radians.
@@ -1525,7 +1515,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_4538"
+            href="/article/chapter4?id=_24_5958"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -1711,7 +1701,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-7">
-        Auto-converting degrees to radians.
         <VerticalChunk>
           <b>
             Auto-converting degrees to radians.
@@ -1825,25 +1814,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-8">
-        Sines and cosines of{" "}
-        <NoBreak>
-          <Math>
-            $\mathbf&#123;30^\circ&#125;$
-          </Math>
-          ,
-        </NoBreak>
-        {" "}
-        {" "}
-        <Math>
-          $\mathbf&#123;45^\circ&#125;$
-        </Math>
-        {" "}and{" "}
-        <NoBreak>
-          <Math>
-            $\mathbf&#123;60^\circ&#125;$
-          </Math>
-          .
-        </NoBreak>
         <VerticalChunk>
           <b>
             Sines and cosines of{" "}
@@ -2278,7 +2248,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-9">
-        Scaling the circle.
         <VerticalChunk>
           <b>
             Scaling the circle.
@@ -2402,7 +2371,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-10">
-        Polar coordinates.
         <VerticalChunk>
           <b>
             Polar coordinates.
@@ -2639,7 +2607,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-11">
-        Change-of-coordinate formulas.
         <VerticalChunk>
           <b>
             Change-of-coordinate formulas.
@@ -2859,7 +2826,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-12">
-        Right triangles.
         <VerticalChunk>
           <b>
             Right triangles.
@@ -3018,7 +2984,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-13">
-        A famous diagram.
         <VerticalChunk>
           <b>
             A famous diagram.
@@ -3126,7 +3091,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-14">
-        The Abercrombie inequality.
         <VerticalChunk>
           <b>
             The Abercrombie inequality.
@@ -3389,7 +3353,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-15">
-        The Gregorinovich sandwich.
         <VerticalChunk>
           <b>
             The Gregorinovich sandwich.
@@ -3686,7 +3649,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-16">
-        The angle-sum formulas.
         <VerticalChunk>
           <b>
             The angle-sum formulas.
@@ -3873,7 +3835,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-17">
-        The missing arrows.
         <VerticalChunk>
           <b>
             The missing arrows.
@@ -4064,7 +4025,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-18">
-        Secant: a second view.
         <VerticalChunk>
           <b>
             Secant: a second view.
@@ -4187,7 +4147,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-19">
-        Note on calculators.
         <VerticalChunk>
           <b>
             Note on calculators.
@@ -4403,8 +4362,8 @@ const Rest = () => {
               as we can count on the graph of the original
               function:
               <ImageLeft
-                src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
-                line={-2} />
+                line={-2}
+                src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg" />
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg" />
@@ -4480,8 +4439,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg" />
           </ExerciseStatement>
           <Solution solution_number={3}>
             <VerticalChunk>
@@ -4492,8 +4451,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg" />
             <Pause />
             <VerticalChunk>
               [Nb:
@@ -4630,8 +4589,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg" />
             <Pause />
             <VerticalChunk>
               ...so...
@@ -4683,8 +4642,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg" />
             <Pause />
             <VerticalChunk>
               That increase being entirely due to the term
@@ -4763,8 +4722,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg" />
             <Pause />
             <VerticalChunk>
               Moreover at{" "}
@@ -4867,8 +4826,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg" />
             <Pause />
             <VerticalChunk>
               So an estimate for the
@@ -5040,8 +4999,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_big_wave_minus_sin_x.svg"
-              style="margin-top:0.8em;margin-bottom:1em;" />
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_big_wave_minus_sin_x.svg" />
             <Pause />
             <VerticalChunk>
               ...and that
@@ -5232,8 +5191,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <table
-              style="border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;"
-              class="slice">
+              class="slice"
+              style="border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;">
               <colgroup>
                 <col width={200} />
                 <col width={200} />
@@ -5377,12 +5336,12 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_pythagorean_graphs_sin2.svg"
-              style="margin-top:1.1em;margin-bottom:1.1em;" />
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/images/svg_ch5_ex_pythagorean_graphs_sin2.svg" />
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_pythagorean_graphs_cos2.svg"
-              style="margin-top:1.1em;margin-bottom:1.1em;" />
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/images/svg_ch5_ex_pythagorean_graphs_cos2.svg" />
             <Pause />
             <VerticalChunk>
               After vertically flipping the cutout
@@ -5403,8 +5362,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_pythagorean_graphs_compounded.svg"
-              style="margin-top:1.1em;margin-bottom:1.1em;" />
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/images/svg_ch5_ex_pythagorean_graphs_compounded.svg" />
             <Pause />
             <VerticalChunk>
               And this occurs because
@@ -5444,8 +5403,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_big_snail.svg"
-              style="width:500px;margin-top:1em;margin-bottom:1em;" />
+              style="width:500px;margin-top:1em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_big_snail.svg" />
           </ExerciseStatement>
           <Solution solution_number={7}>
             <VerticalChunk>
@@ -5667,8 +5626,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg"
-                style="margin-top:0.8em;margin-bottom:1em;" />
+                style="margin-top:0.8em;margin-bottom:1em;"
+                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg" />
               <Pause />
               <VerticalChunk>
                 The key to measuring this
@@ -5689,8 +5648,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg"
-                style="margin-top:0.8em;margin-bottom:1em;" />
+                style="margin-top:0.8em;margin-bottom:1em;"
+                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg" />
               <Pause />
               <VerticalChunk>
                 Then we can calculate the purple angle as
@@ -5789,8 +5748,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg"
-              style="margin-top:1em;margin-bottom:0.5em;" />
+              style="margin-top:1em;margin-bottom:0.5em;"
+              src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg" />
           </ExerciseStatement>
           <Solution solution_number={8}>
             <VerticalChunk>
@@ -5837,8 +5796,8 @@ const Rest = () => {
               r\cdot\cos(\phi)
               $$
               <ImageRight
-                offset_x="5.5em"
                 src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg"
+                offset_x="5.5em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -5860,8 +5819,8 @@ const Rest = () => {
               r\cdot\sin(\phi)
               $$
               <ImageLeft
-                offset_x="7.5em"
                 src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg"
+                offset_x="7.5em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -6014,8 +5973,8 @@ const Rest = () => {
               \,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
               $$
               <ImageRight
-                offset_x="1em"
                 src="/images/svg_ch5_ex_vector_sum_101_cloud.svg"
+                offset_x="1em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -6281,8 +6240,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_vector_sum_previous_example.svg"
-                style="margin-top:1em;margin-bottom:0.8em;" />
+                style="margin-top:1em;margin-bottom:0.8em;"
+                src="/images/svg_ch5_ex_vector_sum_previous_example.svg" />
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -6840,8 +6799,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_0_2_radians_guess_answer.svg"
-              style="margin-top:1em;margin-bottom:1em;" />
+              style="margin-top:1em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_0_2_radians_guess_answer.svg" />
             <Pause />
             <VerticalChunk>
               If you zoom in
@@ -6869,8 +6828,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_0_2_radians_guess_joke.svg"
-              style="margin-top:1em;margin-bottom:1em;" />
+              style="margin-top:1em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_0_2_radians_guess_joke.svg" />
             <Pause />
             <VerticalChunk>
               (Joking.)
@@ -7122,8 +7081,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg"
-                style="margin-top:0.8em;margin-bottom:1.4em;" />
+                style="margin-top:0.8em;margin-bottom:1.4em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg" />
               <Pause />
               <VerticalChunk>
                 We take the first digit of the numerator,
@@ -7152,8 +7111,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7185,8 +7144,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg" />
               <Pause />
               <VerticalChunk>
                 We next add a digit from the numerator, giving
@@ -7213,8 +7172,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7246,8 +7205,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg" />
               <Pause />
               <VerticalChunk>
                 We subtract
@@ -7299,8 +7258,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg" />
               <Pause />
               <VerticalChunk>
                 Because{" "}
@@ -7339,8 +7298,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg" />
               <Pause />
               <VerticalChunk>
                 We ask “how many times does{" "}
@@ -7359,8 +7318,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg" />
               <Pause />
               <VerticalChunk>
                 The answer is{" "}
@@ -7392,8 +7351,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg" />
               <Pause />
               <VerticalChunk>
                 We subtract
@@ -7446,8 +7405,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg" />
               <Pause />
               <VerticalChunk>
                 Because{" "}
@@ -7477,8 +7436,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg"
-                style="margin-top:0.8em;margin-bottom:1.5em;" />
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg" />
               <Pause />
               <VerticalChunk>
                 (Etc.)
@@ -8442,8 +8401,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_big_division_big_subtraction_final.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+                style="margin-top:1em;margin-bottom:1em;"
+                src="/images/svg_ch5_ex_big_division_big_subtraction_final.svg" />
               <Pause />
               <VerticalChunk>
                 (And like we alluded to above, one can also
@@ -8630,8 +8589,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              style="background-color:#fdfdfd"
-              src="/images/svg_ch5_ex_x_plus_y_options.svg" />
+              src="/images/svg_ch5_ex_x_plus_y_options.svg"
+              style="background-color:#fdfdfd" />
             <Pause />
             <VerticalChunk>
               Either way, the upshot is that the sum
@@ -9735,8 +9694,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                src="/images/svg_ch5_ex_max_xy_example_isoset.svg"
-                style="margin-top:1em;margin-bottom:1em;" />
+                style="margin-top:1em;margin-bottom:1em;"
+                src="/images/svg_ch5_ex_max_xy_example_isoset.svg" />
             </SolutionNote>
             <Pause />
             <SolutionNote>
@@ -10849,8 +10808,8 @@ const Rest = () => {
             </VerticalChunk>
             <TextParent>
               <ol
-                style="margin-top:0.5em;"
-                class="l1">
+                class="l1"
+                style="margin-top:0.5em;">
                 <li>
                   using the composition{" "}
                   <NoBreak>
@@ -11992,8 +11951,8 @@ const Rest = () => {
               \Large\downarrow
               $$
               <ImageRight
-                offset_x="4em"
                 src="/images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg"
+                offset_x="4em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -12008,8 +11967,8 @@ const Rest = () => {
               \Large\downarrow
               $$
               <ImageRight
-                offset_x="4em"
                 src="/images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg"
+                offset_x="4em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -12024,8 +11983,8 @@ const Rest = () => {
               \Large\downarrow
               $$
               <ImageRight
-                offset_x="4em"
                 src="/images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg"
+                offset_x="4em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -12212,9 +12171,9 @@ const Rest = () => {
               \end&#123;align*&#125;
               $$
               <ImageLeft
-                offset_y="3%"
-                offset_x="3.4em"
                 src="/images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg"
+                offset_x="3.4em"
+                offset_y="3%"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -13323,8 +13282,8 @@ const Rest = () => {
               \sin x\cos \psi + \cos x\sin \psi
               $$
               <ImageRight
-                offset_x="8em"
                 src="/images/svg_ch5_ex_polar_discovery2_cloud.svg"
+                offset_x="8em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -13619,8 +13578,8 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_costan_powers_cos_bounce.svg" />
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_costan_powers_cos_snail.svg"
-              style="margin-top:1.5em;" />
+              style="margin-top:1.5em;"
+              src="/images/svg_ch5_ex_costan_powers_cos_snail.svg" />
             <Pause />
             <Image src="/images/svg_ch5_ex_costan_powers_cos_inverted_towers.svg" />
             <Pause />
@@ -14721,7 +14680,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_25_5672">
+          <ExerciseStatement id="_25_5240">
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -15420,8 +15379,8 @@ const Rest = () => {
               \sec(\theta)
               $$
               <ImageRight
-                src="/images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg"
                 offset_x="9em"
+                src="/images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -16054,8 +16013,8 @@ const Rest = () => {
                 \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_i r
                 $$
                 <ImageRight
-                  src="/images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg"
                   offset_x="5em"
+                  src="/images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg"
                   compensate_offset_x_for_large_text_columns={true} />
               </MathBlock>
               <Pause />
@@ -16068,8 +16027,8 @@ const Rest = () => {
                 \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r
                 $$
                 <ImageLeft
-                  src="/images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg"
                   offset_x="2.5em"
+                  src="/images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg"
                   compensate_offset_x_for_large_text_columns={true} />
               </MathBlock>
               <Pause />

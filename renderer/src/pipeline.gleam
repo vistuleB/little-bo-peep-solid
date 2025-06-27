@@ -34,6 +34,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Solution", "counter", "SolutionNoteCounter"),
         #("Chapter", "path", "/article/chapter::øøChapterCounter"),
         #("Bootcamp", "path", "/article/bootcamp::øøBootcampCounter"),
+        #("Chapter", "banner", "Chapter ::øøChapterCounter:"),
+        #("Bootcamp", "banner", "Bootcamp ::øøBootcampCounter:"),
         #("Exercise", "exercise_number", "::øøExerciseCounter"),
         #("Solution", "solution_number", "::øøExerciseCounter"),
         #("Section", "id", "section-::++SectionCounter"),
@@ -94,6 +96,10 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("CentralDisplay", "VerticalChunk"),
         #("CentralDisplayItalic", "VerticalChunk"),
       ]),
+      dn.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
+      dn.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
+      dn.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
+      dn.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
     ],
     // ****
     // parse _, * delims
@@ -191,7 +197,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Example", "Pause", []),
         #("Note", "Pause", []),
         #("SolutionNote", "Pause", []),
-        #("Section", "Pause", []),
         #("MathBlock", "Pause", []),
         #("CentralDisplayItalic", "Pause", []),
         #("CentralDisplay", "Pause", []),
@@ -202,6 +207,9 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Grid", "Pause", []),
         #("List", "Pause", []),
         #("StarDivider", "Pause", []),
+      ]),
+      dn.add_before_tags_but_not_before_first_of_kind([
+        #("Section", "Pause", []),
       ]),
       // ************************
       // attribute cleanup
@@ -232,11 +240,12 @@ pub fn lbp_pipeline() -> List(Pipe) {
         Some("Spacer"),
       )),
       dn.generate_lbp_prev_next_attributes(),
-      dn.auto_generate_first_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
-      dn.generate_lbp_sections_breadcrumbs(),
+      dn.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
+      dn.generate_lbp_section_breadcrumbs(),
       dn.unwrap(["BreadcrumbTitle"]),
       // dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
-      dn.unwrap(["DebugScope"])
+      dn.unwrap(["DebugScope"]),
+      dn.remove_attributes(["test"]),
     ]
   ]
   |> list.flatten

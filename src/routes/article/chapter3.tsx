@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitle from "~/components/ArticleTitle";
 
 const Article = () => {
   useSetRoute();
@@ -28,10 +29,10 @@ const Article = () => {
       number={3}
       next-page="/article/chapter4"
       prev-page="/article/chapter2"
-      max-element-width={1500}
-      page-necessary-margin={700}
       title="Functions"
-      id="_15_6601">
+      page-necessary-margin={700}
+      max-element-width={1500}
+      id="_15_9307">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -162,8 +163,10 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitle banner="Chapter 3:">
+        Functions
+      </ArticleTitle>
       <Section id="section-1">
-        Syntax.
         <VerticalChunk>
           <b>
             Syntax.
@@ -395,7 +398,6 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
-        Lambda functions.
         <VerticalChunk>
           <b>
             Lambda functions.
@@ -564,7 +566,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
-        Definition by cases.
         <VerticalChunk>
           <b>
             Definition by cases.
@@ -681,7 +682,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-4">
-        On arbitrariness.
         <VerticalChunk>
           <b>
             On arbitrariness.
@@ -740,7 +740,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
-        Graphs.
         <VerticalChunk>
           <b>
             Graphs.
@@ -894,15 +893,14 @@ const Rest = () => {
               .
             </NoBreak>
             <ImageLeft
-              offset_y="0em"
+              src="/images/svg_ch3_0.5625_cloud.svg"
               line={-1}
-              src="/images/svg_ch3_0.5625_cloud.svg" />
+              offset_y="0em" />
           </VerticalChunk>
         </Example>
       </Section>
       <Pause />
       <Section id="section-6">
-        Domains.
         <VerticalChunk>
           <b>
             Domains.
@@ -1088,7 +1086,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-7">
-        “From/To” Notation.
         <VerticalChunk>
           <b>
             “From/To” Notation.
@@ -1223,7 +1220,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-8">
-        The Vertical Line Test.
         <VerticalChunk>
           <b>
             The Vertical Line Test.
@@ -1299,8 +1295,8 @@ const Rest = () => {
         <Pause />
         <Image src="/images/svg_ch3_ch_circle.svg">
           <ImageRight
-            offset_x="2em"
-            src="/images/svg_ch3_ch_crossing_circle_cloud.svg" />
+            src="/images/svg_ch3_ch_crossing_circle_cloud.svg"
+            offset_x="2em" />
         </Image>
         <Pause />
         <VerticalChunk>
@@ -1315,8 +1311,8 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <Image
-          class="pt-4 mb-3"
-          src="/images/svg_ch3_ch_empty_circle.svg" />
+          src="/images/svg_ch3_ch_empty_circle.svg"
+          class="pt-4 mb-3" />
         <Pause />
         <VerticalChunk>
           ...means that the point in question is{" "}
@@ -1379,7 +1375,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-9">
-        A Famous Discontinuity.
         <VerticalChunk>
           <b>
             A Famous Discontinuity.
@@ -1443,22 +1438,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-10">
-        Distinguishing{" "}
-        <NoBreak>
-          “
-          <Math>
-            $f$
-          </Math>
-          ”
-        </NoBreak>
-        {" "}and{" "}
-        <NoBreak>
-          “
-          <Math>
-            $f(x)$
-          </Math>
-          ”.
-        </NoBreak>
         <VerticalChunk>
           <b>
             Distinguishing{" "}
@@ -1660,22 +1639,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-11">
-        Distinguishing{" "}
-        <NoBreak>
-          “
-          <Math>
-            $x^3$
-          </Math>
-          ”
-        </NoBreak>
-        {" "}and{" "}
-        <NoBreak>
-          “
-          <Math>
-            $x \ra x^3$
-          </Math>
-          ”.
-        </NoBreak>
         <VerticalChunk>
           <b>
             Distinguishing{" "}
@@ -1774,7 +1737,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-12">
-        Polynomials.
         <VerticalChunk>
           <b>
             Polynomials.
@@ -1951,12 +1913,11 @@ const Rest = () => {
         </VerticalChunk>
         <Pause />
         <Image
-          src="/images/svg_ch3_ch_affine_linear_cloud.svg"
-          style="margin-top:-0.6em;margin-bottom:-0.4em" />
+          style="margin-top:-0.6em;margin-bottom:-0.4em"
+          src="/images/svg_ch3_ch_affine_linear_cloud.svg" />
       </Section>
       <Pause />
       <Section id="section-13">
-        Quadratic, linear, and constant terms.
         <VerticalChunk>
           <b>
             Quadratic, linear, and constant terms.
@@ -2047,9 +2008,9 @@ const Rest = () => {
           x^1 = x
           $$
           <ImageRight
-            offset_x="-0.1em"
-            offset_y="0.2em"
             src="/images/svg_ch3_ch_a1_x1_cloud.svg"
+            offset_y="0.2em"
+            offset_x="-0.1em"
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
@@ -2069,9 +2030,9 @@ const Rest = () => {
           x^0 = 1
           $$
           <ImageRight
-            offset_y="0.2em"
-            offset_x="0em"
             src="/images/svg_ch3_ch_a0_x0_cloud.svg"
+            offset_x="0em"
+            offset_y="0.2em"
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
@@ -2196,11 +2157,11 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Grid
-              column_first={true}
-              with_padding={false}
-              place_items="start"
+              cols={2}
               sm_cols={1}
-              cols={2}>
+              place_items="start"
+              with_padding={false}
+              column_first={true}>
               <Item>
                 i.{" "}
                 <Math>
@@ -2233,11 +2194,11 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Grid
-              column_first={true}
-              with_padding={false}
-              place_items="start"
+              cols={2}
               sm_cols={1}
-              cols={2}>
+              place_items="start"
+              with_padding={false}
+              column_first={true}>
               <Item>
                 i.{" "}
                 <Math>
@@ -2266,7 +2227,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <ExerciseStatement id="_7_9345">
+          <ExerciseStatement id="_7_9545">
             <VerticalChunk>
               <b>
                 Exercise 4.
@@ -2487,7 +2448,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
-          <ExerciseStatement id="_8_4285">
+          <ExerciseStatement id="_8_7042">
             <VerticalChunk>
               <b>
                 Exercise 5.
@@ -2521,7 +2482,7 @@ const Rest = () => {
               </NoBreak>
               {" "}apply the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_9345"
+                href="/article/chapter3?id=_7_9545"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2574,7 +2535,7 @@ const Rest = () => {
               {" "}
               the formula for the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_9345"
+                href="/article/chapter3?id=_7_9545"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2591,8 +2552,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              width="1400px"
-              src="/images/png_ch3_desmos_composition_0_c.png" />
+              src="/images/png_ch3_desmos_composition_0_c.png"
+              width="1400px" />
             <Pause />
             <VerticalChunk>
               <i>
@@ -2604,16 +2565,16 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              width="1400px"
-              src="/images/png_ch3_desmos_composition_1_c.png" />
+              src="/images/png_ch3_desmos_composition_1_c.png"
+              width="1400px" />
             <Pause />
             <VerticalChunk>
               Or we can be even fancier:
             </VerticalChunk>
             <Pause />
             <Image
-              width="1400px"
-              src="/images/png_ch3_desmos_composition_2_b.png" />
+              src="/images/png_ch3_desmos_composition_2_b.png"
+              width="1400px" />
             <Pause />
             <VerticalChunk>
               What you see above (the graph in orange) is
@@ -2976,7 +2937,7 @@ const Rest = () => {
               because all we have to do is to multiply
               {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_4285"
+                href="/article/chapter3?id=_8_7042"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -3001,7 +2962,7 @@ const Rest = () => {
             <VerticalChunk>
               because the problem is similar to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_4285"
+                href="/article/chapter3?id=_8_7042"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -3080,18 +3041,18 @@ const Rest = () => {
               <NoBreak>
                 “
                 <InlineImage
-                  bottom="0.15em"
+                  src="/images/svg_ch3_3_3_grid_1.svg"
                   width="0.9em"
-                  src="/images/svg_ch3_3_3_grid_1.svg" />
+                  bottom="0.15em" />
                 ”{" "}
               </NoBreak>
               to{" "}
               <NoBreak>
                 “
                 <InlineImage
-                  bottom="0.15em"
+                  src="/images/svg_ch3_3_3_grid_2.svg"
                   width="0.9em"
-                  src="/images/svg_ch3_3_3_grid_2.svg" />
+                  bottom="0.15em" />
                 ”,{" "}
               </NoBreak>
               namely), meaning that the final answer is
@@ -3264,7 +3225,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <ExerciseStatement id="_9_7280">
+          <ExerciseStatement id="_9_7327">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -3380,10 +3341,10 @@ const Rest = () => {
               {" "}
               in (AA) yields
               <ImageLeft
-                offset_x="1em"
-                y_anchor={1}
+                src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg"
                 popup={true}
-                src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg" />
+                y_anchor={1}
+                offset_x="1em" />
             </VerticalChunk>
             <div style="font-size:1.1em;margin:0.8em 0em;">
               <MathBlock>
@@ -3447,7 +3408,7 @@ const Rest = () => {
               {" "}
               Same question as{" "}
               <InChapterLink
-                href="/article/chapter3?id=_9_7280"
+                href="/article/chapter3?id=_9_7327"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -3880,35 +3841,35 @@ const Rest = () => {
                   $\Large h($
                 </Math>
                 <InlineImage
-                  top="-3px"
+                  src="/images/svg_ch3_composition_icon_clubs.svg"
                   width="1rem"
-                  src="/images/svg_ch3_composition_icon_clubs.svg" />
+                  top="-3px" />
                 <Math>
                   $\Large&#123;&#125;) =$
                 </Math>
                 <InlineImage
-                  marginRight=".5rem"
-                  marginLeft=".5rem"
-                  top="-3px"
+                  src="/images/svg_ch3_composition_icon_die_3.svg"
                   width="1.25rem"
-                  src="/images/svg_ch3_composition_icon_die_3.svg" />
+                  top="-3px"
+                  marginLeft=".5rem"
+                  marginRight=".5rem" />
               </CentralDisplay>
               <Pause />
               <VerticalChunk>
                 because the arrow that originates at{" "}
                 <InlineImage
-                  top="-4px"
+                  src="/images/svg_ch3_composition_icon_clubs.svg"
                   width="1rem"
-                  src="/images/svg_ch3_composition_icon_clubs.svg" />
+                  top="-4px" />
                 {" "}in set{" "}
                 <Math>
                   $D$
                 </Math>
                 {" "}lands at{" "}
                 <InlineImage
-                  top="-4px"
+                  src="/images/svg_ch3_composition_icon_die_3.svg"
                   width="1.25rem"
-                  src="/images/svg_ch3_composition_icon_die_3.svg" />
+                  top="-4px" />
                 {" "}in set{" "}
                 <NoBreak>
                   <Math>
@@ -3926,36 +3887,36 @@ const Rest = () => {
                   $\Large g(h($
                 </Math>
                 <InlineImage
-                  top="-3px"
+                  src="/images/svg_ch3_composition_icon_clubs.svg"
                   width="1rem"
-                  src="/images/svg_ch3_composition_icon_clubs.svg" />
+                  top="-3px" />
                 <Math>
                   $\Large&#123;&#125;)) =$
                 </Math>
                 <InlineImage
-                  marginRight=".5rem"
-                  marginLeft=".5rem"
-                  top="-4px"
+                  src="/images/svg_ch3_composition_icon_fence.svg"
                   width="2.3rem"
-                  src="/images/svg_ch3_composition_icon_fence.svg" />
+                  top="-4px"
+                  marginLeft=".5rem"
+                  marginRight=".5rem" />
               </CentralDisplay>
               <Pause />
               <VerticalChunk>
                 because, pursuing that path onwards, the arrow
                 that originates at{" "}
                 <InlineImage
-                  top="-4px"
+                  src="/images/svg_ch3_composition_icon_die_3.svg"
                   width="1.25rem"
-                  src="/images/svg_ch3_composition_icon_die_3.svg" />
+                  top="-4px" />
                 {" "}in set{" "}
                 <Math>
                   $C$
                 </Math>
                 {" "}lands at{" "}
                 <InlineImage
-                  top="-4px"
+                  src="/images/svg_ch3_composition_icon_fence.svg"
                   width="2.3rem"
-                  src="/images/svg_ch3_composition_icon_fence.svg" />
+                  top="-4px" />
                 {" "}in set{" "}
                 <NoBreak>
                   <Math>
@@ -3986,8 +3947,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                width="2000px"
-                src="/images/svg_ch3_truth_be_said_right_first.svg" />
+                src="/images/svg_ch3_truth_be_said_right_first.svg"
+                width="2000px" />
               <Pause />
               <VerticalChunk>
                 We can also get rid of{" "}
@@ -4002,8 +3963,8 @@ const Rest = () => {
               </VerticalChunk>
               <Pause />
               <Image
-                width="2000px"
-                src="/images/svg_ch3_truth_be_said_left_first.svg" />
+                src="/images/svg_ch3_truth_be_said_left_first.svg"
+                width="2000px" />
               <Pause />
               <VerticalChunk>
                 The first order of computation corresponds
@@ -4176,7 +4137,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <ExerciseStatement id="_10_3783">
+          <ExerciseStatement id="_10_4603">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4269,7 +4230,7 @@ const Rest = () => {
               {" "}
               Solve{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_3783"
+                href="/article/chapter3?id=_10_4603"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4512,7 +4473,7 @@ const Rest = () => {
               </NoBreak>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_3783"
+                href="/article/chapter3?id=_10_4603"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4539,7 +4500,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_3783"
+                href="/article/chapter3?id=_10_4603"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4649,7 +4610,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement id="_11_1205">
+          <ExerciseStatement id="_11_5273">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -5151,7 +5112,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
-          <ExerciseStatement id="_12_4205">
+          <ExerciseStatement id="_12_3958">
             <VerticalChunk>
               <b>
                 Exercise 15.
@@ -5275,8 +5236,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              width="760px"
-              src="/images/svg_ch3_ex_x0_y0_step0.svg" />
+              src="/images/svg_ch3_ex_x0_y0_step0.svg"
+              width="760px" />
             <Pause />
             <VerticalChunk>
               After vertically translating by{" "}
@@ -5294,8 +5255,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              width="760px"
-              src="/images/svg_ch3_ex_x0_y0_step1.svg" />
+              src="/images/svg_ch3_ex_x0_y0_step1.svg"
+              width="760px" />
             <Pause />
             <VerticalChunk>
               Then after horizontally translating by{" "}
@@ -5313,8 +5274,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              width="760px"
-              src="/images/svg_ch3_ex_x0_y0_step2.svg" />
+              src="/images/svg_ch3_ex_x0_y0_step2.svg"
+              width="760px" />
             <Pause />
             <VerticalChunk>
               Lastly, vertical scaling does not affect
@@ -5338,8 +5299,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Image
-              width="760px"
-              src="/images/svg_ch3_ex_x0_y0_step3.svg" />
+              src="/images/svg_ch3_ex_x0_y0_step3.svg"
+              width="760px" />
             <Pause />
             <VerticalChunk>
               So the roots are at:{" "}
@@ -5555,7 +5516,7 @@ const Rest = () => {
               {" "}by the following
               sequence of transformations (cf.{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_1205"
+                href="/article/chapter3?id=_11_5273"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -5587,7 +5548,7 @@ const Rest = () => {
               (We put the vertical translation first.)
               By{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_4205"
+                href="/article/chapter3?id=_12_3958"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -5725,12 +5686,12 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Grid
-              column_first={true}
-              with_padding={false}
-              place_items="start"
-              center_on_overflow={true}
+              cols={2}
               sm_cols={1}
-              cols={2}>
+              center_on_overflow={true}
+              place_items="start"
+              with_padding={false}
+              column_first={true}>
               <Item>
                 i.{" "}
                 <Math>
@@ -5788,7 +5749,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <ExerciseStatement id="_13_1930">
+          <ExerciseStatement id="_13_5364">
             <VerticalChunk>
               <b>
                 Exercise 18.
@@ -6026,7 +5987,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={19}>
-          <ExerciseStatement id="_14_8952">
+          <ExerciseStatement id="_14_4473">
             <VerticalChunk>
               <b>
                 Exercise 19.
@@ -6104,7 +6065,7 @@ const Rest = () => {
             <VerticalChunk>
               and, similarly to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_1205"
+                href="/article/chapter3?id=_11_5273"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6167,7 +6128,7 @@ const Rest = () => {
               </NoBreak>
               {" "}of{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_1205"
+                href="/article/chapter3?id=_11_5273"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6177,7 +6138,7 @@ const Rest = () => {
             <VerticalChunk indent={true}>
               By direct analogy with{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_1205"
+                href="/article/chapter3?id=_11_5273"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6385,7 +6346,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_4205"
+                href="/article/chapter3?id=_12_3958"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -6469,7 +6430,7 @@ const Rest = () => {
               <VerticalChunk>
                 as briefly flashed by, e.g., in{" "}
                 <a
-                  href="/article/chapter1?id=_5_2852"
+                  href="/article/chapter1?id=_5_1526"
                   class="handle-out-of-chapter-link">
                   Chapter 1
                 </a>

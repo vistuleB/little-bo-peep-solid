@@ -1,13 +1,17 @@
-import TextParent from "./TextParent";
+import { ParentProps } from "solid-js";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
-const TOCItem = (props: {
+const TOCItemNewStyle = (props: ParentProps & {
   href: string;
-  label: string;
-  on_mobile?: string;
+  // label: string;
+  // on_mobile?: string;
   article_type: any;
 }) => {
   return (
-    <TextParent>
+    <div
+      class="text-column"
+      style={`width:${mainColumnWidth()}px;`}
+    >
       <div
         onclick={() => {
           window.location.href = `/article/${props.href}`;
@@ -28,12 +32,12 @@ const TOCItem = (props: {
           style="--toc-label-stroke-color: white"
           aria-hidden="true"
         >
-          {props.label}
+          {props.children}
         </div>
-        <div class="toc-item-title">{props.label}</div>
+        <div class="toc-item-title">{props.children}</div>
       </div>
-    </TextParent>
+    </div>
   );
 };
 
-export default TOCItem;
+export default TOCItemNewStyle;

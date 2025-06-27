@@ -156,6 +156,8 @@ fn lbp_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useSetRoute from \"~/hooks/useSetRoute\";"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import useBreadcrumbs from \"~/hooks/useBreadcrumbs\";"),
+        BlamedLine(blame_us("lbp_fragment_emitter"), 0, "import ArticleTitle from \"~/components/ArticleTitle\";"),
+
         BlamedLine(blame_us("lbp_fragment_emitter"), 0, ""),
         BlamedLine(
           blame_us("lbp_fragment_emitter"),

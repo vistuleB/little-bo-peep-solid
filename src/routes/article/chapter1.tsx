@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitle from "~/components/ArticleTitle";
 
 const Article = () => {
   useSetRoute();
@@ -28,10 +29,10 @@ const Article = () => {
       number={1}
       next-page="/article/chapter2"
       prev-page="/"
-      max-element-width={500}
+      title="A _Few_ Refreshers"
       page-necessary-margin={610}
-      title="A Few Refreshers"
-      id="_5_2852">
+      max-element-width={500}
+      id="_5_1526">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -76,8 +77,14 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitle banner="Chapter 1:">
+        A{" "}
+        <i>
+          Few
+        </i>
+        {" "}Refreshers
+      </ArticleTitle>
       <Section id="section-1">
-        Square Roots.
         <VerticalChunk>
           <b>
             Square Roots.
@@ -131,9 +138,9 @@ const Article = () => {
         <MathBlock>
           $$\sqrt&#123;(-2)^2&#125; = 2$$
           <ImageRight
-            offset_x="5em"
-            offset_y="0em"
             src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
+            offset_y="0em"
+            offset_x="5em"
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
@@ -546,7 +553,6 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
-        Fractions and Division.
         <VerticalChunk>
           <b>
             Fractions and Division.
@@ -732,6 +738,7 @@ const Rest = () => {
           {" "}
           really is (one second!):
         </VerticalChunk>
+        <Pause />
         <MathBlock>
           $$
           \begin&#123;align&#125;
@@ -741,6 +748,7 @@ const Rest = () => {
           \end&#123;align&#125;
           $$
         </MathBlock>
+        <Pause />
         <VerticalChunk>
           ...so we find, among others, that{" "}
           <Math>
@@ -763,7 +771,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
-        Distributivity.
         <VerticalChunk>
           <b>
             Distributivity.
@@ -865,9 +872,9 @@ const Rest = () => {
           (a + b)(C + D) \,=\, aC + bC + aD + bD
           $$
           <ImageLeft
-            offset_x="1em"
-            offset_y="-0.5em"
             src="/images/325.svg"
+            offset_y="-0.5em"
+            offset_x="1em"
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
@@ -1344,9 +1351,8 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section
-        id="section-4"
-        divider={false}>
-        Epilogue.
+        divider={false}
+        id="section-4">
         <VerticalChunk>
           <b>
             Epilogue.
@@ -1420,7 +1426,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
-        Vocabulary.
         <VerticalChunk>
           <b>
             Vocabulary.
@@ -1467,7 +1472,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_4_6681">
+          <ExerciseStatement id="_4_4063">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1477,10 +1482,10 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Grid
-              center_on_overflow={true}
-              sm_cutoff={520}
+              cols={3}
               sm_cols={2}
-              cols={3}>
+              sm_cutoff={520}
+              center_on_overflow={true}>
               <Item>
                 a.{" "}
                 <Math>
@@ -1633,8 +1638,8 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageLeft
-                offset_y="0.8rem"
                 src="/images/17.svg"
+                offset_y="0.8rem"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -1968,10 +1973,10 @@ const Rest = () => {
               10^&#123;9&#125;\fw\te&#123;km&#125;
               $$
               <ImageRight
-                squiggle={false}
-                offset_y="-1rem"
-                offset_x="3rem"
                 src="/images/svg_ch1_ex_104.svg"
+                offset_x="3rem"
+                offset_y="-1rem"
+                squiggle={false}
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -2166,8 +2171,8 @@ const Rest = () => {
             </VerticalChunk>
             <Pause />
             <Grid
-              place_items="end"
-              cols={3}>
+              cols={3}
+              place_items="end">
               <Math>
                 $ (-1)^1 = $
               </Math>
@@ -2481,8 +2486,8 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageRight
-                offset_y="-0.5em"
                 src="/images/svg_ch1_ex_24.svg"
+                offset_y="-0.5em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -2631,7 +2636,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_6681"
+                href="/article/chapter1?id=_4_4063"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2699,10 +2704,10 @@ const Rest = () => {
               &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
               $$
               <ImageRight
-                squiggle={false}
-                src="/images/svg_ch1_ex_25.svg"
-                offset_y="1.2rem"
                 offset_x="5rem"
+                offset_y="1.2rem"
+                src="/images/svg_ch1_ex_25.svg"
+                squiggle={false}
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -2715,10 +2720,10 @@ const Rest = () => {
               &#123;1 \over n^2&#125;
               $$
               <ImageRight
-                squiggle={false}
-                src="/images/svg_ch1_ex_26.svg"
-                offset_y="1.2rem"
                 offset_x="11.5rem"
+                offset_y="1.2rem"
+                src="/images/svg_ch1_ex_26.svg"
+                squiggle={false}
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
@@ -2759,8 +2764,8 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageRight
-                offset_y="-0.5em"
                 src="/images/svg_ch1_ex_27.svg"
+                offset_y="-0.5em"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />

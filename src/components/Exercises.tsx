@@ -8,7 +8,6 @@ import {
   useExercisesContext,
   useExercisesStateHelpers,
 } from "~/store/ExercisesStoreProvider";
-import TextParent from "~/components/TextParent";
 
 type ExercisesProps = ParentProps & SharedProps;
 
@@ -111,7 +110,9 @@ const Switcher = (props: SwitcherProps) => {
   };
 
   return (
-    <TextParent>
+    <div
+      class="m-auto"
+    >
       <div
         id="exercises-btns"
         class="flex justify-center !text-xl gap-0 mt-[2px]">
@@ -217,7 +218,7 @@ const Switcher = (props: SwitcherProps) => {
           </svg>
         </div>
       </div>
-    </TextParent>
+    </div>
   );
 };
 

@@ -6,7 +6,7 @@ import mainColumnWidth from "~/hooks/useMainColumnWidth";
 export const List = (props: ParentProps & SharedProps) => {
   return (
     <div
-      class={twJoin("slice", props.class)}
+      class={twJoin("text-column", props.class)}
       style={`width:${mainColumnWidth()}px;${props.style}`}
     >
       <ol class="list-decimal px-4 ml-6">{props.children}</ol>

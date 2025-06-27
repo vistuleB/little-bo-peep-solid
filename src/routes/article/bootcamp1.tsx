@@ -19,6 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import ArticleTitle from "~/components/ArticleTitle";
 
 const Article = () => {
   useSetRoute();
@@ -28,9 +29,9 @@ const Article = () => {
       number={1}
       next-page="/"
       prev-page="/article/bootcamp2"
-      max-element-width={800}
+      title="Sets"
       page-necessary-margin={160}
-      title="Sets">
+      max-element-width={800}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -89,8 +90,10 @@ const Article = () => {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
+      <ArticleTitle banner="Bootcamp 1:">
+        Sets
+      </ArticleTitle>
       <Section id="section-1">
-        Notation.
         <VerticalChunk>
           <b>
             Notation.
@@ -204,7 +207,6 @@ const Rest = () => {
     { showMore() && <>
       <Pause />
       <Section id="section-2">
-        What it does.
         <VerticalChunk>
           <b>
             What it does.
@@ -410,7 +412,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-3">
-        Set Equality.
         <VerticalChunk>
           <b>
             Set Equality.
@@ -537,7 +538,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-4">
-        Second notation for the empty set.
         <VerticalChunk>
           <b>
             Second notation for the empty set.
@@ -570,7 +570,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-5">
-        Sets within sets.
         <VerticalChunk>
           <b>
             Sets within sets.
@@ -618,8 +617,8 @@ const Rest = () => {
           \Large \&#123;\&#123;\&#125; \&#125; \ne \&#123;\&#125;
           $$
           <ImageRight
-            offset_x="3em"
             src="/images/svg_bt1_bt_empty_set_cloud.svg"
+            offset_x="3em"
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
@@ -686,7 +685,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-6">
-        Set union and set intersection.
         <VerticalChunk>
           <b>
             Set union and set intersection.
@@ -939,7 +937,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-7">
-        Sets encountered in calculus.
         <VerticalChunk>
           <b>
             Sets encountered in calculus.
@@ -1115,7 +1112,6 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section id="section-8">
-        Sets not encountered in calculus.
         <VerticalChunk>
           <b>
             Sets not encountered in calculus.
