@@ -34,6 +34,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Solution", "counter", "SolutionNoteCounter"),
         #("Chapter", "path", "/article/chapter::øøChapterCounter"),
         #("Bootcamp", "path", "/article/bootcamp::øøBootcampCounter"),
+        #("Chapter", "banner", "Chapter ::øøChapterCounter:"),
+        #("Bootcamp", "banner", "Bootcamp ::øøBootcampCounter:"),
         #("Exercise", "exercise_number", "::øøExerciseCounter"),
         #("Solution", "solution_number", "::øøExerciseCounter"),
         #("Section", "id", "section-::++SectionCounter"),
@@ -94,8 +96,10 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("CentralDisplay", "VerticalChunk"),
         #("CentralDisplayItalic", "VerticalChunk"),
       ]),
-      dn.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitleNewStyle", "title")),
-      dn.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitleNewStyle", "title")),
+      dn.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
+      dn.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
+      dn.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
+      dn.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
     ],
     // ****
     // parse _, * delims
@@ -193,7 +197,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Example", "Pause", []),
         #("Note", "Pause", []),
         #("SolutionNote", "Pause", []),
-        // #("Section", "Pause", []),
         #("MathBlock", "Pause", []),
         #("CentralDisplayItalic", "Pause", []),
         #("CentralDisplay", "Pause", []),
@@ -233,7 +236,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.generate_lbp_table_of_contents(#(
         "TOC",
         "TOCTitle",
-        "TOCItemNewStyle",
+        "TOCItem",
         Some("Spacer"),
       )),
       dn.generate_lbp_prev_next_attributes(),
