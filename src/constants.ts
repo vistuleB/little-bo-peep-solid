@@ -1,4 +1,5 @@
 export const MOBILE_MAX_WIDTH = 900;
+export const MD_MAX_WIDTH = 1280;
 export const DESKTOP_COLUMN_WIDTH = 488;
 export const TEXT_X_PADDING = "1rem";
 export const CHAPTER_TITLE_TOP_MARGIN_DESKTOP = 15;

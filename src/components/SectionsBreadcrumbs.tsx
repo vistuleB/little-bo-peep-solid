@@ -7,7 +7,11 @@ import {
   ParentProps,
 } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
-import { HAMBURGER_MENU_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
+import {
+  HAMBURGER_MENU_HEIGHT,
+  MD_MAX_WIDTH,
+  MOBILE_MAX_WIDTH,
+} from "~/constants";
 import { Component } from "solid-js";
 import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 import { twJoin } from "tailwind-merge";
@@ -20,7 +24,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
 
   const [visible, setVisible] = useLocalStorage(
     "sections-breadcrumbs-visible",
-    true,
+    MD_MAX_WIDTH < store.innerWidth,
   );
 
   const [outSideHovered, setOutSideHovered] = createSignal(false);
@@ -118,7 +122,9 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
             opacity: visible() ? 1 : 0,
             transition: `all ${Math.min(300 + children_list.length * 50, 600)}ms ease-in-out`,
           }}>
-          <ul ref={ref}>
+          <ul
+            ref={ref}
+            class="[&>li]:text-[11px] [&>li]:leading-[1.3rem] xl:[&>li]:text-[14px] xl:[&>li]:leading-[2rem]">
             <li class="breadcrumb-prev-next flex gap-2">
               <OutlinedText
                 onClick={() => getPrevArticle(true)}
