@@ -1,12 +1,11 @@
 import { JSX } from "solid-js";
 import { A, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { ParentProps } from "solid-js";
 
-const HamburgerPanelItem = (props: {
+const HamburgerPanelItem = (props: ParentProps & {
   href: string;
-  label: string;
-  on_mobile?: string;
-  article_type: any;
+  article_type: number;
 }) => {
   const { store } = useGlobalContext();
 
@@ -37,10 +36,10 @@ const HamburgerPanelItem = (props: {
             style="--toc-label-stroke-color: oklch(97% 0.001 106.424)"
             aria-hidden="true"
           >
-            {props.label}
+            {props.children}
           </div>
           <div class="toc-item-title">
-            <span>{props.label}</span>
+            <span>{props.children}</span>
           </div>
         </div>
       </div>

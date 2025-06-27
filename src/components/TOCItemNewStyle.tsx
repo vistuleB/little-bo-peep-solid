@@ -3,8 +3,8 @@ import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const TOCItemNewStyle = (props: ParentProps & {
   href: string;
-  label: string;
-  on_mobile?: string;
+  // label: string;
+  // on_mobile?: string;
   article_type: any;
 }) => {
   return (
@@ -34,7 +34,7 @@ const TOCItemNewStyle = (props: ParentProps & {
         >
           {props.children}
         </div>
-        <div class="toc-item-title">{props.label}</div>
+        <div class="toc-item-title">{props.children}</div>
       </div>
     </div>
   );

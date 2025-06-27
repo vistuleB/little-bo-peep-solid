@@ -93,7 +93,6 @@ const Article = () => {
       <ArticleTitleNewStyle>
         Sets
       </ArticleTitleNewStyle>
-      <Pause />
       <Section id="section-1">
         <VerticalChunk>
           <b>

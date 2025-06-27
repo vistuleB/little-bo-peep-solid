@@ -205,7 +205,7 @@ fn toc_emitter(
       [
         BlamedLine(blame_us("toc_emitter"), 0, "import TOC from \"~/components/TOC\";"),
         BlamedLine(blame_us("toc_emitter"), 0, "import TOCTitle from \"~/components/TOCTitle\";"),
-        BlamedLine(blame_us("toc_emitter"), 0, "import TOCItem from \"~/components/TOCItem\";"),
+        BlamedLine(blame_us("toc_emitter"), 0, "import TOCItemNewStyle from \"~/components/TOCItemNewStyle\";"),
         BlamedLine(blame_us("toc_emitter"), 0, "import { Spacer } from \"~/components/Spacer\";"),
         BlamedLine(blame_us("toc_emitter"), 0, ""),
         BlamedLine(blame_us("toc_emitter"), 0, "export default function Home() {"),

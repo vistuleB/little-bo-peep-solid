@@ -193,7 +193,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Example", "Pause", []),
         #("Note", "Pause", []),
         #("SolutionNote", "Pause", []),
-        #("Section", "Pause", []),
+        // #("Section", "Pause", []),
         #("MathBlock", "Pause", []),
         #("CentralDisplayItalic", "Pause", []),
         #("CentralDisplay", "Pause", []),
@@ -204,6 +204,9 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Grid", "Pause", []),
         #("List", "Pause", []),
         #("StarDivider", "Pause", []),
+      ]),
+      dn.add_before_tags_but_not_before_first_of_kind([
+        #("Section", "Pause", []),
       ]),
       // ************************
       // attribute cleanup
@@ -230,7 +233,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.generate_lbp_table_of_contents(#(
         "TOC",
         "TOCTitle",
-        "TOCItem",
+        "TOCItemNewStyle",
         Some("Spacer"),
       )),
       dn.generate_lbp_prev_next_attributes(),
@@ -238,7 +241,8 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.generate_lbp_section_breadcrumbs(),
       dn.unwrap(["BreadcrumbTitle"]),
       // dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
-      dn.unwrap(["DebugScope"])
+      dn.unwrap(["DebugScope"]),
+      dn.remove_attributes(["test"]),
     ]
   ]
   |> list.flatten

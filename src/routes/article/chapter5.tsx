@@ -200,7 +200,6 @@ const Article = () => {
       <ArticleTitleNewStyle>
         The Trigonometric Functions
       </ArticleTitleNewStyle>
-      <Pause />
       <Section id="section-1">
         <VerticalChunk>
           <b>
@@ -1516,7 +1515,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_7337"
+            href="/article/chapter4?id=_24_2643"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14681,7 +14680,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_25_8319">
+          <ExerciseStatement id="_25_581">
             <VerticalChunk>
               <b>
                 Exercise 42.
