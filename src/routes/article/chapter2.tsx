@@ -1,4 +1,4 @@
-import Chapter from "~/components/Chapter";
+import Article from "~/components/Article";
 import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import TextParent from "~/components/TextParent";
@@ -16,20 +16,14 @@ import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
 import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
-import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
-import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 import ArticleTitle from "~/components/ArticleTitle";
 
-const Article = () => {
-  useSetRoute();
-  useBreadcrumbs();
-  return (<>
-    <Chapter
-      number={2}
+export default function () {
+  return <>
+    <Article
       next-page="/article/chapter3"
       prev-page="/article/chapter1"
-      title="Slopes"
       page-necessary-margin={1040}
       max-element-width={900}>
       <SectionsBreadcrumbs>
@@ -201,9 +195,9 @@ const Article = () => {
         </VerticalChunk>
       </Section>
       <Rest />
-    </Chapter>
-  </>);
-};
+    </Article>
+  </>
+}
 
 const Rest = () => {
   const showMore = useShowMore();
@@ -1721,7 +1715,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement id="_6_2860">
+          <ExerciseStatement id="_6_7472">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2160,7 +2154,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_2860"
+                href="/article/chapter2?id=_6_7472"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
@@ -2314,5 +2308,3 @@ const Rest = () => {
 </> }
 </>);
 };
-
-export default Article;

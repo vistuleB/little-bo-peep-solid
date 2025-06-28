@@ -4,20 +4,24 @@ import useScrollX from "~/hooks/useScrollX";
 import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
 import { useGlobalContext } from "~/store/StoreProvider";
 import ActionArrows from "./ActionArrows";
+import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import useSetRoute from "~/hooks/useSetRoute";
 
-const AbstractArticle = (
-  props: ParentProps & {
-    id?: string;
-    pageNecessaryMargin?: number;
-    maxElementWidth?: number;
-    nextPage?: string;
-    prevPage?: string;
-  },
-) => {
+type AbstractArticleProps = {
+  id?: string;
+  "page-necessary-margin"?: number;
+  "max-element-width"?: number;
+  "next-page"?: string;
+  "prev-page"?: string;
+};
+
+const AbstractArticle = (props: ParentProps & AbstractArticleProps) => {
   let { set_store, store } = useGlobalContext();
 
   useScrollX();
   useCheckedSaveScroll();
+  useSetRoute();
+  useBreadcrumbs();
 
   const resetDimensions = () => {
     set_store(
@@ -28,10 +32,10 @@ const AbstractArticle = (
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
 
-    set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
-    set_store("maxElementWidth", props.maxElementWidth || 0);
-    set_store("nextPage", props.nextPage || "");
-    set_store("prevPage", props.prevPage || "");
+    set_store("pageNecessaryMargin", props["page-necessary-margin"] || 0);
+    set_store("maxElementWidth", props["max-element-width"] || 0);
+    set_store("nextPage", props["next-page"] || "");
+    set_store("prevPage", props["prev-page"] || "");
 
     let _dummy =
       store.scrollY +

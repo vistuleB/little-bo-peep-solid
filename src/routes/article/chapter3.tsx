@@ -1,4 +1,4 @@
-import Chapter from "~/components/Chapter";
+import Article from "~/components/Article";
 import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import TextParent from "~/components/TextParent";
@@ -16,23 +16,17 @@ import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
 import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
-import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
-import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 import ArticleTitle from "~/components/ArticleTitle";
 
-const Article = () => {
-  useSetRoute();
-  useBreadcrumbs();
-  return (<>
-    <Chapter
-      number={3}
+export default function () {
+  return <>
+    <Article
       next-page="/article/chapter4"
       prev-page="/article/chapter2"
-      title="Functions"
       page-necessary-margin={700}
       max-element-width={1500}
-      id="_15_9307">
+      id="_15_654">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -388,9 +382,9 @@ const Article = () => {
         </VerticalChunk>
       </Section>
       <Rest />
-    </Chapter>
-  </>);
-};
+    </Article>
+  </>
+}
 
 const Rest = () => {
   const showMore = useShowMore();
@@ -2227,7 +2221,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={4}>
-          <ExerciseStatement id="_7_9545">
+          <ExerciseStatement id="_7_3127">
             <VerticalChunk>
               <b>
                 Exercise 4.
@@ -2448,7 +2442,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={5}>
-          <ExerciseStatement id="_8_7042">
+          <ExerciseStatement id="_8_3306">
             <VerticalChunk>
               <b>
                 Exercise 5.
@@ -2482,7 +2476,7 @@ const Rest = () => {
               </NoBreak>
               {" "}apply the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_9545"
+                href="/article/chapter3?id=_7_3127"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2535,7 +2529,7 @@ const Rest = () => {
               {" "}
               the formula for the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_9545"
+                href="/article/chapter3?id=_7_3127"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2937,7 +2931,7 @@ const Rest = () => {
               because all we have to do is to multiply
               {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_7042"
+                href="/article/chapter3?id=_8_3306"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -2962,7 +2956,7 @@ const Rest = () => {
             <VerticalChunk>
               because the problem is similar to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_7042"
+                href="/article/chapter3?id=_8_3306"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -3225,7 +3219,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={8}>
-          <ExerciseStatement id="_9_7327">
+          <ExerciseStatement id="_9_6752">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -3408,7 +3402,7 @@ const Rest = () => {
               {" "}
               Same question as{" "}
               <InChapterLink
-                href="/article/chapter3?id=_9_7327"
+                href="/article/chapter3?id=_9_6752"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -4137,7 +4131,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={10}>
-          <ExerciseStatement id="_10_4603">
+          <ExerciseStatement id="_10_2839">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4230,7 +4224,7 @@ const Rest = () => {
               {" "}
               Solve{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_4603"
+                href="/article/chapter3?id=_10_2839"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4473,7 +4467,7 @@ const Rest = () => {
               </NoBreak>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_4603"
+                href="/article/chapter3?id=_10_2839"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4500,7 +4494,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_4603"
+                href="/article/chapter3?id=_10_2839"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4610,7 +4604,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={14}>
-          <ExerciseStatement id="_11_5273">
+          <ExerciseStatement id="_11_2120">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -5112,7 +5106,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={15}>
-          <ExerciseStatement id="_12_3958">
+          <ExerciseStatement id="_12_8988">
             <VerticalChunk>
               <b>
                 Exercise 15.
@@ -5516,7 +5510,7 @@ const Rest = () => {
               {" "}by the following
               sequence of transformations (cf.{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_5273"
+                href="/article/chapter3?id=_11_2120"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -5548,7 +5542,7 @@ const Rest = () => {
               (We put the vertical translation first.)
               By{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_3958"
+                href="/article/chapter3?id=_12_8988"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -5749,7 +5743,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={18}>
-          <ExerciseStatement id="_13_5364">
+          <ExerciseStatement id="_13_7605">
             <VerticalChunk>
               <b>
                 Exercise 18.
@@ -5987,7 +5981,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={19}>
-          <ExerciseStatement id="_14_4473">
+          <ExerciseStatement id="_14_5947">
             <VerticalChunk>
               <b>
                 Exercise 19.
@@ -6065,7 +6059,7 @@ const Rest = () => {
             <VerticalChunk>
               and, similarly to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_5273"
+                href="/article/chapter3?id=_11_2120"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6128,7 +6122,7 @@ const Rest = () => {
               </NoBreak>
               {" "}of{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_5273"
+                href="/article/chapter3?id=_11_2120"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6138,7 +6132,7 @@ const Rest = () => {
             <VerticalChunk indent={true}>
               By direct analogy with{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_5273"
+                href="/article/chapter3?id=_11_2120"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6346,7 +6340,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_3958"
+                href="/article/chapter3?id=_12_8988"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -6430,7 +6424,7 @@ const Rest = () => {
               <VerticalChunk>
                 as briefly flashed by, e.g., in{" "}
                 <a
-                  href="/article/chapter1?id=_5_1526"
+                  href="/article/chapter1?id=_5_3654"
                   class="handle-out-of-chapter-link">
                   Chapter 1
                 </a>
@@ -6840,5 +6834,3 @@ const Rest = () => {
 </> }
 </>);
 };
-
-export default Article;

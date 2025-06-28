@@ -1,4 +1,4 @@
-import Bootcamp from "~/components/Bootcamp";
+import Article from "~/components/Article";
 import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import TextParent from "~/components/TextParent";
@@ -16,20 +16,14 @@ import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
 import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
-import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
-import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 import ArticleTitle from "~/components/ArticleTitle";
 
-const Article = () => {
-  useSetRoute();
-  useBreadcrumbs();
-  return (<>
-    <Bootcamp
-      number={1}
+export default function () {
+  return <>
+    <Article
       next-page="/"
       prev-page="/article/bootcamp2"
-      title="Sets"
       page-necessary-margin={160}
       max-element-width={800}>
       <SectionsBreadcrumbs>
@@ -197,9 +191,9 @@ const Article = () => {
         </VerticalChunk>
       </Section>
       <Rest />
-    </Bootcamp>
-  </>);
-};
+    </Article>
+  </>
+}
 
 const Rest = () => {
   const showMore = useShowMore();
@@ -1285,5 +1279,3 @@ const Rest = () => {
 </> }
 </>);
 };
-
-export default Article;

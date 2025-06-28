@@ -1,4 +1,4 @@
-import Chapter from "~/components/Chapter";
+import Article from "~/components/Article";
 import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import TextParent from "~/components/TextParent";
@@ -16,19 +16,13 @@ import { SectionDivider } from "~/components/SectionDivider";
 import { StarDivider } from "~/components/StarDivider";
 import VerticalChunk from "~/components/VerticalChunk";
 import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
-import useSetRoute from "~/hooks/useSetRoute";
 import useShowMore from "~/hooks/useShowMore";
-import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 import ArticleTitle from "~/components/ArticleTitle";
 
-const Article = () => {
-  useSetRoute();
-  useBreadcrumbs();
-  return (<>
-    <Chapter
-      number={5}
+export default function () {
+  return <>
+    <Article
       prev-page="/article/chapter4"
-      title="The Trigonometric Functions"
       page-necessary-margin={950}
       max-element-width={1000}>
       <SectionsBreadcrumbs>
@@ -717,9 +711,9 @@ const Article = () => {
         </VerticalChunk>
       </Section>
       <Rest />
-    </Chapter>
-  </>);
-};
+    </Article>
+  </>
+}
 
 const Rest = () => {
   const showMore = useShowMore();
@@ -1515,7 +1509,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_5958"
+            href="/article/chapter4?id=_24_7716"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14680,7 +14674,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_25_5240">
+          <ExerciseStatement id="_25_2327">
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -16290,5 +16284,3 @@ const Rest = () => {
 </> }
 </>);
 };
-
-export default Article;

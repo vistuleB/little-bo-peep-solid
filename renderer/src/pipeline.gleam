@@ -211,11 +211,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.add_before_tags_but_not_before_first_of_kind([
         #("Section", "Pause", []),
       ]),
-      // ************************
-      // attribute cleanup
-      // ************************
-      dn.change_attribute_value([#("src", "/()")]),
-      dn.remove_attributes(["counter", "handle", "type", "t", "path", "."]),
       dn.rearrange_links([
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
@@ -245,7 +240,12 @@ pub fn lbp_pipeline() -> List(Pipe) {
       dn.unwrap(["BreadcrumbTitle"]),
       // dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
       dn.unwrap(["DebugScope"]),
-      dn.remove_attributes(["test"]),
+
+      // ************************
+      // attribute cleanup
+      // ************************
+      dn.change_attribute_value([#("src", "/()")]),
+      dn.remove_attributes(["counter", "handle", "type", "t", "path", ".", "title", "test"]),
     ]
   ]
   |> list.flatten
