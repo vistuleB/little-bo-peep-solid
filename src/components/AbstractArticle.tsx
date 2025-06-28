@@ -17,7 +17,6 @@ const AbstractArticle = (
   let { set_store, store } = useGlobalContext();
 
   useScrollX();
-  useCheckedSaveScroll();
 
   const resetDimensions = () => {
     set_store(
@@ -27,11 +26,6 @@ const AbstractArticle = (
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
-
-    set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
-    set_store("maxElementWidth", props.maxElementWidth || 0);
-    set_store("nextPage", props.nextPage || "");
-    set_store("prevPage", props.prevPage || "");
 
     let _dummy =
       store.scrollY +
@@ -48,11 +42,22 @@ const AbstractArticle = (
 
   return (
     <ExercisesStoreProvider>
-      <span id={props.id} class="id_span"></span>
-      {props.children}
+      {/* <span id={props.id} class="id_span"></span> */}
+      <ExercisesStoreConsumer>{props.children}</ExercisesStoreConsumer>
       <ActionArrows />
     </ExercisesStoreProvider>
   );
+};
+
+const ExercisesStoreConsumer = (props: ParentProps & {
+    id?: string;
+    pageNecessaryMargin?: number;
+    maxElementWidth?: number;
+    nextPage?: string;
+    prevPage?: string;
+  }) => {
+  useCheckedSaveScroll();
+  return <>{props.children}</>;
 };
 
 export default AbstractArticle;

@@ -3343,7 +3343,7 @@ const Rest = () => {
               <ImageLeft
                 src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg"
                 popup={true}
-                y_anchor={1}
+                line={1}
                 offset_x="1em" />
             </VerticalChunk>
             <div style="font-size:1.1em;margin:0.8em 0em;">
