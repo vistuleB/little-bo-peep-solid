@@ -1721,7 +1721,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={2}>
-          <ExerciseStatement id="_6_2860">
+          <ExerciseStatement id="_6_3844">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2055,7 +2055,13 @@ const Rest = () => {
                 Note 1.
               </i>
               {" "}
-              As explained in Chapter &gt;&gt;, an empty circle of
+              As explained in{" "}
+              <a
+                href="/article/chapter3?id=_15_2684"
+                class="handle-out-of-chapter-link">
+                Chapter 3
+              </a>
+              , an empty circle of
               this type
             </VerticalChunk>
             <Pause />
@@ -2160,7 +2166,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_2860"
+                href="/article/chapter2?id=_6_3844"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
