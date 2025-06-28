@@ -7,7 +7,7 @@ import ActionArrows from "./ActionArrows";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 import useSetRoute from "~/hooks/useSetRoute";
 
-type AbstractArticleProps = {
+type ArticleProps = {
   id?: string;
   "page-necessary-margin"?: number;
   "max-element-width"?: number;
@@ -15,7 +15,7 @@ type AbstractArticleProps = {
   "prev-page"?: string;
 };
 
-const AbstractArticle = (props: ParentProps & AbstractArticleProps) => {
+const Article = (props: ParentProps & ArticleProps) => {
   let { set_store, store } = useGlobalContext();
 
   useScrollX();
@@ -52,11 +52,24 @@ const AbstractArticle = (props: ParentProps & AbstractArticleProps) => {
 
   return (
     <ExercisesStoreProvider>
-      <span id={props.id} class="id_span"></span>
-      {props.children}
+      {/* <span id={props.id} class="id_span"></span> */}
+      <ExercisesStoreConsumer>{props.children}</ExercisesStoreConsumer>
       <ActionArrows />
     </ExercisesStoreProvider>
   );
 };
 
-export default AbstractArticle;
+const ExercisesStoreConsumer = (
+  props: ParentProps & {
+    id?: string;
+    pageNecessaryMargin?: number;
+    maxElementWidth?: number;
+    nextPage?: string;
+    prevPage?: string;
+  },
+) => {
+  useCheckedSaveScroll();
+  return <>{props.children}</>;
+};
+
+export default Article;
