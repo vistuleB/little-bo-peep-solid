@@ -1793,7 +1793,7 @@ const Rest = () => {
         <VerticalChunk>
           of functions already appear in{" "}
           <a
-            href="/article/chapter3?id=_13_7421"
+            href="/article/chapter3?id=_13_8746"
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1824,8 +1824,8 @@ const Rest = () => {
       </Section>
       <Pause />
       <Exercises>
-        <Exercise exercise_number={1}>
-          <ExerciseStatement id="_16_647">
+        <Exercise number={1}>
+          <ExerciseStatement id="_16_432">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1846,7 +1846,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_slope_one_half_see_saw.svg" />
           </ExerciseStatement>
-          <Solution solution_number={1}>
+          <Solution>
             <VerticalChunk>
               That would be:
             </VerticalChunk>
@@ -1882,7 +1882,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={2}>
+        <Exercise number={2}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -1911,7 +1911,7 @@ const Rest = () => {
               it depend on which side of 0 you are?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={2}>
+          <Solution>
             <VerticalChunk>
               The graph of{" "}
               <Math>
@@ -1936,7 +1936,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={3}>
+        <Exercise number={3}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -1953,14 +1953,14 @@ const Rest = () => {
             <VerticalChunk>
               derivative of the graph in{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_647"
+                href="/article/chapter4?id=_16_432"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
               .
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={3}>
+          <Solution>
             <VerticalChunk>
               The second derivative is zero wherever the
               first derivative is flat, and is undefined
@@ -1989,7 +1989,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={4}>
+        <Exercise number={4}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -1998,7 +1998,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_647"
+                href="/article/chapter4?id=_16_432"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2029,7 +2029,7 @@ const Rest = () => {
               and second derivatives?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={4}>
+          <Solution>
             <VerticalChunk>
               The units on the{" "}
               <Math>
@@ -2092,7 +2092,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={5}>
+        <Exercise number={5}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2109,7 +2109,7 @@ const Rest = () => {
               $$
             </MathBlock>
           </ExerciseStatement>
-          <Solution solution_number={5}>
+          <Solution>
             <VerticalChunk>
               The equation makes sense and is true.
               Syntactically,
@@ -2289,7 +2289,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={6}>
+        <Exercise number={6}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2302,7 +2302,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_missing_units.svg" />
           </ExerciseStatement>
-          <Solution solution_number={6}>
+          <Solution>
             <VerticalChunk>
               The pattern to respect is that, each time
               you take a derivative, the units on the{" "}
@@ -2415,7 +2415,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={7}>
+        <Exercise number={7}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2451,7 +2451,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_ex_position_by_time_find_the_order.svg" />
           </ExerciseStatement>
-          <Solution solution_number={7}>
+          <Solution>
             <VerticalChunk>
               The graphs are already in the right order:
               if{" "}
@@ -2536,8 +2536,8 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={8}>
-          <ExerciseStatement id="_17_2940">
+        <Exercise number={8}>
+          <ExerciseStatement id="_17_3393">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -2574,7 +2574,7 @@ const Rest = () => {
               help!)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={8}>
+          <Solution>
             <VerticalChunk>
               To start with, the slope of{" "}
               <Math>
@@ -2696,7 +2696,7 @@ const Rest = () => {
             <Image src="/images/svg_ch4_sketch_the_middle_a_sol5.svg" />
           </Solution>
         </Exercise>
-        <Exercise exercise_number={9}>
+        <Exercise number={9}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2719,14 +2719,14 @@ const Rest = () => {
               {" "}analogously to
               {" "}
               <InChapterLink
-                href="/article/chapter4?id=_17_2940"
+                href="/article/chapter4?id=_17_3393"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
               .
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={9}>
+          <Solution>
             <VerticalChunk>
               Firstly, the graph of{" "}
               <Math>
@@ -2988,8 +2988,8 @@ const Rest = () => {
             <Image src="/images/svg_ch4_sketch_the_middle_b_sol12.svg" />
           </Solution>
         </Exercise>
-        <Exercise exercise_number={10}>
-          <ExerciseStatement id="_18_6495">
+        <Exercise number={10}>
+          <ExerciseStatement id="_18_9186">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -3025,7 +3025,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={10}>
+          <Solution>
             <VerticalChunk>
               Yes, this is the case. For a joke way
               of seeing it, here is a graph of a
@@ -3082,7 +3082,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={11}>
+        <Exercise number={11}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -3104,7 +3104,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_narrow_and_less_narrow_bends.svg" />
           </ExerciseStatement>
-          <Solution solution_number={11}>
+          <Solution>
             <VerticalChunk>
               The rate of change is the slope, which
               is greatest along the right-hand portion
@@ -3136,7 +3136,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={12}>
+        <Exercise number={12}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -3149,7 +3149,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_cosine_curves.svg" />
           </ExerciseStatement>
-          <Solution solution_number={12}>
+          <Solution>
             <VerticalChunk>
               As it happens—and by the exact method
               that we used to generate these curves—the
@@ -3711,7 +3711,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={13}>
+        <Exercise number={13}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -3804,7 +3804,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={13}>
+          <Solution>
             <VerticalChunk>
               It is necessary and sufficient to show that
             </VerticalChunk>
@@ -4026,7 +4026,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={14}>
+        <Exercise number={14}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -4092,7 +4092,7 @@ const Rest = () => {
               corresponding fact for numbers, namely.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={14}>
+          <Solution>
             <VerticalChunk>
               Given an arbitrary{" "}
               <Math>
@@ -4274,7 +4274,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={15}>
+        <Exercise number={15}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -4334,9 +4334,7 @@ const Rest = () => {
               {" "}compute?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution
-            solution_number={15}
-            id="_19_8434">
+          <Solution id="_19_6895">
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -4524,7 +4522,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={16}>
+        <Exercise number={16}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -4539,7 +4537,7 @@ const Rest = () => {
               keeping the same setup as in Exercise 34?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={16}>
+          <Solution>
             <VerticalChunk>
               It computes the dollars-per-second earnings rate
               as a function of time. In full detail,
@@ -4594,7 +4592,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={17}>
+        <Exercise number={17}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -4628,7 +4626,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={17}>
+          <Solution>
             <VerticalChunk>
               At{" "}
               <NoBreak>
@@ -4805,7 +4803,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={18}>
+        <Exercise number={18}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -4850,7 +4848,7 @@ const Rest = () => {
               {" "}Exercises 34-37.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={18}>
+          <Solution>
             <VerticalChunk>
               The sought-for formula is
             </VerticalChunk>
@@ -5031,7 +5029,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={19}>
+        <Exercise number={19}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -5069,7 +5067,7 @@ const Rest = () => {
               vector describe?) Over how much time?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={19}>
+          <Solution>
             <VerticalChunk>
               The velocity vector is an arrow of length{" "}
               <Math>
@@ -5150,7 +5148,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={20}>
+        <Exercise number={20}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -5169,7 +5167,7 @@ const Rest = () => {
               of the particle from Exercise 39?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={20}>
+          <Solution>
             <VerticalChunk>
               The velocity vector of Exercise 39 travels
               in a circle of radius{" "}
@@ -5234,7 +5232,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={21}>
+        <Exercise number={21}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -5257,7 +5255,7 @@ const Rest = () => {
               {" "}(Clockwise, say.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={21}>
+          <Solution>
             <VerticalChunk>
               The velocity vector has length{" "}
               <NoBreak>
@@ -5385,7 +5383,7 @@ const Rest = () => {
             <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_with_position.svg" />
           </Solution>
         </Exercise>
-        <Exercise exercise_number={22}>
+        <Exercise number={22}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -5415,7 +5413,7 @@ const Rest = () => {
               lengths of the various vectors.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={22}>
+          <Solution>
             <VerticalChunk>
               While the particle goes around a circle of
               radius{" "}
@@ -5712,7 +5710,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_20_596">
+            <SolutionNote id="_20_8997">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -5881,7 +5879,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={23}>
+        <Exercise number={23}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -5923,7 +5921,7 @@ const Rest = () => {
               particle?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={23}>
+          <Solution>
             <VerticalChunk>
               Starting with the second part of the
               question, because the particles are going around
@@ -5989,7 +5987,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={24}>
+        <Exercise number={24}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -6001,7 +5999,7 @@ const Rest = () => {
               “length over time”, ([L/T]).)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={24}>
+          <Solution>
             <VerticalChunk>
               <i>
                 Solution 1.
@@ -6071,7 +6069,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={25}>
+        <Exercise number={25}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -6109,14 +6107,14 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={25}>
+          <Solution>
             <VerticalChunk>
               Going back in time,
               examine how long it would take
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see{" "}
               <InChapterLink
-                href="/article/chapter4?id=_21_5525"
+                href="/article/chapter4?id=_21_549"
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6293,7 +6291,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_21_5525">
+            <SolutionNote id="_21_549">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6350,7 +6348,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={26}>
+        <Exercise number={26}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -6405,7 +6403,7 @@ const Rest = () => {
               exist altogether between the three graphs?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={26}>
+          <Solution>
             <VerticalChunk>
               For{" "}
               <Math>
@@ -6562,7 +6560,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={27}>
+        <Exercise number={27}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -6613,7 +6611,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={27}>
+          <Solution>
             <VerticalChunk>
               At{" "}
               <Math>
@@ -8209,7 +8207,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={28}>
+        <Exercise number={28}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -8244,7 +8242,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={28}>
+          <Solution>
             <VerticalChunk>
               Recall the curves from Exercise 12:
             </VerticalChunk>
@@ -8329,7 +8327,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={29}>
+        <Exercise number={29}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -8380,7 +8378,7 @@ const Rest = () => {
               ...in the form of self-contained, formal statements.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={29}>
+          <Solution>
             <VerticalChunk>
               For the functions:
             </VerticalChunk>
@@ -8591,7 +8589,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={30}>
+        <Exercise number={30}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -8634,7 +8632,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_scaled_cosine_curves.svg" />
           </ExerciseStatement>
-          <Solution solution_number={30}>
+          <Solution>
             <VerticalChunk>
               The values oscillate between{" "}
               <Math>
@@ -8687,7 +8685,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={31}>
+        <Exercise number={31}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -8798,9 +8796,7 @@ const Rest = () => {
               ...?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution
-            solution_number={31}
-            id="_22_5497">
+          <Solution id="_22_9779">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9517,7 +9513,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={32}>
+        <Exercise number={32}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -9561,7 +9557,7 @@ const Rest = () => {
               concerned, what would our options be?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={32}>
+          <Solution>
             <VerticalChunk>
               Take{" "}
               <Math>
@@ -9943,7 +9939,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={33}>
+        <Exercise number={33}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -9972,9 +9968,7 @@ const Rest = () => {
               the expression, if any.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution
-            solution_number={33}
-            id="_23_9326">
+          <Solution id="_23_4017">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10150,7 +10144,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={34}>
+        <Exercise number={34}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -10436,7 +10430,7 @@ const Rest = () => {
               each term become?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={34}>
+          <Solution>
             <VerticalChunk>
               Dividing by{" "}
               <NoBreak>
@@ -10577,7 +10571,7 @@ const Rest = () => {
               {" "}(cf.
               Exercise 16{" "}
               <InChapterLink
-                href="/article/chapter4?id=_19_8434"
+                href="/article/chapter4?id=_19_6895"
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -11000,7 +10994,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={35}>
+        <Exercise number={35}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -11041,7 +11035,7 @@ const Rest = () => {
               , by the way.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={35}>
+          <Solution>
             <VerticalChunk>
               One can say
             </VerticalChunk>
@@ -11074,7 +11068,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={36}>
+        <Exercise number={36}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -11086,7 +11080,7 @@ const Rest = () => {
               of Exercise 19, what do we obtain?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={36}>
+          <Solution>
             <VerticalChunk>
               The form of...
             </VerticalChunk>
@@ -11220,7 +11214,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={37}>
+        <Exercise number={37}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -11269,9 +11263,7 @@ const Rest = () => {
               to this point?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution
-            solution_number={37}
-            id="_24_5862">
+          <Solution id="_24_8079">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>
@@ -11351,7 +11343,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={38}>
+        <Exercise number={38}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -11430,7 +11422,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={38}>
+          <Solution>
             <VerticalChunk>
               The “logical” definition is:
             </VerticalChunk>
@@ -11530,7 +11522,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={39}>
+        <Exercise number={39}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -11627,7 +11619,7 @@ const Rest = () => {
               the input.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={39}>
+          <Solution>
             <VerticalChunk>
               E.g.:
             </VerticalChunk>
@@ -11663,7 +11655,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={40}>
+        <Exercise number={40}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -11712,7 +11704,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={40}>
+          <Solution>
             <VerticalChunk>
               We can start with the fraction in the
               middle of the product:
@@ -11990,7 +11982,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={41}>
+        <Exercise number={41}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -12021,7 +12013,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_cosine_for_eta.svg" />
           </ExerciseStatement>
-          <Solution solution_number={41}>
+          <Solution>
             <VerticalChunk>
               Because the particle is going at unit speed the
               circumference of the unit circle is equal to the
@@ -12180,7 +12172,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={42}>
+        <Exercise number={42}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -12247,7 +12239,7 @@ const Rest = () => {
               data!)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={42}>
+          <Solution>
             <VerticalChunk>
               Let's start by examining Pacman's first six displacements,
               appearing here in blue (positive displacements, going to the right
@@ -12755,7 +12747,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={43}>
+        <Exercise number={43}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -12788,7 +12780,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={43}>
+          <Solution>
             <VerticalChunk>
               It seems well-advised to start by heuristically verifying
               that Pacman's speed remains
@@ -13427,7 +13419,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={44}>
+        <Exercise number={44}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -13440,7 +13432,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch4_one_long_line.svg" />
           </ExerciseStatement>
-          <Solution solution_number={44}>
+          <Solution>
             <VerticalChunk>
               As the second derivative is the
             </VerticalChunk>

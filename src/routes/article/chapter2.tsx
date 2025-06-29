@@ -1618,7 +1618,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Exercises>
-        <Exercise exercise_number={1}>
+        <Exercise number={1}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -1639,7 +1639,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={1}>
+          <Solution>
             <VerticalChunk>
               This is true, as illustrated by the following
               pair of lines:
@@ -1714,8 +1714,8 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={2}>
-          <ExerciseStatement id="_6_9859">
+        <Exercise number={2}>
+          <ExerciseStatement id="_6_7420">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -1737,7 +1737,7 @@ const Rest = () => {
               (Hint: Start from the slope formula.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={2}>
+          <Solution>
             <VerticalChunk>
               A point{" "}
               <Math>
@@ -1972,7 +1972,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={3}>
+        <Exercise number={3}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -1990,7 +1990,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/1.svg" />
           </ExerciseStatement>
-          <Solution solution_number={3}>
+          <Solution>
             <VerticalChunk>
               Here is the “official” graph of the (vertical)
               velocity:
@@ -2051,7 +2051,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_15_3561"
+                href="/article/chapter3?id=_15_6458"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2150,7 +2150,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={4}>
+        <Exercise number={4}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2160,7 +2160,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_9859"
+                href="/article/chapter2?id=_6_7420"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
@@ -2194,7 +2194,7 @@ const Rest = () => {
               and “rise equals slope times run”.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={4}>
+          <Solution>
             <VerticalChunk>
               E.g.:
             </VerticalChunk>

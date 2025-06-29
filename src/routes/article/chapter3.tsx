@@ -26,7 +26,7 @@ export default function __Chapter3__() {
       prev-page="/article/chapter2"
       page-necessary-margin={700}
       max-element-width={1500}
-      id="_15_3561">
+      id="_15_6458">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -2047,7 +2047,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Exercises>
-        <Exercise exercise_number={1}>
+        <Exercise number={1}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2058,7 +2058,7 @@ const Rest = () => {
               function using “definition by cases”?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={1}>
+          <Solution>
             <VerticalChunk>
               The absolute value function is
             </VerticalChunk>
@@ -2088,7 +2088,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={2}>
+        <Exercise number={2}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2099,7 +2099,7 @@ const Rest = () => {
               function using an “ordinary” algebraic formula?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={2}>
+          <Solution>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -2140,7 +2140,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={3}>
+        <Exercise number={3}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2182,7 +2182,7 @@ const Rest = () => {
               </Item>
             </Grid>
           </ExerciseStatement>
-          <Solution solution_number={3}>
+          <Solution>
             <VerticalChunk>
               The answers are:
             </VerticalChunk>
@@ -2220,8 +2220,8 @@ const Rest = () => {
             </Grid>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={4}>
-          <ExerciseStatement id="_7_4838">
+        <Exercise number={4}>
+          <ExerciseStatement id="_7_2404">
             <VerticalChunk>
               <b>
                 Exercise 4.
@@ -2300,7 +2300,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch3_ex_factory_roof_graph.svg" />
           </ExerciseStatement>
-          <Solution solution_number={4}>
+          <Solution>
             <VerticalChunk>
               As{" "}
               <Math>
@@ -2441,8 +2441,8 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={5}>
-          <ExerciseStatement id="_8_7362">
+        <Exercise number={5}>
+          <ExerciseStatement id="_8_7569">
             <VerticalChunk>
               <b>
                 Exercise 5.
@@ -2463,7 +2463,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch3_ex_factory_roof_stretched.svg" />
           </ExerciseStatement>
-          <Solution solution_number={5}>
+          <Solution>
             <VerticalChunk>
               We would like to argue the correctness of
               the following two-step process (divide the
@@ -2476,7 +2476,7 @@ const Rest = () => {
               </NoBreak>
               {" "}apply the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_4838"
+                href="/article/chapter3?id=_7_2404"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2529,7 +2529,7 @@ const Rest = () => {
               {" "}
               the formula for the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_4838"
+                href="/article/chapter3?id=_7_2404"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2889,7 +2889,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={6}>
+        <Exercise number={6}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2902,7 +2902,7 @@ const Rest = () => {
             <Pause />
             <Image src="/images/svg_ch3_ex_three_factories.svg" />
           </ExerciseStatement>
-          <Solution solution_number={6}>
+          <Solution>
             <VerticalChunk>
               For the first graph,
               <del>
@@ -2931,7 +2931,7 @@ const Rest = () => {
               because all we have to do is to multiply
               {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_7362"
+                href="/article/chapter3?id=_8_7569"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -2956,7 +2956,7 @@ const Rest = () => {
             <VerticalChunk>
               because the problem is similar to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_7362"
+                href="/article/chapter3?id=_8_7569"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -3084,7 +3084,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={7}>
+        <Exercise number={7}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -3133,7 +3133,7 @@ const Rest = () => {
               {" "}spaced-out bumps??
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={7}>
+          <Solution>
             <VerticalChunk>
               Consider how to “read off” a value of{" "}
               <Math>
@@ -3218,8 +3218,8 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={8}>
-          <ExerciseStatement id="_9_6082">
+        <Exercise number={8}>
+          <ExerciseStatement id="_9_8671">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -3298,7 +3298,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={8}>
+          <Solution>
             <VerticalChunk>
               Setting{" "}
               <NoBreak>
@@ -3393,7 +3393,7 @@ const Rest = () => {
             <Image src="/images/svg_first_victim_second_victim_1_1em.svg" />
           </Solution>
         </Exercise>
-        <Exercise exercise_number={9}>
+        <Exercise number={9}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -3402,7 +3402,7 @@ const Rest = () => {
               {" "}
               Same question as{" "}
               <InChapterLink
-                href="/article/chapter3?id=_9_6082"
+                href="/article/chapter3?id=_9_8671"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -3426,7 +3426,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={9}>
+          <Solution>
             <VerticalChunk>
               We will again evaluate the “outer”
               composition operator first and the “inner”
@@ -4130,8 +4130,8 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={10}>
-          <ExerciseStatement id="_10_3588">
+        <Exercise number={10}>
+          <ExerciseStatement id="_10_2716">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4175,7 +4175,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={10}>
+          <Solution>
             <VerticalChunk>
               The answer is
             </VerticalChunk>
@@ -4215,7 +4215,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={11}>
+        <Exercise number={11}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -4224,7 +4224,7 @@ const Rest = () => {
               {" "}
               Solve{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_3588"
+                href="/article/chapter3?id=_10_2716"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4236,7 +4236,7 @@ const Rest = () => {
               {" "}variables.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={11}>
+          <Solution>
             <VerticalChunk>
               Put an unknown{" "}
               <NoBreak>
@@ -4442,7 +4442,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={12}>
+        <Exercise number={12}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -4467,7 +4467,7 @@ const Rest = () => {
               </NoBreak>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_3588"
+                href="/article/chapter3?id=_10_2716"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4480,7 +4480,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={12}>
+          <Solution>
             <VerticalChunk>
               The equation is equivalent to
             </VerticalChunk>
@@ -4494,7 +4494,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_3588"
+                href="/article/chapter3?id=_10_2716"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4514,7 +4514,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={13}>
+        <Exercise number={13}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -4540,7 +4540,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={13}>
+          <Solution>
             <VerticalChunk>
               The equation can be written
             </VerticalChunk>
@@ -4603,8 +4603,8 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={14}>
-          <ExerciseStatement id="_11_9590">
+        <Exercise number={14}>
+          <ExerciseStatement id="_11_3799">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -4652,7 +4652,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={14}>
+          <Solution>
             <VerticalChunk>
               Write
             </VerticalChunk>
@@ -5105,8 +5105,8 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={15}>
-          <ExerciseStatement id="_12_5891">
+        <Exercise number={15}>
+          <ExerciseStatement id="_12_1335">
             <VerticalChunk>
               <b>
                 Exercise 15.
@@ -5192,7 +5192,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={15}>
+          <Solution>
             <VerticalChunk>
               Start by noting that the point
               {" "}
@@ -5309,7 +5309,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={16}>
+        <Exercise number={16}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -5347,7 +5347,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={16}>
+          <Solution>
             <VerticalChunk>
               Well,
             </VerticalChunk>
@@ -5510,7 +5510,7 @@ const Rest = () => {
               {" "}by the following
               sequence of transformations (cf.{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_9590"
+                href="/article/chapter3?id=_11_3799"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -5542,7 +5542,7 @@ const Rest = () => {
               (We put the vertical translation first.)
               By{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_5891"
+                href="/article/chapter3?id=_12_1335"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -5658,7 +5658,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={17}>
+        <Exercise number={17}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -5712,7 +5712,7 @@ const Rest = () => {
               </Item>
             </Grid>
           </ExerciseStatement>
-          <Solution solution_number={17}>
+          <Solution>
             <VerticalChunk>
               The true statements are i, iv, because
               {" "}
@@ -5742,8 +5742,8 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={18}>
-          <ExerciseStatement id="_13_7421">
+        <Exercise number={18}>
+          <ExerciseStatement id="_13_8746">
             <VerticalChunk>
               <b>
                 Exercise 18.
@@ -5919,7 +5919,7 @@ const Rest = () => {
               $$(g + h) \circ f = (x \ra (g + h)(f(x)))$$
             </MathBlock>
           </ExerciseStatement>
-          <Solution solution_number={18}>
+          <Solution>
             <VerticalChunk>
               The first equality is false because the
               right-hand side is actually
@@ -5980,8 +5980,8 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={19}>
-          <ExerciseStatement id="_14_5629">
+        <Exercise number={19}>
+          <ExerciseStatement id="_14_2706">
             <VerticalChunk>
               <b>
                 Exercise 19.
@@ -6035,7 +6035,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={19}>
+          <Solution>
             <VerticalChunk>
               Write
             </VerticalChunk>
@@ -6059,7 +6059,7 @@ const Rest = () => {
             <VerticalChunk>
               and, similarly to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_9590"
+                href="/article/chapter3?id=_11_3799"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6122,7 +6122,7 @@ const Rest = () => {
               </NoBreak>
               {" "}of{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_9590"
+                href="/article/chapter3?id=_11_3799"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6132,7 +6132,7 @@ const Rest = () => {
             <VerticalChunk indent={true}>
               By direct analogy with{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_9590"
+                href="/article/chapter3?id=_11_3799"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6191,7 +6191,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={20}>
+        <Exercise number={20}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -6239,7 +6239,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={20}>
+          <Solution>
             <VerticalChunk>
               The curve
             </VerticalChunk>
@@ -6340,7 +6340,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_5891"
+                href="/article/chapter3?id=_12_1335"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -6424,7 +6424,7 @@ const Rest = () => {
               <VerticalChunk>
                 as briefly flashed by, e.g., in{" "}
                 <a
-                  href="/article/chapter1?id=_5_6364"
+                  href="/article/chapter1?id=_5_6885"
                   class="handle-out-of-chapter-link">
                   Chapter 1
                 </a>
@@ -6488,7 +6488,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={21}>
+        <Exercise number={21}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -6513,7 +6513,7 @@ const Rest = () => {
               (Hint: The answer is a specific real number.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={21}>
+          <Solution>
             <VerticalChunk>
               ...in an expression such as...
             </VerticalChunk>

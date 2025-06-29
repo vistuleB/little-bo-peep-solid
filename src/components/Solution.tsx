@@ -25,10 +25,10 @@ import smoothScrollTo from "~/utils/smoothScrollTo";
 import elementPosOnPage from "~/utils/elementPosOnPage";
 import { HeightChangeListenerProvider } from "~/store/HeightChangeListenerProvider";
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
+import { useOneExerciseContext } from "~/store/OneExerciseStoreProvider";
 
 type SolutionProps = ParentProps &
   SharedProps & {
-    solution_number: number;
     re_calculate_height?: boolean;
   };
 
@@ -74,19 +74,22 @@ export const Solution = (props: SolutionProps) => {
   let { store: global_store, set_store: set_global_store } = useGlobalContext();
   const { set_exercises_store: set_store, exercises_store: store } =
     useExercisesContext();
+  let {
+    store: { number: solution_number },
+  } = useOneExerciseContext();
   const { updateExerciseByIndex } = useExercisesStateHelpers();
 
   const solution_open = () =>
-    store.exercises[props.solution_number - 1]?.solution_open;
+    store.exercises[solution_number - 1]?.solution_open;
   const transition_duration = () =>
-    store.exercises[props.solution_number - 1]?.transition_duration;
+    store.exercises[solution_number - 1]?.transition_duration;
   const num_exercises = () => store.exercises.length;
 
   let [content_height, set_content_height] = createSignal(0);
   let [bot_div, set_bot_div] = createSignal(false);
   let [solution_fully_opened, set_solution_fully_opened] = createSignal(false);
   let [handle, set_handle] = createSignal<ReturnType<typeof setTimeout> | null>(
-    null
+    null,
   );
   const [green_div_transition, set_green_div_transition] = createSignal(0);
   const [solution_transition, set_solution_transition] = createSignal(0);
@@ -101,7 +104,7 @@ export const Solution = (props: SolutionProps) => {
     props.re_calculate_height; // re-calc on change
     if (ref?.clientHeight) {
       set_content_height(ref?.clientHeight || 0);
-      updateExerciseByIndex(props.solution_number - 1, {
+      updateExerciseByIndex(solution_number - 1, {
         field: "transition_duration",
         value: Math.min(ref?.clientHeight, 1000) * 0.8,
       });
@@ -146,9 +149,7 @@ export const Solution = (props: SolutionProps) => {
   createEffect(() => {
     // green div height
     // if exercise question is too small we increase green div height
-    let exo = document
-      .querySelectorAll(".exercise")
-      ?.item(props.solution_number - 1);
+    let exo = document.querySelectorAll(".exercise")?.item(solution_number - 1);
     if (exo?.clientHeight < 200 + green_div_height()) {
       set_green_div_height(700);
     } else {
@@ -183,7 +184,7 @@ export const Solution = (props: SolutionProps) => {
       },
       {
         rootMargin: "1000px",
-      }
+      },
     );
 
     if (buttonRef) observer.observe(buttonRef);
@@ -198,7 +199,7 @@ export const Solution = (props: SolutionProps) => {
         set_handle={set_handle}
         set_solution_fully_opened={set_solution_fully_opened}
         set_solution_transition={set_solution_transition}
-        solution_number={props.solution_number}
+        solution_number={solution_number}
         ref={buttonRef}
         resetter={reset_content_height_etc}
       />
@@ -209,14 +210,13 @@ export const Solution = (props: SolutionProps) => {
         class={twJoin(
           "relative transition-all",
           !solution_open() && "pointer-events-none",
-          (!solution_open() || !solution_fully_opened()) && "overflow-y-clip"
+          (!solution_open() || !solution_fully_opened()) && "overflow-y-clip",
         )}
         style={{
           height: `${solution_open() ? content_height() : 0}px`,
           "transition-duration": `${solution_transition()}ms`,
           "transition-property": "height",
-        }}
-      >
+        }}>
         <div ref={ref} class={twJoin("absolute bottom-0 w-full")}>
           <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           {props.children}
@@ -225,13 +225,12 @@ export const Solution = (props: SolutionProps) => {
           style={`width:${global_store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : global_store.innerWidth}px;`}
           class={twJoin(
             "absolute top-0 left-1/2 -translate-x-1/2 spacer-100 bg-bg",
-            solution_fully_opened() && "opacity-0"
-          )}
-        ></div>
+            solution_fully_opened() && "opacity-0",
+          )}></div>
       </div>
 
       {/* Possible backup arrow */}
-      {(!store.list_view || props.solution_number === num_exercises()) && (
+      {(!store.list_view || solution_number === num_exercises()) && (
         <>
           <SpaceBeforeBackupArrow />
           <div
@@ -241,14 +240,13 @@ export const Solution = (props: SolutionProps) => {
             class={twJoin(
               "flex items-center justify-center",
               (!solution_open() || !solution_fully_opened()) && "opacity-0",
-              bot_div() && "delay-[2s]"
-            )}
-          >
+              bot_div() && "delay-[2s]",
+            )}>
             <BackupArrow />
           </div>
         </>
       )}
-      {store.list_view && props.solution_number !== num_exercises() && (
+      {store.list_view && solution_number !== num_exercises() && (
         <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
       )}
 
@@ -256,11 +254,10 @@ export const Solution = (props: SolutionProps) => {
       <div
         class="text-column transition-all col-start-2"
         style={{
-          height: `${(!store.list_view || props.solution_number === num_exercises()) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
+          height: `${(!store.list_view || solution_number === num_exercises()) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
           "background-color": global_store.show_areas ? "#00440050" : "",
           "transition-duration": `${green_div_transition()}ms`,
-        }}
-      ></div>
+        }}></div>
     </HeightChangeListenerProvider>
   );
 };
@@ -291,8 +288,7 @@ const SolutionButton = (props: SolutionBtnProps) => {
     <div
       ref={props.ref}
       class="relative"
-      style={`padding-inline: ${TEXT_X_PADDING}`}
-    >
+      style={`padding-inline: ${TEXT_X_PADDING}`}>
       <SolutionSVG
         solution_open={solution_open}
         onClick={(event) => {
@@ -330,7 +326,7 @@ const SolutionButton = (props: SolutionBtnProps) => {
             let article = location.pathname.split("/").pop();
             localStorage.setItem(
               `${article}_exo_${props.solution_number}_opened`,
-              String(solution_open())
+              String(solution_open()),
             );
           }
 
@@ -353,7 +349,7 @@ export const BackupArrow = () => {
     document
       .querySelectorAll(".exo-statement")
       .item(
-        exercises_store.list_view ? 0 : exercises_store.selected_exo - 1
+        exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
       ) as HTMLElement;
 
   return (
@@ -369,25 +365,22 @@ export const BackupArrow = () => {
         if (store.innerWidth > MOBILE_MAX_WIDTH) {
           smoothScrollTo(
             calculateTargetCenterOnPage(selectedExercise()) + 50,
-            100
+            100,
           );
         } else {
           document?.getElementById("exo")?.scrollIntoView();
         }
-      }}
-    >
+      }}>
       <path
         d="M35.4941 1H6.65545C3.53203 1 1 3.53203 1 6.65545V35.4941C1 38.6175 3.53203 41.1495 6.65545 41.1495H35.4941C38.6175 41.1495 41.1495 38.6175 41.1495 35.4941V6.65545C41.1495 3.53203 38.6175 1 35.4941 1Z"
         fill="#EEFFAA"
         fill-opacity="0.4"
         stroke="black"
         stroke-width="1.5"
-        stroke-miterlimit="2"
-      ></path>
+        stroke-miterlimit="2"></path>
       <path
         d="M20 32C20 32.5523 20.4477 33 21 33C21.5523 33 22 32.5523 22 32H20ZM21 11L15.2265 21H26.7735L21 11ZM22 32L22 20H20L20 32H22Z"
-        fill="black"
-      ></path>
+        fill="black"></path>
     </svg>
   );
 };
@@ -409,46 +402,40 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
               x="-7"
               y="-7"
               width="123"
-              height="50"
-            ></rect>
+              height="50"></rect>
             <rect
               aria-label="solution_button_focus_rect"
               class={twJoin(
                 "solution_button_transition",
                 props.solution_open()
                   ? "inactive_solution_button_rect"
-                  : "active_solution_button_rect"
+                  : "active_solution_button_rect",
               )}
               width="109"
-              height="36"
-            ></rect>
+              height="36"></rect>
             <path
               aria-label="solution_button_lip"
               class={twJoin(
                 "solution_button_transition",
                 props.solution_open()
                   ? "inactive_solution_button_lip"
-                  : "active_solution_button_lip"
+                  : "active_solution_button_lip",
               )}
-              d="M 0 10 v -10 h 109 v 10 M 0 26 v 10 h 109 v -10"
-            ></path>
+              d="M 0 10 v -10 h 109 v 10 M 0 26 v 10 h 109 v -10"></path>
             <g
               aria-label="solution_button_finger_pair"
               class={twJoin(
                 "solution_button_transition",
                 props.solution_open()
                   ? "inactive_solution_button_hands"
-                  : "active_solution_button_hands"
-              )}
-            >
+                  : "active_solution_button_hands",
+              )}>
               <use
                 href="#finger_pointing_left"
-                transform="translate(101.5, 18)"
-              ></use>
+                transform="translate(101.5, 18)"></use>
               <use
                 href="#finger_pointing_left"
-                transform="scale(-1, 1) translate(-8, 20)"
-              ></use>
+                transform="scale(-1, 1) translate(-8, 20)"></use>
               <use x="-2" href="#solution_button_text"></use>
             </g>
           </g>

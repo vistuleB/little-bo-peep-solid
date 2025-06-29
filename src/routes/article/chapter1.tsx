@@ -26,7 +26,7 @@ export default function __Chapter1__() {
       prev-page="/"
       page-necessary-margin={610}
       max-element-width={500}
-      id="_5_6364">
+      id="_5_6885">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -1465,8 +1465,8 @@ const Rest = () => {
       </Section>
       <Pause />
       <Exercises>
-        <Exercise exercise_number={1}>
-          <ExerciseStatement id="_4_5303">
+        <Exercise number={1}>
+          <ExerciseStatement id="_4_9698">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1536,7 +1536,7 @@ const Rest = () => {
               </Item>
             </Grid>
           </ExerciseStatement>
-          <Solution solution_number={1}>
+          <Solution>
             <VerticalChunk>
               Part by part:
             </VerticalChunk>
@@ -2621,7 +2621,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={2}>
+        <Exercise number={2}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2630,7 +2630,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_5303"
+                href="/article/chapter1?id=_4_9698"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2688,7 +2688,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={2}>
+          <Solution>
             <VerticalChunk>
               Since
             </VerticalChunk>

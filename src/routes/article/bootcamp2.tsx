@@ -325,7 +325,7 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_1_4903">
+        <MathBlock id="_1_8224">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -347,7 +347,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_4903"
+            href="/article/bootcamp2?id=_1_8224"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -369,7 +369,7 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_4903"
+            href="/article/bootcamp2?id=_1_8224"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -379,7 +379,7 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_4903"
+            href="/article/bootcamp2?id=_1_8224"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -390,7 +390,7 @@ const Rest = () => {
             line={2} />
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_2_6078">
+        <MathBlock id="_2_9922">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -426,13 +426,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6078"
+            href="/article/bootcamp2?id=_2_9922"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6078"
+            href="/article/bootcamp2?id=_2_9922"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -446,7 +446,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6078"
+            href="/article/bootcamp2?id=_2_9922"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -518,13 +518,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_4903"
+            href="/article/bootcamp2?id=_1_8224"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_6078"
+            href="/article/bootcamp2?id=_2_9922"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -2121,7 +2121,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Exercises>
-        <Exercise exercise_number={1}>
+        <Exercise number={1}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2146,7 +2146,7 @@ const Rest = () => {
               {" "}by hand.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={1}>
+          <Solution>
             <VerticalChunk>
               Since{" "}
               <NoBreak>
@@ -2231,7 +2231,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={2}>
+        <Exercise number={2}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2245,7 +2245,7 @@ const Rest = () => {
               {" "}by hand.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={2}>
+          <Solution>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -2290,7 +2290,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={3}>
+        <Exercise number={3}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2305,7 +2305,7 @@ const Rest = () => {
               What about “万万万”?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={3}>
+          <Solution>
             <VerticalChunk>
               “万万” is “ten thousand ten thousand”, or
             </VerticalChunk>
@@ -2388,7 +2388,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={4}>
+        <Exercise number={4}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2399,7 +2399,7 @@ const Rest = () => {
               How many kilometers in a millimeter?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={4}>
+          <Solution>
             <VerticalChunk>
               There are{" "}
               <Math>
@@ -2453,7 +2453,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={5}>
+        <Exercise number={5}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2467,7 +2467,7 @@ const Rest = () => {
               {" "}millimeters?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={5}>
+          <Solution>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -2500,7 +2500,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={6}>
+        <Exercise number={6}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2516,7 +2516,7 @@ const Rest = () => {
               one hundred billion $?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={6}>
+          <Solution>
             <VerticalChunk>
               One hundred billion is{" "}
               <Math>
@@ -2560,7 +2560,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={7}>
+        <Exercise number={7}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2574,7 +2574,7 @@ const Rest = () => {
               {" "}of one trillion?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={7}>
+          <Solution>
             <VerticalChunk>
               <NoBreak>
                 <Math>
@@ -2592,7 +2592,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={8}>
+        <Exercise number={8}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2612,7 +2612,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={8}>
+          <Solution>
             <VerticalChunk>
               <NoBreak>
                 <Math>
@@ -2630,7 +2630,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={9}>
+        <Exercise number={9}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2648,7 +2648,7 @@ const Rest = () => {
               ?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={9}>
+          <Solution>
             <VerticalChunk>
               Since
             </VerticalChunk>
@@ -2677,7 +2677,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={10}>
+        <Exercise number={10}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2693,7 +2693,7 @@ const Rest = () => {
               $$
             </MathBlock>
           </ExerciseStatement>
-          <Solution solution_number={10}>
+          <Solution>
             <VerticalChunk>
               We have
             </VerticalChunk>
@@ -2735,7 +2735,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={11}>
+        <Exercise number={11}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2753,7 +2753,7 @@ const Rest = () => {
               ?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={11}>
+          <Solution>
             <VerticalChunk>
               Presumably, there are{" "}
               <Math>
@@ -2789,7 +2789,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={12}>
+        <Exercise number={12}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2854,7 +2854,7 @@ const Rest = () => {
               by using some kind of algebra?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={12}>
+          <Solution>
             <VerticalChunk>
               One has
             </VerticalChunk>
@@ -2877,7 +2877,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={13}>
+        <Exercise number={13}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -2914,7 +2914,7 @@ const Rest = () => {
               {" "}bootcamp.)
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={13}>
+          <Solution>
             <VerticalChunk>
               Here is the “proof” that your professor is
               hoping for:
@@ -2935,7 +2935,7 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1_4903"
+                href="/article/bootcamp2?id=_1_8224"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -2998,8 +2998,8 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={14}>
-          <ExerciseStatement id="_3_7308">
+        <Exercise number={14}>
+          <ExerciseStatement id="_3_8196">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3060,7 +3060,7 @@ const Rest = () => {
               </NoBreak>
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution solution_number={14}>
+          <Solution>
             <VerticalChunk>
               We have (#1)
             </VerticalChunk>
@@ -3149,7 +3149,7 @@ const Rest = () => {
             </VerticalChunk>
           </Solution>
         </Exercise>
-        <Exercise exercise_number={15}>
+        <Exercise number={15}>
           <ExerciseStatement>
             <VerticalChunk>
               <b>
@@ -3230,7 +3230,7 @@ const Rest = () => {
               $$
             </MathBlock>
           </ExerciseStatement>
-          <Solution solution_number={15}>
+          <Solution>
             <VerticalChunk>
               Firstly we can rewrite{" "}
               <NoBreak>
@@ -3283,7 +3283,7 @@ const Rest = () => {
               </Math>
               {" "}(as in{" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_7308"
+                href="/article/bootcamp2?id=_3_8196"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>

@@ -40,8 +40,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Bootcamp", "number", "::øøBootcampCounter"),
         #("Chapter", "category", "Chapter"),
         #("Bootcamp", "category", "Bootcamp"),
-        #("Exercise", "exercise_number", "::øøExerciseCounter"),
-        #("Solution", "solution_number", "::øøExerciseCounter"),
+        #("Exercise", "number", "::øøExerciseCounter"),
         #("Section", "id", "section-::++SectionCounter"),
       ]),
       dn.associate_counter_by_prepending_incrementing_attribute([

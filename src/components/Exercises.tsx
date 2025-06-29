@@ -8,11 +8,12 @@ import {
   useExercisesContext,
   useExercisesStateHelpers,
 } from "~/store/ExercisesStoreProvider";
+import { OneExerciseStoreProvider } from "~/store/OneExerciseStoreProvider";
 
 type ExercisesProps = ParentProps & SharedProps;
 
 type ExerciseProps = ParentProps & {
-  exercise_number: number;
+  number: number;
 };
 
 export const Exercises = (props: ExercisesProps) => {
@@ -110,9 +111,7 @@ const Switcher = (props: SwitcherProps) => {
   };
 
   return (
-    <div
-      class="m-auto"
-    >
+    <div class="m-auto">
       <div
         id="exercises-btns"
         class="flex justify-center !text-xl gap-0 mt-[2px]">
@@ -223,7 +222,11 @@ const Switcher = (props: SwitcherProps) => {
 };
 
 export const Exercise = (props: ExerciseProps) => {
-  return <div>{props.children}</div>;
+  return (
+    <OneExerciseStoreProvider number={props.number}>
+      <div>{props.children}</div>
+    </OneExerciseStoreProvider>
+  );
 };
 
 export const ExerciseStatement = (props: any) => {
