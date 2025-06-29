@@ -217,7 +217,12 @@ export const Solution = (props: SolutionProps) => {
           "transition-duration": `${solution_transition()}ms`,
           "transition-property": "height",
         }}>
-        <div ref={ref} class={twJoin("absolute bottom-0 w-full")}>
+        <div
+          ref={ref}
+          style={{
+            position: solution_fully_opened() ? "relative" : "absolute",
+          }}
+          class={twJoin(" bottom-0 w-full")}>
           <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           {props.children}
         </div>
