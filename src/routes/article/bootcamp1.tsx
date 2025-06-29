@@ -1,5 +1,5 @@
 import Article from "~/components/Article";
-import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from "~/components/Wrappers";
+import { Section, Note, SolutionNote, Example, NoBreak, Pause } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import TextParent from "~/components/TextParent";
 import { Math, MathBlock } from "~/components/Math";
@@ -19,7 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useShowMore from "~/hooks/useShowMore";
 import ArticleTitle from "~/components/ArticleTitle";
 
-export default function () {
+export default function __Bootcamp1__() {
   return <>
     <Article
       next-page="/"

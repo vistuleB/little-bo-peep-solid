@@ -19,7 +19,6 @@ const Article = (props: ParentProps & ArticleProps) => {
   let { set_store, store } = useGlobalContext();
 
   useScrollX();
-  useCheckedSaveScroll();
   useSetRoute();
   useBreadcrumbs();
 
@@ -52,7 +51,7 @@ const Article = (props: ParentProps & ArticleProps) => {
 
   return (
     <ExercisesStoreProvider>
-      {/* <span id={props.id} class="id_span"></span> */}
+      <span id={props.id} class="id_span"></span>
       <ExercisesStoreConsumer>{props.children}</ExercisesStoreConsumer>
       <ActionArrows />
     </ExercisesStoreProvider>

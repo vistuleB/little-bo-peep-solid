@@ -1,5 +1,5 @@
 import Article from "~/components/Article";
-import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from "~/components/Wrappers";
+import { Section, Note, SolutionNote, Example, NoBreak, Pause } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import TextParent from "~/components/TextParent";
 import { Math, MathBlock } from "~/components/Math";
@@ -19,14 +19,14 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useShowMore from "~/hooks/useShowMore";
 import ArticleTitle from "~/components/ArticleTitle";
 
-export default function () {
+export default function __Chapter1__() {
   return <>
     <Article
       next-page="/article/chapter2"
       prev-page="/"
       page-necessary-margin={610}
       max-element-width={500}
-      id="_5_5891">
+      id="_5_6364">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -1466,7 +1466,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise exercise_number={1}>
-          <ExerciseStatement id="_4_8915">
+          <ExerciseStatement id="_4_5303">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2630,7 +2630,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_8915"
+                href="/article/chapter1?id=_4_5303"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>

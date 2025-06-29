@@ -1,5 +1,5 @@
 import Article from "~/components/Article";
-import { Section, Note, SolutionNote, Example, NoBreak, Pause, WriterlyBlankLine } from "~/components/Wrappers";
+import { Section, Note, SolutionNote, Example, NoBreak, Pause } from "~/components/Wrappers";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import TextParent from "~/components/TextParent";
 import { Math, MathBlock } from "~/components/Math";
@@ -19,7 +19,7 @@ import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadc
 import useShowMore from "~/hooks/useShowMore";
 import ArticleTitle from "~/components/ArticleTitle";
 
-export default function () {
+export default function __Chapter5__() {
   return <>
     <Article
       prev-page="/article/chapter4"
@@ -1509,7 +1509,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_5833"
+            href="/article/chapter4?id=_24_5862"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14674,7 +14674,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise exercise_number={42}>
-          <ExerciseStatement id="_25_1540">
+          <ExerciseStatement id="_25_8357">
             <VerticalChunk>
               <b>
                 Exercise 42.

@@ -36,6 +36,10 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("Bootcamp", "path", "/article/bootcamp::øøBootcampCounter"),
         #("Chapter", "banner", "Chapter ::øøChapterCounter:"),
         #("Bootcamp", "banner", "Bootcamp ::øøBootcampCounter:"),
+         #("Chapter", "number", "::øøChapterCounter"),
+        #("Bootcamp", "number", "::øøBootcampCounter"),
+        #("Chapter", "category", "Chapter"),
+        #("Bootcamp", "category", "Bootcamp"),
         #("Exercise", "exercise_number", "::øøExerciseCounter"),
         #("Solution", "solution_number", "::øøExerciseCounter"),
         #("Section", "id", "section-::++SectionCounter"),
@@ -245,7 +249,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // attribute cleanup
       // ************************
       dn.change_attribute_value([#("src", "/()")]),
-      dn.remove_attributes(["counter", "handle", "type", "t", "path", ".", "title", "test"]),
+      dn.remove_attributes(["counter", "handle", "type", "t", ".", "title", "test"]),
     ]
   ]
   |> list.flatten

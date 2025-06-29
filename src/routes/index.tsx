@@ -3,7 +3,7 @@ import TOCTitle from "~/components/TOCTitle";
 import TOCItem from "~/components/TOCItem";
 import { Spacer } from "~/components/Spacer";
 
-export default function () {
+export default function __Home__() {
   return (
     <TOC
       next-page="/article/chapter1"
