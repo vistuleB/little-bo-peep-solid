@@ -19,20 +19,118 @@ import SharedProps from "./types/SharedProps";
 import OutlinedText from "./OutlinedText";
 import { useLocalStorage } from "solidjs-hooks";
 
+const screen_width_to_achieve_max_size = 1380;
+const screen_width_to_achieve_min_size = MD_MAX_WIDTH;
+const screen_width_to_achieve_default_visible = MD_MAX_WIDTH;
+const screen_width_to_achieve_on = MOBILE_MAX_WIDTH;
+const max_font_size = 14;
+const min_font_size = 11;
+const max_size_line_wrap_width_pct = 0.5;
+const min_size_line_wrap_width_pct = 0.8;
+const min_line_height = 1.3; // in rem
+const max_line_height = 2;
+const closing_circle_min_size_stroke_width = 1.5;
+const closing_circle_max_size_stroke_width = 2.5;
+const min_size_closing_circle_radius = 16;
+const max_size_closing_circle_radius = 24;
+const min_size_top_margin = 10;
+const max_size_top_margin = 18;
+const min_size_left_margin = 16;
+const max_size_left_margin = 26;
+
+const clamp = (min: number, value: number, max: number) => {
+  return Math.max(min, Math.min(max, value));
+};
+
+const linear_interpolation = (min: number, max: number, progress: number) => {
+  return clamp(min, min + (max - min) * progress, max);
+};
+
+const calculate_values = () => {
+  const { store } = useGlobalContext();
+  // Linear interpolation between min and max
+  const progress = () =>
+    (store.innerWidth - screen_width_to_achieve_min_size) /
+    (screen_width_to_achieve_max_size - screen_width_to_achieve_min_size);
+
+  const font_size = () =>
+    linear_interpolation(min_font_size, max_font_size, progress());
+
+  const line_wrap_width_pct = () =>
+    linear_interpolation(
+      min_size_line_wrap_width_pct,
+      max_size_line_wrap_width_pct,
+      progress(),
+    );
+
+  const line_height = () =>
+    linear_interpolation(min_line_height, max_line_height, progress());
+
+  const closing_circle_stroke_width = () =>
+    linear_interpolation(
+      closing_circle_min_size_stroke_width,
+      closing_circle_max_size_stroke_width,
+      progress(),
+    );
+
+  const closing_circle_radius = () =>
+    linear_interpolation(
+      min_size_closing_circle_radius,
+      max_size_closing_circle_radius,
+      progress(),
+    );
+
+  const top_margin = () =>
+    linear_interpolation(min_size_top_margin, max_size_top_margin, progress());
+
+  const left_margin = () =>
+    linear_interpolation(
+      min_size_left_margin,
+      max_size_left_margin,
+      progress(),
+    );
+
+  const default_visible_state = () =>
+    screen_width_to_achieve_default_visible < store.innerWidth;
+
+  const on = () => screen_width_to_achieve_on <= store.innerWidth;
+
+  return {
+    font_size,
+    line_wrap_width_pct,
+    line_height,
+    closing_circle_stroke_width,
+    closing_circle_radius,
+    top_margin,
+    left_margin,
+    default_visible_state,
+    on,
+  };
+};
+
 const SectionsBreadcrumbs = (props: ParentProps) => {
   const { store } = useGlobalContext();
+  const {
+    font_size,
+    line_height,
+    line_wrap_width_pct,
+    top_margin,
+    left_margin,
+    default_visible_state,
+    on,
+  } = calculate_values();
 
   const [visible, setVisible] = useLocalStorage(
     "sections-breadcrumbs-visible",
-    MD_MAX_WIDTH < store.innerWidth,
+    default_visible_state(),
   );
 
   const [outSideHovered, setOutSideHovered] = createSignal(false);
   let children_list = children(() => props.children).toArray();
 
-  const delta = 18;
-  const top = HAMBURGER_MENU_HEIGHT + delta;
-  const sticky = () => store.scrollY > top - delta;
+  const top_margin_when_not_sticky = () => HAMBURGER_MENU_HEIGHT + top_margin();
+  const sticky = () =>
+    store.scrollY > top_margin_when_not_sticky() - top_margin();
 
   let ref: HTMLUListElement | undefined;
 
@@ -109,12 +207,12 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
         style={{
           position: sticky() ? "fixed" : "absolute",
           "z-index": visible() ? 25 : 0,
-          top: (sticky() ? delta : top) + "px",
+          top: (sticky() ? top_margin() : top_margin_when_not_sticky()) + "px",
           width: "fit-content",
-          padding: "0 26px",
+          "padding-inline": left_margin() + "px",
           "max-width": "300px",
           left: sticky() ? "0" : store.scrollX + "px",
-          display: store.innerWidth <= MOBILE_MAX_WIDTH ? "none" : "block",
+          display: on() ? "block" : "none",
         }}>
         <div
           style={{
@@ -124,7 +222,10 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
           }}>
           <ul
             ref={ref}
-            class="[&>li]:text-[11px] [&>li]:leading-[1.3rem] xl:[&>li]:text-[14px] xl:[&>li]:leading-[2rem]">
+            style={{
+              "font-size": font_size() + "px",
+              "line-height": line_height() + "rem",
+            }}>
             <li class="breadcrumb-prev-next flex gap-2">
               <OutlinedText
                 onClick={() => getPrevArticle(true)}
@@ -170,37 +271,40 @@ export const BreadcrumbItem = (props: ParentProps & SharedProps) => {
 const CloseCircleIcon: Component<JSX.SvgSVGAttributes<SVGSVGElement>> = (
   props,
 ) => {
-  const iconSize = 28;
-  const circleRadius = 24;
-  const crossSize = 10;
-  const strokeWidth = 2.5;
+  const {
+    closing_circle_stroke_width: strokeWidth,
+    closing_circle_radius: circleRadius,
+  } = calculate_values();
+
+  const iconSize = () => circleRadius() + 4;
+  const crossSize = () => iconSize() * 0.4;
   const strokeColor = "currentColor";
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={iconSize}
-      height={iconSize}
-      viewBox={`0 0 ${iconSize * 2} ${iconSize * 2}`}
+      width={iconSize()}
+      height={iconSize()}
+      viewBox={`0 0 ${iconSize() * 2} ${iconSize() * 2}`}
       fill="none"
       stroke={strokeColor}
-      stroke-width={strokeWidth}
+      stroke-width={strokeWidth()}
       stroke-linecap="round"
       stroke-linejoin="round"
       class={props.class}
       onMouseOver={props.onMouseOver}
       onClick={props.onClick}>
-      <circle cx={iconSize} cy={iconSize} r={circleRadius}></circle>
+      <circle cx={iconSize()} cy={iconSize()} r={circleRadius()}></circle>
       <line
-        x1={iconSize + crossSize}
-        y1={iconSize - crossSize}
-        x2={iconSize - crossSize}
-        y2={iconSize + crossSize}></line>
+        x1={iconSize() + crossSize()}
+        y1={iconSize() - crossSize()}
+        x2={iconSize() - crossSize()}
+        y2={iconSize() + crossSize()}></line>
       <line
-        x1={iconSize - crossSize}
-        y1={iconSize - crossSize}
-        x2={iconSize + crossSize}
-        y2={iconSize + crossSize}></line>
+        x1={iconSize() - crossSize()}
+        y1={iconSize() - crossSize()}
+        x2={iconSize() + crossSize()}
+        y2={iconSize() + crossSize()}></line>
     </svg>
   );
 };
