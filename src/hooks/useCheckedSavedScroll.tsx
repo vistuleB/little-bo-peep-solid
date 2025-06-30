@@ -3,7 +3,7 @@ import { createEffect, createSignal, onMount } from "solid-js";
 import useScrollToInChapter from "./useScrollToInChapter";
 import { useGlobalContext } from "~/store/StoreProvider";
 
-const useCheckedSaveScroll = () => {
+const useCheckedSavedScroll = () => {
   const [searchParams, _] = useSearchParams();
   const location = useLocation();
   const { store, set_store } = useGlobalContext();
@@ -61,4 +61,4 @@ const useCheckedSaveScroll = () => {
   });
 };
 
-export default useCheckedSaveScroll;
+export default useCheckedSavedScroll;
