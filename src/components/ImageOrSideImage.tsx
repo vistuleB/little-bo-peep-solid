@@ -24,7 +24,7 @@ function ImageOrSideImage(
       class={twJoin(
         props.class,
         store.show_areas &&
-          (props.side_image ? "divide-vertically" : "divide-horizontally"),
+          (props.side_image ? "top-bottom-background-divide" : "left-right-background-divide"),
       )}
       style={props.style || ""}
     />

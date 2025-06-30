@@ -26,72 +26,52 @@ export default function __Bootcamp2__() {
       page-necessary-margin={270}
       max-element-width={1200}>
       <SectionsBreadcrumbs>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
             terminology
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
             integer powers of 10
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             other bases
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             additivity of exponents
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             the third law of exponents
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
             famous powers of 10
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
             negative exponent prefixes
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
             positive exponent prefixes
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
             logarithms base 10
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -222,7 +202,7 @@ const Rest = () => {
           </Math>
           {" "}times.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For example,
         </VerticalChunk>
         <Pause />
@@ -305,7 +285,7 @@ const Rest = () => {
         <VerticalChunk>
           by the second definition.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           As{" "}
           <Math>
             $n$
@@ -325,7 +305,7 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_1_3361">
+        <MathBlock id="_1_1881">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -347,7 +327,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_3361"
+            href="/article/bootcamp2?id=_1_1881"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -369,7 +349,7 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_3361"
+            href="/article/bootcamp2?id=_1_1881"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -379,7 +359,7 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_3361"
+            href="/article/bootcamp2?id=_1_1881"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -390,7 +370,7 @@ const Rest = () => {
             line={2} />
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_2_2170">
+        <MathBlock id="_2_2011">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -426,13 +406,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_2170"
+            href="/article/bootcamp2?id=_2_2011"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_2170"
+            href="/article/bootcamp2?id=_2_2011"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -446,7 +426,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_2170"
+            href="/article/bootcamp2?id=_2_2011"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -518,13 +498,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_3361"
+            href="/article/bootcamp2?id=_1_1881"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_2170"
+            href="/article/bootcamp2?id=_2_2011"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -578,7 +558,7 @@ const Rest = () => {
           </Math>
           {" "}twice, etc.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           However, a small quirk occurs for base{" "}
           <NoBreak>
             <Math>
@@ -638,7 +618,7 @@ const Rest = () => {
           {" "}etc, remain
           undefined.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Also (in case you're wondering){" "}
           <NoBreak>
             <Math>
@@ -718,7 +698,7 @@ const Rest = () => {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Note that mathematicians sometimes refer
           to a power with an exponent of{" "}
           <Math>
@@ -812,7 +792,7 @@ const Rest = () => {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           More generally,
         </VerticalChunk>
         <Pause />
@@ -947,7 +927,7 @@ const Rest = () => {
           {" "}This is known as “the third law
           of exponents”.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           On this subject, note that if one writes
         </VerticalChunk>
         <Pause />
@@ -1097,7 +1077,7 @@ const Rest = () => {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In English, e.g., these are some of the “famous”
           powers of{" "}
           <NoBreak>
@@ -1478,7 +1458,7 @@ const Rest = () => {
           ...and so on, which is a possible trick to check
           one's work and avoid mistakes.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           However, there also exist negative exponent
         </VerticalChunk>
         <Pause />
@@ -1626,7 +1606,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(Well, anyway.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           To give an idea of scale,
         </VerticalChunk>
         <Pause />
@@ -1904,7 +1884,7 @@ const Rest = () => {
           {" "}of that
           (positive) number.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For example,
         </VerticalChunk>
         <Pause />
@@ -2365,7 +2345,7 @@ const Rest = () => {
               times ten is a hundred and since a thousand
               times a thousand is a million.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (Similarly,
             </VerticalChunk>
             <Pause />
@@ -2423,7 +2403,7 @@ const Rest = () => {
               {" "}
               millimeters in a kilometer.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               From there, it automatically follows that
               there are{" "}
               <Math>
@@ -2432,7 +2412,7 @@ const Rest = () => {
               {" "}kilometers in
               a millimeter.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (Or you can run the reverse reasoning:
               There are{" "}
               <Math>
@@ -2935,7 +2915,7 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1_3361"
+                href="/article/bootcamp2?id=_1_1881"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -2999,7 +2979,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_3_7608">
+          <ExerciseStatement id="_3_8804">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3283,7 +3263,7 @@ const Rest = () => {
               </Math>
               {" "}(as in{" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_7608"
+                href="/article/bootcamp2?id=_3_8804"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -3614,7 +3594,7 @@ const Rest = () => {
               </NoBreak>
               {" "}which it does.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               In summary, the solution is{" "}
               <NoBreak>
                 <Math>

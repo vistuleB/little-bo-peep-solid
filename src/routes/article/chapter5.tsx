@@ -26,23 +26,17 @@ export default function __Chapter5__() {
       page-necessary-margin={950}
       max-element-width={1000}>
       <SectionsBreadcrumbs>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
             cos and sin. (“cosine” and “sine”.)
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
             derivatives
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             even/odd identities, and identities with{" "}
             <NoBreak>
@@ -54,37 +48,27 @@ export default function __Chapter5__() {
             </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             relation to derivatives
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             the pythagorean identity
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
             inputs as radians
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
             auto-converting degrees to radians
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
             sines and cosines of{" "}
             <NoBreak>
@@ -106,86 +90,62 @@ export default function __Chapter5__() {
             </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
             scaling the circle
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=section-10">
             polar coordinates
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-10">
+        <BreadcrumbItem id="breadcrumb-10">
           <InChapterLink href="?id=section-11">
             change-of-coordinate formulas
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-11">
+        <BreadcrumbItem id="breadcrumb-11">
           <InChapterLink href="?id=section-12">
             right triangles
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-12">
+        <BreadcrumbItem id="breadcrumb-12">
           <InChapterLink href="?id=section-13">
             a famous diagram
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-13">
+        <BreadcrumbItem id="breadcrumb-13">
           <InChapterLink href="?id=section-14">
             the abercrombie inequality
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-14">
+        <BreadcrumbItem id="breadcrumb-14">
           <InChapterLink href="?id=section-15">
             the gregorinovich sandwich
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-15">
+        <BreadcrumbItem id="breadcrumb-15">
           <InChapterLink href="?id=section-16">
             the angle-sum formulas
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-16">
+        <BreadcrumbItem id="breadcrumb-16">
           <InChapterLink href="?id=section-17">
             the missing arrows
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-17">
+        <BreadcrumbItem id="breadcrumb-17">
           <InChapterLink href="?id=section-18">
             secant: a second view
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-18">
+        <BreadcrumbItem id="breadcrumb-18">
           <InChapterLink href="?id=section-19">
             note on calculators
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-19">
+        <BreadcrumbItem id="breadcrumb-19">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -567,7 +527,7 @@ export default function __Chapter5__() {
             .)
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In another possible definition,
         </VerticalChunk>
         <Pause />
@@ -649,7 +609,7 @@ export default function __Chapter5__() {
           {" "}are
           equivalent! (👍👍)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In particular,{" "}
           <Math>
             $\sin(x)$
@@ -866,7 +826,7 @@ const Rest = () => {
             ”.
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Adding the curves for{" "}
           <Math>
             $-\!\sin$
@@ -967,7 +927,7 @@ const Rest = () => {
           (Clockwise vs. counterclockwise rotation
           notwithstanding.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           One can also note that
         </VerticalChunk>
         <Pause />
@@ -1238,7 +1198,7 @@ const Rest = () => {
         <VerticalChunk>
           as seen in the previous section.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In fact, one can make the further observation that
         </VerticalChunk>
         <Pause />
@@ -1342,7 +1302,7 @@ const Rest = () => {
           </i>
           .
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Various “tricks” are associated to the
           pythagorean identity. For example, the
           number
@@ -1509,7 +1469,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_6522"
+            href="/article/chapter4?id=_24_5660"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -1581,7 +1541,7 @@ const Rest = () => {
         <VerticalChunk>
           aaaand... and so on.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           As a consequence of the definition, a
           displacement of{" "}
           <Math>
@@ -1740,7 +1700,7 @@ const Rest = () => {
         <VerticalChunk>
           converts from degrees to radians.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For example,
         </VerticalChunk>
         <Pause />
@@ -1763,7 +1723,7 @@ const Rest = () => {
         <VerticalChunk>
           per this definition.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In this way, in particular, we can write
         </VerticalChunk>
         <Pause />
@@ -1786,7 +1746,7 @@ const Rest = () => {
         <VerticalChunk>
           ...without committing any informality.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           (Note that
         </VerticalChunk>
         <Pause />
@@ -1902,7 +1862,7 @@ const Rest = () => {
           {" "}
           signs.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In particular, the unit circle contains the
           following points:
         </VerticalChunk>
@@ -1995,7 +1955,7 @@ const Rest = () => {
         <VerticalChunk>
           in radians) in the second quadrant, and so on.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For the remaining values we rely on the
           existence of the following two equilateral
           triangles:
@@ -2146,7 +2106,7 @@ const Rest = () => {
         <VerticalChunk>
           in radians!
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           (And symmetrically in other quadrants, e.g.,
         </VerticalChunk>
         <Pause />
@@ -2514,7 +2474,7 @@ const Rest = () => {
         <VerticalChunk>
           namely.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           NONETHELESS—even though the polar coordinates
           of a point are not (not ever!) uniquely
           determined, we say “the” polar coordinates of
@@ -2641,7 +2601,7 @@ const Rest = () => {
             .)
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Conversely, to recover the polar
           coordinates{" "}
           <Math>
@@ -2732,7 +2692,7 @@ const Rest = () => {
           </NoBreak>
           {" "}etc.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           But the call goes{" "}
           <span style="font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(y, x)
@@ -3126,7 +3086,7 @@ const Rest = () => {
           at least
           the length of the arc.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           The proof is that, if this were not the case,
           the
           length
@@ -3264,7 +3224,7 @@ const Rest = () => {
           </Math>
           {" "}would not clear the arc).
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Therefore, each segment of{" "}
           <Math>
             $P$
@@ -3305,7 +3265,7 @@ const Rest = () => {
           This constitutes the proof of the Abercrombie
           inequality.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           One can polish a few more details by noting that:
         </VerticalChunk>
         <TextParent>
@@ -3495,7 +3455,7 @@ const Rest = () => {
             .)
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           The first inequality
         </VerticalChunk>
         <Pause />
@@ -3552,7 +3512,7 @@ const Rest = () => {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For the second inequality, we have to start
           by noting that
         </VerticalChunk>
@@ -3624,7 +3584,7 @@ const Rest = () => {
           hypotenuse-to-opposite multiplicative
           factor.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           The fact that
         </VerticalChunk>
         <Pause />
@@ -3708,7 +3668,7 @@ const Rest = () => {
           are all nonnegative, and that all their
           products are nonnegative, as well.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           On the other hand, if we inscribe the
           figure in the unit circle with the joint angle
           {" "}
@@ -3757,7 +3717,7 @@ const Rest = () => {
         <VerticalChunk>
           ...works as well!)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In other words, we find...
         </VerticalChunk>
         <Pause />
@@ -3874,7 +3834,7 @@ const Rest = () => {
           </i>
           .
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           To be clear, multiplying by
         </VerticalChunk>
         <Pause />
@@ -3918,7 +3878,7 @@ const Rest = () => {
         <VerticalChunk>
           takes you from ‘opposite’ to ‘adjacent’. (!)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           You may observe that
         </VerticalChunk>
         <Pause />
@@ -4085,7 +4045,7 @@ const Rest = () => {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           (After all, this multiplicative factor...
         </VerticalChunk>
         <Pause />
@@ -4311,7 +4271,7 @@ const Rest = () => {
               of two functions, to be more exact—that is what
               the sum of two functions looks like, pictorialized!)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               The line appears to be
             </VerticalChunk>
             <Pause />
@@ -4333,7 +4293,7 @@ const Rest = () => {
               </i>
               , cf. Chapter 3).
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               As for the “something”—the bumpy one—it appears
               to just be a “sped up cosine”, and note that
               the graph goes through approximately{" "}
@@ -4510,7 +4470,7 @@ const Rest = () => {
               </NoBreak>
               {" "}cf. Chapter 3.]
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               As the parabola is symmetric about the{" "}
               <Math>
                 $y$
@@ -4554,7 +4514,7 @@ const Rest = () => {
               {" "}
               term, that would break symmetry.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               The value
             </VerticalChunk>
             <Pause />
@@ -4695,7 +4655,7 @@ const Rest = () => {
             <VerticalChunk>
               per this estimate.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               The other portion of the answer—what is left
               after the parabola is subtracted—is a cosine-like
               function (or{" "}
@@ -4898,7 +4858,7 @@ const Rest = () => {
             <VerticalChunk>
               or thereabouts.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To model the sinusoid portion of the large-scale
               purple curve we need more measurements, such as
               the total height of the sinusoid from top of
@@ -4918,7 +4878,7 @@ const Rest = () => {
               </Math>
               {" "}from top of bump to bottom of trough.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (And in case you're confused by what we're trying
               to do,
               let us re-explain that we are trying
@@ -4936,7 +4896,7 @@ const Rest = () => {
                 .)
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               What this means is that if we remove the linear
               portion
             </VerticalChunk>
@@ -5022,7 +4982,7 @@ const Rest = () => {
               </Math>
               {" "}is for.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To know how much{" "}
               <Math>
                 $B$
@@ -5090,7 +5050,7 @@ const Rest = () => {
             <VerticalChunk>
               for the large-scale sinusoid. (Aquamarine graph.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (So far we have
             </VerticalChunk>
             <Pause />
@@ -5105,7 +5065,7 @@ const Rest = () => {
               the linear and sinusoidal parts together. Now we
               move on from the purple curve.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               It remains to add in the small-scale oscillation
               from the original curve; we can do the tedious
               part first, and count the number cycles in an
@@ -5156,7 +5116,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Altogether, we get
             </VerticalChunk>
             <Pause />
@@ -6469,7 +6429,7 @@ const Rest = () => {
             <VerticalChunk>
               or angular speed, of the particle.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               However, said “increase” in radians can be
               associated to either clockwise or a
               counterclockwise motion, there is no telling.
@@ -6662,7 +6622,7 @@ const Rest = () => {
               {" "}units
               of time.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Since one cycle is{" "}
               <Math>
                 $4\eta$
@@ -7793,7 +7753,7 @@ const Rest = () => {
                 over the division “on the board”
                 for a bit.
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 We start by asking “how many times does{" "}
                 <Math>
                   $777$
@@ -8099,7 +8059,7 @@ const Rest = () => {
                 odometer must be driven back/forth to reach the other
                 number.
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 Viewing the top number as an odometer, the odometer
                 would be as follows:
               </VerticalChunk>
@@ -8648,7 +8608,7 @@ const Rest = () => {
               {" "}and that standard
               position.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To add a little imagery, if we make a heatmap
               of{" "}
               <Math>
@@ -8689,7 +8649,7 @@ const Rest = () => {
               to minimize the sum we must go as far down and
               to the left as possible, towards purple!
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Having said this,
             </VerticalChunk>
             <Pause />
@@ -8798,7 +8758,7 @@ const Rest = () => {
                 ”).
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               The actual value of{" "}
               <Math>
                 $\cos(x) + \sin(x)$
@@ -9125,7 +9085,7 @@ const Rest = () => {
                   {" "}axis to the counterclockwise tangent.
                 </i>
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 (Nb: When we say the “radial vector” and
                 “counterclockwise tangent” we mean those objects that
                 are illustrated here:)
@@ -9242,7 +9202,7 @@ const Rest = () => {
             <VerticalChunk>
               ...?
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               [In human terms: draw solutions of the equation
             </VerticalChunk>
             <Pause />
@@ -9266,7 +9226,7 @@ const Rest = () => {
                 .]
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Next: Use any geometric insights gleaned from
               these
             </VerticalChunk>
@@ -9382,7 +9342,7 @@ const Rest = () => {
               {" "}axes, that
               intersect.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (For a throwback, the solution of Exercise
               16 of Chapter 3 mentions that the product of
               two numbers is{" "}
@@ -9457,7 +9417,7 @@ const Rest = () => {
               {" "}axis, which
               explains the shape of the isoset.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               If we draw a “heatmap” of
             </VerticalChunk>
             <Pause />
@@ -9991,7 +9951,7 @@ const Rest = () => {
                 {" "}
                 etc.
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 For another specifically noteworthy instance
                 of this phenomenon,
               </VerticalChunk>
@@ -10054,7 +10014,7 @@ const Rest = () => {
                 {" "}of
                 itself.)
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 (Indeed, since
               </VerticalChunk>
               <Pause />
@@ -10208,7 +10168,7 @@ const Rest = () => {
                   .
                 </NoBreak>
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 (Or...
               </VerticalChunk>
               <Pause />
@@ -11515,7 +11475,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To prove formula we use the angle-sum formulas;
               specifically...
             </VerticalChunk>
@@ -12018,7 +11978,7 @@ const Rest = () => {
               the second case
               of Exercise 27, in particular.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (NB: If we do it the other way around,
               putting the vertical scaling before the vertical
               translation, we obtain{" "}
@@ -12094,7 +12054,7 @@ const Rest = () => {
                 .)
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               The issue for the second part of the problem is
               therefore to prove that...
             </VerticalChunk>
@@ -12110,7 +12070,7 @@ const Rest = () => {
             <VerticalChunk>
               ...by algebraic means.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For this we again use the angle-sum formula
             </VerticalChunk>
             <Pause />
@@ -12456,7 +12416,7 @@ const Rest = () => {
                 .)
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Note that while the above graph may
             </VerticalChunk>
             <Pause />
@@ -12580,7 +12540,7 @@ const Rest = () => {
               </NoBreak>
               {" "}(!!!)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For the proof, we resort to the angle-sum formula...
             </VerticalChunk>
             <Pause />
@@ -13232,7 +13192,7 @@ const Rest = () => {
               </Math>
               {" "}become?
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (NB: We have flipped{" "}
               <NoBreak>
                 ‘
@@ -13497,7 +13457,7 @@ const Rest = () => {
               {" "}
               bouncing back and forth between the two sides.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               If we are willing to reproduce the angle
               {" "}
               <Math>
@@ -14047,7 +14007,7 @@ const Rest = () => {
                 (The label of the middle box is pasted diagonally
                 above the box because of reasons of space.)
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 We can understand our first solution as gluing
                 the middle and right boxes onto the{" "}
                 <NoBreak>
@@ -14337,7 +14297,7 @@ const Rest = () => {
                 then both of our solutions would involve the
                 same amount of translation, but they don't!
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 (Also:
               </VerticalChunk>
               <Pause />
@@ -14674,7 +14634,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_25_3438">
+          <ExerciseStatement id="_25_9847">
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -14902,7 +14862,7 @@ const Rest = () => {
                 .)
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Next, as
             </VerticalChunk>
             <Pause />
@@ -15002,7 +14962,7 @@ const Rest = () => {
               into the corresponding angle whose tangent equals that
               fraction.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               The final answer to the problem is...
             </VerticalChunk>
             <center style="margin-top:1em;margin-bottom:1em;">
@@ -15200,7 +15160,7 @@ const Rest = () => {
             <VerticalChunk>
               which constitutes our “general formula”.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               From this point, we apply the general formula with
               {" "}
               <NoBreak>
@@ -15271,7 +15231,7 @@ const Rest = () => {
               big handle in closed position with the wall, and of
               the small handle with the wall.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (By the way: don't be confused by the fact that
               {" "}
               <Math>
@@ -15286,7 +15246,7 @@ const Rest = () => {
               undergone by the door, as it measures the amount of rotation
               of a specific point attached to the door!)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               In particular, since
             </VerticalChunk>
             <Pause />
@@ -15724,7 +15684,7 @@ const Rest = () => {
                 by the sum of the volumes of the tetrahedrons,
                 a.k.a. cones.
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 Define the
               </VerticalChunk>
               <Pause />
@@ -15736,18 +15696,18 @@ const Rest = () => {
                 of such a set of tetrahedrons to be the largest
                 sidelength of any tetrahedron base.
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 (The smaller the mesh size, the more pointed
                 the tetrahedrons.)
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 For the current
                 discussion we take it for granted that as the
                 mesh size shrinks, the sum of the volumes of
                 the cones (= tetrahedrons) converges to the
                 volume of sphere.
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 (Or take the limit, as the mesh size shrinks,
                 of the sum of the volume of the tetrahedrons
                 to be the{" "}
@@ -15759,7 +15719,7 @@ const Rest = () => {
                 any other competing notion of “volume of the sphere”,
                 at the moment.)
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 Here is a closer look at a single tetrahedron
                 {" "}
                 <NoBreak>
@@ -15898,7 +15858,7 @@ const Rest = () => {
               <VerticalChunk>
                 for all... if etc.
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 (Or as mathematicians would put it: “for all{" "}
                 <Math>
                   $\e &gt; 0$
@@ -15938,7 +15898,7 @@ const Rest = () => {
                 {" "}
                 (“For all... there exists... such that... if... .”)
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 This implies that
               </VerticalChunk>
               <Pause />
@@ -16195,7 +16155,7 @@ const Rest = () => {
               (Similarly for a vector of higher dimension—those
               exist too.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               In other words, the product takes the constant
               {" "}
               <Math>

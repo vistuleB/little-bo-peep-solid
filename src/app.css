@@ -299,7 +299,7 @@ table.first-line tr td:first-child {
   white-space: nowrap;
 }
 
-.divide-horizontally {
+.left-right-background-divide {
   background-image: linear-gradient(
     to right,
     #d1d1f7 0%,
@@ -309,7 +309,7 @@ table.first-line tr td:first-child {
   );
 }
 
-.divide-vertically {
+.top-bottom-background-divide {
   background-image: linear-gradient(
     to bottom,
     #d1f7dc 0%,

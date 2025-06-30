@@ -26,46 +26,34 @@ export default function __Chapter1__() {
       prev-page="/"
       page-necessary-margin={610}
       max-element-width={500}
-      id="_5_2068">
+      id="_5_9141">
       <SectionsBreadcrumbs>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
             square roots
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
             fractions and division
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             distributivity
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             epilogue
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             vocabulary
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -190,7 +178,7 @@ export default function __Chapter1__() {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           (Nb: If ever you want to indicate both
           solutions of the equation{" "}
           <Math>
@@ -226,7 +214,7 @@ export default function __Chapter1__() {
             .)
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Next, we will ponder
         </VerticalChunk>
         <Pause />
@@ -374,7 +362,7 @@ export default function __Chapter1__() {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In last resort, and in reasonably good
           agreement with our observations, a calculator
           reveals that
@@ -404,7 +392,7 @@ export default function __Chapter1__() {
           {" "}is
           often perceived as counterintuitive.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           You can think of it this way: multiplying a
           value by{" "}
           <NoBreak>
@@ -495,7 +483,7 @@ export default function __Chapter1__() {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           The point is: if{" "}
           <NoBreak>
             “
@@ -804,7 +792,7 @@ const Rest = () => {
           </i>
           {" "}for short.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           (We might finally clarify that{" "}
           <NoBreak>
             ‘
@@ -856,7 +844,7 @@ const Rest = () => {
           because multiplication takes precedence over
           addition, by default.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           A little more generally, one has such identities
           as
         </VerticalChunk>
@@ -977,7 +965,7 @@ const Rest = () => {
           {" "}is a bit curious
           indeed.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           If we start from the afore-mentioned identity
         </VerticalChunk>
         <Pause />
@@ -1466,7 +1454,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_4_4512">
+          <ExerciseStatement id="_4_5122">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1679,7 +1667,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Technically, however, a number{" "}
               <Math>
                 $x$
@@ -1709,7 +1697,7 @@ const Rest = () => {
               {" "}satisfies
               this equation as well!
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               The last step, therefore, is to note that
               {" "}
               <Math>
@@ -2630,7 +2618,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_4512"
+                href="/article/chapter1?id=_4_5122"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>

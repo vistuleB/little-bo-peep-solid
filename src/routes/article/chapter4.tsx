@@ -27,86 +27,62 @@ export default function __Chapter4__() {
       page-necessary-margin={1450}
       max-element-width={700}>
       <SectionsBreadcrumbs>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
             definitions
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
             vocabulary
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             sketching a derivative
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             derivative of a constant function
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             derivative of an affine function
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
             units of the derivative
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
             the second derivative
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
             geometric interpretation of the second derivative
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
             vocabulary #1
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=section-10">
             the second derivative of position
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-10">
+        <BreadcrumbItem id="breadcrumb-10">
           <InChapterLink href="?id=section-11">
             the jerk
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-11">
+        <BreadcrumbItem id="breadcrumb-11">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -403,7 +379,7 @@ const Rest = () => {
         <VerticalChunk>
           ...voilà!
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           An alternate approach is to start by
           determining intervals on which the derivative
           is positive and negative, and then to
@@ -498,7 +474,7 @@ const Rest = () => {
           </NoBreak>
           {" "}when you look up (down?) at the graph.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           If we refer to
         </VerticalChunk>
         <Pause />
@@ -638,7 +614,7 @@ const Rest = () => {
           {" "}effects a vertical translation, which
           does not change the slope of anything.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In words:
         </VerticalChunk>
         <Pause />
@@ -829,7 +805,7 @@ const Rest = () => {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For example, if the “before” graph has units
           of...
         </VerticalChunk>
@@ -915,7 +891,7 @@ const Rest = () => {
         <VerticalChunk>
           ...and so on.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Units might additionally prompt us to refer
           to{" "}
           <Math>
@@ -1216,7 +1192,7 @@ const Rest = () => {
         <VerticalChunk>
           slope gives curves a “bending downward” shape!
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           To emphasize, if the second derivative is some
         </VerticalChunk>
         <Pause />
@@ -1252,7 +1228,7 @@ const Rest = () => {
           {" "}for that
           matter).
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Likewise, if the second derivative is some
         </VerticalChunk>
         <Pause />
@@ -1387,7 +1363,7 @@ const Rest = () => {
           finally, the second derivative...
           <ImageLeft src="/images/svg_ch4_ch_position_by_time_der_cloud.svg" />
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           ...describes
         </VerticalChunk>
         <Pause />
@@ -1406,7 +1382,7 @@ const Rest = () => {
         <VerticalChunk>
           as a function of time.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Note that the units on the{" "}
           <Math>
             $y$
@@ -1472,7 +1448,7 @@ const Rest = () => {
           is defined as “the increase in velocity per unit
           time”.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           To summarize:
         </VerticalChunk>
         <Pause />
@@ -1657,7 +1633,7 @@ const Rest = () => {
           </i>
           .
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           The word “jerk” is aptly chosen,
           too, considering that
         </VerticalChunk>
@@ -1793,7 +1769,7 @@ const Rest = () => {
         <VerticalChunk>
           of functions already appear in{" "}
           <a
-            href="/article/chapter3?id=_13_6472"
+            href="/article/chapter3?id=_13_64"
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1825,7 +1801,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_16_7636">
+          <ExerciseStatement id="_16_9726">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1953,7 +1929,7 @@ const Rest = () => {
             <VerticalChunk>
               derivative of the graph in{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_7636"
+                href="/article/chapter4?id=_16_9726"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -1998,7 +1974,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_7636"
+                href="/article/chapter4?id=_16_9726"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2537,7 +2513,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_17_4230">
+          <ExerciseStatement id="_17_5214">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -2719,7 +2695,7 @@ const Rest = () => {
               {" "}analogously to
               {" "}
               <InChapterLink
-                href="/article/chapter4?id=_17_4230"
+                href="/article/chapter4?id=_17_5214"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -2989,7 +2965,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_18_7786">
+          <ExerciseStatement id="_18_2349">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -3247,7 +3223,7 @@ const Rest = () => {
               {" "}
               two-dimensional.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Here's another point of view: just like
             </VerticalChunk>
             <Pause />
@@ -3298,7 +3274,7 @@ const Rest = () => {
               and likewise for the second coordinate—two
               coordinates, two rates of change!
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Geometrically, if we use the{" "}
               <NoBreak>
                 <Math>
@@ -3404,7 +3380,7 @@ const Rest = () => {
               the length of the arrow is, therefore,
               the speed!
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Now consider not one but four particles,
               going around a unit circle in clockwise
               fashion, 90° apart in phase, at unit
@@ -3475,7 +3451,7 @@ const Rest = () => {
               {" "}are brushed
               in the direction of travel.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (Nb: When we draw a vector as an arrow
               we mean that the first coordinate of the
               vector is equal to the horizontal
@@ -3486,7 +3462,7 @@ const Rest = () => {
               arrow to the head of the arrow.)
               <ImageRight src="/images/svg_ch4_cosine_curves_vector_illustration_cloud.svg" />
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Due to the 90° rotations and uniform
               lengths of{" "}
               <NoBreak>
@@ -3570,7 +3546,7 @@ const Rest = () => {
                 -coordinate”.
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Concretely, if you graph the
               {" "}
               <NoBreak>
@@ -3860,7 +3836,7 @@ const Rest = () => {
               same output under either function. See Note 6,
               Exercise 9, Chapter 3.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Starting up,
             </VerticalChunk>
             <Pause />
@@ -4202,7 +4178,7 @@ const Rest = () => {
             <VerticalChunk>
               by definition of function equality.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For the second half we have, similarly,
             </VerticalChunk>
             <Pause />
@@ -4326,7 +4302,7 @@ const Rest = () => {
               {" "}seconds after the
               start of the race.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               In this case, what does{" "}
               <Math>
                 $f \circ g$
@@ -4334,7 +4310,7 @@ const Rest = () => {
               {" "}compute?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_19_9503">
+          <Solution id="_19_6467">
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -4557,7 +4533,7 @@ const Rest = () => {
               </Math>
               {" "}seconds after the start of the race.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               <i>
                 Note 1.
               </i>
@@ -4899,7 +4875,7 @@ const Rest = () => {
                 ).
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (For example, the solution to Exercise 36 can actually
               be written
             </VerticalChunk>
@@ -4948,7 +4924,7 @@ const Rest = () => {
                 .])
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Nb: This result is known as the{" "}
               <i>
                 chain rule
@@ -5198,7 +5174,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               As the derivative of the velocity vector,
               the acceleration vector is therefore
               a vector of length{" "}
@@ -5502,7 +5478,7 @@ const Rest = () => {
               vector. (Speed of velocity vector = length of
               acceleration vector.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Next, the ratio
             </VerticalChunk>
             <Pause />
@@ -5582,7 +5558,7 @@ const Rest = () => {
               times as large as the circle traced by the velocity
               vector, and the same pattern starts all over again!
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (In other words, each time we take a derivative we
               find that the vector whose derivative we are taking
               has speed
@@ -5614,7 +5590,7 @@ const Rest = () => {
               {" "}times as large for the next
               derivative, etc, etc.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Concretely, the length of the jerk vector will be
             </VerticalChunk>
             <Pause />
@@ -5654,7 +5630,7 @@ const Rest = () => {
               {" "}etc.
               (Not that we needed to go beyond the jerk.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Coming back to a sketch of all this, if
             </VerticalChunk>
             <Pause />
@@ -5710,7 +5686,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_20_2491">
+            <SolutionNote id="_20_9111">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -5962,7 +5938,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Keeping in mind that the jerk is
               {" "}
               <Math>
@@ -6059,7 +6035,7 @@ const Rest = () => {
               which is a “one over time” quantity, because
               radians are dimensionless.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Indeed, “radian” is
               short for “number of radii that fit inside the
               arc length”, which is one length
@@ -6114,7 +6090,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see{" "}
               <InChapterLink
-                href="/article/chapter4?id=_21_7599"
+                href="/article/chapter4?id=_21_6678"
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6291,7 +6267,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_21_7599">
+            <SolutionNote id="_21_6678">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6643,7 +6619,7 @@ const Rest = () => {
                 offset_y="150px"
                 offset_x="-0.5em" />
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For{" "}
               <Math>
                 $t &lt; 0$
@@ -6661,13 +6637,13 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               HOWEVER.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               It is possible to say much more.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To go deeper, we introduce eight new
               particles, comprising the original colors but
               in white and black flavors:
@@ -6753,7 +6729,7 @@ const Rest = () => {
               the velocity of the yellow particle to the
               position of the green particle, etc.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               In this case the white particles will
               rotate at unit speed around their circle of
               radius{" "}
@@ -6766,7 +6742,7 @@ const Rest = () => {
               constraints
               (albeit with a different set of colors).
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               The black particles, for their part,
               behave as a single fused-together particle
               whose velocity is equal to its position,
@@ -6789,7 +6765,7 @@ const Rest = () => {
               line between them and the origin, meaning
               they are “stuck” to that line.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Also note that the
             </VerticalChunk>
             <Pause />
@@ -6829,7 +6805,7 @@ const Rest = () => {
               since the length of the position vector is
               the distance to the origin.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               This means that if we introduce gradations
               to the afore-mentioned half-line through{" "}
               <Math>
@@ -6887,11 +6863,11 @@ const Rest = () => {
                 src="/images/svg_ch4_ex_circle_at_2_4_sqrt_20_cloud.svg"
                 line={-1} />
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               This describes an “understandable”
               behavior of the black and white particles.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Next we write
             </VerticalChunk>
             <Pause />
@@ -6981,7 +6957,7 @@ const Rest = () => {
               particle as a function of time, and so on
               for all the other particles.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For example,
             </VerticalChunk>
             <Pause />
@@ -8050,7 +8026,7 @@ const Rest = () => {
                 !
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               In other words, the proposed definitions of
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
@@ -8071,7 +8047,7 @@ const Rest = () => {
               of the problem statement, and are, indeed, the
               solution we seek.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Qualitatively, this implies that the particles
               can be understood as four particles rotating at
               unit speed around a circle of radius{" "}
@@ -8092,7 +8068,7 @@ const Rest = () => {
               {" "}
               whether that seems intuitive or not.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Concretely,
               the particle trajectories
               end up like so, locally around{" "}
@@ -8130,7 +8106,7 @@ const Rest = () => {
               leaving only the residual motion of the white
               particles!
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               <i>
                 Note 1.
               </i>
@@ -8796,7 +8772,7 @@ const Rest = () => {
               ...?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_22_249">
+          <Solution id="_22_3064">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -8926,7 +8902,7 @@ const Rest = () => {
               ...and we do the same for each particle,
               to advance to the next step.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               If we stop{" "}
               <Math>
                 $10$
@@ -9028,7 +9004,7 @@ const Rest = () => {
                 </span>
               </ImageLeft>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               In any case [take two] the point is that
               whether or not you are one of the wizards,
               you can
@@ -9043,7 +9019,7 @@ const Rest = () => {
               of “feel” that they exist! (This is a
               moral consolation prize, at least.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               We can also convert the paths into a
               function
             </VerticalChunk>
@@ -9057,7 +9033,7 @@ const Rest = () => {
             <VerticalChunk>
               that satisfies the problem requirements.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For example let{" "}
               <Math>
                 $f$
@@ -9842,7 +9818,7 @@ const Rest = () => {
               “close the loop” after going through all
               17 particles!)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               In this starting configuration, all
               velocity vectors are exactly tangent to
               the unit circle
@@ -9968,7 +9944,7 @@ const Rest = () => {
               the expression, if any.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_23_4962">
+          <Solution id="_23_428">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10235,7 +10211,7 @@ const Rest = () => {
             <VerticalChunk>
               over said course of time.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To introduce an unsolicited metaphor,
               imagine{" "}
               <Math>
@@ -10571,7 +10547,7 @@ const Rest = () => {
               {" "}(cf.
               Exercise 16{" "}
               <InChapterLink
-                href="/article/chapter4?id=_19_9503"
+                href="/article/chapter4?id=_19_6467"
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -10600,12 +10576,12 @@ const Rest = () => {
               </NoBreak>
               <ImageLeft src="/images/svg_ch4_RATS_for_f_equals_AB_cloud.svg" />
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               The first term on the right-hand side, for
               its part, approaches
               <ImageRight src="/images/svg_ch4_RATS_first_term_cloud.svg" />
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               as{" "}
               <Math>
                 $\Delta&#123;&#125;t$
@@ -10690,7 +10666,7 @@ const Rest = () => {
               {" "}by the property
               of the Newton quotient.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Lastly the most interesting term is the
               second term on the right-hand side!
               Symmetrically to the first term on the
@@ -10886,7 +10862,7 @@ const Rest = () => {
                 .)
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Summarizing, the three terms separately
               approach
             </VerticalChunk>
@@ -10951,7 +10927,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Nb: This result is known as the{" "}
               <i>
                 product rule
@@ -11163,7 +11139,7 @@ const Rest = () => {
               two forms. Also note that each form has its
               own “qualitatively distinct” qualifying conditions.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (To wit,
             </VerticalChunk>
             <Pause />
@@ -11263,7 +11239,7 @@ const Rest = () => {
               to this point?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_24_6522">
+          <Solution id="_24_5660">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>
@@ -11788,7 +11764,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Next down in order of interesting-ness we presumably
               have the terms{" "}
               <Math>
@@ -11931,7 +11907,7 @@ const Rest = () => {
               in the solution to Exercise 17, but that might
               have been.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Lastly one has the tail end of the product,
               where{" "}
               <Math>
@@ -12616,7 +12592,7 @@ const Rest = () => {
               the start of the interval is at an integer value: this is a good
               way to estimate the length.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Because displacement
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
@@ -12796,7 +12772,7 @@ const Rest = () => {
               no matter the direction that Pacman is headed, as long as Pacman is
               in motion.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For example, take the instant{" "}
               <NoBreak>
                 <Math>
@@ -12892,7 +12868,7 @@ const Rest = () => {
               {" "}
               regardless of the direction of travel.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For more verification, take{" "}
               <NoBreak>
                 <Math>
@@ -12936,7 +12912,7 @@ const Rest = () => {
               </NoBreak>
               {" "}(!)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For two more verifications take{" "}
               <Math>
                 $t = 27\te&#123;s&#125;$
@@ -13025,7 +13001,7 @@ const Rest = () => {
               {" "}
               (Closest so far, in fact.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               We now admit, after this “heuristic verification”,
               that Pacman goes approximately the same speed
               regardless of direction, namely something in
@@ -13037,7 +13013,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Now consider the time interval from{" "}
               <Math>
                 $t = 22.7\te&#123;s&#125;$
@@ -13484,7 +13460,7 @@ const Rest = () => {
               the function will therefore be a
               line segment, over each of the purple intervals!
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Between these line segments, however, things
               happen, and there is a change in slope! The
               change in slope is given by the “amount of bump”
@@ -13529,7 +13505,7 @@ const Rest = () => {
               line segment, and vice-versa when we pass over a
               negative bump.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Put
             </VerticalChunk>
             <Pause />
@@ -13593,7 +13569,7 @@ const Rest = () => {
               {" "}being
               the (negative) area of a negative bump.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               With these variables in place, here is a generic
               illustration of a graph (in black) whose second
               derivative is the one from the statement (faded in
@@ -13623,7 +13599,7 @@ const Rest = () => {
               translation does not affect the derivative,
               much less the second derivative.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For another example, if{" "}
               <NoBreak>
                 <Math>
@@ -13659,7 +13635,7 @@ const Rest = () => {
               can also be vertically translated by any amount!
               (And same for any solution.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For yet another example, here is a graph in which
               {" "}
               <NoBreak>
@@ -13710,7 +13686,7 @@ const Rest = () => {
               free to choose—is the amount of vertical
               translation.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To claim a truly good “theoretical” understanding
               of the solution, however, we should also determine
               this rise here, if we can, as a function of{" "}

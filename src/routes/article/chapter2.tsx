@@ -27,72 +27,52 @@ export default function __Chapter2__() {
       page-necessary-margin={1040}
       max-element-width={900}>
       <SectionsBreadcrumbs>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
             definition
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
             measuring slope
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             sign combinations
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             pathological cases
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             “rise over run”
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
             solving for “rise” and “run”
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
             slopes and line equations
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
             slopes and units
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
             postscript: units vs dimensions
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -156,7 +136,7 @@ export default function __Chapter2__() {
         <VerticalChunk>
           ...more elegant!
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For example, the line below has slope 1, because
           it goes up by{" "}
           <Math>
@@ -237,7 +217,7 @@ const Rest = () => {
           horizontal change gives the per-horizontal-unit
           vertical change.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           More precisely, if
         </VerticalChunk>
         <Pause />
@@ -421,7 +401,7 @@ const Rest = () => {
           definition, is a nonnegative number, while a
           difference carries no such restriction.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In particular, since
         </VerticalChunk>
         <Pause />
@@ -760,7 +740,7 @@ const Rest = () => {
           {" "}
           that appear in the slope formula.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           (In order not to discriminate, maybe we should
           also include this picture:
         </VerticalChunk>
@@ -1154,7 +1134,7 @@ const Rest = () => {
           {" "}is a
           constant.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           One should also bear in mind that an equation can
           define a line without having either of the forms
           {" "}
@@ -1259,7 +1239,7 @@ const Rest = () => {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For example, if the units on the{" "}
           <Math>
             $y$
@@ -1370,7 +1350,7 @@ const Rest = () => {
           {" "}
           or km/hour, etc, depends on the exact units involved.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Terminology-wise, slopes are often known as
         </VerticalChunk>
         <Pause />
@@ -1715,7 +1695,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_5825">
+          <ExerciseStatement id="_6_3255">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -1794,7 +1774,7 @@ const Rest = () => {
               {" "}to be on
               the line!
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Unfortunately, the equation
             </VerticalChunk>
             <Pause />
@@ -1835,7 +1815,7 @@ const Rest = () => {
               not a valid equality because the right-hand
               side is an undefined quantity.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Instead, multiplying
             </VerticalChunk>
             <Pause />
@@ -2051,7 +2031,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_15_694"
+                href="/article/chapter3?id=_15_9981"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2160,7 +2140,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_5825"
+                href="/article/chapter2?id=_6_3255"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

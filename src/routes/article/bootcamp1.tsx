@@ -27,58 +27,42 @@ export default function __Bootcamp1__() {
       page-necessary-margin={160}
       max-element-width={800}>
       <SectionsBreadcrumbs>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
             notation
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
             what it does
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             set equality
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             second notation for the empty set
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             sets within sets
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
             set union and set intersection
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
             sets encountered in calculus
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
             sets not encountered in calculus
           </InChapterLink>
@@ -268,7 +252,7 @@ const Rest = () => {
           {" "}would
           answer “yes”.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Notation-wise, the expression
         </VerticalChunk>
         <Pause />
@@ -483,7 +467,7 @@ const Rest = () => {
           and answer “no” to all else,
           they are by definition the same.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           (These examples demonstrate that human notation
           is redundant: there are several different ways of
           writing down the same set. They also demonstrate
@@ -506,7 +490,7 @@ const Rest = () => {
           of their elements. Such notions are simply not part
           of the “API” of a set.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Moreover, any empty set is equal to any other
           empty set. Equality follows because both sets
           answer all questions the same way: they both
@@ -602,7 +586,7 @@ const Rest = () => {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Mind you, concerning this example, that
         </VerticalChunk>
         <Pause />
@@ -818,7 +802,7 @@ const Rest = () => {
             .
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Note that
         </VerticalChunk>
         <Pause />
@@ -992,7 +976,7 @@ const Rest = () => {
             ).
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Secondly—and this pretty much wraps it up for those
           sets  that are commonly seen in calculus—you will
           encounter{" "}
@@ -1061,7 +1045,7 @@ const Rest = () => {
           </NoBreak>
           {" "}Etc.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Note that
         </VerticalChunk>
         <Pause />
@@ -1163,7 +1147,7 @@ const Rest = () => {
         <VerticalChunk>
           (I.e., ...well, you get it!)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           You can view{" "}
           <Math>
             $\overline&#123;\rr&#125;$
@@ -1197,7 +1181,7 @@ const Rest = () => {
           </i>
           .
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Does all this have any “real meaning”? Good question!
           The answer is:{" "}
           <i>
@@ -1205,7 +1189,7 @@ const Rest = () => {
           </i>
           .
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           E.g. (to give you a brief flavor, before we move on
           forever from the topic), the value of something like
         </VerticalChunk>

@@ -26,74 +26,54 @@ export default function __Chapter3__() {
       prev-page="/article/chapter2"
       page-necessary-margin={700}
       max-element-width={1500}
-      id="_15_694">
+      id="_15_9981">
       <SectionsBreadcrumbs>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
             syntax
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
             lambda functions
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             definition by cases
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             on arbitrariness
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             graphs
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
             domains
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
             “from/to” notation
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
             the vertical line test
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
             a famous discontinuity
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=section-10">
             distinguishing{" "}
             <NoBreak>
@@ -113,9 +93,7 @@ export default function __Chapter3__() {
             </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-10">
+        <BreadcrumbItem id="breadcrumb-10">
           <InChapterLink href="?id=section-11">
             distinguishing{" "}
             <NoBreak>
@@ -135,23 +113,17 @@ export default function __Chapter3__() {
             </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-11">
+        <BreadcrumbItem id="breadcrumb-11">
           <InChapterLink href="?id=section-12">
             polynomials
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-12">
+        <BreadcrumbItem id="breadcrumb-12">
           <InChapterLink href="?id=section-13">
             quadratic, linear, and constant terms
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem
-          class="breadcrumb"
-          id="breadcrumb-13">
+        <BreadcrumbItem id="breadcrumb-13">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -188,7 +160,7 @@ export default function __Chapter3__() {
           and the result comes out the other side.
           (Metaphorically speaking.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           In the above picture, the name of the function
           is{" "}
           <NoBreak>
@@ -199,7 +171,7 @@ export default function __Chapter3__() {
             ”.
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Notation-wise, one writes
         </VerticalChunk>
         <Pause />
@@ -478,7 +450,7 @@ const Rest = () => {
         <VerticalChunk>
           to mean the same thing.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Note that
         </VerticalChunk>
         <Pause />
@@ -517,7 +489,7 @@ const Rest = () => {
             ”.
           </NoBreak>
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For more practice:
         </VerticalChunk>
         <Pause />
@@ -768,7 +740,7 @@ const Rest = () => {
           {" "}is the value of the corresponding
           output.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For example, here is a graph of VX-11/78A:
         </VerticalChunk>
         <Pause />
@@ -1154,7 +1126,7 @@ const Rest = () => {
           </i>
           ].
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Generalizing,
         </VerticalChunk>
         <Pause />
@@ -1233,7 +1205,7 @@ const Rest = () => {
           also called “graphs”, but that are not
           function graphs.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           The so-called
         </VerticalChunk>
         <Pause />
@@ -1274,7 +1246,7 @@ const Rest = () => {
           output). In other words, every vertical line
           should intersect the graph at most once.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For example, this particular graph...
         </VerticalChunk>
         <Pause />
@@ -1298,7 +1270,7 @@ const Rest = () => {
           some vertical lines intersect the graph more
           than once.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           (Oops. To backtrack and quickly clarify a small
           matter, an empty circle at the end of a segment,
           in the vein of the previous figure...
@@ -1382,7 +1354,7 @@ const Rest = () => {
           : a place where the function
           experiences a sudden “jump” in value.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For a famous example of a “naturally” occurring
           discontinuity (that we feel compelled to
           mention, for some reason) we need look no
@@ -1673,7 +1645,7 @@ const Rest = () => {
           some default value attached, absent any other
           context.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           By contrast,
         </VerticalChunk>
         <Pause />
@@ -1712,7 +1684,7 @@ const Rest = () => {
           {" "}are very (VERY)
           different, qualitatively speaking.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           But including the arrow everywhere is
           impractical and even pedantic, so, in the end,
           you might see us refer to an expression such as,
@@ -1806,7 +1778,7 @@ const Rest = () => {
           .) (We're not
           kidding.)
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           For example,
         </VerticalChunk>
         <Pause />
@@ -1839,7 +1811,7 @@ const Rest = () => {
         <VerticalChunk>
           is a polynomial of degree 100.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Polynomials of low degree have their own
           special names, as inventoried in the following
           table:
@@ -1977,7 +1949,7 @@ const Rest = () => {
           </NoBreak>
           {" "}fyi.
         </VerticalChunk>
-        <VerticalChunk indent={true}>
+        <VerticalChunk class="indent-10">
           Note that the linear term can also be viewed as
           the{" "}
           <NoBreak>
@@ -2221,7 +2193,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_7_9490">
+          <ExerciseStatement id="_7_1580">
             <VerticalChunk>
               <b>
                 Exercise 4.
@@ -2275,7 +2247,7 @@ const Rest = () => {
                 .)
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Sketch the graph{" "}
               <NoBreak>
                 <Math>
@@ -2284,7 +2256,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Secondly, find a formula for a function whose
               graph looks like this, where you are allowed
               to use{" "}
@@ -2367,7 +2339,7 @@ const Rest = () => {
               {" "}
               and so on.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For the second part note that the following
               two displacements, excerpted from the “factory
               roof” graph in the statement, are equal:
@@ -2442,7 +2414,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_8_88">
+          <ExerciseStatement id="_8_8240">
             <VerticalChunk>
               <b>
                 Exercise 5.
@@ -2476,7 +2448,7 @@ const Rest = () => {
               </NoBreak>
               {" "}apply the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_9490"
+                href="/article/chapter3?id=_7_1580"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2529,7 +2501,7 @@ const Rest = () => {
               {" "}
               the formula for the function from{" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_9490"
+                href="/article/chapter3?id=_7_1580"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2694,7 +2666,7 @@ const Rest = () => {
               for further processing. (A certain movie called
               “The Human Centipede” comes to mind.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               (To be perfectly clear,
             </VerticalChunk>
             <Pause />
@@ -2931,7 +2903,7 @@ const Rest = () => {
               because all we have to do is to multiply
               {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_88"
+                href="/article/chapter3?id=_8_8240"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -2943,7 +2915,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For the second graph, an answer is
             </VerticalChunk>
             <Pause />
@@ -2956,7 +2928,7 @@ const Rest = () => {
             <VerticalChunk>
               because the problem is similar to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_88"
+                href="/article/chapter3?id=_8_8240"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -2967,7 +2939,7 @@ const Rest = () => {
               </Math>
               {" "}horizontal dilation.
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               For the third graph, we will first stop to
               find a formula  for the function depicted
               here:
@@ -3219,7 +3191,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_9_1757">
+          <ExerciseStatement id="_9_7382">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -3402,7 +3374,7 @@ const Rest = () => {
               {" "}
               Same question as{" "}
               <InChapterLink
-                href="/article/chapter3?id=_9_1757"
+                href="/article/chapter3?id=_9_7382"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -3920,7 +3892,7 @@ const Rest = () => {
                 </NoBreak>
                 {" "}etc.
               </VerticalChunk>
-              <VerticalChunk indent={true}>
+              <VerticalChunk class="indent-10">
                 Under this representation one can “compute”
                 {" "}
                 <Math>
@@ -4131,7 +4103,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_10_7197">
+          <ExerciseStatement id="_10_1961">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4224,7 +4196,7 @@ const Rest = () => {
               {" "}
               Solve{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_7197"
+                href="/article/chapter3?id=_10_1961"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4467,7 +4439,7 @@ const Rest = () => {
               </NoBreak>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_7197"
+                href="/article/chapter3?id=_10_1961"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4494,7 +4466,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_7197"
+                href="/article/chapter3?id=_10_1961"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4604,7 +4576,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_11_6754">
+          <ExerciseStatement id="_11_5518">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -4856,7 +4828,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To understand how a preprocessing step
               affects the shape of a graph, note that, more
               generally, a graph of the form
@@ -5003,7 +4975,7 @@ const Rest = () => {
               {" "}that's why it's “more elegantly put”,
               in our opinion.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To recapitulate, the three transformations
               are,in order:
             </VerticalChunk>
@@ -5106,7 +5078,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={15}>
-          <ExerciseStatement id="_12_9320">
+          <ExerciseStatement id="_12_3667">
             <VerticalChunk>
               <b>
                 Exercise 15.
@@ -5479,7 +5451,7 @@ const Rest = () => {
                 .)
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               So the roots are{" "}
               <Math>
                 $x = 0$
@@ -5492,7 +5464,7 @@ const Rest = () => {
                 .
               </NoBreak>
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               To complete the problem{" "}
               <i>
                 as we were asked
@@ -5510,7 +5482,7 @@ const Rest = () => {
               {" "}by the following
               sequence of transformations (cf.{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_6754"
+                href="/article/chapter3?id=_11_5518"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -5542,7 +5514,7 @@ const Rest = () => {
               (We put the vertical translation first.)
               By{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_9320"
+                href="/article/chapter3?id=_12_3667"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -5743,7 +5715,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement id="_13_6472">
+          <ExerciseStatement id="_13_64">
             <VerticalChunk>
               <b>
                 Exercise 18.
@@ -5880,7 +5852,7 @@ const Rest = () => {
               </i>
               , namely.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               Given these definitions, which of the following
               equalities hold, in general for all functions{" "}
               <NoBreak>
@@ -5981,7 +5953,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={19}>
-          <ExerciseStatement id="_14_1865">
+          <ExerciseStatement id="_14_3628">
             <VerticalChunk>
               <b>
                 Exercise 19.
@@ -6059,7 +6031,7 @@ const Rest = () => {
             <VerticalChunk>
               and, similarly to{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_6754"
+                href="/article/chapter3?id=_11_5518"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6122,17 +6094,17 @@ const Rest = () => {
               </NoBreak>
               {" "}of{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_6754"
+                href="/article/chapter3?id=_11_5518"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
               ,
               that also has a minus sign out front.)
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               By direct analogy with{" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_6754"
+                href="/article/chapter3?id=_11_5518"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6317,7 +6289,7 @@ const Rest = () => {
               {" "}axis never
               to see it again, and there are no roots!
             </VerticalChunk>
-            <VerticalChunk indent={true}>
+            <VerticalChunk class="indent-10">
               On the other hand, if
             </VerticalChunk>
             <Pause />
@@ -6340,7 +6312,7 @@ const Rest = () => {
             <VerticalChunk>
               by{" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_9320"
+                href="/article/chapter3?id=_12_3667"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -6424,7 +6396,7 @@ const Rest = () => {
               <VerticalChunk>
                 as briefly flashed by, e.g., in{" "}
                 <a
-                  href="/article/chapter1?id=_5_2068"
+                  href="/article/chapter1?id=_5_9141"
                   class="handle-out-of-chapter-link">
                   Chapter 1
                 </a>

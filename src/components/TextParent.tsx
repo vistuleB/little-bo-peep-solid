@@ -12,7 +12,7 @@ const TextParent = (props: ParentProps & SharedProps) => {
       class={twJoin(
         "text-column",
         props.class,
-        store.show_areas && "divide-horizontally"
+        store.show_areas && "left-right-background-divide"
       )}
       style={`width:${mainColumnWidth()}px;${props.style}`}
     >

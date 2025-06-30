@@ -5,7 +5,7 @@ import { useGlobalContext } from "../store/StoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const VerticalChunk = (
-  props: ParentProps & SharedProps & { indent?: boolean },
+  props: ParentProps & SharedProps,
 ) => {
   const { store } = useGlobalContext();
 
@@ -13,9 +13,8 @@ const VerticalChunk = (
     <p
       class={twJoin(
         "text-column",
-        props.indent && "indent-10",
         props.class,
-        store.show_areas && "divide-horizontally",
+        store.show_areas && "left-right-background-divide",
       )}
       style={`width:${mainColumnWidth()}px;${props.style}`}>
       {props.children}

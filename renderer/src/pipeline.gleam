@@ -175,7 +175,7 @@ pub fn lbp_pipeline() -> List(Pipe) {
       // ************************
       // VerticalChunk indents
       // ************************
-      dn.add_attribute_to_second_of_kind(#("VerticalChunk", "indent", "true")),
+      dn.add_attribute_to_second_of_kind(#("VerticalChunk", "class", "indent-10")),
       // ************************
       // Add spacers
       // ************************
