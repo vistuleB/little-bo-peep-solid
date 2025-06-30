@@ -17,15 +17,16 @@ import { twJoin } from "tailwind-merge";
 import SharedProps from "./types/SharedProps";
 import OutlinedText from "./OutlinedText";
 import { useLocalStorage } from "solidjs-hooks";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
-const screen_width_to_achieve_max_size = 1380;
+const screen_width_to_achieve_max_size = 1500;
 const screen_width_to_achieve_min_size = 1280;
 const screen_width_to_achieve_default_visible = 1280;
 const screen_width_to_achieve_on = MOBILE_MAX_WIDTH;
 const max_font_size = 14;
 const min_font_size = 11;
-const max_size_line_wrap_width_pct = 1;
-const min_size_line_wrap_width_pct = 1;
+const max_size_line_wrap_width_pct = 0.6;
+const min_size_line_wrap_width_pct = 0.9;
 const min_line_height = 1.3; // in rem
 const max_line_height = 1.6;
 const closing_circle_min_size_stroke_width = 1.5;
@@ -41,16 +42,19 @@ const clamp = (min: number, value: number, max: number) => {
   return Math.max(min, Math.min(max, value));
 };
 
-const linear_interpolation = (min: number, max: number, progress: number) => {
-  return clamp(min, min + (max - min) * progress, max);
+const linear_interpolation = (val_at_0: number, val_at_1: number, t: number) => {
+  return val_at_0 + (val_at_1 - val_at_0) * t;
 };
 
 const calculate_values = () => {
   const { store } = useGlobalContext();
-  // Linear interpolation between min and max
+
   const progress = () =>
-    (store.innerWidth - screen_width_to_achieve_min_size) /
-    (screen_width_to_achieve_max_size - screen_width_to_achieve_min_size);
+    clamp(
+      0,
+      (store.innerWidth - screen_width_to_achieve_min_size) /
+      (screen_width_to_achieve_max_size - screen_width_to_achieve_min_size),
+      1);
 
   const font_size = () =>
     linear_interpolation(min_font_size, max_font_size, progress());
@@ -172,6 +176,8 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
     });
   });
 
+  console.log(line_wrap_width_pct());
+
   return (
     <>
       {/* Ultra Hot corner */}
@@ -204,12 +210,12 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       <div
         id="breadcrumbs"
         style={{
+          background: store.show_areas ? "#5a3a": "#0000",
           position: sticky() ? "fixed" : "absolute",
           "z-index": visible() ? 25 : 0,
           top: (sticky() ? top_margin() : top_margin_when_not_sticky()) + "px",
-          width: "fit-content",
           "padding-inline": left_margin() + "px",
-          "max-width": "300px",
+          "width": (0.5 * (store.innerWidth - mainColumnWidth()) * line_wrap_width_pct()) + "px",
           left: sticky() ? "0" : store.scrollX + "px",
           display: on() ? "block" : "none",
         }}>
@@ -225,7 +231,13 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
               "font-size": font_size() + "px",
               "line-height": line_height() + "rem",
             }}>
-            <li class="breadcrumb-prev-next flex gap-2">
+            <li
+              style={{
+              "font-size": font_size() * 0.99 + "px",           // slightly smaller font-size
+              "padding-bottom": line_height() * 0.06 + "rem",   // ...and more space below, to offset optical illusion caused by underline
+            }}
+              class="breadcrumb-prev-next flex gap-2"
+            >
               <OutlinedText
                 onClick={() => getPrevArticle(true)}
                 class={twJoin(
