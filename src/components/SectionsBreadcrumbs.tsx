@@ -7,10 +7,7 @@ import {
   ParentProps,
 } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
-import {
-  HAMBURGER_MENU_HEIGHT,
-  MOBILE_MAX_WIDTH,
-} from "~/constants";
+import { HAMBURGER_MENU_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
 import { Component } from "solid-js";
 import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 import { twJoin } from "tailwind-merge";
@@ -38,23 +35,22 @@ const max_size_top_margin = 18;
 const min_size_left_margin = 16;
 const max_size_left_margin = 26;
 
-const clamp = (min: number, value: number, max: number) => {
-  return Math.max(min, Math.min(max, value));
-};
+const linear_interpolation = (val_at_0: number, val_at_1: number, t: number) =>
+  val_at_0 + (val_at_1 - val_at_0) * t;
 
-const linear_interpolation = (val_at_0: number, val_at_1: number, t: number) => {
-  return val_at_0 + (val_at_1 - val_at_0) * t;
-};
+const clamp = (value: number, min: number, max: number) =>
+  Math.max(min, Math.min(max, value));  
 
 const calculate_values = () => {
   const { store } = useGlobalContext();
 
   const progress = () =>
     clamp(
-      0,
       (store.innerWidth - screen_width_to_achieve_min_size) /
-      (screen_width_to_achieve_max_size - screen_width_to_achieve_min_size),
-      1);
+        (screen_width_to_achieve_max_size - screen_width_to_achieve_min_size),
+      0,
+      1
+    );
 
   const font_size = () =>
     linear_interpolation(min_font_size, max_font_size, progress());
@@ -63,7 +59,7 @@ const calculate_values = () => {
     linear_interpolation(
       min_size_line_wrap_width_pct,
       max_size_line_wrap_width_pct,
-      progress(),
+      progress()
     );
 
   const line_height = () =>
@@ -73,14 +69,14 @@ const calculate_values = () => {
     linear_interpolation(
       closing_circle_min_size_stroke_width,
       closing_circle_max_size_stroke_width,
-      progress(),
+      progress()
     );
 
   const closing_circle_radius = () =>
     linear_interpolation(
       min_size_closing_circle_radius,
       max_size_closing_circle_radius,
-      progress(),
+      progress()
     );
 
   const top_margin = () =>
@@ -90,7 +86,7 @@ const calculate_values = () => {
     linear_interpolation(
       min_size_left_margin,
       max_size_left_margin,
-      progress(),
+      progress()
     );
 
   const default_visible_state = () =>
@@ -125,7 +121,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
 
   const [visible, setVisible] = useLocalStorage(
     "sections-breadcrumbs-visible",
-    default_visible_state(),
+    default_visible_state()
   );
 
   const [outSideHovered, setOutSideHovered] = createSignal(false);
@@ -143,7 +139,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
   onMount(() => {
     const isMouseOverElement = (
       element: HTMLElement | null,
-      { x, y }: MouseEvent,
+      { x, y }: MouseEvent
     ) => {
       if (!element) return false;
 
@@ -180,8 +176,8 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
 
   return (
     <>
-      {/* Ultra Hot corner */}
       <div
+        id="ultra-hot-corner" // unused 'id' but for self-documenting purposes...
         style={{
           border: store.show_areas ? "5px solid rgb(181, 25, 25)" : "none",
           width: "150px",
@@ -191,10 +187,10 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
           left: "0",
           "z-index": 20,
         }}
-        onMouseEnter={() => setVisible(true)}></div>
-      {/* Hot corner */}
+        onMouseEnter={() => setVisible(true)}
+      ></div>
       <div
-        id="hot-corner"
+        id="hot-corner" // this one is used!
         style={{
           border: store.show_areas ? "5px solid rgb(249, 150, 150)" : "none",
           width: "150px",
@@ -206,52 +202,62 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
         }}
         onMouseEnter={() => {
           setVisible(visible() || outSideHovered());
-        }}></div>
+        }}
+      ></div>
       <div
         id="breadcrumbs"
         style={{
-          background: store.show_areas ? "#5a3a": "#0000",
+          background: store.show_areas ? "#5a3a" : "#0000",
           position: sticky() ? "fixed" : "absolute",
           "z-index": visible() ? 25 : 0,
           top: (sticky() ? top_margin() : top_margin_when_not_sticky()) + "px",
           "padding-inline": left_margin() + "px",
-          "width": (0.5 * (store.innerWidth - mainColumnWidth()) * line_wrap_width_pct()) + "px",
+          width:
+            0.5 *
+              (store.innerWidth - mainColumnWidth()) *
+              line_wrap_width_pct() +
+            "px",
           left: sticky() ? "0" : store.scrollX + "px",
           display: on() ? "block" : "none",
-        }}>
+        }}
+      >
         <div
           style={{
             transform: `translateY(${visible() ? "0" : "-120%"})`,
             opacity: visible() ? 1 : 0,
             transition: `all ${Math.min(300 + children_list.length * 50, 600)}ms ease-in-out`,
-          }}>
+          }}
+        >
           <ul
             ref={ref}
             style={{
               "font-size": font_size() + "px",
               "line-height": line_height() + "rem",
-            }}>
+            }}
+          >
             <li
               style={{
-              "font-size": font_size() * 0.99 + "px",           // slightly smaller font-size
-              "padding-bottom": line_height() * 0.06 + "rem",   // ...and more space below, to offset optical illusion caused by underline
-            }}
+                "font-size": font_size() * 0.99 + "px", // slightly smaller font-size
+                "padding-bottom": line_height() * 0.06 + "rem", // ...and more space below, to offset optical illusion caused by underline
+              }}
               class="breadcrumb-prev-next flex gap-2"
             >
               <OutlinedText
                 onClick={() => getPrevArticle(true)}
                 class={twJoin(
                   prevDisabled() && "!text-stone-300 cursor-default",
-                  "underline cursor-pointer",
-                )}>
+                  "underline cursor-pointer"
+                )}
+              >
                 &lt;&lt;prev
               </OutlinedText>
               <OutlinedText
                 onClick={() => getNextArticle(true)}
                 class={twJoin(
                   nextDisabled() && "!text-stone-300 cursor-default",
-                  "underline cursor-pointer",
-                )}>
+                  "underline cursor-pointer"
+                )}
+              >
                 next&gt;&gt;
               </OutlinedText>
             </li>
@@ -278,7 +284,7 @@ export const BreadcrumbItem = (props: ParentProps & SharedProps) => {
 };
 
 const CloseCircleIcon: Component<JSX.SvgSVGAttributes<SVGSVGElement>> = (
-  props,
+  props
 ) => {
   const {
     closing_circle_stroke_width: strokeWidth,
@@ -302,18 +308,21 @@ const CloseCircleIcon: Component<JSX.SvgSVGAttributes<SVGSVGElement>> = (
       stroke-linejoin="round"
       class={props.class}
       onMouseOver={props.onMouseOver}
-      onClick={props.onClick}>
+      onClick={props.onClick}
+    >
       <circle cx={iconSize()} cy={iconSize()} r={circleRadius()}></circle>
       <line
         x1={iconSize() + crossSize()}
         y1={iconSize() - crossSize()}
         x2={iconSize() - crossSize()}
-        y2={iconSize() + crossSize()}></line>
+        y2={iconSize() + crossSize()}
+      ></line>
       <line
         x1={iconSize() - crossSize()}
         y1={iconSize() - crossSize()}
         x2={iconSize() + crossSize()}
-        y2={iconSize() + crossSize()}></line>
+        y2={iconSize() + crossSize()}
+      ></line>
     </svg>
   );
 };
