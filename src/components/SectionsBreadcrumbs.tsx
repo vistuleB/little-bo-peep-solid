@@ -9,7 +9,6 @@ import {
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
   HAMBURGER_MENU_HEIGHT,
-  MD_MAX_WIDTH,
   MOBILE_MAX_WIDTH,
 } from "~/constants";
 import { Component } from "solid-js";
@@ -20,15 +19,15 @@ import OutlinedText from "./OutlinedText";
 import { useLocalStorage } from "solidjs-hooks";
 
 const screen_width_to_achieve_max_size = 1380;
-const screen_width_to_achieve_min_size = MD_MAX_WIDTH;
-const screen_width_to_achieve_default_visible = MD_MAX_WIDTH;
+const screen_width_to_achieve_min_size = 1280;
+const screen_width_to_achieve_default_visible = 1280;
 const screen_width_to_achieve_on = MOBILE_MAX_WIDTH;
 const max_font_size = 14;
 const min_font_size = 11;
-const max_size_line_wrap_width_pct = 0.5;
-const min_size_line_wrap_width_pct = 0.8;
+const max_size_line_wrap_width_pct = 1;
+const min_size_line_wrap_width_pct = 1;
 const min_line_height = 1.3; // in rem
-const max_line_height = 2;
+const max_line_height = 1.6;
 const closing_circle_min_size_stroke_width = 1.5;
 const closing_circle_max_size_stroke_width = 2.5;
 const min_size_closing_circle_radius = 16;

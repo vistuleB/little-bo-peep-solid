@@ -237,7 +237,6 @@
         with $A = -1$, $B = 12$.
 
 |> Section
-    type=caba
 
     *Units of the Derivative.*
     If units are present, we have
@@ -447,7 +446,7 @@
     |> del
 
         “the rate of change of the rate of change”.
-    &ensp;Sorry: “the rate of change of the slope”.
+    \ Sorry: “the rate of change of the slope”.
     (Same difference.) Ergo, if the second derivative
     is positive, the slope is increasing; if the
     second derivative is negative, the slope is

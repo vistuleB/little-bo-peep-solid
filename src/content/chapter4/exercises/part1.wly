@@ -2278,7 +2278,7 @@
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-        &ensp;by setting...
+        \ by setting...
 
         |> CentralDisplay
             |> InlineImage
@@ -2903,11 +2903,11 @@
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p3_inline.svg
-        &ensp;and
+        \ and
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-        &ensp;are the translate of the white particle
+        \ are the translate of the white particle
         positions at $t = 0$ back up and to the right
         by the vector $(2, 4)$, which brings those
         positions back to the original positions of
@@ -2922,11 +2922,11 @@
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p3_inline.svg
-        &ensp;and
+        \ and
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-        &ensp;as they appear in the problem statement! I.e.,
+        \ as they appear in the problem statement! I.e.,
         our newly-defined
         particles
         |> InlineImage
@@ -2940,11 +2940,11 @@
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p3_inline.svg
-        &ensp;and
+        \ and
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-        &ensp;are in the desired place at $t = 0$!
+        \ are in the desired place at $t = 0$!
 
         In other words, the proposed definitions of
         |> InlineImage
@@ -2958,11 +2958,11 @@
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p3_inline.svg
-        &ensp;and
+        \ and
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-        &ensp;“work” in the sense of satisfying all the conditions
+        \ “work” in the sense of satisfying all the conditions
         of the problem statement, and are, indeed, the
         solution we seek.
 

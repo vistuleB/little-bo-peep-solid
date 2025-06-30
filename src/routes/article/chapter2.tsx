@@ -723,7 +723,7 @@ const Rest = () => {
               width="28px" />
             ”),
           </span>
-          &amp;ensp;following such a picture:
+          {" "}following such a picture:
         </VerticalChunk>
         <Pause />
         <Image src="/images/44.svg" />
@@ -1715,7 +1715,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_1788">
+          <ExerciseStatement id="_6_5825">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -1983,7 +1983,7 @@ const Rest = () => {
               <del>
                 an object
               </del>
-              &amp;ensp;a mosquito whose height over time is
+              {" "}a mosquito whose height over time is
               given by this graph (use the same time interval
               as the graph):
             </VerticalChunk>
@@ -2051,7 +2051,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_15_1903"
+                href="/article/chapter3?id=_15_694"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2160,7 +2160,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_1788"
+                href="/article/chapter2?id=_6_5825"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

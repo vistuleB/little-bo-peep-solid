@@ -334,7 +334,7 @@
             src=images/rise-run.svg
             width=28px
         ”),
-    &ensp;following such a picture:
+    \ following such a picture:
 
     |> Image
         src=images/44.svg
@@ -838,7 +838,7 @@
         |> del
 
             an object
-        &ensp;a mosquito whose height over time is
+        \ a mosquito whose height over time is
         given by this graph (use the same time interval
         as the graph):
 

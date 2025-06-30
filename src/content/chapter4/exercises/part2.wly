@@ -443,7 +443,7 @@
         |> del
 
             paths
-        &ensp;functions that look like so:
+        \ functions that look like so:
 
         |> Image
             src=images/svg_ch4_17_actual_functions.svg
@@ -767,7 +767,7 @@
 
                     when $B$'s tail is sticking out of the
                     cat's mouth, and
-                &ensp;when $A$ and $B$ have both made it
+                \ when $A$ and $B$ have both made it
                 to $t_0 + \Delta{}t$
 
     Correspondingly, the product
@@ -1567,11 +1567,11 @@
         |> del
 
             amount of travel
-        &ensp;
+        \ 
         |> del
 
             during the
-        &ensp;six displacements:
+        \ six displacements:
 
         |> CentralDisplay
 
@@ -1641,7 +1641,7 @@
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet6_inline.svg
-        &ensp;the next displacement, if you look back at
+        \ the next displacement, if you look back at
         the graphs, is horizontal, so yes.) In fact,
         if you look at the maze,
 
@@ -1734,11 +1734,11 @@
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet2_inline.svg
-        &ensp;and
+        \ and
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet4_inline.svg
-        &ensp;equal $-3\te{c}$ and $3\te{c}$, in each
+        \ equal $-3\te{c}$ and $3\te{c}$, in each
         case):
 
         |> Image
@@ -1764,14 +1764,14 @@
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet7_inline.svg
-        &ensp;is horizontal to the right the only possible
+        \ is horizontal to the right the only possible
         remaining solution is the right-hand one,
         or else Pacman would collide with the ghost cage,
         with displacement
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet6_inline.svg
-        &ensp;equal to 6c not 7c, or else Pacman would
+        \ equal to 6c not 7c, or else Pacman would
         collide with a wall:
 
         |> Image
@@ -1788,7 +1788,7 @@
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet7_inline.svg
-        &ensp;brings Pacman all the way around the maze to
+        \ brings Pacman all the way around the maze to
         the left edge of the ghost cage, like so...
 
         |> Image
@@ -1808,7 +1808,7 @@
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet8_inline.svg
-        &ensp;must be $-3$c or $-4$c;
+        \ must be $-3$c or $-4$c;
         must actually be $-3$c since displacement
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
@@ -1836,7 +1836,7 @@
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet7_inline.svg
-        &ensp;and
+        \ and
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet8_inline.svg

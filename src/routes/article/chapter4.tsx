@@ -1194,7 +1194,7 @@ const Rest = () => {
           <del>
             “the rate of change of the rate of change”.
           </del>
-          &amp;ensp;Sorry: “the rate of change of the slope”.
+          {" "}Sorry: “the rate of change of the slope”.
           (Same difference.) Ergo, if the second derivative
           is positive, the slope is increasing; if the
           second derivative is negative, the slope is
@@ -1793,7 +1793,7 @@ const Rest = () => {
         <VerticalChunk>
           of functions already appear in{" "}
           <a
-            href="/article/chapter3?id=_13_1699"
+            href="/article/chapter3?id=_13_6472"
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1825,7 +1825,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_16_9253">
+          <ExerciseStatement id="_16_7636">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1953,7 +1953,7 @@ const Rest = () => {
             <VerticalChunk>
               derivative of the graph in{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_9253"
+                href="/article/chapter4?id=_16_7636"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -1998,7 +1998,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of{" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_9253"
+                href="/article/chapter4?id=_16_7636"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2537,7 +2537,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_17_4356">
+          <ExerciseStatement id="_17_4230">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -2719,7 +2719,7 @@ const Rest = () => {
               {" "}analogously to
               {" "}
               <InChapterLink
-                href="/article/chapter4?id=_17_4356"
+                href="/article/chapter4?id=_17_4230"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -2989,7 +2989,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_18_8776">
+          <ExerciseStatement id="_18_7786">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4334,7 +4334,7 @@ const Rest = () => {
               {" "}compute?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_19_4992">
+          <Solution id="_19_9503">
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -5710,7 +5710,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_20_2393">
+            <SolutionNote id="_20_2491">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6114,7 +6114,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see{" "}
               <InChapterLink
-                href="/article/chapter4?id=_21_1176"
+                href="/article/chapter4?id=_21_7599"
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6291,7 +6291,7 @@ const Rest = () => {
               {" "}no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_21_1176">
+            <SolutionNote id="_21_7599">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -7105,7 +7105,7 @@ const Rest = () => {
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg" />
-              &amp;ensp;by setting...
+              {" "}by setting...
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
@@ -7990,11 +7990,11 @@ const Rest = () => {
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/images/svg_ch4_circle_at_2_4_p3_inline.svg" />
-              &amp;ensp;and
+              {" "}and
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg" />
-              &amp;ensp;are the translate of the white particle
+              {" "}are the translate of the white particle
               positions at{" "}
               <Math>
                 $t = 0$
@@ -8020,11 +8020,11 @@ const Rest = () => {
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/images/svg_ch4_circle_at_2_4_p3_inline.svg" />
-              &amp;ensp;and
+              {" "}and
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg" />
-              &amp;ensp;as they appear in the problem statement! I.e.,
+              {" "}as they appear in the problem statement! I.e.,
               our newly-defined
               particles
               <InlineImage
@@ -8038,11 +8038,11 @@ const Rest = () => {
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/images/svg_ch4_circle_at_2_4_p3_inline.svg" />
-              &amp;ensp;and
+              {" "}and
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg" />
-              &amp;ensp;are in the desired place at{" "}
+              {" "}are in the desired place at{" "}
               <NoBreak>
                 <Math>
                   $t = 0$
@@ -8063,11 +8063,11 @@ const Rest = () => {
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/images/svg_ch4_circle_at_2_4_p3_inline.svg" />
-              &amp;ensp;and
+              {" "}and
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/images/svg_ch4_circle_at_2_4_p4_inline.svg" />
-              &amp;ensp;“work” in the sense of satisfying all the conditions
+              {" "}“work” in the sense of satisfying all the conditions
               of the problem statement, and are, indeed, the
               solution we seek.
             </VerticalChunk>
@@ -8796,7 +8796,7 @@ const Rest = () => {
               ...?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_22_1543">
+          <Solution id="_22_249">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9733,7 +9733,7 @@ const Rest = () => {
               <del>
                 paths
               </del>
-              &amp;ensp;functions that look like so:
+              {" "}functions that look like so:
             </VerticalChunk>
             <Pause />
             <Image src="/images/svg_ch4_17_actual_functions.svg" />
@@ -9968,7 +9968,7 @@ const Rest = () => {
               the expression, if any.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_23_6636">
+          <Solution id="_23_4962">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10357,7 +10357,7 @@ const Rest = () => {
                     {" "}tail is sticking out of the
                     cat's mouth, and
                   </del>
-                  &amp;ensp;when{" "}
+                  {" "}when{" "}
                   <Math>
                     $A$
                   </Math>
@@ -10571,7 +10571,7 @@ const Rest = () => {
               {" "}(cf.
               Exercise 16{" "}
               <InChapterLink
-                href="/article/chapter4?id=_19_4992"
+                href="/article/chapter4?id=_19_9503"
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -11263,7 +11263,7 @@ const Rest = () => {
               to this point?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_24_3758">
+          <Solution id="_24_6522">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>
@@ -12299,11 +12299,11 @@ const Rest = () => {
               <del>
                 amount of travel
               </del>
-              &amp;ensp;
+              {" "}{" "}
               <del>
                 during the
               </del>
-              &amp;ensp;six displacements:
+              {" "}six displacements:
             </VerticalChunk>
             <Pause />
             <CentralDisplay>
@@ -12386,7 +12386,7 @@ const Rest = () => {
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/images/svg_ch4_pacman1_pellet6_inline.svg" />
-              &amp;ensp;the next displacement, if you look back at
+              {" "}the next displacement, if you look back at
               the graphs, is horizontal, so yes.) In fact,
               if you look at the maze,
             </VerticalChunk>
@@ -12556,11 +12556,11 @@ const Rest = () => {
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/images/svg_ch4_pacman1_pellet2_inline.svg" />
-              &amp;ensp;and
+              {" "}and
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/images/svg_ch4_pacman1_pellet4_inline.svg" />
-              &amp;ensp;equal{" "}
+              {" "}equal{" "}
               <Math>
                 $-3\te&#123;c&#125;$
               </Math>
@@ -12621,14 +12621,14 @@ const Rest = () => {
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/images/svg_ch4_pacman1_pellet7_inline.svg" />
-              &amp;ensp;is horizontal to the right the only possible
+              {" "}is horizontal to the right the only possible
               remaining solution is the right-hand one,
               or else Pacman would collide with the ghost cage,
               with displacement
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/images/svg_ch4_pacman1_pellet6_inline.svg" />
-              &amp;ensp;equal to 6c not 7c, or else Pacman would
+              {" "}equal to 6c not 7c, or else Pacman would
               collide with a wall:
             </VerticalChunk>
             <Pause />
@@ -12651,7 +12651,7 @@ const Rest = () => {
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/images/svg_ch4_pacman1_pellet7_inline.svg" />
-              &amp;ensp;brings Pacman all the way around the maze to
+              {" "}brings Pacman all the way around the maze to
               the left edge of the ghost cage, like so...
             </VerticalChunk>
             <Pause />
@@ -12681,7 +12681,7 @@ const Rest = () => {
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/images/svg_ch4_pacman1_pellet8_inline.svg" />
-              &amp;ensp;must be{" "}
+              {" "}must be{" "}
               <NoBreak>
                 <Math>
                   $-3$
@@ -12739,7 +12739,7 @@ const Rest = () => {
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/images/svg_ch4_pacman1_pellet7_inline.svg" />
-              &amp;ensp;and
+              {" "}and
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/images/svg_ch4_pacman1_pellet8_inline.svg" />

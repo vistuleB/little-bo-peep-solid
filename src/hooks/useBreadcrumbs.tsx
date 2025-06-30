@@ -69,7 +69,7 @@ const useBreadcrumbs = () => {
       {
         threshold: 0,
         rootMargin: "-50% 0px -20% 0px",
-      },
+      }
     );
 
     sections.forEach((section) => {
