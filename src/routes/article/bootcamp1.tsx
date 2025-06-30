@@ -22,8 +22,8 @@ import ArticleTitle from "~/components/ArticleTitle";
 export default function __Bootcamp1__() {
   return <>
     <Article
-      next-page="/"
       prev-page="/article/bootcamp2"
+      next-page="/"
       page-necessary-margin={160}
       max-element-width={800}>
       <SectionsBreadcrumbs>
@@ -68,7 +68,7 @@ export default function __Bootcamp1__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle banner="Bootcamp 1:">
+      <ArticleTitle>
         Sets
       </ArticleTitle>
       <Section id="section-1">

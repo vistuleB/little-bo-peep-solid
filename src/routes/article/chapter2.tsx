@@ -22,8 +22,8 @@ import ArticleTitle from "~/components/ArticleTitle";
 export default function __Chapter2__() {
   return <>
     <Article
-      next-page="/article/chapter3"
       prev-page="/article/chapter1"
+      next-page="/article/chapter3"
       page-necessary-margin={1040}
       max-element-width={900}>
       <SectionsBreadcrumbs>
@@ -78,7 +78,7 @@ export default function __Chapter2__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle banner="Chapter 2:">
+      <ArticleTitle>
         Slopes
       </ArticleTitle>
       <Section id="section-1">
@@ -1695,7 +1695,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_3255">
+          <ExerciseStatement id="_6_3453">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2031,7 +2031,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_15_9981"
+                href="/article/chapter3?id=_15_763"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2140,7 +2140,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_3255"
+                href="/article/chapter2?id=_6_3453"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

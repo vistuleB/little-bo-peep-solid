@@ -2,23 +2,22 @@ import TOC from "~/components/TOC";
 import TOCTitle from "~/components/TOCTitle";
 import TOCItem from "~/components/TOCItem";
 import { Spacer } from "~/components/Spacer";
+import { Math } from "~/components/Math";
 
 export default function __Home__() {
   return (
     <TOC
-      next-page="/article/chapter1"
-      prev-page="/article/bootcamp1">
+      prev-page="/article/bootcamp1"
+      next-page="/article/chapter1">
       <div id="chapter">
         <TOCTitle label="Chapters" />
         <ul>
           <TOCItem
             article_type={1}
             href="chapter1">
-            A{" "}
-            <i>
-              Few
-            </i>
-            {" "}Refreshers
+            <Math>
+              $n \ra n + 1$
+            </Math>
           </TOCItem>
           <TOCItem
             article_type={2}

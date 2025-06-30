@@ -27,14 +27,9 @@ const TOCItemNewStyle = (props: ParentProps & {
             </span>
           </div>
         </div>
-        <div
-          class="toc-item-title-outline"
-          style="--toc-label-stroke-color: white"
-          aria-hidden="true"
-        >
-          {props.children}
+        <div class="toc-item-title">
+          <span class="bg-white" style="direction:ltr;">&lrm;&thinsp;{props.children}&lrm;</span>
         </div>
-        <div class="toc-item-title">{props.children}</div>
       </div>
     </div>
   );

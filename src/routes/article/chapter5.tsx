@@ -151,7 +151,7 @@ export default function __Chapter5__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle banner="Chapter 5:">
+      <ArticleTitle>
         The Trigonometric Functions
       </ArticleTitle>
       <Section id="section-1">
@@ -1469,7 +1469,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_5660"
+            href="/article/chapter4?id=_24_7917"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14634,7 +14634,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_25_9847">
+          <ExerciseStatement id="_25_2117">
             <VerticalChunk>
               <b>
                 Exercise 42.
