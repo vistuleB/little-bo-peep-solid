@@ -259,11 +259,9 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
 
 export const BreadcrumbItem = (props: ParentProps & SharedProps) => {
   return (
-    <>
-      <li id={props.id} class={props.class}>
-        <OutlinedText>{props.children}</OutlinedText>
-      </li>
-    </>
+    <li id={props.id} class="breadcrumb">
+      <OutlinedText>{props.children}</OutlinedText>
+    </li>
   );
 };
 
