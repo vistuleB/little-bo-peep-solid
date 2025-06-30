@@ -192,13 +192,13 @@ export default function __Bootcamp1__() {
       </Section>
       <Rest />
     </Article>
-  </>
+  </>;
 }
 
 const Rest = () => {
   const showMore = useShowMore();
-  return(<>
-    { showMore() && <>
+  return <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <VerticalChunk>
@@ -1276,6 +1276,6 @@ const Rest = () => {
           (Well, anyway, end of lesson.)
         </VerticalChunk>
       </Section>
-</> }
-</>);
+    </>}
+  </>;
 };

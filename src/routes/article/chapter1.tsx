@@ -26,7 +26,7 @@ export default function __Chapter1__() {
       prev-page="/"
       page-necessary-margin={610}
       max-element-width={500}
-      id="_5_6885">
+      id="_5_8979">
       <SectionsBreadcrumbs>
         <BreadcrumbItem
           class="breadcrumb"
@@ -538,13 +538,13 @@ export default function __Chapter1__() {
       </Section>
       <Rest />
     </Article>
-  </>
+  </>;
 }
 
 const Rest = () => {
   const showMore = useShowMore();
-  return(<>
-    { showMore() && <>
+  return <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <VerticalChunk>
@@ -1466,7 +1466,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_4_9698">
+          <ExerciseStatement id="_4_9528">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2630,7 +2630,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_9698"
+                href="/article/chapter1?id=_4_9528"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2905,6 +2905,6 @@ const Rest = () => {
           </Solution>
         </Exercise>
       </Exercises>
-</> }
-</>);
+    </>}
+  </>;
 };

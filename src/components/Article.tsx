@@ -1,5 +1,5 @@
 import { onMount, ParentProps } from "solid-js";
-import useCheckedSaveScroll from "~/hooks/useCheckedSaveScroll";
+import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
 import useScrollX from "~/hooks/useScrollX";
 import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
 import { useGlobalContext } from "~/store/StoreProvider";
@@ -67,7 +67,7 @@ const ExercisesStoreConsumer = (
     prevPage?: string;
   },
 ) => {
-  useCheckedSaveScroll();
+  useCheckedSavedScroll();
   return <>{props.children}</>;
 };
 

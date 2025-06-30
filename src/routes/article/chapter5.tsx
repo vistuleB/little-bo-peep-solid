@@ -712,13 +712,13 @@ export default function __Chapter5__() {
       </Section>
       <Rest />
     </Article>
-  </>
+  </>;
 }
 
 const Rest = () => {
   const showMore = useShowMore();
-  return(<>
-    { showMore() && <>
+  return <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <VerticalChunk>
@@ -1509,7 +1509,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_8079"
+            href="/article/chapter4?id=_24_5110"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14674,7 +14674,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_25_8150">
+          <ExerciseStatement id="_25_2597">
             <VerticalChunk>
               <b>
                 Exercise 42.
@@ -16281,6 +16281,6 @@ const Rest = () => {
           </Solution>
         </Exercise>
       </Exercises>
-</> }
-</>);
+    </>}
+  </>;
 };

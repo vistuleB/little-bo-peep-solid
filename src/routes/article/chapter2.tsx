@@ -196,13 +196,13 @@ export default function __Chapter2__() {
       </Section>
       <Rest />
     </Article>
-  </>
+  </>;
 }
 
 const Rest = () => {
   const showMore = useShowMore();
-  return(<>
-    { showMore() && <>
+  return <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <VerticalChunk>
@@ -1715,7 +1715,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_7420">
+          <ExerciseStatement id="_6_8608">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2051,7 +2051,7 @@ const Rest = () => {
               {" "}
               As explained in{" "}
               <a
-                href="/article/chapter3?id=_15_6458"
+                href="/article/chapter3?id=_15_373"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2160,7 +2160,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to{" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_7420"
+                href="/article/chapter2?id=_6_8608"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
@@ -2311,6 +2311,6 @@ const Rest = () => {
           </Solution>
         </Exercise>
       </Exercises>
-</> }
-</>);
+    </>}
+  </>;
 };

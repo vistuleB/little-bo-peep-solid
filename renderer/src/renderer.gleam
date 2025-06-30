@@ -5,16 +5,14 @@ import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
 import gleam/io
 import gleam/list
 import gleam/option.{Some}
-import gleam/string
+import gleam/string.{inspect as ins}
 import gleam/dict
 import infrastructure as infra
 import pipeline
-import vxml.{type VXML, BlamedAttribute, V}
+import vxml.{type VXML, V}
 import vxml_renderer as vr
 import writerly as wp
 import gleam/otp/actor.{stop}
-
-const ins = string.inspect
 
 type FragmentType {
   Article(String)
@@ -29,9 +27,7 @@ type LBPSplitterError {
   MoreThanOneHamburgerPanelAuthorSuppliedContents
 }
 
-type LBPEmitterError {
-  NumberAttributeAlreadyExists(FragmentType, Int)
-}
+type LBPEmitterError = Nil
 
 fn blame_us(message: String) -> Blame {
   Blame(message, -1, -1, [])
@@ -100,8 +96,7 @@ fn up_to_and_including_first_section(
   }
 }
 
-// splitting chapter vxmls for performance
-fn split_vxmls_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
+fn split_vxml_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
   let assert V(b, t, a, children) = vxml
   let #(before_rest, rest) = up_to_and_including_first_section([], children)
   let rest_tag = V(blame_us("rest tag"), "Rest", [], [])
@@ -114,7 +109,7 @@ fn article_emitter(
   fragment_type: FragmentType,
 ) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
 
-  let #(first_split, rest) = split_vxmls_to_first_section_and_rest(fragment)
+  let #(first_split, rest) = split_vxml_to_first_section_and_rest(fragment)
   let assert Article(payload) = fragment_type
 
   let lines =
@@ -142,31 +137,24 @@ fn article_emitter(
         BlamedLine(blame_us("article_emitter"), 0, "import ArticleTitle from \"~/components/ArticleTitle\";"),
 
         BlamedLine(blame_us("article_emitter"), 0, ""),
-        BlamedLine(
-          blame_us("article_emitter"),
-          0,
-          "export default function " <> payload <> "() {",
-        ),
+        BlamedLine(blame_us("article_emitter"), 0, "export default function " <> payload <> "() {"),
         BlamedLine(blame_us("article_emitter"), 2, "return <>"),
       ],
       vxml.vxml_to_jsx_blamed_lines(first_split, 4),
-      // first section loads immediatly
       [
-        BlamedLine(blame_us("article_emitter"), 2, "</>"),
+        BlamedLine(blame_us("article_emitter"), 2, "</>;"),
         BlamedLine(blame_us("article_emitter"), 0, "}"),
         BlamedLine(blame_us("article_emitter"), 0, ""),
         BlamedLine(blame_us("article_emitter"), 0, "const Rest = () => {"),
         BlamedLine(blame_us("article_emitter"), 2, "const showMore = useShowMore();"),
-        BlamedLine(blame_us("article_emitter"), 2, "return(<>"),
-        BlamedLine(blame_us("article_emitter"), 4, "{ showMore() && <>"),
+        BlamedLine(blame_us("article_emitter"), 2, "return <>"),
+        BlamedLine(blame_us("article_emitter"), 4, "{showMore() && <>"),
       ],
       vxml.vxmls_to_jsx_blamed_lines(rest, 6),
-      // first section loads immediatly
       [
-        BlamedLine(blame_us("article_emitter"), 0, "</> }"),
-        BlamedLine(blame_us("article_emitter"), 0, "</>);"),
+        BlamedLine(blame_us("article_emitter"), 4, "</>}"),
+        BlamedLine(blame_us("article_emitter"), 2, "</>;"),
         BlamedLine(blame_us("article_emitter"), 0, "};"),
-        BlamedLine(blame_us("article_emitter"), 0, ""),
       ],
     ])
 
