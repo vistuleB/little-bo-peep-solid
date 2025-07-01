@@ -26,7 +26,7 @@ export default function __Chapter1__() {
       next-page="/article/chapter2"
       page-necessary-margin={610}
       max-element-width={500}
-      id="_5_8825">
+      id="_5_3209">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -1452,7 +1452,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_4_6383">
+          <ExerciseStatement id="_4_9266">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2616,7 +2616,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_6383"
+                href="/article/chapter1?id=_4_9266"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>

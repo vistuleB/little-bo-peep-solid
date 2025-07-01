@@ -1,5 +1,5 @@
 import { MOBILE_MAX_WIDTH } from "~/constants";
-import { createContext, ParentComponent, useContext } from "solid-js";
+import { createContext, ParentComponent, ParentProps, useContext } from "solid-js";
 import { SetStoreFunction, createStore } from "solid-js/store";
 
 type ExerciseState = {
@@ -27,7 +27,7 @@ const StoreContext = createContext<{
 
 export const useExercisesContext = () => useContext(StoreContext)!;
 
-export const ExercisesStoreProvider: ParentComponent = (props) => {
+export const ExercisesStoreProvider: ParentComponent = (props: ParentProps) => {
   return (
     <StoreContext.Provider
       value={{

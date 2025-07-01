@@ -32,7 +32,7 @@ const HamburgerPanelItem = (props: ParentProps & {
             </div>
           </div>
           <div class="toc-item-title">
-            <span class="bg-slate-100">&lrm;&thinsp;{props.children}&lrm;</span>
+            <span class="bg-stone-100">&lrm;&thinsp;{props.children}&lrm;</span>
           </div>
         </div>
       </div>

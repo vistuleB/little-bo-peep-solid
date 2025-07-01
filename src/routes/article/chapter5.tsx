@@ -23,6 +23,7 @@ export default function __Chapter5__() {
   return <>
     <Article
       prev-page="/article/chapter4"
+      next-page=""
       page-necessary-margin={950}
       max-element-width={1000}>
       <SectionsBreadcrumbs>
@@ -1469,7 +1470,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_7917"
+            href="/article/chapter4?id=_24_333"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14634,7 +14635,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_25_2117">
+          <ExerciseStatement id="_25_3415">
             <VerticalChunk>
               <b>
                 Exercise 42.

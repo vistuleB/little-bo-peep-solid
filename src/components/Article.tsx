@@ -58,15 +58,7 @@ const Article = (props: ParentProps & ArticleProps) => {
   );
 };
 
-const ExercisesStoreConsumer = (
-  props: ParentProps & {
-    id?: string;
-    pageNecessaryMargin?: number;
-    maxElementWidth?: number;
-    nextPage?: string;
-    prevPage?: string;
-  },
-) => {
+const ExercisesStoreConsumer = (props: ParentProps) => {
   useCheckedSavedScroll();
   return <>{props.children}</>;
 };
