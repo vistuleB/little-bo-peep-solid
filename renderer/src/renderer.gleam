@@ -8,7 +8,7 @@ import gleam/option.{Some}
 import gleam/string.{inspect as ins}
 import gleam/dict
 import infrastructure as infra
-import pipeline
+import pipeline.{our_pipeline}
 import vxml.{type VXML, V}
 import vxml_renderer as vr
 import writerly as wp
@@ -173,6 +173,7 @@ fn toc_emitter(
         BlamedLine(blame_us("toc_emitter"), 0, "import TOCTitle from \"~/components/TOCTitle\";"),
         BlamedLine(blame_us("toc_emitter"), 0, "import TOCItem from \"~/components/TOCItem\";"),
         BlamedLine(blame_us("toc_emitter"), 0, "import { Spacer } from \"~/components/Spacer\";"),
+        BlamedLine(blame_us("toc_emitter"), 0, "import { Math } from \"~/components/Math\";"),
         BlamedLine(blame_us("toc_emitter"), 0, ""),
         BlamedLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
@@ -198,6 +199,7 @@ fn hpausc_emitter(
       [
         BlamedLine(blame_us("hpausc_emitter"), 0, "import HamburgerPanelTitle from \"./HamburgerPanelTitle\";"),
         BlamedLine(blame_us("hpausc_emitter"), 0, "import HamburgerPanelItem from \"./HamburgerPanelItem\";"),
+        BlamedLine(blame_us("hpausc_emitter"), 0, "import { Math } from \"./Math\";"),
         BlamedLine(blame_us("hpausc_emitter"), 0, ""),
         BlamedLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
         BlamedLine(blame_us("hpausc_emitter"), 2, "return <>"),
@@ -349,7 +351,7 @@ pub fn main() {
         _,
         amendments.spotlight_args,
       ),
-      pipeline: pipeline.lbp_pipeline(),
+      pipeline: our_pipeline(),
       splitter: our_splitter,
       emitter: our_emitter,
       prettifier: vr.guarded_prettier_prettifier(amendments.user_args),

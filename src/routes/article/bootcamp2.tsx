@@ -77,7 +77,7 @@ export default function __Bootcamp2__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle banner="Bootcamp 2:">
+      <ArticleTitle>
         Powers of 10
       </ArticleTitle>
       <Section id="section-1">
@@ -305,7 +305,7 @@ const Rest = () => {
           {" "}one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_1_4888">
+        <MathBlock id="_1_737">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -327,7 +327,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_4888"
+            href="/article/bootcamp2?id=_1_737"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -349,7 +349,7 @@ const Rest = () => {
           {" "}which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_4888"
+            href="/article/bootcamp2?id=_1_737"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -359,7 +359,7 @@ const Rest = () => {
           </Math>
           {" "}by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_4888"
+            href="/article/bootcamp2?id=_1_737"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -370,7 +370,7 @@ const Rest = () => {
             line={2} />
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_2_9131">
+        <MathBlock id="_2_8688">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -406,13 +406,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_9131"
+            href="/article/bootcamp2?id=_2_8688"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_9131"
+            href="/article/bootcamp2?id=_2_8688"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -426,7 +426,7 @@ const Rest = () => {
           </NoBreak>
           {" "}(So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_9131"
+            href="/article/bootcamp2?id=_2_8688"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -498,13 +498,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_4888"
+            href="/article/bootcamp2?id=_1_737"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_9131"
+            href="/article/bootcamp2?id=_2_8688"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -2915,7 +2915,7 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1_4888"
+                href="/article/bootcamp2?id=_1_737"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -2979,7 +2979,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_3_7241">
+          <ExerciseStatement id="_3_3079">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3263,7 +3263,7 @@ const Rest = () => {
               </Math>
               {" "}(as in{" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_7241"
+                href="/article/bootcamp2?id=_3_3079"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>

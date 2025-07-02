@@ -68,7 +68,7 @@ export default function __Bootcamp1__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle banner="Bootcamp 1:">
+      <ArticleTitle>
         Sets
       </ArticleTitle>
       <Section id="section-1">

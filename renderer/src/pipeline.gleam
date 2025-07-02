@@ -4,8 +4,12 @@ import infrastructure.{type Pipe} as infra
 import prefabricated_pipelines as pp
 import desugarer_names as dn
 
-pub fn lbp_pipeline() -> List(Pipe) {
+pub fn our_pipeline() -> List(Pipe) {
   [
+    [
+      dn.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
+      dn.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
+    ],
     // ****
     // create Math, MathBlock, then replace
     // escaped dollar signs with ordinary dollars
@@ -99,8 +103,6 @@ pub fn lbp_pipeline() -> List(Pipe) {
         #("CentralDisplay", "VerticalChunk"),
         #("CentralDisplayItalic", "VerticalChunk"),
       ]),
-      dn.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
-      dn.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
       dn.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
       dn.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
     ],

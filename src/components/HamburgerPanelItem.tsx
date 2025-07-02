@@ -31,15 +31,8 @@ const HamburgerPanelItem = (props: ParentProps & {
               </span>
             </div>
           </div>
-          <div
-            class="toc-item-title-outline"
-            style="--toc-label-stroke-color: oklch(97% 0.001 106.424)"
-            aria-hidden="true"
-          >
-            {props.children}
-          </div>
           <div class="toc-item-title">
-            <span>{props.children}</span>
+            <span class="bg-stone-100">&lrm;&thinsp;{props.children}&lrm;</span>
           </div>
         </div>
       </div>
