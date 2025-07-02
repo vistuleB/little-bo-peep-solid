@@ -22,11 +22,11 @@ import ArticleTitle from "~/components/ArticleTitle";
 export default function __Chapter1__() {
   return <>
     <Article
-      next-page="/article/chapter2"
       prev-page="/"
+      next-page="/article/chapter2"
       page-necessary-margin={610}
       max-element-width={500}
-      id="_5_9141">
+      id="_5_7254">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -1454,7 +1454,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_4_5122">
+          <ExerciseStatement id="_4_2589">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2618,7 +2618,7 @@ const Rest = () => {
               {" "}
               In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_5122"
+                href="/article/chapter1?id=_4_2589"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>

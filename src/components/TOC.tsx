@@ -1,9 +1,6 @@
-import useScrollX from "~/hooks/useScrollX";
-import { useGlobalContext } from "~/store/StoreProvider";
-import { onMount, ParentProps } from "solid-js";
-import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
-import useSetRoute from "~/hooks/useSetRoute";
+import { ParentProps } from "solid-js";
 import SectionsBreadcrumbs from "./SectionsBreadcrumbs";
+import Page from "./Page";
 
 const TOC = (
   props: ParentProps & {
@@ -11,38 +8,18 @@ const TOC = (
     "prev-page"?: string;
   },
 ) => {
-  let { set_store } = useGlobalContext();
-  useScrollX();
-  useCheckedSavedScroll();
-  useSetRoute();
-
-  // TOC sets pageNecessaryMargin to 0
-  set_store("pageNecessaryMargin", 0);
-
-  const resetDimensions = () => {
-    set_store(
-      "innerWidth",
-      document.documentElement.clientWidth || window.innerWidth,
-    );
-    set_store("innerHeight", window.innerHeight);
-    set_store("scrollWidth", document.body.scrollWidth);
-    set_store("scrollHeight", document.body.scrollHeight);
-    set_store("nextPage", props["next-page"] || "");
-    set_store("prevPage", props["prev-page"] || "");
-  };
-
-  onMount(() => resetDimensions());
-
   return (
-    <div>
-      <div
-        style="width:100vw"
-        class="mt-[3.3rem] mb-[2.3rem] sm:mb-[2.6rem] mx-auto">
-        <TitleSVG />
+    <Page nextPage={props["next-page"]} prevPage={props["prev-page"]}>
+      <div>
+        <div
+          style="width:100vw"
+          class="mt-[3.3rem] mb-[2.3rem] sm:mb-[2.6rem] mx-auto">
+          <TitleSVG />
+        </div>
+        <SectionsBreadcrumbs />
+        {props.children}
       </div>
-      <SectionsBreadcrumbs />
-      {props.children}
-    </div>
+    </Page>
   );
 };
 
