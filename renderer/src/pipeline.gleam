@@ -131,9 +131,9 @@ pub fn our_pipeline() -> List(Pipe) {
       dn.remove_text_nodes_with_singleton_empty_line(),
       dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
-      dn.remove_empty_chunks(),
+      dn.remove_empty_tags(["VerticalChunk"]),
       dn.identity(),
-      dn.unwrap_vertical_chunks_with_no_text_child(),
+      dn.unwrap_tags_with_no_text_child(["VerticalChunk"]),
       dn.unwrap_when_descendant_of([#("VerticalChunk", ["td", "li"])]),
       dn.rename_when_child_of([
         #("VerticalChunk", "Item", "List"),
