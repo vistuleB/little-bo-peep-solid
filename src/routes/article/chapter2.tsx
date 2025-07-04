@@ -24,7 +24,7 @@ export default function __Chapter2__() {
     <Article
       prev-page="/article/chapter1"
       next-page="/article/chapter3"
-      page-necessary-margin={1040}
+      page-necessary-margin={600}
       max-element-width={900}
       banner="Chapter 2:">
       <SectionsBreadcrumbs>
@@ -1696,7 +1696,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_2298">
+          <ExerciseStatement id="_6_7370">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2032,7 +2032,7 @@ const Rest = () => {
               {" "}
               As explained in {" "}
               <a
-                href="/article/chapter3?id=_15_4982"
+                href="/article/chapter3?id=_15_4401"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2141,7 +2141,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_2298"
+                href="/article/chapter2?id=_6_7370"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

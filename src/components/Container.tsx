@@ -34,6 +34,9 @@ const Container = (props: ParentProps) => {
   };
 
   const handleResize = () => {
+    let oldInnerWidth = store.innerWidth;
+    let oldScrollWidth = store.scrollWidth;
+
     set_store("innerWidth", document.documentElement.clientWidth || window.innerWidth);
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
@@ -45,19 +48,12 @@ const Container = (props: ParentProps) => {
       store.scrollHeight +
       store.scrollWidth;
 
-    if (!on_mobile()) {
+    if (oldInnerWidth != store.innerWidth || oldScrollWidth != store.scrollWidth) {
       window.scroll({
         left: (store.scrollWidth - store.innerWidth) / 2,
         behavior: "instant",
       });
     }
-  };
-
-  const handleOrientationChange = () => {
-    window.scroll({
-      left: (store.scrollWidth - store.innerWidth) / 2,
-      behavior: "instant",
-    });
   };
 
   createEffect(() => {
@@ -82,14 +78,12 @@ const Container = (props: ParentProps) => {
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-    window.addEventListener("orientationchange", handleOrientationChange);
     document.addEventListener("scrollend", scroll_back);
     document.addEventListener("touchend", scroll_back);
 
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("orientationchange", handleOrientationChange);
       document.removeEventListener("scrollend", scroll_back);
       document.removeEventListener("touchend", scroll_back);
     });
