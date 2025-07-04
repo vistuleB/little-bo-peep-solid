@@ -1,10 +1,8 @@
 import { ParentProps } from "solid-js";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
-const TOCItemNewStyle = (props: ParentProps & {
+const TOCItem = (props: ParentProps & {
   href: string;
-  // label: string;
-  // on_mobile?: string;
   article_type: any;
 }) => {
   return (
@@ -35,4 +33,4 @@ const TOCItemNewStyle = (props: ParentProps & {
   );
 };
 
-export default TOCItemNewStyle;
+export default TOCItem;

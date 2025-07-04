@@ -7,21 +7,31 @@ const HamburgerPanelAuthorSuppliedContents = () => {
     <div id="chapter">
       <HamburgerPanelTitle label="Chapters" />
       <ul>
-        <HamburgerPanelItem href="chapter1">
+        <HamburgerPanelItem
+          article_type={1}
+          href="chapter1">
           <Math>
             $n \ra n + 1$
           </Math>
         </HamburgerPanelItem>
-        <HamburgerPanelItem href="chapter2">
+        <HamburgerPanelItem
+          article_type={2}
+          href="chapter2">
           Slopes
         </HamburgerPanelItem>
-        <HamburgerPanelItem href="chapter3">
+        <HamburgerPanelItem
+          article_type={3}
+          href="chapter3">
           Functions
         </HamburgerPanelItem>
-        <HamburgerPanelItem href="chapter4">
+        <HamburgerPanelItem
+          article_type={4}
+          href="chapter4">
           Derivatives
         </HamburgerPanelItem>
-        <HamburgerPanelItem href="chapter5">
+        <HamburgerPanelItem
+          article_type={5}
+          href="chapter5">
           The Trigonometric Functions
         </HamburgerPanelItem>
       </ul>
@@ -29,10 +39,14 @@ const HamburgerPanelAuthorSuppliedContents = () => {
     <div id="bootcamp">
       <HamburgerPanelTitle label="Bootcamps" />
       <ul>
-        <HamburgerPanelItem href="bootcamp1">
+        <HamburgerPanelItem
+          article_type={1}
+          href="bootcamp1">
           Sets
         </HamburgerPanelItem>
-        <HamburgerPanelItem href="bootcamp2">
+        <HamburgerPanelItem
+          article_type={2}
+          href="bootcamp2">
           Powers of 10
         </HamburgerPanelItem>
       </ul>
