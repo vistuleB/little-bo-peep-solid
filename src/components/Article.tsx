@@ -6,19 +6,19 @@ import Page from "./Page";
 
 type ArticleProps = {
   id?: string;
-  "page-necessary-margin"?: number;
-  "max-element-width"?: number;
-  "next-page"?: string;
-  "prev-page"?: string;
+  pageNecessaryMargin?: number;
+  maxElementWidth?: number;
+  nextPage?: string;
+  prevPage?: string;
 };
 
 const Article = (props: ParentProps & ArticleProps) => {
   return (
     <Page
-      pageNecessaryMargin={props["page-necessary-margin"]}
-      maxElementWidth={props["max-element-width"]}
-      nextPage={props["next-page"]}
-      prevPage={props["prev-page"]}>
+      pageNecessaryMargin={props.pageNecessaryMargin}
+      maxElementWidth={props.maxElementWidth}
+      nextPage={props.nextPage}
+      prevPage={props.prevPage}>
       <ExercisesStoreProvider>
         <span id={props.id} class="id_span"></span>
         <ExercisesStoreConsumer>{props.children}</ExercisesStoreConsumer>

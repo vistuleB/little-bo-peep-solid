@@ -179,10 +179,6 @@ pub fn our_pipeline() -> List(Pipe) {
           "true",
         ),
       ]),
-      dn.rename_attributes([
-        #("margin-left", "marginLeft"),
-        #("margin-right", "marginRight"),
-      ]),
       // ************************
       // VerticalChunk indents
       // ************************
@@ -258,6 +254,7 @@ pub fn our_pipeline() -> List(Pipe) {
       // ************************
       dn.change_attribute_value([#("src", "/()")]),
       dn.remove_attributes(["counter", "handle", "type", "t", ".", "title", "test"]),
+      dn.rename_attributes_by_function(infra.kabob_case_to_camel_case),
     ]
   ]
   |> list.flatten

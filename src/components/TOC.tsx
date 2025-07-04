@@ -4,12 +4,12 @@ import Page from "./Page";
 
 const TOC = (
   props: ParentProps & {
-    "next-page"?: string;
-    "prev-page"?: string;
+    nextPage?: string;
+    prevPage?: string;
   },
 ) => {
   return (
-    <Page nextPage={props["next-page"]} prevPage={props["prev-page"]}>
+    <Page nextPage={props.nextPage} prevPage={props.prevPage}>
       <div>
         <div
           style="width:100vw"
