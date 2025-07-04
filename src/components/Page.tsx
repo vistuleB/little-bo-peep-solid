@@ -14,19 +14,16 @@ type PageProps = {
 const Page = (props: ParentProps & PageProps) => {
   let { set_store, store } = useGlobalContext();
 
-  useScrollX();
   useSetRoute();
   useBreadcrumbs();
+  useScrollX();    
 
   const resetDimensions = () => {
-    set_store(
-      "innerWidth",
-      document.documentElement.clientWidth || window.innerWidth,
-    );
+    set_store("innerWidth", document.documentElement.clientWidth || window.innerWidth, );
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
-
+    
     set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
     set_store("maxElementWidth", props.maxElementWidth || 0);
     set_store("nextPage", props.nextPage || "");
