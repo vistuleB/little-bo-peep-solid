@@ -17,10 +17,10 @@ export default function __Chapter1__() {
   return <>
     <Article
       prevPage="/"
-      nextPage="/article/chapter2"
+      nextPage=""
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_5_3177">
+      id="_2_5871">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -1446,7 +1446,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_4_3318">
+          <ExerciseStatement id="_1_1402">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2610,7 +2610,7 @@ const Rest = () => {
               {" "}
               In the solution to {" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_3318"
+                href="/article/chapter1?id=_1_1402"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>

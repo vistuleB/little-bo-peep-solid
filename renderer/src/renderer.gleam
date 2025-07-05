@@ -188,7 +188,8 @@ fn hpausc_emitter(
   let lines =
     list.flatten([
       component_imports,
-      [BlamedLine(blame_us("hpausc_emitter"), 0, ""),
+      [
+        BlamedLine(blame_us("hpausc_emitter"), 0, ""),
         BlamedLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
         BlamedLine(blame_us("hpausc_emitter"), 2, "return <>"),
       ],
@@ -312,7 +313,7 @@ pub fn main() {
     },
   )
 
-    use _ <- infra.on_error_on_ok(
+  use _ <- infra.on_error_on_ok(
     dict.get(amendments.user_args, "--delete-wly"),
     with_on_ok: fn(_) {
       delete_files(".wly", input_dir)
@@ -335,14 +336,8 @@ pub fn main() {
 
   let renderer =
     vr.Renderer(
-      assembler: wp.assemble_blamed_lines_advanced_mode(
-        _,
-        amendments.spotlight_args_files,
-      ),
-      source_parser: vr.default_writerly_source_parser(
-        _,
-        amendments.spotlight_args,
-      ),
+      assembler: wp.assemble_blamed_lines_advanced_mode(_, amendments.spotlight_args_files),
+      source_parser: vr.default_writerly_source_parser( _, amendments.spotlight_args),
       pipeline: our_pipeline(),
       splitter: our_splitter,
       emitter: fn(fragment) { our_emitter(fragment, imports_lookup) },

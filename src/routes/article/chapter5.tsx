@@ -1465,7 +1465,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_8486"
+            href="/article/chapter4?id=_24_2832"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14637,7 +14637,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_25_7959">
+          <ExerciseStatement id="_25_7379">
             <VerticalChunk>
               <b>
                 Exercise 42.
