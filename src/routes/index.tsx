@@ -1,14 +1,14 @@
-import TOC from "~/components/TOC";
-import TOCTitle from "~/components/TOCTitle";
-import TOCItem from "~/components/TOCItem";
-import { Spacer } from "~/components/Spacer";
-import { Math } from "~/components/Math";
+import { Math }  from "~/components/Math";
+import { Spacer }  from "~/components/Spacer";
+import TOC  from "~/components/TOC";
+import TOCItem  from "~/components/TOCItem";
+import TOCTitle  from "~/components/TOCTitle";
 
 export default function __Home__() {
   return (
     <TOC
-      prev-page="/article/bootcamp1"
-      next-page="/article/chapter1">
+      prevPage="/article/bootcamp1"
+      nextPage="/article/chapter1">
       <div id="chapter">
         <TOCTitle label="Chapters" />
         <ul>

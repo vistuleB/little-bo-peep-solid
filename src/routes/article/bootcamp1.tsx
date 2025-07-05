@@ -1,32 +1,21 @@
-import Article from "~/components/Article";
-import { Section, Note, SolutionNote, Example, NoBreak, Pause } from "~/components/Wrappers";
-import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
-import TextParent from "~/components/TextParent";
-import { Math, MathBlock } from "~/components/Math";
-import { ImageRight, ImageLeft } from "~/components/SideImage";
-import Image from "~/components/Image";
-import InlineImage from "~/components/InlineImage";
-import { Exercise, Exercises, ExerciseStatement } from "~/components/Exercises";
-import InChapterLink from "~/components/InChapterLink";
-import Solution from "~/components/Solution";
-import Table from "~/components/Table";
-import Grid from "~/components/Grid";
-import { List, Item } from "~/components/List";
-import { SectionDivider } from "~/components/SectionDivider";
-import { StarDivider } from "~/components/StarDivider";
-import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
+import Article  from "~/components/Article";
+import ArticleTitle  from "~/components/ArticleTitle";
+import { CentralDisplayItalic }  from "~/components/Delimiters";
+import InChapterLink  from "~/components/InChapterLink";
+import { Math, MathBlock }  from "~/components/Math";
+import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
+import { ImageRight }  from "~/components/SideImage";
+import VerticalChunk  from "~/components/VerticalChunk";
+import { Section, NoBreak, Pause }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
-import ArticleTitle from "~/components/ArticleTitle";
 
 export default function __Bootcamp1__() {
   return <>
     <Article
-      prev-page="/article/bootcamp2"
-      next-page="/"
-      page-necessary-margin={160}
-      max-element-width={800}
-      banner="Bootcamp 1:">
+      prevPage="/article/bootcamp2"
+      nextPage="/"
+      pageNecessaryMargin={160}
+      maxElementWidth={800}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -69,7 +58,7 @@ export default function __Bootcamp1__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle>
+      <ArticleTitle banner="Bootcamp 1:">
         Sets
       </ArticleTitle>
       <Section id="section-1">

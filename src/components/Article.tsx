@@ -18,7 +18,8 @@ const Article = (props: ParentProps & ArticleProps) => {
       pageNecessaryMargin={props.pageNecessaryMargin}
       maxElementWidth={props.maxElementWidth}
       nextPage={props.nextPage}
-      prevPage={props.prevPage}>
+      prevPage={props.prevPage}
+    >
       <ExercisesStoreProvider>
         <span id={props.id} class="id_span"></span>
         <ExercisesStoreConsumer>{props.children}</ExercisesStoreConsumer>

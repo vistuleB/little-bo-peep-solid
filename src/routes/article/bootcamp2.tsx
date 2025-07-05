@@ -1,32 +1,25 @@
-import Article from "~/components/Article";
-import { Section, Note, SolutionNote, Example, NoBreak, Pause } from "~/components/Wrappers";
-import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
-import TextParent from "~/components/TextParent";
-import { Math, MathBlock } from "~/components/Math";
-import { ImageRight, ImageLeft } from "~/components/SideImage";
-import Image from "~/components/Image";
-import InlineImage from "~/components/InlineImage";
-import { Exercise, Exercises, ExerciseStatement } from "~/components/Exercises";
-import InChapterLink from "~/components/InChapterLink";
-import Solution from "~/components/Solution";
-import Table from "~/components/Table";
-import Grid from "~/components/Grid";
-import { List, Item } from "~/components/List";
-import { SectionDivider } from "~/components/SectionDivider";
-import { StarDivider } from "~/components/StarDivider";
-import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
+import Article  from "~/components/Article";
+import ArticleTitle  from "~/components/ArticleTitle";
+import { CentralDisplayItalic }  from "~/components/Delimiters";
+import { Exercises, Exercise, ExerciseStatement }  from "~/components/Exercises";
+import Image  from "~/components/Image";
+import InChapterLink  from "~/components/InChapterLink";
+import { Math, MathBlock }  from "~/components/Math";
+import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
+import { ImageLeft, ImageRight }  from "~/components/SideImage";
+import Solution  from "~/components/Solution";
+import Table  from "~/components/Table";
+import VerticalChunk  from "~/components/VerticalChunk";
+import { Section, Pause, NoBreak, Example, SolutionNote }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
-import ArticleTitle from "~/components/ArticleTitle";
 
 export default function __Bootcamp2__() {
   return <>
     <Article
-      prev-page=""
-      next-page="/article/bootcamp1"
-      page-necessary-margin={270}
-      max-element-width={1200}
-      banner="Bootcamp 2:">
+      prevPage=""
+      nextPage="/article/bootcamp1"
+      pageNecessaryMargin={270}
+      maxElementWidth={1200}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -79,7 +72,7 @@ export default function __Bootcamp2__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle>
+      <ArticleTitle banner="Bootcamp 2:">
         Powers of 10
       </ArticleTitle>
       <Section id="section-1">
@@ -307,7 +300,7 @@ const Rest = () => {
           {" "} one also has
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_1_2877">
+        <MathBlock id="_1_80">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -329,7 +322,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_2877"
+            href="/article/bootcamp2?id=_1_80"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -351,7 +344,7 @@ const Rest = () => {
           {" "} which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_2877"
+            href="/article/bootcamp2?id=_1_80"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -361,7 +354,7 @@ const Rest = () => {
           </Math>
           {" "} by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_2877"
+            href="/article/bootcamp2?id=_1_80"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -372,7 +365,7 @@ const Rest = () => {
             line={2} />
         </VerticalChunk>
         <Pause />
-        <MathBlock id="_2_7600">
+        <MathBlock id="_2_9389">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -408,13 +401,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_7600"
+            href="/article/bootcamp2?id=_2_9389"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_7600"
+            href="/article/bootcamp2?id=_2_9389"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -428,7 +421,7 @@ const Rest = () => {
           </NoBreak>
           {" "} (So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_7600"
+            href="/article/bootcamp2?id=_2_9389"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -500,13 +493,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_2877"
+            href="/article/bootcamp2?id=_1_80"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_7600"
+            href="/article/bootcamp2?id=_2_9389"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -1704,8 +1697,8 @@ const Rest = () => {
         <Pause />
         <Table
           class="first-line"
-          margin-top="1em"
-          margin-bottom="1em">
+          marginTop="1em"
+          marginBottom="1em">
           <colgroup>
             <col width="120px" />
             <col width="120px" />
@@ -2917,7 +2910,7 @@ const Rest = () => {
             <VerticalChunk>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1_2877"
+                href="/article/bootcamp2?id=_1_80"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -2981,7 +2974,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_3_6763">
+          <ExerciseStatement id="_3_3941">
             <VerticalChunk>
               <b>
                 Exercise 14.
@@ -3265,7 +3258,7 @@ const Rest = () => {
               </Math>
               {" "} (as in {" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_6763"
+                href="/article/bootcamp2?id=_3_3941"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>

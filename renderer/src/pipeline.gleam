@@ -9,8 +9,6 @@ pub fn our_pipeline() -> List(Pipe) {
     [
       dn.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
       dn.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
-      dn.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
-      dn.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
     ],
     // ****
     // create Math, MathBlock, then replace
@@ -68,6 +66,8 @@ pub fn our_pipeline() -> List(Pipe) {
       dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
       dn.handles_substitute([]),
       dn.unwrap(["GrandWrapper"]),
+      dn.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
+      dn.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
     ],
     // ****
     // get rid of 'WriterlyBlankLine',
@@ -248,7 +248,6 @@ pub fn our_pipeline() -> List(Pipe) {
       dn.unwrap(["BreadcrumbTitle"]),
       // dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
       dn.unwrap(["DebugScope"]),
-
       // ************************
       // attribute cleanup
       // ************************

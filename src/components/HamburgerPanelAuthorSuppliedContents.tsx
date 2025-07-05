@@ -1,6 +1,6 @@
-import HamburgerPanelTitle from "./HamburgerPanelTitle";
-import HamburgerPanelItem from "./HamburgerPanelItem";
-import { Math } from "./Math";
+import HamburgerPanelItem  from "~/components/HamburgerPanelItem";
+import HamburgerPanelTitle  from "~/components/HamburgerPanelTitle";
+import { Math }  from "~/components/Math";
 
 const HamburgerPanelAuthorSuppliedContents = () => {
   return <>

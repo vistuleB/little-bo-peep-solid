@@ -1,32 +1,27 @@
-import Article from "~/components/Article";
-import { Section, Note, SolutionNote, Example, NoBreak, Pause } from "~/components/Wrappers";
-import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
-import TextParent from "~/components/TextParent";
-import { Math, MathBlock } from "~/components/Math";
-import { ImageRight, ImageLeft } from "~/components/SideImage";
-import Image from "~/components/Image";
-import InlineImage from "~/components/InlineImage";
-import { Exercise, Exercises, ExerciseStatement } from "~/components/Exercises";
-import InChapterLink from "~/components/InChapterLink";
-import Solution from "~/components/Solution";
-import Table from "~/components/Table";
-import Grid from "~/components/Grid";
-import { List, Item } from "~/components/List";
-import { SectionDivider } from "~/components/SectionDivider";
-import { StarDivider } from "~/components/StarDivider";
-import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
+import Article  from "~/components/Article";
+import ArticleTitle  from "~/components/ArticleTitle";
+import { CentralDisplayItalic, CentralDisplay }  from "~/components/Delimiters";
+import { Exercises, Exercise, ExerciseStatement }  from "~/components/Exercises";
+import Image  from "~/components/Image";
+import InChapterLink  from "~/components/InChapterLink";
+import InlineImage  from "~/components/InlineImage";
+import { Math, MathBlock }  from "~/components/Math";
+import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
+import { ImageRight, ImageLeft }  from "~/components/SideImage";
+import Solution  from "~/components/Solution";
+import { StarDivider }  from "~/components/StarDivider";
+import Table  from "~/components/Table";
+import VerticalChunk  from "~/components/VerticalChunk";
+import { Section, Pause, NoBreak, Example, SolutionNote }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
-import ArticleTitle from "~/components/ArticleTitle";
 
 export default function __Chapter2__() {
   return <>
     <Article
-      prev-page="/article/chapter1"
-      next-page="/article/chapter3"
-      page-necessary-margin={600}
-      max-element-width={900}
-      banner="Chapter 2:">
+      prevPage="/article/chapter1"
+      nextPage="/article/chapter3"
+      pageNecessaryMargin={610}
+      maxElementWidth={900}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -79,7 +74,7 @@ export default function __Chapter2__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle>
+      <ArticleTitle banner="Chapter 2:">
         Slopes
       </ArticleTitle>
       <Section id="section-1">
@@ -1696,7 +1691,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_7370">
+          <ExerciseStatement id="_6_5400">
             <VerticalChunk>
               <b>
                 Exercise 2.
@@ -2032,7 +2027,7 @@ const Rest = () => {
               {" "}
               As explained in {" "}
               <a
-                href="/article/chapter3?id=_15_4401"
+                href="/article/chapter3?id=_15_6048"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2141,7 +2136,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_7370"
+                href="/article/chapter2?id=_6_5400"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

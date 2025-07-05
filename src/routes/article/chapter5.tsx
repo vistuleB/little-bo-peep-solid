@@ -1,32 +1,26 @@
-import Article from "~/components/Article";
-import { Section, Note, SolutionNote, Example, NoBreak, Pause } from "~/components/Wrappers";
-import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
-import TextParent from "~/components/TextParent";
-import { Math, MathBlock } from "~/components/Math";
-import { ImageRight, ImageLeft } from "~/components/SideImage";
-import Image from "~/components/Image";
-import InlineImage from "~/components/InlineImage";
-import { Exercise, Exercises, ExerciseStatement } from "~/components/Exercises";
-import InChapterLink from "~/components/InChapterLink";
-import Solution from "~/components/Solution";
-import Table from "~/components/Table";
-import Grid from "~/components/Grid";
-import { List, Item } from "~/components/List";
-import { SectionDivider } from "~/components/SectionDivider";
-import { StarDivider } from "~/components/StarDivider";
-import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
+import Article  from "~/components/Article";
+import ArticleTitle  from "~/components/ArticleTitle";
+import { CentralDisplayItalic, CentralDisplay }  from "~/components/Delimiters";
+import { Exercises, Exercise, ExerciseStatement }  from "~/components/Exercises";
+import Image  from "~/components/Image";
+import InChapterLink  from "~/components/InChapterLink";
+import { Math, MathBlock }  from "~/components/Math";
+import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
+import { ImageLeft, ImageRight }  from "~/components/SideImage";
+import Solution  from "~/components/Solution";
+import { StarDivider }  from "~/components/StarDivider";
+import TextParent  from "~/components/TextParent";
+import VerticalChunk  from "~/components/VerticalChunk";
+import { NoBreak, Section, Pause, Example, SolutionNote }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
-import ArticleTitle from "~/components/ArticleTitle";
 
 export default function __Chapter5__() {
   return <>
     <Article
-      prev-page="/article/chapter4"
-      next-page=""
-      page-necessary-margin={950}
-      max-element-width={1000}
-      banner="Chapter 5:">
+      prevPage="/article/chapter4"
+      nextPage=""
+      pageNecessaryMargin={950}
+      maxElementWidth={1000}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -153,7 +147,7 @@ export default function __Chapter5__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle>
+      <ArticleTitle banner="Chapter 5:">
         The Trigonometric Functions
       </ArticleTitle>
       <Section id="section-1">
@@ -1471,7 +1465,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_7405"
+            href="/article/chapter4?id=_24_8486"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14643,7 +14637,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_25_8952">
+          <ExerciseStatement id="_25_7959">
             <VerticalChunk>
               <b>
                 Exercise 42.

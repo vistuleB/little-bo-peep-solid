@@ -1,32 +1,27 @@
-import Article from "~/components/Article";
-import { Section, Note, SolutionNote, Example, NoBreak, Pause } from "~/components/Wrappers";
-import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
-import TextParent from "~/components/TextParent";
-import { Math, MathBlock } from "~/components/Math";
-import { ImageRight, ImageLeft } from "~/components/SideImage";
-import Image from "~/components/Image";
-import InlineImage from "~/components/InlineImage";
-import { Exercise, Exercises, ExerciseStatement } from "~/components/Exercises";
-import InChapterLink from "~/components/InChapterLink";
-import Solution from "~/components/Solution";
-import Table from "~/components/Table";
-import Grid from "~/components/Grid";
-import { List, Item } from "~/components/List";
-import { SectionDivider } from "~/components/SectionDivider";
-import { StarDivider } from "~/components/StarDivider";
-import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
+import Article  from "~/components/Article";
+import ArticleTitle  from "~/components/ArticleTitle";
+import { CentralDisplayItalic, CentralDisplay }  from "~/components/Delimiters";
+import { Exercises, Exercise, ExerciseStatement }  from "~/components/Exercises";
+import Image  from "~/components/Image";
+import InChapterLink  from "~/components/InChapterLink";
+import InlineImage  from "~/components/InlineImage";
+import { MathBlock, Math }  from "~/components/Math";
+import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
+import { ImageRight, ImageLeft }  from "~/components/SideImage";
+import Solution  from "~/components/Solution";
+import { StarDivider }  from "~/components/StarDivider";
+import TextParent  from "~/components/TextParent";
+import VerticalChunk  from "~/components/VerticalChunk";
+import { Pause, Section, NoBreak, Example, SolutionNote }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
-import ArticleTitle from "~/components/ArticleTitle";
 
 export default function __Chapter4__() {
   return <>
     <Article
-      prev-page="/article/chapter3"
-      next-page="/article/chapter5"
-      page-necessary-margin={1450}
-      max-element-width={700}
-      banner="Chapter 4:">
+      prevPage="/article/chapter3"
+      nextPage="/article/chapter5"
+      pageNecessaryMargin={1450}
+      maxElementWidth={700}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -89,7 +84,7 @@ export default function __Chapter4__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle>
+      <ArticleTitle banner="Chapter 4:">
         Derivatives
       </ArticleTitle>
       <Pause />
@@ -1770,7 +1765,7 @@ const Rest = () => {
         <VerticalChunk>
           of functions already appear in {" "}
           <a
-            href="/article/chapter3?id=_13_5524"
+            href="/article/chapter3?id=_13_9134"
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1802,7 +1797,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_16_1576">
+          <ExerciseStatement id="_16_5960">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -1930,7 +1925,7 @@ const Rest = () => {
             <VerticalChunk>
               derivative of the graph in {" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_1576"
+                href="/article/chapter4?id=_16_5960"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -1975,7 +1970,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of {" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_1576"
+                href="/article/chapter4?id=_16_5960"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2514,7 +2509,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_17_6441">
+          <ExerciseStatement id="_17_324">
             <VerticalChunk>
               <b>
                 Exercise 8.
@@ -2696,7 +2691,7 @@ const Rest = () => {
               {" "} analogously to
               {" "}
               <InChapterLink
-                href="/article/chapter4?id=_17_6441"
+                href="/article/chapter4?id=_17_324"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -2966,7 +2961,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_18_2146">
+          <ExerciseStatement id="_18_5485">
             <VerticalChunk>
               <b>
                 Exercise 10.
@@ -4311,7 +4306,7 @@ const Rest = () => {
               {" "} compute?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_19_7138">
+          <Solution id="_19_4003">
             <VerticalChunk>
               It computes
               the amount earned by the rat as a function of time. In
@@ -5687,7 +5682,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_20_747">
+            <SolutionNote id="_20_6521">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -6091,7 +6086,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see {" "}
               <InChapterLink
-                href="/article/chapter4?id=_21_8098"
+                href="/article/chapter4?id=_21_9300"
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6268,7 +6263,7 @@ const Rest = () => {
               {" "} no matter how far back in time you look.)
             </VerticalChunk>
             <Pause />
-            <SolutionNote id="_21_8098">
+            <SolutionNote id="_21_9300">
               <VerticalChunk>
                 <i>
                   Note 1.
@@ -8773,7 +8768,7 @@ const Rest = () => {
               ...?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_22_4177">
+          <Solution id="_22_5914">
             <VerticalChunk>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9001,7 +8996,7 @@ const Rest = () => {
                 children_x="50%"
                 children_y="2em">
                 <VerticalChunk>
-                  <span font-size="1.4em">
+                  <span fontSize="1.4em">
                     Fig. 1
                   </span>
                 </VerticalChunk>
@@ -9947,7 +9942,7 @@ const Rest = () => {
               the expression, if any.
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_23_2433">
+          <Solution id="_23_8334">
             <VerticalChunk>
               This version pictures all the elements
               that appear in the fraction:
@@ -10550,7 +10545,7 @@ const Rest = () => {
               {" "} (cf.
               Exercise 16 {" "}
               <InChapterLink
-                href="/article/chapter4?id=_19_7138"
+                href="/article/chapter4?id=_19_4003"
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -11242,7 +11237,7 @@ const Rest = () => {
               to this point?
             </VerticalChunk>
           </ExerciseStatement>
-          <Solution id="_24_7405">
+          <Solution id="_24_8486">
             <VerticalChunk>
               That would be the fact that
             </VerticalChunk>

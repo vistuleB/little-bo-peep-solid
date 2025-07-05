@@ -1,33 +1,26 @@
-import Article from "~/components/Article";
-import { Section, Note, SolutionNote, Example, NoBreak, Pause } from "~/components/Wrappers";
-import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
-import TextParent from "~/components/TextParent";
-import { Math, MathBlock } from "~/components/Math";
-import { ImageRight, ImageLeft } from "~/components/SideImage";
-import Image from "~/components/Image";
-import InlineImage from "~/components/InlineImage";
-import { Exercise, Exercises, ExerciseStatement } from "~/components/Exercises";
-import InChapterLink from "~/components/InChapterLink";
-import Solution from "~/components/Solution";
-import Table from "~/components/Table";
-import Grid from "~/components/Grid";
-import { List, Item } from "~/components/List";
-import { SectionDivider } from "~/components/SectionDivider";
-import { StarDivider } from "~/components/StarDivider";
-import VerticalChunk from "~/components/VerticalChunk";
-import SectionsBreadcrumbs, { BreadcrumbItem } from "~/components/SectionsBreadcrumbs";
+import Article  from "~/components/Article";
+import ArticleTitle  from "~/components/ArticleTitle";
+import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
+import { Exercises, Exercise, ExerciseStatement }  from "~/components/Exercises";
+import Grid  from "~/components/Grid";
+import InChapterLink  from "~/components/InChapterLink";
+import { List, Item }  from "~/components/List";
+import { Math, MathBlock }  from "~/components/Math";
+import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
+import { ImageRight, ImageLeft }  from "~/components/SideImage";
+import Solution  from "~/components/Solution";
+import VerticalChunk  from "~/components/VerticalChunk";
+import { Section, Pause, NoBreak, Example }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
-import ArticleTitle from "~/components/ArticleTitle";
 
 export default function __Chapter1__() {
   return <>
     <Article
-      prev-page="/"
-      next-page="/article/chapter2"
-      page-necessary-margin={800}
-      max-element-width={500}
-      banner="Chapter 1:"
-      id="_5_6126">
+      prevPage="/"
+      nextPage="/article/chapter2"
+      pageNecessaryMargin={800}
+      maxElementWidth={500}
+      id="_5_3177">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -60,7 +53,7 @@ export default function __Chapter1__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle>
+      <ArticleTitle banner="Chapter 1:">
         <Math>
           $n \ra n + 1$
         </Math>
@@ -1453,7 +1446,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_4_4251">
+          <ExerciseStatement id="_4_3318">
             <VerticalChunk>
               <b>
                 Exercise 1.
@@ -2617,7 +2610,7 @@ const Rest = () => {
               {" "}
               In the solution to {" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_4251"
+                href="/article/chapter1?id=_4_3318"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
