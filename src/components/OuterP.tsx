@@ -4,9 +4,7 @@ import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "../store/StoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
-const VerticalChunk = (
-  props: ParentProps & SharedProps,
-) => {
+const OuterP = (props: ParentProps & SharedProps) => {
   const { store } = useGlobalContext();
 
   return (
@@ -22,4 +20,4 @@ const VerticalChunk = (
   );
 };
 
-export default VerticalChunk;
+export default OuterP;

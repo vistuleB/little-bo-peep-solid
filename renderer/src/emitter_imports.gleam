@@ -41,7 +41,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("TOC", ExportedByFile(Some("TOC"), [])),
     #("TOCItem", ExportedByFile(Some("TOCItem"), [])),
     #("TOCTitle", ExportedByFile(Some("TOCTitle"), [])),
-    #("VerticalChunk", ExportedByFile(Some("VerticalChunk"), [])),
+    #("OuterP", ExportedByFile(Some("OuterP"), [])),
     #("Wrappers", ExportedByFile(None, ["Section", "Note", "SolutionNote", "Example", "NoBreak", "Pause", "WriterlyBlankLine"])),
   ])
 }

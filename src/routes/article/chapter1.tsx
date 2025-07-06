@@ -4,12 +4,12 @@ import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
 import { Exercises, Exercise, ExerciseStatement }  from "~/components/Exercises";
 import Grid  from "~/components/Grid";
 import InChapterLink  from "~/components/InChapterLink";
-import { List, Item }  from "~/components/List";
+import { List }  from "~/components/List";
 import { Math, MathBlock }  from "~/components/Math";
+import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
-import VerticalChunk  from "~/components/VerticalChunk";
 import { Section, Pause, NoBreak, Example }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
@@ -17,10 +17,10 @@ export default function __Chapter1__() {
   return <>
     <Article
       prevPage="/"
-      nextPage=""
+      nextPage="/article/chapter2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_2_5871">
+      id="_5_6746">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -59,7 +59,7 @@ export default function __Chapter1__() {
         </Math>
       </ArticleTitle>
       <Section id="section-1">
-        <VerticalChunk>
+        <OuterP>
           <b>
             Square Roots.
           </b>
@@ -69,7 +69,7 @@ export default function __Chapter1__() {
           (Why? The enemy of my enemy is my friend.)
           So any nonzero number multiplied by itself
           is positive. For example,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -87,18 +87,18 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          are both positive. But {" "}
+        <OuterP>
+          are both positive. But{" "}
           <Math>
             $\sqrt&#123;4&#125;$
           </Math>
-          {" "} is, by
-          definition, the unique {" "}
+          {" "}is, by
+          definition, the unique{" "}
           <i>
             nonnegative
           </i>
           {" "}
-          solution to {" "}
+          solution to{" "}
           <NoBreak>
             <Math>
               $x^2 = 4$
@@ -107,7 +107,7 @@ export default function __Chapter1__() {
           </NoBreak>
           {" "}
           Hence,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$\sqrt&#123;(-2)^2&#125; = 2$$
@@ -118,13 +118,13 @@ export default function __Chapter1__() {
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          and, in particular, it is {" "}
+        <OuterP>
+          and, in particular, it is{" "}
           <i>
             not
           </i>
-          {" "} true that
-        </VerticalChunk>
+          {" "}true that
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -132,16 +132,16 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          for every real number {" "}
+        <OuterP>
+          for every real number{" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             .
           </NoBreak>
-          {" "} Instead we have
-        </VerticalChunk>
+          {" "}Instead we have
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -149,35 +149,35 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          for every real number {" "}
+        <OuterP>
+          for every real number{" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             ,
           </NoBreak>
-          {" "} where {" "}
+          {" "}where{" "}
           <Math>
             $|x|$
           </Math>
           {" "}
-          denotes the absolute value of {" "}
+          denotes the absolute value of{" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             .
           </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
+        </OuterP>
+        <OuterP class="indent-10">
           (Nb: If ever you want to indicate both
-          solutions of the equation {" "}
+          solutions of the equation{" "}
           <Math>
             $x^2 = 4$
           </Math>
-          {" "} you
-          can always use the notation {" "}
+          {" "}you
+          can always use the notation{" "}
           <NoBreak>
             “
             <Math>
@@ -188,7 +188,7 @@ export default function __Chapter1__() {
           {" "}
           This is what happens, for example, in the
           maybe-well-known formula
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -196,7 +196,7 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           for the solutions to the quadratic equation
           {" "}
           <NoBreak>
@@ -205,10 +205,10 @@ export default function __Chapter1__() {
             </Math>
             .)
           </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
+        </OuterP>
+        <OuterP class="indent-10">
           Next, we will ponder
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -216,10 +216,10 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           whose value is—by definition—the unique
           nonnegative solution to
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -227,19 +227,19 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           As beginners, there's nothing wrong with
           trying to solve this equation by trial and
-          error. With {" "}
+          error. With{" "}
           <NoBreak>
             <Math>
               $x = &#123;1\over 4&#125;$
             </Math>
             ,
           </NoBreak>
-          {" "} for example,
+          {" "}for example,
           we find
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -247,27 +247,27 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          so {" "}
+        <OuterP>
+          so{" "}
           <Math>
             $x = &#123;1\over 4&#125;$
           </Math>
-          {" "} is not a solution of
+          {" "}is not a solution of
           the equation, being apparently too small.
-          Increasing {" "}
+          Increasing{" "}
           <Math>
             $x$
           </Math>
-          {" "} to {" "}
+          {" "}to{" "}
           <NoBreak>
             <Math>
               $x = &#123;1\over 2&#125;$
             </Math>
             ,
           </NoBreak>
-          {" "} say, we
+          {" "}say, we
           find
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -275,12 +275,12 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          which is better, since {" "}
+        <OuterP>
+          which is better, since{" "}
           <Math>
             $1/4$
           </Math>
-          {" "} is closer to {" "}
+          {" "}is closer to{" "}
           <NoBreak>
             <Math>
               $1/2$
@@ -288,24 +288,24 @@ export default function __Chapter1__() {
             ,
           </NoBreak>
           {" "}
-          but still too small. Increasing {" "}
+          but still too small. Increasing{" "}
           <Math>
             $x$
           </Math>
-          {" "} by {" "}
+          {" "}by{" "}
           <Math>
             $1/4$
           </Math>
           {" "}
-          again, say, to {" "}
+          again, say, to{" "}
           <NoBreak>
             <Math>
               $x = &#123;3\over 4&#125;$
             </Math>
             ,
           </NoBreak>
-          {" "} we find
-        </VerticalChunk>
+          {" "}we find
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -313,7 +313,7 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           which—surprise!—is actually pretty close to
           {" "}
           <NoBreak>
@@ -322,14 +322,14 @@ export default function __Chapter1__() {
             </Math>
             ,
           </NoBreak>
-          {" "} as {" "}
+          {" "}as{" "}
           <NoBreak>
             <Math>
               $1/2 = 8/16$
             </Math>
             .
           </NoBreak>
-          {" "} And since {" "}
+          {" "}And since{" "}
           <NoBreak>
             <Math>
               $9/16 &gt; 0.5$
@@ -341,11 +341,11 @@ export default function __Chapter1__() {
           <Math>
             $\sqrt&#123;0.5&#125;$
           </Math>
-          {" "} must be a little {" "}
+          {" "}must be a little{" "}
           <i>
             less
           </i>
-          {" "} than
+          {" "}than
           {" "}
           <NoBreak>
             <Math>
@@ -353,12 +353,12 @@ export default function __Chapter1__() {
             </Math>
             .
           </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
+        </OuterP>
+        <OuterP class="indent-10">
           In last resort, and in reasonably good
           agreement with our observations, a calculator
           reveals that
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -366,34 +366,34 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           where the decimals trail off with no pattern.
           (This number is irrational.) Even so, the fact
-          that {" "}
+          that{" "}
           <Math>
             $\sqrt&#123;0.5&#125;$
           </Math>
-          {" "} is {" "}
+          {" "}is{" "}
           <i>
             greater
           </i>
-          {" "} than {" "}
+          {" "}than{" "}
           <Math>
             $0.5$
           </Math>
-          {" "} is
+          {" "}is
           often perceived as counterintuitive.
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
+        </OuterP>
+        <OuterP class="indent-10">
           You can think of it this way: multiplying a
-          value by {" "}
+          value by{" "}
           <NoBreak>
             <Math>
               $0.7071$
             </Math>
             ,
           </NoBreak>
-          {" "} or approximately {" "}
+          {" "}or approximately{" "}
           <NoBreak>
             <Math>
               $\sqrt&#123;0.5&#125;$
@@ -401,13 +401,13 @@ export default function __Chapter1__() {
             ,
           </NoBreak>
           {" "}
-          is like taking {" "}
+          is like taking{" "}
           <Math>
             $70.71\%$
           </Math>
-          {" "} of that value—for
+          {" "}of that value—for
           example, say,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -415,28 +415,28 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          is {" "}
+        <OuterP>
+          is{" "}
           <Math>
             $70.71\%$
           </Math>
-          {" "} of {" "}
+          {" "}of{" "}
           <NoBreak>
             <Math>
               $605$
             </Math>
             ,
           </NoBreak>
-          {" "} and so on—so if we
-          multiply {" "}
+          {" "}and so on—so if we
+          multiply{" "}
           <i>
             twice
           </i>
-          {" "} by {" "}
+          {" "}by{" "}
           <Math>
             $0.7071$
           </Math>
-          {" "} we obtain
+          {" "}we obtain
           {" "}
           <NoBreak>
             “
@@ -444,29 +444,29 @@ export default function __Chapter1__() {
               $70.71\%$
             </Math>
           </NoBreak>
-          {" "} of {" "}
+          {" "}of{" "}
           <NoBreak>
             <Math>
               $70.71\%$
             </Math>
             ”
           </NoBreak>
-          {" "} and it just so happens
-          that {" "}
+          {" "}and it just so happens
+          that{" "}
           <NoBreak>
             “
             <Math>
               $70.71\%$
             </Math>
           </NoBreak>
-          {" "} of {" "}
+          {" "}of{" "}
           <NoBreak>
             <Math>
               $70.71\%$
             </Math>
             ”
           </NoBreak>
-          {" "} is close to
+          {" "}is close to
           {" "}
           <NoBreak>
             <Math>
@@ -474,23 +474,23 @@ export default function __Chapter1__() {
             </Math>
             .
           </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          The point is: if {" "}
+        </OuterP>
+        <OuterP class="indent-10">
+          The point is: if{" "}
           <NoBreak>
             “
             <Math>
               $X\%$
             </Math>
           </NoBreak>
-          {" "} of {" "}
+          {" "}of{" "}
           <NoBreak>
             <Math>
               $X\%$
             </Math>
             ”
           </NoBreak>
-          {" "} equals {" "}
+          {" "}equals{" "}
           <NoBreak>
             <Math>
               $50\%$
@@ -498,23 +498,23 @@ export default function __Chapter1__() {
             ,
           </NoBreak>
           {" "}
-          then, of course, {" "}
+          then, of course,{" "}
           <NoBreak>
             <Math>
               $\rt&#123;0.03&#125;X &gt; 50$
             </Math>
             —that
           </NoBreak>
-          {" "} much
+          {" "}much
           seems logical—and, with a little thought, the
-          same phenomenon explains why {" "}
+          same phenomenon explains why{" "}
           <NoBreak>
             <Math>
               $\sqrt&#123;0.5&#125; &gt; 0.5$
             </Math>
             !
           </NoBreak>
-        </VerticalChunk>
+        </OuterP>
       </Section>
       <Rest />
     </Article>
@@ -527,13 +527,13 @@ const Rest = () => {
     {showMore() && <>
       <Pause />
       <Section id="section-2">
-        <VerticalChunk>
+        <OuterP>
           <b>
             Fractions and Division.
           </b>
           {" "}
           An elementary fraction, or division, such as
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -541,49 +541,49 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           can be thought of in a few different ways:
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <List>
-          <Item>
-            Fifty halves (i.e., {" "}
+          <p>
+            Fifty halves (i.e.,{" "}
             <NoBreak>
               <Math>
                 $50 \times &#123;1\over 2&#125;$
               </Math>
               ).
             </NoBreak>
-          </Item>
-          <Item>
+          </p>
+          <p>
             The size obtained when something of size
             fifty is divided into two equal parts
-            (answer: {" "}
+            (answer:{" "}
             <NoBreak>
               <Math>
                 $25$
               </Math>
               ).
             </NoBreak>
-          </Item>
-          <Item>
-            The number of times that {" "}
+          </p>
+          <p>
+            The number of times that{" "}
             <Math>
               $2$
             </Math>
-            {" "} goes into {" "}
+            {" "}goes into{" "}
             <Math>
               $50$
             </Math>
             {" "}
-            (answer: {" "}
+            (answer:{" "}
             <NoBreak>
               <Math>
                 $25$
               </Math>
               ,
             </NoBreak>
-            {" "} because it takes twenty-five
+            {" "}because it takes twenty-five
             {" "}
             <NoBreak>
               <Math>
@@ -591,25 +591,25 @@ const Rest = () => {
               </Math>
               's
             </NoBreak>
-            {" "} to make up {" "}
+            {" "}to make up{" "}
             <NoBreak>
               <Math>
                 $50$
               </Math>
               ).
             </NoBreak>
-          </Item>
+          </p>
         </List>
         <Pause />
-        <VerticalChunk>
-          But {" "}
+        <OuterP>
+          But{" "}
           <Math>
             $50/2$
           </Math>
-          {" "} is a ratio of integers, which makes
+          {" "}is a ratio of integers, which makes
           things particularly nice! For a ratio of
           decimals, such as, say,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -617,7 +617,7 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           our possible points of view are going to be
           more restricted. Thankfully, however, we can
           still characterize this fraction as the
@@ -626,16 +626,16 @@ const Rest = () => {
           <Math>
             $0.01$
           </Math>
-          {" "} go into {" "}
+          {" "}go into{" "}
           <NoBreak>
             <Math>
               $1$
             </Math>
             ?”
           </NoBreak>
-          {" "} as in the third option
+          {" "}as in the third option
           above. And, indeed,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -643,25 +643,25 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          because {" "}
+        <OuterP>
+          because{" "}
           <Math>
             $0.01$
           </Math>
-          {" "} goes {" "}
+          {" "}goes{" "}
           <Math>
             $100$
           </Math>
-          {" "} times into {" "}
+          {" "}times into{" "}
           <NoBreak>
             <Math>
               $1$
             </Math>
             .
           </NoBreak>
-          {" "} For
+          {" "}For
           that matter,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -669,33 +669,33 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           by the same reasoning, which explains why
           dividing by smaller and smaller numbers produces
           larger and larger results (and, by extension,
-          why dividing by {" "}
+          why dividing by{" "}
           <Math>
             $0$
           </Math>
-          {" "} is undefined).
-        </VerticalChunk>
+          {" "}is undefined).
+        </OuterP>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           <b>
             Note.
           </b>
-          {" "} In general, the ratio of two decimal
+          {" "}In general, the ratio of two decimal
           numbers can be turned into a ratio of integers
           by multiplying the ratio top and bottom by a
-          suitable power of {" "}
+          suitable power of{" "}
           <NoBreak>
             <Math>
               $10$
             </Math>
             .
           </NoBreak>
-          {" "} E.g.:
-        </VerticalChunk>
+          {" "}E.g.:
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -703,15 +703,15 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           This example was chosen randomly, and, if you
-          allow, we would like to see how large {" "}
+          allow, we would like to see how large{" "}
           <Math>
             $71/40$
           </Math>
           {" "}
           really is (one second!):
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -723,29 +723,29 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          ...so we find, among others, that {" "}
+        <OuterP>
+          ...so we find, among others, that{" "}
           <Math>
             $71$
           </Math>
-          {" "} is exactly
+          {" "}is exactly
           {" "}
           <Math>
             $77.5\%$
           </Math>
-          {" "} greater than {" "}
+          {" "}greater than{" "}
           <NoBreak>
             <Math>
               $40$
             </Math>
             .
           </NoBreak>
-          {" "} (Interesting, no?)
-        </VerticalChunk>
+          {" "}(Interesting, no?)
+        </OuterP>
       </Section>
       <Pause />
       <Section id="section-3">
-        <VerticalChunk>
+        <OuterP>
           <b>
             Distributivity.
           </b>
@@ -753,7 +753,7 @@ const Rest = () => {
           As you might already know, a number that
           multiplies a sum can be brought “inside” the
           sum. For example,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -761,9 +761,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           (five times twelve equals fifty plus ten), or
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -771,21 +771,21 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           more generally. This property is known as the
           {" "}
           <i>
             distributivity of multiplication over addition
           </i>
           ,
-          or {" "}
+          or{" "}
           <i>
             distributivity
           </i>
-          {" "} for short.
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          (We might finally clarify that {" "}
+          {" "}for short.
+        </OuterP>
+        <OuterP class="indent-10">
+          (We might finally clarify that{" "}
           <NoBreak>
             ‘
             <Math>
@@ -793,8 +793,8 @@ const Rest = () => {
             </Math>
             ’
           </NoBreak>
-          {" "} means
-          “times”, i.e., the same as {" "}
+          {" "}means
+          “times”, i.e., the same as{" "}
           <NoBreak>
             ‘
             <Math>
@@ -802,9 +802,9 @@ const Rest = () => {
             </Math>
             ’.
           </NoBreak>
-          {" "} Moreover,
+          {" "}Moreover,
           when we write
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -812,9 +812,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           we really mean
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -822,9 +822,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           as opposed to something else, such as
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -832,14 +832,14 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           because multiplication takes precedence over
           addition, by default.)
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
+        </OuterP>
+        <OuterP class="indent-10">
           A little more generally, one has such identities
           as
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -852,11 +852,11 @@ const Rest = () => {
             compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           that come from multiplying every term of the first
           parenthesis with every term of the second
           parenthesis. Indeed,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -864,9 +864,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           by one application of distributivity, while
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -880,18 +880,18 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           by distributivity again.
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <Example>
-          <VerticalChunk>
+          <OuterP>
             <b>
               Example 1.
             </b>
             {" "}
             One has
-          </VerticalChunk>
+          </OuterP>
           <Pause />
           <MathBlock>
             $$
@@ -903,25 +903,25 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          <VerticalChunk>
-            so {" "}
+          <OuterP>
+            so{" "}
             <NoBreak>
               <Math>
                 $12 \times 14 = 168$
               </Math>
               .
             </NoBreak>
-          </VerticalChunk>
+          </OuterP>
         </Example>
         <Pause />
         <Example>
-          <VerticalChunk>
+          <OuterP>
             <b>
               Example 2.
             </b>
             {" "}
             One has
-          </VerticalChunk>
+          </OuterP>
           <Pause />
           <MathBlock>
             $$
@@ -933,33 +933,33 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          <VerticalChunk>
-            so {" "}
+          <OuterP>
+            so{" "}
             <NoBreak>
               <Math>
                 $13 \times 13 = 169$
               </Math>
               .
             </NoBreak>
-          </VerticalChunk>
+          </OuterP>
         </Example>
         <Pause />
-        <VerticalChunk>
-          (The fact that {" "}
+        <OuterP>
+          (The fact that{" "}
           <Math>
             $13 \times 13$
           </Math>
-          {" "} is exactly one
-          greater than {" "}
+          {" "}is exactly one
+          greater than{" "}
           <Math>
             $12 \times 14$
           </Math>
-          {" "} is a bit curious
+          {" "}is a bit curious
           indeed.)
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
+        </OuterP>
+        <OuterP class="indent-10">
           If we start from the afore-mentioned identity
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -967,23 +967,23 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          and set {" "}
+        <OuterP>
+          and set{" "}
           <NoBreak>
             <Math>
               $C = a$
             </Math>
             ,
           </NoBreak>
-          {" "} {" "}
+          {" "}{" "}
           <NoBreak>
             <Math>
               $D = b$
             </Math>
             ,
           </NoBreak>
-          {" "} we find
-        </VerticalChunk>
+          {" "}we find
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -991,9 +991,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           or, equivalently,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1001,44 +1001,44 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          since {" "}
+        <OuterP>
+          since{" "}
           <NoBreak>
             <Math>
               $(a + b)(a + b) = (a + b)^2$
             </Math>
             ,
           </NoBreak>
-          {" "} {" "}
+          {" "}{" "}
           <Math>
             $aa = a^2$
           </Math>
           {" "}
-          and {" "}
+          and{" "}
           <NoBreak>
             <Math>
               $bb = b^2$
             </Math>
             .
           </NoBreak>
-          {" "} (This is the {" "}
+          {" "}(This is the{" "}
           <i>
             binomial expansion
             of degree two
           </i>
           , but such terminology is not very
           important at this stage.)
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <Example>
-          <VerticalChunk>
+          <OuterP>
             <b>
               Example 3.
             </b>
             {" "}
             By the last formula (or “binomial expansion
             of degree two”),
-          </VerticalChunk>
+          </OuterP>
           <Pause />
           <MathBlock>
             $$
@@ -1050,25 +1050,25 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          <VerticalChunk>
+          <OuterP>
             which agrees with Example 2.
-          </VerticalChunk>
+          </OuterP>
         </Example>
         <Pause />
-        <VerticalChunk>
-          On the other hand, setting {" "}
+        <OuterP>
+          On the other hand, setting{" "}
           <NoBreak>
             <Math>
               $C = a$
             </Math>
             ,
           </NoBreak>
-          {" "} {" "}
+          {" "}{" "}
           <Math>
             $D = -b$
           </Math>
-          {" "} in
-        </VerticalChunk>
+          {" "}in
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1076,9 +1076,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           gives
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1086,9 +1086,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           or, less pedantically,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1096,9 +1096,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           or
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1106,30 +1106,30 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          since {" "}
+        <OuterP>
+          since{" "}
           <NoBreak>
             <Math>
               $- ab + ba = 0$
             </Math>
             ,
           </NoBreak>
-          {" "} {" "}
+          {" "}{" "}
           <NoBreak>
             <Math>
               $aa = a^2$
             </Math>
             ,
           </NoBreak>
-          {" "} {" "}
+          {" "}{" "}
           <NoBreak>
             <Math>
               $bb = b^2$
             </Math>
             .
           </NoBreak>
-          {" "} Note that
-        </VerticalChunk>
+          {" "}Note that
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1137,39 +1137,39 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           is
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <CentralDisplayItalic>
           a difference of squares
         </CentralDisplayItalic>
         <Pause />
-        <VerticalChunk>
-          whence {" "}
+        <OuterP>
+          whence{" "}
           <i>
             a difference of squares can always be
             factored
           </i>
-          . (Factored as {" "}
+          . (Factored as{" "}
           <NoBreak>
             <Math>
               $(a + b)(a - b)$
             </Math>
             ,
           </NoBreak>
-          {" "} that
+          {" "}that
           is.) (PS: “Factored” means “written as a product”.)
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <Example>
-          <VerticalChunk>
+          <OuterP>
             <b>
               Example 4.
             </b>
             {" "}
             Since
-          </VerticalChunk>
+          </OuterP>
           <Pause />
           <MathBlock>
             $$
@@ -1177,29 +1177,29 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          <VerticalChunk>
-            is a difference of squares, {" "}
+          <OuterP>
+            is a difference of squares,{" "}
             <Math>
               $19$
             </Math>
-            {" "} can be
-            factored. (On the other hand {" "}
+            {" "}can be
+            factored. (On the other hand{" "}
             <Math>
               $19$
             </Math>
-            {" "} is a prime
+            {" "}is a prime
             number, but nevermind.)
-          </VerticalChunk>
+          </OuterP>
         </Example>
         <Pause />
         <Example>
-          <VerticalChunk>
+          <OuterP>
             <b>
               Example 5.
             </b>
             {" "}
             The algebraic expression
-          </VerticalChunk>
+          </OuterP>
           <Pause />
           <MathBlock>
             $$
@@ -1207,9 +1207,9 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          <VerticalChunk>
+          <OuterP>
             can be factored, because
-          </VerticalChunk>
+          </OuterP>
           <Pause />
           <MathBlock>
             $$
@@ -1217,9 +1217,9 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          <VerticalChunk>
+          <OuterP>
             implies that
-          </VerticalChunk>
+          </OuterP>
           <Pause />
           <MathBlock>
             $$
@@ -1227,9 +1227,9 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          <VerticalChunk>
+          <OuterP>
             truly is “a difference of squares”. And, indeed,
-          </VerticalChunk>
+          </OuterP>
           <Pause />
           <MathBlock>
             $$
@@ -1237,8 +1237,8 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          <VerticalChunk>
-            as per {" "}
+          <OuterP>
+            as per{" "}
             <NoBreak>
               “
               <Math>
@@ -1246,23 +1246,23 @@ const Rest = () => {
               </Math>
               ”.
             </NoBreak>
-          </VerticalChunk>
+          </OuterP>
         </Example>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           In relation to distributivity, we should also
           mention the simple but important fact that
-          multiplying a difference by {" "}
+          multiplying a difference by{" "}
           <Math>
             $-1$
           </Math>
-          {" "} {" "}
+          {" "}{" "}
           <i>
             reverses
           </i>
-          {" "} the
+          {" "}the
           difference. That is,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1270,9 +1270,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           or, for short,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1280,9 +1280,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           because, indeed,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1294,17 +1294,17 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           by distributivity (used in the second step).
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <Example>
-          <VerticalChunk>
+          <OuterP>
             <b>
               Example 6.
             </b>
             {" "}
-            We have {" "}
+            We have{" "}
             <NoBreak>
               <Math>
                 $-(10 - 3) = 3 - 10$
@@ -1312,27 +1312,27 @@ const Rest = () => {
               .
             </NoBreak>
             {" "}
-            (Because {" "}
+            (Because{" "}
             <NoBreak>
               <Math>
                 $-7 = -7$
               </Math>
               ,
             </NoBreak>
-            {" "} as it would be, haha.)
-          </VerticalChunk>
+            {" "}as it would be, haha.)
+          </OuterP>
         </Example>
       </Section>
       <Pause />
       <Section
         divider={false}
         id="section-4">
-        <VerticalChunk>
+        <OuterP>
           <b>
             Epilogue.
           </b>
-          {" "} Do you remember the near miss between
-        </VerticalChunk>
+          {" "}Do you remember the near miss between
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1340,9 +1340,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           and
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1350,9 +1350,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           ...? Well if you observe, additionally, that
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1364,10 +1364,10 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           (etc) you might become suspicious of a pattern!
           But the mystery is rather thin: we have
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1375,18 +1375,18 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          for {" "}
+        <OuterP>
+          for{" "}
           <i>
             every
           </i>
-          {" "} real number {" "}
+          {" "}real number{" "}
           <Math>
             $n$
           </Math>
-          {" "} because of the
+          {" "}because of the
           formula
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1394,19 +1394,19 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           for a difference of squares!
-        </VerticalChunk>
+        </OuterP>
       </Section>
       <Pause />
       <Section id="section-5">
-        <VerticalChunk>
+        <OuterP>
           <b>
             Vocabulary.
           </b>
           {" "}
           A pair of algebraic expressions of the form
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1414,13 +1414,13 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          is called a {" "}
+        <OuterP>
+          is called a{" "}
           <i>
             conjugate pair
           </i>
           . For example,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1428,9 +1428,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           is a conjugate pair, as is
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1438,92 +1438,92 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
+        <OuterP>
           and so on. (Generally speaking, conjugate pairs
           are good things to multiply together.)
-        </VerticalChunk>
+        </OuterP>
       </Section>
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_1_1402">
-            <VerticalChunk>
+          <ExerciseStatement id="_4_7846">
+            <OuterP>
               <b>
                 Exercise 1.
               </b>
               {" "}
               True or false (and, if possible, explain):
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <Grid
               cols={3}
               sm_cols={2}
               sm_cutoff={520}
               center_on_overflow={true}>
-              <Item>
-                a. {" "}
+              <p>
+                a.{" "}
                 <Math>
                   $ 0.9^2 &lt; 0.9 $
                 </Math>
-              </Item>
-              <Item>
-                b. {" "}
+              </p>
+              <p>
+                b.{" "}
                 <Math>
                   $ \sqrt&#123;0.01&#125; = 0.1 $
                 </Math>
-              </Item>
-              <Item>
-                c. {" "}
+              </p>
+              <p>
+                c.{" "}
                 <Math>
                   $ \sqrt[2]&#123;\up&#123;0.8&#125;\sqrt[3]&#123;2&#125;&#125; = \sqrt[3]&#123;\up&#123;0.8&#125;\sqrt[2]&#123;2&#125;&#125; $
                 </Math>
-              </Item>
-              <Item>
-                d. {" "}
+              </p>
+              <p>
+                d.{" "}
                 <Math>
                   $&#123;\sqrt&#123;2&#125; \over \up&#123;0.55&#125;2&#125; = \sqrt&#123;0.5&#125;$
                 </Math>
-              </Item>
-              <Item>
-                e. {" "}
+              </p>
+              <p>
+                e.{" "}
                 <Math>
                   $ &#123;1 \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;0.5&#125; $
                 </Math>
-              </Item>
-              <Item>
-                f. {" "}
+              </p>
+              <p>
+                f.{" "}
                 <Math>
                   $ 2^&#123;30&#125; &gt; 1000^3 $
                 </Math>
-              </Item>
-              <Item>
-                g. {" "}
+              </p>
+              <p>
+                g.{" "}
                 <Math>
                   $ &#123;1 \over 0.95&#125; &gt; 1.05 $
                 </Math>
-              </Item>
-              <Item>
-                h. {" "}
+              </p>
+              <p>
+                h.{" "}
                 <Math>
                   $ (-1)^&#123;101&#125; = -1 $
                 </Math>
-              </Item>
-              <Item>
-                i. {" "}
+              </p>
+              <p>
+                i.{" "}
                 <Math>
                   $ &#123;100 \over \up&#123;0.5&#125;99&#125; &lt; &#123;101 \over \up&#123;0.5&#125;100&#125; $
                 </Math>
-              </Item>
+              </p>
             </Grid>
           </ExerciseStatement>
           <Solution>
-            <VerticalChunk>
+            <OuterP>
               Part by part:
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               a. (True) We have
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1531,19 +1531,19 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              and {" "}
+            <OuterP>
+              and{" "}
               <NoBreak>
                 <Math>
                   $0.81 &lt; 0.9$
                 </Math>
                 .
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               b. (True) We have
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1551,42 +1551,42 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              and {" "}
+            <OuterP>
+              and{" "}
               <Math>
                 $0.1$
               </Math>
-              {" "} is nonnegative, so {" "}
+              {" "}is nonnegative, so{" "}
               <NoBreak>
                 <Math>
                   $\sqrt&#123;0.01&#125; = 0.1$
                 </Math>
                 .
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               c. (True) In fact,
               {" "}
               <Math>
                 $\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;$
               </Math>
               {" "}
-              and {" "}
+              and{" "}
               <Math>
                 $\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;$
               </Math>
-              {" "} are
-              both equal to {" "}
+              {" "}are
+              both equal to{" "}
               <NoBreak>
                 <Math>
                   $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
                 </Math>
                 .
               </NoBreak>
-              {" "} To
+              {" "}To
               convince yourself, note that
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1617,9 +1617,9 @@ const Rest = () => {
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               and
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1649,8 +1649,8 @@ const Rest = () => {
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              so {" "}
+            <OuterP>
+              so{" "}
               <NoBreak>
                 <Math>
                   $(\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 =
@@ -1658,14 +1658,14 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-            </VerticalChunk>
-            <VerticalChunk class="indent-10">
-              Technically, however, a number {" "}
+            </OuterP>
+            <OuterP class="indent-10">
+              Technically, however, a number{" "}
               <Math>
                 $x$
               </Math>
-              {" "} such that
-            </VerticalChunk>
+              {" "}such that
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1673,8 +1673,8 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              is not necessarily {" "}
+            <OuterP>
+              is not necessarily{" "}
               <NoBreak>
                 <Math>
                   $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
@@ -1682,47 +1682,47 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              because {" "}
+              because{" "}
               <Math>
                 $x = -\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
               </Math>
-              {" "} satisfies
+              {" "}satisfies
               this equation as well!
-            </VerticalChunk>
-            <VerticalChunk class="indent-10">
+            </OuterP>
+            <OuterP class="indent-10">
               The last step, therefore, is to note that
               {" "}
               <Math>
                 $\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;$
               </Math>
-              {" "} and
+              {" "}and
               {" "}
               <Math>
                 $\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;$
               </Math>
-              {" "} are both
+              {" "}are both
               {" "}
               <i>
                 nonnegative
               </i>
-              {" "} numbers (taken as obvious),
-              and which implies that they are the {" "}
+              {" "}numbers (taken as obvious),
+              and which implies that they are the{" "}
               <i>
                 unique
                 nonnegative
               </i>
-              {" "} solution to {" "}
+              {" "}solution to{" "}
               <NoBreak>
                 <Math>
                   $x^6 = 2$
                 </Math>
                 .
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               d. (True) In general,
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1730,21 +1730,21 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              for all {" "}
+            <OuterP>
+              for all{" "}
               <NoBreak>
                 <Math>
                   $x \geq 0$
                 </Math>
                 ,
               </NoBreak>
-              {" "} {" "}
+              {" "}{" "}
               <Math>
                 $y &gt; 0$
               </Math>
-              {" "} (you need each
+              {" "}(you need each
               root to be defined), so
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1752,17 +1752,17 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               ...ta-daa!
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               <i>
                 Note 1.
               </i>
-              {" "} One can also proceed by “direct
+              {" "}One can also proceed by “direct
               verification”:
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1771,14 +1771,14 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               (This, together with the fact that
               {" "}
               <Math>
                 $&#123;\sqrt&#123;2&#125; \over 2&#125;$
               </Math>
-              {" "} is not negative,
-              establishes that {" "}
+              {" "}is not negative,
+              establishes that{" "}
               <NoBreak>
                 <Math>
                   $&#123;\sqrt&#123;2&#125; \over 2&#125; =
@@ -1786,9 +1786,9 @@ const Rest = () => {
                 </Math>
                 .)
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               e. (True) Using the
               {" "}
               <NoBreak>
@@ -1799,8 +1799,8 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "} identity:
-            </VerticalChunk>
+              {" "}identity:
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1808,9 +1808,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               Or by direct verification:
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1819,14 +1819,14 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              (And {" "}
+            <OuterP>
+              (And{" "}
               <Math>
                 $1 \over \sqrt&#123;2&#125;$
               </Math>
-              {" "} is nonnegative.)
+              {" "}is nonnegative.)
               Or by reducing to part d:
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1834,18 +1834,18 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               (The point being: we already know that
               {" "}
               <Math>
                 $&#123;\sqrt&#123;2&#125; \over 2&#125; = \sqrt&#123;0.5&#125;$
               </Math>
-              {" "} by part d.)
-            </VerticalChunk>
+              {" "}by part d.)
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               f. (True) We have
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1853,9 +1853,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               and
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1863,23 +1863,23 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               <i>
                 Note 2.
               </i>
               {" "}
-              The first ten or so powers of {" "}
+              The first ten or so powers of{" "}
               <Math>
                 $2$
               </Math>
-              {" "} are worth
-              knowing by heart (here's {" "}
+              {" "}are worth
+              knowing by heart (here's{" "}
               <i>
                 eleven
               </i>
-              {" "} powers, mind
+              {" "}powers, mind
               you):
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1900,9 +1900,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               Among which, the fact that
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1910,17 +1910,17 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               can be particularly useful to know! For
               example, if a 1-millimeter-thick napkin is
-              folded {" "}
+              folded{" "}
               <Math>
                 $50$
               </Math>
-              {" "} times over, doubling the width
+              {" "}times over, doubling the width
               each time, one obtains something of
               thickness
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1928,9 +1928,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               As
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1938,9 +1938,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               this is
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1954,21 +1954,21 @@ const Rest = () => {
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              or {" "}
+            <OuterP>
+              or{" "}
               <i>
                 one billion
               </i>
-              {" "} kilometers. By
+              {" "}kilometers. By
               comparison, the distance from the Earth to
-              the Sun is a mere {" "}
+              the Sun is a mere{" "}
               <Math>
                 $150$
               </Math>
-              {" "} million kilometers.
+              {" "}million kilometers.
               (The point being: that we could go from the
               relatively mysterious
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1976,9 +1976,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               to the relatively less mysterious
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -1986,21 +1986,21 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              by the approximation {" "}
+            <OuterP>
+              by the approximation{" "}
               <NoBreak>
                 <Math>
                   $2^&#123;10&#125; \approx 10^3$
                 </Math>
                 .)
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               g. (True) As an inequality can be multiplied
               on both sides by a positive number while
               preserving the inequality, one has
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2013,16 +2013,16 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              (using the fact that {" "}
+            <OuterP>
+              (using the fact that{" "}
               <NoBreak>
                 <Math>
                   $(1+x)(1-x) = 1-x^2$
                 </Math>
                 ,
               </NoBreak>
-              {" "} of
-            </VerticalChunk>
+              {" "}of
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2030,17 +2030,17 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              fame), and since the {" "}
+            <OuterP>
+              fame), and since the{" "}
               <i>
                 last
               </i>
-              {" "} inequality is true,
-              the {" "}
+              {" "}inequality is true,
+              the{" "}
               <i>
                 first
               </i>
-              {" "} inequality is true! (Recall that
+              {" "}inequality is true! (Recall that
               {" "}
               <NoBreak>
                 “
@@ -2049,16 +2049,16 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "} means “if and only if”.)
-            </VerticalChunk>
+              {" "}means “if and only if”.)
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               <i>
                 Note 3.
               </i>
               {" "}
               More generally, even though
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2066,20 +2066,20 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              for any small {" "}
+            <OuterP>
+              for any small{" "}
               <NoBreak>
                 <Math>
                   $\epsilon &gt; 0$
                 </Math>
                 ,
               </NoBreak>
-              {" "} the number
+              {" "}the number
               {" "}
               <Math>
                 $1 + \epsilon$
               </Math>
-              {" "} remains a good approximation to
+              {" "}remains a good approximation to
               {" "}
               <NoBreak>
                 <Math>
@@ -2087,8 +2087,8 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "} For example,
-            </VerticalChunk>
+              {" "}For example,
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2096,9 +2096,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               is a good approximation to
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2106,9 +2106,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               while
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2116,9 +2116,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               is a good approximation to
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2126,120 +2126,150 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               etc.
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
-              h. (True) Here are the first few powers of {" "}
+            <OuterP>
+              h. (True) Here are the first few powers of{" "}
               <Math>
                 $-1$
               </Math>
               {" "}
-              (note how each additional multiplication by {" "}
+              (note how each additional multiplication by{" "}
               <Math>
                 $-1$
               </Math>
               {" "}
               simply changes the sign of the previous result):
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <Grid
               cols={3}
               place_items="end">
-              <Math>
-                $ (-1)^1 = $
-              </Math>
-              <Math>
-                $ (-1) = $
-              </Math>
-              <Math>
-                $ -1 $
-              </Math>
-              <Math>
-                $ (-1)^2 = $
-              </Math>
-              <Math>
-                $ (-1)\times (-1) = $
-              </Math>
-              <Math>
-                $ 1 $
-              </Math>
-              <Math>
-                $ (-1)^3 = $
-              </Math>
-              <Math>
-                $ (-1)\times(-1)\times (-1) = $
-              </Math>
-              <Math>
-                $ -1 $
-              </Math>
-              <Math>
-                $ (-1)^4 = $
-              </Math>
-              <Math>
-                $ (-1)\times(-1)\times(-1)\times(-1) = $
-              </Math>
-              <Math>
-                $ 1 $
-              </Math>
-              <Math>
-                $ (-1)^5 = $
-              </Math>
-              <Math>
-                $ \,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) = $
-              </Math>
-              <Math>
-                $ -1 $
-              </Math>
+              <p>
+                <Math>
+                  $ (-1)^1 = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ (-1) = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ -1 $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ (-1)^2 = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ (-1)\times (-1) = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ 1 $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ (-1)^3 = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ (-1)\times(-1)\times (-1) = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ -1 $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ (-1)^4 = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ (-1)\times(-1)\times(-1)\times(-1) = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ 1 $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ (-1)^5 = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ \,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) = $
+                </Math>
+              </p>
+              <p>
+                <Math>
+                  $ -1 $
+                </Math>
+              </p>
             </Grid>
             <Pause />
-            <VerticalChunk>
-              (Etc.) Obviously, even powers of {" "}
+            <OuterP>
+              (Etc.) Obviously, even powers of{" "}
               <Math>
                 $(-1)$
               </Math>
-              {" "} are
-              equal to {" "}
+              {" "}are
+              equal to{" "}
               <NoBreak>
                 <Math>
                   $1$
                 </Math>
                 ,
               </NoBreak>
-              {" "} while odd powers of {" "}
+              {" "}while odd powers of{" "}
               <Math>
                 $(-1)$
               </Math>
-              {" "} are
-              equal to {" "}
+              {" "}are
+              equal to{" "}
               <NoBreak>
                 <Math>
                   $-1$
                 </Math>
                 .
               </NoBreak>
-              {" "} As {" "}
+              {" "}As{" "}
               <Math>
                 $101$
               </Math>
-              {" "} is odd, {" "}
+              {" "}is odd,{" "}
               <Math>
                 $(-1)^&#123;101&#125;$
               </Math>
               {" "}
-              is {" "}
+              is{" "}
               <NoBreak>
                 <Math>
                   $-1$
                 </Math>
                 .
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               i. (False) We have
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2247,9 +2277,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               and
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2257,8 +2287,8 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              so the smaller of the two fractions is {" "}
+            <OuterP>
+              so the smaller of the two fractions is{" "}
               <NoBreak>
                 <Math>
                   $&#123;101
@@ -2266,7 +2296,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} since {" "}
+              {" "}since{" "}
               <NoBreak>
                 <Math>
                   $&#123;1 \over 100&#125; &lt; &#123;1 \over
@@ -2274,15 +2304,15 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               <i>
                 Note 4.
               </i>
               {" "}
               The difference
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2290,7 +2320,7 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               is interesting in its own right, being
               connected to a famous infinite sum. To
               visualize this sum, picture a hare poised at
@@ -2298,10 +2328,10 @@ const Rest = () => {
               <Math>
                 $x = 0$
               </Math>
-              {" "} on the number line. This hare runs
+              {" "}on the number line. This hare runs
               forward by one unit and backwards by half a
               unit, stopping at the number
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2309,20 +2339,20 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               by virtue of this back-and-forth movement.
               The hare then proceeds to run forward by
               {" "}
               <i>
                 half
               </i>
-              {" "} a unit and back by a {" "}
+              {" "}a unit and back by a{" "}
               <i>
                 third
               </i>
-              {" "} of a unit,
+              {" "}of a unit,
               stopping at
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2335,10 +2365,10 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               for another break. Keeping with this pattern,
               the hare then stops at
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2352,9 +2382,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               and then at
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2369,10 +2399,10 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               and so on.
               Clearly, the successive positions at which
-              the hare stops are approaching the number {" "}
+              the hare stops are approaching the number{" "}
               <Math>
                 $1$
               </Math>
@@ -2382,8 +2412,8 @@ const Rest = () => {
               <i>
                 infinite
               </i>
-              {" "} sum
-            </VerticalChunk>
+              {" "}sum
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2399,24 +2429,24 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              is “equal” (in some sense) to {" "}
+            <OuterP>
+              is “equal” (in some sense) to{" "}
               <NoBreak>
                 <Math>
                   $1$
                 </Math>
                 .
               </NoBreak>
-              {" "} But how
-              much, exactly, is the {" "}
+              {" "}But how
+              much, exactly, is the{" "}
               <NoBreak>
                 <Math>
                   $n$
                 </Math>
                 -th
               </NoBreak>
-              {" "} term
-            </VerticalChunk>
+              {" "}term
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2424,21 +2454,21 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              of the sum? (By the way, this {" "}
+            <OuterP>
+              of the sum? (By the way, this{" "}
               <NoBreak>
                 <Math>
                   $n$
                 </Math>
                 -th
               </NoBreak>
-              {" "} term
+              {" "}term
               is the difference
               {" "}
               <Math>
                 $&#123;1 \over 99&#125; - &#123;1 \over 100&#125;$
               </Math>
-              {" "} for {" "}
+              {" "}for{" "}
               <NoBreak>
                 <Math>
                   $n = 99$
@@ -2448,7 +2478,7 @@ const Rest = () => {
               {" "}
               which is how we came to be reminded of this
               infinite sum in the first place.) Well...
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2465,9 +2495,9 @@ const Rest = () => {
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               ...it's that much. (For example,
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2475,9 +2505,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               and
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2485,9 +2515,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               and so on.) So the infinite sum
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2504,9 +2534,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               can also be written
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2515,9 +2545,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               (or
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2525,17 +2555,17 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               equivalently) which is not obvious at first
               glance, and kind of interesting!
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               <i>
                 Note 5.
               </i>
-              {" "} The fact that
-            </VerticalChunk>
+              {" "}The fact that
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2543,27 +2573,27 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               means, in particular, that
               {" "}
               <Math>
                 $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
               </Math>
-              {" "} is roughly
+              {" "}is roughly
               {" "}
               <Math>
                 $&#123;1 \over n^2&#125;$
               </Math>
-              {" "} for large {" "}
+              {" "}for large{" "}
               <NoBreak>
                 <Math>
                   $n$
                 </Math>
                 ,
               </NoBreak>
-              {" "} which is
+              {" "}which is
               sometimes handy to know. For example,
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2571,16 +2601,16 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              is approximately {" "}
+            <OuterP>
+              is approximately{" "}
               <NoBreak>
                 <Math>
                   $1/10^2 = 0.01$
                 </Math>
                 ,
               </NoBreak>
-              {" "} while
-            </VerticalChunk>
+              {" "}while
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2588,8 +2618,8 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              is approximately {" "}
+            <OuterP>
+              is approximately{" "}
               <NoBreak>
                 <Math>
                   $1/100^2 = 0.01^2 = 0.0001$
@@ -2598,25 +2628,25 @@ const Rest = () => {
               </NoBreak>
               {" "}
               etc.
-            </VerticalChunk>
+            </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={2}>
           <ExerciseStatement>
-            <VerticalChunk>
+            <OuterP>
               <b>
                 Exercise 2.
               </b>
               {" "}
-              In the solution to {" "}
+              In the solution to{" "}
               <InChapterLink
-                href="/article/chapter1?id=_1_1402"
+                href="/article/chapter1?id=_4_7846"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
               , we 
               observed how the difference
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2624,54 +2654,54 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              is {" "}
+            <OuterP>
+              is{" "}
               <i>
                 roughly
               </i>
-              {" "} {" "}
+              {" "}{" "}
               <Math>
                 $1/n^2$
               </Math>
-              {" "} for large {" "}
+              {" "}for large{" "}
               <NoBreak>
                 <Math>
                   $n$
                 </Math>
                 .
               </NoBreak>
-              {" "} But how
+              {" "}But how
               far off is this exactly? (I.e., what is the
-              difference between {" "}
+              difference between{" "}
               <Math>
                 $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
               </Math>
               {" "}
-              and {" "}
+              and{" "}
               <NoBreak>
                 <Math>
                   $&#123;1 \over n^2&#125;$
                 </Math>
                 ?)
               </NoBreak>
-              {" "} And {" "}
+              {" "}And{" "}
               <i>
                 roughly
               </i>
-              {" "} how much is
-              this far-offness, for large {" "}
+              {" "}how much is
+              this far-offness, for large{" "}
               <NoBreak>
                 <Math>
                   $n$
                 </Math>
                 ?
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
           </ExerciseStatement>
           <Solution>
-            <VerticalChunk>
+            <OuterP>
               Since
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2685,9 +2715,9 @@ const Rest = () => {
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               (as previously computed) is smaller than
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2701,9 +2731,9 @@ const Rest = () => {
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               we will compute the difference
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2711,9 +2741,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               as opposed to the “other” difference
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2721,12 +2751,12 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               to avoid a minus sign in the result.
               (Computing the second difference and having
               a minus sign does not constitute a mistake,
               however.) Having said this, the difference is:
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2743,16 +2773,16 @@ const Rest = () => {
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              which, for large {" "}
+            <OuterP>
+              which, for large{" "}
               <NoBreak>
                 <Math>
                   $n$
                 </Math>
                 ,
               </NoBreak>
-              {" "} is roughly
-            </VerticalChunk>
+              {" "}is roughly
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2760,26 +2790,26 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              since {" "}
+            <OuterP>
+              since{" "}
               <Math>
                 $n^2(n+1) \approx n^3$
               </Math>
-              {" "} for large {" "}
+              {" "}for large{" "}
               <NoBreak>
                 <Math>
                   $n$
                 </Math>
                 .
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
             <Pause />
-            <VerticalChunk>
+            <OuterP>
               <i>
                 Example 1.
               </i>
-              {" "} Above, we estimated
-            </VerticalChunk>
+              {" "}Above, we estimated
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2787,26 +2817,26 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              to be roughly {" "}
+            <OuterP>
+              to be roughly{" "}
               <NoBreak>
                 <Math>
                   $1/100 = 0.01$
                 </Math>
                 ,
               </NoBreak>
-              {" "} but {" "}
+              {" "}but{" "}
               <Math>
                 $1/100$
               </Math>
-              {" "} is
+              {" "}is
               bigger than the actual value of
               {" "}
               <Math>
                 $&#123;1 \over 10\cdot 11&#125; = &#123;1 \over 110&#125;$
               </Math>
-              {" "} by
-            </VerticalChunk>
+              {" "}by
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2814,8 +2844,8 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              or close to {" "}
+            <OuterP>
+              or close to{" "}
               <NoBreak>
                 <Math>
                   $1/10^3 = 0.001$
@@ -2824,7 +2854,7 @@ const Rest = () => {
               </NoBreak>
               {" "}
               (So
-            </VerticalChunk>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2832,15 +2862,15 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              is about {" "}
+            <OuterP>
+              is about{" "}
               <NoBreak>
                 <Math>
                   $0.01$
                 </Math>
                 ,
               </NoBreak>
-              {" "} while making an error of about
+              {" "}while making an error of about
               {" "}
               <NoBreak>
                 <Math>
@@ -2848,8 +2878,8 @@ const Rest = () => {
                 </Math>
                 .)
               </NoBreak>
-              {" "} (In fact,
-            </VerticalChunk>
+              {" "}(In fact,
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2857,31 +2887,31 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            <VerticalChunk>
-              is {" "}
+            <OuterP>
+              is{" "}
               <i>
                 less
               </i>
-              {" "} than {" "}
+              {" "}than{" "}
               <NoBreak>
                 <Math>
                   $1/10^3$
                 </Math>
                 ,
               </NoBreak>
-              {" "} so the error is {" "}
+              {" "}so the error is{" "}
               <i>
                 less
               </i>
               {" "}
-              than {" "}
+              than{" "}
               <NoBreak>
                 <Math>
                   $0.001$
                 </Math>
                 .)
               </NoBreak>
-            </VerticalChunk>
+            </OuterP>
           </Solution>
         </Exercise>
       </Exercises>

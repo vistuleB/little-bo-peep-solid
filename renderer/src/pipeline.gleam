@@ -72,12 +72,12 @@ pub fn our_pipeline() -> List(Pipe) {
     // ****
     // get rid of 'WriterlyBlankLine',
     // replace with parenting notion of
-    // VerticalChunk (paragraph abstraction) instead
+    // OuterP (paragraph abstraction) instead
     // ****
     [
       dn.group_consecutive_children_avoiding(
         #(
-          "VerticalChunk",
+          "p",
           [
             "ArticleTitle",
             "Bootcamp", "CentralDisplay", "CentralDisplayItalic", "Chapter",
@@ -89,28 +89,36 @@ pub fn our_pipeline() -> List(Pipe) {
             "thead", "tbody", "tr", "td", "section",
             "DebugScope",
           ],
-          ["MathBlock", "VerticalChunk", "CentralDisplay", "CentralDisplayItalic", "ArticleTitle"],
+          ["MathBlock", "p", "CentralDisplay", "CentralDisplayItalic", "ArticleTitle"],
         ),
       ),
       dn.unwrap(["WriterlyBlankLine"]),
       dn.concatenate_text_nodes(),
       dn.remove_text_nodes_with_singleton_empty_line(),
-      dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
-      dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
-      dn.remove_empty_tags(["VerticalChunk"]),
+      dn.rename_when_child_of([
+        #("p", "OuterP", "Section"),
+        #("p", "OuterP", "Exercise"),
+        #("p", "OuterP", "Solution"),
+        #("p", "OuterP", "Example"),
+        #("p", "OuterP", "Chapter"),
+        #("p", "OuterP", "Bootcamp"),
+      ]),
+      dn.remove_starting_and_ending_spaces(["OuterP"]),
+      dn.remove_starting_and_ending_empty_lines(["OuterP"]),
+      dn.remove_empty_tags(["OuterP"]),
     ],
     // ****
     // parse '__', '_|' delimiters, break
-    // new elements out of parent VerticalChunk
-    // (why don't we do this before creating the VerticalChunk,
+    // new elements out of parent OuterP
+    // (why don't we do this before creating the OuterP,
     // and spare ourselves the free_children call?)
     // ****
     pp.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
     pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
       dn.free_children([
-        #("CentralDisplay", "VerticalChunk"),
-        #("CentralDisplayItalic", "VerticalChunk"),
+        #("CentralDisplay", "OuterP"),
+        #("CentralDisplayItalic", "OuterP"),
       ]),
     ],
     // ****
@@ -132,28 +140,28 @@ pub fn our_pipeline() -> List(Pipe) {
         #("Exercise", "ExerciseStatement", "id"),
       ),
       // ************************
-      // VerticalChunk cleanup (some cleanups all over again, after delim splitting)
+      // OuterP cleanup (some cleanups all over again, after delim splitting)
       // ************************
       dn.concatenate_text_nodes(),
       dn.remove_text_nodes_with_singleton_empty_line(),
-      dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
-      dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
-      dn.remove_empty_tags(["VerticalChunk"]),
+      dn.remove_starting_and_ending_spaces(["OuterP"]),
+      dn.remove_starting_and_ending_empty_lines(["OuterP"]),
+      dn.remove_empty_tags(["OuterP"]),
       dn.unwrap_tags_when_no_child_meets_condition(#(
-        ["VerticalChunk"],
+        ["OuterP"],
         infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"])
       )),
-      dn.unwrap_when_descendant_of([#("VerticalChunk", ["td", "li"])]),
+      dn.unwrap_when_descendant_of([#("OuterP", ["td", "li"])]),
       dn.rename_when_child_of([
-        #("VerticalChunk", "Item", "List"),
-        #("VerticalChunk", "Item", "Grid"),
+        #("OuterP", "Item", "List"),
+        #("OuterP", "Item", "Grid"),
       ]),
       // ************************
       // ImageLeft, ImageRight parent-finding
       // ************************
       dn.absorb_next_sibling_while([
-        #("VerticalChunk", "ImageRight"),
-        #("VerticalChunk", "ImageLeft"),
+        #("OuterP", "ImageRight"),
+        #("OuterP", "ImageLeft"),
         #("MathBlock", "ImageRight"),
         #("MathBlock", "ImageLeft"),
         #("CentralDisplayItalic", "ImageRight"),
@@ -180,25 +188,25 @@ pub fn our_pipeline() -> List(Pipe) {
         ),
       ]),
       // ************************
-      // VerticalChunk indents
+      // OuterP indents
       // ************************
-      dn.add_attribute_to_second_of_kind(#("VerticalChunk", "class", "indent-10")),
+      dn.add_attribute_to_second_of_kind(#("OuterP", "class", "indent-10")),
       // ************************
       // Add spacers
       // ************************
       dn.add_between_tags([
-        #(#("MathBlock", "VerticalChunk"), "Pause", []),
-        #(#("Example", "VerticalChunk"), "Pause", []),
-        #(#("Note", "VerticalChunk"), "Pause", []),
-        #(#("SolutionNote", "VerticalChunk"), "Pause", []),
-        #(#("Image", "VerticalChunk"), "Pause", []),
-        #(#("Table", "VerticalChunk"), "Pause", []),
-        #(#("table", "VerticalChunk"), "Pause", []),
-        #(#("Grid", "VerticalChunk"), "Pause", []),
-        #(#("CentralDisplayItalic", "VerticalChunk"), "Pause", []),
-        #(#("CentralDisplay", "VerticalChunk"), "Pause", []),
-        #(#("List", "VerticalChunk"), "Pause", []),
-        #(#("StarDivider", "VerticalChunk"), "Pause", []),
+        #(#("MathBlock", "OuterP"), "Pause", []),
+        #(#("Example", "OuterP"), "Pause", []),
+        #(#("Note", "OuterP"), "Pause", []),
+        #(#("SolutionNote", "OuterP"), "Pause", []),
+        #(#("Image", "OuterP"), "Pause", []),
+        #(#("Table", "OuterP"), "Pause", []),
+        #(#("table", "OuterP"), "Pause", []),
+        #(#("Grid", "OuterP"), "Pause", []),
+        #(#("CentralDisplayItalic", "OuterP"), "Pause", []),
+        #(#("CentralDisplay", "OuterP"), "Pause", []),
+        #(#("List", "OuterP"), "Pause", []),
+        #(#("StarDivider", "OuterP"), "Pause", []),
       ]),
       // (I forgot... why would raw text directly follow a MathBlock?)
       dn.add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),

@@ -1,129 +1,168 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
 import { CentralDisplayItalic }  from "~/components/Delimiters";
-import { Exercises, Exercise, ExerciseStatement }  from "~/components/Exercises";
-import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { Math, MathBlock }  from "~/components/Math";
+import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
-import { ImageLeft, ImageRight }  from "~/components/SideImage";
-import Solution  from "~/components/Solution";
-import Table  from "~/components/Table";
-import VerticalChunk  from "~/components/VerticalChunk";
-import { Section, Pause, NoBreak, Example, SolutionNote }  from "~/components/Wrappers";
+import { ImageRight }  from "~/components/SideImage";
+import { Section, NoBreak, Pause }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Bootcamp1__() {
   return <>
     <Article
-      prevPage=""
+      prevPage="/article/bootcamp2"
       nextPage="/"
-      pageNecessaryMargin={270}
-      maxElementWidth={1200}>
+      pageNecessaryMargin={160}
+      maxElementWidth={800}>
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            terminology
+            notation
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            integer powers of 10
+            what it does
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
-            other bases
+            set equality
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
-            additivity of exponents
+            second notation for the empty set
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
-            the third law of exponents
+            sets within sets
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
-            famous powers of 10
+            set union and set intersection
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
-            negative exponent prefixes
+            sets encountered in calculus
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
-            positive exponent prefixes
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=section-9">
-            logarithms base 10
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-9">
-          <InChapterLink href="?id=exercises">
-            exercises
+            sets not encountered in calculus
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Bootcamp 1:">
-        Powers of 10
+        Sets
       </ArticleTitle>
       <Section id="section-1">
-        <VerticalChunk>
+        <OuterP>
           <b>
-            Terminology.
+            Notation.
           </b>
           {" "}
-          The expression below is called a {" "}
+          Curly braces typically denote the beginning
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\&#123;$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}and ending{" "}
+          <NoBreak>
+            “
+            <Math>
+              $\&#125;$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}of a collection of
+          elements, otherwise known as a{" "}
           <i>
-            power
+            set
           </i>
-          ;
-          the number at the bottom of the power is called
-          the {" "}
-          <i>
-            base
-          </i>
-          {" "} (of the power); the number at the top
-          is called the {" "}
-          <i>
-            exponent
-          </i>
-          :
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_base_exponent.svg" />
-        <Pause />
-        <VerticalChunk>
-          The whole expression is read {" "}
-          <Math>
-            $\mathit&#123;10&#125;$
-          </Math>
-          {" "} {" "}
-          <i>
-            to the power
-          </i>
-          {" "} {" "}
+          .
+          For example, this is a set containing the
+          numbers{" "}
           <NoBreak>
             <Math>
-              $\mathit&#123;3&#125;$
+              $1$
             </Math>
             ,
           </NoBreak>
-          {" "} and the
-          general process of taking a power is called {" "}
+          {" "}{" "}
+          <Math>
+            $2$
+          </Math>
+          {" "}and{" "}
+          <Math>
+            $3$
+          </Math>
+          {" "}(and nothing else):
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;1, 2, 3\&#125;$$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          Also,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;1\&#125;$$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a set containing just the number{" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}while
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;1, 3\&#125;$$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a set containing just the numbers{" "}
+          <Math>
+            $1$
+          </Math>
+          {" "}
+          and{" "}
+          <NoBreak>
+            <Math>
+              $3$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}etc. Even,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$\Large\&#123;\&#125;$$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is an{" "}
           <i>
-            exponentiation
+            empty
           </i>
-          .
-        </VerticalChunk>
+          {" "}set, a set with no elements!
+        </OuterP>
       </Section>
       <Rest />
     </Article>
@@ -136,3547 +175,1084 @@ const Rest = () => {
     {showMore() && <>
       <Pause />
       <Section id="section-2">
-        <VerticalChunk>
+        <OuterP>
           <b>
-            Integer powers of 10.
+            What it does.
           </b>
           {" "}
-          We define
-        </VerticalChunk>
+          The “API” (a computer science notion,
+          roughly meaning
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          the interface offered to the outside world
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          as in, for example, the buttons and clock
+          display and door handle of a microwave oven)
+          of a set consists of just one functionality:
+          a set can answer questions of the form
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain ... ?
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          and nothing else.
+          For example, you could ask a set
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 3?
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          to which{" "}
+          <Math>
+            $\&#123;1, 3\&#125;$
+          </Math>
+          {" "}would answer “yes”, but
+          {" "}
+          <Math>
+            $\&#123; 1\&#125;$
+          </Math>
+          {" "}would answer “no”, or
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 2?
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          to which{" "}
+          <Math>
+            $\&#123;1\&#125;$
+          </Math>
+          {" "}and{" "}
+          <Math>
+            $\&#123;1, 3\&#125;$
+          </Math>
+          {" "}would
+          both answer “no”, but{" "}
+          <Math>
+            $\&#123;1, 2, 3\&#125;$
+          </Math>
+          {" "}would
+          answer “yes”.
+        </OuterP>
+        <OuterP class="indent-10">
+          Notation-wise, the expression
+        </OuterP>
         <Pause />
         <MathBlock>
-          $$
-          \Large 10^&#123;\hspace&#123;0.2ex&#125;n&#125;
-          $$
+          $$\Large x \in A$$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          as follows, if {" "}
-          <Math>
-            $n$
-          </Math>
-          {" "} is a nonnegative integer: start
-          from {" "}
-          <Math>
-            $1$
-          </Math>
-          {" "} and multiply by {" "}
-          <Math>
-            $10$
-          </Math>
-          {" "} {" "}
-          <Math>
-            $n$
-          </Math>
-          {" "} times. We also define
-        </VerticalChunk>
+        <OuterP>
+          means
+        </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          \Large 10^&#123;-n&#125;
-          $$
-        </MathBlock>
+        <CentralDisplayItalic>
+          <Math>
+            $A$
+          </Math>
+          {" "}contains{" "}
+          <Math>
+            $x$
+          </Math>
+        </CentralDisplayItalic>
         <Pause />
-        <VerticalChunk>
-          as follows, if {" "}
+        <OuterP>
+          or
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
           <Math>
-            $n$
+            $A$
           </Math>
-          {" "} is a positive integer: start from {" "}
+          {" "}answers “yes” to the
+          question “do you contain{" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            ?”
+          </NoBreak>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          equivalently. [One can also say
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
           <Math>
-            $1$
+            $x$
           </Math>
-          {" "} and divide
-          by {" "}
+          {" "}in{" "}
           <Math>
-            $10$
+            $A$
           </Math>
-          {" "} {" "}
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          or
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
           <Math>
-            $n$
+            $x$
           </Math>
-          {" "} times.
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
+          {" "}is in{" "}
+          <Math>
+            $A$
+          </Math>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          or
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <Math>
+            $x$
+          </Math>
+          {" "}is an element of{" "}
+          <Math>
+            $A$
+          </Math>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          depending on one's mood and/or tastes.]
+          As in all of mathematics, any such statement
+          evaluates to either “true” or “false”.
           For example,
-        </VerticalChunk>
+        </OuterP>
         <Pause />
         <MathBlock>
-          $$
-          \Large 10^4 = 1 \times 10 \times 10 \times 10 \times 10 = 10000
-          $$
+          $$\Large 1 \in \&#123;1, 2\&#125;$$
         </MathBlock>
         <Pause />
-        <MathBlock>
-          $$
-          \Large 10^3 = 1 \times 10 \times 10 \times 10 = 1000
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 10^2 = 1 \times 10 \times 10 = 100
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 10^1 = 1 \times 10 = 10
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 10^0 = 1 = 1
-          $$
-          <ImageLeft
-            src="/images/svg_bt2_bt_alert_cloud.svg"
-            offset_y="-0.2em"
-            offset_x="4em"
-            compensate_offset_x_for_large_text_columns={true} />
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          (where, in the last line, {" "}
+        <OuterP>
+          is true, because{" "}
           <Math>
             $1$
           </Math>
-          {" "} is multiplied by {" "}
-          <Math>
-            $10$
-          </Math>
-          {" "} {" "}
+          {" "}{" "}
           <i>
-            zero times
+            is
           </i>
-          ,
-          as per the exponent, which is zero) by the first definition, while
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 10^&#123;-1&#125; = 1\,/\,10 = 0.1
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 10^&#123;-2&#125; = (1\,/\, 10)\,/\,10 = 0.01
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 10^&#123;-3&#125; = ((1\,/\, 10)\,/\,10)\,/\,10 = 0.001
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 10^&#123;-4&#125; = (((1\,/\, 10)\,/\,10)\,/\, 10)\,/\, 10 = 0.0001
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          by the second definition.
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          As {" "}
-          <Math>
-            $n$
-          </Math>
-          {" "} successive divisions
-          by {" "}
-          <Math>
-            $10$
-          </Math>
-          {" "} is the same as one division by {" "}
-          <NoBreak>
-            <Math>
-              $10^n$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} one also has
-        </VerticalChunk>
-        <Pause />
-        <MathBlock id="_1_3426">
-          $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          for every positive integer {" "}
-          <NoBreak>
-            <Math>
-              $n$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} which gives an alternate means of computing {" "}
-          <NoBreak>
-            <Math>
-              $10^&#123;-n&#125;$
-            </Math>
-            .
-          </NoBreak>
-          {" "}
-          Moreover, (
-          <InChapterLink
-            href="/article/bootcamp1?id=_1_3426"
-            class="handle-in-chapter-link">
-            A
-          </InChapterLink>
-          ) actually holds for
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          every
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          integer {" "}
-          <NoBreak>
-            <Math>
-              $n$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} which is mildly important. In more
-          detail, (
-          <InChapterLink
-            href="/article/bootcamp1?id=_1_3426"
-            class="handle-in-chapter-link">
-            A
-          </InChapterLink>
-          ) holds for {" "}
-          <Math>
-            $n = 0$
-          </Math>
-          {" "} by inspection, and (
-          <InChapterLink
-            href="/article/bootcamp1?id=_1_3426"
-            class="handle-in-chapter-link">
-            A
-          </InChapterLink>
-          )
-          is equivalent to the identity
-          <ImageLeft
-            src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
-            line={2} />
-        </VerticalChunk>
-        <Pause />
-        <MathBlock id="_2_1883">
-          $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          which holds for {" "}
-          <Math>
-            $n$
-          </Math>
-          {" "} if and only if it holds for
+          {" "}an element of the set
           {" "}
           <NoBreak>
             <Math>
-              $-n$
-            </Math>
-            .
-          </NoBreak>
-          {" "} (By which we mean: replacing {" "}
-          <NoBreak>
-            “
-            <Math>
-              $n$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} by {" "}
-          <NoBreak>
-            “
-            <Math>
-              $-n$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}
-          in (
-          <InChapterLink
-            href="/article/bootcamp1?id=_2_1883"
-            class="handle-in-chapter-link">
-            AA
-          </InChapterLink>
-          ) lands you right back on (
-          <InChapterLink
-            href="/article/bootcamp1?id=_2_1883"
-            class="handle-in-chapter-link">
-            AA
-          </InChapterLink>
-          ), due to the fact
-          that {" "}
-          <NoBreak>
-            <Math>
-              $-&#123;(-n)&#125; = n$
-            </Math>
-            .)
-          </NoBreak>
-          {" "} (So, namely, if (
-          <InChapterLink
-            href="/article/bootcamp1?id=_2_1883"
-            class="handle-in-chapter-link">
-            AA
-          </InChapterLink>
-          ) holds for all
-          positive values of {" "}
-          <NoBreak>
-            <Math>
-              $\hspace&#123;0.05em&#125;n$
+              $\&#123;1, 2\&#125;$
             </Math>
             ,
           </NoBreak>
-          {" "} then it holds
-          for all negative values of {" "}
-          <NoBreak>
-            <Math>
-              $n$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} as well.)
-        </VerticalChunk>
-        <Pause />
-        <VerticalChunk>
-          <b>
-            Vocabulary.
-          </b>
-          {" "}
-          Numbers {" "}
-          <Math>
-            $a$
-          </Math>
-          {" "} and {" "}
-          <Math>
-            $b$
-          </Math>
-          {" "} such that
-        </VerticalChunk>
+          {" "}whereas
+        </OuterP>
         <Pause />
         <MathBlock>
-          $$
-          \Large ab = 1
-          $$
+          $$\Large 3 \in \&#123;1, 2\&#125;$$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          are {" "}
+        <OuterP>
+          is false, because{" "}
+          <Math>
+            $3$
+          </Math>
+          {" "}{" "}
           <i>
-            reciprocal
+            is not
           </i>
-          . If {" "}
-          <Math>
-            $a$
-          </Math>
-          {" "} and {" "}
-          <Math>
-            $b$
-          </Math>
-          {" "} are reciprocal,
-          then these equations are satisfied...
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large ab = 1 \qquad a = &#123;1 \over b&#125; \qquad b = &#123;1 \over a&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          ...and any one of these equations implies the other two.
-          Thus, either of (
-          <InChapterLink
-            href="/article/bootcamp1?id=_1_3426"
-            class="handle-in-chapter-link">
-            A
-          </InChapterLink>
-          ) and (
-          <InChapterLink
-            href="/article/bootcamp1?id=_2_1883"
-            class="handle-in-chapter-link">
-            AA
-          </InChapterLink>
-          )
-          expresses the
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          reciprocality
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          of {" "}
-          <Math>
-            $10^n$
-          </Math>
-          {" "} and {" "}
+          {" "}
+          an element of the set{" "}
           <NoBreak>
             <Math>
-              $10^&#123;-n&#125;$
+              $\&#123;1, 2\&#125;$
             </Math>
             .
           </NoBreak>
-        </VerticalChunk>
+        </OuterP>
       </Section>
       <Pause />
       <Section id="section-3">
-        <VerticalChunk>
+        <OuterP>
           <b>
-            Other bases.
+            Set Equality.
           </b>
           {" "}
-          Integer powers of other nonzero bases are defined
-          similarly, e.g.,
-        </VerticalChunk>
+          Two sets are deemed to be
+          equal if and only if they
+          answer the same to
+          all “do you contain ...?” questions.
+          For example, while
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large 2^&#123;-2&#125;
+          \Large\&#123;2, 1\&#125;
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          is defined as {" "}
-          <Math>
-            $1$
-          </Math>
-          {" "} divided by {" "}
-          <Math>
-            $2$
-          </Math>
-          {" "} twice, etc.
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          However, a small quirk occurs for base {" "}
-          <NoBreak>
-            <Math>
-              $0$
-            </Math>
-            :
-          </NoBreak>
-          {" "} as one
-          cannot divide by {" "}
-          <NoBreak>
-            <Math>
-              $0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} negative powers of {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} remain
-          undefined. E.g.,
-        </VerticalChunk>
+        <OuterP>
+          might look superficially different from
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large 0^&#123;-2&#125;
+          \Large\&#123;1, 2\&#125;
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          would be {" "}
-          <NoBreak>
-            “
-            <Math>
-              $1$
-            </Math>
-          </NoBreak>
-          {" "} divided by {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} twice”, but this
-          is undefined. Hence {" "}
-          <NoBreak>
-            <Math>
-              $0^&#123;-1&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $0^&#123;-2&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} etc, remain
-          undefined.
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          Also (in case you're wondering) {" "}
-          <NoBreak>
-            <Math>
-              $0^0 = 1$
-            </Math>
-            .
-          </NoBreak>
-          {" "}
-          You can see this by writing down the first few powers
-          of {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} in descending order:
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 0^3 = 1 \times 0 \times 0 \times 0 = 0
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 0^2 = 1 \times 0 \times 0 = 0
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 0^1 = 1 \times 0 = 0
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 0^0 = 1 = 1
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          In other words, every positive power of {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} is zero,
-          but when it comes to {" "}
-          <NoBreak>
-            <Math>
-              $0^0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} the {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $0\hspace&#123;0.12ex&#125;$
-            </Math>
-            ’
-          </NoBreak>
-          {" "}
-          in the exponent “wins out” over the {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $0\hspace&#123;0.12ex&#125;$
-            </Math>
-            ’
-          </NoBreak>
-          {" "}
-          in the base, making the result {" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-            .
-          </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          Note that mathematicians sometimes refer
-          to a power with an exponent of {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} as an
-        </VerticalChunk>
+        <OuterP>
+          these sets are actually one and the same,
+          because they both answer “yes” to
+        </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          empty product
+          do you contain 1?
         </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          and they will repeatedly admonish that
-        </VerticalChunk>
         <Pause />
         <CentralDisplayItalic>
-          an empty product is {" "}
-          <Math>
-            $\mathit&#123;1&#125;$
-          </Math>
+          do you contain 2?
         </CentralDisplayItalic>
         <Pause />
-        <VerticalChunk>
-          in the sense that “all products start at
-          {" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-            ”,
-          </NoBreak>
-          {" "} and that if you start at {" "}
-          <Math>
-            $1$
-          </Math>
-          {" "} and don't
-          multiply anything in, you stay at {" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-            .
-          </NoBreak>
-        </VerticalChunk>
+        <OuterP>
+          and answer “no” to all else. For that matter,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\&#123;1, 1, 2\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          might also look superficially different from
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\&#123;1, 2\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          but since both sets answer “yes” to
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 1?
+        </CentralDisplayItalic>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 2?
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          and answer “no” to all else,
+          they are by definition the same.
+        </OuterP>
+        <OuterP class="indent-10">
+          (These examples demonstrate that human notation
+          is redundant: there are several different ways of
+          writing down the same set. They also demonstrate
+          that sets do not keep track of the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          order
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          nor of the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          multiplicity
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          of their elements. Such notions are simply not part
+          of the “API” of a set.)
+        </OuterP>
+        <OuterP class="indent-10">
+          Moreover, any empty set is equal to any other
+          empty set. Equality follows because both sets
+          answer all questions the same way: they both
+          answer “no” to everything. So there is
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          one
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          and only one empty set. Therefore, mathematicians
+          speak of
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          the
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          empty set—the one and only!
+        </OuterP>
       </Section>
       <Pause />
       <Section id="section-4">
-        <VerticalChunk>
+        <OuterP>
           <b>
-            Additivity of exponents.
+            Second notation for the empty set.
           </b>
           {" "}
-          If you think about it,
-        </VerticalChunk>
+          While the empty set can be written
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;13&#125; \times 10^&#123;14&#125; = 10^&#123;\hspace&#123;0.1ex&#125;27&#125;
+          \Large \&#123;\&#125;
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          because {" "}
-          <Math>
-            $13$
-          </Math>
-          {" "} multiplications by {" "}
-          <Math>
-            $10$
-          </Math>
-          {" "} followed
-          by {" "}
-          <Math>
-            $14$
-          </Math>
-          {" "} multiplications by {" "}
-          <Math>
-            $10$
-          </Math>
-          {" "} makes {" "}
-          <Math>
-            $13 + 14 = 27$
-          </Math>
-          {" "}
-          multiplications by {" "}
-          <NoBreak>
-            <Math>
-              $10$
-            </Math>
-            .
-          </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          More generally,
-        </VerticalChunk>
+        <OuterP>
+          another available notation is
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large 10^&#123;\hspace&#123;0.1ex&#125;n&#125; \times 10^&#123;\hspace&#123;0.1ex&#125;m&#125; = 10^&#123;\hspace&#123;0.1ex&#125;n + m&#125;
+          \Large \phi
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          for all {" "}
-          <Math>
-            $n$
-          </Math>
-          {" "} and {" "}
-          <Math>
-            $m$
-          </Math>
-          {" "} (and other bases than {" "}
-          <NoBreak>
-            <Math>
-              $10$
-            </Math>
-            ),
-          </NoBreak>
-          {" "}
-          which is known as
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          additivity of exponents
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          and which is sometimes paraphrased by saying
-          that
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          the product of the powers is the power of the sum
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          where {" "}
-          <i>
-            the product of the powers
-          </i>
-          {" "} refers to
-          {" "}
-          <NoBreak>
-            “
-            <Math>
-              $10^n \times 10^m$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} and {" "}
-          <i>
-            the power of the sum
-          </i>
-          {" "}
-          refers to {" "}
-          <NoBreak>
-            “
-            <Math>
-              $10^&#123;n+m&#125;$
-            </Math>
-            ”.
-          </NoBreak>
-          {" "} (Or for some other base.)
-        </VerticalChunk>
+        <OuterP>
+          which is the Greek letter phi, read “fee”. (Or
+          “fie”? Hum.) (Or you can just say “the empty set”,
+          and keep it safe.)
+        </OuterP>
       </Section>
       <Pause />
       <Section id="section-5">
-        <VerticalChunk>
+        <OuterP>
           <b>
-            The third law of exponents.
+            Sets within sets.
           </b>
           {" "}
-          Also, if you think about it,
-        </VerticalChunk>
+          Sets can be nested much like Russian dolls. In
+          fact, the result of doing this might even look
+          like a little bit like a Russian doll (no?):
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large (10^&#123;13&#125;)^&#123;14&#125; = 10^&#123;13\cdot 14&#125;
+          \Large \&#123;\&#123;\&#123;\&#123;\&#125;\&#125;\&#125;\&#125;
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          because multiplying {" "}
-          <Math>
-            $14$
-          </Math>
-          {" "} times by {" "}
-          <Math>
-            $10^&#123;13&#125;$
-          </Math>
-          {" "} is like
-          multiplying {" "}
-          <Math>
-            $13\cdot 14$
-          </Math>
-          {" "} times by {" "}
+        <OuterP>
+          The above is “a set containing a set containing
+          a set containing a set containing the empty set”.
+          Eschewing complete adherence to the Russian doll
+          aesthetic, we could also write
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;\&#123;\&#123;\phi\&#125;\&#125;\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for the same thing, given that{" "}
           <NoBreak>
             <Math>
-              $10$
+              $\phi = \&#123;\&#125;$
             </Math>
             .
           </NoBreak>
-          {" "} More
-          generally,
-        </VerticalChunk>
+        </OuterP>
+        <OuterP class="indent-10">
+          Mind you, concerning this example, that
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large (10^n)^m = 10^&#123;nm&#125;
+          \Large \&#123;\&#123;\&#125; \&#125; \ne \&#123;\&#125;
           $$
+          <ImageRight
+            src="/images/svg_bt1_bt_empty_set_cloud.svg"
+            offset_x="3em"
+            compensate_offset_x_for_large_text_columns={true} />
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          for all {" "}
-          <Math>
-            $n$
-          </Math>
-          {" "} and {" "}
-          <NoBreak>
-            <Math>
-              $m$
-            </Math>
-            .
-          </NoBreak>
-          {" "} This is known as “the third law
-          of exponents”.
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          On this subject, note that if one writes
-        </VerticalChunk>
+        <OuterP>
+          because a box containing an empty box is not the
+          same thing as an empty box! Specifically,
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large a^&#123;b^&#123;c&#125;&#125;
+          \Large \&#123; \&#123;\&#125; \&#125;
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          <NoBreak>
-            [“
-            <Math>
-              $a$
-            </Math>
-          </NoBreak>
-          {" "} to the power {" "}
-          <Math>
-            $b$
-          </Math>
-          {" "} to the power {" "}
-          <NoBreak>
-            <Math>
-              $c$
-            </Math>
-            ”]
-          </NoBreak>
+        <OuterP>
+          answers “yes” to the question “do you contain
           {" "}
-          there is a seeming ambiguity: does it mean
-        </VerticalChunk>
+          <NoBreak>
+            <Math>
+              $\&#123;\&#125;$
+            </Math>
+            ?”
+          </NoBreak>
+          {" "}(a.k.a., “do you contain{" "}
+          <NoBreak>
+            <Math>
+              $\phi$
+            </Math>
+            ?”)
+          </NoBreak>
+          {" "}whereas
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large a^&#123;\left(b^&#123;c&#125;\right)&#125;
+          \Large \&#123;\&#125;
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          <NoBreak>
-            [“
-            <Math>
-              $a$
-            </Math>
-          </NoBreak>
-          {" "} to the power {" "}
-          <NoBreak>
-            [
-            <Math>
-              $b$
-            </Math>
-          </NoBreak>
-          {" "} to the power {" "}
-          <NoBreak>
-            <Math>
-              $c$
-            </Math>
-            ]”]
-          </NoBreak>
-          {" "}
-          or does it mean
-        </VerticalChunk>
+        <OuterP>
+          answers “no” to the same question. (Indeed, while
+          the empty set{" "}
+          <i>
+            contains
+          </i>
+          {" "}nothing, it{" "}
+          <i>
+            is
+          </i>
+          {" "}something.)
+          Similarly,
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large (a^&#123;b&#125;)^&#123;c&#125;
+          \Large \&#123;\&#123;\&#123;\&#125;\&#125; \&#125; \ne \&#123;\&#123;\&#125;\&#125;
           $$
         </MathBlock>
         <Pause />
-        <VerticalChunk>
-          <NoBreak>
-            [“[
-            <Math>
-              $a$
-            </Math>
-          </NoBreak>
-          {" "} to the power {" "}
-          <NoBreak>
-            <Math>
-              $b$
-            </Math>
-            ]
-          </NoBreak>
-          {" "} to the power {" "}
-          <NoBreak>
-            <Math>
-              $c$
-            </Math>
-            ”]...?
-          </NoBreak>
-          {" "}
-          Well, because the second way can be written
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large a^&#123;bc&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          by the third law of exponents, the second way already has
-          “its own” notation, and therefore the convention is that...
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large a^&#123;b^c&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          ...absolutely always means...
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large a^&#123;\left(b^c\right)&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          ...!
-        </VerticalChunk>
+        <OuterP>
+          etc, etc: adding a new outer layer changes the
+          whole set each time.
+        </OuterP>
       </Section>
       <Pause />
       <Section id="section-6">
-        <VerticalChunk>
+        <OuterP>
           <b>
-            Famous powers of 10.
+            Set union and set intersection.
           </b>
           {" "}
-          Many human languages have special names for
-          various integer powers of {" "}
+          The so-called{" "}
+          <i>
+            union
+          </i>
+          {" "}of two sets{" "}
+          <Math>
+            $A$
+          </Math>
+          {" "}and{" "}
+          <Math>
+            $B$
+          </Math>
+          {" "}is
+          written
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$\Large A \cup B$$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and consists of the set
+          of all things that are either in{" "}
+          <Math>
+            $A$
+          </Math>
+          {" "}or in{" "}
           <NoBreak>
             <Math>
-              $10$
+              $B$
+            </Math>
+            .
+          </NoBreak>
+          {" "}For
+          example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;1, 2\&#125; \cup \&#123;2, 5\&#125; = \&#123;1, 2, 5\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          as{" "}
+          <NoBreak>
+            <Math>
+              $1$
             </Math>
             ,
           </NoBreak>
-          {" "} due to the fact
-          that many of our ancestors chose to count in base
-          {" "}
+          {" "}{" "}
+          <Math>
+            $2$
+          </Math>
+          {" "}and{" "}
+          <Math>
+            $5$
+          </Math>
+          {" "}are the only elements to find
+          themselves either in{" "}
+          <Math>
+            $\&#123;1, 2\&#125;$
+          </Math>
+          {" "}or in{" "}
           <NoBreak>
             <Math>
-              $10$
+              $\&#123;2, 5\&#125;$
             </Math>
             .
           </NoBreak>
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          In English, e.g., these are some of the “famous”
-          powers of {" "}
-          <NoBreak>
-            <Math>
-              $10$
-            </Math>
-            :
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Table class="first-line">
-          <colgroup>
-            <col width="60px" />
-            <col width="200px" />
-            <col width="140px" />
-          </colgroup>
-          <tbody>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $n$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $\,\,10^n$
-                </Math>
-              </td>
-              <td class="align-center">
-                name
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $0$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $1$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  one
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $1$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $10$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  ten
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $2$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $100$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  hundred
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $3$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $1000$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  thousand
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $6$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $1\,000\,000$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  million
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $9$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $1\,000\,000\,000$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  billion
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $12$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $1\,000\,000\,000\,000$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  trillion
-                </i>
-              </td>
-            </tr>
-          </tbody>
-        </Table>
-        <Pause />
-        <VerticalChunk>
-          One can note that
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          one million is a thousand thousand
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          because
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 1000 \times 1000 = 1000\hspace&#123;0.3ex&#125;000
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          by counting zeroes, or, equivalently, because
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 10^3 \times 10^3 = 10^6
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          by additivity of exponents. Similarly, note that
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          one billion is a thousand million
-          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          and
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          one trillion is a thousand billion
-          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          and also (while we're at it)
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          one trillion is a million million
-          <ImageRight src="/images/svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          as can be seen, for example, by replacing “billion”
-          with “thousand million” in the previous sentence and
-          then further replacing “thousand thousand” with “million”
-          in {" "}
+          {" "}
+          The so-called{" "}
           <i>
-            that
+            intersection
           </i>
-          {" "} sentence.
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section id="section-7">
-        <VerticalChunk>
-          <b>
-            Negative exponent prefixes.
-          </b>
+          {" "}of two sets{" "}
+          <Math>
+            $A$
+          </Math>
+          {" "}and
           {" "}
-          For negative exponents we simply say “one tenth”
-          instead of “ten”, etc. Specifically, the table looks
-          like so:
-        </VerticalChunk>
-        <Pause />
-        <Table class="first-line">
-          <colgroup>
-            <col width="60px" />
-            <col width="200px" />
-            <col width="140px" />
-          </colgroup>
-          <tbody>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $n$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $\,\,10^n$
-                </Math>
-              </td>
-              <td class="align-center">
-                name
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $-1$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $0.1$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  one tenth
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $-2$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $0.01$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  one hundredth
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $-3$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $0.001$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  one thousandth
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $-6$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $0.000001$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  one millionth
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $-9$
-                </Math>
-              </td>
-              <td class="align-center">
-                <Math>
-                  $0.000000001$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  one trillionth
-                </i>
-              </td>
-            </tr>
-          </tbody>
-        </Table>
-        <Pause />
-        <VerticalChunk>
-          In passing, note how the standard decimal expansion
-          for {" "}
           <Math>
-            $10^&#123;-1&#125;$
+            $B$
           </Math>
-          {" "} contains exactly one {" "}
+          {" "}is written
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large A \cap B
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and consists of the set of all things that are both
+          in{" "}
+          <Math>
+            $A$
+          </Math>
+          {" "}and in{" "}
           <NoBreak>
             <Math>
-              $&#123;0&#125;$
-            </Math>
-            :
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_one_blue_one_image_equation.svg" />
-        <Pause />
-        <VerticalChunk>
-          Likewise, the standard decimal expansion for {" "}
-          <Math>
-            $10^&#123;-2&#125;$
-          </Math>
-          {" "}
-          contains exactly two {" "}
-          <NoBreak>
-            <Math>
-              $0$
-            </Math>
-            's...
-          </NoBreak>
-        </VerticalChunk>
-        <Pause />
-        <Image src="/images/svg_two_blue_one_image_equation.svg" />
-        <Pause />
-        <VerticalChunk>
-          ...and so on, which is a possible trick to check
-          one's work and avoid mistakes.
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          However, there also exist negative exponent
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          prefixes
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          that people use to qualify other measures. For
-          example, a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          millimeter
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          is {" "}
-          <Math>
-            $10^&#123;-3&#125;$
-          </Math>
-          {" "} meters, i.e., one thousandth of
-          a meter, because “milli” happens to be the prefix
-          for {" "}
-          <NoBreak>
-            <Math>
-              $10^&#123;-3&#125;$
+              $B$
             </Math>
             .
           </NoBreak>
-          {" "} Here is a list of the most common
-          such prefixes:
-        </VerticalChunk>
+          {" "}For example,
+        </OuterP>
         <Pause />
-        <Table class="first-line">
-          <colgroup>
-            <col width="120px" />
-            <col width="120px" />
-          </colgroup>
-          <tbody>
-            <tr>
-              <td class="align-center">
-                power
-              </td>
-              <td class="align-center">
-                prefix
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;-1&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  deci
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;-2&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  centi
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;-3&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  milli
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;-6&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  micro
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;-9&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  nano
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;-12&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  pico
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;-15&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  femto
-                </i>
-              </td>
-            </tr>
-          </tbody>
-        </Table>
+        <MathBlock>
+          $$
+          \Large \&#123;1, 2\&#125; \cap \&#123;2, 5\&#125; = \&#123;2\&#125;
+          $$
+        </MathBlock>
         <Pause />
-        <VerticalChunk>
-          (Funny how the prefixes switch from
-          ending in ‘i’ to ending in ‘o’ after
+        <OuterP>
+          as{" "}
+          <Math>
+            $2$
+          </Math>
+          {" "}is the only element that is both in{" "}
+          <Math>
+            $\&#123;1, 2\&#125;$
+          </Math>
           {" "}
+          and in{" "}
           <NoBreak>
             <Math>
-              $10^&#123;-3&#125;$
+              $\&#123;2, 5\&#125;$
             </Math>
-            .)
+            .
           </NoBreak>
-          {" "} (Well, anyway.)
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          To give an idea of scale,
-        </VerticalChunk>
+        </OuterP>
+        <OuterP class="indent-10">
+          Note that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large x \in (A \cup B)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          if and only if
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large x \in A
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <i>
+            or
+          </i>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large x \in B
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          because that's how we defined “union”. (Replace
+          “or” by “and” to get a definition of intersection.)
+          In fact, a logician would define the union of two
+          sets by an abstruse expression of the type
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large x \in (A \cup B) \iff (x \in A) \vee (x \in B)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          read
+        </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          micrometers
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          are smaller than the smallest animal
-          cells (human red blood cells, which
-          are among the smallest animal cells,
-          have a diameter of
-          {" "}
-          <NoBreak>
-            <Math>
-              $7$
-            </Math>
-            ~
-          </NoBreak>
+          an element{" "}
           <Math>
-            $9$
+            $x$
           </Math>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $\mu\textrm&#123;m&#125;$
-            </Math>
-            )
-          </NoBreak>
-          {" "} (nb: {" "}
+          {" "}is in the thing I call{" "}
           <NoBreak>
             “
             <Math>
-              $\mu$
+              $A \cup B$
             </Math>
             ”
           </NoBreak>
           {" "}
-          stands for “micro” and {" "}
+          if and only if{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}is in{" "}
+          <Math>
+            $A$
+          </Math>
+          {" "}or{" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}is in{" "}
+          <Math>
+            $B$
+          </Math>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          as{" "}
           <NoBreak>
             “
             <Math>
-              $\mu$
+              $\!\!\iff\!\!$
             </Math>
-            m”
+            ”
           </NoBreak>
-          {" "} stands
-          for “micrometer”). Next down,
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          nanometers
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          happen to be smaller than the diameter
-          of DNA, with DNA having a diameter of
-          about {" "}
+          {" "}means “if and only if” and
+          {" "}
           <NoBreak>
+            “
             <Math>
-              $2.5$
+              $\vee$
             </Math>
-            nm
+            ”
           </NoBreak>
-          {" "} (“nm” = “nanometer”).
-        </VerticalChunk>
+          {" "}means “or”. (You can figure out the
+          similar definition for the intersection of two sets
+          if we tell you that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \wedge
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          means “and”.)
+        </OuterP>
       </Section>
       <Pause />
-      <Section id="section-8">
-        <VerticalChunk>
+      <Section id="section-7">
+        <OuterP>
           <b>
-            Positive exponent prefixes.
+            Sets encountered in calculus.
           </b>
           {" "}
-          There exists a similar set of prefixes
-          for positve powers of {" "}
+          In calculus, you will see sets such as{" "}
+          <i>
+            the real
+            numbers
+          </i>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\rr
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which is an infinite set containing all “ordinary”
+          decimal numbers, or such as{" "}
+          <i>
+            the integers
+          </i>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\zz
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which contains all “whole” numbers, including the
+          negative ones. You might also encounter
+          {" "}
+          <i>
+            the natural numbers
+          </i>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\nn
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which contains only those integers that are greater
+          than{" "}
+          <Math>
+            $0$
+          </Math>
+          {" "}(i.e.,{" "}
           <NoBreak>
             <Math>
-              $10$
+              $\nn = \&#123;1, 2, 3, \ldots \&#125;$
             </Math>
-            .
+            ).
           </NoBreak>
-          {" "} Going up
-          to {" "}
+        </OuterP>
+        <OuterP class="indent-10">
+          Secondly—and this pretty much wraps it up for those
+          sets  that are commonly seen in calculus—you will
+          encounter{" "}
+          <i>
+            intervals
+          </i>
+          . For example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large [a, b]
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a{" "}
+          <i>
+            closed interval
+          </i>
+          , consisting of all (real)
+          numbers greater than or equal to{" "}
           <NoBreak>
             <Math>
-              $10^&#123;15&#125;$
+              $a$
             </Math>
             ,
           </NoBreak>
-          {" "} these are:
-        </VerticalChunk>
-        <Pause />
-        <Table
-          class="first-line"
-          marginTop="1em"
-          marginBottom="1em">
-          <colgroup>
-            <col width="120px" />
-            <col width="120px" />
-          </colgroup>
-          <tbody>
-            <tr>
-              <td class="align-center">
-                power
-              </td>
-              <td class="align-center">
-                prefix
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^1$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  deca
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;2&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  hecto
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;3&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  kilo
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;6&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  mega
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;9&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  giga
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;12&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  tera
-                </i>
-              </td>
-            </tr>
-            <tr>
-              <td class="align-center">
-                <Math>
-                  $10^&#123;15&#125;$
-                </Math>
-              </td>
-              <td class="align-center">
-                <i>
-                  peta
-                </i>
-              </td>
-            </tr>
-          </tbody>
-        </Table>
-        <Pause />
-        <VerticalChunk>
-          For example, a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          kilometer
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          is a thousand meters
-          {" "}
-          <NoBreak>
-            [b/
-            <Math>
-              $\!\hspace&#123;0.1ex&#125;\rm&#123;c&#125;$
-            </Math>
-          </NoBreak>
-          {" "} “kilo” = thousand],
-          while a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          terabyte
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          is a trillion bytes {" "}
-          <NoBreak>
-            [b/
-            <Math>
-              $\!\hspace&#123;0.1ex&#125;\rm&#123;c&#125;$
-            </Math>
-          </NoBreak>
-          {" "} “tera” = trillion].
-          (In case you don't know, by the way,
-          a
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          byte
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          is a unit of computer memory
-          that is equal to {" "}
-          <Math>
-            $8$
-          </Math>
-          {" "} {" "}
-          <i>
-            bits
-          </i>
-          , with a {" "}
-          <i>
-            bit
-          </i>
-          {" "}
-          being a single 0/1 value.)
-        </VerticalChunk>
-      </Section>
-      <Pause />
-      <Section id="section-9">
-        <VerticalChunk>
-          <b>
-            Logarithms base 10.
-          </b>
-          {" "}
-          Every positive number can be uniquely
-          written as “ten to the power something”.
-          This “something” will heretofore be called
-          the {" "}
-          <i>
-            logarithm base {" "}
-            <Math>
-              $\mathit&#123;10&#125;$
-            </Math>
-          </i>
-          {" "} of that
-          (positive) number.
-        </VerticalChunk>
-        <VerticalChunk class="indent-10">
-          For example,
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 100
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          can be uniquely written as “ten to the power
-          something”. To wit, {" "}
-          <Math>
-            $100$
-          </Math>
-          {" "} is, of course,
-        </VerticalChunk>
-        <Pause />
-        <CentralDisplayItalic>
-          ten to the power {" "}
-          <Math>
-            $\mathit&#123;2&#125;$
-          </Math>
-        </CentralDisplayItalic>
-        <Pause />
-        <VerticalChunk>
-          and this means that
-        </VerticalChunk>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large 2
-          $$
-        </MathBlock>
-        <Pause />
-        <VerticalChunk>
-          is the logarithm base {" "}
-          <Math>
-            $10$
-          </Math>
-          {" "} of {" "}
+          {" "}and less than
+          or equal to{" "}
           <NoBreak>
             <Math>
-              $100$
+              $b$
             </Math>
             .
           </NoBreak>
-        </VerticalChunk>
+          {" "}Or
+        </OuterP>
         <Pause />
-        <Example>
-          <VerticalChunk>
-            <b>
-              Example 1.
-            </b>
-            {" "}
-            It so happens that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large 99 = 10^&#123;1.99563519...&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            under an extended definition of exponentiation that allows us to
-            compute {" "}
-            <Math>
-              $10^x$
-            </Math>
-            {" "} for every {" "}
-            <NoBreak>
-              <Math>
-                $x \in \rr$
-              </Math>
-              .
-            </NoBreak>
-            {" "}
-            So
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large 1.99563519...
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is the logarithm base {" "}
-            <Math>
-              $10$
-            </Math>
-            {" "} of {" "}
-            <NoBreak>
-              <Math>
-                $99$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-        </Example>
+        <MathBlock>
+          $$
+          \Large [a, b)
+          $$
+        </MathBlock>
         <Pause />
-        <Example>
-          <VerticalChunk>
-            <b>
-              Example 2.
-            </b>
-            {" "}
-            It so happens that
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large 98 = 10^&#123;1.99122607...&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            under the same extended definition, so
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large 1.99122607...
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            is the logarithm base {" "}
+        <OuterP>
+          is a{" "}
+          <i>
+            half-open
+          </i>
+          {" "}interval, consisting of all real
+          numbers greater than or equal to{" "}
+          <NoBreak>
             <Math>
-              $10$
+              $a$
             </Math>
-            {" "} of {" "}
-            <NoBreak>
-              <Math>
-                $98$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-        </Example>
+            ,
+          </NoBreak>
+          {" "}and less than
+          {" "}
+          <NoBreak>
+            <Math>
+              $b$
+            </Math>
+            .
+          </NoBreak>
+          {" "}Etc.
+        </OuterP>
+        <OuterP class="indent-10">
+          Note that
+        </OuterP>
         <Pause />
-        <Example>
-          <VerticalChunk>
-            <b>
-              Example 3.
-            </b>
-            {" "}
-            Since
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large 0.1 = 10^&#123;-1&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            the logarithm base {" "}
-            <Math>
-              $10$
-            </Math>
-            {" "} of {" "}
-            <Math>
-              $0.1$
-            </Math>
-            {" "} is {" "}
-            <NoBreak>
-              <Math>
-                $-1$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-        </Example>
+        <MathBlock>
+          $$
+          \Large (-\infty, \infty) = \rr
+          $$
+        </MathBlock>
         <Pause />
-        <Example>
-          <VerticalChunk>
-            <b>
-              Example 4.
-            </b>
-            {" "}
-            Since
-          </VerticalChunk>
-          <Pause />
-          <MathBlock>
-            $$
-            \Large 0.00001 = 10^&#123;-5&#125;
-            $$
-            <ImageRight
-              src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
-              offset_x="0em"
-              compensate_offset_x_for_large_text_columns={true} />
-          </MathBlock>
-          <Pause />
-          <VerticalChunk>
-            the logarithm base {" "}
+        <OuterP>
+          since
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large (-\infty, \infty)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (which is an{" "}
+          <i>
+            open
+          </i>
+          {" "}interval, by the way) means
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          the set of real numbers with no bound below,
+          and no bound above
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          which is all of{" "}
+          <NoBreak>
             <Math>
-              $10$
+              $\rr$
             </Math>
-            {" "} of {" "}
-            <Math>
-              $0.00001$
-            </Math>
-            {" "} is {" "}
-            <NoBreak>
-              <Math>
-                $-5$
-              </Math>
-              .
-            </NoBreak>
-          </VerticalChunk>
-        </Example>
+            .
+          </NoBreak>
+        </OuterP>
       </Section>
       <Pause />
-      <Exercises>
-        <Exercise number={1}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 1.
-              </b>
-              {" "}
-              Compute {" "}
-              <NoBreak>
-                <Math>
-                  $2^&#123;-2&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $2^&#123;-3&#125;$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $2^&#123;-4&#125;$
-              </Math>
-              {" "} by hand.
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              Since {" "}
-              <NoBreak>
-                <Math>
-                  $2^&#123;-1&#125; = 1/2 = 0.5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} one has
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2^&#123;-2&#125; = &#123;2^&#123;-1&#125;\over 2&#125; = &#123;0.5 \over 2&#125; = 0.25
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2^&#123;-3&#125; = &#123;2^&#123;-2&#125;\over 2&#125; = &#123;0.25 \over 2&#125; = 0.125
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2^&#123;-4&#125; = &#123;2^&#123;-3&#125;\over 2&#125; = &#123;0.125 \over 2&#125; = 0.0625
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              respectively.
-            </VerticalChunk>
-            <Pause />
-            <SolutionNote>
-              <VerticalChunk>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                For the last computation, {" "}
-                <Math>
-                  $0.125$
-                </Math>
-                {" "} can be viewed
-                as twelve hundredths plus {" "}
-                <Math>
-                  $5$
-                </Math>
-                {" "} thousandths:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_0.125_twelve_5.svg" />
-              <Pause />
-              <VerticalChunk>
-                Half of twelve hundredths is six hundredths, and
-                half of {" "}
-                <Math>
-                  $5$
-                </Math>
-                {" "} thousandths is {" "}
-                <Math>
-                  $2.5$
-                </Math>
-                {" "} thousandths:
-              </VerticalChunk>
-              <Pause />
-              <Image src="/images/svg_06_and_0025.svg" />
-              <Pause />
-              <VerticalChunk>
-                ...so {" "}
-                <Math>
-                  $0.125/2$
-                </Math>
-                {" "} is {" "}
-                <NoBreak>
-                  <Math>
-                    $0.06 + 0.0025 = 0.0625$
-                  </Math>
-                  .
-                </NoBreak>
-              </VerticalChunk>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={2}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 2.
-              </b>
-              {" "}
-              Compute {" "}
-              <Math>
-                $100/16$
-              </Math>
-              {" "} by hand.
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              We have
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;1 \over 16&#125; = &#123;1 \over 2\cdot 2\cdot 2\cdot 2&#125; = 2^&#123;-4&#125; = 0.0625
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              so
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;100 \over 16&#125; = 100 \cdot &#123;1 \over 16&#125; = 100\cdot 0.0625 = 6.25
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and that's all there is to it! (Or you could repeatedly divide {" "}
-              <Math>
-                $100$
-              </Math>
-              {" "} by {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              until you reach {" "}
-              <NoBreak>
-                <Math>
-                  $6.25$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} after the fourth division.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={3}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 3.
-              </b>
-              {" "}
-              If “万” is Chinese for {" "}
-              <i>
-                ten thousand
-              </i>
-              , what is “万万” in English?
-              What about “万万万”?
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              “万万” is “ten thousand ten thousand”, or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^4 \times 10^4 = 10^8
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or {" "}
-              <i>
-                one hundred million
-              </i>
-              {" "} since {" "}
-              <Math>
-                $10^8 = 10^2 \times 10^6$
-              </Math>
-              {" "} is a hundred times a
-              million. Similarly, “万万万” is
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^4 \times 10^4 \times 10^4 = 10^&#123;12&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which is just one trillion.
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Notes.
-              </i>
-              {" "}
-              Rearranging
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              ten thousand ten thousand
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              to
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              ten ten thousand thousand
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              directly leads us to “hundred million”
-              without having to use exponents, since ten
-              times ten is a hundred and since a thousand
-              times a thousand is a million.
-            </VerticalChunk>
-            <VerticalChunk class="indent-10">
-              (Similarly,
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              ten thousand ten thousand ten thousand
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              becomes
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              ten ten ten thousand thousand thousand
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              after rearrangement, which can be seen to
-              equal one trillion because “ten ten ten” is
-              a thousand.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={4}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 4.
-              </b>
-              {" "}
-              How many millimeters in a kilometer?
-              How many kilometers in a millimeter?
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              There are {" "}
-              <Math>
-                $10^3$
-              </Math>
-              {" "} millimeters in a meter
-              (
-              <i>
-                milli
-              </i>
-              {" "} = thousandth) and {" "}
-              <Math>
-                $10^3$
-              </Math>
-              {" "} meters
-              in a kilometer, so there are
-              {" "}
-              <Math>
-                $10^3 \times 10^3 = 10^6$
-              </Math>
-              {" "}
-              millimeters in a kilometer.
-            </VerticalChunk>
-            <VerticalChunk class="indent-10">
-              From there, it automatically follows that
-              there are {" "}
-              <Math>
-                $1/10^6 = 10^&#123;-6&#125;$
-              </Math>
-              {" "} kilometers in
-              a millimeter.
-            </VerticalChunk>
-            <VerticalChunk class="indent-10">
-              (Or you can run the reverse reasoning:
-              There are {" "}
-              <Math>
-                $10^&#123;-3&#125;$
-              </Math>
-              {" "} kilometers in a meter,
-              and {" "}
-              <Math>
-                $10^&#123;-3&#125;$
-              </Math>
-              {" "} meters in a millimeter,
-              so {" "}
-              <Math>
-                $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
-              </Math>
-              {" "}
-              kilometers in a millimeter.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={5}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 5.
-              </b>
-              {" "}
-              How many kilometers is {" "}
-              <Math>
-                $10^&#123;24&#125;$
-              </Math>
-              {" "} millimeters?
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              We have
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1\textrm&#123;mm&#125; = 10^&#123;-6&#125;\textrm&#123;km&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by the previous problem, so
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^&#123;24&#125; \textrm&#123;mm&#125; = 10^&#123;24&#125;\cdot 10^&#123;-6&#125;\textrm&#123;km&#125; = 10^&#123;18&#125;\textrm&#123;km&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by direct substitution. (You can do that with
-              units.) The answer is therefore: {" "}
-              <NoBreak>
-                <Math>
-                  $10^&#123;18&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={6}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 6.
-              </b>
-              {" "}
-              If the US yearly budget is {" "}
-              <Math>
-                $4$
-              </Math>
-              {" "} trillion
-              dollars, what percentage of the budget is
-              one hundred billion $?
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              One hundred billion is {" "}
-              <Math>
-                $10\%$
-              </Math>
-              {" "} of one trillion [cf.:
-              {" "}
-              <NoBreak>
-                <Math>
-                  $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
-                </Math>
-                ]
-              </NoBreak>
-              {" "}
-              and one trillion is a quarter of {" "}
-              <Math>
-                $4$
-              </Math>
-              {" "}
-              trillion, so the answer is {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Postscript
-              </i>
-              :
-              There is no such thing as “the U.S. budget”. A
-              monetarily sovereign nation {" "}
-              <i>
-                spends
-              </i>
-              {" "} its currency
-              into existence. (And taxes it out of existence.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={7}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 7.
-              </b>
-              {" "}
-              What is the logarithm base {" "}
-              <Math>
-                $10$
-              </Math>
-              {" "} of one trillion?
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              <NoBreak>
-                <Math>
-                  $12$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} because one trillion is {" "}
-              <NoBreak>
-                <Math>
-                  $10^&#123;12&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={8}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 8.
-              </b>
-              {" "}
-              What is the logarithm base {" "}
-              <Math>
-                $10$
-              </Math>
-              {" "} of {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ?
-              </NoBreak>
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} because {" "}
-              <NoBreak>
-                <Math>
-                  $1 = 10^0$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 9.
-              </b>
-              {" "}
-              What is the logarithm base {" "}
-              <Math>
-                $10$
-              </Math>
-              {" "} of: {" "}
-              <i>
-                a trillion times a billion times a million times a thousand
-              </i>
-              ?
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              Since
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^&#123;12&#125;\times 10^&#123;9&#125;\times 10^&#123;6&#125;\times 10^3 = 10^&#123;12+9+6+3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              the answer is {" "}
-              <NoBreak>
-                <Math>
-                  $12+9+6+3$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} or {" "}
-              <NoBreak>
-                <Math>
-                  $30$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={10}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 10.
-              </b>
-              {" "}
-              Evaluate:
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125;
-              $$
-            </MathBlock>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              We have
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; = &#123;10^&#123;6-12+10&#125; \over 10^&#123;-4 -4&#125;&#125; = &#123;10^4 \over 10^&#123;-8&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;10^4 \over 10^&#123;-8&#125;&#125; = 10^4 \cdot &#123;1 \over 10^&#123;-8&#125;&#125; = 10^4\cdot 10^&#123;-(-8)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^4\cdot 10^&#123;-(-8)&#125; = 10^4\cdot 10^8 = 10^&#123;4 + 8&#125; = 10^&#123;12&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              so the answer is {" "}
-              <NoBreak>
-                <Math>
-                  $10^&#123;12&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 11.
-              </b>
-              {" "}
-              How many {" "}
-              <i>
-                millibits
-              </i>
-              {" "} in a {" "}
-              <i>
-                gigabyte
-              </i>
-              ?
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              Presumably, there are {" "}
-              <Math>
-                $1000$
-              </Math>
-              {" "} “millibits”
-              (whatever those are, we can go along with
-              the joke here) in one bit. Since there are
-              eight bits in a byte, and a million bytes
-              in a gigabyte, this means that there would
-              be
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1000 \times 8 \times 10^6 = 8 \times 10^9
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or {" "}
-              <Math>
-                $8$
-              </Math>
-              {" "} billion “millibits” per gigabyte.
-              (But to reiterate, there is no such thing
-              as a “millibit”; a bit is a {" "}
-              <i>
-                discrete
-              </i>
-              —i.e.,
-              indivisible—unit of computer memory.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={12}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 12.
-              </b>
-              {" "}
-              It so happens that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 6.25
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (i.e., the value of {" "}
-              <NoBreak>
-                <Math>
-                  $100/16$
-                </Math>
-                )
-              </NoBreak>
-              {" "} is also
-              famous for being equal to {" "}
-              <NoBreak>
-                <Math>
-                  $2.5^2$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (You can
-              verify that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 25^2 = 625
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and, by shifting two decimal places, one
-              finds {" "}
-              <NoBreak>
-                <Math>
-                  $2.5^2 = 6.25$
-                </Math>
-                .)
-              </NoBreak>
-              {" "} Can you elucidate
-              why it would be that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;100 \over 16&#125; = 2.5^2
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by using some kind of algebra?
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              One has
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;100 \over 16&#125; = &#123;10^2 \over 4^2&#125; = \left(\!&#123;10\over 4&#125;\!\right)^&#123;\!\!2&#125; = \left(\!&#123;5\over 2&#125;\!\right)^&#123;\!\!2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $5/2 = 2.5$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (Ta-daa!)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 13.
-              </b>
-              {" "}
-              Prove that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;10^n \over \vphantom&#123;10^&#123;A^n&#125;&#125;10^m&#125; = 10^&#123;n-m&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              for all integers {" "}
-              <Math>
-                $n$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $m$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (You can
-              take for granted any identity that is stated
-              in this {" "}
-              <del>
-                chapter
-              </del>
-              {" "} bootcamp.)
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              Here is the “proof” that your professor is
-              hoping for:
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_start_end_proof.svg" />
-            <Pause />
-            <VerticalChunk>
-              The point is that the second equality uses the identity
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;1 \over 10^m&#125; = 10^&#123;-m&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              stated earlier in the chapter as (
-              <InChapterLink
-                href="/article/bootcamp1?id=_1_3426"
-                class="handle-in-chapter-link">
-                A
-              </InChapterLink>
-              ), 
-              while the third equality uses additivity of exponents, 
-              also stated earlier. (So: We are only using “known”
-              facts, alongside some ordinary arithmetic.)
-            </VerticalChunk>
-            <Pause />
-            <VerticalChunk>
-              <i>
-                Notes.
-              </i>
-              {" "}
-              The identity proved in this exercise,
-              when generalized to any base,
-              is one of the “laws of exponents”, whose complete list
-              (even more-than-complete, other sources list fewer laws)
-              is as follows (minus fine print):
-            </VerticalChunk>
-            <Pause />
-            <Image src="/images/svg_laws_exp.svg" />
-            <Pause />
-            <VerticalChunk>
-              The first law can be recognized as “additivity of exponents”
-              while the second law
-              is the above-mentioned generalization of this exercise's result.
-              (Nb: Concerning the next-to-last law, note that, {" "}
-              <i>
-                by definition
-              </i>
-              ,
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \left(&#123;a\over b&#125;\right)^&#123;\!-1&#125; = &#123;1 \over \left( &#123;a \over b&#125;\right)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and it so happens that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;1 \over \left( &#123;a \over b&#125;\right)&#125; = &#123;b \over a&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              for all {" "}
-              <NoBreak>
-                <Math>
-                  $a, b \ne 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} by some principle of elementary arithmetic.)
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_3_4723">
-            <VerticalChunk>
-              <b>
-                Exercise 14.
-              </b>
-              {" "}
-              Rewrite each of these expressions...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;L \over T&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;M (L/T) \over T&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right)
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...in the form...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large M^aL^bT^c
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...for some integer exponents {" "}
-              <NoBreak>
-                <Math>
-                  $a$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $b$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $c$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              We have (#1)
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;L \over T&#125; = LT^&#123;-1&#125; = M^0L^1T^&#123;-1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              since
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;L \over T&#125; = L\cdot &#123;1\over T&#125; = LT^&#123;-1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and (#2)
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;M (L/T) \over T&#125; = MLT^&#123;-2&#125; = M^1L^1T^&#123;-2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              since
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;L/T \over T&#125; = &#123;L\over T&#125;\cdot&#123;1 \over T&#125; = &#123;L \over T^2&#125; = LT^&#123;-2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and (#3)
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right) = ML^&#123;-1&#125;T^&#123;-1&#125; = M^1L^&#123;-1&#125;T^&#123;-1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              since
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large L^2&#123;L/T\over L&#125; = L^2&#123;1/T \over 1&#125; = &#123;L^2\over T&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \left.&#123;ML \over T^2 &#125; \right/ &#123;L^2\over T&#125; = &#123;ML\over T^2&#125;\cdot &#123;T\over L^2&#125; = &#123;M \over TL&#125; = MT^&#123;-1&#125;L^&#123;-1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              given that {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over T&#125; = T^&#123;-1&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over L&#125;=L^&#123;-1&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement>
-            <VerticalChunk>
-              <b>
-                Exercise 15.
-              </b>
-              {" "}
-              Find integers {" "}
-              <NoBreak>
-                <Math>
-                  $a$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $b$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} such that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large v^aF^b\mu^c\rho = 1
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              where {" "}
-              <NoBreak>
-                <Math>
-                  $v$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $F$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $\mu$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $\rho$
-              </Math>
-              {" "} are defined as below.
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large v = &#123;L \over T&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large F = &#123;ML \over T^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \mu = &#123;M \over TL &#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \rho = &#123;M \over L^3&#125;
-              $$
-            </MathBlock>
-          </ExerciseStatement>
-          <Solution>
-            <VerticalChunk>
-              Firstly we can rewrite {" "}
-              <NoBreak>
-                <Math>
-                  $v$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $F$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $\mu$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $\rho$
-              </Math>
-              {" "}
-              in the canonical form {" "}
-              <Math>
-                $M^xL^yT^z$
-              </Math>
-              {" "}
-              for integers {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $z$
-              </Math>
-              {" "} (as in {" "}
-              <InChapterLink
-                href="/article/bootcamp1?id=_3_4723"
-                class="handle-in-chapter-link">
-                Exercise 14
-              </InChapterLink>
-              ):
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large v = LT^&#123;-1&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large F = MLT^&#123;-2&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \mu = MT^&#123;-1&#125;L^&#123;-1&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \rho = ML^&#123;-3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (Ok.) Nextly, we compute {" "}
-              <NoBreak>
-                <Math>
-                  $v^a$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $F^b$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $\mu^c$
-              </Math>
-              {" "}
-              by applying the fourth law of exponents (note e.g.
-              that {" "}
-              <NoBreak>
-                <Math>
-                  $(T^&#123;-1&#125;)^a = T^&#123;(-1)a&#125; = T^&#123;-a&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} etc):
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large v^a = L^aT^&#123;-a&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large F^b = M^&#123;b&#125;L^bT^&#123;-2b&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \mu^c = M^cT^&#123;-c&#125;L^&#123;-c&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \rho = ML^&#123;-3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (In the last line we just restated {" "}
-              <NoBreak>
-                <Math>
-                  $\rho$
-                </Math>
-                .)
-              </NoBreak>
-              {" "}
-              Then {" "}
-              <Math>
-                $v^aF^b\mu^c\rho$
-              </Math>
-              {" "} becomes
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large M^&#123;b+c+1&#125;L^&#123;a+b-c-3&#125;T^&#123;-a-2b-c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              by multiplying everything together and using
-              additivity of exponents. (E.g., {" "}
-              <NoBreak>
-                <Math>
-                  $M^bM^cM = M^&#123;b+c+1&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              and so on.) This expression equals
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              independently of the values of {" "}
-              <NoBreak>
-                <Math>
-                  $M$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $L$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $T$
-              </Math>
-              {" "}
-              if and only if...
-            </VerticalChunk>
-            <Pause />
-            <CentralDisplayItalic>
-              the three exponents are zero
-            </CentralDisplayItalic>
-            <Pause />
-            <VerticalChunk>
-              ...(!!!) which means that we need to find values
-              {" "}
-              <NoBreak>
-                <Math>
-                  $a$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $b$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} such that these three equations...
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large b + c + 1 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large a + b - c - 3 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large -a -2b - c = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              ...are satisfied! Adding the second and
-              third equation together, we find
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large -b -2c -3 = 0
-              $$
-              <ImageRight
-                src="/images/svg_bt2_ex_equation_addition_cloud.svg"
-                offset_y="-0.5em"
-                offset_x="0.5em"
-                compensate_offset_x_for_large_text_columns={true} />
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              and adding this last equation to the first
-              equation above, we find
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large -c -2 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which implies that {" "}
-              <NoBreak>
-                <Math>
-                  $-c = 2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} i.e., that {" "}
-              <NoBreak>
-                <Math>
-                  $c = -2$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              Plugging {" "}
-              <Math>
-                $c = -2$
-              </Math>
-              {" "} into the first of our three
-              equations, we find
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large b + (-2) + 1 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              or
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large b - 1 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which implies that {" "}
-              <NoBreak>
-                <Math>
-                  $b = 1$
-                </Math>
-                .
-              </NoBreak>
-              {" "} Lastly, plugging
-              {" "}
-              <NoBreak>
-                <Math>
-                  $b = 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $c = -2$
-              </Math>
-              {" "} in our second equation above
-              gives us
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large a + 1 - (-2) - 3 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              which implies that {" "}
-              <Math>
-                $a = 0$
-              </Math>
-              {" "} since {" "}
-              <NoBreak>
-                <Math>
-                  $1-(-2)-3 = 0$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              (One can finally check that
-              setting {" "}
-              <NoBreak>
-                <Math>
-                  $a=0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $b = 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $c=-2$
-              </Math>
-              {" "} satisfies that
-              third equation, {" "}
-              <NoBreak>
-                <Math>
-                  $-a-2b-c=0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which it does.)
-            </VerticalChunk>
-            <VerticalChunk class="indent-10">
-              In summary, the solution is {" "}
-              <NoBreak>
-                <Math>
-                  $a = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $b = 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              {" "}
-              <NoBreak>
-                <Math>
-                  $c = -2$
-                </Math>
-                ;
-              </NoBreak>
-              {" "} we have discovered that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large v^0 F^1 \mu^&#123;-2&#125; \rho = 1
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              under the given definitions of {" "}
-              <NoBreak>
-                <Math>
-                  $v$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $F$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $\mu$
-              </Math>
-              {" "}
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $\rho$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} or which is to say, we have discovered
-              that
-            </VerticalChunk>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large F\mu^&#123;-2&#125;\rho = 1
-              $$
-            </MathBlock>
-            <Pause />
-            <VerticalChunk>
-              (since {" "}
-              <NoBreak>
-                <Math>
-                  $v^0 = 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $F^1 = F$
-                </Math>
-                ).
-              </NoBreak>
-            </VerticalChunk>
-          </Solution>
-        </Exercise>
-      </Exercises>
+      <Section id="section-8">
+        <OuterP>
+          <b>
+            Sets not encountered in calculus.
+          </b>
+          {" "}
+          If you take a more advanced course, you might
+          encounter the so-called{" "}
+          <i>
+            set of extended real numbers
+          </i>
+          ,
+          written
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\overline&#123;\rr&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and which consists of all the numbers in{" "}
+          <NoBreak>
+            <Math>
+              $\rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}plus
+          the formal symbols{" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\infty$
+            </Math>
+            ”,
+          </NoBreak>
+          {" "}{" "}
+          <NoBreak>
+            “
+            <Math>
+              $\infty$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}as well:
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\overline&#123;\rr&#125; = \rr \cup \&#123;-\infty, \infty\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (I.e., ...well, you get it!)
+        </OuterP>
+        <OuterP class="indent-10">
+          You can view{" "}
+          <Math>
+            $\overline&#123;\rr&#125;$
+          </Math>
+          {" "}as a kind “closed interval”
+          version of{" "}
+          <NoBreak>
+            <Math>
+              $\rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}that is, think of{" "}
+          <Math>
+            $\overline&#123;\rr&#125;$
+          </Math>
+          {" "}
+          as being the closed interval
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large [-\infty, \infty]
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          with the two infinite endpoints{" "}
+          <i>
+            included
+          </i>
+          .
+        </OuterP>
+        <OuterP class="indent-10">
+          Does all this have any “real meaning”? Good question!
+          The answer is:{" "}
+          <i>
+            not until you give it one
+          </i>
+          .
+        </OuterP>
+        <OuterP class="indent-10">
+          E.g. (to give you a brief flavor, before we move on
+          forever from the topic), the value of something like
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large 0.5+ \infty
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          must be{" "}
+          <i>
+            defined
+          </i>
+          . (It is defined to be{" "}
+          <NoBreak>
+            <Math>
+              $\infty$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}in
+          case you're curious. In fact, one has{" "}
+          <Math>
+            $a + \infty = \infty$
+          </Math>
+          {" "}
+          for any{" "}
+          <NoBreak>
+            <Math>
+              $a \ne -\infty$
+            </Math>
+            .)
+          </NoBreak>
+          {" "}And some things remain
+          explicitly{" "}
+          <i>
+            undefined
+          </i>
+          . For example, the expression
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large (-\infty) + \infty
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          has an{" "}
+          <i>
+            undefined
+          </i>
+          {" "}value—the same way, say, that
+          division by{" "}
+          <Math>
+            $0$
+          </Math>
+          {" "}is undefined in{" "}
+          <NoBreak>
+            <Math>
+              $\rr$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (Well, anyway, end of lesson.)
+        </OuterP>
+      </Section>
     </>}
   </>;
 };
