@@ -1,3 +1,4 @@
+import { useNavigate } from "@solidjs/router";
 import {
   ParentProps,
   createEffect,
@@ -16,9 +17,10 @@ import mainColumnWidth from "~/hooks/useMainColumnWidth";
 const Container = (props: ParentProps) => {
   // can_click is for disabling click on page transition
   // there is an inital scroll when each page is loaded .
-  // code for it is in useScrollX used in renderder helpers
+  // code for it is in useScrollX used in renderer helpers
   // add_imports and table of contents
   const [marginMode, set_marginMode] = createSignal(false);
+  const navigate = useNavigate();
 
   let { on_mobile } = useOnMobile();
   let { store, set_store } = useGlobalContext();
@@ -32,10 +34,10 @@ const Container = (props: ParentProps) => {
   };
 
   const handleResize = () => {
-    set_store(
-      "innerWidth",
-      document.documentElement.clientWidth || window.innerWidth,
-    );
+    let oldInnerWidth = store.innerWidth;
+    let oldScrollWidth = store.scrollWidth;
+
+    set_store("innerWidth", document.documentElement.clientWidth || window.innerWidth);
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
@@ -46,19 +48,12 @@ const Container = (props: ParentProps) => {
       store.scrollHeight +
       store.scrollWidth;
 
-    if (!on_mobile()) {
+    if (oldInnerWidth != store.innerWidth || oldScrollWidth != store.scrollWidth) {
       window.scroll({
         left: (store.scrollWidth - store.innerWidth) / 2,
         behavior: "instant",
       });
     }
-  };
-
-  const handleOrientationChange = () => {
-    window.scroll({
-      left: (store.scrollWidth - store.innerWidth) / 2,
-      behavior: "instant",
-    });
   };
 
   createEffect(() => {
@@ -83,14 +78,12 @@ const Container = (props: ParentProps) => {
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-    window.addEventListener("orientationchange", handleOrientationChange);
     document.addEventListener("scrollend", scroll_back);
     document.addEventListener("touchend", scroll_back);
 
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("orientationchange", handleOrientationChange);
       document.removeEventListener("scrollend", scroll_back);
       document.removeEventListener("touchend", scroll_back);
     });
@@ -178,12 +171,12 @@ const Container = (props: ParentProps) => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") {
         e.preventDefault();
-        (document.querySelector(".prev_page") as HTMLAnchorElement)?.click();
+        navigate(store.prevPage);
         return;
       }
       if (e.key === "ArrowRight") {
         e.preventDefault();
-        (document.querySelector(".next_page") as HTMLAnchorElement)?.click();
+        navigate(store.nextPage);
         return;
       }
     };
@@ -201,19 +194,20 @@ const Container = (props: ParentProps) => {
     return Math.max(
       store.innerWidth,
       store.maxElementWidth + 60,
-      mainColumnWidth() + 2 * store.pageNecessaryMargin,
+      mainColumnWidth() + 2 * store.pageNecessaryMargin
     );
   };
 
   const effectiveMarginWidth = () => {
     return (containerWidth() - mainColumnWidth()) / 2;
-  }
+  };
 
   return (
     <div
       id="Container"
       class="pb-14 -z-10 relative overflow-hidden"
-      style={`width:${containerWidth()}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}>
+      style={`width:${containerWidth()}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}
+    >
       <EarlyImages />
       {/* Show margin areas when show_areas is true */}
       {store.show_areas && store.pageNecessaryMargin > 0 && (
@@ -239,7 +233,8 @@ const Container = (props: ParentProps) => {
             left: (store.scrollWidth - store.innerWidth) / 2,
             behavior: "smooth",
           });
-        }}>
+        }}
+      >
         {props.children}
       </div>
       <SVGDefs />

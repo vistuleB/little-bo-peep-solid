@@ -1,5 +1,5 @@
 |> Chapter
     title=$n \ra n + 1$
     handle=Refreshers
-    page-necessary-margin=610
+    page-necessary-margin=800
     max-element-width=500 

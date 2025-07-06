@@ -6,13 +6,14 @@ import gleam/io
 import gleam/list
 import gleam/option.{Some}
 import gleam/string.{inspect as ins}
-import gleam/dict
+import gleam/dict.{type Dict}
 import infrastructure as infra
 import pipeline.{our_pipeline}
 import vxml.{type VXML, V}
 import vxml_renderer as vr
 import writerly as wp
 import gleam/otp/actor.{stop}
+import emitter_imports as ei
 
 type FragmentType {
   Article(String)
@@ -107,35 +108,20 @@ fn article_emitter(
   path: String,
   fragment: VXML,
   fragment_type: FragmentType,
+  imports_lookup: Dict(String, ei.ImportSource),
 ) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
 
   let #(first_split, rest) = split_vxml_to_first_section_and_rest(fragment)
   let assert Article(payload) = fragment_type
 
+  let assert Ok(component_imports) =
+    ei.uppercase_tags(fragment)
+    |> ei.imports_blamed_lines_for_symbols(imports_lookup)
+
   let lines =
     list.flatten([
-      [
-        BlamedLine(blame_us("article_emitter"), 0, "import Article from \"~/components/Article\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import { Section, Note, SolutionNote, Example, NoBreak, Pause } from \"~/components/Wrappers\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import { CentralDisplay, CentralDisplayItalic } from \"~/components/Delimiters\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import TextParent from \"~/components/TextParent\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import { Math, MathBlock } from \"~/components/Math\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import { ImageRight, ImageLeft } from \"~/components/SideImage\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import Image from \"~/components/Image\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import InlineImage from \"~/components/InlineImage\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import { Exercise, Exercises, ExerciseStatement } from \"~/components/Exercises\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import InChapterLink from \"~/components/InChapterLink\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import Solution from \"~/components/Solution\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import Table from \"~/components/Table\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import Grid from \"~/components/Grid\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import { List, Item } from \"~/components/List\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import { SectionDivider } from \"~/components/SectionDivider\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import { StarDivider } from \"~/components/StarDivider\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import VerticalChunk from \"~/components/VerticalChunk\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import SectionsBreadcrumbs, { BreadcrumbItem } from \"~/components/SectionsBreadcrumbs\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
-        BlamedLine(blame_us("article_emitter"), 0, "import ArticleTitle from \"~/components/ArticleTitle\";"),
-
+      component_imports,
+      [ BlamedLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
         BlamedLine(blame_us("article_emitter"), 0, ""),
         BlamedLine(blame_us("article_emitter"), 0, "export default function " <> payload <> "() {"),
         BlamedLine(blame_us("article_emitter"), 2, "return <>"),
@@ -165,16 +151,16 @@ fn toc_emitter(
   path: String,
   fragment: VXML,
   fragment_type: FragmentType,
+  imports_lookup: Dict(String, ei.ImportSource),
 ) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
+  let assert Ok(component_imports) =
+    ei.uppercase_tags(fragment)
+    |> ei.imports_blamed_lines_for_symbols(imports_lookup)
+
   let lines =
     list.flatten([
-      [
-        BlamedLine(blame_us("toc_emitter"), 0, "import TOC from \"~/components/TOC\";"),
-        BlamedLine(blame_us("toc_emitter"), 0, "import TOCTitle from \"~/components/TOCTitle\";"),
-        BlamedLine(blame_us("toc_emitter"), 0, "import TOCItem from \"~/components/TOCItem\";"),
-        BlamedLine(blame_us("toc_emitter"), 0, "import { Spacer } from \"~/components/Spacer\";"),
-        BlamedLine(blame_us("toc_emitter"), 0, "import { Math } from \"~/components/Math\";"),
-        BlamedLine(blame_us("toc_emitter"), 0, ""),
+      component_imports,
+      [BlamedLine(blame_us("toc_emitter"), 0, ""),
         BlamedLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
       ],
@@ -193,13 +179,16 @@ fn hpausc_emitter(
   path: String,
   fragment: VXML,
   fragment_type: FragmentType,
+  imports_lookup: Dict(String, ei.ImportSource),
 ) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
+  let assert Ok(component_imports) =
+    ei.uppercase_tags_in_children(fragment)
+    |> ei.imports_blamed_lines_for_symbols(imports_lookup)
+
   let lines =
     list.flatten([
+      component_imports,
       [
-        BlamedLine(blame_us("hpausc_emitter"), 0, "import HamburgerPanelTitle from \"./HamburgerPanelTitle\";"),
-        BlamedLine(blame_us("hpausc_emitter"), 0, "import HamburgerPanelItem from \"./HamburgerPanelItem\";"),
-        BlamedLine(blame_us("hpausc_emitter"), 0, "import { Math } from \"./Math\";"),
         BlamedLine(blame_us("hpausc_emitter"), 0, ""),
         BlamedLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
         BlamedLine(blame_us("hpausc_emitter"), 2, "return <>"),
@@ -218,13 +207,14 @@ fn hpausc_emitter(
 
 fn our_emitter(
   fragment: #(String, VXML, FragmentType),
+  imports_lookup: Dict(String, ei.ImportSource),
 ) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
   let #(path, vxml, fragment_type) = fragment
   case fragment_type {
     Article(_) ->
-      article_emitter(path, vxml, fragment_type)
-    TOC -> toc_emitter(path, vxml, fragment_type)
-    HamburgerPanelAuthorSuppliedContents -> hpausc_emitter(path, vxml, fragment_type)
+      article_emitter(path, vxml, fragment_type, imports_lookup)
+    TOC -> toc_emitter(path, vxml, fragment_type, imports_lookup)
+    HamburgerPanelAuthorSuppliedContents -> hpausc_emitter(path, vxml, fragment_type, imports_lookup)
   }
 }
 
@@ -323,7 +313,7 @@ pub fn main() {
     },
   )
 
-    use _ <- infra.on_error_on_ok(
+  use _ <- infra.on_error_on_ok(
     dict.get(amendments.user_args, "--delete-wly"),
     with_on_ok: fn(_) {
       delete_files(".wly", input_dir)
@@ -341,19 +331,16 @@ pub fn main() {
     },
   )
 
+  let exports_dict = ei.lbp_exports_dictionary()
+  let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
+
   let renderer =
     vr.Renderer(
-      assembler: wp.assemble_blamed_lines_advanced_mode(
-        _,
-        amendments.spotlight_args_files,
-      ),
-      source_parser: vr.default_writerly_source_parser(
-        _,
-        amendments.spotlight_args,
-      ),
+      assembler: wp.assemble_blamed_lines_advanced_mode(_, amendments.spotlight_args_files),
+      source_parser: vr.default_writerly_source_parser( _, amendments.spotlight_args),
       pipeline: our_pipeline(),
       splitter: our_splitter,
-      emitter: our_emitter,
+      emitter: fn(fragment) { our_emitter(fragment, imports_lookup) },
       prettifier: vr.guarded_prettier_prettifier(amendments.user_args),
     )
 

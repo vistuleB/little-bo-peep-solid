@@ -66,6 +66,8 @@ pub fn our_pipeline() -> List(Pipe) {
       dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
       dn.handles_substitute([]),
       dn.unwrap(["GrandWrapper"]),
+      dn.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
+      dn.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
     ],
     // ****
     // get rid of 'WriterlyBlankLine',
@@ -77,18 +79,25 @@ pub fn our_pipeline() -> List(Pipe) {
         #(
           "VerticalChunk",
           [
+            "ArticleTitle",
             "Bootcamp", "CentralDisplay", "CentralDisplayItalic", "Chapter",
             "Example", "Exercise", "Exercises", "Grid", "Image", "ImageLeft",
             "ImageRight", "List", "MathBlock", "Note", "Pause", "Section",
             "Solution", "SolutionNote", "StarDivider", "Table", "TextParent",
-            "WriterlyBlankLine", "center", "li", "ul", "ol", "table", "colgroup",
+            "WriterlyBlankLine",
+            "center", "col", "div", "p", "li", "ul", "ol", "table", "colgroup",
             "thead", "tbody", "tr", "td", "section",
             "DebugScope",
           ],
-          ["MathBlock", "VerticalChunk", "CentralDisplay", "CentralDisplayItalic"],
+          ["MathBlock", "VerticalChunk", "CentralDisplay", "CentralDisplayItalic", "ArticleTitle"],
         ),
       ),
       dn.unwrap(["WriterlyBlankLine"]),
+      dn.concatenate_text_nodes(),
+      dn.remove_text_nodes_with_singleton_empty_line(),
+      dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
+      dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
+      dn.remove_empty_tags(["VerticalChunk"]),
     ],
     // ****
     // parse '__', '_|' delimiters, break
@@ -103,8 +112,6 @@ pub fn our_pipeline() -> List(Pipe) {
         #("CentralDisplay", "VerticalChunk"),
         #("CentralDisplayItalic", "VerticalChunk"),
       ]),
-      dn.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
-      dn.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
     ],
     // ****
     // parse _, * delims
@@ -125,15 +132,17 @@ pub fn our_pipeline() -> List(Pipe) {
         #("Exercise", "ExerciseStatement", "id"),
       ),
       // ************************
-      // VerticalChunk cleanup
+      // VerticalChunk cleanup (some cleanups all over again, after delim splitting)
       // ************************
       dn.concatenate_text_nodes(),
       dn.remove_text_nodes_with_singleton_empty_line(),
       dn.remove_starting_and_ending_spaces(["VerticalChunk"]),
       dn.remove_starting_and_ending_empty_lines(["VerticalChunk"]),
       dn.remove_empty_tags(["VerticalChunk"]),
-      dn.identity(),
-      dn.unwrap_tags_with_no_text_child(["VerticalChunk"]),
+      dn.unwrap_tags_when_no_child_meets_condition(#(
+        ["VerticalChunk"],
+        infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"])
+      )),
       dn.unwrap_when_descendant_of([#("VerticalChunk", ["td", "li"])]),
       dn.rename_when_child_of([
         #("VerticalChunk", "Item", "List"),
@@ -169,10 +178,6 @@ pub fn our_pipeline() -> List(Pipe) {
           "compensate_offset_x_for_large_text_columns",
           "true",
         ),
-      ]),
-      dn.rename_attributes([
-        #("margin-left", "marginLeft"),
-        #("margin-right", "marginRight"),
       ]),
       // ************************
       // VerticalChunk indents
@@ -213,9 +218,7 @@ pub fn our_pipeline() -> List(Pipe) {
         #("List", "Pause", []),
         #("StarDivider", "Pause", []),
       ]),
-      dn.add_before_tags_but_not_before_first_of_kind([
-        #("Section", "Pause", []),
-      ]),
+      dn.add_before_tags_but_not_before_first_of_kind([#("Section", "Pause", [])]),
       dn.rearrange_links([
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
@@ -245,12 +248,12 @@ pub fn our_pipeline() -> List(Pipe) {
       dn.unwrap(["BreadcrumbTitle"]),
       // dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
       dn.unwrap(["DebugScope"]),
-
       // ************************
       // attribute cleanup
       // ************************
       dn.change_attribute_value([#("src", "/()")]),
       dn.remove_attributes(["counter", "handle", "type", "t", ".", "title", "test"]),
+      dn.rename_attributes_by_function(infra.kabob_case_to_camel_case),
     ]
   ]
   |> list.flatten
