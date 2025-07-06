@@ -18,6 +18,9 @@ const Page = (props: ParentProps & PageProps) => {
   useSetRoute();
   useBreadcrumbs();
 
+  set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
+  set_store("maxElementWidth", props.maxElementWidth || 0);
+
   const resetDimensions = () => {
     set_store(
       "innerWidth",
@@ -27,8 +30,6 @@ const Page = (props: ParentProps & PageProps) => {
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
 
-    set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
-    set_store("maxElementWidth", props.maxElementWidth || 0);
     set_store("nextPage", props.nextPage || "");
     set_store("prevPage", props.prevPage || "");
 
