@@ -58,6 +58,7 @@ const Image = (props: ImageProps) => {
     const scale_to_use = should_be_scaled_down
       ? scaled_down_scale()
       : large_scale;
+
     set_scale({
       scale: 1.1,
       name: props.src,
@@ -115,6 +116,8 @@ const Image = (props: ImageProps) => {
             });
           }}
           onClick={() => {
+            if (store.margin_mode) return;
+
             // should we scale? (if it's the first click we should def. scale up)
             const should_be_scaled_down =
               our_on_mobile() && !scaled_down() && after_first_click();

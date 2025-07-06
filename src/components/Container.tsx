@@ -19,7 +19,6 @@ const Container = (props: ParentProps) => {
   // there is an inital scroll when each page is loaded .
   // code for it is in useScrollX used in renderer helpers
   // add_imports and table of contents
-  const [marginMode, set_marginMode] = createSignal(false);
   const navigate = useNavigate();
 
   let { on_mobile } = useOnMobile();
@@ -37,7 +36,10 @@ const Container = (props: ParentProps) => {
     let oldInnerWidth = store.innerWidth;
     let oldScrollWidth = store.scrollWidth;
 
-    set_store("innerWidth", document.documentElement.clientWidth || window.innerWidth);
+    set_store(
+      "innerWidth",
+      document.documentElement.clientWidth || window.innerWidth,
+    );
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
@@ -48,7 +50,10 @@ const Container = (props: ParentProps) => {
       store.scrollHeight +
       store.scrollWidth;
 
-    if (oldInnerWidth != store.innerWidth || oldScrollWidth != store.scrollWidth) {
+    if (
+      oldInnerWidth != store.innerWidth ||
+      oldScrollWidth != store.scrollWidth
+    ) {
       window.scroll({
         left: (store.scrollWidth - store.innerWidth) / 2,
         behavior: "instant",
@@ -70,10 +75,10 @@ const Container = (props: ParentProps) => {
           left: theoretical_left,
           behavior: "smooth",
         });
-        set_marginMode(false);
+        set_store("margin_mode", false);
         return;
       }
-      set_marginMode(true);
+      set_store("margin_mode", true);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -126,7 +131,7 @@ const Container = (props: ParentProps) => {
         preventActionOn().find((s) => s?.contains(target)) ||
         targetIsAnchor(target) ||
         on_mobile() ||
-        marginMode()
+        store.margin_mode
       ) {
         return;
       }
@@ -194,7 +199,7 @@ const Container = (props: ParentProps) => {
     return Math.max(
       store.innerWidth,
       store.maxElementWidth + 60,
-      mainColumnWidth() + 2 * store.pageNecessaryMargin
+      mainColumnWidth() + 2 * store.pageNecessaryMargin,
     );
   };
 
@@ -206,8 +211,7 @@ const Container = (props: ParentProps) => {
     <div
       id="Container"
       class="pb-14 -z-10 relative overflow-hidden"
-      style={`width:${containerWidth()}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}
-    >
+      style={`width:${containerWidth()}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}>
       <EarlyImages />
       {/* Show margin areas when show_areas is true */}
       {store.show_areas && store.pageNecessaryMargin > 0 && (
@@ -233,8 +237,7 @@ const Container = (props: ParentProps) => {
             left: (store.scrollWidth - store.innerWidth) / 2,
             behavior: "smooth",
           });
-        }}
-      >
+        }}>
         {props.children}
       </div>
       <SVGDefs />
