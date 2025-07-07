@@ -18,6 +18,10 @@ const Container = (props: ParentProps) => {
 
   useScrollIsAt0();
 
+  // **************************
+  // **** scrollBack stuff ****
+  // **************************
+
   const scrollBack = () => {
     let theoretical_left = (store.scrollWidth - store.innerWidth) / 2;
     if (
@@ -34,37 +38,6 @@ const Container = (props: ParentProps) => {
     set_store("margin_mode", true);
   };
 
-  const handleScroll = () => {
-    set_store("scrollY", window.scrollY);
-    set_store("scrollX", window.scrollX);
-  };
-
-  const handleResize = () => {
-    let oldInnerWidth = store.innerWidth;
-    let oldScrollWidth = store.scrollWidth;
-
-    set_store("innerWidth", window.innerWidth);
-    set_store("innerHeight", window.innerHeight);
-    set_store("scrollWidth", document.body.scrollWidth);
-    set_store("scrollHeight", document.body.scrollHeight);
-
-    let _dummy =
-      store.scrollY +
-      store.innerHeight +
-      store.scrollHeight +
-      store.scrollWidth;
-
-    if (
-      oldInnerWidth != store.innerWidth ||
-      oldScrollWidth != store.scrollWidth
-    ) {
-      window.scroll({
-        left: (store.scrollWidth - store.innerWidth) / 2,
-        behavior: "instant",
-      });
-    }
-  };
-
   createEffect(() => {
     document.addEventListener("scrollend", scrollBack);
     document.addEventListener("touchend", scrollBack);
@@ -74,6 +47,15 @@ const Container = (props: ParentProps) => {
     });
   });
 
+  // ****************************
+  // **** handleScroll stuff ****
+  // ****************************
+
+  const handleScroll = () => {
+    set_store("scrollY", window.scrollY);
+    set_store("scrollX", window.scrollX);
+  };
+
   createEffect(() => {
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -82,16 +64,12 @@ const Container = (props: ParentProps) => {
     });
   });
 
-  createEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    onCleanup(() => {
-      window.removeEventListener("resize", handleResize);
-    });
-  });
-
   let _window = window as any;
-
+  
+  // ***********************
+  // **** onMount stuff ****
+  // ***********************
+  
   onMount(() => {
     const preventActionOn = () => [
       document.getElementById("hamburger_panel"),

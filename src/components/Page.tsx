@@ -1,4 +1,4 @@
-import { onMount, ParentProps } from "solid-js";
+import { createEffect, onCleanup, ParentProps } from "solid-js";
 import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import useSetRoute from "~/hooks/useSetRoute";
@@ -23,7 +23,14 @@ const Page = (props: ParentProps & PageProps) => {
   set_store("nextPage", props.nextPage || "");
   set_store("prevPage", props.prevPage || "");
 
-  const resetDimensions = () => {
+  // ****************************
+  // **** handleResize stuff ****
+  // ****************************
+
+  const handleResize = () => {
+    let oldInnerWidth = store.innerWidth;
+    let oldScrollWidth = store.scrollWidth;
+
     set_store("innerWidth", window.innerWidth);
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
@@ -34,12 +41,24 @@ const Page = (props: ParentProps & PageProps) => {
       store.innerHeight +
       store.scrollHeight +
       store.scrollWidth;
+
+    if (
+      oldInnerWidth != store.innerWidth ||
+      oldScrollWidth != store.scrollWidth
+    ) {
+      window.scroll({
+        left: (store.scrollWidth - store.innerWidth) / 2,
+        behavior: "instant",
+      });
+    }
   };
 
-  onMount(() => {
-    resetDimensions();
-    setTimeout(resetDimensions, 50);
-    setTimeout(resetDimensions, 500);
+  createEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    onCleanup(() => {
+      window.removeEventListener("resize", handleResize);
+    });
   });
 
   return <>{props.children}</>;
