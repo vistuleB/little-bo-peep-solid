@@ -107,10 +107,7 @@ const Page = (props: ParentProps & PageProps) => {
       return false;
     };
 
-    if (
-      targetIsAnchor(e.target as Element) ||
-      on_mobile()
-    ) {
+    if (targetIsAnchor(e.target as Element)) {
       return;
     }
 
@@ -119,6 +116,10 @@ const Page = (props: ParentProps & PageProps) => {
         left: (store.scrollWidth - store.innerWidth) / 2,
         behavior: "smooth",
       });
+      return;
+    }
+
+    if (on_mobile()) {
       return;
     }
 
@@ -166,7 +167,7 @@ const Page = (props: ParentProps & PageProps) => {
   onMount(() => {
     handleScroll();
     handleResize();
-  
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     document.addEventListener("scrollend", handleScrollendAndTouchend);
