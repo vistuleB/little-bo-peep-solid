@@ -16,6 +16,9 @@ const Nav = () => {
           store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
           store.innerWidth >= MOBILE_MAX_WIDTH && "absolute"
         )}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
       >
         <div class="select-none border-b flex justify-center items-center bg-bg z-40 w-full h-14 left-0">
           <Title />

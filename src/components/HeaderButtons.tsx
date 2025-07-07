@@ -175,7 +175,8 @@ const HamburgerButton = () => {
   return (
     <button
       id="menu-btn"
-      onClick={() => {
+      onClick={(e) => {
+        e.stopPropagation();
         set_store("panel_opened", !open());
       }}
       style={{

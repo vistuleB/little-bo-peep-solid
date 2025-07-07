@@ -241,7 +241,10 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
               class="breadcrumb-prev-next flex gap-2"
             >
               <OutlinedText
-                onClick={() => getPrevArticle()}
+                onClick={(e: any) => {
+                  e.stopPropagation();
+                  getPrevArticle();
+                }}
                 class={twJoin(
                   prevDisabled() && "!text-stone-300 cursor-default",
                   "underline cursor-pointer"
@@ -250,7 +253,10 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
                 &lt;&lt;prev
               </OutlinedText>
               <OutlinedText
-                onClick={() => getNextArticle()}
+                onClick={(e: any) => {
+                  e.stopPropagation();
+                  getNextArticle();
+                }}
                 class={twJoin(
                   nextDisabled() && "!text-stone-300 cursor-default",
                   "underline cursor-pointer"
@@ -263,7 +269,8 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
           </ul>
           <CloseCircleIcon
             class="mt-2 cursor-pointer"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               setVisible(false);
             }}
           />

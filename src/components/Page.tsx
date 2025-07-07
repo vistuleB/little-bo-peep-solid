@@ -118,22 +118,8 @@ const Page = (props: ParentProps & PageProps) => {
   // ***********************
 
   onMount(() => {
-    const preventActionOn = () => [
-      document.getElementById("hamburger_panel"),
-      document.getElementById("prev-btn"),
-      document.getElementById("next-btn"),
-      document.getElementById("menu-btn"),
-      document.getElementById("breadcrumbs"),
-      ...document.querySelectorAll("#solution-btn"),
-      ...document.querySelectorAll("#backup-btn"),
-      ...document.querySelectorAll("#option-btn"),
-      document.getElementById("exercises-btns"),
-      document.getElementById("scroll-btns"),
-    ];
-
     const targetIsAnchor = (element: Element) => {
       let currentElement = element;
-
       while (
         currentElement !== null &&
         currentElement !== document.documentElement
@@ -147,11 +133,8 @@ const Page = (props: ParentProps & PageProps) => {
     };
 
     const handleClick = (e: MouseEvent) => {
-      const target = e.target as Element;
-
       if (
-        preventActionOn().find((s) => s?.contains(target)) ||
-        targetIsAnchor(target) ||
+        targetIsAnchor(e.target as Element) ||
         on_mobile()
       ) {
         return;
