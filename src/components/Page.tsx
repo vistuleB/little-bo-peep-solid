@@ -1,4 +1,4 @@
-import { createEffect, onMount, onCleanup, ParentProps } from "solid-js";
+import { onMount, onCleanup, ParentProps } from "solid-js";
 import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import useSetRoute from "~/hooks/useSetRoute";
@@ -162,16 +162,18 @@ const Page = (props: ParentProps & PageProps) => {
       return;
     }
   };
-  
+
   onMount(() => {
     handleScroll();
     handleResize();
+  
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     document.addEventListener("scrollend", handleScrollendAndTouchend);
     document.addEventListener("touchend", handleScrollendAndTouchend);
     window.addEventListener("click", handleClick);
     window.addEventListener("keydown", handleKeydown);
+
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
