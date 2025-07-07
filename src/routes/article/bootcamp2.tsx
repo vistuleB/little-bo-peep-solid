@@ -14,7 +14,7 @@ import { Section, Pause, NoBreak, Example, SolutionNote }  from "~/components/Wr
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Bootcamp2__() {
-  return <>
+  return (
     <Article
       prevPage=""
       nextPage="/article/bootcamp1"
@@ -127,7 +127,7 @@ export default function __Bootcamp2__() {
       </Section>
       <Rest />
     </Article>
-  </>;
+  );
 }
 
 const Rest = () => {
@@ -300,7 +300,7 @@ const Rest = () => {
           {" "} one also has
         </OuterP>
         <Pause />
-        <MathBlock id="_1_5136">
+        <MathBlock id="_1_4941">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -322,7 +322,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_5136"
+            href="/article/bootcamp2?id=_1_4941"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -344,7 +344,7 @@ const Rest = () => {
           {" "} which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_5136"
+            href="/article/bootcamp2?id=_1_4941"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -354,7 +354,7 @@ const Rest = () => {
           </Math>
           {" "} by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_5136"
+            href="/article/bootcamp2?id=_1_4941"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -365,7 +365,7 @@ const Rest = () => {
             line={2} />
         </OuterP>
         <Pause />
-        <MathBlock id="_2_223">
+        <MathBlock id="_2_2576">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -401,13 +401,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_223"
+            href="/article/bootcamp2?id=_2_2576"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_223"
+            href="/article/bootcamp2?id=_2_2576"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -421,7 +421,7 @@ const Rest = () => {
           </NoBreak>
           {" "} (So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_223"
+            href="/article/bootcamp2?id=_2_2576"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -493,13 +493,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_5136"
+            href="/article/bootcamp2?id=_1_4941"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_223"
+            href="/article/bootcamp2?id=_2_2576"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -2908,7 +2908,7 @@ const Rest = () => {
             <OuterP>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1_5136"
+                href="/article/bootcamp2?id=_1_4941"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -2972,7 +2972,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_3_9631">
+          <ExerciseStatement id="_3_4921">
             <OuterP>
               <b>
                 Exercise 14.
@@ -3256,7 +3256,7 @@ const Rest = () => {
               </Math>
               {" "} (as in {" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_9631"
+                href="/article/bootcamp2?id=_3_4921"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>

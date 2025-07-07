@@ -10,7 +10,7 @@ import { Section, NoBreak, Pause }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Bootcamp1__() {
-  return <>
+  return (
     <Article
       prevPage="/article/bootcamp2"
       nextPage="/"
@@ -166,7 +166,7 @@ export default function __Bootcamp1__() {
       </Section>
       <Rest />
     </Article>
-  </>;
+  );
 }
 
 const Rest = () => {

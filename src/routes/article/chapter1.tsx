@@ -14,13 +14,13 @@ import { Section, Pause, NoBreak, Example }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter1__() {
-  return <>
+  return (
     <Article
       prevPage="/"
       nextPage="/article/chapter2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_5_3655">
+      id="_5_5691">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -518,7 +518,7 @@ export default function __Chapter1__() {
       </Section>
       <Rest />
     </Article>
-  </>;
+  );
 }
 
 const Rest = () => {
@@ -1446,7 +1446,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_4_4023">
+          <ExerciseStatement id="_4_543">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2610,7 +2610,7 @@ const Rest = () => {
               {" "}
               In the solution to {" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_4023"
+                href="/article/chapter1?id=_4_543"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>

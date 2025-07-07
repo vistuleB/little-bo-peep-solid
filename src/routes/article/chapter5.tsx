@@ -15,7 +15,7 @@ import { NoBreak, Section, Pause, Example, SolutionNote }  from "~/components/Wr
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter5__() {
-  return <>
+  return (
     <Article
       prevPage="/article/chapter4"
       nextPage=""
@@ -668,7 +668,7 @@ export default function __Chapter5__() {
       </Section>
       <Rest />
     </Article>
-  </>;
+  );
 }
 
 const Rest = () => {
@@ -1465,7 +1465,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_4633"
+            href="/article/chapter4?id=_24_2679"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14491,7 +14491,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_25_5440">
+          <ExerciseStatement id="_25_2612">
             <OuterP>
               <b>
                 Exercise 42.

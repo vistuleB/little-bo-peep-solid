@@ -16,7 +16,7 @@ import { Section, Pause, NoBreak, Example, SolutionNote }  from "~/components/Wr
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter2__() {
-  return <>
+  return (
     <Article
       prevPage="/article/chapter1"
       nextPage="/article/chapter3"
@@ -172,7 +172,7 @@ export default function __Chapter2__() {
       </Section>
       <Rest />
     </Article>
-  </>;
+  );
 }
 
 const Rest = () => {
@@ -1691,7 +1691,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_1766">
+          <ExerciseStatement id="_6_5877">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2027,7 +2027,7 @@ const Rest = () => {
               {" "}
               As explained in {" "}
               <a
-                href="/article/chapter3?id=_15_5018"
+                href="/article/chapter3?id=_15_9433"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2136,7 +2136,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_1766"
+                href="/article/chapter2?id=_6_5877"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
