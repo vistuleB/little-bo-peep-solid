@@ -11,11 +11,11 @@ import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "../store/StoreProvider";
 import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 
-const HeaderTopRightButtons = () => {
+const HeaderButtons = () => {
   return (
     <ButtonsContainer>
-      <HeaderBarLeftArrowButton />
-      <HeaderBarRightArrowButton />
+      <LeftArrowButton />
+      <RightArrowButton />
       <HamburgerButton />
     </ButtonsContainer>
   );
@@ -99,7 +99,7 @@ const ButtonsContainer = (props: ParentProps) => {
   );
 };
 
-const HeaderBarLeftArrowButton = () => {
+const LeftArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
   const { getPrevArticle, prevDisabled } = usePrevNextArticle();
@@ -121,7 +121,7 @@ const HeaderBarLeftArrowButton = () => {
         "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
       }}
     >
-      <HeaderBarLeftArrowIcon
+      <LeftArrowSVG
         class={twMerge(
           !prevDisabled()
             ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
@@ -133,7 +133,7 @@ const HeaderBarLeftArrowButton = () => {
   );
 };
 
-const HeaderBarRightArrowButton = () => {
+const RightArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
 
@@ -156,7 +156,7 @@ const HeaderBarRightArrowButton = () => {
         "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
       }}
     >
-      <HeaderBarRightArrowIcon
+      <RightArrowSVG
         class={twMerge(
           !nextDisabled()
             ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
@@ -182,7 +182,7 @@ const HamburgerButton = () => {
         "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
       }}
     >
-      <HamburgerButtonIcon
+      <HamburgerButtonSVG
         class="fill-[rgb(30,30,30)] hover:fill-stone-600"
         open={open()}
       />
@@ -197,7 +197,7 @@ const adx = 6.5;
 const ady = 6.5;
 const un = 30 / 2;
 
-export const HeaderBarLeftArrowIcon = (props: {
+const LeftArrowSVG = (props: {
   class: string;
   style: string;
 }) => {
@@ -219,7 +219,7 @@ export const HeaderBarLeftArrowIcon = (props: {
   );
 };
 
-const HeaderBarRightArrowIcon = (props: { class: string; style: string }) => {
+const RightArrowSVG = (props: { class: string; style: string }) => {
   return (
     <svg
       class={props.class}
@@ -238,7 +238,7 @@ const HeaderBarRightArrowIcon = (props: { class: string; style: string }) => {
   );
 };
 
-const HamburgerButtonIcon = (props: { open: boolean; class: string }) => {
+const HamburgerButtonSVG = (props: { open: boolean; class: string }) => {
   return (
     <svg width="30" height="30" viewBox="0 0 30 30" class={props.class}>
       <rect
@@ -272,4 +272,4 @@ const HamburgerButtonIcon = (props: { open: boolean; class: string }) => {
   );
 };
 
-export default HeaderTopRightButtons;
+export default HeaderButtons;

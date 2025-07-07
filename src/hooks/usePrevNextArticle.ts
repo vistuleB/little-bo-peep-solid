@@ -5,8 +5,8 @@ const usePrevNextArticle = () => {
   const { store } = useGlobalContext();
   const navigate = useNavigate();
 
-  const prevDisabled = () => (store.prevPage === "");
-  const nextDisabled = () => (store.nextPage === "");
+  const prevDisabled = () => store.prevPage === "";
+  const nextDisabled = () => store.nextPage === "";
   const getPrevArticle = () => store.prevPage !== "" && navigate(store.prevPage);
   const getNextArticle = () => store.nextPage !== "" && navigate(store.nextPage);
 

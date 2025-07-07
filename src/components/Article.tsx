@@ -14,7 +14,7 @@ type ArticleProps = {
 };
 
 const Article = (props: ParentProps & ArticleProps) => {
-  return (<>
+  return (
     <Page
       pageNecessaryMargin={props.pageNecessaryMargin}
       maxElementWidth={props.maxElementWidth}
@@ -27,7 +27,7 @@ const Article = (props: ParentProps & ArticleProps) => {
         <ActionArrows />
       </ExercisesStoreProvider>
     </Page>
-  </>);
+  );
 };
 
 const ExercisesStoreConsumer = (props: ParentProps) => {
