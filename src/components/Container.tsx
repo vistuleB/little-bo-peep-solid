@@ -1,9 +1,7 @@
 import { ParentProps, createEffect, onCleanup, onMount } from "solid-js";
 import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
-import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
-import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const Container = (props: ParentProps) => {
@@ -11,111 +9,9 @@ const Container = (props: ParentProps) => {
   // there is an inital scroll when each page is loaded .
   // code for it is in useScrollX used in renderer helpers
   // add_imports and table of contents
-  let { on_mobile } = useOnMobile();
-  let { store, set_store } = useGlobalContext();
-  const { getPrevArticle, getNextArticle } = usePrevNextArticle();
+  let { store } = useGlobalContext();
 
   let _window = window as any;
-  
-  // ***********************
-  // **** onMount stuff ****
-  // ***********************
-  
-  onMount(() => {
-    const preventActionOn = () => [
-      document.getElementById("hamburger_panel"),
-      document.getElementById("prev-btn"),
-      document.getElementById("next-btn"),
-      document.getElementById("menu-btn"),
-      document.getElementById("breadcrumbs"),
-      ...document.querySelectorAll("#solution-btn"),
-      ...document.querySelectorAll("#backup-btn"),
-      ...document.querySelectorAll("#option-btn"),
-      document.getElementById("exercises-btns"),
-      document.getElementById("scroll-btns"),
-    ];
-
-    const targetIsAnchor = (element: Element) => {
-      let currentElement = element;
-
-      while (
-        currentElement !== null &&
-        currentElement !== document.documentElement
-      ) {
-        if (currentElement.tagName === "A") {
-          return true;
-        }
-        currentElement = currentElement.parentElement as Element;
-      }
-      return false;
-    };
-
-    const handleClick = (e: MouseEvent) => {
-      const target = e.target as Element;
-      if (
-        preventActionOn().find((s) => s?.contains(target)) ||
-        targetIsAnchor(target) ||
-        on_mobile() ||
-        store.margin_mode
-      ) {
-        console.log("preventing!");
-        return;
-      }
-
-      let screenHeight = window.innerHeight;
-      let clientXBasedOnScrollWidth = window.scrollX + e.clientX;
-
-      if (e.clientY <= screenHeight * 0.25 && window.scrollY != 0) {
-        window.scrollBy({ top: -screenHeight });
-        return;
-      }
-
-      if (
-        e.clientY >= screenHeight * 0.75 &&
-        window.scrollY + window.innerHeight < document.body.scrollHeight
-      ) {
-        window.scrollBy({ top: screenHeight });
-        return;
-      }
-
-      if (
-        clientXBasedOnScrollWidth <
-        window.scrollX + window.innerWidth * 0.1
-      ) {
-        getPrevArticle();
-        return;
-      }
-
-      if (
-        clientXBasedOnScrollWidth >
-        window.scrollX + window.innerWidth * 0.9
-      ) {
-        getNextArticle();
-        return;
-      }
-    };
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        getPrevArticle();
-        return;
-      }
-      if (e.key === "ArrowRight") {
-        e.preventDefault();
-        getNextArticle();
-        return;
-      }
-    };
-
-    window.addEventListener("click", handleClick);
-    window.addEventListener("keydown", handleKeyDown);
-
-    onCleanup(() => {
-      window.removeEventListener("click", handleClick);
-      window.removeEventListener("keydown", handleKeyDown);
-    });
-  });
 
   const containerWidth = () => {
     return Math.max(
