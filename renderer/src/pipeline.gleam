@@ -40,7 +40,7 @@ pub fn our_pipeline() -> List(Pipe) {
         #("Bootcamp", "path", "/article/bootcamp::øøBootcampCounter"),
         #("Chapter", "banner", "Chapter ::øøChapterCounter:"),
         #("Bootcamp", "banner", "Bootcamp ::øøBootcampCounter:"),
-         #("Chapter", "number", "::øøChapterCounter"),
+        #("Chapter", "number", "::øøChapterCounter"),
         #("Bootcamp", "number", "::øøBootcampCounter"),
         #("Chapter", "category", "Chapter"),
         #("Bootcamp", "category", "Bootcamp"),
@@ -95,30 +95,22 @@ pub fn our_pipeline() -> List(Pipe) {
       dn.unwrap(["WriterlyBlankLine"]),
       dn.concatenate_text_nodes(),
       dn.remove_text_nodes_with_singleton_empty_line(),
-      dn.rename_when_child_of([
-        #("p", "OuterP", "Section"),
-        #("p", "OuterP", "Exercise"),
-        #("p", "OuterP", "Solution"),
-        #("p", "OuterP", "Example"),
-        #("p", "OuterP", "Chapter"),
-        #("p", "OuterP", "Bootcamp"),
-      ]),
-      dn.remove_starting_and_ending_spaces(["OuterP"]),
-      dn.remove_starting_and_ending_empty_lines(["OuterP"]),
-      dn.remove_empty_tags(["OuterP"]),
+      dn.remove_starting_and_ending_spaces(["p"]),
+      dn.remove_starting_and_ending_empty_lines(["p"]),
+      dn.remove_empty_tags(["p"]),
     ],
     // ****
     // parse '__', '_|' delimiters, break
-    // new elements out of parent OuterP
-    // (why don't we do this before creating the OuterP,
+    // new elements out of parent p
+    // (why don't we do this before creating the p,
     // and spare ourselves the free_children call?)
     // ****
     pp.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
     pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
       dn.free_children([
-        #("CentralDisplay", "OuterP"),
-        #("CentralDisplayItalic", "OuterP"),
+        #("CentralDisplay", "p"),
+        #("CentralDisplayItalic", "p"),
       ]),
     ],
     // ****
@@ -135,27 +127,33 @@ pub fn our_pipeline() -> List(Pipe) {
     [
       dn.wrap_math_with_no_break(),
       dn.unwrap_when_zero_or_one_children(["NoBreak"]),
-      dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
-      dn.cut_paste_attribute_from_self_to_child(
-        #("Exercise", "ExerciseStatement", "id"),
-      ),
       // ************************
       // OuterP cleanup (some cleanups all over again, after delim splitting)
       // ************************
       dn.concatenate_text_nodes(),
       dn.remove_text_nodes_with_singleton_empty_line(),
-      dn.remove_starting_and_ending_spaces(["OuterP"]),
-      dn.remove_starting_and_ending_empty_lines(["OuterP"]),
-      dn.remove_empty_tags(["OuterP"]),
+      dn.remove_starting_and_ending_spaces(["p"]),
+      dn.remove_starting_and_ending_empty_lines(["p"]),
+      dn.remove_empty_tags(["p"]),
       dn.unwrap_tags_when_no_child_meets_condition(#(
-        ["OuterP"],
+        ["p"],
         infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"])
       )),
-      dn.unwrap_when_descendant_of([#("OuterP", ["td", "li"])]),
+      dn.unwrap_when_descendant_of([#("p", ["td", "li"])]),
       dn.rename_when_child_of([
-        #("OuterP", "Item", "List"),
-        #("OuterP", "Item", "Grid"),
+        #("p", "Item", "List"),
+        #("p", "Item", "Grid"),
       ]),
+      dn.rename_when_child_of([
+        #("p", "OuterP", "Section"),
+        #("p", "OuterP", "Exercise"),
+        #("p", "OuterP", "Solution"),
+        #("p", "OuterP", "Example"),
+        #("p", "OuterP", "Chapter"),
+        #("p", "OuterP", "Bootcamp"),
+      ]),
+      dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
+      dn.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
       // ************************
       // ImageLeft, ImageRight parent-finding
       // ************************

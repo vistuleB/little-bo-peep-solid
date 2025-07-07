@@ -82,11 +82,11 @@ export default function __Chapter2__() {
           <b>
             Definition.
           </b>
-          {" "}The{" "}
+          {" "} The {" "}
           <i>
             slope
           </i>
-          {" "}of a line is a
+          {" "} of a line is a
           mathematical measure of how “steep” a line is.
           Here are a few examples (for an explanation of
           the values, see below):
@@ -104,22 +104,22 @@ export default function __Chapter2__() {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          ...assuming that numbers on the{" "}
+          ...assuming that numbers on the {" "}
           <NoBreak>
             <Math>
               $y$
             </Math>
             -axis
           </NoBreak>
-          {" "}increase
-          going up and that numbers on the{" "}
+          {" "} increase
+          going up and that numbers on the {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             -axis
           </NoBreak>
-          {" "}increase
+          {" "} increase
           going right, as is usually the case. One can also
           describe slope as...
         </OuterP>
@@ -134,11 +134,11 @@ export default function __Chapter2__() {
         </OuterP>
         <OuterP class="indent-10">
           For example, the line below has slope 1, because
-          it goes up by{" "}
+          it goes up by {" "}
           <Math>
             $1$
           </Math>
-          {" "}unit for each unit to the right:
+          {" "} unit for each unit to the right:
         </OuterP>
         <Pause />
         <Image src="/images/slope_1_example.svg" />
@@ -152,15 +152,15 @@ export default function __Chapter2__() {
             </Math>
             ,
           </NoBreak>
-          {" "}because it goes up by{" "}
+          {" "} because it goes up by {" "}
           <i>
             minus
           </i>
-          {" "}{" "}
+          {" "} {" "}
           <Math>
             $0.5$
           </Math>
-          {" "}units
+          {" "} units
           with each unit to the right:
         </OuterP>
         <Pause />
@@ -188,18 +188,18 @@ const Rest = () => {
           {" "}
           The slope of a line is also the ratio of vertical
           change to horizontal change between any two
-          distinct points{" "}
+          distinct points {" "}
           <NoBreak>
             <Math>
               $A$
             </Math>
             ,
           </NoBreak>
-          {" "}{" "}
+          {" "} {" "}
           <Math>
             $B$
           </Math>
-          {" "}on the line:
+          {" "} on the line:
         </OuterP>
         <Pause />
         <Image src="/images/31.svg" />
@@ -246,23 +246,23 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          are the horizontal{" "}
+          are the horizontal {" "}
           <i>
             &amp;
           </i>
-          {" "}the vertical change,
-          respectively, from{" "}
+          {" "} the vertical change,
+          respectively, from {" "}
           <Math>
             $A$
           </Math>
-          {" "}to{" "}
+          {" "} to {" "}
           <NoBreak>
             <Math>
               $B$
             </Math>
             ,
           </NoBreak>
-          {" "}so
+          {" "} so
         </OuterP>
         <Pause />
         <MathBlock>
@@ -277,7 +277,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          more succinctly. We call this the{" "}
+          more succinctly. We call this the {" "}
           <i>
             slope formula
           </i>
@@ -327,18 +327,18 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          is the vertical change from{" "}
+          is the vertical change from {" "}
           <Math>
             $A$
           </Math>
-          {" "}to{" "}
+          {" "} to {" "}
           <NoBreak>
             <Math>
               $B$
             </Math>
             ,
           </NoBreak>
-          {" "}while
+          {" "} while
         </OuterP>
         <Pause />
         <MathBlock>
@@ -348,11 +348,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          is the horizontal change from{" "}
+          is the horizontal change from {" "}
           <Math>
             $A$
           </Math>
-          {" "}to{" "}
+          {" "} to {" "}
           <NoBreak>
             <Math>
               $B$
@@ -384,12 +384,12 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          are not distances but{" "}
+          are not distances but {" "}
           <i>
             differences
           </i>
-          {" "}(or,
-          equivalently,{" "}
+          {" "} (or,
+          equivalently, {" "}
           <i>
             changes
           </i>
@@ -431,192 +431,147 @@ const Rest = () => {
           <tbody>
             <tr>
               <td>
-                <p>
-                  <Math>
-                    $x_2 - x_1$
-                  </Math>
-                </p>
+                <Math>
+                  $x_2 - x_1$
+                </Math>
               </td>
               <td>
-                <p>
-                  <Math>
-                    $y_2 - y_1$
-                  </Math>
-                </p>
+                <Math>
+                  $y_2 - y_1$
+                </Math>
               </td>
               <td>
-                <p>
-                  <img
-                    src="/images/33.svg"
-                    width={50}
-                    style="padding-top:7px;padding-bottom:7px;" />
-                </p>
+                <img
+                  src="/images/33.svg"
+                  width={50}
+                  style="padding-top:7px;padding-bottom:7px;" />
               </td>
               <td>
-                <p />
-                <Pause />
                 <MathBlock>
                   $$
                   &#123;y_2-y_1 \over x_2-x_1&#125;
                   $$
                 </MathBlock>
-                <p />
               </td>
             </tr>
             <tr>
               <td>
-                <p>
-                  <Math>
-                    $+$
-                  </Math>
-                </p>
+                <Math>
+                  $+$
+                </Math>
               </td>
               <td>
-                <p>
-                  <Math>
-                    $+$
-                  </Math>
-                </p>
+                <Math>
+                  $+$
+                </Math>
               </td>
               <td>
-                <p>
-                  <img
-                    src="/images/34.svg"
-                    style="margin-top:7px;margin-bottom:7px;width:105px;" />
-                </p>
+                <img
+                  src="/images/34.svg"
+                  style="margin-top:7px;margin-bottom:7px;width:105px;" />
               </td>
               <td>
-                <p />
-                <Pause />
                 <MathBlock>
                   $$
                   &#123;+ \over +&#125; = \,+
                   $$
                 </MathBlock>
-                <p />
               </td>
             </tr>
             <tr>
               <td>
-                <p>
-                  <Math>
-                    $-$
-                  </Math>
-                </p>
+                <Math>
+                  $-$
+                </Math>
               </td>
               <td>
-                <p>
-                  <Math>
-                    $-$
-                  </Math>
-                </p>
+                <Math>
+                  $-$
+                </Math>
               </td>
               <td>
-                <p>
-                  <img
-                    src="/images/35.svg"
-                    width={105}
-                    style="margin-top:7px;margin-bottom:7px;" />
-                </p>
+                <img
+                  src="/images/35.svg"
+                  width={105}
+                  style="margin-top:7px;margin-bottom:7px;" />
               </td>
               <td>
-                <p />
-                <Pause />
                 <MathBlock>
                   $$
                   &#123;- \over -&#125; = \,+
                   $$
                 </MathBlock>
-                <p />
               </td>
             </tr>
             <tr>
               <td>
-                <p>
-                  <Math>
-                    $+$
-                  </Math>
-                </p>
+                <Math>
+                  $+$
+                </Math>
               </td>
               <td>
-                <p>
-                  <Math>
-                    $-$
-                  </Math>
-                </p>
+                <Math>
+                  $-$
+                </Math>
               </td>
               <td>
-                <p>
-                  <img
-                    src="/images/36.svg"
-                    width={105}
-                    style="margin-top:7px;margin-bottom:7px;" />
-                </p>
+                <img
+                  src="/images/36.svg"
+                  width={105}
+                  style="margin-top:7px;margin-bottom:7px;" />
               </td>
               <td>
-                <p />
-                <Pause />
                 <MathBlock>
                   $$
                   &#123;- \over +&#125; = \,-
                   $$
                 </MathBlock>
-                <p />
               </td>
             </tr>
             <tr>
               <td>
-                <p>
-                  <Math>
-                    $-$
-                  </Math>
-                </p>
+                <Math>
+                  $-$
+                </Math>
               </td>
               <td>
-                <p>
-                  <Math>
-                    $+$
-                  </Math>
-                </p>
+                <Math>
+                  $+$
+                </Math>
               </td>
               <td>
-                <p>
-                  <img
-                    src="/images/37.svg"
-                    width={105}
-                    style="margin-top:7px;margin-bottom:7px;" />
-                </p>
+                <img
+                  src="/images/37.svg"
+                  width={105}
+                  style="margin-top:7px;margin-bottom:7px;" />
               </td>
               <td>
-                <p />
-                <Pause />
                 <MathBlock>
                   $$
                   \frac&#123;+&#125;&#123;-&#125; = \,-
                   $$
                 </MathBlock>
-                <p />
               </td>
             </tr>
           </tbody>
         </Table>
         <Pause />
         <OuterP>
-          In fact, we{" "}
+          In fact, we {" "}
           <i>
             should
           </i>
-          {" "}be able to algebraically
+          {" "} be able to algebraically
           verify that the slope formula gives the same
-          answer if{" "}
+          answer if {" "}
           <Math>
             $(x_1, y_1)$
           </Math>
-          {" "}and{" "}
+          {" "} and {" "}
           <Math>
             $(x_2, y_2)$
           </Math>
-          {" "}swap
+          {" "} swap
           places, or, namely, to show that the fractions
           <ImageRight
             src="/images/svg_ch2_ch_swap_cloud.svg"
@@ -678,11 +633,11 @@ const Rest = () => {
         <Image src="/images/40.svg" />
         <Pause />
         <OuterP>
-          Indeed, vertical lines have{" "}
+          Indeed, vertical lines have {" "}
           <i>
             undefined
           </i>
-          {" "}slope.
+          {" "} slope.
           Moreover the bad case
         </OuterP>
         <Pause />
@@ -696,11 +651,11 @@ const Rest = () => {
           <Math>
             $(x_1, y_1)$
           </Math>
-          {" "}and{" "}
+          {" "} and {" "}
           <Math>
             $(x_2, y_2)$
           </Math>
-          {" "}coincide. In that
+          {" "} coincide. In that
           case, more precisely, the slope formula evaluates
           to
         </OuterP>
@@ -710,7 +665,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          which could be anything. (Technically,{" "}
+          which could be anything. (Technically, {" "}
           <NoBreak>
             “
             <Math>
@@ -718,7 +673,7 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}is
+          {" "} is
           undefined.) Indeed, infinitely many different
           lines pass through any given point!
         </OuterP>
@@ -731,7 +686,7 @@ const Rest = () => {
           </b>
           {" "}
           Some people remember the slope formula as “slope
-          equals rise over run” (i.e.,{" "}
+          equals rise over run” (i.e., {" "}
           <NoBreak>
             “
             <Math>
@@ -744,7 +699,7 @@ const Rest = () => {
               width="28px" />
             ”),
           </span>
-          {" "}following such a picture:
+          {" "} following such a picture:
         </OuterP>
         <Pause />
         <Image src="/images/44.svg" />
@@ -762,7 +717,7 @@ const Rest = () => {
         <Pause />
         <OuterP>
           in accordance, namely, with the coordinate
-          differences{" "}
+          differences {" "}
           <NoBreak>
             “
             <Math>
@@ -770,7 +725,7 @@ const Rest = () => {
             </Math>
             ”,
           </NoBreak>
-          {" "}{" "}
+          {" "} {" "}
           <NoBreak>
             “
             <Math>
@@ -809,7 +764,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          where the foreign-looking symbols{" "}
+          where the foreign-looking symbols {" "}
           <NoBreak>
             <Math>
               $\Delta x$
@@ -821,7 +776,7 @@ const Rest = () => {
           <Math>
             $\Delta y$
           </Math>
-          {" "}can be thought of as shorthands for
+          {" "} can be thought of as shorthands for
           {" "}
           <NoBreak>
             “
@@ -830,7 +785,7 @@ const Rest = () => {
             </Math>
             ”,
           </NoBreak>
-          {" "}{" "}
+          {" "} {" "}
           <NoBreak>
             “
             <Math>
@@ -838,16 +793,16 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}respectively. (Or,
+          {" "} respectively. (Or,
           a little more exactly, as shorthands for the
-          phrases “change in{" "}
+          phrases “change in {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             ”,
           </NoBreak>
-          {" "}“change in{" "}
+          {" "} “change in {" "}
           <NoBreak>
             <Math>
               $y$
@@ -909,7 +864,7 @@ const Rest = () => {
           <b>
             Slopes and Line Equations.
           </b>
-          {" "}An equation of the
+          {" "} An equation of the
           form
         </OuterP>
         <Pause />
@@ -918,29 +873,29 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          where{" "}
+          where {" "}
           <Math>
             $a$
           </Math>
-          {" "}and{" "}
+          {" "} and {" "}
           <Math>
             $b$
           </Math>
-          {" "}are constants defines a line in
+          {" "} are constants defines a line in
           the Cartesian plane. E.g.:
         </OuterP>
         <Pause />
         <Image src="/images/svg_ch2_ch_line_equations.svg" />
         <Pause />
         <OuterP>
-          Note that, assuming said{" "}
+          Note that, assuming said {" "}
           <NoBreak>
             <Math>
               $y = ax + b$
             </Math>
             ,
           </NoBreak>
-          {" "}one has
+          {" "} one has
         </OuterP>
         <Pause />
         <MathBlock>
@@ -948,18 +903,18 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          at{" "}
+          at {" "}
           <NoBreak>
             <Math>
               $x = 0$
             </Math>
             ,
           </NoBreak>
-          {" "}so{" "}
+          {" "} so {" "}
           <Math>
             $b$
           </Math>
-          {" "}is the height of the line at
+          {" "} is the height of the line at
           {" "}
           <NoBreak>
             <Math>
@@ -967,7 +922,7 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}(FYI, this height is called the
+          {" "} (FYI, this height is called the
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -980,16 +935,16 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          of the line, because{" "}
+          of the line, because {" "}
           <Math>
             $x = 0$
           </Math>
-          {" "}is where the line
-          crosses the{" "}
+          {" "} is where the line
+          crosses the {" "}
           <Math>
             $y$
           </Math>
-          {" "}axis. But the point
+          {" "} axis. But the point
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1010,7 +965,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          of the line, so the term{" "}
+          of the line, so the term {" "}
           <NoBreak>
             “
             <Math>
@@ -1018,12 +973,12 @@ const Rest = () => {
             </Math>
             -intercept”
           </NoBreak>
-          {" "}might
-          either refer to the value{" "}
+          {" "} might
+          either refer to the value {" "}
           <Math>
             $b$
           </Math>
-          {" "}or to the point
+          {" "} or to the point
           {" "}
           <NoBreak>
             <Math>
@@ -1031,7 +986,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}depending.) On the other hand, at
+          {" "} depending.) On the other hand, at
           {" "}
           <NoBreak>
             <Math>
@@ -1039,7 +994,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}we have
+          {" "} we have
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1047,19 +1002,19 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          so{" "}
+          so {" "}
           <Math>
             $y$
           </Math>
-          {" "}increases by{" "}
+          {" "} increases by {" "}
           <Math>
             $a$
           </Math>
-          {" "}between{" "}
+          {" "} between {" "}
           <Math>
             $x = 0$
           </Math>
-          {" "}and
+          {" "} and
           {" "}
           <NoBreak>
             <Math>
@@ -1067,25 +1022,25 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}In fact,{" "}
+          {" "} In fact, {" "}
           <Math>
             $y$
           </Math>
-          {" "}increases by{" "}
+          {" "} increases by {" "}
           <Math>
             $a$
           </Math>
-          {" "}each time
+          {" "} each time
           {" "}
           <Math>
             $x$
           </Math>
-          {" "}increases by 1, so, by our own definition of
-          slope—the increase in{" "}
+          {" "} increases by 1, so, by our own definition of
+          slope—the increase in {" "}
           <Math>
             $y$
           </Math>
-          {" "}per unit increase in
+          {" "} per unit increase in
           {" "}
           <NoBreak>
             <Math>
@@ -1096,7 +1051,7 @@ const Rest = () => {
           <Math>
             $a$
           </Math>
-          {" "}is the slope of{" "}
+          {" "} is the slope of {" "}
           <NoBreak>
             <Math>
               $y = ax + b$
@@ -1132,17 +1087,17 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          cannot describe a vertical line, because{" "}
+          cannot describe a vertical line, because {" "}
           <Math>
             $a$
           </Math>
-          {" "}is
+          {" "} is
           the slope, while a vertical line has no slope, so
-          what would{" "}
+          what would {" "}
           <Math>
             $a$
           </Math>
-          {" "}be equal to? Instead, a vertical
+          {" "} be equal to? Instead, a vertical
           line is described by an equation of the form
         </OuterP>
         <Pause />
@@ -1151,11 +1106,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          (see Fig. 1) where{" "}
+          (see Fig. 1) where {" "}
           <Math>
             $c \in \rr$
           </Math>
-          {" "}is a constant,
+          {" "} is a constant,
           similarly to the more familiar equation
           <ImageLeft
             src="/images/svg_ch2_ch_vertical_line_equation.svg"
@@ -1168,11 +1123,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          for a horizontal line, where{" "}
+          for a horizontal line, where {" "}
           <Math>
             $b \in \rr$
           </Math>
-          {" "}is a
+          {" "} is a
           constant.
         </OuterP>
         <OuterP class="indent-10">
@@ -1186,7 +1141,7 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}or{" "}
+          {" "} or {" "}
           <NoBreak>
             “
             <Math>
@@ -1194,7 +1149,7 @@ const Rest = () => {
             </Math>
             ”.
           </NoBreak>
-          {" "}For example,
+          {" "} For example,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1210,19 +1165,19 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          and thus describes a line of{" "}
+          and thus describes a line of {" "}
           <NoBreak>
             <Math>
               $y$
             </Math>
             -intercept
           </NoBreak>
-          {" "}{" "}
+          {" "} {" "}
           <Math>
             $3$
           </Math>
           {" "}
-          and slope{" "}
+          and slope {" "}
           <NoBreak>
             <Math>
               $-1$
@@ -1242,21 +1197,21 @@ const Rest = () => {
             Slopes and Units.
           </b>
           {" "}
-          If the{" "}
+          If the {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             -
           </NoBreak>
-          {" "}and{" "}
+          {" "} and {" "}
           <NoBreak>
             <Math>
               $y$
             </Math>
             -axes
           </NoBreak>
-          {" "}have units then a line's
+          {" "} have units then a line's
           slope has units
         </OuterP>
         <Pause />
@@ -1268,11 +1223,11 @@ const Rest = () => {
         <Pause />
         <OuterP>
           as should make sense, given that the slope is a
-          change in{" "}
+          change in {" "}
           <Math>
             $y$
           </Math>
-          {" "}divided by a change in{" "}
+          {" "} divided by a change in {" "}
           <NoBreak>
             <Math>
               $x$
@@ -1281,16 +1236,16 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          For example, if the units on the{" "}
+          For example, if the units on the {" "}
           <Math>
             $y$
           </Math>
-          {" "}axis are
-          meters (“m”) and the units on the{" "}
+          {" "} axis are
+          meters (“m”) and the units on the {" "}
           <Math>
             $x$
           </Math>
-          {" "}axis are
+          {" "} axis are
           seconds (“s”) then the slope has units
         </OuterP>
         <Pause />
@@ -1301,7 +1256,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          also known as{" "}
+          also known as {" "}
           <i>
             meters per second
           </i>
@@ -1315,25 +1270,25 @@ const Rest = () => {
         <Image src="/images/52.svg" />
         <Pause />
         <OuterP>
-          The slope of the graph is{" "}
+          The slope of the graph is {" "}
           <Math>
             $0.75$
           </Math>
-          {" "}{" "}
+          {" "} {" "}
           <i>
             meters per
             second
           </i>
-          {" "}because the balloon's height increases by
-          three{" "}
+          {" "} because the balloon's height increases by
+          three {" "}
           <i>
             meters
           </i>
-          {" "}over the first four{" "}
+          {" "} over the first four {" "}
           <i>
             seconds
           </i>
-          {" "}(if
+          {" "} (if
           you had noticed):
         </OuterP>
         <Pause />
@@ -1370,21 +1325,21 @@ const Rest = () => {
         </CentralDisplay>
         <Pause />
         <OuterP>
-          whenever the{" "}
+          whenever the {" "}
           <Math>
             $y$
           </Math>
-          {" "}axis has dimensions of length and
-          the{" "}
+          {" "} axis has dimensions of length and
+          the {" "}
           <Math>
             $x$
           </Math>
-          {" "}axis has dimensions of time—whether the
-          slope turns out to be{" "}
+          {" "} axis has dimensions of time—whether the
+          slope turns out to be {" "}
           <Math>
             $\te&#123;m&#125;/\te&#123;s&#125;$
           </Math>
-          {" "}or{" "}
+          {" "} or {" "}
           <Math>
             $\te&#123;km&#125;/\te&#123;s&#125;$
           </Math>
@@ -1401,14 +1356,14 @@ const Rest = () => {
         <Pause />
         <OuterP>
           in the presence of units. More particularly, in the
-          common case when the{" "}
+          common case when the {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             -axis
           </NoBreak>
-          {" "}denotes time, the
+          {" "} denotes time, the
           formula
         </OuterP>
         <Pause />
@@ -1427,14 +1382,14 @@ const Rest = () => {
         <Pause />
         <OuterP>
           where “amount of change” is short for “amount of
-          change on the{" "}
+          change on the {" "}
           <NoBreak>
             <Math>
               $y$
             </Math>
             -axis”.
           </NoBreak>
-          {" "}By extension, taking all
+          {" "} By extension, taking all
           three permutations of the slope formula into account
           gives us...
         </OuterP>
@@ -1491,7 +1446,7 @@ const Rest = () => {
               </Math>
               s
             </NoBreak>
-            {" "}is the “rate of change” of the
+            {" "} is the “rate of change” of the
             balloon's height.)
           </OuterP>
         </Example>
@@ -1503,14 +1458,14 @@ const Rest = () => {
             </b>
             {" "}
             The amount of time required
-            for the balloon to go up by (say){" "}
+            for the balloon to go up by (say) {" "}
             <NoBreak>
               <Math>
                 $4$
               </Math>
               m
             </NoBreak>
-            {" "}is
+            {" "} is
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1554,14 +1509,14 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          “the{" "}
+          “the {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             -axis
           </NoBreak>
-          {" "}has dimensions of time”
+          {" "} has dimensions of time”
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -1569,14 +1524,14 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          “the{" "}
+          “the {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             -axis
           </NoBreak>
-          {" "}has units of seconds”
+          {" "} has units of seconds”
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -1599,11 +1554,11 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          each of which covers{" "}
+          each of which covers {" "}
           <i>
             several different
           </i>
-          {" "}units.
+          {" "} units.
           For example, in the “time” dimension, one finds
           individual units of the type
         </OuterP>
@@ -1646,12 +1601,12 @@ const Rest = () => {
                 Exercise 1.
               </b>
               {" "}
-              True or false: Lines of slope{" "}
+              True or false: Lines of slope {" "}
               <Math>
                 $-&#123;1 \over 2&#125;$
               </Math>
               {" "}
-              are perpendicular to lines of slope{" "}
+              are perpendicular to lines of slope {" "}
               <NoBreak>
                 <Math>
                   $2$
@@ -1681,11 +1636,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               In more detail, the two triangles are related
-              by a{" "}
+              by a {" "}
               <Math>
                 $90^\circ$
               </Math>
-              {" "}rotation and so, likewise,
+              {" "} rotation and so, likewise,
               are the lines defined by their hypotenuses!
             </OuterP>
             <Pause />
@@ -1695,27 +1650,27 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                More generally, a line of slope{" "}
+                More generally, a line of slope {" "}
                 <Math>
                   $p$
                 </Math>
-                {" "}is
-                perpendicular to a line of slope{" "}
+                {" "} is
+                perpendicular to a line of slope {" "}
                 <NoBreak>
                   <Math>
                     $-1/p$
                   </Math>
                   ,
                 </NoBreak>
-                {" "}for
-                all{" "}
+                {" "} for
+                all {" "}
                 <NoBreak>
                   <Math>
                     $p \ne 0$
                   </Math>
                   .
                 </NoBreak>
-                {" "}By a similar drawing:
+                {" "} By a similar drawing:
               </p>
               <Pause />
               <Image
@@ -1736,7 +1691,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_6542">
+          <ExerciseStatement id="_6_1766">
             <OuterP>
               <b>
                 Exercise 2.
@@ -1747,7 +1702,7 @@ const Rest = () => {
               <Math>
                 $p$
               </Math>
-              {" "}passing through a point{" "}
+              {" "} passing through a point {" "}
               <NoBreak>
                 <Math>
                   $(x_0, y_0)$
@@ -1760,16 +1715,16 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              A point{" "}
+              A point {" "}
               <Math>
                 $(x,y) \ne (x_0,y_0)$
               </Math>
-              {" "}is on the
-              line of slope{" "}
+              {" "} is on the
+              line of slope {" "}
               <Math>
                 $p$
               </Math>
-              {" "}if and only if
+              {" "} if and only if
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1795,24 +1750,24 @@ const Rest = () => {
               <Math>
                 $(x_0,y_0)$
               </Math>
-              {" "}to{" "}
+              {" "} to {" "}
               <NoBreak>
                 <Math>
                   $(x,y)$
                 </Math>
                 ,
               </NoBreak>
-              {" "}and it is necessary
+              {" "} and it is necessary
               and sufficient for this segment to have slope
               {" "}
               <Math>
                 $p$
               </Math>
-              {" "}in order for the point{" "}
+              {" "} in order for the point {" "}
               <Math>
                 $(x,y)$
               </Math>
-              {" "}to be on
+              {" "} to be on
               the line!
             </OuterP>
             <OuterP class="indent-10">
@@ -1825,11 +1780,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               is not an entirely satisfactory answer,
-              because the point{" "}
+              because the point {" "}
               <Math>
                 $(x,y) = (x_0,y_0)$
               </Math>
-              {" "}itself
+              {" "} itself
               does not satisfy the equation. (We find
             </OuterP>
             <Pause />
@@ -1838,21 +1793,21 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              if we plug in{" "}
+              if we plug in {" "}
               <NoBreak>
                 <Math>
                   $x = x_0$
                 </Math>
                 ,
               </NoBreak>
-              {" "}{" "}
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $y = y_0$
                 </Math>
                 ,
               </NoBreak>
-              {" "}which is
+              {" "} which is
               not a valid equality because the right-hand
               side is an undefined quantity.)
             </OuterP>
@@ -1867,14 +1822,14 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              on both sides by{" "}
+              on both sides by {" "}
               <NoBreak>
                 <Math>
                   $x-x_0$
                 </Math>
                 ,
               </NoBreak>
-              {" "}we find the
+              {" "} we find the
               fraction-less equation
             </OuterP>
             <Pause />
@@ -1885,7 +1840,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              which is satisfied by the point{" "}
+              which is satisfied by the point {" "}
               <Math>
                 $(x,y) = (x_0,y_0)$
               </Math>
@@ -1935,12 +1890,12 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              with{" "}
+              with {" "}
               <Math>
                 $y$
               </Math>
-              {" "}isolated on the left-hand side. From
-              there one can also distribute{" "}
+              {" "} isolated on the left-hand side. From
+              there one can also distribute {" "}
               <NoBreak>
                 <Math>
                   $p(x-x_0)$
@@ -1948,7 +1903,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              obtaining (after putting{" "}
+              obtaining (after putting {" "}
               <NoBreak>
                 “
                 <Math>
@@ -1956,7 +1911,7 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "}last)
+              {" "} last)
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1976,14 +1931,14 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              with{" "}
+              with {" "}
               <NoBreak>
                 <Math>
                   $a = p$
                 </Math>
                 ,
               </NoBreak>
-              {" "}{" "}
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $b = y_0 - px_0$
@@ -2004,7 +1959,7 @@ const Rest = () => {
               <del>
                 an object
               </del>
-              {" "}a mosquito whose height over time is
+              {" "} a mosquito whose height over time is
               given by this graph (use the same time interval
               as the graph):
             </OuterP>
@@ -2021,11 +1976,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               On each interval, the velocity is rate of
-              change of the height, i.e., the{" "}
+              change of the height, i.e., the {" "}
               <i>
                 slope
               </i>
-              {" "}of
+              {" "} of
               the height. For example, the rate of change
               of the height is
             </OuterP>
@@ -2037,23 +1992,23 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              between{" "}
+              between {" "}
               <NoBreak>
                 <Math>
                   $-4$
                 </Math>
                 s
               </NoBreak>
-              {" "}and{" "}
+              {" "} and {" "}
               <NoBreak>
                 <Math>
                   $-3$
                 </Math>
                 s,
               </NoBreak>
-              {" "}where the mosquito
+              {" "} where the mosquito
               goes up by one meter during a one second
-              period, so the vertical velocity is{" "}
+              period, so the vertical velocity is {" "}
               <NoBreak>
                 1m
                 <Math>
@@ -2070,9 +2025,9 @@ const Rest = () => {
                 Note 1.
               </i>
               {" "}
-              As explained in{" "}
+              As explained in {" "}
               <a
-                href="/article/chapter3?id=_15_8542"
+                href="/article/chapter3?id=_15_5018"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2084,7 +2039,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               indicates a “missing” value. Specifically, in
-              our case, the vertical velocity is{" "}
+              our case, the vertical velocity is {" "}
               <i>
                 undefined
               </i>
@@ -2099,21 +2054,21 @@ const Rest = () => {
                 Note 2.
               </i>
               {" "}
-              For the time interval from{" "}
+              For the time interval from {" "}
               <NoBreak>
                 <Math>
                   $2$
                 </Math>
                 s
               </NoBreak>
-              {" "}to{" "}
+              {" "} to {" "}
               <NoBreak>
                 <Math>
                   $2.5$
                 </Math>
                 s,
               </NoBreak>
-              {" "}the
+              {" "} the
               slope is
             </OuterP>
             <Pause />
@@ -2130,14 +2085,14 @@ const Rest = () => {
                 </Math>
                 s
               </NoBreak>
-              {" "}to{" "}
+              {" "} to {" "}
               <NoBreak>
                 <Math>
                   $3$
                 </Math>
                 s
               </NoBreak>
-              {" "}the slope is
+              {" "} the slope is
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2145,23 +2100,23 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              because{" "}
+              because {" "}
               <NoBreak>
                 <Math>
                   $2/0.5 = 4$
                 </Math>
                 .
               </NoBreak>
-              {" "}(Think:{" "}
+              {" "} (Think: {" "}
               <i>
                 how many times
               </i>
               {" "}
-              does{" "}
+              does {" "}
               <Math>
                 $0.5$
               </Math>
-              {" "}go into{" "}
+              {" "} go into {" "}
               <NoBreak>
                 <Math>
                   $2$
@@ -2179,9 +2134,9 @@ const Rest = () => {
               </b>
               {" "}
               Digressing on the second-to-last equation
-              in the solution to{" "}
+              in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_6542"
+                href="/article/chapter2?id=_6_1766"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
@@ -2195,23 +2150,23 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is the{" "}
+              is the {" "}
               <NoBreak>
                 <Math>
                   $y$
                 </Math>
                 -intercept
               </NoBreak>
-              {" "}of the line of slope{" "}
+              {" "} of the line of slope {" "}
               <Math>
                 $p$
               </Math>
               {" "}
-              through the point{" "}
+              through the point {" "}
               <Math>
                 $(x_0,y_0)$
               </Math>
-              {" "}by using a drawing
+              {" "} by using a drawing
               and “rise equals slope times run”.
             </OuterP>
           </ExerciseStatement>
@@ -2223,26 +2178,26 @@ const Rest = () => {
             <Image src="/images/66.svg" />
             <Pause />
             <OuterP>
-              The rise from the{" "}
+              The rise from the {" "}
               <NoBreak>
                 <Math>
                   $y$
                 </Math>
                 -intercept
               </NoBreak>
-              {" "}to{" "}
+              {" "} to {" "}
               <Math>
                 $(x_0, y_0)$
               </Math>
               {" "}
-              is{" "}
+              is {" "}
               <NoBreak>
                 <Math>
                   $px_0$
                 </Math>
                 ,
               </NoBreak>
-              {" "}as found by “rise equals slope times
+              {" "} as found by “rise equals slope times
               run”, implying that
             </OuterP>
             <Pause />
@@ -2253,7 +2208,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is the{" "}
+              is the {" "}
               <NoBreak>
                 <Math>
                   $y$
@@ -2266,19 +2221,19 @@ const Rest = () => {
               <i>
                 Note 1.
               </i>
-              {" "}Our drawing makes some implicit
-              assumptions, such as{" "}
+              {" "} Our drawing makes some implicit
+              assumptions, such as {" "}
               <Math>
                 $p &gt; 0$
               </Math>
-              {" "}and{" "}
+              {" "} and {" "}
               <NoBreak>
                 <Math>
                   $x_0 &gt; 0$
                 </Math>
                 .
               </NoBreak>
-              {" "}But
+              {" "} But
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2286,32 +2241,32 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is the rise from the{" "}
+              is the rise from the {" "}
               <NoBreak>
                 <Math>
                   $y$
                 </Math>
                 -intercept
               </NoBreak>
-              {" "}to
+              {" "} to
               {" "}
               <Math>
                 $(x_0, y_0)$
               </Math>
-              {" "}regardless of the sign of{" "}
+              {" "} regardless of the sign of {" "}
               <Math>
                 $p$
               </Math>
-              {" "}or
+              {" "} or
               {" "}
               <Math>
                 $x_0$
               </Math>
-              {" "}(because{" "}
+              {" "} (because {" "}
               <Math>
                 $x_0$
               </Math>
-              {" "}is the run in all cases),
+              {" "} is the run in all cases),
               making
             </OuterP>
             <Pause />
@@ -2320,14 +2275,14 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              the{" "}
+              the {" "}
               <NoBreak>
                 <Math>
                   $y$
                 </Math>
                 -intercept
               </NoBreak>
-              {" "}in all cases.
+              {" "} in all cases.
             </OuterP>
           </Solution>
         </Exercise>
