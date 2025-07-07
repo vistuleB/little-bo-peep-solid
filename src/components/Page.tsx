@@ -24,6 +24,23 @@ const Page = (props: ParentProps & PageProps) => {
   set_store("prevPage", props.prevPage || "");
 
   // ****************************
+  // **** handleScroll stuff ****
+  // ****************************
+
+  const handleScroll = () => {
+    set_store("scrollY", window.scrollY);
+    set_store("scrollX", window.scrollX);
+  };
+
+  createEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    onCleanup(() => {
+      window.removeEventListener("scroll", handleScroll);
+    });
+  });
+
+  // ****************************
   // **** handleResize stuff ****
   // ****************************
 

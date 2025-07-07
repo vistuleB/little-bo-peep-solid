@@ -39,7 +39,7 @@ const linear_interpolation = (val_at_0: number, val_at_1: number, t: number) =>
   val_at_0 + (val_at_1 - val_at_0) * t;
 
 const clamp = (value: number, min: number, max: number) =>
-  Math.max(min, Math.min(max, value));  
+  Math.max(min, Math.min(max, value));
 
 const calculate_values = () => {
   const { store } = useGlobalContext();
@@ -243,7 +243,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
               class="breadcrumb-prev-next flex gap-2"
             >
               <OutlinedText
-                onClick={() => getPrevArticle(true)}
+                onClick={() => getPrevArticle()}
                 class={twJoin(
                   prevDisabled() && "!text-stone-300 cursor-default",
                   "underline cursor-pointer"
@@ -252,7 +252,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
                 &lt;&lt;prev
               </OutlinedText>
               <OutlinedText
-                onClick={() => getNextArticle(true)}
+                onClick={() => getNextArticle()}
                 class={twJoin(
                   nextDisabled() && "!text-stone-300 cursor-default",
                   "underline cursor-pointer"

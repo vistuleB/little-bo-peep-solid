@@ -47,23 +47,6 @@ const Container = (props: ParentProps) => {
     });
   });
 
-  // ****************************
-  // **** handleScroll stuff ****
-  // ****************************
-
-  const handleScroll = () => {
-    set_store("scrollY", window.scrollY);
-    set_store("scrollX", window.scrollX);
-  };
-
-  createEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    onCleanup(() => {
-      window.removeEventListener("scroll", handleScroll);
-    });
-  });
-
   let _window = window as any;
   
   // ***********************
