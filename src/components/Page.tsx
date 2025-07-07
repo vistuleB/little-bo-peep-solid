@@ -29,28 +29,20 @@ const Page = (props: ParentProps & PageProps) => {
   set_store("nextPage", props.nextPage || "");
   set_store("prevPage", props.prevPage || "");
 
-  // ****************************
-  // **** handleScroll stuff ****
-  // ****************************
+  // **********************
+  // **** handleScroll ****
+  // **********************
 
   const handleScroll = () => {
     set_store("scrollY", window.scrollY);
     set_store("scrollX", window.scrollX);
   };
 
-  createEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    onCleanup(() => {
-      window.removeEventListener("scroll", handleScroll);
-    });
-  });
+  // ************************************
+  // **** handleScrollendAndTouchend ****
+  // ************************************
 
-  // **************************
-  // **** scrollBack stuff ****
-  // **************************
-
-  const scrollBack = () => {
+  const handleScrollendAndTouchend = () => {
     let scrollXWhenCentered = (store.scrollWidth - store.innerWidth) / 2;
     if (
       store.scrollX > scrollXWhenCentered - 200 &&
@@ -66,18 +58,9 @@ const Page = (props: ParentProps & PageProps) => {
     set_store("margin_mode", true);
   };
 
-  createEffect(() => {
-    document.addEventListener("scrollend", scrollBack);
-    document.addEventListener("touchend", scrollBack);
-    onCleanup(() => {
-      document.removeEventListener("scrollend", scrollBack);
-      document.removeEventListener("touchend", scrollBack);
-    });
-  });
-
-  // ****************************
-  // **** handleResize stuff ****
-  // ****************************
+  // **********************
+  // **** handleResize ****
+  // **********************
 
   const handleResize = () => {
     let oldInnerWidth = store.innerWidth;
@@ -105,19 +88,11 @@ const Page = (props: ParentProps & PageProps) => {
     }
   };
 
-  createEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    onCleanup(() => {
-      window.removeEventListener("resize", handleResize);
-    });
-  });
+  // *********************
+  // **** handleClick ****
+  // *********************
 
-  // ***********************
-  // **** onMount stuff ****
-  // ***********************
-
-  onMount(() => {
+  const handleClick = (e: MouseEvent) => {
     const targetIsAnchor = (element: Element) => {
       let currentElement = element;
       while (
@@ -132,65 +107,78 @@ const Page = (props: ParentProps & PageProps) => {
       return false;
     };
 
-    const handleClick = (e: MouseEvent) => {
-      if (
-        targetIsAnchor(e.target as Element) ||
-        on_mobile()
-      ) {
-        return;
-      }
+    if (
+      targetIsAnchor(e.target as Element) ||
+      on_mobile()
+    ) {
+      return;
+    }
 
-      if (store.margin_mode) {
-        window.scroll({
-          left: (store.scrollWidth - store.innerWidth) / 2,
-          behavior: "smooth",
-        });
-        return;
-      }
+    if (store.margin_mode) {
+      window.scroll({
+        left: (store.scrollWidth - store.innerWidth) / 2,
+        behavior: "smooth",
+      });
+      return;
+    }
 
-      if (e.clientY <= store.innerHeight * 0.25 && window.scrollY != 0) {
-        window.scrollBy({ top: -store.innerHeight });
-        return;
-      }
+    if (e.clientY <= store.innerHeight * 0.25 && window.scrollY != 0) {
+      window.scrollBy({ top: -store.innerHeight });
+      return;
+    }
 
-      if (
-        e.clientY >= store.innerHeight * 0.75 &&
-        window.scrollY + window.innerHeight < document.body.scrollHeight
-      ) {
-        window.scrollBy({ top: store.innerHeight });
-        return;
-      }
+    if (
+      e.clientY >= store.innerHeight * 0.75 &&
+      window.scrollY + window.innerHeight < document.body.scrollHeight
+    ) {
+      window.scrollBy({ top: store.innerHeight });
+      return;
+    }
 
-      if (e.clientX < store.innerWidth * 0.1) {
-        getPrevArticle();
-        return;
-      }
+    if (e.clientX < store.innerWidth * 0.1) {
+      getPrevArticle();
+      return;
+    }
 
-      if (e.clientX > store.innerWidth * 0.9) {
-        getNextArticle();
-        return;
-      }
-    };
+    if (e.clientX > store.innerWidth * 0.9) {
+      getNextArticle();
+      return;
+    }
+  };
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        getPrevArticle();
-        return;
-      }
-      if (e.key === "ArrowRight") {
-        e.preventDefault();
-        getNextArticle();
-        return;
-      }
-    };
+  // ***********************
+  // **** handleKeydown ****
+  // ***********************
 
+  const handleKeydown = (e: KeyboardEvent) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      getPrevArticle();
+      return;
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      getNextArticle();
+      return;
+    }
+  };
+  
+  onMount(() => {
+    handleScroll();
+    handleResize();
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("scrollend", handleScrollendAndTouchend);
+    document.addEventListener("touchend", handleScrollendAndTouchend);
     window.addEventListener("click", handleClick);
-    window.addEventListener("keydown", handleKeyDown);
-
+    window.addEventListener("keydown", handleKeydown);
     onCleanup(() => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("scrollend", handleScrollendAndTouchend);
+      document.removeEventListener("touchend", handleScrollendAndTouchend);
       window.removeEventListener("click", handleClick);
-      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keydown", handleKeydown);
     });
   });
 
