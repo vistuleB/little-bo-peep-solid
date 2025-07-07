@@ -172,8 +172,6 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
     });
   });
 
-  console.log(line_wrap_width_pct());
-
   return (
     <>
       <div

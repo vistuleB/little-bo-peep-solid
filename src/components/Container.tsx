@@ -1,4 +1,4 @@
-import { ParentProps, createEffect, onCleanup, onMount } from "solid-js";
+import { ParentProps } from "solid-js";
 import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
 import { useGlobalContext } from "~/store/StoreProvider";

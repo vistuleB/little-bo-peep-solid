@@ -19,16 +19,16 @@ const Page = (props: ParentProps & PageProps) => {
   const { getPrevArticle, getNextArticle } = usePrevNextArticle();
   const { on_mobile }  = useOnMobile();
 
+  useScrollX();
   useScrollIsAt0();
   useSetRoute();
   useBreadcrumbs();
-  useScrollX();
 
   set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
   set_store("maxElementWidth", props.maxElementWidth || 0);
   set_store("nextPage", props.nextPage || "");
   set_store("prevPage", props.prevPage || "");
-
+  
   // ****************************
   // **** handleScroll stuff ****
   // ****************************
@@ -110,9 +110,9 @@ const Page = (props: ParentProps & PageProps) => {
     window.addEventListener("resize", handleResize);
     onCleanup(() => {
       window.removeEventListener("resize", handleResize);
-    });
+    });  
   });
-
+  
   // ***********************
   // **** onMount stuff ****
   // ***********************
