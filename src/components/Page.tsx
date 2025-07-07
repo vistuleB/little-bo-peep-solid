@@ -17,7 +17,7 @@ type PageProps = {
 const Page = (props: ParentProps & PageProps) => {
   let { set_store, store } = useGlobalContext();
   const { getPrevArticle, getNextArticle } = usePrevNextArticle();
-  const { on_mobile }  = useOnMobile();
+  const { on_mobile } = useOnMobile();
 
   useScrollX();
   useScrollIsAt0();
@@ -28,7 +28,7 @@ const Page = (props: ParentProps & PageProps) => {
   set_store("maxElementWidth", props.maxElementWidth || 0);
   set_store("nextPage", props.nextPage || "");
   set_store("prevPage", props.prevPage || "");
-  
+
   // ****************************
   // **** handleScroll stuff ****
   // ****************************
@@ -45,7 +45,7 @@ const Page = (props: ParentProps & PageProps) => {
       window.removeEventListener("scroll", handleScroll);
     });
   });
-  
+
   // **************************
   // **** scrollBack stuff ****
   // **************************
@@ -110,13 +110,13 @@ const Page = (props: ParentProps & PageProps) => {
     window.addEventListener("resize", handleResize);
     onCleanup(() => {
       window.removeEventListener("resize", handleResize);
-    });  
+    });
   });
-  
+
   // ***********************
   // **** onMount stuff ****
   // ***********************
-  
+
   onMount(() => {
     const preventActionOn = () => [
       document.getElementById("hamburger_panel"),
@@ -148,44 +148,42 @@ const Page = (props: ParentProps & PageProps) => {
 
     const handleClick = (e: MouseEvent) => {
       const target = e.target as Element;
+
       if (
         preventActionOn().find((s) => s?.contains(target)) ||
         targetIsAnchor(target) ||
-        on_mobile() ||
-        store.margin_mode
+        on_mobile()
       ) {
-        console.log("preventing!");
         return;
       }
 
-      let screenHeight = window.innerHeight;
-      let clientXBasedOnScrollWidth = window.scrollX + e.clientX;
+      if (store.margin_mode) {
+        window.scroll({
+          left: (store.scrollWidth - store.innerWidth) / 2,
+          behavior: "smooth",
+        });
+        return;
+      }
 
-      if (e.clientY <= screenHeight * 0.25 && window.scrollY != 0) {
-        window.scrollBy({ top: -screenHeight });
+      if (e.clientY <= store.innerHeight * 0.25 && window.scrollY != 0) {
+        window.scrollBy({ top: -store.innerHeight });
         return;
       }
 
       if (
-        e.clientY >= screenHeight * 0.75 &&
+        e.clientY >= store.innerHeight * 0.75 &&
         window.scrollY + window.innerHeight < document.body.scrollHeight
       ) {
-        window.scrollBy({ top: screenHeight });
+        window.scrollBy({ top: store.innerHeight });
         return;
       }
 
-      if (
-        clientXBasedOnScrollWidth <
-        window.scrollX + window.innerWidth * 0.1
-      ) {
+      if (e.clientX < store.innerWidth * 0.1) {
         getPrevArticle();
         return;
       }
 
-      if (
-        clientXBasedOnScrollWidth >
-        window.scrollX + window.innerWidth * 0.9
-      ) {
+      if (e.clientX > store.innerWidth * 0.9) {
         getNextArticle();
         return;
       }

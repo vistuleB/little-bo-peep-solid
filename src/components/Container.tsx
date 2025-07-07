@@ -1,28 +1,42 @@
 import { ParentProps } from "solid-js";
 import Nav from "./Nav";
-import SVGDefs from "./SVGDefs";
 import { useGlobalContext } from "~/store/StoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const Container = (props: ParentProps) => {
-  // can_click is for disabling click on page transition
-  // there is an inital scroll when each page is loaded .
-  // code for it is in useScrollX used in renderer helpers
-  // add_imports and table of contents
   let { store } = useGlobalContext();
 
-  let _window = window as any;
-
-  const containerWidth = () => {
-    return Math.max(
+  const containerWidth = () =>
+    Math.max(
       store.innerWidth,
       store.maxElementWidth + 60,
       mainColumnWidth() + 2 * store.pageNecessaryMargin
     );
+
+  const marginWidth = () => (containerWidth() - mainColumnWidth()) / 2;
+
+  const marginBeyondNecessaryMargin = () =>
+    marginWidth() - store.pageNecessaryMargin;
+
+  const marginShowAreaDivs = () => {
+    return (
+      <>
+        <div
+          style={`position:absolute;top:0;left:${marginBeyondNecessaryMargin()}px; width:${store.pageNecessaryMargin}px;height:100%;background-color:rgba(255, 0, 0, 0.2);border:2px solid red;pointer-events:none;z-index:1000;`}
+        />
+        <div
+          style={`position:absolute;top:0;right:${marginBeyondNecessaryMargin()}px;width:${store.pageNecessaryMargin}px;height:100%;background-color:rgba(255, 0, 0, 0.2);border: 2px solid red;pointer-events:none;z-index:1000;`}
+        />
+      </>
+    );
   };
 
-  const effectiveMarginWidth = () => {
-    return (containerWidth() - mainColumnWidth()) / 2;
+  const maxElementShowAreasDiv = () => {
+    return (
+      <div
+        style={`position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: ${store.maxElementWidth}px; height: 100%; background-color: rgba(0, 255, 0, 0.2); border: 2px solid green; pointer-events: none; z-index: 999;`}
+      />
+    );
   };
 
   return (
@@ -32,35 +46,12 @@ const Container = (props: ParentProps) => {
       style={`width:${containerWidth()}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}
     >
       <EarlyImages />
-      {/* Show margin areas when show_areas is true */}
-      {store.show_areas && store.pageNecessaryMargin > 0 && (
-        <>
-          <div
-            style={`position:absolute;top:0;left:${effectiveMarginWidth() - store.pageNecessaryMargin}px; width:${store.pageNecessaryMargin}px;height:100%;background-color:rgba(255, 0, 0, 0.2);border:2px solid red;pointer-events:none;z-index:1000;`}
-          />
-          <div
-            style={`position:absolute;top:0;right:${effectiveMarginWidth() - store.pageNecessaryMargin}px;width:${store.pageNecessaryMargin}px;height:100%;background-color:rgba(255, 0, 0, 0.2);border: 2px solid red;pointer-events:none;z-index:1000;`}
-          />
-        </>
-      )}
-      {/* Show maxElementWidth area when show_areas is true */}
-      {store.show_areas && (
-        <div
-          style={`position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: ${store.maxElementWidth}px; height: 100%; background-color: rgba(0, 255, 0, 0.2); border: 2px solid green; pointer-events: none; z-index: 999;`}
-        />
-      )}
+      {store.show_areas &&
+        store.pageNecessaryMargin > 0 &&
+        marginShowAreaDivs()}
+      {store.show_areas && maxElementShowAreasDiv()}
       <Nav />
-      <div
-        onClick={() => {
-          window.scroll({
-            left: (store.scrollWidth - store.innerWidth) / 2,
-            behavior: "smooth",
-          });
-        }}
-      >
-        {props.children}
-      </div>
-      <SVGDefs />
+      {props.children}
     </div>
   );
 };

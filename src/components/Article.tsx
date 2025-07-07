@@ -2,6 +2,7 @@ import { ParentProps } from "solid-js";
 import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
 import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
 import ActionArrows from "./ActionArrows";
+import SVGDefs from "./SVGDefs";
 import Page from "./Page";
 
 type ArticleProps = {
@@ -13,7 +14,7 @@ type ArticleProps = {
 };
 
 const Article = (props: ParentProps & ArticleProps) => {
-  return (
+  return (<>
     <Page
       pageNecessaryMargin={props.pageNecessaryMargin}
       maxElementWidth={props.maxElementWidth}
@@ -26,7 +27,7 @@ const Article = (props: ParentProps & ArticleProps) => {
         <ActionArrows />
       </ExercisesStoreProvider>
     </Page>
-  );
+  </>);
 };
 
 const ExercisesStoreConsumer = (props: ParentProps) => {
