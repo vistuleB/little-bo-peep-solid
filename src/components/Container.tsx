@@ -1,9 +1,4 @@
-import {
-  ParentProps,
-  createEffect,
-  onCleanup,
-  onMount,
-} from "solid-js";
+import { ParentProps, createEffect, onCleanup, onMount } from "solid-js";
 import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
 import useOnMobile from "../hooks/useOnMobile";
@@ -23,6 +18,22 @@ const Container = (props: ParentProps) => {
 
   useScrollIsAt0();
 
+  const scrollBack = () => {
+    let theoretical_left = (store.scrollWidth - store.innerWidth) / 2;
+    if (
+      store.scrollX > theoretical_left - 200 &&
+      store.scrollX < theoretical_left + 200
+    ) {
+      window.scroll({
+        left: theoretical_left,
+        behavior: "smooth",
+      });
+      set_store("margin_mode", false);
+      return;
+    }
+    set_store("margin_mode", true);
+  };
+
   const handleScroll = () => {
     set_store("scrollY", window.scrollY);
     set_store("scrollX", window.scrollX);
@@ -32,10 +43,7 @@ const Container = (props: ParentProps) => {
     let oldInnerWidth = store.innerWidth;
     let oldScrollWidth = store.scrollWidth;
 
-    set_store(
-      "innerWidth",
-      document.documentElement.clientWidth || window.innerWidth,
-    );
+    set_store("innerWidth", window.innerWidth);
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
@@ -58,35 +66,27 @@ const Container = (props: ParentProps) => {
   };
 
   createEffect(() => {
+    document.addEventListener("scrollend", scrollBack);
+    document.addEventListener("touchend", scrollBack);
+    onCleanup(() => {
+      document.removeEventListener("scrollend", scrollBack);
+      document.removeEventListener("touchend", scrollBack);
+    });
+  });
+
+  createEffect(() => {
     handleScroll();
-    handleResize();
-
-    const scroll_back = () => {
-      let theoretical_left = (store.scrollWidth - store.innerWidth) / 2;
-      if (
-        store.scrollX > theoretical_left - 200 &&
-        store.scrollX < theoretical_left + 200
-      ) {
-        window.scroll({
-          left: theoretical_left,
-          behavior: "smooth",
-        });
-        set_store("margin_mode", false);
-        return;
-      }
-      set_store("margin_mode", true);
-    };
-
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-    document.addEventListener("scrollend", scroll_back);
-    document.addEventListener("touchend", scroll_back);
-
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);
+    });
+  });
+
+  createEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    onCleanup(() => {
       window.removeEventListener("resize", handleResize);
-      document.removeEventListener("scrollend", scroll_back);
-      document.removeEventListener("touchend", scroll_back);
     });
   });
 
@@ -129,6 +129,7 @@ const Container = (props: ParentProps) => {
         on_mobile() ||
         store.margin_mode
       ) {
+        console.log("preventing!");
         return;
       }
 
@@ -136,9 +137,7 @@ const Container = (props: ParentProps) => {
       let clientXBasedOnScrollWidth = window.scrollX + e.clientX;
 
       if (e.clientY <= screenHeight * 0.25 && window.scrollY != 0) {
-        window.scrollBy({
-          top: -screenHeight,
-        });
+        window.scrollBy({ top: -screenHeight });
         return;
       }
 
@@ -146,9 +145,7 @@ const Container = (props: ParentProps) => {
         e.clientY >= screenHeight * 0.75 &&
         window.scrollY + window.innerHeight < document.body.scrollHeight
       ) {
-        window.scrollBy({
-          top: screenHeight,
-        });
+        window.scrollBy({ top: screenHeight });
         return;
       }
 
@@ -195,7 +192,7 @@ const Container = (props: ParentProps) => {
     return Math.max(
       store.innerWidth,
       store.maxElementWidth + 60,
-      mainColumnWidth() + 2 * store.pageNecessaryMargin,
+      mainColumnWidth() + 2 * store.pageNecessaryMargin
     );
   };
 
@@ -207,7 +204,8 @@ const Container = (props: ParentProps) => {
     <div
       id="Container"
       class="pb-14 -z-10 relative overflow-hidden"
-      style={`width:${containerWidth()}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}>
+      style={`width:${containerWidth()}px; opacity: ${store.saved_scroll_finished || store.scroll_is_at_0 ? "1" : "0"}`}
+    >
       <EarlyImages />
       {/* Show margin areas when show_areas is true */}
       {store.show_areas && store.pageNecessaryMargin > 0 && (
@@ -233,7 +231,8 @@ const Container = (props: ParentProps) => {
             left: (store.scrollWidth - store.innerWidth) / 2,
             behavior: "smooth",
           });
-        }}>
+        }}
+      >
         {props.children}
       </div>
       <SVGDefs />
