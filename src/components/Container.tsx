@@ -18,35 +18,6 @@ const Container = (props: ParentProps) => {
 
   useScrollIsAt0();
 
-  // **************************
-  // **** scrollBack stuff ****
-  // **************************
-
-  const scrollBack = () => {
-    let theoretical_left = (store.scrollWidth - store.innerWidth) / 2;
-    if (
-      store.scrollX > theoretical_left - 200 &&
-      store.scrollX < theoretical_left + 200
-    ) {
-      window.scroll({
-        left: theoretical_left,
-        behavior: "smooth",
-      });
-      set_store("margin_mode", false);
-      return;
-    }
-    set_store("margin_mode", true);
-  };
-
-  createEffect(() => {
-    document.addEventListener("scrollend", scrollBack);
-    document.addEventListener("touchend", scrollBack);
-    onCleanup(() => {
-      document.removeEventListener("scrollend", scrollBack);
-      document.removeEventListener("touchend", scrollBack);
-    });
-  });
-
   let _window = window as any;
   
   // ***********************

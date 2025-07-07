@@ -39,6 +39,35 @@ const Page = (props: ParentProps & PageProps) => {
       window.removeEventListener("scroll", handleScroll);
     });
   });
+  
+  // **************************
+  // **** scrollBack stuff ****
+  // **************************
+
+  const scrollBack = () => {
+    let scrollXWhenCentered = (store.scrollWidth - store.innerWidth) / 2;
+    if (
+      store.scrollX > scrollXWhenCentered - 200 &&
+      store.scrollX < scrollXWhenCentered + 200
+    ) {
+      window.scroll({
+        left: scrollXWhenCentered,
+        behavior: "smooth",
+      });
+      set_store("margin_mode", false);
+      return;
+    }
+    set_store("margin_mode", true);
+  };
+
+  createEffect(() => {
+    document.addEventListener("scrollend", scrollBack);
+    document.addEventListener("touchend", scrollBack);
+    onCleanup(() => {
+      document.removeEventListener("scrollend", scrollBack);
+      document.removeEventListener("touchend", scrollBack);
+    });
+  });
 
   // ****************************
   // **** handleResize stuff ****
