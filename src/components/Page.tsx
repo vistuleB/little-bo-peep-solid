@@ -44,10 +44,14 @@ const Page = (props: ParentProps & PageProps) => {
 
   const handleScrollendAndTouchend = () => {
     let scrollXWhenCentered = (store.scrollWidth - store.innerWidth) / 2;
-    if (
-      store.scrollX > scrollXWhenCentered - 200 &&
-      store.scrollX < scrollXWhenCentered + 200
-    ) {
+    let distanceFromCentered = Math.abs(store.scrollX - scrollXWhenCentered);
+
+    if (distanceFromCentered < 1) {
+      set_store("margin_mode", false);
+      return;
+    }
+
+    if (distanceFromCentered < 200) {
       window.scroll({
         left: scrollXWhenCentered,
         behavior: "smooth",
@@ -55,6 +59,7 @@ const Page = (props: ParentProps & PageProps) => {
       set_store("margin_mode", false);
       return;
     }
+
     set_store("margin_mode", true);
   };
 
@@ -116,6 +121,8 @@ const Page = (props: ParentProps & PageProps) => {
         left: (store.scrollWidth - store.innerWidth) / 2,
         behavior: "smooth",
       });
+      set_store("margin_mode", false);
+      e.stopPropagation();
       return;
     }
 
@@ -125,24 +132,28 @@ const Page = (props: ParentProps & PageProps) => {
 
     if (e.clientY <= store.innerHeight * 0.25 && window.scrollY != 0) {
       window.scrollBy({ top: -store.innerHeight });
+      e.stopPropagation();
       return;
     }
-
+    
     if (
       e.clientY >= store.innerHeight * 0.75 &&
       window.scrollY + window.innerHeight < document.body.scrollHeight
     ) {
       window.scrollBy({ top: store.innerHeight });
+      e.stopPropagation();
       return;
     }
-
+    
     if (e.clientX < store.innerWidth * 0.1) {
       getPrevArticle();
+      e.stopPropagation();
       return;
     }
-
+    
     if (e.clientX > store.innerWidth * 0.9) {
       getNextArticle();
+      e.stopPropagation();
       return;
     }
   };
