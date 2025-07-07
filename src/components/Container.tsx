@@ -1,9 +1,7 @@
-import { useNavigate } from "@solidjs/router";
 import {
   ParentProps,
   createEffect,
   onCleanup,
-  createSignal,
   onMount,
 } from "solid-js";
 import Nav from "./Nav";
@@ -19,8 +17,6 @@ const Container = (props: ParentProps) => {
   // there is an inital scroll when each page is loaded .
   // code for it is in useScrollX used in renderer helpers
   // add_imports and table of contents
-  const navigate = useNavigate();
-
   let { on_mobile } = useOnMobile();
   let { store, set_store } = useGlobalContext();
   const { getPrevArticle, getNextArticle } = usePrevNextArticle();
@@ -176,12 +172,12 @@ const Container = (props: ParentProps) => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") {
         e.preventDefault();
-        navigate(store.prevPage);
+        getPrevArticle();
         return;
       }
       if (e.key === "ArrowRight") {
         e.preventDefault();
-        navigate(store.nextPage);
+        getNextArticle();
         return;
       }
     };
