@@ -20,17 +20,14 @@ const Page = (props: ParentProps & PageProps) => {
 
   set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
   set_store("maxElementWidth", props.maxElementWidth || 0);
+  set_store("nextPage", props.nextPage || "");
+  set_store("prevPage", props.prevPage || "");
 
   const resetDimensions = () => {
-    set_store(
-      "innerWidth",
-      document.documentElement.clientWidth || window.innerWidth,
-    );
+    set_store("innerWidth", window.innerWidth);
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
-    set_store("nextPage", props.nextPage || "");
-    set_store("prevPage", props.prevPage || "");
 
     let _dummy =
       store.scrollY +
