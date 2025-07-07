@@ -3,7 +3,6 @@ import Nav from "./Nav";
 import SVGDefs from "./SVGDefs";
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
-import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
 import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
@@ -15,8 +14,6 @@ const Container = (props: ParentProps) => {
   let { on_mobile } = useOnMobile();
   let { store, set_store } = useGlobalContext();
   const { getPrevArticle, getNextArticle } = usePrevNextArticle();
-
-  useScrollIsAt0();
 
   let _window = window as any;
   

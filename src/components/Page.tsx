@@ -3,6 +3,7 @@ import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import useSetRoute from "~/hooks/useSetRoute";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
+import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
 
 type PageProps = {
   pageNecessaryMargin?: number;
@@ -14,6 +15,7 @@ type PageProps = {
 const Page = (props: ParentProps & PageProps) => {
   let { set_store, store } = useGlobalContext();
 
+  useScrollIsAt0();
   useSetRoute();
   useBreadcrumbs();
   useScrollX();
