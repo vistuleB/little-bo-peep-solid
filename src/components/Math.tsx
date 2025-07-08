@@ -1,4 +1,12 @@
-import { createSignal, onCleanup, onMount, ParentProps } from "solid-js";
+import {
+  createEffect,
+  createSignal,
+  onCleanup,
+  onMount,
+  ParentProps,
+} from "solid-js";
+import { TEXT_X_PADDING } from "~/constants";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 export const Math = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
@@ -33,7 +41,22 @@ export const Math = (props: ParentProps) => {
 
 export const MathBlock = (props: ParentProps) => {
   let ref: HTMLDivElement | undefined;
+  const { store } = useGlobalContext();
   const [visible, setVisible] = createSignal(false);
+  const [scaledDown, setScaledDown] = createSignal(false);
+  const [originalWidth, setOriginalWidth] = createSignal(0);
+
+  const handleClick = () => {
+    setScaledDown((prev) => !prev);
+  };
+
+  const shouldBeScaledDown = () => {
+    if (ref) {
+      const rect = ref.getBoundingClientRect();
+      return rect.width > store.innerWidth - TEXT_X_PADDING * 2;
+    }
+    return false;
+  };
 
   onMount(() => {
     const observer = new IntersectionObserver(
@@ -48,14 +71,41 @@ export const MathBlock = (props: ParentProps) => {
         rootMargin: "300px",
       },
     );
-    if (ref) observer.observe(ref);
-    onCleanup(() => observer.disconnect());
+    if (ref) {
+      observer.observe(ref);
+      setOriginalWidth(ref.getBoundingClientRect().width);
+      ref?.querySelector("svg")?.classList.add("transition-all");
+    }
+
+    const handleResize = () => {
+      setScaledDown(shouldBeScaledDown());
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    onCleanup(() => {
+      observer.disconnect();
+      window.removeEventListener("resize", handleResize);
+    });
+  });
+
+  createEffect(() => {
+    if (scaledDown()) {
+      ref?.style.setProperty(
+        "width",
+        store.innerWidth - TEXT_X_PADDING * 2 + "px",
+      );
+      return;
+    }
+    ref?.style.setProperty("width", originalWidth() + "px");
   });
 
   return (
     <div
-      class="mathblock transition-opacity"
+      class="mathblock transition-all"
       style={{ opacity: visible() ? "1" : "0" }}
+      onClick={handleClick}
       ref={ref}>
       {props.children}
     </div>

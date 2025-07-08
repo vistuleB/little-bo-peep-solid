@@ -293,7 +293,7 @@ const SolutionButton = (props: SolutionBtnProps) => {
     <div
       ref={props.ref}
       class="relative"
-      style={`padding-inline: ${TEXT_X_PADDING}`}>
+      style={`padding-inline: ${TEXT_X_PADDING}px`}>
       <SolutionSVG
         solution_open={solution_open}
         onClick={(event) => {
