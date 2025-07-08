@@ -2,6 +2,7 @@ import { ParentProps } from "solid-js";
 import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
 import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
 import ActionArrows from "./ActionArrows";
+import SVGDefs from "./SVGDefs";
 import Page from "./Page";
 
 type ArticleProps = {

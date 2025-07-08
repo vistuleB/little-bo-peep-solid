@@ -1,10 +1,10 @@
-import { onCleanup, onMount } from "solid-js";
+import { onMount } from "solid-js";
 
 const useBreadcrumbs = () => {
   const highlight = (section_id: string) => {
     let breadcrumbs = document.querySelectorAll(".breadcrumb");
-
     let to_highlight: HTMLElement | null = null;
+
     if (section_id === "exercises") {
       to_highlight = breadcrumbs.item(breadcrumbs.length - 1) as HTMLElement;
     } else {
@@ -16,6 +16,7 @@ const useBreadcrumbs = () => {
     breadcrumbs.forEach((el) => {
       el.classList.remove("highlighted");
     });
+
     to_highlight?.classList.add("highlighted");
   };
 
@@ -23,6 +24,7 @@ const useBreadcrumbs = () => {
     await new Promise((resolve) => setTimeout(resolve, 1000)); // to be safe
     const sections = document.querySelectorAll("section");
     const sectionVisibility = new Map();
+
     sections.forEach((section) => {
       sectionVisibility.set(section.id, { element: section, isVisible: false });
     });
@@ -75,7 +77,10 @@ const useBreadcrumbs = () => {
     sections.forEach((section) => {
       observer.observe(section);
     });
-    onCleanup(() => observer.disconnect());
+
+    // commented out L83 b/c Solid was generating an annoying warning 
+    //     'cleanups created outside a `createRoot` or `render` will never be run'
+    // onCleanup(() => observer.disconnect());
   });
 };
 

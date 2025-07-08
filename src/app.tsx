@@ -1,13 +1,12 @@
+import { Meta, MetaProvider } from "@solidjs/meta";
+import { StoreProvider } from "./store/StoreProvider";
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
-import { ParentProps, Suspense } from "solid-js";
-import Container from "~/components/Container";
-import { Meta, MetaProvider } from "@solidjs/meta";
-
-import "./app.css";
-import { StoreProvider } from "./store/StoreProvider";
-import HamburgerButton from "./components/HamburgerButton";
+import HeaderButtons from "./components/HeaderButtons";
 import HamburgerPanel from "./components/HamburgerPanel";
+import Container from "~/components/Container";
+import { Suspense } from "solid-js";
+import "./app.css";
 
 export default function App() {
   return (
@@ -17,7 +16,7 @@ export default function App() {
         <Router
           root={(props) => (
             <>
-              <HamburgerButton />
+              <HeaderButtons />
               <HamburgerPanel />
               <Container>
                 <Suspense>{props.children}</Suspense>

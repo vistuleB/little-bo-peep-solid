@@ -124,11 +124,11 @@ fn article_emitter(
       [ BlamedLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
         BlamedLine(blame_us("article_emitter"), 0, ""),
         BlamedLine(blame_us("article_emitter"), 0, "export default function " <> payload <> "() {"),
-        BlamedLine(blame_us("article_emitter"), 2, "return <>"),
+        BlamedLine(blame_us("article_emitter"), 2, "return ("),
       ],
       vxml.vxml_to_jsx_blamed_lines(first_split, 4),
       [
-        BlamedLine(blame_us("article_emitter"), 2, "</>;"),
+        BlamedLine(blame_us("article_emitter"), 2, ");"),
         BlamedLine(blame_us("article_emitter"), 0, "}"),
         BlamedLine(blame_us("article_emitter"), 0, ""),
         BlamedLine(blame_us("article_emitter"), 0, "const Rest = () => {"),
