@@ -369,8 +369,7 @@ pub fn main() {
     opt: [],
   )
 
-  case vr.run_renderer(renderer, parameters, debug_options) {
-    Ok(Nil) -> Nil
-    Error(error) -> io.println("\nrenderer error: " <> ins(error) <> "\n")
-  }
+  let _ = vr.run_renderer(renderer, parameters, debug_options)
+
+  Nil
 }

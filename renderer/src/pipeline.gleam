@@ -1,32 +1,22 @@
 import gleam/list
 import gleam/option.{None, Some}
-import infrastructure.{type Pipe} as infra
-import prefabricated_pipelines as pp
-import desugarer_names as dn
+import infrastructure.{type Desugarer} as infra
+import prefabricated_pipelines as dsds
+import desugarer_names as ds
 
-pub fn our_pipeline() -> List(Pipe) {
+pub fn our_pipeline() -> List(Desugarer) {
   [
     [
-      dn.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
-      dn.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
+      ds.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
+      ds.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
     ],
-    // ****
-    // create Math, MathBlock, then replace
-    // escaped dollar signs with ordinary dollars
-    // ****
-    pp.create_mathblock_and_math_elements(
+    dsds.create_mathblock_and_math_elements(
       #([ infra.DoubleDollar ], infra.DoubleDollar),
       #([ infra.SingleDollar ], infra.SingleDollar),
     ),
     [
-      dn.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
-    ],
-    // ****
-    // setting up counters and
-    // counter-related titles
-    // ****
-    [
-      dn.add_attributes([
+      ds.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
+      ds.add_attributes([
         #("Book", "counter", "ChapterCounter"),
         #("Book", "counter", "BootcampCounter"),
         #("Chapter", "counter", "ExampleCounter"),
@@ -47,7 +37,7 @@ pub fn our_pipeline() -> List(Pipe) {
         #("Exercise", "number", "::øøExerciseCounter"),
         #("Section", "id", "section-::++SectionCounter"),
       ]),
-      dn.associate_counter_by_prepending_incrementing_attribute([
+      ds.associate_counter_by_prepending_incrementing_attribute([
         #("Chapter", "ChapterCounter"),
         #("Bootcamp", "BootcampCounter"),
         #("Example", "ExampleCounter"),
@@ -55,27 +45,20 @@ pub fn our_pipeline() -> List(Pipe) {
         #("SolutionNote", "SolutionNoteCounter"),
         #("Note", "NoteCounter"),
       ]),
-      dn.prepend_text([
+      ds.prepend_text([
         #("Example", "*Example ::øøExampleCounter.*"),
         #("Exercise", "*Exercise ::øøExerciseCounter.*"),
         #("SolutionNote", "_Note ::øøSolutionNoteCounter._"),
         #("Note", "_Note ::øøNoteCounter._"),
       ]),
-      dn.counters_substitute_and_assign_handles(),
-      dn.handles_generate_ids(),
-      dn.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
-      dn.handles_substitute([]),
-      dn.unwrap(["GrandWrapper"]),
-      dn.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
-      dn.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
-    ],
-    // ****
-    // get rid of 'WriterlyBlankLine',
-    // replace with parenting notion of
-    // OuterP (paragraph abstraction) instead
-    // ****
-    [
-      dn.group_consecutive_children_avoiding(
+      ds.counters_substitute_and_assign_handles(),
+      ds.handles_generate_ids(),
+      ds.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
+      ds.handles_substitute([]),
+      ds.unwrap(["GrandWrapper"]),
+      ds.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
+      ds.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
+      ds.group_consecutive_children_avoiding(
         #(
           "p",
           [
@@ -92,59 +75,42 @@ pub fn our_pipeline() -> List(Pipe) {
           ["MathBlock", "p", "CentralDisplay", "CentralDisplayItalic", "ArticleTitle"],
         ),
       ),
-      dn.unwrap(["WriterlyBlankLine"]),
-      dn.concatenate_text_nodes(),
-      dn.remove_text_nodes_with_singleton_empty_line(),
-      dn.remove_starting_and_ending_spaces(["p"]),
-      dn.remove_starting_and_ending_empty_lines(["p"]),
-      dn.remove_empty_tags(["p"]),
+      ds.unwrap(["WriterlyBlankLine"]),
+      ds.concatenate_text_nodes(),
+      ds.remove_text_nodes_with_singleton_empty_line(),
+      ds.remove_starting_and_ending_spaces(["p"]),
+      ds.remove_starting_and_ending_empty_lines(["p"]),
+      ds.remove_empty_tags(["p"]),
     ],
-    // ****
-    // parse '__', '_|' delimiters, break
-    // new elements out of parent p
-    // (why don't we do this before creating the p,
-    // and spare ourselves the free_children call?)
-    // ****
-    pp.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
-    pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
+    dsds.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
+    dsds.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
-      dn.free_children([
+      ds.free_children([
         #("CentralDisplay", "p"),
         #("CentralDisplayItalic", "p"),
       ]),
     ],
-    // ****
-    // parse _, * delims
-    // ****
-    pp.symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
-    pp.symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
+    dsds.symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
+    dsds.symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
     [
-      dn.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
-    ],
-    // ****
-    // misc + not-so misc...
-    // ****
-    [
-      dn.wrap_math_with_no_break(),
-      dn.unwrap_when_zero_or_one_children(["NoBreak"]),
-      // ************************
-      // OuterP cleanup (some cleanups all over again, after delim splitting)
-      // ************************
-      dn.concatenate_text_nodes(),
-      dn.remove_text_nodes_with_singleton_empty_line(),
-      dn.remove_starting_and_ending_spaces(["p"]),
-      dn.remove_starting_and_ending_empty_lines(["p"]),
-      dn.remove_empty_tags(["p"]),
-      dn.unwrap_tags_when_no_child_meets_condition(#(
+      ds.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
+      ds.wrap_math_with_no_break(),
+      ds.unwrap_when_zero_or_one_children(["NoBreak"]),
+      ds.concatenate_text_nodes(),
+      ds.remove_text_nodes_with_singleton_empty_line(),
+      ds.remove_starting_and_ending_spaces(["p"]),
+      ds.remove_starting_and_ending_empty_lines(["p"]),
+      ds.remove_empty_tags(["p"]),
+      ds.unwrap_tags_when_no_child_meets_condition(#(
         ["p"],
         infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"])
       )),
-      dn.unwrap_when_descendant_of([#("p", ["td", "li"])]),
-      dn.rename_when_child_of([
+      ds.unwrap_when_descendant_of([#("p", ["td", "li"])]),
+      ds.rename_when_child_of([
         #("p", "Item", "List"),
         #("p", "Item", "Grid"),
       ]),
-      dn.rename_when_child_of([
+      ds.rename_when_child_of([
         #("p", "OuterP", "Section"),
         #("p", "OuterP", "Exercise"),
         #("p", "OuterP", "Solution"),
@@ -152,12 +118,9 @@ pub fn our_pipeline() -> List(Pipe) {
         #("p", "OuterP", "Chapter"),
         #("p", "OuterP", "Bootcamp"),
       ]),
-      dn.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
-      dn.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
-      // ************************
-      // ImageLeft, ImageRight parent-finding
-      // ************************
-      dn.absorb_next_sibling_while([
+      ds.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
+      ds.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
+      ds.absorb_next_sibling_while([
         #("OuterP", "ImageRight"),
         #("OuterP", "ImageLeft"),
         #("MathBlock", "ImageRight"),
@@ -171,7 +134,7 @@ pub fn our_pipeline() -> List(Pipe) {
         #("ul", "ImageRight"),
         #("ul", "ImageLeft"),
       ]),
-      dn.add_attribute_when_child_of([
+      ds.add_attribute_when_child_of([
         #(
           "ImageRight",
           "MathBlock",
@@ -185,14 +148,8 @@ pub fn our_pipeline() -> List(Pipe) {
           "true",
         ),
       ]),
-      // ************************
-      // OuterP indents
-      // ************************
-      dn.add_attribute_to_second_of_kind(#("OuterP", "class", "indent-10")),
-      // ************************
-      // Add spacers
-      // ************************
-      dn.add_between_tags([
+      ds.add_attribute_to_second_of_kind(#("OuterP", "class", "indent-10")),
+      ds.add_between_tags([
         #(#("MathBlock", "OuterP"), "Pause", []),
         #(#("Example", "OuterP"), "Pause", []),
         #(#("Note", "OuterP"), "Pause", []),
@@ -206,9 +163,8 @@ pub fn our_pipeline() -> List(Pipe) {
         #(#("List", "OuterP"), "Pause", []),
         #(#("StarDivider", "OuterP"), "Pause", []),
       ]),
-      // (I forgot... why would raw text directly follow a MathBlock?)
-      dn.add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
-      dn.add_before_tags_but_not_first_child_tags([
+      ds.add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
+      ds.add_before_tags_but_not_first_child_tags([
         #("Exercises", "Pause", []),
         #("Example", "Pause", []),
         #("Note", "Pause", []),
@@ -224,8 +180,8 @@ pub fn our_pipeline() -> List(Pipe) {
         #("List", "Pause", []),
         #("StarDivider", "Pause", []),
       ]),
-      dn.add_before_tags_but_not_before_first_of_kind([#("Section", "Pause", [])]),
-      dn.rearrange_links([
+      ds.add_before_tags_but_not_before_first_of_kind([#("Section", "Pause", [])]),
+      ds.rearrange_links([
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
         #("Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=1>Exercise _1_ of Chapter _2_</a>"),
@@ -233,33 +189,26 @@ pub fn our_pipeline() -> List(Pipe) {
         #("Exercise <a href=1>_1_</a>", "<a href=1>Exercise _1_</a>"),
         #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
       ]),
-      // ************************
-      // contents
-      // ************************
-      dn.generate_lbp_table_of_contents(#(
+      ds.generate_lbp_table_of_contents(#(
         "HamburgerPanelAuthorSuppliedContents",
         "HamburgerPanelTitle",
         "HamburgerPanelItem",
         None,
       )),
-      dn.generate_lbp_table_of_contents(#(
+      ds.generate_lbp_table_of_contents(#(
         "TOC",
         "TOCTitle",
         "TOCItem",
         Some("Spacer"),
       )),
-      dn.generate_lbp_prev_next_attributes(),
-      dn.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
-      dn.generate_lbp_breadcrumbs(),
-      dn.unwrap(["BreadcrumbTitle"]),
-      // dn.reassign_text_node_blame_to_blame_of_first_nonempty_line_in_text_node(),
-      dn.unwrap(["DebugScope"]),
-      // ************************
-      // attribute cleanup
-      // ************************
-      dn.change_attribute_value([#("src", "/()")]),
-      dn.remove_attributes(["counter", "handle", "type", "t", ".", "title", "test"]),
-      dn.rename_attributes_by_function(infra.kabob_case_to_camel_case),
+      ds.generate_lbp_prev_next_attributes(),
+      ds.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
+      ds.generate_lbp_breadcrumbs(),
+      ds.unwrap(["BreadcrumbTitle"]),
+      ds.unwrap(["DebugScope"]),
+      ds.change_attribute_value([#("src", "/()")]),
+      ds.remove_attributes(["counter", "handle", "type", "t", ".", "title", "test"]),
+      ds.rename_attributes_by_function(infra.kabob_case_to_camel_case),
     ]
   ]
   |> list.flatten
