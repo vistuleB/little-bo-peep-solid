@@ -1645,7 +1645,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 1.
                 </i>
@@ -1671,7 +1671,7 @@ const Rest = () => {
                   .
                 </NoBreak>
                 {" "} By a similar drawing:
-              </p>
+              </OuterP>
               <Pause />
               <Image
                 src="/images/58.svg"
@@ -1691,7 +1691,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_8289">
+          <ExerciseStatement id="_6_4080">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2027,7 +2027,7 @@ const Rest = () => {
               {" "}
               As explained in {" "}
               <a
-                href="/article/chapter3?id=_15_7548"
+                href="/article/chapter3?id=_15_4458"
                 class="handle-out-of-chapter-link">
                 Chapter 3
               </a>
@@ -2136,7 +2136,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_8289"
+                href="/article/chapter2?id=_6_4080"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

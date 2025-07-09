@@ -22,7 +22,7 @@ export default function __Chapter3__() {
       nextPage="/article/chapter4"
       pageNecessaryMargin={700}
       maxElementWidth={1500}
-      id="_15_7548">
+      id="_15_4458">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -2189,7 +2189,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_7_7036">
+          <ExerciseStatement id="_7_5083">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2410,7 +2410,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_8_5665">
+          <ExerciseStatement id="_8_8548">
             <OuterP>
               <b>
                 Exercise 5.
@@ -2444,7 +2444,7 @@ const Rest = () => {
               </NoBreak>
               {" "} apply the function from {" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_7036"
+                href="/article/chapter3?id=_7_5083"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2497,7 +2497,7 @@ const Rest = () => {
               {" "}
               the formula for the function from {" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_7036"
+                href="/article/chapter3?id=_7_5083"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2899,7 +2899,7 @@ const Rest = () => {
               because all we have to do is to multiply
               {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_5665"
+                href="/article/chapter3?id=_8_8548"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -2924,7 +2924,7 @@ const Rest = () => {
             <OuterP>
               because the problem is similar to {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_5665"
+                href="/article/chapter3?id=_8_8548"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -3187,7 +3187,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_9_1442">
+          <ExerciseStatement id="_9_6102">
             <OuterP>
               <b>
                 Exercise 8.
@@ -3370,7 +3370,7 @@ const Rest = () => {
               {" "}
               Same question as {" "}
               <InChapterLink
-                href="/article/chapter3?id=_9_1442"
+                href="/article/chapter3?id=_9_6102"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -3474,13 +3474,13 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 1.
                 </i>
                 {" "}
                 The fact that
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3488,9 +3488,9 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 and
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3498,9 +3498,9 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 both evaluate to
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3508,9 +3508,9 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 actually implies that
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3518,9 +3518,9 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 and
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3528,7 +3528,7 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 are the same function; this function is namely
                 the function that maps {" "}
                 <Math>
@@ -3544,7 +3544,7 @@ const Rest = () => {
                   $x$
                 </Math>
                 {" "} (or
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3552,19 +3552,19 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 in lambda notation).
-              </p>
+              </OuterP>
             </SolutionNote>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 2.
                 </i>
                 {" "}
                 Because of this, we can write
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3572,21 +3572,21 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 without any parentheses. (The point is: either
                 way you parenthesize it you obtain the same
                 function, so why bother?)
-              </p>
+              </OuterP>
             </SolutionNote>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 3.
                 </i>
                 {" "}
                 The fact that
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3594,7 +3594,7 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 for all numbers {" "}
                 <NoBreak>
                   <Math>
@@ -3614,14 +3614,15 @@ const Rest = () => {
                   $c$
                 </Math>
                 {" "} is known as the
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplayItalic>
                 associativity
               </CentralDisplayItalic>
-              <p>
+              <Pause />
+              <OuterP>
                 of addition; likewise, the fact that
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3629,7 +3630,7 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 for all numbers {" "}
                 <NoBreak>
                   <Math>
@@ -3649,15 +3650,16 @@ const Rest = () => {
                   $c$
                 </Math>
                 {" "} is known as the
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplayItalic>
                 associativity
               </CentralDisplayItalic>
-              <p>
+              <Pause />
+              <OuterP>
                 of multiplication; and again likewise,
                 the fact that
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -3665,7 +3667,7 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 for all functions {" "}
                 <NoBreak>
                   <Math>
@@ -3686,19 +3688,20 @@ const Rest = () => {
                 </Math>
                 {" "} is known
                 as the
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplayItalic>
                 associativity
                 <ImageRight src="/images/svg_ch3_ex_associativity_cloud.svg" />
               </CentralDisplayItalic>
-              <p>
+              <Pause />
+              <OuterP>
                 of function composition.
-              </p>
+              </OuterP>
             </SolutionNote>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 4.
                 </i>
@@ -3710,10 +3713,11 @@ const Rest = () => {
                 {" "} understand
                 the associativity of function composition
                 uses this picture:
-              </p>
+              </OuterP>
               <Pause />
               <Image src="/images/svg_ch3_truth_be_said.svg" />
-              <p>
+              <Pause />
+              <OuterP>
                 In the above {" "}
                 <NoBreak>
                   <Math>
@@ -3792,7 +3796,7 @@ const Rest = () => {
                 </NoBreak>
                 {" "}
                 For example,
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplay>
                 <Math>
@@ -3812,7 +3816,8 @@ const Rest = () => {
                   marginLeft=".5rem"
                   marginRight=".5rem" />
               </CentralDisplay>
-              <p>
+              <Pause />
+              <OuterP>
                 because the arrow that originates at {" "}
                 <InlineImage
                   src="/images/svg_ch3_composition_icon_clubs.svg"
@@ -3835,7 +3840,7 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "} and
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplay>
                 {" "}
@@ -3857,7 +3862,8 @@ const Rest = () => {
                   marginLeft=".5rem"
                   marginRight=".5rem" />
               </CentralDisplay>
-              <p>
+              <Pause />
+              <OuterP>
                 because, pursuing that path onwards, the arrow
                 that originates at {" "}
                 <InlineImage
@@ -3881,8 +3887,8 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "} etc.
-              </p>
-              <p>
+              </OuterP>
+              <OuterP class="indent-10">
                 Under this representation one can “compute”
                 {" "}
                 <Math>
@@ -3900,12 +3906,13 @@ const Rest = () => {
                 </Math>
                 {" "} in the
                 middle left:
-              </p>
+              </OuterP>
               <Pause />
               <Image
                 src="/images/svg_ch3_truth_be_said_right_first.svg"
                 width="2000px" />
-              <p>
+              <Pause />
+              <OuterP>
                 We can also get rid of {" "}
                 <Math>
                   $B$
@@ -3915,12 +3922,13 @@ const Rest = () => {
                   $C$
                 </Math>
                 {" "} second:
-              </p>
+              </OuterP>
               <Pause />
               <Image
                 src="/images/svg_ch3_truth_be_said_left_first.svg"
                 width="2000px" />
-              <p>
+              <Pause />
+              <OuterP>
                 The first order of computation corresponds
                 to the parenthetization {" "}
                 <NoBreak>
@@ -3955,11 +3963,11 @@ const Rest = () => {
                 </Math>
                 {" "}
                 more stuff
-              </p>
+              </OuterP>
             </SolutionNote>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 5.
                 </i>
@@ -3980,11 +3988,11 @@ const Rest = () => {
                 general, no choice but to diligently apply
                 each recipe in order—the first function first,
                 the second function second.
-              </p>
+              </OuterP>
             </SolutionNote>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 6.
                 </i>
@@ -4013,14 +4021,15 @@ const Rest = () => {
                 </del>
                 {" "} sets of ordered pairs; for example—conceptual
                 cold water shock ahead—
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 &#123;\textrm&#123;VX-11/78A&#125; = \&#123;(0, 3.5), (1, 2.5)\&#125;&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 because VX-11/78A maps {" "}
                 <Math>
                   $0$
@@ -4042,7 +4051,7 @@ const Rest = () => {
                   .
                 </NoBreak>
                 {" "} (The presence of an ordered pair
-              </p>
+              </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
                 <MathBlock>
                   $$
@@ -4050,7 +4059,7 @@ const Rest = () => {
                   $$
                 </MathBlock>
               </div>
-              <p>
+              <OuterP>
                 means that input {" "}
                 <Math>
                   $a$
@@ -4065,12 +4074,13 @@ const Rest = () => {
                 {" "} So
                 two functions are equal if and only if they
                 are equal
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplayItalic>
                 as sets of ordered pairs
               </CentralDisplayItalic>
-              <p>
+              <Pause />
+              <OuterP>
                 because the set of ordered pairs is the
                 underlying “thing” that the function is. In
                 particular, there is no notion of a “formula”
@@ -4084,12 +4094,12 @@ const Rest = () => {
                 </del>
                 {" "} set of ordered pairs is equal, and, perforce,
                 that the two functions are equal!!
-              </p>
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_10_1213">
+          <ExerciseStatement id="_10_5480">
             <OuterP>
               <b>
                 Exercise 10.
@@ -4182,7 +4192,7 @@ const Rest = () => {
               {" "}
               Solve {" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_1213"
+                href="/article/chapter3?id=_10_5480"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4425,7 +4435,7 @@ const Rest = () => {
               </NoBreak>
               {" "} {" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_1213"
+                href="/article/chapter3?id=_10_5480"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4452,7 +4462,7 @@ const Rest = () => {
             <OuterP>
               by {" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_1213"
+                href="/article/chapter3?id=_10_5480"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4562,7 +4572,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_11_9905">
+          <ExerciseStatement id="_11_2205">
             <OuterP>
               <b>
                 Exercise 14.
@@ -4988,7 +4998,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 1.
                 </i>
@@ -4999,7 +5009,7 @@ const Rest = () => {
                 That order of geometric transformations
                 would correspond to the following sequence
                 of algebraic transformations:
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
@@ -5042,7 +5052,8 @@ const Rest = () => {
                 &#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 ...in which the {" "}
                 <i>
                   second
@@ -5058,12 +5069,12 @@ const Rest = () => {
                   ”
                 </NoBreak>
                 {" "} with something else.)
-              </p>
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={15}>
-          <ExerciseStatement id="_12_8778">
+          <ExerciseStatement id="_12_2155">
             <OuterP>
               <b>
                 Exercise 15.
@@ -5467,7 +5478,7 @@ const Rest = () => {
               {" "} by the following
               sequence of transformations (cf. {" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_9905"
+                href="/article/chapter3?id=_11_2205"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -5499,7 +5510,7 @@ const Rest = () => {
               (We put the vertical translation first.)
               By {" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_8778"
+                href="/article/chapter3?id=_12_2155"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -5700,7 +5711,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement id="_13_4331">
+          <ExerciseStatement id="_13_1994">
             <OuterP>
               <b>
                 Exercise 18.
@@ -5938,7 +5949,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={19}>
-          <ExerciseStatement id="_14_1047">
+          <ExerciseStatement id="_14_4845">
             <OuterP>
               <b>
                 Exercise 19.
@@ -6016,7 +6027,7 @@ const Rest = () => {
             <OuterP>
               and, similarly to {" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_9905"
+                href="/article/chapter3?id=_11_2205"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6079,7 +6090,7 @@ const Rest = () => {
               </NoBreak>
               {" "} of {" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_9905"
+                href="/article/chapter3?id=_11_2205"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6089,7 +6100,7 @@ const Rest = () => {
             <OuterP class="indent-10">
               By direct analogy with {" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_9905"
+                href="/article/chapter3?id=_11_2205"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6297,7 +6308,7 @@ const Rest = () => {
             <OuterP>
               by {" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_8778"
+                href="/article/chapter3?id=_12_2155"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -6312,112 +6323,121 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 1.
                 </i>
                 {" "}
                 In fact,
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 (square both sides of the equation—in general,
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \pm E = \pm F
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 as one set of two values equalling another
                 set of two values, if and only if
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 |E| = |F|
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 or
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 E^2 = F^2
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 —so that's why we say “square both sides”),
                 so the formula for the roots can also be written
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 x = -&#123;B \over 2A&#125; \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 or
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 x = &#123;&#123;-B \pm \sqrt&#123;B^2 - 4AC&#125;&#125; \over 2A&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 as briefly flashed by, e.g., in {" "}
                 <a
-                  href="/article/chapter1?id=_5_6951"
+                  href="/article/chapter1?id=_5_403"
                   class="handle-out-of-chapter-link">
                   Chapter 1
                 </a>
                 .
-              </p>
+              </OuterP>
             </SolutionNote>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 2.
                 </i>
                 {" "}
                 If
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 then
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 does not exist, alerting you to the absence
                 of roots, if you try to use the first formula
                 we gave. Also
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0\iff B^2 - 4AC &lt; 0
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 because {" "}
                 <Math>
                   $4A^2 &gt; 0$
@@ -6432,7 +6452,7 @@ const Rest = () => {
                 {" "}
                 so the second set of formulas would alert you
                 to the absence of roots in that case, as well.
-              </p>
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>

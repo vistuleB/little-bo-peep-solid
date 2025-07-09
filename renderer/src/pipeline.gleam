@@ -2,7 +2,7 @@ import gleam/list
 import gleam/option.{None, Some}
 import infrastructure.{type Desugarer} as infra
 import prefabricated_pipelines as dsds
-import desugarer_names as ds
+import desugarers as ds
 
 pub fn our_pipeline() -> List(Desugarer) {
   [
@@ -117,6 +117,7 @@ pub fn our_pipeline() -> List(Desugarer) {
         #("p", "OuterP", "Example"),
         #("p", "OuterP", "Chapter"),
         #("p", "OuterP", "Bootcamp"),
+        #("p", "OuterP", "SolutionNote"),
       ]),
       ds.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
       ds.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
@@ -189,18 +190,8 @@ pub fn our_pipeline() -> List(Desugarer) {
         #("Exercise <a href=1>_1_</a>", "<a href=1>Exercise _1_</a>"),
         #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
       ]),
-      ds.generate_lbp_table_of_contents(#(
-        "HamburgerPanelAuthorSuppliedContents",
-        "HamburgerPanelTitle",
-        "HamburgerPanelItem",
-        None,
-      )),
-      ds.generate_lbp_table_of_contents(#(
-        "TOC",
-        "TOCTitle",
-        "TOCItem",
-        Some("Spacer"),
-      )),
+      ds.generate_lbp_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
+      ds.generate_lbp_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
       ds.generate_lbp_prev_next_attributes(),
       ds.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
       ds.generate_lbp_breadcrumbs(),

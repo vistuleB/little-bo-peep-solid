@@ -1765,7 +1765,7 @@ const Rest = () => {
         <OuterP>
           of functions already appear in {" "}
           <a
-            href="/article/chapter3?id=_13_4331"
+            href="/article/chapter3?id=_13_1994"
             class="handle-out-of-chapter-link">
             Exercise 18 of Chapter 3
           </a>
@@ -1797,7 +1797,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_16_2435">
+          <ExerciseStatement id="_16_9746">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1925,7 +1925,7 @@ const Rest = () => {
             <OuterP>
               derivative of the graph in {" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_2435"
+                href="/article/chapter4?id=_16_9746"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -1970,7 +1970,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of {" "}
               <InChapterLink
-                href="/article/chapter4?id=_16_2435"
+                href="/article/chapter4?id=_16_9746"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
@@ -2033,7 +2033,7 @@ const Rest = () => {
             <StarDivider />
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 1.
                 </i>
@@ -2041,11 +2041,11 @@ const Rest = () => {
                 The second and third functions are respectively
                 the velocity and the acceleration of the car as
                 a function of time.
-              </p>
+              </OuterP>
             </SolutionNote>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 2.
                 </i>
@@ -2054,12 +2054,13 @@ const Rest = () => {
                 are rounded off a bit while the velocity and
                 acceleration remain continuous, albeit with steep
                 slopes and sharp peaks. (This...
-              </p>
+              </OuterP>
               <Pause />
               <Image src="/images/svg_ch4_ex_car_position_rounded.svg" />
-              <p>
+              <Pause />
+              <OuterP>
                 ...idea.)
-              </p>
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -2508,7 +2509,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_17_2235">
+          <ExerciseStatement id="_17_2114">
             <OuterP>
               <b>
                 Exercise 8.
@@ -2690,7 +2691,7 @@ const Rest = () => {
               {" "} analogously to
               {" "}
               <InChapterLink
-                href="/article/chapter4?id=_17_2235"
+                href="/article/chapter4?id=_17_2114"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -2960,7 +2961,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_18_6818">
+          <ExerciseStatement id="_18_6125">
             <OuterP>
               <b>
                 Exercise 10.
@@ -4305,7 +4306,7 @@ const Rest = () => {
               {" "} compute?
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_19_1346">
+          <Solution id="_19_8193">
             <OuterP>
               It computes
               the amount earned by the rat as a function of time. In
@@ -5681,66 +5682,72 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_20_4964">
-              <p>
+            <SolutionNote id="_20_5382">
+              <OuterP>
                 <i>
                   Note 1.
                 </i>
                 {" "}
                 The ratio
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 &#123;\Large &#123;v \over r&#125;&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 is known as the
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplayItalic>
                 angular velocity
               </CentralDisplayItalic>
-              <p>
+              <Pause />
+              <OuterP>
                 of the particle. You can think of the angular velocity
                 as
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 &#123;\Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125;&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 directly per the expression above, or as
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 &#123;\Large &#123;\te&#123;distance per unit time&#125;\over \te&#123;radius&#125;&#125;&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 since that is just the definition of “speed”, but which also
                 means that you can think of the angular velocity as
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \Large &#123;\te&#123;number of radii per unit time&#125;&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 or, say, just as
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \Large &#123;\te&#123;radii per unit time&#125;&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 in other words.
                 (The “number or radii” covered by an arc is
                 also known as the {" "}
@@ -5760,29 +5767,30 @@ const Rest = () => {
                 acceleration vector, etc, and it also constitutes
                 the ratio between the successive lengths of all
                 these vectors!
-              </p>
+              </OuterP>
             </SolutionNote>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 2.
                 </i>
                 {" "}
                 A common notation for the angular velocity of a
                 particle is
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 &#123;\Large \omega&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 which means that the velocity vector, acceleration
                 vector, and jerk vector have lengths
                 have lengths
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
@@ -5801,7 +5809,8 @@ const Rest = () => {
                 &#123;\Large \omega&#123;&#125;^3r&#125;
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 respectively, where {" "}
                 <Math>
                   $r$
@@ -5838,7 +5847,7 @@ const Rest = () => {
                   &amp;
                 </i>
                 {" "} typographically aligned.)
-              </p>
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -6077,7 +6086,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see {" "}
               <InChapterLink
-                href="/article/chapter4?id=_21_7438"
+                href="/article/chapter4?id=_21_8186"
                 class="handle-in-chapter-link">
                 Note 1
               </InChapterLink>
@@ -6254,30 +6263,32 @@ const Rest = () => {
               {" "} no matter how far back in time you look.)
             </OuterP>
             <Pause />
-            <SolutionNote id="_21_7438">
-              <p>
+            <SolutionNote id="_21_8186">
+              <OuterP>
                 <i>
                   Note 1.
                 </i>
                 {" "}
                 A so-called
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplayItalic>
                 geometric progression
               </CentralDisplayItalic>
-              <p>
+              <Pause />
+              <OuterP>
                 is a sequence of numbers in which each number
                 is a fixed multiple of the previous number.
                 For example,
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 100,\, 300,\, 900,\, 2700
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 is a (finite) geometric progression, because each number
                 is the previous number multiplied by {" "}
                 <NoBreak>
@@ -6288,14 +6299,15 @@ const Rest = () => {
                 </NoBreak>
                 {" "}
                 and
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 1,\, 0.5,\, 0.25,\, 0.125,\, 0.0625,\, \ldots
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 is an (infinite) geometric progression, because each number
                 is the previous multiplied by {" "}
                 <NoBreak>
@@ -6304,7 +6316,7 @@ const Rest = () => {
                   </Math>
                   .
                 </NoBreak>
-              </p>
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -8622,7 +8634,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <SolutionNote>
-              <p>
+              <OuterP>
                 <i>
                   Note 1.
                 </i>
@@ -8632,15 +8644,16 @@ const Rest = () => {
                 distance could be meters, kilometers, or
                 anything, and time could be seconds, hours,
                 etc—it doesn't matter. Either way,
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplayItalic>
                 unit speed
               </CentralDisplayItalic>
-              <p>
+              <Pause />
+              <OuterP>
                 means that one unit of distance is traveled
                 per unit of time, whatever the units are.
-              </p>
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -8755,7 +8768,7 @@ const Rest = () => {
               ...?
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_22_4415">
+          <Solution id="_22_7144">
             <OuterP>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9929,7 +9942,7 @@ const Rest = () => {
               the expression, if any.
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_23_3317">
+          <Solution id="_23_5972">
             <OuterP>
               This version pictures all the elements
               that appear in the fraction:
@@ -10532,7 +10545,7 @@ const Rest = () => {
               {" "} (cf.
               Exercise 16 {" "}
               <InChapterLink
-                href="/article/chapter4?id=_19_1346"
+                href="/article/chapter4?id=_19_8193"
                 class="handle-in-chapter-link">
                 Note 3
               </InChapterLink>
@@ -11224,7 +11237,7 @@ const Rest = () => {
               to this point?
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_24_4268">
+          <Solution id="_24_4165">
             <OuterP>
               That would be the fact that
             </OuterP>

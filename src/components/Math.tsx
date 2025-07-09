@@ -71,6 +71,7 @@ export const MathBlock = (props: ParentProps) => {
         rootMargin: "300px",
       },
     );
+
     if (ref) {
       observer.observe(ref);
       setOriginalWidth(ref.getBoundingClientRect().width);
