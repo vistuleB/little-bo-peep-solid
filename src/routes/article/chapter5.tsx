@@ -1465,7 +1465,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_4165"
+            href="/article/chapter4?id=_24_9246"
             class="handle-out-of-chapter-link">
             Note 10
           </a>
@@ -14633,7 +14633,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_25_42">
+          <ExerciseStatement id="_25_1924">
             <OuterP>
               <b>
                 Exercise 42.

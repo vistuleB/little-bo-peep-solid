@@ -1,22 +1,22 @@
 import gleam/list
 import gleam/option.{None, Some}
 import infrastructure.{type Desugarer} as infra
-import prefabricated_pipelines as dsds
-import desugarers as ds
+import prefabricated_pipelines as pref
+import desugarer_library as dl
 
 pub fn our_pipeline() -> List(Desugarer) {
   [
     [
-      ds.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
-      ds.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
+      dl.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
+      dl.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
     ],
-    dsds.create_mathblock_and_math_elements(
+    pref.create_mathblock_and_math_elements(
       #([ infra.DoubleDollar ], infra.DoubleDollar),
       #([ infra.SingleDollar ], infra.SingleDollar),
     ),
     [
-      ds.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
-      ds.add_attributes([
+      dl.find_replace(#([#("\\$", "$")], ["Math", "MathBlock"])),
+      dl.add_attributes([
         #("Book", "counter", "ChapterCounter"),
         #("Book", "counter", "BootcampCounter"),
         #("Chapter", "counter", "ExampleCounter"),
@@ -37,7 +37,7 @@ pub fn our_pipeline() -> List(Desugarer) {
         #("Exercise", "number", "::øøExerciseCounter"),
         #("Section", "id", "section-::++SectionCounter"),
       ]),
-      ds.associate_counter_by_prepending_incrementing_attribute([
+      dl.associate_counter_by_prepending_incrementing_attribute([
         #("Chapter", "ChapterCounter"),
         #("Bootcamp", "BootcampCounter"),
         #("Example", "ExampleCounter"),
@@ -45,20 +45,20 @@ pub fn our_pipeline() -> List(Desugarer) {
         #("SolutionNote", "SolutionNoteCounter"),
         #("Note", "NoteCounter"),
       ]),
-      ds.prepend_text([
+      dl.prepend_text([
         #("Example", "*Example ::øøExampleCounter.*"),
         #("Exercise", "*Exercise ::øøExerciseCounter.*"),
         #("SolutionNote", "_Note ::øøSolutionNoteCounter._"),
         #("Note", "_Note ::øøNoteCounter._"),
       ]),
-      ds.counters_substitute_and_assign_handles(),
-      ds.handles_generate_ids(),
-      ds.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
-      ds.handles_substitute([]),
-      ds.unwrap(["GrandWrapper"]),
-      ds.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
-      ds.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
-      ds.group_consecutive_children_avoiding(
+      dl.counters_substitute_and_assign_handles(),
+      dl.handles_generate_ids(),
+      dl.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
+      dl.handles_substitute([]),
+      dl.unwrap(["GrandWrapper"]),
+      dl.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
+      dl.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
+      dl.group_consecutive_children_avoiding(
         #(
           "p",
           [
@@ -75,42 +75,42 @@ pub fn our_pipeline() -> List(Desugarer) {
           ["MathBlock", "p", "CentralDisplay", "CentralDisplayItalic", "ArticleTitle"],
         ),
       ),
-      ds.unwrap(["WriterlyBlankLine"]),
-      ds.concatenate_text_nodes(),
-      ds.remove_text_nodes_with_singleton_empty_line(),
-      ds.remove_starting_and_ending_spaces(["p"]),
-      ds.remove_starting_and_ending_empty_lines(["p"]),
-      ds.remove_empty_tags(["p"]),
+      dl.unwrap(["WriterlyBlankLine"]),
+      dl.concatenate_text_nodes(),
+      dl.remove_text_nodes_with_singleton_empty_line(),
+      dl.remove_starting_and_ending_spaces(["p"]),
+      dl.remove_starting_and_ending_empty_lines(["p"]),
+      dl.remove_empty_tags(["p"]),
     ],
-    dsds.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
-    dsds.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
+    pref.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
+    pref.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
-      ds.free_children([
+      dl.free_children([
         #("CentralDisplay", "p"),
         #("CentralDisplayItalic", "p"),
       ]),
     ],
-    dsds.symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
-    dsds.symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
+    pref.symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
+    pref.symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
     [
-      ds.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
-      ds.wrap_math_with_no_break(),
-      ds.unwrap_when_zero_or_one_children(["NoBreak"]),
-      ds.concatenate_text_nodes(),
-      ds.remove_text_nodes_with_singleton_empty_line(),
-      ds.remove_starting_and_ending_spaces(["p"]),
-      ds.remove_starting_and_ending_empty_lines(["p"]),
-      ds.remove_empty_tags(["p"]),
-      ds.unwrap_tags_when_no_child_meets_condition(#(
+      dl.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
+      dl.wrap_math_with_no_break(),
+      dl.unwrap_when_zero_or_one_children(["NoBreak"]),
+      dl.concatenate_text_nodes(),
+      dl.remove_text_nodes_with_singleton_empty_line(),
+      dl.remove_starting_and_ending_spaces(["p"]),
+      dl.remove_starting_and_ending_empty_lines(["p"]),
+      dl.remove_empty_tags(["p"]),
+      dl.unwrap_tags_when_no_child_meets_condition(#(
         ["p"],
         infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"])
       )),
-      ds.unwrap_when_descendant_of([#("p", ["td", "li"])]),
-      ds.rename_when_child_of([
+      dl.unwrap_when_descendant_of([#("p", ["td", "li"])]),
+      dl.rename_when_child_of([
         #("p", "Item", "List"),
         #("p", "Item", "Grid"),
       ]),
-      ds.rename_when_child_of([
+      dl.rename_when_child_of([
         #("p", "OuterP", "Section"),
         #("p", "OuterP", "Exercise"),
         #("p", "OuterP", "Solution"),
@@ -119,9 +119,9 @@ pub fn our_pipeline() -> List(Desugarer) {
         #("p", "OuterP", "Bootcamp"),
         #("p", "OuterP", "SolutionNote"),
       ]),
-      ds.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
-      ds.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
-      ds.absorb_next_sibling_while([
+      dl.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
+      dl.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
+      dl.absorb_next_sibling_while([
         #("OuterP", "ImageRight"),
         #("OuterP", "ImageLeft"),
         #("MathBlock", "ImageRight"),
@@ -135,7 +135,7 @@ pub fn our_pipeline() -> List(Desugarer) {
         #("ul", "ImageRight"),
         #("ul", "ImageLeft"),
       ]),
-      ds.add_attribute_when_child_of([
+      dl.add_attribute_when_child_of([
         #(
           "ImageRight",
           "MathBlock",
@@ -149,8 +149,8 @@ pub fn our_pipeline() -> List(Desugarer) {
           "true",
         ),
       ]),
-      ds.add_attribute_to_second_of_kind(#("OuterP", "class", "indent-10")),
-      ds.add_between_tags([
+      dl.add_attribute_to_second_of_kind(#("OuterP", "class", "indent-10")),
+      dl.add_between_tags([
         #(#("MathBlock", "OuterP"), "Pause", []),
         #(#("Example", "OuterP"), "Pause", []),
         #(#("Note", "OuterP"), "Pause", []),
@@ -164,8 +164,8 @@ pub fn our_pipeline() -> List(Desugarer) {
         #(#("List", "OuterP"), "Pause", []),
         #(#("StarDivider", "OuterP"), "Pause", []),
       ]),
-      ds.add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
-      ds.add_before_tags_but_not_first_child_tags([
+      dl.add_between_tag_and_text_node([#("MathBlock", "Pause", [])]),
+      dl.add_before_tags_but_not_first_child_tags([
         #("Exercises", "Pause", []),
         #("Example", "Pause", []),
         #("Note", "Pause", []),
@@ -181,8 +181,8 @@ pub fn our_pipeline() -> List(Desugarer) {
         #("List", "Pause", []),
         #("StarDivider", "Pause", []),
       ]),
-      ds.add_before_tags_but_not_before_first_of_kind([#("Section", "Pause", [])]),
-      ds.rearrange_links([
+      dl.add_before_tags_but_not_before_first_of_kind([#("Section", "Pause", [])]),
+      dl.rearrange_links([
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
         #("Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=1>Exercise _1_ of Chapter _2_</a>"),
@@ -190,16 +190,16 @@ pub fn our_pipeline() -> List(Desugarer) {
         #("Exercise <a href=1>_1_</a>", "<a href=1>Exercise _1_</a>"),
         #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
       ]),
-      ds.generate_lbp_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
-      ds.generate_lbp_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
-      ds.generate_lbp_prev_next_attributes(),
-      ds.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
-      ds.generate_lbp_breadcrumbs(),
-      ds.unwrap(["BreadcrumbTitle"]),
-      ds.unwrap(["DebugScope"]),
-      ds.change_attribute_value([#("src", "/()")]),
-      ds.remove_attributes(["counter", "handle", "type", "t", ".", "title", "test"]),
-      ds.rename_attributes_by_function(infra.kabob_case_to_camel_case),
+      dl.generate_lbp_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
+      dl.generate_lbp_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
+      dl.generate_lbp_prev_next_attributes(),
+      dl.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
+      dl.generate_lbp_breadcrumbs(),
+      dl.unwrap(["BreadcrumbTitle"]),
+      dl.unwrap(["DebugScope"]),
+      dl.change_attribute_value([#("src", "/()")]),
+      dl.remove_attributes(["counter", "handle", "type", "t", ".", "title", "test"]),
+      dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
     ]
   ]
   |> list.flatten
