@@ -23,7 +23,7 @@ export const Math = (props: ParentProps) => {
       },
       {
         rootMargin: "300px",
-      },
+      }
     );
     if (ref) observer.observe(ref);
     onCleanup(() => observer.disconnect());
@@ -33,7 +33,8 @@ export const Math = (props: ParentProps) => {
     <span
       class="math inline-flex indent-0 transition-opacity"
       style={{ opacity: visible() ? "1" : "0" }}
-      ref={ref}>
+      ref={ref}
+    >
       {props.children}
     </span>
   );
@@ -45,15 +46,22 @@ export const MathBlock = (props: ParentProps) => {
   const [visible, setVisible] = createSignal(false);
   const [scaledDown, setScaledDown] = createSignal(false);
   const [originalWidth, setOriginalWidth] = createSignal(0);
+  const [localInnerWidthCopy, setLocalInnerWidthCopy] = createSignal(0);
 
   const handleClick = () => {
-    setScaledDown((prev) => !prev);
+    setScaledDown(!scaledDown());
+    if (!scaledDown()) {
+      setTimeout(
+        () => { if (ref) { setOriginalWidth(ref.getBoundingClientRect().width); } },
+        100
+      );
+    }
   };
 
   const shouldBeScaledDown = () => {
     if (ref) {
       const rect = ref.getBoundingClientRect();
-      return rect.width > store.innerWidth - TEXT_X_PADDING * 2;
+      return rect.width > localInnerWidthCopy() - TEXT_X_PADDING * 2;
     }
     return false;
   };
@@ -69,7 +77,7 @@ export const MathBlock = (props: ParentProps) => {
       },
       {
         rootMargin: "300px",
-      },
+      }
     );
 
     if (ref) {
@@ -79,10 +87,14 @@ export const MathBlock = (props: ParentProps) => {
     }
 
     const handleResize = () => {
-      setScaledDown(shouldBeScaledDown());
+      let oldInnerWidth = localInnerWidthCopy();
+      let newInnerWidth = window.innerWidth;
+      setLocalInnerWidthCopy(newInnerWidth);
+      if (newInnerWidth != oldInnerWidth)
+        setScaledDown(shouldBeScaledDown());
     };
 
-    handleResize();
+    handleResize(); // should result in call to setScaledDown()
     window.addEventListener("resize", handleResize);
 
     onCleanup(() => {
@@ -95,7 +107,7 @@ export const MathBlock = (props: ParentProps) => {
     if (scaledDown()) {
       ref?.style.setProperty(
         "width",
-        store.innerWidth - TEXT_X_PADDING * 2 + "px",
+        store.innerWidth - TEXT_X_PADDING * 2 + "px"
       );
       return;
     }
@@ -107,7 +119,8 @@ export const MathBlock = (props: ParentProps) => {
       class="mathblock transition-all"
       style={{ opacity: visible() ? "1" : "0" }}
       onClick={handleClick}
-      ref={ref}>
+      ref={ref}
+    >
       {props.children}
     </div>
   );
