@@ -76,11 +76,13 @@ pub fn our_pipeline() -> List(Desugarer) {
         ),
       ),
       dl.unwrap(["WriterlyBlankLine"]),
+      // cleaning 'p' first time around:
       dl.concatenate_text_nodes(),
       dl.remove_text_nodes_with_singleton_empty_line(),
       dl.remove_starting_and_ending_spaces(["p"]),
       dl.remove_starting_and_ending_empty_lines(["p"]),
       dl.remove_empty_tags(["p"]),
+      // (end cleaning)
     ],
     pref.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
     pref.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
@@ -96,15 +98,14 @@ pub fn our_pipeline() -> List(Desugarer) {
       dl.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
       dl.wrap_math_with_no_break(),
       dl.unwrap_when_zero_or_one_children(["NoBreak"]),
+      // cleaning 'p' second time around (not sure all the steps are necessary this time):
       dl.concatenate_text_nodes(),
       dl.remove_text_nodes_with_singleton_empty_line(),
       dl.remove_starting_and_ending_spaces(["p"]),
       dl.remove_starting_and_ending_empty_lines(["p"]),
       dl.remove_empty_tags(["p"]),
-      dl.unwrap_tags_when_no_child_meets_condition(#(
-        ["p"],
-        infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"])
-      )),
+      // (end cleaning)
+      dl.unwrap_tags_when_no_child_meets_condition(#(["p"], infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"]))),
       dl.unwrap_when_descendant_of([#("p", ["td", "li"])]),
       dl.rename_when_child_of([
         #("p", "Item", "List"),
