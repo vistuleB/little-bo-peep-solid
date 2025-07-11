@@ -101,6 +101,7 @@ em {
 
 .MathJax svg {
   max-width: 100%;
+  margin: auto;
 }
 .MathJax_SVG {
   font-size: 100%;
