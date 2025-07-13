@@ -1,5 +1,6 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import {
+  DESKTOP_COLUMN_WIDTH,
   HAMBURGER_MENU_SCROLLY_END_FADE,
   HAMBURGER_MENU_SCROLLY_START_FADE,
 } from "~/constants";
@@ -10,9 +11,8 @@ import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
-const ActionArrows = () => {
+const PageUpDownArrows = () => {
   const { store } = useGlobalContext();
-  const { exercises_store } = useExercisesContext();
   const [opacity, set_opacity] = createSignal(1);
   const [hovered, set_hovered] = createSignal(false);
 
@@ -37,28 +37,14 @@ const ActionArrows = () => {
     });
   });
 
-  const { calculateTargetCenterOnPage } = useScrollToInChapter();
-  const selectedExercise = () =>
-    document
-      .querySelectorAll(".exo-statement")
-      .item(
-        exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
-      ) as HTMLElement;
-
-  const handleUpClick = (_: MouseEvent) => {
-    let middleScroll = calculateTargetCenterOnPage(selectedExercise());
-    let scrollTo = store.scrollY < middleScroll + 100 ? 0 : middleScroll + 50;
-    smoothScrollTo(scrollTo, 100);
+  const handleUpClick = (e: MouseEvent) => {
+    e.stopImmediatePropagation();
+    window.scrollBy({ top: -store.innerHeight });
   };
 
-  const handleDownClick = (_: MouseEvent) => {
-    let middleScroll = calculateTargetCenterOnPage(selectedExercise());
-    let scrollTo =
-      store.scrollY > middleScroll - 100
-        ? document.body.scrollHeight
-        : middleScroll + 50;
-
-    smoothScrollTo(scrollTo, 100);
+  const handleDownClick = (e: MouseEvent) => {
+    e.stopImmediatePropagation();
+    window.scrollBy({ top: store.innerHeight });
   };
 
   const containerWidth = () => {
@@ -71,7 +57,7 @@ const ActionArrows = () => {
 
   const effectiveMarginWidth = () => {
     return (containerWidth() - mainColumnWidth()) / 2;
-  }
+  };
 
   return (
     <div
@@ -80,7 +66,7 @@ const ActionArrows = () => {
       onMouseOut={() => set_hovered(false)}
       style={{
         opacity: hovered() ? 1 : opacity(),
-        left: `${effectiveMarginWidth() - store.scrollX - 33}px`,
+        left: `${effectiveMarginWidth() - store.scrollX + DESKTOP_COLUMN_WIDTH}px`,
       }}
       class="fixed bottom-3">
       <button
@@ -170,4 +156,4 @@ const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
   );
 };
 
-export default ActionArrows;
+export default PageUpDownArrows;
