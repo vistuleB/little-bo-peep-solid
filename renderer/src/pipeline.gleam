@@ -96,8 +96,7 @@ pub fn our_pipeline() -> List(Desugarer) {
     pref.symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
     [
       dl.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
-      dl.wrap_math_with_no_break(),
-      dl.unwrap_when_zero_or_one_children(["NoBreak"]),
+      dl.wrap_adjacent_non_whitespace_text_with(#("Math", "NoBreak")),
       // cleaning 'p' second time around (not sure all the steps are necessary this time):
       dl.concatenate_text_nodes(),
       dl.remove_text_nodes_with_singleton_empty_line(),

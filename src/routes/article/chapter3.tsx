@@ -22,7 +22,7 @@ export default function __Chapter3__() {
       nextPage="/article/chapter4"
       pageNecessaryMargin={700}
       maxElementWidth={1500}
-      id="_15_6490">
+      id="_15_858">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -2189,7 +2189,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_7_4692">
+          <ExerciseStatement id="_7_2447">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2410,7 +2410,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_8_8228">
+          <ExerciseStatement id="_8_5863">
             <OuterP>
               <b>
                 Exercise 5.
@@ -2444,7 +2444,7 @@ const Rest = () => {
               </NoBreak>
               {" "} apply the function from {" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_4692"
+                href="/article/chapter3?id=_7_2447"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2497,7 +2497,7 @@ const Rest = () => {
               {" "}
               the formula for the function from {" "}
               <InChapterLink
-                href="/article/chapter3?id=_7_4692"
+                href="/article/chapter3?id=_7_2447"
                 class="handle-in-chapter-link">
                 Exercise 4
               </InChapterLink>
@@ -2899,7 +2899,7 @@ const Rest = () => {
               because all we have to do is to multiply
               {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_8228"
+                href="/article/chapter3?id=_8_5863"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -2924,7 +2924,7 @@ const Rest = () => {
             <OuterP>
               because the problem is similar to {" "}
               <InChapterLink
-                href="/article/chapter3?id=_8_8228"
+                href="/article/chapter3?id=_8_5863"
                 class="handle-in-chapter-link">
                 Exercise 5
               </InChapterLink>
@@ -3187,7 +3187,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_9_2003">
+          <ExerciseStatement id="_9_9614">
             <OuterP>
               <b>
                 Exercise 8.
@@ -3370,7 +3370,7 @@ const Rest = () => {
               {" "}
               Same question as {" "}
               <InChapterLink
-                href="/article/chapter3?id=_9_2003"
+                href="/article/chapter3?id=_9_9614"
                 class="handle-in-chapter-link">
                 Exercise 8
               </InChapterLink>
@@ -4099,7 +4099,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_10_1171">
+          <ExerciseStatement id="_10_8223">
             <OuterP>
               <b>
                 Exercise 10.
@@ -4192,7 +4192,7 @@ const Rest = () => {
               {" "}
               Solve {" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_1171"
+                href="/article/chapter3?id=_10_8223"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4435,7 +4435,7 @@ const Rest = () => {
               </NoBreak>
               {" "} {" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_1171"
+                href="/article/chapter3?id=_10_8223"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4462,7 +4462,7 @@ const Rest = () => {
             <OuterP>
               by {" "}
               <InChapterLink
-                href="/article/chapter3?id=_10_1171"
+                href="/article/chapter3?id=_10_8223"
                 class="handle-in-chapter-link">
                 Exercise 10
               </InChapterLink>
@@ -4572,7 +4572,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_11_3062">
+          <ExerciseStatement id="_11_3020">
             <OuterP>
               <b>
                 Exercise 14.
@@ -5074,7 +5074,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={15}>
-          <ExerciseStatement id="_12_5031">
+          <ExerciseStatement id="_12_5101">
             <OuterP>
               <b>
                 Exercise 15.
@@ -5478,7 +5478,7 @@ const Rest = () => {
               {" "} by the following
               sequence of transformations (cf. {" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_3062"
+                href="/article/chapter3?id=_11_3020"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -5510,7 +5510,7 @@ const Rest = () => {
               (We put the vertical translation first.)
               By {" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_5031"
+                href="/article/chapter3?id=_12_5101"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -5711,7 +5711,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement id="_13_1098">
+          <ExerciseStatement id="_13_97">
             <OuterP>
               <b>
                 Exercise 18.
@@ -5949,7 +5949,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={19}>
-          <ExerciseStatement id="_14_3441">
+          <ExerciseStatement id="_14_7847">
             <OuterP>
               <b>
                 Exercise 19.
@@ -6027,7 +6027,7 @@ const Rest = () => {
             <OuterP>
               and, similarly to {" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_3062"
+                href="/article/chapter3?id=_11_3020"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6090,7 +6090,7 @@ const Rest = () => {
               </NoBreak>
               {" "} of {" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_3062"
+                href="/article/chapter3?id=_11_3020"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6100,7 +6100,7 @@ const Rest = () => {
             <OuterP class="indent-10">
               By direct analogy with {" "}
               <InChapterLink
-                href="/article/chapter3?id=_11_3062"
+                href="/article/chapter3?id=_11_3020"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -6308,7 +6308,7 @@ const Rest = () => {
             <OuterP>
               by {" "}
               <InChapterLink
-                href="/article/chapter3?id=_12_5031"
+                href="/article/chapter3?id=_12_5101"
                 class="handle-in-chapter-link">
                 Exercise 15
               </InChapterLink>
@@ -6392,7 +6392,7 @@ const Rest = () => {
               <OuterP>
                 as briefly flashed by, e.g., in {" "}
                 <a
-                  href="/article/chapter1?id=_5_8402"
+                  href="/article/chapter1?id=_5_5322"
                   class="handle-out-of-chapter-link">
                   Chapter 1
                 </a>
