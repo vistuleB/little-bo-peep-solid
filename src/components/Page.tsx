@@ -135,7 +135,7 @@ const Page = (props: ParentProps & PageProps) => {
       e.stopPropagation();
       return;
     }
-    
+
     if (
       e.clientY >= store.innerHeight * 0.75 &&
       window.scrollY + window.innerHeight < document.body.scrollHeight
@@ -144,13 +144,13 @@ const Page = (props: ParentProps & PageProps) => {
       e.stopPropagation();
       return;
     }
-    
+
     if (e.clientX < store.innerWidth * 0.1) {
       getPrevArticle();
       e.stopPropagation();
       return;
     }
-    
+
     if (e.clientX > store.innerWidth * 0.9) {
       getNextArticle();
       e.stopPropagation();
@@ -178,6 +178,7 @@ const Page = (props: ParentProps & PageProps) => {
   onMount(() => {
     handleScroll();
     handleResize();
+    document.getElementById("Container")?.classList.remove("loading-container");
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);

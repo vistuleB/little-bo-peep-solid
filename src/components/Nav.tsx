@@ -4,6 +4,7 @@ import { MOBILE_MAX_WIDTH } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import useScrollX from "~/hooks/useScrollX";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
+import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 
 const Nav = () => {
   let { store } = useGlobalContext();
@@ -14,12 +15,11 @@ const Nav = () => {
         class={twJoin(
           "select-none w-full z-40",
           store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
-          store.innerWidth >= MOBILE_MAX_WIDTH && "absolute"
+          store.innerWidth >= MOBILE_MAX_WIDTH && "absolute",
         )}
         onClick={(e) => {
           e.stopPropagation();
-        }}
-      >
+        }}>
         <div class="select-none border-b flex justify-center items-center bg-bg z-40 w-full h-14 left-0">
           <Title />
         </div>
@@ -31,14 +31,14 @@ const Nav = () => {
 
 const Title = () => {
   const [_, setRoute] = createSignal("/");
+  const { getPage } = usePrevNextArticle();
 
   return (
     <div class="select-none w-full h-full" id="Header">
       <div
         class="text-3xl self-end mt-auto mb-auto py-2 text-column"
-        style={`width:${mainColumnWidth()}px;transform:translate(0, 0.2em);`}
-      >
-        <a href="/" onClick={() => setRoute("/")}>
+        style={`width:${mainColumnWidth()}px;transform:translate(0, 0.2em);`}>
+        <a href="/" onClick={() => getPage("/")}>
           <LittleBoPeepSvg />
         </a>
       </div>
@@ -52,8 +52,7 @@ const LittleBoPeepSvg = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="157"
       height="33"
-      viewBox="0 0 157 33"
-    >
+      viewBox="0 0 157 33">
       <path
         aria-label="Little Bo Peep"
         style="fill:black;stroke:black;stroke-width:0.1;"

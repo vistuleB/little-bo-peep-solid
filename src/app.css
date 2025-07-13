@@ -492,3 +492,12 @@ ol.l1 > li:before {
   max-width: calc(100% - 40px);
   align-items: right;
 }
+
+.loading-container {
+  height: 100vh;
+  background-color: red;
+}
+
+.loading-container * {
+  display: none;
+}

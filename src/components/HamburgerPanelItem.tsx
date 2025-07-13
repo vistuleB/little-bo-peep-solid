@@ -2,24 +2,29 @@ import { JSX } from "solid-js";
 import { A, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { ParentProps } from "solid-js";
+import usePrevNextArticle from "~/hooks/usePrevNextArticle";
 
-const HamburgerPanelItem = (props: ParentProps & {
-  href: string;
-  article_type: number;
-}) => {
+const HamburgerPanelItem = (
+  props: ParentProps & {
+    href: string;
+    article_type: number;
+  },
+) => {
   const { store } = useGlobalContext();
+  const { getPage } = usePrevNextArticle();
+  const link = `/article/${props.href}`;
 
   return (
     <ConditionalLink
-      href={`/article/${props.href}`}
+      href={link}
+      onClick={() => getPage(link)}
       onSameRoute={(e) => {
         e.preventDefault();
         window.scroll({
           left: (store.scrollWidth - store.innerWidth) / 2,
           behavior: "instant",
         });
-      }}
-    >
+      }}>
       <div class="panel-item flex items-baseline justify-between leading-9 sm:leading-8 text-2xl">
         <div class="relative m-auto" style={`width:100%;direction:rtl;`}>
           <div class="toc-item-lead-wrapper">
@@ -40,11 +45,12 @@ const HamburgerPanelItem = (props: ParentProps & {
   );
 };
 
-interface ConditionalLinkProps
-  extends JSX.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface ConditionalLinkProps {
+  // extends JSX.AnchorHTMLAttributes<HTMLAnchorElement>
   href: string;
   onSameRoute?: (e: MouseEvent) => void;
   onClick?: (e: MouseEvent) => void;
+  children: JSX.Element;
 }
 
 export function ConditionalLink(props: ConditionalLinkProps) {
@@ -57,11 +63,12 @@ export function ConditionalLink(props: ConditionalLinkProps) {
       onSameRoute?.(e);
     } else {
       // Otherwise, call the original onClick handler if it exists
+      e.preventDefault();
       onClick?.(e);
     }
   };
 
-  return <A {...rest} onClick={handleClick} />;
+  return <div class="cursor-pointer" onClick={handleClick} {...rest} />;
 }
 
 export default HamburgerPanelItem;

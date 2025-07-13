@@ -5,16 +5,36 @@ const usePrevNextArticle = () => {
   const { store } = useGlobalContext();
   const navigate = useNavigate();
 
+  const clearCurrentPage = () => {
+    const container = document.getElementById("Container");
+    container?.classList.add("loading-container");
+  };
+
   const prevDisabled = () => store.prevPage === "";
   const nextDisabled = () => store.nextPage === "";
-  const getPrevArticle = () => store.prevPage !== "" && navigate(store.prevPage);
-  const getNextArticle = () => store.nextPage !== "" && navigate(store.nextPage);
+  const getPrevArticle = () => {
+    if (store.prevPage !== "") {
+      clearCurrentPage();
+      navigate(store.prevPage);
+    }
+  };
+  const getNextArticle = () => {
+    if (store.nextPage !== "") {
+      clearCurrentPage();
+      navigate(store.nextPage);
+    }
+  };
+  const getPage = (page: string) => {
+    clearCurrentPage();
+    navigate(page);
+  };
 
   return {
     prevDisabled,
     nextDisabled,
     getNextArticle,
     getPrevArticle,
+    getPage,
   };
 };
 
