@@ -25,6 +25,7 @@
 :root {
   --background-rgb: #fff;
   --foreground-rgb: rgb(0, 0, 0);
+  --hamburger-menu-height: 56px;
   --desktop-text-column-padding: 16px;
   --mobile-max-width: 900px;
   --toc-label-stroke-color: oklch(97% 0.001 106.424); /* bg-stone-100 */
@@ -493,11 +494,12 @@ ol.l1 > li:before {
   align-items: right;
 }
 
-.loading-container {
-  height: 100vh;
+#loading-screen {
+  height: calc(100vh - var(--hamburger-menu-height));
+  top: var(--hamburger-menu-height);
+  position: absolute;
+  left: 0;
   background-color: red;
-}
-
-.loading-container * {
-  display: none;
+  z-index: 1000;
+  width: 100%;
 }

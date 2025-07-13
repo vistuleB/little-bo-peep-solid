@@ -10,7 +10,7 @@ const Container = (props: ParentProps) => {
     Math.max(
       store.innerWidth,
       store.maxElementWidth + 60,
-      mainColumnWidth() + 2 * store.pageNecessaryMargin
+      mainColumnWidth() + 2 * store.pageNecessaryMargin,
     );
 
   const marginWidth = () => (containerWidth() - mainColumnWidth()) / 2;
@@ -40,22 +40,24 @@ const Container = (props: ParentProps) => {
   };
 
   return (
-    <div
-      id="Container"
-      class="pb-14 -z-10 relative overflow-hidden"
-      style={{
-        "width": containerWidth() + 'px',
-        "opacity": store.saved_scroll_finished || store.scroll_is_at_0 ? 1 : 0,
-      }}
-    >
-      <EarlyImages />
-      {store.show_areas &&
-        store.pageNecessaryMargin > 0 &&
-        marginShowAreaDivs()}
-      {store.show_areas && maxElementShowAreasDiv()}
-      <Nav />
-      {props.children}
-    </div>
+    <>
+      <div
+        id="Container"
+        class="pb-14 -z-10 relative overflow-hidden"
+        style={{
+          width: containerWidth() + "px",
+          opacity: store.saved_scroll_finished || store.scroll_is_at_0 ? 1 : 0,
+        }}>
+        <EarlyImages />
+        {store.show_areas &&
+          store.pageNecessaryMargin > 0 &&
+          marginShowAreaDivs()}
+        {store.show_areas && maxElementShowAreasDiv()}
+        <Nav />
+        {props.children}
+        <div id="loading-screen" class="hidden"></div>
+      </div>
+    </>
   );
 };
 

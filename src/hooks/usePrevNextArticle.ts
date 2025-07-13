@@ -6,8 +6,7 @@ const usePrevNextArticle = () => {
   const navigate = useNavigate();
 
   const clearCurrentPage = () => {
-    const container = document.getElementById("Container");
-    container?.classList.add("loading-container");
+    document.getElementById("loading-screen")?.classList.remove("hidden");
   };
 
   const prevDisabled = () => store.prevPage === "";

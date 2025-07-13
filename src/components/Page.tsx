@@ -178,7 +178,7 @@ const Page = (props: ParentProps & PageProps) => {
   onMount(() => {
     handleScroll();
     handleResize();
-    document.getElementById("Container")?.classList.remove("loading-container");
+    document.getElementById("loading-screen")?.classList.add("hidden");
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);

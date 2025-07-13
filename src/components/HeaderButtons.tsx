@@ -60,7 +60,7 @@ const ButtonsContainer = (props: ParentProps) => {
             !on_mobile() &&
             store.scrollX + store.innerWidth >=
               store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2 &&
-            "h-[10rem]"
+            "h-[10rem]",
         )}
         style={{
           width: "134px",
@@ -70,17 +70,15 @@ const ButtonsContainer = (props: ParentProps) => {
               : store.show_areas
                 ? "#fff000"
                 : "#fff",
-        }}
-      ></div>
+        }}></div>
       <div
         class={twJoin(
           "fixed right-0 z-50 h-14",
           !on_mobile() &&
             !open() &&
             store.scrollY < 2 * HAMBURGER_MENU_HEIGHT &&
-            "border-b"
-        )}
-      >
+            "border-b",
+        )}>
         <div
           class="select-none flex items-center justify-center h-8 m-3 hover:!opacity-100"
           style={{
@@ -90,8 +88,7 @@ const ButtonsContainer = (props: ParentProps) => {
                 : store.saved_scroll_finished
                   ? opacity()
                   : 0,
-          }}
-        >
+          }}>
           {props.children}
         </div>
       </div>
@@ -103,6 +100,7 @@ const LeftArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
   const { getPrevArticle, prevDisabled } = usePrevNextArticle();
+  const [pressed, setPressed] = createSignal(false);
 
   return (
     <button
@@ -110,22 +108,30 @@ const LeftArrowButton = () => {
       class={twJoin(
         !on_mobile() && "mr-2",
         on_mobile() && "mr-4",
-        prevDisabled() && "cursor-default"
+        prevDisabled() && "cursor-default",
       )}
       onClick={(e) => {
         e.stopPropagation();
         e.stopImmediatePropagation();
         getPrevArticle();
       }}
+      onMouseDown={() => setPressed(true)}
+      onMouseUp={() => setPressed(false)}
+      onMouseLeave={() => setPressed(false)}
       style={{
-        "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
-      }}
-    >
+        "background-color": pressed()
+          ? "#ececec"
+          : store.show_areas
+            ? "rgb(224, 215, 48)"
+            : "#fff",
+      }}>
       <LeftArrowSVG
         class={twMerge(
-          !prevDisabled()
-            ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
-            : "stroke-stone-300"
+          pressed()
+            ? "stroke-purple-600"
+            : !prevDisabled()
+              ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
+              : "stroke-stone-300",
         )}
         style=""
       />
@@ -136,8 +142,8 @@ const LeftArrowButton = () => {
 const RightArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
-
   const { getNextArticle, nextDisabled } = usePrevNextArticle();
+  const [pressed, setPressed] = createSignal(false);
 
   return (
     <button
@@ -145,22 +151,30 @@ const RightArrowButton = () => {
       class={twJoin(
         !on_mobile() && "mr-3",
         on_mobile() && "mr-4",
-        nextDisabled() && "cursor-default"
+        nextDisabled() && "cursor-default",
       )}
       onClick={(e) => {
         e.stopPropagation();
         e.stopImmediatePropagation();
         getNextArticle();
       }}
+      onMouseDown={() => setPressed(true)}
+      onMouseUp={() => setPressed(false)}
+      onMouseLeave={() => setPressed(false)}
       style={{
-        "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
-      }}
-    >
+        "background-color": pressed()
+          ? "#ececec"
+          : store.show_areas
+            ? "rgb(224, 215, 48)"
+            : "#fff",
+      }}>
       <RightArrowSVG
         class={twMerge(
-          !nextDisabled()
-            ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
-            : "stroke-stone-300"
+          pressed()
+            ? "stroke-purple-600"
+            : !nextDisabled()
+              ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
+              : "stroke-stone-300",
         )}
         style=""
       />
@@ -181,8 +195,7 @@ const HamburgerButton = () => {
       }}
       style={{
         "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
-      }}
-    >
+      }}>
       <HamburgerButtonSVG
         class="fill-[rgb(30,30,30)] hover:fill-stone-600"
         open={open()}
@@ -198,24 +211,19 @@ const adx = 6.5;
 const ady = 6.5;
 const un = 30 / 2;
 
-const LeftArrowSVG = (props: {
-  class: string;
-  style: string;
-}) => {
+const LeftArrowSVG = (props: { class: string; style: string }) => {
   return (
     <svg
       class={props.class}
       width="30"
       height="30"
       viewBox="0 0 30 30"
-      style={props.style}
-    >
+      style={props.style}>
       <path
         d={`M${un - cdx + adx} ${un - ady} L${un - cdx} ${un} L${un - cdx + adx} ${un + ady}`}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"
-      ></path>
+        fill="none"></path>
     </svg>
   );
 };
@@ -227,14 +235,12 @@ const RightArrowSVG = (props: { class: string; style: string }) => {
       width="30"
       height="30"
       viewBox="0 0 30 30"
-      style={props.style}
-    >
+      style={props.style}>
       <path
         d={`M${un + cdx - adx} ${un - ady} L${un + cdx} ${un} L${un + cdx - adx} ${un + ady}`}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"
-      ></path>
+        fill="none"></path>
     </svg>
   );
 };
@@ -249,8 +255,7 @@ const HamburgerButtonSVG = (props: { open: boolean; class: string }) => {
         height="3"
         rx="1.5"
         ry="1.5"
-        class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}
-      ></rect>
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-1" : ""}`}></rect>
       <rect
         x="5"
         y="13.5"
@@ -258,8 +263,7 @@ const HamburgerButtonSVG = (props: { open: boolean; class: string }) => {
         height="3"
         rx="1.5"
         ry="1.5"
-        class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}
-      ></rect>
+        class={`menu-icon-svg ${props.open ? "opacity-0" : ""}`}></rect>
       <rect
         x="5"
         y="21"
@@ -267,8 +271,7 @@ const HamburgerButtonSVG = (props: { open: boolean; class: string }) => {
         height="3"
         rx="1.5"
         ry="1.5"
-        class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}
-      ></rect>
+        class={`menu-icon-svg ${props.open ? "close-icon-svg-2" : ""}`}></rect>
     </svg>
   );
 };
