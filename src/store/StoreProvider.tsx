@@ -28,6 +28,7 @@ export type Store = {
   maxElementWidth: number;
   nextPage: string;
   prevPage: string;
+  loading: boolean;
 };
 
 const [store, set_store] = createStore<Store>({
@@ -51,6 +52,7 @@ const [store, set_store] = createStore<Store>({
   maxElementWidth: 0,
   nextPage: "",
   prevPage: "",
+  loading: false,
 });
 
 const StoreContext = createContext<{

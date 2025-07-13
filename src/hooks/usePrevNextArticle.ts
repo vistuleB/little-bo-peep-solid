@@ -2,11 +2,11 @@ import { useNavigate } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 const usePrevNextArticle = () => {
-  const { store } = useGlobalContext();
+  const { store, set_store } = useGlobalContext();
   const navigate = useNavigate();
 
   const clearCurrentPage = () => {
-    document.getElementById("loading-screen")?.classList.remove("hidden");
+    set_store("loading", true);
   };
 
   const prevDisabled = () => store.prevPage === "";

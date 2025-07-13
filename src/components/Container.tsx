@@ -2,6 +2,7 @@ import { ParentProps } from "solid-js";
 import Nav from "./Nav";
 import { useGlobalContext } from "~/store/StoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
+import LoadingSpinner from "./LoadingSpinner";
 
 const Container = (props: ParentProps) => {
   let { store } = useGlobalContext();
@@ -55,7 +56,12 @@ const Container = (props: ParentProps) => {
         {store.show_areas && maxElementShowAreasDiv()}
         <Nav />
         {props.children}
-        <div id="loading-screen" class="hidden"></div>
+
+        {store.loading && (
+          <div id="loading-screen">
+            <LoadingSpinner />
+          </div>
+        )}
       </div>
     </>
   );
