@@ -6,6 +6,7 @@ import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
 import useOnMobile from "../hooks/useOnMobile";
 import usePrevNextArticle from "~/hooks/usePrevNextArticle";
+import { useLocation } from "@solidjs/router";
 
 type PageProps = {
   pageNecessaryMargin?: number;
@@ -18,6 +19,7 @@ const Page = (props: ParentProps & PageProps) => {
   let { set_store, store } = useGlobalContext();
   const { getPrevArticle, getNextArticle } = usePrevNextArticle();
   const { on_mobile } = useOnMobile();
+  const location = useLocation();
 
   useScrollX();
   useScrollIsAt0();
@@ -179,6 +181,9 @@ const Page = (props: ParentProps & PageProps) => {
     handleScroll();
     handleResize();
     set_store("loading", false);
+    if (location.pathname !== "/") {
+      set_store("have_been_outside_home", true);
+    }
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);

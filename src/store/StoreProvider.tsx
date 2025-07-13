@@ -29,6 +29,7 @@ export type Store = {
   nextPage: string;
   prevPage: string;
   loading: boolean;
+  have_been_outside_home: boolean;
 };
 
 const [store, set_store] = createStore<Store>({
@@ -53,6 +54,7 @@ const [store, set_store] = createStore<Store>({
   nextPage: "",
   prevPage: "",
   loading: false,
+  have_been_outside_home: false,
 });
 
 const StoreContext = createContext<{
