@@ -13,7 +13,7 @@ const usePrevNextArticle = () => {
     clearCurrentPage();
     setTimeout(
       () => {
-        // navigate(page);
+        navigate(page);
       },
       500 + Math.random() * 500,
     );
