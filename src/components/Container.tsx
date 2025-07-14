@@ -44,7 +44,7 @@ const Container = (props: ParentProps) => {
     <>
       <div
         id="Container"
-        class="pb-14 -z-10 relative overflow-hidden"
+        class="min-h-screen pb-14 -z-10 relative overflow-hidden"
         style={{
           width: containerWidth() + "px",
           opacity: store.saved_scroll_finished || store.scroll_is_at_0 ? 1 : 0,
@@ -71,6 +71,7 @@ const EarlyImages = () => {
   return (
     <div style="overflow:hidden;position:absolute;top:0px;left:0px;pointer-events:none;width:1px;height:1px;">
       <img src="/images/svg_base_exponent.svg" style="position:absolute" />
+      <img src="/images/loading_screen.png" style="position:absolute" />
       <img
         src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
         style="position:absolute"

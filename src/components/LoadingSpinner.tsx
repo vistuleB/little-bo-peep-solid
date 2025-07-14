@@ -21,8 +21,6 @@ const LoadingSpinner = () => {
     <div>
       <div>Loading ...</div>
       <div>{time()} </div>
-      <div>---- &nbsp;&nbsp;&nbsp;seconds</div>
-      <div>60</div>
     </div>
   );
 };

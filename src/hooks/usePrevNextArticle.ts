@@ -9,23 +9,30 @@ const usePrevNextArticle = () => {
     set_store("loading", true);
   };
 
+  const customNavigate = (page: string) => {
+    clearCurrentPage();
+    setTimeout(
+      () => {
+        // navigate(page);
+      },
+      500 + Math.random() * 500,
+    );
+  };
+
   const prevDisabled = () => store.prevPage === "";
   const nextDisabled = () => store.nextPage === "";
   const getPrevArticle = () => {
     if (store.prevPage !== "") {
-      clearCurrentPage();
-      navigate(store.prevPage);
+      customNavigate(store.prevPage);
     }
   };
   const getNextArticle = () => {
     if (store.nextPage !== "") {
-      clearCurrentPage();
-      navigate(store.nextPage);
+      customNavigate(store.nextPage);
     }
   };
   const getPage = (page: string) => {
-    clearCurrentPage();
-    navigate(page);
+    customNavigate(page);
   };
 
   return {

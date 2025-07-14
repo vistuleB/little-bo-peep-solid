@@ -499,11 +499,16 @@ ol.l1 > li:before {
   top: var(--hamburger-menu-height);
   position: absolute;
   left: 0;
-  background-color: red;
+  background-color: #fff;
+  background-image: url("/images/loading_screen.png");
+  background-size: auto 90%;
+  background-position: top;
+  background-repeat: no-repeat;
   z-index: 1000;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: #fff;
+  align-items: end;
+  font-family: "Baskerville Bold";
+  padding-bottom: 20px;
 }
