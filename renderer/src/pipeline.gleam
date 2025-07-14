@@ -54,7 +54,14 @@ pub fn our_pipeline() -> List(Desugarer) {
       dl.counters_substitute_and_assign_handles(),
       dl.handles_generate_ids(),
       dl.handles_generate_dictionary([#("Chapter", "path"), #("Bootcamp", "path")]),
-      dl.handles_substitute([]),
+      dl.handles_substitute(
+        #(
+          ["Chapter", "Bootcamp"],
+          "path",
+          #("InChapterLink", ["handle-in-chapter-link"]),
+          #("a", ["handle-out-chapter-link"])
+        )
+      ),
       dl.unwrap(["GrandWrapper"]),
       dl.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
       dl.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
