@@ -77,11 +77,11 @@ const PageUpDownArrows = () => {
         class={twJoin(
           "block px-1 mb-2",
           store.scrollY > 1
-            ? "stroke-black hover:stroke-stone-600"
-            : "stroke-stone-300",
+            ? "stroke-black hover:stroke-stone-600 fill-black hover:fill-stone-600"
+            : "stroke-stone-300 fill-stone-300",
           "transition-all",
         )}>
-        <DoubleUpArrowSVG />
+        <IconSvg style="width:30px;" />
       </button>
       <button
         onClick={handleDownClick}
@@ -91,67 +91,47 @@ const PageUpDownArrows = () => {
         class={twJoin(
           "block px-1 mb-1",
           store.scrollY + store.innerHeight - store.scrollHeight < -1
-            ? "stroke-black hover:stroke-stone-600"
-            : "stroke-stone-300",
+            ? "stroke-black hover:stroke-stone-600 fill-black hover:fill-stone-600"
+            : "stroke-stone-300 fill-stone-300",
           "transition-all",
         )}>
-        <DoubleDownArrowSVG />
+        <IconSvg style="width:30px;transform:scale(1, -1);" />
       </button>
     </div>
   );
 };
 
-const sw = 2.6;
-const cdy = -1;
-const ady = 8;
-const adx = 8;
-const sep = 10;
-const un = 30 / 2;
-
-const DoubleUpArrowSVG = (props: { class?: string; style?: string }) => {
-  const { store } = useGlobalContext();
-
+const IconSvg = (props: { style: string }) => {
   return (
     <svg
-      style={{
-        "background-color": store.show_areas ? "#ffc0cb" : "transparent",
-      }}
-      class={props.class}
-      width="30"
-      height="30"
-      viewBox="0 5 30 35">
+      version="1.1"
+      viewBox="0 0 340.45 340.45"
+      xmlns="http://www.w3.org/2000/svg"
+      width="30px"
+      style={props.style}>
+      <path d="m69.054 40.511h14.452v-13.954h-14.452z" fill="none" />
+      <path d="m170.22 40.511h14.452v-13.954h-14.452z" fill="none" />
+      <path d="m256.94 124.24h14.452v-13.954h-14.452z" fill="none" />
+      <path d="m256.94 291.69h14.452v-13.954h-14.452z" fill="none" />
+      <path d="m69.054 291.69h14.452v-13.954h-14.452z" fill="none" />
       <path
-        d={`
-          M${un - adx} ${un + cdy + ady} l${adx} ${-ady} ${adx} ${ady}
-          M${un - adx} ${un + cdy + ady + sep} l${adx} ${-ady} ${adx} ${ady}
-        `}
-        stroke-linecap="round"
-        stroke-width={sw}
-        fill="none"></path>
-    </svg>
-  );
-};
-
-const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
-  const { store } = useGlobalContext();
-
-  return (
-    <svg
-      style={{
-        "background-color": store.show_areas ? "#ffc0cb" : "transparent",
-      }}
-      class={props.class}
-      width="30"
-      height="30"
-      viewBox="0 -15 30 35">
+        d="m264.17 117.26-86.716-83.724h-101.17v251.18h187.89z"
+        fill="#fff"
+        stroke-miterlimit="2"
+        stroke-width="9"
+      />
       <path
-        d={`
-          M${un - adx} ${un - cdy - ady} l${adx} ${ady} ${adx} ${-ady}
-          M${un - adx} ${un - cdy - ady - sep} l${adx} ${ady} ${adx} ${-ady}
-        `}
-        stroke-linecap="round"
-        stroke-width={sw}
-        fill="none"></path>
+        d="m140.72 227.1v-67.754h-35.216l64.484-62.259 64.484 62.259h-35.216v67.754z"
+        stroke-miterlimit="2"
+        stroke-width="0"
+      />
+      <path d="m220.81 117.26h-43.358v-41.862z" fill="#fff" />
+      <path
+        d="m177.45 33.534v83.724h86.716"
+        fill="none"
+        stroke-miterlimit="2"
+        stroke-width="9"
+      />
     </svg>
   );
 };
