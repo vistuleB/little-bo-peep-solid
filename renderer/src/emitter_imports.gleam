@@ -161,7 +161,7 @@ pub fn imports_blamed_lines_for_symbols(
   imports_lookup: Dict(String, ImportSource)
 ) -> Result(List(blamedlines.BlamedLine), String) {
   let blame = blamedlines.Blame("(automated import)", 0, 0, [])
-  
+
   use globbed <- result.try(glob_imports(symbols, imports_lookup))
 
   let import_lines = list.map(
@@ -187,7 +187,7 @@ fn uppercase_tags_tree_walker(
   case vxml {
     V(_, tag, _, children) -> {
       let new_state = case take_root && string.starts_with(tag, string.uppercase(string.slice(tag, 0, 1))) {
-        True -> infra.add_if_not_present(state, tag)
+        True -> infra.append_class_if_not_present(state, tag)
         False -> state
       }
       list.fold(children, new_state, fn(acc, child) {
