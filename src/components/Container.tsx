@@ -58,9 +58,18 @@ const Container = (props: ParentProps) => {
         {props.children}
 
         {store.loading && (
-          <div id="loading-screen">
-            <LoadingSpinner />
-          </div>
+          <>
+            <div class="fixed top-0 left-0 w-full h-full bg-white z-50"></div>
+            <div
+              id="loading-screen"
+              style={{
+                "margin-top": `${Math.min(150, mainColumnWidth() * 0.3)}px`,
+                "padding-bottom": `${Math.min(150, mainColumnWidth() * 0.3) + 20}px`,
+                "background-size": `auto ${Math.min(580, mainColumnWidth())}px`,
+              }}>
+              <LoadingSpinner />
+            </div>
+          </>
         )}
       </div>
     </>

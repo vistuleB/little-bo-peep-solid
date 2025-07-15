@@ -13,7 +13,7 @@ const Nav = () => {
     <>
       <nav
         class={twJoin(
-          "select-none w-full z-40",
+          "select-none w-full",
           store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
           store.innerWidth >= MOBILE_MAX_WIDTH && "absolute",
         )}

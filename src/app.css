@@ -494,14 +494,17 @@ ol.l1 > li:before {
   align-items: right;
 }
 
+nav {
+  z-index: 1001;
+}
+
 #loading-screen {
-  height: calc(100vh - var(--hamburger-menu-height));
-  top: var(--hamburger-menu-height);
-  position: absolute;
+  height: calc(100vh);
+  top: 0;
+  position: fixed;
   left: 0;
   background-color: #fff;
   background-image: url("/images/loading_screen.png");
-  background-size: auto 90%;
   background-position: top;
   background-repeat: no-repeat;
   z-index: 1000;
@@ -509,6 +512,7 @@ ol.l1 > li:before {
   display: flex;
   justify-content: center;
   align-items: end;
-  font-family: "Baskerville Bold";
+  font-family: "Baskerville";
+  font-size: 1.5rem;
   padding-bottom: 20px;
 }

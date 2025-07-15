@@ -15,7 +15,7 @@ const usePrevNextArticle = () => {
       () => {
         navigate(page);
       },
-      500 + Math.random() * 500,
+      store.navigation_delays ? 500 + Math.random() * 500 : 0,
     );
   };
 

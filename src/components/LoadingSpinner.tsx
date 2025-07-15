@@ -19,9 +19,9 @@ const LoadingSpinner = () => {
   });
 
   return (
-    <div>
-      <div>Loading ...</div>
-      <div>{time()} </div>
+    <div class="flex flex-col items-center justify-center">
+      <div>loading ...</div>
+      <div>{(time() / 10).toFixed(1)}s </div>
     </div>
   );
 };

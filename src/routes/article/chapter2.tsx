@@ -1,18 +1,18 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
-import { CentralDisplayItalic, CentralDisplay }  from "~/components/Delimiters";
-import { Exercises, Exercise, ExerciseStatement }  from "~/components/Exercises";
+import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
+import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
-import { Math, MathBlock }  from "~/components/Math";
+import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
-import { ImageRight, ImageLeft }  from "~/components/SideImage";
+import { ImageLeft, ImageRight }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import Table  from "~/components/Table";
-import { Section, Pause, NoBreak, Example, SolutionNote }  from "~/components/Wrappers";
+import { SolutionNote, Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter2__() {
@@ -1691,7 +1691,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_3257">
+          <ExerciseStatement id="_6_1484">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2027,8 +2027,8 @@ const Rest = () => {
               {" "}
               As explained in {" "}
               <a
-                href="/article/chapter3?id=_15_5826"
-                class="handle-out-of-chapter-link">
+                href="/article/chapter3?id=_15_9429"
+                class="handle-out-chapter-link">
                 Chapter 3
               </a>
               , an empty circle of
@@ -2136,7 +2136,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_3257"
+                href="/article/chapter2?id=_6_1484"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>

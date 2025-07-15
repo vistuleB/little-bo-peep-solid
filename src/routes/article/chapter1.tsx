@@ -1,16 +1,16 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
-import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
-import { Exercises, Exercise, ExerciseStatement }  from "~/components/Exercises";
+import { CentralDisplayItalic, CentralDisplay }  from "~/components/Delimiters";
+import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Grid  from "~/components/Grid";
 import InChapterLink  from "~/components/InChapterLink";
-import { List, Item }  from "~/components/List";
-import { Math, MathBlock }  from "~/components/Math";
+import { Item, List }  from "~/components/List";
+import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
-import { ImageRight, ImageLeft }  from "~/components/SideImage";
+import { ImageLeft, ImageRight }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
-import { Section, Pause, NoBreak, Example }  from "~/components/Wrappers";
+import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter1__() {
@@ -20,7 +20,7 @@ export default function __Chapter1__() {
       nextPage="/article/chapter2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_5_2481">
+      id="_5_4540">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -1446,7 +1446,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_4_7435">
+          <ExerciseStatement id="_4_6197">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2610,7 +2610,7 @@ const Rest = () => {
               {" "}
               In the solution to {" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_7435"
+                href="/article/chapter1?id=_4_6197"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
