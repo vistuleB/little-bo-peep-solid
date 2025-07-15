@@ -187,7 +187,7 @@ fn uppercase_tags_tree_walker(
   case vxml {
     V(_, tag, _, children) -> {
       let new_state = case take_root && string.starts_with(tag, string.uppercase(string.slice(tag, 0, 1))) {
-        True -> infra.append_class_if_not_present(state, tag)
+        True -> infra.append_if_not_present(state, tag)
         False -> state
       }
       list.fold(children, new_state, fn(acc, child) {
