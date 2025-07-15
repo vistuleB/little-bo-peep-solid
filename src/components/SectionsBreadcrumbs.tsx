@@ -1,5 +1,6 @@
 import {
   children,
+  createEffect,
   createSignal,
   JSX,
   onCleanup,
@@ -123,6 +124,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
     "sections-breadcrumbs-visible",
     default_visible_state(),
   );
+  const [hasBeenClosed, setHasBeenClosed] = createSignal(false);
   const really_visible = () => visible() && store.have_been_outside_home;
 
   const [outSideHovered, setOutSideHovered] = createSignal(false);
@@ -136,6 +138,12 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
 
   const { getPrevArticle, prevDisabled, getNextArticle, nextDisabled } =
     usePrevNextArticle();
+
+  createEffect(() => {
+    if (!visible()) {
+      setHasBeenClosed(true);
+    }
+  });
 
   onMount(() => {
     const isMouseOverElement = (
@@ -221,7 +229,9 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
           style={{
             transform: `translateY(${really_visible() ? "0" : "-120%"})`,
             opacity: really_visible() ? 1 : 0,
-            transition: `all ${Math.min(300 + children_list.length * 50, 600)}ms ease-in-out`,
+            transition: hasBeenClosed()
+              ? `all ${Math.min(300 + children_list.length * 50, 600)}ms ease-in-out`
+              : "none",
           }}>
           <ul
             ref={ref}
