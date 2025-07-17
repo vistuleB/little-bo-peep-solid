@@ -2,7 +2,7 @@ import { JSX } from "solid-js";
 import { A, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { ParentProps } from "solid-js";
-import usePrevNextArticle from "~/hooks/usePrevNextArticle";
+import usePrevNextPage from "~/hooks/usePrevNextPage";
 
 const HamburgerPanelItem = (
   props: ParentProps & {
@@ -11,7 +11,7 @@ const HamburgerPanelItem = (
   },
 ) => {
   const { store } = useGlobalContext();
-  const { getPage } = usePrevNextArticle();
+  const { getPage } = usePrevNextPage();
   const link = `/article/${props.href}`;
 
   return (

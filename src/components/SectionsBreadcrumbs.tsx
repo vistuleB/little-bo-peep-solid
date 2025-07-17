@@ -10,7 +10,7 @@ import {
 import { useGlobalContext } from "~/store/StoreProvider";
 import { HAMBURGER_MENU_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
 import { Component } from "solid-js";
-import usePrevNextArticle from "~/hooks/usePrevNextArticle";
+import usePrevNextPage from "~/hooks/usePrevNextPage";
 import { twJoin } from "tailwind-merge";
 import SharedProps from "./types/SharedProps";
 import OutlinedText from "./OutlinedText";
@@ -137,7 +137,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
   let ref: HTMLUListElement | undefined;
 
   const { getPrevArticle, prevDisabled, getNextArticle, nextDisabled } =
-    usePrevNextArticle();
+    usePrevNextPage();
 
   createEffect(() => {
     if (!visible()) {

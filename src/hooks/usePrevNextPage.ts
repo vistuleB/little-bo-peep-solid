@@ -1,7 +1,7 @@
 import { useNavigate } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 
-const usePrevNextArticle = () => {
+const usePrevNextPage = () => {
   const { store, set_store } = useGlobalContext();
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ const usePrevNextArticle = () => {
       () => {
         navigate(page);
       },
-      store.navigation_delays ? 500 + Math.random() * 500 : 0,
+      store.navigation_delays ? 1500 + Math.random() * 1500 : 0,
     );
   };
 
@@ -45,4 +45,4 @@ const usePrevNextArticle = () => {
   };
 };
 
-export default usePrevNextArticle;
+export default usePrevNextPage;

@@ -58,7 +58,7 @@ const [store, set_store] = createStore<Store>({
   loading: false,
   have_been_outside_home: false,
   last_page_load_time: 0,
-  navigation_delays: false,
+  navigation_delays: true,
 });
 
 const StoreContext = createContext<{

@@ -4,7 +4,7 @@ import { MOBILE_MAX_WIDTH } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import useScrollX from "~/hooks/useScrollX";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
-import usePrevNextArticle from "~/hooks/usePrevNextArticle";
+import usePrevNextPage from "~/hooks/usePrevNextPage";
 
 const Nav = () => {
   let { store } = useGlobalContext();
@@ -31,7 +31,7 @@ const Nav = () => {
 
 const Title = () => {
   const [_, setRoute] = createSignal("/");
-  const { getPage } = usePrevNextArticle();
+  const { getPage } = usePrevNextPage();
 
   return (
     <div class="select-none w-full h-full" id="Header">

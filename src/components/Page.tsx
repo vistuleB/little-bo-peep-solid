@@ -5,7 +5,7 @@ import useSetRoute from "~/hooks/useSetRoute";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
 import useOnMobile from "../hooks/useOnMobile";
-import usePrevNextArticle from "~/hooks/usePrevNextArticle";
+import usePrevNextPage from "~/hooks/usePrevNextPage";
 import { useLocation } from "@solidjs/router";
 
 type PageProps = {
@@ -17,7 +17,7 @@ type PageProps = {
 
 const Page = (props: ParentProps & PageProps) => {
   let { set_store, store } = useGlobalContext();
-  const { getPrevArticle, getNextArticle } = usePrevNextArticle();
+  const { getPrevArticle, getNextArticle } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
   const location = useLocation();
 

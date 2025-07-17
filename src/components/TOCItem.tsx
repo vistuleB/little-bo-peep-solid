@@ -1,6 +1,6 @@
 import { ParentProps } from "solid-js";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
-import usePrevNextArticle from "~/hooks/usePrevNextArticle";
+import usePrevNextPage from "~/hooks/usePrevNextPage";
 
 const TOCItem = (
   props: ParentProps & {
@@ -8,7 +8,7 @@ const TOCItem = (
     article_type: any;
   },
 ) => {
-  const { getPage } = usePrevNextArticle();
+  const { getPage } = usePrevNextPage();
   return (
     <div class="text-column" style={`width:${mainColumnWidth()}px;`}>
       <div

@@ -9,7 +9,7 @@ import {
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "../store/StoreProvider";
-import usePrevNextArticle from "~/hooks/usePrevNextArticle";
+import usePrevNextPage from "~/hooks/usePrevNextPage";
 
 const HeaderButtons = () => {
   return (
@@ -99,7 +99,7 @@ const ButtonsContainer = (props: ParentProps) => {
 const LeftArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
-  const { getPrevArticle, prevDisabled } = usePrevNextArticle();
+  const { getPrevArticle, prevDisabled } = usePrevNextPage();
   const [pressed, setPressed] = createSignal(false);
 
   return (
@@ -142,7 +142,7 @@ const LeftArrowButton = () => {
 const RightArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
-  const { getNextArticle, nextDisabled } = usePrevNextArticle();
+  const { getNextArticle, nextDisabled } = usePrevNextPage();
   const [pressed, setPressed] = createSignal(false);
 
   return (
