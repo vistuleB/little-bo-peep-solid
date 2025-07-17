@@ -12,9 +12,12 @@ const usePrevNextPage = () => {
   const customNavigate = (page: string) => {
     if (store.loading) return;
     clearCurrentPage();
+
     setTimeout(
       () => {
-        navigate(page);
+        navigate(page, {
+          scroll: false,
+        });
       },
       store.navigation_delays ? 1500 + Math.random() * 1500 : 0,
     );
@@ -33,6 +36,7 @@ const usePrevNextPage = () => {
     }
   };
   const getPage = (page: string) => {
+    console.log(page);
     customNavigate(page);
   };
 
