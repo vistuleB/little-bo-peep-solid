@@ -117,13 +117,16 @@ const LeftArrowButton = () => {
       }}
       onMouseDown={() => setPressed(true)}
       onMouseUp={() => setPressed(false)}
+      onTouchStart={() => setPressed(true)}
       onMouseLeave={() => setPressed(false)}
+      onTouchEnd={() => setPressed(false)}
       style={{
         "background-color": pressed()
           ? "#ececec"
           : store.show_areas
             ? "rgb(224, 215, 48)"
             : "#fff",
+        scale: pressed() && on_mobile() ? "1.8" : "1",
       }}>
       <LeftArrowSVG
         class={twMerge(
@@ -159,14 +162,17 @@ const RightArrowButton = () => {
         getNextArticle();
       }}
       onMouseDown={() => setPressed(true)}
+      onTouchStart={() => setPressed(true)}
       onMouseUp={() => setPressed(false)}
       onMouseLeave={() => setPressed(false)}
+      onTouchEnd={() => setPressed(false)}
       style={{
         "background-color": pressed()
           ? "#ececec"
           : store.show_areas
             ? "rgb(224, 215, 48)"
             : "#fff",
+        scale: pressed() && on_mobile() ? "1.8" : "1",
       }}>
       <RightArrowSVG
         class={twMerge(
