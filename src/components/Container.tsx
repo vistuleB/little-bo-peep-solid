@@ -2,7 +2,7 @@ import { ParentProps } from "solid-js";
 import Nav from "./Nav";
 import { useGlobalContext } from "~/store/StoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingGraphic from "./LoadingGraphic";
 
 const Container = (props: ParentProps) => {
   let { store } = useGlobalContext();
@@ -56,21 +56,7 @@ const Container = (props: ParentProps) => {
         {store.show_areas && maxElementShowAreasDiv()}
         <Nav />
         {props.children}
-
-        {store.loading && (
-          <>
-            <div class="fixed top-0 left-0 w-full h-full bg-white z-50"></div>
-            <div
-              id="loading-screen"
-              style={{
-                "margin-top": `${Math.min(150, mainColumnWidth() * 0.3)}px`,
-                "padding-bottom": `${Math.min(150, mainColumnWidth() * 0.3) + 20}px`,
-                "background-size": `auto ${Math.min(580, mainColumnWidth())}px`,
-              }}>
-              <LoadingSpinner />
-            </div>
-          </>
-        )}
+        {store.loading && <LoadingGraphic />}
       </div>
     </>
   );

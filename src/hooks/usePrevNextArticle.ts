@@ -13,7 +13,7 @@ const usePrevNextArticle = () => {
     clearCurrentPage();
     setTimeout(
       () => {
-        navigate(page);
+        // navigate(page);
       },
       store.navigation_delays ? 500 + Math.random() * 500 : 0,
     );

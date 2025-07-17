@@ -2,7 +2,7 @@
   "name": "example-with-tailwindcss",
   "type": "module",
   "scripts": {
-    "dev": "vinxi dev",
+    "dev": "vinxi dev --port ${npm_config_port:-3000}",
     "dev-host": "vinxi dev --host 0.0.0.0",
     "build": "vinxi build",
     "start": "vinxi start"

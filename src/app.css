@@ -493,26 +493,3 @@ ol.l1 > li:before {
   max-width: calc(100% - 40px);
   align-items: right;
 }
-
-nav {
-  z-index: 1001;
-}
-
-#loading-screen {
-  height: calc(100vh);
-  top: 0;
-  position: fixed;
-  left: 0;
-  background-color: #fff;
-  background-image: url("/images/loading_screen.png");
-  background-position: top;
-  background-repeat: no-repeat;
-  z-index: 1000;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  font-family: "Baskerville";
-  font-size: 1.5rem;
-  padding-bottom: 20px;
-}
