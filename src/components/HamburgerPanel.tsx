@@ -62,13 +62,13 @@ const HamburgerPanel = () => {
             <HamburgerPanelTitle label="Stats" />
             <Stat
               label="Page load"
-              value={`${(store.last_page_load_time / 10).toFixed(1)}s`}
+              value={`${(store.last_page_load_time / 10).toFixed(2)}s`}
             />
             <Stat
               label="Avg Page load"
               value={
                 pageLoadsCount()
-                  ? `${(totalPageLoadTime() / pageLoadsCount() / 10).toFixed(1)}s`
+                  ? `${(totalPageLoadTime() / pageLoadsCount() / 10).toFixed(2)}s`
                   : "0s"
               }
             />
