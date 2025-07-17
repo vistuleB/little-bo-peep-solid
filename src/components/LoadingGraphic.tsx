@@ -7,8 +7,8 @@ const LoadingGraphic = () => {
   const [_interval, _setInterval] = createSignal<NodeJS.Timeout | null>(null);
   createEffect(() => {
     let interval = setInterval(() => {
-      setTime(time() + 1);
-    }, 100);
+      setTime(time() + 63);
+    }, 63);
 
     _setInterval(interval);
   });
@@ -21,10 +21,10 @@ const LoadingGraphic = () => {
   return (
     <>
       <div class="fixed top-0 left-0 w-full h-full bg-white z-50"></div>
-      <div class="fixed top-20 left-1/2 -translate-x-1/2 z-50">
+      <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
         <img src="/images/loading_screen.png" class="min-w-[375px]" />
-        <div class="mt-4 text-3xl font-baskerville text-center">
-          <div>loading {(time() / 10).toFixed(1)}s&thinsp;</div>
+        <div class="mt-4 text-5xl font-baskerville text-center">
+          <div>{(time() / 1000).toFixed(2)}s&thinsp;</div>
         </div>
       </div>
     </>
