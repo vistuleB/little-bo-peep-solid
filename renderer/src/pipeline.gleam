@@ -91,7 +91,7 @@ pub fn our_pipeline() -> List(Desugarer) {
       dl.remove_empty_tags(["p"]),
       // (end cleaning)
     ],
-    pref.symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
+    pref.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
     pref.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
       dl.free_children([
@@ -99,8 +99,8 @@ pub fn our_pipeline() -> List(Desugarer) {
         #("CentralDisplayItalic", "p"),
       ]),
     ],
-    pref.symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
-    pref.symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
+    pref.barbaric_symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
+    pref.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
     [
       dl.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
       dl.wrap_adjacent_non_whitespace_text_with(#("Math", "NoBreak")),
