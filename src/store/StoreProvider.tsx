@@ -38,7 +38,7 @@ const [store, set_store] = createStore<Store>({
   panel_opened: false,
   show_section_dividers: false,
   show_areas: false,
-  show_squiggles: true,
+  show_squiggles: false,
   title: "Little Bo Peep",
   innerWidth: document.documentElement.clientWidth || window.innerWidth,
   innerHeight: window.innerHeight,

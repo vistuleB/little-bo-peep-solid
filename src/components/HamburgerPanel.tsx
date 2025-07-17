@@ -54,7 +54,6 @@ const HamburgerPanel = () => {
               label="Section Dividers"
               state_key="show_section_dividers"
             />
-            <Option label="Squiggles" state_key="show_squiggles" />
             <Option label="Navigation delays" state_key="navigation_delays" />
             <ClearCache />
           </div>
