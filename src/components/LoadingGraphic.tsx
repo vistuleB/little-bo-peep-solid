@@ -6,8 +6,9 @@ const LoadingGraphic = () => {
   const [ms, setMs] = createSignal(0);
   const [_interval, _setInterval] = createSignal<NodeJS.Timeout | null>(null);
   const startTime = performance.now();
+
   onMount(() => {
-    let interval = setInterval(() => { setMs(ms() + 63); }, 63);
+    let interval = setInterval(() => { setMs(performance.now() - startTime); }, 63);
     _setInterval(interval);
   });
 
