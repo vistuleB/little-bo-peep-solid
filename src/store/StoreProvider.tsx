@@ -30,7 +30,9 @@ export type Store = {
   prevPage: string;
   loading: boolean;
   have_been_outside_home: boolean;
-  last_page_load_time: number;
+  last_page_load_ms: number;
+  total_page_load_ms: number,
+  num_page_loads: number,
   navigation_delays: boolean;
 };
 
@@ -57,7 +59,9 @@ const [store, set_store] = createStore<Store>({
   prevPage: "",
   loading: false,
   have_been_outside_home: false,
-  last_page_load_time: 0,
+  last_page_load_ms: 0,
+  total_page_load_ms: 0,
+  num_page_loads: 0,
   navigation_delays: true,
 });
 

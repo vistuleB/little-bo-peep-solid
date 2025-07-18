@@ -1,20 +1,21 @@
-import { createEffect, createSignal, onCleanup } from "solid-js";
+import { onMount, createSignal, onCleanup } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 const LoadingGraphic = () => {
-  const { set_store } = useGlobalContext();
-  const [time, setTime] = createSignal(0);
+  const { store, set_store } = useGlobalContext();
+  const [ms, setMs] = createSignal(0);
   const [_interval, _setInterval] = createSignal<NodeJS.Timeout | null>(null);
-  createEffect(() => {
-    let interval = setInterval(() => {
-      setTime(time() + 63);
-    }, 63);
-
+  const startTime = performance.now();
+  onMount(() => {
+    let interval = setInterval(() => { setMs(ms() + 63); }, 63);
     _setInterval(interval);
   });
 
   onCleanup(() => {
-    set_store("last_page_load_time", time());
+    let delta = performance.now() - startTime;
+    set_store("last_page_load_ms", delta);
+    set_store("total_page_load_ms", store.total_page_load_ms + delta);
+    set_store("num_page_loads", store.num_page_loads + 1);
     clearInterval(_interval()!);
   });
 
@@ -24,7 +25,7 @@ const LoadingGraphic = () => {
       <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
         <img src="/images/loading_screen.png" class="min-w-[375px]" />
         <div class="mt-4 text-5xl font-baskerville text-center">
-          <div>{(time() / 1000).toFixed(2)}s&thinsp;</div>
+          <div>{(ms() / 1000).toFixed(2)}s&thinsp;</div>
         </div>
       </div>
     </>

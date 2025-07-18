@@ -8,8 +8,6 @@ const HamburgerPanel = () => {
   const { store } = useGlobalContext();
   const menu_closed = () => !store.panel_opened;
   const env = import.meta.env.VITE_ENV;
-  const [totalPageLoadTime, setTotalPageLoadTime] = createSignal(0);
-  const [pageLoadsCount, setPageLoadsCount] = createSignal(-1); // -1 because the first page load is not counted
 
   const toggle_scroll = (overflow: string) => {
     if (menu_closed()) {
@@ -18,11 +16,6 @@ const HamburgerPanel = () => {
       document.body.style.setProperty("overflow", overflow);
     }
   };
-
-  createEffect(() => {
-    setTotalPageLoadTime((prev) => prev + store.last_page_load_time);
-    setPageLoadsCount((prev) => prev + 1);
-  });
 
   return (
     <div
@@ -61,13 +54,13 @@ const HamburgerPanel = () => {
             <HamburgerPanelTitle label="Stats" />
             <Stat
               label="Page load"
-              value={`${(store.last_page_load_time / 10).toFixed(2)}s`}
+              value={`${(store.last_page_load_ms / 1000).toFixed(2)}s`}
             />
             <Stat
               label="Avg Page load"
               value={
-                pageLoadsCount()
-                  ? `${(totalPageLoadTime() / pageLoadsCount() / 10).toFixed(2)}s`
+                store.num_page_loads
+                  ? `${(store.total_page_load_ms / (store.num_page_loads * 1000)).toFixed(2)}s`
                   : "0s"
               }
             />
