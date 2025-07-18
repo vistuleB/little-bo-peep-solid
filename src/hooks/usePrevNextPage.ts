@@ -14,12 +14,14 @@ const usePrevNextPage = () => {
     clearCurrentPage();
     if (store.navigation_delays) {
       setTimeout(
-        () => { navigate(page, {scroll:false}) },
-        1500 + Math.random() * 1500
-      )
+        () => {
+          navigate(page, { scroll: false });
+        },
+        1500 + Math.random() * 1500,
+      );
       return;
     }
-    navigate(page, {scroll:false});
+    navigate(page, { scroll: false });
   };
   return {
     prevDisabled,

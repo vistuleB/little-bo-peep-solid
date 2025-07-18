@@ -16,6 +16,7 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Bootcamp2__() {
   return (
     <Article
+      max-element-width="672.44"
       prevPage=""
       nextPage="/article/bootcamp1"
       pageNecessaryMargin={270}
@@ -99,7 +100,9 @@ export default function __Bootcamp2__() {
           :
         </OuterP>
         <Pause />
-        <Image src="/images/svg_base_exponent.svg" />
+        <Image
+          width="500.0px"
+          src="/images/svg_base_exponent.svg" />
         <Pause />
         <OuterP>
           The whole expression is read {" "}
@@ -230,6 +233,7 @@ const Rest = () => {
           \Large 10^0 = 1 = 1
           $$
           <ImageLeft
+            width="200.0px"
             src="/images/svg_bt2_bt_alert_cloud.svg"
             offset_y="-0.2em"
             offset_x="4em"
@@ -300,7 +304,7 @@ const Rest = () => {
           {" "} one also has
         </OuterP>
         <Pause />
-        <MathBlock id="_1_6180">
+        <MathBlock id="_1_5380">
           $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
         </MathBlock>
         <Pause />
@@ -322,7 +326,7 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_6180"
+            href="/article/bootcamp2?id=_1_5380"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -344,7 +348,7 @@ const Rest = () => {
           {" "} which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_6180"
+            href="/article/bootcamp2?id=_1_5380"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
@@ -354,18 +358,19 @@ const Rest = () => {
           </Math>
           {" "} by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_6180"
+            href="/article/bootcamp2?id=_1_5380"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           )
           is equivalent to the identity
           <ImageLeft
+            width="530.0px"
             src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
             line={2} />
         </OuterP>
         <Pause />
-        <MathBlock id="_2_1316">
+        <MathBlock id="_2_9386">
           $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
         </MathBlock>
         <Pause />
@@ -401,13 +406,13 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_1316"
+            href="/article/bootcamp2?id=_2_9386"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_1316"
+            href="/article/bootcamp2?id=_2_9386"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -421,7 +426,7 @@ const Rest = () => {
           </NoBreak>
           {" "} (So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_1316"
+            href="/article/bootcamp2?id=_2_9386"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -493,13 +498,13 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2?id=_1_6180"
+            href="/article/bootcamp2?id=_1_5380"
             class="handle-in-chapter-link">
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2?id=_2_1316"
+            href="/article/bootcamp2?id=_2_9386"
             class="handle-in-chapter-link">
             AA
           </InChapterLink>
@@ -1261,7 +1266,9 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
+          <ImageLeft
+            width="250.0px"
+            src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1270,7 +1277,9 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
+          <ImageLeft
+            width="250.0px"
+            src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1279,7 +1288,9 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight src="/images/svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
+          <ImageRight
+            width="300.0px"
+            src="/images/svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1430,7 +1441,9 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_one_blue_one_image_equation.svg" />
+        <Image
+          width="100.0px"
+          src="/images/svg_one_blue_one_image_equation.svg" />
         <Pause />
         <OuterP>
           Likewise, the standard decimal expansion for {" "}
@@ -1447,7 +1460,9 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_two_blue_one_image_equation.svg" />
+        <Image
+          width="100.0px"
+          src="/images/svg_two_blue_one_image_equation.svg" />
         <Pause />
         <OuterP>
           ...and so on, which is a possible trick to check
@@ -2070,6 +2085,7 @@ const Rest = () => {
             \Large 0.00001 = 10^&#123;-5&#125;
             $$
             <ImageRight
+              width="250.0px"
               src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
               offset_x="0em"
               compensate_offset_x_for_large_text_columns={true} />
@@ -2173,7 +2189,9 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_0.125_twelve_5.svg" />
+              <Image
+                width="400.0px"
+                src="/images/svg_0.125_twelve_5.svg" />
               <Pause />
               <OuterP>
                 Half of twelve hundredths is six hundredths, and
@@ -2188,7 +2206,9 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_06_and_0025.svg" />
+              <Image
+                width="450.0px"
+                src="/images/svg_06_and_0025.svg" />
               <Pause />
               <OuterP>
                 ...so {" "}
@@ -2895,7 +2915,9 @@ const Rest = () => {
               hoping for:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_start_end_proof.svg" />
+            <Image
+              width="450.0px"
+              src="/images/svg_start_end_proof.svg" />
             <Pause />
             <OuterP>
               The point is that the second equality uses the identity
@@ -2910,7 +2932,7 @@ const Rest = () => {
             <OuterP>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2?id=_1_6180"
+                href="/article/bootcamp2?id=_1_5380"
                 class="handle-in-chapter-link">
                 A
               </InChapterLink>
@@ -2932,7 +2954,9 @@ const Rest = () => {
               is as follows (minus fine print):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_laws_exp.svg" />
+            <Image
+              width="672.44px"
+              src="/images/svg_laws_exp.svg" />
             <Pause />
             <OuterP>
               The first law can be recognized as “additivity of exponents”
@@ -2974,7 +2998,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_3_1419">
+          <ExerciseStatement id="_3_2015">
             <OuterP>
               <b>
                 Exercise 14.
@@ -3258,7 +3282,7 @@ const Rest = () => {
               </Math>
               {" "} (as in {" "}
               <InChapterLink
-                href="/article/bootcamp2?id=_3_1419"
+                href="/article/bootcamp2?id=_3_2015"
                 class="handle-in-chapter-link">
                 Exercise 14
               </InChapterLink>
@@ -3460,6 +3484,7 @@ const Rest = () => {
               \Large -b -2c -3 = 0
               $$
               <ImageRight
+                width="440.0px"
                 src="/images/svg_bt2_ex_equation_addition_cloud.svg"
                 offset_y="-0.5em"
                 offset_x="0.5em"

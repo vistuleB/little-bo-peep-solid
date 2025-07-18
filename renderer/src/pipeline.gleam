@@ -207,6 +207,8 @@ pub fn our_pipeline() -> List(Desugarer) {
       dl.change_attribute_value([#("src", "/()")]),
       dl.remove_attributes(["counter", "handle", "type", "t", ".", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
+      dl.compute_missing_images_width(),
+      dl.compute_max_element_width(["Image", "ImageLeft", "ImageRight"]),
     ]
   ]
   |> list.flatten

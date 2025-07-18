@@ -18,6 +18,7 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Chapter2__() {
   return (
     <Article
+      max-element-width="2077.428"
       prevPage="/article/chapter1"
       nextPage="/article/chapter3"
       pageNecessaryMargin={610}
@@ -92,7 +93,9 @@ export default function __Chapter2__() {
           the values, see below):
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
+        <Image
+          width="470.0px"
+          src="/images/svg_ch2_ch_collection_of_examples.svg" />
         <Pause />
         <OuterP>
           To explain, the slope of a line is...
@@ -141,7 +144,9 @@ export default function __Chapter2__() {
           {" "} unit for each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/images/slope_1_example.svg" />
+        <Image
+          width="327.0px"
+          src="/images/slope_1_example.svg" />
         <Pause />
         <OuterP>
           On the other hand, the line below has slope
@@ -164,7 +169,9 @@ export default function __Chapter2__() {
           with each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/images/slope_0.5_example.svg" />
+        <Image
+          width="340.0px"
+          src="/images/slope_0.5_example.svg" />
         <Pause />
         <OuterP>
           (Etc.)
@@ -202,7 +209,9 @@ const Rest = () => {
           {" "} on the line:
         </OuterP>
         <Pause />
-        <Image src="/images/31.svg" />
+        <Image
+          width="302.0px"
+          src="/images/31.svg" />
         <Pause />
         <MathBlock>
           $$ \te&#123;slope&#125; = &#123;\te&#123;vertical change from A to B&#125; \over \te&#123;horizontal change from A to B&#125;&#125; $$
@@ -270,6 +279,7 @@ const Rest = () => {
           \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
           $$
           <ImageRight
+            width="600.0px"
             src="/images/32.svg"
             offset_y="-0.7em"
             offset_x="3em"
@@ -574,6 +584,7 @@ const Rest = () => {
           {" "} swap
           places, or, namely, to show that the fractions
           <ImageRight
+            width="400.0px"
             src="/images/svg_ch2_ch_swap_cloud.svg"
             line={3}
             offset_x="-0.5em" />
@@ -590,6 +601,7 @@ const Rest = () => {
         <MathBlock>
           $$ &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125; $$
           <ImageLeft
+            width="400.0px"
             src="/images/39.svg"
             offset_x="2.5em"
             offset_y="-60px"
@@ -630,7 +642,9 @@ const Rest = () => {
           line:
         </OuterP>
         <Pause />
-        <Image src="/images/40.svg" />
+        <Image
+          width="355.0px"
+          src="/images/40.svg" />
         <Pause />
         <OuterP>
           Indeed, vertical lines have {" "}
@@ -702,7 +716,9 @@ const Rest = () => {
           {" "} following such a picture:
         </OuterP>
         <Pause />
-        <Image src="/images/44.svg" />
+        <Image
+          width="300.0px"
+          src="/images/44.svg" />
         <Pause />
         <OuterP>
           In this context, note that, in physics, a
@@ -741,7 +757,9 @@ const Rest = () => {
           also include this picture:
         </OuterP>
         <Pause />
-        <Image src="/images/47.svg" />
+        <Image
+          width="300.0px"
+          src="/images/47.svg" />
         <Pause />
         <OuterP>
           Then “rise” and “run” have their signs flipped,
@@ -852,7 +870,9 @@ const Rest = () => {
           or “run equals rise over slope”. Thus:
         </OuterP>
         <Pause />
-        <Image src="/images/48.svg" />
+        <Image
+          width="340.0px"
+          src="/images/48.svg" />
         <Pause />
         <OuterP>
           ...as can sometimes be useful to know.
@@ -885,7 +905,9 @@ const Rest = () => {
           the Cartesian plane. E.g.:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch2_ch_line_equations.svg" />
+        <Image
+          width="644.0px"
+          src="/images/svg_ch2_ch_line_equations.svg" />
         <Pause />
         <OuterP>
           Note that, assuming said {" "}
@@ -1113,6 +1135,7 @@ const Rest = () => {
           {" "} is a constant,
           similarly to the more familiar equation
           <ImageLeft
+            width="200.0px"
             src="/images/svg_ch2_ch_vertical_line_equation.svg"
             offset_y="-6em"
             offset_x="1em" />
@@ -1185,6 +1208,7 @@ const Rest = () => {
             .
           </NoBreak>
           <ImageRight
+            width="300.0px"
             src="/images/svg_3_plus_minus_one_times_x_cloud.svg"
             line={1}
             offset_x="2rem" />
@@ -1267,7 +1291,9 @@ const Rest = () => {
           in seconds:
         </OuterP>
         <Pause />
-        <Image src="/images/52.svg" />
+        <Image
+          width="423.0px"
+          src="/images/52.svg" />
         <Pause />
         <OuterP>
           The slope of the graph is {" "}
@@ -1394,7 +1420,9 @@ const Rest = () => {
           gives us...
         </OuterP>
         <Pause />
-        <Image src="/images/53.svg" />
+        <Image
+          width="512.0px"
+          src="/images/53.svg" />
         <Pause />
         <OuterP>
           ...these formulas, commonly useful in “applied”
@@ -1473,6 +1501,7 @@ const Rest = () => {
             \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
             $$
             <ImageRight
+              width="2077.428px"
               src="/images/svg_ch2_ch_units_cloud.svg"
               offset_x="-6rem"
               style="width:930px"
@@ -1622,13 +1651,16 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
+              width="400.0px"
               src="/images/55.svg"
               class="relative w-fit">
               <ImageRight
+                width="340.0px"
                 src="/images/56.svg"
                 offset_y="5rem"
                 offset_x="-1.3rem" />
               <ImageLeft
+                width="340.0px"
                 src="/images/57.svg"
                 offset_x="-8rem"
                 offset_y="8rem" />
@@ -1674,13 +1706,16 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
+                width="400.0px"
                 src="/images/58.svg"
                 class="relative w-fit">
                 <ImageRight
+                  width="340.0px"
                   src="/images/59.svg"
                   offset_y="27%"
                   offset_x="-10%" />
                 <ImageLeft
+                  width="340.0px"
                   src="/images/60.svg"
                   offset_x="-24%"
                   offset_y="33%" />
@@ -1691,7 +1726,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_6836">
+          <ExerciseStatement id="_6_9327">
             <OuterP>
               <b>
                 Exercise 2.
@@ -1730,6 +1765,7 @@ const Rest = () => {
             <MathBlock>
               $$ p = &#123;y - y_0 \over x - x_0&#125; $$
               <ImageLeft
+                width="700.0px"
                 src="/images/svg_ch2_ex_x0_y0_line_equation_cloud.svg"
                 offset_x="7.5em"
                 offset_y="103px"
@@ -1855,6 +1891,7 @@ const Rest = () => {
               \te&#123;“&#125;\te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;\te&#123;”&#125;
               $$
               <ImageRight
+                width="400.0px"
                 src="/images/svg_slope_times_run_equals_rise_cloud.svg"
                 offset_x="2.5rem"
                 offset_y="-0.5rem"
@@ -1964,7 +2001,9 @@ const Rest = () => {
               as the graph):
             </OuterP>
             <Pause />
-            <Image src="/images/1.svg" />
+            <Image
+              width="667.0px"
+              src="/images/1.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -1972,7 +2011,9 @@ const Rest = () => {
               velocity:
             </OuterP>
             <Pause />
-            <Image src="/images/64.svg" />
+            <Image
+              width="623.0px"
+              src="/images/64.svg" />
             <Pause />
             <OuterP>
               On each interval, the velocity is rate of
@@ -2027,7 +2068,7 @@ const Rest = () => {
               {" "}
               As explained in {" "}
               <a
-                href="/article/chapter3?id=_15_2126"
+                href="/article/chapter3?id=_15_9929"
                 class="handle-out-chapter-link">
                 Chapter 3
               </a>
@@ -2035,7 +2076,9 @@ const Rest = () => {
               this type
             </OuterP>
             <Pause />
-            <Image src="/images/svg_empty_circle_alone.svg" />
+            <Image
+              width="30.0px"
+              src="/images/svg_empty_circle_alone.svg" />
             <Pause />
             <OuterP>
               indicates a “missing” value. Specifically, in
@@ -2136,7 +2179,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2?id=_6_6836"
+                href="/article/chapter2?id=_6_9327"
                 class="handle-in-chapter-link">
                 Exercise 2
               </InChapterLink>
@@ -2175,7 +2218,9 @@ const Rest = () => {
               E.g.:
             </OuterP>
             <Pause />
-            <Image src="/images/66.svg" />
+            <Image
+              width="667.0px"
+              src="/images/66.svg" />
             <Pause />
             <OuterP>
               The rise from the {" "}
