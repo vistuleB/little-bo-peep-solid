@@ -111,7 +111,7 @@ const LeftArrowButton = () => {
     setPressedTimeout(true);
     setTimeout(() => {
       setPressedTimeout(false);
-    }, 20);
+    }, on_mobile() ? 50 : 20);
   };
 
   const handleMouseUp = () => {
@@ -143,7 +143,7 @@ const LeftArrowButton = () => {
             : store.show_areas
               ? "rgb(224, 215, 48)"
               : "#fff",
-        scale: pressed() && on_mobile() ? "1.8" : "1",
+        scale: (pressed() || pressedTimeout()) && on_mobile() ? "1.8" : "1",
       }}
     >
       <LeftArrowSVG
@@ -172,7 +172,7 @@ const RightArrowButton = () => {
     setPressedTimeout(true);
     setTimeout(() => {
       setPressedTimeout(false);
-    }, 20);
+    }, on_mobile() ? 50 : 20);
   };
 
   const handleMouseUp = () => {
@@ -204,7 +204,7 @@ const RightArrowButton = () => {
             : store.show_areas
               ? "rgb(224, 215, 48)"
               : "#fff",
-        scale: pressed() && on_mobile() ? "1.8" : "1",
+        scale: (pressed() || pressedTimeout()) && on_mobile() ? "1.8" : "1",
       }}
     >
       <RightArrowSVG
