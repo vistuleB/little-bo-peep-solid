@@ -9,10 +9,7 @@ import infrastructure as infra
 import pipeline.{our_pipeline}
 import vxml.{type VXML, V}
 import vxml_renderer as vr
-import writerly as wp
 import emitter_imports as ei
-// import simplifile
-// import gleam/otp/actor.{stop}
 
 type FragmentType {
   Article(String)
@@ -224,63 +221,6 @@ fn cli_usage_supplementary() {
 const input_dir = "../src/content"
 const output_dir = "../src"
 
-// fn rename_files(from_ext: String, to_ext: String, dir: String) -> Nil {
-//   use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
-//     io.println("error reading directory" <> ins(error))
-//     Nil
-//   })
-
-//   dir_children
-//   |> list.each(fn(child) {
-//     let child = dir <> "/" <> child
-//     case simplifile.is_file(child) {
-//       Ok(True) -> {
-//         let _ = shellout.command(
-//           run: "git",
-//           in: ".",
-//           with: ["mv", child, child |> string.replace(from_ext, to_ext)],
-//           opt: [],
-//         )
-//         io.println("Renamed " <> child <> " to " <> child |> string.replace(from_ext, to_ext))
-//       }
-//       Ok(False) -> rename_files(from_ext, to_ext, child)
-//       Error(_) -> Nil
-//     }
-//   })
-// }
-
-// fn delete_files(ext: String,  dir: String) -> Nil {
-//   use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
-//     io.println("error reading directory" <> ins(error))
-//     Nil
-//   })
-
-//   dir_children
-//   |> list.each(fn(child) {
-//     let child = dir <> "/" <> child
-
-//     case simplifile.is_file(child), string.ends_with(child, ext) {
-//       Ok(True), True -> {
-//         let _ = shellout.command(
-//           run: "git",
-//           in: ".",
-//           with: ["rm", "-f", "--cached", child],
-//           opt: [],
-//         )
-//         let _ = shellout.command(
-//           run: "rm",
-//           in: ".",
-//           with: [child],
-//           opt: [],
-//         )
-//         io.println("Deleted " <> child)
-//       }
-//       Ok(False), _ -> delete_files(ext, child)
-//       _, _ -> Nil
-//     }
-//   })
-// }
-
 pub fn main() {
   use amendments <- infra.on_error_on_ok(
     vr.process_command_line_arguments(argv.load().arguments, []),
@@ -293,8 +233,10 @@ pub fn main() {
   )
 
   use <- infra.on_lazy_true_on_false(
-    amendments.info,
-    fn() { vr.cli_usage() }
+    amendments.help,
+    fn() {
+      io.println("(exiting on '--help' option)")
+    }
   )
 
   let exports_dict = ei.lbp_exports_dictionary()
@@ -302,8 +244,8 @@ pub fn main() {
 
   let renderer =
     vr.Renderer(
-      assembler: wp.assemble_blamed_lines_advanced_mode(_, amendments.spotlight_args_files),
-      source_parser: vr.default_writerly_source_parser( _, amendments.spotlight_args),
+      assembler: vr.default_blamed_lines_assembler(amendments.spotlight_paths),
+      source_parser: vr.default_writerly_source_parser(amendments.spotlight_key_values),
       pipeline: our_pipeline(),
       splitter: our_splitter,
       emitter: fn(fragment) { our_emitter(fragment, imports_lookup) },
@@ -319,7 +261,7 @@ pub fn main() {
     |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
 
   let debug_options =
-    vr.empty_renderer_debug_options("../renderer_artifacts")
+    vr.default_renderer_debug_options("../renderer_artifacts")
     |> vr.amend_renderer_debug_options_by_command_line_amendment(
       amendments,
       renderer.pipeline,
