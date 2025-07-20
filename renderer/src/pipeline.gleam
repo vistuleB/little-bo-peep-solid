@@ -1,7 +1,7 @@
 import gleam/list
 import gleam/option.{None, Some}
 import infrastructure.{type Desugarer} as infra
-import prefabricated_pipelines as pref
+import prefabricated_pipelines as pp
 import desugarer_library as dl
 
 pub fn our_pipeline() -> List(Desugarer) {
@@ -10,7 +10,7 @@ pub fn our_pipeline() -> List(Desugarer) {
       dl.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
       dl.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
     ],
-    pref.create_mathblock_and_math_elements(
+    pp.create_mathblock_and_math_elements(
       #([ infra.DoubleDollar ], infra.DoubleDollar),
       #([ infra.SingleDollar ], infra.SingleDollar),
     ),
@@ -91,16 +91,16 @@ pub fn our_pipeline() -> List(Desugarer) {
       dl.remove_empty_tags(["p"]),
       // (end cleaning)
     ],
-    pref.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
-    pref.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
+    pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
+    pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
       dl.free_children([
         #("CentralDisplay", "p"),
         #("CentralDisplayItalic", "p"),
       ]),
     ],
-    pref.barbaric_symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
-    pref.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
+    pp.barbaric_symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
+    pp.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
     [
       dl.find_replace(#([#("\\*", "*"), #("\\_", "_")], ["MathBlock", "Math"])),
       dl.wrap_adjacent_non_whitespace_text_with(#("Math", "NoBreak")),
