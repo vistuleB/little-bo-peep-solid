@@ -11,11 +11,14 @@ import vxml.{type VXML, V}
 import vxml_renderer as vr
 import emitter_imports as ei
 
-type FragmentType {
+type LBPFragmentClassifer {
   Article(String)
   TOC
   HamburgerPanelAuthorSuppliedContents
 }
+
+type LBPFragment(z) = vr.OutputFragment(LBPFragmentClassifer, z)
+type BL = List(BlamedLine)
 
 type LBPSplitterError {
   NoTOC
@@ -32,7 +35,7 @@ fn blame_us(message: String) -> Blame {
 
 fn our_splitter(
   root: VXML,
-) -> Result(List(#(String, VXML, FragmentType)), LBPSplitterError) {
+) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
   let articles = infra.children_with_tags(root, ["Chapter", "Bootcamp"])
   use toc_vxml <- infra.on_error_on_ok(
     infra.unique_child_with_tag(root, "TOC"),
@@ -57,8 +60,8 @@ fn our_splitter(
   Ok(
     list.flatten([
       [
-        #("routes/index.tsx", toc_vxml, TOC),
-        #("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
+        vr.OutputFragment("routes/index.tsx", toc_vxml, TOC),
+        vr.OutputFragment("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
       ],
       list.map(
         articles,
@@ -67,7 +70,7 @@ fn our_splitter(
           let #(c, number) = infra.assert_pop_attribute_value(c, "number")
           let #(c, category) = infra.assert_pop_attribute_value(c, "category")
           let c = infra.set_tag(c, "Article")
-          #("routes" <> path <> ".tsx", c, Article("__" <> category <> number <> "__"))
+          vr.OutputFragment("routes" <> path <> ".tsx", c, Article("__" <> category <> number <> "__"))
         }
       ),
     ]),
@@ -101,17 +104,15 @@ fn split_vxml_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
 }
 
 fn article_emitter(
-  path: String,
-  fragment: VXML,
-  fragment_type: FragmentType,
+  fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
-) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
+) -> Result(LBPFragment(BL), LBPEmitterError) {
 
-  let #(first_split, rest) = split_vxml_to_first_section_and_rest(fragment)
-  let assert Article(payload) = fragment_type
+  let #(first_split, rest) = split_vxml_to_first_section_and_rest(fr.payload)
+  let assert Article(funcname) = fr.classifier
 
   let assert Ok(component_imports) =
-    ei.uppercase_tags(fragment)
+    ei.uppercase_tags(fr.payload)
     |> ei.imports_blamed_lines_for_symbols(imports_lookup)
 
   let lines =
@@ -119,7 +120,7 @@ fn article_emitter(
       component_imports,
       [ BlamedLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
         BlamedLine(blame_us("article_emitter"), 0, ""),
-        BlamedLine(blame_us("article_emitter"), 0, "export default function " <> payload <> "() {"),
+        BlamedLine(blame_us("article_emitter"), 0, "export default function " <> funcname <> "() {"),
         BlamedLine(blame_us("article_emitter"), 2, "return ("),
       ],
       vxml.vxml_to_jsx_blamed_lines(first_split, 4),
@@ -140,17 +141,15 @@ fn article_emitter(
       ],
     ])
 
-  Ok(#(path, lines, fragment_type))
+  Ok(vr.OutputFragment(..fr, payload: lines))
 }
 
 fn toc_emitter(
-  path: String,
-  fragment: VXML,
-  fragment_type: FragmentType,
+  fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
-) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
+) -> Result(LBPFragment(BL), LBPEmitterError) {
   let assert Ok(component_imports) =
-    ei.uppercase_tags(fragment)
+    ei.uppercase_tags(fr.payload)
     |> ei.imports_blamed_lines_for_symbols(imports_lookup)
 
   let lines =
@@ -160,7 +159,7 @@ fn toc_emitter(
         BlamedLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
       ],
-      vxml.vxml_to_jsx_blamed_lines(fragment , 4),
+      vxml.vxml_to_jsx_blamed_lines(fr.payload , 4),
       [
         BlamedLine(blame_us("toc_emitter"), 2, ");"),
         BlamedLine(blame_us("toc_emitter"), 0, "};"),
@@ -168,17 +167,15 @@ fn toc_emitter(
       ],
     ])
 
-  Ok(#(path, lines, fragment_type))
+  Ok(vr.OutputFragment(..fr, payload: lines))
 }
 
 fn hpausc_emitter(
-  path: String,
-  fragment: VXML,
-  fragment_type: FragmentType,
+  fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
-) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
+) -> Result(LBPFragment(BL), LBPEmitterError) {
   let assert Ok(component_imports) =
-    ei.uppercase_tags_in_children(fragment)
+    ei.uppercase_tags_in_children(fr.payload)
     |> ei.imports_blamed_lines_for_symbols(imports_lookup)
 
   let lines =
@@ -189,7 +186,7 @@ fn hpausc_emitter(
         BlamedLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
         BlamedLine(blame_us("hpausc_emitter"), 2, "return <>"),
       ],
-      vxml.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 4),
+      vxml.vxmls_to_jsx_blamed_lines(fr.payload |> infra.get_children, 4),
       [
         BlamedLine(blame_us("hpausc_emitter"), 2, "</>;"),
         BlamedLine(blame_us("hpausc_emitter"), 0, "};"),
@@ -198,19 +195,17 @@ fn hpausc_emitter(
       ],
     ])
 
-  Ok(#(path, lines, fragment_type))
+  Ok(vr.OutputFragment(..fr, payload: lines))
 }
 
 fn our_emitter(
-  fragment: #(String, VXML, FragmentType),
+  fragment: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
-) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
-  let #(path, vxml, fragment_type) = fragment
-  case fragment_type {
-    Article(_) ->
-      article_emitter(path, vxml, fragment_type, imports_lookup)
-    TOC -> toc_emitter(path, vxml, fragment_type, imports_lookup)
-    HamburgerPanelAuthorSuppliedContents -> hpausc_emitter(path, vxml, fragment_type, imports_lookup)
+) -> Result(LBPFragment(BL), LBPEmitterError) {
+  case fragment.classifier {
+    Article(_) -> article_emitter(fragment, imports_lookup)
+    TOC -> toc_emitter(fragment, imports_lookup)
+    HamburgerPanelAuthorSuppliedContents -> hpausc_emitter(fragment, imports_lookup)
   }
 }
 
