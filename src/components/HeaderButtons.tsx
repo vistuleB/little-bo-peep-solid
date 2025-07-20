@@ -101,6 +101,23 @@ const LeftArrowButton = () => {
   const { store } = useGlobalContext();
   const { getPrevArticle, prevDisabled } = usePrevNextPage();
   const [pressed, setPressed] = createSignal(false);
+  const [pressed_timeout, setPressedTimeout] =
+    createSignal<NodeJS.Timeout | null>(null);
+
+  const handleMouseDown = () => {
+    setPressedTimeout(
+      setTimeout(() => {
+        setPressed(true);
+      }, 200),
+    );
+  };
+
+  const handleMouseUp = () => {
+    if (pressed_timeout()) {
+      clearTimeout(pressed_timeout()!);
+    }
+    setPressed(false);
+  };
 
   return (
     <button
@@ -115,22 +132,23 @@ const LeftArrowButton = () => {
         e.stopImmediatePropagation();
         getPrevArticle();
       }}
-      onMouseDown={() => setPressed(true)}
-      onMouseUp={() => setPressed(false)}
-      onTouchStart={() => setPressed(true)}
-      onMouseLeave={() => setPressed(false)}
-      onTouchEnd={() => setPressed(false)}
+      onMouseDown={handleMouseDown}
+      onTouchStart={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+      onTouchEnd={handleMouseUp}
       style={{
-        "background-color": pressed()
-          ? "#ececec"
-          : store.show_areas
-            ? "rgb(224, 215, 48)"
-            : "#fff",
+        "background-color":
+          pressed() && !on_mobile()
+            ? "#ececec"
+            : store.show_areas
+              ? "rgb(224, 215, 48)"
+              : "#fff",
         scale: pressed() && on_mobile() ? "1.8" : "1",
       }}>
       <LeftArrowSVG
         class={twMerge(
-          pressed()
+          pressed() && !on_mobile()
             ? "stroke-purple-600"
             : !prevDisabled()
               ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
@@ -147,6 +165,23 @@ const RightArrowButton = () => {
   const { store } = useGlobalContext();
   const { getNextArticle, nextDisabled } = usePrevNextPage();
   const [pressed, setPressed] = createSignal(false);
+  const [pressed_timeout, setPressedTimeout] =
+    createSignal<NodeJS.Timeout | null>(null);
+
+  const handleMouseDown = () => {
+    setPressedTimeout(
+      setTimeout(() => {
+        setPressed(true);
+      }, 200),
+    );
+  };
+
+  const handleMouseUp = () => {
+    if (pressed_timeout()) {
+      clearTimeout(pressed_timeout()!);
+    }
+    setPressed(false);
+  };
 
   return (
     <button
@@ -161,22 +196,23 @@ const RightArrowButton = () => {
         e.stopImmediatePropagation();
         getNextArticle();
       }}
-      onMouseDown={() => setPressed(true)}
-      onTouchStart={() => setPressed(true)}
-      onMouseUp={() => setPressed(false)}
-      onMouseLeave={() => setPressed(false)}
-      onTouchEnd={() => setPressed(false)}
+      onMouseDown={handleMouseDown}
+      onTouchStart={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+      onTouchEnd={handleMouseUp}
       style={{
-        "background-color": pressed()
-          ? "#ececec"
-          : store.show_areas
-            ? "rgb(224, 215, 48)"
-            : "#fff",
+        "background-color":
+          pressed() && !on_mobile()
+            ? "#ececec"
+            : store.show_areas
+              ? "rgb(224, 215, 48)"
+              : "#fff",
         scale: pressed() && on_mobile() ? "1.8" : "1",
       }}>
       <RightArrowSVG
         class={twMerge(
-          pressed()
+          pressed() && !on_mobile()
             ? "stroke-purple-600"
             : !nextDisabled()
               ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
