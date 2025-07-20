@@ -1,4 +1,3 @@
-import simplifile
 import shellout
 import argv
 import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
@@ -11,8 +10,9 @@ import pipeline.{our_pipeline}
 import vxml.{type VXML, V}
 import vxml_renderer as vr
 import writerly as wp
-import gleam/otp/actor.{stop}
 import emitter_imports as ei
+// import simplifile
+// import gleam/otp/actor.{stop}
 
 type FragmentType {
   Article(String)
@@ -218,116 +218,83 @@ fn our_emitter(
 }
 
 fn cli_usage_supplementary() {
-  io.println("      --prettier")
-  io.println("         -> run npm prettier on emitted content")
+  Nil
 }
 
 const input_dir = "../src/content"
 const output_dir = "../src"
 
-fn rename_files(from_ext: String, to_ext: String, dir: String) -> Nil {
-  use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
-    io.println("error reading directory" <> ins(error))
-    Nil
-  })
+// fn rename_files(from_ext: String, to_ext: String, dir: String) -> Nil {
+//   use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
+//     io.println("error reading directory" <> ins(error))
+//     Nil
+//   })
 
-  dir_children
-  |> list.each(fn(child) {
-    let child = dir <> "/" <> child
-    case simplifile.is_file(child) {
-      Ok(True) -> {
-        let _ = shellout.command(
-          run: "git",
-          in: ".",
-          with: ["mv", child, child |> string.replace(from_ext, to_ext)],
-          opt: [],
-        )
-        io.println("Renamed " <> child <> " to " <> child |> string.replace(from_ext, to_ext))
-      }
-      Ok(False) -> rename_files(from_ext, to_ext, child)
-      Error(_) -> Nil
-    }
-  })
-}
+//   dir_children
+//   |> list.each(fn(child) {
+//     let child = dir <> "/" <> child
+//     case simplifile.is_file(child) {
+//       Ok(True) -> {
+//         let _ = shellout.command(
+//           run: "git",
+//           in: ".",
+//           with: ["mv", child, child |> string.replace(from_ext, to_ext)],
+//           opt: [],
+//         )
+//         io.println("Renamed " <> child <> " to " <> child |> string.replace(from_ext, to_ext))
+//       }
+//       Ok(False) -> rename_files(from_ext, to_ext, child)
+//       Error(_) -> Nil
+//     }
+//   })
+// }
 
-fn delete_files(ext: String,  dir: String) -> Nil {
-  use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
-    io.println("error reading directory" <> ins(error))
-    Nil
-  })
+// fn delete_files(ext: String,  dir: String) -> Nil {
+//   use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
+//     io.println("error reading directory" <> ins(error))
+//     Nil
+//   })
 
-  dir_children
-  |> list.each(fn(child) {
-    let child = dir <> "/" <> child
+//   dir_children
+//   |> list.each(fn(child) {
+//     let child = dir <> "/" <> child
 
-    case simplifile.is_file(child), string.ends_with(child, ext) {
-      Ok(True), True -> {
-        let _ = shellout.command(
-          run: "git",
-          in: ".",
-          with: ["rm", "-f", "--cached", child],
-          opt: [],
-        )
-        let _ = shellout.command(
-          run: "rm",
-          in: ".",
-          with: [child],
-          opt: [],
-        )
-        io.println("Deleted " <> child)
-      }
-      Ok(False), _ -> delete_files(ext, child)
-      _, _ -> Nil
-    }
-  })
-}
+//     case simplifile.is_file(child), string.ends_with(child, ext) {
+//       Ok(True), True -> {
+//         let _ = shellout.command(
+//           run: "git",
+//           in: ".",
+//           with: ["rm", "-f", "--cached", child],
+//           opt: [],
+//         )
+//         let _ = shellout.command(
+//           run: "rm",
+//           in: ".",
+//           with: [child],
+//           opt: [],
+//         )
+//         io.println("Deleted " <> child)
+//       }
+//       Ok(False), _ -> delete_files(ext, child)
+//       _, _ -> Nil
+//     }
+//   })
+// }
 
 pub fn main() {
   use amendments <- infra.on_error_on_ok(
-    vr.process_command_line_arguments(argv.load().arguments, ["--prettier", "--emu-to-wly", "--wly-to-emu", "--delete-wly", "--delete-emu"]),
+    vr.process_command_line_arguments(argv.load().arguments, []),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
-      io.println("")
       vr.cli_usage()
       cli_usage_supplementary()
     },
   )
 
-  use _ <- infra.on_error_on_ok(
-    dict.get(amendments.user_args, "--emu-to-wly"),
-    with_on_ok: fn(_) {
-      rename_files(".emu", ".wly", input_dir)
-      let _ = stop()
-      Nil
-    },
-  )
-
-  use _ <- infra.on_error_on_ok(
-    dict.get(amendments.user_args, "--wly-to-emu"),
-    with_on_ok: fn(_) {
-      rename_files(".wly", ".emu", input_dir)
-      let _ = stop()
-      Nil
-    },
-  )
-
-  use _ <- infra.on_error_on_ok(
-    dict.get(amendments.user_args, "--delete-wly"),
-    with_on_ok: fn(_) {
-      delete_files(".wly", input_dir)
-      let _ = stop()
-      Nil
-    },
-  )
-
-  use _ <- infra.on_error_on_ok(
-    dict.get(amendments.user_args, "--delete-emu"),
-    with_on_ok: fn(_) {
-      delete_files(".emu", input_dir)
-      let _ = stop()
-      Nil
-    },
+  use <- infra.on_lazy_true_on_false(
+    amendments.info,
+    fn() { vr.cli_usage() }
   )
 
   let exports_dict = ei.lbp_exports_dictionary()
@@ -340,13 +307,14 @@ pub fn main() {
       pipeline: our_pipeline(),
       splitter: our_splitter,
       emitter: fn(fragment) { our_emitter(fragment, imports_lookup) },
-      prettifier: vr.guarded_prettier_prettifier(amendments.user_args),
+      prettifier: vr.default_prettier_prettifier,
     )
 
   let parameters =
     vr.RendererParameters(
       input_dir: input_dir,
       output_dir: output_dir,
+      prettifier_on_by_default: False,
     )
     |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
 
