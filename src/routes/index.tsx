@@ -1,4 +1,3 @@
-import { Math }  from "~/components/Math";
 import { Spacer }  from "~/components/Spacer";
 import TOC  from "~/components/TOC";
 import TOCItem  from "~/components/TOCItem";
@@ -15,9 +14,11 @@ export default function __Home__() {
           <TOCItem
             article_type={1}
             href="chapter1">
-            <Math>
-              $n \ra n + 1$
-            </Math>
+            A {" "}
+            <i>
+              Few
+            </i>
+            {" "} Refreshers
           </TOCItem>
           <TOCItem
             article_type={2}

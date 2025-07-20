@@ -1,6 +1,5 @@
 import HamburgerPanelItem  from "~/components/HamburgerPanelItem";
 import HamburgerPanelTitle  from "~/components/HamburgerPanelTitle";
-import { Math }  from "~/components/Math";
 
 const HamburgerPanelAuthorSuppliedContents = () => {
   return <>
@@ -10,9 +9,11 @@ const HamburgerPanelAuthorSuppliedContents = () => {
         <HamburgerPanelItem
           article_type={1}
           href="chapter1">
-          <Math>
-            $n \ra n + 1$
-          </Math>
+          A {" "}
+          <i>
+            Few
+          </i>
+          {" "} Refreshers
         </HamburgerPanelItem>
         <HamburgerPanelItem
           article_type={2}

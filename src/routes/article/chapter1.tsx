@@ -5,7 +5,7 @@ import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises"
 import Grid  from "~/components/Grid";
 import InChapterLink  from "~/components/InChapterLink";
 import { Item, List }  from "~/components/List";
-import { MathBlock, Math }  from "~/components/Math";
+import { Math, MathBlock }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageLeft, ImageRight }  from "~/components/SideImage";
@@ -21,7 +21,7 @@ export default function __Chapter1__() {
       nextPage="/article/chapter2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_5_6476">
+      id="_5_hgi_">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -55,9 +55,11 @@ export default function __Chapter1__() {
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 1:">
-        <Math>
-          $n \ra n + 1$
-        </Math>
+        A {" "}
+        <i>
+          Few
+        </i>
+        {" "} Refreshers
       </ArticleTitle>
       <Section id="section-1">
         <OuterP>
@@ -1449,7 +1451,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_4_806">
+          <ExerciseStatement id="_4_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2617,7 +2619,7 @@ const Rest = () => {
               {" "}
               In the solution to {" "}
               <InChapterLink
-                href="/article/chapter1?id=_4_806"
+                href="/article/chapter1?id=_4_hgi_"
                 class="handle-in-chapter-link">
                 Exercise 1
               </InChapterLink>
