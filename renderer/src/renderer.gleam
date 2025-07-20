@@ -4,7 +4,6 @@ import argv
 import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
 import gleam/io
 import gleam/list
-import gleam/option.{Some}
 import gleam/string.{inspect as ins}
 import gleam/dict.{type Dict}
 import infrastructure as infra
@@ -347,7 +346,7 @@ pub fn main() {
   let parameters =
     vr.RendererParameters(
       input_dir: input_dir,
-      output_dir: Some(output_dir),
+      output_dir: output_dir,
     )
     |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
 
