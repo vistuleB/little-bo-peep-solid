@@ -1,25 +1,24 @@
-import simplifile
 import shellout
 import argv
 import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
 import gleam/io
 import gleam/list
-import gleam/option.{Some}
 import gleam/string.{inspect as ins}
 import gleam/dict.{type Dict}
 import infrastructure as infra
 import pipeline.{our_pipeline}
 import vxml.{type VXML, V}
 import vxml_renderer as vr
-import writerly as wp
-import gleam/otp/actor.{stop}
 import emitter_imports as ei
 
-type FragmentType {
+type LBPFragmentClassifer {
   Article(String)
   TOC
   HamburgerPanelAuthorSuppliedContents
 }
+
+type LBPFragment(z) = vr.OutputFragment(LBPFragmentClassifer, z)
+type BL = List(BlamedLine)
 
 type LBPSplitterError {
   NoTOC
@@ -36,7 +35,7 @@ fn blame_us(message: String) -> Blame {
 
 fn our_splitter(
   root: VXML,
-) -> Result(List(#(String, VXML, FragmentType)), LBPSplitterError) {
+) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
   let articles = infra.children_with_tags(root, ["Chapter", "Bootcamp"])
   use toc_vxml <- infra.on_error_on_ok(
     infra.unique_child_with_tag(root, "TOC"),
@@ -61,8 +60,8 @@ fn our_splitter(
   Ok(
     list.flatten([
       [
-        #("routes/index.tsx", toc_vxml, TOC),
-        #("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
+        vr.OutputFragment("routes/index.tsx", toc_vxml, TOC),
+        vr.OutputFragment("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
       ],
       list.map(
         articles,
@@ -71,7 +70,7 @@ fn our_splitter(
           let #(c, number) = infra.assert_pop_attribute_value(c, "number")
           let #(c, category) = infra.assert_pop_attribute_value(c, "category")
           let c = infra.set_tag(c, "Article")
-          #("routes" <> path <> ".tsx", c, Article("__" <> category <> number <> "__"))
+          vr.OutputFragment("routes" <> path <> ".tsx", c, Article("__" <> category <> number <> "__"))
         }
       ),
     ]),
@@ -105,17 +104,15 @@ fn split_vxml_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
 }
 
 fn article_emitter(
-  path: String,
-  fragment: VXML,
-  fragment_type: FragmentType,
+  fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
-) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
+) -> Result(LBPFragment(BL), LBPEmitterError) {
 
-  let #(first_split, rest) = split_vxml_to_first_section_and_rest(fragment)
-  let assert Article(payload) = fragment_type
+  let #(first_split, rest) = split_vxml_to_first_section_and_rest(fr.payload)
+  let assert Article(funcname) = fr.classifier
 
   let assert Ok(component_imports) =
-    ei.uppercase_tags(fragment)
+    ei.uppercase_tags(fr.payload)
     |> ei.imports_blamed_lines_for_symbols(imports_lookup)
 
   let lines =
@@ -123,7 +120,7 @@ fn article_emitter(
       component_imports,
       [ BlamedLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
         BlamedLine(blame_us("article_emitter"), 0, ""),
-        BlamedLine(blame_us("article_emitter"), 0, "export default function " <> payload <> "() {"),
+        BlamedLine(blame_us("article_emitter"), 0, "export default function " <> funcname <> "() {"),
         BlamedLine(blame_us("article_emitter"), 2, "return ("),
       ],
       vxml.vxml_to_jsx_blamed_lines(first_split, 4),
@@ -144,17 +141,15 @@ fn article_emitter(
       ],
     ])
 
-  Ok(#(path, lines, fragment_type))
+  Ok(vr.OutputFragment(..fr, payload: lines))
 }
 
 fn toc_emitter(
-  path: String,
-  fragment: VXML,
-  fragment_type: FragmentType,
+  fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
-) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
+) -> Result(LBPFragment(BL), LBPEmitterError) {
   let assert Ok(component_imports) =
-    ei.uppercase_tags(fragment)
+    ei.uppercase_tags(fr.payload)
     |> ei.imports_blamed_lines_for_symbols(imports_lookup)
 
   let lines =
@@ -164,7 +159,7 @@ fn toc_emitter(
         BlamedLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
       ],
-      vxml.vxml_to_jsx_blamed_lines(fragment , 4),
+      vxml.vxml_to_jsx_blamed_lines(fr.payload , 4),
       [
         BlamedLine(blame_us("toc_emitter"), 2, ");"),
         BlamedLine(blame_us("toc_emitter"), 0, "};"),
@@ -172,17 +167,15 @@ fn toc_emitter(
       ],
     ])
 
-  Ok(#(path, lines, fragment_type))
+  Ok(vr.OutputFragment(..fr, payload: lines))
 }
 
 fn hpausc_emitter(
-  path: String,
-  fragment: VXML,
-  fragment_type: FragmentType,
+  fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
-) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
+) -> Result(LBPFragment(BL), LBPEmitterError) {
   let assert Ok(component_imports) =
-    ei.uppercase_tags_in_children(fragment)
+    ei.uppercase_tags_in_children(fr.payload)
     |> ei.imports_blamed_lines_for_symbols(imports_lookup)
 
   let lines =
@@ -193,7 +186,7 @@ fn hpausc_emitter(
         BlamedLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
         BlamedLine(blame_us("hpausc_emitter"), 2, "return <>"),
       ],
-      vxml.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 4),
+      vxml.vxmls_to_jsx_blamed_lines(fr.payload |> infra.get_children, 4),
       [
         BlamedLine(blame_us("hpausc_emitter"), 2, "</>;"),
         BlamedLine(blame_us("hpausc_emitter"), 0, "};"),
@@ -202,133 +195,43 @@ fn hpausc_emitter(
       ],
     ])
 
-  Ok(#(path, lines, fragment_type))
+  Ok(vr.OutputFragment(..fr, payload: lines))
 }
 
 fn our_emitter(
-  fragment: #(String, VXML, FragmentType),
+  fragment: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
-) -> Result(#(String, List(BlamedLine), FragmentType), LBPEmitterError) {
-  let #(path, vxml, fragment_type) = fragment
-  case fragment_type {
-    Article(_) ->
-      article_emitter(path, vxml, fragment_type, imports_lookup)
-    TOC -> toc_emitter(path, vxml, fragment_type, imports_lookup)
-    HamburgerPanelAuthorSuppliedContents -> hpausc_emitter(path, vxml, fragment_type, imports_lookup)
+) -> Result(LBPFragment(BL), LBPEmitterError) {
+  case fragment.classifier {
+    Article(_) -> article_emitter(fragment, imports_lookup)
+    TOC -> toc_emitter(fragment, imports_lookup)
+    HamburgerPanelAuthorSuppliedContents -> hpausc_emitter(fragment, imports_lookup)
   }
 }
 
 fn cli_usage_supplementary() {
-  io.println("      --prettier")
-  io.println("         -> run npm prettier on emitted content")
+  Nil
 }
 
 const input_dir = "../src/content"
 const output_dir = "../src"
 
-fn rename_files(from_ext: String, to_ext: String, dir: String) -> Nil {
-  use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
-    io.println("error reading directory" <> ins(error))
-    Nil
-  })
-
-  dir_children
-  |> list.each(fn(child) {
-    let child = dir <> "/" <> child
-    case simplifile.is_file(child) {
-      Ok(True) -> {
-        let _ = shellout.command(
-          run: "git",
-          in: ".",
-          with: ["mv", child, child |> string.replace(from_ext, to_ext)],
-          opt: [],
-        )
-        io.println("Renamed " <> child <> " to " <> child |> string.replace(from_ext, to_ext))
-      }
-      Ok(False) -> rename_files(from_ext, to_ext, child)
-      Error(_) -> Nil
-    }
-  })
-}
-
-fn delete_files(ext: String,  dir: String) -> Nil {
-  use dir_children <- infra.on_error_on_ok(simplifile.read_directory(dir), fn(error) {
-    io.println("error reading directory" <> ins(error))
-    Nil
-  })
-
-  dir_children
-  |> list.each(fn(child) {
-    let child = dir <> "/" <> child
-
-    case simplifile.is_file(child), string.ends_with(child, ext) {
-      Ok(True), True -> {
-        let _ = shellout.command(
-          run: "git",
-          in: ".",
-          with: ["rm", "-f", "--cached", child],
-          opt: [],
-        )
-        let _ = shellout.command(
-          run: "rm",
-          in: ".",
-          with: [child],
-          opt: [],
-        )
-        io.println("Deleted " <> child)
-      }
-      Ok(False), _ -> delete_files(ext, child)
-      _, _ -> Nil
-    }
-  })
-}
-
 pub fn main() {
   use amendments <- infra.on_error_on_ok(
-    vr.process_command_line_arguments(argv.load().arguments, ["--prettier", "--emu-to-wly", "--wly-to-emu", "--delete-wly", "--delete-emu"]),
+    vr.process_command_line_arguments(argv.load().arguments, []),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
-      io.println("")
       vr.cli_usage()
       cli_usage_supplementary()
     },
   )
 
-  use _ <- infra.on_error_on_ok(
-    dict.get(amendments.user_args, "--emu-to-wly"),
-    with_on_ok: fn(_) {
-      rename_files(".emu", ".wly", input_dir)
-      let _ = stop()
-      Nil
-    },
-  )
-
-  use _ <- infra.on_error_on_ok(
-    dict.get(amendments.user_args, "--wly-to-emu"),
-    with_on_ok: fn(_) {
-      rename_files(".wly", ".emu", input_dir)
-      let _ = stop()
-      Nil
-    },
-  )
-
-  use _ <- infra.on_error_on_ok(
-    dict.get(amendments.user_args, "--delete-wly"),
-    with_on_ok: fn(_) {
-      delete_files(".wly", input_dir)
-      let _ = stop()
-      Nil
-    },
-  )
-
-  use _ <- infra.on_error_on_ok(
-    dict.get(amendments.user_args, "--delete-emu"),
-    with_on_ok: fn(_) {
-      delete_files(".emu", input_dir)
-      let _ = stop()
-      Nil
-    },
+  use <- infra.on_lazy_true_on_false(
+    amendments.help,
+    fn() {
+      io.println("(exiting on '--help' option)")
+    }
   )
 
   let exports_dict = ei.lbp_exports_dictionary()
@@ -336,23 +239,24 @@ pub fn main() {
 
   let renderer =
     vr.Renderer(
-      assembler: wp.assemble_blamed_lines_advanced_mode(_, amendments.spotlight_args_files),
-      source_parser: vr.default_writerly_source_parser( _, amendments.spotlight_args),
+      assembler: vr.default_blamed_lines_assembler(amendments.spotlight_paths),
+      source_parser: vr.default_writerly_source_parser(amendments.spotlight_key_values),
       pipeline: our_pipeline(),
       splitter: our_splitter,
       emitter: fn(fragment) { our_emitter(fragment, imports_lookup) },
-      prettifier: vr.guarded_prettier_prettifier(amendments.user_args),
+      prettifier: vr.default_prettier_prettifier,
     )
 
   let parameters =
     vr.RendererParameters(
       input_dir: input_dir,
-      output_dir: Some(output_dir),
+      output_dir: output_dir,
+      prettifier_on_by_default: False,
     )
     |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
 
   let debug_options =
-    vr.empty_renderer_debug_options("../renderer_artifacts")
+    vr.default_renderer_debug_options()
     |> vr.amend_renderer_debug_options_by_command_line_amendment(
       amendments,
       renderer.pipeline,
