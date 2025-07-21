@@ -1337,11 +1337,11 @@
     
     *The Gregorinovich sandwich.*
     The “Gregorinovich sandwich”—sometimes
-    Gr_
-    |> span
-        style=text-decoration:underline
-        i
-    _gorinovich—states that
+    Gr_i_gorinovich—states that
+    !! |> span
+    !!     style=text-decoration:underline
+    !!     i
+    !! _gorinovich—states that
 
     $$
     \sin(\theta) \,<\, \theta \,<\, {\sin(\theta)\over\cos(\theta)}

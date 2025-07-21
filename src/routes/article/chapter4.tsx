@@ -18,7 +18,6 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Chapter4__() {
   return (
     <Article
-      max-element-width="1550.0"
       prevPage="/article/chapter3"
       nextPage="/article/chapter5"
       pageNecessaryMargin={1450}
@@ -89,9 +88,7 @@ export default function __Chapter4__() {
         Derivatives
       </ArticleTitle>
       <Pause />
-      <Image
-        width="510.0px"
-        src="/images/svg_ch4_ch_polaroids.svg" />
+      <Image src="/images/svg_ch4_ch_polaroids.svg" />
       <Section id="section-1">
         <OuterP>
           <b>
@@ -178,9 +175,7 @@ export default function __Chapter4__() {
           “before” graph.) E.g.:
         </OuterP>
         <Pause />
-        <Image
-          width="1.0e3px"
-          src="/images/svg_ch4_ch_explanation1.svg" />
+        <Image src="/images/svg_ch4_ch_explanation1.svg" />
         <Pause />
         <OuterP>
           Note that {" "}
@@ -220,9 +215,7 @@ export default function __Chapter4__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image
-          width="1050.0px"
-          src="/images/svg_ch4_ch_explanation2.svg" />
+        <Image src="/images/svg_ch4_ch_explanation2.svg" />
         <Pause />
         <OuterP>
           In fact, we can
@@ -249,9 +242,7 @@ export default function __Chapter4__() {
           value for the derivative:
         </OuterP>
         <Pause />
-        <Image
-          width="600.0px"
-          src="/images/svg_ch4_ch_one_sided_tangent.svg" />
+        <Image src="/images/svg_ch4_ch_one_sided_tangent.svg" />
         <Pause />
         <OuterP>
           (In other words, what one might describe as
@@ -366,9 +357,7 @@ const Rest = () => {
           (the one with the closed endpoints):
         </OuterP>
         <Pause />
-        <Image
-          width="450.0px"
-          src="/images/svg_ch4_ch_curve_to_sketch.svg" />
+        <Image src="/images/svg_ch4_ch_curve_to_sketch.svg" />
         <Pause />
         <OuterP>
           One method is simply to eyeball the slope at
@@ -376,11 +365,8 @@ const Rest = () => {
           values and interpolate:
         </OuterP>
         <Pause />
-        <Image
-          width="850.0px"
-          src="/images/svg_ch4_ch_curve_to_sketch_sketch.svg">
+        <Image src="/images/svg_ch4_ch_curve_to_sketch_sketch.svg">
           <ImageRight
-            width="450.0px"
             src="/images/svg_ch4_ch_curve_to_sketch_cloud.svg"
             offset_y="36%"
             offset_x="-15%" />
@@ -398,9 +384,7 @@ const Rest = () => {
           interval:
         </OuterP>
         <Pause />
-        <Image
-          width="1250.0px"
-          src="/images/svg_ch4_ch_second_sketch.svg" />
+        <Image src="/images/svg_ch4_ch_second_sketch.svg" />
         <Pause />
         <OuterP>
           The result (at bottom right)
@@ -463,7 +447,6 @@ const Rest = () => {
           (x \ra B)' = (x \ra 0)
           $$
           <ImageLeft
-            width="430.0px"
             src="/images/svg_ch4_ch_constant_derivative_cloud.svg"
             offset_x="8em"
             compensate_offset_x_for_large_text_columns={true} />
@@ -578,7 +561,6 @@ const Rest = () => {
           (x \ra Ax + B)' = (x \ra A)
           $$
           <ImageLeft
-            width="430.0px"
             src="/images/svg_ch4_ch_affine_derivative_cloud.svg"
             offset_x="7em"
             compensate_offset_x_for_large_text_columns={true} />
@@ -842,7 +824,6 @@ const Rest = () => {
         <OuterP>
           ...then the “after” graph will have units of...
           <ImageRight
-            width="700.0px"
             src="/images/svg_ch4_ch_units1_cloud.svg"
             offset_y="-0.6em" />
         </OuterP>
@@ -884,7 +865,6 @@ const Rest = () => {
         <OuterP>
           ...then the “after” graph will have units of...
           <ImageLeft
-            width="700.0px"
             src="/images/svg_ch4_ch_units2_cloud.svg"
             offset_y="0.6em" />
         </OuterP>
@@ -1088,7 +1068,6 @@ const Rest = () => {
             (x \ra 3x + 1)'' = (x \ra 0)
             $$
             <ImageRight
-              width="900.0px"
               src="/images/svg_ch4_3x_plus_one_and_second_cloud.svg"
               offset_x="6em"
               offset_y="0.1em"
@@ -1180,9 +1159,7 @@ const Rest = () => {
           have a negative second derivative:
         </OuterP>
         <Pause />
-        <Image
-          width="1550.0px"
-          src="/images/svg_ch4_bendiness.svg" />
+        <Image src="/images/svg_ch4_bendiness.svg" />
         <Pause />
         <OuterP>
           Reason like this: the second derivative is {" "}
@@ -1216,7 +1193,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          LARGE POSITIVE NUMBER
+          L
+          ARGE POSITIVE NUMBE
+          R
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -1252,7 +1231,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          LARGE NEGATIVE NUMBER
+          L
+          ARGE NEGATIVE NUMBE
+          R
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -1294,9 +1275,7 @@ const Rest = () => {
           Viz:
         </OuterP>
         <Pause />
-        <Image
-          width="550.0px"
-          src="/images/svg_ch4_ch_convex_concave.svg" />
+        <Image src="/images/svg_ch4_ch_convex_concave.svg" />
         <Pause />
         <OuterP>
           <b>
@@ -1312,9 +1291,7 @@ const Rest = () => {
           of a graph:
         </OuterP>
         <Pause />
-        <Image
-          width="500.0px"
-          src="/images/svg_ch4_ch_inflection_point.svg" />
+        <Image src="/images/svg_ch4_ch_inflection_point.svg" />
         <Pause />
         <Example>
           <OuterP>
@@ -1364,9 +1341,7 @@ const Rest = () => {
           A graph of the form...
         </OuterP>
         <Pause />
-        <Image
-          width="400.0px"
-          src="/images/svg_ch4_ch_position_by_time.svg" />
+        <Image src="/images/svg_ch4_ch_position_by_time.svg" />
         <Pause />
         <OuterP>
           ...describes {" "}
@@ -1377,9 +1352,7 @@ const Rest = () => {
           (look at the units); the derivative...
         </OuterP>
         <Pause />
-        <Image
-          width="400.0px"
-          src="/images/svg_ch4_ch_position_by_time_der.svg" />
+        <Image src="/images/svg_ch4_ch_position_by_time_der.svg" />
         <Pause />
         <OuterP>
           ...describes {" "}
@@ -1388,9 +1361,7 @@ const Rest = () => {
           </i>
           ;
           finally, the second derivative...
-          <ImageLeft
-            width="1350.0px"
-            src="/images/svg_ch4_ch_position_by_time_der_cloud.svg" />
+          <ImageLeft src="/images/svg_ch4_ch_position_by_time_der_cloud.svg" />
         </OuterP>
         <OuterP class="indent-10">
           ...describes
@@ -1446,9 +1417,7 @@ const Rest = () => {
           seconds:
         </OuterP>
         <Pause />
-        <Image
-          width="550.0px"
-          src="/images/svg_ch4_ch_position_by_time_tangent.svg" />
+        <Image src="/images/svg_ch4_ch_position_by_time_tangent.svg" />
         <Pause />
         <OuterP>
           The ratio “rise over run” has the form
@@ -1589,7 +1558,6 @@ const Rest = () => {
             (2&#123;\te&#123;m&#125;/\te&#123;s&#125;\!&#123;\,&#125;^2&#125;) \times\, (10\te&#123;s&#125;) = 20&#123;\te&#123;m&#125;/\te&#123;s&#125;&#125;
             $$
             <ImageRight
-              width="350.0px"
               src="/images/svg_ch4_ch_units_cancellation_cloud.svg"
               offset_x="5em"
               compensate_offset_x_for_large_text_columns={true} />
@@ -1852,18 +1820,14 @@ const Rest = () => {
               {" "} a sharp corner):
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_slope_one_half_see_saw.svg" />
+            <Image src="/images/svg_ch4_slope_one_half_see_saw.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
               That would be:
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_slope_one_half_see_saw_derivative.svg" />
+            <Image src="/images/svg_ch4_slope_one_half_see_saw_derivative.svg" />
             <Pause />
             <OuterP>
               (The derivative is {" "}
@@ -1932,9 +1896,7 @@ const Rest = () => {
               {" "} looks like so:
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_one_over_x.svg" />
+            <Image src="/images/svg_ch4_one_over_x.svg" />
             <Pause />
             <OuterP>
               As one can see, the slope is very negative
@@ -1983,9 +1945,7 @@ const Rest = () => {
               pockmarked appearance:
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_slope_one_half_see_saw_second_derivative.svg" />
+            <Image src="/images/svg_ch4_slope_one_half_see_saw_second_derivative.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -2068,17 +2028,11 @@ const Rest = () => {
               {" "} axis):
             </OuterP>
             <Pause />
-            <Image
-              width="470.0px"
-              src="/images/svg_ch4_slope_one_half_see_saw_with_units.svg" />
+            <Image src="/images/svg_ch4_slope_one_half_see_saw_with_units.svg" />
             <Pause />
-            <Image
-              width="470.0px"
-              src="/images/svg_ch4_slope_one_half_see_saw_with_units_derivative.svg" />
+            <Image src="/images/svg_ch4_slope_one_half_see_saw_with_units_derivative.svg" />
             <Pause />
-            <Image
-              width="470.0px"
-              src="/images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg" />
+            <Image src="/images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -2106,9 +2060,7 @@ const Rest = () => {
                 slopes and sharp peaks. (This...
               </OuterP>
               <Pause />
-              <Image
-                width="390.0px"
-                src="/images/svg_ch4_ex_car_position_rounded.svg" />
+              <Image src="/images/svg_ch4_ex_car_position_rounded.svg" />
               <Pause />
               <OuterP>
                 ...idea.)
@@ -2324,9 +2276,7 @@ const Rest = () => {
               below, based on those units that are given:
             </OuterP>
             <Pause />
-            <Image
-              width="650.0px"
-              src="/images/svg_ch4_missing_units.svg" />
+            <Image src="/images/svg_ch4_missing_units.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2349,9 +2299,7 @@ const Rest = () => {
               axis. This gives the unique solutions:
             </OuterP>
             <Pause />
-            <Image
-              width="800.0px"
-              src="/images/svg_ch4_missing_units_solution.svg" />
+            <Image src="/images/svg_ch4_missing_units_solution.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -2477,9 +2425,7 @@ const Rest = () => {
               assuming that relationship exists.)
             </OuterP>
             <Pause />
-            <Image
-              width="733.97px"
-              src="/images/svg_ch4_ex_position_by_time_find_the_order.svg" />
+            <Image src="/images/svg_ch4_ex_position_by_time_find_the_order.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2509,9 +2455,7 @@ const Rest = () => {
               {" "} is on the right:
             </OuterP>
             <Pause />
-            <Image
-              width="733.97px"
-              src="/images/svg_ch4_ex_position_by_time_find_the_order_answer.svg" />
+            <Image src="/images/svg_ch4_ex_position_by_time_find_the_order_answer.svg" />
             <Pause />
             <OuterP>
               For example, the graph on the left
@@ -2534,9 +2478,7 @@ const Rest = () => {
               derivative of the graph on the left!):
             </OuterP>
             <Pause />
-            <Image
-              width="650.0px"
-              src="/images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg" />
+            <Image src="/images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg" />
             <Pause />
             <OuterP>
               Moreover the middle graph has slope
@@ -2562,9 +2504,7 @@ const Rest = () => {
               on the right:
             </OuterP>
             <Pause />
-            <Image
-              width="650.0px"
-              src="/images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg" />
+            <Image src="/images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg" />
             <Pause />
             <OuterP>
               (Taking one more derivative would produce a
@@ -2582,9 +2522,7 @@ const Rest = () => {
               Given these graphs...
             </OuterP>
             <Pause />
-            <Image
-              width="700.0px"
-              src="/images/svg_ch4_sketch_the_middle_a.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_a.svg" />
             <Pause />
             <OuterP>
               ...what can you say about {" "}
@@ -2653,9 +2591,7 @@ const Rest = () => {
               {" "} respectively:
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_a_sol1.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_a_sol1.svg" />
             <Pause />
             <OuterP>
               This already gives us three points from which
@@ -2669,9 +2605,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_a_sol2.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_a_sol2.svg" />
             <Pause />
             <OuterP>
               But the graph of {" "}
@@ -2714,18 +2648,14 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_a_sol3.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_a_sol3.svg" />
             <Pause />
             <OuterP>
               As a second step, we thus “bend into shape”
               our previous sketch to produce these slopes...
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_a_sol4.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_a_sol4.svg" />
             <Pause />
             <OuterP>
               ...achieving our final answer.
@@ -2739,9 +2669,7 @@ const Rest = () => {
               derivative looks like so:
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_a_sol5.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_a_sol5.svg" />
           </Solution>
         </Exercise>
         <Exercise number={9}>
@@ -2754,9 +2682,7 @@ const Rest = () => {
               Given these graphs...
             </OuterP>
             <Pause />
-            <Image
-              width="700.0px"
-              src="/images/svg_ch4_sketch_the_middle_b.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b.svg" />
             <Pause />
             <OuterP>
               ...sketch {" "}
@@ -2796,9 +2722,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol1.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol1.svg" />
             <Pause />
             <OuterP>
               ...which gives us one data point on the
@@ -2809,9 +2733,7 @@ const Rest = () => {
               {" "} to start with...
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol2.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol2.svg" />
             <Pause />
             <OuterP>
               ...moreover, by the graph of {" "}
@@ -2841,9 +2763,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol3.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol3.svg" />
             <Pause />
             <OuterP>
               ...so, as a second step, we can extend
@@ -2859,12 +2779,8 @@ const Rest = () => {
               {" "} on this interval:
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol4.svg">
-              <ImageLeft
-                width="600.0px"
-                src="/images/svg_ch4_sketch_the_middle_b_cloud.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol4.svg">
+              <ImageLeft src="/images/svg_ch4_sketch_the_middle_b_cloud.svg" />
             </Image>
             <Pause />
             <OuterP>
@@ -2904,9 +2820,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol5.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol5.svg" />
             <Pause />
             <OuterP>
               This gives us two more points on the graph
@@ -2919,9 +2833,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol6.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol6.svg" />
             <Pause />
             <OuterP>
               Then, because the second derivative has
@@ -2941,9 +2853,7 @@ const Rest = () => {
               {" "} (about)...
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol7.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol7.svg" />
             <Pause />
             <OuterP>
               ...we extend these two new data points by
@@ -2956,9 +2866,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol8.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol8.svg" />
             <Pause />
             <OuterP>
               ...on the relevant intervals. (I.e., for
@@ -2979,9 +2887,7 @@ const Rest = () => {
               yet-to-be-determined shape:
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol9.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol9.svg" />
             <Pause />
             <OuterP>
               Since {" "}
@@ -3007,9 +2913,7 @@ const Rest = () => {
               middles...
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol10.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol10.svg" />
             <Pause />
             <OuterP>
               ...our final answer, given by the
@@ -3017,9 +2921,7 @@ const Rest = () => {
               “bending into shape” the connector curves...
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol11.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol11.svg" />
             <Pause />
             <OuterP>
               ...to give them a slope of {" "}
@@ -3059,9 +2961,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_sketch_the_middle_b_sol12.svg" />
+            <Image src="/images/svg_ch4_sketch_the_middle_b_sol12.svg" />
           </Solution>
         </Exercise>
         <Exercise number={10}>
@@ -3116,9 +3016,7 @@ const Rest = () => {
               scaling:
             </OuterP>
             <Pause />
-            <Image
-              width="670.0px"
-              src="/images/svg_ch4_scaling_figure.svg" />
+            <Image src="/images/svg_ch4_scaling_figure.svg" />
             <Pause />
             <OuterP>
               The second graph truly is the first
@@ -3180,9 +3078,7 @@ const Rest = () => {
               greatest?
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_narrow_and_less_narrow_bends.svg" />
+            <Image src="/images/svg_ch4_narrow_and_less_narrow_bends.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -3191,9 +3087,7 @@ const Rest = () => {
               of the curve:
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_narrow_and_less_narrow_bends_steepest.svg" />
+            <Image src="/images/svg_ch4_narrow_and_less_narrow_bends_steepest.svg" />
             <Pause />
             <OuterP>
               On the other hand,
@@ -3211,9 +3105,7 @@ const Rest = () => {
               rate:
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_narrow_and_less_narrow_bends_curviest.svg" />
+            <Image src="/images/svg_ch4_narrow_and_less_narrow_bends_curviest.svg" />
             <Pause />
             <OuterP>
               (Well, believe us or not, but we're right!)
@@ -3231,9 +3123,7 @@ const Rest = () => {
               be a derivative of which other curve?
             </OuterP>
             <Pause />
-            <Image
-              width="1.2e3px"
-              src="/images/svg_ch4_cosine_curves.svg" />
+            <Image src="/images/svg_ch4_cosine_curves.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -3242,9 +3132,7 @@ const Rest = () => {
               blue is the derivative of the red:
             </OuterP>
             <Pause />
-            <Image
-              width="1.2e3px"
-              src="/images/svg_ch4_cosine_curves_blue_red_only.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_blue_red_only.svg" />
             <Pause />
             <OuterP>
               Likewise, the derivative of the blue
@@ -3296,9 +3184,7 @@ const Rest = () => {
               bump, not the other way around:
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_cosine_curves_cresting.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_cresting.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -3324,9 +3210,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_cosine_curves_two_dimensional_vel.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_two_dimensional_vel.svg" />
             <Pause />
             <OuterP>
               The velocities of the two shadows
@@ -3418,9 +3302,7 @@ const Rest = () => {
               velocity to draw an arrow emanating
               from a point on the curve, this arrow
               is tangent to the curve, and the
-              <ImageRight
-                width="800.0px"
-                src="/images/svg_ch4_cosine_curves_tangent_velocity_cloud.svg" />
+              <ImageRight src="/images/svg_ch4_cosine_curves_tangent_velocity_cloud.svg" />
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -3507,9 +3389,7 @@ const Rest = () => {
               circle at the origin):
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_cosine_curves_unit_circle.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_unit_circle.svg" />
             <Pause />
             <OuterP>
               The
@@ -3523,9 +3403,7 @@ const Rest = () => {
               of the particles are as follows:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_cosine_curves_unit_circle_position_vectors.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_unit_circle_position_vectors.svg" />
             <Pause />
             <OuterP>
               (You can't really see it so well, but
@@ -3548,9 +3426,7 @@ const Rest = () => {
               are as follows:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_cosine_curves_unit_circle_velocity_vectors.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_unit_circle_velocity_vectors.svg" />
             <Pause />
             <OuterP>
               (Like the position vectors, the
@@ -3584,9 +3460,7 @@ const Rest = () => {
               that the second coordinate is equal to the
               vertical displacement from the tail of the
               arrow to the head of the arrow.)
-              <ImageRight
-                width="750.0px"
-                src="/images/svg_ch4_cosine_curves_vector_illustration_cloud.svg" />
+              <ImageRight src="/images/svg_ch4_cosine_curves_vector_illustration_cloud.svg" />
             </OuterP>
             <OuterP class="indent-10">
               Due to the 90° rotations and uniform
@@ -3604,9 +3478,7 @@ const Rest = () => {
               position vector:
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_cosine_curves_unit_circle_equality.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_unit_circle_equality.svg" />
             <Pause />
             <OuterP>
               From the {" "}
@@ -3722,9 +3594,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="1.2e3px"
-              src="/images/svg_ch4_cosine_curves_verified.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_verified.svg" />
             <Pause />
             <OuterP>
               If we add the {" "}
@@ -3760,9 +3630,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="1.2e3px"
-              src="/images/svg_ch4_cosine_curves_rolling_wheel.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_rolling_wheel.svg" />
             <Pause />
             <OuterP>
               (If the above just looks like a
@@ -3779,9 +3647,7 @@ const Rest = () => {
               figure again:
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_cosine_curves_cresting.svg" />
+            <Image src="/images/svg_ch4_cosine_curves_cresting.svg" />
             <Pause />
             <OuterP>
               The derivative is
@@ -4555,9 +4421,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="700.0px"
-              src="/images/svg_ch4_f_g_composition_units.svg" />
+            <Image src="/images/svg_ch4_f_g_composition_units.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -4593,9 +4457,7 @@ const Rest = () => {
               while inventing some numbers:
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_f_g_first_example_of_f.svg" />
+            <Image src="/images/svg_ch4_f_g_first_example_of_f.svg" />
             <Pause />
             <OuterP>
               In the above the rat earns {" "}
@@ -4616,9 +4478,7 @@ const Rest = () => {
               “unlocks”:
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_f_g_second_example_of_f.svg" />
+            <Image src="/images/svg_ch4_f_g_second_example_of_f.svg" />
             <Pause />
             <OuterP>
               In our mathematicians' imaginations, however, {" "}
@@ -4631,9 +4491,7 @@ const Rest = () => {
               parts of the course that momentarily lose you money):
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_f_g_third_example_of_f.svg" />
+            <Image src="/images/svg_ch4_f_g_third_example_of_f.svg" />
             <Pause />
             <OuterP>
               (Etc.)
@@ -4730,13 +4588,9 @@ const Rest = () => {
               {" "} have these graphs:
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_f_g_actual_exercise_f.svg" />
+            <Image src="/images/svg_ch4_f_g_actual_exercise_f.svg" />
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_f_g_actual_exercise_g.svg" />
+            <Image src="/images/svg_ch4_f_g_actual_exercise_g.svg" />
             <Pause />
             <OuterP>
               In this case what is {" "}
@@ -4776,9 +4630,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_f_g_actual_exercise_g_with_slope.svg" />
+            <Image src="/images/svg_ch4_f_g_actual_exercise_g_with_slope.svg" />
             <Pause />
             <OuterP>
               Moreover at {" "}
@@ -4809,9 +4661,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_f_g_actual_exercise_f_with_slope.svg" />
+            <Image src="/images/svg_ch4_f_g_actual_exercise_f_with_slope.svg" />
             <Pause />
             <OuterP>
               Multiplying the {" "}
@@ -4852,7 +4702,6 @@ const Rest = () => {
               \left(&#123;5\over 3\up&#123;1&#125;&#125;\left[&#123;\te&#123;m&#125; \over \te&#123;s&#125;&#125;\right]\right) \times \left(&#123;1 \over 10\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;m&#125;&#125;\right]\right) = &#123;5\over 30\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;s&#125;&#125;\right].
               $$
               <ImageRight
-                width="700.0px"
                 src="/images/svg_ch4_f_g_actual_exercise_cloud.svg"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
@@ -5212,9 +5061,7 @@ const Rest = () => {
               clockwise:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_velocity_vector_radius_2_speed_3_sketch_1.svg" />
+            <Image src="/images/svg_velocity_vector_radius_2_speed_3_sketch_1.svg" />
             <Pause />
             <OuterP>
               If we bring the tail of the vector back to
@@ -5236,9 +5083,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_velocity_vector_radius_2_speed_3_centered.svg" />
+            <Image src="/images/svg_velocity_vector_radius_2_speed_3_centered.svg" />
             <Pause />
             <OuterP>
               Lastly, the velocity vector does a full revolution
@@ -5341,9 +5186,7 @@ const Rest = () => {
               the path of the velocity vector:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_what_is_the_acceleration_vector_uncentered.svg" />
+            <Image src="/images/svg_ch4_what_is_the_acceleration_vector_uncentered.svg" />
             <Pause />
             <OuterP>
               Or, if we translate the acceleration vector back
@@ -5351,9 +5194,7 @@ const Rest = () => {
               (either way is fine):
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_what_is_the_acceleration_vector_centered.svg" />
+            <Image src="/images/svg_ch4_what_is_the_acceleration_vector_centered.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -5412,13 +5253,9 @@ const Rest = () => {
               (top) or brought back to the origin (bottom):
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_velocity_vector_radius_3_speed_2_uncentered.svg" />
+            <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_uncentered.svg" />
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_velocity_vector_radius_3_speed_2_centered.svg" />
+            <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_centered.svg" />
             <Pause />
             <OuterP>
               Moreover (!) the speed of the velocity vector is
@@ -5453,13 +5290,9 @@ const Rest = () => {
               velocity vector), and looks like so (in either representation):
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_velocity_vector_radius_3_speed_2_acceleration_uncentered.svg" />
+            <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_acceleration_uncentered.svg" />
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_velocity_vector_radius_3_speed_2_acceleration_centered.svg" />
+            <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_acceleration_centered.svg" />
             <Pause />
             <OuterP>
               Lastly the acceleration vector has speed
@@ -5495,13 +5328,9 @@ const Rest = () => {
               {" "} away:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_uncentered.svg" />
+            <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_uncentered.svg" />
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_centered.svg" />
+            <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_jerk_centered.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -5527,9 +5356,7 @@ const Rest = () => {
               {" "} between the successive radii:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_velocity_vector_radius_3_speed_2_with_position.svg" />
+            <Image src="/images/svg_ch4_velocity_vector_radius_3_speed_2_with_position.svg" />
           </Solution>
         </Exercise>
         <Exercise number={22}>
@@ -5841,9 +5668,7 @@ const Rest = () => {
               it's unimportant):
             </OuterP>
             <Pause />
-            <Image
-              width="540.0px"
-              src="/images/svg_ch4_ex_general_circular_motion_uncentered.svg">
+            <Image src="/images/svg_ch4_ex_general_circular_motion_uncentered.svg">
               <p>
                 But if the position circle is centered at {" "}
                 <NoBreak>
@@ -5857,9 +5682,7 @@ const Rest = () => {
               </p>
             </Image>
             <Pause />
-            <Image
-              width="540.0px"
-              src="/images/svg_ch4_ex_general_circular_motion_centered.svg" />
+            <Image src="/images/svg_ch4_ex_general_circular_motion_centered.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -6065,9 +5888,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="400.0px"
-              src="/images/svg_ch4_ex_four_particles_radius_3.svg" />
+            <Image src="/images/svg_ch4_ex_four_particles_radius_3.svg" />
             <Pause />
             <OuterP>
               Sketch the position vector, velocity vector,
@@ -6133,9 +5954,7 @@ const Rest = () => {
               particle—are therefore as follows:
             </OuterP>
             <Pause />
-            <Image
-              width="520.0px"
-              src="/images/svg_ch4_ex_four_particles_radius_3_four_minis.svg" />
+            <Image src="/images/svg_ch4_ex_four_particles_radius_3_four_minis.svg" />
             <Pause />
             <OuterP>
               (In particular, the purple particle's position
@@ -6185,9 +6004,7 @@ const Rest = () => {
               this simplifies...
             </OuterP>
             <Pause />
-            <Image
-              width="349.056px"
-              src="/images/svg_ch4_ex_1_over_L_times_L_over_T_simplification.svg" />
+            <Image src="/images/svg_ch4_ex_1_over_L_times_L_over_T_simplification.svg" />
             <Pause />
             <OuterP>
               ...down to dimensions of “one over time”.
@@ -6253,9 +6070,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="400.0px"
-              src="/images/svg_ch4_ex_one_particle_at_1.svg" />
+            <Image src="/images/svg_ch4_ex_one_particle_at_1.svg" />
             <Pause />
             <OuterP>
               If we play time backward, will the particle
@@ -6286,9 +6101,7 @@ const Rest = () => {
               ):
             </OuterP>
             <Pause />
-            <Image
-              width="470.0px"
-              src="/images/svg_ch4_ex_one_particle_interval_subdivision.svg" />
+            <Image src="/images/svg_ch4_ex_one_particle_interval_subdivision.svg" />
             <Pause />
             <OuterP>
               The interval from {" "}
@@ -6311,7 +6124,6 @@ const Rest = () => {
               &#123;0.5 \over 1&#125; = 0.5
               $$
               <ImageLeft
-                width="400.0px"
                 src="/images/svg_ch4_one_particle_speed_equals_time_cloud.svg"
                 offset_x="6em"
                 compensate_offset_x_for_large_text_columns={true} />
@@ -6549,9 +6361,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_three_one_dimensional_particles.svg" />
+            <Image src="/images/svg_ch4_three_one_dimensional_particles.svg" />
             <Pause />
             <OuterP>
               If the velocity of the yellow particle is set to track
@@ -6606,9 +6416,7 @@ const Rest = () => {
               accelerating rate:
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_three_one_dimensional_particles_blue_yellow.svg" />
+            <Image src="/images/svg_ch4_three_one_dimensional_particles_blue_yellow.svg" />
             <Pause />
             <OuterP>
               If we add the graph of the red particle to the
@@ -6635,9 +6443,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="600.0px"
-              src="/images/svg_ch4_three_one_dimensional_particles_blue_yellow_red.svg" />
+            <Image src="/images/svg_ch4_three_one_dimensional_particles_blue_yellow_red.svg" />
             <Pause />
             <OuterP>
               Indeed, for the red graph,
@@ -6700,9 +6506,7 @@ const Rest = () => {
               and vice-versa:
             </OuterP>
             <Pause />
-            <Image
-              width="526.0px"
-              src="/images/svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg" />
+            <Image src="/images/svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg" />
             <Pause />
             <OuterP>
               Also note that all graphs have slopes of
@@ -6761,9 +6565,7 @@ const Rest = () => {
               {" "} in the plane:
             </OuterP>
             <Pause />
-            <Image
-              width="387.198px"
-              src="/images/svg_ch4_circle_at_2_4.svg" />
+            <Image src="/images/svg_ch4_circle_at_2_4.svg" />
             <Pause />
             <OuterP>
               The velocity of each particle is set to
@@ -6817,7 +6619,6 @@ const Rest = () => {
                 .
               </NoBreak>
               <ImageRight
-                width="500.0px"
                 src="/images/svg_ch4_circle_at_2_4_with_some_vectors_cloud.svg"
                 offset_y="150px"
                 offset_x="-0.5em" />
@@ -6903,9 +6704,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="520.0px"
-              src="/images/svg_ch4_circle_at_2_4_white_version.svg" />
+            <Image src="/images/svg_ch4_circle_at_2_4_white_version.svg" />
             <Pause />
             <OuterP>
               The black particles, for their part, are
@@ -6925,9 +6724,7 @@ const Rest = () => {
               of different colors, like a UNO card:
             </OuterP>
             <Pause />
-            <Image
-              width="520.0px"
-              src="/images/svg_ch4_circle_at_2_4_black_version.svg" />
+            <Image src="/images/svg_ch4_circle_at_2_4_black_version.svg" />
             <Pause />
             <OuterP>
               Within each group we set the velocity of
@@ -6995,7 +6792,6 @@ const Rest = () => {
             <CentralDisplayItalic>
               length of the position vector
               <ImageRight
-                width="250.0px"
                 src="/images/svg_ch4_ex_circle_at_2_4_position_equals_velocity_cloud.svg"
                 offset_x="-4em" />
             </CentralDisplayItalic>
@@ -7029,9 +6825,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="520.0px"
-              src="/images/svg_ch4_circle_at_2_4_UNO_with_gradated_line.svg" />
+            <Image src="/images/svg_ch4_circle_at_2_4_UNO_with_gradated_line.svg" />
             <Pause />
             <OuterP>
               ...indicating the distance to the origin,
@@ -7042,9 +6836,7 @@ const Rest = () => {
               its position on this line:
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_circle_at_2_4_UNO_flat_half_line.svg" />
+            <Image src="/images/svg_ch4_circle_at_2_4_UNO_flat_half_line.svg" />
             <Pause />
             <OuterP>
               The behavior of such a particle is
@@ -7072,7 +6864,6 @@ const Rest = () => {
               {" "}
               (!!)
               <ImageLeft
-                width="330.0px"
                 src="/images/svg_ch4_ex_circle_at_2_4_sqrt_20_cloud.svg"
                 line={-1} />
             </OuterP>
@@ -8293,9 +8084,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="470.0px"
-              src="/images/svg_ch4_circle_at_2_4_solution_curves.svg" />
+            <Image src="/images/svg_ch4_circle_at_2_4_solution_curves.svg" />
             <Pause />
             <OuterP>
               The above plot goes from {" "}
@@ -8337,7 +8126,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplay>
-              “a [kind of] four-particle explosion”
+              “
+              a [kind of] four-particle explosion
+              ”
             </CentralDisplay>
             <Pause />
             <OuterP>
@@ -8438,9 +8229,7 @@ const Rest = () => {
               Recall the curves from Exercise 12:
             </OuterP>
             <Pause />
-            <Image
-              width="830.0px"
-              src="/images/svg_ch4_ex_cosine_recall.svg" />
+            <Image src="/images/svg_ch4_ex_cosine_recall.svg" />
             <Pause />
             <OuterP>
               The blue curve is the derivative of the red curve
@@ -8457,7 +8246,6 @@ const Rest = () => {
               a
               $$
               <ImageLeft
-                width="550.0px"
                 src="/images/svg_ch4_ex_cosine_recall_cloud.svg"
                 offset_x="200px"
                 compensate_offset_x_for_large_text_columns={true} />
@@ -8654,7 +8442,6 @@ const Rest = () => {
                     </NoBreak>
                   </i>
                   <ImageLeft
-                    width="430.0px"
                     src="/images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg"
                     offset_x="4em" />
                 </li>
@@ -8825,9 +8612,7 @@ const Rest = () => {
               Or something else yet?
             </OuterP>
             <Pause />
-            <Image
-              width="1174.6px"
-              src="/images/svg_ch4_scaled_cosine_curves.svg" />
+            <Image src="/images/svg_ch4_scaled_cosine_curves.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9010,9 +8795,7 @@ const Rest = () => {
               convention), instead of 4:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_5_euler_position_vectors.svg" />
+            <Image src="/images/svg_ch4_5_euler_position_vectors.svg" />
             <Pause />
             <OuterP>
               The idea would be that the
@@ -9038,16 +8821,16 @@ const Rest = () => {
               velocity vectors would be as follows:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_5_euler_velocity_vectors.svg" />
+            <Image src="/images/svg_ch4_5_euler_velocity_vectors.svg" />
             <Pause />
             <OuterP>
               The velocity vectors are
             </OuterP>
             <Pause />
             <CentralDisplay>
-              NOT
+              N
+              O
+              T
             </CentralDisplay>
             <Pause />
             <OuterP>
@@ -9060,9 +8843,7 @@ const Rest = () => {
               to approximately these new positions:
             </OuterP>
             <Pause />
-            <Image
-              width="540.0px"
-              src="/images/svg_ch4_5_euler_after_1_10th.svg" />
+            <Image src="/images/svg_ch4_5_euler_after_1_10th.svg" />
             <Pause />
             <OuterP>
               In the next one-tenth unit of time we
@@ -9080,9 +8861,7 @@ const Rest = () => {
               lines:
             </OuterP>
             <Pause />
-            <Image
-              width="560.0px"
-              src="/images/svg_ch4_5_euler_after_2_10th.svg" />
+            <Image src="/images/svg_ch4_5_euler_after_2_10th.svg" />
             <Pause />
             <OuterP>
               Applying the same process for {" "}
@@ -9093,9 +8872,7 @@ const Rest = () => {
               steps:
             </OuterP>
             <Pause />
-            <Image
-              width="560.0px"
-              src="/images/svg_ch4_5_euler_after_10_10th.svg" />
+            <Image src="/images/svg_ch4_5_euler_after_10_10th.svg" />
             <Pause />
             <OuterP>
               To be clear, in the above figure, the
@@ -9103,18 +8880,14 @@ const Rest = () => {
               fifth step...
             </OuterP>
             <Pause />
-            <Image
-              width="560.0px"
-              src="/images/svg_ch4_5_euler_after_5_10th.svg" />
+            <Image src="/images/svg_ch4_5_euler_after_5_10th.svg" />
             <Pause />
             <OuterP>
               ...is obtained by starting from the red
               particle's position at the fourth step...
             </OuterP>
             <Pause />
-            <Image
-              width="560.0px"
-              src="/images/svg_ch4_5_euler_after_4_10th.svg" />
+            <Image src="/images/svg_ch4_5_euler_after_4_10th.svg" />
             <Pause />
             <OuterP>
               ...and adding one-tenth of the approximation
@@ -9131,9 +8904,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="560.0px"
-              src="/images/svg_ch4_5_euler_after_4_10th_b.svg" />
+            <Image src="/images/svg_ch4_5_euler_after_4_10th_b.svg" />
             <Pause />
             <OuterP>
               ...and we do the same for each particle,
@@ -9168,9 +8939,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="560.0px"
-              src="/images/svg_ch4_5_euler_after_100_100th_blur.svg" />
+            <Image src="/images/svg_ch4_5_euler_after_100_100th_blur.svg" />
             <Pause />
             <OuterP>
               To visualize such a fine-grained
@@ -9199,18 +8968,14 @@ const Rest = () => {
               approximation:
             </OuterP>
             <Pause />
-            <Image
-              width="560.0px"
-              src="/images/svg_ch4_5_euler_after_100_100th_points.svg" />
+            <Image src="/images/svg_ch4_5_euler_after_100_100th_points.svg" />
             <Pause />
             <OuterP>
               Zooming in a bit (or else we still can't
               see anything):
             </OuterP>
             <Pause />
-            <Image
-              width="560.0px"
-              src="/images/svg_ch4_5_euler_after_100_100th_zoomed.svg" />
+            <Image src="/images/svg_ch4_5_euler_after_100_100th_zoomed.svg" />
             <Pause />
             <OuterP>
               In any case, even the {" "}
@@ -9238,7 +9003,6 @@ const Rest = () => {
               form doubly-infinite spirals—in to infinity,
               out to infinity.
               <ImageLeft
-                width="490.0px"
                 offset_x="1.5em"
                 src="/images/svg_ch4_5_euler_spiral_figure.svg"
                 children_x="50%"
@@ -9510,9 +9274,7 @@ const Rest = () => {
               curves:
             </OuterP>
             <Pause />
-            <Image
-              width="800.0px"
-              src="/images/svg_ch4_5_euler_final_graph.svg" />
+            <Image src="/images/svg_ch4_5_euler_final_graph.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -9635,9 +9397,7 @@ const Rest = () => {
               e.g., ...
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_5_euler_one_dimensional.svg" />
+            <Image src="/images/svg_ch4_5_euler_one_dimensional.svg" />
             <Pause />
             <OuterP>
               ...(the initial positions really don't
@@ -9712,12 +9472,8 @@ const Rest = () => {
             <Pause />
             <CentralDisplayItalic>
               the whole is simpler than the parts
-              <ImageLeft
-                width="500.0px"
-                src="/images/svg_ch4_5_euler_hearts_left.svg" />
-              <ImageRight
-                width="500.0px"
-                src="/images/svg_ch4_5_euler_hearts_right.svg" />
+              <ImageLeft src="/images/svg_ch4_5_euler_hearts_left.svg" />
+              <ImageRight src="/images/svg_ch4_5_euler_hearts_right.svg" />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -9798,9 +9554,7 @@ const Rest = () => {
               with position vectors):
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_17_position_vectors.svg" />
+            <Image src="/images/svg_ch4_17_position_vectors.svg" />
             <Pause />
             <OuterP>
               Set the velocity of particle
@@ -9834,12 +9588,8 @@ const Rest = () => {
               vectors end up looking like so, for example:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_17_velocity_vector_1.svg">
-              <ImageRight
-                width="500.0px"
-                src="/images/svg_ch4_17_velocity_vector_1_cloud.svg" />
+            <Image src="/images/svg_ch4_17_velocity_vector_1.svg">
+              <ImageRight src="/images/svg_ch4_17_velocity_vector_1_cloud.svg" />
             </Image>
             <Pause />
             <OuterP>
@@ -9940,9 +9690,7 @@ const Rest = () => {
               of the particles look like so:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_17_paths.svg" />
+            <Image src="/images/svg_ch4_17_paths.svg" />
             <Pause />
             <OuterP>
               ...and if you take the {" "}
@@ -9974,9 +9722,7 @@ const Rest = () => {
               {" "} functions that look like so:
             </OuterP>
             <Pause />
-            <Image
-              width="900.0px"
-              src="/images/svg_ch4_17_actual_functions.svg" />
+            <Image src="/images/svg_ch4_17_actual_functions.svg" />
             <Pause />
             <OuterP>
               For example, the derivative of curve
@@ -9986,9 +9732,7 @@ const Rest = () => {
               , highlighted in blue:
             </OuterP>
             <Pause />
-            <Image
-              width="900.0px"
-              src="/images/svg_ch4_17_actual_functions_with_highlights.svg" />
+            <Image src="/images/svg_ch4_17_actual_functions_with_highlights.svg" />
             <Pause />
             <OuterP>
               ...and taking sixteen more derivatives
@@ -10039,9 +9783,7 @@ const Rest = () => {
               configuration:
             </OuterP>
             <Pause />
-            <Image
-              width="480.0px"
-              src="/images/svg_ch4_17_other_start.svg" />
+            <Image src="/images/svg_ch4_17_other_start.svg" />
             <Pause />
             <OuterP>
               To parse the above figure, understand
@@ -10093,7 +9835,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplay>
-              EXCEPT
+              E
+              XCEP
+              T
             </CentralDisplay>
             <Pause />
             <OuterP>
@@ -10115,9 +9859,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="880.0px"
-              src="/images/svg_ch4_17_other_start_paths.svg" />
+            <Image src="/images/svg_ch4_17_other_start_paths.svg" />
             <Pause />
             <OuterP>
               The particles shoot of to infinity in short
@@ -10199,9 +9941,7 @@ const Rest = () => {
               Add elements to the following drawing...
             </OuterP>
             <Pause />
-            <Image
-              width="456.0px"
-              src="/images/svg_ch4_newton_quotient_unfinished.svg" />
+            <Image src="/images/svg_ch4_newton_quotient_unfinished.svg" />
             <Pause />
             <OuterP>
               ...such that it becomes a “complete”
@@ -10226,9 +9966,7 @@ const Rest = () => {
               that appear in the fraction:
             </OuterP>
             <Pause />
-            <Image
-              width="456.0px"
-              src="/images/svg_ch4_newton_quotient_finished.svg" />
+            <Image src="/images/svg_ch4_newton_quotient_finished.svg" />
             <Pause />
             <OuterP>
               The point is: the fraction
@@ -10256,7 +9994,6 @@ const Rest = () => {
               (x, f(x))
               $$
               <ImageLeft
-                width="400.0px"
                 src="/images/svg_ch4_new_quatient_x_fx_cloud.svg"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
@@ -10270,7 +10007,6 @@ const Rest = () => {
               (x + h, f(x + h))
               $$
               <ImageRight
-                width="400.0px"
                 offset_y="-0.5em"
                 src="/images/svg_ch4_new_quatient_x_fxplush_cloud.svg"
                 compensate_offset_x_for_large_text_columns={true} />
@@ -10437,9 +10173,7 @@ const Rest = () => {
               time):
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_RATS_timeline.svg" />
+            <Image src="/images/svg_ch4_RATS_timeline.svg" />
             <Pause />
             <OuterP>
               We also consider quantities {" "}
@@ -10477,9 +10211,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="450.0px"
-              src="/images/svg_ch4_RATS_timeline_with_A_B.svg" />
+            <Image src="/images/svg_ch4_RATS_timeline_with_A_B.svg" />
             <Pause />
             <OuterP>
               More specifically, we are interested in
@@ -10508,9 +10240,7 @@ const Rest = () => {
               {" "} as
             </OuterP>
             <Pause />
-            <Image
-              width="180.0px"
-              src="/images/svg_ch4_RATS_rats.svg" />
+            <Image src="/images/svg_ch4_RATS_rats.svg" />
             <Pause />
             <OuterP>
               that are crossing a hallway surveyed by
@@ -10565,7 +10295,6 @@ const Rest = () => {
               </NoBreak>
               {" "} line, to be clear):
               <ImageLeft
-                width="750.0px"
                 offset_x="0.5em"
                 offset_y="-0.5em"
                 src="/images/svg_ch4_RATS_corridor_cloud.svg" />
@@ -10670,9 +10399,7 @@ const Rest = () => {
               equation:
             </OuterP>
             <Pause />
-            <Image
-              width="700.0px"
-              src="/images/svg_ch4_RATS_equation.svg" />
+            <Image src="/images/svg_ch4_RATS_equation.svg" />
             <Pause />
             <OuterP>
               If we divide the above equation by {" "}
@@ -10706,9 +10433,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="700.0px"
-              src="/images/svg_ch4_RATS_equation_over_Dt.svg" />
+            <Image src="/images/svg_ch4_RATS_equation_over_Dt.svg" />
             <Pause />
             <OuterP>
               As {" "}
@@ -10845,9 +10570,7 @@ const Rest = () => {
               ), and
             </OuterP>
             <Pause />
-            <Image
-              width="400.0px"
-              src="/images/svg_ch4_RATS_over_Dt_first_term.svg" />
+            <Image src="/images/svg_ch4_RATS_over_Dt_first_term.svg" />
             <Pause />
             <OuterP>
               has the form
@@ -10867,16 +10590,12 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              <ImageLeft
-                width="500.0px"
-                src="/images/svg_ch4_RATS_for_f_equals_AB_cloud.svg" />
+              <ImageLeft src="/images/svg_ch4_RATS_for_f_equals_AB_cloud.svg" />
             </OuterP>
             <OuterP class="indent-10">
               The first term on the right-hand side, for
               its part, approaches
-              <ImageRight
-                width="900.0px"
-                src="/images/svg_ch4_RATS_first_term_cloud.svg" />
+              <ImageRight src="/images/svg_ch4_RATS_first_term_cloud.svg" />
             </OuterP>
             <OuterP class="indent-10">
               as {" "}
@@ -10968,9 +10687,7 @@ const Rest = () => {
               second term on the right-hand side!
               Symmetrically to the first term on the
               right-hand side, the second term approaches
-              <ImageRight
-                width="900.0px"
-                src="/images/svg_ch4_RATS_second_term_cloud.svg" />
+              <ImageRight src="/images/svg_ch4_RATS_second_term_cloud.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -11945,7 +11662,6 @@ const Rest = () => {
               A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
               $$
               <ImageRight
-                width="700.0px"
                 src="/images/svg_ch4_big_product_parchment_cloud.svg"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
@@ -11986,9 +11702,7 @@ const Rest = () => {
               middle of the product:
             </OuterP>
             <Pause />
-            <Image
-              width="800.0px"
-              src="/images/svg_ch4_big_product_fraction_outline.svg" />
+            <Image src="/images/svg_ch4_big_product_fraction_outline.svg" />
             <Pause />
             <OuterP>
               This is seen to be a Newton quotient
@@ -12080,9 +11794,7 @@ const Rest = () => {
               at the beginning of the product...
             </OuterP>
             <Pause />
-            <Image
-              width="800.0px"
-              src="/images/svg_ch4_big_product_prefix_outline.svg" />
+            <Image src="/images/svg_ch4_big_product_prefix_outline.svg" />
             <Pause />
             <OuterP>
               ...; here the
@@ -12220,9 +11932,7 @@ const Rest = () => {
               {" "} does not even appear:
             </OuterP>
             <Pause />
-            <Image
-              width="800.0px"
-              src="/images/svg_ch4_big_product_suffix_outline.svg" />
+            <Image src="/images/svg_ch4_big_product_suffix_outline.svg" />
             <Pause />
             <OuterP>
               Because {" "}
@@ -12249,9 +11959,7 @@ const Rest = () => {
               therefore:
             </OuterP>
             <Pause />
-            <Image
-              width="700.0px"
-              src="/images/svg_ch4_big_product_final_answer.svg" />
+            <Image src="/images/svg_ch4_big_product_final_answer.svg" />
             <Pause />
             <OuterP>
               ...with a lone {" "}
@@ -12295,9 +12003,7 @@ const Rest = () => {
               of a unit circle.
             </OuterP>
             <Pause />
-            <Image
-              width="1240.0px"
-              src="/images/svg_ch4_cosine_for_eta.svg" />
+            <Image src="/images/svg_ch4_cosine_for_eta.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -12308,9 +12014,7 @@ const Rest = () => {
               length of this yellow interval:
             </OuterP>
             <Pause />
-            <Image
-              width="1240.0px"
-              src="/images/svg_ch4_cosine_for_eta_with_yellow.svg" />
+            <Image src="/images/svg_ch4_cosine_for_eta_with_yellow.svg" />
             <Pause />
             <OuterP>
               One revolution around the circle is also
@@ -12319,9 +12023,7 @@ const Rest = () => {
               on the graph:
             </OuterP>
             <Pause />
-            <Image
-              width="1240.0px"
-              src="/images/svg_ch4_cosine_for_eta_with_two_yellows.svg" />
+            <Image src="/images/svg_ch4_cosine_for_eta_with_two_yellows.svg" />
             <Pause />
             <OuterP>
               Going a bit further, {" "}
@@ -12347,9 +12049,7 @@ const Rest = () => {
               you zoom in):
             </OuterP>
             <Pause />
-            <Image
-              width="1240.0px"
-              src="/images/svg_ch4_cosine_for_eta_revealed.svg" />
+            <Image src="/images/svg_ch4_cosine_for_eta_revealed.svg" />
             <Pause />
             <OuterP>
               Therefore
@@ -12431,9 +12131,7 @@ const Rest = () => {
               revolution...
             </OuterP>
             <Pause />
-            <Image
-              width="1240.0px"
-              src="/images/svg_ch4_cosine_for_eta_tau_verification.svg" />
+            <Image src="/images/svg_ch4_cosine_for_eta_tau_verification.svg" />
             <Pause />
             <OuterP>
               ...whereas
@@ -12458,9 +12156,7 @@ const Rest = () => {
               length of a quarter-revolution:
             </OuterP>
             <Pause />
-            <Image
-              width="1240.0px"
-              src="/images/svg_ch4_cosine_for_eta_eta_verification.svg" />
+            <Image src="/images/svg_ch4_cosine_for_eta_eta_verification.svg" />
             <Pause />
             <OuterP>
               (So, we have some secondary “visual confirmation”
@@ -12479,18 +12175,13 @@ const Rest = () => {
               vertical velocities...
             </OuterP>
             <Pause />
-            <Image
-              width="1052.0px"
-              src="/images/svg_ch4_pacman1_hor0.svg">
+            <Image src="/images/svg_ch4_pacman1_hor0.svg">
               <ImageLeft
-                width="800.0px"
                 offset_y="1em"
                 src="/images/svg_ch4_pacman1_x_prime_t_scloud.svg" />
             </Image>
             <Pause />
-            <Image
-              width="1052.0px"
-              src="/images/svg_ch4_pacman1_ver0.svg" />
+            <Image src="/images/svg_ch4_pacman1_ver0.svg" />
             <Pause />
             <OuterP>
               ...of PACMAN, with unit of
@@ -12516,7 +12207,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="590px"
               src="/images/svg_ch4_pacman1_maze.svg" />
             <Pause />
@@ -12548,13 +12238,9 @@ const Rest = () => {
               or up) and red (negative displacements, going to the left or down):
             </OuterP>
             <Pause />
-            <Image
-              width="420.0px"
-              src="/images/svg_ch4_pacman1_hor1.svg" />
+            <Image src="/images/svg_ch4_pacman1_hor1.svg" />
             <Pause />
-            <Image
-              width="430.0px"
-              src="/images/svg_ch4_pacman1_ver1.svg" />
+            <Image src="/images/svg_ch4_pacman1_ver1.svg" />
             <Pause />
             <OuterP>
               We can estimate the duration of each
@@ -12562,13 +12248,9 @@ const Rest = () => {
               (mistakes of estimation can be made, we shall recover):
             </OuterP>
             <Pause />
-            <Image
-              width="420.0px"
-              src="/images/svg_ch4_pacman1_hor2.svg" />
+            <Image src="/images/svg_ch4_pacman1_hor2.svg" />
             <Pause />
-            <Image
-              width="430.0px"
-              src="/images/svg_ch4_pacman1_ver2.svg" />
+            <Image src="/images/svg_ch4_pacman1_ver2.svg" />
             <Pause />
             <OuterP>
               We can also estimate the velocity to be
@@ -12600,7 +12282,6 @@ const Rest = () => {
               (\te&#123;velocity&#125;) \times (\te&#123;amount of time&#125;) = (\te&#123;displacement&#125;)
               $$
               <ImageRight
-                width="800.0px"
                 src="/images/svg_ch4_pacman1_velocity_times_amt_time_cloud.svg"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
@@ -12625,9 +12306,7 @@ const Rest = () => {
               <Math>
                 $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.5\te&#123;s&#125;\,\,=\,\,-3.375\,\te&#123;cells&#125;$
               </Math>
-              <ImageRight
-                width="350.0px"
-                src="/images/svg_ch4_pacman1_cells_per_second_times_seconds_cloud.svg" />
+              <ImageRight src="/images/svg_ch4_pacman1_cells_per_second_times_seconds_cloud.svg" />
             </CentralDisplay>
             <Pause />
             <CentralDisplay>
@@ -12686,9 +12365,7 @@ const Rest = () => {
               imply the following set of initial motions:
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_pacman1_initial_displacements_before_rounding.svg" />
+            <Image src="/images/svg_ch4_pacman1_initial_displacements_before_rounding.svg" />
             <Pause />
             <OuterP>
               But these are approximate numbers and the
@@ -12863,9 +12540,7 @@ const Rest = () => {
               measurement, the initial motions must be:
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_pacman1_initial_motions.svg" />
+            <Image src="/images/svg_ch4_pacman1_initial_motions.svg" />
             <Pause />
             <OuterP>
               The maze fits these constraints in only two places
@@ -12893,7 +12568,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="590px"
               src="/images/svg_ch4_pacman1_maze_two_possibilities.svg" />
             <Pause />
@@ -12925,13 +12599,9 @@ const Rest = () => {
               respectively:
             </OuterP>
             <Pause />
-            <Image
-              width="569.0px"
-              src="/images/svg_ch4_pacman1_hor3.svg" />
+            <Image src="/images/svg_ch4_pacman1_hor3.svg" />
             <Pause />
-            <Image
-              width="569.0px"
-              src="/images/svg_ch4_pacman1_ver3.svg" />
+            <Image src="/images/svg_ch4_pacman1_ver3.svg" />
             <Pause />
             <OuterP>
               (Nb: Imagine translating these intervals to the left or right until
@@ -12955,7 +12625,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="590px"
               src="/images/svg_ch4_pacman1_maze_would_collide.svg" />
             <Pause />
@@ -12979,7 +12648,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="590px"
               src="/images/svg_ch4_pacman1_maze_bring_around.svg" />
             <Pause />
@@ -13048,7 +12716,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="590px"
               src="/images/svg_ch4_pacman1_maze_final_solution.svg" />
             <Pause />
@@ -13083,7 +12750,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="551px"
               src="/images/svg_ch4_pacman2_maze.svg" />
             <Pause />
@@ -13094,9 +12760,7 @@ const Rest = () => {
               change—note that green is the vertical velocity)...
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein.svg" />
             <Pause />
             <OuterP>
               ...and asking for Pacman's position at {" "}
@@ -13157,9 +12821,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_at_23_7.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_at_23_7.svg" />
             <Pause />
             <OuterP>
               The velocity vector (cf. Exercise 12) is therefore about
@@ -13193,7 +12855,6 @@ const Rest = () => {
               \sqrt&#123;4.8^2 + 4.8^2&#125; = \sqrt&#123;2&#125; \times 4.8 = 6.788...
               $$
               <ImageLeft
-                width="500.0px"
                 src="/images/svg_ch4_pacman2_4_point_8_cloud.svg"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
@@ -13245,9 +12906,7 @@ const Rest = () => {
               cells per second:
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_at_26.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_at_26.svg" />
             <Pause />
             <OuterP>
               This gives a speed of
@@ -13284,9 +12943,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_at_27_and_30.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_at_27_and_30.svg" />
             <Pause />
             <OuterP>
               The speed at {" "}
@@ -13337,9 +12994,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_at_31.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_at_31.svg" />
             <Pause />
             <OuterP>
               This yields a speed of
@@ -13388,9 +13043,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_first_big_purple.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_first_big_purple.svg" />
             <Pause />
             <OuterP>
               Both the {" "}
@@ -13413,9 +13066,7 @@ const Rest = () => {
               and ends with horizontal motion:
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_first_big_purple_annotations.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_first_big_purple_annotations.svg" />
             <Pause />
             <OuterP>
               Thus Pacman starts the curve going up, and ends the curve
@@ -13514,7 +13165,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="551px"
               src="/images/svg_ch4_pacman2_upper_left_highlight.svg" />
             <Pause />
@@ -13524,9 +13174,7 @@ const Rest = () => {
               rightward and ends downward:
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_second_big_purple.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_second_big_purple.svg" />
             <Pause />
             <OuterP>
               ...this second curve must, of course, be the
@@ -13535,7 +13183,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="551px"
               src="/images/svg_ch4_pacman2_upper_right_highlight.svg" />
             <Pause />
@@ -13545,9 +13192,7 @@ const Rest = () => {
               with rightward motion:
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_first_warning_purple.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_first_warning_purple.svg" />
             <Pause />
             <OuterP>
               In fact, it is also strange that Pacman {" "}
@@ -13559,9 +13204,7 @@ const Rest = () => {
               starts at the leftmost edge of the maze):
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_second_warning_purple.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_second_warning_purple.svg" />
             <Pause />
             <OuterP>
               Looking back over our work,
@@ -13651,7 +13294,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="551px"
               src="/images/svg_ch4_pacman2_corrected_highlights.svg" />
             <Pause />
@@ -13668,9 +13310,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_third_big_purple.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_third_big_purple.svg" />
             <Pause />
             <OuterP>
               Indeed, the curve lasts {" "}
@@ -13711,7 +13351,6 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              width="1150.0px"
               height="551px"
               src="/images/svg_ch4_pacman2_continued_highlights.svg" />
             <Pause />
@@ -13720,27 +13359,21 @@ const Rest = () => {
               re-enters the curve (going right and up a tiny bit):
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_back_in_purple.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_back_in_purple.svg" />
             <Pause />
             <OuterP>
               But then changes again, and re-exits the curve
               (going left and down a tiny bit):
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_back_out_purple.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_back_out_purple.svg" />
             <Pause />
             <OuterP>
               Then Pacman goes left-and-then-right-again by
               some small amount:
             </OuterP>
             <Pause />
-            <Image
-              width="1030.0px"
-              src="/images/svg_ch4_pacman2_frankenstein_back_out_purple.svg" />
+            <Image src="/images/svg_ch4_pacman2_frankenstein_back_out_purple.svg" />
             <Pause />
             <OuterP>
               At this point—and in particular at
@@ -13789,9 +13422,7 @@ const Rest = () => {
               if its second derivative has this graph (broadly):
             </OuterP>
             <Pause />
-            <Image
-              width="1.0e3px"
-              src="/images/svg_ch4_one_long_line.svg" />
+            <Image src="/images/svg_ch4_one_long_line.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -13823,9 +13454,7 @@ const Rest = () => {
               does say “broadly” anyway):
             </OuterP>
             <Pause />
-            <Image
-              width="1.0e3px"
-              src="/images/svg_ch4_one_long_line_with_purple.svg" />
+            <Image src="/images/svg_ch4_one_long_line_with_purple.svg" />
             <Pause />
             <OuterP>
               As
@@ -13856,9 +13485,7 @@ const Rest = () => {
               gives the total change in slope:
             </OuterP>
             <Pause />
-            <Image
-              width="1.0e3px"
-              src="/images/svg_ch4_one_long_line_positive_area.svg" />
+            <Image src="/images/svg_ch4_one_long_line_positive_area.svg" />
             <Pause />
             <OuterP>
               (We won't argue this right now, but it's
@@ -13876,9 +13503,7 @@ const Rest = () => {
               to the other:
             </OuterP>
             <Pause />
-            <Image
-              width="1.0e3px"
-              src="/images/svg_ch4_one_long_line_negative_area.svg" />
+            <Image src="/images/svg_ch4_one_long_line_negative_area.svg" />
             <Pause />
             <OuterP>
               In any case the areas are all the same {" "}
@@ -13916,9 +13541,7 @@ const Rest = () => {
                 ),
               </NoBreak>
               {" "} and
-              <ImageRight
-                width="900.0px"
-                src="/images/svg_ch4_one_long_line_a_is_about_1_cloud.svg" />
+              <ImageRight src="/images/svg_ch4_one_long_line_a_is_about_1_cloud.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -13969,12 +13592,8 @@ const Rest = () => {
               the background):
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_one_long_line_solution_sketch_1.svg">
-              <ImageLeft
-                width="200.0px"
-                src="/images/svg_ch4_one_long_line_c_is_approx_0_point_2_cloud.svg" />
+            <Image src="/images/svg_ch4_one_long_line_solution_sketch_1.svg">
+              <ImageLeft src="/images/svg_ch4_one_long_line_c_is_approx_0_point_2_cloud.svg" />
             </Image>
             <Pause />
             <OuterP>
@@ -14023,12 +13642,8 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_one_long_line_solution_sketch_2.svg">
-              <ImageLeft
-                width="200.0px"
-                src="/images/svg_ch4_one_long_line_c_is_approx_minus_a_over_2_cloud.svg" />
+            <Image src="/images/svg_ch4_one_long_line_solution_sketch_2.svg">
+              <ImageLeft src="/images/svg_ch4_one_long_line_c_is_approx_minus_a_over_2_cloud.svg" />
             </Image>
             <Pause />
             <OuterP>
@@ -14054,9 +13669,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              width="500.0px"
-              src="/images/svg_ch4_one_long_line_solution_sketch_3.svg" />
+            <Image src="/images/svg_ch4_one_long_line_solution_sketch_3.svg" />
             <Pause />
             <OuterP>
               Again, any of these graphs are
@@ -14108,9 +13721,7 @@ const Rest = () => {
               of one line segment and the start of the next:
             </OuterP>
             <Pause />
-            <Image
-              width="540.0px"
-              src="/images/svg_ch4_one_long_line_what_are_the_rises_1.svg" />
+            <Image src="/images/svg_ch4_one_long_line_what_are_the_rises_1.svg" />
             <Pause />
             <OuterP>
               In fact, is not entirely clear that there aren't
@@ -14123,9 +13734,7 @@ const Rest = () => {
               that exist (the concave ones and the convex ones):
             </OuterP>
             <Pause />
-            <Image
-              width="540.0px"
-              src="/images/svg_ch4_one_long_line_what_are_the_rises_2.svg" />
+            <Image src="/images/svg_ch4_one_long_line_what_are_the_rises_2.svg" />
             <Pause />
             <OuterP>
               (It will turn out that
@@ -14161,9 +13770,7 @@ const Rest = () => {
               curve:
             </OuterP>
             <Pause />
-            <Image
-              width="800.0px"
-              src="/images/svg_ch4_one_long_line_connector_curve_lower_bound.svg" />
+            <Image src="/images/svg_ch4_one_long_line_connector_curve_lower_bound.svg" />
             <Pause />
             <OuterP>
               Symmetrically,
@@ -14189,9 +13796,7 @@ const Rest = () => {
               connector curve:
             </OuterP>
             <Pause />
-            <Image
-              width="800.0px"
-              src="/images/svg_ch4_one_long_line_connector_curve_upper_bound.svg" />
+            <Image src="/images/svg_ch4_one_long_line_connector_curve_upper_bound.svg" />
             <Pause />
             <OuterP>
               To go any further we must add the first
@@ -14237,9 +13842,7 @@ const Rest = () => {
               second derivative:
             </OuterP>
             <Pause />
-            <Image
-              width="730.0px"
-              src="/images/svg_ch4_one_long_line_what_are_the_rises_3.svg" />
+            <Image src="/images/svg_ch4_one_long_line_what_are_the_rises_3.svg" />
             <Pause />
             <OuterP>
               The afore-mentioned lower bound of
@@ -14260,9 +13863,7 @@ const Rest = () => {
               {" "} the graph of the derivative:
             </OuterP>
             <Pause />
-            <Image
-              width="800.0px"
-              src="/images/svg_ch4_one_long_line_connector_curve_lower_bound_area.svg" />
+            <Image src="/images/svg_ch4_one_long_line_connector_curve_lower_bound_area.svg" />
             <Pause />
             <OuterP>
               Whereas the afore-mentioned upper bound of
@@ -14283,9 +13884,7 @@ const Rest = () => {
               {" "} the graph of the derivative:
             </OuterP>
             <Pause />
-            <Image
-              width="800.0px"
-              src="/images/svg_ch4_one_long_line_connector_curve_upper_bound_area.svg" />
+            <Image src="/images/svg_ch4_one_long_line_connector_curve_upper_bound_area.svg" />
             <Pause />
             <OuterP>
               In other words, the rise of the convex connector
@@ -14340,9 +13939,7 @@ const Rest = () => {
               surgery:
             </OuterP>
             <Pause />
-            <Image
-              width="1090.0px"
-              src="/images/svg_ch4_one_long_line_area_surgery.svg" />
+            <Image src="/images/svg_ch4_one_long_line_area_surgery.svg" />
             <Pause />
             <OuterP>
               Long story short, the area enclosed, which is
@@ -14395,9 +13992,7 @@ const Rest = () => {
               S-curve of the derivative is...
             </OuterP>
             <Pause />
-            <Image
-              width="730.0px"
-              src="/images/svg_ch4_one_long_line_concave_connector.svg" />
+            <Image src="/images/svg_ch4_one_long_line_concave_connector.svg" />
             <Pause />
             <OuterP>
               ...flipped around from before, going from
@@ -14419,9 +14014,7 @@ const Rest = () => {
               information, if we want. (Well...
             </OuterP>
             <Pause />
-            <Image
-              width="730.0px"
-              src="/images/svg_ch4_one_long_line_with_rises_shown.svg" />
+            <Image src="/images/svg_ch4_one_long_line_with_rises_shown.svg" />
             <Pause />
             <OuterP>
               ...there, no one can accuse us of not doing the

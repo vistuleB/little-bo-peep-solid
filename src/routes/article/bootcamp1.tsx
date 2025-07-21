@@ -12,7 +12,6 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Bootcamp1__() {
   return (
     <Article
-      max-element-width="300.0"
       prevPage="/article/bootcamp2"
       nextPage="/"
       pageNecessaryMargin={160}
@@ -586,7 +585,6 @@ const Rest = () => {
           \Large \&#123;\&#123;\&#125; \&#125; \ne \&#123;\&#125;
           $$
           <ImageRight
-            width="300.0px"
             src="/images/svg_bt1_bt_empty_set_cloud.svg"
             offset_x="3em"
             compensate_offset_x_for_large_text_columns={true} />

@@ -16,7 +16,6 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Chapter1__() {
   return (
     <Article
-      max-element-width="606.819"
       prevPage="/"
       nextPage="/article/chapter2"
       pageNecessaryMargin={800}
@@ -81,7 +80,9 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <CentralDisplay>
-          and
+          a
+          n
+          d
         </CentralDisplay>
         <Pause />
         <MathBlock>
@@ -115,7 +116,6 @@ export default function __Chapter1__() {
         <MathBlock>
           $$\sqrt&#123;(-2)^2&#125; = 2$$
           <ImageRight
-            width="360.0px"
             src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
             offset_y="0em"
             offset_x="5em"
@@ -850,7 +850,6 @@ const Rest = () => {
           (a + b)(C + D) \,=\, aC + bC + aD + bD
           $$
           <ImageLeft
-            width="400.0px"
             src="/images/325.svg"
             offset_y="-0.5em"
             offset_x="1em"
@@ -1617,7 +1616,6 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageLeft
-                width="346.0px"
                 src="/images/17.svg"
                 offset_y="0.8rem"
                 compensate_offset_x_for_large_text_columns={true} />
@@ -1651,7 +1649,6 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageLeft
-                width="444.0px"
                 src="/images/18.svg"
                 compensate_offset_x_for_large_text_columns={true} />
             </MathBlock>
@@ -1954,7 +1951,6 @@ const Rest = () => {
               10^&#123;9&#125;\fw\te&#123;km&#125;
               $$
               <ImageRight
-                width="480.0px"
                 src="/images/svg_ch1_ex_104.svg"
                 offset_x="3rem"
                 offset_y="-1rem"
@@ -2468,7 +2464,6 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageRight
-                width="497.212px"
                 src="/images/svg_ch1_ex_24.svg"
                 offset_y="-0.5em"
                 compensate_offset_x_for_large_text_columns={true} />
@@ -2687,7 +2682,6 @@ const Rest = () => {
               &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
               $$
               <ImageRight
-                width="362.474px"
                 offset_x="5rem"
                 offset_y="1.2rem"
                 src="/images/svg_ch1_ex_25.svg"
@@ -2704,7 +2698,6 @@ const Rest = () => {
               &#123;1 \over n^2&#125;
               $$
               <ImageRight
-                width="362.474px"
                 offset_x="11.5rem"
                 offset_y="1.2rem"
                 src="/images/svg_ch1_ex_26.svg"
@@ -2749,7 +2742,6 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageRight
-                width="606.819px"
                 src="/images/svg_ch1_ex_27.svg"
                 offset_y="-0.5em"
                 compensate_offset_x_for_large_text_columns={true} />
