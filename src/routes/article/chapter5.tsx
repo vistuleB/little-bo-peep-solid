@@ -785,13 +785,13 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          “
-          {" "}
-          <Math>
-            $-\!\sin$
-          </Math>
-          {" "}
-          ”
+          <NoBreak>
+            “
+            <Math>
+              $-\!\sin$
+            </Math>
+            ”
+          </NoBreak>
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -2702,13 +2702,13 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          “
-          {" "}
-          <Math>
-            $\arctan(y/x)$
-          </Math>
-          {" "}
-          ”
+          <NoBreak>
+            “
+            <Math>
+              $\arctan(y/x)$
+            </Math>
+            ”
+          </NoBreak>
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -3386,9 +3386,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          B
-          IGGE
-          R
+          BIGGER
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -3416,9 +3414,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          D
-          RAMATICALLY BIGGE
-          R
+          DRAMATICALLY BIGGER
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -5373,9 +5369,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplay>
-              N
-              OT RIGHT TRIANGLE
-              S
+              NOT RIGHT TRIANGLES
             </CentralDisplay>
             <Pause />
             <OuterP>

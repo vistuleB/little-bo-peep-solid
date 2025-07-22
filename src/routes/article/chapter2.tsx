@@ -1321,9 +1321,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          “
-          slope = velocity
-          ”
+          “slope = velocity”
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -1511,16 +1509,14 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          “
-          the {" "}
+          “the {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             -axis
           </NoBreak>
-          {" "} has dimensions of time
-          ”
+          {" "} has dimensions of time”
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -1528,16 +1524,14 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          “
-          the {" "}
+          “the {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             -axis
           </NoBreak>
-          {" "} has units of seconds
-          ”
+          {" "} has units of seconds”
         </CentralDisplay>
         <Pause />
         <OuterP>

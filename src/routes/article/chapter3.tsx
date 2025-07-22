@@ -2122,6 +2122,7 @@ const Rest = () => {
               Evaluate:
             </OuterP>
             <Pause />
+            <Pause />
             <Grid
               cols={2}
               sm_cols={1}
@@ -2158,6 +2159,7 @@ const Rest = () => {
             <OuterP>
               The answers are:
             </OuterP>
+            <Pause />
             <Pause />
             <Grid
               cols={2}
@@ -2799,21 +2801,23 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplay>
-              “
-              {" "}
-              <Math>
-                $f$
-              </Math>
+              <NoBreak>
+                “
+                <Math>
+                  $f$
+                </Math>
+              </NoBreak>
               {" "} of {" "}
               <Math>
                 $\hlfbk&#123;&#125;g$
               </Math>
               {" "} of {" "}
-              <Math>
-                $x\hspace&#123;0.1em&#125;$
-              </Math>
-              {" "}
-              ”
+              <NoBreak>
+                <Math>
+                  $x\hspace&#123;0.1em&#125;$
+                </Math>
+                ”
+              </NoBreak>
             </CentralDisplay>
             <Pause />
             <OuterP>
@@ -3801,8 +3805,6 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <CentralDisplay>
-                {" "}
-                {" "}
                 <Math>
                   $\Large h($
                 </Math>
@@ -3819,8 +3821,6 @@ const Rest = () => {
                   top="-3px"
                   marginLeft=".5rem"
                   marginRight=".5rem" />
-                {" "}
-                {" "}
               </CentralDisplay>
               <Pause />
               <OuterP>
@@ -3850,7 +3850,6 @@ const Rest = () => {
               <Pause />
               <CentralDisplay>
                 {" "}
-                
                 {" "}
                 <Math>
                   $\Large g(h($
@@ -3868,8 +3867,6 @@ const Rest = () => {
                   top="-4px"
                   marginLeft=".5rem"
                   marginRight=".5rem" />
-                {" "}
-                {" "}
               </CentralDisplay>
               <Pause />
               <OuterP>
@@ -5656,6 +5653,7 @@ const Rest = () => {
               {" "} are functions):
             </OuterP>
             <Pause />
+            <Pause />
             <Grid
               cols={2}
               sm_cols={1}
@@ -6259,8 +6257,6 @@ const Rest = () => {
             <Pause />
             <CentralDisplay>
               ~
-              
-              {" "}
             </CentralDisplay>
             <Pause />
             <OuterP>

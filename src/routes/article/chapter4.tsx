@@ -1193,9 +1193,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          L
-          ARGE POSITIVE NUMBE
-          R
+          LARGE POSITIVE NUMBER
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -1231,9 +1229,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          L
-          ARGE NEGATIVE NUMBE
-          R
+          LARGE NEGATIVE NUMBER
         </CentralDisplay>
         <Pause />
         <OuterP>
@@ -8126,9 +8122,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplay>
-              “
-              a [kind of] four-particle explosion
-              ”
+              “a [kind of] four-particle explosion”
             </CentralDisplay>
             <Pause />
             <OuterP>
@@ -8828,9 +8822,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplay>
-              N
-              O
-              T
+              NOT
             </CentralDisplay>
             <Pause />
             <OuterP>
@@ -9835,9 +9827,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplay>
-              E
-              XCEP
-              T
+              EXCEPT
             </CentralDisplay>
             <Pause />
             <OuterP>

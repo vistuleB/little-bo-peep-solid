@@ -80,9 +80,7 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <CentralDisplay>
-          a
-          n
-          d
+          and
         </CentralDisplay>
         <Pause />
         <MathBlock>
@@ -1459,6 +1457,7 @@ const Rest = () => {
               True or false (and, if possible, explain):
             </OuterP>
             <Pause />
+            <Pause />
             <Grid
               cols={3}
               sm_cols={2}
@@ -2147,6 +2146,7 @@ const Rest = () => {
               {" "}
               simply changes the sign of the previous result):
             </OuterP>
+            <Pause />
             <Pause />
             <Grid
               cols={3}
