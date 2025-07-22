@@ -4,6 +4,19 @@ import infrastructure.{type Desugarer} as infra
 import prefabricated_pipelines as pp
 import desugarer_library as dl
 
+const cannot_be_contained_in_a_paragrap = [
+  "ArticleTitle", "Bootcamp", "CentralDisplay", "CentralDisplayItalic", 
+  "Chapter", "Example", "Exercise", "Exercises", "Grid", "Image", 
+  "ImageLeft", "ImageRight", "List", "MathBlock", "Note", "Pause", 
+  "Scope", "Section", "Solution", "SolutionNote", "StarDivider", "Table", 
+  "TextParent", "WriterlyBlankLine", "center", "col", "colgroup", "div", 
+  "p", "li", "ol", "table", "thead", "tbody", "tr", "td", "section", "ul", 
+]
+
+const cannot_contain_a_paragraph = [
+  "MathBlock", "p", "CentralDisplay", "CentralDisplayItalic", "ArticleTitle"
+]
+
 // *************************
 // PIPELINE WITHOUT LISTS
 // *************************
@@ -18,25 +31,25 @@ fn pipeline_no_list() -> List(Desugarer) {
     pp.create_math_elements([infra.SingleDollar], infra.SingleDollar),
     [
       dl.find_replace_no_list(#("\\$", "$", ["Math", "MathBlock"])),
-      dl.add_attributes_no_list(#("Book", "counter", "ChapterCounter")),
-      dl.add_attributes_no_list(#("Book", "counter", "BootcampCounter")),
-      dl.add_attributes_no_list(#("Chapter", "counter", "ExampleCounter")),
-      dl.add_attributes_no_list(#("Chapter", "counter", "NoteCounter")),
-      dl.add_attributes_no_list(#("Chapter", "counter", "SectionCounter")),
-      dl.add_attributes_no_list(#("Bootcamp", "counter", "ExampleCounter")),
-      dl.add_attributes_no_list(#("Bootcamp", "counter", "SectionCounter")),
-      dl.add_attributes_no_list(#("Exercises", "counter", "ExerciseCounter")),
-      dl.add_attributes_no_list(#("Solution", "counter", "SolutionNoteCounter")),
-      dl.add_attributes_no_list(#("Chapter", "path", "/article/chapter::øøChapterCounter")),
-      dl.add_attributes_no_list(#("Bootcamp", "path", "/article/bootcamp::øøBootcampCounter")),
-      dl.add_attributes_no_list(#("Chapter", "banner", "Chapter ::øøChapterCounter:")),
-      dl.add_attributes_no_list(#("Bootcamp", "banner", "Bootcamp ::øøBootcampCounter:")),
-      dl.add_attributes_no_list(#("Chapter", "number", "::øøChapterCounter")),
-      dl.add_attributes_no_list(#("Bootcamp", "number", "::øøBootcampCounter")),
-      dl.add_attributes_no_list(#("Chapter", "category", "Chapter")),
-      dl.add_attributes_no_list(#("Bootcamp", "category", "Bootcamp")),
-      dl.add_attributes_no_list(#("Exercise", "number", "::øøExerciseCounter")),
-      dl.add_attributes_no_list(#("Section", "id", "section-::++SectionCounter")),
+      dl.add_attribute(#("Book", "counter", "ChapterCounter")),
+      dl.add_attribute(#("Book", "counter", "BootcampCounter")),
+      dl.add_attribute(#("Chapter", "counter", "ExampleCounter")),
+      dl.add_attribute(#("Chapter", "counter", "NoteCounter")),
+      dl.add_attribute(#("Chapter", "counter", "SectionCounter")),
+      dl.add_attribute(#("Bootcamp", "counter", "ExampleCounter")),
+      dl.add_attribute(#("Bootcamp", "counter", "SectionCounter")),
+      dl.add_attribute(#("Exercises", "counter", "ExerciseCounter")),
+      dl.add_attribute(#("Solution", "counter", "SolutionNoteCounter")),
+      dl.add_attribute(#("Chapter", "path", "/article/chapter::øøChapterCounter")),
+      dl.add_attribute(#("Bootcamp", "path", "/article/bootcamp::øøBootcampCounter")),
+      dl.add_attribute(#("Chapter", "banner", "Chapter ::øøChapterCounter:")),
+      dl.add_attribute(#("Bootcamp", "banner", "Bootcamp ::øøBootcampCounter:")),
+      dl.add_attribute(#("Chapter", "number", "::øøChapterCounter")),
+      dl.add_attribute(#("Bootcamp", "number", "::øøBootcampCounter")),
+      dl.add_attribute(#("Chapter", "category", "Chapter")),
+      dl.add_attribute(#("Bootcamp", "category", "Bootcamp")),
+      dl.add_attribute(#("Exercise", "number", "::øøExerciseCounter")),
+      dl.add_attribute(#("Section", "id", "section-::++SectionCounter")),
       dl.associate_counter_by_prepending_incrementing_attribute_no_list(#("Chapter", "ChapterCounter")),
       dl.associate_counter_by_prepending_incrementing_attribute_no_list(#("Bootcamp", "BootcampCounter")),
       dl.associate_counter_by_prepending_incrementing_attribute_no_list(#("Example", "ExampleCounter")),
@@ -54,22 +67,7 @@ fn pipeline_no_list() -> List(Desugarer) {
       dl.unwrap_no_list("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
       dl.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
-      dl.group_consecutive_children_avoiding(
-        #(
-          "p",
-          [
-            "ArticleTitle", "Bootcamp", "CentralDisplay", "CentralDisplayItalic", 
-            "Chapter", "Example", "Exercise", "Exercises", "Grid", "Image", 
-            "ImageLeft", "ImageRight", "List", "MathBlock", "Note", "Pause", 
-            "Scope", "Section", "Solution", "SolutionNote", "StarDivider", "Table", 
-            "TextParent", "WriterlyBlankLine", "center", "col", "colgroup", "div", 
-            "p", "li", "ol", "table", "thead", "tbody", "tr", "td", "section", "ul", 
-          ],
-          [
-            "MathBlock", "p", "CentralDisplay", "CentralDisplayItalic", "ArticleTitle"
-          ],
-        ),
-      ),
+      dl.group_consecutive_children_avoiding(#("p", cannot_be_contained_in_a_paragrap, cannot_contain_a_paragraph)),
       dl.unwrap_no_list("WriterlyBlankLine"),
       // cleaning 'p' first time around:
       dl.concatenate_text_nodes(),
@@ -162,7 +160,7 @@ fn pipeline_no_list() -> List(Desugarer) {
       dl.generate_lbp_breadcrumbs(),
       dl.unwrap_no_list("BreadcrumbTitle"),
       dl.unwrap_no_list("Scope"),
-      dl.change_attribute_value([#("src", "/()")]),
+      dl.change_attribute_value_no_list(#("src", "/()")),
       dl.remove_attribute("counter"),
       dl.remove_attribute("handle"),
       dl.remove_attribute("type"),
@@ -241,22 +239,7 @@ fn old_pipeline() -> List(Desugarer) {
       dl.unwrap_no_list("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
       dl.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
-      dl.group_consecutive_children_avoiding(
-        #(
-          "p",
-          [
-            "ArticleTitle", "Bootcamp", "CentralDisplay", "CentralDisplayItalic", 
-            "Chapter", "Example", "Exercise", "Exercises", "Grid", "Image", 
-            "ImageLeft", "ImageRight", "List", "MathBlock", "Note", "Pause", 
-            "Scope", "Section", "Solution", "SolutionNote", "StarDivider", "Table", 
-            "TextParent", "WriterlyBlankLine", "center", "col", "colgroup", "div", 
-            "p", "li", "ol", "table", "thead", "tbody", "tr", "td", "section", "ul", 
-          ],
-          [
-            "MathBlock", "p", "CentralDisplay", "CentralDisplayItalic", "ArticleTitle"
-          ],
-        ),
-      ),
+      dl.group_consecutive_children_avoiding(#("p", cannot_be_contained_in_a_paragrap, cannot_contain_a_paragraph)),
       dl.unwrap_no_list("WriterlyBlankLine"),
       // cleaning 'p' first time around:
       dl.concatenate_text_nodes(),
@@ -365,7 +348,7 @@ fn old_pipeline() -> List(Desugarer) {
       dl.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
       dl.generate_lbp_breadcrumbs(),
       dl.unwrap(["BreadcrumbTitle", "Scope"]),
-      dl.change_attribute_value([#("src", "/()")]),
+      dl.change_attribute_value_no_list(#("src", "/()")),
       dl.remove_attributes(["counter", "handle", "type", "t", ".", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
       // dl.compute_missing_images_width(),
