@@ -73,8 +73,6 @@ export default function __Chapter5__() {
               </Math>
               ,
             </NoBreak>
-            {" "}
-            {" "}
             <Math>
               $\mathbf&#123;45^\circ&#125;$
             </Math>
@@ -176,14 +174,12 @@ export default function __Chapter5__() {
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <Math>
             $\sin(x)$
           </Math>
-          {" "} goes diagonally through the point
-          {" "}
+          {" "} goes diagonally through the {" "}
           <NoBreak>
+            point
             <Math>
               $(0, 0)$
             </Math>
@@ -194,11 +190,13 @@ export default function __Chapter5__() {
         <Image src="/images/svg_ch5_ch_cosine_and_sine.svg" />
         <Pause />
         <OuterP>
-          As far as standard definitions go,
-          {" "}
-          <Math>
-            $\cos(x)$
-          </Math>
+          As far as standard definitions {" "}
+          <NoBreak>
+            go,
+            <Math>
+              $\cos(x)$
+            </Math>
+          </NoBreak>
           {" "} is the
         </OuterP>
         <Pause />
@@ -233,11 +231,13 @@ export default function __Chapter5__() {
           <Math>
             $x$
           </Math>
-          {" "} units counterclockwise from
-          {" "}
-          <Math>
-            $(1, 0)$
-          </Math>
+          {" "} units counterclockwise {" "}
+          <NoBreak>
+            from
+            <Math>
+              $(1, 0)$
+            </Math>
+          </NoBreak>
           {" "} on the unit circle. (Nb: “a”
         </OuterP>
         <Pause />
@@ -281,8 +281,6 @@ export default function __Chapter5__() {
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <NoBreak>
             <Math>
               $\sin(&#123;1\over 2&#125;) \approx 0.5$
@@ -306,11 +304,13 @@ export default function __Chapter5__() {
             $\approx 0.9$
           </Math>
           {" "} in {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}
-          and {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            and
+          </NoBreak>
+          {" "} {" "}
           <Math>
             $\approx 0.5$
           </Math>
@@ -319,11 +319,13 @@ export default function __Chapter5__() {
             $y$
           </Math>
           {" "} (or actually {" "}
-          <Math>
-            $0.87758...$
-          </Math>
-          {" "}
-          and {" "}
+          <NoBreak>
+            <Math>
+              $0.87758...$
+            </Math>
+            and
+          </NoBreak>
+          {" "} {" "}
           <NoBreak>
             <Math>
               $0.47942...$
@@ -337,20 +339,22 @@ export default function __Chapter5__() {
         <Image src="/images/svg_ch5_ch_unit_circle_@0.5_smaller.svg" />
         <Pause />
         <OuterP>
-          As a second example, the graphs indicate that
-          {" "}
+          As a second example, the graphs indicate {" "}
           <NoBreak>
+            that
             <Math>
               $\sin(-3) \approx -0.2$
             </Math>
             ,
           </NoBreak>
           {" "} {" "}
-          <Math>
-            $\cos(-3) \approx -0.99$
-          </Math>
-          {" "}
-          (or something very close to {" "}
+          <NoBreak>
+            <Math>
+              $\cos(-3) \approx -0.99$
+            </Math>
+            (or
+          </NoBreak>
+          {" "} something very close to {" "}
           <NoBreak>
             <Math>
               $-1$
@@ -396,20 +400,24 @@ export default function __Chapter5__() {
             -coordinates
           </NoBreak>
           {" "} of {" "}
-          <Math>
-            $\approx -0.2$
-          </Math>
-          {" "}
-          and {" "}
+          <NoBreak>
+            <Math>
+              $\approx -0.2$
+            </Math>
+            and
+          </NoBreak>
+          {" "} {" "}
           <Math>
             $\approx -0.99$
           </Math>
           {" "} respectively (or {" "}
-          <Math>
-            $-0.1411...$
-          </Math>
-          {" "}
-          and {" "}
+          <NoBreak>
+            <Math>
+              $-0.1411...$
+            </Math>
+            and
+          </NoBreak>
+          {" "} {" "}
           <NoBreak>
             <Math>
               $-0.989992...$
@@ -442,8 +450,6 @@ export default function __Chapter5__() {
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <NoBreak>
             <Math>
               $\sin(x) = -1$
@@ -456,11 +462,13 @@ export default function __Chapter5__() {
         <Pause />
         <OuterP>
           Some thought reveals that this value of {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}
-          would be {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            would
+          </NoBreak>
+          {" "} be {" "}
           <i>
             minus one-quarter the circumference
             of a unit circle
@@ -514,9 +522,9 @@ export default function __Chapter5__() {
             </Math>
             ,
           </NoBreak>
-          {" "} not
-          {" "}
+          {" "} {" "}
           <NoBreak>
+            not
             <Math>
               $x = -1.6$
             </Math>
@@ -555,11 +563,13 @@ export default function __Chapter5__() {
           <Math>
             $\sin(x)$
           </Math>
-          {" "} and
-          {" "}
-          <Math>
-            $\cos(x)$
-          </Math>
+          {" "} {" "}
+          <NoBreak>
+            and
+            <Math>
+              $\cos(x)$
+            </Math>
+          </NoBreak>
           {" "} are both defined by {" "}
           <NoBreak>
             <Math>
@@ -586,11 +596,13 @@ export default function __Chapter5__() {
             ,
           </NoBreak>
           {" "} the same as the {" "}
-          <Math>
-            $y$
-          </Math>
-          {" "}
-          axis looks from the vantage point of {" "}
+          <NoBreak>
+            <Math>
+              $y$
+            </Math>
+            axis
+          </NoBreak>
+          {" "} looks from the vantage point of {" "}
           <NoBreak>
             <Math>
               $(1, 0)$
@@ -828,38 +840,46 @@ const Rest = () => {
             $-\!\sin$
           </Math>
           {" "} and {" "}
-          <Math>
-            $-\!\cos$
-          </Math>
-          {" "}
-          to the graphs fills the “gap” between {" "}
-          <Math>
-            $y = \sin(x)$
-          </Math>
-          {" "}
-          and {" "}
+          <NoBreak>
+            <Math>
+              $-\!\cos$
+            </Math>
+            to
+          </NoBreak>
+          {" "} the graphs fills the “gap” between {" "}
+          <NoBreak>
+            <Math>
+              $y = \sin(x)$
+            </Math>
+            and
+          </NoBreak>
+          {" "} {" "}
           <Math>
             $y = \cos(x)$
           </Math>
           {" "} with two new equally-spaced curves;
-          note that
-          {" "}
-          <Math>
-            $\cos$
-          </Math>
+          note {" "}
+          <NoBreak>
+            that
+            <Math>
+              $\cos$
+            </Math>
+          </NoBreak>
           {" "} lags behind {" "}
-          <Math>
-            $-\!\sin$
-          </Math>
-          {" "}
-          (reading the graphs from left to right)
+          <NoBreak>
+            <Math>
+              $-\!\sin$
+            </Math>
+            (reading
+          </NoBreak>
+          {" "} the graphs from left to right)
           by the same amount that {" "}
           <Math>
             $\sin$
           </Math>
-          {" "} lags behind
-          {" "}
+          {" "} lags {" "}
           <NoBreak>
+            behind
             <Math>
               $\cos$
             </Math>
@@ -909,9 +929,9 @@ const Rest = () => {
             </Math>
             -coordinate
           </NoBreak>
-          {" "} is the
-          {" "}
+          {" "} is {" "}
           <NoBreak>
+            the
             <Math>
               $x$
             </Math>
@@ -935,11 +955,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           in general for any {" "}
-          <Math>
-            $f : \rr \ra \rr$
-          </Math>
-          {" "}
-          (cf. Exercise 20 and Exercise 10 of Chapter 4),
+          <NoBreak>
+            <Math>
+              $f : \rr \ra \rr$
+            </Math>
+            (cf.
+          </NoBreak>
+          {" "} Exercise 20 and Exercise 10 of Chapter 4),
           which implies that
         </OuterP>
         <Pause />
@@ -1465,9 +1487,9 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4?id=_24_hgi_"
+            href="_24_hgi_?id=10"
             class="handle-out-chapter-link">
-            Note 10
+            Note /article/chapter4
           </a>
           {" "} of Exercise 37, Chapter 4.
           In short, it is a “scientific” measure
@@ -1773,8 +1795,6 @@ const Rest = () => {
               </Math>
               ,
             </NoBreak>
-            {" "}
-            {" "}
             <Math>
               $\mathbf&#123;45^\circ&#125;$
             </Math>
@@ -1842,11 +1862,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           ...look like this.) Vice-versa, every point
-          on the unit circle has the form (*) for some
-          {" "}
-          <Math>
-            $0 \leq x \leq 1$
-          </Math>
+          on the unit circle has the form (*) for {" "}
+          <NoBreak>
+            some
+            <Math>
+              $0 \leq x \leq 1$
+            </Math>
+          </NoBreak>
           {" "} and some choice of the {" "}
           <NoBreak>
             ‘
@@ -1881,11 +1903,13 @@ const Rest = () => {
             $45^\circ\hlfbk$
           </Math>
           {" "} from the {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "}
-          axis, which implies
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            axis,
+          </NoBreak>
+          {" "} which implies
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1968,17 +1992,17 @@ const Rest = () => {
             </Math>
             -coordinate
           </NoBreak>
-          {" "}
-          {" "}
           <Math>
             $0.5$
           </Math>
           {" "} in the first quadrant is at {" "}
-          <Math>
-            $60^\circ\hlfbk$
-          </Math>
-          {" "}
-          from the {" "}
+          <NoBreak>
+            <Math>
+              $60^\circ\hlfbk$
+            </Math>
+            from
+          </NoBreak>
+          {" "} the {" "}
           <Math>
             $x$
           </Math>
@@ -1991,16 +2015,20 @@ const Rest = () => {
             -coordinate
           </NoBreak>
           {" "} {" "}
-          <Math>
-            $0.5$
-          </Math>
-          {" "}
-          in the first quadrant is at {" "}
-          <Math>
-            $30^\circ\hlfbk$
-          </Math>
-          {" "}
-          from the {" "}
+          <NoBreak>
+            <Math>
+              $0.5$
+            </Math>
+            in
+          </NoBreak>
+          {" "} the first quadrant is at {" "}
+          <NoBreak>
+            <Math>
+              $30^\circ\hlfbk$
+            </Math>
+            from
+          </NoBreak>
+          {" "} the {" "}
           <Math>
             $x$
           </Math>
@@ -2386,9 +2414,9 @@ const Rest = () => {
               <Math>
                 $x$
               </Math>
-              {" "} axis to the segment
-              {" "}
+              {" "} axis to the {" "}
               <NoBreak>
+                segment
                 <Math>
                   $OP$
                 </Math>
@@ -2437,11 +2465,13 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "} then
-          {" "}
-          <Math>
-            $\theta$
-          </Math>
+          {" "} {" "}
+          <NoBreak>
+            then
+            <Math>
+              $\theta$
+            </Math>
+          </NoBreak>
           {" "} may be anything. (Because in that
           case
         </OuterP>
@@ -2505,9 +2535,9 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            count among the polar coordinates of the point
-            {" "}
+            count among the polar coordinates of the {" "}
             <NoBreak>
+              point
               <Math>
                 $(1, 1) \in \rr^2$
               </Math>
@@ -2544,9 +2574,9 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            count among the polar coordinates of the point
-            {" "}
+            count among the polar coordinates of the {" "}
             <NoBreak>
+              point
               <Math>
                 $(-1, 1) \in \rr^2$
               </Math>
@@ -2575,11 +2605,13 @@ const Rest = () => {
         <OuterP>
           give the change-of-coordinate formulas
           from a polar coordinate {" "}
-          <Math>
-            $(r, \theta)$
-          </Math>
-          {" "}
-          to a cartesian coordinate {" "}
+          <NoBreak>
+            <Math>
+              $(r, \theta)$
+            </Math>
+            to
+          </NoBreak>
+          {" "} a cartesian coordinate {" "}
           <NoBreak>
             <Math>
               $(x, y)$
@@ -2588,9 +2620,9 @@ const Rest = () => {
           </NoBreak>
           {" "}
           (It's right there in the promise of what
-          it means to be a valid polar coordinate
-          {" "}
+          it means to be a valid polar {" "}
           <NoBreak>
+            coordinate
             <Math>
               $(r, \theta)$
             </Math>
@@ -2665,11 +2697,13 @@ const Rest = () => {
           <Math>
             $\theta$
           </Math>
-          {" "} of a given pair
-          {" "}
-          <Math>
-            $(x, y)$
-          </Math>
+          {" "} of a given {" "}
+          <NoBreak>
+            pair
+            <Math>
+              $(x, y)$
+            </Math>
+          </NoBreak>
           {" "} out of the box, without you having to
           worry about which of {" "}
           <Math>
@@ -2793,11 +2827,13 @@ const Rest = () => {
           <Math>
             $0 \leq \theta \leq \eta$
           </Math>
-          {" "} then both
-          {" "}
-          <Math>
-            $r\cos(\theta)$
-          </Math>
+          {" "} then {" "}
+          <NoBreak>
+            both
+            <Math>
+              $r\cos(\theta)$
+            </Math>
+          </NoBreak>
           {" "} and {" "}
           <Math>
             $r\sin(\theta)$
@@ -2921,9 +2957,9 @@ const Rest = () => {
           <Pause />
           <OuterP>
             by following one ‘cos’ and then two ‘sin’
-            arrows, starting from the sidelength of
-            {" "}
+            arrows, starting from the sidelength {" "}
             <NoBreak>
+              of
               <Math>
                 $10$
               </Math>
@@ -2997,11 +3033,13 @@ const Rest = () => {
             $\theta_1$
           </Math>
           {" "} and {" "}
-          <Math>
-            $\theta_2$
-          </Math>
-          {" "}
-          to be greater than {" "}
+          <NoBreak>
+            <Math>
+              $\theta_2$
+            </Math>
+            to
+          </NoBreak>
+          {" "} be greater than {" "}
           <NoBreak>
             <Math>
               $\eta$
@@ -3017,16 +3055,20 @@ const Rest = () => {
           <Math>
             $\theta_1$
           </Math>
-          {" "} and
-          {" "}
-          <Math>
-            $\theta_2$
-          </Math>
-          {" "} are individually in the range from
-          {" "}
-          <Math>
-            $0$
-          </Math>
+          {" "} {" "}
+          <NoBreak>
+            and
+            <Math>
+              $\theta_2$
+            </Math>
+          </NoBreak>
+          {" "} are individually in the range {" "}
+          <NoBreak>
+            from
+            <Math>
+              $0$
+            </Math>
+          </NoBreak>
           {" "} to {" "}
           <NoBreak>
             <Math>
@@ -3046,11 +3088,13 @@ const Rest = () => {
             The Abercrombie inequality.
           </b>
           {" "}
-          Take an ordinary angle of aperture less than
-          {" "}
-          <Math>
-            $180^\circ\hlfbk$
-          </Math>
+          Take an ordinary angle of aperture less {" "}
+          <NoBreak>
+            than
+            <Math>
+              $180^\circ\hlfbk$
+            </Math>
+          </NoBreak>
           {" "} with a circular arc drawn
           inside and a line segment spanning the two
           sides of the angle that clears the arc:
@@ -3085,11 +3129,13 @@ const Rest = () => {
         <OuterP class="indent-10">
           The proof is that, if this were not the case,
           the
-          length
           {" "}
-          <Math>
-            $S$
-          </Math>
+          <NoBreak>
+            length
+            <Math>
+              $S$
+            </Math>
+          </NoBreak>
           {" "} of the segment would lie to left of the
           length {" "}
           <Math>
@@ -3180,11 +3226,13 @@ const Rest = () => {
             $s_2$
           </Math>
           {" "} are separated by a
-          pair of parallel lines that are at distance
-          {" "}
-          <Math>
-            $\overline&#123;p_1p_2&#125;$
-          </Math>
+          pair of parallel lines that are at {" "}
+          <NoBreak>
+            distance
+            <Math>
+              $\overline&#123;p_1p_2&#125;$
+            </Math>
+          </NoBreak>
           {" "} from one another, and
           because at least one of {" "}
           <NoBreak>
@@ -3333,11 +3381,12 @@ const Rest = () => {
           {" "}
           The Gregorinovich sandwich is so-called because
           it “sandwiches” {" "}
-          <Math>
-            $\theta$
-          </Math>
-          {" "}
-          between
+          <NoBreak>
+            <Math>
+              $\theta$
+            </Math>
+            between
+          </NoBreak>
         </OuterP>
         <Pause />
         <MathBlock>
@@ -3368,11 +3417,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           in the range {" "}
-          <Math>
-            $0 &lt; \theta &lt; \eta$
-          </Math>
-          {" "}
-          because dividing by
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            because
+          </NoBreak>
+          {" "} dividing by
         </OuterP>
         <Pause />
         <MathBlock>
@@ -3405,11 +3456,13 @@ const Rest = () => {
             </Math>
             —in
           </NoBreak>
-          {" "} fact, dividing by
-          {" "}
-          <Math>
-            $\cos(\theta)$
-          </Math>
+          {" "} fact, dividing {" "}
+          <NoBreak>
+            by
+            <Math>
+              $\cos(\theta)$
+            </Math>
+          </NoBreak>
           {" "} will make you
         </OuterP>
         <Pause />
@@ -3497,9 +3550,9 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          on the other hand. Together, this implies
-          {" "}
+          on the other hand. Together, this {" "}
           <NoBreak>
+            implies
             <Math>
               $\theta \rt&#123;0.1&#125;&gt;\rt&#123;0.1&#125; \sin(\theta)$
             </Math>
@@ -3546,11 +3599,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           turns the bottom segment of length {" "}
-          <Math>
-            $1$
-          </Math>
-          {" "}
-          into the pink hypotenuse, because just as ‘cos’
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            into
+          </NoBreak>
+          {" "} the pink hypotenuse, because just as ‘cos’
           is the hypotenuse-to-adjacent multiplicative
           factor, so is {" "}
           <NoBreak>
@@ -3627,8 +3682,6 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <Math>
             $0 \leq \theta_2 \leq \eta$
           </Math>
@@ -3641,34 +3694,34 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <NoBreak>
             <Math>
               $\cos(\theta_1\!\rt&#123;0.1&#125;)$
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
           <Math>
             $\sin(\theta_2\!\rt&#123;0.1&#125;)$
           </Math>
           {" "} and {" "}
-          <Math>
-            $\cos(\theta_2\!\rt&#123;0.1&#125;)$
-          </Math>
-          {" "}
-          are all nonnegative, and that all their
+          <NoBreak>
+            <Math>
+              $\cos(\theta_2\!\rt&#123;0.1&#125;)$
+            </Math>
+            are
+          </NoBreak>
+          {" "} all nonnegative, and that all their
           products are nonnegative, as well.)
         </OuterP>
         <OuterP class="indent-10">
           On the other hand, if we inscribe the
-          figure in the unit circle with the joint angle
-          {" "}
-          <Math>
-            $\theta_1 + \theta_2$
-          </Math>
+          figure in the unit circle with the joint {" "}
+          <NoBreak>
+            angle
+            <Math>
+              $\theta_1 + \theta_2$
+            </Math>
+          </NoBreak>
           {" "} at the center, we find that
         </OuterP>
         <Pause />
@@ -3727,9 +3780,9 @@ const Rest = () => {
             $\theta_2$
           </Math>
           {" "} as may
-          appear in such a figure, i.e., for
-          {" "}
+          appear in such a figure, i.e., {" "}
           <NoBreak>
+            for
             <Math>
               $0 \leq \theta_1, \theta_2 \leq \eta$
             </Math>
@@ -3740,8 +3793,6 @@ const Rest = () => {
           <i>
             all
           </i>
-          {" "}
-          {" "}
           <NoBreak>
             <Math>
               $\theta_1$
@@ -4291,11 +4342,13 @@ const Rest = () => {
               As for the “something”—the bumpy one—it appears
               to just be a “sped up cosine”, and note that
               the graph goes through approximately {" "}
-              <Math>
-                $10$
-              </Math>
-              {" "}
-              cycles between {" "}
+              <NoBreak>
+                <Math>
+                  $10$
+                </Math>
+                cycles
+              </NoBreak>
+              {" "} between {" "}
               <Math>
                 $x = 0$
               </Math>
@@ -4325,9 +4378,9 @@ const Rest = () => {
               <Math>
                 $x = 0$
               </Math>
-              {" "} to
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                to
                 <Math>
                   $x = 4\eta$
                 </Math>
@@ -4519,9 +4572,9 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is easy because it is the value of the parabola at
-              {" "}
+              is easy because it is the value of the parabola {" "}
               <NoBreak>
+                at
                 <Math>
                   $x = 0$
                 </Math>
@@ -4560,11 +4613,13 @@ const Rest = () => {
               </NoBreak>
               {" "}
               note that the parabola appears to have value {" "}
-              <Math>
-                $y \approx 3$
-              </Math>
-              {" "}
-              at {" "}
+              <NoBreak>
+                <Math>
+                  $y \approx 3$
+                </Math>
+                at
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $x = \pm 12$
@@ -4572,11 +4627,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} resulting in an increase of {" "}
-              <Math>
-                $\approx 6$
-              </Math>
-              {" "}
-              between {" "}
+              <NoBreak>
+                <Math>
+                  $\approx 6$
+                </Math>
+                between
+              </NoBreak>
+              {" "} {" "}
               <Math>
                 $x = 0$
               </Math>
@@ -4594,9 +4651,9 @@ const Rest = () => {
               src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg" />
             <Pause />
             <OuterP>
-              That increase being entirely due to the term
-              {" "}
+              That increase being entirely due to the {" "}
               <NoBreak>
+                term
                 <Math>
                   $Ax^2$
                 </Math>
@@ -4825,11 +4882,13 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_big_wave_purple.svg" />
             <Pause />
             <OuterP>
-              It appears to be a linear function (line through
-              {" "}
-              <Math>
-                $(0, 0)$
-              </Math>
+              It appears to be a linear function (line {" "}
+              <NoBreak>
+                through
+                <Math>
+                  $(0, 0)$
+                </Math>
+              </NoBreak>
               {" "} sloping down) plus a sinusoid. To
               estimate the slope of the linear function we can
               take two points in like relation to the sinusoid,
@@ -4969,11 +5028,13 @@ const Rest = () => {
             <OuterP>
               ...and, from there, all that remains is to
               “slow down” the oscillation to match the
-              aquamarine graph—the “slowing down” is what
-              {" "}
-              <Math>
-                $B$
-              </Math>
+              aquamarine graph—the “slowing down” is {" "}
+              <NoBreak>
+                what
+                <Math>
+                  $B$
+                </Math>
+              </NoBreak>
               {" "} is for.)
             </OuterP>
             <OuterP class="indent-10">
@@ -5216,11 +5277,13 @@ const Rest = () => {
                 </i>
                 . (Formally defined
                 as a function of the form {" "}
-                <Math>
-                  $x \ra A\cdot \sin(Bx + C) + D$
-                </Math>
-                {" "}
-                for some constants {" "}
+                <NoBreak>
+                  <Math>
+                    $x \ra A\cdot \sin(Bx + C) + D$
+                  </Math>
+                  for
+                </NoBreak>
+                {" "} some constants {" "}
                 <NoBreak>
                   <Math>
                     $A$
@@ -5514,9 +5577,9 @@ const Rest = () => {
               <Math>
                 $A$
               </Math>
-              {" "} seems plausibly to be about one-third of
-              {" "}
+              {" "} seems plausibly to be about one-third {" "}
               <NoBreak>
+                of
                 <Math>
                   $B$
                 </Math>
@@ -5986,19 +6049,19 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "} {" "}
-                <Math>
-                  $\vec&#123;v&#125;$
-                </Math>
-                {" "}
-                by arrows whose components are displacements {" "}
+                <NoBreak>
+                  <Math>
+                    $\vec&#123;v&#125;$
+                  </Math>
+                  by
+                </NoBreak>
+                {" "} arrows whose components are displacements {" "}
                 <NoBreak>
                   <Math>
                     $u_x$
                   </Math>
                   ,
                 </NoBreak>
-                {" "}
-                {" "}
                 <NoBreak>
                   <Math>
                     $u_y$
@@ -6106,22 +6169,25 @@ const Rest = () => {
                   $\vec&#123;u&#125;$
                 </Math>
                 {" "} and {" "}
-                <Math>
-                  $\vec&#123;v&#125;$
-                </Math>
-                {" "}
-                arrows...
+                <NoBreak>
+                  <Math>
+                    $\vec&#123;v&#125;$
+                  </Math>
+                  arrows...
+                </NoBreak>
               </OuterP>
               <Pause />
               <Image src="/images/svg_ch5_ex_vector_sum_u_concat_v.svg" />
               <Pause />
               <OuterP>
                 ...which actually implies that {" "}
-                <Math>
-                  $\vec&#123;u&#125; + \vec&#123;v&#125;$
-                </Math>
-                {" "}
-                is the vector going from the head of {" "}
+                <NoBreak>
+                  <Math>
+                    $\vec&#123;u&#125; + \vec&#123;v&#125;$
+                  </Math>
+                  is
+                </NoBreak>
+                {" "} the vector going from the head of {" "}
                 <Math>
                   $\vec&#123;u&#125;$
                 </Math>
@@ -6131,9 +6197,9 @@ const Rest = () => {
                   $\vec&#123;v&#125;$
                 </Math>
                 {" "} in the afore-mentioned
-                concatenation, because of how we defined
-                {" "}
+                concatenation, because of how we {" "}
                 <NoBreak>
+                  defined
                   <Math>
                     $\vec&#123;u&#125; + \vec&#123;v&#125;$
                   </Math>
@@ -6331,11 +6397,13 @@ const Rest = () => {
                   </NoBreak>
                   {" "} of the particle, as
                   measured from a translate of the positive {" "}
-                  <Math>
-                    $x$
-                  </Math>
-                  {" "}
-                  axis going through the center of the circle
+                  <NoBreak>
+                    <Math>
+                      $x$
+                    </Math>
+                    axis
+                  </NoBreak>
+                  {" "} going through the center of the circle
                 </li>
               </ul>
             </TextParent>
@@ -6410,11 +6478,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               is an amount of radians, because anything
-              fed to ‘cos’ is an amount of radians; and so
-              {" "}
-              <Math>
-                $B$
-              </Math>
+              fed to ‘cos’ is an amount of radians; and {" "}
+              <NoBreak>
+                so
+                <Math>
+                  $B$
+                </Math>
+              </NoBreak>
               {" "} ends up being the
             </OuterP>
             <Pause />
@@ -6590,11 +6660,13 @@ const Rest = () => {
               {" "}
               Take a particle traveling around a
               circle at constant speed. What is the
-              number of cycles [full revolutions] per
-              {" "}
-              <Math>
-                $4\eta$
-              </Math>
+              number of cycles [full revolutions] {" "}
+              <NoBreak>
+                per
+                <Math>
+                  $4\eta$
+                </Math>
+              </NoBreak>
               {" "} units of time equal to, by
               another name?
             </OuterP>
@@ -6884,21 +6956,25 @@ const Rest = () => {
                 <Math>
                   $\eta$
                 </Math>
-                {" "} and
-                {" "}
-                <Math>
-                  $4\eta$
-                </Math>
+                {" "} {" "}
+                <NoBreak>
+                  and
+                  <Math>
+                    $4\eta$
+                  </Math>
+                </NoBreak>
                 {" "} also follow by viewing {" "}
                 <Math>
                   $\eta$
                 </Math>
                 {" "} and {" "}
-                <Math>
-                  $4\eta$
-                </Math>
-                {" "}
-                as the radian values of a right angle and a full angle,
+                <NoBreak>
+                  <Math>
+                    $4\eta$
+                  </Math>
+                  as
+                </NoBreak>
+                {" "} the radian values of a right angle and a full angle,
                 respectively.
               </OuterP>
             </SolutionNote>
@@ -7044,11 +7120,13 @@ const Rest = () => {
                   </Math>
                   ’,
                 </NoBreak>
-                {" "} ask “how many times does
-                {" "}
-                <Math>
-                  $7$
-                </Math>
+                {" "} ask “how many times {" "}
+                <NoBreak>
+                  does
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
                 {" "} go into {" "}
                 <NoBreak>
                   <Math>
@@ -7110,9 +7188,9 @@ const Rest = () => {
                 <Math>
                   $7$
                 </Math>
-                {" "} go into
-                {" "}
+                {" "} go {" "}
                 <NoBreak>
+                  into
                   <Math>
                     $11$
                   </Math>
@@ -7197,9 +7275,9 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "} and now we have
-                {" "}
+                {" "} and now we {" "}
                 <NoBreak>
+                  have
                   <Math>
                     $11 = 7 \times 1 + 4$
                   </Math>
@@ -7324,13 +7402,15 @@ const Rest = () => {
                 </NoBreak>
                 {" "} giving us a new remainder
                 of {" "}
-                <Math>
-                  $5$
-                </Math>
-                {" "}
-                (well, to be technical, the remainder is actually
-                {" "}
                 <NoBreak>
+                  <Math>
+                    $5$
+                  </Math>
+                  (well,
+                </NoBreak>
+                {" "} to be technical, the remainder is {" "}
+                <NoBreak>
+                  actually
                   <Math>
                     $5 \times 10^&#123;-1&#125;$
                   </Math>
@@ -7375,9 +7455,9 @@ const Rest = () => {
                 <Math>
                   $0$
                 </Math>
-                {" "} down from our infinite reserve of
-                {" "}
+                {" "} down from our infinite reserve {" "}
                 <NoBreak>
+                  of
                   <Math>
                     $0$
                   </Math>
@@ -7751,11 +7831,13 @@ const Rest = () => {
               </OuterP>
               <OuterP class="indent-10">
                 We start by asking “how many times does {" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}
-                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $777$
+                  </Math>
+                  go
+                </NoBreak>
+                {" "} into {" "}
                 <NoBreak>
                   <Math>
                     $1$
@@ -7775,11 +7857,13 @@ const Rest = () => {
                 {" "} (that we need not write
                 down, but we can), we move to asking
                 “how many times does {" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}
-                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $777$
+                  </Math>
+                  go
+                </NoBreak>
+                {" "} into {" "}
                 <NoBreak>
                   <Math>
                     $15$
@@ -7801,11 +7885,13 @@ const Rest = () => {
                 </NoBreak>
                 {" "} we move to asking
                 “how many times does {" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}
-                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $777$
+                  </Math>
+                  go
+                </NoBreak>
+                {" "} into {" "}
                 <NoBreak>
                   <Math>
                     $155$
@@ -7827,11 +7913,13 @@ const Rest = () => {
                 </NoBreak>
                 {" "} we move to asking
                 “how many times does {" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}
-                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $777$
+                  </Math>
+                  go
+                </NoBreak>
+                {" "} into {" "}
                 <NoBreak>
                   <Math>
                     $1554$
@@ -7852,11 +7940,13 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "} we subtract {" "}
-                <Math>
-                  $2 \times 777$
-                </Math>
-                {" "}
-                from {" "}
+                <NoBreak>
+                  <Math>
+                    $2 \times 777$
+                  </Math>
+                  from
+                </NoBreak>
+                {" "} {" "}
                 <NoBreak>
                   <Math>
                     $1554$
@@ -7885,11 +7975,13 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "} ask “how many times does {" "}
-                <Math>
-                  $777$
-                </Math>
-                {" "}
-                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $777$
+                  </Math>
+                  go
+                </NoBreak>
+                {" "} into {" "}
                 <NoBreak>
                   <Math>
                     $2$
@@ -8009,11 +8101,13 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "} we subtract {" "}
-                <Math>
-                  $3 \times 777$
-                </Math>
-                {" "}
-                from {" "}
+                <NoBreak>
+                  <Math>
+                    $3 \times 777$
+                  </Math>
+                  from
+                </NoBreak>
+                {" "} {" "}
                 <NoBreak>
                   <Math>
                     $2648$
@@ -8150,9 +8244,9 @@ const Rest = () => {
                   </Math>
                   ”
                 </NoBreak>
-                {" "} to do
-                {" "}
+                {" "} to {" "}
                 <NoBreak>
+                  do
                   <Math>
                     $12 - 8 = 4$
                   </Math>
@@ -8485,9 +8579,9 @@ const Rest = () => {
                 $y = \cos(x) + \sin(x)$
               </Math>
               {" "} from
-              Exercise 5 has a maximum value greater than
-              {" "}
+              Exercise 5 has a maximum value greater {" "}
               <NoBreak>
+                than
                 <Math>
                   $1$
                 </Math>
@@ -8563,11 +8657,13 @@ const Rest = () => {
                 $-45^\circ$
               </Math>
               {" "} through the point {" "}
-              <Math>
-                $(x, y)$
-              </Math>
-              {" "}
-              with either the {" "}
+              <NoBreak>
+                <Math>
+                  $(x, y)$
+                </Math>
+                with
+              </NoBreak>
+              {" "} either the {" "}
               <NoBreak>
                 <Math>
                   $x$
@@ -8586,9 +8682,9 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_x_plus_y_intersections.svg" />
             <Pause />
             <OuterP>
-              (By the way: when we say “line of angle
-              {" "}
+              (By the way: when we say “line of {" "}
               <NoBreak>
+                angle
                 <Math>
                   $-45^\circ$
                 </Math>
@@ -8667,9 +8763,9 @@ const Rest = () => {
                 </Math>
                 -
               </NoBreak>
-              {" "} and
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                and
                 <Math>
                   $y$
                 </Math>
@@ -8830,17 +8926,15 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}
-                {" "}
                 <NoBreak>
                   <Math>
                     $y_0 = \sin(\eta/2)$
                   </Math>
                   ,
                 </NoBreak>
-                {" "} and the sum is seen to be
-                {" "}
+                {" "} and the sum is seen to {" "}
                 <NoBreak>
+                  be
                   <Math>
                     $\sqrt&#123;1^2 + 1^2&#125; = \sqrt&#123;2&#125;$
                   </Math>
@@ -8855,17 +8949,17 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                On the original graph from the statement, the
-                {" "}
+                On the original graph from the statement, {" "}
                 <NoBreak>
+                  the
                   <Math>
                     $y$
                   </Math>
                   -value
                 </NoBreak>
-                {" "} of the maximum is therefore
-                {" "}
+                {" "} of the maximum is {" "}
                 <NoBreak>
+                  therefore
                   <Math>
                     $y = \sqrt&#123;2&#125;$
                   </Math>
@@ -8878,8 +8972,6 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "}
-                {" "}
                 <NoBreak>
                   <Math>
                     $x = 9\eta/2$
@@ -8933,9 +9025,9 @@ const Rest = () => {
                 Exercise 19.
               </b>
               {" "}
-              What is the angle marked ‘?’, as a function of
-              {" "}
+              What is the angle marked ‘?’, as a function {" "}
               <NoBreak>
+                of
                 <Math>
                   $\theta$
                 </Math>
@@ -9070,18 +9162,22 @@ const Rest = () => {
               <OuterP>
                 Verbalized: {" "}
                 <i>
-                  the counterclockwise angle from the positive
-                  {" "}
-                  <Math>
-                    $x$
-                  </Math>
+                  the counterclockwise angle from the {" "}
+                  <NoBreak>
+                    positive
+                    <Math>
+                      $x$
+                    </Math>
+                  </NoBreak>
                   {" "} axis to
                   the radial vector
-                  equals the counterclockwise angle from the positive
-                  {" "}
-                  <Math>
-                    $y$
-                  </Math>
+                  equals the counterclockwise angle from the {" "}
+                  <NoBreak>
+                    positive
+                    <Math>
+                      $y$
+                    </Math>
+                  </NoBreak>
                   {" "} axis to the counterclockwise tangent.
                 </i>
               </OuterP>
@@ -9143,8 +9239,6 @@ const Rest = () => {
               <i>
                 isovalue set
               </i>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $\rt&#123;0.1&#125;$
@@ -9217,9 +9311,9 @@ const Rest = () => {
               <Math>
                 $\rr^2$
               </Math>
-              {" "} for some different values of
-              {" "}
+              {" "} for some different values {" "}
               <NoBreak>
+                of
                 <Math>
                   $C \in \rr$
                 </Math>
@@ -9475,25 +9569,31 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              will reach its maximum at those values of
-              {" "}
-              <Math>
-                $\theta$
-              </Math>
+              will reach its maximum at those values {" "}
+              <NoBreak>
+                of
+                <Math>
+                  $\theta$
+                </Math>
+              </NoBreak>
               {" "} that put the point {" "}
-              <Math>
-                $(\cos \theta, \sin \theta)$
-              </Math>
-              {" "}
-              at either {" "}
+              <NoBreak>
+                <Math>
+                  $(\cos \theta, \sin \theta)$
+                </Math>
+                at
+              </NoBreak>
+              {" "} either {" "}
               <Math>
                 $(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)$
               </Math>
-              {" "} or
-              {" "}
-              <Math>
-                $(-\sqrt&#123;0.5&#125;, -\sqrt&#123;0.5&#125;)$
-              </Math>
+              {" "} {" "}
+              <NoBreak>
+                or
+                <Math>
+                  $(-\sqrt&#123;0.5&#125;, -\sqrt&#123;0.5&#125;)$
+                </Math>
+              </NoBreak>
               {" "} on the unit circle;
               these values of {" "}
               <Math>
@@ -9795,11 +9895,13 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                [meaning: a horizontal dilation by a factor
-                {" "}
-                <Math>
-                  $a$
-                </Math>
+                [meaning: a horizontal dilation by a {" "}
+                <NoBreak>
+                  factor
+                  <Math>
+                    $a$
+                  </Math>
+                </NoBreak>
                 {" "} followed by a vertical dilation by a
                 factor {" "}
                 <NoBreak>
@@ -9861,9 +9963,9 @@ const Rest = () => {
                   </Math>
                   ]
                 </NoBreak>
-                {" "} of
-                {" "}
+                {" "} {" "}
                 <NoBreak>
+                  of
                   <Math>
                     $xy = 1$
                   </Math>
@@ -9998,16 +10100,20 @@ const Rest = () => {
                 {" "} (You can take this
                 last statement as the definition of “centrally
                 symmetric”. I.e., a set {" "}
-                <Math>
-                  $S \subseteq \rr^2$
-                </Math>
-                {" "}
-                is centrally symmetric if and only if {" "}
-                <Math>
-                  $S$
-                </Math>
-                {" "}
-                is equal to the {" "}
+                <NoBreak>
+                  <Math>
+                    $S \subseteq \rr^2$
+                  </Math>
+                  is
+                </NoBreak>
+                {" "} centrally symmetric if and only if {" "}
+                <NoBreak>
+                  <Math>
+                    $S$
+                  </Math>
+                  is
+                </NoBreak>
+                {" "} equal to the {" "}
                 <NoBreak>
                   <Math>
                     $(-1, -1)$
@@ -10038,9 +10144,9 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                each of the isosets is centrally symmetric, not only
-                {" "}
+                each of the isosets is centrally symmetric, not {" "}
                 <NoBreak>
+                  only
                   <Math>
                     $xy = 1$
                   </Math>
@@ -10074,11 +10180,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 Note that, technically, a set {" "}
-                <Math>
-                  $S \subseteq \rr^2$
-                </Math>
-                {" "}
-                [meaning: {" "}
+                <NoBreak>
+                  <Math>
+                    $S \subseteq \rr^2$
+                  </Math>
+                  [meaning:
+                </NoBreak>
+                {" "} {" "}
                 <Math>
                   $S$
                 </Math>
@@ -10108,11 +10216,13 @@ const Rest = () => {
                 <Math>
                   $S$
                 </Math>
-                {" "} if and only if
-                {" "}
-                <Math>
-                  $(y_0, x_0)$
-                </Math>
+                {" "} if and only {" "}
+                <NoBreak>
+                  if
+                  <Math>
+                    $(y_0, x_0)$
+                  </Math>
+                </NoBreak>
                 {" "} is in {" "}
                 <NoBreak>
                   <Math>
@@ -10230,11 +10340,13 @@ const Rest = () => {
               <Image src="/images/svg_ch5_ex_max_xy_mirror_image_other_way_explanation.svg" />
               <Pause />
               <OuterP>
-                In other words, any set that is symmetric through
-                {" "}
-                <Math>
-                  $x = y$
-                </Math>
+                In other words, any set that is symmetric {" "}
+                <NoBreak>
+                  through
+                  <Math>
+                    $x = y$
+                  </Math>
+                </NoBreak>
                 {" "} and that is centrally symmetric is also
                 symmetric through {" "}
                 <NoBreak>
@@ -10308,15 +10420,19 @@ const Rest = () => {
             <Pause />
             <OuterP>
               On the other hand, {" "}
-              <Math>
-                $A/C = \tan(\theta)$
-              </Math>
-              {" "}
-              also, by the result of Exercise 19 (whereby
-              {" "}
-              <Math>
-                $\theta$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $A/C = \tan(\theta)$
+                </Math>
+                also,
+              </NoBreak>
+              {" "} by the result of Exercise 19 {" "}
+              <NoBreak>
+                (whereby
+                <Math>
+                  $\theta$
+                </Math>
+              </NoBreak>
               {" "} reappears as the top left angle of
               the middle-sized right triangle):
             </OuterP>
@@ -10376,17 +10492,19 @@ const Rest = () => {
                 Solution 1.
               </i>
               {" "} We use the small leg {" "}
-              <Math>
-                $D$
-              </Math>
-              {" "}
-              of the triangle as a stopover between {" "}
+              <NoBreak>
+                <Math>
+                  $D$
+                </Math>
+                of
+              </NoBreak>
+              {" "} the triangle as a stopover between {" "}
               <Math>
                 $A$
               </Math>
-              {" "} and
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                and
                 <Math>
                   $B$
                 </Math>
@@ -10443,11 +10561,13 @@ const Rest = () => {
                 $A$
               </Math>
               {" "} as {" "}
-              <Math>
-                $B + A'$
-              </Math>
-              {" "}
-              where {" "}
+              <NoBreak>
+                <Math>
+                  $B + A'$
+                </Math>
+                where
+              </NoBreak>
+              {" "} {" "}
               <Math>
                 $A' = B - A$
               </Math>
@@ -10547,11 +10667,13 @@ const Rest = () => {
                 $\sec(\theta)$
               </Math>
               {" "} and {" "}
-              <Math>
-                $\tan(\theta)$
-              </Math>
-              {" "}
-              are defined for all {" "}
+              <NoBreak>
+                <Math>
+                  $\tan(\theta)$
+                </Math>
+                are
+              </NoBreak>
+              {" "} defined for all {" "}
               <Math>
                 $\theta$
               </Math>
@@ -10603,9 +10725,9 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              for all
-              {" "}
+              for {" "}
               <NoBreak>
+                all
                 <Math>
                   $\theta \in \dom \tan = \dom \sec$
                 </Math>
@@ -11076,11 +11198,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} and {" "}
-              <Math>
-                $\sin^2$
-              </Math>
-              {" "}
-              are periodic mod {" "}
+              <NoBreak>
+                <Math>
+                  $\sin^2$
+                </Math>
+                are
+              </NoBreak>
+              {" "} periodic mod {" "}
               <NoBreak>
                 <Math>
                   $2\eta$
@@ -11339,9 +11463,9 @@ const Rest = () => {
               <Math>
                 $y = \cos(x)\sin(x)$
               </Math>
-              {" "} and
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                and
                 <Math>
                   $y = \cos^2(x)$
                 </Math>
@@ -11372,11 +11496,13 @@ const Rest = () => {
             <OuterP>
               We know from Exercise 21 that the
               bump immediately to the right of {" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              {" "}
-              on the graph {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                on
+              </NoBreak>
+              {" "} the graph {" "}
               <Math>
                 $y = \cos(x)\sin(x)$
               </Math>
@@ -11398,19 +11524,23 @@ const Rest = () => {
               <Math>
                 $-\eta/2$
               </Math>
-              {" "} units horizontally and
-              {" "}
-              <Math>
-                $&#123;1\over 2&#125;$
-              </Math>
-              {" "} units vertically maps the graph
-              {" "}
-              <Math>
-                $y = \sin(x)\cos(x)$
-              </Math>
-              {" "} onto the graph
-              {" "}
+              {" "} units horizontally {" "}
               <NoBreak>
+                and
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+              </NoBreak>
+              {" "} units vertically maps the {" "}
+              <NoBreak>
+                graph
+                <Math>
+                  $y = \sin(x)\cos(x)$
+                </Math>
+              </NoBreak>
+              {" "} onto the {" "}
+              <NoBreak>
+                graph
                 <Math>
                   $y = \cos^2(x)$
                 </Math>
@@ -11574,9 +11704,9 @@ const Rest = () => {
               <Math>
                 $y = \cos^2(x)$
               </Math>
-              {" "} truly is the translate of
-              {" "}
+              {" "} truly is the translate {" "}
               <NoBreak>
+                of
                 <Math>
                   $y = \cos(x)\sin(x)$
                 </Math>
@@ -11595,11 +11725,13 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                We can turn the identity around, mapping
-                {" "}
-                <Math>
-                  $y = \cos^2(x)$
-                </Math>
+                We can turn the identity around, {" "}
+                <NoBreak>
+                  mapping
+                  <Math>
+                    $y = \cos^2(x)$
+                  </Math>
+                </NoBreak>
                 {" "} onto {" "}
                 <Math>
                   $y = \sin(x)\cos(x)$
@@ -11646,13 +11778,15 @@ const Rest = () => {
                   </Math>
                   ,
                 </NoBreak>
-                {" "} and adding
-                {" "}
-                <Math>
-                  $-&#123;1\over 2&#125;$
-                </Math>
-                {" "}
-                to the result effects a vertical translation by {" "}
+                {" "} and {" "}
+                <NoBreak>
+                  adding
+                  <Math>
+                    $-&#123;1\over 2&#125;$
+                  </Math>
+                  to
+                </NoBreak>
+                {" "} the result effects a vertical translation by {" "}
                 <NoBreak>
                   <Math>
                     $-&#123;1\over 2&#125;$
@@ -11661,11 +11795,13 @@ const Rest = () => {
                 </NoBreak>
                 {" "}
                 (I.e., we are using the
-                inverse amounts of translation that we used to map
-                {" "}
-                <Math>
-                  $y = \cos(x)\sin(x)$
-                </Math>
+                inverse amounts of translation that we used to {" "}
+                <NoBreak>
+                  map
+                  <Math>
+                    $y = \cos(x)\sin(x)$
+                  </Math>
+                </NoBreak>
                 {" "} onto {" "}
                 <NoBreak>
                   <Math>
@@ -11770,11 +11906,13 @@ const Rest = () => {
               </b>
               {" "}
               It also seems from the graphs that {" "}
-              <Math>
-                $y = \cos^2(x)$
-              </Math>
-              {" "}
-              is a {" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos^2(x)$
+                </Math>
+                is
+              </NoBreak>
+              {" "} a {" "}
               <i>
                 sinusoid
               </i>
@@ -11807,11 +11945,13 @@ const Rest = () => {
               <Math>
                 $2\eta$
               </Math>
-              {" "} while
-              {" "}
-              <Math>
-                $\cos$
-              </Math>
+              {" "} {" "}
+              <NoBreak>
+                while
+                <Math>
+                  $\cos$
+                </Math>
+              </NoBreak>
               {" "} is periodic mod {" "}
               <NoBreak>
                 <Math>
@@ -11826,11 +11966,13 @@ const Rest = () => {
                 $2$
               </Math>
               {" "} in order to map the bumps of {" "}
-              <Math>
-                $y = \cos(x)$
-              </Math>
-              {" "}
-              onto those of {" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos(x)$
+                </Math>
+                onto
+              </NoBreak>
+              {" "} those of {" "}
               <NoBreak>
                 <Math>
                   $y = \cos^2(x)$
@@ -11849,11 +11991,13 @@ const Rest = () => {
                 $&#123;1\over 2&#125;$
               </Math>
               {" "} (or scaling vertically by {" "}
-              <Math>
-                $&#123;1\over 2&#125;$
-              </Math>
-              {" "}
-              and translating up by {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+                and
+              </NoBreak>
+              {" "} translating up by {" "}
               <NoBreak>
                 <Math>
                   $&#123;1\over 2&#125;$
@@ -11866,11 +12010,13 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison_transformations_1.svg" />
             <Pause />
             <OuterP>
-              Algebraically, the three steps above turn
-              {" "}
-              <Math>
-                $\cos(x)$
-              </Math>
+              Algebraically, the three steps above {" "}
+              <NoBreak>
+                turn
+                <Math>
+                  $\cos(x)$
+                </Math>
+              </NoBreak>
               {" "} into {" "}
               <NoBreak>
                 <Math>
@@ -12046,9 +12192,9 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              ...which is same-same since
-              {" "}
+              ...which is same-same {" "}
               <NoBreak>
+                since
                 <Math>
                   $&#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x) = &#123;1 + \cos(2x)\over 2&#125;$
                 </Math>
@@ -12235,11 +12381,13 @@ const Rest = () => {
               {" "}
               What sequence of geometric transformations
               can turn [the graph] {" "}
-              <Math>
-                $y = \sin(x)$
-              </Math>
-              {" "}
-              into [the graph] {" "}
+              <NoBreak>
+                <Math>
+                  $y = \sin(x)$
+                </Math>
+                into
+              </NoBreak>
+              {" "} [the graph] {" "}
               <NoBreak>
                 <Math>
                   $y = \sin(x)\cos(x)$
@@ -12345,11 +12493,13 @@ const Rest = () => {
           <Solution>
             <OuterP>
               Note that {" "}
-              <Math>
-                $\sin + \cos$
-              </Math>
-              {" "}
-              has period {" "}
+              <NoBreak>
+                <Math>
+                  $\sin + \cos$
+                </Math>
+                has
+              </NoBreak>
+              {" "} period {" "}
               <Math>
                 $4\eta$
               </Math>
@@ -12357,9 +12507,9 @@ const Rest = () => {
               <Math>
                 $\sin$
               </Math>
-              {" "} or
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                or
                 <Math>
                   $\cos$
                 </Math>
@@ -12376,17 +12526,17 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <Math>
                 $\sin + \cos$
               </Math>
               {" "} reaches a maximum of {" "}
-              <Math>
-                $\sqrt&#123;2&#125;$
-              </Math>
-              {" "}
-              at {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                at
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $x = \eta/2$
@@ -12438,11 +12588,13 @@ const Rest = () => {
               of the current exercise! But we can conjecture
               that the
               following two steps would take us from {" "}
-              <Math>
-                $y = \cos(x)$
-              </Math>
-              {" "}
-              to {" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos(x)$
+                </Math>
+                to
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $y = \sin(x) + \cos(x)$
@@ -12671,9 +12823,9 @@ const Rest = () => {
                 .)
               </NoBreak>
               {" "} Also: draw a deep analogy
-              to polar coordinates, regarding the transform that gives
-              {" "}
+              to polar coordinates, regarding the transform that {" "}
               <NoBreak>
+                gives
                 <Math>
                   $W$
                 </Math>
@@ -12725,9 +12877,9 @@ const Rest = () => {
               <Math>
                 $W$
               </Math>
-              {" "} and collecting coefficients of
-              {" "}
+              {" "} and collecting coefficients {" "}
               <NoBreak>
+                of
                 <Math>
                   $\cos x$
                 </Math>
@@ -12757,19 +12909,23 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              we see that
-              {" "}
-              <Math>
-                $W \cos(x + \psi)$
-              </Math>
-              {" "}
-              would equal
-              {" "}
-              <Math>
-                $A_1\cos x + A_2\sin x$
-              </Math>
-              {" "}
-              if we could find {" "}
+              we see {" "}
+              <NoBreak>
+                that
+                <Math>
+                  $W \cos(x + \psi)$
+                </Math>
+                would
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                equal
+                <Math>
+                  $A_1\cos x + A_2\sin x$
+                </Math>
+                if
+              </NoBreak>
+              {" "} we could find {" "}
               <NoBreak>
                 <Math>
                   $W$
@@ -12820,11 +12976,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <Math>
-                $-\sin(x) = \sin(-x)$
-              </Math>
-              {" "}
-              for all {" "}
+              <NoBreak>
+                <Math>
+                  $-\sin(x) = \sin(-x)$
+                </Math>
+                for
+              </NoBreak>
+              {" "} all {" "}
               <NoBreak>
                 <Math>
                   $x \in \rr$
@@ -12851,11 +13009,13 @@ const Rest = () => {
             <OuterP>
               that give the transformation
               from polar coordinates {" "}
-              <Math>
-                $(r, \theta)$
-              </Math>
-              {" "}
-              to Cartesian coordinates {" "}
+              <NoBreak>
+                <Math>
+                  $(r, \theta)$
+                </Math>
+                to
+              </NoBreak>
+              {" "} Cartesian coordinates {" "}
               <NoBreak>
                 <Math>
                   $(x, y)$
@@ -13050,11 +13210,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 would work as well,
-                if we add
-                {" "}
-                <Math>
-                  $2\eta$
-                </Math>
+                if we {" "}
+                <NoBreak>
+                  add
+                  <Math>
+                    $2\eta$
+                  </Math>
+                </NoBreak>
                 {" "} to the argument!
               </OuterP>
             </SolutionNote>
@@ -13419,9 +13581,9 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} since
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                since
                 <Math>
                   $1 = \sec^0(\theta)$
                 </Math>
@@ -13443,11 +13605,13 @@ const Rest = () => {
               </NoBreak>
               {" "} bottom left,
               successive multiplications by {" "}
-              <Math>
-                $\sec(\theta)$
-              </Math>
-              {" "}
-              are performed by “dropping a height up” onto
+              <NoBreak>
+                <Math>
+                  $\sec(\theta)$
+                </Math>
+                are
+              </NoBreak>
+              {" "} performed by “dropping a height up” onto
               the opposite side of the angle {" "}
               <NoBreak>
                 <Math>
@@ -13459,11 +13623,13 @@ const Rest = () => {
               bouncing back and forth between the two sides.
             </OuterP>
             <OuterP class="indent-10">
-              If we are willing to reproduce the angle
-              {" "}
-              <Math>
-                $\theta$
-              </Math>
+              If we are willing to reproduce the {" "}
+              <NoBreak>
+                angle
+                <Math>
+                  $\theta$
+                </Math>
+              </NoBreak>
               {" "} several times over,
               another possibility is to draw a “snail stack”
               of right triangles sharing a common vertex:
@@ -13611,9 +13777,9 @@ const Rest = () => {
               <OuterP>
                 (To reiterate, this works because the triangles are all similar,
                 and the size ratio of one triangle to the previous—specifically,
-                the ratio of the hypotenuses—is
-                {" "}
+                the ratio of the {" "}
                 <NoBreak>
+                  hypotenuses—is
                   <Math>
                     $\cos(\theta)$
                   </Math>
@@ -13673,11 +13839,13 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                one can start with an illustration for powers of
-                {" "}
-                <Math>
-                  $\cos(\theta)$
-                </Math>
+                one can start with an illustration for powers {" "}
+                <NoBreak>
+                  of
+                  <Math>
+                    $\cos(\theta)$
+                  </Math>
+                </NoBreak>
                 {" "} and reverse the role of {" "}
                 <Math>
                   $\theta$
@@ -13693,20 +13861,24 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 (Likewise to switch from an illustration of {" "}
-                <Math>
-                  $\sec$
-                </Math>
-                {" "}
-                to illustration of {" "}
+                <NoBreak>
+                  <Math>
+                    $\sec$
+                  </Math>
+                  to
+                </NoBreak>
+                {" "} illustration of {" "}
                 <Math>
                   $\csc$
                 </Math>
                 {" "} it suffices to move {" "}
-                <Math>
-                  $\theta$
-                </Math>
-                {" "}
-                around, not that aliens will ever descend on Earth and
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  around,
+                </NoBreak>
+                {" "} not that aliens will ever descend on Earth and
                 ask us these things.)
               </OuterP>
             </SolutionNote>
@@ -13884,9 +14056,9 @@ const Rest = () => {
                 <Math>
                   $\cos(x)$
                 </Math>
-                {" "} and
-                {" "}
+                {" "} {" "}
                 <NoBreak>
+                  and
                   <Math>
                     $\cos(0.1x + 0.1)$
                   </Math>
@@ -14072,9 +14244,9 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} for constants
-              {" "}
+              {" "} for {" "}
               <NoBreak>
+                constants
                 <Math>
                   $B$
                 </Math>
@@ -14091,16 +14263,20 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              As in the solution to Exercise 37 place
-              {" "}
-              <Math>
-                $\cos(x + C)$
-              </Math>
-              {" "} as an intermediate function between
-              {" "}
-              <Math>
-                $\cos(x)$
-              </Math>
+              As in the solution to Exercise 37 {" "}
+              <NoBreak>
+                place
+                <Math>
+                  $\cos(x + C)$
+                </Math>
+              </NoBreak>
+              {" "} as an intermediate function {" "}
+              <NoBreak>
+                between
+                <Math>
+                  $\cos(x)$
+                </Math>
+              </NoBreak>
               {" "} and {" "}
               <NoBreak>
                 <Math>
@@ -14497,9 +14673,9 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_one_over_A_secant_Agt1.svg" />
             <Pause />
             <OuterP>
-              ...the position obtained is the corresponding
-              {" "}
+              ...the position obtained is the {" "}
               <NoBreak>
+                corresponding
                 <Math>
                   $\cos(\theta)$
                 </Math>
@@ -14576,20 +14752,22 @@ const Rest = () => {
               <Math>
                 $1/2$
               </Math>
-              {" "} and
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                and
                 <Math>
                   $\sqrt&#123;0.75&#125; = &#123;\sqrt&#123;3&#125;\over 2&#125;$
                 </Math>
                 ,
               </NoBreak>
               {" "} being {" "}
-              <Math>
-                $\cos(60^\circ)$
-              </Math>
-              {" "}
-              and {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(60^\circ)$
+                </Math>
+                and
+              </NoBreak>
+              {" "} {" "}
               <Math>
                 $\sin(60^\circ)$
               </Math>
@@ -14646,11 +14824,13 @@ const Rest = () => {
                 $A$
               </Math>
               {" "} to {" "}
-              <Math>
-                $A'$
-              </Math>
-              {" "}
-              from the following set of blueprints for a shed with
+              <NoBreak>
+                <Math>
+                  $A'$
+                </Math>
+                from
+              </NoBreak>
+              {" "} the following set of blueprints for a shed with
               an angled inside wall (all distances in inches):
             </OuterP>
             <Pause />
@@ -14667,11 +14847,13 @@ const Rest = () => {
             <OuterP>
               Proceeding, the longer and smaller green lengths
               are {" "}
-              <Math>
-                $112\rt&#123;0.1&#125; \cdot \sin(25.5^\circ\hlfbk)$
-              </Math>
-              {" "}
-              and {" "}
+              <NoBreak>
+                <Math>
+                  $112\rt&#123;0.1&#125; \cdot \sin(25.5^\circ\hlfbk)$
+                </Math>
+                and
+              </NoBreak>
+              {" "} {" "}
               <Math>
                 $8\rt&#123;0.1&#125; \cdot \cos(25.5^\circ\hlfbk)$
               </Math>
@@ -15014,11 +15196,13 @@ const Rest = () => {
           <Solution>
             <OuterP>
               In the interest of mass-producing our results
-              we will write a general formula to compute
-              {" "}
-              <Math>
-                $\alpha$
-              </Math>
+              we will write a general formula to {" "}
+              <NoBreak>
+                compute
+                <Math>
+                  $\alpha$
+                </Math>
+              </NoBreak>
               {" "} in terms of {" "}
               <NoBreak>
                 <Math>
@@ -15138,9 +15322,9 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} since
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                since
                 <Math>
                   $r^2 = x_0^2 + y_0^2$
                 </Math>
@@ -15162,33 +15346,29 @@ const Rest = () => {
               which constitutes our “general formula”.
             </OuterP>
             <OuterP class="indent-10">
-              From this point, we apply the general formula with
-              {" "}
+              From this point, we apply the general formula {" "}
               <NoBreak>
+                with
                 <Math>
                   $z = 66 - 18 = 44$
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $(x_0, y_0) = (60, 30)$
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $(x_0, y_0) = (93, 30)$
                 </Math>
                 ,
               </NoBreak>
-              {" "} and
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                and
                 <Math>
                   $(x_0, y_0) = (108, 22)$
                 </Math>
@@ -15233,11 +15413,13 @@ const Rest = () => {
               the small handle with the wall.
             </OuterP>
             <OuterP class="indent-10">
-              (By the way: don't be confused by the fact that
-              {" "}
-              <Math>
-                $\alpha$
-              </Math>
+              (By the way: don't be confused by the fact {" "}
+              <NoBreak>
+                that
+                <Math>
+                  $\alpha$
+                </Math>
+              </NoBreak>
               {" "} is not an angle measured “from
               horizontal”; {" "}
               <Math>
@@ -15770,15 +15952,16 @@ const Rest = () => {
                 $$
               </MathBlock>
               <p>
-                where
-                {" "}
-                <Math>
-                  $
-                  h_i
-                  $
-                </Math>
-                {" "}
-                is the height of the tetrahedron, and {" "}
+                <NoBreak>
+                  where
+                  <Math>
+                    $
+                    h_i
+                    $
+                  </Math>
+                  is
+                </NoBreak>
+                {" "} the height of the tetrahedron, and {" "}
                 <Math>
                   $r$
                 </Math>
@@ -15848,11 +16031,13 @@ const Rest = () => {
               </p>
               <p>
                 (Or as mathematicians would put it: “for all {" "}
-                <Math>
-                  $\e &gt; 0$
-                </Math>
-                {" "}
-                there exists an {" "}
+                <NoBreak>
+                  <Math>
+                    $\e &gt; 0$
+                  </Math>
+                  there
+                </NoBreak>
+                {" "} exists an {" "}
                 <Math>
                   $s &gt; 0$
                 </Math>
@@ -16133,11 +16318,13 @@ const Rest = () => {
               exist too.)
             </OuterP>
             <OuterP class="indent-10">
-              In other words, the product takes the constant
-              {" "}
-              <Math>
-                $c$
-              </Math>
+              In other words, the product takes the {" "}
+              <NoBreak>
+                constant
+                <Math>
+                  $c$
+                </Math>
+              </NoBreak>
               {" "} “inside”, multiplying each coordinate of
               the vector by {" "}
               <NoBreak>
@@ -16169,8 +16356,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $\vec&#123;v&#125; = (10, 3.333)$

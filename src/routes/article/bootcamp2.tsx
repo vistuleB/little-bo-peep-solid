@@ -321,11 +321,11 @@ const Rest = () => {
           </NoBreak>
           {" "}
           Moreover, (
-          <InChapterLink
-            href="/article/bootcamp2?id=_1_hgi_"
-            class="handle-in-chapter-link">
-            A
-          </InChapterLink>
+          <a
+            href="_1_hgi_?id=A"
+            class="handle-out-chapter-link">
+            /article/bootcamp2
+          </a>
           ) actually holds for
         </OuterP>
         <Pause />
@@ -343,21 +343,21 @@ const Rest = () => {
           </NoBreak>
           {" "} which is mildly important. In more
           detail, (
-          <InChapterLink
-            href="/article/bootcamp2?id=_1_hgi_"
-            class="handle-in-chapter-link">
-            A
-          </InChapterLink>
+          <a
+            href="_1_hgi_?id=A"
+            class="handle-out-chapter-link">
+            /article/bootcamp2
+          </a>
           ) holds for {" "}
           <Math>
             $n = 0$
           </Math>
           {" "} by inspection, and (
-          <InChapterLink
-            href="/article/bootcamp2?id=_1_hgi_"
-            class="handle-in-chapter-link">
-            A
-          </InChapterLink>
+          <a
+            href="_1_hgi_?id=A"
+            class="handle-out-chapter-link">
+            /article/bootcamp2
+          </a>
           )
           is equivalent to the identity
           <ImageLeft
@@ -374,9 +374,9 @@ const Rest = () => {
           <Math>
             $n$
           </Math>
-          {" "} if and only if it holds for
-          {" "}
+          {" "} if and only if it holds {" "}
           <NoBreak>
+            for
             <Math>
               $-n$
             </Math>
@@ -400,17 +400,17 @@ const Rest = () => {
           </NoBreak>
           {" "}
           in (
-          <InChapterLink
-            href="/article/bootcamp2?id=_2_hgi_"
-            class="handle-in-chapter-link">
-            AA
-          </InChapterLink>
+          <a
+            href="_2_hgi_?id=AA"
+            class="handle-out-chapter-link">
+            /article/bootcamp2
+          </a>
           ) lands you right back on (
-          <InChapterLink
-            href="/article/bootcamp2?id=_2_hgi_"
-            class="handle-in-chapter-link">
-            AA
-          </InChapterLink>
+          <a
+            href="_2_hgi_?id=AA"
+            class="handle-out-chapter-link">
+            /article/bootcamp2
+          </a>
           ), due to the fact
           that {" "}
           <NoBreak>
@@ -420,11 +420,11 @@ const Rest = () => {
             .)
           </NoBreak>
           {" "} (So, namely, if (
-          <InChapterLink
-            href="/article/bootcamp2?id=_2_hgi_"
-            class="handle-in-chapter-link">
-            AA
-          </InChapterLink>
+          <a
+            href="_2_hgi_?id=AA"
+            class="handle-out-chapter-link">
+            /article/bootcamp2
+          </a>
           ) holds for all
           positive values of {" "}
           <NoBreak>
@@ -492,17 +492,17 @@ const Rest = () => {
         <OuterP>
           ...and any one of these equations implies the other two.
           Thus, either of (
-          <InChapterLink
-            href="/article/bootcamp2?id=_1_hgi_"
-            class="handle-in-chapter-link">
-            A
-          </InChapterLink>
+          <a
+            href="_1_hgi_?id=A"
+            class="handle-out-chapter-link">
+            /article/bootcamp2
+          </a>
           ) and (
-          <InChapterLink
-            href="/article/bootcamp2?id=_2_hgi_"
-            class="handle-in-chapter-link">
-            AA
-          </InChapterLink>
+          <a
+            href="_2_hgi_?id=AA"
+            class="handle-out-chapter-link">
+            /article/bootcamp2
+          </a>
           )
           expresses the
         </OuterP>
@@ -718,9 +718,9 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          in the sense that “all products start at
-          {" "}
+          in the sense that “all products start {" "}
           <NoBreak>
+            at
             <Math>
               $1$
             </Math>
@@ -775,11 +775,13 @@ const Rest = () => {
             $10$
           </Math>
           {" "} makes {" "}
-          <Math>
-            $13 + 14 = 27$
-          </Math>
-          {" "}
-          multiplications by {" "}
+          <NoBreak>
+            <Math>
+              $13 + 14 = 27$
+            </Math>
+            multiplications
+          </NoBreak>
+          {" "} by {" "}
           <NoBreak>
             <Math>
               $10$
@@ -1063,9 +1065,9 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} due to the fact
-          that many of our ancestors chose to count in base
-          {" "}
+          that many of our ancestors chose to count in {" "}
           <NoBreak>
+            base
             <Math>
               $10$
             </Math>
@@ -1434,11 +1436,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           Likewise, the standard decimal expansion for {" "}
-          <Math>
-            $10^&#123;-2&#125;$
-          </Math>
-          {" "}
-          contains exactly two {" "}
+          <NoBreak>
+            <Math>
+              $10^&#123;-2&#125;$
+            </Math>
+            contains
+          </NoBreak>
+          {" "} exactly two {" "}
           <NoBreak>
             <Math>
               $0$
@@ -1591,9 +1595,9 @@ const Rest = () => {
         <Pause />
         <OuterP>
           (Funny how the prefixes switch from
-          ending in ‘i’ to ending in ‘o’ after
-          {" "}
+          ending in ‘i’ to ending in ‘o’ {" "}
           <NoBreak>
+            after
             <Math>
               $10^&#123;-3&#125;$
             </Math>
@@ -1613,9 +1617,9 @@ const Rest = () => {
           are smaller than the smallest animal
           cells (human red blood cells, which
           are among the smallest animal cells,
-          have a diameter of
-          {" "}
+          have a diameter {" "}
           <NoBreak>
+            of
             <Math>
               $7$
             </Math>
@@ -2390,13 +2394,15 @@ const Rest = () => {
                 $10^3$
               </Math>
               {" "} meters
-              in a kilometer, so there are
-              {" "}
-              <Math>
-                $10^3 \times 10^3 = 10^6$
-              </Math>
-              {" "}
-              millimeters in a kilometer.
+              in a kilometer, so there {" "}
+              <NoBreak>
+                are
+                <Math>
+                  $10^3 \times 10^3 = 10^6$
+                </Math>
+                millimeters
+              </NoBreak>
+              {" "} in a kilometer.
             </OuterP>
             <OuterP class="indent-10">
               From there, it automatically follows that
@@ -2420,11 +2426,13 @@ const Rest = () => {
               </Math>
               {" "} meters in a millimeter,
               so {" "}
-              <Math>
-                $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
-              </Math>
-              {" "}
-              kilometers in a millimeter.)
+              <NoBreak>
+                <Math>
+                  $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
+                </Math>
+                kilometers
+              </NoBreak>
+              {" "} in a millimeter.)
             </OuterP>
           </Solution>
         </Exercise>
@@ -2497,9 +2505,9 @@ const Rest = () => {
               <Math>
                 $10\%$
               </Math>
-              {" "} of one trillion [cf.:
-              {" "}
+              {" "} of one trillion {" "}
               <NoBreak>
+                [cf.:
                 <Math>
                   $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
                 </Math>
@@ -2507,11 +2515,13 @@ const Rest = () => {
               </NoBreak>
               {" "}
               and one trillion is a quarter of {" "}
-              <Math>
-                $4$
-              </Math>
-              {" "}
-              trillion, so the answer is {" "}
+              <NoBreak>
+                <Math>
+                  $4$
+                </Math>
+                trillion,
+              </NoBreak>
+              {" "} so the answer is {" "}
               <NoBreak>
                 <Math>
                   $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
@@ -2909,11 +2919,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               stated earlier in the chapter as (
-              <InChapterLink
-                href="/article/bootcamp2?id=_1_hgi_"
-                class="handle-in-chapter-link">
-                A
-              </InChapterLink>
+              <a
+                href="_1_hgi_?id=A"
+                class="handle-out-chapter-link">
+                /article/bootcamp2
+              </a>
               ), 
               while the third equality uses additivity of exponents, 
               also stated earlier. (So: We are only using “known”
@@ -3229,16 +3239,20 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <Math>
-                $\rho$
-              </Math>
-              {" "}
-              in the canonical form {" "}
-              <Math>
-                $M^xL^yT^z$
-              </Math>
-              {" "}
-              for integers {" "}
+              <NoBreak>
+                <Math>
+                  $\rho$
+                </Math>
+                in
+              </NoBreak>
+              {" "} the canonical form {" "}
+              <NoBreak>
+                <Math>
+                  $M^xL^yT^z$
+                </Math>
+                for
+              </NoBreak>
+              {" "} integers {" "}
               <NoBreak>
                 <Math>
                   $x$
@@ -3257,11 +3271,11 @@ const Rest = () => {
                 $z$
               </Math>
               {" "} (as in {" "}
-              <InChapterLink
-                href="/article/bootcamp2?id=_3_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 14
-              </InChapterLink>
+              <a
+                href="_3_hgi_?id=14"
+                class="handle-out-chapter-link">
+                Exercise /article/bootcamp2
+              </a>
               ):
             </OuterP>
             <Pause />
@@ -3305,11 +3319,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <Math>
-                $\mu^c$
-              </Math>
-              {" "}
-              by applying the fourth law of exponents (note e.g.
+              <NoBreak>
+                <Math>
+                  $\mu^c$
+                </Math>
+                by
+              </NoBreak>
+              {" "} applying the fourth law of exponents (note e.g.
               that {" "}
               <NoBreak>
                 <Math>
@@ -3401,11 +3417,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <Math>
-                $T$
-              </Math>
-              {" "}
-              if and only if...
+              <NoBreak>
+                <Math>
+                  $T$
+                </Math>
+                if
+              </NoBreak>
+              {" "} and only if...
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -3413,9 +3431,9 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              ...(!!!) which means that we need to find values
-              {" "}
+              ...(!!!) which means that we need to find {" "}
               <NoBreak>
+                values
                 <Math>
                   $a$
                 </Math>
@@ -3525,9 +3543,9 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "} Lastly, plugging
-              {" "}
+              {" "} Lastly, {" "}
               <NoBreak>
+                plugging
                 <Math>
                   $b = 1$
                 </Math>
@@ -3604,8 +3622,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $c = -2$
@@ -3637,11 +3653,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <Math>
-                $\mu$
-              </Math>
-              {" "}
-              and {" "}
+              <NoBreak>
+                <Math>
+                  $\mu$
+                </Math>
+                and
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $\rho$
