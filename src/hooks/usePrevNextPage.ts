@@ -7,8 +7,8 @@ const usePrevNextPage = () => {
   const clearCurrentPage = () => set_store("loading", true);
   const prevDisabled = () => store.prevPage === "";
   const nextDisabled = () => store.nextPage === "";
-  const getPrevArticle = () => getPage(store.prevPage);
-  const getNextArticle = () => getPage(store.nextPage);
+  const getPrevPage = () => getPage(store.prevPage);
+  const getNextPage = () => getPage(store.nextPage);
   const getPage = (page: string) => {
     if (page === "") return;
     clearCurrentPage();
@@ -26,8 +26,8 @@ const usePrevNextPage = () => {
   return {
     prevDisabled,
     nextDisabled,
-    getNextArticle,
-    getPrevArticle,
+    getNextPage: getNextPage,
+    getPrevPage: getPrevPage,
     getPage,
   };
 };

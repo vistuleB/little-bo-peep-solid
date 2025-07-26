@@ -687,15 +687,15 @@
                 src=images/55.svg
                 class=relative w-fit
 
-                |> ImageRight
-                    src=images/56.svg
-                    offset_y=5rem
-                    offset_x= -1.3rem
+            |> ImageRight
+                src=images/56.svg
+                offset_y=5rem
+                offset_x= -1.3rem
 
-                |> ImageLeft
-                    src=images/57.svg
-                    offset_x= -8rem
-                    offset_y=8rem
+            |> ImageLeft
+                src=images/57.svg
+                offset_x= -8rem
+                offset_y=8rem
 
             In more detail, the two triangles are related
             by a $90^\circ$ rotation and so, likewise,

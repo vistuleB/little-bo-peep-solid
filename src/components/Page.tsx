@@ -17,7 +17,7 @@ type PageProps = {
 
 const Page = (props: ParentProps & PageProps) => {
   let { set_store, store } = useGlobalContext();
-  const { getPrevArticle, getNextArticle } = usePrevNextPage();
+  const { getPrevPage, getNextPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
   const location = useLocation();
 
@@ -148,13 +148,13 @@ const Page = (props: ParentProps & PageProps) => {
     }
 
     if (e.clientX < store.innerWidth * 0.1) {
-      getPrevArticle();
+      getPrevPage();
       e.stopPropagation();
       return;
     }
 
     if (e.clientX > store.innerWidth * 0.9) {
-      getNextArticle();
+      getNextPage();
       e.stopPropagation();
       return;
     }
@@ -167,12 +167,12 @@ const Page = (props: ParentProps & PageProps) => {
   const handleKeydown = (e: KeyboardEvent) => {
     if (e.key === "ArrowLeft") {
       e.preventDefault();
-      getPrevArticle();
+      getPrevPage();
       return;
     }
     if (e.key === "ArrowRight") {
       e.preventDefault();
-      getNextArticle();
+      getNextPage();
       return;
     }
   };

@@ -1469,7 +1469,6 @@ const Rest = () => {
               True or false (and, if possible, explain):
             </OuterP>
             <Pause />
-            <Pause />
             <Grid
               cols={3}
               sm_cols={2}
@@ -2174,7 +2173,6 @@ const Rest = () => {
               </NoBreak>
               {" "} changes the sign of the previous result):
             </OuterP>
-            <Pause />
             <Pause />
             <Grid
               cols={3}

@@ -149,7 +149,6 @@ fn pipeline_without_lists() -> List(Desugarer) {
       dl.add_before_but_not_before_first_child(#("Table", "Pause", [])),
       dl.add_before_but_not_before_first_child(#("table", "Pause", [])),
       dl.add_before_but_not_before_first_child(#("Grid", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("Grid", "Pause", [])),
       dl.add_before_but_not_before_first_child(#("List", "Pause", [])),
       dl.add_before_but_not_before_first_child(#("StarDivider", "Pause", [])),
       dl.add_before_but_not_before_first_of_kind(#("Section", "Pause", [])),
@@ -321,7 +320,6 @@ fn pipeline_with_lists() -> List(Desugarer) {
         #("Table", "Pause", []),
         #("table", "Pause", []),
         #("Grid", "Pause", []),
-        #("Grid", "Pause", []),
         #("List", "Pause", []),
         #("StarDivider", "Pause", []),
       ]),
@@ -350,9 +348,9 @@ fn pipeline_with_lists() -> List(Desugarer) {
   |> list.flatten
 }
 
-pub fn our_pipeline() -> List(Desugarer) {
-  case infra.no_list {
-    True -> pipeline_without_lists()
-    False -> pipeline_with_lists()
+pub fn our_pipeline(batch) -> List(Desugarer) {
+  case batch {
+    False -> pipeline_without_lists()
+    True -> pipeline_with_lists()
   }
 }

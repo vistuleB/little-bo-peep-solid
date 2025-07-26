@@ -102,7 +102,7 @@ const ButtonsContainer = (props: ParentProps) => {
 const LeftArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
-  const { getPrevArticle, prevDisabled } = usePrevNextPage();
+  const { getPrevPage: getPrevArticle, prevDisabled } = usePrevNextPage();
   const [pressed, setPressed] = createSignal(false);
   const [pressedTimeout, setPressedTimeout] = createSignal(false);
 
@@ -163,7 +163,7 @@ const LeftArrowButton = () => {
 const RightArrowButton = () => {
   const { on_mobile } = useOnMobile();
   const { store } = useGlobalContext();
-  const { getNextArticle, nextDisabled } = usePrevNextPage();
+  const { getNextPage: getNextArticle, nextDisabled } = usePrevNextPage();
   const [pressed, setPressed] = createSignal(false);
   const [pressedTimeout, setPressedTimeout] = createSignal(false);
 
