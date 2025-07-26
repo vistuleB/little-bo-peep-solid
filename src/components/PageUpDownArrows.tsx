@@ -6,9 +6,6 @@ import {
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
-import smoothScrollTo from "~/utils/smoothScrollTo";
-import useScrollToInChapter from "~/hooks/useScrollToInChapter";
-import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const PageUpDownArrows = () => {

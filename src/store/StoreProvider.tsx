@@ -31,9 +31,10 @@ export type Store = {
   loading: boolean;
   have_been_outside_home: boolean;
   last_page_load_ms: number;
-  total_page_load_ms: number,
-  num_page_loads: number,
+  total_page_load_ms: number;
+  num_page_loads: number;
   navigation_delays: boolean;
+  animations: boolean;
 };
 
 const [store, set_store] = createStore<Store>({
@@ -63,6 +64,7 @@ const [store, set_store] = createStore<Store>({
   total_page_load_ms: 0,
   num_page_loads: 0,
   navigation_delays: false,
+  animations: true,
 });
 
 const StoreContext = createContext<{

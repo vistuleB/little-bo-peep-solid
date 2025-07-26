@@ -100,7 +100,7 @@ const useScrollToInChapter = () => {
       // just scroll to the target
       smoothScrollTo(
         firstSectionEdgeCase(target) ? 0 : addSafeMarginForLongTarget(target),
-        scrollDuration,
+        store.animations ? scrollDuration : 0,
       );
       return;
     }
@@ -115,7 +115,10 @@ const useScrollToInChapter = () => {
     }
 
     if (exercises_store.list_view) {
-      smoothScrollTo(addSafeMarginForLongTarget(target), scrollDuration);
+      smoothScrollTo(
+        addSafeMarginForLongTarget(target),
+        store.animations ? scrollDuration : 0,
+      );
       return;
     }
 
@@ -125,7 +128,10 @@ const useScrollToInChapter = () => {
       (target.getBoundingClientRect().top < 0 ||
         target.getBoundingClientRect().bottom > store.innerHeight)
     ) {
-      smoothScrollTo(addSafeMarginForLongTarget(target), 100);
+      smoothScrollTo(
+        addSafeMarginForLongTarget(target),
+        store.animations ? scrollDuration : 0,
+      );
     }
     Promise.resolve();
   };

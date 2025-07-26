@@ -22,7 +22,6 @@ import {
   useExercisesStateHelpers,
 } from "~/store/ExercisesStoreProvider";
 import smoothScrollTo from "~/utils/smoothScrollTo";
-import elementPosOnPage from "~/utils/elementPosOnPage";
 import { HeightChangeListenerProvider } from "~/store/HeightChangeListenerProvider";
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useOneExerciseContext } from "~/store/OneExerciseStoreProvider";
@@ -106,7 +105,9 @@ export const Solution = (props: SolutionProps) => {
       set_content_height(ref?.clientHeight || 0);
       updateExerciseByIndex(solution_number - 1, {
         field: "transition_duration",
-        value: Math.min(ref?.clientHeight, 1000) * 0.8,
+        value: global_store.animations
+          ? Math.min(ref?.clientHeight, 1000) * 0.8
+          : 0,
       });
     }
   };
@@ -214,7 +215,7 @@ export const Solution = (props: SolutionProps) => {
         )}
         style={{
           height: `${solution_open() ? content_height() : 0}px`,
-          "transition-duration": `${solution_transition()}ms`,
+          "transition-duration": `${global_store.animations ? solution_transition() : 0}ms`,
           "transition-property": "height",
         }}>
         <div
@@ -240,7 +241,7 @@ export const Solution = (props: SolutionProps) => {
           <SpaceBeforeBackupArrow />
           <div
             style={{
-              "transition-duration": `${solution_open() ? solution_transition() : 50}ms`,
+              "transition-duration": `${!global_store.animations ? 0 : solution_open() ? solution_transition() : 50}ms`,
             }}
             class={twJoin(
               "flex items-center justify-center",
@@ -261,7 +262,7 @@ export const Solution = (props: SolutionProps) => {
         style={{
           height: `${(!store.list_view || solution_number === num_exercises()) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
           "background-color": global_store.show_areas ? "#00440050" : "",
-          "transition-duration": `${green_div_transition()}ms`,
+          "transition-duration": `${global_store.animations ? green_div_transition() : 0}ms`,
         }}></div>
     </HeightChangeListenerProvider>
   );
@@ -370,7 +371,7 @@ export const BackupArrow = () => {
         if (store.innerWidth > MOBILE_MAX_WIDTH) {
           smoothScrollTo(
             calculateTargetCenterOnPage(selectedExercise()) + 50,
-            100,
+            store.animations ? 100 : 0,
           );
         } else {
           document?.getElementById("exo")?.scrollIntoView();

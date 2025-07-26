@@ -48,7 +48,7 @@ const PageTopBottomArrows = () => {
   const handleUpClick = (_: MouseEvent) => {
     let middleScroll = calculateTargetCenterOnPage(selectedExercise());
     let scrollTo = store.scrollY < middleScroll + 100 ? 0 : middleScroll + 50;
-    smoothScrollTo(scrollTo, 100);
+    smoothScrollTo(scrollTo, store.animations ? 100 : 0);
   };
 
   const handleDownClick = (_: MouseEvent) => {
@@ -58,7 +58,7 @@ const PageTopBottomArrows = () => {
         ? document.body.scrollHeight
         : middleScroll + 50;
 
-    smoothScrollTo(scrollTo, 100);
+    smoothScrollTo(scrollTo, store.animations ? 100 : 0);
   };
 
   const containerWidth = () => {

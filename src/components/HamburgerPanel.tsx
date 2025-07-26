@@ -21,8 +21,9 @@ const HamburgerPanel = () => {
     <div
       id="hamburger_panel"
       classList={{
-        "duration-500": menu_closed(),
-        "duration-200": !menu_closed(),
+        "duration-500": store.animations && menu_closed(),
+        "duration-200": store.animations && !menu_closed(),
+        "duration-0": !store.animations,
       }}
       onMouseEnter={() => toggle_scroll("hidden")}
       onMouseLeave={() => toggle_scroll("auto")}
@@ -48,6 +49,7 @@ const HamburgerPanel = () => {
               state_key="show_section_dividers"
             />
             <Option label="Navigation delays" state_key="navigation_delays" />
+            <Option label="Animations" state_key="animations" />
             <ClearCache />
           </div>
           <div id="stats">

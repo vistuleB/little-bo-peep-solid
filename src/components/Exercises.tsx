@@ -125,7 +125,8 @@ const Switcher = (props: SwitcherProps) => {
             "tab cursor-pointer overflow-visible",
             left_on() ? "" : "disabled",
           )}
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation();
             if (left_on()) {
               set_store("selected_exo", selected_exo() - 1);
             }
