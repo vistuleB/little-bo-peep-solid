@@ -193,11 +193,13 @@ export default function __Chapter3__() {
             ”,
           </NoBreak>
           {" "} and that's
-          important) for the result of passing an input
-          {" "}
-          <Math>
-            $x$
-          </Math>
+          important) for the result of passing an {" "}
+          <NoBreak>
+            input
+            <Math>
+              $x$
+            </Math>
+          </NoBreak>
           {" "} to a function {" "}
           <NoBreak>
             <Math>
@@ -522,11 +524,7 @@ const Rest = () => {
             function
           </i>
           , no matter what symbol
-          you choose.
-          <b>
-            ) (
-          </b>
-          As long as you don't collide
+          you choose.*) (*As long as you don't collide
           with other existing variable names.)
         </OuterP>
       </Section>
@@ -629,11 +627,13 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            aaand... and these are the only two values of
-            {" "}
-            <Math>
-              $x$
-            </Math>
+            aaand... and these are the only two values {" "}
+            <NoBreak>
+              of
+              <Math>
+                $x$
+              </Math>
+            </NoBreak>
             {" "} for which {" "}
             <NoBreak>
               VX-11/78A
@@ -729,9 +729,9 @@ const Rest = () => {
             -coordinate
           </NoBreak>
           {" "} of
-          the point is the value of the input, while the
-          {" "}
+          the point is the value of the input, while {" "}
           <NoBreak>
+            the
             <Math>
               $y$
             </Math>
@@ -765,9 +765,9 @@ const Rest = () => {
           <Math>
             $0$
           </Math>
-          {" "} to
-          {" "}
+          {" "} {" "}
           <NoBreak>
+            to
             <Math>
               $3.5$
             </Math>
@@ -809,18 +809,20 @@ const Rest = () => {
             <Math>
               $x \ra x^2$
             </Math>
-            {" "} on the interval
-            {" "}
-            <Math>
-              $[-1, 1]$
-            </Math>
+            {" "} on the {" "}
+            <NoBreak>
+              interval
+              <Math>
+                $[-1, 1]$
+              </Math>
+            </NoBreak>
             {" "} (meaning: going from {" "}
             <Math>
               $x = -1$
             </Math>
-            {" "} to
-            {" "}
+            {" "} {" "}
             <NoBreak>
+              to
               <Math>
                 $x = 1$
               </Math>
@@ -832,9 +834,9 @@ const Rest = () => {
           <Pause />
           <OuterP>
             Among all the points on this graph that we
-            could discuss, let us name, say, the point
-            {" "}
+            could discuss, let us name, say, the {" "}
             <NoBreak>
+              point
               <Math>
                 $(0.75, 0.5625)$
               </Math>
@@ -850,9 +852,9 @@ const Rest = () => {
             <Math>
               $0.75$
             </Math>
-            {" "} is
-            {" "}
+            {" "} {" "}
             <NoBreak>
+              is
               <Math>
                 $0.5625 = 9/16$
               </Math>
@@ -934,8 +936,6 @@ const Rest = () => {
               </Math>
               ,
             </NoBreak>
-            {" "}
-            {" "}
             <NoBreak>
               <Math>
                 $1$
@@ -980,9 +980,9 @@ const Rest = () => {
             <Math>
               $\te&#123;DM-1700&#125;(x)$
             </Math>
-            {" "} is defined for all
-            {" "}
+            {" "} is defined for {" "}
             <NoBreak>
+              all
               <Math>
                 $x \in \rr$
               </Math>
@@ -1036,11 +1036,13 @@ const Rest = () => {
               $x - 1 \geq 0$
             </Math>
             {" "} in order for {" "}
-            <Math>
-              $g(x)$
-            </Math>
-            {" "}
-            to be defined, i.e., we need {" "}
+            <NoBreak>
+              <Math>
+                $g(x)$
+              </Math>
+              to
+            </NoBreak>
+            {" "} be defined, i.e., we need {" "}
             <NoBreak>
               <Math>
                 $x \geq 1$
@@ -1118,11 +1120,13 @@ const Rest = () => {
           [translation: {" "}
           <i>
             the set of values output by {" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}
-            is a subset of the set of real numbers
+            <NoBreak>
+              <Math>
+                $f$
+              </Math>
+              is
+            </NoBreak>
+            {" "} a subset of the set of real numbers
           </i>
           ].
         </OuterP>
@@ -1381,11 +1385,13 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          which implies a discontinuity in the graph of
-          {" "}
-          <Math>
-            $y = 0^x$
-          </Math>
+          which implies a discontinuity in the graph {" "}
+          <NoBreak>
+            of
+            <Math>
+              $y = 0^x$
+            </Math>
+          </NoBreak>
           {" "} at {" "}
           <NoBreak>
             <Math>
@@ -1585,11 +1591,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           ...where we use the fact that {" "}
-          <Math>
-            $f = (t \ra f(t))$
-          </Math>
-          {" "}
-          in the second equality. You could keep going,
+          <NoBreak>
+            <Math>
+              $f = (t \ra f(t))$
+            </Math>
+            in
+          </NoBreak>
+          {" "} the second equality. You could keep going,
           replacing each time {" "}
           <NoBreak>
             “
@@ -1889,9 +1897,9 @@ const Rest = () => {
             Quadratic, linear, and constant terms.
           </b>
           {" "}
-          To finish up on polynomials: the terms of degree
-          {" "}
+          To finish up on polynomials: the terms of {" "}
           <NoBreak>
+            degree
             <Math>
               $2$
             </Math>
@@ -1939,9 +1947,9 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "} not
-          {" "}
+          {" "} {" "}
           <NoBreak>
+            not
             <Math>
               $a_2x^2$
             </Math>
@@ -2235,11 +2243,13 @@ const Rest = () => {
                 $x$
               </Math>
               {" "} and travel left on the
-              number line until you meet an integer; but if
-              {" "}
-              <Math>
-                $x$
-              </Math>
+              number line until you meet an integer; but {" "}
+              <NoBreak>
+                if
+                <Math>
+                  $x$
+                </Math>
+              </NoBreak>
               {" "} is already an integer, stay there; the
               place you land is {" "}
               <NoBreak>
@@ -2287,17 +2297,21 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} but
-              {" "}
-              <Math>
-                $\floor&#123;x&#125;$
-              </Math>
+              {" "} {" "}
+              <NoBreak>
+                but
+                <Math>
+                  $\floor&#123;x&#125;$
+                </Math>
+              </NoBreak>
               {" "} only “levels up” each time {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              reaches a new integer, and “flatlines”
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                reaches
+              </NoBreak>
+              {" "} a new integer, and “flatlines”
               otherwise; this gives rise to the following
               staircase-shaped graph:
             </OuterP>
@@ -2311,11 +2325,13 @@ const Rest = () => {
               </Math>
               {" "} because the
               greatest integer less than or equal to {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}
-              is {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                is
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $1$
@@ -2361,8 +2377,6 @@ const Rest = () => {
                 </Math>
                 -coordinate
               </NoBreak>
-              {" "}
-              {" "}
               <NoBreak>
                 <Math>
                   $\floor&#123;x&#125;$
@@ -2449,11 +2463,11 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} apply the function from {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_7_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 4
-              </InChapterLink>
+              <a
+                href="_7_hgi_?id=4"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               ):
             </OuterP>
             <Pause />
@@ -2502,11 +2516,11 @@ const Rest = () => {
               </NoBreak>
               {" "}
               the formula for the function from {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_7_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 4
-              </InChapterLink>
+              <a
+                href="_7_hgi_?id=4"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               .
             </OuterP>
             <Pause />
@@ -2554,11 +2568,13 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              of the functions
-              {" "}
-              <Math>
-                $\f$
-              </Math>
+              of the {" "}
+              <NoBreak>
+                functions
+                <Math>
+                  $\f$
+                </Math>
+              </NoBreak>
               {" "} and {" "}
               <NoBreak>
                 <Math>
@@ -2661,11 +2677,13 @@ const Rest = () => {
                 's
               </NoBreak>
               {" "} output is passed on to {" "}
-              <Math>
-                $\f$
-              </Math>
-              {" "}
-              for further processing. (A certain movie called
+              <NoBreak>
+                <Math>
+                  $\f$
+                </Math>
+                for
+              </NoBreak>
+              {" "} further processing. (A certain movie called
               “The Human Centipede” comes to mind.)
             </OuterP>
             <OuterP class="indent-10">
@@ -2711,11 +2729,13 @@ const Rest = () => {
                 ”—something
               </NoBreak>
               {" "}
-              not based on pictures—one need only specify what
-              {" "}
-              <Math>
-                $f \circ g$
-              </Math>
+              not based on pictures—one need only specify {" "}
+              <NoBreak>
+                what
+                <Math>
+                  $f \circ g$
+                </Math>
+              </NoBreak>
               {" "} does to inputs. Specifically:
             </OuterP>
             <Pause />
@@ -2738,11 +2758,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               which is to say that the domain of {" "}
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "}
-              consists of all {" "}
+              <NoBreak>
+                <Math>
+                  $f \circ g$
+                </Math>
+                consists
+              </NoBreak>
+              {" "} of all {" "}
               <Math>
                 $x$
               </Math>
@@ -2751,11 +2773,13 @@ const Rest = () => {
                 (i)
               </b>
               {" "} {" "}
-              <Math>
-                $g(x)$
-              </Math>
-              {" "}
-              exists (a.k.a, {" "}
+              <NoBreak>
+                <Math>
+                  $g(x)$
+                </Math>
+                exists
+              </NoBreak>
+              {" "} (a.k.a, {" "}
               <NoBreak>
                 “
                 <Math>
@@ -2904,11 +2928,11 @@ const Rest = () => {
             <OuterP>
               because all we have to do is to multiply
               {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_8_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 5
-              </InChapterLink>
+              <a
+                href="_8_hgi_?id=5"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               's formula by {" "}
               <NoBreak>
                 <Math>
@@ -2929,11 +2953,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               because the problem is similar to {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_8_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 5
-              </InChapterLink>
+              <a
+                href="_8_hgi_?id=5"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               {" "}
               except with a factor {" "}
               <Math>
@@ -3001,11 +3025,13 @@ const Rest = () => {
               </NoBreak>
               {" "} the formula for the
               second graph. Then we multiply that by {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "}
-              (to go from {" "}
+              <NoBreak>
+                <Math>
+                  $3$
+                </Math>
+                (to
+              </NoBreak>
+              {" "} go from {" "}
               <NoBreak>
                 “
                 <InlineImage
@@ -3110,11 +3136,13 @@ const Rest = () => {
           <Solution>
             <OuterP>
               Consider how to “read off” a value of {" "}
-              <Math>
-                $y = \cos(1000x)$
-              </Math>
-              {" "}
-              from the graph {" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos(1000x)$
+                </Math>
+                from
+              </NoBreak>
+              {" "} the graph {" "}
               <NoBreak>
                 <Math>
                   $y = \cos(x)$
@@ -3167,22 +3195,26 @@ const Rest = () => {
               </i>
               {" "}
               One can also reason that a small change in {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              results in a large change in {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                results
+              </NoBreak>
+              {" "} in a large change in {" "}
               <NoBreak>
                 <Math>
                   $1000x$
                 </Math>
                 ,
               </NoBreak>
-              {" "} so that
-              {" "}
-              <Math>
-                $\cos(1000x)$
-              </Math>
+              {" "} so {" "}
+              <NoBreak>
+                that
+                <Math>
+                  $\cos(1000x)$
+                </Math>
+              </NoBreak>
               {" "} must “cycle” much faster through
               values than {" "}
               <Math>
@@ -3375,11 +3407,11 @@ const Rest = () => {
               </b>
               {" "}
               Same question as {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_9_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 8
-              </InChapterLink>
+              <a
+                href="_9_hgi_?id=8"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               , but for
               {" "}
               <NoBreak>
@@ -3758,11 +3790,13 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "} {" "}
-                <Math>
-                  $g$
-                </Math>
-                {" "}
-                and {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  and
+                </NoBreak>
+                {" "} {" "}
                 <Math>
                   $h$
                 </Math>
@@ -3849,8 +3883,6 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <CentralDisplay>
-                {" "}
-                {" "}
                 <Math>
                   $\Large g(h($
                 </Math>
@@ -3895,11 +3927,13 @@ const Rest = () => {
                 {" "} etc.
               </OuterP>
               <OuterP class="indent-10">
-                Under this representation one can “compute”
-                {" "}
-                <Math>
-                  $f \circ g \circ h$
-                </Math>
+                Under this representation one can {" "}
+                <NoBreak>
+                  “compute”
+                  <Math>
+                    $f \circ g \circ h$
+                  </Math>
+                </NoBreak>
                 {" "} by gluing arrows end-to-end.
                 First, say, obliviate set {" "}
                 <Math>
@@ -3964,11 +3998,13 @@ const Rest = () => {
                 (or “collapsed”) does not affect the origin
                 point or destination point of the final
                 arrow. {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "}
-                more stuff
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  more
+                </NoBreak>
+                {" "} stuff
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -4044,11 +4080,13 @@ const Rest = () => {
                 <Math>
                   $3.5$
                 </Math>
-                {" "} and maps
-                {" "}
-                <Math>
-                  $1$
-                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  maps
+                  <Math>
+                    $1$
+                  </Math>
+                </NoBreak>
                 {" "} to {" "}
                 <NoBreak>
                   <Math>
@@ -4197,11 +4235,11 @@ const Rest = () => {
               </b>
               {" "}
               Solve {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_10_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 10
-              </InChapterLink>
+              <a
+                href="_10_hgi_?id=10"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               {" "} using
               algebra {" "}
               <i>
@@ -4252,9 +4290,9 @@ const Rest = () => {
             <Pause />
             <OuterP>
               In order for this equation to hold as an
-              equality between polynomials (i.e., for all
-              {" "}
+              equality between polynomials (i.e., for {" "}
               <NoBreak>
+                all
                 <Math>
                   $x$
                 </Math>
@@ -4340,17 +4378,17 @@ const Rest = () => {
               <Math>
                 $U^2 + V = 30$
               </Math>
-              {" "} becomes
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                becomes
                 <Math>
                   $25 + V = 30$
                 </Math>
                 ,
               </NoBreak>
-              {" "} and
-              {" "}
+              {" "} {" "}
               <NoBreak>
+                and
                 <Math>
                   $V = 30 - 25 = 5$
                 </Math>
@@ -4440,11 +4478,11 @@ const Rest = () => {
                 </Math>
               </NoBreak>
               {" "} {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_10_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 10
-              </InChapterLink>
+              <a
+                href="_10_hgi_?id=10"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               ) has no solutions {" "}
               <NoBreak>
                 <Math>
@@ -4467,11 +4505,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_10_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 10
-              </InChapterLink>
+              <a
+                href="_10_hgi_?id=10"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               , but this implies
             </OuterP>
             <Pause />
@@ -4527,11 +4565,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               because {" "}
-              <Math>
-                $(x + 5)^2 = x^2 + 10x + 25$
-              </Math>
-              {" "}
-              and {" "}
+              <NoBreak>
+                <Math>
+                  $(x + 5)^2 = x^2 + 10x + 25$
+                </Math>
+                and
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $25 - 55 = -30$
@@ -4689,11 +4729,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               that can be seen as descending from {" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              {" "}
-              in three steps:
+              <NoBreak>
+                <Math>
+                  $y = x^2$
+                </Math>
+                in
+              </NoBreak>
+              {" "} three steps:
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4791,11 +4833,13 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} because we add
-              {" "}
-              <Math>
-                $-&#123;B^2 \over 4A^2&#125;$
-              </Math>
+              {" "} because we {" "}
+              <NoBreak>
+                add
+                <Math>
+                  $-&#123;B^2 \over 4A^2&#125;$
+                </Math>
+              </NoBreak>
               {" "} to the value of {" "}
               <NoBreak>
                 <Math>
@@ -4813,9 +4857,9 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              step, in that we mess with the input (i.e.,
-              {" "}
+              step, in that we mess with the input {" "}
               <NoBreak>
+                (i.e.,
                 <Math>
                   $x$
                 </Math>
@@ -4866,11 +4910,13 @@ const Rest = () => {
                 $a$
               </Math>
               {" "} units to the right. The larger {" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}
-              is, thus, the further
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                is,
+              </NoBreak>
+              {" "} thus, the further
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4901,14 +4947,16 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} and if you replace
-              {" "}
-              <Math>
-                $20$
-              </Math>
-              {" "} with something larger, that position (i.e.,
-              {" "}
+              {" "} and if you {" "}
               <NoBreak>
+                replace
+                <Math>
+                  $20$
+                </Math>
+              </NoBreak>
+              {" "} with something larger, that position {" "}
+              <NoBreak>
+                (i.e.,
                 <Math>
                   $x = -20$
                 </Math>
@@ -4932,11 +4980,13 @@ const Rest = () => {
                 $a$
               </Math>
               {" "} units of {" "}
-              <Math>
-                $y = f(x)$
-              </Math>
-              {" "}
-              and, as a consequence, the first step effects a
+              <NoBreak>
+                <Math>
+                  $y = f(x)$
+                </Math>
+                and,
+              </NoBreak>
+              {" "} as a consequence, the first step effects a
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -4966,9 +5016,9 @@ const Rest = () => {
             <Pause />
             <OuterP>
               more elegantly put. (The second formulation
-              doesn't assume a particular orientation of the
-              {" "}
+              doesn't assume a particular orientation of {" "}
               <NoBreak>
+                the
                 <Math>
                   $x$
                 </Math>
@@ -5097,11 +5147,13 @@ const Rest = () => {
               <Math>
                 $y_0 \in \rr$
               </Math>
-              {" "} and
-              {" "}
-              <Math>
-                $a \in \rr$
-              </Math>
+              {" "} {" "}
+              <NoBreak>
+                and
+                <Math>
+                  $a \in \rr$
+                </Math>
+              </NoBreak>
               {" "} with {" "}
               <NoBreak>
                 <Math>
@@ -5110,11 +5162,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <Math>
-                $a \ne 0.$
-              </Math>
-              {" "}
-              If you apply these transformations...
+              <NoBreak>
+                <Math>
+                  $a \ne 0.$
+                </Math>
+                If
+              </NoBreak>
+              {" "} you apply these transformations...
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -5168,11 +5222,13 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Start by noting that the point
-              {" "}
-              <Math>
-                $(\sqrt&#123;y_0&#125;, y_0)$
-              </Math>
+              Start by noting that the {" "}
+              <NoBreak>
+                point
+                <Math>
+                  $(\sqrt&#123;y_0&#125;, y_0)$
+                </Math>
+              </NoBreak>
               {" "} is on the curve {" "}
               <NoBreak>
                 <Math>
@@ -5189,17 +5245,21 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              because
               {" "}
-              <Math>
-                $(\sqrt&#123;y_0&#125;)^2 = (-\sqrt&#123;y_0&#125;)^2 =$
-              </Math>
+              <NoBreak>
+                because
+                <Math>
+                  $(\sqrt&#123;y_0&#125;)^2 = (-\sqrt&#123;y_0&#125;)^2 =$
+                </Math>
+              </NoBreak>
               {" "} {" "}
-              <Math>
-                $y_0;$
-              </Math>
-              {" "}
-              here is a sketch of the situation before
+              <NoBreak>
+                <Math>
+                  $y_0;$
+                </Math>
+                here
+              </NoBreak>
+              {" "} is a sketch of the situation before
               anything happens:
             </OuterP>
             <Pause />
@@ -5209,11 +5269,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               After vertically translating by {" "}
-              <Math>
-                $-y_0$
-              </Math>
-              {" "}
-              the roots will therefore be at {" "}
+              <NoBreak>
+                <Math>
+                  $-y_0$
+                </Math>
+                the
+              </NoBreak>
+              {" "} roots will therefore be at {" "}
               <NoBreak>
                 <Math>
                   $x = \pm\sqrt&#123;y_0&#125;$
@@ -5228,11 +5290,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               Then after horizontally translating by {" "}
-              <Math>
-                $x_0$
-              </Math>
-              {" "}
-              the roots mosey over to {" "}
+              <NoBreak>
+                <Math>
+                  $x_0$
+                </Math>
+                the
+              </NoBreak>
+              {" "} roots mosey over to {" "}
               <NoBreak>
                 <Math>
                   $x = x_0\pm\sqrt&#123;y_0&#125;$
@@ -5253,11 +5317,13 @@ const Rest = () => {
                 about
               </i>
               {" "} the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              axis (here {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                axis
+              </NoBreak>
+              {" "} (here {" "}
               <NoBreak>
                 <Math>
                   $a \approx 1.7$
@@ -5295,11 +5361,13 @@ const Rest = () => {
               <Math>
                 $x$
               </Math>
-              {" "} such that
-              {" "}
-              <Math>
-                $Ax^2 + Bx = 0$
-              </Math>
+              {" "} such {" "}
+              <NoBreak>
+                that
+                <Math>
+                  $Ax^2 + Bx = 0$
+                </Math>
+              </NoBreak>
               {" "} for constants {" "}
               <NoBreak>
                 <Math>
@@ -5374,11 +5442,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               and the other root is the value of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              such that
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                such
+              </NoBreak>
+              {" "} that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5473,21 +5543,23 @@ const Rest = () => {
               </i>
               ,
               however, we will use the fact that {" "}
-              <Math>
-                $y = Ax^2 + Bx$
-              </Math>
-              {" "}
-              is obtained from {" "}
+              <NoBreak>
+                <Math>
+                  $y = Ax^2 + Bx$
+                </Math>
+                is
+              </NoBreak>
+              {" "} obtained from {" "}
               <Math>
                 $y = x^2$
               </Math>
               {" "} by the following
               sequence of transformations (cf. {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_11_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 14
-              </InChapterLink>
+              <a
+                href="_11_hgi_?id=14"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               ):
             </OuterP>
             <Pause />
@@ -5515,17 +5587,19 @@ const Rest = () => {
             <OuterP>
               (We put the vertical translation first.)
               By {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_12_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 15
-              </InChapterLink>
+              <a
+                href="_12_hgi_?id=15"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               , the roots of {" "}
-              <Math>
-                $y = Ax^2 + Bx$
-              </Math>
-              {" "}
-              are thus at
+              <NoBreak>
+                <Math>
+                  $y = Ax^2 + Bx$
+                </Math>
+                are
+              </NoBreak>
+              {" "} thus at
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5542,11 +5616,13 @@ const Rest = () => {
                 $x = 0$
               </Math>
               {" "} and {" "}
-              <Math>
-                $x = -B/A$
-              </Math>
-              {" "}
-              until you realize that
+              <NoBreak>
+                <Math>
+                  $x = -B/A$
+                </Math>
+                until
+              </NoBreak>
+              {" "} you realize that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5617,11 +5693,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               so here too we find that the roots are {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "}
-              and {" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                and
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $x = -B/A$
@@ -5689,11 +5767,13 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The true statements are i, iv, because
-              {" "}
-              <Math>
-                $f \circ g$
-              </Math>
+              The true statements are i, iv, {" "}
+              <NoBreak>
+                because
+                <Math>
+                  $f \circ g$
+                </Math>
+              </NoBreak>
               {" "} is the function that maps an
               input {" "}
               <Math>
@@ -5763,11 +5843,13 @@ const Rest = () => {
               </NoBreak>
               {" "} if you like),
               i.e., to be the function that applies {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}
-              and {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                and
+              </NoBreak>
+              {" "} {" "}
               <Math>
                 $g$
               </Math>
@@ -5805,11 +5887,13 @@ const Rest = () => {
               <Math>
                 $f$
               </Math>
-              {" "} and
-              {" "}
-              <Math>
-                $g$
-              </Math>
+              {" "} {" "}
+              <NoBreak>
+                and
+                <Math>
+                  $g$
+                </Math>
+              </NoBreak>
               {" "} separately and then takes the product.
               (These definitions are similar to how we define
             </OuterP>
@@ -5864,8 +5948,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              {" "}
               <Math>
                 $g$
               </Math>
@@ -6033,11 +6115,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               and, similarly to {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_11_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 14
-              </InChapterLink>
+              <a
+                href="_11_hgi_?id=14"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               , write
             </OuterP>
             <Pause />
@@ -6059,11 +6141,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               so that, altogether, {" "}
-              <Math>
-                $Ax^2 + Bx + C$
-              </Math>
-              {" "}
-              becomes
+              <NoBreak>
+                <Math>
+                  $Ax^2 + Bx + C$
+                </Math>
+                becomes
+              </NoBreak>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -6096,21 +6179,21 @@ const Rest = () => {
                 ”
               </NoBreak>
               {" "} of {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_11_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 14
-              </InChapterLink>
+              <a
+                href="_11_hgi_?id=14"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               ,
               that also has a minus sign out front.)
             </OuterP>
             <OuterP class="indent-10">
               By direct analogy with {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_11_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 14
-              </InChapterLink>
+              <a
+                href="_11_hgi_?id=14"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               , the three
               transformations are thus...
             </OuterP>
@@ -6314,11 +6397,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by {" "}
-              <InChapterLink
-                href="/article/chapter3?id=_12_hgi_"
-                class="handle-in-chapter-link">
-                Exercise 15
-              </InChapterLink>
+              <a
+                href="_12_hgi_?id=15"
+                class="handle-out-chapter-link">
+                Exercise /article/chapter3
+              </a>
               . {" "}
               <Math>
                 $\rightarrow$
@@ -6399,9 +6482,9 @@ const Rest = () => {
               <OuterP>
                 as briefly flashed by, e.g., in {" "}
                 <a
-                  href="/article/chapter1?id=_5_hgi_"
+                  href="_5_hgi_?id=1"
                   class="handle-out-chapter-link">
-                  Chapter 1
+                  Chapter /article/chapter1
                 </a>
                 .
               </OuterP>
@@ -6521,11 +6604,13 @@ const Rest = () => {
                 $6$
               </Math>
               {" "} becomes the value to use for {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              in {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                in
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 “
                 <Math>
@@ -6569,11 +6654,13 @@ const Rest = () => {
                 $6$
               </Math>
               {" "} becomes the value to use for {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              in {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                in
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 “
                 <Math>
@@ -6674,11 +6761,13 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} the
-              {" "}
-              <Math>
-                $x$
-              </Math>
+              {" "} {" "}
+              <NoBreak>
+                the
+                <Math>
+                  $x$
+                </Math>
+              </NoBreak>
               {" "} with {" "}
               <NoBreak>
                 <Math>
@@ -6726,11 +6815,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              and {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                and
+              </NoBreak>
+              {" "} {" "}
               <Math>
                 $h$
               </Math>
