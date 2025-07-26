@@ -8,24 +8,15 @@ import {
 import useOnMobile from "../hooks/useOnMobile";
 import { ParentProps } from "solid-js";
 
-const ArticleTitle = (props: ParentProps & {
-  banner?: string;
-}) => {
+const ArticleTitle = (
+  props: ParentProps & { banner?: string; }
+) => {
   const { on_mobile } = useOnMobile();
 
   return (
     <div class="text-column" style={`width:${mainColumnWidth()}px;`}>
       <h1
-        class="text-2rem sm:text-4xl pt-5 sm:pt-4 pb-4"
-        style={`margin-top: ${
-          on_mobile()
-            ? CHAPTER_TITLE_TOP_MARGIN_MOBILE
-            : CHAPTER_TITLE_TOP_MARGIN_DESKTOP
-        }px;margin-bottom: ${
-          on_mobile()
-            ? CHAPTER_TITLE_BOTTOM_MARGIN_MOBILE
-            : CHAPTER_TITLE_BOTTOM_MARGIN_DESKTOP
-        }px`}
+        class="mobile-title sm:text-4xl pt-5 md:pt-6 lg:pt-7 pb-4 sm:pb-5"
       > {props.banner}
         {" "}
         {props.children}
