@@ -1635,12 +1635,11 @@ const Rest = () => {
               <ImageRight
                 src="/images/56.svg"
                 offset_y="5rem"
-                offset_x="-1.3rem">
-                <ImageLeft
-                  src="/images/57.svg"
-                  offset_x="-8rem"
-                  offset_y="8rem" />
-              </ImageRight>
+                offset_x="-1.3rem" />
+              <ImageLeft
+                src="/images/57.svg"
+                offset_x="-8rem"
+                offset_y="8rem" />
             </Image>
             <Pause />
             <OuterP>

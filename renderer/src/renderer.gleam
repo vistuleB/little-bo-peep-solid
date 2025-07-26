@@ -241,7 +241,7 @@ pub fn main() {
     vr.Renderer(
       assembler: vr.default_blamed_lines_assembler(amendments.spotlight_paths),
       source_parser: vr.default_writerly_source_parser(amendments.spotlight_key_values),
-      pipeline: our_pipeline(),
+      pipeline: our_pipeline(False),
       splitter: our_splitter,
       emitter: fn(fragment) { our_emitter(fragment, imports_lookup) },
       prettifier: vr.default_prettier_prettifier,

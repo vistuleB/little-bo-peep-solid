@@ -2130,7 +2130,6 @@ const Rest = () => {
               Evaluate:
             </OuterP>
             <Pause />
-            <Pause />
             <Grid
               cols={2}
               sm_cols={1}
@@ -2167,7 +2166,6 @@ const Rest = () => {
             <OuterP>
               The answers are:
             </OuterP>
-            <Pause />
             <Pause />
             <Grid
               cols={2}
@@ -5730,7 +5728,6 @@ const Rest = () => {
               </Math>
               {" "} are functions):
             </OuterP>
-            <Pause />
             <Pause />
             <Grid
               cols={2}
