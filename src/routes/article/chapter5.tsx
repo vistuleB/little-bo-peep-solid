@@ -1487,9 +1487,9 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="_24_hgi_?id=10"
+            href="/article/chapter4#_24_hgi_"
             class="handle-out-chapter-link">
-            Note /article/chapter4
+            Note 10
           </a>
           {" "} of Exercise 37, Chapter 4.
           In short, it is a “scientific” measure

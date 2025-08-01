@@ -2043,9 +2043,9 @@ const Rest = () => {
               {" "}
               As explained in {" "}
               <a
-                href="_15_hgi_?id=3"
+                href="/article/chapter3#_15_hgi_"
                 class="handle-out-chapter-link">
-                Chapter /article/chapter3
+                Chapter 3
               </a>
               , an empty circle of
               this type
@@ -2151,11 +2151,11 @@ const Rest = () => {
               {" "}
               Digressing on the second-to-last equation
               in the solution to {" "}
-              <a
-                href="_6_hgi_?id=2"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter2
-              </a>
+              <InChapterLink
+                href="/article/chapter2#_6_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 2
+              </InChapterLink>
               , explain why
             </OuterP>
             <Pause />

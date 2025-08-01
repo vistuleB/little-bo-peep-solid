@@ -2461,11 +2461,11 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} apply the function from {" "}
-              <a
-                href="_7_hgi_?id=4"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_7_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 4
+              </InChapterLink>
               ):
             </OuterP>
             <Pause />
@@ -2514,11 +2514,11 @@ const Rest = () => {
               </NoBreak>
               {" "}
               the formula for the function from {" "}
-              <a
-                href="_7_hgi_?id=4"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_7_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 4
+              </InChapterLink>
               .
             </OuterP>
             <Pause />
@@ -2926,11 +2926,11 @@ const Rest = () => {
             <OuterP>
               because all we have to do is to multiply
               {" "}
-              <a
-                href="_8_hgi_?id=5"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_8_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 5
+              </InChapterLink>
               's formula by {" "}
               <NoBreak>
                 <Math>
@@ -2951,11 +2951,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               because the problem is similar to {" "}
-              <a
-                href="_8_hgi_?id=5"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_8_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 5
+              </InChapterLink>
               {" "}
               except with a factor {" "}
               <Math>
@@ -3405,11 +3405,11 @@ const Rest = () => {
               </b>
               {" "}
               Same question as {" "}
-              <a
-                href="_9_hgi_?id=8"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_9_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 8
+              </InChapterLink>
               , but for
               {" "}
               <NoBreak>
@@ -4233,11 +4233,11 @@ const Rest = () => {
               </b>
               {" "}
               Solve {" "}
-              <a
-                href="_10_hgi_?id=10"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_10_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 10
+              </InChapterLink>
               {" "} using
               algebra {" "}
               <i>
@@ -4476,11 +4476,11 @@ const Rest = () => {
                 </Math>
               </NoBreak>
               {" "} {" "}
-              <a
-                href="_10_hgi_?id=10"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_10_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 10
+              </InChapterLink>
               ) has no solutions {" "}
               <NoBreak>
                 <Math>
@@ -4503,11 +4503,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by {" "}
-              <a
-                href="_10_hgi_?id=10"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_10_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 10
+              </InChapterLink>
               , but this implies
             </OuterP>
             <Pause />
@@ -5553,11 +5553,11 @@ const Rest = () => {
               </Math>
               {" "} by the following
               sequence of transformations (cf. {" "}
-              <a
-                href="_11_hgi_?id=14"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_11_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 14
+              </InChapterLink>
               ):
             </OuterP>
             <Pause />
@@ -5585,11 +5585,11 @@ const Rest = () => {
             <OuterP>
               (We put the vertical translation first.)
               By {" "}
-              <a
-                href="_12_hgi_?id=15"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_12_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 15
+              </InChapterLink>
               , the roots of {" "}
               <NoBreak>
                 <Math>
@@ -6112,11 +6112,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               and, similarly to {" "}
-              <a
-                href="_11_hgi_?id=14"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_11_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 14
+              </InChapterLink>
               , write
             </OuterP>
             <Pause />
@@ -6176,21 +6176,21 @@ const Rest = () => {
                 ”
               </NoBreak>
               {" "} of {" "}
-              <a
-                href="_11_hgi_?id=14"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_11_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 14
+              </InChapterLink>
               ,
               that also has a minus sign out front.)
             </OuterP>
             <OuterP class="indent-10">
               By direct analogy with {" "}
-              <a
-                href="_11_hgi_?id=14"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_11_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 14
+              </InChapterLink>
               , the three
               transformations are thus...
             </OuterP>
@@ -6394,11 +6394,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by {" "}
-              <a
-                href="_12_hgi_?id=15"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter3
-              </a>
+              <InChapterLink
+                href="/article/chapter3#_12_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 15
+              </InChapterLink>
               . {" "}
               <Math>
                 $\rightarrow$
@@ -6479,9 +6479,9 @@ const Rest = () => {
               <OuterP>
                 as briefly flashed by, e.g., in {" "}
                 <a
-                  href="_5_hgi_?id=1"
+                  href="/article/chapter1#_5_hgi_"
                   class="handle-out-chapter-link">
-                  Chapter /article/chapter1
+                  Chapter 1
                 </a>
                 .
               </OuterP>

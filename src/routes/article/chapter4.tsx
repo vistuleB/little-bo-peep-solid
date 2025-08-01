@@ -1771,9 +1771,9 @@ const Rest = () => {
         <OuterP>
           of functions already appear in {" "}
           <a
-            href="_13_hgi_?id=18"
+            href="/article/chapter3#_13_hgi_"
             class="handle-out-chapter-link">
-            Exercise /article/chapter3 of Chapter /article/chapter3
+            Exercise 18 of Chapter 3
           </a>
           , also. (On the other hand, the
           quotient (i.e. {" "}
@@ -1930,11 +1930,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               derivative of the graph in {" "}
-              <a
-                href="_16_hgi_?id=1"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter4
-              </a>
+              <InChapterLink
+                href="/article/chapter4#_16_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 1
+              </InChapterLink>
               .
             </OuterP>
           </ExerciseStatement>
@@ -1975,11 +1975,11 @@ const Rest = () => {
               </b>
               {" "}
               If we pretend that the graph of {" "}
-              <a
-                href="_16_hgi_?id=1"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter4
-              </a>
+              <InChapterLink
+                href="/article/chapter4#_16_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 1
+              </InChapterLink>
               {" "}
               depicts the
               <del>
@@ -2708,11 +2708,11 @@ const Rest = () => {
               </NoBreak>
               {" "} analogously to
               {" "}
-              <a
-                href="_17_hgi_?id=8"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter4
-              </a>
+              <InChapterLink
+                href="/article/chapter4#_17_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 8
+              </InChapterLink>
               .
             </OuterP>
           </ExerciseStatement>
@@ -6155,11 +6155,11 @@ const Rest = () => {
                 {" "} (
               </b>
               see {" "}
-              <a
-                href="_21_hgi_?id=1"
-                class="handle-out-chapter-link">
-                Note /article/chapter4
-              </a>
+              <InChapterLink
+                href="/article/chapter4#_21_hgi_"
+                class="handle-in-chapter-link">
+                Note 1
+              </InChapterLink>
               ):
             </OuterP>
             <Pause />
@@ -10676,11 +10676,11 @@ const Rest = () => {
               </Math>
               {" "} (cf.
               Exercise 16 {" "}
-              <a
-                href="_19_hgi_?id=3"
-                class="handle-out-chapter-link">
-                Note /article/chapter4
-              </a>
+              <InChapterLink
+                href="/article/chapter4#_19_hgi_"
+                class="handle-in-chapter-link">
+                Note 3
+              </InChapterLink>
               ), and
             </OuterP>
             <Pause />

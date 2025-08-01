@@ -2651,11 +2651,11 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to {" "}
-              <a
-                href="_4_hgi_?id=1"
-                class="handle-out-chapter-link">
-                Exercise /article/chapter1
-              </a>
+              <InChapterLink
+                href="/article/chapter1#_4_hgi_"
+                class="handle-in-chapter-link">
+                Exercise 1
+              </InChapterLink>
               , we 
               observed how the difference
             </OuterP>
