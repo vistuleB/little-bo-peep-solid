@@ -35,7 +35,6 @@ fn pipeline_without_lists() -> List(Desugarer) {
     pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar),
     pp.create_math_elements([infra.SingleDollar], infra.SingleDollar),
     [
-      dl.delete_empty_lines(),
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
       dl.timer(),
       dl.append_attribute(#("Book", "counter", "ChapterCounter")),
