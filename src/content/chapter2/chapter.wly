@@ -5,8 +5,6 @@
     Here are a few examples (for an explanation of
     the values, see below):
 
-    |> marker
-
     |> Image
         src=images/svg_ch2_ch_collection_of_examples.svg
 
@@ -29,7 +27,6 @@
     it goes up by $1$ unit for each unit to the right:
 
     |> Image
-        test=test
         src=images/slope_1_example.svg
 
     On the other hand, the line below has slope

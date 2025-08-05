@@ -350,13 +350,12 @@ fn pipeline_with_lists() -> List(Desugarer) {
 }
 
 pub fn our_pipeline(batch: Bool) -> List(Pipe) {
-  let echo_mode = infra.OnChange
-  // let selector = sl.within_x_lines_below_tag(_, "marker", 6)
-  let selector = sl.within_x_lines_below_key_val(_, "test", "test", 6)
-
   case batch {
     False -> pipeline_without_lists()
     True -> pipeline_with_lists()
   }
-  |> infra.wrap_desugarers(echo_mode, selector)
+  |> infra.wrap_desugarers(
+    infra.Off,                                                   // set to infra.OnChange for general debugging
+    sl.within_x_lines_below_key_val(_, "test", "test", 10),      // see new file 'selector_library.gleam' in vxml_desugaring 4 ur other options
+  )
 }

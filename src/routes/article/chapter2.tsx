@@ -92,7 +92,6 @@ export default function __Chapter2__() {
           Here are a few examples (for an explanation of
           the values, see below):
         </OuterP>
-        <marker />
         <Pause />
         <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
         <Pause />
