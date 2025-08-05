@@ -1,8 +1,9 @@
 import gleam/list
 import gleam/option.{None, Some}
-import infrastructure.{type Desugarer} as infra
+import infrastructure.{type Desugarer, type Pipe} as infra
 import prefabricated_pipelines as pp
 import desugarer_library as dl
+import selector_library as sl
 
 const cannot_be_contained_in_a_paragrap = [
   "ArticleTitle", "Bootcamp", "CentralDisplay",
@@ -29,6 +30,7 @@ const cannot_contain_a_paragraph = [
 fn pipeline_without_lists() -> List(Desugarer) {
   [
     [
+      dl.identity(),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Bootcamp", "ArticleTitle", "title"), ["Chapter"]),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Chapter", "ArticleTitle", "title"), ["Bootcamp"]),
     ],
@@ -336,20 +338,25 @@ fn pipeline_with_lists() -> List(Desugarer) {
       dl.generate_lbp_prev_next_attributes(),
       dl.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
       dl.generate_lbp_breadcrumbs(),
-      dl.unwrap__batch(["BreadcrumbTitle", "Scope"]),
       dl.change_attribute_value(#("src", "/()")),
       dl.delete_attribute__batch(["counter", "handle", "type", "t", ".", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
       // dl.compute_missing_images_width(),
       // dl.compute_max_element_width(["Image", "ImageLeft", "ImageRight"]),
+      dl.unwrap__batch(["BreadcrumbTitle", "Scope", "marker"]),
     ]
   ]
   |> list.flatten
 }
 
-pub fn our_pipeline(batch) -> List(Desugarer) {
+pub fn our_pipeline(batch: Bool) -> List(Pipe) {
+  let echo_mode = infra.OnChange
+  // let selector = sl.within_x_lines_below_tag(_, "marker", 6)
+  let selector = sl.within_x_lines_below_key_val(_, "test", "test", 6)
+
   case batch {
     False -> pipeline_without_lists()
     True -> pipeline_with_lists()
   }
+  |> infra.wrap_desugarers(echo_mode, selector)
 }

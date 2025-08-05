@@ -16,10 +16,11 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Bootcamp2__() {
   return (
     <Article
-      prevPage=""
-      nextPage="/article/bootcamp1"
-      pageNecessaryMargin={270}
-      maxElementWidth={1200}>
+    prevPage=""
+    nextPage="/article/bootcamp1"
+    pageNecessaryMargin={270}
+    maxElementWidth={1200}
+    >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -230,10 +231,11 @@ const Rest = () => {
           \Large 10^0 = 1 = 1
           $$
           <ImageLeft
-            src="/images/svg_bt2_bt_alert_cloud.svg"
-            offset_y="-0.2em"
-            offset_x="4em"
-            compensate_offset_x_for_large_text_columns={true} />
+          src="/images/svg_bt2_bt_alert_cloud.svg"
+          offset_y="-0.2em"
+          offset_x="4em"
+          compensate_offset_x_for_large_text_columns={true}
+           />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -322,8 +324,9 @@ const Rest = () => {
           {" "}
           Moreover, (
           <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
-            class="handle-in-chapter-link">
+          href="/article/bootcamp2#_1_hgi_"
+          class="handle-in-chapter-link"
+          >
             A
           </InChapterLink>
           ) actually holds for
@@ -344,8 +347,9 @@ const Rest = () => {
           {" "} which is mildly important. In more
           detail, (
           <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
-            class="handle-in-chapter-link">
+          href="/article/bootcamp2#_1_hgi_"
+          class="handle-in-chapter-link"
+          >
             A
           </InChapterLink>
           ) holds for {" "}
@@ -354,15 +358,17 @@ const Rest = () => {
           </Math>
           {" "} by inspection, and (
           <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
-            class="handle-in-chapter-link">
+          href="/article/bootcamp2#_1_hgi_"
+          class="handle-in-chapter-link"
+          >
             A
           </InChapterLink>
           )
           is equivalent to the identity
           <ImageLeft
-            src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
-            line={2} />
+          src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
+          line={2}
+           />
         </OuterP>
         <Pause />
         <MathBlock id="_2_hgi_">
@@ -401,14 +407,16 @@ const Rest = () => {
           {" "}
           in (
           <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link">
+          href="/article/bootcamp2#_2_hgi_"
+          class="handle-in-chapter-link"
+          >
             AA
           </InChapterLink>
           ) lands you right back on (
           <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link">
+          href="/article/bootcamp2#_2_hgi_"
+          class="handle-in-chapter-link"
+          >
             AA
           </InChapterLink>
           ), due to the fact
@@ -421,8 +429,9 @@ const Rest = () => {
           </NoBreak>
           {" "} (So, namely, if (
           <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link">
+          href="/article/bootcamp2#_2_hgi_"
+          class="handle-in-chapter-link"
+          >
             AA
           </InChapterLink>
           ) holds for all
@@ -493,14 +502,16 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (
           <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
-            class="handle-in-chapter-link">
+          href="/article/bootcamp2#_1_hgi_"
+          class="handle-in-chapter-link"
+          >
             A
           </InChapterLink>
           ) and (
           <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link">
+          href="/article/bootcamp2#_2_hgi_"
+          class="handle-in-chapter-link"
+          >
             AA
           </InChapterLink>
           )
@@ -1696,9 +1707,10 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Table
-          class="first-line"
-          marginTop="1em"
-          marginBottom="1em">
+        class="first-line"
+        marginTop="1em"
+        marginBottom="1em"
+        >
           <colgroup>
             <col width="120px" />
             <col width="120px" />
@@ -2070,9 +2082,10 @@ const Rest = () => {
             \Large 0.00001 = 10^&#123;-5&#125;
             $$
             <ImageRight
-              src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
-              offset_x="0em"
-              compensate_offset_x_for_large_text_columns={true} />
+            src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
+            offset_x="0em"
+            compensate_offset_x_for_large_text_columns={true}
+             />
           </MathBlock>
           <Pause />
           <OuterP>
@@ -2910,8 +2923,9 @@ const Rest = () => {
             <OuterP>
               stated earlier in the chapter as (
               <InChapterLink
-                href="/article/bootcamp2#_1_hgi_"
-                class="handle-in-chapter-link">
+              href="/article/bootcamp2#_1_hgi_"
+              class="handle-in-chapter-link"
+              >
                 A
               </InChapterLink>
               ), 
@@ -3258,8 +3272,9 @@ const Rest = () => {
               </Math>
               {" "} (as in {" "}
               <InChapterLink
-                href="/article/bootcamp2#_3_hgi_"
-                class="handle-in-chapter-link">
+              href="/article/bootcamp2#_3_hgi_"
+              class="handle-in-chapter-link"
+              >
                 Exercise 14
               </InChapterLink>
               ):
@@ -3460,10 +3475,11 @@ const Rest = () => {
               \Large -b -2c -3 = 0
               $$
               <ImageRight
-                src="/images/svg_bt2_ex_equation_addition_cloud.svg"
-                offset_y="-0.5em"
-                offset_x="0.5em"
-                compensate_offset_x_for_large_text_columns={true} />
+              src="/images/svg_bt2_ex_equation_addition_cloud.svg"
+              offset_y="-0.5em"
+              offset_x="0.5em"
+              compensate_offset_x_for_large_text_columns={true}
+               />
             </MathBlock>
             <Pause />
             <OuterP>

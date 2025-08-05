@@ -18,10 +18,11 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Chapter2__() {
   return (
     <Article
-      prevPage="/article/chapter1"
-      nextPage="/article/chapter3"
-      pageNecessaryMargin={610}
-      maxElementWidth={900}>
+    prevPage="/article/chapter1"
+    nextPage="/article/chapter3"
+    pageNecessaryMargin={610}
+    maxElementWidth={900}
+    >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
@@ -91,6 +92,7 @@ export default function __Chapter2__() {
           Here are a few examples (for an explanation of
           the values, see below):
         </OuterP>
+        <marker />
         <Pause />
         <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
         <Pause />
@@ -270,10 +272,11 @@ const Rest = () => {
           \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
           $$
           <ImageRight
-            src="/images/32.svg"
-            offset_y="-0.7em"
-            offset_x="3em"
-            compensate_offset_x_for_large_text_columns={true} />
+          src="/images/32.svg"
+          offset_y="-0.7em"
+          offset_x="3em"
+          compensate_offset_x_for_large_text_columns={true}
+           />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -420,8 +423,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Table
-          class="lines"
-          style="margin-top:0.5em;margin-bottom:0.5em;">
+        class="lines"
+        style="margin-top:0.5em;margin-bottom:0.5em;"
+        >
           <colgroup>
             <col width={120} />
             <col width={120} />
@@ -442,9 +446,10 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/images/33.svg"
-                  width={50}
-                  style="padding-top:7px;padding-bottom:7px;" />
+                src="/images/33.svg"
+                width={50}
+                style="padding-top:7px;padding-bottom:7px;"
+                 />
               </td>
               <td>
                 <MathBlock>
@@ -467,8 +472,9 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/images/34.svg"
-                  style="margin-top:7px;margin-bottom:7px;width:105px;" />
+                src="/images/34.svg"
+                style="margin-top:7px;margin-bottom:7px;width:105px;"
+                 />
               </td>
               <td>
                 <MathBlock>
@@ -491,9 +497,10 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/images/35.svg"
-                  width={105}
-                  style="margin-top:7px;margin-bottom:7px;" />
+                src="/images/35.svg"
+                width={105}
+                style="margin-top:7px;margin-bottom:7px;"
+                 />
               </td>
               <td>
                 <MathBlock>
@@ -516,9 +523,10 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/images/36.svg"
-                  width={105}
-                  style="margin-top:7px;margin-bottom:7px;" />
+                src="/images/36.svg"
+                width={105}
+                style="margin-top:7px;margin-bottom:7px;"
+                 />
               </td>
               <td>
                 <MathBlock>
@@ -541,9 +549,10 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/images/37.svg"
-                  width={105}
-                  style="margin-top:7px;margin-bottom:7px;" />
+                src="/images/37.svg"
+                width={105}
+                style="margin-top:7px;margin-bottom:7px;"
+                 />
               </td>
               <td>
                 <MathBlock>
@@ -574,9 +583,10 @@ const Rest = () => {
           {" "} swap
           places, or, namely, to show that the fractions
           <ImageRight
-            src="/images/svg_ch2_ch_swap_cloud.svg"
-            line={3}
-            offset_x="-0.5em" />
+          src="/images/svg_ch2_ch_swap_cloud.svg"
+          line={3}
+          offset_x="-0.5em"
+           />
         </OuterP>
         <Pause />
         <MathBlock>
@@ -590,10 +600,11 @@ const Rest = () => {
         <MathBlock>
           $$ &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125; $$
           <ImageLeft
-            src="/images/39.svg"
-            offset_x="2.5em"
-            offset_y="-60px"
-            compensate_offset_x_for_large_text_columns={true} />
+          src="/images/39.svg"
+          offset_x="2.5em"
+          offset_y="-60px"
+          compensate_offset_x_for_large_text_columns={true}
+           />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -695,8 +706,9 @@ const Rest = () => {
           </NoBreak>
           <span class="nobreak">
             <InlineImage
-              src="/images/rise-run.svg"
-              width="28px" />
+            src="/images/rise-run.svg"
+            width="28px"
+             />
             ”),
           </span>
           {" "} following such a picture:
@@ -1113,9 +1125,10 @@ const Rest = () => {
           {" "} is a constant,
           similarly to the more familiar equation
           <ImageLeft
-            src="/images/svg_ch2_ch_vertical_line_equation.svg"
-            offset_y="-6em"
-            offset_x="1em" />
+          src="/images/svg_ch2_ch_vertical_line_equation.svg"
+          offset_y="-6em"
+          offset_x="1em"
+           />
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1185,9 +1198,10 @@ const Rest = () => {
             .
           </NoBreak>
           <ImageRight
-            src="/images/svg_3_plus_minus_one_times_x_cloud.svg"
-            line={1}
-            offset_x="2rem" />
+          src="/images/svg_3_plus_minus_one_times_x_cloud.svg"
+          line={1}
+          offset_x="2rem"
+           />
         </OuterP>
       </Section>
       <Pause />
@@ -1473,10 +1487,11 @@ const Rest = () => {
             \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
             $$
             <ImageRight
-              src="/images/svg_ch2_ch_units_cloud.svg"
-              offset_x="-6rem"
-              style="width:930px"
-              compensate_offset_x_for_large_text_columns={true} />
+            src="/images/svg_ch2_ch_units_cloud.svg"
+            offset_x="-6rem"
+            style="width:930px"
+            compensate_offset_x_for_large_text_columns={true}
+             />
           </MathBlock>
           <Pause />
           <OuterP>
@@ -1498,8 +1513,9 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section
-        divider={false}
-        id="section-9">
+      divider={false}
+      id="section-9"
+      >
         <OuterP>
           <b>
             Postscript: Units vs Dimensions.
@@ -1622,16 +1638,19 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/images/55.svg"
-              class="relative w-fit">
+            src="/images/55.svg"
+            class="relative w-fit"
+            >
               <ImageRight
-                src="/images/56.svg"
-                offset_y="5rem"
-                offset_x="-1.3rem" />
+              src="/images/56.svg"
+              offset_y="5rem"
+              offset_x="-1.3rem"
+               />
               <ImageLeft
-                src="/images/57.svg"
-                offset_x="-8rem"
-                offset_y="8rem" />
+              src="/images/57.svg"
+              offset_x="-8rem"
+              offset_y="8rem"
+               />
             </Image>
             <Pause />
             <OuterP>
@@ -1674,16 +1693,19 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/images/58.svg"
-                class="relative w-fit">
+              src="/images/58.svg"
+              class="relative w-fit"
+              >
                 <ImageRight
-                  src="/images/59.svg"
-                  offset_y="27%"
-                  offset_x="-10%" />
+                src="/images/59.svg"
+                offset_y="27%"
+                offset_x="-10%"
+                 />
                 <ImageLeft
-                  src="/images/60.svg"
-                  offset_x="-24%"
-                  offset_y="33%" />
+                src="/images/60.svg"
+                offset_x="-24%"
+                offset_y="33%"
+                 />
               </Image>
               <Pause />
               <StarDivider />
@@ -1730,10 +1752,11 @@ const Rest = () => {
             <MathBlock>
               $$ p = &#123;y - y_0 \over x - x_0&#125; $$
               <ImageLeft
-                src="/images/svg_ch2_ex_x0_y0_line_equation_cloud.svg"
-                offset_x="7.5em"
-                offset_y="103px"
-                compensate_offset_x_for_large_text_columns={true} />
+              src="/images/svg_ch2_ex_x0_y0_line_equation_cloud.svg"
+              offset_x="7.5em"
+              offset_y="103px"
+              compensate_offset_x_for_large_text_columns={true}
+               />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -1855,10 +1878,11 @@ const Rest = () => {
               \te&#123;“&#125;\te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;\te&#123;”&#125;
               $$
               <ImageRight
-                src="/images/svg_slope_times_run_equals_rise_cloud.svg"
-                offset_x="2.5rem"
-                offset_y="-0.5rem"
-                compensate_offset_x_for_large_text_columns={true} />
+              src="/images/svg_slope_times_run_equals_rise_cloud.svg"
+              offset_x="2.5rem"
+              offset_y="-0.5rem"
+              compensate_offset_x_for_large_text_columns={true}
+               />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2027,8 +2051,9 @@ const Rest = () => {
               {" "}
               As explained in {" "}
               <a
-                href="/article/chapter3#_15_hgi_"
-                class="handle-out-chapter-link">
+              href="/article/chapter3#_15_hgi_"
+              class="handle-out-chapter-link"
+              >
                 Chapter 3
               </a>
               , an empty circle of
@@ -2136,8 +2161,9 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2#_6_hgi_"
-                class="handle-in-chapter-link">
+              href="/article/chapter2#_6_hgi_"
+              class="handle-in-chapter-link"
+              >
                 Exercise 2
               </InChapterLink>
               , explain why
