@@ -356,6 +356,6 @@ pub fn our_pipeline(batch: Bool) -> List(Pipe) {
   }
   |> infra.wrap_desugarers(
     infra.Off,                                                   // set to infra.OnChange for general debugging
-    sl.within_x_lines_below_key_val(_, "test", "test", 10),      // see new file 'selector_library.gleam' in vxml_desugaring 4 ur other options
+    sl.within_x_lines_below_tag(_, "marker", 10),                // see new file 'selector_library.gleam' in vxml_desugaring for other options
   )
 }
