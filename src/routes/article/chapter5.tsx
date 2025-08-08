@@ -10724,7 +10724,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$1 + \tan^2(\theta)$$
+              $$
+              1 + \tan^2(\theta)
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -10819,7 +10821,9 @@ const Rest = () => {
                   as an expression of the form
                   <Pause />
                   <MathBlock>
-                    $$x \ra \dots$$
+                    $$
+                    x \ra \dots
+                    $$
                   </MathBlock>
                   <Pause />
                   for some value of {" "}
@@ -13121,7 +13125,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$A_1 = A_2 = 1$$
+              $$
+              A_1 = A_2 = 1
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -13130,7 +13136,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$W = \sqrt&#123;2&#125;$$
+              $$
+              W = \sqrt&#123;2&#125;
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -13138,7 +13146,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$\psi = -\eta/2$$
+              $$
+              \psi = -\eta/2
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -15821,9 +15831,7 @@ const Rest = () => {
                 where
                 {" "}
                 <Math>
-                  $
-                  h_i
-                  $
+                  $h_i$
                 </Math>
                 {" "}
                 is the height of the tetrahedron, and {" "}

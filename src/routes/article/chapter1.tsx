@@ -66,7 +66,7 @@ export default function __Chapter1__() {
           <b>
             Square Roots.
           </b>
-          {" "}
+          <marker />
           You might remember that “minus times minus
           is plus” and that “plus times plus is plus”.
           (Why? The enemy of my enemy is my friend.)
@@ -113,10 +113,11 @@ export default function __Chapter1__() {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\sqrt&#123;(-2)^2&#125; = 2$$
+          $$
+          \sqrt&#123;(-2)^2&#125; = 2
+          $$
           <ImageRight
           src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
-          offset_y="0em"
           offset_x="5em"
           compensate_offset_x_for_large_text_columns={true}
            />
@@ -2159,49 +2160,49 @@ const Rest = () => {
             place_items="end"
             >
               <Math>
-                $ (-1)^1 = $
+                $(-1)^1 =$
               </Math>
               <Math>
-                $ (-1) = $
+                $(-1) =$
               </Math>
               <Math>
-                $ -1 $
+                $-1$
               </Math>
               <Math>
-                $ (-1)^2 = $
+                $(-1)^2 =$
               </Math>
               <Math>
-                $ (-1)\times (-1) = $
+                $(-1)\times (-1) =$
               </Math>
               <Math>
-                $ 1 $
+                $1$
               </Math>
               <Math>
-                $ (-1)^3 = $
+                $(-1)^3 =$
               </Math>
               <Math>
-                $ (-1)\times(-1)\times (-1) = $
+                $(-1)\times(-1)\times (-1) =$
               </Math>
               <Math>
-                $ -1 $
+                $-1$
               </Math>
               <Math>
-                $ (-1)^4 = $
+                $(-1)^4 =$
               </Math>
               <Math>
-                $ (-1)\times(-1)\times(-1)\times(-1) = $
+                $(-1)\times(-1)\times(-1)\times(-1) =$
               </Math>
               <Math>
-                $ 1 $
+                $1$
               </Math>
               <Math>
-                $ (-1)^5 = $
+                $(-1)^5 =$
               </Math>
               <Math>
-                $ \,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) = $
+                $\,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) =$
               </Math>
               <Math>
-                $ -1 $
+                $-1$
               </Math>
             </Grid>
             <Pause />

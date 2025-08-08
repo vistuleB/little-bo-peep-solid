@@ -303,7 +303,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock id="_1_hgi_">
-          $$\Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;$$
+          $$
+          \Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -372,7 +374,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock id="_2_hgi_">
-          $$\Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;$$
+          $$
+          \Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>

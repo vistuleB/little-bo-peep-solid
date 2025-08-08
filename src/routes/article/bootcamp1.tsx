@@ -111,7 +111,9 @@ export default function __Bootcamp1__() {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\Large\&#123;1, 2, 3\&#125;$$
+          $$
+          \Large\&#123;1, 2, 3\&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -119,7 +121,9 @@ export default function __Bootcamp1__() {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\Large\&#123;1\&#125;$$
+          $$
+          \Large\&#123;1\&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -134,7 +138,9 @@ export default function __Bootcamp1__() {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\Large\&#123;1, 3\&#125;$$
+          $$
+          \Large\&#123;1, 3\&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -154,7 +160,9 @@ export default function __Bootcamp1__() {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\Large\&#123;\&#125;$$
+          $$
+          \Large\&#123;\&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -248,7 +256,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\Large x \in A$$
+          $$
+          \Large x \in A
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -333,7 +343,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\Large 1 \in \&#123;1, 2\&#125;$$
+          $$
+          \Large 1 \in \&#123;1, 2\&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -357,7 +369,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\Large 3 \in \&#123;1, 2\&#125;$$
+          $$
+          \Large 3 \in \&#123;1, 2\&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -677,7 +691,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\Large A \cup B$$
+          $$
+          \Large A \cup B
+          $$
         </MathBlock>
         <Pause />
         <OuterP>

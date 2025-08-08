@@ -4471,7 +4471,7 @@ const Rest = () => {
               In the above the rat earns {" "}
               <NoBreak>
                 <Math>
-                  $\te&#123;\$&#125;$
+                  \(\te&#123;\$&#125;\)
                 </Math>
                 3
               </NoBreak>
@@ -4912,7 +4912,7 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <Math>
-                  $f'(3.333...) = &#123;1\over 10&#125;\te&#123;\$/s&#125;$
+                  \(f'(3.333...) = &#123;1\over 10&#125;\te&#123;\$/s&#125;\)
                 </Math>
                 —the
               </NoBreak>
@@ -6523,9 +6523,7 @@ const Rest = () => {
               Also note that all graphs have slopes of
               {" "}
               <Math>
-                $
-                \pm 1
-                $
+                $\pm 1$
               </Math>
               {" "}
               at {" "}
@@ -7088,7 +7086,7 @@ const Rest = () => {
               src="/images/svg_ch4_circle_at_2_4_p2white_inline.svg"
                />
               <Math>
-                $_x + $
+                $_x +$
               </Math>
               <InlineImage
               class="ch4_inline_blackwhite_particles"

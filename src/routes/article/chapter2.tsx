@@ -206,7 +206,9 @@ const Rest = () => {
         <Image src="/images/31.svg" />
         <Pause />
         <MathBlock>
-          $$ \te&#123;slope&#125; = &#123;\te&#123;vertical change from A to B&#125; \over \te&#123;horizontal change from A to B&#125;&#125; $$
+          $$
+          \te&#123;slope&#125; = &#123;\te&#123;vertical change from A to B&#125; \over \te&#123;horizontal change from A to B&#125;&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -219,7 +221,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ A = (x_1, y_1) $$
+          $$
+          A = (x_1, y_1)
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -227,7 +231,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ B = (x_2, y_2) $$
+          $$
+          B = (x_2, y_2)
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -235,7 +241,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 $$
+          $$
+          x_2 - x_1
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -243,7 +251,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ y_2 - y_1 $$
+          $$
+          y_2 - y_1
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -296,7 +306,9 @@ const Rest = () => {
           </OuterP>
           <Pause />
           <MathBlock>
-            $$A = (-2, 5)$$
+            $$
+            A = (-2, 5)
+            $$
           </MathBlock>
           <Pause />
           <OuterP>
@@ -304,7 +316,9 @@ const Rest = () => {
           </OuterP>
           <Pause />
           <MathBlock>
-            $$B = (4, 1)$$
+            $$
+            B = (4, 1)
+            $$
           </MathBlock>
           <Pause />
           <OuterP>
@@ -312,7 +326,9 @@ const Rest = () => {
           </OuterP>
           <Pause />
           <MathBlock>
-            $$&#123;1 - 5 \over 4 - (-2)&#125; = &#123;-4 \over 6&#125; = - &#123;2 \over 3&#125;.$$
+            $$
+            &#123;1 - 5 \over 4 - (-2)&#125; = &#123;-4 \over 6&#125; = - &#123;2 \over 3&#125;.
+            $$
           </MathBlock>
         </Example>
         <Pause />
@@ -374,7 +390,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 $$
+          $$
+          x_2 - x_1
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -382,7 +400,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ y_2 - y_1 $$
+          $$
+          y_2 - y_1
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -404,7 +424,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 $$
+          $$
+          x_2 - x_1
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -412,7 +434,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ y_2 - y_1 $$
+          $$
+          y_2 - y_1
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -589,7 +613,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ &#123;y_2 - y_1 \over x_2 - x_1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y_1 - y_2 \over x_1 - x_2&#125; $$
+          $$
+          &#123;y_2 - y_1 \over x_2 - x_1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y_1 - y_2 \over x_1 - x_2&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -597,7 +623,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125; $$
+          $$
+          &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125;
+          $$
           <ImageLeft
           src="/images/39.svg"
           offset_x="2.5em"
@@ -611,7 +639,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ &#123;y_2 - y_1 \over x_2 - x_1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y_1 - y_2 \over x_1 - x_2&#125; $$
+          $$
+          &#123;y_2 - y_1 \over x_2 - x_1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y_1 - y_2 \over x_1 - x_2&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -630,7 +660,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 = 0 $$
+          $$
+          x_2 - x_1 = 0
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -652,7 +684,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ x_2 - x_1 = 0 $$
+          $$
+          x_2 - x_1 = 0
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -671,7 +705,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$ \frac&#123;y_2 - y_1&#125;&#123;x_2 - x_1&#125; = \frac&#123;0&#125;&#123;0&#125; $$
+          $$
+          \frac&#123;y_2 - y_1&#125;&#123;x_2 - x_1&#125; = \frac&#123;0&#125;&#123;0&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -880,7 +916,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$y = ax + b$$
+          $$
+          y = ax + b
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -910,7 +948,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$y = a\cdot 0 + b = b$$
+          $$
+          y = a\cdot 0 + b = b
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -959,7 +999,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$(0, b)$$
+          $$
+          (0, b)
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1009,7 +1051,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$y = a\cdot 1 + b = a + b$$
+          $$
+          y = a\cdot 1 + b = a + b
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1081,7 +1125,9 @@ const Rest = () => {
           </OuterP>
           <Pause />
           <MathBlock>
-            $$y = 100x - 3$$
+            $$
+            y = 100x - 3
+            $$
           </MathBlock>
           <Pause />
           <OuterP>
@@ -1094,7 +1140,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$y = ax + b$$
+          $$
+          y = ax + b
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1113,7 +1161,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$x = c$$
+          $$
+          x = c
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1131,7 +1181,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$y = b$$
+          $$
+          y = b
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1165,7 +1217,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$x + y = 3$$
+          $$
+          x + y = 3
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1173,7 +1227,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$y = 3 - x$$
+          $$
+          y = 3 - x
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1381,7 +1437,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\te&#123;slope&#125; = &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;$$
+          $$
+          \te&#123;slope&#125; = &#123;\te&#123;rise&#125; \over \te&#123;run&#125;&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1389,8 +1447,10 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <MathBlock>
-          $$\te&#123;“&#125;\rt&#123;0.1&#125;\te&#123;rate of change&#125; \,\,=\,\,
-          &#123;\!\rt&#123;0.15&#125;\te&#123;amount of change&#125;\!\rt&#123;0.1&#125; \over \te&#123;amount of time&#125;&#125;\rt&#123;0.1&#125;\te&#123;”&#125;$$
+          $$
+          \te&#123;“&#125;\rt&#123;0.1&#125;\te&#123;rate of change&#125; \,\,=\,\,
+          &#123;\!\rt&#123;0.15&#125;\te&#123;amount of change&#125;\!\rt&#123;0.1&#125; \over \te&#123;amount of time&#125;&#125;\rt&#123;0.1&#125;\te&#123;”&#125;
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1749,7 +1809,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$ p = &#123;y - y_0 \over x - x_0&#125; $$
+              $$
+              p = &#123;y - y_0 \over x - x_0&#125;
+              $$
               <ImageLeft
               src="/images/svg_ch2_ex_x0_y0_line_equation_cloud.svg"
               offset_x="7.5em"
@@ -1763,7 +1825,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$ \,\,&#123;y - y_0 \over x - x_0&#125; $$
+              $$
+              \,\,&#123;y - y_0 \over x - x_0&#125;
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -1797,7 +1861,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$ p = &#123;y - y_0 \over x - x_0&#125; $$
+              $$
+              p = &#123;y - y_0 \over x - x_0&#125;
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -1811,7 +1877,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$ p = &#123;0 \over 0&#125; $$
+              $$
+              p = &#123;0 \over 0&#125;
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2097,7 +2165,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$ &#123;-2\rt&#123;0.05&#125;\te&#123;m&#125; \over 0.5\rt&#123;0.05&#125;\te&#123;s&#125;&#125; = -\rt&#123;0.07&#125;4\rt&#123;0.1&#125;\te&#123;m&#125;/\te&#123;s&#125; $$
+              $$
+              &#123;-2\rt&#123;0.05&#125;\te&#123;m&#125; \over 0.5\rt&#123;0.05&#125;\te&#123;s&#125;&#125; = -\rt&#123;0.07&#125;4\rt&#123;0.1&#125;\te&#123;m&#125;/\te&#123;s&#125;
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2120,7 +2190,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$ &#123;2\rt&#123;0.05&#125;\te&#123;m&#125; \over 0.5\rt&#123;0.05&#125;\te&#123;s&#125;&#125; = 4\rt&#123;0.1&#125;\te&#123;m&#125;/\te&#123;s&#125; $$
+              $$
+              &#123;2\rt&#123;0.05&#125;\te&#123;m&#125; \over 0.5\rt&#123;0.05&#125;\te&#123;s&#125;&#125; = 4\rt&#123;0.1&#125;\te&#123;m&#125;/\te&#123;s&#125;
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2262,7 +2334,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$ px_0 $$
+              $$
+              px_0
+              $$
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2296,7 +2370,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$ y_0 - px_0 $$
+              $$
+              y_0 - px_0
+              $$
             </MathBlock>
             <Pause />
             <OuterP>

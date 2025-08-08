@@ -359,7 +359,7 @@ pub fn our_pipeline(batch: Bool) -> List(Pipe) {
     // sl.key_val("test", "test")
     sl.tag("marker")
     |> infra.extend_selector_up(4)
-    |> infra.extend_selector_down(4)
+    |> infra.extend_selector_down(40)
     // |> infra.extend_selector_to_ancestors
   )
 }

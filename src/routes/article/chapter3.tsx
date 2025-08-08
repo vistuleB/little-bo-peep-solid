@@ -5913,19 +5913,27 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <MathBlock>
-              $$f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))$$
+              $$
+              f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$f \circ (g + h) = (x \ra f(g(x) + h(x)))$$
+              $$
+              f \circ (g + h) = (x \ra f(g(x) + h(x)))
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$(g + h) \circ f = (x \ra h(f(x)) + g(f(x)))$$
+              $$
+              (g + h) \circ f = (x \ra h(f(x)) + g(f(x)))
+              $$
             </MathBlock>
             <Pause />
             <MathBlock>
-              $$(g + h) \circ f = (x \ra (g + h)(f(x)))$$
+              $$
+              (g + h) \circ f = (x \ra (g + h)(f(x)))
+              $$
             </MathBlock>
           </ExerciseStatement>
           <Solution>
