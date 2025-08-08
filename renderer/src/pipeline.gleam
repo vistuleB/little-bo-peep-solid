@@ -35,7 +35,7 @@ fn pipeline_without_lists() -> List(Desugarer) {
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Chapter", "ArticleTitle", "title"), ["Bootcamp"]),
     ],
     pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar),
-    pp.create_math_elements([infra.SingleDollar], infra.SingleDollar),
+    pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis),
     [
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
       dl.timer(),
@@ -198,7 +198,7 @@ fn pipeline_with_lists() -> List(Desugarer) {
       dl.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
     ],
     pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar),
-    pp.create_math_elements([infra.SingleDollar], infra.SingleDollar),
+    pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis),
     [
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
       dl.append_attribute__batch([
@@ -355,7 +355,10 @@ pub fn our_pipeline(batch: Bool) -> List(Pipe) {
     True -> pipeline_with_lists()
   }
   |> infra.wrap_desugarers(
-    infra.Off,                                                   // set to infra.OnChange for general debugging
-    sl.within_x_lines_below_tag(_, "marker", 10),                // see new file 'selector_library.gleam' in vxml_desugaring for other options
+    infra.OnChange,
+    sl.tag("marker")
+    |> infra.extend_selector_up(4)
+    |> infra.extend_selector_down(15)
+    |> infra.extend_selector_to_ancestors_without_attributes
   )
 }
