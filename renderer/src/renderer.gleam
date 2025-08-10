@@ -246,6 +246,7 @@ pub fn main() {
       emitter: fn(fragment) { our_emitter(fragment, imports_lookup) },
       prettifier: vr.default_prettier_prettifier,
     )
+    |> vr.amend_renderer_by_command_line_amendments(amendments)
 
   let parameters =
     vr.RendererParameters(
@@ -253,14 +254,11 @@ pub fn main() {
       output_dir: output_dir,
       prettifier_on_by_default: False,
     )
-    |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
+    |> vr.amend_renderer_paramaters_by_command_line_amendments(amendments)
 
   let debug_options =
     vr.default_renderer_debug_options()
-    |> vr.amend_renderer_debug_options_by_command_line_amendment(
-      amendments,
-      renderer.pipeline,
-    )
+    |> vr.amend_renderer_debug_options_by_command_line_amendments(amendments)
 
   let _ = shellout.command(
     run: "rm",
