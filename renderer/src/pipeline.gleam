@@ -355,11 +355,14 @@ pub fn our_pipeline(batch: Bool) -> List(Pipe) {
     True -> pipeline_with_lists()
   }
   |> infra.wrap_desugarers(
-    infra.OnChange,
-    // sl.key_val("test", "test")
+    infra.Off,
     sl.tag("marker")
+    // sl.keyval("test", "test")
     |> infra.extend_selector_up(4)
-    |> infra.extend_selector_down(40)
-    // |> infra.extend_selector_to_ancestors
+    |> infra.extend_selector_down(4)
+    |> infra.extend_selector_to_ancestors(
+      with_elder_siblings: False,
+      with_attributes: True,
+    )
   )
 }
