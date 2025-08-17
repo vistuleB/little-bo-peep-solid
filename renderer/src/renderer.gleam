@@ -1,6 +1,6 @@
 import shellout
 import argv
-import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
+import blamedlines.{type Blame, Blame, type OutputLine, OutputLine}
 import gleam/io
 import gleam/list
 import gleam/string.{inspect as ins}
@@ -18,7 +18,7 @@ type LBPFragmentClassifer {
 }
 
 type LBPFragment(z) = vr.OutputFragment(LBPFragmentClassifer, z)
-type BL = List(BlamedLine)
+type BL = List(OutputLine)
 
 type LBPSplitterError {
   NoTOC
@@ -113,31 +113,32 @@ fn article_emitter(
 
   let assert Ok(component_imports) =
     ei.uppercase_tags(fr.payload)
-    |> ei.imports_blamed_lines_for_symbols(imports_lookup)
+    |> ei.imports_output_lines_for_symbols(imports_lookup)
 
   let lines =
     list.flatten([
       component_imports,
-      [ BlamedLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
-        BlamedLine(blame_us("article_emitter"), 0, ""),
-        BlamedLine(blame_us("article_emitter"), 0, "export default function " <> funcname <> "() {"),
-        BlamedLine(blame_us("article_emitter"), 2, "return ("),
-      ],
-      vxml.vxml_to_jsx_blamed_lines(first_split, 4),
       [
-        BlamedLine(blame_us("article_emitter"), 2, ");"),
-        BlamedLine(blame_us("article_emitter"), 0, "}"),
-        BlamedLine(blame_us("article_emitter"), 0, ""),
-        BlamedLine(blame_us("article_emitter"), 0, "const Rest = () => {"),
-        BlamedLine(blame_us("article_emitter"), 2, "const showMore = useShowMore();"),
-        BlamedLine(blame_us("article_emitter"), 2, "return <>"),
-        BlamedLine(blame_us("article_emitter"), 4, "{showMore() && <>"),
+        OutputLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
+        OutputLine(blame_us("article_emitter"), 0, ""),
+        OutputLine(blame_us("article_emitter"), 0, "export default function " <> funcname <> "() {"),
+        OutputLine(blame_us("article_emitter"), 2, "return ("),
       ],
-      vxml.vxmls_to_jsx_blamed_lines(rest, 6),
+      vxml.vxml_to_jsx_output_lines(first_split, 4),
       [
-        BlamedLine(blame_us("article_emitter"), 4, "</>}"),
-        BlamedLine(blame_us("article_emitter"), 2, "</>;"),
-        BlamedLine(blame_us("article_emitter"), 0, "};"),
+        OutputLine(blame_us("article_emitter"), 2, ");"),
+        OutputLine(blame_us("article_emitter"), 0, "}"),
+        OutputLine(blame_us("article_emitter"), 0, ""),
+        OutputLine(blame_us("article_emitter"), 0, "const Rest = () => {"),
+        OutputLine(blame_us("article_emitter"), 2, "const showMore = useShowMore();"),
+        OutputLine(blame_us("article_emitter"), 2, "return <>"),
+        OutputLine(blame_us("article_emitter"), 4, "{showMore() && <>"),
+      ],
+      vxml.vxmls_to_jsx_output_lines(rest, 6),
+      [
+        OutputLine(blame_us("article_emitter"), 4, "</>}"),
+        OutputLine(blame_us("article_emitter"), 2, "</>;"),
+        OutputLine(blame_us("article_emitter"), 0, "};"),
       ],
     ])
 
@@ -150,20 +151,20 @@ fn toc_emitter(
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
   let assert Ok(component_imports) =
     ei.uppercase_tags(fr.payload)
-    |> ei.imports_blamed_lines_for_symbols(imports_lookup)
+    |> ei.imports_output_lines_for_symbols(imports_lookup)
 
   let lines =
     list.flatten([
       component_imports,
-      [BlamedLine(blame_us("toc_emitter"), 0, ""),
-        BlamedLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
-        BlamedLine(blame_us("toc_emitter"), 2, "return ("),
+      [OutputLine(blame_us("toc_emitter"), 0, ""),
+        OutputLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
+        OutputLine(blame_us("toc_emitter"), 2, "return ("),
       ],
-      vxml.vxml_to_jsx_blamed_lines(fr.payload , 4),
+      vxml.vxml_to_jsx_output_lines(fr.payload , 4),
       [
-        BlamedLine(blame_us("toc_emitter"), 2, ");"),
-        BlamedLine(blame_us("toc_emitter"), 0, "};"),
-        BlamedLine(blame_us("toc_emitter"), 0, ""),
+        OutputLine(blame_us("toc_emitter"), 2, ");"),
+        OutputLine(blame_us("toc_emitter"), 0, "};"),
+        OutputLine(blame_us("toc_emitter"), 0, ""),
       ],
     ])
 
@@ -176,22 +177,22 @@ fn hpausc_emitter(
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
   let assert Ok(component_imports) =
     ei.uppercase_tags_in_children(fr.payload)
-    |> ei.imports_blamed_lines_for_symbols(imports_lookup)
+    |> ei.imports_output_lines_for_symbols(imports_lookup)
 
   let lines =
     list.flatten([
       component_imports,
       [
-        BlamedLine(blame_us("hpausc_emitter"), 0, ""),
-        BlamedLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
-        BlamedLine(blame_us("hpausc_emitter"), 2, "return <>"),
+        OutputLine(blame_us("hpausc_emitter"), 0, ""),
+        OutputLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
+        OutputLine(blame_us("hpausc_emitter"), 2, "return <>"),
       ],
-      vxml.vxmls_to_jsx_blamed_lines(fr.payload |> infra.get_children, 4),
+      vxml.vxmls_to_jsx_output_lines(fr.payload |> infra.get_children, 4),
       [
-        BlamedLine(blame_us("hpausc_emitter"), 2, "</>;"),
-        BlamedLine(blame_us("hpausc_emitter"), 0, "};"),
-        BlamedLine(blame_us("hpausc_emitter"), 0, ""),
-        BlamedLine(blame_us("hpausc_emitter"), 0, "export default HamburgerPanelAuthorSuppliedContents;"),
+        OutputLine(blame_us("hpausc_emitter"), 2, "</>;"),
+        OutputLine(blame_us("hpausc_emitter"), 0, "};"),
+        OutputLine(blame_us("hpausc_emitter"), 0, ""),
+        OutputLine(blame_us("hpausc_emitter"), 0, "export default HamburgerPanelAuthorSuppliedContents;"),
       ],
     ])
 
@@ -239,7 +240,7 @@ pub fn main() {
 
   let renderer =
     vr.Renderer(
-      assembler: vr.default_blamed_lines_assembler(amendments.spotlight_paths),
+      assembler: vr.default_input_lines_assembler(amendments.spotlight_paths),
       source_parser: vr.default_writerly_source_parser(amendments.spotlight_key_values),
       pipeline: our_pipeline(False),
       splitter: our_splitter,

@@ -156,10 +156,10 @@ fn import_line(file: String, imported: ImportedFromFile) -> String {
     <> "\";"
 }
 
-pub fn imports_blamed_lines_for_symbols(
+pub fn imports_output_lines_for_symbols(
   symbols: List(String),
   imports_lookup: Dict(String, ImportSource)
-) -> Result(List(blamedlines.BlamedLine), String) {
+) -> Result(List(blamedlines.OutputLine), String) {
   let blame = blamedlines.Blame("(automated import)", 0, 0, [])
 
   use globbed <- result.try(glob_imports(symbols, imports_lookup))
@@ -173,7 +173,7 @@ pub fn imports_blamed_lines_for_symbols(
   )
 
   Ok(list.map(import_lines, fn(line) {
-    blamedlines.BlamedLine(blame, 0, line)
+    blamedlines.OutputLine(blame, 0, line)
   }))
 }
 
