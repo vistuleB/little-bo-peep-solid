@@ -160,7 +160,7 @@ pub fn imports_output_lines_for_symbols(
   symbols: List(String),
   imports_lookup: Dict(String, ImportSource)
 ) -> Result(List(blamedlines.OutputLine), String) {
-  let blame = blamedlines.Blame("(automated import)", 0, 0, [])
+  let blame = blamedlines.Em([], "emitter_imports")
 
   use globbed <- result.try(glob_imports(symbols, imports_lookup))
 

@@ -66,7 +66,7 @@ export default function __Chapter1__() {
           <b>
             Square Roots.
           </b>
-          <marker />
+          {" "}
           You might remember that “minus times minus
           is plus” and that “plus times plus is plus”.
           (Why? The enemy of my enemy is my friend.)
@@ -2622,13 +2622,16 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to {" "}
-              <InChapterLink
-              href="/article/chapter1#_4_hgi_"
-              class="handle-in-chapter-link"
-              >
-                Exercise 1
-              </InChapterLink>
-              , we 
+              <NoBreak>
+                <InChapterLink
+                href="/article/chapter1#_4_hgi_"
+                class="handle-in-chapter-link"
+                >
+                  Exercise 1
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "} we 
               observed how the difference
             </OuterP>
             <Pause />

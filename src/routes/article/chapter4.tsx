@@ -1772,13 +1772,16 @@ const Rest = () => {
         <Pause />
         <OuterP>
           of functions already appear in {" "}
-          <a
-          href="/article/chapter3#_13_hgi_"
-          class="handle-out-chapter-link"
-          >
-            Exercise 18 of Chapter 3
-          </a>
-          , also. (On the other hand, the
+          <NoBreak>
+            <a
+            href="/article/chapter3#_13_hgi_"
+            class="handle-out-chapter-link"
+            >
+              Exercise 18 of Chapter 3
+            </a>
+            ,
+          </NoBreak>
+          {" "} also. (On the other hand, the
           quotient (i.e. {" "}
           <NoBreak>
             <Math>
@@ -1933,13 +1936,16 @@ const Rest = () => {
             <Pause />
             <OuterP>
               derivative of the graph in {" "}
-              <InChapterLink
-              href="/article/chapter4#_16_hgi_"
-              class="handle-in-chapter-link"
-              >
-                Exercise 1
-              </InChapterLink>
-              .
+              <NoBreak>
+                <InChapterLink
+                href="/article/chapter4#_16_hgi_"
+                class="handle-in-chapter-link"
+                >
+                  Exercise 1
+                </InChapterLink>
+                .
+              </NoBreak>
+              {" "}{" "}
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -2701,13 +2707,16 @@ const Rest = () => {
               </NoBreak>
               {" "} analogously to
               {" "}
-              <InChapterLink
-              href="/article/chapter4#_17_hgi_"
-              class="handle-in-chapter-link"
-              >
-                Exercise 8
-              </InChapterLink>
-              .
+              <NoBreak>
+                <InChapterLink
+                href="/article/chapter4#_17_hgi_"
+                class="handle-in-chapter-link"
+                >
+                  Exercise 8
+                </InChapterLink>
+                .
+              </NoBreak>
+              {" "}{" "}
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -6102,13 +6111,16 @@ const Rest = () => {
                 {" "} (
               </b>
               see {" "}
-              <InChapterLink
-              href="/article/chapter4#_21_hgi_"
-              class="handle-in-chapter-link"
-              >
-                Note 1
-              </InChapterLink>
-              ):
+              <NoBreak>
+                <InChapterLink
+                href="/article/chapter4#_21_hgi_"
+                class="handle-in-chapter-link"
+                >
+                  Note 1
+                </InChapterLink>
+                ):
+              </NoBreak>
+              {" "}{" "}
             </OuterP>
             <Pause />
             <Image src="/images/svg_ch4_ex_one_particle_interval_subdivision.svg" />
@@ -10754,13 +10766,16 @@ const Rest = () => {
               </Math>
               {" "} (cf.
               Exercise 16 {" "}
-              <InChapterLink
-              href="/article/chapter4#_19_hgi_"
-              class="handle-in-chapter-link"
-              >
-                Note 3
-              </InChapterLink>
-              ), and
+              <NoBreak>
+                <InChapterLink
+                href="/article/chapter4#_19_hgi_"
+                class="handle-in-chapter-link"
+                >
+                  Note 3
+                </InChapterLink>
+                ),
+              </NoBreak>
+              {" "} and
             </OuterP>
             <Pause />
             <Image src="/images/svg_ch4_RATS_over_Dt_first_term.svg" />

@@ -1,6 +1,6 @@
 import shellout
 import argv
-import blamedlines.{type Blame, Blame, type OutputLine, OutputLine}
+import blamedlines.{type OutputLine, OutputLine} as bl
 import gleam/io
 import gleam/list
 import gleam/string.{inspect as ins}
@@ -28,10 +28,6 @@ type LBPSplitterError {
 }
 
 type LBPEmitterError = Nil
-
-fn blame_us(message: String) -> Blame {
-  Blame(message, -1, -1, [])
-}
 
 fn our_splitter(
   root: VXML,
@@ -99,7 +95,7 @@ fn up_to_and_including_first_section(
 fn split_vxml_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
   let assert V(b, t, a, children) = vxml
   let #(before_rest, rest) = up_to_and_including_first_section([], children)
-  let rest_tag = V(blame_us("rest tag"), "Rest", [], [])
+  let rest_tag = V(bl.Em([], "split_vxml_to_first_section_and_rest"), "Rest", [], [])
   #(V(b, t, a, [rest_tag, ..before_rest] |> list.reverse), rest)
 }
 
@@ -119,26 +115,26 @@ fn article_emitter(
     list.flatten([
       component_imports,
       [
-        OutputLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
-        OutputLine(blame_us("article_emitter"), 0, ""),
-        OutputLine(blame_us("article_emitter"), 0, "export default function " <> funcname <> "() {"),
-        OutputLine(blame_us("article_emitter"), 2, "return ("),
+        OutputLine(bl.Em([], "article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
+        OutputLine(bl.Em([], "article_emitter"), 0, ""),
+        OutputLine(bl.Em([], "article_emitter"), 0, "export default function " <> funcname <> "() {"),
+        OutputLine(bl.Em([], "article_emitter"), 2, "return ("),
       ],
       vxml.vxml_to_jsx_output_lines(first_split, 4),
       [
-        OutputLine(blame_us("article_emitter"), 2, ");"),
-        OutputLine(blame_us("article_emitter"), 0, "}"),
-        OutputLine(blame_us("article_emitter"), 0, ""),
-        OutputLine(blame_us("article_emitter"), 0, "const Rest = () => {"),
-        OutputLine(blame_us("article_emitter"), 2, "const showMore = useShowMore();"),
-        OutputLine(blame_us("article_emitter"), 2, "return <>"),
-        OutputLine(blame_us("article_emitter"), 4, "{showMore() && <>"),
+        OutputLine(bl.Em([], "article_emitter"), 2, ");"),
+        OutputLine(bl.Em([], "article_emitter"), 0, "}"),
+        OutputLine(bl.Em([], "article_emitter"), 0, ""),
+        OutputLine(bl.Em([], "article_emitter"), 0, "const Rest = () => {"),
+        OutputLine(bl.Em([], "article_emitter"), 2, "const showMore = useShowMore();"),
+        OutputLine(bl.Em([], "article_emitter"), 2, "return <>"),
+        OutputLine(bl.Em([], "article_emitter"), 4, "{showMore() && <>"),
       ],
       vxml.vxmls_to_jsx_output_lines(rest, 6),
       [
-        OutputLine(blame_us("article_emitter"), 4, "</>}"),
-        OutputLine(blame_us("article_emitter"), 2, "</>;"),
-        OutputLine(blame_us("article_emitter"), 0, "};"),
+        OutputLine(bl.Em([], "article_emitter"), 4, "</>}"),
+        OutputLine(bl.Em([], "article_emitter"), 2, "</>;"),
+        OutputLine(bl.Em([], "article_emitter"), 0, "};"),
       ],
     ])
 
@@ -156,15 +152,16 @@ fn toc_emitter(
   let lines =
     list.flatten([
       component_imports,
-      [OutputLine(blame_us("toc_emitter"), 0, ""),
-        OutputLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
-        OutputLine(blame_us("toc_emitter"), 2, "return ("),
+      [
+        OutputLine(bl.Em([], "toc_emitter"), 0, ""),
+        OutputLine(bl.Em([], "toc_emitter"), 0, "export default function __Home__() {"),
+        OutputLine(bl.Em([], "toc_emitter"), 2, "return ("),
       ],
       vxml.vxml_to_jsx_output_lines(fr.payload , 4),
       [
-        OutputLine(blame_us("toc_emitter"), 2, ");"),
-        OutputLine(blame_us("toc_emitter"), 0, "};"),
-        OutputLine(blame_us("toc_emitter"), 0, ""),
+        OutputLine(bl.Em([], "toc_emitter"), 2, ");"),
+        OutputLine(bl.Em([], "toc_emitter"), 0, "};"),
+        OutputLine(bl.Em([], "toc_emitter"), 0, ""),
       ],
     ])
 
@@ -183,16 +180,16 @@ fn hpausc_emitter(
     list.flatten([
       component_imports,
       [
-        OutputLine(blame_us("hpausc_emitter"), 0, ""),
-        OutputLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
-        OutputLine(blame_us("hpausc_emitter"), 2, "return <>"),
+        OutputLine(bl.Em([], "hpausc_emitter"), 0, ""),
+        OutputLine(bl.Em([], "hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
+        OutputLine(bl.Em([], "hpausc_emitter"), 2, "return <>"),
       ],
       vxml.vxmls_to_jsx_output_lines(fr.payload |> infra.get_children, 4),
       [
-        OutputLine(blame_us("hpausc_emitter"), 2, "</>;"),
-        OutputLine(blame_us("hpausc_emitter"), 0, "};"),
-        OutputLine(blame_us("hpausc_emitter"), 0, ""),
-        OutputLine(blame_us("hpausc_emitter"), 0, "export default HamburgerPanelAuthorSuppliedContents;"),
+        OutputLine(bl.Em([], "hpausc_emitter"), 2, "</>;"),
+        OutputLine(bl.Em([], "hpausc_emitter"), 0, "};"),
+        OutputLine(bl.Em([], "hpausc_emitter"), 0, ""),
+        OutputLine(bl.Em([], "hpausc_emitter"), 0, "export default HamburgerPanelAuthorSuppliedContents;"),
       ],
     ])
 

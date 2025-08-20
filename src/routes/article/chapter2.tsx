@@ -2117,13 +2117,16 @@ const Rest = () => {
               </i>
               {" "}
               As explained in {" "}
-              <a
-              href="/article/chapter3#_15_hgi_"
-              class="handle-out-chapter-link"
-              >
-                Chapter 3
-              </a>
-              , an empty circle of
+              <NoBreak>
+                <a
+                href="/article/chapter3#_15_hgi_"
+                class="handle-out-chapter-link"
+                >
+                  Chapter 3
+                </a>
+                ,
+              </NoBreak>
+              {" "} an empty circle of
               this type
             </OuterP>
             <Pause />
@@ -2231,13 +2234,16 @@ const Rest = () => {
               {" "}
               Digressing on the second-to-last equation
               in the solution to {" "}
-              <InChapterLink
-              href="/article/chapter2#_6_hgi_"
-              class="handle-in-chapter-link"
-              >
-                Exercise 2
-              </InChapterLink>
-              , explain why
+              <NoBreak>
+                <InChapterLink
+                href="/article/chapter2#_6_hgi_"
+                class="handle-in-chapter-link"
+                >
+                  Exercise 2
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "} explain why
             </OuterP>
             <Pause />
             <MathBlock>
