@@ -371,8 +371,7 @@ pub fn our_pipeline(batch: Bool) -> List(Pipe) {
   }
   |> infra.wrap_desugarers(
     infra.Off,
-    sl.tag("marker")
-    // sl.keyval("test", "test")
+    sl.verbatim("<> marker")
     |> infra.extend_selector_up(4)
     |> infra.extend_selector_down(4)
     |> infra.extend_selector_to_ancestors(

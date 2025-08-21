@@ -119,7 +119,8 @@ fn article_emitter(
   let lines =
     list.flatten([
       component_imports,
-      [ OutputLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
+      [
+        OutputLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
         OutputLine(blame_us("article_emitter"), 0, ""),
         OutputLine(blame_us("article_emitter"), 0, "export default function " <> funcname <> "() {"),
         OutputLine(blame_us("article_emitter"), 2, "return ("),
@@ -156,7 +157,8 @@ fn toc_emitter(
   let lines =
     list.flatten([
       component_imports,
-      [OutputLine(blame_us("toc_emitter"), 0, ""),
+      [
+        OutputLine(blame_us("toc_emitter"), 0, ""),
         OutputLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
         OutputLine(blame_us("toc_emitter"), 2, "return ("),
       ],
@@ -234,9 +236,6 @@ pub fn main() {
       io.println("(exiting on '--help' option)")
     }
   )
-
-  let exports_dict = ei.lbp_exports_dictionary()
-  let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
 
   let exports_dict = ei.lbp_exports_dictionary()
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
