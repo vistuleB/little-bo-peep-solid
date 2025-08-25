@@ -1,4 +1,3 @@
-import gleam/option
 import shellout
 import argv
 import blamedlines.{type Blame, type OutputLine, Src, OutputLine}
@@ -255,8 +254,7 @@ pub fn main() {
     vr.RendererParameters(
       input_dir: input_dir,
       output_dir: output_dir,
-      prettifier_on_by_default: False,
-      prettier_dir: option.None
+      prettifier_behavior: vr.PrettifierOff,
     )
     |> vr.amend_renderer_paramaters_by_command_line_amendments(amendments)
 
@@ -270,7 +268,7 @@ pub fn main() {
     with: [
       output_dir <> "/article/*",
       output_dir <> "/components/index.tsx",
-      output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"
+      output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx",
     ],
     opt: [],
   )

@@ -371,11 +371,11 @@ pub fn our_pipeline(batch: Bool) -> List(Pipe) {
   }
   |> infra.wrap_desugarers(
     infra.Off,
-    sl.verbatim("<> marker")
+    sl.verbatim("Square Roots.")
     |> infra.extend_selector_up(4)
     |> infra.extend_selector_down(4)
     |> infra.extend_selector_to_ancestors(
-      with_elder_siblings: False,
+      with_elder_siblings: True,
       with_attributes: True,
     )
   )
