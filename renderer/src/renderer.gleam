@@ -61,8 +61,8 @@ fn our_splitter(
   Ok(
     list.flatten([
       [
-        vr.OutputFragment("routes/index.tsx", toc_vxml, TOC),
-        vr.OutputFragment("components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml, HamburgerPanelAuthorSuppliedContents),
+        vr.OutputFragment(TOC, "routes/index.tsx", toc_vxml),
+        vr.OutputFragment(HamburgerPanelAuthorSuppliedContents, "components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml),
       ],
       list.map(
         articles,
@@ -71,7 +71,7 @@ fn our_splitter(
           let #(c, number) = infra.assert_pop_attribute_value(c, "number")
           let #(c, category) = infra.assert_pop_attribute_value(c, "category")
           let c = infra.set_tag(c, "Article")
-          vr.OutputFragment("routes" <> path <> ".tsx", c, Article("__" <> category <> number <> "__"))
+          vr.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
         }
       ),
     ]),
@@ -242,11 +242,11 @@ pub fn main() {
 
   let renderer =
     vr.Renderer(
-      assembler: vr.default_input_lines_assembler(amendments.spotlight_paths),
-      source_parser: vr.default_writerly_source_parser(amendments.spotlight_key_values),
+      assembler: vr.default_assembler(amendments.spotlight_paths),
+      parser: vr.default_writerly_parser(amendments.spotlight_key_values),
       pipeline: our_pipeline(False),
       splitter: our_splitter,
-      emitter: fn(fragment) { our_emitter(fragment, imports_lookup) },
+      emitter: our_emitter(_, imports_lookup),
       prettifier: vr.default_prettier_prettifier,
     )
     |> vr.amend_renderer_by_command_line_amendments(amendments)
