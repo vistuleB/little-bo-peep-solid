@@ -253,6 +253,7 @@ pub fn main() {
 
   let parameters =
     vr.RendererParameters(
+      pipeline_table: True,
       input_dir: input_dir,
       output_dir: output_dir,
       prettifier_behavior: vr.PrettifierOff,
