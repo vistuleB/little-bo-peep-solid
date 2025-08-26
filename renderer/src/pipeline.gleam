@@ -103,11 +103,7 @@ fn pipeline_without_lists() -> List(Desugarer) {
       dl.trim("p"),
       dl.delete_if_empty("p"),
       // (end cleaning)
-      dl.unwrap_if_no_child_meets_condition(#(
-        "p",
-        infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"]),
-        "is_text_or_is_one_of(_, [\"b\", \"i\", \"a\", \"span\", \"InChapterLink\"]"),
-      ),
+      dl.unwrap_if_no_child_meets_condition(#("p", infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"]))),
       dl.unwrap_if_descendant_of(#("p", ["td", "li"])),
       dl.rename_if_child_of(#("p", "Item", "List")),
       dl.rename_if_child_of(#("p", "Item", "Grid")),
@@ -282,11 +278,7 @@ fn pipeline_with_lists() -> List(Desugarer) {
       dl.trim("p"),
       dl.delete_if_empty("p"),
       // (end cleaning)
-      dl.unwrap_if_no_child_meets_condition(#(
-        "p",
-        infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"]),
-        "is_text_or_is_one_of(_, [\"b\", \"i\", \"a\", \"span\", \"InChapterLink\"]"),
-      ),
+      dl.unwrap_if_no_child_meets_condition(#("p", infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"]))),
       dl.unwrap_if_descendant_of(#("p", ["td", "li"])),
       dl.rename_if_child_of__batch([
         #("p", "Item", "List"),

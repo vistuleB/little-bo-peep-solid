@@ -532,10 +532,10 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
+            href="/article/bootcamp2#_2_hgi_"
             class="handle-in-chapter-link"
             >
-              A
+              AA
             </InChapterLink>
             )
           </NoBreak>
@@ -543,10 +543,10 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
+            href="/article/bootcamp2#_1_hgi_"
             class="handle-in-chapter-link"
             >
-              AA
+              A
             </InChapterLink>
             )
           </NoBreak>

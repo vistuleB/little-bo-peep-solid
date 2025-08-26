@@ -2,7 +2,8 @@ import gleam/dict.{type Dict}
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/result
-import blamedlines
+import blame.{Em}
+import io_lines.{type OutputLine, OutputLine}
 import vxml.{type VXML, V, T}
 import gleam/string
 import infrastructure as infra
@@ -159,8 +160,8 @@ fn import_line(file: String, imported: ImportedFromFile) -> String {
 pub fn imports_output_lines_for_symbols(
   symbols: List(String),
   imports_lookup: Dict(String, ImportSource)
-) -> Result(List(blamedlines.OutputLine), String) {
-  let blame = blamedlines.Em([], "emitter_imports")
+) -> Result(List(OutputLine), String) {
+  let blame = Em([], "emitter_imports")
 
   use globbed <- result.try(glob_imports(symbols, imports_lookup))
 
@@ -173,7 +174,7 @@ pub fn imports_output_lines_for_symbols(
   )
 
   Ok(list.map(import_lines, fn(line) {
-    blamedlines.OutputLine(blame, 0, line)
+    OutputLine(blame, 0, line)
   }))
 }
 

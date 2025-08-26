@@ -1,6 +1,7 @@
 import shellout
 import argv
-import blamedlines.{type Blame, type OutputLine, Src, OutputLine}
+import blame.{type Blame, Src}
+import io_lines.{type OutputLine, OutputLine}
 import gleam/io
 import gleam/list
 import gleam/string.{inspect as ins}

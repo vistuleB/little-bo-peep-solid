@@ -2631,7 +2631,7 @@ const Rest = () => {
                 </InChapterLink>
                 ,
               </NoBreak>
-              {" "} yyywe 
+              {" "} we 
               observed how the difference
             </OuterP>
             <Pause />
