@@ -1,6 +1,5 @@
 import gleam/list
-import gleam/option.{None, Some}
-import infrastructure.{type Desugarer, type Pipe} as infra
+import infrastructure.{type Pipeline} as infra
 import prefabricated_pipelines as pp
 import desugarer_library as dl
 import selector_library as sl
@@ -27,7 +26,7 @@ const cannot_contain_a_paragraph = [
 // PIPELINE WITHOUT LISTS
 // *************************
 
-fn pipeline_without_lists() -> List(Desugarer) {
+pub fn our_pipeline() -> Pipeline {
   [
     [
       dl.identity(),
@@ -150,17 +149,6 @@ fn pipeline_without_lists() -> List(Desugarer) {
       dl.add_before_but_not_before_first_child(#("StarDivider", "Pause", [])),
       dl.add_before_but_not_before_first_of_kind(#("Section", "Pause", [])),
       dl.timer(),
-      // dl.rearrange_links__batch([
-      //   #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
-      //   #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
-      //   #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
-      //   #("Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=1>Exercise _1_ of Chapter _2_</a>"),
-      //   #("Example <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=1>Example _1_ of Chapter _2_</a>"),
-      //   #("Chapter <a href=1>_1_</a>", "<a href=1>Chapter _1_</a>"),
-      //   #("Bootcamp <a href=1>_1_</a>", "<a href=1>Bootcamp _1_</a>"),
-      //   #("Exercise <a href=1>_1_</a>", "<a href=1>Exercise _1_</a>"),
-      //   #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
-      // ]),
       dl.tokenize_href_surroundings(),
       dl.rearrange_links_4_pre_tokenized_src(#("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>")),
       dl.rearrange_links_4_pre_tokenized_src(#("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>")),
@@ -175,8 +163,8 @@ fn pipeline_without_lists() -> List(Desugarer) {
       dl.timer(),
       dl.wrap_adjacent_non_whitespace_text_with(#("a", "NoBreak")),
       dl.wrap_adjacent_non_whitespace_text_with(#("InChapterLink", "NoBreak")),
-      dl.generate_lbp_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
-      dl.generate_lbp_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
+      // dl.generate_lbp_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
+      // dl.generate_lbp_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
       dl.generate_lbp_prev_next_attributes(),
       dl.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
       dl.generate_lbp_breadcrumbs(),
@@ -194,173 +182,6 @@ fn pipeline_without_lists() -> List(Desugarer) {
     ]
   ]
   |> list.flatten
-}
-
-// *************************
-// (OLD) PIPELINE WITH LISTS
-// *************************
-
-fn pipeline_with_lists() -> List(Desugarer) {
-  [
-    [
-      dl.auto_generate_child_if_missing_from_attribute(#("Bootcamp", "ArticleTitle", "title")),
-      dl.auto_generate_child_if_missing_from_attribute(#("Chapter", "ArticleTitle", "title")),
-    ],
-    pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar),
-    pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis),
-    [
-      dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
-      dl.append_attribute__batch([
-        #("Book", "counter", "ChapterCounter"),
-        #("Book", "counter", "BootcampCounter"),
-        #("Chapter", "counter", "ExampleCounter"),
-        #("Chapter", "counter", "NoteCounter"),
-        #("Chapter", "counter", "SectionCounter"),
-        #("Bootcamp", "counter", "ExampleCounter"),
-        #("Bootcamp", "counter", "SectionCounter"),
-        #("Exercises", "counter", "ExerciseCounter"),
-        #("Solution", "counter", "SolutionNoteCounter"),
-        #("Chapter", "path", "/article/chapter::øøChapterCounter"),
-        #("Bootcamp", "path", "/article/bootcamp::øøBootcampCounter"),
-        #("Chapter", "banner", "Chapter ::øøChapterCounter:"),
-        #("Bootcamp", "banner", "Bootcamp ::øøBootcampCounter:"),
-        #("Chapter", "number", "::øøChapterCounter"),
-        #("Bootcamp", "number", "::øøBootcampCounter"),
-        #("Chapter", "category", "Chapter"),
-        #("Bootcamp", "category", "Bootcamp"),
-        #("Exercise", "number", "::øøExerciseCounter"),
-        #("Section", "id", "section-::++SectionCounter"),
-      ]),
-      dl.associate_counter_by_prepending_incrementing_attribute__batch([
-        #("Chapter", "ChapterCounter", infra.GoBack),
-        #("Bootcamp", "BootcampCounter", infra.GoBack),
-        #("Example", "ExampleCounter", infra.GoBack),
-        #("Exercise", "ExerciseCounter", infra.GoBack),
-        #("SolutionNote", "SolutionNoteCounter", infra.GoBack),
-        #("Note", "NoteCounter", infra.GoBack),
-      ]),
-      dl.prepend_text_node__batch([
-        #("Example", "*Example ::øøExampleCounter.*"),
-        #("Exercise", "*Exercise ::øøExerciseCounter.*"),
-        #("SolutionNote", "_Note ::øøSolutionNoteCounter._"),
-        #("Note", "_Note ::øøNoteCounter._"),
-      ]),
-      dl.counters_substitute_and_assign_handles(),
-      dl.handles_generate_ids(),
-      dl.handles_generate_dictionary("path"),
-      dl.handles_substitute(#("path", "InChapterLink", "a", [#("class", "handle-in-chapter-link")], [#("class", "handle-out-chapter-link")])),
-      dl.unwrap("GrandWrapper"),
-      dl.cut_paste_attribute_from_self_to_child(#("Bootcamp", "ArticleTitle", "banner")),
-      dl.cut_paste_attribute_from_self_to_child(#("Chapter", "ArticleTitle", "banner")),
-      dl.group_consecutive_children__outside(#("p", cannot_be_contained_in_a_paragrap), cannot_contain_a_paragraph),
-      dl.unwrap("WriterlyBlankLine"),
-      // cleaning 'p' first time around:
-      dl.concatenate_text_nodes(),
-      dl.delete_text_nodes_with_singleton_empty_line(),
-      dl.trim("p"),
-      dl.delete_if_empty("p"),
-      // (end cleaning)
-    ],
-    pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
-    pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
-    [
-      dl.free_children__batch([#("CentralDisplay", "p"), #("CentralDisplayItalic", "p")]),
-    ],
-    pp.barbaric_symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
-    pp.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
-    [
-      dl.find_replace__outside(#("\\*", "*"), ["MathBlock", "Math"]),
-      dl.find_replace__outside(#("\\_", "_"), ["MathBlock", "Math"]),
-      dl.wrap_adjacent_non_whitespace_text_with(#("Math", "NoBreak")),
-      // cleaning 'p' second time around (not sure all the steps are necessary this time):
-      dl.concatenate_text_nodes(),
-      dl.delete_text_nodes_with_singleton_empty_line(),
-      dl.trim("p"),
-      dl.delete_if_empty("p"),
-      // (end cleaning)
-      dl.unwrap_if_no_child_meets_condition(#("p", infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"]))),
-      dl.unwrap_if_descendant_of(#("p", ["td", "li"])),
-      dl.rename_if_child_of__batch([
-        #("p", "Item", "List"),
-        #("p", "Item", "Grid"),
-        #("p", "OuterP", "Section"),
-        #("p", "OuterP", "Exercise"),
-        #("p", "OuterP", "Solution"),
-        #("p", "OuterP", "Example"),
-        #("p", "OuterP", "Chapter"),
-        #("p", "OuterP", "Bootcamp"),
-        #("p", "OuterP", "SolutionNote"),
-      ]),
-      dl.wrap_children_before_in(#("Exercise", "Solution", "ExerciseStatement")),
-      dl.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
-      dl.absorb_into_previous_sibling(["ImageRight", "ImageLeft"]),
-      dl.append_attribute_if_child_of__batch([
-        #("ImageRight", "MathBlock", "compensate_offset_x_for_large_text_columns", "true"),
-        #("ImageLeft", "MathBlock", "compensate_offset_x_for_large_text_columns", "true"),
-      ]),
-      dl.append_attribute_to_second_of_kind(#("OuterP", "class", "indent-10")),
-      dl.add_between_tags__batch([
-        #(#("MathBlock", "OuterP"), "Pause", []),
-        #(#("Example", "OuterP"), "Pause", []),
-        #(#("Note", "OuterP"), "Pause", []),
-        #(#("SolutionNote", "OuterP"), "Pause", []),
-        #(#("Image", "OuterP"), "Pause", []),
-        #(#("Table", "OuterP"), "Pause", []),
-        #(#("table", "OuterP"), "Pause", []),
-        #(#("Grid", "OuterP"), "Pause", []),
-        #(#("CentralDisplayItalic", "OuterP"), "Pause", []),
-        #(#("CentralDisplay", "OuterP"), "Pause", []),
-        #(#("List", "OuterP"), "Pause", []),
-        #(#("StarDivider", "OuterP"), "Pause", []),
-      ]),
-      dl.add_between_tag_and_text_node(#("MathBlock", "Pause", [])),
-      dl.add_before_but_not_before_first_child__batch([
-        #("Exercises", "Pause", []),
-        #("Example", "Pause", []),
-        #("Note", "Pause", []),
-        #("SolutionNote", "Pause", []),
-        #("MathBlock", "Pause", []),
-        #("CentralDisplayItalic", "Pause", []),
-        #("CentralDisplay", "Pause", []),
-        #("Image", "Pause", []),
-        #("Table", "Pause", []),
-        #("table", "Pause", []),
-        #("Grid", "Pause", []),
-        #("List", "Pause", []),
-        #("StarDivider", "Pause", []),
-      ]),
-      dl.add_before_but_not_before_first_of_kind(#("Section", "Pause", [])),
-      dl.rearrange_links__batch([
-        #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
-        #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
-        #("Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=1>Exercise _1_ of Chapter _2_</a>"),
-        #("Chapter <a href=1>_1_</a>", "<a href=1>Chapter _1_</a>"),
-        #("Exercise <a href=1>_1_</a>", "<a href=1>Exercise _1_</a>"),
-        #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
-      ]),
-      dl.wrap_adjacent_non_whitespace_text_with(#("a", "NoBreak")),
-      dl.wrap_adjacent_non_whitespace_text_with(#("InChapterLink", "NoBreak")),
-      dl.generate_lbp_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
-      dl.generate_lbp_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
-      dl.generate_lbp_prev_next_attributes(),
-      dl.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
-      dl.generate_lbp_breadcrumbs(),
-      dl.change_attribute_value(#("src", "/()")),
-      dl.delete_attribute__batch(["counter", "handle", "type", "t", ".", "title", "test"]),
-      dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
-      // dl.compute_missing_images_width(),
-      // dl.compute_max_element_width(["Image", "ImageLeft", "ImageRight"]),
-      dl.unwrap__batch(["BreadcrumbTitle", "Scope", "marker"]),
-    ]
-  ]
-  |> list.flatten
-}
-
-pub fn our_pipeline(batch: Bool) -> List(Pipe) {
-  case batch {
-    False -> pipeline_without_lists()
-    True -> pipeline_with_lists()
-  }
   |> infra.wrap_desugarers(
     infra.Off,
     sl.verbatim("Square Roots.")

@@ -11,6 +11,7 @@ import pipeline.{our_pipeline}
 import vxml.{type VXML, V}
 import vxml_renderer as vr
 import emitter_imports as ei
+import on
 
 type LBPFragmentClassifer {
   Article(String)
@@ -28,7 +29,12 @@ type LBPSplitterError {
   MoreThanOneHamburgerPanelAuthorSuppliedContents
 }
 
-type LBPEmitterError = Nil
+type LBPEmitterError {
+  UnknownComponentError(
+    component: String,
+    classifier: String,
+  )
+}
 
 fn blame_us(message: String) -> Blame {
   Src([], message, -1, -1)
@@ -38,9 +44,9 @@ fn our_splitter(
   root: VXML,
 ) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
   let articles = infra.children_with_tags(root, ["Chapter", "Bootcamp"])
-  use toc_vxml <- infra.on_error_on_ok(
+  use toc_vxml <- on.error_ok(
     infra.unique_child_with_tag(root, "TOC"),
-    with_on_error: fn(error) {
+    on_error: fn(error) {
       case error {
         infra.LessThanOne -> Error(NoTOC)
         infra.MoreThanOne -> Error(MoreThanOneTOC)
@@ -48,9 +54,9 @@ fn our_splitter(
     },
   )
 
-  use panel_vxml <- infra.on_error_on_ok(
+  use panel_vxml <- on.error_ok(
     infra.unique_child_with_tag(root, "HamburgerPanelAuthorSuppliedContents"),
-    with_on_error: fn(error) {
+    on_error: fn(error) {
       case error {
         infra.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
         infra.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
@@ -112,9 +118,12 @@ fn article_emitter(
   let #(first_split, rest) = split_vxml_to_first_section_and_rest(fr.payload)
   let assert Article(funcname) = fr.classifier
 
-  let assert Ok(component_imports) =
-    ei.uppercase_tags(fr.payload)
-    |> ei.imports_output_lines_for_symbols(imports_lookup)
+  use component_imports <- on.error_ok(
+    fr.payload
+    |> ei.uppercase_tags
+    |> ei.imports_output_lines_for_symbols(imports_lookup),
+    on_error: fn(s) {Error(UnknownComponentError(s, ins(fr.classifier)))},
+  )
 
   let lines =
     list.flatten([
@@ -150,9 +159,12 @@ fn toc_emitter(
   fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
-  let assert Ok(component_imports) =
-    ei.uppercase_tags(fr.payload)
-    |> ei.imports_output_lines_for_symbols(imports_lookup)
+  use component_imports <- on.error_ok(
+    fr.payload
+    |> ei.uppercase_tags
+    |> ei.imports_output_lines_for_symbols(imports_lookup),
+    on_error: fn(s) {Error(UnknownComponentError(s, ins(fr.classifier)))},
+  )
 
   let lines =
     list.flatten([
@@ -177,9 +189,12 @@ fn hpausc_emitter(
   fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
-  let assert Ok(component_imports) =
-    ei.uppercase_tags_in_children(fr.payload)
-    |> ei.imports_output_lines_for_symbols(imports_lookup)
+  use component_imports <- on.error_ok(
+    fr.payload
+    |> ei.uppercase_tags_in_children
+    |> ei.imports_output_lines_for_symbols(imports_lookup),
+    on_error: fn(s) {Error(UnknownComponentError(s, ins(fr.classifier)))},
+  )
 
   let lines =
     list.flatten([
@@ -220,7 +235,7 @@ const input_dir = "../src/content"
 const output_dir = "../src"
 
 pub fn main() {
-  use amendments <- infra.on_error_on_ok(
+  use amendments <- on.error_ok(
     vr.process_command_line_arguments(argv.load().arguments, []),
     fn(error) {
       io.println("")
@@ -230,7 +245,7 @@ pub fn main() {
     },
   )
 
-  use <- infra.on_lazy_true_on_false(
+  use <- on.lazy_true_false(
     amendments.help,
     fn() {
       io.println("(exiting on '--help' option)")
@@ -244,7 +259,7 @@ pub fn main() {
     vr.Renderer(
       assembler: vr.default_assembler(amendments.spotlight_paths),
       parser: vr.default_writerly_parser(amendments.spotlight_key_values),
-      pipeline: our_pipeline(False),
+      pipeline: our_pipeline(),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
       prettifier: vr.default_prettier_prettifier,
@@ -253,7 +268,7 @@ pub fn main() {
 
   let parameters =
     vr.RendererParameters(
-      pipeline_table: True,
+      table: False,
       input_dir: input_dir,
       output_dir: output_dir,
       prettifier_behavior: vr.PrettifierOff,
