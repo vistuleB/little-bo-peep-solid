@@ -231,16 +231,13 @@ fn cli_usage_supplementary() {
   Nil
 }
 
-const input_dir = "../src/content"
-const output_dir = "../src"
-
 pub fn main() {
   use amendments <- on.error_ok(
     vr.process_command_line_arguments(argv.load().arguments, []),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
-      vr.cli_usage()
+      vr.basic_cli_usage()
       cli_usage_supplementary()
     },
   )
@@ -264,10 +261,12 @@ pub fn main() {
     )
     |> vr.amend_renderer_by_command_line_amendments(amendments)
 
+  let output_dir = "../src"
+
   let parameters =
     vr.RendererParameters(
       table: False,
-      input_dir: input_dir,
+      input_dir: "../src/content",
       output_dir: output_dir,
       prettifier_behavior: vr.PrettifierOff,
     )

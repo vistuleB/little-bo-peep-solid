@@ -184,7 +184,7 @@ pub fn our_pipeline() -> Pipeline {
   ]
   |> list.flatten
   |> infra.wrap_desugarers(
-    infra.Off,
+    infra.TrackingOff,
     sl.verbatim("Square Roots.")
     |> infra.extend_selector_up(4)
     |> infra.extend_selector_down(4)
