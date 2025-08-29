@@ -1,4 +1,5 @@
 import gleam/list
+import gleam/option.{None, Some}
 import infrastructure.{type Pipeline} as infra
 import prefabricated_pipelines as pp
 import desugarer_library as dl
@@ -163,8 +164,8 @@ pub fn our_pipeline() -> Pipeline {
       dl.timer(),
       dl.wrap_adjacent_non_whitespace_text_with(#("a", "NoBreak")),
       dl.wrap_adjacent_non_whitespace_text_with(#("InChapterLink", "NoBreak")),
-      // dl.generate_lbp_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
-      // dl.generate_lbp_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
+      dl.generate_lbp_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
+      dl.generate_lbp_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
       dl.generate_lbp_prev_next_attributes(),
       dl.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
       dl.generate_lbp_breadcrumbs(),
