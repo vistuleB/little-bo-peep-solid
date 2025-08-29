@@ -1,5 +1,6 @@
 import gleam/dict.{type Dict}
 import gleam/list
+import gleam/io
 import gleam/option.{type Option, None, Some}
 import gleam/result
 import blame.{Em}
@@ -76,13 +77,18 @@ pub fn imports_lookup_dictionary_from_exports(exports: Dict(String, ExportedByFi
   )
 }
 
-fn glob_imports(symbols: List(String), imports_lookup: Dict(String, ImportSource)) -> Result(List(#(String, ImportedFromFile)), String) {
+fn glob_imports(
+  symbols: List(String),
+  imports_lookup: Dict(String, ImportSource),
+) -> Result(List(#(String, ImportedFromFile)), String) {
   list.try_fold(
     symbols,
     dict.new(),
     fn (acc : Dict(String, ImportedFromFile), symbol) {
       case dict.get(imports_lookup, symbol) {
-        Error(_) -> Error(symbol)
+        Error(_) -> {
+          Error(symbol)
+        }
         Ok(Default(file)) -> {
           case dict.get(acc, file) {
             Ok(what_were_importing_so_far_from_this_file) -> {
