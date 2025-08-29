@@ -247,9 +247,7 @@ pub fn main() {
 
   use <- on.lazy_true_false(
     amendments.help,
-    fn() {
-      io.println("(exiting on '--help' option)")
-    }
+    fn() { io.println("(exiting on '--help' option)") },
   )
 
   let exports_dict = ei.lbp_exports_dictionary()
@@ -257,8 +255,8 @@ pub fn main() {
 
   let renderer =
     vr.Renderer(
-      assembler: vr.default_assembler(amendments.spotlight_paths),
-      parser: vr.default_writerly_parser(amendments.spotlight_key_values),
+      assembler: vr.default_assembler(amendments.only_paths),
+      parser: vr.default_writerly_parser(amendments.only_key_values),
       pipeline: our_pipeline(),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),

@@ -7,7 +7,7 @@ import io_lines.{type OutputLine, OutputLine}
 import vxml.{type VXML, V, T}
 import gleam/string
 import infrastructure as infra
-
+import on
 
 pub type ExportedByFile {
   ExportedByFile(default: Option(String), other: List(String))
@@ -129,32 +129,32 @@ fn glob_imports(symbols: List(String), imports_lookup: Dict(String, ImportSource
 fn import_line(file: String, imported: ImportedFromFile) -> String {
   let assert True = option.is_some(imported.default) || !list.is_empty(imported.other)
   "import"
-    <> case imported.default {
-      None -> ""
-      Some(component) -> " " <> component
+  <> case imported.default {
+    None -> ""
+    Some(component) -> " " <> component
+  }
+  <> case option.is_some(imported.default) && !list.is_empty(imported.other) {
+    True -> ", "
+    False -> case list.is_empty(imported.other) {
+      True -> " "
+      False -> ""
     }
-    <> case option.is_some(imported.default) && !list.is_empty(imported.other) {
-      True -> ", "
-      False -> case list.is_empty(imported.other) {
-        True -> " "
-        False -> ""
-      }
-    }
-    <> case list.is_empty(imported.other) {
-      True -> ""
-      False -> " { " <> list.index_fold(
-        imported.other,
-        "",
-        fn (acc, symbol, index) {
-          acc <> case index == 0 {
-            True -> ""
-            False -> ", "
-          } <> symbol
-        }) <> " } "
-    }
-    <> " from \"~/components/"
-    <> file
-    <> "\";"
+  }
+  <> case list.is_empty(imported.other) {
+    True -> ""
+    False -> " { " <> list.index_fold(
+      imported.other,
+      "",
+      fn (acc, symbol, index) {
+        acc <> case index == 0 {
+          True -> ""
+          False -> ", "
+        } <> symbol
+      }) <> " } "
+  }
+  <> " from \"~/components/"
+  <> file
+  <> "\";"
 }
 
 pub fn imports_output_lines_for_symbols(
@@ -162,20 +162,16 @@ pub fn imports_output_lines_for_symbols(
   imports_lookup: Dict(String, ImportSource)
 ) -> Result(List(OutputLine), String) {
   let blame = Em([], "emitter_imports")
-
-  use globbed <- result.try(glob_imports(symbols, imports_lookup))
-
-  let import_lines = list.map(
+  use globbed <- on.ok(glob_imports(symbols, imports_lookup))
+  list.map(
     globbed,
     fn(globbed_symbols_for_file) {
       let #(file, imported_from_file) = globbed_symbols_for_file
-      import_line(file, imported_from_file)
+      let line = import_line(file, imported_from_file)
+      OutputLine(blame, 0, line)
     }
   )
-
-  Ok(list.map(import_lines, fn(line) {
-    OutputLine(blame, 0, line)
-  }))
+  |> Ok
 }
 
 type TreeWalkingState = List(String)
