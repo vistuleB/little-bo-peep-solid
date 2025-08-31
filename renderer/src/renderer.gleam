@@ -43,9 +43,9 @@ fn blame_us(message: String) -> Blame {
 fn our_splitter(
   root: VXML,
 ) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
-  let articles = infra.children_with_tags(root, ["Chapter", "Bootcamp"])
+  let articles = infra.v_children_with_tags(root, ["Chapter", "Bootcamp"])
   use toc_vxml <- on.error_ok(
-    infra.unique_child_with_tag(root, "TOC"),
+    infra.v_unique_child_with_tag(root, "TOC"),
     on_error: fn(error) {
       case error {
         infra.LessThanOne -> Error(NoTOC)
@@ -55,7 +55,7 @@ fn our_splitter(
   )
 
   use panel_vxml <- on.error_ok(
-    infra.unique_child_with_tag(root, "HamburgerPanelAuthorSuppliedContents"),
+    infra.v_unique_child_with_tag(root, "HamburgerPanelAuthorSuppliedContents"),
     on_error: fn(error) {
       case error {
         infra.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
@@ -73,10 +73,10 @@ fn our_splitter(
       list.map(
         articles,
         fn(c) {
-          let #(c, path) = infra.assert_pop_attribute_value(c, "path")
-          let #(c, number) = infra.assert_pop_attribute_value(c, "number")
-          let #(c, category) = infra.assert_pop_attribute_value(c, "category")
-          let c = infra.set_tag(c, "Article")
+          let #(c, path) = infra.v_assert_pop_attribute_value(c, "path")
+          let #(c, number) = infra.v_assert_pop_attribute_value(c, "number")
+          let #(c, category) = infra.v_assert_pop_attribute_value(c, "category")
+          let c = infra.v_set_tag(c, "Article")
           vr.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
         }
       ),
@@ -85,7 +85,7 @@ fn our_splitter(
 }
 
 fn is_section(vxml: VXML) -> Bool {
-  infra.is_tag(vxml, "Section")
+  infra.is_v_and_tag_equals(vxml, "Section")
 }
 
 fn up_to_and_including_first_section(
@@ -204,7 +204,7 @@ fn hpausc_emitter(
         OutputLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
         OutputLine(blame_us("hpausc_emitter"), 2, "return <>"),
       ],
-      vxml.vxmls_to_jsx_output_lines(fr.payload |> infra.get_children, 4),
+      vxml.vxmls_to_jsx_output_lines(fr.payload |> infra.v_get_children, 4),
       [
         OutputLine(blame_us("hpausc_emitter"), 2, "</>;"),
         OutputLine(blame_us("hpausc_emitter"), 0, "};"),

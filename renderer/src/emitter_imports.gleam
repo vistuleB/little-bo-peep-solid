@@ -1,6 +1,5 @@
 import gleam/dict.{type Dict}
 import gleam/list
-import gleam/io
 import gleam/option.{type Option, None, Some}
 import gleam/result
 import blame.{Em}
