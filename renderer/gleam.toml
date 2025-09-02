@@ -2,9 +2,9 @@ name = "renderer"
 version = "1.0.0"
 
 [dependencies]
-vxml = { "path" = "../../../vistuleB/vxml" }
-writerly = { "path" = "../../../vistuleB/writerly" }
-vxml_desugaring = { "path" = "../../../vistuleB/vxml_desugaring" }
+vxml = { "path" = "../../../vistuleB/wly-composer/vxml" }
+writerly = { "path" = "../../../vistuleB/wly-composer/writerly" }
+sharknado = { "path" = "../../../vistuleB/wly-composer/sharknado" }
 
 argv = ">= 1.0.2 and < 2.0.0"
 gleam_stdlib = ">= 0.34.0 and < 2.0.0"

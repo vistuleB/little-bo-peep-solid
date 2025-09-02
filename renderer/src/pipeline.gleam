@@ -23,10 +23,6 @@ const cannot_contain_a_paragraph = [
   "CentralDisplayItalic", "ArticleTitle"
 ]
 
-// *************************
-// PIPELINE WITHOUT LISTS
-// *************************
-
 pub fn our_pipeline() -> Pipeline {
   [
     [
@@ -135,19 +131,34 @@ pub fn our_pipeline() -> Pipeline {
       dl.add_between(#("StarDivider", "OuterP", "Pause", [])),
       dl.add_between_tag_and_text_node(#("MathBlock", "Pause", [])),
       dl.timer(),
-      dl.add_before_but_not_before_first_child(#("Exercises", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("Example", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("Note", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("SolutionNote", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("MathBlock", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("CentralDisplayItalic", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("CentralDisplay", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("Image", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("Table", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("table", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("Grid", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("List", "Pause", [])),
-      dl.add_before_but_not_before_first_child(#("StarDivider", "Pause", [])),
+      dl.add_before_but_not_before_first_child__batch([
+        #("Exercises", "Pause", []),
+        #("Example", "Pause", []),
+        #("Note", "Pause", []),
+        #("SolutionNote", "Pause", []),
+        #("MathBlock", "Pause", []),
+        #("CentralDisplayItalic", "Pause", []),
+        #("CentralDisplay", "Pause", []),
+        #("Image", "Pause", []),
+        #("Table", "Pause", []),
+        #("table", "Pause", []),
+        #("Grid", "Pause", []),
+        #("List", "Pause", []),
+        #("StarDivider", "Pause", []),
+      ]),
+      // dl.add_before_but_not_before_first_child(#("Exercises", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("Example", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("Note", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("SolutionNote", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("MathBlock", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("CentralDisplayItalic", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("CentralDisplay", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("Image", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("Table", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("table", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("Grid", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("List", "Pause", [])),
+      // dl.add_before_but_not_before_first_child(#("StarDivider", "Pause", [])),
       dl.add_before_but_not_before_first_of_kind(#("Section", "Pause", [])),
       dl.timer(),
       // dl.tokenize_href_surroundings(),
@@ -192,14 +203,14 @@ pub fn our_pipeline() -> Pipeline {
     ]
   ]
   |> list.flatten
-  |> infra.wrap_desugarers(
-    infra.TrackingOff,
+  |> infra.desugarers_2_pipeline(
     sl.verbatim("Square Roots.")
     |> infra.extend_selector_up(4)
     |> infra.extend_selector_down(4)
     |> infra.extend_selector_to_ancestors(
       with_elder_siblings: True,
       with_attributes: True,
-    )
+    ),
+    infra.TrackingOff,
   )
 }
