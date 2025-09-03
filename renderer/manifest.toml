@@ -19,7 +19,7 @@ packages = [
   { name = "snag", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "snag", source = "hex", outer_checksum = "7E9F06390040EB5FAB392CE642771484136F2EC103A92AE11BA898C8167E6E17" },
   { name = "vix", version = "0.35.0", build_tools = ["mix", "make"], requirements = ["cc_precompiler", "elixir_make", "kino"], otp_app = "vix", source = "hex", outer_checksum = "A3E80067A89D0631B6CF2B93594E03C1B303A2C7CDDBBDD28040750D521984E5" },
   { name = "vxml", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_regexp", "gleam_stdlib", "on", "simplifile", "xmlm"], source = "local", path = "../../../vistuleB/wly-composer/vxml" },
-  { name = "sharknado", version = "1.0.0", build_tools = ["gleam"], requirements = ["ansel", "argv", "gleam_regexp", "gleam_stdlib", "gleam_time", "on", "shellout", "simplifile", "vxml", "writerly", "xmlm"], source = "local", path = "../../../vistuleB/wly-composer/sharknado" },
+  { name = "vxml_pipeline", version = "1.0.0", build_tools = ["gleam"], requirements = ["ansel", "argv", "gleam_regexp", "gleam_stdlib", "gleam_time", "on", "shellout", "simplifile", "vxml", "writerly", "xmlm"], source = "local", path = "../../../vistuleB/wly-composer/vxml_pipeline" },
   { name = "writerly", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_regexp", "gleam_stdlib", "gleam_time", "simplifile", "vxml"], source = "local", path = "../../../vistuleB/wly-composer/writerly" },
   { name = "xmlm", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "xmlm", source = "hex", outer_checksum = "295F483E1A930DC4C45ED0F07C3466C0A7381972C3C2FC64D66BD2FBB307ED6A" },
 ]
@@ -33,6 +33,6 @@ on = { version = ">= 1.0.0 and < 2.0.0" }
 shellout = { version = ">= 1.6.0 and < 2.0.0" }
 simplifile = { version = ">= 2.3.0 and < 3.0.0" }
 vxml = { path = "../../../vistuleB/wly-composer/vxml" }
-sharknado = { path = "../../../vistuleB/wly-composer/sharknado" }
+vxml_pipeline = { path = "../../../vistuleB/wly-composer/vxml_pipeline" }
 writerly = { path = "../../../vistuleB/wly-composer/writerly" }
 xmlm = { version = ">= 1.0.0 and < 2.0.0" }
