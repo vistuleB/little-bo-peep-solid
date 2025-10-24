@@ -65,11 +65,9 @@ const ButtonsContainer = (props: ParentProps) => {
         style={{
           width: "134px",
           "background-color":
-            store.scrollY > HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY || on_mobile()
-              ? "transparent"
-              : store.show_areas
+              store.show_areas
                 ? "#fff000"
-                : "#fff",
+                : "transparent",
         }}
       ></div>
       <div
