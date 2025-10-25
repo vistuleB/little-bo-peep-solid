@@ -20,7 +20,7 @@ const Nav = () => {
         onClick={(e) => {
           e.stopPropagation();
         }}>
-        <div class="select-none border-b flex justify-center items-center bg-bg z-40 w-full h-14 left-0">
+        <div class="select-none border-[var(--nav-border)] border-b flex justify-center items-center bg-bg z-40 w-full h-14 left-0">
           <Title />
         </div>
       </nav>

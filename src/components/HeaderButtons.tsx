@@ -76,7 +76,7 @@ const ButtonsContainer = (props: ParentProps) => {
           !on_mobile() &&
             !open() &&
             store.scrollY < 2 * HAMBURGER_MENU_HEIGHT &&
-            "border-b"
+            "border-b border-[var(--nav-border)]"
         )}
       >
         <div
@@ -137,17 +137,17 @@ const LeftArrowButton = () => {
       style={{
         "background-color":
           (pressed() || pressedTimeout()) && !on_mobile()
-            ? "#ececec"
+            ? "var(--arrow-pressed-bg)"
             : store.show_areas
               ? "rgb(224, 215, 48)"
-              : "#fff",
+              : "var(--background-rgb)",
         scale: (pressed() || pressedTimeout()) && on_mobile() ? "1.8" : "1",
       }}
     >
       <LeftArrowSVG
         class={twMerge(
           pressed() && !on_mobile()
-            ? "stroke-purple-600"
+            ? "stroke-[var(--arrow-pressed)]"
             : !prevDisabled()
               ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
               : "stroke-stone-300"
@@ -201,14 +201,14 @@ const RightArrowButton = () => {
             ? "#ececec"
             : store.show_areas
               ? "rgb(224, 215, 48)"
-              : "#fff",
+              : "var(--background-rgb)",
         scale: (pressed() || pressedTimeout()) && on_mobile() ? "1.8" : "1",
       }}
     >
       <RightArrowSVG
         class={twMerge(
           pressed() && !on_mobile()
-            ? "stroke-purple-600"
+            ? "stroke-[var(--arrow-pressed)]"
             : !nextDisabled()
               ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
               : "stroke-stone-300"
@@ -231,7 +231,7 @@ const HamburgerButton = () => {
         set_store("panel_opened", !open());
       }}
       style={{
-        "background-color": store.show_areas ? "rgb(224, 215, 48)" : "#fff",
+        "background-color": store.show_areas ? "rgb(224, 215, 48)" : "--var(background-rgb)",
       }}
     >
       <HamburgerButtonSVG

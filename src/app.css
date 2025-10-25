@@ -23,9 +23,13 @@
 }
 
 :root {
-  --background-rgb: #fff;
+  --background-rgb: rgb(255,255,255);
+  /*--background-rgb: rgb(255,0,255);*/
   --foreground-rgb: rgb(0, 0, 0);
   --highlighted-rgb: rgb(255,0,0);
+  --arrow-pressed: #9333ea;
+  --arrow-pressed-bg: #ececec;
+  --nav-border: #ececec;
   --hamburger-menu-height: 56px;
   --desktop-text-column-padding: 16px;
   --mobile-max-width: 900px;
