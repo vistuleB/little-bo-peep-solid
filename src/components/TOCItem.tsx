@@ -26,7 +26,7 @@ const TOCItem = (
           </div>
         </div>
         <div class="toc-item-title">
-          <span class="bg-white" style="direction:ltr;">
+          <span class="bg-[var(--background-rgb)]" style="direction:ltr;">
             &lrm;&thinsp;{props.children}&lrm;
           </span>
         </div>

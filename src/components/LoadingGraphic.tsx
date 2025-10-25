@@ -23,7 +23,7 @@ const LoadingGraphic = () => {
 
   return (
     <>
-      <div class="fixed top-0 left-0 w-full h-full bg-white z-50"></div>
+      <div class="fixed top-0 left-0 w-full h-full bg-[var(--background-rgb)] z-50"></div>
       <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
         <img
           src="/images/loading_screen.png"
