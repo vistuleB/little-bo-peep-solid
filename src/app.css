@@ -25,6 +25,7 @@
 :root {
   --background-rgb: #fff;
   --foreground-rgb: rgb(0, 0, 0);
+  --highlighted-rgb: rgb(255,0,0);
   --hamburger-menu-height: 56px;
   --desktop-text-column-padding: 16px;
   --mobile-max-width: 900px;
@@ -452,7 +453,7 @@ ol.l1 > li:before {
 }
 
 .highlighted {
-  color: red;
+  color: var(--highlighted-rgb);
 }
 
 .handle-in-chapter-link:hover,
