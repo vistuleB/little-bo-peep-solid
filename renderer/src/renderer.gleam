@@ -45,11 +45,12 @@ fn our_splitter(
 ) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
   let articles = infra.v_children_with_tags(root, ["Chapter", "Bootcamp"])
   use toc_vxml <- on.error_ok(
-    infra.v_unique_child_with_tag(root, "TOC"),
+    infra.v_unique_child(root, "TOC"),
     on_error: fn(error) {
       case error {
-        infra.LessThanOne -> Error(NoTOC)
-        infra.MoreThanOne -> Error(MoreThanOneTOC)
+        infra.DesugaringError(_,_) -> Error(NoTOC)
+        // infra.LessThanOne -> Error(NoTOC)
+        // infra.MoreThanOne -> Error(MoreThanOneTOC)
       }
     },
   )
@@ -58,8 +59,9 @@ fn our_splitter(
     infra.v_unique_child(root, "HamburgerPanelAuthorSuppliedContents"),
     on_error: fn(error) {
       case error {
-        infra.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
-        infra.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
+        infra.DesugaringError(_,_) -> Error(NoHamburgerPanelAuthorSuppliedContents)
+        // infra.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
+        // infra.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
       }
     },
   )
@@ -73,9 +75,9 @@ fn our_splitter(
       list.map(
         articles,
         fn(c) {
-          let #(c, path) = infra.v_assert_pop_attr(c, "path")
-          let #(c, number) = infra.v_assert_pop_attr(c, "number")
-          let #(c, category) = infra.v_assert_pop_attr(c, "category")
+          let #(c, vxml.Attr(_,_,path)) = infra.v_assert_pop_attr(c, "path")
+          let #(c, vxml.Attr(_, _, number)) = infra.v_assert_pop_attr(c, "number")
+          let #(c, vxml.Attr(_,_,category)) = infra.v_assert_pop_attr(c, "category")
           let c = infra.v_set_tag(c, "Article")
           ds.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
         }
