@@ -7,7 +7,7 @@ dist
 .vinxi
 
 # Editor
-.zed/
+**/.zed/
 
 # Environment
 .env
