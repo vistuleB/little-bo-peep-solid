@@ -8,7 +8,7 @@ const OutlinedText = (props: any) => {
           position: "absolute",
           top: 0,
           left: 0,
-          "-webkit-text-stroke-color": "white",
+          "-webkit-text-stroke-color": "var(--background-rgb)",
           "-webkit-text-stroke-width": "5px",
         }}>
         {props.children}
