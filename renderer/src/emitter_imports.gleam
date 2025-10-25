@@ -2,7 +2,7 @@ import gleam/dict.{type Dict}
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/result
-import blame.{Em}
+import blame.{Ext}
 import io_lines.{type OutputLine, OutputLine}
 import vxml.{type VXML, V, T}
 import gleam/string
@@ -166,7 +166,7 @@ pub fn imports_output_lines_for_symbols(
   symbols: List(String),
   imports_lookup: Dict(String, ImportSource)
 ) -> Result(List(OutputLine), String) {
-  let blame = Em([], "emitter_imports")
+  let blame = Ext([], "emitter_imports")
   use globbed <- on.ok(glob_imports(symbols, imports_lookup))
   list.map(
     globbed,

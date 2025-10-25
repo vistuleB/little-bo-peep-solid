@@ -1,17 +1,17 @@
-import shellout
 import argv
 import blame.{type Blame, Src}
-import io_lines.{type OutputLine, OutputLine}
+import desugaring as ds
+import emitter_imports as ei
 import gleam/io
 import gleam/list
 import gleam/string.{inspect as ins}
 import gleam/dict.{type Dict}
 import infrastructure as infra
-import pipeline.{our_pipeline}
-import vxml.{type VXML, V}
-import vxml_renderer as vr
-import emitter_imports as ei
+import io_lines.{type OutputLine, OutputLine}
 import on
+import pipeline.{our_pipeline}
+import shellout
+import vxml.{type VXML, V}
 
 type LBPFragmentClassifer {
   Article(String)
@@ -19,7 +19,7 @@ type LBPFragmentClassifer {
   HamburgerPanelAuthorSuppliedContents
 }
 
-type LBPFragment(z) = vr.OutputFragment(LBPFragmentClassifer, z)
+type LBPFragment(z) = ds.OutputFragment(LBPFragmentClassifer, z)
 type BL = List(OutputLine)
 
 type LBPSplitterError {
@@ -55,7 +55,7 @@ fn our_splitter(
   )
 
   use panel_vxml <- on.error_ok(
-    infra.v_unique_child_with_tag(root, "HamburgerPanelAuthorSuppliedContents"),
+    infra.v_unique_child(root, "HamburgerPanelAuthorSuppliedContents"),
     on_error: fn(error) {
       case error {
         infra.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
@@ -67,17 +67,17 @@ fn our_splitter(
   Ok(
     list.flatten([
       [
-        vr.OutputFragment(TOC, "routes/index.tsx", toc_vxml),
-        vr.OutputFragment(HamburgerPanelAuthorSuppliedContents, "components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml),
+        ds.OutputFragment(TOC, "routes/index.tsx", toc_vxml),
+        ds.OutputFragment(HamburgerPanelAuthorSuppliedContents, "components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml),
       ],
       list.map(
         articles,
         fn(c) {
-          let #(c, path) = infra.v_assert_pop_attribute_value(c, "path")
-          let #(c, number) = infra.v_assert_pop_attribute_value(c, "number")
-          let #(c, category) = infra.v_assert_pop_attribute_value(c, "category")
+          let #(c, path) = infra.v_assert_pop_attr(c, "path")
+          let #(c, number) = infra.v_assert_pop_attr(c, "number")
+          let #(c, category) = infra.v_assert_pop_attr(c, "category")
           let c = infra.v_set_tag(c, "Article")
-          vr.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
+          ds.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
         }
       ),
     ]),
@@ -152,7 +152,7 @@ fn article_emitter(
       ],
     ])
 
-  Ok(vr.OutputFragment(..fr, payload: lines))
+  Ok(ds.OutputFragment(..fr, payload: lines))
 }
 
 fn toc_emitter(
@@ -182,7 +182,7 @@ fn toc_emitter(
       ],
     ])
 
-  Ok(vr.OutputFragment(..fr, payload: lines))
+  Ok(ds.OutputFragment(..fr, payload: lines))
 }
 
 fn hpausc_emitter(
@@ -213,7 +213,7 @@ fn hpausc_emitter(
       ],
     ])
 
-  Ok(vr.OutputFragment(..fr, payload: lines))
+  Ok(ds.OutputFragment(..fr, payload: lines))
 }
 
 fn our_emitter(
@@ -233,11 +233,11 @@ fn cli_usage_supplementary() {
 
 pub fn main() {
   use amendments <- on.error_ok(
-    vr.process_command_line_arguments(argv.load().arguments, []),
+    ds.process_command_line_arguments(argv.load().arguments, []),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
-      vr.basic_cli_usage()
+      ds.basic_cli_usage("\nCommand line options (basic):")
       cli_usage_supplementary()
     },
   )
@@ -251,30 +251,33 @@ pub fn main() {
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
 
   let renderer =
-    vr.Renderer(
-      assembler: vr.default_assembler(amendments.only_paths),
-      parser: vr.default_writerly_parser(amendments.only_key_values),
+    ds.Renderer(
+      assembler: ds.default_assembler(amendments.only_paths),
+      parser: ds.default_writerly_parser(amendments.only_key_values),
       pipeline: our_pipeline(),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
-      prettifier: vr.default_prettier_prettifier,
+      writer: ds.default_writer,
+      prettifier: ds.default_prettier_prettifier,
     )
-    |> vr.amend_renderer_by_command_line_amendments(amendments)
+    |> ds.amend_renderer_by_command_line_amendments(amendments)
 
   let output_dir = "../src"
 
   let parameters =
-    vr.RendererParameters(
-      table: False,
+    ds.RendererParameters(
       input_dir: "../src/content",
       output_dir: output_dir,
-      prettifier_behavior: vr.PrettifierOff,
+      prettifier_behavior: ds.PrettifierOff,
+      table: False,
+      verbose: True,
+      warnings: True,
     )
-    |> vr.amend_renderer_paramaters_by_command_line_amendments(amendments)
+    |> ds.amend_renderer_paramaters_by_command_line_amendments(amendments)
 
   let debug_options =
-    vr.default_renderer_debug_options()
-    |> vr.amend_renderer_debug_options_by_command_line_amendments(amendments)
+    ds.default_renderer_debug_options()
+    |> ds.amend_renderer_debug_options_by_command_line_amendments(amendments)
 
   let _ = shellout.command(
     run: "rm",
@@ -287,7 +290,7 @@ pub fn main() {
     opt: [],
   )
 
-  let _ = vr.run_renderer(renderer, parameters, debug_options)
+  let _ = ds.run_renderer(renderer, parameters, debug_options)
 
   Nil
 }
