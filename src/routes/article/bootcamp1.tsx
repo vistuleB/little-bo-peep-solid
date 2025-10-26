@@ -600,7 +600,7 @@ const Rest = () => {
           \Large \&#123;\&#123;\&#125; \&#125; \ne \&#123;\&#125;
           $$
           <ImageRight
-          src="/images/svg_bt1_bt_empty_set_cloud.svg"
+          src="images/svg_bt1_bt_empty_set_cloud.svg"
           offset_x="3em"
           compensate_offset_x_for_large_text_columns={true}
            />

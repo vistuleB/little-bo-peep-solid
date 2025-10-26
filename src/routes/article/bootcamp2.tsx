@@ -100,7 +100,7 @@ export default function __Bootcamp2__() {
           :
         </OuterP>
         <Pause />
-        <Image src="/images/svg_base_exponent.svg" />
+        <Image src="images/svg_base_exponent.svg" />
         <Pause />
         <OuterP>
           The whole expression is read {" "}
@@ -231,11 +231,14 @@ const Rest = () => {
           \Large 10^0 = 1 = 1
           $$
           <ImageLeft
-          src="/images/svg_bt2_bt_alert_cloud.svg"
+          src="images/svg_bt2_bt_alert_cloud.svg"
           offset_y="-0.2em"
-          offset_x="4em"
           compensate_offset_x_for_large_text_columns={true}
-           />
+          >
+            <p>
+              offset_x= 4em
+            </p>
+          </ImageLeft>
         </MathBlock>
         <Pause />
         <OuterP>
@@ -380,7 +383,7 @@ const Rest = () => {
           {" "}
           is equivalent to the identity
           <ImageLeft
-          src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
+          src="images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
           line={2}
            />
         </OuterP>
@@ -532,10 +535,10 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
+            href="/article/bootcamp2#_1_hgi_"
             class="handle-in-chapter-link"
             >
-              AA
+              A
             </InChapterLink>
             )
           </NoBreak>
@@ -543,10 +546,10 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
+            href="/article/bootcamp2#_2_hgi_"
             class="handle-in-chapter-link"
             >
-              A
+              AA
             </InChapterLink>
             )
           </NoBreak>
@@ -1308,7 +1311,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
+          <ImageLeft src="images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1317,7 +1320,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
+          <ImageLeft src="images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1326,7 +1329,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight src="/images/svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
+          <ImageRight src="images/svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1477,7 +1480,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_one_blue_one_image_equation.svg" />
+        <Image src="images/svg_one_blue_one_image_equation.svg" />
         <Pause />
         <OuterP>
           Likewise, the standard decimal expansion for {" "}
@@ -1494,7 +1497,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_two_blue_one_image_equation.svg" />
+        <Image src="images/svg_two_blue_one_image_equation.svg" />
         <Pause />
         <OuterP>
           ...and so on, which is a possible trick to check
@@ -1977,7 +1980,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example>
+        <Example _="ExampleCounter 1">
           <OuterP>
             <b>
               Example 1.
@@ -2030,7 +2033,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example>
+        <Example _="ExampleCounter 2">
           <OuterP>
             <b>
               Example 2.
@@ -2070,7 +2073,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example>
+        <Example _="ExampleCounter 3">
           <OuterP>
             <b>
               Example 3.
@@ -2104,7 +2107,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example>
+        <Example _="ExampleCounter 4">
           <OuterP>
             <b>
               Example 4.
@@ -2118,10 +2121,13 @@ const Rest = () => {
             \Large 0.00001 = 10^&#123;-5&#125;
             $$
             <ImageRight
-            src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
-            offset_x="0em"
+            src="images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
             compensate_offset_x_for_large_text_columns={true}
-             />
+            >
+              <p>
+                offset_x= 0em
+              </p>
+            </ImageRight>
           </MathBlock>
           <Pause />
           <OuterP>
@@ -2145,7 +2151,10 @@ const Rest = () => {
       </Section>
       <Pause />
       <Exercises>
-        <Exercise number={1}>
+        <Exercise
+        _="ExerciseCounter 1"
+        number={1}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2204,7 +2213,7 @@ const Rest = () => {
               respectively.
             </OuterP>
             <Pause />
-            <SolutionNote>
+            <SolutionNote _="SolutionNoteCounter 1">
               <OuterP>
                 <i>
                   Note 1.
@@ -2222,7 +2231,7 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_0.125_twelve_5.svg" />
+              <Image src="images/svg_0.125_twelve_5.svg" />
               <Pause />
               <OuterP>
                 Half of twelve hundredths is six hundredths, and
@@ -2237,7 +2246,7 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_06_and_0025.svg" />
+              <Image src="images/svg_06_and_0025.svg" />
               <Pause />
               <OuterP>
                 ...so {" "}
@@ -2255,7 +2264,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={2}>
+        <Exercise
+        _="ExerciseCounter 2"
+        number={2}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2314,7 +2326,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={3}>
+        <Exercise
+        _="ExerciseCounter 3"
+        number={3}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2412,7 +2427,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={4}>
+        <Exercise
+        _="ExerciseCounter 4"
+        number={4}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2477,7 +2495,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={5}>
+        <Exercise
+        _="ExerciseCounter 5"
+        number={5}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2524,7 +2545,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={6}>
+        <Exercise
+        _="ExerciseCounter 6"
+        number={6}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2584,7 +2608,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={7}>
+        <Exercise
+        _="ExerciseCounter 7"
+        number={7}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2616,7 +2643,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={8}>
+        <Exercise
+        _="ExerciseCounter 8"
+        number={8}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2654,7 +2684,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={9}>
+        <Exercise
+        _="ExerciseCounter 9"
+        number={9}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2701,7 +2734,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={10}>
+        <Exercise
+        _="ExerciseCounter 10"
+        number={10}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2759,7 +2795,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={11}>
+        <Exercise
+        _="ExerciseCounter 11"
+        number={11}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2813,7 +2852,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={12}>
+        <Exercise
+        _="ExerciseCounter 12"
+        number={12}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2901,7 +2943,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={13}>
+        <Exercise
+        _="ExerciseCounter 13"
+        number={13}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -2944,7 +2989,7 @@ const Rest = () => {
               hoping for:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_start_end_proof.svg" />
+            <Image src="images/svg_start_end_proof.svg" />
             <Pause />
             <OuterP>
               The point is that the second equality uses the identity
@@ -2986,7 +3031,7 @@ const Rest = () => {
               is as follows (minus fine print):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_laws_exp.svg" />
+            <Image src="images/svg_laws_exp.svg" />
             <Pause />
             <OuterP>
               The first law can be recognized as “additivity of exponents”
@@ -3027,7 +3072,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={14}>
+        <Exercise
+        _="ExerciseCounter 14"
+        number={14}
+        >
           <ExerciseStatement id="_3_hgi_">
             <OuterP>
               <b>
@@ -3178,7 +3226,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={15}>
+        <Exercise
+        _="ExerciseCounter 15"
+        number={15}
+        >
           <ExerciseStatement>
             <OuterP>
               <b>
@@ -3316,7 +3367,7 @@ const Rest = () => {
                 href="/article/bootcamp2#_3_hgi_"
                 class="handle-in-chapter-link"
                 >
-                  Exercise 14
+                  Exercise {" "}
                 </InChapterLink>
                 ):
               </NoBreak>
@@ -3518,11 +3569,14 @@ const Rest = () => {
               \Large -b -2c -3 = 0
               $$
               <ImageRight
-              src="/images/svg_bt2_ex_equation_addition_cloud.svg"
+              src="images/svg_bt2_ex_equation_addition_cloud.svg"
               offset_y="-0.5em"
-              offset_x="0.5em"
               compensate_offset_x_for_large_text_columns={true}
-               />
+              >
+                <p>
+                  offset_x= 0.5em
+                </p>
+              </ImageRight>
             </MathBlock>
             <Pause />
             <OuterP>

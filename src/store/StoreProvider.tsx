@@ -64,7 +64,7 @@ const [store, set_store] = createStore<Store>({
   total_page_load_ms: 0,
   num_page_loads: 0,
   navigation_delays: false,
-  animations: true,
+  animations: false,
 });
 
 const StoreContext = createContext<{
