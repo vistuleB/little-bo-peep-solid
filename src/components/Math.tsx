@@ -48,15 +48,15 @@ export const MathBlock = (props: ParentProps) => {
   const [scaledDown, setScaledDown] = createSignal(false);
   const [originalWidth, setOriginalWidth] = createSignal(0);
   const [localInnerWidthCopy, setLocalInnerWidthCopy] = createSignal(0);
+  let firstMeasureOfOriginalWidth = 0;
 
   const handleClick = () => {
     setScaledDown(!scaledDown());
   };
 
   const shouldBeScaledDown = () => {
-    if (ref) {
-      const rect = ref.getBoundingClientRect();
-      return rect.width > localInnerWidthCopy() - TEXT_X_PADDING * 2;
+    if (ref && originalWidth() > 0) {
+      return originalWidth() > localInnerWidthCopy() - TEXT_X_PADDING * 2;
     }
     return false;
   };
@@ -78,9 +78,34 @@ export const MathBlock = (props: ParentProps) => {
 
     if (ref) {
       observer.observe(ref);
-      setOriginalWidth(ref.getBoundingClientRect().width);
-      ref?.querySelector("svg")?.classList.add("transition-all");
     }
+    
+    const measureOriginalWidth: () => boolean = () => {
+      let svg = null;
+      if (ref) {
+        svg = ref.querySelector("svg");
+        svg?.classList.add("transition-all");
+        if (svg) {
+          setOriginalWidth(svg.getBoundingClientRect().width);
+        }
+      }
+      return svg != null;
+    }
+
+    setTimeout(measureOriginalWidth, 50);
+
+    var cnt = 0;
+    var obstinateMeasurer = setInterval(
+      () => {
+        if (measureOriginalWidth())
+          window.clearTimeout(obstinateMeasurer);
+        if (++cnt >= 16) {
+          console.log("warning: MathJax display svg still null after ~8s; giving up");
+          window.clearTimeout(obstinateMeasurer);
+        }
+      },
+      500,
+    )
 
     const handleResize = () => {
       let oldInnerWidth = localInnerWidthCopy();
@@ -100,6 +125,7 @@ export const MathBlock = (props: ParentProps) => {
 
   createEffect(() => {
     if (scaledDown()) {
+      console.log("setting it here to: ", store.innerWidth - TEXT_X_PADDING * 2 + "px")
       ref?.style.setProperty(
         "width",
         store.innerWidth - TEXT_X_PADDING * 2 + "px",
@@ -107,8 +133,10 @@ export const MathBlock = (props: ParentProps) => {
       return;
     }
     ref?.style.setProperty(
-      "width",
-      originalWidth() > 0 ? originalWidth() + "px" : "auto",
+      "width", 
+      (ref && originalWidth() > 0)
+      ? originalWidth() + "px"
+      : "auto"
     );
   });
 
