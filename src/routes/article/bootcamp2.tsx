@@ -3367,7 +3367,7 @@ const Rest = () => {
                 href="/article/bootcamp2#_3_hgi_"
                 class="handle-in-chapter-link"
                 >
-                  Exercise {" "}
+                  Exercise 14
                 </InChapterLink>
                 ):
               </NoBreak>

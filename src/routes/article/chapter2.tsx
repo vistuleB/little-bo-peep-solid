@@ -2173,7 +2173,7 @@ const Rest = () => {
                 href="/article/chapter3#_15_hgi_"
                 class="handle-out-chapter-link"
                 >
-                  Chapter {" "}
+                  Chapter 3
                 </a>
                 ,
               </NoBreak>
@@ -2293,7 +2293,7 @@ const Rest = () => {
                 href="/article/chapter2#_6_hgi_"
                 class="handle-in-chapter-link"
                 >
-                  Exercise {" "}
+                  Exercise 2
                 </InChapterLink>
                 ,
               </NoBreak>

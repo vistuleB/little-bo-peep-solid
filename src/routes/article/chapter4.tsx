@@ -1786,7 +1786,7 @@ const Rest = () => {
             href="/article/chapter3#_13_hgi_"
             class="handle-out-chapter-link"
             >
-              Exercise  of Chapter {" "}
+              Exercise 18 of Chapter 3
             </a>
             ,
           </NoBreak>
@@ -1959,7 +1959,7 @@ const Rest = () => {
                 href="/article/chapter4#_16_hgi_"
                 class="handle-in-chapter-link"
                 >
-                  Exercise {" "}
+                  Exercise 1
                 </InChapterLink>
                 .
               </NoBreak>
@@ -2010,7 +2010,7 @@ const Rest = () => {
               href="/article/chapter4#_16_hgi_"
               class="handle-in-chapter-link"
               >
-                Exercise {" "}
+                Exercise 1
               </InChapterLink>
               {" "}
               depicts the
@@ -2748,7 +2748,7 @@ const Rest = () => {
                 href="/article/chapter4#_17_hgi_"
                 class="handle-in-chapter-link"
                 >
-                  Exercise {" "}
+                  Exercise 8
                 </InChapterLink>
                 .
               </NoBreak>
