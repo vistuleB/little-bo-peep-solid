@@ -162,7 +162,7 @@ const Image = (props: ImageProps) => {
             // (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish-dark", // dark yellow means "max-width-screen" & recent "scale up" click
             // !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish",     // light yellow means not "max-width-screen" & recent "scale up" click
 
-            after_first_click() && "transition-all",
+            after_first_click() && "transition-img",
           )}
           style={`width:${props.width};height:${props.height};${props.style}`}
           src={props.src}

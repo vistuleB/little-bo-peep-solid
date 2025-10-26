@@ -172,6 +172,14 @@ span .MathJax_SVG {
   grid-template-rows: 1fr;
 }
 
+/* JPS didn't know how to modify this transition-duration
+   property of tailwind's 'transition-all' */
+.transition-img {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
 @media (hover: hover) {
   .tab:hover:not(.disabled) > path:first-child {
     fill: #dbf6b8 !important;
