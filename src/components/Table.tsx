@@ -69,7 +69,7 @@ const Table = (props: ParentProps & SharedProps) => {
           props.class,
           "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
           // recent_click() && "bg-reddish",
-          after_first_load() && "transition-all",
+          after_first_load() && "transition-img",
         )}
         ref={table_ref}
         onClick={(_) => {
