@@ -6,7 +6,7 @@
     the values, see below):
 
     |> Image
-        src=images/svg_ch2_ch_collection_of_examples.svg
+        src=/images/svg_ch2_ch_collection_of_examples.svg
 
     To explain, the slope of a line is...
 
@@ -27,8 +27,7 @@
     it goes up by $1$ unit for each unit to the right:
 
     |> Image
-        test=test
-        src=images/slope_1_example.svg
+        src=./images/slope_1_example.svg
 
     On the other hand, the line below has slope
     $-0.5$, because it goes up by _minus_ $0.5$ units
@@ -83,7 +82,7 @@
     |> ImageRight
         src=images/32.svg
         offset_y=-0.7em
-        offset_x= 3em
+        offset_x=3em
 
     more succinctly. We call this the _slope formula_.
 
@@ -271,7 +270,7 @@
     |> ImageRight
         src=images/svg_ch2_ch_swap_cloud.svg
         line=3
-        offset_x= -0.5em
+        offset_x=-0.5em
 
     $$ {y_2 - y_1 \over x_2 - x_1}\qquad\,\,\,\,\,\te{and}\,\,\,\,\,\qquad{y_1 - y_2 \over x_1 - x_2} $$
 

@@ -22,6 +22,8 @@ type ImageProps = ParentProps &
   };
 
 const Image = (props: ImageProps) => {
+  // console.log("hi", props);
+
   let [scale, set_scale] = createSignal({
     scale: 1.0,
     name: props.src,
@@ -58,7 +60,6 @@ const Image = (props: ImageProps) => {
     const scale_to_use = should_be_scaled_down
       ? scaled_down_scale()
       : large_scale;
-
     set_scale({
       scale: 1.1,
       name: props.src,

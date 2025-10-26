@@ -3,7 +3,6 @@ import gleam/option.{None, Some}
 import infrastructure.{type Pipeline} as infra
 import prefabricated_pipelines as pp
 import desugarer_library as dl
-import selector_library as sl
 
 const cannot_be_contained_in_a_paragrap = [
   "ArticleTitle", "Bootcamp", "CentralDisplay",
@@ -198,14 +197,9 @@ pub fn our_pipeline() -> Pipeline {
       dl.generate_lbp_breadcrumbs(),
       dl.unwrap("BreadcrumbTitle"),
       dl.unwrap("Scope"),
-      dl.change_attribute_value(#("src", "/()")),
-      dl.delete_attribute("counter"),
-      dl.delete_attribute("handle"),
-      dl.delete_attribute("type"),
-      dl.delete_attribute("t"),
-      dl.delete_attribute("."),
-      dl.delete_attribute("title"),
-      dl.delete_attribute("test"),
+      dl.table_marker(),
+      dl.ensure_attribute_value_starts_with(#("src", "/")),
+      dl.delete_attribute__batch(["counter", "handle", "type", "t", "_", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
     ]
   ]
