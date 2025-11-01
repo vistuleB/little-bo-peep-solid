@@ -99,7 +99,7 @@ export const MathBlock = (props: ParentProps) => {
       () => {
         if (measureOriginalWidth())
           window.clearTimeout(obstinateMeasurer);
-        if (++cnt >= 16) {
+        if (++cnt >= 20) {
           console.log("warning: MathJax display svg still null after ~8s; giving up");
           window.clearTimeout(obstinateMeasurer);
         }

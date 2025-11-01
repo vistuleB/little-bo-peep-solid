@@ -14,8 +14,6 @@ function ImageOrSideImage(
 ) {
   let { store } = useGlobalContext();
 
-  console.log("hey");
-
   return (
     <img
       ref={props.ref}
