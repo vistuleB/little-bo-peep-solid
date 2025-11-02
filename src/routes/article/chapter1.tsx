@@ -895,7 +895,8 @@ const Rest = () => {
             <b>
               Example 1.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             One has
           </OuterP>
           <Pause />
@@ -925,7 +926,8 @@ const Rest = () => {
             <b>
               Example 2.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             One has
           </OuterP>
           <Pause />
@@ -1041,7 +1043,8 @@ const Rest = () => {
             <b>
               Example 3.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             By the last formula (or “binomial expansion
             of degree two”),
           </OuterP>
@@ -1173,7 +1176,8 @@ const Rest = () => {
             <b>
               Example 4.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             Since
           </OuterP>
           <Pause />
@@ -1203,7 +1207,8 @@ const Rest = () => {
             <b>
               Example 5.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             The algebraic expression
           </OuterP>
           <Pause />
@@ -1309,7 +1314,8 @@ const Rest = () => {
             <b>
               Example 6.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             We have {" "}
             <NoBreak>
               <Math>
@@ -2620,7 +2626,8 @@ const Rest = () => {
               <b>
                 Exercise 2.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               In the solution to {" "}
               <NoBreak>
                 <InChapterLink

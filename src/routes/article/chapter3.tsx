@@ -590,7 +590,8 @@ const Rest = () => {
             <b>
               Example 1.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             If VX-11/78A (don't mind the weird name, chosen
             at random) is the function defined by
           </OuterP>
@@ -801,7 +802,8 @@ const Rest = () => {
             <b>
               Example 2.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             Here is a graph of {" "}
             <Math>
               $x \ra x^2$
@@ -907,7 +909,8 @@ const Rest = () => {
             <b>
               Example 3.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             We have
           </OuterP>
           <Pause />
@@ -948,7 +951,8 @@ const Rest = () => {
             <b>
               Example 4.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             If DM-1700 (another weirdly named function) is
             defined by
           </OuterP>
@@ -994,7 +998,8 @@ const Rest = () => {
             <b>
               Example 5.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             If {" "}
             <Math>
               $g : \rr \ra \rr$
@@ -1295,7 +1300,8 @@ const Rest = () => {
             <b>
               Example 6.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             This {" "}
             <i>
               upper semicircle
@@ -1316,7 +1322,8 @@ const Rest = () => {
             <b>
               Example 7.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             This graph defines a function...
           </OuterP>
           <Pause />
@@ -2029,7 +2036,8 @@ const Rest = () => {
               <b>
                 Exercise 1.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               How can you define the absolute value
               function using “definition by cases”?
             </OuterP>
@@ -2070,7 +2078,8 @@ const Rest = () => {
               <b>
                 Exercise 2.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               How can you define the absolute value
               function using an “ordinary” algebraic formula?
             </OuterP>
@@ -2122,7 +2131,8 @@ const Rest = () => {
               <b>
                 Exercise 3.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Evaluate:
             </OuterP>
             <Pause />
@@ -2204,7 +2214,8 @@ const Rest = () => {
               <b>
                 Exercise 4.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               The {" "}
               <i>
                 floor
@@ -2425,7 +2436,8 @@ const Rest = () => {
               <b>
                 Exercise 5.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Find the formula for a function whose graph
               looks like this, again using the floor function
               {" "}
@@ -2884,7 +2896,8 @@ const Rest = () => {
               <b>
                 Exercise 6.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Find formulas for functions whose graphs look
               like these:
             </OuterP>
@@ -3086,7 +3099,8 @@ const Rest = () => {
               <b>
                 Exercise 7.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If
             </OuterP>
             <Pause />
@@ -3220,7 +3234,8 @@ const Rest = () => {
               <b>
                 Exercise 8.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Rewrite
             </OuterP>
             <div style="font-size:1.1em;margin:1em 0em;">
@@ -3396,7 +3411,8 @@ const Rest = () => {
               <b>
                 Exercise 9.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Same question as {" "}
               <NoBreak>
                 <InChapterLink
@@ -3511,7 +3527,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The fact that
               </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
@@ -3595,7 +3612,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Because of this, we can write
               </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
@@ -3617,7 +3635,8 @@ const Rest = () => {
                 <i>
                   Note 3.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The fact that
               </OuterP>
               <div style="font-size:1.1em;margin:0.8em 0em;">
@@ -3738,7 +3757,8 @@ const Rest = () => {
                 <i>
                   Note 4.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 One of the best ways to explain {" "}
                 <i>
                   &amp;
@@ -4014,7 +4034,8 @@ const Rest = () => {
                 <i>
                   Note 5.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The last series of diagrams might leave one
                 with the impression that the composition of
                 two or more functions can be “precomputed”
@@ -4039,7 +4060,8 @@ const Rest = () => {
                 <i>
                   Note 6.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 We have taken for granted the fact that two
                 functions {" "}
                 <Math>
@@ -4147,7 +4169,8 @@ const Rest = () => {
               <b>
                 Exercise 10.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Show that
             </OuterP>
             <Pause />
@@ -4232,7 +4255,8 @@ const Rest = () => {
               <b>
                 Exercise 11.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Solve {" "}
               <InChapterLink
               href="/article/chapter3#_10_hgi_"
@@ -4460,7 +4484,8 @@ const Rest = () => {
               <b>
                 Exercise 12.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Show that
             </OuterP>
             <Pause />
@@ -4540,7 +4565,8 @@ const Rest = () => {
               <b>
                 Exercise 13.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Show that
             </OuterP>
             <Pause />
@@ -4629,7 +4655,8 @@ const Rest = () => {
               <b>
                 Exercise 14.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What sequence of geometric transformations
               (rotations, translations, scalings, etc)
               maps the curve
@@ -5054,7 +5081,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 You could do the vertical translation
                 before the horizontal translation,
                 geometrically it comes out the same.
@@ -5131,7 +5159,8 @@ const Rest = () => {
               <b>
                 Exercise 15.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Let {" "}
               <NoBreak>
                 <Math>
@@ -5339,7 +5368,8 @@ const Rest = () => {
               <b>
                 Exercise 16.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Use the results of the previous two exercises
               to find the value(s) of {" "}
               <Math>
@@ -5696,7 +5726,8 @@ const Rest = () => {
               <b>
                 Exercise 17.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               True or false {" "}
               <NoBreak>
                 (
@@ -5781,7 +5812,8 @@ const Rest = () => {
               <b>
                 Exercise 18.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If {" "}
               <Math>
                 $f$
@@ -6027,7 +6059,8 @@ const Rest = () => {
               <b>
                 Exercise 19.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What sequence of geometric transformations
               of length no more than 3 maps
             </OuterP>
@@ -6250,7 +6283,8 @@ const Rest = () => {
               <b>
                 Exercise 20.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What are the roots (i.e., solutions) {" "}
               <Math>
                 $x$
@@ -6416,7 +6450,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 In fact,
               </OuterP>
               <Pause />
@@ -6498,7 +6533,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 If
               </OuterP>
               <Pause />
@@ -6555,7 +6591,8 @@ const Rest = () => {
               <b>
                 Exercise 21.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Summon your senses of extrapolation {" "}
               <i>
                 &amp;

@@ -1598,7 +1598,8 @@ const Rest = () => {
             <b>
               Example 1.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             We can conceptualize {" "}
             <NoBreak>
               <Math>
@@ -1627,7 +1628,8 @@ const Rest = () => {
             <b>
               Example 2.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             We can conceptualize {" "}
             <NoBreak>
               <Math>
@@ -2484,7 +2486,8 @@ const Rest = () => {
             <b>
               Example 3.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             The pairs
           </OuterP>
           <Pause />
@@ -2523,7 +2526,8 @@ const Rest = () => {
             <b>
               Example 4.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             The pairs
           </OuterP>
           <Pause />
@@ -2871,7 +2875,8 @@ const Rest = () => {
             <b>
               Example 5.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             In the following diagram...
           </OuterP>
           <Pause />
@@ -2905,7 +2910,8 @@ const Rest = () => {
             <b>
               Example 6.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             In the following diagram...
           </OuterP>
           <Pause />
@@ -4247,7 +4253,8 @@ const Rest = () => {
               <b>
                 Exercise 2.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Guesstimate a function with this graph:
             </OuterP>
             <Pause />
@@ -4383,7 +4390,8 @@ const Rest = () => {
               <b>
                 Exercise 3.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Guesstimate a function with this graph (we can
               tell you that the large-scale curve is a
               parabola):
@@ -4819,7 +4827,8 @@ const Rest = () => {
               <b>
                 Exercise 4.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Guesstimate a function with this graph:
             </OuterP>
             <Pause />
@@ -5143,7 +5152,8 @@ const Rest = () => {
               <b>
                 Exercise 5.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Which function is most plausibly associated to
               which graph?
             </OuterP>
@@ -5355,7 +5365,8 @@ const Rest = () => {
               <b>
                 Exercise 7.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Compute the ratio {" "}
               <Math>
                 $A/B$
@@ -5545,7 +5556,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 While the final answer can be written
               </OuterP>
               <Pause />
@@ -5580,7 +5592,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Instead of counting the number of times that the
                 quadrilateral appears in the double spiral by hand
                 one can
@@ -5663,7 +5676,8 @@ const Rest = () => {
               <b>
                 Exercise 8.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               In the drawing below the oval is a circle of
               radius {" "}
               <Math>
@@ -5821,7 +5835,8 @@ const Rest = () => {
               <b>
                 Exercise 9.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If a
             </OuterP>
             <Pause />
@@ -5978,7 +5993,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The little arrow {" "}
                 <NoBreak>
                   “
@@ -5998,7 +6014,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Represent the vectors {" "}
                 <NoBreak>
                   <Math>
@@ -6202,7 +6219,8 @@ const Rest = () => {
                 <i>
                   Note 3.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The solution to Exercise 7 can be cast in terms of
                 vector addition, with, specifically, the position
                 vector of the point being equal to the sum of the
@@ -6223,7 +6241,8 @@ const Rest = () => {
               <b>
                 Exercise 10.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If a particle in {" "}
               <Math>
                 $\rr^2$
@@ -6575,7 +6594,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 If you harbor any doubts about there being no more
                 than two solutions, picture this diagram...
               </OuterP>
@@ -6609,7 +6629,8 @@ const Rest = () => {
               <b>
                 Exercise 11.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Take a particle traveling around a
               circle at constant speed. What is the
               number of cycles [full revolutions] per
@@ -6729,7 +6750,8 @@ const Rest = () => {
               <b>
                 Exercise 12.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Which of these angles is {" "}
               <Math>
                 $0.2$
@@ -6816,7 +6838,8 @@ const Rest = () => {
               <b>
                 Exercise 13.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What geometric ratios do
             </OuterP>
             <Pause />
@@ -6878,7 +6901,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 As one consequence, it follows that the circumference
                 of a circle is
               </OuterP>
@@ -6903,7 +6927,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 These “ratio descriptions” of {" "}
                 <Math>
                   $\eta$
@@ -6934,7 +6959,8 @@ const Rest = () => {
               <b>
                 Exercise 14.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Compute
             </OuterP>
             <Pause />
@@ -7049,7 +7075,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 If you've never done this kind of thing before, the
                 division starts in this blank state:
               </OuterP>
@@ -7436,7 +7463,8 @@ const Rest = () => {
               <b>
                 Exercise 15.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Compute
             </OuterP>
             <Pause />
@@ -7484,7 +7512,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Because...
               </OuterP>
               <Pause />
@@ -7529,7 +7558,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 As mentioned in Note 1 of Exercise 24,
                 Chapter 3, these approximations are about
                 half-a-part-in-a-thousand too large, or to
@@ -7680,7 +7710,8 @@ const Rest = () => {
               <b>
                 Exercise 16.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               To close our division skills: use the
               table below to compute the integer part and
               the first three digits past the decimal point
@@ -7779,7 +7810,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Lest anyone get left behind, we can go
                 over the division “on the board”
                 for a bit.
@@ -8077,7 +8109,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 If you need help brushing up on your
                 long-form subtraction, say your subtraction is this:
               </OuterP>
@@ -8408,7 +8441,8 @@ const Rest = () => {
                 <i>
                   Note 3.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Generally,
               </OuterP>
               <Pause />
@@ -8429,7 +8463,8 @@ const Rest = () => {
               <b>
                 Exercise 17.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What is the angle marked ‘?’, as a function
               of {" "}
               <NoBreak>
@@ -8475,7 +8510,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Two angles that sum to {" "}
                 <Math>
                   $\eta$
@@ -8515,7 +8551,8 @@ const Rest = () => {
               <b>
                 Exercise 18.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               The graph {" "}
               <Math>
                 $y = \cos(x) + \sin(x)$
@@ -8842,7 +8879,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The fact that
               </OuterP>
               <Pause />
@@ -8891,7 +8929,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 On the original graph from the statement, the
                 {" "}
                 <NoBreak>
@@ -8969,7 +9008,8 @@ const Rest = () => {
               <b>
                 Exercise 19.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What is the angle marked ‘?’, as a function of
               {" "}
               <NoBreak>
@@ -9042,7 +9082,8 @@ const Rest = () => {
               <b>
                 Exercise 20.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Argue that, in the following figure, the
               angle marked ‘?’ equals {" "}
               <NoBreak>
@@ -9093,7 +9134,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 This holds no matter which quadrant we
                 push {" "}
                 <Math>
@@ -9140,7 +9182,8 @@ const Rest = () => {
               <b>
                 Exercise 21.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If each of these dotted lines...
             </OuterP>
             <Pause />
@@ -9610,7 +9653,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 As a consequence, the function
               </OuterP>
               <Pause />
@@ -9675,7 +9719,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 For completeness, here is a closer look at
                 the isoset {" "}
                 <NoBreak>
@@ -9698,7 +9743,8 @@ const Rest = () => {
                 <i>
                   Note 3.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Because a point {" "}
                 <Math>
                   $(x, y)$
@@ -10092,7 +10138,8 @@ const Rest = () => {
                 <i>
                   Note 4.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Among other additional symmetries, the line
               </OuterP>
               <Pause />
@@ -10235,7 +10282,8 @@ const Rest = () => {
                 <i>
                   Note 5.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Lastly, each isoset is symmetric
                 through the line {" "}
                 <NoBreak>
@@ -10294,7 +10342,8 @@ const Rest = () => {
               <b>
                 Exercise 22.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Express {" "}
               <Math>
                 $A/B$
@@ -10388,7 +10437,8 @@ const Rest = () => {
               <b>
                 Exercise 23.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Express {" "}
               <Math>
                 $A/B$
@@ -10531,7 +10581,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Since the two solutions compute
                 answers to the same question,
                 one can in particular deduce that
@@ -10579,7 +10630,8 @@ const Rest = () => {
               <b>
                 Exercise 24.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               In general, {" "}
               <Math>
                 $\sec(\theta)$
@@ -10708,7 +10760,8 @@ const Rest = () => {
               <b>
                 Exercise 25.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Run the computation of the
               previous exercise backwards, starting with
             </OuterP>
@@ -10784,7 +10837,8 @@ const Rest = () => {
               <b>
                 Exercise 26.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Here are four function compositions
               depicted as “function box” diagrams, with
               inputs coming in the right and outputs
@@ -10995,7 +11049,8 @@ const Rest = () => {
               <b>
                 Exercise 27.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               How would the graph of each of the compositions
               from Exercise 26 compare to the graph of the
               generic function {" "}
@@ -11103,7 +11158,8 @@ const Rest = () => {
               <b>
                 Exercise 28.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Prove that {" "}
               <NoBreak>
                 <Math>
@@ -11266,7 +11322,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Note that
               </OuterP>
               <Pause />
@@ -11377,7 +11434,8 @@ const Rest = () => {
               <b>
                 Exercise 29.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Given the graphs {" "}
               <Math>
                 $y = \cos(x)\sin(x)$
@@ -11637,7 +11695,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 We can turn the identity around, mapping
                 {" "}
                 <Math>
@@ -11724,7 +11783,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The identity from the previous note can also
                 be proved via the angle-sum formulas; since
               </OuterP>
@@ -11811,7 +11871,8 @@ const Rest = () => {
               <b>
                 Exercise 30.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               It also seems from the graphs that {" "}
               <Math>
                 $y = \cos^2(x)$
@@ -12201,7 +12262,8 @@ const Rest = () => {
               <b>
                 Exercise 31.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Relate
             </OuterP>
             <Pause />
@@ -12279,7 +12341,8 @@ const Rest = () => {
               <b>
                 Exercise 32.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What sequence of geometric transformations
               can turn [the graph] {" "}
               <Math>
@@ -12626,7 +12689,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The fact that
               </OuterP>
               <Pause />
@@ -12658,7 +12722,8 @@ const Rest = () => {
               <b>
                 Exercise 34.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Prove that for every {" "}
               <NoBreak>
                 <Math>
@@ -13058,7 +13123,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 To explicitly give formulas,
                 one can set
               </OuterP>
@@ -13202,7 +13268,8 @@ const Rest = () => {
               <b>
                 Exercise 35.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If we attempt to express
             </OuterP>
             <Pause />
@@ -13422,7 +13489,8 @@ const Rest = () => {
               <b>
                 Exercise 36.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If aliens descended on Earth, captured everyone,
               took you aside and told you that the fate of
               humanity rested on your ability to “illustrate
@@ -13560,7 +13628,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 One can note that the third diagram makes a cameo
                 appearance within the second diagram (modulo scale):
               </OuterP>
@@ -13575,7 +13644,8 @@ const Rest = () => {
               <b>
                 Exercise 37.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What do similar illustrations look like for
               powers of cosine, and for powers of tangent?
             </OuterP>
@@ -13657,7 +13727,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Here are some examples of what we suggest at the
               </OuterP>
               <Pause />
@@ -13684,7 +13755,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 To illustrate powers of
               </OuterP>
               <Pause />
@@ -13775,7 +13847,8 @@ const Rest = () => {
               <b>
                 Exercise 38.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What sequence of geometric transformations
               of the plane will map the graph
             </OuterP>
@@ -13931,7 +14004,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 One can also place {" "}
                 <Math>
                   $\cos(0.1x)$
@@ -14048,7 +14122,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Take the following three-box assemblage, that
                 computes {" "}
                 <NoBreak>
@@ -14111,7 +14186,8 @@ const Rest = () => {
               <b>
                 Exercise 39.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               More generally, how is the graph of
             </OuterP>
             <Pause />
@@ -14265,7 +14341,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Alternately, like Note 1 of Exercise 37, we can
                 stop at {" "}
                 <Math>
@@ -14341,7 +14418,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 One says that translation and scaling  are
               </OuterP>
               <Pause />
@@ -14383,7 +14461,8 @@ const Rest = () => {
               <b>
                 Exercise 40.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If
             </OuterP>
             <Pause />
@@ -14603,7 +14682,8 @@ const Rest = () => {
               <b>
                 Exercise 41.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               In the following drawing at what
               coordinates does the tangent to the circle
               intersect the axes, as marked by the purple
@@ -14697,7 +14777,8 @@ const Rest = () => {
               <b>
                 Exercise 42.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Compute the vertical distance from {" "}
               <Math>
                 $A$
@@ -14799,7 +14880,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 Note that...
               </OuterP>
               <Pause />
@@ -14836,7 +14918,8 @@ const Rest = () => {
               <b>
                 Exercise 43.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Given the following sketch, to what angle
               can the door be opened before it hits against
               the roof? (Hint: You will need to Google “how
@@ -15055,7 +15138,8 @@ const Rest = () => {
               <b>
                 Exercise 44.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               (Speaking of doors with negligible thickness.)
               The sketch below shows the top view of a bomb
               shelter door set in a corner near a wall,
@@ -15355,7 +15439,8 @@ const Rest = () => {
               <b>
                 Exercise 45.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If a sphere is projected directly outward onto
               a cylinder abutting the sphere at the equator, with each
               point remaining at its height, as pictured in the
@@ -15442,7 +15527,8 @@ const Rest = () => {
               <b>
                 Exercise 46.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Rank the {" "}
               <Math>
                 $7$
@@ -15488,7 +15574,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 This holds because each slice has the same area
                 as the horizontal projection of that slice onto a cylinder
                 hugging the sphere, by Exercise 46, and because
@@ -15503,7 +15590,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The slices of height {" "}
                 <Math>
                   $1/3$
@@ -15538,7 +15626,8 @@ const Rest = () => {
               <b>
                 Exercise 47.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Give a formula for the area of a sphere of
               radius {" "}
               <NoBreak>
@@ -15608,7 +15697,8 @@ const Rest = () => {
               <b>
                 Exercise 48.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Give a formula for the volume of a sphere of
               radius {" "}
               <Math>
@@ -15717,7 +15807,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 To formalize the argument, consider that
                 we can approximate the volume of the sphere
                 by finitely many cones with triangular bases,
@@ -16138,7 +16229,8 @@ const Rest = () => {
               <b>
                 Exercise 49.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Similarly to Exercise 9, suggest a definition for
               the product
             </OuterP>
@@ -16268,7 +16360,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 In some sense, the vector “wins” over the
                 number, in that their conjoint baby is a vector,
                 not a number.

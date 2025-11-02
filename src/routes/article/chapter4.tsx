@@ -667,7 +667,8 @@ const Rest = () => {
             <b>
               Example 1.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             One has
           </OuterP>
           <Pause />
@@ -710,7 +711,8 @@ const Rest = () => {
             <b>
               Example 2.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             One has
           </OuterP>
           <Pause />
@@ -1065,7 +1067,8 @@ const Rest = () => {
             <b>
               Example 3.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             We have
           </OuterP>
           <Pause />
@@ -1122,7 +1125,8 @@ const Rest = () => {
             <b>
               Example 4.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             More generally,
           </OuterP>
           <Pause />
@@ -1301,7 +1305,8 @@ const Rest = () => {
             <b>
               Example 5.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             The fact that
           </OuterP>
           <Pause />
@@ -1534,7 +1539,8 @@ const Rest = () => {
             <b>
               Example 6.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             Over a period of {" "}
             <NoBreak>
               <Math>
@@ -1814,7 +1820,8 @@ const Rest = () => {
               <b>
                 Exercise 1.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Sketch the derivative of a function with the
               following graph (what {" "}
               <i>
@@ -1872,7 +1879,8 @@ const Rest = () => {
               <b>
                 Exercise 2.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Would the derivative of
             </OuterP>
             <Pause />
@@ -1926,7 +1934,8 @@ const Rest = () => {
               <b>
                 Exercise 3.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Sketch the
             </OuterP>
             <Pause />
@@ -1983,7 +1992,8 @@ const Rest = () => {
               <b>
                 Exercise 4.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If we pretend that the graph of {" "}
               <InChapterLink
               href="/article/chapter4#_16_hgi_"
@@ -2054,7 +2064,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The second and third functions are respectively
                 the velocity and the acceleration of the car as
                 a function of time.
@@ -2066,7 +2077,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 In a more physically realistic scenario the corners
                 are rounded off a bit while the velocity and
                 acceleration remain continuous, albeit with steep
@@ -2087,7 +2099,8 @@ const Rest = () => {
               <b>
                 Exercise 5.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Is the following equation correct, incorrect,
               or nonsensical?
             </OuterP>
@@ -2284,7 +2297,8 @@ const Rest = () => {
               <b>
                 Exercise 6.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Complete the missing units for each strip
               below, based on those units that are given:
             </OuterP>
@@ -2410,7 +2424,8 @@ const Rest = () => {
               <b>
                 Exercise 7.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Among the functions below, which is the
               zeroth, first, and second derivative?
               (I.e., which is {" "}
@@ -2531,7 +2546,8 @@ const Rest = () => {
               <b>
                 Exercise 8.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Given these graphs...
             </OuterP>
             <Pause />
@@ -2691,7 +2707,8 @@ const Rest = () => {
               <b>
                 Exercise 9.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Given these graphs...
             </OuterP>
             <Pause />
@@ -2987,7 +3004,8 @@ const Rest = () => {
               <b>
                 Exercise 10.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If you scale the graph of a function {" "}
               <Math>
                 $f$
@@ -3081,7 +3099,8 @@ const Rest = () => {
               <b>
                 Exercise 11.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Where is the rate of change of the function
               below, on the part shown, greatest? And
               where is the
@@ -3135,7 +3154,8 @@ const Rest = () => {
               <b>
                 Exercise 12.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               In the following graph, which curve might
               be a derivative of which other curve?
             </OuterP>
@@ -3710,7 +3730,8 @@ const Rest = () => {
               <b>
                 Exercise 13.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Apply the definition
             </OuterP>
             <Pause />
@@ -4025,7 +4046,8 @@ const Rest = () => {
               <b>
                 Exercise 14.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Prove that
             </OuterP>
             <Pause />
@@ -4273,7 +4295,8 @@ const Rest = () => {
               <b>
                 Exercise 15.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               A rat is running a fundraising race. The function
             </OuterP>
             <Pause />
@@ -4521,7 +4544,8 @@ const Rest = () => {
               <b>
                 Exercise 16.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What does {" "}
               <Math>
                 $(f \circ g)'$
@@ -4591,7 +4615,8 @@ const Rest = () => {
               <b>
                 Exercise 17.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Continuing with the fundraising rat as in the
               previous two exercises, assume that the functions
               {" "}
@@ -4803,7 +4828,8 @@ const Rest = () => {
               <b>
                 Exercise 18.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Conjecture a general formula for
             </OuterP>
             <Pause />
@@ -5029,7 +5055,8 @@ const Rest = () => {
               <b>
                 Exercise 19.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Sketch the velocity vector of a particle
               going at three times unit speed (“speed {" "}
               <NoBreak>
@@ -5148,7 +5175,8 @@ const Rest = () => {
               <b>
                 Exercise 20.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What is the
             </OuterP>
             <Pause />
@@ -5232,7 +5260,8 @@ const Rest = () => {
               <b>
                 Exercise 21.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Sketch the velocity vector, acceleration vector,
               and jerk vector of a particle going around a circle
               of radius {" "}
@@ -5383,7 +5412,8 @@ const Rest = () => {
               <b>
                 Exercise 22.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Sketch the velocity vector, acceleration vector,
               and jerk vector of a particle going around a circle
               of radius {" "}
@@ -5709,7 +5739,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 The ratio
               </OuterP>
               <Pause />
@@ -5797,7 +5828,8 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 A common notation for the angular velocity of a
                 particle is
               </OuterP>
@@ -5879,7 +5911,8 @@ const Rest = () => {
               <b>
                 Exercise 23.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Four particles are moving at speed {" "}
               <Math>
                 $3$
@@ -5987,7 +6020,8 @@ const Rest = () => {
               <b>
                 Exercise 24.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What are the dimensions of angular velocity?
               (For example, the dimensions of velocity are
               “length over time”, ([L/T]).)
@@ -6069,7 +6103,8 @@ const Rest = () => {
               <b>
                 Exercise 25.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Imagine a single particle in a one-dimensional
               world, whose velocity equals its position; at {" "}
               <NoBreak>
@@ -6299,7 +6334,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 A so-called
               </OuterP>
               <Pause />
@@ -6357,7 +6393,8 @@ const Rest = () => {
               <b>
                 Exercise 26.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Take a system of two particles on the real
               line; at time {" "}
               <NoBreak>
@@ -6567,7 +6604,8 @@ const Rest = () => {
               <b>
                 Exercise 27.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Four particles are placed
               at intervals of {" "}
               <Math>
@@ -8395,7 +8433,8 @@ const Rest = () => {
               <b>
                 Exercise 28.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Find a nonzero function {" "}
               <Math>
                 $f$
@@ -8516,7 +8555,8 @@ const Rest = () => {
               <b>
                 Exercise 29.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Express the...
             </OuterP>
             <TextParent>
@@ -8779,7 +8819,8 @@ const Rest = () => {
               <b>
                 Exercise 30.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               How can we generate the following set of
               curves by rotating points around a circle,
               and tracking their {" "}
@@ -8850,7 +8891,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 In this and in the previous exercise the
                 units of time and distance are “anonymous”:
                 distance could be meters, kilometers, or
@@ -8875,7 +8917,8 @@ const Rest = () => {
               <b>
                 Exercise 31.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Exercise 12 exhibits a function {" "}
               <NoBreak>
                 <Math>
@@ -9706,7 +9749,8 @@ const Rest = () => {
               <b>
                 Exercise 32.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If we seek a function {" "}
               <Math>
                 $f : \rr \ra \rr$
@@ -10138,7 +10182,8 @@ const Rest = () => {
               <b>
                 Exercise 33.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Add elements to the following drawing...
             </OuterP>
             <Pause />
@@ -10345,7 +10390,8 @@ const Rest = () => {
               <b>
                 Exercise 34.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               In this exercise we consider two points
               in time {" "}
               <Math>
@@ -11200,7 +11246,8 @@ const Rest = () => {
               <b>
                 Exercise 35.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               The identity
             </OuterP>
             <Pause />
@@ -11274,7 +11321,8 @@ const Rest = () => {
               <b>
                 Exercise 36.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If we rewrite the “product rule” of Exercise
               17 in the same terse style as the “sum rule”
               of Exercise 19, what do we obtain?
@@ -11420,7 +11468,8 @@ const Rest = () => {
               <b>
                 Exercise 37.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If the identities
             </OuterP>
             <Pause />
@@ -11549,7 +11598,8 @@ const Rest = () => {
               <b>
                 Exercise 38.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               The solution to the previous exercise
               erroneously assumes that the product of a
               constant and a function has been defined. It
@@ -11728,7 +11778,8 @@ const Rest = () => {
               <b>
                 Exercise 39.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               The definition
             </OuterP>
             <Pause />
@@ -11861,7 +11912,8 @@ const Rest = () => {
               <b>
                 Exercise 40.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What does...
             </OuterP>
             <Pause />
@@ -12189,7 +12241,8 @@ const Rest = () => {
               <b>
                 Exercise 41.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               The function below is also the red
               curve from Exercise 12, known as the
               {" "}
@@ -12379,7 +12432,8 @@ const Rest = () => {
               <b>
                 Exercise 42.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               The graphs below are the horizontal and
               vertical velocities...
             </OuterP>
@@ -12985,7 +13039,8 @@ const Rest = () => {
               <b>
                 Exercise 43.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Same question, but for the following maze...
             </OuterP>
             <Pause />
@@ -13663,7 +13718,8 @@ const Rest = () => {
               <b>
                 Exercise 44.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Describe what a function might look like
               if its second derivative has this graph (broadly):
             </OuterP>

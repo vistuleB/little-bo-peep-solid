@@ -1982,7 +1982,8 @@ const Rest = () => {
             <b>
               Example 1.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             It so happens that
           </OuterP>
           <Pause />
@@ -2035,7 +2036,8 @@ const Rest = () => {
             <b>
               Example 2.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             It so happens that
           </OuterP>
           <Pause />
@@ -2075,7 +2077,8 @@ const Rest = () => {
             <b>
               Example 3.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             Since
           </OuterP>
           <Pause />
@@ -2109,7 +2112,8 @@ const Rest = () => {
             <b>
               Example 4.
             </b>
-            {" "}
+          </OuterP>
+          <OuterP class="indent-10">
             Since
           </OuterP>
           <Pause />
@@ -2151,7 +2155,8 @@ const Rest = () => {
               <b>
                 Exercise 1.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Compute {" "}
               <NoBreak>
                 <Math>
@@ -2209,7 +2214,8 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
-                {" "}
+              </OuterP>
+              <OuterP class="indent-10">
                 For the last computation, {" "}
                 <Math>
                   $0.125$
@@ -2261,7 +2267,8 @@ const Rest = () => {
               <b>
                 Exercise 2.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Compute {" "}
               <Math>
                 $100/16$
@@ -2320,7 +2327,8 @@ const Rest = () => {
               <b>
                 Exercise 3.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If “万” is Chinese for {" "}
               <i>
                 ten thousand
@@ -2418,7 +2426,8 @@ const Rest = () => {
               <b>
                 Exercise 4.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               How many millimeters in a kilometer?
               How many kilometers in a millimeter?
             </OuterP>
@@ -2483,7 +2492,8 @@ const Rest = () => {
               <b>
                 Exercise 5.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               How many kilometers is {" "}
               <Math>
                 $10^&#123;24&#125;$
@@ -2530,7 +2540,8 @@ const Rest = () => {
               <b>
                 Exercise 6.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               If the US yearly budget is {" "}
               <Math>
                 $4$
@@ -2590,7 +2601,8 @@ const Rest = () => {
               <b>
                 Exercise 7.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What is the logarithm base {" "}
               <Math>
                 $10$
@@ -2622,7 +2634,8 @@ const Rest = () => {
               <b>
                 Exercise 8.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What is the logarithm base {" "}
               <Math>
                 $10$
@@ -2660,7 +2673,8 @@ const Rest = () => {
               <b>
                 Exercise 9.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               What is the logarithm base {" "}
               <Math>
                 $10$
@@ -2707,7 +2721,8 @@ const Rest = () => {
               <b>
                 Exercise 10.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Evaluate:
             </OuterP>
             <Pause />
@@ -2765,7 +2780,8 @@ const Rest = () => {
               <b>
                 Exercise 11.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               How many {" "}
               <i>
                 millibits
@@ -2819,7 +2835,8 @@ const Rest = () => {
               <b>
                 Exercise 12.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               It so happens that
             </OuterP>
             <Pause />
@@ -2907,7 +2924,8 @@ const Rest = () => {
               <b>
                 Exercise 13.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Prove that
             </OuterP>
             <Pause />
@@ -2931,7 +2949,7 @@ const Rest = () => {
               </NoBreak>
               {" "} (You can
               take for granted any identity that is stated
-              in this {" "}
+              in this
               <del>
                 chapter
               </del>
@@ -2968,8 +2986,8 @@ const Rest = () => {
                 </InChapterLink>
                 ),
               </NoBreak>
-              {" "} 
-              while the third equality uses additivity of exponents, 
+              {" "}
+              while the third equality uses additivity of exponents,
               also stated earlier. (So: We are only using “known”
               facts, alongside some ordinary arithmetic.)
             </OuterP>
@@ -3033,7 +3051,8 @@ const Rest = () => {
               <b>
                 Exercise 14.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Rewrite each of these expressions...
             </OuterP>
             <Pause />
@@ -3184,7 +3203,8 @@ const Rest = () => {
               <b>
                 Exercise 15.
               </b>
-              {" "}
+            </OuterP>
+            <OuterP class="indent-10">
               Find integers {" "}
               <NoBreak>
                 <Math>
