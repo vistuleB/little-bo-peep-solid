@@ -167,6 +167,7 @@
 
                     |> img
                         src=images/33.svg
+                        svgo=false
                         width=50
                         style=padding-top:7px;padding-bottom:7px;
 

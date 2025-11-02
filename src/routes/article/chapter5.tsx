@@ -4343,7 +4343,7 @@ const Rest = () => {
                 <Math>
                   $10$
                 </Math>
-                &#x200b;
+                &amp;#x200b;
               </NoBreak>
               <NoBreak>
                 <Math>
@@ -14565,7 +14565,7 @@ const Rest = () => {
               <Math>
                 $\cos(\theta)\cdot\sec(\theta) = 1$
               </Math>
-              {" "} &#x2705;.
+              {" "} &amp;#x2705;.
               If {" "}
               <Math>
                 $|A| \leq 1$

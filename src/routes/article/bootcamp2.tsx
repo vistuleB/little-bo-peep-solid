@@ -2931,7 +2931,7 @@ const Rest = () => {
               </NoBreak>
               {" "} (You can
               take for granted any identity that is stated
-              in this {" "}
+              in this
               <del>
                 chapter
               </del>
@@ -2968,8 +2968,8 @@ const Rest = () => {
                 </InChapterLink>
                 ),
               </NoBreak>
-              {" "} 
-              while the third equality uses additivity of exponents, 
+              {" "}
+              while the third equality uses additivity of exponents,
               also stated earlier. (So: We are only using “known”
               facts, alongside some ordinary arithmetic.)
             </OuterP>
