@@ -37,7 +37,7 @@ type LBPEmitterError {
 }
 
 fn blame_us(message: String) -> Blame {
-  Src([], message, -1, -1)
+  Src([], message, -1, -1, False)
 }
 
 fn our_splitter(
