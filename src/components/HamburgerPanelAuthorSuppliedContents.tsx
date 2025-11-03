@@ -7,8 +7,8 @@ const HamburgerPanelAuthorSuppliedContents = () => {
       <HamburgerPanelTitle label="Chapters" />
       <ul>
         <HamburgerPanelItem
-        article_type={1}
-        href="chapter1"
+          article_type={1}
+          href="chapter1"
         >
           A {" "}
           <i>
@@ -17,26 +17,26 @@ const HamburgerPanelAuthorSuppliedContents = () => {
           {" "} Refreshers
         </HamburgerPanelItem>
         <HamburgerPanelItem
-        article_type={2}
-        href="chapter2"
+          article_type={2}
+          href="chapter2"
         >
           Slopes
         </HamburgerPanelItem>
         <HamburgerPanelItem
-        article_type={3}
-        href="chapter3"
+          article_type={3}
+          href="chapter3"
         >
           Functions
         </HamburgerPanelItem>
         <HamburgerPanelItem
-        article_type={4}
-        href="chapter4"
+          article_type={4}
+          href="chapter4"
         >
           Derivatives
         </HamburgerPanelItem>
         <HamburgerPanelItem
-        article_type={5}
-        href="chapter5"
+          article_type={5}
+          href="chapter5"
         >
           The Trigonometric Functions
         </HamburgerPanelItem>
@@ -46,14 +46,14 @@ const HamburgerPanelAuthorSuppliedContents = () => {
       <HamburgerPanelTitle label="Bootcamps" />
       <ul>
         <HamburgerPanelItem
-        article_type={1}
-        href="bootcamp1"
+          article_type={1}
+          href="bootcamp1"
         >
           Sets
         </HamburgerPanelItem>
         <HamburgerPanelItem
-        article_type={2}
-        href="bootcamp2"
+          article_type={2}
+          href="bootcamp2"
         >
           Powers of 10
         </HamburgerPanelItem>

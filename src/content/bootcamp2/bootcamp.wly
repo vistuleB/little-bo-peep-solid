@@ -69,6 +69,7 @@
 
     As $n$ successive divisions
     by $10$ is the same as one division by $10^n$, one also has
+
     |> MathBlock
         handle=10_to_the_minus_n A
 

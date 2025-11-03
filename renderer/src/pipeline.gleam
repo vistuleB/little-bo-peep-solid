@@ -25,8 +25,9 @@ const cannot_contain_a_paragraph = [
 pub fn our_pipeline() -> Pipeline {
   [
     [
-      dl.delete("WriterlyComment"),
       dl.identity(),
+      dl.delete("WriterlyComment"),
+      dl.delete_first_child_occurrences_of_and_recurse("WriterlyBlankLine"),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Bootcamp", "ArticleTitle", "title"), ["Chapter"]),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Chapter", "ArticleTitle", "title"), ["Bootcamp"]),
     ],

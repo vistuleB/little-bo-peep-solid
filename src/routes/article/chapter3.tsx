@@ -18,11 +18,11 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Chapter3__() {
   return (
     <Article
-    prevPage="/article/chapter2"
-    nextPage="/article/chapter4"
-    pageNecessaryMargin={700}
-    maxElementWidth={1500}
-    id="_15_hgi_"
+      prevPage="/article/chapter2"
+      nextPage="/article/chapter4"
+      pageNecessaryMargin={700}
+      maxElementWidth={1500}
+      id="_15_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -856,9 +856,9 @@ const Rest = () => {
               .
             </NoBreak>
             <ImageLeft
-            src="/images/svg_ch3_0.5625_cloud.svg"
-            line={-1}
-            offset_y="0em"
+              src="/images/svg_ch3_0.5625_cloud.svg"
+              line={-1}
+              offset_y="0em"
              />
           </OuterP>
         </Example>
@@ -1259,8 +1259,8 @@ const Rest = () => {
         <Pause />
         <Image src="/images/svg_ch3_ch_circle.svg">
           <ImageRight
-          src="/images/svg_ch3_ch_crossing_circle_cloud.svg"
-          offset_x="2em"
+            src="/images/svg_ch3_ch_crossing_circle_cloud.svg"
+            offset_x="2em"
            />
         </Image>
         <Pause />
@@ -1276,8 +1276,8 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-        src="/images/svg_ch3_ch_empty_circle.svg"
-        class="pt-4 mb-3"
+          src="/images/svg_ch3_ch_empty_circle.svg"
+          class="pt-4 mb-3"
          />
         <Pause />
         <OuterP>
@@ -1879,8 +1879,8 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-        style="margin-top:-0.6em;margin-bottom:-0.4em"
-        src="/images/svg_ch3_ch_affine_linear_cloud.svg"
+          style="margin-top:-0.6em;margin-bottom:-0.4em"
+          src="/images/svg_ch3_ch_affine_linear_cloud.svg"
          />
       </Section>
       <Pause />
@@ -1928,8 +1928,8 @@ const Rest = () => {
           a_7x^7 + a_6x^6 + a_5x^5 + a_4x^4 + a_3x^3 - a_2x^2 + a_1x + a_0
           $$
           <ImageRight
-          src="/images/svg_ch3_ch_quadratic_linear_constant_cloud.svg"
-          compensate_offset_x_for_large_text_columns={true}
+            src="/images/svg_ch3_ch_quadratic_linear_constant_cloud.svg"
+            compensate_offset_x_for_large_text_columns={true}
            />
         </MathBlock>
         <Pause />
@@ -1976,10 +1976,10 @@ const Rest = () => {
           x^1 = x
           $$
           <ImageRight
-          src="/images/svg_ch3_ch_a1_x1_cloud.svg"
-          offset_y="0.2em"
-          offset_x="-0.1em"
-          compensate_offset_x_for_large_text_columns={true}
+            src="/images/svg_ch3_ch_a1_x1_cloud.svg"
+            offset_y="0.2em"
+            offset_x="-0.1em"
+            compensate_offset_x_for_large_text_columns={true}
            />
         </MathBlock>
         <Pause />
@@ -1999,10 +1999,10 @@ const Rest = () => {
           x^0 = 1
           $$
           <ImageRight
-          src="/images/svg_ch3_ch_a0_x0_cloud.svg"
-          offset_x="0em"
-          offset_y="0.2em"
-          compensate_offset_x_for_large_text_columns={true}
+            src="/images/svg_ch3_ch_a0_x0_cloud.svg"
+            offset_x="0em"
+            offset_y="0.2em"
+            compensate_offset_x_for_large_text_columns={true}
            />
         </MathBlock>
         <Pause />
@@ -2127,11 +2127,11 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Grid
-            cols={2}
-            sm_cols={1}
-            place_items="start"
-            with_padding={false}
-            column_first={true}
+              cols={2}
+              sm_cols={1}
+              place_items="start"
+              with_padding={false}
+              column_first={true}
             >
               <Item>
                 i. {" "}
@@ -2165,11 +2165,11 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Grid
-            cols={2}
-            sm_cols={1}
-            place_items="start"
-            with_padding={false}
-            column_first={true}
+              cols={2}
+              sm_cols={1}
+              place_items="start"
+              with_padding={false}
+              column_first={true}
             >
               <Item>
                 i. {" "}
@@ -2455,8 +2455,8 @@ const Rest = () => {
               {" "} apply the function from {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_7_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_7_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 4
                 </InChapterLink>
@@ -2512,8 +2512,8 @@ const Rest = () => {
               the formula for the function from {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_7_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_7_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 4
                 </InChapterLink>
@@ -2532,8 +2532,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            src="/images/png_ch3_desmos_composition_0_c.png"
-            width="1400px"
+              src="/images/png_ch3_desmos_composition_0_c.png"
+              width="1400px"
              />
             <Pause />
             <OuterP>
@@ -2546,8 +2546,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            src="/images/png_ch3_desmos_composition_1_c.png"
-            width="1400px"
+              src="/images/png_ch3_desmos_composition_1_c.png"
+              width="1400px"
              />
             <Pause />
             <OuterP>
@@ -2555,8 +2555,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            src="/images/png_ch3_desmos_composition_2_b.png"
-            width="1400px"
+              src="/images/png_ch3_desmos_composition_2_b.png"
+              width="1400px"
              />
             <Pause />
             <OuterP>
@@ -2921,8 +2921,8 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_8_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_8_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 5
                 </InChapterLink>
@@ -2949,8 +2949,8 @@ const Rest = () => {
             <OuterP>
               because the problem is similar to {" "}
               <InChapterLink
-              href="/article/chapter3#_8_hgi_"
-              class="handle-in-chapter-link"
+                href="/article/chapter3#_8_hgi_"
+                class="handle-in-chapter-link"
               >
                 Exercise 5
               </InChapterLink>
@@ -3029,9 +3029,9 @@ const Rest = () => {
               <NoBreak>
                 “
                 <InlineImage
-                src="/images/svg_ch3_3_3_grid_1.svg"
-                width="0.9em"
-                bottom="0.15em"
+                  src="/images/svg_ch3_3_3_grid_1.svg"
+                  width="0.9em"
+                  bottom="0.15em"
                  />
                 ” {" "}
               </NoBreak>
@@ -3039,9 +3039,9 @@ const Rest = () => {
               <NoBreak>
                 “
                 <InlineImage
-                src="/images/svg_ch3_3_3_grid_2.svg"
-                width="0.9em"
-                bottom="0.15em"
+                  src="/images/svg_ch3_3_3_grid_2.svg"
+                  width="0.9em"
+                  bottom="0.15em"
                  />
                 ”, {" "}
               </NoBreak>
@@ -3331,10 +3331,10 @@ const Rest = () => {
               {" "}
               in (AA) yields
               <ImageLeft
-              src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg"
-              popup={true}
-              line={1}
-              offset_x="1em"
+                src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg"
+                popup={true}
+                line={1}
+                offset_x="1em"
                />
             </OuterP>
             <div style="font-size:1.1em;margin:0.8em 0em;">
@@ -3400,8 +3400,8 @@ const Rest = () => {
               Same question as {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_9_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_9_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 8
                 </InChapterLink>
@@ -3836,28 +3836,28 @@ const Rest = () => {
                   $\Large h($
                 </Math>
                 <InlineImage
-                src="/images/svg_ch3_composition_icon_clubs.svg"
-                width="1rem"
-                top="-3px"
+                  src="/images/svg_ch3_composition_icon_clubs.svg"
+                  width="1rem"
+                  top="-3px"
                  />
                 <Math>
                   $\Large&#123;&#125;) =$
                 </Math>
                 <InlineImage
-                src="/images/svg_ch3_composition_icon_die_3.svg"
-                width="1.25rem"
-                top="-3px"
-                marginLeft=".5rem"
-                marginRight=".5rem"
+                  src="/images/svg_ch3_composition_icon_die_3.svg"
+                  width="1.25rem"
+                  top="-3px"
+                  marginLeft=".5rem"
+                  marginRight=".5rem"
                  />
               </CentralDisplay>
               <Pause />
               <OuterP>
                 because the arrow that originates at {" "}
                 <InlineImage
-                src="/images/svg_ch3_composition_icon_clubs.svg"
-                width="1rem"
-                top="-4px"
+                  src="/images/svg_ch3_composition_icon_clubs.svg"
+                  width="1rem"
+                  top="-4px"
                  />
                 {" "} in set {" "}
                 <Math>
@@ -3865,9 +3865,9 @@ const Rest = () => {
                 </Math>
                 {" "} lands at {" "}
                 <InlineImage
-                src="/images/svg_ch3_composition_icon_die_3.svg"
-                width="1.25rem"
-                top="-4px"
+                  src="/images/svg_ch3_composition_icon_die_3.svg"
+                  width="1.25rem"
+                  top="-4px"
                  />
                 {" "} in set {" "}
                 <NoBreak>
@@ -3886,19 +3886,19 @@ const Rest = () => {
                   $\Large g(h($
                 </Math>
                 <InlineImage
-                src="/images/svg_ch3_composition_icon_clubs.svg"
-                width="1rem"
-                top="-3px"
+                  src="/images/svg_ch3_composition_icon_clubs.svg"
+                  width="1rem"
+                  top="-3px"
                  />
                 <Math>
                   $\Large&#123;&#125;)) =$
                 </Math>
                 <InlineImage
-                src="/images/svg_ch3_composition_icon_fence.svg"
-                width="2.3rem"
-                top="-4px"
-                marginLeft=".5rem"
-                marginRight=".5rem"
+                  src="/images/svg_ch3_composition_icon_fence.svg"
+                  width="2.3rem"
+                  top="-4px"
+                  marginLeft=".5rem"
+                  marginRight=".5rem"
                  />
               </CentralDisplay>
               <Pause />
@@ -3906,9 +3906,9 @@ const Rest = () => {
                 because, pursuing that path onwards, the arrow
                 that originates at {" "}
                 <InlineImage
-                src="/images/svg_ch3_composition_icon_die_3.svg"
-                width="1.25rem"
-                top="-4px"
+                  src="/images/svg_ch3_composition_icon_die_3.svg"
+                  width="1.25rem"
+                  top="-4px"
                  />
                 {" "} in set {" "}
                 <Math>
@@ -3916,9 +3916,9 @@ const Rest = () => {
                 </Math>
                 {" "} lands at {" "}
                 <InlineImage
-                src="/images/svg_ch3_composition_icon_fence.svg"
-                width="2.3rem"
-                top="-4px"
+                  src="/images/svg_ch3_composition_icon_fence.svg"
+                  width="2.3rem"
+                  top="-4px"
                  />
                 {" "} in set {" "}
                 <NoBreak>
@@ -3950,8 +3950,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              src="/images/svg_ch3_truth_be_said_right_first.svg"
-              width="2000px"
+                src="/images/svg_ch3_truth_be_said_right_first.svg"
+                width="2000px"
                />
               <Pause />
               <OuterP>
@@ -3967,8 +3967,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              src="/images/svg_ch3_truth_be_said_left_first.svg"
-              width="2000px"
+                src="/images/svg_ch3_truth_be_said_left_first.svg"
+                width="2000px"
                />
               <Pause />
               <OuterP>
@@ -4235,8 +4235,8 @@ const Rest = () => {
               {" "}
               Solve {" "}
               <InChapterLink
-              href="/article/chapter3#_10_hgi_"
-              class="handle-in-chapter-link"
+                href="/article/chapter3#_10_hgi_"
+                class="handle-in-chapter-link"
               >
                 Exercise 10
               </InChapterLink>
@@ -4480,8 +4480,8 @@ const Rest = () => {
               {" "} {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_10_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_10_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 10
                 </InChapterLink>
@@ -4511,8 +4511,8 @@ const Rest = () => {
               by {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_10_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_10_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 10
                 </InChapterLink>
@@ -5250,8 +5250,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            src="/images/svg_ch3_ex_x0_y0_step0.svg"
-            width="760px"
+              src="/images/svg_ch3_ex_x0_y0_step0.svg"
+              width="760px"
              />
             <Pause />
             <OuterP>
@@ -5270,8 +5270,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            src="/images/svg_ch3_ex_x0_y0_step1.svg"
-            width="760px"
+              src="/images/svg_ch3_ex_x0_y0_step1.svg"
+              width="760px"
              />
             <Pause />
             <OuterP>
@@ -5290,8 +5290,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            src="/images/svg_ch3_ex_x0_y0_step2.svg"
-            width="760px"
+              src="/images/svg_ch3_ex_x0_y0_step2.svg"
+              width="760px"
              />
             <Pause />
             <OuterP>
@@ -5316,8 +5316,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            src="/images/svg_ch3_ex_x0_y0_step3.svg"
-            width="760px"
+              src="/images/svg_ch3_ex_x0_y0_step3.svg"
+              width="760px"
              />
             <Pause />
             <OuterP>
@@ -5535,8 +5535,8 @@ const Rest = () => {
               sequence of transformations (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_11_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_11_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 14
                 </InChapterLink>
@@ -5571,8 +5571,8 @@ const Rest = () => {
               By {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_12_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_12_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 15
                 </InChapterLink>
@@ -5712,12 +5712,12 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Grid
-            cols={2}
-            sm_cols={1}
-            center_on_overflow={true}
-            place_items="start"
-            with_padding={false}
-            column_first={true}
+              cols={2}
+              sm_cols={1}
+              center_on_overflow={true}
+              place_items="start"
+              with_padding={false}
+              column_first={true}
             >
               <Item>
                 i. {" "}
@@ -6101,8 +6101,8 @@ const Rest = () => {
               and, similarly to {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_11_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_11_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 14
                 </InChapterLink>
@@ -6168,8 +6168,8 @@ const Rest = () => {
               {" "} of {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_11_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_11_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 14
                 </InChapterLink>
@@ -6182,8 +6182,8 @@ const Rest = () => {
               By direct analogy with {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_11_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_11_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 14
                 </InChapterLink>
@@ -6394,8 +6394,8 @@ const Rest = () => {
               by {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/chapter3#_12_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/chapter3#_12_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 15
                 </InChapterLink>
@@ -6482,8 +6482,8 @@ const Rest = () => {
                 as briefly flashed by, e.g., in {" "}
                 <NoBreak>
                   <a
-                  href="/article/chapter1#_5_hgi_"
-                  class="handle-out-chapter-link"
+                    href="/article/chapter1#_5_hgi_"
+                    class="handle-out-chapter-link"
                   >
                     Chapter 1
                   </a>

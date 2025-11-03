@@ -16,10 +16,10 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Bootcamp2__() {
   return (
     <Article
-    prevPage=""
-    nextPage="/article/bootcamp1"
-    pageNecessaryMargin={270}
-    maxElementWidth={1200}
+      prevPage=""
+      nextPage="/article/bootcamp1"
+      pageNecessaryMargin={270}
+      maxElementWidth={1200}
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -231,10 +231,10 @@ const Rest = () => {
           \Large 10^0 = 1 = 1
           $$
           <ImageLeft
-          src="/images/svg_bt2_bt_alert_cloud.svg"
-          offset_y="-0.2em"
-          offset_x="4em"
-          compensate_offset_x_for_large_text_columns={true}
+            src="/images/svg_bt2_bt_alert_cloud.svg"
+            offset_y="-0.2em"
+            offset_x="4em"
+            compensate_offset_x_for_large_text_columns={true}
            />
         </MathBlock>
         <Pause />
@@ -328,8 +328,8 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
-            class="handle-in-chapter-link"
+              href="/article/bootcamp2#_1_hgi_"
+              class="handle-in-chapter-link"
             >
               A
             </InChapterLink>
@@ -355,8 +355,8 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
-            class="handle-in-chapter-link"
+              href="/article/bootcamp2#_1_hgi_"
+              class="handle-in-chapter-link"
             >
               A
             </InChapterLink>
@@ -370,8 +370,8 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
-            class="handle-in-chapter-link"
+              href="/article/bootcamp2#_1_hgi_"
+              class="handle-in-chapter-link"
             >
               A
             </InChapterLink>
@@ -380,8 +380,8 @@ const Rest = () => {
           {" "}
           is equivalent to the identity
           <ImageLeft
-          src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
-          line={2}
+            src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
+            line={2}
            />
         </OuterP>
         <Pause />
@@ -425,8 +425,8 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link"
+              href="/article/bootcamp2#_2_hgi_"
+              class="handle-in-chapter-link"
             >
               AA
             </InChapterLink>
@@ -436,8 +436,8 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link"
+              href="/article/bootcamp2#_2_hgi_"
+              class="handle-in-chapter-link"
             >
               AA
             </InChapterLink>
@@ -455,8 +455,8 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link"
+              href="/article/bootcamp2#_2_hgi_"
+              class="handle-in-chapter-link"
             >
               AA
             </InChapterLink>
@@ -532,8 +532,8 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_1_hgi_"
-            class="handle-in-chapter-link"
+              href="/article/bootcamp2#_1_hgi_"
+              class="handle-in-chapter-link"
             >
               A
             </InChapterLink>
@@ -543,8 +543,8 @@ const Rest = () => {
           <NoBreak>
             (
             <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link"
+              href="/article/bootcamp2#_2_hgi_"
+              class="handle-in-chapter-link"
             >
               AA
             </InChapterLink>
@@ -1743,9 +1743,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Table
-        class="first-line"
-        marginTop="1em"
-        marginBottom="1em"
+          class="first-line"
+          marginTop="1em"
+          marginBottom="1em"
         >
           <colgroup>
             <col width="120px" />
@@ -2118,9 +2118,9 @@ const Rest = () => {
             \Large 0.00001 = 10^&#123;-5&#125;
             $$
             <ImageRight
-            src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
-            offset_x="0em"
-            compensate_offset_x_for_large_text_columns={true}
+              src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
+              offset_x="0em"
+              compensate_offset_x_for_large_text_columns={true}
              />
           </MathBlock>
           <Pause />
@@ -2961,8 +2961,8 @@ const Rest = () => {
               <NoBreak>
                 (
                 <InChapterLink
-                href="/article/bootcamp2#_1_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/bootcamp2#_1_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   A
                 </InChapterLink>
@@ -3313,8 +3313,8 @@ const Rest = () => {
               {" "} (as in {" "}
               <NoBreak>
                 <InChapterLink
-                href="/article/bootcamp2#_3_hgi_"
-                class="handle-in-chapter-link"
+                  href="/article/bootcamp2#_3_hgi_"
+                  class="handle-in-chapter-link"
                 >
                   Exercise 14
                 </InChapterLink>
@@ -3518,10 +3518,10 @@ const Rest = () => {
               \Large -b -2c -3 = 0
               $$
               <ImageRight
-              src="/images/svg_bt2_ex_equation_addition_cloud.svg"
-              offset_y="-0.5em"
-              offset_x="0.5em"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_bt2_ex_equation_addition_cloud.svg"
+                offset_y="-0.5em"
+                offset_x="0.5em"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />

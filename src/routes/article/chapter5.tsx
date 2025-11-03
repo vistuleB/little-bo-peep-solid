@@ -17,10 +17,10 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Chapter5__() {
   return (
     <Article
-    prevPage="/article/chapter4"
-    nextPage=""
-    pageNecessaryMargin={950}
-    maxElementWidth={1000}
+      prevPage="/article/chapter4"
+      nextPage=""
+      pageNecessaryMargin={950}
+      maxElementWidth={1000}
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -1466,8 +1466,8 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-          href="/article/chapter4#_24_hgi_"
-          class="handle-out-chapter-link"
+            href="/article/chapter4#_24_hgi_"
+            class="handle-out-chapter-link"
           >
             Note 10
           </a>
@@ -4312,8 +4312,8 @@ const Rest = () => {
               as we can count on the graph of the original
               function:
               <ImageLeft
-              line={-2}
-              src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
+                line={-2}
+                src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
                />
             </OuterP>
             <Pause />
@@ -4390,8 +4390,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:0.8em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
              />
           </ExerciseStatement>
           <Solution>
@@ -4403,8 +4403,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:0.8em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg"
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg"
              />
             <Pause />
             <OuterP>
@@ -4542,8 +4542,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:0.8em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg"
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg"
              />
             <Pause />
             <OuterP>
@@ -4596,8 +4596,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:0.8em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg"
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg"
              />
             <Pause />
             <OuterP>
@@ -4677,8 +4677,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:0.8em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg"
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg"
              />
             <Pause />
             <OuterP>
@@ -4782,8 +4782,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:0.8em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg"
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg"
              />
             <Pause />
             <OuterP>
@@ -4956,8 +4956,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:0.8em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_big_wave_minus_sin_x.svg"
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_big_wave_minus_sin_x.svg"
              />
             <Pause />
             <OuterP>
@@ -5149,8 +5149,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <table
-            class="slice"
-            style="border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;"
+              class="slice"
+              style="border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;"
             >
               <colgroup>
                 <col width={200} />
@@ -5295,13 +5295,13 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:1.1em;margin-bottom:1.1em;"
-            src="/images/svg_ch5_ex_pythagorean_graphs_sin2.svg"
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/images/svg_ch5_ex_pythagorean_graphs_sin2.svg"
              />
             <Pause />
             <Image
-            style="margin-top:1.1em;margin-bottom:1.1em;"
-            src="/images/svg_ch5_ex_pythagorean_graphs_cos2.svg"
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/images/svg_ch5_ex_pythagorean_graphs_cos2.svg"
              />
             <Pause />
             <OuterP>
@@ -5323,8 +5323,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:1.1em;margin-bottom:1.1em;"
-            src="/images/svg_ch5_ex_pythagorean_graphs_compounded.svg"
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/images/svg_ch5_ex_pythagorean_graphs_compounded.svg"
              />
             <Pause />
             <OuterP>
@@ -5365,8 +5365,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="width:500px;margin-top:1em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_big_snail.svg"
+              style="width:500px;margin-top:1em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_big_snail.svg"
              />
           </ExerciseStatement>
           <Solution>
@@ -5589,8 +5589,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg"
+                style="margin-top:0.8em;margin-bottom:1em;"
+                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg"
                />
               <Pause />
               <OuterP>
@@ -5612,8 +5612,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg"
+                style="margin-top:0.8em;margin-bottom:1em;"
+                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg"
                />
               <Pause />
               <OuterP>
@@ -5713,8 +5713,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:1em;margin-bottom:0.5em;"
-            src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg"
+              style="margin-top:1em;margin-bottom:0.5em;"
+              src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg"
              />
           </ExerciseStatement>
           <Solution>
@@ -5762,9 +5762,9 @@ const Rest = () => {
               r\cdot\cos(\phi)
               $$
               <ImageRight
-              src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg"
-              offset_x="5.5em"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg"
+                offset_x="5.5em"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -5786,9 +5786,9 @@ const Rest = () => {
               r\cdot\sin(\phi)
               $$
               <ImageLeft
-              src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg"
-              offset_x="7.5em"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg"
+                offset_x="7.5em"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -5943,9 +5943,9 @@ const Rest = () => {
               \,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
               $$
               <ImageRight
-              src="/images/svg_ch5_ex_vector_sum_101_cloud.svg"
-              offset_x="1em"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_ch5_ex_vector_sum_101_cloud.svg"
+                offset_x="1em"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -6211,8 +6211,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:1em;margin-bottom:0.8em;"
-              src="/images/svg_ch5_ex_vector_sum_previous_example.svg"
+                style="margin-top:1em;margin-bottom:0.8em;"
+                src="/images/svg_ch5_ex_vector_sum_previous_example.svg"
                />
             </SolutionNote>
           </Solution>
@@ -6771,8 +6771,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:1em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_0_2_radians_guess_answer.svg"
+              style="margin-top:1em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_0_2_radians_guess_answer.svg"
              />
             <Pause />
             <OuterP>
@@ -6801,8 +6801,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            style="margin-top:1em;margin-bottom:1em;"
-            src="/images/svg_ch5_ex_0_2_radians_guess_joke.svg"
+              style="margin-top:1em;margin-bottom:1em;"
+              src="/images/svg_ch5_ex_0_2_radians_guess_joke.svg"
              />
             <Pause />
             <OuterP>
@@ -7055,8 +7055,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.4em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg"
+                style="margin-top:0.8em;margin-bottom:1.4em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg"
                />
               <Pause />
               <OuterP>
@@ -7086,8 +7086,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg"
                />
               <Pause />
               <OuterP>
@@ -7120,8 +7120,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg"
                />
               <Pause />
               <OuterP>
@@ -7149,8 +7149,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg"
                />
               <Pause />
               <OuterP>
@@ -7183,8 +7183,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg"
                />
               <Pause />
               <OuterP>
@@ -7237,8 +7237,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg"
                />
               <Pause />
               <OuterP>
@@ -7278,8 +7278,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg"
                />
               <Pause />
               <OuterP>
@@ -7299,8 +7299,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg"
                />
               <Pause />
               <OuterP>
@@ -7333,8 +7333,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg"
                />
               <Pause />
               <OuterP>
@@ -7388,8 +7388,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg"
                />
               <Pause />
               <OuterP>
@@ -7420,8 +7420,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:0.8em;margin-bottom:1.5em;"
-              src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg"
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg"
                />
               <Pause />
               <OuterP>
@@ -8390,8 +8390,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:1em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_big_division_big_subtraction_final.svg"
+                style="margin-top:1em;margin-bottom:1em;"
+                src="/images/svg_ch5_ex_big_division_big_subtraction_final.svg"
                />
               <Pause />
               <OuterP>
@@ -8579,8 +8579,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-            src="/images/svg_ch5_ex_x_plus_y_options.svg"
-            style="background-color:#fdfdfd"
+              src="/images/svg_ch5_ex_x_plus_y_options.svg"
+              style="background-color:#fdfdfd"
              />
             <Pause />
             <OuterP>
@@ -9688,8 +9688,8 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-              style="margin-top:1em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_max_xy_example_isoset.svg"
+                style="margin-top:1em;margin-bottom:1em;"
+                src="/images/svg_ch5_ex_max_xy_example_isoset.svg"
                />
             </SolutionNote>
             <Pause />
@@ -10803,8 +10803,8 @@ const Rest = () => {
             </OuterP>
             <TextParent>
               <ol
-              class="l1"
-              style="margin-top:0.5em;"
+                class="l1"
+                style="margin-top:0.5em;"
               >
                 <li>
                   using the composition {" "}
@@ -11949,9 +11949,9 @@ const Rest = () => {
               \Large\downarrow
               $$
               <ImageRight
-              src="/images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg"
-              offset_x="4em"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg"
+                offset_x="4em"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -11966,9 +11966,9 @@ const Rest = () => {
               \Large\downarrow
               $$
               <ImageRight
-              src="/images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg"
-              offset_x="4em"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg"
+                offset_x="4em"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -11983,9 +11983,9 @@ const Rest = () => {
               \Large\downarrow
               $$
               <ImageRight
-              src="/images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg"
-              offset_x="4em"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg"
+                offset_x="4em"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -12172,10 +12172,10 @@ const Rest = () => {
               \end&#123;align*&#125;
               $$
               <ImageLeft
-              src="/images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg"
-              offset_x="3.4em"
-              offset_y="3%"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg"
+                offset_x="3.4em"
+                offset_y="3%"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -12362,8 +12362,7 @@ const Rest = () => {
               <b>
                 Exercise 33.
               </b>
-            </OuterP>
-            <OuterP class="indent-10">
+              {" "}
               What sequence of geometric transformations
               maps the graph
             </OuterP>
@@ -13184,8 +13183,8 @@ const Rest = () => {
                   \cos x + \sin x = \sqrt&#123;2&#125;\cdot\cos(x - \eta/2)
                   $$
                   <ImageRight
-                  src="/images/svg_ch5_ex_polar_discovery_cloud.svg"
-                  compensate_offset_x_for_large_text_columns={true}
+                    src="/images/svg_ch5_ex_polar_discovery_cloud.svg"
+                    compensate_offset_x_for_large_text_columns={true}
                    />
                 </MathBlock>
               </div>
@@ -13292,9 +13291,9 @@ const Rest = () => {
               \sin x\cos \psi + \cos x\sin \psi
               $$
               <ImageRight
-              src="/images/svg_ch5_ex_polar_discovery2_cloud.svg"
-              offset_x="8em"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_ch5_ex_polar_discovery2_cloud.svg"
+                offset_x="8em"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -13589,8 +13588,8 @@ const Rest = () => {
             <Image src="/images/svg_ch5_ex_costan_powers_cos_bounce.svg" />
             <Pause />
             <Image
-            style="margin-top:1.5em;"
-            src="/images/svg_ch5_ex_costan_powers_cos_snail.svg"
+              style="margin-top:1.5em;"
+              src="/images/svg_ch5_ex_costan_powers_cos_snail.svg"
              />
             <Pause />
             <Image src="/images/svg_ch5_ex_costan_powers_cos_inverted_towers.svg" />
@@ -15211,8 +15210,8 @@ const Rest = () => {
               \alpha = 90^\circ + \arctan(z/\sqrt&#123;x_0^2 + y_0^2 - z^2&#125;) - \arctan(y_0/x_0)
               $$
               <ImageRight
-              src="/images/svg_ch5_ex_bomb_shelter_door_alpha_cloud.svg"
-              compensate_offset_x_for_large_text_columns={true}
+                src="/images/svg_ch5_ex_bomb_shelter_door_alpha_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -15392,9 +15391,9 @@ const Rest = () => {
               \sec(\theta)
               $$
               <ImageRight
-              offset_x="9em"
-              src="/images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg"
-              compensate_offset_x_for_large_text_columns={true}
+                offset_x="9em"
+                src="/images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg"
+                compensate_offset_x_for_large_text_columns={true}
                />
             </MathBlock>
             <Pause />
@@ -16009,9 +16008,9 @@ const Rest = () => {
                 \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_i r
                 $$
                 <ImageRight
-                offset_x="5em"
-                src="/images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg"
-                compensate_offset_x_for_large_text_columns={true}
+                  offset_x="5em"
+                  src="/images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg"
+                  compensate_offset_x_for_large_text_columns={true}
                  />
               </MathBlock>
               <p>
@@ -16023,9 +16022,9 @@ const Rest = () => {
                 \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r
                 $$
                 <ImageLeft
-                offset_x="2.5em"
-                src="/images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg"
-                compensate_offset_x_for_large_text_columns={true}
+                  offset_x="2.5em"
+                  src="/images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg"
+                  compensate_offset_x_for_large_text_columns={true}
                  />
               </MathBlock>
               <p>
