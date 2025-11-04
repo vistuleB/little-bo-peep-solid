@@ -67,7 +67,7 @@ const ButtonsContainer = (props: ParentProps) => {
           "background-color":
               store.show_areas
                 ? "#fff000"
-                : "transparent",
+                : "var(--background-rgb)",
         }}
       ></div>
       <div
