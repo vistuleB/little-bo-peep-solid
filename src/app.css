@@ -208,20 +208,20 @@ span .MathJax_SVG {
 /* solution svg css */
 
 .pointing_finger_backhand {
-  fill: white;
-  stroke: white;
+  fill: var(--background-rgb);
+  stroke: var(--background-rgb);
   stroke-width: 1;
 }
 
 .pointing_finger_knuckle_zone {
-  fill: white;
-  stroke: white;
+  fill: var(--background-rgb);
+  stroke: var(--background-rgb);
   stroke-width: 4;
 }
 
 .pointing_finger_cuff_zone {
-  fill: white;
-  stroke: white;
+  fill: var(--background-rgb);
+  stroke: var(--background-rgb);
   stroke-width: 3;
 }
 
