@@ -163,7 +163,8 @@ const Switcher = (props: SwitcherProps) => {
               "tab cursor-pointer overflow-visible",
               right_on() ? "" : "disabled",
             )}
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               if (right_on()) {
                 set_store("selected_exo", selected_exo() + 1);
               }
@@ -191,7 +192,8 @@ const Switcher = (props: SwitcherProps) => {
             height={`${2 + w}`}
             viewBox={`0 0 ${c2c + 2 * r1 + 2} ${2 + w}`}
             xmlns="http://www.w3.org/2000/svg"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               set_store("list_view", !store.list_view);
             }}>
             <path
