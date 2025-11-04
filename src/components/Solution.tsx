@@ -397,6 +397,7 @@ type SolutionSVGProps = {
 };
 
 export const SolutionSVG = (props: SolutionSVGProps) => {
+  const { store: global_store } = useGlobalContext();
   return (
     <>
       <div onClick={props.onClick} class="cursor-pointer w-fit m-auto">
@@ -412,7 +413,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
             <rect
               aria-label="solution_button_focus_rect"
               class={twJoin(
-                "solution_button_transition",
+                (global_store.animations ? "solution_button_transition" : ""),
                 props.solution_open()
                   ? "inactive_solution_button_rect"
                   : "active_solution_button_rect",
@@ -422,7 +423,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
             <path
               aria-label="solution_button_lip"
               class={twJoin(
-                "solution_button_transition",
+                (global_store.animations ? "solution_button_transition" : ""),
                 props.solution_open()
                   ? "inactive_solution_button_lip"
                   : "active_solution_button_lip",
@@ -431,7 +432,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
             <g
               aria-label="solution_button_finger_pair"
               class={twJoin(
-                "solution_button_transition",
+                (global_store.animations ? "solution_button_transition" : ""),
                 props.solution_open()
                   ? "inactive_solution_button_hands"
                   : "active_solution_button_hands",
