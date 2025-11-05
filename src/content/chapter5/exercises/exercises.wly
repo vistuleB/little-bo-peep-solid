@@ -4664,8 +4664,8 @@
             by finitely many cones with triangular bases,
             by triangulating the surface of the sphere:
 
-        |> Image
-            src=images/svg_ch5_ex_sphere_tetrahedrons.svg
+            |> Image
+                src=images/svg_ch5_ex_sphere_tetrahedrons.svg
 
             Note that a cone with a triangular base is
             just a

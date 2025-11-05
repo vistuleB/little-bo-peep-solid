@@ -8795,7 +8795,7 @@ const Rest = () => {
                 <Math>
                   $2$
                 </Math>
-                &amp;#x200b;
+                &#x200b;
               </NoBreak>
               <Math>
                 $\times$

@@ -4343,7 +4343,7 @@ const Rest = () => {
                 <Math>
                   $10$
                 </Math>
-                &amp;#x200b;
+                &#x200b;
               </NoBreak>
               <NoBreak>
                 <Math>
@@ -14565,7 +14565,7 @@ const Rest = () => {
               <Math>
                 $\cos(\theta)\cdot\sec(\theta) = 1$
               </Math>
-              {" "} &amp;#x2705;.
+              {" "} &#x2705;.
               If {" "}
               <Math>
                 $|A| \leq 1$
@@ -15722,49 +15722,51 @@ const Rest = () => {
                 by finitely many cones with triangular bases,
                 by triangulating the surface of the sphere:
               </OuterP>
-            </SolutionNote>
-            <Pause />
-            <Image src="/images/svg_ch5_ex_sphere_tetrahedrons.svg">
-              <p>
+              <Pause />
+              <Image src="/images/svg_ch5_ex_sphere_tetrahedrons.svg" />
+              <Pause />
+              <OuterP>
                 Note that a cone with a triangular base is
                 just a
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplayItalic>
                 tetrahedron
                 <ImageLeft src="/images/svg_ch5_ex_sphere_volume_cones_cloud.svg" />
               </CentralDisplayItalic>
-              <p>
+              <Pause />
+              <OuterP>
                 where “tetrahedron” means “four-sided shape”.
                 (There is only 1 way to pull off a four-sided
                 shape in 3D: to make all sides triangles.)
                 So the volume of the sphere is approximated
                 by the sum of the volumes of the tetrahedrons,
                 a.k.a. cones.
-              </p>
-              <p>
+              </OuterP>
+              <OuterP class="indent-10">
                 Define the
-              </p>
+              </OuterP>
               <Pause />
               <CentralDisplayItalic>
                 mesh size
               </CentralDisplayItalic>
-              <p>
+              <Pause />
+              <OuterP>
                 of such a set of tetrahedrons to be the largest
                 sidelength of any tetrahedron base.
-              </p>
-              <p>
+              </OuterP>
+              <OuterP class="indent-10">
                 (The smaller the mesh size, the more pointed
                 the tetrahedrons.)
-              </p>
-              <p>
+              </OuterP>
+              <OuterP class="indent-10">
                 For the current
                 discussion we take it for granted that as the
                 mesh size shrinks, the sum of the volumes of
                 the cones (= tetrahedrons) converges to the
                 volume of sphere.
-              </p>
-              <p>
+              </OuterP>
+              <OuterP class="indent-10">
                 (Or take the limit, as the mesh size shrinks,
                 of the sum of the volume of the tetrahedrons
                 to be the {" "}
@@ -15775,8 +15777,8 @@ const Rest = () => {
                 sphere”—that's just as well, since we don't have
                 any other competing notion of “volume of the sphere”,
                 at the moment.)
-              </p>
-              <p>
+              </OuterP>
+              <OuterP class="indent-10">
                 Here is a closer look at a single tetrahedron
                 {" "}
                 <NoBreak>
@@ -15786,48 +15788,53 @@ const Rest = () => {
                   </Math>
                 </NoBreak>
                 {" "} is the height of the tetrahedron):
-              </p>
+              </OuterP>
               <Pause />
               <Image src="/images/svg_ch5_ex_sphere_volume_closeup.svg" />
-              <p>
+              <Pause />
+              <OuterP>
                 One observes that
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 B_i \leq A_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 where
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 B_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 is the base of the tetrahedron and
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 A_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 is the projection of the base onto the surface
                 of the sphere from the center of the sphere, and
                 that
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 h_i \leq r
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 where
                 {" "}
                 <Math>
@@ -15841,68 +15848,74 @@ const Rest = () => {
                 {" "} is the
                 radius of sphere. On the other hand, it is not hard
                 to convince oneself that
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 B_i \geq 0.9A_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 and
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 h_i \geq 0.9r
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 for all of the tetrahedrons, if the mesh size is
                 sufficiently small; even,
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 B_i \geq 0.99A_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 and
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 h_i \geq 0.99r
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 for all of the tetrahedrons simultaenously,
                 {" "}
                 <i>
                   if the mesh size is sufficiently small
                 </i>
                 ; even,
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 B_i \geq 0.99999A_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 and
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 h_i \geq 0.99999r
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 for all... if etc.
-              </p>
-              <p>
+              </OuterP>
+              <OuterP class="indent-10">
                 (Or as mathematicians would put it: “for all {" "}
                 <Math>
                   $\e &gt; 0$
@@ -15913,23 +15926,25 @@ const Rest = () => {
                   $s &gt; 0$
                 </Math>
                 {" "} such that
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 B_i \geq (1-\e)A_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 and
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 h_i \geq (1-\e)r
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 for all of the tetrahedrons, if the mesh size less than {" "}
                 <NoBreak>
                   <Math>
@@ -15939,17 +15954,18 @@ const Rest = () => {
                 </NoBreak>
                 {" "}
                 (“For all... there exists... such that... if... .”)
-              </p>
-              <p>
+              </OuterP>
+              <OuterP class="indent-10">
                 This implies that
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 [nb: fast-foward to Exercise 38 if you have never
                 seen {" "}
                 <NoBreak>
@@ -16001,7 +16017,7 @@ const Rest = () => {
                 </NoBreak>
                 {" "} tetrahedron, is
                 sandwiched between
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
@@ -16013,9 +16029,10 @@ const Rest = () => {
                   compensate_offset_x_for_large_text_columns={true}
                  />
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 above, and
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
@@ -16027,50 +16044,55 @@ const Rest = () => {
                   compensate_offset_x_for_large_text_columns={true}
                  />
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 below, for sufficiently small mesh size; but
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \sum_&#123;i=1&#125;^N A_i = A
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 where {" "}
                 <Math>
                   $A = 8\eta\rt&#123;.05&#125;r^2$
                 </Math>
                 {" "} is the total area
                 of the sphere, and so
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 is sandwiched between
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_ir = &#123;1\over 3&#125;\cdot r\cdot \sum_&#123;i=1&#125;^N A_i = &#123;1\over 3&#125;Ar
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 above, and
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r = (0.99999)^2&#123;1\over 3&#125;Ar
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 below; or, nicely put in a double inequality:
-              </p>
+              </OuterP>
               <center style="margin-top:1em;margin-bottom:1em;">
                 <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
                   <MathBlock>
@@ -16080,7 +16102,7 @@ const Rest = () => {
                   </MathBlock>
                 </div>
               </center>
-              <p>
+              <OuterP>
                 ...but we could replace {" "}
                 <NoBreak>
                   “
@@ -16108,27 +16130,29 @@ const Rest = () => {
                 </NoBreak>
                 {" "} by further
                 shrinking the size of the mesh, which implies that
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 must converge to
-              </p>
+              </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 &#123;1\over 3&#125;Ar
                 $$
               </MathBlock>
-              <p>
+              <Pause />
+              <OuterP>
                 as the mesh size goes to zero—it cannot converge to
                 something greater than, nor less than, this number!
-              </p>
-            </Image>
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={49}>
