@@ -470,7 +470,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                src="build-svg-o/86.svg"
+                src="/images/33.svg"
                 width={50}
                 style="padding-top:7px;padding-bottom:7px;"
                  />
@@ -496,7 +496,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                src="build-svg-o/87.svg"
+                src="/images/34.svg"
                 style="margin-top:7px;margin-bottom:7px;width:105px;"
                  />
               </td>
@@ -521,7 +521,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                src="build-svg-o/88.svg"
+                src="/images/35.svg"
                 width={105}
                 style="margin-top:7px;margin-bottom:7px;"
                  />
@@ -547,7 +547,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                src="build-svg-o/89.svg"
+                src="/images/36.svg"
                 width={105}
                 style="margin-top:7px;margin-bottom:7px;"
                  />
@@ -573,7 +573,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                src="build-svg-o/90.svg"
+                src="/images/37.svg"
                 width={105}
                 style="margin-top:7px;margin-bottom:7px;"
                  />

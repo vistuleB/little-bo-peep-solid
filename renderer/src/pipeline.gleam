@@ -201,7 +201,7 @@ pub fn our_pipeline() -> Pipeline {
       dl.ensure_attribute_value_starts_with(#("src", "/")),
       dl.delete_attribute__batch(["counter", "handle", "type", "t", "_", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
-      dl.lbp_img_build("../public/images","../public/build-img","../image-map.json"),
+      dl.lbp_img_build(#("../public/images","../public/build-img","../image-map.json", None, None)),
     ]
   ]
   |> list.flatten
