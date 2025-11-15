@@ -100,7 +100,7 @@ export default function __Bootcamp2__() {
           :
         </OuterP>
         <Pause />
-        <Image src="/images/svg_base_exponent.svg" />
+        <Image src="/build-img/svgo-svg/1763177724457221109.svg" />
         <Pause />
         <OuterP>
           The whole expression is read {" "}
@@ -231,11 +231,11 @@ const Rest = () => {
           \Large 10^0 = 1 = 1
           $$
           <ImageLeft
-            src="/images/svg_bt2_bt_alert_cloud.svg"
+            src="/build-img/svgo-svg/1763177724602175563.svg"
             offset_y="-0.2em"
             offset_x="4em"
             compensate_offset_x_for_large_text_columns={true}
-           />
+          />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -380,9 +380,9 @@ const Rest = () => {
           {" "}
           is equivalent to the identity
           <ImageLeft
-            src="/images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
+            src="/build-img/svgo-svg/1763177724757953827.svg"
             line={2}
-           />
+          />
         </OuterP>
         <Pause />
         <MathBlock id="_2_hgi_">
@@ -1308,7 +1308,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg" />
+          <ImageLeft src="/build-img/svgo-svg/1763177724972523036.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1317,7 +1317,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft src="/images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg" />
+          <ImageLeft src="/build-img/svgo-svg/1763177725139050448.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1326,7 +1326,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight src="/images/svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg" />
+          <ImageRight src="/build-img/svgo-svg/1763177725331186261.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1477,7 +1477,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_one_blue_one_image_equation.svg" />
+        <Image src="/build-img/svgo-svg/1763177725492192478.svg" />
         <Pause />
         <OuterP>
           Likewise, the standard decimal expansion for {" "}
@@ -1494,7 +1494,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_two_blue_one_image_equation.svg" />
+        <Image src="/build-img/svgo-svg/1763177725638207362.svg" />
         <Pause />
         <OuterP>
           ...and so on, which is a possible trick to check
@@ -2118,10 +2118,10 @@ const Rest = () => {
             \Large 0.00001 = 10^&#123;-5&#125;
             $$
             <ImageRight
-              src="/images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
+              src="/build-img/svgo-svg/1763177725784218121.svg"
               offset_x="0em"
               compensate_offset_x_for_large_text_columns={true}
-             />
+            />
           </MathBlock>
           <Pause />
           <OuterP>
@@ -2222,7 +2222,7 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_0.125_twelve_5.svg" />
+              <Image src="/build-img/svgo-svg/1763177725964206447.svg" />
               <Pause />
               <OuterP>
                 Half of twelve hundredths is six hundredths, and
@@ -2237,7 +2237,7 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_06_and_0025.svg" />
+              <Image src="/build-img/svgo-svg/1763177726111166974.svg" />
               <Pause />
               <OuterP>
                 ...so {" "}
@@ -2944,7 +2944,7 @@ const Rest = () => {
               hoping for:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_start_end_proof.svg" />
+            <Image src="/build-img/svgo-svg/1763177726258259582.svg" />
             <Pause />
             <OuterP>
               The point is that the second equality uses the identity
@@ -2986,7 +2986,7 @@ const Rest = () => {
               is as follows (minus fine print):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_laws_exp.svg" />
+            <Image src="/build-img/svgo-svg/1763177726403164868.svg" />
             <Pause />
             <OuterP>
               The first law can be recognized as “additivity of exponents”
@@ -3518,11 +3518,11 @@ const Rest = () => {
               \Large -b -2c -3 = 0
               $$
               <ImageRight
-                src="/images/svg_bt2_ex_equation_addition_cloud.svg"
+                src="/build-img/svgo-svg/1763177726587251799.svg"
                 offset_y="-0.5em"
                 offset_x="0.5em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>

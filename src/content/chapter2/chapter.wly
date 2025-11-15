@@ -34,7 +34,7 @@
     with each unit to the right:
 
     |> Image
-        src=images/slope_0.5_example.svg
+        src=/images/slope_0.5_example.svg
 
     (Etc.)
 

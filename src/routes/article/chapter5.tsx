@@ -162,7 +162,7 @@ export default function __Chapter5__() {
           It is the one that has this graph:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_cosine.svg" />
+        <Image src="/build-img/svgo-svg/1763177672289954084.svg" />
         <Pause />
         <OuterP>
           It has a close cousin named ‘sin’.
@@ -192,7 +192,7 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_cosine_and_sine.svg" />
+        <Image src="/build-img/svgo-svg/1763177672428008542.svg" />
         <Pause />
         <OuterP>
           As far as standard definitions go,
@@ -292,7 +292,7 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_cosine_and_sine_@0.5.svg" />
+        <Image src="/build-img/svgo-svg/1763177672617931209.svg" />
         <Pause />
         <OuterP>
           Per the definitions,
@@ -335,7 +335,7 @@ export default function __Chapter5__() {
           a calculator equipped with ‘sin’ and ‘cos’):
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_@0.5_smaller.svg" />
+        <Image src="/build-img/svgo-svg/1763177672827909000.svg" />
         <Pause />
         <OuterP>
           As a second example, the graphs indicate that
@@ -361,7 +361,7 @@ export default function __Chapter5__() {
           {" "} in any case):
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_cosine_and_sine_@-3.svg" />
+        <Image src="/build-img/svgo-svg/1763177673058920250.svg" />
         <Pause />
         <OuterP>
           Indeed, going {" "}
@@ -420,7 +420,7 @@ export default function __Chapter5__() {
           {" "} to be exact, it turns out):
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_@-3_smaller.svg" />
+        <Image src="/build-img/svgo-svg/1763177673278942375.svg" />
         <Pause />
         <OuterP>
           For a last example,
@@ -453,7 +453,7 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_cosine_and_sine_@minus_eta.svg" />
+        <Image src="/build-img/svgo-svg/1763177673472912792.svg" />
         <Pause />
         <OuterP>
           Some thought reveals that this value of {" "}
@@ -570,7 +570,7 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_with_new_definition.svg" />
+        <Image src="/build-img/svgo-svg/1763177673692911292.svg" />
         <Pause />
         <OuterP>
           In more detail, if you tilt your head  sideways,
@@ -637,7 +637,7 @@ export default function __Chapter5__() {
           particle:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_with_sin_and_cos_particles.svg" />
+        <Image src="/build-img/svgo-svg/1763177673915934334.svg" />
         <Pause />
         <OuterP>
           ...to be contrasted with our first definition,
@@ -645,7 +645,7 @@ export default function __Chapter5__() {
           two different axes:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_with_sincos_particle.svg" />
+        <Image src="/build-img/svgo-svg/1763177674162920792.svg" />
         <Pause />
         <OuterP>
           The second definition (former diagram) explains
@@ -724,7 +724,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_unit_circle_with_four_particles.svg" />
+        <Image src="/build-img/svgo-svg/1763177674404938542.svg" />
         <Pause />
         <OuterP>
           These labels are chosen
@@ -869,7 +869,7 @@ const Rest = () => {
           {" "} etc:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_four_curves.svg" />
+        <Image src="/build-img/svgo-svg/1763177674709926834.svg" />
         <Pause />
         <OuterP>
           These are the same four curves that
@@ -1078,7 +1078,7 @@ const Rest = () => {
           things to the author's way of seeing things):
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_identity_explanations.svg" />
+        <Image src="/build-img/svgo-svg/1763177674899939792.svg" />
         <Pause />
         <OuterP>
           Two more identities
@@ -1110,7 +1110,7 @@ const Rest = () => {
           plane:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_identity_explanations_more.svg" />
+        <Image src="/build-img/svgo-svg/1763177675435924334.svg" />
         <Pause />
         <OuterP>
           We also have these identities...
@@ -1479,7 +1479,7 @@ const Rest = () => {
           that arc:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition.svg" />
+        <Image src="/build-img/svgo-svg/1763177676015934209.svg" />
         <Pause />
         <OuterP>
           The definition implies that the radian
@@ -1487,7 +1487,7 @@ const Rest = () => {
           by the angle on a unit circle:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition_radius_1.svg" />
+        <Image src="/build-img/svgo-svg/1763177676164917334.svg" />
         <Pause />
         <OuterP>
           In particular, {" "}
@@ -1501,13 +1501,13 @@ const Rest = () => {
           {" "} radians:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition_90_degrees_is.svg" />
+        <Image src="/build-img/svgo-svg/1763177676323922834.svg" />
         <Pause />
         <OuterP>
           To imprint this fact in our memories:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition_90_imprint.svg" />
+        <Image src="/build-img/svgo-svg/1763177676502915292.svg" />
         <Pause />
         <OuterP>
           (We will often leave out the “rad”—in fact,
@@ -1534,7 +1534,7 @@ const Rest = () => {
           {" "} radians:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_radian_definition_45_imprint.svg" />
+        <Image src="/build-img/svgo-svg/1763177676652915084.svg" />
         <Pause />
         <OuterP>
           aaaand... and so on.
@@ -1571,7 +1571,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_x_displacement_and_x_radians.svg" />
+        <Image src="/build-img/svgo-svg/1763177676814927834.svg" />
         <Pause />
         <OuterP>
           In particular,
@@ -1579,7 +1579,7 @@ const Rest = () => {
           sin and cos like this...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_x_displacement_and_x_radians_displacement_definition.svg" />
+        <Image src="/build-img/svgo-svg/1763177677000911750.svg" />
         <Pause />
         <OuterP>
           ...with the input appearing as a
@@ -1587,7 +1587,7 @@ const Rest = () => {
           like this...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch_ch_x_displacement_and_x_radians_radian_definition.svg" />
+        <Image src="/build-img/svgo-svg/1763177677172941292.svg" />
         <Pause />
         <OuterP>
           ...with the input appearing as a radian.
@@ -1608,14 +1608,14 @@ const Rest = () => {
             </NoBreak>
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch_5_ch_etaOver2_example_displacement_version.svg" />
+          <Image src="/build-img/svgo-svg/1763177677342927709.svg" />
           <Pause />
           <OuterP>
             ...like this, with the input appearing as a displacement,
             or else like this...
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch5_ch_etaOver2_example_angle_version.svg" />
+          <Image src="/build-img/svgo-svg/1763177677503910334.svg" />
           <Pause />
           <OuterP>
             ...with the input appearing as a radian.
@@ -1637,14 +1637,14 @@ const Rest = () => {
             </NoBreak>
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch5_ch_etaOver3_example_displacement_version.svg" />
+          <Image src="/build-img/svgo-svg/1763177677681917709.svg" />
           <Pause />
           <OuterP>
             ...like this, with the input appearing as a displacement,
             or else like this...
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch5_ch_etaOver3_example_angle_version.svg" />
+          <Image src="/build-img/svgo-svg/1763177677851927500.svg" />
           <Pause />
           <OuterP>
             ...with the input appearing as a radian.
@@ -1840,7 +1840,7 @@ const Rest = () => {
           family...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_that_family.svg" />
+        <Image src="/build-img/svgo-svg/1763177678031944917.svg" />
         <Pause />
         <OuterP>
           ...look like this.) Vice-versa, every point
@@ -1865,7 +1865,7 @@ const Rest = () => {
           following points:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_main_angles_first.svg" />
+        <Image src="/build-img/svgo-svg/1763177678525919167.svg" />
         <Pause />
         <OuterP>
           Here
@@ -1959,7 +1959,7 @@ const Rest = () => {
           triangles:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_main_angles_two_equilateral_triangles.svg" />
+        <Image src="/build-img/svgo-svg/1763177678862933709.svg" />
         <Pause />
         <OuterP>
           The first triangle implies that the the unique
@@ -2168,7 +2168,7 @@ const Rest = () => {
           drawn as follows (adding the angles in, as well):
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_main_angles_second.svg" />
+        <Image src="/build-img/svgo-svg/1763177679066935584.svg" />
         <Pause />
         <OuterP>
           <i>
@@ -2196,7 +2196,7 @@ const Rest = () => {
           {" "} In this case:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_main_angles_third.svg" />
+        <Image src="/build-img/svgo-svg/1763177679364915042.svg" />
       </Section>
       <Pause />
       <Section id="section-9">
@@ -2221,7 +2221,7 @@ const Rest = () => {
           because that is the definition of sin and cos:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_scaling_circle_1.svg" />
+        <Image src="/build-img/svgo-svg/1763177679683930875.svg" />
         <Pause />
         <OuterP>
           But say now that
@@ -2242,7 +2242,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_scaling_circle_r.svg" />
+        <Image src="/build-img/svgo-svg/1763177679835911250.svg" />
         <Pause />
         <OuterP>
           ...what are the coordinates of {" "}
@@ -2788,7 +2788,7 @@ const Rest = () => {
           (it's a scaled-up/down unit circle):
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_triangle_sequence_1.svg" />
+        <Image src="/build-img/svgo-svg/1763177679990963625.svg" />
         <Pause />
         <OuterP>
           If we assume {" "}
@@ -2809,7 +2809,7 @@ const Rest = () => {
           the sidelengths of a right triangle:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_triangle_sequence_2.svg" />
+        <Image src="/build-img/svgo-svg/1763177680183902000.svg" />
         <Pause />
         <OuterP>
           If we rebrand the three legs of the triangle
@@ -2823,19 +2823,19 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_triangle_sequence_rebranded.svg" />
+        <Image src="/build-img/svgo-svg/1763177680363927875.svg" />
         <Pause />
         <OuterP>
           ...the relationship can be written:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_relationships_of_note.svg" />
+        <Image src="/build-img/svgo-svg/1763177680566923250.svg" />
         <Pause />
         <OuterP>
           To be paired with this figure:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_relationships_of_note_triangle_version.svg" />
+        <Image src="/build-img/svgo-svg/1763177681679918292.svg" />
         <Pause />
         <OuterP>
           The arrows are meant to indicate that {" "}
@@ -2875,7 +2875,7 @@ const Rest = () => {
             In the following diagram...
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch5_ch_example_multiplications_1.svg" />
+          <Image src="/build-img/svgo-svg/1763177682267569584.svg" />
           <Pause />
           <OuterP>
             ...the length of the side marked ‘?’ is
@@ -2909,7 +2909,7 @@ const Rest = () => {
             In the following diagram...
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch5_ch_example_multiplications_2.svg" />
+          <Image src="/build-img/svgo-svg/1763177682436542042.svg" />
           <Pause />
           <OuterP>
             ...the length of the side marked ‘?’ is
@@ -2947,7 +2947,7 @@ const Rest = () => {
           two right triangles:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_snail_stack_1.svg" />
+        <Image src="/build-img/svgo-svg/1763177682617580584.svg" />
         <Pause />
         <OuterP>
           Rotate a copy of the smaller
@@ -2959,7 +2959,7 @@ const Rest = () => {
           we end up with two pairs of parallel sides:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_snail_stack_2.svg" />
+        <Image src="/build-img/svgo-svg/1763177682766553500.svg" />
         <Pause />
         <OuterP>
           Therefore, if we snap a scaled copy of the
@@ -2976,7 +2976,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_snail_stack_3.svg" />
+        <Image src="/build-img/svgo-svg/1763177682990542417.svg" />
         <Pause />
         <OuterP>
           We finish off the diagram by setting the
@@ -2990,7 +2990,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_snail_stack_4.svg" />
+        <Image src="/build-img/svgo-svg/1763177683177543709.svg" />
         <Pause />
         <OuterP>
           This completes the diagram. Note that it is
@@ -3012,7 +3012,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_snail_stack_greater_eta.svg" />
+        <Image src="/build-img/svgo-svg/1763177683344534500.svg" />
         <Pause />
         <OuterP>
           ...but, by construction, {" "}
@@ -3058,7 +3058,7 @@ const Rest = () => {
           sides of the angle that clears the arc:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_abercrombie_statement.svg" />
+        <Image src="/build-img/svgo-svg/1763177683507550000.svg" />
         <Pause />
         <OuterP>
           The eponymous
@@ -3101,7 +3101,7 @@ const Rest = () => {
           pictured in this stylized view of the number line:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_abercrombie_to_the_left.svg" />
+        <Image src="/build-img/svgo-svg/1763177683657568292.svg" />
         <Pause />
         <OuterP>
           In the space between {" "}
@@ -3124,7 +3124,7 @@ const Rest = () => {
           approximating the arc...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_abercrombie_with_P.svg" />
+        <Image src="/build-img/svgo-svg/1763177683855543459.svg" />
         <Pause />
         <OuterP>
           ...because such polygonal lines can
@@ -3153,14 +3153,14 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_abercrombie_shadows.svg" />
+        <Image src="/build-img/svgo-svg/1763177684085540042.svg" />
         <Pause />
         <OuterP>
           ...this last claim follows from the following
           diagram:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_abercrombie_s1s2p1p2.svg" />
+        <Image src="/build-img/svgo-svg/1763177684328526209.svg" />
         <Pause />
         <OuterP>
           The point is that
@@ -3248,7 +3248,7 @@ const Rest = () => {
           of values...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_abercrombie_to_the_left_second.svg" />
+        <Image src="/build-img/svgo-svg/1763177684560540375.svg" />
         <Pause />
         <OuterP>
           ...on the number line is an impossibility,
@@ -3471,7 +3471,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_fisher_first_ineq.svg" />
+        <Image src="/build-img/svgo-svg/1763177684737548250.svg" />
         <Pause />
         <OuterP>
           Namely, per the one slightly pedantic logic,
@@ -3534,7 +3534,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_fisher_second_ineq.svg" />
+        <Image src="/build-img/svgo-svg/1763177684921563750.svg" />
         <Pause />
         <OuterP>
           Specifically,
@@ -3619,7 +3619,7 @@ const Rest = () => {
           four other outer edges precisely once:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_1.svg" />
+        <Image src="/build-img/svgo-svg/1763177685111538750.svg" />
         <Pause />
         <OuterP>
           (Note by the way that {" "}
@@ -3696,7 +3696,7 @@ const Rest = () => {
           sums or differences of the four outer edges:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_2.svg" />
+        <Image src="/build-img/svgo-svg/1763177685371550000.svg" />
         <Pause />
         <OuterP>
           (Or with {" "}
@@ -3708,7 +3708,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_3.svg" />
+        <Image src="/build-img/svgo-svg/1763177685668536917.svg" />
         <Pause />
         <OuterP>
           ...works as well!)
@@ -3717,7 +3717,7 @@ const Rest = () => {
           In other words, we find...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_formulas_flowers.svg" />
+        <Image src="/build-img/svgo-svg/1763177685898545042.svg" />
         <Pause />
         <OuterP>
           ...for {" "}
@@ -3766,7 +3766,7 @@ const Rest = () => {
           note the “pattern” of the angle-sum formulas:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_angle_sum_formulas_by_heart.svg" />
+        <Image src="/build-img/svgo-svg/1763177686592551334.svg" />
         <Pause />
         <OuterP>
           The point of remembering these patterns
@@ -3796,7 +3796,7 @@ const Rest = () => {
           are hereby drawn:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_missing_arrows_veiled.svg" />
+        <Image src="/build-img/svgo-svg/1763177687019550375.svg" />
         <Pause />
         <OuterP>
           In fact, there is a dedicated, named function
@@ -3805,7 +3805,7 @@ const Rest = () => {
           functions (!!):
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_missing_arrows_unveiled.svg" />
+        <Image src="/build-img/svgo-svg/1763177687185561250.svg" />
         <Pause />
         <OuterP>
           Here
@@ -4004,7 +4004,7 @@ const Rest = () => {
           figure:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_secant_reinterpretation_1.svg" />
+        <Image src="/build-img/svgo-svg/1763177687354558209.svg" />
         <Pause />
         <OuterP>
           Indeed, the scaling factor that is needed
@@ -4045,14 +4045,14 @@ const Rest = () => {
           (After all, this multiplicative factor...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_secant_reinterpretation_2.svg" />
+        <Image src="/build-img/svgo-svg/1763177687519593792.svg" />
         <Pause />
         <OuterP>
           ...was always going to equal
           this multiplicative factor...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_secant_reinterpretation_3.svg" />
+        <Image src="/build-img/svgo-svg/1763177687677543959.svg" />
         <Pause />
         <OuterP>
           ...given that the target segment has length {" "}
@@ -4089,7 +4089,7 @@ const Rest = () => {
           {" "} triangle below:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch5_ch_secant_reinterpretation_4.svg" />
+        <Image src="/build-img/svgo-svg/1763177687841542500.svg" />
         <Pause />
         <OuterP>
           (But this fact is not used as often.)
@@ -4251,7 +4251,7 @@ const Rest = () => {
               Guesstimate a function with this graph:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4.svg" />
+            <Image src="/build-img/svgo-svg/1763177688028557875.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -4260,7 +4260,7 @@ const Rest = () => {
               diagram:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg" />
+            <Image src="/build-img/svgo-svg/1763177688189552125.svg" />
             <Pause />
             <OuterP>
               (Or in the technical sense of taking the sum
@@ -4313,11 +4313,11 @@ const Rest = () => {
               function:
               <ImageLeft
                 line={-2}
-                src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
-               />
+                src="/build-img/svgo-svg/1763177688374557584.svg"
+              />
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg" />
+            <Image src="/build-img/svgo-svg/1763177688572543292.svg" />
             <Pause />
             <OuterP>
               As cos goes through {" "}
@@ -4343,7 +4343,7 @@ const Rest = () => {
                 <Math>
                   $10$
                 </Math>
-                &amp;#x200b;
+                &#x200b;
               </NoBreak>
               <NoBreak>
                 <Math>
@@ -4391,8 +4391,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
-             />
+              src="/build-img/svgo-svg/1763177688780551542.svg"
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -4404,8 +4404,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg"
-             />
+              src="/build-img/svgo-svg/1763177688932560959.svg"
+            />
             <Pause />
             <OuterP>
               [Nb:
@@ -4543,8 +4543,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg"
-             />
+              src="/build-img/svgo-svg/1763177689099551542.svg"
+            />
             <Pause />
             <OuterP>
               ...so...
@@ -4597,8 +4597,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg"
-             />
+              src="/build-img/svgo-svg/1763177689264545584.svg"
+            />
             <Pause />
             <OuterP>
               That increase being entirely due to the term
@@ -4678,8 +4678,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg"
-             />
+              src="/build-img/svgo-svg/1763177689477555292.svg"
+            />
             <Pause />
             <OuterP>
               Moreover at {" "}
@@ -4783,8 +4783,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg"
-             />
+              src="/build-img/svgo-svg/1763177689658575542.svg"
+            />
             <Pause />
             <OuterP>
               So an estimate for the
@@ -4823,7 +4823,7 @@ const Rest = () => {
               Guesstimate a function with this graph:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_wave.svg" />
+            <Image src="/build-img/svgo-svg/1763177689924559459.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -4831,7 +4831,7 @@ const Rest = () => {
               curve in purple:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_wave_purple.svg" />
+            <Image src="/build-img/svgo-svg/1763177690068543959.svg" />
             <Pause />
             <OuterP>
               It appears to be a linear function (line through
@@ -4845,7 +4845,7 @@ const Rest = () => {
               draw a line between them and estimate the slope:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_wave_purple_blue_with_1_4.svg" />
+            <Image src="/build-img/svgo-svg/1763177690245536084.svg" />
             <Pause />
             <OuterP>
               This makes the linear function portion of the purple
@@ -4871,7 +4871,7 @@ const Rest = () => {
               we won't be able to see where we're measuring):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_wave_purple_blue_with_height.svg" />
+            <Image src="/build-img/svgo-svg/1763177690452555709.svg" />
             <Pause />
             <OuterP>
               So it appears that the sinusoid has a total height
@@ -4888,7 +4888,7 @@ const Rest = () => {
               to measure the vertical width of this blue band...
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_wave_purple_blue_with_band.svg" />
+            <Image src="/build-img/svgo-svg/1763177690638543209.svg" />
             <Pause />
             <OuterP>
               ...that, indeed, seems near {" "}
@@ -4924,7 +4924,7 @@ const Rest = () => {
               that “purple curve” retains its unique meaning):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_wave_purple_sinusoid_only.svg" />
+            <Image src="/build-img/svgo-svg/1763177690851538084.svg" />
             <Pause />
             <OuterP>
               This graph has the form
@@ -4957,8 +4957,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_big_wave_minus_sin_x.svg"
-             />
+              src="/build-img/svgo-svg/1763177691013542625.svg"
+            />
             <Pause />
             <OuterP>
               ...and that
@@ -4974,7 +4974,7 @@ const Rest = () => {
               has graph...
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_wave_minus_2sin_x.svg" />
+            <Image src="/build-img/svgo-svg/1763177691166568209.svg" />
             <Pause />
             <OuterP>
               ...and, from there, all that remains is to
@@ -5000,7 +5000,7 @@ const Rest = () => {
               the top of each large-scale bump):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_wave_purple_blue_period_measurement.svg" />
+            <Image src="/build-img/svgo-svg/1763177691317561375.svg" />
             <Pause />
             <OuterP>
               As
@@ -5082,7 +5082,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_wave_purple_small_scale_bump_count.svg" />
+            <Image src="/build-img/svgo-svg/1763177691520543042.svg" />
             <Pause />
             <OuterP>
               So the small-scale oscillation is running
@@ -5184,14 +5184,14 @@ const Rest = () => {
               </tbody>
             </table>
             <Pause />
-            <Image src="/images/svg_ch5_ex_four_graphs.svg" />
+            <Image src="/build-img/svgo-svg/1763177691724573792.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
               The culprits are:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_four_graphs_labeled.svg" />
+            <Image src="/build-img/svgo-svg/1763177691914621084.svg" />
             <Pause />
             <OuterP>
               For reference (if you need help checking), the
@@ -5206,9 +5206,9 @@ const Rest = () => {
               {" "} are as follows:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_four_graphs_cos.svg" />
+            <Image src="/build-img/svgo-svg/1763177692130510584.svg" />
             <Pause />
-            <Image src="/images/svg_ch5_ex_four_graphs_sin.svg" />
+            <Image src="/build-img/svgo-svg/1763177692281584375.svg" />
             <Pause />
             <OuterP>
               (Then imagine summing together, squaring, etc.)
@@ -5296,13 +5296,13 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:1.1em;margin-bottom:1.1em;"
-              src="/images/svg_ch5_ex_pythagorean_graphs_sin2.svg"
-             />
+              src="/build-img/svgo-svg/1763177692432624125.svg"
+            />
             <Pause />
             <Image
               style="margin-top:1.1em;margin-bottom:1.1em;"
-              src="/images/svg_ch5_ex_pythagorean_graphs_cos2.svg"
-             />
+              src="/build-img/svgo-svg/1763177692599541042.svg"
+            />
             <Pause />
             <OuterP>
               After vertically flipping the cutout
@@ -5324,8 +5324,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:1.1em;margin-bottom:1.1em;"
-              src="/images/svg_ch5_ex_pythagorean_graphs_compounded.svg"
-             />
+              src="/build-img/svgo-svg/1763177692791526750.svg"
+            />
             <Pause />
             <OuterP>
               And this occurs because
@@ -5366,8 +5366,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="width:500px;margin-top:1em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_big_snail.svg"
-             />
+              src="/build-img/svgo-svg/1763177692981537709.svg"
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -5377,7 +5377,7 @@ const Rest = () => {
               ratio over and over again:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_snail_quad.svg" />
+            <Image src="/build-img/svgo-svg/1763177693156527917.svg" />
             <Pause />
             <OuterP>
               But the two triangles involved are
@@ -5397,7 +5397,7 @@ const Rest = () => {
               functions. Specifically, as per this drawing:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_snail_quad_four_parts.svg" />
+            <Image src="/build-img/svgo-svg/1763177693310565917.svg" />
             <Pause />
             <OuterP>
               The multiplicative ratios that correspond to the
@@ -5590,8 +5590,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1em;"
-                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg"
-               />
+                src="/build-img/svgo-svg/1763177693466552417.svg"
+              />
               <Pause />
               <OuterP>
                 The key to measuring this
@@ -5613,8 +5613,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1em;"
-                src="/images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg"
-               />
+                src="/build-img/svgo-svg/1763177693640542667.svg"
+              />
               <Pause />
               <OuterP>
                 Then we can calculate the purple angle as
@@ -5714,8 +5714,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:1em;margin-bottom:0.5em;"
-              src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg"
-             />
+              src="/build-img/svgo-svg/1763177693813580375.svg"
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -5762,10 +5762,10 @@ const Rest = () => {
               r\cdot\cos(\phi)
               $$
               <ImageRight
-                src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg"
+                src="/build-img/svgo-svg/1763177693976545667.svg"
                 offset_x="5.5em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -5786,10 +5786,10 @@ const Rest = () => {
               r\cdot\sin(\phi)
               $$
               <ImageLeft
-                src="/images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg"
+                src="/build-img/svgo-svg/1763177694121535417.svg"
                 offset_x="7.5em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -5943,10 +5943,10 @@ const Rest = () => {
               \,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
               $$
               <ImageRight
-                src="/images/svg_ch5_ex_vector_sum_101_cloud.svg"
+                src="/build-img/svgo-svg/1763177694300548500.svg"
                 offset_x="1em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -6063,7 +6063,7 @@ const Rest = () => {
                 respectively:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_vector_sum_vectors.svg" />
+              <Image src="/build-img/svgo-svg/1763177694475558417.svg" />
               <Pause />
               <OuterP>
                 Then
@@ -6090,7 +6090,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_vector_sum_ux_plus_vx.svg" />
+              <Image src="/build-img/svgo-svg/1763177694631543750.svg" />
               <Pause />
               <OuterP>
                 ...component displacements, while
@@ -6117,7 +6117,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_vector_sum_uy_plus_vy.svg" />
+              <Image src="/build-img/svgo-svg/1763177694804549750.svg" />
               <Pause />
               <OuterP>
                 ...component displacements; moreover, both
@@ -6134,7 +6134,7 @@ const Rest = () => {
                 arrows...
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_vector_sum_u_concat_v.svg" />
+              <Image src="/build-img/svgo-svg/1763177694965545667.svg" />
               <Pause />
               <OuterP>
                 ...which actually implies that {" "}
@@ -6162,7 +6162,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_vector_sum_u_plus_v.svg" />
+              <Image src="/build-img/svgo-svg/1763177695142548542.svg" />
               <Pause />
               <OuterP>
                 This makes a mess, but the point is that this
@@ -6212,8 +6212,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:1em;margin-bottom:0.8em;"
-                src="/images/svg_ch5_ex_vector_sum_previous_example.svg"
-               />
+                src="/build-img/svgo-svg/1763177695321540375.svg"
+              />
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -6548,13 +6548,13 @@ const Rest = () => {
               diagram illustrates the two possibilities:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg" />
+            <Image src="/build-img/svgo-svg/1763177695545562709.svg" />
             <Pause />
             <OuterP>
               (Or... ~ ~ ~ ~ ~ ~ ~ ~ ~
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg" />
+            <Image src="/build-img/svgo-svg/1763177695808527834.svg" />
             <Pause />
             <OuterP>
               ...to put everything in terms of
@@ -6580,7 +6580,7 @@ const Rest = () => {
                 than two solutions, picture this diagram...
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_Bt_plus_C_black_on_white.svg" />
+              <Image src="/build-img/svgo-svg/1763177696089526500.svg" />
               <Pause />
               <OuterP>
                 ...and imagine the vertical line scanning
@@ -6737,7 +6737,7 @@ const Rest = () => {
               {" "} radians?
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_0_2_radians_guess.svg" />
+            <Image src="/build-img/svgo-svg/1763177696264557792.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -6772,8 +6772,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:1em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_0_2_radians_guess_answer.svg"
-             />
+              src="/build-img/svgo-svg/1763177696396551209.svg"
+            />
             <Pause />
             <OuterP>
               If you zoom in
@@ -6802,8 +6802,8 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:1em;margin-bottom:1em;"
-              src="/images/svg_ch5_ex_0_2_radians_guess_joke.svg"
-             />
+              src="/build-img/svgo-svg/1763177696536569542.svg"
+            />
             <Pause />
             <OuterP>
               (Joking.)
@@ -6968,7 +6968,7 @@ const Rest = () => {
               outside, in a time-space porthole of its own):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_11_over_7_longhand_eloise.svg" />
+            <Image src="/build-img/svgo-svg/1763177696680579459.svg" />
             <Pause />
             <OuterP>
               The division stops when we see the same
@@ -7056,8 +7056,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.4em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg"
-               />
+                src="/build-img/svgo-svg/1763177696870543125.svg"
+              />
               <Pause />
               <OuterP>
                 We take the first digit of the numerator,
@@ -7087,8 +7087,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg"
-               />
+                src="/build-img/svgo-svg/1763177697073540834.svg"
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -7121,8 +7121,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg"
-               />
+                src="/build-img/svgo-svg/1763177697262180406.svg"
+              />
               <Pause />
               <OuterP>
                 We next add a digit from the numerator, giving
@@ -7150,8 +7150,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg"
-               />
+                src="/build-img/svgo-svg/1763177697436175756.svg"
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -7184,8 +7184,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg"
-               />
+                src="/build-img/svgo-svg/1763177697609204755.svg"
+              />
               <Pause />
               <OuterP>
                 We subtract
@@ -7238,8 +7238,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg"
-               />
+                src="/build-img/svgo-svg/1763177697779186165.svg"
+              />
               <Pause />
               <OuterP>
                 Because {" "}
@@ -7279,8 +7279,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg"
-               />
+                src="/build-img/svgo-svg/1763177697954158115.svg"
+              />
               <Pause />
               <OuterP>
                 We ask “how many times does {" "}
@@ -7300,8 +7300,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg"
-               />
+                src="/build-img/svgo-svg/1763177698134176314.svg"
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -7334,8 +7334,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg"
-               />
+                src="/build-img/svgo-svg/1763177698306181048.svg"
+              />
               <Pause />
               <OuterP>
                 We subtract
@@ -7389,8 +7389,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg"
-               />
+                src="/build-img/svgo-svg/1763177698480174607.svg"
+              />
               <Pause />
               <OuterP>
                 Because {" "}
@@ -7421,8 +7421,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
-                src="/images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg"
-               />
+                src="/build-img/svgo-svg/1763177698655182098.svg"
+              />
               <Pause />
               <OuterP>
                 (Etc.)
@@ -7456,7 +7456,7 @@ const Rest = () => {
               remainders repeat, look as follows:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_22_and_33_and_44_over_7_combined_longhands.svg" />
+            <Image src="/build-img/svgo-svg/1763177698839178490.svg" />
             <Pause />
             <OuterP>
               From which...
@@ -7738,7 +7738,7 @@ const Rest = () => {
               the “last remainder”):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_big_division.svg" />
+            <Image src="/build-img/svgo-svg/1763177699066192844.svg" />
             <Pause />
             <OuterP>
               Said quotient is
@@ -7800,7 +7800,7 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_1.svg" />
+              <Image src="/build-img/svgo-svg/1763177699278173202.svg" />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -7824,7 +7824,7 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_2.svg" />
+              <Image src="/build-img/svgo-svg/1763177699464181376.svg" />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -7850,7 +7850,7 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_3.svg" />
+              <Image src="/build-img/svgo-svg/1763177699653182351.svg" />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -7876,7 +7876,7 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_4.svg" />
+              <Image src="/build-img/svgo-svg/1763177699865183832.svg" />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -7902,14 +7902,14 @@ const Rest = () => {
                 the remainder:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_4b.svg" />
+              <Image src="/build-img/svgo-svg/1763177700051175965.svg" />
               <Pause />
               <OuterP>
                 (FYI, the remainder now consists of these yellow
                 digits:)
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_4remainder.svg" />
+              <Image src="/build-img/svgo-svg/1763177700256176538.svg" />
               <Pause />
               <OuterP>
                 Continuing, we bring down a {" "}
@@ -7934,7 +7934,7 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_5b_v2.svg" />
+              <Image src="/build-img/svgo-svg/1763177700451172071.svg" />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -7967,7 +7967,7 @@ const Rest = () => {
                 here:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_6b_v2.svg" />
+              <Image src="/build-img/svgo-svg/1763177700645169170.svg" />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8000,7 +8000,7 @@ const Rest = () => {
                 here:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_7b_v2.svg" />
+              <Image src="/build-img/svgo-svg/1763177700841173469.svg" />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8033,7 +8033,7 @@ const Rest = () => {
                 here:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_8b_v2.svg" />
+              <Image src="/build-img/svgo-svg/1763177701040264733.svg" />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8058,14 +8058,14 @@ const Rest = () => {
                 {" "} giving us a new remainder:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_8c.svg" />
+              <Image src="/build-img/svgo-svg/1763177701238182358.svg" />
               <Pause />
               <OuterP>
                 (And to be specific, the remainder is now formed
                 by...
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_inside_8remainder.svg" />
+              <Image src="/build-img/svgo-svg/1763177701440170174.svg" />
               <Pause />
               <OuterP>
                 ...these yellow digits.) Etc.
@@ -8082,7 +8082,7 @@ const Rest = () => {
                 long-form subtraction, say your subtraction is this:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_a.svg" />
+              <Image src="/build-img/svgo-svg/1763177701636170098.svg" />
               <Pause />
               <OuterP>
                 You can either treat the top or bottom number as an
@@ -8095,7 +8095,7 @@ const Rest = () => {
                 would be as follows:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_odometer_1.svg" />
+              <Image src="/build-img/svgo-svg/1763177701811160006.svg" />
               <Pause />
               <OuterP>
                 Starting from the right end of the subtraction, we ask
@@ -8120,7 +8120,7 @@ const Rest = () => {
                 will write the answer below:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_c.svg" />
+              <Image src="/build-img/svgo-svg/1763177701958206406.svg" />
               <Pause />
               <OuterP>
                 The answer is: {" "}
@@ -8134,7 +8134,7 @@ const Rest = () => {
                 say):
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_d.svg" />
+              <Image src="/build-img/svgo-svg/1763177702132192048.svg" />
               <Pause />
               <OuterP>
                 But the odometer will pass
@@ -8196,7 +8196,7 @@ const Rest = () => {
                 {" "} as some teachers put it):
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_e.svg" />
+              <Image src="/build-img/svgo-svg/1763177702304179949.svg" />
               <Pause />
               <OuterP>
                 Next we ask “by how many {" "}
@@ -8228,7 +8228,7 @@ const Rest = () => {
                 will write the answer below:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_f.svg" />
+              <Image src="/build-img/svgo-svg/1763177702476172474.svg" />
               <Pause />
               <OuterP>
                 The answer is: {" "}
@@ -8246,7 +8246,7 @@ const Rest = () => {
                 {" "} of miles]:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_g.svg" />
+              <Image src="/build-img/svgo-svg/1763177702656169049.svg" />
               <Pause />
               <OuterP>
                 But here too the odometer will pass
@@ -8285,7 +8285,7 @@ const Rest = () => {
                 effect:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_h.svg" />
+              <Image src="/build-img/svgo-svg/1763177702832169808.svg" />
               <Pause />
               <OuterP>
                 Next we ask “by how many {" "}
@@ -8317,7 +8317,7 @@ const Rest = () => {
                 will write the answer below:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_i.svg" />
+              <Image src="/build-img/svgo-svg/1763177703014172624.svg" />
               <Pause />
               <OuterP>
                 The answer is: {" "}
@@ -8335,7 +8335,7 @@ const Rest = () => {
                 {" "} of miles]:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_j.svg" />
+              <Image src="/build-img/svgo-svg/1763177703193177057.svg" />
               <Pause />
               <OuterP>
                 Next we ask “by how many {" "}
@@ -8365,7 +8365,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_k.svg" />
+              <Image src="/build-img/svgo-svg/1763177703372163907.svg" />
               <Pause />
               <OuterP>
                 The answer is: {" "}
@@ -8383,7 +8383,7 @@ const Rest = () => {
                 {" "} of miles]:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_big_subtraction_l.svg" />
+              <Image src="/build-img/svgo-svg/1763177703564182847.svg" />
               <Pause />
               <OuterP>
                 Etc—we finally obtain:
@@ -8391,8 +8391,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:1em;margin-bottom:1em;"
-                src="/images/svg_ch5_ex_big_division_big_subtraction_final.svg"
-               />
+                src="/build-img/svgo-svg/1763177703748165489.svg"
+              />
               <Pause />
               <OuterP>
                 (And like we alluded to above, one can also
@@ -8412,7 +8412,7 @@ const Rest = () => {
                 Generally,
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_big_division_remainder_equation.svg" />
+              <Image src="/build-img/svgo-svg/1763177703932176922.svg" />
               <Pause />
               <OuterP>
                 at any point in a long division after the
@@ -8440,7 +8440,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_angle_sum_180.svg" />
+            <Image src="/build-img/svgo-svg/1763177704139173403.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -8531,7 +8531,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_maximum_of_sin_plus_cos.svg" />
+            <Image src="/build-img/svgo-svg/1763177704262167407.svg" />
             <Pause />
             <OuterP>
               What is this maximum value, and for which
@@ -8579,9 +8579,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/images/svg_ch5_ex_x_plus_y_options.svg"
+              src="/build-img/svgo-svg/1763177704431163007.svg"
               style="background-color:#fdfdfd"
-             />
+            />
             <Pause />
             <OuterP>
               Either way, the upshot is that the sum
@@ -8620,7 +8620,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_x_plus_y_intersections.svg" />
+            <Image src="/build-img/svgo-svg/1763177704638166447.svg" />
             <Pause />
             <OuterP>
               (By the way: when we say “line of angle
@@ -8676,7 +8676,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_x_plus_y_rainbow.svg" />
+            <Image src="/build-img/svgo-svg/1763177704808188313.svg" />
             <Pause />
             <OuterP>
               If we are confined to some region of the plane
@@ -8738,7 +8738,7 @@ const Rest = () => {
               {" "} (!!!!):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_x_plus_y_eta_over_2.svg" />
+            <Image src="/build-img/svgo-svg/1763177705079181817.svg" />
             <Pause />
             <OuterP>
               ...or with any multiple of {" "}
@@ -8856,7 +8856,7 @@ const Rest = () => {
                 can also be seen from this diagram...
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_x_plus_y_pythagoras.svg" />
+              <Image src="/build-img/svgo-svg/1763177705250216574.svg" />
               <Pause />
               <OuterP>
                 ...which is an application of the Pythagorean
@@ -8933,7 +8933,7 @@ const Rest = () => {
                 {" "} etc:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_maximum_of_sin_plus_cos_with_answer.svg" />
+              <Image src="/build-img/svgo-svg/1763177705431173292.svg" />
               <Pause />
               <OuterP>
                 (Note that
@@ -8980,7 +8980,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_angle_sum_180_followup.svg" />
+            <Image src="/build-img/svgo-svg/1763177705602182342.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -8996,7 +8996,7 @@ const Rest = () => {
               of my complement is myself”:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_angle_sum_180_followup_explanation.svg" />
+            <Image src="/build-img/svgo-svg/1763177705736246692.svg" />
             <Pause />
             <OuterP>
               Another method of deduction uses the fact that,
@@ -9024,7 +9024,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_angle_sum_180_followup_explanation_2.svg" />
+            <Image src="/build-img/svgo-svg/1763177705891173229.svg" />
             <Pause />
             <OuterP>
               (In one case we use the fact that the
@@ -9055,7 +9055,7 @@ const Rest = () => {
               the center of the circle:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tangent_angle_v2.svg" />
+            <Image src="/build-img/svgo-svg/1763177706064181853.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9069,7 +9069,7 @@ const Rest = () => {
               respectively, of the central angle:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tangent_angle_explanation_v2.svg" />
+            <Image src="/build-img/svgo-svg/1763177706265830386.svg" />
             <Pause />
             <OuterP>
               The angle marked ‘?’ is therefore obtained
@@ -9102,7 +9102,7 @@ const Rest = () => {
                 {" "} to:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_tangent_angle_explanation_other_quadrants.svg" />
+              <Image src="/build-img/svgo-svg/1763177706469177251.svg" />
               <Pause />
               <OuterP>
                 Verbalized: {" "}
@@ -9128,7 +9128,7 @@ const Rest = () => {
                 are illustrated here:)
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg" />
+              <Image src="/build-img/svgo-svg/1763177706747204328.svg" />
             </SolutionNote>
             <Pause />
             <StarDivider />
@@ -9144,7 +9144,7 @@ const Rest = () => {
               If each of these dotted lines...
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_x_plus_y_isosets.svg" />
+            <Image src="/build-img/svgo-svg/1763177707038275913.svg" />
             <Pause />
             <OuterP>
               ...is a so-called
@@ -9318,7 +9318,7 @@ const Rest = () => {
               different random ones):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_xy_isosets.svg" />
+            <Image src="/build-img/svgo-svg/1763177707317201885.svg" />
             <Pause />
             <OuterP>
               Note that each isoset consists of the union of TWO
@@ -9476,7 +9476,7 @@ const Rest = () => {
               quadrants:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_rainbow.svg" />
+            <Image src="/build-img/svgo-svg/1763177707551208690.svg" />
             <Pause />
             <OuterP>
               Of particular interest to us: at a given
@@ -9499,7 +9499,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_fixed_distance.svg" />
+            <Image src="/build-img/svgo-svg/1763177707845243992.svg" />
             <Pause />
             <OuterP>
               In particular,
@@ -9550,7 +9550,7 @@ const Rest = () => {
               as per this illustration...
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_max_xy_angles.svg" />
+            <Image src="/build-img/svgo-svg/1763177708153164112.svg" />
             <Pause />
             <OuterP>
               ...and the maximum value of
@@ -9665,7 +9665,7 @@ const Rest = () => {
                 given in Exercise 4:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_max_xy_graph.svg" />
+              <Image src="/build-img/svgo-svg/1763177708419324655.svg" />
               <Pause />
               <StarDivider />
             </SolutionNote>
@@ -9689,8 +9689,8 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:1em;margin-bottom:1em;"
-                src="/images/svg_ch5_ex_max_xy_example_isoset.svg"
-               />
+                src="/build-img/svgo-svg/1763177708605189624.svg"
+              />
             </SolutionNote>
             <Pause />
             <SolutionNote>
@@ -9803,7 +9803,7 @@ const Rest = () => {
                 illustrated here:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_max_xy_2x_scaling_v2.svg" />
+              <Image src="/build-img/svgo-svg/1763177708861196712.svg" />
               <Pause />
               <OuterP>
                 More generally, the curve
@@ -10108,7 +10108,7 @@ const Rest = () => {
                 about that line:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_max_xy_mirror_image.svg" />
+              <Image src="/build-img/svgo-svg/1763177709109228665.svg" />
               <Pause />
               <OuterP>
                 Note that, technically, a set {" "}
@@ -10169,7 +10169,7 @@ const Rest = () => {
                 Illustrated:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_max_xy_mirror_image_with_x0_y0.svg" />
+              <Image src="/build-img/svgo-svg/1763177709294223323.svg" />
               <Pause />
               <OuterP>
                 In our case, a point {" "}
@@ -10246,7 +10246,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_max_xy_mirror_image_other_way.svg" />
+              <Image src="/build-img/svgo-svg/1763177709523187255.svg" />
               <Pause />
               <OuterP>
                 Indeed, this symmetry can be obtained as the
@@ -10265,7 +10265,7 @@ const Rest = () => {
                 symmetry:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_max_xy_mirror_image_other_way_explanation.svg" />
+              <Image src="/build-img/svgo-svg/1763177709695162156.svg" />
               <Pause />
               <OuterP>
                 In other words, any set that is symmetric through
@@ -10308,7 +10308,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio.svg" />
+            <Image src="/build-img/svgo-svg/1763177709902196387.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -10330,7 +10330,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_height_C.svg" />
+            <Image src="/build-img/svgo-svg/1763177710043278853.svg" />
             <Pause />
             <OuterP>
               On the one hand, {" "}
@@ -10342,7 +10342,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_left_part.svg" />
+            <Image src="/build-img/svgo-svg/1763177710189193240.svg" />
             <Pause />
             <OuterP>
               On the other hand, {" "}
@@ -10359,7 +10359,7 @@ const Rest = () => {
               the middle-sized right triangle):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_right_part.svg" />
+            <Image src="/build-img/svgo-svg/1763177710364182357.svg" />
             <Pause />
             <OuterP>
               The answer is therefore:
@@ -10402,7 +10402,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg" />
+            <Image src="/build-img/svgo-svg/1763177710535167533.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -10432,7 +10432,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_D.svg" />
+            <Image src="/build-img/svgo-svg/1763177710692201099.svg" />
             <Pause />
             <OuterP>
               On the one hand, {" "}
@@ -10444,7 +10444,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_left_part.svg" />
+            <Image src="/build-img/svgo-svg/1763177710841196867.svg" />
             <Pause />
             <OuterP>
               On the other hand, {" "}
@@ -10457,7 +10457,7 @@ const Rest = () => {
               {" "} also (!?):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_right_part_shrunk.svg" />
+            <Image src="/build-img/svgo-svg/1763177711033140601.svg" />
             <Pause />
             <OuterP>
               Thus:
@@ -10500,7 +10500,7 @@ const Rest = () => {
               Exercise 22:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg" />
+            <Image src="/build-img/svgo-svg/1763177711202159701.svg" />
             <Pause />
             <OuterP>
               We find:
@@ -10796,7 +10796,7 @@ const Rest = () => {
               function):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_four_compositions.svg" />
+            <Image src="/build-img/svgo-svg/1763177711347219859.svg" />
             <Pause />
             <OuterP>
               Rewrite each case:
@@ -11392,7 +11392,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg" />
+            <Image src="/build-img/svgo-svg/1763177711553250948.svg" />
             <Pause />
             <OuterP>
               ...it {" "}
@@ -11433,7 +11433,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg" />
+            <Image src="/build-img/svgo-svg/1763177711760173515.svg" />
             <Pause />
             <OuterP>
               It might therefore be that a translation
@@ -11461,7 +11461,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg" />
+            <Image src="/build-img/svgo-svg/1763177711964193780.svg" />
             <Pause />
             <OuterP>
               If true, this would indicate that
@@ -11831,7 +11831,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison.svg" />
+            <Image src="/build-img/svgo-svg/1763177712214220143.svg" />
             <Pause />
             <OuterP>
               If so, what scaling and translation operations,
@@ -11906,7 +11906,7 @@ const Rest = () => {
               {" "} either way):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_cos_and_cos2_comparison_transformations_1.svg" />
+            <Image src="/build-img/svgo-svg/1763177712423185117.svg" />
             <Pause />
             <OuterP>
               Algebraically, the three steps above turn
@@ -11949,10 +11949,10 @@ const Rest = () => {
               \Large\downarrow
               $$
               <ImageRight
-                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg"
+                src="/build-img/svgo-svg/1763177712720190844.svg"
                 offset_x="4em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <MathBlock>
@@ -11966,10 +11966,10 @@ const Rest = () => {
               \Large\downarrow
               $$
               <ImageRight
-                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg"
+                src="/build-img/svgo-svg/1763177712908194344.svg"
                 offset_x="4em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <MathBlock>
@@ -11983,10 +11983,10 @@ const Rest = () => {
               \Large\downarrow
               $$
               <ImageRight
-                src="/images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg"
+                src="/build-img/svgo-svg/1763177713101221300.svg"
                 offset_x="4em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <MathBlock>
@@ -12172,11 +12172,11 @@ const Rest = () => {
               \end&#123;align*&#125;
               $$
               <ImageLeft
-                src="/images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg"
+                src="/build-img/svgo-svg/1763177713289230050.svg"
                 offset_x="3.4em"
                 offset_y="3%"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -12444,7 +12444,7 @@ const Rest = () => {
               from which the following graphic is recovered:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_cos_to_sin_plus_cos_reminder.svg" />
+            <Image src="/build-img/svgo-svg/1763177713449190209.svg" />
             <Pause />
             <OuterP>
               (We have added the minimum at {" "}
@@ -13028,7 +13028,7 @@ const Rest = () => {
               ):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_polar_discovery.svg" />
+            <Image src="/build-img/svgo-svg/1763177713636239149.svg" />
             <Pause />
             <OuterP>
               In particular,
@@ -13171,7 +13171,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_polar_discovery_1_1.svg" />
+            <Image src="/build-img/svgo-svg/1763177713809209526.svg" />
             <Pause />
             <OuterP>
               (In fact, the fact that...
@@ -13183,9 +13183,9 @@ const Rest = () => {
                   \cos x + \sin x = \sqrt&#123;2&#125;\cdot\cos(x - \eta/2)
                   $$
                   <ImageRight
-                    src="/images/svg_ch5_ex_polar_discovery_cloud.svg"
+                    src="/build-img/svgo-svg/1763177713967185777.svg"
                     compensate_offset_x_for_large_text_columns={true}
-                   />
+                  />
                 </MathBlock>
               </div>
             </center>
@@ -13291,10 +13291,10 @@ const Rest = () => {
               \sin x\cos \psi + \cos x\sin \psi
               $$
               <ImageRight
-                src="/images/svg_ch5_ex_polar_discovery2_cloud.svg"
+                src="/build-img/svgo-svg/1763177714108190620.svg"
                 offset_x="8em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -13486,7 +13486,7 @@ const Rest = () => {
               echoes back to the first solution to Exercise 27:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_sec_powers_bounce.svg" />
+            <Image src="/build-img/svgo-svg/1763177714300174394.svg" />
             <Pause />
             <OuterP>
               Starting with a length of {" "}
@@ -13524,7 +13524,7 @@ const Rest = () => {
               of right triangles sharing a common vertex:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_sec_powers_snail.svg" />
+            <Image src="/build-img/svgo-svg/1763177714498215559.svg" />
             <Pause />
             <OuterP>
               Or if we move the angle {" "}
@@ -13537,7 +13537,7 @@ const Rest = () => {
               this one:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_sec_powers_inverted_towers.svg" />
+            <Image src="/build-img/svgo-svg/1763177714738166466.svg" />
             <Pause />
             <OuterP>
               We can also take a page from the geometric
@@ -13545,7 +13545,7 @@ const Rest = () => {
               the end of the chapter, and draw this figure:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_sec_powers_circles.svg" />
+            <Image src="/build-img/svgo-svg/1763177714924165724.svg" />
             <Pause />
             <OuterP>
               (In which we are effectively using a circular arc
@@ -13564,7 +13564,7 @@ const Rest = () => {
                 appearance within the second diagram (modulo scale):
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_sec_powers_bounce_cameo.svg" />
+              <Image src="/build-img/svgo-svg/1763177715154160879.svg" />
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -13585,24 +13585,24 @@ const Rest = () => {
               for secant, but go “in the other direction”:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_costan_powers_cos_bounce.svg" />
+            <Image src="/build-img/svgo-svg/1763177715326159696.svg" />
             <Pause />
             <Image
               style="margin-top:1.5em;"
-              src="/images/svg_ch5_ex_costan_powers_cos_snail.svg"
-             />
+              src="/build-img/svgo-svg/1763177715522161203.svg"
+            />
             <Pause />
-            <Image src="/images/svg_ch5_ex_costan_powers_cos_inverted_towers.svg" />
+            <Image src="/build-img/svgo-svg/1763177715697162487.svg" />
             <Pause />
-            <Image src="/images/svg_ch5_ex_costan_powers_circles.svg" />
+            <Image src="/build-img/svgo-svg/1763177715894163261.svg" />
             <Pause />
             <OuterP>
               For ‘tan’ it is possible to produce spirals:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_costan_powers_tan_48_big.svg" />
+            <Image src="/build-img/svgo-svg/1763177716147195631.svg" />
             <Pause />
-            <Image src="/images/svg_ch5_ex_costan_powers_tan_48_big_other_spiral.svg" />
+            <Image src="/build-img/svgo-svg/1763177716394166320.svg" />
             <Pause />
             <OuterP>
               There is also a staircase possibility (nb:
@@ -13616,7 +13616,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_costan_powers_tan_48_wedge.svg" />
+            <Image src="/build-img/svgo-svg/1763177716645161617.svg" />
             <Pause />
             <OuterP>
               We can also do as in the second spiral,
@@ -13628,7 +13628,7 @@ const Rest = () => {
               hypotenuses of the triangles...
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_costan_powers_tan_48_other_wedge.svg" />
+            <Image src="/build-img/svgo-svg/1763177716918171820.svg" />
             <Pause />
             <OuterP>
               ...since the size ratio of successive triangles
@@ -13660,9 +13660,9 @@ const Rest = () => {
                 Here are some examples of what we suggest at the
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_costan_powers_cos_snail_other_way.svg" />
+              <Image src="/build-img/svgo-svg/1763177717179152783.svg" />
               <Pause />
-              <Image src="/images/svg_ch5_ex_costan_powers_cos_towers_other_way.svg" />
+              <Image src="/build-img/svgo-svg/1763177717355138042.svg" />
               <Pause />
               <OuterP>
                 (To reiterate, this works because the triangles are all similar,
@@ -13716,7 +13716,7 @@ const Rest = () => {
                 E.g.:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_costan_powers_cot_48_big.svg" />
+              <Image src="/build-img/svgo-svg/1763177717551158757.svg" />
               <Pause />
               <OuterP>
                 Likewise, to illustrate powers of
@@ -13743,9 +13743,9 @@ const Rest = () => {
                 snail:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_costan_powers_sin_snail.svg" />
+              <Image src="/build-img/svgo-svg/1763177717810163019.svg" />
               <Pause />
-              <Image src="/images/svg_ch5_ex_costan_powers_sin_snail_other_way.svg" />
+              <Image src="/build-img/svgo-svg/1763177718000171135.svg" />
               <Pause />
               <OuterP>
                 (Likewise to switch from an illustration of {" "}
@@ -14058,7 +14058,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_cos_01x.svg" />
+              <Image src="/build-img/svgo-svg/1763177718193202842.svg" />
               <Pause />
               <OuterP>
                 (The label of the middle box is pasted diagonally
@@ -14079,14 +14079,14 @@ const Rest = () => {
                 additional gluing on the graph:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_cos_01x_2.svg" />
+              <Image src="/build-img/svgo-svg/1763177718373165751.svg" />
               <Pause />
               <OuterP>
                 On the other hand, if we perform the same
                 analysis on this alternate three-box sequence...
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_cos_01x_3.svg" />
+              <Image src="/build-img/svgo-svg/1763177718596177582.svg" />
               <Pause />
               <OuterP>
                 ...that also computes {" "}
@@ -14100,7 +14100,7 @@ const Rest = () => {
                 we recover our second solution:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_cos_01x_4.svg" />
+              <Image src="/build-img/svgo-svg/1763177718742170342.svg" />
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -14522,8 +14522,8 @@ const Rest = () => {
               this, you can't be faulted for missing it):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_one_over_A_secant_construction.svg">
-              <ImageRight src="/images/svg_ch5_ex_one_over_A_secant_construction_cloud.svg" />
+            <Image src="/build-img/svgo-svg/1763177718922209832.svg">
+              <ImageRight src="/build-img/svgo-svg/1763177719064166277.svg" />
             </Image>
             <Pause />
             <OuterP>
@@ -14550,7 +14550,7 @@ const Rest = () => {
               {" "} axis:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_one_over_A_secant_Agt1.svg" />
+            <Image src="/build-img/svgo-svg/1763177719235156577.svg" />
             <Pause />
             <OuterP>
               ...the position obtained is the corresponding
@@ -14565,7 +14565,7 @@ const Rest = () => {
               <Math>
                 $\cos(\theta)\cdot\sec(\theta) = 1$
               </Math>
-              {" "} &amp;#x2705;.
+              {" "} &#x2705;.
               If {" "}
               <Math>
                 $|A| \leq 1$
@@ -14609,7 +14609,7 @@ const Rest = () => {
               triangles?
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_60_tangent.svg" />
+            <Image src="/build-img/svgo-svg/1763177719403172743.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -14652,12 +14652,12 @@ const Rest = () => {
               {" "} respectively:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_60_tangent_with_coordinates.svg" />
+            <Image src="/build-img/svgo-svg/1763177719569168960.svg" />
             <Pause />
             <OuterP>
               But by Exercise 43 this implies that the coordinate
               of the intersectionj of the tangent is
-              <ImageRight src="/images/svg_ch5_ex_60_tangent_sec_cloud.svg" />
+              <ImageRight src="/build-img/svgo-svg/1763177719733147978.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14672,7 +14672,7 @@ const Rest = () => {
                 $x$
               </Math>
               {" "} axis, and
-              <ImageRight src="/images/svg_ch5_ex_60_tangent_csc_cloud.svg" />
+              <ImageRight src="/build-img/svgo-svg/1763177719877160413.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14710,7 +14710,7 @@ const Rest = () => {
               an angled inside wall (all distances in inches):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_floorplan.svg" />
+            <Image src="/build-img/svgo-svg/1763177720019151356.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -14718,7 +14718,7 @@ const Rest = () => {
               red length, then the blue length, then add 130:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_floorplan_soln1.svg" />
+            <Image src="/build-img/svgo-svg/1763177720190158073.svg" />
             <Pause />
             <OuterP>
               Proceeding, the longer and smaller green lengths
@@ -14735,7 +14735,7 @@ const Rest = () => {
               respectively:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_floorplan_soln2.svg" />
+            <Image src="/build-img/svgo-svg/1763177720366170997.svg" />
             <Pause />
             <OuterP>
               The red length is therefore
@@ -14772,7 +14772,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               inches, which comes out to
-              <ImageLeft src="/images/svg_ch5_ex_floorplan_computation_cloud.svg" />
+              <ImageLeft src="/build-img/svgo-svg/1763177720536165365.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14843,7 +14843,7 @@ const Rest = () => {
               to Cartesian coordinates”.)
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_opening_door.svg" />
+            <Image src="/build-img/svgo-svg/1763177720790190044.svg" />
             <Pause />
             <OuterP>
               And:
@@ -14876,7 +14876,7 @@ const Rest = () => {
               {" "} drawing:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_opening_door_soln1.svg" />
+            <Image src="/build-img/svgo-svg/1763177720992154443.svg" />
             <Pause />
             <OuterP>
               (Nb: One can also compute the length marked ‘2’ as
@@ -14962,7 +14962,7 @@ const Rest = () => {
               {" "} digits of accuracy):
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_opening_door_overhead.svg" />
+            <Image src="/build-img/svgo-svg/1763177721198167700.svg" />
             <Pause />
             <OuterP>
               Here
@@ -15065,7 +15065,7 @@ const Rest = () => {
               the “closed” position, shown by the dotted line?
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_bomb_shelter_door_tru_sizes.svg" />
+            <Image src="/build-img/svgo-svg/1763177721392183423.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -15100,7 +15100,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_bomb_shelter_door_alpha_x0y0.svg" />
+            <Image src="/build-img/svgo-svg/1763177721550164841.svg" />
             <Pause />
             <OuterP>
               We can decompose
@@ -15134,7 +15134,7 @@ const Rest = () => {
               {" "} as depicted here:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_bomb_shelter_door_alpha_decomposed.svg" />
+            <Image src="/build-img/svgo-svg/1763177721719160816.svg" />
             <Pause />
             <OuterP>
               By definition of {" "}
@@ -15210,9 +15210,9 @@ const Rest = () => {
               \alpha = 90^\circ + \arctan(z/\sqrt&#123;x_0^2 + y_0^2 - z^2&#125;) - \arctan(y_0/x_0)
               $$
               <ImageRight
-                src="/images/svg_ch5_ex_bomb_shelter_door_alpha_cloud.svg"
+                src="/build-img/svgo-svg/1763177721883184458.svg"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -15253,7 +15253,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_bomb_shelter_annotated.svg" />
+            <Image src="/build-img/svgo-svg/1763177722034170176.svg" />
             <Pause />
             <OuterP>
               The three values of {" "}
@@ -15368,7 +15368,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_horizontal_projection_sphere_statement.svg" />
+            <Image src="/build-img/svgo-svg/1763177722215170142.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -15392,9 +15392,9 @@ const Rest = () => {
               $$
               <ImageRight
                 offset_x="9em"
-                src="/images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg"
+                src="/build-img/svgo-svg/1763177722473168597.svg"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -15413,7 +15413,7 @@ const Rest = () => {
               ...as depicted in this...
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg" />
+            <Image src="/build-img/svgo-svg/1763177722650170872.svg" />
             <Pause />
             <OuterP>
               ...sketch, and because the
@@ -15451,7 +15451,7 @@ const Rest = () => {
               smallest area slice:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_pez_sphere_statement.svg" />
+            <Image src="/build-img/svgo-svg/1763177722805176281.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -15493,7 +15493,7 @@ const Rest = () => {
                 hugging the sphere, by Exercise 46, and because
                 the area of a cylinder slice only depends on its
                 height.
-                <ImageRight src="/images/svg_ch5_ex_pez_sphere_cloud.svg" />
+                <ImageRight src="/build-img/svgo-svg/1763177722966172041.svg" />
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -15579,7 +15579,7 @@ const Rest = () => {
               {" "} by Exercise 46:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_sphere_area.svg" />
+            <Image src="/build-img/svgo-svg/1763177723139178873.svg" />
             <Pause />
             <OuterP>
               (Namely,
@@ -15623,7 +15623,7 @@ const Rest = () => {
               sphere as being made up of many cones:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch5_ex_sphere_volume_idea.svg" />
+            <Image src="/build-img/svgo-svg/1763177723300183840.svg" />
             <Pause />
             <OuterP>
               When we add up the volume
@@ -15723,7 +15723,7 @@ const Rest = () => {
                 by triangulating the surface of the sphere:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_sphere_tetrahedrons.svg" />
+              <Image src="/build-img/svgo-svg/1763177723441169559.svg" />
               <Pause />
               <OuterP>
                 Note that a cone with a triangular base is
@@ -15732,7 +15732,7 @@ const Rest = () => {
               <Pause />
               <CentralDisplayItalic>
                 tetrahedron
-                <ImageLeft src="/images/svg_ch5_ex_sphere_volume_cones_cloud.svg" />
+                <ImageLeft src="/build-img/svgo-svg/1763177723642156775.svg" />
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
@@ -15790,7 +15790,7 @@ const Rest = () => {
                 {" "} is the height of the tetrahedron):
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch5_ex_sphere_volume_closeup.svg" />
+              <Image src="/build-img/svgo-svg/1763177723843160324.svg" />
               <Pause />
               <OuterP>
                 One observes that
@@ -16025,9 +16025,9 @@ const Rest = () => {
                 $$
                 <ImageRight
                   offset_x="5em"
-                  src="/images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg"
+                  src="/build-img/svgo-svg/1763177724013268021.svg"
                   compensate_offset_x_for_large_text_columns={true}
-                 />
+                />
               </MathBlock>
               <Pause />
               <OuterP>
@@ -16040,9 +16040,9 @@ const Rest = () => {
                 $$
                 <ImageLeft
                   offset_x="2.5em"
-                  src="/images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg"
+                  src="/build-img/svgo-svg/1763177724153168559.svg"
                   compensate_offset_x_for_large_text_columns={true}
-                 />
+                />
               </MathBlock>
               <Pause />
               <OuterP>

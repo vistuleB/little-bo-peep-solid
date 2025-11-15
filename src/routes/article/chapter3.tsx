@@ -149,7 +149,7 @@ export default function __Chapter3__() {
           “input tube” and an “output tube”:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch3_f_box.svg" />
+        <Image src="/build-img/svgo-svg/1763177615405438125.svg" />
         <Pause />
         <OuterP>
           An input goes in via the input tube, is
@@ -741,14 +741,14 @@ const Rest = () => {
           For example, here is a graph of VX-11/78A:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch3_vx1178A.svg" />
+        <Image src="/build-img/svgo-svg/1763177615555448209.svg" />
         <Pause />
         <OuterP>
           The graph has only two points, because VX-78/11A
           is defined at only two values. One point is...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch3_ch_vx1178A_@0_with_cors.svg" />
+        <Image src="/build-img/svgo-svg/1763177615697421292.svg" />
         <Pause />
         <OuterP>
           <NoBreak>
@@ -773,7 +773,7 @@ const Rest = () => {
           {" "} while the other point is...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch3_ch_vx1178A_@1_with_cors.svg" />
+        <Image src="/build-img/svgo-svg/1763177615911407125.svg" />
         <Pause />
         <OuterP>
           <NoBreak>
@@ -825,7 +825,7 @@ const Rest = () => {
             </NoBreak>
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch3_ch_x_squared_1.svg" />
+          <Image src="/build-img/svgo-svg/1763177616079519209.svg" />
           <Pause />
           <OuterP>
             Among all the points on this graph that we
@@ -839,7 +839,7 @@ const Rest = () => {
             </NoBreak>
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch3_ch_x_squared_2.svg" />
+          <Image src="/build-img/svgo-svg/1763177616235413125.svg" />
           <Pause />
           <OuterP>
             ...which finds itself on the graph, namely,
@@ -856,10 +856,10 @@ const Rest = () => {
               .
             </NoBreak>
             <ImageLeft
-              src="/images/svg_ch3_0.5625_cloud.svg"
+              src="/build-img/svgo-svg/1763177616430422125.svg"
               line={-1}
               offset_y="0em"
-             />
+            />
           </OuterP>
         </Example>
       </Section>
@@ -1248,7 +1248,7 @@ const Rest = () => {
           For example, this particular graph...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch3_ch_wiggle_graph.svg" />
+        <Image src="/build-img/svgo-svg/1763177616611432584.svg" />
         <Pause />
         <OuterP>
           is a function graph (or locally at least, from
@@ -1257,11 +1257,11 @@ const Rest = () => {
           graph...
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch3_ch_circle.svg">
+        <Image src="/build-img/svgo-svg/1763177616763412584.svg">
           <ImageRight
-            src="/images/svg_ch3_ch_crossing_circle_cloud.svg"
+            src="/build-img/svgo-svg/1763177616906412792.svg"
             offset_x="2em"
-           />
+          />
         </Image>
         <Pause />
         <OuterP>
@@ -1276,9 +1276,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/images/svg_ch3_ch_empty_circle.svg"
+          src="/build-img/svgo-svg/1763177617059409209.svg"
           class="pt-4 mb-3"
-         />
+        />
         <Pause />
         <OuterP>
           ...means that the point in question is {" "}
@@ -1303,7 +1303,7 @@ const Rest = () => {
             {" "} of unit radius...
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch3_ch_upper_semicircle.svg" />
+          <Image src="/build-img/svgo-svg/1763177617224406334.svg" />
           <Pause />
           <OuterP>
             ...passes the vertical line test, and, hence,
@@ -1320,14 +1320,14 @@ const Rest = () => {
             This graph defines a function...
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch3_ch_factory_function.svg" />
+          <Image src="/build-img/svgo-svg/1763177617366420209.svg" />
           <Pause />
           <OuterP>
             ...because it passes the vertical line test,
             while this graph does not define a function...
           </OuterP>
           <Pause />
-          <Image src="/images/svg_ch3_factory_nonfunction.svg" />
+          <Image src="/build-img/svgo-svg/1763177617514430667.svg" />
           <Pause />
           <OuterP>
             ...because it does {" "}
@@ -1396,7 +1396,7 @@ const Rest = () => {
           {" "} as pictured here:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch3_zero_to_the_x.svg" />
+        <Image src="/build-img/svgo-svg/1763177617671451250.svg" />
         <Pause />
         <OuterP>
           (Pretty cool, no?)
@@ -1880,8 +1880,8 @@ const Rest = () => {
         <Pause />
         <Image
           style="margin-top:-0.6em;margin-bottom:-0.4em"
-          src="/images/svg_ch3_ch_affine_linear_cloud.svg"
-         />
+          src="/build-img/svgo-svg/1763177617818434959.svg"
+        />
       </Section>
       <Pause />
       <Section id="section-13">
@@ -1928,9 +1928,9 @@ const Rest = () => {
           a_7x^7 + a_6x^6 + a_5x^5 + a_4x^4 + a_3x^3 - a_2x^2 + a_1x + a_0
           $$
           <ImageRight
-            src="/images/svg_ch3_ch_quadratic_linear_constant_cloud.svg"
+            src="/build-img/svgo-svg/1763177618007413375.svg"
             compensate_offset_x_for_large_text_columns={true}
-           />
+          />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1976,11 +1976,11 @@ const Rest = () => {
           x^1 = x
           $$
           <ImageRight
-            src="/images/svg_ch3_ch_a1_x1_cloud.svg"
+            src="/build-img/svgo-svg/1763177618200418250.svg"
             offset_y="0.2em"
             offset_x="-0.1em"
             compensate_offset_x_for_large_text_columns={true}
-           />
+          />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1999,11 +1999,11 @@ const Rest = () => {
           x^0 = 1
           $$
           <ImageRight
-            src="/images/svg_ch3_ch_a0_x0_cloud.svg"
+            src="/build-img/svgo-svg/1763177618342419667.svg"
             offset_x="0em"
             offset_y="0.2em"
             compensate_offset_x_for_large_text_columns={true}
-           />
+          />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -2276,7 +2276,7 @@ const Rest = () => {
               {" "} in your formula:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_factory_roof_graph.svg" />
+            <Image src="/build-img/svgo-svg/1763177618475445959.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2306,7 +2306,7 @@ const Rest = () => {
               staircase-shaped graph:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_factory_roof_floor_graph.svg" />
+            <Image src="/build-img/svgo-svg/1763177618626414209.svg" />
             <Pause />
             <OuterP>
               (For example, {" "}
@@ -2351,7 +2351,7 @@ const Rest = () => {
               roof” graph in the statement, are equal:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_factory_roof_with_displacement_arrows.svg" />
+            <Image src="/build-img/svgo-svg/1763177618783416875.svg" />
             <Pause />
             <OuterP>
               The red dot to the left of {" "}
@@ -2439,7 +2439,7 @@ const Rest = () => {
               {" "} as a building block:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_factory_roof_stretched.svg" />
+            <Image src="/build-img/svgo-svg/1763177618959412042.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2465,7 +2465,7 @@ const Rest = () => {
               {" "}{" "}
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_factory_roof_stretched_solution.svg" />
+            <Image src="/build-img/svgo-svg/1763177619120399625.svg" />
             <Pause />
             <OuterP>
               Indeed, the two graphs featured above differ
@@ -2532,9 +2532,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/images/png_ch3_desmos_composition_0_c.png"
+              src="/build-img/png/1763184101075722709.png"
               width="1400px"
-             />
+            />
             <Pause />
             <OuterP>
               <i>
@@ -2546,18 +2546,18 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/images/png_ch3_desmos_composition_1_c.png"
+              src="/build-img/png/1763177619351353959.png"
               width="1400px"
-             />
+            />
             <Pause />
             <OuterP>
               Or we can be even fancier:
             </OuterP>
             <Pause />
             <Image
-              src="/images/png_ch3_desmos_composition_2_b.png"
+              src="/build-img/png/1763184277416360875.png"
               width="1400px"
-             />
+            />
             <Pause />
             <OuterP>
               What you see above (the graph in orange) is
@@ -2585,7 +2585,7 @@ const Rest = () => {
               “input tube” and “output tube” sides of a function...
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_f_box_inverted.svg" />
+            <Image src="/build-img/svgo-svg/1763177619362344500.svg" />
             <Pause />
             <OuterP>
               ...(compared to the drawing at the top of the
@@ -2665,7 +2665,7 @@ const Rest = () => {
               like so:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_f_box_g_box.svg" />
+            <Image src="/build-img/svgo-svg/1763177619562425959.svg" />
             <Pause />
             <OuterP>
               In other words, {" "}
@@ -2687,7 +2687,7 @@ const Rest = () => {
               (To be perfectly clear,
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_f_circle_g_equals.svg" />
+            <Image src="/build-img/svgo-svg/1763177619719409125.svg" />
             <Pause />
             <OuterP>
               <Math>
@@ -2889,7 +2889,7 @@ const Rest = () => {
               like these:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_three_factories.svg" />
+            <Image src="/build-img/svgo-svg/1763177619881447084.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2967,13 +2967,13 @@ const Rest = () => {
               here:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_three_factories_sol1.svg" />
+            <Image src="/build-img/svgo-svg/1763177620058408292.svg" />
             <Pause />
             <OuterP>
               And that formula is...
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_three_factories_sol2.svg" />
+            <Image src="/build-img/svgo-svg/1763177620204416084.svg" />
             <Pause />
             <OuterP>
               ...iiiiiiiS...
@@ -3029,20 +3029,20 @@ const Rest = () => {
               <NoBreak>
                 “
                 <InlineImage
-                  src="/images/svg_ch3_3_3_grid_1.svg"
+                  src="images/svg_ch3_3_3_grid_1.svg"
                   width="0.9em"
                   bottom="0.15em"
-                 />
+                />
                 ” {" "}
               </NoBreak>
               to {" "}
               <NoBreak>
                 “
                 <InlineImage
-                  src="/images/svg_ch3_3_3_grid_2.svg"
+                  src="images/svg_ch3_3_3_grid_2.svg"
                   width="0.9em"
                   bottom="0.15em"
-                 />
+                />
                 ”, {" "}
               </NoBreak>
               namely), meaning that the final answer is
@@ -3108,7 +3108,7 @@ const Rest = () => {
               is a function whose graph looks like so...
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_cosine.svg" />
+            <Image src="/build-img/svgo-svg/1763177620424413334.svg" />
             <Pause />
             <OuterP>
               ...then does the function...
@@ -3145,7 +3145,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_ex_cosine_1000x.svg" />
+            <Image src="/build-img/svgo-svg/1763177620565496750.svg" />
             <Pause />
             <OuterP>
               By the first step, a
@@ -3331,11 +3331,11 @@ const Rest = () => {
               {" "}
               in (AA) yields
               <ImageLeft
-                src="/images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg"
+                src="/build-img/svgo-svg/1763177620781473375.svg"
                 popup={true}
                 line={1}
                 offset_x="1em"
-               />
+              />
             </OuterP>
             <div style="font-size:1.1em;margin:0.8em 0em;">
               <MathBlock>
@@ -3387,7 +3387,7 @@ const Rest = () => {
               into a single string of equalities:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_first_victim_second_victim_1_1em.svg" />
+            <Image src="/build-img/svgo-svg/1763177620955428375.svg" />
           </Solution>
         </Exercise>
         <Exercise number={9}>
@@ -3437,7 +3437,7 @@ const Rest = () => {
               world:
             </OuterP>
             <Pause />
-            <Image src="/images/svg_inner_outer_1_1em.svg" />
+            <Image src="/build-img/svgo-svg/1763177621132410125.svg" />
             <Pause />
             <OuterP>
               So the first step is...
@@ -3725,7 +3725,7 @@ const Rest = () => {
               <Pause />
               <CentralDisplayItalic>
                 associativity
-                <ImageRight src="/images/svg_ch3_ex_associativity_cloud.svg" />
+                <ImageRight src="/build-img/svgo-svg/1763177621275459584.svg" />
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
@@ -3748,7 +3748,7 @@ const Rest = () => {
                 uses this picture:
               </OuterP>
               <Pause />
-              <Image src="/images/svg_ch3_truth_be_said.svg" />
+              <Image src="/build-img/svgo-svg/1763177621431422000.svg" />
               <Pause />
               <OuterP>
                 In the above {" "}
@@ -3836,39 +3836,39 @@ const Rest = () => {
                   $\Large h($
                 </Math>
                 <InlineImage
-                  src="/images/svg_ch3_composition_icon_clubs.svg"
+                  src="images/svg_ch3_composition_icon_clubs.svg"
                   width="1rem"
                   top="-3px"
-                 />
+                />
                 <Math>
                   $\Large&#123;&#125;) =$
                 </Math>
                 <InlineImage
-                  src="/images/svg_ch3_composition_icon_die_3.svg"
+                  src="images/svg_ch3_composition_icon_die_3.svg"
                   width="1.25rem"
                   top="-3px"
                   marginLeft=".5rem"
                   marginRight=".5rem"
-                 />
+                />
               </CentralDisplay>
               <Pause />
               <OuterP>
                 because the arrow that originates at {" "}
                 <InlineImage
-                  src="/images/svg_ch3_composition_icon_clubs.svg"
+                  src="images/svg_ch3_composition_icon_clubs.svg"
                   width="1rem"
                   top="-4px"
-                 />
+                />
                 {" "} in set {" "}
                 <Math>
                   $D$
                 </Math>
                 {" "} lands at {" "}
                 <InlineImage
-                  src="/images/svg_ch3_composition_icon_die_3.svg"
+                  src="images/svg_ch3_composition_icon_die_3.svg"
                   width="1.25rem"
                   top="-4px"
-                 />
+                />
                 {" "} in set {" "}
                 <NoBreak>
                   <Math>
@@ -3886,40 +3886,40 @@ const Rest = () => {
                   $\Large g(h($
                 </Math>
                 <InlineImage
-                  src="/images/svg_ch3_composition_icon_clubs.svg"
+                  src="images/svg_ch3_composition_icon_clubs.svg"
                   width="1rem"
                   top="-3px"
-                 />
+                />
                 <Math>
                   $\Large&#123;&#125;)) =$
                 </Math>
                 <InlineImage
-                  src="/images/svg_ch3_composition_icon_fence.svg"
+                  src="images/svg_ch3_composition_icon_fence.svg"
                   width="2.3rem"
                   top="-4px"
                   marginLeft=".5rem"
                   marginRight=".5rem"
-                 />
+                />
               </CentralDisplay>
               <Pause />
               <OuterP>
                 because, pursuing that path onwards, the arrow
                 that originates at {" "}
                 <InlineImage
-                  src="/images/svg_ch3_composition_icon_die_3.svg"
+                  src="images/svg_ch3_composition_icon_die_3.svg"
                   width="1.25rem"
                   top="-4px"
-                 />
+                />
                 {" "} in set {" "}
                 <Math>
                   $C$
                 </Math>
                 {" "} lands at {" "}
                 <InlineImage
-                  src="/images/svg_ch3_composition_icon_fence.svg"
+                  src="images/svg_ch3_composition_icon_fence.svg"
                   width="2.3rem"
                   top="-4px"
-                 />
+                />
                 {" "} in set {" "}
                 <NoBreak>
                   <Math>
@@ -3950,9 +3950,9 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/images/svg_ch3_truth_be_said_right_first.svg"
+                src="/build-img/svgo-svg/1763177621610426625.svg"
                 width="2000px"
-               />
+              />
               <Pause />
               <OuterP>
                 We can also get rid of {" "}
@@ -3967,9 +3967,9 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/images/svg_ch3_truth_be_said_left_first.svg"
+                src="/build-img/svgo-svg/1763177621944419875.svg"
                 width="2000px"
-               />
+              />
               <Pause />
               <OuterP>
                 The first order of computation corresponds
@@ -5250,9 +5250,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/images/svg_ch3_ex_x0_y0_step0.svg"
+              src="/build-img/svgo-svg/1763177622291138458.svg"
               width="760px"
-             />
+            />
             <Pause />
             <OuterP>
               After vertically translating by {" "}
@@ -5270,9 +5270,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/images/svg_ch3_ex_x0_y0_step1.svg"
+              src="/build-img/svgo-svg/1763177622473044542.svg"
               width="760px"
-             />
+            />
             <Pause />
             <OuterP>
               Then after horizontally translating by {" "}
@@ -5290,9 +5290,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/images/svg_ch3_ex_x0_y0_step2.svg"
+              src="/build-img/svgo-svg/1763177622652062875.svg"
               width="760px"
-             />
+            />
             <Pause />
             <OuterP>
               Lastly, vertical scaling does not affect
@@ -5316,9 +5316,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/images/svg_ch3_ex_x0_y0_step3.svg"
+              src="/build-img/svgo-svg/1763177622848036875.svg"
               width="760px"
-             />
+            />
             <Pause />
             <OuterP>
               So the roots are at: {" "}
@@ -6599,7 +6599,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_connection_x_6.svg" />
+            <Image src="/build-img/svgo-svg/1763177623047145792.svg" />
             <Pause />
             <OuterP>
               ...and {" "}
@@ -6621,7 +6621,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_connection_x_6_in_computation.svg" />
+            <Image src="/build-img/svgo-svg/1763177623179020833.svg" />
             <Pause />
             <OuterP>
               ...; in an expression such as...
@@ -6647,7 +6647,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_connection_x_6_again.svg" />
+            <Image src="/build-img/svgo-svg/1763177623316037208.svg" />
             <Pause />
             <OuterP>
               ...and {" "}
@@ -6669,7 +6669,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_connection_x_6_again_in_computation.svg" />
+            <Image src="/build-img/svgo-svg/1763177623453056833.svg" />
             <Pause />
             <OuterP>
               ...(in this case the result is not a number,
@@ -6706,7 +6706,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_connection_x_y_6_8.svg" />
+            <Image src="/build-img/svgo-svg/1763177623591070417.svg" />
             <Pause />
             <OuterP>
               ...and {" "}
@@ -6736,7 +6736,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_connection_x_y_6_8_in_computation.svg" />
+            <Image src="/build-img/svgo-svg/1763177623727038208.svg" />
             <Pause />
             <OuterP>
               ...; now in an expression such as...
@@ -6785,7 +6785,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_connection_f_x_h.svg" />
+            <Image src="/build-img/svgo-svg/1763177623863054917.svg" />
             <Pause />
             <OuterP>
               ...and {" "}
@@ -6830,7 +6830,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/images/svg_ch3_connection_f_x_h_in_computation.svg" />
+            <Image src="/build-img/svgo-svg/1763177624010064417.svg" />
             <Pause />
             <OuterP>
               ...; evaluating...

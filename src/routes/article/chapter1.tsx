@@ -117,10 +117,10 @@ export default function __Chapter1__() {
           \sqrt&#123;(-2)^2&#125; = 2
           $$
           <ImageRight
-            src="/images/svg_ch1_ch_minus_two_squared_cloud.svg"
+            src="/build-img/svgo-svg/1763177608132970667.svg"
             offset_x="5em"
             compensate_offset_x_for_large_text_columns={true}
-           />
+          />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -851,11 +851,11 @@ const Rest = () => {
           (a + b)(C + D) \,=\, aC + bC + aD + bD
           $$
           <ImageLeft
-            src="/images/325.svg"
+            src="/build-img/svgo-svg/1763177608296221042.svg"
             offset_y="-0.5em"
             offset_x="1em"
             compensate_offset_x_for_large_text_columns={true}
-           />
+          />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -1620,10 +1620,10 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageLeft
-                src="/images/17.svg"
+                src="/build-img/svgo-svg/1763177608450466875.svg"
                 offset_y="0.8rem"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -1654,9 +1654,9 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageLeft
-                src="/images/18.svg"
+                src="/build-img/svgo-svg/1763177608601406959.svg"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -1957,12 +1957,12 @@ const Rest = () => {
               10^&#123;9&#125;\fw\te&#123;km&#125;
               $$
               <ImageRight
-                src="/images/svg_ch1_ex_104.svg"
+                src="/build-img/svgo-svg/1763177608748433125.svg"
                 offset_x="3rem"
                 offset_y="-1rem"
                 squiggle={false}
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2472,10 +2472,10 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageRight
-                src="/images/svg_ch1_ex_24.svg"
+                src="/build-img/svgo-svg/1763177608919497000.svg"
                 offset_y="-0.5em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2697,10 +2697,10 @@ const Rest = () => {
               <ImageRight
                 offset_x="5rem"
                 offset_y="1.2rem"
-                src="/images/svg_ch1_ex_25.svg"
+                src="/build-img/svgo-svg/1763177609074462500.svg"
                 squiggle={false}
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2714,10 +2714,10 @@ const Rest = () => {
               <ImageRight
                 offset_x="11.5rem"
                 offset_y="1.2rem"
-                src="/images/svg_ch1_ex_26.svg"
+                src="/build-img/svgo-svg/1763177609218413292.svg"
                 squiggle={false}
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2757,10 +2757,10 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageRight
-                src="/images/svg_ch1_ex_27.svg"
+                src="/build-img/svgo-svg/1763177609363435834.svg"
                 offset_y="-0.5em"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>

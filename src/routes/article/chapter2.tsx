@@ -93,7 +93,7 @@ export default function __Chapter2__() {
           the values, see below):
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch2_ch_collection_of_examples.svg" />
+        <Image src="/build-img/svgo-svg/1763177609555438542.svg" />
         <Pause />
         <OuterP>
           To explain, the slope of a line is...
@@ -142,7 +142,7 @@ export default function __Chapter2__() {
           {" "} unit for each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/./images/slope_1_example.svg" />
+        <Image src="/build-img/svgo-svg/1763177609720427375.svg" />
         <Pause />
         <OuterP>
           On the other hand, the line below has slope
@@ -165,7 +165,7 @@ export default function __Chapter2__() {
           with each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/images/slope_0.5_example.svg" />
+        <Image src="/build-img/svgo-svg/1763177609876433125.svg" />
         <Pause />
         <OuterP>
           (Etc.)
@@ -203,7 +203,7 @@ const Rest = () => {
           {" "} on the line:
         </OuterP>
         <Pause />
-        <Image src="/images/31.svg" />
+        <Image src="/build-img/svgo-svg/1763177610063413834.svg" />
         <Pause />
         <MathBlock>
           $$
@@ -281,11 +281,11 @@ const Rest = () => {
           \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
           $$
           <ImageRight
-            src="/images/32.svg"
+            src="/build-img/svgo-svg/1763177610238419959.svg"
             offset_y="-0.7em"
             offset_x="3em"
             compensate_offset_x_for_large_text_columns={true}
-           />
+          />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -469,10 +469,11 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/images/33.svg"
+                  src="/build-img/svg/1763177610406421750.svg"
+                  svgo={false}
                   width={50}
                   style="padding-top:7px;padding-bottom:7px;"
-                 />
+                />
               </td>
               <td>
                 <MathBlock>
@@ -495,9 +496,9 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="../public/build-img/build-svg-o/1762948127064733917.svg"
+                  src="/build-img/svgo-svg/1763177610412438042.svg"
                   style="margin-top:7px;margin-bottom:7px;width:105px;"
-                 />
+                />
               </td>
               <td>
                 <MathBlock>
@@ -520,10 +521,10 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="../public/build-img/build-svg-o/1762948127284014833.svg"
+                  src="/build-img/svgo-svg/1763177610587406917.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
-                 />
+                />
               </td>
               <td>
                 <MathBlock>
@@ -546,10 +547,10 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="../public/build-img/build-svg-o/1762948127469983167.svg"
+                  src="/build-img/svgo-svg/1763177610758405000.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
-                 />
+                />
               </td>
               <td>
                 <MathBlock>
@@ -572,10 +573,10 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="../public/build-img/build-svg-o/1762948127677997458.svg"
+                  src="/build-img/svgo-svg/1763177610951420375.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
-                 />
+                />
               </td>
               <td>
                 <MathBlock>
@@ -606,10 +607,10 @@ const Rest = () => {
           {" "} swap
           places, or, namely, to show that the fractions
           <ImageRight
-            src="/images/svg_ch2_ch_swap_cloud.svg"
+            src="/build-img/svgo-svg/1763177611116436667.svg"
             line={3}
             offset_x="-0.5em"
-           />
+          />
         </OuterP>
         <Pause />
         <MathBlock>
@@ -627,11 +628,11 @@ const Rest = () => {
           &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125;
           $$
           <ImageLeft
-            src="/images/39.svg"
+            src="/build-img/svgo-svg/1763177611302425834.svg"
             offset_x="2.5em"
             offset_y="-60px"
             compensate_offset_x_for_large_text_columns={true}
-           />
+          />
         </MathBlock>
         <Pause />
         <OuterP>
@@ -672,7 +673,7 @@ const Rest = () => {
           line:
         </OuterP>
         <Pause />
-        <Image src="/images/40.svg" />
+        <Image src="/build-img/svgo-svg/1763177611457428250.svg" />
         <Pause />
         <OuterP>
           Indeed, vertical lines have {" "}
@@ -741,15 +742,15 @@ const Rest = () => {
           </NoBreak>
           <span class="nobreak">
             <InlineImage
-              src="/images/rise-run.svg"
+              src="images/rise-run.svg"
               width="28px"
-             />
+            />
             ”),
           </span>
           {" "} following such a picture:
         </OuterP>
         <Pause />
-        <Image src="/images/44.svg" />
+        <Image src="/build-img/svgo-svg/1763177611625449667.svg" />
         <Pause />
         <OuterP>
           In this context, note that, in physics, a
@@ -788,7 +789,7 @@ const Rest = () => {
           also include this picture:
         </OuterP>
         <Pause />
-        <Image src="/images/47.svg" />
+        <Image src="/build-img/svgo-svg/1763177611779487792.svg" />
         <Pause />
         <OuterP>
           Then “rise” and “run” have their signs flipped,
@@ -899,7 +900,7 @@ const Rest = () => {
           or “run equals rise over slope”. Thus:
         </OuterP>
         <Pause />
-        <Image src="/images/48.svg" />
+        <Image src="/build-img/svgo-svg/1763177611929435375.svg" />
         <Pause />
         <OuterP>
           ...as can sometimes be useful to know.
@@ -934,7 +935,7 @@ const Rest = () => {
           the Cartesian plane. E.g.:
         </OuterP>
         <Pause />
-        <Image src="/images/svg_ch2_ch_line_equations.svg" />
+        <Image src="/build-img/svgo-svg/1763177612179432334.svg" />
         <Pause />
         <OuterP>
           Note that, assuming said {" "}
@@ -1174,10 +1175,10 @@ const Rest = () => {
           {" "} is a constant,
           similarly to the more familiar equation
           <ImageLeft
-            src="/images/svg_ch2_ch_vertical_line_equation.svg"
+            src="/build-img/svgo-svg/1763177612337480542.svg"
             offset_y="-6em"
             offset_x="1em"
-           />
+          />
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1253,10 +1254,10 @@ const Rest = () => {
             .
           </NoBreak>
           <ImageRight
-            src="/images/svg_3_plus_minus_one_times_x_cloud.svg"
+            src="/build-img/svgo-svg/1763177612496411042.svg"
             line={1}
             offset_x="2rem"
-           />
+          />
         </OuterP>
       </Section>
       <Pause />
@@ -1336,7 +1337,7 @@ const Rest = () => {
           in seconds:
         </OuterP>
         <Pause />
-        <Image src="/images/52.svg" />
+        <Image src="/build-img/svgo-svg/1763177612638447792.svg" />
         <Pause />
         <OuterP>
           The slope of the graph is {" "}
@@ -1467,7 +1468,7 @@ const Rest = () => {
           gives us...
         </OuterP>
         <Pause />
-        <Image src="/images/53.svg" />
+        <Image src="/build-img/svgo-svg/1763177612804431584.svg" />
         <Pause />
         <OuterP>
           ...these formulas, commonly useful in “applied”
@@ -1546,11 +1547,11 @@ const Rest = () => {
             \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
             $$
             <ImageRight
-              src="/images/svg_ch2_ch_units_cloud.svg"
+              src="/build-img/svgo-svg/1763177613108411417.svg"
               offset_x="-6rem"
               style="width:930px"
               compensate_offset_x_for_large_text_columns={true}
-             />
+            />
           </MathBlock>
           <Pause />
           <OuterP>
@@ -1697,19 +1698,19 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/images/55.svg"
+              src="/build-img/svgo-svg/1763177613288421750.svg"
               class="relative w-fit"
             >
               <ImageRight
-                src="/images/56.svg"
+                src="/build-img/svgo-svg/1763177613482457750.svg"
                 offset_y="5rem"
                 offset_x="-1.3rem"
-               />
+              />
               <ImageLeft
-                src="/images/57.svg"
+                src="/build-img/svgo-svg/1763177613682568959.svg"
                 offset_x="-8rem"
                 offset_y="8rem"
-               />
+              />
             </Image>
             <Pause />
             <OuterP>
@@ -1752,19 +1753,19 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/images/58.svg"
+                src="/build-img/svgo-svg/1763177613877413000.svg"
                 class="relative w-fit"
               >
                 <ImageRight
-                  src="/images/59.svg"
+                  src="/build-img/svgo-svg/1763177614019402834.svg"
                   offset_y="27%"
                   offset_x="-10%"
-                 />
+                />
                 <ImageLeft
-                  src="/images/60.svg"
+                  src="/build-img/svgo-svg/1763177614169420042.svg"
                   offset_x="-24%"
                   offset_y="33%"
-                 />
+                />
               </Image>
               <Pause />
               <StarDivider />
@@ -1813,11 +1814,11 @@ const Rest = () => {
               p = &#123;y - y_0 \over x - x_0&#125;
               $$
               <ImageLeft
-                src="/images/svg_ch2_ex_x0_y0_line_equation_cloud.svg"
+                src="/build-img/svgo-svg/1763177614315418542.svg"
                 offset_x="7.5em"
                 offset_y="103px"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -1945,11 +1946,11 @@ const Rest = () => {
               \te&#123;“&#125;\te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;\te&#123;”&#125;
               $$
               <ImageRight
-                src="/images/svg_slope_times_run_equals_rise_cloud.svg"
+                src="/build-img/svgo-svg/1763177614506428084.svg"
                 offset_x="2.5rem"
                 offset_y="-0.5rem"
                 compensate_offset_x_for_large_text_columns={true}
-               />
+              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -2055,7 +2056,7 @@ const Rest = () => {
               as the graph):
             </OuterP>
             <Pause />
-            <Image src="/images/1.svg" />
+            <Image src="/build-img/svgo-svg/1763177614746431167.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2063,7 +2064,7 @@ const Rest = () => {
               velocity:
             </OuterP>
             <Pause />
-            <Image src="/images/64.svg" />
+            <Image src="/build-img/svgo-svg/1763177614915434209.svg" />
             <Pause />
             <OuterP>
               On each interval, the velocity is rate of
@@ -2130,7 +2131,7 @@ const Rest = () => {
               this type
             </OuterP>
             <Pause />
-            <Image src="/images/svg_empty_circle_alone.svg" />
+            <Image src="/build-img/svgo-svg/1763177615096433834.svg" />
             <Pause />
             <OuterP>
               indicates a “missing” value. Specifically, in
@@ -2278,7 +2279,7 @@ const Rest = () => {
               E.g.:
             </OuterP>
             <Pause />
-            <Image src="/images/66.svg" />
+            <Image src="/build-img/svgo-svg/1763177615236419209.svg" />
             <Pause />
             <OuterP>
               The rise from the {" "}
