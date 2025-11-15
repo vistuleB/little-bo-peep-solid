@@ -156,15 +156,12 @@
         |> tbody
             |> tr
                 |> td
-
                     $x_2 - x_1$
 
                 |> td
-
                     $y_2 - y_1$
 
                 |> td
-
                     |> img
                         src=images/33.svg
                         svgo=false
@@ -172,22 +169,18 @@
                         style=padding-top:7px;padding-bottom:7px;
 
                 |> td
-
                     $$
                     {y_2-y_1 \over x_2-x_1}
                     $$
 
             |> tr
                 |> td
-
                     $+$
 
                 |> td
-
                     $+$
 
                 |> td
-
                     |> img
                         src=images/34.svg
                         style=margin-top:7px;margin-bottom:7px;width:105px;
@@ -200,22 +193,18 @@
 
             |> tr
                 |> td
-
                     $-$
 
                 |> td
-
                     $-$
 
                 |> td
-
                     |> img
                         src=images/35.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
                 |> td
-
                     $$
                     {- \over -} = \,+
                     $$

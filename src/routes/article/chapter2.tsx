@@ -470,7 +470,6 @@ const Rest = () => {
               <td>
                 <img
                   src="/build-img/svg/1763177610406421750.svg"
-                  svgo={false}
                   width={50}
                   style="padding-top:7px;padding-bottom:7px;"
                 />
