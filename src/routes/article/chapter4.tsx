@@ -89,7 +89,7 @@ export default function __Chapter4__() {
         Derivatives
       </ArticleTitle>
       <Pause />
-      <Image src="/build-img/svgo-svg/1763177624160053375.svg" />
+      <Image src="/build-img/svgo-svg/1s4r.svg" />
       <Section id="section-1">
         <OuterP>
           <b>
@@ -176,7 +176,7 @@ export default function __Chapter4__() {
           “before” graph.) E.g.:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177624449052167.svg" />
+        <Image src="/build-img/svgo-svg/G9zf.svg" />
         <Pause />
         <OuterP>
           Note that {" "}
@@ -216,7 +216,7 @@ export default function __Chapter4__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177624630039792.svg" />
+        <Image src="/build-img/svgo-svg/Tf6r.svg" />
         <Pause />
         <OuterP>
           In fact, we can
@@ -243,7 +243,7 @@ export default function __Chapter4__() {
           value for the derivative:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177624817034417.svg" />
+        <Image src="/build-img/svgo-svg/5-sP.svg" />
         <Pause />
         <OuterP>
           (In other words, what one might describe as
@@ -358,7 +358,7 @@ const Rest = () => {
           (the one with the closed endpoints):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177624987045917.svg" />
+        <Image src="/build-img/svgo-svg/ErE1.svg" />
         <Pause />
         <OuterP>
           One method is simply to eyeball the slope at
@@ -366,9 +366,9 @@ const Rest = () => {
           values and interpolate:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177625166036750.svg">
+        <Image src="/build-img/svgo-svg/EAqF.svg">
           <ImageRight
-            src="/build-img/svgo-svg/1763177625472053042.svg"
+            src="/build-img/svgo-svg/FwEL.svg"
             offset_y="36%"
             offset_x="-15%"
           />
@@ -386,7 +386,7 @@ const Rest = () => {
           interval:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177625669042875.svg" />
+        <Image src="/build-img/svgo-svg/VS7z.svg" />
         <Pause />
         <OuterP>
           The result (at bottom right)
@@ -449,7 +449,7 @@ const Rest = () => {
           (x \ra B)' = (x \ra 0)
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/1763177625958057542.svg"
+            src="/build-img/svgo-svg/tkpb.svg"
             offset_x="8em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -564,7 +564,7 @@ const Rest = () => {
           (x \ra Ax + B)' = (x \ra A)
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/1763177626170032792.svg"
+            src="/build-img/svgo-svg/2UFf.svg"
             offset_x="7em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -828,7 +828,7 @@ const Rest = () => {
         <OuterP>
           ...then the “after” graph will have units of...
           <ImageRight
-            src="/build-img/svgo-svg/1763177626367053125.svg"
+            src="/build-img/svgo-svg/p48d.svg"
             offset_y="-0.6em"
           />
         </OuterP>
@@ -870,7 +870,7 @@ const Rest = () => {
         <OuterP>
           ...then the “after” graph will have units of...
           <ImageLeft
-            src="/build-img/svgo-svg/1763177626600062417.svg"
+            src="/build-img/svgo-svg/DEDt.svg"
             offset_y="0.6em"
           />
         </OuterP>
@@ -1074,7 +1074,7 @@ const Rest = () => {
             (x \ra 3x + 1)'' = (x \ra 0)
             $$
             <ImageRight
-              src="/build-img/svgo-svg/1763177626800701417.svg"
+              src="/build-img/svgo-svg/ORL8.svg"
               offset_x="6em"
               offset_y="0.1em"
               compensate_offset_x_for_large_text_columns={true}
@@ -1166,7 +1166,7 @@ const Rest = () => {
           have a negative second derivative:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177626980047500.svg" />
+        <Image src="/build-img/svgo-svg/gmq7.svg" />
         <Pause />
         <OuterP>
           Reason like this: the second derivative is {" "}
@@ -1278,7 +1278,7 @@ const Rest = () => {
           Viz:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177627395050500.svg" />
+        <Image src="/build-img/svgo-svg/at2Y.svg" />
         <Pause />
         <OuterP>
           <b>
@@ -1294,7 +1294,7 @@ const Rest = () => {
           of a graph:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177627621043208.svg" />
+        <Image src="/build-img/svgo-svg/tv8l.svg" />
         <Pause />
         <Example>
           <OuterP>
@@ -1344,7 +1344,7 @@ const Rest = () => {
           A graph of the form...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177627766065750.svg" />
+        <Image src="/build-img/svgo-svg/UjMy.svg" />
         <Pause />
         <OuterP>
           ...describes {" "}
@@ -1355,7 +1355,7 @@ const Rest = () => {
           (look at the units); the derivative...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177627914035833.svg" />
+        <Image src="/build-img/svgo-svg/wwWE.svg" />
         <Pause />
         <OuterP>
           ...describes {" "}
@@ -1364,7 +1364,7 @@ const Rest = () => {
           </i>
           ;
           finally, the second derivative...
-          <ImageLeft src="/build-img/svgo-svg/1763177628064040458.svg" />
+          <ImageLeft src="/build-img/svgo-svg/zAav.svg" />
         </OuterP>
         <OuterP class="indent-10">
           ...describes
@@ -1420,7 +1420,7 @@ const Rest = () => {
           seconds:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177628311051500.svg" />
+        <Image src="/build-img/svgo-svg/XBxH.svg" />
         <Pause />
         <OuterP>
           The ratio “rise over run” has the form
@@ -1561,7 +1561,7 @@ const Rest = () => {
             (2&#123;\te&#123;m&#125;/\te&#123;s&#125;\!&#123;\,&#125;^2&#125;) \times\, (10\te&#123;s&#125;) = 20&#123;\te&#123;m&#125;/\te&#123;s&#125;&#125;
             $$
             <ImageRight
-              src="/build-img/svgo-svg/1763177628477069292.svg"
+              src="/build-img/svgo-svg/R0nW.svg"
               offset_x="5em"
               compensate_offset_x_for_large_text_columns={true}
             />
@@ -1828,14 +1828,14 @@ const Rest = () => {
               {" "} a sharp corner):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177628624102375.svg" />
+            <Image src="/build-img/svgo-svg/Is8C.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
               That would be:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177628766063833.svg" />
+            <Image src="/build-img/svgo-svg/KPKF.svg" />
             <Pause />
             <OuterP>
               (The derivative is {" "}
@@ -1904,7 +1904,7 @@ const Rest = () => {
               {" "} looks like so:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177628921057042.svg" />
+            <Image src="/build-img/svgo-svg/hWOn.svg" />
             <Pause />
             <OuterP>
               As one can see, the slope is very negative
@@ -1957,7 +1957,7 @@ const Rest = () => {
               pockmarked appearance:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177629070054167.svg" />
+            <Image src="/build-img/svgo-svg/oCwv.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -2041,11 +2041,11 @@ const Rest = () => {
               {" "} axis):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177629216052333.svg" />
+            <Image src="/build-img/svgo-svg/0dwd.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177629361037333.svg" />
+            <Image src="/build-img/svgo-svg/b7Oc.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177629513049583.svg" />
+            <Image src="/build-img/svgo-svg/OG7m.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -2073,7 +2073,7 @@ const Rest = () => {
                 slopes and sharp peaks. (This...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/1763177629661054083.svg" />
+              <Image src="/build-img/svgo-svg/LYJG.svg" />
               <Pause />
               <OuterP>
                 ...idea.)
@@ -2289,7 +2289,7 @@ const Rest = () => {
               below, based on those units that are given:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177629850075708.svg" />
+            <Image src="/build-img/svgo-svg/VHPd.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2312,7 +2312,7 @@ const Rest = () => {
               axis. This gives the unique solutions:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177630072058000.svg" />
+            <Image src="/build-img/svgo-svg/KQs9.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -2438,7 +2438,7 @@ const Rest = () => {
               assuming that relationship exists.)
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177630309059333.svg" />
+            <Image src="/build-img/svgo-svg/-8uy.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2468,7 +2468,7 @@ const Rest = () => {
               {" "} is on the right:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177630460068083.svg" />
+            <Image src="/build-img/svgo-svg/a02_.svg" />
             <Pause />
             <OuterP>
               For example, the graph on the left
@@ -2491,7 +2491,7 @@ const Rest = () => {
               derivative of the graph on the left!):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177630623050250.svg" />
+            <Image src="/build-img/svgo-svg/gqxn.svg" />
             <Pause />
             <OuterP>
               Moreover the middle graph has slope
@@ -2517,7 +2517,7 @@ const Rest = () => {
               on the right:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177630814053708.svg" />
+            <Image src="/build-img/svgo-svg/4Efs.svg" />
             <Pause />
             <OuterP>
               (Taking one more derivative would produce a
@@ -2535,7 +2535,7 @@ const Rest = () => {
               Given these graphs...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177631007039000.svg" />
+            <Image src="/build-img/svgo-svg/-Gn0.svg" />
             <Pause />
             <OuterP>
               ...what can you say about {" "}
@@ -2604,7 +2604,7 @@ const Rest = () => {
               {" "} respectively:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177631176064375.svg" />
+            <Image src="/build-img/svgo-svg/Vtlo.svg" />
             <Pause />
             <OuterP>
               This already gives us three points from which
@@ -2618,7 +2618,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177631400063167.svg" />
+            <Image src="/build-img/svgo-svg/jVL0.svg" />
             <Pause />
             <OuterP>
               But the graph of {" "}
@@ -2661,14 +2661,14 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177631671045625.svg" />
+            <Image src="/build-img/svgo-svg/l4WF.svg" />
             <Pause />
             <OuterP>
               As a second step, we thus “bend into shape”
               our previous sketch to produce these slopes...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177631867051708.svg" />
+            <Image src="/build-img/svgo-svg/zXu5.svg" />
             <Pause />
             <OuterP>
               ...achieving our final answer.
@@ -2682,7 +2682,7 @@ const Rest = () => {
               derivative looks like so:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177632100030208.svg" />
+            <Image src="/build-img/svgo-svg/LvNA.svg" />
           </Solution>
         </Exercise>
         <Exercise number={9}>
@@ -2695,7 +2695,7 @@ const Rest = () => {
               Given these graphs...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177632269071750.svg" />
+            <Image src="/build-img/svgo-svg/45I8.svg" />
             <Pause />
             <OuterP>
               ...sketch {" "}
@@ -2739,7 +2739,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177632431042958.svg" />
+            <Image src="/build-img/svgo-svg/kazC.svg" />
             <Pause />
             <OuterP>
               ...which gives us one data point on the
@@ -2750,7 +2750,7 @@ const Rest = () => {
               {" "} to start with...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177632658038917.svg" />
+            <Image src="/build-img/svgo-svg/sMSm.svg" />
             <Pause />
             <OuterP>
               ...moreover, by the graph of {" "}
@@ -2780,7 +2780,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177632862044792.svg" />
+            <Image src="/build-img/svgo-svg/hXW9.svg" />
             <Pause />
             <OuterP>
               ...so, as a second step, we can extend
@@ -2796,8 +2796,8 @@ const Rest = () => {
               {" "} on this interval:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177633069043083.svg">
-              <ImageLeft src="/build-img/svgo-svg/1763177633290045958.svg" />
+            <Image src="/build-img/svgo-svg/EfV0.svg">
+              <ImageLeft src="/build-img/svgo-svg/w-6f.svg" />
             </Image>
             <Pause />
             <OuterP>
@@ -2837,7 +2837,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177633471059542.svg" />
+            <Image src="/build-img/svgo-svg/7Oh-.svg" />
             <Pause />
             <OuterP>
               This gives us two more points on the graph
@@ -2850,7 +2850,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177633717066042.svg" />
+            <Image src="/build-img/svgo-svg/AlvD.svg" />
             <Pause />
             <OuterP>
               Then, because the second derivative has
@@ -2870,7 +2870,7 @@ const Rest = () => {
               {" "} (about)...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177633933033500.svg" />
+            <Image src="/build-img/svgo-svg/-wEN.svg" />
             <Pause />
             <OuterP>
               ...we extend these two new data points by
@@ -2883,7 +2883,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177634135048583.svg" />
+            <Image src="/build-img/svgo-svg/xIBg.svg" />
             <Pause />
             <OuterP>
               ...on the relevant intervals. (I.e., for
@@ -2904,7 +2904,7 @@ const Rest = () => {
               yet-to-be-determined shape:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177634357045708.svg" />
+            <Image src="/build-img/svgo-svg/4fl7.svg" />
             <Pause />
             <OuterP>
               Since {" "}
@@ -2930,7 +2930,7 @@ const Rest = () => {
               middles...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177634574035167.svg" />
+            <Image src="/build-img/svgo-svg/JUoK.svg" />
             <Pause />
             <OuterP>
               ...our final answer, given by the
@@ -2938,7 +2938,7 @@ const Rest = () => {
               “bending into shape” the connector curves...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177634766032500.svg" />
+            <Image src="/build-img/svgo-svg/ZF4t.svg" />
             <Pause />
             <OuterP>
               ...to give them a slope of {" "}
@@ -2978,7 +2978,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177635009045917.svg" />
+            <Image src="/build-img/svgo-svg/dkg9.svg" />
           </Solution>
         </Exercise>
         <Exercise number={10}>
@@ -3033,7 +3033,7 @@ const Rest = () => {
               scaling:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177635181047625.svg" />
+            <Image src="/build-img/svgo-svg/lJqH.svg" />
             <Pause />
             <OuterP>
               The second graph truly is the first
@@ -3095,7 +3095,7 @@ const Rest = () => {
               greatest?
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177635386048625.svg" />
+            <Image src="/build-img/svgo-svg/GWW0.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -3104,7 +3104,7 @@ const Rest = () => {
               of the curve:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177635531057333.svg" />
+            <Image src="/build-img/svgo-svg/Qi_q.svg" />
             <Pause />
             <OuterP>
               On the other hand,
@@ -3122,7 +3122,7 @@ const Rest = () => {
               rate:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177635679048458.svg" />
+            <Image src="/build-img/svgo-svg/kw0r.svg" />
             <Pause />
             <OuterP>
               (Well, believe us or not, but we're right!)
@@ -3140,7 +3140,7 @@ const Rest = () => {
               be a derivative of which other curve?
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177635830045833.svg" />
+            <Image src="/build-img/svgo-svg/_2ki.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -3149,7 +3149,7 @@ const Rest = () => {
               blue is the derivative of the red:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177635980056250.svg" />
+            <Image src="/build-img/svgo-svg/W8c1.svg" />
             <Pause />
             <OuterP>
               Likewise, the derivative of the blue
@@ -3201,7 +3201,7 @@ const Rest = () => {
               bump, not the other way around:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177636414051583.svg" />
+            <Image src="/build-img/svgo-svg/P9o9.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -3227,7 +3227,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177636651052125.svg" />
+            <Image src="/build-img/svgo-svg/eSj9.svg" />
             <Pause />
             <OuterP>
               The velocities of the two shadows
@@ -3319,7 +3319,7 @@ const Rest = () => {
               velocity to draw an arrow emanating
               from a point on the curve, this arrow
               is tangent to the curve, and the
-              <ImageRight src="/build-img/svgo-svg/1763177636835061958.svg" />
+              <ImageRight src="/build-img/svgo-svg/52rF.svg" />
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -3406,7 +3406,7 @@ const Rest = () => {
               circle at the origin):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177637113072667.svg" />
+            <Image src="/build-img/svgo-svg/zkYn.svg" />
             <Pause />
             <OuterP>
               The
@@ -3420,7 +3420,7 @@ const Rest = () => {
               of the particles are as follows:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177637311667292.svg" />
+            <Image src="/build-img/svgo-svg/g6Et.svg" />
             <Pause />
             <OuterP>
               (You can't really see it so well, but
@@ -3443,7 +3443,7 @@ const Rest = () => {
               are as follows:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177637499702875.svg" />
+            <Image src="/build-img/svgo-svg/4R5D.svg" />
             <Pause />
             <OuterP>
               (Like the position vectors, the
@@ -3477,7 +3477,7 @@ const Rest = () => {
               that the second coordinate is equal to the
               vertical displacement from the tail of the
               arrow to the head of the arrow.)
-              <ImageRight src="/build-img/svgo-svg/1763177637692682667.svg" />
+              <ImageRight src="/build-img/svgo-svg/BcYN.svg" />
             </OuterP>
             <OuterP class="indent-10">
               Due to the 90° rotations and uniform
@@ -3495,7 +3495,7 @@ const Rest = () => {
               position vector:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177637921665167.svg" />
+            <Image src="/build-img/svgo-svg/9nrU.svg" />
             <Pause />
             <OuterP>
               From the {" "}
@@ -3611,7 +3611,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177638173698667.svg" />
+            <Image src="/build-img/svgo-svg/sg-c.svg" />
             <Pause />
             <OuterP>
               If we add the {" "}
@@ -3647,7 +3647,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177638444666584.svg" />
+            <Image src="/build-img/svgo-svg/E0qc.svg" />
             <Pause />
             <OuterP>
               (If the above just looks like a
@@ -3664,7 +3664,7 @@ const Rest = () => {
               figure again:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177636414051583.svg" />
+            <Image src="/build-img/svgo-svg/P9o9.svg" />
             <Pause />
             <OuterP>
               The derivative is
@@ -4438,7 +4438,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177638691753167.svg" />
+            <Image src="/build-img/svgo-svg/96sV.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -4474,7 +4474,7 @@ const Rest = () => {
               while inventing some numbers:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177639308666334.svg" />
+            <Image src="/build-img/svgo-svg/CzxM.svg" />
             <Pause />
             <OuterP>
               In the above the rat earns {" "}
@@ -4495,7 +4495,7 @@ const Rest = () => {
               “unlocks”:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177639465687084.svg" />
+            <Image src="/build-img/svgo-svg/UxiE.svg" />
             <Pause />
             <OuterP>
               In our mathematicians' imaginations, however, {" "}
@@ -4508,7 +4508,7 @@ const Rest = () => {
               parts of the course that momentarily lose you money):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177639633672750.svg" />
+            <Image src="/build-img/svgo-svg/-wVL.svg" />
             <Pause />
             <OuterP>
               (Etc.)
@@ -4605,9 +4605,9 @@ const Rest = () => {
               {" "} have these graphs:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177639796685834.svg" />
+            <Image src="/build-img/svgo-svg/3IfQ.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177639968658084.svg" />
+            <Image src="/build-img/svgo-svg/TBiP.svg" />
             <Pause />
             <OuterP>
               In this case what is {" "}
@@ -4647,7 +4647,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177640164679917.svg" />
+            <Image src="/build-img/svgo-svg/qPIg.svg" />
             <Pause />
             <OuterP>
               Moreover at {" "}
@@ -4678,7 +4678,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177640373685459.svg" />
+            <Image src="/build-img/svgo-svg/dAMr.svg" />
             <Pause />
             <OuterP>
               Multiplying the {" "}
@@ -4719,7 +4719,7 @@ const Rest = () => {
               \left(&#123;5\over 3\up&#123;1&#125;&#125;\left[&#123;\te&#123;m&#125; \over \te&#123;s&#125;&#125;\right]\right) \times \left(&#123;1 \over 10\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;m&#125;&#125;\right]\right) = &#123;5\over 30\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;s&#125;&#125;\right].
               $$
               <ImageRight
-                src="/build-img/svgo-svg/1763177640556660875.svg"
+                src="/build-img/svgo-svg/eJML.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -5079,7 +5079,7 @@ const Rest = () => {
               clockwise:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177640740684625.svg" />
+            <Image src="/build-img/svgo-svg/6etX.svg" />
             <Pause />
             <OuterP>
               If we bring the tail of the vector back to
@@ -5101,7 +5101,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177640900680084.svg" />
+            <Image src="/build-img/svgo-svg/F9Zp.svg" />
             <Pause />
             <OuterP>
               Lastly, the velocity vector does a full revolution
@@ -5204,7 +5204,7 @@ const Rest = () => {
               the path of the velocity vector:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177641122667667.svg" />
+            <Image src="/build-img/svgo-svg/wKig.svg" />
             <Pause />
             <OuterP>
               Or, if we translate the acceleration vector back
@@ -5212,7 +5212,7 @@ const Rest = () => {
               (either way is fine):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177641332671917.svg" />
+            <Image src="/build-img/svgo-svg/bvs-.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -5271,9 +5271,9 @@ const Rest = () => {
               (top) or brought back to the origin (bottom):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177641527673209.svg" />
+            <Image src="/build-img/svgo-svg/d71u.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177641701675584.svg" />
+            <Image src="/build-img/svgo-svg/q6Sb.svg" />
             <Pause />
             <OuterP>
               Moreover (!) the speed of the velocity vector is
@@ -5308,9 +5308,9 @@ const Rest = () => {
               velocity vector), and looks like so (in either representation):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177641881710625.svg" />
+            <Image src="/build-img/svgo-svg/dF7b.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177642072671042.svg" />
+            <Image src="/build-img/svgo-svg/F2u1.svg" />
             <Pause />
             <OuterP>
               Lastly the acceleration vector has speed
@@ -5346,9 +5346,9 @@ const Rest = () => {
               {" "} away:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177642277668334.svg" />
+            <Image src="/build-img/svgo-svg/VSpZ.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177642470660625.svg" />
+            <Image src="/build-img/svgo-svg/1EdZ.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -5374,7 +5374,7 @@ const Rest = () => {
               {" "} between the successive radii:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177642672665209.svg" />
+            <Image src="/build-img/svgo-svg/nVRw.svg" />
           </Solution>
         </Exercise>
         <Exercise number={22}>
@@ -5686,7 +5686,7 @@ const Rest = () => {
               it's unimportant):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177642886724875.svg">
+            <Image src="/build-img/svgo-svg/ltlc.svg">
               <p>
                 But if the position circle is centered at {" "}
                 <NoBreak>
@@ -5700,7 +5700,7 @@ const Rest = () => {
               </p>
             </Image>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177643127665542.svg" />
+            <Image src="/build-img/svgo-svg/U8eB.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -5906,7 +5906,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177643389713625.svg" />
+            <Image src="/build-img/svgo-svg/VDnQ.svg" />
             <Pause />
             <OuterP>
               Sketch the position vector, velocity vector,
@@ -5972,7 +5972,7 @@ const Rest = () => {
               particle—are therefore as follows:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177643559687709.svg" />
+            <Image src="/build-img/svgo-svg/186P.svg" />
             <Pause />
             <OuterP>
               (In particular, the purple particle's position
@@ -6022,7 +6022,7 @@ const Rest = () => {
               this simplifies...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177643787658375.svg" />
+            <Image src="/build-img/svgo-svg/ds09.svg" />
             <Pause />
             <OuterP>
               ...down to dimensions of “one over time”.
@@ -6088,7 +6088,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177643919670042.svg" />
+            <Image src="/build-img/svgo-svg/vEPq.svg" />
             <Pause />
             <OuterP>
               If we play time backward, will the particle
@@ -6123,7 +6123,7 @@ const Rest = () => {
               {" "}{" "}
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177644101670625.svg" />
+            <Image src="/build-img/svgo-svg/ESgD.svg" />
             <Pause />
             <OuterP>
               The interval from {" "}
@@ -6146,7 +6146,7 @@ const Rest = () => {
               &#123;0.5 \over 1&#125; = 0.5
               $$
               <ImageLeft
-                src="/build-img/svgo-svg/1763177644429668709.svg"
+                src="/build-img/svgo-svg/SiXb.svg"
                 offset_x="6em"
                 compensate_offset_x_for_large_text_columns={true}
               />
@@ -6384,7 +6384,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177644584734375.svg" />
+            <Image src="/build-img/svgo-svg/yz-u.svg" />
             <Pause />
             <OuterP>
               If the velocity of the yellow particle is set to track
@@ -6439,7 +6439,7 @@ const Rest = () => {
               accelerating rate:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177644771678584.svg" />
+            <Image src="/build-img/svgo-svg/MS8t.svg" />
             <Pause />
             <OuterP>
               If we add the graph of the red particle to the
@@ -6466,7 +6466,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177644940683167.svg" />
+            <Image src="/build-img/svgo-svg/7kvF.svg" />
             <Pause />
             <OuterP>
               Indeed, for the red graph,
@@ -6529,7 +6529,7 @@ const Rest = () => {
               and vice-versa:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177645102680125.svg" />
+            <Image src="/build-img/svgo-svg/a0qL.svg" />
             <Pause />
             <OuterP>
               Also note that all graphs have slopes of
@@ -6586,7 +6586,7 @@ const Rest = () => {
               {" "} in the plane:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177645308679500.svg" />
+            <Image src="/build-img/svgo-svg/Tb68.svg" />
             <Pause />
             <OuterP>
               The velocity of each particle is set to
@@ -6640,7 +6640,7 @@ const Rest = () => {
                 .
               </NoBreak>
               <ImageRight
-                src="/build-img/svgo-svg/1763177645452765042.svg"
+                src="/build-img/svgo-svg/7A0o.svg"
                 offset_y="150px"
                 offset_x="-0.5em"
               />
@@ -6734,7 +6734,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177645706678875.svg" />
+            <Image src="/build-img/svgo-svg/rYi5.svg" />
             <Pause />
             <OuterP>
               The black particles, for their part, are
@@ -6754,7 +6754,7 @@ const Rest = () => {
               of different colors, like a UNO card:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177645866670042.svg" />
+            <Image src="/build-img/svgo-svg/qPL0.svg" />
             <Pause />
             <OuterP>
               Within each group we set the velocity of
@@ -6822,7 +6822,7 @@ const Rest = () => {
             <CentralDisplayItalic>
               length of the position vector
               <ImageRight
-                src="/build-img/svgo-svg/1763177646032681417.svg"
+                src="/build-img/svgo-svg/vnba.svg"
                 offset_x="-4em"
               />
             </CentralDisplayItalic>
@@ -6856,7 +6856,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177646194679167.svg" />
+            <Image src="/build-img/svgo-svg/VxRW.svg" />
             <Pause />
             <OuterP>
               ...indicating the distance to the origin,
@@ -6867,7 +6867,7 @@ const Rest = () => {
               its position on this line:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177646484661792.svg" />
+            <Image src="/build-img/svgo-svg/xj0g.svg" />
             <Pause />
             <OuterP>
               The behavior of such a particle is
@@ -6895,7 +6895,7 @@ const Rest = () => {
               {" "}
               (!!)
               <ImageLeft
-                src="/build-img/svgo-svg/1763177646695666917.svg"
+                src="/build-img/svgo-svg/RFxt.svg"
                 line={-1}
               />
             </OuterP>
@@ -8286,7 +8286,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177646880759000.svg" />
+            <Image src="/build-img/svgo-svg/KERt.svg" />
             <Pause />
             <OuterP>
               The above plot goes from {" "}
@@ -8429,7 +8429,7 @@ const Rest = () => {
               Recall the curves from Exercise 12:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177647089698459.svg" />
+            <Image src="/build-img/svgo-svg/X2nI.svg" />
             <Pause />
             <OuterP>
               The blue curve is the derivative of the red curve
@@ -8446,7 +8446,7 @@ const Rest = () => {
               a
               $$
               <ImageLeft
-                src="/build-img/svgo-svg/1763177647238644250.svg"
+                src="/build-img/svgo-svg/be04.svg"
                 offset_x="200px"
                 compensate_offset_x_for_large_text_columns={true}
               />
@@ -8642,7 +8642,7 @@ const Rest = () => {
                       ]
                     </NoBreak>
                     <ImageLeft
-                      src="/build-img/svgo-svg/1763177647436690042.svg"
+                      src="/build-img/svgo-svg/pcYW.svg"
                       offset_x="4em"
                     />
                   </i>
@@ -8814,7 +8814,7 @@ const Rest = () => {
               Or something else yet?
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177647603690542.svg" />
+            <Image src="/build-img/svgo-svg/B7D4.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -8997,7 +8997,7 @@ const Rest = () => {
               convention), instead of 4:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177647744683834.svg" />
+            <Image src="/build-img/svgo-svg/826P.svg" />
             <Pause />
             <OuterP>
               The idea would be that the
@@ -9023,7 +9023,7 @@ const Rest = () => {
               velocity vectors would be as follows:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177647930676250.svg" />
+            <Image src="/build-img/svgo-svg/uq4U.svg" />
             <Pause />
             <OuterP>
               The velocity vectors are
@@ -9043,7 +9043,7 @@ const Rest = () => {
               to approximately these new positions:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177648129674875.svg" />
+            <Image src="/build-img/svgo-svg/ZQgt.svg" />
             <Pause />
             <OuterP>
               In the next one-tenth unit of time we
@@ -9061,7 +9061,7 @@ const Rest = () => {
               lines:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177648340676792.svg" />
+            <Image src="/build-img/svgo-svg/0xaW.svg" />
             <Pause />
             <OuterP>
               Applying the same process for {" "}
@@ -9072,7 +9072,7 @@ const Rest = () => {
               steps:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177648563659375.svg" />
+            <Image src="/build-img/svgo-svg/hg3g.svg" />
             <Pause />
             <OuterP>
               To be clear, in the above figure, the
@@ -9080,14 +9080,14 @@ const Rest = () => {
               fifth step...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177648827671375.svg" />
+            <Image src="/build-img/svgo-svg/GKbB.svg" />
             <Pause />
             <OuterP>
               ...is obtained by starting from the red
               particle's position at the fourth step...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177649094664500.svg" />
+            <Image src="/build-img/svgo-svg/jG_S.svg" />
             <Pause />
             <OuterP>
               ...and adding one-tenth of the approximation
@@ -9104,7 +9104,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177649345664375.svg" />
+            <Image src="/build-img/svgo-svg/Js6D.svg" />
             <Pause />
             <OuterP>
               ...and we do the same for each particle,
@@ -9139,7 +9139,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177649738665834.svg" />
+            <Image src="/build-img/svgo-svg/8BpD.svg" />
             <Pause />
             <OuterP>
               To visualize such a fine-grained
@@ -9168,14 +9168,14 @@ const Rest = () => {
               approximation:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177649952665500.svg" />
+            <Image src="/build-img/svgo-svg/uXS-.svg" />
             <Pause />
             <OuterP>
               Zooming in a bit (or else we still can't
               see anything):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177650173672667.svg" />
+            <Image src="/build-img/svgo-svg/IUP8.svg" />
             <Pause />
             <OuterP>
               In any case, even the {" "}
@@ -9204,7 +9204,7 @@ const Rest = () => {
               out to infinity.
               <ImageLeft
                 offset_x="1.5em"
-                src="/build-img/svgo-svg/1763177650406671875.svg"
+                src="/build-img/svgo-svg/QRVl.svg"
                 children_x="50%"
                 children_y="2em"
               >
@@ -9475,7 +9475,7 @@ const Rest = () => {
               curves:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177650645699750.svg" />
+            <Image src="/build-img/svgo-svg/U6Hi.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -9598,7 +9598,7 @@ const Rest = () => {
               e.g., ...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177650785696125.svg" />
+            <Image src="/build-img/svgo-svg/cejz.svg" />
             <Pause />
             <OuterP>
               ...(the initial positions really don't
@@ -9673,8 +9673,8 @@ const Rest = () => {
             <Pause />
             <CentralDisplayItalic>
               the whole is simpler than the parts
-              <ImageLeft src="/build-img/svgo-svg/1763177650969678875.svg" />
-              <ImageRight src="/build-img/svgo-svg/1763177651150685209.svg" />
+              <ImageLeft src="/build-img/svgo-svg/_DUb.svg" />
+              <ImageRight src="/build-img/svgo-svg/7DF3.svg" />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -9755,7 +9755,7 @@ const Rest = () => {
               with position vectors):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177651305680084.svg" />
+            <Image src="/build-img/svgo-svg/UDTy.svg" />
             <Pause />
             <OuterP>
               Set the velocity of particle
@@ -9789,8 +9789,8 @@ const Rest = () => {
               vectors end up looking like so, for example:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177651493678875.svg">
-              <ImageRight src="/build-img/svgo-svg/1763177651686662834.svg" />
+            <Image src="/build-img/svgo-svg/tkLL.svg">
+              <ImageRight src="/build-img/svgo-svg/Bvhk.svg" />
             </Image>
             <Pause />
             <OuterP>
@@ -9891,7 +9891,7 @@ const Rest = () => {
               of the particles look like so:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177651897682292.svg" />
+            <Image src="/build-img/svgo-svg/kytU.svg" />
             <Pause />
             <OuterP>
               ...and if you take the {" "}
@@ -9923,7 +9923,7 @@ const Rest = () => {
               {" "} functions that look like so:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177652132676959.svg" />
+            <Image src="/build-img/svgo-svg/KuID.svg" />
             <Pause />
             <OuterP>
               For example, the derivative of curve
@@ -9933,7 +9933,7 @@ const Rest = () => {
               , highlighted in blue:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177652314295458.svg" />
+            <Image src="/build-img/svgo-svg/SKRR.svg" />
             <Pause />
             <OuterP>
               ...and taking sixteen more derivatives
@@ -9986,7 +9986,7 @@ const Rest = () => {
               configuration:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177652494297416.svg" />
+            <Image src="/build-img/svgo-svg/t94J.svg" />
             <Pause />
             <OuterP>
               To parse the above figure, understand
@@ -10060,7 +10060,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177652668310625.svg" />
+            <Image src="/build-img/svgo-svg/3j-T.svg" />
             <Pause />
             <OuterP>
               The particles shoot of to infinity in short
@@ -10142,7 +10142,7 @@ const Rest = () => {
               Add elements to the following drawing...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177652859301916.svg" />
+            <Image src="/build-img/svgo-svg/1hYI.svg" />
             <Pause />
             <OuterP>
               ...such that it becomes a “complete”
@@ -10167,7 +10167,7 @@ const Rest = () => {
               that appear in the fraction:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177653021295666.svg" />
+            <Image src="/build-img/svgo-svg/cWTG.svg" />
             <Pause />
             <OuterP>
               The point is: the fraction
@@ -10195,7 +10195,7 @@ const Rest = () => {
               (x, f(x))
               $$
               <ImageLeft
-                src="/build-img/svgo-svg/1763177653208286500.svg"
+                src="/build-img/svgo-svg/P0pJ.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -10210,7 +10210,7 @@ const Rest = () => {
               $$
               <ImageRight
                 offset_y="-0.5em"
-                src="/build-img/svgo-svg/1763177653383291000.svg"
+                src="/build-img/svgo-svg/TzXP.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -10376,7 +10376,7 @@ const Rest = () => {
               time):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177653575346125.svg" />
+            <Image src="/build-img/svgo-svg/rzVH.svg" />
             <Pause />
             <OuterP>
               We also consider quantities {" "}
@@ -10414,7 +10414,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177653719300375.svg" />
+            <Image src="/build-img/svgo-svg/Axof.svg" />
             <Pause />
             <OuterP>
               More specifically, we are interested in
@@ -10443,7 +10443,7 @@ const Rest = () => {
               {" "} as
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177653880288625.svg" />
+            <Image src="/build-img/svgo-svg/zn1D.svg" />
             <Pause />
             <OuterP>
               that are crossing a hallway surveyed by
@@ -10500,7 +10500,7 @@ const Rest = () => {
               <ImageLeft
                 offset_x="0.5em"
                 offset_y="-0.5em"
-                src="/build-img/svgo-svg/1763177654176289083.svg"
+                src="/build-img/svgo-svg/zR89.svg"
               />
             </OuterP>
             <TextParent>
@@ -10603,7 +10603,7 @@ const Rest = () => {
               equation:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177654592324916.svg" />
+            <Image src="/build-img/svgo-svg/S2-s.svg" />
             <Pause />
             <OuterP>
               If we divide the above equation by {" "}
@@ -10637,7 +10637,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177654800293750.svg" />
+            <Image src="/build-img/svgo-svg/Im2x.svg" />
             <Pause />
             <OuterP>
               As {" "}
@@ -10778,7 +10778,7 @@ const Rest = () => {
               {" "} and
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177655018279833.svg" />
+            <Image src="/build-img/svgo-svg/MvBw.svg" />
             <Pause />
             <OuterP>
               has the form
@@ -10798,12 +10798,12 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              <ImageLeft src="/build-img/svgo-svg/1763177655230306041.svg" />
+              <ImageLeft src="/build-img/svgo-svg/LuWh.svg" />
             </OuterP>
             <OuterP class="indent-10">
               The first term on the right-hand side, for
               its part, approaches
-              <ImageRight src="/build-img/svgo-svg/1763177655368290666.svg" />
+              <ImageRight src="/build-img/svgo-svg/5bqq.svg" />
             </OuterP>
             <OuterP class="indent-10">
               as {" "}
@@ -10895,7 +10895,7 @@ const Rest = () => {
               second term on the right-hand side!
               Symmetrically to the first term on the
               right-hand side, the second term approaches
-              <ImageRight src="/build-img/svgo-svg/1763177655611290791.svg" />
+              <ImageRight src="/build-img/svgo-svg/9OXS.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -11870,7 +11870,7 @@ const Rest = () => {
               A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
               $$
               <ImageRight
-                src="/build-img/svgo-svg/1763177655833409416.svg"
+                src="/build-img/svgo-svg/6ZYS.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -11911,7 +11911,7 @@ const Rest = () => {
               middle of the product:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177655996281583.svg" />
+            <Image src="/build-img/svgo-svg/c9db.svg" />
             <Pause />
             <OuterP>
               This is seen to be a Newton quotient
@@ -12003,7 +12003,7 @@ const Rest = () => {
               at the beginning of the product...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177656173283833.svg" />
+            <Image src="/build-img/svgo-svg/B9Zl.svg" />
             <Pause />
             <OuterP>
               ...; here the
@@ -12141,7 +12141,7 @@ const Rest = () => {
               {" "} does not even appear:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177656345306000.svg" />
+            <Image src="/build-img/svgo-svg/TQjR.svg" />
             <Pause />
             <OuterP>
               Because {" "}
@@ -12168,7 +12168,7 @@ const Rest = () => {
               therefore:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177656532298583.svg" />
+            <Image src="/build-img/svgo-svg/hUGM.svg" />
             <Pause />
             <OuterP>
               ...with a lone {" "}
@@ -12212,7 +12212,7 @@ const Rest = () => {
               of a unit circle.
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177656992320875.svg" />
+            <Image src="/build-img/svgo-svg/njEr.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -12223,7 +12223,7 @@ const Rest = () => {
               length of this yellow interval:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177657143288666.svg" />
+            <Image src="/build-img/svgo-svg/KEtq.svg" />
             <Pause />
             <OuterP>
               One revolution around the circle is also
@@ -12232,7 +12232,7 @@ const Rest = () => {
               on the graph:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177657343298500.svg" />
+            <Image src="/build-img/svgo-svg/2Uov.svg" />
             <Pause />
             <OuterP>
               Going a bit further, {" "}
@@ -12258,7 +12258,7 @@ const Rest = () => {
               you zoom in):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177657590294708.svg" />
+            <Image src="/build-img/svgo-svg/oghJ.svg" />
             <Pause />
             <OuterP>
               Therefore
@@ -12340,7 +12340,7 @@ const Rest = () => {
               revolution...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177657866310333.svg" />
+            <Image src="/build-img/svgo-svg/dK07.svg" />
             <Pause />
             <OuterP>
               ...whereas
@@ -12365,7 +12365,7 @@ const Rest = () => {
               length of a quarter-revolution:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177658020306250.svg" />
+            <Image src="/build-img/svgo-svg/jUtu.svg" />
             <Pause />
             <OuterP>
               (So, we have some secondary “visual confirmation”
@@ -12384,14 +12384,14 @@ const Rest = () => {
               vertical velocities...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177658176298333.svg">
+            <Image src="/build-img/svgo-svg/hGqu.svg">
               <ImageLeft
                 offset_y="1em"
-                src="/build-img/svgo-svg/1763177658344292833.svg"
+                src="/build-img/svgo-svg/nwVf.svg"
               />
             </Image>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177658520303458.svg" />
+            <Image src="/build-img/svgo-svg/MGlT.svg" />
             <Pause />
             <OuterP>
               ...of PACMAN, with unit of
@@ -12418,7 +12418,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="590px"
-              src="/build-img/svgo-svg/1763177658678300333.svg"
+              src="/build-img/svgo-svg/m7Ll.svg"
             />
             <Pause />
             <OuterP>
@@ -12449,9 +12449,9 @@ const Rest = () => {
               or up) and red (negative displacements, going to the left or down):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177658932301208.svg" />
+            <Image src="/build-img/svgo-svg/IBuM.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177659127288833.svg" />
+            <Image src="/build-img/svgo-svg/mMn6.svg" />
             <Pause />
             <OuterP>
               We can estimate the duration of each
@@ -12459,9 +12459,9 @@ const Rest = () => {
               (mistakes of estimation can be made, we shall recover):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177659332292125.svg" />
+            <Image src="/build-img/svgo-svg/u4My.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177659580286083.svg" />
+            <Image src="/build-img/svgo-svg/rH2b.svg" />
             <Pause />
             <OuterP>
               We can also estimate the velocity to be
@@ -12494,7 +12494,7 @@ const Rest = () => {
               (\te&#123;velocity&#125;) \times (\te&#123;amount of time&#125;) = (\te&#123;displacement&#125;)
               $$
               <ImageRight
-                src="/build-img/svgo-svg/1763177659796293583.svg"
+                src="/build-img/svgo-svg/Uk9d.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -12520,7 +12520,7 @@ const Rest = () => {
               <Math>
                 $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.5\te&#123;s&#125;\,\,=\,\,-3.375\,\te&#123;cells&#125;$
               </Math>
-              <ImageRight src="/build-img/svgo-svg/1763177659971295958.svg" />
+              <ImageRight src="/build-img/svgo-svg/baQ_.svg" />
             </CentralDisplay>
             <Pause />
             <CentralDisplay>
@@ -12584,7 +12584,7 @@ const Rest = () => {
               imply the following set of initial motions:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177660131295625.svg" />
+            <Image src="/build-img/svgo-svg/QFoq.svg" />
             <Pause />
             <OuterP>
               But these are approximate numbers and the
@@ -12630,7 +12630,7 @@ const Rest = () => {
               $$
               <ImageLeft
                 width="700px"
-                src="/build-img/svgo-svg/1763177660312314625.svg"
+                src="/build-img/svgo-svg/dcmY.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -12645,7 +12645,7 @@ const Rest = () => {
               $$
               <ImageLeft
                 width="1400px"
-                src="/build-img/svgo-svg/1763177660510315958.svg"
+                src="/build-img/svgo-svg/q3zw.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -12660,7 +12660,7 @@ const Rest = () => {
               $$
               <ImageLeft
                 width="700px"
-                src="/build-img/svgo-svg/1763177660698298541.svg"
+                src="/build-img/svgo-svg/L75a.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -12764,7 +12764,7 @@ const Rest = () => {
               measurement, the initial motions must be:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177660877297541.svg" />
+            <Image src="/build-img/svgo-svg/D-ST.svg" />
             <Pause />
             <OuterP>
               The maze fits these constraints in only two places
@@ -12795,7 +12795,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="590px"
-              src="/build-img/svgo-svg/1763177661048318041.svg"
+              src="/build-img/svgo-svg/tzR7.svg"
             />
             <Pause />
             <OuterP>
@@ -12826,9 +12826,9 @@ const Rest = () => {
               respectively:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177661389311000.svg" />
+            <Image src="/build-img/svgo-svg/Toj1.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177661583271958.svg" />
+            <Image src="/build-img/svgo-svg/MAtZ.svg" />
             <Pause />
             <OuterP>
               (Nb: Imagine translating these intervals to the left or right until
@@ -12855,7 +12855,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="590px"
-              src="/build-img/svgo-svg/1763177661779294250.svg"
+              src="/build-img/svgo-svg/s8YV.svg"
             />
             <Pause />
             <OuterP>
@@ -12880,7 +12880,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="590px"
-              src="/build-img/svgo-svg/1763177662038300500.svg"
+              src="/build-img/svgo-svg/0Agm.svg"
             />
             <Pause />
             <OuterP>
@@ -12954,7 +12954,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="590px"
-              src="/build-img/svgo-svg/1763177662306293666.svg"
+              src="/build-img/svgo-svg/zXtI.svg"
             />
             <Pause />
             <OuterP>
@@ -12991,7 +12991,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="551px"
-              src="/build-img/svgo-svg/1763177662565298666.svg"
+              src="/build-img/svgo-svg/d8B6.svg"
             />
             <Pause />
             <OuterP>
@@ -13001,7 +13001,7 @@ const Rest = () => {
               change—note that green is the vertical velocity)...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177662763297125.svg" />
+            <Image src="/build-img/svgo-svg/VWaV.svg" />
             <Pause />
             <OuterP>
               ...and asking for Pacman's position at {" "}
@@ -13062,7 +13062,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177662939314208.svg" />
+            <Image src="/build-img/svgo-svg/GAWM.svg" />
             <Pause />
             <OuterP>
               The velocity vector (cf. Exercise 12) is therefore about
@@ -13096,7 +13096,7 @@ const Rest = () => {
               \sqrt&#123;4.8^2 + 4.8^2&#125; = \sqrt&#123;2&#125; \times 4.8 = 6.788...
               $$
               <ImageLeft
-                src="/build-img/svgo-svg/1763177663111327625.svg"
+                src="/build-img/svgo-svg/wsTF.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -13148,7 +13148,7 @@ const Rest = () => {
               cells per second:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177663325301500.svg" />
+            <Image src="/build-img/svgo-svg/GBWO.svg" />
             <Pause />
             <OuterP>
               This gives a speed of
@@ -13185,7 +13185,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177663503302375.svg" />
+            <Image src="/build-img/svgo-svg/3t-v.svg" />
             <Pause />
             <OuterP>
               The speed at {" "}
@@ -13236,7 +13236,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177663697301333.svg" />
+            <Image src="/build-img/svgo-svg/QXY0.svg" />
             <Pause />
             <OuterP>
               This yields a speed of
@@ -13285,7 +13285,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177663893288041.svg" />
+            <Image src="/build-img/svgo-svg/Tyoa.svg" />
             <Pause />
             <OuterP>
               Both the {" "}
@@ -13308,7 +13308,7 @@ const Rest = () => {
               and ends with horizontal motion:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177664107286708.svg" />
+            <Image src="/build-img/svgo-svg/niov.svg" />
             <Pause />
             <OuterP>
               Thus Pacman starts the curve going up, and ends the curve
@@ -13408,7 +13408,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="551px"
-              src="/build-img/svgo-svg/1763177664323355458.svg"
+              src="/build-img/svgo-svg/Fs4p.svg"
             />
             <Pause />
             <OuterP>
@@ -13417,7 +13417,7 @@ const Rest = () => {
               rightward and ends downward:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177664564280125.svg" />
+            <Image src="/build-img/svgo-svg/gJqp.svg" />
             <Pause />
             <OuterP>
               ...this second curve must, of course, be the
@@ -13427,7 +13427,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="551px"
-              src="/build-img/svgo-svg/1763177664802302125.svg"
+              src="/build-img/svgo-svg/zqM6.svg"
             />
             <Pause />
             <OuterP>
@@ -13436,7 +13436,7 @@ const Rest = () => {
               with rightward motion:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177665048287166.svg" />
+            <Image src="/build-img/svgo-svg/hJnh.svg" />
             <Pause />
             <OuterP>
               In fact, it is also strange that Pacman {" "}
@@ -13448,7 +13448,7 @@ const Rest = () => {
               starts at the leftmost edge of the maze):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177665257305125.svg" />
+            <Image src="/build-img/svgo-svg/fCqh.svg" />
             <Pause />
             <OuterP>
               Looking back over our work,
@@ -13539,7 +13539,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="551px"
-              src="/build-img/svgo-svg/1763177665471300958.svg"
+              src="/build-img/svgo-svg/Ywed.svg"
             />
             <Pause />
             <OuterP>
@@ -13555,7 +13555,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177665731276083.svg" />
+            <Image src="/build-img/svgo-svg/Pepc.svg" />
             <Pause />
             <OuterP>
               Indeed, the curve lasts {" "}
@@ -13597,7 +13597,7 @@ const Rest = () => {
             <Pause />
             <Image
               height="551px"
-              src="/build-img/svgo-svg/1763177665921296166.svg"
+              src="/build-img/svgo-svg/Bi-p.svg"
             />
             <Pause />
             <OuterP>
@@ -13605,21 +13605,21 @@ const Rest = () => {
               re-enters the curve (going right and up a tiny bit):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177666225293500.svg" />
+            <Image src="/build-img/svgo-svg/aL8R.svg" />
             <Pause />
             <OuterP>
               But then changes again, and re-exits the curve
               (going left and down a tiny bit):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177666448294541.svg" />
+            <Image src="/build-img/svgo-svg/TUEH.svg" />
             <Pause />
             <OuterP>
               Then Pacman goes left-and-then-right-again by
               some small amount:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177666448294541.svg" />
+            <Image src="/build-img/svgo-svg/TUEH.svg" />
             <Pause />
             <OuterP>
               At this point—and in particular at
@@ -13668,7 +13668,7 @@ const Rest = () => {
               if its second derivative has this graph (broadly):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177666638297958.svg" />
+            <Image src="/build-img/svgo-svg/JTxK.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -13700,7 +13700,7 @@ const Rest = () => {
               does say “broadly” anyway):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177666799293750.svg" />
+            <Image src="/build-img/svgo-svg/ZIg9.svg" />
             <Pause />
             <OuterP>
               As
@@ -13731,7 +13731,7 @@ const Rest = () => {
               gives the total change in slope:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177667005301458.svg" />
+            <Image src="/build-img/svgo-svg/_hHv.svg" />
             <Pause />
             <OuterP>
               (We won't argue this right now, but it's
@@ -13749,7 +13749,7 @@ const Rest = () => {
               to the other:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177667329904084.svg" />
+            <Image src="/build-img/svgo-svg/apR2.svg" />
             <Pause />
             <OuterP>
               In any case the areas are all the same {" "}
@@ -13787,7 +13787,7 @@ const Rest = () => {
                 ),
               </NoBreak>
               {" "} and
-              <ImageRight src="/build-img/svgo-svg/1763177667706937000.svg" />
+              <ImageRight src="/build-img/svgo-svg/37OV.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -13838,8 +13838,8 @@ const Rest = () => {
               the background):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177667913902500.svg">
-              <ImageLeft src="/build-img/svgo-svg/1763177668171916584.svg" />
+            <Image src="/build-img/svgo-svg/tisG.svg">
+              <ImageLeft src="/build-img/svgo-svg/iSTR.svg" />
             </Image>
             <Pause />
             <OuterP>
@@ -13888,8 +13888,8 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177668335047125.svg">
-              <ImageLeft src="/build-img/svgo-svg/1763177668652896750.svg" />
+            <Image src="/build-img/svgo-svg/w9j2.svg">
+              <ImageLeft src="/build-img/svgo-svg/ywUL.svg" />
             </Image>
             <Pause />
             <OuterP>
@@ -13915,7 +13915,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177668819913042.svg" />
+            <Image src="/build-img/svgo-svg/jkLB.svg" />
             <Pause />
             <OuterP>
               Again, any of these graphs are
@@ -13967,7 +13967,7 @@ const Rest = () => {
               of one line segment and the start of the next:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177669134926334.svg" />
+            <Image src="/build-img/svgo-svg/Urvs.svg" />
             <Pause />
             <OuterP>
               In fact, is not entirely clear that there aren't
@@ -13980,7 +13980,7 @@ const Rest = () => {
               that exist (the concave ones and the convex ones):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177669339913917.svg" />
+            <Image src="/build-img/svgo-svg/cpt7.svg" />
             <Pause />
             <OuterP>
               (It will turn out that
@@ -14016,7 +14016,7 @@ const Rest = () => {
               curve:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177669549913750.svg" />
+            <Image src="/build-img/svgo-svg/VC1t.svg" />
             <Pause />
             <OuterP>
               Symmetrically,
@@ -14042,7 +14042,7 @@ const Rest = () => {
               connector curve:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177669807913917.svg" />
+            <Image src="/build-img/svgo-svg/ImNP.svg" />
             <Pause />
             <OuterP>
               To go any further we must add the first
@@ -14088,7 +14088,7 @@ const Rest = () => {
               second derivative:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177670081595709.svg" />
+            <Image src="/build-img/svgo-svg/sAnB.svg" />
             <Pause />
             <OuterP>
               The afore-mentioned lower bound of
@@ -14109,7 +14109,7 @@ const Rest = () => {
               {" "} the graph of the derivative:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177670335926500.svg" />
+            <Image src="/build-img/svgo-svg/-0Ye.svg" />
             <Pause />
             <OuterP>
               Whereas the afore-mentioned upper bound of
@@ -14130,7 +14130,7 @@ const Rest = () => {
               {" "} the graph of the derivative:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177670620915584.svg" />
+            <Image src="/build-img/svgo-svg/QLRv.svg" />
             <Pause />
             <OuterP>
               In other words, the rise of the convex connector
@@ -14141,7 +14141,7 @@ const Rest = () => {
             <Pause />
             <Image
               width="800px"
-              src="/build-img/svgo-svg/1763177670908891917.svg"
+              src="/build-img/svgo-svg/4IQl.svg"
             />
             <Pause />
             <OuterP>
@@ -14153,7 +14153,7 @@ const Rest = () => {
             <Pause />
             <Image
               width="800px"
-              src="/build-img/svgo-svg/1763177671063963125.svg"
+              src="/build-img/svgo-svg/U7Hx.svg"
             />
             <Pause />
             <OuterP>
@@ -14162,7 +14162,7 @@ const Rest = () => {
             <Pause />
             <Image
               width="800px"
-              src="/build-img/svgo-svg/1763177671230915250.svg"
+              src="/build-img/svgo-svg/Kx_N.svg"
             />
             <Pause />
             <OuterP>
@@ -14176,7 +14176,7 @@ const Rest = () => {
             <Pause />
             <Image
               width="800px"
-              src="/build-img/svgo-svg/1763177671387909292.svg"
+              src="/build-img/svgo-svg/66Fx.svg"
             />
             <Pause />
             <OuterP>
@@ -14189,7 +14189,7 @@ const Rest = () => {
               surgery:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177671547930167.svg" />
+            <Image src="/build-img/svgo-svg/_bVJ.svg" />
             <Pause />
             <OuterP>
               Long story short, the area enclosed, which is
@@ -14242,7 +14242,7 @@ const Rest = () => {
               S-curve of the derivative is...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177671796949000.svg" />
+            <Image src="/build-img/svgo-svg/x6B_.svg" />
             <Pause />
             <OuterP>
               ...flipped around from before, going from
@@ -14264,7 +14264,7 @@ const Rest = () => {
               information, if we want. (Well...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177672044914125.svg" />
+            <Image src="/build-img/svgo-svg/CHGf.svg" />
             <Pause />
             <OuterP>
               ...there, no one can accuse us of not doing the

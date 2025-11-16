@@ -100,7 +100,7 @@ export default function __Bootcamp2__() {
           :
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177724457221109.svg" />
+        <Image src="/build-img/svgo-svg/anTr.svg" />
         <Pause />
         <OuterP>
           The whole expression is read {" "}
@@ -231,7 +231,7 @@ const Rest = () => {
           \Large 10^0 = 1 = 1
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/1763177724602175563.svg"
+            src="/build-img/svgo-svg/DSem.svg"
             offset_y="-0.2em"
             offset_x="4em"
             compensate_offset_x_for_large_text_columns={true}
@@ -380,7 +380,7 @@ const Rest = () => {
           {" "}
           is equivalent to the identity
           <ImageLeft
-            src="/build-img/svgo-svg/1763177724757953827.svg"
+            src="/build-img/svgo-svg/rdZz.svg"
             line={2}
           />
         </OuterP>
@@ -1308,7 +1308,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft src="/build-img/svgo-svg/1763177724972523036.svg" />
+          <ImageLeft src="/build-img/svgo-svg/55Oe.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1317,7 +1317,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft src="/build-img/svgo-svg/1763177725139050448.svg" />
+          <ImageLeft src="/build-img/svgo-svg/tAeJ.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1326,7 +1326,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight src="/build-img/svgo-svg/1763177725331186261.svg" />
+          <ImageRight src="/build-img/svgo-svg/xlFe.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1477,7 +1477,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177725492192478.svg" />
+        <Image src="/build-img/svgo-svg/VZCO.svg" />
         <Pause />
         <OuterP>
           Likewise, the standard decimal expansion for {" "}
@@ -1494,7 +1494,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177725638207362.svg" />
+        <Image src="/build-img/svgo-svg/A20h.svg" />
         <Pause />
         <OuterP>
           ...and so on, which is a possible trick to check
@@ -2118,7 +2118,7 @@ const Rest = () => {
             \Large 0.00001 = 10^&#123;-5&#125;
             $$
             <ImageRight
-              src="/build-img/svgo-svg/1763177725784218121.svg"
+              src="/build-img/svgo-svg/nMNN.svg"
               offset_x="0em"
               compensate_offset_x_for_large_text_columns={true}
             />
@@ -2222,7 +2222,7 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/1763177725964206447.svg" />
+              <Image src="/build-img/svgo-svg/KJqj.svg" />
               <Pause />
               <OuterP>
                 Half of twelve hundredths is six hundredths, and
@@ -2237,7 +2237,7 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/1763177726111166974.svg" />
+              <Image src="/build-img/svgo-svg/SBDm.svg" />
               <Pause />
               <OuterP>
                 ...so {" "}
@@ -2944,7 +2944,7 @@ const Rest = () => {
               hoping for:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177726258259582.svg" />
+            <Image src="/build-img/svgo-svg/FF0n.svg" />
             <Pause />
             <OuterP>
               The point is that the second equality uses the identity
@@ -2986,7 +2986,7 @@ const Rest = () => {
               is as follows (minus fine print):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177726403164868.svg" />
+            <Image src="/build-img/svgo-svg/5e0k.svg" />
             <Pause />
             <OuterP>
               The first law can be recognized as “additivity of exponents”
@@ -3518,7 +3518,7 @@ const Rest = () => {
               \Large -b -2c -3 = 0
               $$
               <ImageRight
-                src="/build-img/svgo-svg/1763177726587251799.svg"
+                src="/build-img/svgo-svg/bESG.svg"
                 offset_y="-0.5em"
                 offset_x="0.5em"
                 compensate_offset_x_for_large_text_columns={true}

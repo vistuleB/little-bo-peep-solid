@@ -117,7 +117,7 @@ export default function __Chapter1__() {
           \sqrt&#123;(-2)^2&#125; = 2
           $$
           <ImageRight
-            src="/build-img/svgo-svg/1763177608132970667.svg"
+            src="/build-img/svgo-svg/Z39o.svg"
             offset_x="5em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -851,7 +851,7 @@ const Rest = () => {
           (a + b)(C + D) \,=\, aC + bC + aD + bD
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/1763177608296221042.svg"
+            src="/build-img/svgo-svg/QC6w.svg"
             offset_y="-0.5em"
             offset_x="1em"
             compensate_offset_x_for_large_text_columns={true}
@@ -1620,7 +1620,7 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageLeft
-                src="/build-img/svgo-svg/1763177608450466875.svg"
+                src="/build-img/svgo-svg/Lc4U.svg"
                 offset_y="0.8rem"
                 compensate_offset_x_for_large_text_columns={true}
               />
@@ -1654,7 +1654,7 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageLeft
-                src="/build-img/svgo-svg/1763177608601406959.svg"
+                src="/build-img/svgo-svg/aqem.svg"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -1957,7 +1957,7 @@ const Rest = () => {
               10^&#123;9&#125;\fw\te&#123;km&#125;
               $$
               <ImageRight
-                src="/build-img/svgo-svg/1763177608748433125.svg"
+                src="/build-img/svgo-svg/GgDI.svg"
                 offset_x="3rem"
                 offset_y="-1rem"
                 squiggle={false}
@@ -2472,7 +2472,7 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageRight
-                src="/build-img/svgo-svg/1763177608919497000.svg"
+                src="/build-img/svgo-svg/omps.svg"
                 offset_y="-0.5em"
                 compensate_offset_x_for_large_text_columns={true}
               />
@@ -2697,7 +2697,7 @@ const Rest = () => {
               <ImageRight
                 offset_x="5rem"
                 offset_y="1.2rem"
-                src="/build-img/svgo-svg/1763177609074462500.svg"
+                src="/build-img/svgo-svg/Xx87.svg"
                 squiggle={false}
                 compensate_offset_x_for_large_text_columns={true}
               />
@@ -2714,7 +2714,7 @@ const Rest = () => {
               <ImageRight
                 offset_x="11.5rem"
                 offset_y="1.2rem"
-                src="/build-img/svgo-svg/1763177609218413292.svg"
+                src="/build-img/svgo-svg/jBCw.svg"
                 squiggle={false}
                 compensate_offset_x_for_large_text_columns={true}
               />
@@ -2757,7 +2757,7 @@ const Rest = () => {
               \end&#123;align&#125;
               $$
               <ImageRight
-                src="/build-img/svgo-svg/1763177609363435834.svg"
+                src="/build-img/svgo-svg/4oJD.svg"
                 offset_y="-0.5em"
                 compensate_offset_x_for_large_text_columns={true}
               />

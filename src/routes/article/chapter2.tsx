@@ -93,7 +93,7 @@ export default function __Chapter2__() {
           the values, see below):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177609555438542.svg" />
+        <Image src="/build-img/svgo-svg/9z9J.svg" />
         <Pause />
         <OuterP>
           To explain, the slope of a line is...
@@ -142,7 +142,7 @@ export default function __Chapter2__() {
           {" "} unit for each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177609720427375.svg" />
+        <Image src="/build-img/svgo-svg/JbBo.svg" />
         <Pause />
         <OuterP>
           On the other hand, the line below has slope
@@ -165,7 +165,7 @@ export default function __Chapter2__() {
           with each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177609876433125.svg" />
+        <Image src="/build-img/svgo-svg/03l_.svg" />
         <Pause />
         <OuterP>
           (Etc.)
@@ -203,7 +203,7 @@ const Rest = () => {
           {" "} on the line:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177610063413834.svg" />
+        <Image src="/build-img/svgo-svg/J9Ud.svg" />
         <Pause />
         <MathBlock>
           $$
@@ -281,7 +281,7 @@ const Rest = () => {
           \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
           $$
           <ImageRight
-            src="/build-img/svgo-svg/1763177610238419959.svg"
+            src="/build-img/svgo-svg/hv76.svg"
             offset_y="-0.7em"
             offset_x="3em"
             compensate_offset_x_for_large_text_columns={true}
@@ -469,7 +469,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svg/1763177610406421750.svg"
+                  src="/build-img/svg/Mj3v.svg"
                   width={50}
                   style="padding-top:7px;padding-bottom:7px;"
                 />
@@ -495,7 +495,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/1763177610412438042.svg"
+                  src="/build-img/svgo-svg/QvK-.svg"
                   style="margin-top:7px;margin-bottom:7px;width:105px;"
                 />
               </td>
@@ -520,7 +520,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/1763177610587406917.svg"
+                  src="/build-img/svgo-svg/vebo.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
                 />
@@ -546,7 +546,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/1763177610758405000.svg"
+                  src="/build-img/svgo-svg/QIqm.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
                 />
@@ -572,7 +572,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/1763177610951420375.svg"
+                  src="/build-img/svgo-svg/yqVM.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
                 />
@@ -606,7 +606,7 @@ const Rest = () => {
           {" "} swap
           places, or, namely, to show that the fractions
           <ImageRight
-            src="/build-img/svgo-svg/1763177611116436667.svg"
+            src="/build-img/svgo-svg/j7nd.svg"
             line={3}
             offset_x="-0.5em"
           />
@@ -627,7 +627,7 @@ const Rest = () => {
           &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125;
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/1763177611302425834.svg"
+            src="/build-img/svgo-svg/cWp0.svg"
             offset_x="2.5em"
             offset_y="-60px"
             compensate_offset_x_for_large_text_columns={true}
@@ -672,7 +672,7 @@ const Rest = () => {
           line:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177611457428250.svg" />
+        <Image src="/build-img/svgo-svg/H3CJ.svg" />
         <Pause />
         <OuterP>
           Indeed, vertical lines have {" "}
@@ -749,7 +749,7 @@ const Rest = () => {
           {" "} following such a picture:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177611625449667.svg" />
+        <Image src="/build-img/svgo-svg/Yc3l.svg" />
         <Pause />
         <OuterP>
           In this context, note that, in physics, a
@@ -788,7 +788,7 @@ const Rest = () => {
           also include this picture:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177611779487792.svg" />
+        <Image src="/build-img/svgo-svg/6vhm.svg" />
         <Pause />
         <OuterP>
           Then “rise” and “run” have their signs flipped,
@@ -899,7 +899,7 @@ const Rest = () => {
           or “run equals rise over slope”. Thus:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177611929435375.svg" />
+        <Image src="/build-img/svgo-svg/2sTW.svg" />
         <Pause />
         <OuterP>
           ...as can sometimes be useful to know.
@@ -934,7 +934,7 @@ const Rest = () => {
           the Cartesian plane. E.g.:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177612179432334.svg" />
+        <Image src="/build-img/svgo-svg/IyJL.svg" />
         <Pause />
         <OuterP>
           Note that, assuming said {" "}
@@ -1174,7 +1174,7 @@ const Rest = () => {
           {" "} is a constant,
           similarly to the more familiar equation
           <ImageLeft
-            src="/build-img/svgo-svg/1763177612337480542.svg"
+            src="/build-img/svgo-svg/3IFS.svg"
             offset_y="-6em"
             offset_x="1em"
           />
@@ -1253,7 +1253,7 @@ const Rest = () => {
             .
           </NoBreak>
           <ImageRight
-            src="/build-img/svgo-svg/1763177612496411042.svg"
+            src="/build-img/svgo-svg/h7oS.svg"
             line={1}
             offset_x="2rem"
           />
@@ -1336,7 +1336,7 @@ const Rest = () => {
           in seconds:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177612638447792.svg" />
+        <Image src="/build-img/svgo-svg/Jiyb.svg" />
         <Pause />
         <OuterP>
           The slope of the graph is {" "}
@@ -1467,7 +1467,7 @@ const Rest = () => {
           gives us...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1763177612804431584.svg" />
+        <Image src="/build-img/svgo-svg/lT_G.svg" />
         <Pause />
         <OuterP>
           ...these formulas, commonly useful in “applied”
@@ -1546,7 +1546,7 @@ const Rest = () => {
             \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
             $$
             <ImageRight
-              src="/build-img/svgo-svg/1763177613108411417.svg"
+              src="/build-img/svgo-svg/9BAj.svg"
               offset_x="-6rem"
               style="width:930px"
               compensate_offset_x_for_large_text_columns={true}
@@ -1697,16 +1697,16 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/build-img/svgo-svg/1763177613288421750.svg"
+              src="/build-img/svgo-svg/hxH2.svg"
               class="relative w-fit"
             >
               <ImageRight
-                src="/build-img/svgo-svg/1763177613482457750.svg"
+                src="/build-img/svgo-svg/KI3-.svg"
                 offset_y="5rem"
                 offset_x="-1.3rem"
               />
               <ImageLeft
-                src="/build-img/svgo-svg/1763177613682568959.svg"
+                src="/build-img/svgo-svg/fi0W.svg"
                 offset_x="-8rem"
                 offset_y="8rem"
               />
@@ -1752,16 +1752,16 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/build-img/svgo-svg/1763177613877413000.svg"
+                src="/build-img/svgo-svg/t5sl.svg"
                 class="relative w-fit"
               >
                 <ImageRight
-                  src="/build-img/svgo-svg/1763177614019402834.svg"
+                  src="/build-img/svgo-svg/7UPg.svg"
                   offset_y="27%"
                   offset_x="-10%"
                 />
                 <ImageLeft
-                  src="/build-img/svgo-svg/1763177614169420042.svg"
+                  src="/build-img/svgo-svg/qCes.svg"
                   offset_x="-24%"
                   offset_y="33%"
                 />
@@ -1813,7 +1813,7 @@ const Rest = () => {
               p = &#123;y - y_0 \over x - x_0&#125;
               $$
               <ImageLeft
-                src="/build-img/svgo-svg/1763177614315418542.svg"
+                src="/build-img/svgo-svg/eaW7.svg"
                 offset_x="7.5em"
                 offset_y="103px"
                 compensate_offset_x_for_large_text_columns={true}
@@ -1945,7 +1945,7 @@ const Rest = () => {
               \te&#123;“&#125;\te&#123;slope&#125; \times \te&#123;run&#125; = \te&#123;rise&#125;\te&#123;”&#125;
               $$
               <ImageRight
-                src="/build-img/svgo-svg/1763177614506428084.svg"
+                src="/build-img/svgo-svg/8ZCw.svg"
                 offset_x="2.5rem"
                 offset_y="-0.5rem"
                 compensate_offset_x_for_large_text_columns={true}
@@ -2055,7 +2055,7 @@ const Rest = () => {
               as the graph):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177614746431167.svg" />
+            <Image src="/build-img/svgo-svg/lnNr.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2063,7 +2063,7 @@ const Rest = () => {
               velocity:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177614915434209.svg" />
+            <Image src="/build-img/svgo-svg/u0yv.svg" />
             <Pause />
             <OuterP>
               On each interval, the velocity is rate of
@@ -2130,7 +2130,7 @@ const Rest = () => {
               this type
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177615096433834.svg" />
+            <Image src="/build-img/svgo-svg/Jp8B.svg" />
             <Pause />
             <OuterP>
               indicates a “missing” value. Specifically, in
@@ -2278,7 +2278,7 @@ const Rest = () => {
               E.g.:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1763177615236419209.svg" />
+            <Image src="/build-img/svgo-svg/zUas.svg" />
             <Pause />
             <OuterP>
               The rise from the {" "}
