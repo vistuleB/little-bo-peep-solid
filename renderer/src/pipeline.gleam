@@ -22,7 +22,7 @@ const cannot_contain_a_paragraph = [
   "CentralDisplayItalic", "ArticleTitle"
 ]
 
-pub fn our_pipeline() -> Pipeline {
+pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
   [
     [
       dl.identity(),
@@ -141,17 +141,17 @@ pub fn our_pipeline() -> Pipeline {
       dl.add_before_but_not_before_first_child__batch([
         #("Exercises", "Pause", []),
         #("Example", "Pause", []),
-        #("Note", "Pause", []),
-        #("SolutionNote", "Pause", []),
+        #("Grid", "Pause", []),
+        #("List", "Pause", []),
         #("MathBlock", "Pause", []),
+        #("Note", "Pause", []),
         #("CentralDisplayItalic", "Pause", []),
         #("CentralDisplay", "Pause", []),
         #("Image", "Pause", []),
+        #("SolutionNote", "Pause", []),
+        #("StarDivider", "Pause", []),
         #("Table", "Pause", []),
         #("table", "Pause", []),
-        #("Grid", "Pause", []),
-        #("List", "Pause", []),
-        #("StarDivider", "Pause", []),
       ]),
       dl.add_before_but_not_before_first_of_kind(#("Section", "Pause", [])),
       dl.timer(),
@@ -179,8 +179,7 @@ pub fn our_pipeline() -> Pipeline {
       dl.table_marker(),
       dl.delete_attribute__batch(["counter", "handle", "type", "t", "_", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
-      dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json")),
-      dl.delete_files_not_used_as_src(#("../public", "build-img", [], ["img", "Image", "ImageRight", "ImageLeft"])),
+      dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only, remove_unused, only)),
     ]
   ]
   |> list.flatten

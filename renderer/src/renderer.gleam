@@ -233,7 +233,7 @@ fn cli_usage_supplementary() {
 
 pub fn main() {
   use amendments <- on.error_ok(
-    ds.process_command_line_arguments(argv.load().arguments, []),
+    ds.process_command_line_arguments(argv.load().arguments, ["--remove-unused-build-img"]),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
@@ -249,12 +249,13 @@ pub fn main() {
 
   let exports_dict = ei.lbp_exports_dictionary()
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
+  let only = amendments.only_key_values != [] || amendments.only_paths != []
 
   let renderer =
     ds.Renderer(
       assembler: ds.default_assembler(amendments.only_paths),
       parser: ds.default_writerly_parser(amendments.only_key_values),
-      pipeline: our_pipeline(),
+      pipeline: our_pipeline(only, dict.has_key(amendments.user_args, "--remove-unused-build-img")),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
       writer: ds.default_writer,

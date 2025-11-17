@@ -850,12 +850,6 @@ const Rest = () => {
           $$
           (a + b)(C + D) \,=\, aC + bC + aD + bD
           $$
-          <ImageLeft
-            src="/build-img/svgo-svg/QC6w.svg"
-            offset_y="-0.5em"
-            offset_x="1em"
-            compensate_offset_x_for_large_text_columns={true}
-          />
         </MathBlock>
         <Pause />
         <OuterP>
