@@ -90,8 +90,8 @@ const calculate_values = () => {
       progress()
     );
 
-  const default_visible_state = () =>
-    screen_width_to_achieve_default_visible < store.innerWidth;
+  const default_visible_state = () => false;
+  // screen_width_to_achieve_default_visible < store.innerWidth;
 
   const on = () => screen_width_to_achieve_on <= store.innerWidth;
 
