@@ -65,7 +65,7 @@ const Container = (props: ParentProps) => {
 const EarlyImages = () => {
   return (
     <div style="overflow:hidden;position:absolute;top:0px;left:0px;pointer-events:none;width:1px;height:1px;">
-      <img src="/non-pipeline-img/loading_screen.png" style="position:absolute" />
+      <img src="/non-build-img/loading_screen.png" style="position:absolute" />
       <img src="/build-img/svgo-svg/anTr.svg" style="position:absolute" />
       <img src="/build-img/svgo-svg/Z39o.svg" style="position:absolute" />
       <img src="/build-img/svgo-svg/9z9J.svg" style="position:absolute" />

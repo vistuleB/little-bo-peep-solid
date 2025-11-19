@@ -39,7 +39,7 @@ export const Exercises = (props: ExercisesProps) => {
     <>
       <Image
         id="exo"
-        src="/images/separator.png"
+        src="/non-build-img/separator.png"
         height="50px"
         class="mt-[15px] mb-[40px]"></Image>
       <Switcher exercises={children_list.toArray()} />

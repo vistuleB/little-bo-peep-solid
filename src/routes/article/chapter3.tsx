@@ -3029,7 +3029,7 @@ const Rest = () => {
               <NoBreak>
                 “
                 <InlineImage
-                  src="images/svg_ch3_3_3_grid_1.svg"
+                  src="/build-img/svgo-svg/X25H.svg"
                   width="0.9em"
                   bottom="0.15em"
                 />
@@ -3039,7 +3039,7 @@ const Rest = () => {
               <NoBreak>
                 “
                 <InlineImage
-                  src="images/svg_ch3_3_3_grid_2.svg"
+                  src="/build-img/svgo-svg/7n38.svg"
                   width="0.9em"
                   bottom="0.15em"
                 />
@@ -3836,7 +3836,7 @@ const Rest = () => {
                   $\Large h($
                 </Math>
                 <InlineImage
-                  src="images/svg_ch3_composition_icon_clubs.svg"
+                  src="/build-img/svgo-svg/2mo1.svg"
                   width="1rem"
                   top="-3px"
                 />
@@ -3844,7 +3844,7 @@ const Rest = () => {
                   $\Large&#123;&#125;) =$
                 </Math>
                 <InlineImage
-                  src="images/svg_ch3_composition_icon_die_3.svg"
+                  src="/build-img/svgo-svg/5zgu.svg"
                   width="1.25rem"
                   top="-3px"
                   marginLeft=".5rem"
@@ -3855,7 +3855,7 @@ const Rest = () => {
               <OuterP>
                 because the arrow that originates at {" "}
                 <InlineImage
-                  src="images/svg_ch3_composition_icon_clubs.svg"
+                  src="/build-img/svgo-svg/2mo1.svg"
                   width="1rem"
                   top="-4px"
                 />
@@ -3865,7 +3865,7 @@ const Rest = () => {
                 </Math>
                 {" "} lands at {" "}
                 <InlineImage
-                  src="images/svg_ch3_composition_icon_die_3.svg"
+                  src="/build-img/svgo-svg/5zgu.svg"
                   width="1.25rem"
                   top="-4px"
                 />
@@ -3886,7 +3886,7 @@ const Rest = () => {
                   $\Large g(h($
                 </Math>
                 <InlineImage
-                  src="images/svg_ch3_composition_icon_clubs.svg"
+                  src="/build-img/svgo-svg/2mo1.svg"
                   width="1rem"
                   top="-3px"
                 />
@@ -3894,7 +3894,7 @@ const Rest = () => {
                   $\Large&#123;&#125;)) =$
                 </Math>
                 <InlineImage
-                  src="images/svg_ch3_composition_icon_fence.svg"
+                  src="/build-img/svgo-svg/Ixme.svg"
                   width="2.3rem"
                   top="-4px"
                   marginLeft=".5rem"
@@ -3906,7 +3906,7 @@ const Rest = () => {
                 because, pursuing that path onwards, the arrow
                 that originates at {" "}
                 <InlineImage
-                  src="images/svg_ch3_composition_icon_die_3.svg"
+                  src="/build-img/svgo-svg/5zgu.svg"
                   width="1.25rem"
                   top="-4px"
                 />
@@ -3916,7 +3916,7 @@ const Rest = () => {
                 </Math>
                 {" "} lands at {" "}
                 <InlineImage
-                  src="images/svg_ch3_composition_icon_fence.svg"
+                  src="/build-img/svgo-svg/Ixme.svg"
                   width="2.3rem"
                   top="-4px"
                 />

@@ -741,7 +741,7 @@ const Rest = () => {
           </NoBreak>
           <span class="nobreak">
             <InlineImage
-              src="images/rise-run.svg"
+              src="/build-img/svgo-svg/f8wM.svg"
               width="28px"
             />
             ”),

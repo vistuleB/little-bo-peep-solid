@@ -19,7 +19,7 @@ import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const screen_width_to_achieve_max_size = 1500;
 const screen_width_to_achieve_min_size = 1280;
-const screen_width_to_achieve_default_visible = 1280;
+const screen_width_to_achieve_default_visible = 1750;
 const screen_width_to_achieve_on = MOBILE_MAX_WIDTH;
 const max_font_size = 14;
 const min_font_size = 11;
