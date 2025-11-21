@@ -1,4 +1,4 @@
-import { useNavigate } from "@solidjs/router";
+import { useNavigate, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 const usePrevNextPage = () => {
@@ -11,7 +11,12 @@ const usePrevNextPage = () => {
   const getNextPage = () => getPage(store.nextPage);
   const getPage = (page: string) => {
     if (page === "") return;
-    clearCurrentPage();
+    // had to add this because maybe Solid's
+    // router got a bug or sth, onMount apparently
+    // not stopping the spinner otherwise; but anyway
+    // maybe it's good:
+    if (page !== "/" && page !== "index.html" && page !== "/index.html")
+      clearCurrentPage();
     if (store.navigation_delays) {
       setTimeout(
         () => {
@@ -21,8 +26,6 @@ const usePrevNextPage = () => {
       );
       return;
     }
-    // if (page === "/") page = "index.html";
-    console.log("navigating to:", page);
     navigate(page, { scroll: false });
   };
   return {

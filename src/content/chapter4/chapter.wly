@@ -2,9 +2,8 @@
     src=images/svg_ch4_ch_polaroids.svg
 
 |> Section
-
     *Definitions.*
-    The _derivative_ of a functio
+    The _derivative_ of a function
 
     $$
     f : \rr \ra \rr
@@ -42,11 +41,6 @@
 
     |> Image
         src=images/svg_ch4_ch_explanation2.svg
-
-    !! |> ImageRight
-    !!     offset_y=-17em
-    !!     offset_x=-13em
-    !!     src=images/svg_ch4_ch_explanation2_cloud.svg
 
     In fact, we can
     succinctly describe the derivative by...

@@ -100,7 +100,7 @@ export default function __Chapter4__() {
           <i>
             derivative
           </i>
-          {" "} of a functio
+          {" "} of a function
         </OuterP>
         <Pause />
         <MathBlock>
