@@ -70,7 +70,6 @@
     “half-tangents” do not actually count as tangents.)
 
 |> Section
-
     *Vocabulary.*
     A function $f : \rr \ra \rr$ is
 
@@ -88,7 +87,6 @@
     if $a \in \dom\,f'$.
 
 |> Section
-
     *Sketching a Derivative.*
     Say that you would like to sketch the derivative
     of the “before” function from the last “before”/“after” pair above
@@ -106,8 +104,8 @@
 
     |> ImageRight
         src=images/svg_ch4_ch_curve_to_sketch_cloud.svg
-        offset_y=36%
-        offset_x= -15%
+        offset_y= 36%
+        offset_x=-15%
 
     ...voilà!
 
