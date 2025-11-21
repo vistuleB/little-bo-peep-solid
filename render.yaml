@@ -1,9 +1,12 @@
 services:
   - type: web
     name: little-bo-peep-solid
-    env: node
     buildCommand: "npm install && npm run build"
     startCommand: "node .output/server/index.mjs"
+    runtime: node
     plan: free
     envVars:
-      NODE_ENV: production
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22
