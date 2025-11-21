@@ -12,15 +12,17 @@ const usePrevNextPage = () => {
   const getPage = (page: string) => {
     if (page === "") return;
     clearCurrentPage();
-    // if (store.navigation_delays) {
-    //   setTimeout(
-    //     () => {
-    //       navigate(page, { scroll: false });
-    //     },
-    //     1500 + Math.random() * 1500,
-    //   );
-    //   return;
-    // }
+    if (store.navigation_delays) {
+      setTimeout(
+        () => {
+          navigate(page, { scroll: false });
+        },
+        1500 + Math.random() * 1500,
+      );
+      return;
+    }
+    // if (page === "/") page = "index.html";
+    console.log("navigating to:", page);
     navigate(page, { scroll: false });
   };
   return {
