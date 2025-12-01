@@ -41,8 +41,7 @@
 
     !! The reason for these values, per the definitions,
     !! is that
-    Per the definitions,
-    the point half a unit
+    Per the definitions, the point half a unit
     counterclockwise from $(1, 0)$ on the unit
     circle has coordinates $\approx 0.9$ in $x$
     and $\approx 0.5$ in $y$ (or actually $0.87758...$

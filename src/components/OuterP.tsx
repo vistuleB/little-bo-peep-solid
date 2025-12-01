@@ -12,9 +12,10 @@ const OuterP = (props: ParentProps & SharedProps) => {
       class={twJoin(
         "text-column",
         props.class,
-        store.show_areas && "left-right-background-divide",
+        store.show_areas && "left-right-background-divide"
       )}
-      style={`width:${mainColumnWidth()}px;${props.style}`}>
+      style={`width:${mainColumnWidth()}px;${props.style}`}
+    >
       {props.children}
     </p>
   );

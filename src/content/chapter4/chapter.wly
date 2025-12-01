@@ -25,9 +25,11 @@
     is the slope of the graph $y = f(x)$ at
     $x = a$. And—surprise!—each pair of graphs
     above is a pair of the form $y = f(x)$ [$=$
-    “before”], $y = f'(x)$ [$=$ “after”]. (Meaning,
-    the “after” graph records the slope of the
-    “before” graph.) E.g.:
+    “before”], $y = f'(x)$ [$=$ “after”].
+    !! (Meaning,
+    !! the “after” graph records the slope of the
+    !! “before” graph.) 
+    E.g.:
 
     |> Image
         src=images/svg_ch4_ch_explanation1.svg
@@ -83,8 +85,8 @@
 |> Section
     *Sketching a Derivative.*
     Say that you would like to sketch the derivative
-    of the “before” function from the last “before”/“after” pair above
-    (the one with the closed endpoints):
+    of the “before” function from the last “before”/“after” pair above:
+    !! (the one with the closed endpoints):
 
     |> Image
         src=images/svg_ch4_ch_curve_to_sketch.svg
@@ -115,8 +117,8 @@
 
     The result (at bottom right)
     is a charming “robosketch” of the true
-    derivative! (Well, charming in our opinion,
-    at least.)
+    derivative!
+    (Well, charming in our opinion, at least.)
 
 
 |> Section
@@ -419,7 +421,7 @@
         !!     line=1
 
     |> StarDivider
-        style=margin-top:1.5em;margin-bottom:0em
+        style=margin-top:-0.5em;margin-bottom:0em
 
 |> Section
 
@@ -533,8 +535,8 @@
     ...describes _velocity as a function of time_;
     finally, the second derivative...
 
-    !! |> Image
-    !!     src=images/svg_ch4_ch_position_by_time_der_der.svg
+    |> Image
+        src=images/svg_ch4_ch_position_by_time_der_der.svg
 
     |> ImageLeft
         src=images/svg_ch4_ch_position_by_time_der_cloud.svg
@@ -612,8 +614,9 @@
     __meters per second, per second__
 
     which is even better because it “shows” acceleration
-    to be a number of m$/$s per second. (Acceleration _is_
-    a number of m$/$s per second, no?)
+    to be a number of m$/$s per second. 
+    !! (Acceleration _is_
+    !! a number of m$/$s per second, no?)
 
     |> Example
 
@@ -673,7 +676,8 @@
 
     which is mildly amusing. Basically, the
     jerk specifies how many _meters per second,
-    per second_ (a measure of acceleration!)
+    per second_ 
+    !! (a measure of acceleration)
     is being gained or lost _per second_.
 
     The word “jerk” is aptly chosen,
@@ -691,14 +695,36 @@
     __zero jerk__
 
     are synonymous, insofar as the everyday
-    world is concerned. 
-    (You don't lose balance under constant
-    acceleration, right?) (No! You lose
-    balance when some _jerk_ occurs!!)
-    Which is good, because
-    these notions are also equivalent in the
-    mathematical realm, what with jerk being
-    the derivative of acceleration!
+    world is concerned—you don't lose balance
+    under constant acceleration but rather when some
+    _jerk_ occurs in the movement of your train or
+    subway car, etc. This concurs with the mathematical
+    interpretation of the terms, as the derivative of a
+    constant is zero!
+    !! what with jerk being the derivative of acceleration. 
+    !! (The derivative of a constant is zero.)
+
+    !! But
+    
+    !! __constant acceleration__
+
+    !! also means
+
+    !! __zero jerk__
+
+    !! in the mathematical realm, 
+    !! since jerk is the derivative of acceleration,
+    !! leading to all-around harmony
+    !! between the mathematical and everyday meanings
+    !! of the terms.
+
+    !! (You don't lose balance under constant
+    !! acceleration, right?) (No! You lose
+    !! balance when some _jerk_ occurs!!)
+    !! Which is good, because
+    !! these notions are also equivalent in the
+    !! mathematical realm, what with jerk being
+    !! the derivative of acceleration!
 
     |> Pause
 

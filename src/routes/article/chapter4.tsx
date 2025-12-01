@@ -171,9 +171,8 @@ export default function __Chapter4__() {
               $=$
             </Math>
           </NoBreak>
-          {" "} “after”]. (Meaning,
-          the “after” graph records the slope of the
-          “before” graph.) E.g.:
+          {" "} “after”].
+          E.g.:
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/G9zf.svg" />
@@ -354,8 +353,7 @@ const Rest = () => {
           </b>
           {" "}
           Say that you would like to sketch the derivative
-          of the “before” function from the last “before”/“after” pair above
-          (the one with the closed endpoints):
+          of the “before” function from the last “before”/“after” pair above:
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/ErE1.svg" />
@@ -391,8 +389,8 @@ const Rest = () => {
         <OuterP>
           The result (at bottom right)
           is a charming “robosketch” of the true
-          derivative! (Well, charming in our opinion,
-          at least.)
+          derivative!
+          (Well, charming in our opinion, at least.)
         </OuterP>
       </Section>
       <Pause />
@@ -1149,7 +1147,7 @@ const Rest = () => {
           </CentralDisplayItalic>
         </Example>
         <Pause />
-        <StarDivider style="margin-top:1.5em;margin-bottom:0em" />
+        <StarDivider style="margin-top:-0.5em;margin-bottom:0em" />
       </Section>
       <Pause />
       <Section id="section-8">
@@ -1364,9 +1362,13 @@ const Rest = () => {
           </i>
           ;
           finally, the second derivative...
-          <ImageLeft src="/build-img/svgo-svg/zAav.svg" />
         </OuterP>
-        <OuterP class="indent-10">
+        <Pause />
+        <Image src="/build-img/svgo-svg/cBcm.svg">
+          <ImageLeft src="/build-img/svgo-svg/zAav.svg" />
+        </Image>
+        <Pause />
+        <OuterP>
           ...describes
         </OuterP>
         <Pause />
@@ -1513,20 +1515,7 @@ const Rest = () => {
             </Math>
             s
           </NoBreak>
-          {" "} per second. (Acceleration {" "}
-          <i>
-            is
-          </i>
-          {" "}
-          a number of {" "}
-          <NoBreak>
-            m
-            <Math>
-              $/$
-            </Math>
-            s
-          </NoBreak>
-          {" "} per second, no?)
+          {" "} per second.
         </OuterP>
         <Pause />
         <Example>
@@ -1630,7 +1619,7 @@ const Rest = () => {
             meters per second,
             per second
           </i>
-          {" "} (a measure of acceleration!)
+          {" "} 
           is being gained or lost {" "}
           <i>
             per second
@@ -1656,18 +1645,16 @@ const Rest = () => {
         <Pause />
         <OuterP>
           are synonymous, insofar as the everyday
-          world is concerned. 
-          (You don't lose balance under constant
-          acceleration, right?) (No! You lose
-          balance when some {" "}
+          world is concerned—you don't lose balance
+          under constant acceleration but rather when some
+          {" "}
           <i>
             jerk
           </i>
-          {" "} occurs!!)
-          Which is good, because
-          these notions are also equivalent in the
-          mathematical realm, what with jerk being
-          the derivative of acceleration!
+          {" "} occurs in the movement of your train or
+          subway car, etc. This concurs with the mathematical
+          interpretation of the terms, as the derivative of a
+          constant is zero!
         </OuterP>
         <Pause />
         <OuterP>
@@ -1992,7 +1979,7 @@ const Rest = () => {
                 Exercise 1
               </InChapterLink>
               {" "}
-              depicts the
+              depicts the {" "}
               <del>
                 distance that a car has traveled
                 as a function of time,

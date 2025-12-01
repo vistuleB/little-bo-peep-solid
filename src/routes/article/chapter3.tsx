@@ -3224,11 +3224,13 @@ const Rest = () => {
               Rewrite
             </OuterP>
             <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                \tag&#123;A&#125;(f \circ (g \circ h))(x)
-                $$
-              </MathBlock>
+              <OuterP>
+                <MathBlock>
+                  $$
+                  \tag&#123;A&#125;(f \circ (g \circ h))(x)
+                  $$
+                </MathBlock>
+              </OuterP>
             </div>
             <OuterP>
               without using {" "}
@@ -3244,11 +3246,13 @@ const Rest = () => {
               composition”, which is namely
             </OuterP>
             <div style="font-size:1.1em;margin:1em 0em;">
-              <MathBlock>
-                $$
-                \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
-                $$
-              </MathBlock>
+              <OuterP>
+                <MathBlock>
+                  $$
+                  \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
+                  $$
+                </MathBlock>
+              </OuterP>
             </div>
             <OuterP>
               (where {" "}
@@ -5586,12 +5590,14 @@ const Rest = () => {
               are thus at
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              \tag&#123;A&#125;
-              x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;
-              $$
-            </MathBlock>
+            <OuterP>
+              <MathBlock>
+                $$
+                \tag&#123;A&#125;
+                x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;
+                $$
+              </MathBlock>
+            </OuterP>
             <Pause />
             <OuterP>
               which looks a little different than our

@@ -154,6 +154,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
         #("table", "Pause"),
       ]),
       dl.add_before_but_not_before_first_of_kind(#("Section", "Pause")),
+      dl.wrap_if_text_contains(#("MathBlock", "OuterP", "\\tag{")),
       dl.timer(),
       dl.tokenize_href_surroundings(),
       dl.rearrange_links_4_pre_tokenized_src(#("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>")),

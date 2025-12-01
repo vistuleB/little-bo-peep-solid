@@ -5111,6 +5111,15 @@
     "compression": "0.1%",
     "used-last-build": true
   },
+  "svg_ch4_ch_position_by_time_der_der.svg": {
+    "build-version": "svgo-svg/cBcm.svg",
+    "build-version-created-on": 1764621978,
+    "build-method": "svgo",
+    "build-version-size": 40643,
+    "original-size": 40707,
+    "compression": "0.16%",
+    "used-last-build": true
+  },
   "svg_ch4_17_particle9_inline.svg": {
     "build-version": "svgo-svg/A7E1.svg",
     "build-version-created-on": 1763512031,

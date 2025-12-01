@@ -2579,10 +2579,8 @@
             one can in particular deduce that
 
             |> center
-                style=margin-top:1.5em;margin-bottom:1.5em;
                 |> div
-                    style=display:inline-block;border:1px solid red;padding:1em 1em;
-
+                    style=display:inline-block;border:1px solid red;padding:1em 1em;margin:1.5em 1em;
                     $$
                     \sec^2(\theta) = 1 + \tan^2(\theta)
                     $$
@@ -2605,10 +2603,8 @@
     with the definitions being...
 
     |> center
-        style=margin-top:1em;margin-bottom:1em;
         |> div
-            style=display:inline-block;border:1px solid red;padding:1em 1em;
-
+            style=display:inline-block;border:1px solid red;padding:1em 1em;margin:1.5em 1em;
             $$
             \,\tan(\theta) = {\sin(\theta)\over \cos(\theta)}\,
             $$
@@ -2666,9 +2662,8 @@
         Viz:
 
         |> center
-            style=margin:1em 0em;
             |> div
-                style=display:inline-block;border:1px solid red;padding:1.2em 1.4em;
+                style=display:inline-block;border:1px solid red;padding:1.2em 1.4em;margin:1em 0em;
 
                 $$
                 \begin{align}
@@ -2688,7 +2683,7 @@
 
 |> Exercise
 
-    Here are four function compositions
+    Below are four function compositions
     depicted as “function box” diagrams, with
     inputs coming in the right and outputs
     going out the left (with $f$ being some generic
@@ -3434,9 +3429,7 @@
             $$
             \sqrt{0.5} = {1\over \sqrt{2}}
             $$
-            that some might prefer.
-            !! that is indeed the preferred way of writing $\sqrt{0.5}$
-            !! for many people.
+            previously discussed.
 
 
 |> Exercise

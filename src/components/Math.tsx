@@ -142,7 +142,7 @@ export const MathBlock = (props: ParentProps) => {
 
   return (
     <div
-      class="mathblock transition-all"
+      class={`mathblock transition-all ${originalWidth()}px`}
       style={{ opacity: visible() ? "1" : "0" }}
       onClick={handleClick}
       ref={ref}>

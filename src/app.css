@@ -506,3 +506,9 @@ ol.l1 > li:before {
   max-width: calc(100% - 40px);
   align-items: right;
 }
+
+.ch4_pacman1_inline_number_pellet {
+  height:0.9em;
+  vertical-align:baseline;
+  overflow:visible;
+}

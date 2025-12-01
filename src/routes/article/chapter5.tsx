@@ -295,8 +295,7 @@ export default function __Chapter5__() {
         <Image src="/build-img/svgo-svg/-qIg.svg" />
         <Pause />
         <OuterP>
-          Per the definitions,
-          the point half a unit
+          Per the definitions, the point half a unit
           counterclockwise from {" "}
           <Math>
             $(1, 0)$
@@ -1278,11 +1277,13 @@ const Rest = () => {
           are points on the unit circle, we have
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          \cos^2(x) + \sin^2(x) = 1 \tag&#123;*&#125;
-          $$
-        </MathBlock>
+        <OuterP>
+          <MathBlock>
+            $$
+            \cos^2(x) + \sin^2(x) = 1 \tag&#123;*&#125;
+            $$
+          </MathBlock>
+        </OuterP>
         <Pause />
         <OuterP>
           for all {" "}
@@ -1792,11 +1793,13 @@ const Rest = () => {
           Note that every point of the form
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          (\pm\sqrt&#123;x&#125;, \pm\sqrt&#123;1 - x&#125;),\,\,\,0 \leq x \leq 1 \tag&#123;*&#125;
-          $$
-        </MathBlock>
+        <OuterP>
+          <MathBlock>
+            $$
+            (\pm\sqrt&#123;x&#125;, \pm\sqrt&#123;1 - x&#125;),\,\,\,0 \leq x \leq 1 \tag&#123;*&#125;
+            $$
+          </MathBlock>
+        </OuterP>
         <Pause />
         <OuterP>
           is on the unit circle, because the
@@ -10536,8 +10539,8 @@ const Rest = () => {
                 answers to the same question,
                 one can in particular deduce that
               </OuterP>
-              <center style="margin-top:1.5em;margin-bottom:1.5em;">
-                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+              <center>
+                <div style="display:inline-block;border:1px solid red;padding:1em 1em;margin:1.5em 1em;">
                   <MathBlock>
                     $$
                     \sec^2(\theta) = 1 + \tan^2(\theta)
@@ -10605,8 +10608,8 @@ const Rest = () => {
             <OuterP>
               with the definitions being...
             </OuterP>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+            <center>
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;margin:1.5em 1em;">
                 <MathBlock>
                   $$
                   \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
@@ -10738,8 +10741,8 @@ const Rest = () => {
             <OuterP>
               Viz:
             </OuterP>
-            <center style="margin:1em 0em;">
-              <div style="display:inline-block;border:1px solid red;padding:1.2em 1.4em;">
+            <center>
+              <div style="display:inline-block;border:1px solid red;padding:1.2em 1.4em;margin:1em 0em;">
                 <MathBlock>
                   $$
                   \begin&#123;align&#125;
@@ -10785,7 +10788,7 @@ const Rest = () => {
                 Exercise 26.
               </b>
               {" "}
-              Here are four function compositions
+              Below are four function compositions
               depicted as “function box” diagrams, with
               inputs coming in the right and outputs
               going out the left (with {" "}
@@ -12646,7 +12649,7 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                that some might prefer.
+                previously discussed.
               </OuterP>
             </SolutionNote>
           </Solution>
