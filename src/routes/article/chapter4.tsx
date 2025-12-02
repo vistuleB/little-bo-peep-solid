@@ -12404,7 +12404,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="590px"
+              width="860px"
               src="/build-img/svgo-svg/m7Ll.svg"
             />
             <Pause />
@@ -12766,7 +12766,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="590px"
+              width="860px"
               src="/build-img/svgo-svg/tzR7.svg"
             />
             <Pause />
@@ -12826,7 +12826,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="590px"
+              width="860px"
               src="/build-img/svgo-svg/s8YV.svg"
             />
             <Pause />
@@ -12851,7 +12851,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="590px"
+              width="860px"
               src="/build-img/svgo-svg/0Agm.svg"
             />
             <Pause />
@@ -12925,7 +12925,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="590px"
+              width="860px"
               src="/build-img/svgo-svg/zXtI.svg"
             />
             <Pause />
@@ -12962,7 +12962,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="551px"
+              width="860px"
               src="/build-img/svgo-svg/d8B6.svg"
             />
             <Pause />
@@ -13379,7 +13379,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="551px"
+              width="860px"
               src="/build-img/svgo-svg/Fs4p.svg"
             />
             <Pause />
@@ -13398,7 +13398,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="551px"
+              width="860px"
               src="/build-img/svgo-svg/zqM6.svg"
             />
             <Pause />
@@ -13510,7 +13510,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="551px"
+              width="860px"
               src="/build-img/svgo-svg/Ywed.svg"
             />
             <Pause />
@@ -13568,7 +13568,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              height="551px"
+              width="860px"
               src="/build-img/svgo-svg/Bi-p.svg"
             />
             <Pause />
