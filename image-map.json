@@ -161,15 +161,6 @@
     "compression": "2.32%",
     "used-last-build": true
   },
-  "svg_ch4_new_quatient_x_fx_cloud.svg": {
-    "build-version": "svgo-svg/P0pJ.svg",
-    "build-version-created-on": 1763371716,
-    "build-method": "svgo",
-    "build-version-size": 176575,
-    "original-size": 176621,
-    "compression": "0.03%",
-    "used-last-build": true
-  },
   "svg_ch5_ex_opening_door_overhead.svg": {
     "build-version": "svgo-svg/OO4Q.svg",
     "build-version-created-on": 1763368310,
@@ -4020,15 +4011,6 @@
     "build-version-size": 16321,
     "original-size": 16321,
     "compression": "0.0%",
-    "used-last-build": true
-  },
-  "svg_ch4_new_quatient_x_fxplush_cloud.svg": {
-    "build-version": "svgo-svg/TzXP.svg",
-    "build-version-created-on": 1763371716,
-    "build-method": "svgo",
-    "build-version-size": 207583,
-    "original-size": 207708,
-    "compression": "0.06%",
     "used-last-build": true
   },
   "svg_ch5_ch_cosine_and_sine_@0.5.svg": {

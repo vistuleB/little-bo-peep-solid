@@ -513,3 +513,7 @@ ol.l1 > li:before {
   overflow:visible;
   transform: translate(0,2px);
 }
+
+.ch4_17_pellets {
+  transform: translate(0,-2px);
+}

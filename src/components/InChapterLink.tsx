@@ -10,7 +10,7 @@ const InChapterLink = (
   const handleClick = (e: Event) => {
     e.preventDefault();
     const url = new URL((e.currentTarget as HTMLAnchorElement).href);
-    const id = url.searchParams.get("id") || "";
+    let id = url.searchParams.get("id") || url.hash.slice(1) || "";
     scrollToInChapter(id, 200);
   };
 

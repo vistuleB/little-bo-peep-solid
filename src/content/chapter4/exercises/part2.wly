@@ -19,11 +19,11 @@
         to generate these curves. Also the
         values go through one cycle in the same
         amount of time as the particles of
-        Exercise 12, but the circle has twice the
+        Exercise >>four-particles, but the circle has twice the
         circumference (having twice the radius),
         so the particles are going twice as fast!
         (I.e.: speed 2, since the particles of
-        Exercise 12 have unit speed.)
+        Exercise >>four-particles have unit speed.)
 
         |> SolutionNote
 
@@ -40,7 +40,7 @@
 
 |> Exercise
 
-    Exercise 12 exhibits a function $f$—in fact,
+    Exercise >>four-particles exhibits a function $f$—in fact,
     four different functions $f$—such that
 
     $$
@@ -439,20 +439,21 @@
         the particles over time, with time $t = 0$
         corresponding to the original configuration
         depicted where particle 1 is at $(1, 0)$, you
-        find
+        find 
         |> del
-
             paths
         \ functions that look like so:
 
         |> Image
             src=images/svg_ch4_17_actual_functions.svg
 
-        For example, the derivative of curve
+        For example, the derivative of curve 
         |> InlineImage
+            class=ch4_17_pellets
             src=images/svg_ch4_17_particle1_inline.svg
-        , highlighted below in red, is curve
+        , highlighted below in red, is curve 
         |> InlineImage
+            class=ch4_17_pellets
             src=images/svg_ch4_17_particle5_inline.svg
         , highlighted in blue:
 
@@ -460,27 +461,33 @@
             src=images/svg_ch4_17_actual_functions_with_highlights.svg
 
         ...and taking sixteen more derivatives
-        starting from curve
+        starting from curve 
         |> InlineImage
+            class=ch4_17_pellets
             src=images/svg_ch4_17_particle5_inline.svg
-            style=margin-right:0.8em
-        we would go through curves
+        \ we would go through curves 
         |> InlineImage
+            class=ch4_17_pellets
             src=images/svg_ch4_17_particle9_inline.svg
-        ,
+        , 
         |> InlineImage
+            class=ch4_17_pellets
             src=images/svg_ch4_17_particle13_inline.svg
-        ,
+        , 
         |> InlineImage
+            class=ch4_17_pellets
             src=images/svg_ch4_17_particle17_inline.svg
-        ,
+        , 
         |> InlineImage
+            class=ch4_17_pellets
             src=images/svg_ch4_17_particle4_inline.svg
-        , ...,
+        , ..., 
         |> InlineImage
+            class=ch4_17_pellets
             src=images/svg_ch4_17_particle14_inline.svg
-        before finally coming back to curve
+        \ before finally coming back to curve 
         |> InlineImage
+            class=ch4_17_pellets
             src=images/svg_ch4_17_particle1_inline.svg
             style=margin-right:0.1em
         !
@@ -575,8 +582,8 @@
                         style=border:1px solid blue
                         blue
                     , particle 1, the last particle
-                    to be (noticeably*) “peeled off” from
-                    the circle (*all particles are
+                    to be (noticeably\*) “peeled off” from
+                    the circle (\*all particles are
                     instantaneously peeled off from the
                     circle to _some_ degree, as one
                     particle's slight deviation affects
@@ -642,8 +649,8 @@
         $$
         (x, f(x))
         $$
-        |> ImageLeft
-            src=images/svg_ch4_new_quatient_x_fx_cloud.svg
+        !! |> ImageLeft
+        !!     src=images/svg_ch4_new_quatient_x_fx_cloud.svg
 
         at one end, and
 
@@ -651,9 +658,9 @@
         (x + h, f(x + h))
         $$
 
-        |> ImageRight
-            offset_y=-0.5em
-            src=images/svg_ch4_new_quatient_x_fxplush_cloud.svg
+        !! |> ImageRight
+        !!     offset_y=-0.5em
+        !!     src=images/svg_ch4_new_quatient_x_fxplush_cloud.svg
 
         at the other end. (This is also the case
         if $h$ is negative, by the way.)
@@ -764,7 +771,6 @@
             |> li
                 style=margin-top:0.5em
                 |> del
-
                     when $B$'s tail is sticking out of the
                     cat's mouth, and
                 \ when $A$ and $B$ have both made it
@@ -1394,7 +1400,7 @@
 |> Exercise
 
     The function below is also the red
-    curve from Exercise 12, known as the
+    curve from Exercise >>four-particles, known as the
     _cosine function_ (already encountered
     in Chapter 3, Exercise 7). Knowing that
     this function is the $x$-coordinate of a
@@ -1563,18 +1569,15 @@
         |> ImageRight
             src=images/svg_ch4_pacman1_velocity_times_amt_time_cloud.svg
 
-        then gives us the following estimates for the
+        then gives us the following estimates for the 
         |> del
-
             amount of travel
         \ 
         |> del
-
             during the
         \ six displacements:
 
         |> CentralDisplay
-
             |> InlineImage
                 class=ch4_pacman1_inline_number_pellet
                 src=images/svg_ch4_pacman1_pellet1_inline.svg
@@ -1585,7 +1588,6 @@
             src=images/svg_ch4_pacman1_cells_per_second_times_seconds_cloud.svg
 
         |> CentralDisplay
-
             |> InlineImage
                 class=ch4_pacman1_inline_number_pellet
                 src=images/svg_ch4_pacman1_pellet2_inline.svg
@@ -1593,7 +1595,6 @@
             $-6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.4\te{s}\,\,=\,\,-2.7\,\te{cells}$
 
         |> CentralDisplay
-
             |> InlineImage
                 class=ch4_pacman1_inline_number_pellet
                 src=images/svg_ch4_pacman1_pellet3_inline.svg
@@ -1601,7 +1602,6 @@
             $6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.9\te{s}\,\,=\,\,6.075\,\te{cells}$
 
         |> CentralDisplay
-
             |> InlineImage
                 class=ch4_pacman1_inline_number_pellet
                 src=images/svg_ch4_pacman1_pellet4_inline.svg
@@ -1609,7 +1609,6 @@
             $6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.4\te{s}\,\,=\,\,2.7\,\te{cells}$
 
         |> CentralDisplay
-
             |> InlineImage
                 class=ch4_pacman1_inline_number_pellet
                 src=images/svg_ch4_pacman1_pellet5_inline.svg
@@ -1617,7 +1616,6 @@
             $-6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.4\te{s}\,\,=\,\,-2.7\,\te{cells}$
 
         |> CentralDisplay
-
             |> InlineImage
                 class=ch4_pacman1_inline_number_pellet
                 src=images/svg_ch4_pacman1_pellet6_inline.svg
@@ -1878,7 +1876,7 @@
         |> Image
             src=images/svg_ch4_pacman2_frankenstein_at_23_7.svg
 
-        The velocity vector (cf. Exercise 12) is therefore about
+        The velocity vector (cf. Exercise >>four-particles) is therefore about
 
         $$
         (4.8, 4.8)
@@ -1886,7 +1884,7 @@
 
         in units of $\te{c}\hlfbk/\hlfbk\te{s}$ at $t \approx 23.7$s,
         and the speed, being the length of the velocity
-        vector (cf. Exercise 12), is about
+        vector (cf. Exercise >>four-particles), is about
 
         $$
         \sqrt{4.8^2 + 4.8^2} = \sqrt{2} \times 4.8 = 6.788...
