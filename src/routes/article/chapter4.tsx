@@ -88,15 +88,6 @@ export default function __Chapter4__() {
       <ArticleTitle banner="Chapter 4:">
         Derivatives
       </ArticleTitle>
-      <OuterP>
-        {" "}{" "}
-        <InChapterLink
-          href="/article/chapter4#_19_hgi_"
-          class="handle-in-chapter-link"
-        >
-          Exercise 12
-        </InChapterLink>
-      </OuterP>
       <Pause />
       <Image src="/build-img/svgo-svg/1s4r.svg" />
       <Section id="section-1">
