@@ -1547,11 +1547,11 @@
         $$
         \pm 6.75\te{c}\hlfbk/\hlfbk\te{s}
         $$
-        when it is nonzero (for displacement
+        when it is nonzero (for displacement 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet5_inline.svg
-        the velocity might seem more like $-6.8\te{c}\hlfbk/\hlfbk\te{s}$
+        \ the velocity might seem more like $-6.8\te{c}\hlfbk/\hlfbk\te{s}$
         at the least, but we've already made more
         significant errors while eyeballing the durations, so
         nevermind). Using
@@ -1632,12 +1632,12 @@
             src=images/svg_ch4_pacman1_initial_displacements_before_rounding.svg
 
         But these are approximate numbers and the
-        true values must be integers, except for
+        true values must be integers, except for 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet1_inline.svg
         . (Because we don't know where Pacman started
-        out. For
+        out. For 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet6_inline.svg
@@ -1657,27 +1657,27 @@
         $$
         4
         $$
-        |> ImageLeft
-            width=700px
-            src=images/svg_ch4_pacman1_disp_4_cloud.svg
+        !! |> ImageLeft
+        !!     width=700px
+        !!     src=images/svg_ch4_pacman1_disp_4_cloud.svg
 
         and
 
         $$
         6
         $$
-        |> ImageLeft
-            width=1400px
-            src=images/svg_ch4_pacman1_disp_6_cloud.svg
+        !! |> ImageLeft
+        !!     width=1400px
+        !!     src=images/svg_ch4_pacman1_disp_6_cloud.svg
 
         and
 
         $$
         7
         $$
-        |> ImageLeft
-            width=700px
-            src=images/svg_ch4_pacman1_disp_7_cloud.svg
+        !! |> ImageLeft
+        !!     width=700px
+        !!     src=images/svg_ch4_pacman1_disp_7_cloud.svg
 
         cells, with $5$ not being a possibility.
         In the horizontal direction,
@@ -1730,11 +1730,11 @@
             src=images/svg_ch4_pacman1_initial_motions.svg
 
         The maze fits these constraints in only two places
-        (note that
+        (note that 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet2_inline.svg
-        \ and
+        \ and 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet4_inline.svg
@@ -1760,14 +1760,14 @@
         the start of the interval is at an integer value: this is a good
         way to estimate the length.)
 
-        Because displacement
+        Because displacement 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet7_inline.svg
         \ is horizontal to the right the only possible
         remaining solution is the right-hand one,
         or else Pacman would collide with the ghost cage,
-        with displacement
+        with displacement 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet6_inline.svg
@@ -1784,7 +1784,7 @@
         6.75\te{c}\hlfbk/\hlfbk\te{s}\,\times\,3.2\te{s}\,=\,21.6\te{c}
         $$
 
-        it seems that displacement
+        it seems that displacement 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet7_inline.svg
@@ -1804,25 +1804,25 @@
         -6.75\te{c}\hlfbk/\hlfbk\te{s}\,\times\,0.4\te{s}\,=\,-2.7\te{c}
         $$
 
-        displacement
+        displacement 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet8_inline.svg
         \ must be $-3$c or $-4$c;
-        must actually be $-3$c since displacement
+        must actually be $-3$c since displacement 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet9_inline.svg
-        is to the right; so, notwithstanding the exact
-        length of displacement
+        \ is to the right; so, notwithstanding the exact
+        length of displacement 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet9_inline.svg
-        , there is only one possibility for displacements
+        , there is only one possibility for displacements 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet1_inline.svg
-        through
+        through 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet8_inline.svg
@@ -1832,11 +1832,11 @@
             height=590px
             src=images/svg_ch4_pacman1_maze_final_solution.svg
 
-        So at $t = 49$s, between displacements
+        So at $t = 49$s, between displacements 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet7_inline.svg
-        \ and
+        \ and 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet8_inline.svg

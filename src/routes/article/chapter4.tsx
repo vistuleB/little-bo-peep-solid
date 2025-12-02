@@ -12461,12 +12461,12 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              when it is nonzero (for displacement
+              when it is nonzero (for displacement {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/-5FM.svg"
               />
-              the velocity might seem more like {" "}
+              {" "} the velocity might seem more like {" "}
               <Math>
                 $-6.8\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
               </Math>
@@ -12575,13 +12575,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               But these are approximate numbers and the
-              true values must be integers, except for
+              true values must be integers, except for {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/nS4I.svg"
               />
               . (Because we don't know where Pacman started
-              out. For
+              out. For {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/DMGg.svg"
@@ -12615,11 +12615,6 @@ const Rest = () => {
               $$
               4
               $$
-              <ImageLeft
-                width="700px"
-                src="/build-img/svgo-svg/dcmY.svg"
-                compensate_offset_x_for_large_text_columns={true}
-              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -12630,11 +12625,6 @@ const Rest = () => {
               $$
               6
               $$
-              <ImageLeft
-                width="1400px"
-                src="/build-img/svgo-svg/q3zw.svg"
-                compensate_offset_x_for_large_text_columns={true}
-              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -12645,11 +12635,6 @@ const Rest = () => {
               $$
               7
               $$
-              <ImageLeft
-                width="700px"
-                src="/build-img/svgo-svg/L75a.svg"
-                compensate_offset_x_for_large_text_columns={true}
-              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -12755,12 +12740,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               The maze fits these constraints in only two places
-              (note that
+              (note that {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/42_Z.svg"
               />
-              {" "} and
+              {" "} and {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/6IhU.svg"
@@ -12823,7 +12808,7 @@ const Rest = () => {
               way to estimate the length.)
             </OuterP>
             <OuterP class="indent-10">
-              Because displacement
+              Because displacement {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/g6cf.svg"
@@ -12831,7 +12816,7 @@ const Rest = () => {
               {" "} is horizontal to the right the only possible
               remaining solution is the right-hand one,
               or else Pacman would collide with the ghost cage,
-              with displacement
+              with displacement {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/DMGg.svg"
@@ -12856,7 +12841,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              it seems that displacement
+              it seems that displacement {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/g6cf.svg"
@@ -12888,7 +12873,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              displacement
+              displacement {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/bLYc.svg"
@@ -12915,23 +12900,23 @@ const Rest = () => {
                 </Math>
                 c
               </NoBreak>
-              {" "} since displacement
+              {" "} since displacement {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/oU3r.svg"
               />
-              is to the right; so, notwithstanding the exact
-              length of displacement
+              {" "} is to the right; so, notwithstanding the exact
+              length of displacement {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/oU3r.svg"
               />
-              , there is only one possibility for displacements
+              , there is only one possibility for displacements {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/nS4I.svg"
               />
-              through
+              through {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/bLYc.svg"
@@ -12952,12 +12937,12 @@ const Rest = () => {
                 </Math>
                 s,
               </NoBreak>
-              {" "} between displacements
+              {" "} between displacements {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/g6cf.svg"
               />
-              {" "} and
+              {" "} and {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/bLYc.svg"

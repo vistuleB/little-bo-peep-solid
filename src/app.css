@@ -511,4 +511,5 @@ ol.l1 > li:before {
   height:0.9em;
   vertical-align:baseline;
   overflow:visible;
+  transform: translate(0,2px);
 }

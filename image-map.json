@@ -4085,15 +4085,6 @@
     "compression": "8.73%",
     "used-last-build": true
   },
-  "svg_ch4_pacman1_disp_7_cloud.svg": {
-    "build-version": "svgo-svg/L75a.svg",
-    "build-version-created-on": 1763371724,
-    "build-method": "svgo",
-    "build-version-size": 46425,
-    "original-size": 46590,
-    "compression": "0.35%",
-    "used-last-build": true
-  },
   "svg_ch3_connection_f_x_h.svg": {
     "build-version": "svgo-svg/1JTc.svg",
     "build-version-created-on": 1763370663,
@@ -4146,15 +4137,6 @@
     "build-version-size": 5912,
     "original-size": 5913,
     "compression": "0.02%",
-    "used-last-build": true
-  },
-  "svg_ch4_pacman1_disp_6_cloud.svg": {
-    "build-version": "svgo-svg/q3zw.svg",
-    "build-version-created-on": 1763371724,
-    "build-method": "svgo",
-    "build-version-size": 60774,
-    "original-size": 60800,
-    "compression": "0.04%",
     "used-last-build": true
   },
   "svg_ch5_ex_opening_door.svg": {
@@ -4380,15 +4362,6 @@
     "build-version-size": 54822,
     "original-size": 54858,
     "compression": "0.07%",
-    "used-last-build": true
-  },
-  "svg_ch4_pacman1_disp_4_cloud.svg": {
-    "build-version": "svgo-svg/dcmY.svg",
-    "build-version-created-on": 1763371724,
-    "build-method": "svgo",
-    "build-version-size": 99511,
-    "original-size": 99704,
-    "compression": "0.19%",
     "used-last-build": true
   },
   "svg_ch4_cosine_curves_two_dimensional_vel.svg": {
