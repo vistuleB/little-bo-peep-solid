@@ -619,6 +619,7 @@
         Here's another point of view: just like
 
         __position__
+
         is encoded by a pair of numbers—sometimes
         known as the _position vector_ by
         the way, where “vector” is a term of art
@@ -2083,7 +2084,7 @@
         rotate at unit speed around their circle of
         radius $1$ centered at the origin, just like
         the particles discussed in the solution to
-        Exercise 12, that obey a similar set of
+        Exercise >>four-particles, that obey a similar set of
         constraints
         (albeit with a different set of colors).
 
@@ -2257,18 +2258,24 @@
 
         by the sum rule; but this gives us an idea!; we can
         try to _define_ the original particles 
-        |> InlineImage
-            class=ch4_inline_blackwhite_particles
-            src=images/svg_ch4_circle_at_2_4_p1_inline.svg
-        , 
-        |> InlineImage
-            class=ch4_inline_blackwhite_particles
-            src=images/svg_ch4_circle_at_2_4_p2_inline.svg
-        , 
-        |> InlineImage
-            class=ch4_inline_blackwhite_particles
-            src=images/svg_ch4_circle_at_2_4_p3_inline.svg
-        , 
+        |> NoBreak
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
+            ,
+        \ 
+        |> NoBreak
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
+            ,
+        \ 
+        |> NoBreak
+            |> InlineImage
+                class=ch4_inline_blackwhite_particles
+                src=images/svg_ch4_circle_at_2_4_p3_inline.svg
+            ,
+        \ 
         |> InlineImage
             class=ch4_inline_blackwhite_particles
             src=images/svg_ch4_circle_at_2_4_p4_inline.svg
@@ -2287,7 +2294,6 @@
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
             $_x$
-            |> br
 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
@@ -2301,7 +2307,6 @@
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
             $_y$
-            |> br
 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
@@ -2315,7 +2320,6 @@
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
             $_x$
-            |> br
 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
@@ -2329,7 +2333,6 @@
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
             $_y$
-            |> br
 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
@@ -2343,7 +2346,6 @@
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
             $_x$
-            |> br
 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
@@ -2357,7 +2359,6 @@
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
             $_y$
-            |> br
 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
@@ -2371,7 +2372,6 @@
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
             $_x$
-            |> br
 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
@@ -2454,7 +2454,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
-            $_x \,+$
+            $_x \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
@@ -2462,7 +2462,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
-            $_x \,+$
+            $_x \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
@@ -3054,7 +3054,7 @@
 
     |> Solution
 
-        Recall the curves from Exercise 12:
+        Recall the curves from Exercise >>four-particles:
 
         |> Image
             src=images/svg_ch4_ex_cosine_recall.svg

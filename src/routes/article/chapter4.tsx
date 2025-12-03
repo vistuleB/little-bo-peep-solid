@@ -7125,21 +7125,30 @@ const Rest = () => {
                 define
               </i>
               {" "} the original particles {" "}
-              <InlineImage
-                class="ch4_inline_blackwhite_particles"
-                src="/build-img/svgo-svg/9T47.svg"
-              />
-              , {" "}
-              <InlineImage
-                class="ch4_inline_blackwhite_particles"
-                src="/build-img/svgo-svg/6ZK8.svg"
-              />
-              , {" "}
-              <InlineImage
-                class="ch4_inline_blackwhite_particles"
-                src="/build-img/svgo-svg/Ya08.svg"
-              />
-              , {" "}
+              <NoBreak>
+                <InlineImage
+                  class="ch4_inline_blackwhite_particles"
+                  src="/build-img/svgo-svg/9T47.svg"
+                />
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <InlineImage
+                  class="ch4_inline_blackwhite_particles"
+                  src="/build-img/svgo-svg/6ZK8.svg"
+                />
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <InlineImage
+                  class="ch4_inline_blackwhite_particles"
+                  src="/build-img/svgo-svg/Ya08.svg"
+                />
+                ,
+              </NoBreak>
+              {" "} {" "}
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/build-img/svgo-svg/k4Y8.svg"
@@ -7172,7 +7181,6 @@ const Rest = () => {
                 <Math>
                   $_x$
                 </Math>
-                <br />
               </p>
               <p>
                 <InlineImage
@@ -7198,7 +7206,6 @@ const Rest = () => {
                 <Math>
                   $_y$
                 </Math>
-                <br />
               </p>
               <p>
                 <InlineImage
@@ -7224,7 +7231,6 @@ const Rest = () => {
                 <Math>
                   $_x$
                 </Math>
-                <br />
               </p>
               <p>
                 <InlineImage
@@ -7250,7 +7256,6 @@ const Rest = () => {
                 <Math>
                   $_y$
                 </Math>
-                <br />
               </p>
               <p>
                 <InlineImage
@@ -7276,7 +7281,6 @@ const Rest = () => {
                 <Math>
                   $_x$
                 </Math>
-                <br />
               </p>
               <p>
                 <InlineImage
@@ -7302,7 +7306,6 @@ const Rest = () => {
                 <Math>
                   $_y$
                 </Math>
-                <br />
               </p>
               <p>
                 <InlineImage
@@ -7328,7 +7331,6 @@ const Rest = () => {
                 <Math>
                   $_x$
                 </Math>
-                <br />
               </p>
               <p>
                 <InlineImage
@@ -7477,6 +7479,7 @@ const Rest = () => {
                 <Math>
                   $_x \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
@@ -7492,6 +7495,7 @@ const Rest = () => {
                 <Math>
                   $_x \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
