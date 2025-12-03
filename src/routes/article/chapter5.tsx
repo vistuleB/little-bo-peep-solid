@@ -1,5 +1,6 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
+import Boxed  from "~/components/Boxed";
 import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
@@ -10608,21 +10609,22 @@ const Rest = () => {
             <OuterP>
               with the definitions being...
             </OuterP>
-            <center>
-              <div style="display:inline-block;border:1px solid red;padding:1em 1em;margin:1.5em 1em;">
-                <MathBlock>
-                  $$
-                  \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
-                  $$
-                </MathBlock>
-                <Pause />
-                <MathBlock>
-                  $$
-                  \,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
-                  $$
-                </MathBlock>
-              </div>
-            </center>
+            <Boxed>
+              <MathBlock>
+                $$
+                \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
+                $$
+              </MathBlock>
+              <Pause />
+              {" "}
+              {" "}
+              <Pause />
+              <MathBlock>
+                $$
+                \,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
               ...for all {" "}
               <NoBreak>

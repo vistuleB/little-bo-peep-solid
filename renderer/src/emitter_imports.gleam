@@ -21,6 +21,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
   dict.from_list([
     #("Article", ExportedByFile(Some("Article"), [])),
     #("ArticleTitle", ExportedByFile(Some("ArticleTitle"), [])),
+    #("Boxed", ExportedByFile(Some("Boxed"), [])),
     #("Delimiters", ExportedByFile(None, ["CentralDisplay", "CentralDisplayItalic"])),
     #("Exercises", ExportedByFile(None, ["Exercises", "Exercise", "ExerciseStatement"])),
     #("Grid", ExportedByFile(Some("Grid"), [])),

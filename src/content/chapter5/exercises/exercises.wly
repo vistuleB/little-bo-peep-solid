@@ -2602,15 +2602,13 @@
 
     with the definitions being...
 
-    |> center
-        |> div
-            style=display:inline-block;border:1px solid red;padding:1em 1em;margin:1.5em 1em;
-            $$
-            \,\tan(\theta) = {\sin(\theta)\over \cos(\theta)}\,
-            $$
-            $$
-            \,\sec(\theta) = {1\over \cos(\theta)}\,
-            $$
+    |> Boxed
+        $$
+        \,\tan(\theta) = {\sin(\theta)\over \cos(\theta)}\,
+        $$
+        $$
+        \,\sec(\theta) = {1\over \cos(\theta)}\,
+        $$
 
     ...for all $\theta \in \rr$. (I.e., if the fraction is undefined,
     then the function is undefined.)
