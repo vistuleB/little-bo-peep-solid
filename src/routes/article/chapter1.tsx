@@ -2159,51 +2159,81 @@ const Rest = () => {
               cols={3}
               place_items="end"
             >
-              <Math>
-                $(-1)^1 =$
-              </Math>
-              <Math>
-                $(-1) =$
-              </Math>
-              <Math>
-                $-1$
-              </Math>
-              <Math>
-                $(-1)^2 =$
-              </Math>
-              <Math>
-                $(-1)\times (-1) =$
-              </Math>
-              <Math>
-                $1$
-              </Math>
-              <Math>
-                $(-1)^3 =$
-              </Math>
-              <Math>
-                $(-1)\times(-1)\times (-1) =$
-              </Math>
-              <Math>
-                $-1$
-              </Math>
-              <Math>
-                $(-1)^4 =$
-              </Math>
-              <Math>
-                $(-1)\times(-1)\times(-1)\times(-1) =$
-              </Math>
-              <Math>
-                $1$
-              </Math>
-              <Math>
-                $(-1)^5 =$
-              </Math>
-              <Math>
-                $\,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) =$
-              </Math>
-              <Math>
-                $-1$
-              </Math>
+              <Item>
+                <Math>
+                  $(-1)^1 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $-1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^2 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)\times (-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^3 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)\times(-1)\times (-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $-1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^4 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)\times(-1)\times(-1)\times(-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^5 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $\,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $-1$
+                </Math>
+              </Item>
             </Grid>
             <Pause />
             <OuterP>

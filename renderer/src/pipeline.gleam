@@ -4,7 +4,7 @@ import infrastructure.{type Pipeline} as infra
 import prefabricated_pipelines as pp
 import desugarer_library as dl
 
-const cannot_be_contained_in_a_paragrap = [
+const p_cannot_contain = [
   "ArticleTitle", "Bootcamp", "CentralDisplay",
   "CentralDisplayItalic", "Chapter", "Example",
   "Exercise", "Exercises", "Grid", "Image",
@@ -17,9 +17,9 @@ const cannot_be_contained_in_a_paragrap = [
   "section", "ul",
 ]
 
-const cannot_contain_a_paragraph = [
-  "MathBlock", "Math", "p", "CentralDisplay",
-  "CentralDisplayItalic", "ArticleTitle"
+const cannot_contain_p = [
+  "ArticleTitle",
+  "MathBlock", "Math", "p", 
 ]
 
 pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
@@ -79,7 +79,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.unwrap("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Bootcamp", "ArticleTitle", "banner"), ["Chapter"]),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Chapter", "ArticleTitle", "banner"), ["Bootcamp"]),
-      dl.group_consecutive_children__outside(#("p", cannot_be_contained_in_a_paragrap), cannot_contain_a_paragraph),
+      dl.group_consecutive_children__outside(#("p", p_cannot_contain), cannot_contain_p),
       dl.unwrap("WriterlyBlankLine"),
       // cleaning 'p' first time around:
       dl.concatenate_text_nodes(),
@@ -91,6 +91,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
     pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
     pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
+      dl.table_marker(),
       dl.free_children(#("CentralDisplay", "p")),
       dl.free_children(#("CentralDisplayItalic", "p")),
     ],
@@ -106,7 +107,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.trim("p"),
       dl.delete_if_empty("p"),
       // (end cleaning)
-      dl.unwrap_if_no_child_meets_condition(#("p", infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink"]))),
+      dl.unwrap_if_no_child_meets_condition(#("p", infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink", "InlineImage", "Math"]))),
       dl.unwrap_if_descendant_of(#("p", ["td", "li"])),
       dl.rename_if_child_of(#("p", "Item", "List")),
       dl.rename_if_child_of(#("p", "Item", "Grid")),
