@@ -1,13 +1,13 @@
 |> Exercise
-
     How can we generate the following set of
     curves by rotating points around a circle,
     and tracking their $x$-coordinates? (This
     graph is an exact $2$&#x200b;$\times$ [“two
-    x”] vertical dilation of the graph in Exercise
-    12.) Should we use a circle of radius $2$,
-    or make the points go twice as fast? Or both?
-    Or something else yet?
+    x”] vertical dilation of the graph in 
+    Exercise >>four-particles.) Should we use 
+    a circle of radius $2$, or make the points 
+    go twice as fast? Or both? Or something else
+    yet?
 
     |> Image
         src=images/svg_ch4_scaled_cosine_curves.svg
@@ -1398,12 +1398,12 @@
 
 
 |> Exercise
-
+    handle=eta-approximation-from-cosine-graph
     The function below is also the red
     curve from Exercise >>four-particles, known as the
     _cosine function_ (already encountered
-    in Chapter 3, Exercise 7). Knowing that
-    this function is the $x$-coordinate of a
+    in Chapter >>functions, Exercise >>cosine-1000x). Knowing
+    that this function is the $x$-coordinate of a
     point rotating at unit speed around a unit
     circle, find, by inspection of the graph,
     a rational approximation to the circumference
@@ -2003,7 +2003,8 @@
         $$
 
         for the quarter-circumference of a unit circle
-        (cf$.$ Exercise 24), this would indicate that
+        (cf$.$ Exercise >>eta-approximation-from-cosine-graph),
+        this would indicate that
         the curve (which is a quarter-circle, as
         all curves in this maze) has radius
 

@@ -2119,7 +2119,7 @@ const Rest = () => {
               As explained in {" "}
               <NoBreak>
                 <a
-                  href="/article/chapter3#_15_hgi_"
+                  href="/article/chapter3#_16_hgi_"
                   class="handle-out-chapter-link"
                 >
                   Chapter 3

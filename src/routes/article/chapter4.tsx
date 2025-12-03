@@ -1761,7 +1761,7 @@ const Rest = () => {
           of functions already appear in {" "}
           <NoBreak>
             <a
-              href="/article/chapter3#_13_hgi_"
+              href="/article/chapter3#_14_hgi_"
               class="handle-out-chapter-link"
             >
               Exercise 18 of Chapter 3
@@ -1796,7 +1796,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_16_hgi_">
+          <ExerciseStatement id="_17_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1925,7 +1925,7 @@ const Rest = () => {
               derivative of the graph in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_16_hgi_"
+                  href="/article/chapter4#_17_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 1
@@ -1973,7 +1973,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of {" "}
               <InChapterLink
-                href="/article/chapter4#_16_hgi_"
+                href="/article/chapter4#_17_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 1
@@ -2513,7 +2513,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_17_hgi_">
+          <ExerciseStatement id="_18_hgi_">
             <OuterP>
               <b>
                 Exercise 8.
@@ -2696,7 +2696,7 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_17_hgi_"
+                  href="/article/chapter4#_18_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 8
@@ -2969,7 +2969,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_18_hgi_">
+          <ExerciseStatement id="_19_hgi_">
             <OuterP>
               <b>
                 Exercise 10.
@@ -3117,7 +3117,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={12}>
-          <ExerciseStatement id="_19_hgi_">
+          <ExerciseStatement id="_20_hgi_">
             <OuterP>
               <b>
                 Exercise 12.
@@ -4314,7 +4314,7 @@ const Rest = () => {
               {" "} compute?
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_20_hgi_">
+          <Solution id="_21_hgi_">
             <OuterP>
               It computes
               the amount earned by the rat as a function of time. In
@@ -5691,7 +5691,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_21_hgi_">
+            <SolutionNote id="_22_hgi_">
               <OuterP>
                 <i>
                   Note 1.
@@ -6051,7 +6051,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={25}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_24_hgi_">
             <OuterP>
               <b>
                 Exercise 25.
@@ -6100,7 +6100,7 @@ const Rest = () => {
               see {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_22_hgi_"
+                  href="/article/chapter4#_23_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Note 1
@@ -6281,7 +6281,7 @@ const Rest = () => {
               {" "} no matter how far back in time you look.)
             </OuterP>
             <Pause />
-            <SolutionNote id="_22_hgi_">
+            <SolutionNote id="_23_hgi_">
               <OuterP>
                 <i>
                   Note 1.
@@ -6388,8 +6388,15 @@ const Rest = () => {
               </Math>
               {" "} axis) of the two
               particles. If we add also the graph of the position
-              of the red particle from Exercise 41 to this set of
-              graphs, what symmetries
+              of the red particle from {" "}
+              <InChapterLink
+                href="/article/chapter4#_24_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 25
+              </InChapterLink>
+              {" "}
+              to this set of graphs, what symmetries
               exist altogether between the three graphs?
             </OuterP>
           </ExerciseStatement>
@@ -6761,7 +6768,17 @@ const Rest = () => {
               </Math>
               {" "} centered at the origin, just like
               the particles discussed in the solution to
-              Exercise 12, that obey a similar set of
+              {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_20_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 12
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "} that obey a similar set of
               constraints
               (albeit with a different set of colors).
             </OuterP>
@@ -6861,10 +6878,30 @@ const Rest = () => {
             <OuterP>
               The behavior of such a particle is
               identical to the behavior of the red
-              particle from Exercise 41,
+              particle from {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_24_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 25
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "}
               except that the current
               “UNO particle” has a slight head-start over the
-              red particle from Exercise 41, being
+              red particle from {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_24_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 25
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "} being
               at position {" "}
               <Math>
                 $x = 2\sqrt&#123;5&#125;$
@@ -7007,6 +7044,7 @@ const Rest = () => {
                 <Math>
                   $_x\,\!\!\!' =$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
@@ -7387,6 +7425,7 @@ const Rest = () => {
                 <Math>
                   $_x \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
@@ -7402,6 +7441,7 @@ const Rest = () => {
                 <Math>
                   $_x \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
@@ -7433,6 +7473,7 @@ const Rest = () => {
                 <Math>
                   $_y \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
@@ -7448,6 +7489,7 @@ const Rest = () => {
                 <Math>
                   $_y \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
@@ -7527,6 +7569,7 @@ const Rest = () => {
                 <Math>
                   $_y \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
@@ -7542,6 +7585,7 @@ const Rest = () => {
                 <Math>
                   $_y \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
@@ -7588,6 +7632,7 @@ const Rest = () => {
                 <Math>
                   $_x \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
@@ -7619,6 +7664,7 @@ const Rest = () => {
                 <Math>
                   $_y \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
@@ -7634,6 +7680,7 @@ const Rest = () => {
                 <Math>
                   $_y \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
@@ -7665,6 +7712,7 @@ const Rest = () => {
                 <Math>
                   $_x \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
@@ -7680,6 +7728,7 @@ const Rest = () => {
                 <Math>
                   $_x \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
@@ -7711,6 +7760,7 @@ const Rest = () => {
                 <Math>
                   $_y \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
@@ -7726,6 +7776,7 @@ const Rest = () => {
                 <Math>
                   $_y \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
@@ -7923,6 +7974,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
@@ -7947,6 +7999,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
@@ -7954,6 +8007,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
@@ -7978,6 +8032,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
@@ -7985,6 +8040,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
@@ -8009,6 +8065,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
@@ -8016,6 +8073,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
@@ -8040,6 +8098,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
@@ -8047,6 +8106,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
@@ -8071,6 +8131,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
@@ -8078,6 +8139,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
@@ -8102,6 +8164,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
@@ -8109,6 +8172,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
@@ -8133,6 +8197,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) \,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
@@ -8140,6 +8205,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
@@ -8163,6 +8229,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
@@ -8179,6 +8246,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
@@ -8195,6 +8263,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
@@ -8211,6 +8280,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
@@ -8227,6 +8297,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
@@ -8243,6 +8314,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
@@ -8259,6 +8331,7 @@ const Rest = () => {
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
@@ -8275,6 +8348,7 @@ const Rest = () => {
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
+                {" "} {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
@@ -8607,7 +8681,17 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Recall the curves from Exercise 12:
+              Recall the curves from {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_20_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 12
+                </InChapterLink>
+                :
+              </NoBreak>
+              {" "}{" "}
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/X2nI.svg" />
@@ -8982,17 +9066,28 @@ const Rest = () => {
                 $\times$
               </Math>
               {" "} [“two
-              x”] vertical dilation of the graph in Exercise
-              12.) Should we use a circle of radius {" "}
+              x”] vertical dilation of the graph in 
+              {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_20_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 12
+                </InChapterLink>
+                .)
+              </NoBreak>
+              {" "} Should we use 
+              a circle of radius {" "}
               <NoBreak>
                 <Math>
                   $2$
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              or make the points go twice as fast? Or both?
-              Or something else yet?
+              {" "} or make the points 
+              go twice as fast? Or both? Or something else
+              yet?
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/B7D4.svg" />
@@ -9022,7 +9117,7 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_19_hgi_"
+                  href="/article/chapter4#_20_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 12
@@ -9035,7 +9130,7 @@ const Rest = () => {
               (I.e.: speed 2, since the particles of
               {" "}
               <InChapterLink
-                href="/article/chapter4#_19_hgi_"
+                href="/article/chapter4#_20_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 12
@@ -9076,7 +9171,7 @@ const Rest = () => {
               {" "}
               {" "}
               <InChapterLink
-                href="/article/chapter4#_19_hgi_"
+                href="/article/chapter4#_20_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 12
@@ -9185,7 +9280,7 @@ const Rest = () => {
               ...?
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_23_hgi_">
+          <Solution id="_25_hgi_">
             <OuterP>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -10384,7 +10479,7 @@ const Rest = () => {
               the expression, if any.
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_24_hgi_">
+          <Solution id="_26_hgi_">
             <OuterP>
               This version pictures all the elements
               that appear in the fraction:
@@ -10982,7 +11077,7 @@ const Rest = () => {
               Exercise 16 {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_20_hgi_"
+                  href="/article/chapter4#_21_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Note 3
@@ -11677,7 +11772,7 @@ const Rest = () => {
               to this point?
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_25_hgi_">
+          <Solution id="_27_hgi_">
             <OuterP>
               That would be the fact that
             </OuterP>
@@ -12398,7 +12493,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={41}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_28_hgi_">
             <OuterP>
               <b>
                 Exercise 41.
@@ -12408,7 +12503,7 @@ const Rest = () => {
               curve from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_19_hgi_"
+                  href="/article/chapter4#_20_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 12
@@ -12421,8 +12516,18 @@ const Rest = () => {
                 cosine function
               </i>
               {" "} (already encountered
-              in Chapter 3, Exercise 7). Knowing that
-              this function is the {" "}
+              in {" "}
+              <NoBreak>
+                <a
+                  href="/article/chapter3#_16_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Chapter 3, Exercise 7
+                </a>
+                ).
+              </NoBreak>
+              {" "} Knowing
+              that this function is the {" "}
               <NoBreak>
                 <Math>
                   $x$
@@ -13289,7 +13394,7 @@ const Rest = () => {
               The velocity vector (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_19_hgi_"
+                  href="/article/chapter4#_20_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 12
@@ -13322,7 +13427,7 @@ const Rest = () => {
               vector (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_19_hgi_"
+                  href="/article/chapter4#_20_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 12
@@ -13594,7 +13699,18 @@ const Rest = () => {
                   $.$
                 </Math>
               </NoBreak>
-              {" "} Exercise 24), this would indicate that
+              {" "} {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_28_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 41
+                </InChapterLink>
+                ),
+              </NoBreak>
+              {" "}
+              this would indicate that
               the curve (which is a quarter-circle, as
               all curves in this maze) has radius
             </OuterP>

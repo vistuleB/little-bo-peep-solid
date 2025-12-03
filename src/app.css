@@ -469,7 +469,7 @@ ol.l1 > li:before {
 }
 
 .handle-in-chapter-link:hover,
-.handle-out-of-chapter-link:hover {
+.handle-out-chapter-link:hover {
   text-decoration: underline;
 }
 

@@ -24,7 +24,7 @@
     Notation-wise, one writes
 
     $$
-    {f(x)}
+    f(x)
     $$
 
     (which is read “$f$ of $x$”, and that's
@@ -1158,7 +1158,7 @@
             form, it being more “talkative”.)
 
     |> Exercise
-
+        handle=cosine-1000x
         If
         $$
         \cos \dblcol \rr \ra \rr

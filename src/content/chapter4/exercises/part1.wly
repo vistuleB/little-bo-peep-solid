@@ -1,6 +1,5 @@
 |> Exercise
-    handle=seeSaw
-
+    handle=see-saw
     Sketch the derivative of a function with the
     following graph (what _looks_ like a sharp
     corner _is_ a sharp corner):
@@ -9,7 +8,6 @@
         src=images/svg_ch4_slope_one_half_see_saw.svg
 
     |> Solution
-
         That would be:
 
         |> Image
@@ -48,7 +46,7 @@
 
     __second__
 
-    derivative of the graph in Exercise >>seeSaw.
+    derivative of the graph in Exercise >>see-saw.
 
     |> Solution
 
@@ -74,7 +72,7 @@
 
 |> Exercise
 
-    If we pretend that the graph of Exercise >>seeSaw
+    If we pretend that the graph of Exercise >>see-saw
     depicts the 
     |> del
         distance that a car has traveled
@@ -1778,6 +1776,7 @@
 
 
 |> Exercise
+    handle=single-red-particle
 
     Imagine a single particle in a one-dimensional
     world, whose velocity equals its position; at $t = 0$,
@@ -1913,8 +1912,8 @@
     position-as-a-function-of-time (time on the $x$
     axis, position on the $y$ axis) of the two
     particles. If we add also the graph of the position
-    of the red particle from Exercise 41 to this set of
-    graphs, what symmetries
+    of the red particle from Exercise >>single-red-particle
+    to this set of graphs, what symmetries
     exist altogether between the three graphs?
 
     |> Solution
@@ -2142,10 +2141,10 @@
 
         The behavior of such a particle is
         identical to the behavior of the red
-        particle from Exercise 41,
+        particle from Exercise >>single-red-particle,
         except that the current
         “UNO particle” has a slight head-start over the
-        red particle from Exercise 41, being
+        red particle from Exercise >>single-red-particle, being
         at position $x = 2\sqrt{5}$
         instead of at position $x = 1$ at $t = 0$.
         (!!)
@@ -2204,7 +2203,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
-            $_x\,\!\!\!' =$
+            $_x\,\!\!\!' =$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
@@ -2404,7 +2403,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
-            $_x \,+$
+            $_x \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
@@ -2412,7 +2411,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
-            $_x \,+$
+            $_x \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
@@ -2429,7 +2428,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
-            $_y \,+$
+            $_y \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
@@ -2437,7 +2436,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
-            $_y \,+$
+            $_y \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
@@ -2479,7 +2478,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
-            $_y \,+$
+            $_y \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
@@ -2487,7 +2486,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
-            $_y \,+$
+            $_y \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
@@ -2512,7 +2511,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
-            $_x \,+$
+            $_x \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
@@ -2529,7 +2528,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
-            $_y \,+$
+            $_y \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
@@ -2537,7 +2536,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
-            $_y \,+$
+            $_y \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
@@ -2554,7 +2553,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
-            $_x \,+$
+            $_x \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
@@ -2562,7 +2561,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
-            $_x \,+$
+            $_x \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
@@ -2579,7 +2578,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
-            $_y \,+$
+            $_y \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
@@ -2587,7 +2586,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
-            $_y \,+$
+            $_y \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
@@ -2690,7 +2689,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
-            $_x(0) = 2\,\,+$
+            $_x(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
@@ -2703,11 +2702,11 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
-            $_y(0) \,+$
+            $_y(0) \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1black_inline.svg
-            $_y(0) = 2\,\,+$
+            $_y(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
@@ -2720,11 +2719,11 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
-            $_x(0) \,+$
+            $_x(0) \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
-            $_x(0) = 2\,\,+$
+            $_x(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
@@ -2737,11 +2736,11 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
-            $_y(0) \,+$
+            $_y(0) \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2black_inline.svg
-            $_y(0) = 2\,\,+$
+            $_y(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
@@ -2754,11 +2753,11 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
-            $_x(0) \,+$
+            $_x(0) \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
-            $_x(0) = 2\,\,+$
+            $_x(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
@@ -2771,11 +2770,11 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
-            $_y(0) \,+$
+            $_y(0) \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3black_inline.svg
-            $_y(0) = 2\,\,+$
+            $_y(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
@@ -2788,11 +2787,11 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
-            $_x(0) \,+$
+            $_x(0) \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
-            $_x(0) = 2\,\,+$
+            $_x(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
@@ -2805,11 +2804,11 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
-            $_y(0) \,+$
+            $_y(0) \,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4black_inline.svg
-            $_y(0) = 2\,\,+$
+            $_y(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
@@ -2821,7 +2820,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1_inline.svg
-            $_x(0) = 2\,\,+$
+            $_x(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
@@ -2830,7 +2829,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1_inline.svg
-            $_y(0) = 2\,\,+$
+            $_y(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p1white_inline.svg
@@ -2839,7 +2838,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2_inline.svg
-            $_x(0) = 2\,\,+$
+            $_x(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
@@ -2848,7 +2847,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2_inline.svg
-            $_y(0) = 2\,\,+$
+            $_y(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p2white_inline.svg
@@ -2857,7 +2856,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3_inline.svg
-            $_x(0) = 2\,\,+$
+            $_x(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
@@ -2866,7 +2865,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3_inline.svg
-            $_y(0) = 2\,\,+$
+            $_y(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p3white_inline.svg
@@ -2875,7 +2874,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-            $_x(0) = 2\,\,+$
+            $_x(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
@@ -2884,7 +2883,7 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-            $_y(0) = 2\,\,+$
+            $_y(0) = 2\,\,+$ 
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4white_inline.svg
