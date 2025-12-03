@@ -105,13 +105,11 @@
         |> StarDivider
 
         |> SolutionNote
-
             The second and third functions are respectively
             the velocity and the acceleration of the car as
             a function of time.
 
         |> SolutionNote
-
             In a more physically realistic scenario the corners
             are rounded off a bit while the velocity and
             acceleration remain continuous, albeit with steep
