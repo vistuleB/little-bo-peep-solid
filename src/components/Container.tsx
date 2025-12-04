@@ -44,24 +44,24 @@ const Container = (props: ParentProps) => {
     <>
       <div
         id="Container"
-        class="min-h-screen -z-10 relative overflow-hidden"
+        class="-z-10 overflow-hidden"
         style={{
           width: containerWidth() + "px",
           opacity: store.saved_scroll_finished || store.scroll_is_at_0 ? 1 : 0,
         }}>
         <EarlyImages />
         <div class="relative">
-        {store.show_areas &&
-          store.pageNecessaryMargin > 0 &&
-          marginShowAreaDivs()}
-        {store.show_areas && maxElementShowAreasDiv()}
-        <Nav />
+          {store.show_areas &&
+            store.pageNecessaryMargin > 0 &&
+            marginShowAreaDivs()}
+          {store.show_areas && maxElementShowAreasDiv()}
+          <Nav />
           {props.children}
+          {store.loading && <LoadingGraphic />}
         </div>
-        {store.loading && <LoadingGraphic />}
         <div class="h-14"
           style={{
-            background: (store.show_areas) ? "maroon" : "#0000"
+            background: (store.show_areas) ? "blue" : "#0000"
           }}
         ></div>
       </div>
