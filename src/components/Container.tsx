@@ -44,7 +44,7 @@ const Container = (props: ParentProps) => {
     <>
       <div
         id="Container"
-        class="-z-10 overflow-hidden"
+        class="-z-10 relative overflow-hidden"
         style={{
           width: containerWidth() + "px",
           opacity: store.saved_scroll_finished || store.scroll_is_at_0 ? 1 : 0,
@@ -61,7 +61,7 @@ const Container = (props: ParentProps) => {
         </div>
         <div class="h-14"
           style={{
-            background: (store.show_areas) ? "blue" : "#0000"
+            background: (store.show_areas) ? "maroon" : "#0000"
           }}
         ></div>
       </div>
