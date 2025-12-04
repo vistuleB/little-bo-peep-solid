@@ -1,4 +1,4 @@
-import { onMount, createSignal, onCleanup, ParentProps } from "solid-js";
+import { createSignal, onCleanup, ParentProps, createEffect } from "solid-js";
 import { twJoin, twMerge } from "tailwind-merge";
 import {
   HAMBURGER_MENU_HEIGHT,
@@ -77,8 +77,8 @@ const ButtonsContainer = (props: ParentProps) => {
     setBorderOpacity(calcBorderOpacity());
   };
 
-  onMount(() => {
-    handleScroll();
+  createEffect(() => {
+    // handleScroll();
     window.addEventListener("scroll", handleScroll);
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);

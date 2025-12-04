@@ -11,7 +11,7 @@ const Nav = () => {
   useScrollX();
   return (
     <>
-      <nav
+      <div
         class={twJoin(
           "select-none w-full z-[60]",
           store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
@@ -23,7 +23,7 @@ const Nav = () => {
         <div class="select-none border-[var(--nav-border)] border-b flex justify-center items-center bg-bg z-40 w-full h-14 left-0">
           <Title />
         </div>
-      </nav>
+      </div>
       <div class="h-14"></div>
     </>
   );

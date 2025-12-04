@@ -32,10 +32,10 @@ const Container = (props: ParentProps) => {
     );
   };
 
-  const maxElementShowAreasDiv = () => {
+  const midLineDiv = () => {
     return (
       <div
-        style={`position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: ${store.maxElementWidth}px; height: 100%; background-color: rgba(0, 255, 0, 0.2); border: 2px solid green; pointer-events: none; z-index: 999;`}
+        style={`position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: ${store.maxElementWidth}px; height: 100%; background-color: rgba(0, 100, 100, 0.2); border: 2px solid purple; pointer-events: none; z-index: 999;`}
       />
     );
   };
@@ -54,7 +54,7 @@ const Container = (props: ParentProps) => {
         {store.show_areas &&
           store.pageNecessaryMargin > 0 &&
           marginShowAreaDivs()}
-        {store.show_areas && maxElementShowAreasDiv()}
+        {store.show_areas && midLineDiv()}
         <Nav />
         {props.children}
         {store.loading && <LoadingGraphic />}
