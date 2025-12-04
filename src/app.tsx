@@ -17,7 +17,7 @@ export default function App() {
           root={(props) => (
             <>
               <HeaderButtons />
-              <HamburgerPanel />
+              {/* <HamburgerPanel /> */}
               <Container>
                 <Suspense>{props.children}</Suspense>
               </Container>
