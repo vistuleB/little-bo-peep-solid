@@ -1,4 +1,4 @@
-import { createEffect, createSignal, onCleanup, ParentProps } from "solid-js";
+import { onMount, createSignal, onCleanup, ParentProps } from "solid-js";
 import { twJoin, twMerge } from "tailwind-merge";
 import {
   HAMBURGER_MENU_HEIGHT,
@@ -51,8 +51,7 @@ const ButtonsContainer = (props: ParentProps) => {
         0,
         1.0 -
           (store.scrollY - BOTTOM_BORDER_SCROLLY_START_FADE) /
-            (BOTTOM_BORDER_SCROLLY_END_FADE -
-              BOTTOM_BORDER_SCROLLY_START_FADE)
+            (BOTTOM_BORDER_SCROLLY_END_FADE - BOTTOM_BORDER_SCROLLY_START_FADE)
       )
     );
   };
@@ -78,11 +77,9 @@ const ButtonsContainer = (props: ParentProps) => {
     setBorderOpacity(calcBorderOpacity());
   };
 
-  createEffect(() => {
+  onMount(() => {
     handleScroll();
-
     window.addEventListener("scroll", handleScroll);
-
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);
     });
@@ -90,24 +87,6 @@ const ButtonsContainer = (props: ParentProps) => {
 
   return (
     <>
-      {/* the large-height background */}
-      {/* <div
-        class={twJoin(
-          "fixed right-0 z-40 h-14",
-          store.scrollY <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
-            !on_mobile() &&
-            store.scrollX + store.innerWidth >=
-              store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2 &&
-            "h-[10rem]"
-        )}
-        style={{
-          width: "134px",
-          "background-color": store.show_areas
-            ? "#fff000"
-            : "var(--background-rgb)",
-          opacity: finalButtonOpacity(),
-        }}
-      ></div> */}
       <div
         class={twJoin(
           "fixed right-0 h-14",
@@ -116,19 +95,20 @@ const ButtonsContainer = (props: ParentProps) => {
             store.scrollY < 2 * HAMBURGER_MENU_HEIGHT &&
             "border-b border-[var(--nav-border)]"
         )}
-        >
+      >
+        {/* the large-height background */}
         <div
           style={{
             position: "absolute",
             right: "0px",
             width: "100%",
             height:
-            store.scrollY <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
-            !on_mobile() &&
-            store.scrollX + store.innerWidth >=
-            store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2
-            ? "10rem"
-            : "100%",
+              store.scrollY <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
+              !on_mobile() &&
+              store.scrollX + store.innerWidth >=
+                store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2
+                ? "10rem"
+                : "100%",
             background: "var(--background-rgb)",
             "z-index": "-1",
             opacity: finalButtonOpacity(),
@@ -280,30 +260,30 @@ const RightArrowButton = () => {
   );
 };
 
-const HamburgerButton = () => {
-  const { store, set_store } = useGlobalContext();
-  const open = () => store.panel_opened;
+// const HamburgerButton = () => {
+//   const { store, set_store } = useGlobalContext();
+//   const open = () => store.panel_opened;
 
-  return (
-    <button
-      id="menu-btn"
-      onClick={(e) => {
-        e.stopPropagation();
-        set_store("panel_opened", !open());
-      }}
-      style={{
-        "background-color": store.show_areas
-          ? "rgb(224, 215, 48)"
-          : "--var(background-rgb)",
-      }}
-    >
-      <HamburgerButtonSVG
-        class="fill-[rgb(30,30,30)] hover:fill-stone-600"
-        open={open()}
-      />
-    </button>
-  );
-};
+//   return (
+//     <button
+//       id="menu-btn"
+//       onClick={(e) => {
+//         e.stopPropagation();
+//         set_store("panel_opened", !open());
+//       }}
+//       style={{
+//         "background-color": store.show_areas
+//           ? "rgb(224, 215, 48)"
+//           : "--var(background-rgb)",
+//       }}
+//     >
+//       <HamburgerButtonSVG
+//         class="fill-[rgb(30,30,30)] hover:fill-stone-600"
+//         open={open()}
+//       />
+//     </button>
+//   );
+// };
 
 // svg paths constants
 const sw = 2.6;

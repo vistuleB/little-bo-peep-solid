@@ -28,7 +28,6 @@
  */
 :root {
   --background-rgb: rgb(255, 249, 249);
-  /* --background-rgb: rgb(254, 245, 245); */
   --foreground-rgb: rgb(0, 0, 0);
   --highlighted-rgb: rgb(255,0,0);
   --arrow-pressed: #9333ea;
