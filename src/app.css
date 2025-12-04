@@ -22,6 +22,10 @@
   src: url("/fonts/Baskerville-Italic.ttf");
 }
 
+/* * {
+  box-sizing: content-box;
+}
+ */
 :root {
   --background-rgb: rgb(255, 249, 249);
   /* --background-rgb: rgb(254, 245, 245); */
@@ -29,7 +33,10 @@
   --highlighted-rgb: rgb(255,0,0);
   --arrow-pressed: #9333ea;
   --arrow-pressed-bg: #ececec;
-  --nav-border: #ececec;
+  --nav-border-r: 236;
+  --nav-border-g: 236;
+  --nav-border-b: 236;
+  --nav-border: rgb(var(--nav-border-r), var(--nav-border-g), var(--nav-border-b));
   --hamburger-menu-height: 56px;
   --desktop-text-column-padding: 16px;
   --mobile-max-width: 900px;
@@ -516,4 +523,8 @@ ol.l1 > li:before {
 
 .ch4_17_pellets {
   transform: translate(0,-2px);
+}
+
+.border-red {
+  border-color: red;
 }

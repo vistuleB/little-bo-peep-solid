@@ -1795,10 +1795,7 @@ const Rest = () => {
       </Section>
       <Pause />
       <Exercises>
-        <Exercise
-          !! handle2=nope=""
-          number={1}
-        >
+        <Exercise number={1}>
           <ExerciseStatement id="_17_hgi_">
             <OuterP>
               <b>

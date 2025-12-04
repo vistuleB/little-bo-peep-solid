@@ -1,7 +1,6 @@
 import gleam/list
 import gleam/string
 import gleam/option.{None, Some}
-import gleam/string
 import infrastructure.{type Pipeline} as infra
 import prefabricated_pipelines as pp
 import desugarer_library as dl
@@ -28,7 +27,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
   [
     [
       dl.identity(),
-      dl.delete_attribute_if(fn(key, _) { string.starts_with(key, "!!")}),
       dl.delete("WriterlyComment"),
       dl.delete_attribute_if(fn(key, _) { string.starts_with(key, "!!")}),
       dl.delete_first_child_occurrences_of_and_recurse("WriterlyBlankLine"),

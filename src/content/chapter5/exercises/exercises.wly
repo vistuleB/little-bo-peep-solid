@@ -409,6 +409,7 @@
         sinusoid together.
 
 |> Exercise
+    handle=four-graphs
 
     Which function is most plausibly associated to
     which graph?
@@ -1739,9 +1740,10 @@
             free, not just those angles!)
 
 |> Exercise
+    handle=max-of-sinx-p-cosx
 
     The graph $y = \cos(x) + \sin(x)$ from
-    Exercise 5 has a maximum value greater than
+    Exercise >>four-graphs has a maximum value greater than
     $1$:
 
     |> Image
@@ -2578,12 +2580,10 @@
             answers to the same question,
             one can in particular deduce that
 
-            |> center
-                |> div
-                    style=display:inline-block;border:1px solid red;padding:1em 1em;margin:1.5em 1em;
-                    $$
-                    \sec^2(\theta) = 1 + \tan^2(\theta)
-                    $$
+            |> Boxed
+                $$
+                \sec^2(\theta) = 1 + \tan^2(\theta)
+                $$
 
             for all $0 < \theta < \eta$, which is
             the range of $\theta$ covered by these
@@ -2659,20 +2659,17 @@
 
         Viz:
 
-        |> center
-            |> div
-                style=display:inline-block;border:1px solid red;padding:1.2em 1.4em;margin:1em 0em;
-
-                $$
-                \begin{align}
-                \sec^2(\theta)
-                \,\,&=\,\, {1\over \cos^2(\theta)} \\
-                &amp;=\,\, \up{2} {\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)} \\
-                &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
-                &amp;=\,\, \up{2} 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
-                &amp;=\,\, \up{2}1 + \tan^2(\theta).
-                \end{align}
-                $$
+        |> Boxed
+            $$
+            \begin{align}
+            \sec^2(\theta)
+            \,\,&=\,\, {1\over \cos^2(\theta)} \\
+            &amp;=\,\, \up{2} {\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)} \\
+            &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
+            &amp;=\,\, \up{2} 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
+            &amp;=\,\, \up{2}1 + \tan^2(\theta).
+            \end{align}
+            $$
 
         (Ta-daa!) (It's slightly harder in this
         direction, when you have to think of
@@ -2933,14 +2930,10 @@
 
         If true, this would indicate that
 
-        |> center
-            style=margin-top:1em;margin-bottom:1em;
-            |> div
-                style=border:1px solid red;padding:1em 1em;width:fit-content;
-
-                $$
-                \cos^2(x) = {1\over 2} + \cos(x + \eta/2)\sin(x + \eta/2)
-                $$
+        |> Boxed
+            $$
+            \cos^2(x) = {1\over 2} + \cos(x + \eta/2)\sin(x + \eta/2)
+            $$
 
         since replacing “$x$” by “$x + \eta/2$”
         in $\sin(x)\cos(x)$ effects horizontal
@@ -3002,14 +2995,10 @@
             $y = \cos^2(x)$ onto $y = \sin(x)\cos(x)$ via a
             translation, instead of the other way around; this gives:
 
-            |> center
-                style=margin-top:1em;margin-bottom:1em;
-                |> div
-                    style=border:1px solid red;padding:1em 1em;width:fit-content;
-
-                    $$
-                    \,- {1\over 2} + \cos^2(x - \eta/2) = \cos(x)\sin(x).
-                    $$
+            |> Boxed
+                $$
+                \,- {1\over 2} + \cos^2(x - \eta/2) = \cos(x)\sin(x).
+                $$
 
             In more detail: replacing
             “$x$” by “$x - \eta/2$” in $\cos^2(x)$ effects
@@ -3206,14 +3195,10 @@
         The issue for the second part of the problem is
         therefore to prove that...
 
-        |> center
-            style=margin-top:1em;margin-bottom:1em;
-            |> div
-                style=display:inline-block;border:1px solid red;padding:1em 1em;
-
-                $$
-                {1 + \cos(2x)\over 2} = \cos^2(x)
-                $$
+        |> Boxed
+            $$
+            {1 + \cos(2x)\over 2} = \cos^2(x)
+            $$
 
         ...by algebraic means.
 
@@ -3287,14 +3272,10 @@
         $$
         and
 
-        |> center
-            style=margin-top:1em;margin-bottom:1em;
-            |> div
-                style=display:inline-block;border:1px solid red;padding:1em 1em;
-
-                $$
-                \sin x\cos x = {1\over 2}\sin(2x)
-                $$
+        |> Boxed
+            $$
+            \sin x\cos x = {1\over 2}\sin(2x)
+            $$
 
         ...solving for $\sin x\cos x$.
 
@@ -3321,30 +3302,17 @@
 
 
 |> Exercise
-    t=tt
-
-    !! What sequence of geometric transformations
-    !! can turn [the graph] $y = \cos(x)$
-    !! into [the graph] $y = \sin(x) + \cos(x)$?
-    !! Prove your answer using algebra.
-    !! Building on the discoveries of Exercise 18,
-    !! conjecture a sequence of geometric transformations
-    !! that maps $$y = \cos(x)$$
-    !! onto $$y = \sin(x) + \cos(x)$$
-    !! and prove your answer with algebra.
-    What sequence of geometric transformations
-    maps the graph
+    handle=sinx-p-cosx-geometric-sequence
+    Conjecture a sequence of geometric transformations
+    that maps
     $$
     y = \cos x
     $$
-    onto the graph
+    onto
     $$
     y = \sin x + \cos x
     $$
-    ...?
-    (Study Exercise 18, if you have no inspiration.)
-    (PS: Prove your answer.)
-    !! ($\,$Justify your answer.)
+    and prove your answer. (Comparison: Exercise >>max-of-sinx-p-cosx.)
 
     |> Solution
 
@@ -3352,7 +3320,7 @@
         has period $4\eta$ just like $\sin$ or
         $\cos$, but, unlike $\sin$ and $\cos$,
         $\sin + \cos$ reaches a maximum of $\sqrt{2}$
-        at $x = \eta/2$, as uncovered in Exercise 18,
+        at $x = \eta/2$, as uncovered in Exercise >>max-of-sinx-p-cosx,
         from which the following graphic is recovered:
 
         |> Image
@@ -3388,14 +3356,11 @@
         the _right_ by $a$ units; whence, we can
         conjecture that...
 
-        |> center
-            style=margin-top:1em;margin-bottom:1em;
-            |> div
-                style=display:inline-block;border:1px solid red;padding:1em 1em;
+        |> Boxed
+            $$
+            \sqrt{2}\cdot \cos(x - \eta/2)
+            $$
 
-                $$
-                \sqrt{2}\cdot \cos(x - \eta/2)
-                $$
         ...[$\cos(x)$, translated, scaled] actually coincides
         with $\cos(x) + \sin(x)$!!! (!!!)
 
@@ -3552,31 +3517,30 @@
             if we add
             $2\eta$ to the argument!
 
-        _Example 1._
-        The previously-studied
-        $$
-        \cos x + \sin x
-        $$
-        (cf. Exercise 4) corresponds to the case
-        $$A_1 = A_2 = 1$$ of this exercise, and
-        in which case we can set
-        $$W = \sqrt{2}$$ and
-        $$\psi = -\eta/2$$
-        because the pair
-        $$
-        (W, \,-\psi) \,=\, (\sqrt{2}, \,\,\eta/2)
-        $$
-        is a polar coordinate of $(A_1, A_2) = (1, 1)$:
+            |> Pause
 
-        |> Image
-            src=images/svg_ch5_ex_polar_discovery_1_1.svg
+            _Example 1._
+            The previously-studied
+            $$
+            \cos x + \sin x
+            $$
+            (cf. Exercise 4) corresponds to the case
+            $$A_1 = A_2 = 1$$ of this exercise, and
+            in which case we can set
+            $$W = \sqrt{2}$$ and
+            $$\psi = -\eta/2$$
+            because the pair
+            $$
+            (W, \,-\psi) \,=\, (\sqrt{2}, \,\,\eta/2)
+            $$
+            is a polar coordinate of $(A_1, A_2) = (1, 1)$:
 
-        (In fact, the fact that...
+            |> Image
+                src=images/svg_ch5_ex_polar_discovery_1_1.svg
 
-        |> center
-            style=margin-top:1em;margin-bottom:1em;
-            |> div
-                style=display:inline-block;border:1px solid red;padding:1em 1em;
+            (In fact, the fact that...
+
+            |> Boxed
 
                 $$
                 \cos x + \sin x = \sqrt{2}\cdot\cos(x - \eta/2)
@@ -3585,8 +3549,8 @@
                 |> ImageRight
                     src=images/svg_ch5_ex_polar_discovery_cloud.svg
 
-        ...was painstakingly uncovered
-        in Exercise 33, if you recall.)
+            ...was painstakingly uncovered
+            in Exercise >>sinx-p-cosx-geometric-sequence, if you recall.)
 
 |> Exercise
 

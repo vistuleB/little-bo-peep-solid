@@ -5,6 +5,8 @@ import {
   HAMBURGER_MENU_SCROLLY_END_FADE,
   HAMBURGER_MENU_SCROLLY_START_FADE,
   HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY,
+  BOTTOM_BORDER_SCROLLY_START_FADE,
+  BOTTOM_BORDER_SCROLLY_END_FADE,
   MOBILE_MAX_WIDTH,
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
@@ -16,7 +18,7 @@ const HeaderButtons = () => {
     <ButtonsContainer>
       <LeftArrowButton />
       <RightArrowButton />
-      <HamburgerButton />
+      {/* <HamburgerButton /> */}
     </ButtonsContainer>
   );
 };
@@ -26,18 +28,54 @@ const ButtonsContainer = (props: ParentProps) => {
   const { store } = useGlobalContext();
   const open = () => store.panel_opened;
 
-  const [opacity, set_opacity] = createSignal(1);
+  const [buttonOpacity, setButtonOpacity] = createSignal(1);
+  const [borderOpacity, setBorderOpacity] = createSignal(1);
 
-  const calc_opacity = () => {
-    // prettier-ignore
+  const calcButtonOpacity = () => {
     return Math.min(
       1.0,
-      Math.max(0, 1.0 - (store.scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) / (HAMBURGER_MENU_SCROLLY_END_FADE - HAMBURGER_MENU_SCROLLY_START_FADE))
+      Math.max(
+        0,
+        1.0 -
+          (store.scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) /
+            (HAMBURGER_MENU_SCROLLY_END_FADE -
+              HAMBURGER_MENU_SCROLLY_START_FADE)
+      )
     );
   };
 
+  const calcBorderOpacity = () => {
+    return Math.min(
+      1.0,
+      Math.max(
+        0,
+        1.0 -
+          (store.scrollY - BOTTOM_BORDER_SCROLLY_START_FADE) /
+            (BOTTOM_BORDER_SCROLLY_END_FADE -
+              BOTTOM_BORDER_SCROLLY_START_FADE)
+      )
+    );
+  };
+
+  const finalButtonOpacity = () => {
+    return open() || on_mobile() || store.scroll_is_at_0
+      ? 1
+      : store.saved_scroll_finished
+        ? buttonOpacity()
+        : 0;
+  };
+
+  const finalBorderOpacity = () => {
+    return on_mobile() || store.scroll_is_at_0
+      ? 1
+      : store.saved_scroll_finished
+        ? borderOpacity()
+        : 0;
+  };
+
   const handleScroll = () => {
-    set_opacity(calc_opacity());
+    setButtonOpacity(calcButtonOpacity());
+    setBorderOpacity(calcBorderOpacity());
   };
 
   createEffect(() => {
@@ -52,8 +90,8 @@ const ButtonsContainer = (props: ParentProps) => {
 
   return (
     <>
-      {/* the background */}
-      <div
+      {/* the large-height background */}
+      {/* <div
         class={twJoin(
           "fixed right-0 z-40 h-14",
           store.scrollY <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
@@ -64,30 +102,45 @@ const ButtonsContainer = (props: ParentProps) => {
         )}
         style={{
           width: "134px",
-          "background-color":
-              store.show_areas
-                ? "#fff000"
-                : "var(--background-rgb)",
+          "background-color": store.show_areas
+            ? "#fff000"
+            : "var(--background-rgb)",
+          opacity: finalButtonOpacity(),
         }}
-      ></div>
+      ></div> */}
       <div
         class={twJoin(
-          "fixed right-0 z-50 h-14",
+          "fixed right-0 h-14",
           !on_mobile() &&
             !open() &&
             store.scrollY < 2 * HAMBURGER_MENU_HEIGHT &&
             "border-b border-[var(--nav-border)]"
         )}
-      >
+        >
         <div
-          class="select-none flex items-center justify-center h-8 m-3 hover:!opacity-100"
           style={{
-            opacity:
-              open() || on_mobile() || store.scroll_is_at_0
-                ? 1
-                : store.saved_scroll_finished
-                  ? opacity()
-                  : 0,
+            position: "absolute",
+            right: "0px",
+            width: "100%",
+            height:
+            store.scrollY <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
+            !on_mobile() &&
+            store.scrollX + store.innerWidth >=
+            store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2
+            ? "10rem"
+            : "100%",
+            background: "var(--background-rgb)",
+            "z-index": "-1",
+            opacity: finalButtonOpacity(),
+          }}
+        ></div>
+        <div
+          class="select-none flex items-center justify-center h-8 hover:!opacity-100 border-b"
+          style={{
+            "box-sizing": "content-box",
+            padding: "11.5px 12px",
+            opacity: finalButtonOpacity(),
+            "border-color": `rgba(var(--nav-border-r), var(--nav-border-g), var(--nav-border-b), ${finalBorderOpacity()})`,
           }}
         >
           {props.children}
@@ -107,9 +160,12 @@ const LeftArrowButton = () => {
   const handleMouseDown = () => {
     setPressed(true);
     setPressedTimeout(true);
-    setTimeout(() => {
-      setPressedTimeout(false);
-    }, on_mobile() ? 50 : 20);
+    setTimeout(
+      () => {
+        setPressedTimeout(false);
+      },
+      on_mobile() ? 50 : 20
+    );
   };
 
   const handleMouseUp = () => {
@@ -142,6 +198,7 @@ const LeftArrowButton = () => {
               ? "rgb(224, 215, 48)"
               : "var(--background-rgb)",
         scale: (pressed() || pressedTimeout()) && on_mobile() ? "1.8" : "1",
+        // "box-sizing": "inherit",
       }}
     >
       <LeftArrowSVG
@@ -153,6 +210,7 @@ const LeftArrowButton = () => {
               : "stroke-stone-300"
         )}
         style=""
+        // style="box-sizing:inherit;"
       />
     </button>
   );
@@ -168,9 +226,12 @@ const RightArrowButton = () => {
   const handleMouseDown = () => {
     setPressed(true);
     setPressedTimeout(true);
-    setTimeout(() => {
-      setPressedTimeout(false);
-    }, on_mobile() ? 50 : 20);
+    setTimeout(
+      () => {
+        setPressedTimeout(false);
+      },
+      on_mobile() ? 50 : 20
+    );
   };
 
   const handleMouseUp = () => {
@@ -231,7 +292,9 @@ const HamburgerButton = () => {
         set_store("panel_opened", !open());
       }}
       style={{
-        "background-color": store.show_areas ? "rgb(224, 215, 48)" : "--var(background-rgb)",
+        "background-color": store.show_areas
+          ? "rgb(224, 215, 48)"
+          : "--var(background-rgb)",
       }}
     >
       <HamburgerButtonSVG

@@ -5142,7 +5142,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_29_hgi_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -8514,7 +8514,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_30_hgi_">
             <OuterP>
               <b>
                 Exercise 18.
@@ -8525,7 +8525,14 @@ const Rest = () => {
                 $y = \cos(x) + \sin(x)$
               </Math>
               {" "} from
-              Exercise 5 has a maximum value greater than
+              {" "}
+              <InChapterLink
+                href="/article/chapter5#_29_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 5
+              </InChapterLink>
+              {" "} has a maximum value greater than
               {" "}
               <NoBreak>
                 <Math>
@@ -10540,15 +10547,13 @@ const Rest = () => {
                 answers to the same question,
                 one can in particular deduce that
               </OuterP>
-              <center>
-                <div style="display:inline-block;border:1px solid red;padding:1em 1em;margin:1.5em 1em;">
-                  <MathBlock>
-                    $$
-                    \sec^2(\theta) = 1 + \tan^2(\theta)
-                    $$
-                  </MathBlock>
-                </div>
-              </center>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \sec^2(\theta) = 1 + \tan^2(\theta)
+                  $$
+                </MathBlock>
+              </Boxed>
               <OuterP>
                 for all {" "}
                 <NoBreak>
@@ -10743,22 +10748,20 @@ const Rest = () => {
             <OuterP>
               Viz:
             </OuterP>
-            <center>
-              <div style="display:inline-block;border:1px solid red;padding:1.2em 1.4em;margin:1em 0em;">
-                <MathBlock>
-                  $$
-                  \begin&#123;align&#125;
-                  \sec^2(\theta)
-                  \,\,&amp;=\,\, &#123;1\over \cos^2(\theta)&#125; \\
-                  &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
-                  &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
-                  &amp;=\,\, \up&#123;2&#125; 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
-                  &amp;=\,\, \up&#123;2&#125;1 + \tan^2(\theta).
-                  \end&#123;align&#125;
-                  $$
-                </MathBlock>
-              </div>
-            </center>
+            <Boxed>
+              <MathBlock>
+                $$
+                \begin&#123;align&#125;
+                \sec^2(\theta)
+                \,\,&amp;=\,\, &#123;1\over \cos^2(\theta)&#125; \\
+                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
+                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
+                &amp;=\,\, \up&#123;2&#125; 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
+                &amp;=\,\, \up&#123;2&#125;1 + \tan^2(\theta).
+                \end&#123;align&#125;
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
               (Ta-daa!) (It's slightly harder in this
               direction, when you have to think of
@@ -11471,15 +11474,13 @@ const Rest = () => {
             <OuterP>
               If true, this would indicate that
             </OuterP>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="border:1px solid red;padding:1em 1em;width:fit-content;">
-                <MathBlock>
-                  $$
-                  \cos^2(x) = &#123;1\over 2&#125; + \cos(x + \eta/2)\sin(x + \eta/2)
-                  $$
-                </MathBlock>
-              </div>
-            </center>
+            <Boxed>
+              <MathBlock>
+                $$
+                \cos^2(x) = &#123;1\over 2&#125; + \cos(x + \eta/2)\sin(x + \eta/2)
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
               since replacing {" "}
               <NoBreak>
@@ -11655,15 +11656,13 @@ const Rest = () => {
                 {" "} via a
                 translation, instead of the other way around; this gives:
               </OuterP>
-              <center style="margin-top:1em;margin-bottom:1em;">
-                <div style="border:1px solid red;padding:1em 1em;width:fit-content;">
-                  <MathBlock>
-                    $$
-                    \,- &#123;1\over 2&#125; + \cos^2(x - \eta/2) = \cos(x)\sin(x).
-                    $$
-                  </MathBlock>
-                </div>
-              </center>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \,- &#123;1\over 2&#125; + \cos^2(x - \eta/2) = \cos(x)\sin(x).
+                  $$
+                </MathBlock>
+              </Boxed>
               <OuterP>
                 In more detail: replacing
                 {" "}
@@ -12110,15 +12109,13 @@ const Rest = () => {
               The issue for the second part of the problem is
               therefore to prove that...
             </OuterP>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
-                <MathBlock>
-                  $$
-                  &#123;1 + \cos(2x)\over 2&#125; = \cos^2(x)
-                  $$
-                </MathBlock>
-              </div>
-            </center>
+            <Boxed>
+              <MathBlock>
+                $$
+                &#123;1 + \cos(2x)\over 2&#125; = \cos^2(x)
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
               ...by algebraic means.
             </OuterP>
@@ -12258,15 +12255,13 @@ const Rest = () => {
             <OuterP>
               and
             </OuterP>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
-                <MathBlock>
-                  $$
-                  \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
-                  $$
-                </MathBlock>
-              </div>
-            </center>
+            <Boxed>
+              <MathBlock>
+                $$
+                \sin x\cos x = &#123;1\over 2&#125;\sin(2x)
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
               ...solving for {" "}
               <NoBreak>
@@ -12362,14 +12357,14 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={33}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_31_hgi_">
             <OuterP>
               <b>
                 Exercise 33.
               </b>
               {" "}
-              What sequence of geometric transformations
-              maps the graph
+              Conjecture a sequence of geometric transformations
+              that maps
             </OuterP>
             <Pause />
             <MathBlock>
@@ -12379,7 +12374,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              onto the graph
+              onto
             </OuterP>
             <Pause />
             <MathBlock>
@@ -12389,9 +12384,17 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              ...?
-              (Study Exercise 18, if you have no inspiration.)
-              (PS: Prove your answer.)
+              and prove your answer. (Comparison: {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_30_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 18
+                </InChapterLink>
+                .)
+              </NoBreak>
+              {" "}{" "}
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -12445,7 +12448,17 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} as uncovered in Exercise 18,
+              {" "} as uncovered in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_30_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 18
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "}
               from which the following graphic is recovered:
             </OuterP>
             <Pause />
@@ -12566,15 +12579,13 @@ const Rest = () => {
               {" "} units; whence, we can
               conjecture that...
             </OuterP>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
-                <MathBlock>
-                  $$
-                  \sqrt&#123;2&#125;\cdot \cos(x - \eta/2)
-                  $$
-                </MathBlock>
-              </div>
-            </center>
+            <Boxed>
+              <MathBlock>
+                $$
+                \sqrt&#123;2&#125;\cdot \cos(x - \eta/2)
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
               <NoBreak>
                 ...[
@@ -13109,80 +13120,78 @@ const Rest = () => {
                 </Math>
                 {" "} to the argument!
               </OuterP>
-            </SolutionNote>
-            <Pause />
-            <OuterP>
-              <i>
-                Example 1.
-              </i>
-              {" "}
-              The previously-studied
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos x + \sin x
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (cf. Exercise 4) corresponds to the case
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A_1 = A_2 = 1
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              of this exercise, and
-              in which case we can set
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              W = \sqrt&#123;2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \psi = -\eta/2
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because the pair
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (W, \,-\psi) \,=\, (\sqrt&#123;2&#125;, \,\,\eta/2)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is a polar coordinate of {" "}
-              <NoBreak>
-                <Math>
-                  $(A_1, A_2) = (1, 1)$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/-FKv.svg" />
-            <Pause />
-            <OuterP>
-              (In fact, the fact that...
-            </OuterP>
-            <center style="margin-top:1em;margin-bottom:1em;">
-              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+              <Pause />
+              <OuterP>
+                <i>
+                  Example 1.
+                </i>
+                {" "}
+                The previously-studied
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos x + \sin x
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                (cf. Exercise 4) corresponds to the case
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                A_1 = A_2 = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                of this exercise, and
+                in which case we can set
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                W = \sqrt&#123;2&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \psi = -\eta/2
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                because the pair
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                (W, \,-\psi) \,=\, (\sqrt&#123;2&#125;, \,\,\eta/2)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is a polar coordinate of {" "}
+                <NoBreak>
+                  <Math>
+                    $(A_1, A_2) = (1, 1)$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/-FKv.svg" />
+              <Pause />
+              <OuterP>
+                (In fact, the fact that...
+              </OuterP>
+              <Boxed>
                 <MathBlock>
                   $$
                   \cos x + \sin x = \sqrt&#123;2&#125;\cdot\cos(x - \eta/2)
@@ -13192,12 +13201,22 @@ const Rest = () => {
                     compensate_offset_x_for_large_text_columns={true}
                   />
                 </MathBlock>
-              </div>
-            </center>
-            <OuterP>
-              ...was painstakingly uncovered
-              in Exercise 33, if you recall.)
-            </OuterP>
+              </Boxed>
+              <OuterP>
+                ...was painstakingly uncovered
+                in {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter5#_31_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Exercise 33
+                  </InChapterLink>
+                  ,
+                </NoBreak>
+                {" "} if you recall.)
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={35}>
@@ -14696,7 +14715,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_29_hgi_">
+          <ExerciseStatement id="_32_hgi_">
             <OuterP>
               <b>
                 Exercise 42.
