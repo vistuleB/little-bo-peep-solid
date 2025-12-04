@@ -223,7 +223,8 @@ const RightArrowButton = () => {
       id="next-btn"
       class={twJoin(
         !on_mobile() && "mr-3",
-        on_mobile() && "mr-4",
+        // this used to be "mr-4" when we were still showing the hamburger menu:
+        on_mobile() && "mr-3",
         nextDisabled() && "cursor-default"
       )}
       onClick={(e) => {
