@@ -157,7 +157,8 @@ const LeftArrowButton = () => {
       id="prev-btn"
       class={twJoin(
         !on_mobile() && "mr-2",
-        on_mobile() && "mr-4",
+        // this used to be "mr-4" when we had Hamburg menu:
+        on_mobile() && "mr-3",
         prevDisabled() && "cursor-default"
       )}
       onClick={(e) => {
