@@ -79,7 +79,7 @@ const ButtonsContainer = (props: ParentProps) => {
 
   createEffect(() => {
     // handleScroll();
-    window.addEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll);
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);
     });
