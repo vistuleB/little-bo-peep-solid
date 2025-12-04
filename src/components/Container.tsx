@@ -35,7 +35,7 @@ const Container = (props: ParentProps) => {
   const midLineDiv = () => {
     return (
       <div
-        style={`position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: ${store.maxElementWidth}px; height: 100%; background-color: rgba(0, 0, 0, 0); border: 2px solid yellow; pointer-events: none; z-index: 999;`}
+        style={`position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: ${store.maxElementWidth}px; height: 100%; background-color: rgba(0, 0, 0, 0); border: 2px solid teal; pointer-events: none; z-index: 999;`}
       />
     );
   };
@@ -61,7 +61,7 @@ const Container = (props: ParentProps) => {
         {/* </div> */}
         <div class="h-14"
           style={{
-            background: (store.show_areas) ? "green" : "#0000"
+            background: (store.show_areas) ? "teal" : "#0000"
           }}
         ></div>
       </div>
