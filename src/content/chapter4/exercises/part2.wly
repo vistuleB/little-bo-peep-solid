@@ -273,95 +273,91 @@
 
         $f''''' = f^{(5)}$ equals $f$.
 
-        |> Pause
-        _Note ::++NoteCounter._
-        If you graph the $x$-coordinates of the
-        5 particles over time, each in their
-        color, you get a graph like so, in which
-        blue is the derivative of red, yellow is
-        the derivative of blue, etc; the function
-        $f$ can be taken to be any one of these
-        curves:
+        |> SolutionNote
+            If you graph the $x$-coordinates of the
+            5 particles over time, each in their
+            color, you get a graph like so, in which
+            blue is the derivative of red, yellow is
+            the derivative of blue, etc; the function
+            $f$ can be taken to be any one of these
+            curves:
 
-        |> Image
-            src=images/svg_ch4_5_euler_final_graph.svg
+            |> Image
+                src=images/svg_ch4_5_euler_final_graph.svg
 
-        |> Pause
-        _Note ::++NoteCounter._
-        There is nothing special about
-        $x$-coordinates vis-à-vis $y$-coordinates.
-        You can also define $f(t)$ to be, e.g.,
-        the $y$-coordinate of the red particle
-        at time $t$.
+        |> SolutionNote
+            There is nothing special about
+            $x$-coordinates vis-à-vis $y$-coordinates.
+            You can also define $f(t)$ to be, e.g.,
+            the $y$-coordinate of the red particle
+            at time $t$.
 
-        |> Pause
-        _Note SeparationOfCoordinates<<::++NoteCounter._
-        It is worth noting that, in fact, the
-        $x$- and $y$-coordinates live separate
-        lives. The rate of change of each
-        $x$-coordinate is some other $x$-coordinate,
-        and the rate of change of each $y$-coordinate
-        is some other $y$-coordinate.
+        |> SolutionNote
+            handle=SeparationOfCoordinates
+            It is worth noting that, in fact, the
+            $x$- and $y$-coordinates live separate
+            lives. The rate of change of each
+            $x$-coordinate is some other $x$-coordinate,
+            and the rate of change of each $y$-coordinate
+            is some other $y$-coordinate.
 
-        |> Pause
-        _Note 4._
-        Adding to this observation, we don't
-        _need_ to start the particles in
-        a symmetric configuration. Symmetry only
-        helps to picture how the positions of the
-        particles will evolve without making any
-        computations. We also don't _need_
-        to work in two dimensions. We can place
-        the particles in a one-dimensional world,
-        e.g., ...
+        |> SolutionNote
+            Adding to this observation, we don't
+            _need_ to start the particles in
+            a symmetric configuration. Symmetry only
+            helps to picture how the positions of the
+            particles will evolve without making any
+            computations. We also don't _need_
+            to work in two dimensions. We can place
+            the particles in a one-dimensional world,
+            e.g., ...
 
-        |> Image
-            src=images/svg_ch4_5_euler_one_dimensional.svg
+            |> Image
+                src=images/svg_ch4_5_euler_one_dimensional.svg
 
-        ...(the initial positions really don't
-        matter much, as long as you don't give
-        all the particles the _same_ initial
-        position, or else you won't have $f \ne f'$
-        etc) and stipulate the same rules, namely
-        that the
+            ...(the initial positions really don't
+            matter much, as long as you don't give
+            all the particles the _same_ initial
+            position, or else you won't have $f \ne f'$
+            etc) and stipulate the same rules, namely
+            that the
 
-        __velocity__
+            __velocity__
 
-        (now $1$-dimensional) of the red particle
-        be the
+            (now $1$-dimensional) of the red particle
+            be the
 
-        __position__
+            __position__
 
-        (now $1$-dimensional) of the blue particle
-        and so on—you can “release” the particles
-        from their initial configuration and
-        simulate (or compute exactly, if you have
-        the know-how) their motion by the same
-        methods as above. The five position
-        functions obtained are each a solution
-        $f$ to the problem. (But this solution will
-        typically look more chaotic than the curves
-        from Note 1.)
+            (now $1$-dimensional) of the blue particle
+            and so on—you can “release” the particles
+            from their initial configuration and
+            simulate (or compute exactly, if you have
+            the know-how) their motion by the same
+            methods as above. The five position
+            functions obtained are each a solution
+            $f$ to the problem. (But this solution will
+            typically look more chaotic than the curves
+            from Note 1.)
 
-        |> Pause
-        _Note 5._
-        In fact, our symmetric two-dimensional
-        solution is an instance in which you can say
-        that
+        |> SolutionNote
+            In fact, our symmetric two-dimensional
+            solution is an instance in which you can say
+            that
 
-        __the whole is simpler than the parts__
+            __the whole is simpler than the parts__
 
-        |> ImageLeft
-            src=images/svg_ch4_5_euler_hearts_left.svg
+            |> ImageLeft
+                src=images/svg_ch4_5_euler_hearts_left.svg
 
-        |> ImageRight
-            src=images/svg_ch4_5_euler_hearts_right.svg
+            |> ImageRight
+                src=images/svg_ch4_5_euler_hearts_right.svg
 
-        in that you would never spot the symmetry
-        at play, or have a chance of eyeballing
-        the long-term evolution of the system, if
-        you were shown just the $x$-coordinates,
-        or just the $y$-coordinates, on their own!
+            in that you would never spot the symmetry
+            at play, or have a chance of eyeballing
+            the long-term evolution of the system, if
+            you were shown just the $x$-coordinates,
+            or just the $y$-coordinates, on their own!
 
 
 |> Exercise
@@ -665,41 +661,39 @@
         at the other end. (This is also the case
         if $h$ is negative, by the way.)
 
-        |> Pause
-        _Note ::++NoteCounter._
-        A fraction of this form is called a _Newton
-        quotient_.
+        |> SolutionNote
+            A fraction of this form is called a _Newton
+            quotient_.
 
-        |> Pause
-        _Note ::++NoteCounter._
-        The pale brown line is sometimes known as
-        the _secant_ [through $(x, f(x))$, $(x+h, f(x+h))$].
-        “Secant” is a general term for “line passing
-        through two specified points on another
-        curve”.
+        |> SolutionNote
+            The pale brown line is sometimes known as
+            the _secant_ [through $(x, f(x))$, $(x+h, f(x+h))$].
+            “Secant” is a general term for “line passing
+            through two specified points on another
+            curve”.
 
-        |> Pause
-        _Note LimitOfNewtonQuotient<<::++NoteCounter._
-        If we let $h$ drop to $0$, and if $f$ is
-        differentiable at $x$, the
-        Newton-quotient-a.k.a.-slope-of-the-secant
-        approaches
+        |> SolutionNote
+            handle=LimitOfNewtonQuotient
+            If we let $h$ drop to $0$, and if $f$ is
+            differentiable at $x$, the
+            Newton-quotient-a.k.a.-slope-of-the-secant
+            approaches
 
-        $$
-        f'(x)
-        $$
+            $$
+            f'(x)
+            $$
 
-        because the secant approaches the tangent,
-        in that case, and the slope of the secant
-        is also, perforce, approaching the slope
-        of the tangent, which is $f'(x)$. (But you
-        cannot directly set $h = 0$, because
+            because the secant approaches the tangent,
+            in that case, and the slope of the secant
+            is also, perforce, approaching the slope
+            of the tangent, which is $f'(x)$. (But you
+            cannot directly set $h = 0$, because
 
-        $$
-        {f(x+0)-f(x)\over 0} = {0 \over 0}
-        $$
+            $$
+            {f(x+0)-f(x)\over 0} = {0 \over 0}
+            $$
 
-        is undefined.)
+            is undefined.)
 
 
 |> Exercise
@@ -1114,7 +1108,6 @@
     to this point?
 
     |> Solution
-
         That would be the fact that
 
         $$
@@ -1125,18 +1118,18 @@
         for all $c \in \rr$, mentioned in Exercise 10
         for $c = 2$.
 
-        |> Pause
-        _Note DifferentiationFormulasClarification<<::++NoteCounter._
-        You can also write
+        |> SolutionNote
+            handle=DifferentiationFormulasClarification
+            You can also write
 
-        $$
-        (cf)' = c \cdot f'
-        $$
+            $$
+            (cf)' = c \cdot f'
+            $$
 
-        if it helps clarify the difference between the
-        left- and right-hand sides. (The difference being
-        namely “($c$ times $f$) prime” on the left vs. “c
-        times ($f$ prime)” on the right.)
+            if it helps clarify the difference between the
+            left- and right-hand sides. (The difference being
+            namely “($c$ times $f$) prime” on the left vs. “c
+            times ($f$ prime)” on the right.)
 
 |> Exercise
 

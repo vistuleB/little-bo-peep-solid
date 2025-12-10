@@ -4314,11 +4314,10 @@ const Rest = () => {
               {" "} compute?
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_21_hgi_">
+          <Solution>
             <OuterP>
-              It computes
-              the amount earned by the rat as a function of time. In
-              more detail, {" "}
+              It computes the amount earned by the rat as a
+              function of time. In more detail, {" "}
               <Math>
                 $(f \circ g)(t)$
               </Math>
@@ -4331,175 +4330,180 @@ const Rest = () => {
               seconds after the start of the race.
             </OuterP>
             <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              In even more detail,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              g(t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the position in meters of the rat {" "}
-              <Math>
-                $t$
-              </Math>
-              {" "}
-              seconds after start, by definition
-              of {" "}
-              <NoBreak>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                In even more detail,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                g(t)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is the position in meters of the rat {" "}
                 <Math>
-                  $g$
+                  $t$
                 </Math>
-                ,
-              </NoBreak>
-              {" "} at which position the rat has
-              earned
-            </OuterP>
+                {" "}
+                seconds after start, by definition
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} at which position the rat has
+                earned
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                f(g(t))
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                $'s in total, by definition of {" "}
+                <NoBreak>
+                  <Math>
+                    $f$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                And
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                f(g(t))
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                (f \circ g)(t)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                by definition of {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $\circ$
+                  </Math>
+                  ”.
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
             <Pause />
-            <MathBlock>
-              $$
-              f(g(t))
-              $$
-            </MathBlock>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                If it helps, here is a pictorialization of the
+                “units transformation pipeline” that
+                occurs inside {" "}
+                <NoBreak>
+                  <Math>
+                    $f \circ g$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/96sV.svg" />
+            </SolutionNote>
             <Pause />
-            <OuterP>
-              $'s in total, by definition of {" "}
-              <NoBreak>
+            <SolutionNote id="_21_hgi_">
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                To emphasize, {" "}
+                <Math>
+                  $f(x)$
+                </Math>
+                {" "} is the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                ~ total ~
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                amount earned when position {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} is reached.
+                In real life {" "}
+                <NoBreak>
+                  <Math>
+                    $f$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "}
+                graph might therefore look something like this,
+                while inventing some numbers:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/CzxM.svg" />
+              <Pause />
+              <OuterP>
+                In the above the rat earns {" "}
+                <NoBreak>
+                  <Math>
+                    \(\te&#123;\$&#125;\)
+                  </Math>
+                  3
+                </NoBreak>
+                {" "} for the
+                first 50m, after which the dollar-per-meter
+                rate is reduced.
+                Or {" "}
                 <Math>
                   $f$
                 </Math>
-                .
-              </NoBreak>
-              {" "}
-              And
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f(g(t))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \circ g)(t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by definition of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”.
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              If it helps,
-              here is a pictorialization of the
-              “units transformation pipeline” that
-              occurs inside {" "}
-              <NoBreak>
-                <Math>
-                  $f \circ g$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/96sV.svg" />
-            <Pause />
-            <OuterP>
-              <i>
-                Note 3.
-              </i>
-              {" "}
-              To emphasize, {" "}
-              <Math>
-                $f(x)$
-              </Math>
-              {" "} is the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              ~ total ~
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              amount earned when position {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} is reached.
-              In real life {" "}
-              <NoBreak>
+                {" "} could look like this, with discrete
+                “unlocks”:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/UxiE.svg" />
+              <Pause />
+              <OuterP>
+                In our mathematicians' imaginations, however, {" "}
                 <Math>
                   $f$
                 </Math>
-                's
-              </NoBreak>
-              {" "}
-              graph might therefore look something like this,
-              while inventing some numbers:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/CzxM.svg" />
-            <Pause />
-            <OuterP>
-              In the above the rat earns {" "}
-              <NoBreak>
-                <Math>
-                  \(\te&#123;\$&#125;\)
-                </Math>
-                3
-              </NoBreak>
-              {" "} for the
-              first 50m, after which the dollar-per-meter
-              rate is reduced.
-              Or {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} could look like this, with discrete
-              “unlocks”:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/UxiE.svg" />
-            <Pause />
-            <OuterP>
-              In our mathematicians' imaginations, however, {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}
-              might also look like this, nice and differentiable,
-              with periods of negative slope (corresponding to
-              parts of the course that momentarily lose you money):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/-wVL.svg" />
-            <Pause />
-            <OuterP>
-              (Etc.)
-            </OuterP>
+                {" "}
+                might also look like this, nice and differentiable,
+                with periods of negative slope (corresponding to
+                parts of the course that momentarily lose you money):
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/-wVL.svg" />
+              <Pause />
+              <OuterP>
+                (Etc.)
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={16}>
@@ -5339,27 +5343,29 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <OuterP>
-              <i>
-                Note CircleRadiiPattern&lt;&lt;NoteCounter.
-              </i>
-              {" "}
-              If the particle's original path is centered at
-              {" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              {" "} then that path constitutes a fourth
-              circle obeying the same pattern
-              of {" "}
-              <NoBreak>
+            <SolutionNote id="_22_hgi_">
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                If the particle's original path is centered at
+                {" "}
                 <Math>
-                  $2/3$
+                  $(0, 0)$
                 </Math>
-                -ratios
-              </NoBreak>
-              {" "} between the successive radii:
-            </OuterP>
+                {" "} then that path constitutes a fourth
+                circle obeying the same pattern
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $2/3$
+                  </Math>
+                  -ratios
+                </NoBreak>
+                {" "} between the successive radii:
+              </OuterP>
+            </SolutionNote>
             <Pause />
             <Image src="/build-img/svgo-svg/nVRw.svg" />
           </Solution>
@@ -5691,7 +5697,7 @@ const Rest = () => {
             <Pause />
             <StarDivider />
             <Pause />
-            <SolutionNote id="_22_hgi_">
+            <SolutionNote id="_23_hgi_">
               <OuterP>
                 <i>
                   Note 1.
@@ -6051,7 +6057,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={25}>
-          <ExerciseStatement id="_24_hgi_">
+          <ExerciseStatement id="_25_hgi_">
             <OuterP>
               <b>
                 Exercise 25.
@@ -6100,7 +6106,7 @@ const Rest = () => {
               see {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_23_hgi_"
+                  href="/article/chapter4#_24_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Note 1
@@ -6281,7 +6287,7 @@ const Rest = () => {
               {" "} no matter how far back in time you look.)
             </OuterP>
             <Pause />
-            <SolutionNote id="_23_hgi_">
+            <SolutionNote id="_24_hgi_">
               <OuterP>
                 <i>
                   Note 1.
@@ -6390,7 +6396,7 @@ const Rest = () => {
               particles. If we add also the graph of the position
               of the red particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_24_hgi_"
+                href="/article/chapter4#_25_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 25
@@ -6881,7 +6887,7 @@ const Rest = () => {
               particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_24_hgi_"
+                  href="/article/chapter4#_25_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 25
@@ -6894,7 +6900,7 @@ const Rest = () => {
               red particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_24_hgi_"
+                  href="/article/chapter4#_25_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 25
@@ -9026,16 +9032,18 @@ const Rest = () => {
               </ul>
             </TextParent>
             <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              We never took the time to prove the associativity
-              of function addition, but it is easy to prove!
-              (For other proofs see Exercise 32, Exercise 33, as
-              well as Exercise 9, Chapter 3.)
-            </OuterP>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                We never took the time to prove the associativity
+                of function addition, but it is easy to prove!
+                (For other proofs see Exercise 32, Exercise 33, as
+                well as Exercise 9, Chapter 3.)
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={30}>
@@ -9280,7 +9288,7 @@ const Rest = () => {
               ...?
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_25_hgi_">
+          <Solution>
             <OuterP>
               We can naïvely try to imitiate how the
               curves of Exercise 16 are generated by
@@ -9750,254 +9758,264 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <OuterP>
-              <i>
-                Note 4.
-              </i>
-              {" "}
-              If you graph the {" "}
-              <NoBreak>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                If you graph the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} of the
+                5 particles over time, each in their
+                color, you get a graph like so, in which
+                blue is the derivative of red, yellow is
+                the derivative of blue, etc; the function
+                {" "}
                 <Math>
-                  $x$
+                  $f$
                 </Math>
-                -coordinates
-              </NoBreak>
-              {" "} of the
-              5 particles over time, each in their
-              color, you get a graph like so, in which
-              blue is the derivative of red, yellow is
-              the derivative of blue, etc; the function
-              {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} can be taken to be any one of these
-              curves:
-            </OuterP>
+                {" "} can be taken to be any one of these
+                curves:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/U6Hi.svg" />
+            </SolutionNote>
             <Pause />
-            <Image src="/build-img/svgo-svg/U6Hi.svg" />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                There is nothing special about
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} vis-à-vis {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinates.
+                </NoBreak>
+                {" "}
+                You can also define {" "}
+                <Math>
+                  $f(t)$
+                </Math>
+                {" "} to be, e.g.,
+                the {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "} of the red particle
+                at time {" "}
+                <NoBreak>
+                  <Math>
+                    $t$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
             <Pause />
-            <OuterP>
-              <i>
-                Note 5.
-              </i>
-              {" "}
-              There is nothing special about
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinates
-              </NoBreak>
-              {" "} vis-à-vis {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinates.
-              </NoBreak>
-              {" "}
-              You can also define {" "}
-              <Math>
-                $f(t)$
-              </Math>
-              {" "} to be, e.g.,
-              the {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the red particle
-              at time {" "}
-              <NoBreak>
-                <Math>
-                  $t$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
+            <SolutionNote id="_26_hgi_">
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                It is worth noting that, in fact, the
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} live separate
+                lives. The rate of change of each
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "} is some other {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate,
+                </NoBreak>
+                {" "}
+                and the rate of change of each {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}
+                is some other {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate.
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
             <Pause />
-            <OuterP>
-              <i>
-                Note 6.
-              </i>
-              {" "}
-              It is worth noting that, in fact, the
-              {" "}
-              <NoBreak>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 4.
+                </i>
+                {" "}
+                Adding to this observation, we don't
+                {" "}
+                <i>
+                  need
+                </i>
+                {" "} to start the particles in
+                a symmetric configuration. Symmetry only
+                helps to picture how the positions of the
+                particles will evolve without making any
+                computations. We also don't {" "}
+                <i>
+                  need
+                </i>
+                {" "}
+                to work in two dimensions. We can place
+                the particles in a one-dimensional world,
+                e.g., ...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/cejz.svg" />
+              <Pause />
+              <OuterP>
+                ...(the initial positions really don't
+                matter much, as long as you don't give
+                all the particles the {" "}
+                <i>
+                  same
+                </i>
+                {" "} initial
+                position, or else you won't have {" "}
                 <Math>
-                  $x$
+                  $f \ne f'$
                 </Math>
-                -
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
+                {" "}
+                etc) and stipulate the same rules, namely
+                that the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                velocity
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                (now {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  -dimensional)
+                </NoBreak>
+                {" "} of the red particle
+                be the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                position
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                (now {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  -dimensional)
+                </NoBreak>
+                {" "} of the blue particle
+                and so on—you can “release” the particles
+                from their initial configuration and
+                simulate (or compute exactly, if you have
+                the know-how) their motion by the same
+                methods as above. The five position
+                functions obtained are each a solution
+                {" "}
                 <Math>
-                  $y$
+                  $f$
                 </Math>
-                -coordinates
-              </NoBreak>
-              {" "} live separate
-              lives. The rate of change of each
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} is some other {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate,
-              </NoBreak>
-              {" "}
-              and the rate of change of each {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "}
-              is some other {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinate.
-              </NoBreak>
-            </OuterP>
+                {" "} to the problem. (But this solution will
+                typically look more chaotic than the curves
+                from Note 1.)
+              </OuterP>
+            </SolutionNote>
             <Pause />
-            <OuterP>
-              <i>
-                Note 4.
-              </i>
-              {" "}
-              Adding to this observation, we don't
-              {" "}
-              <i>
-                need
-              </i>
-              {" "} to start the particles in
-              a symmetric configuration. Symmetry only
-              helps to picture how the positions of the
-              particles will evolve without making any
-              computations. We also don't {" "}
-              <i>
-                need
-              </i>
-              {" "}
-              to work in two dimensions. We can place
-              the particles in a one-dimensional world,
-              e.g., ...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/cejz.svg" />
-            <Pause />
-            <OuterP>
-              ...(the initial positions really don't
-              matter much, as long as you don't give
-              all the particles the {" "}
-              <i>
-                same
-              </i>
-              {" "} initial
-              position, or else you won't have {" "}
-              <Math>
-                $f \ne f'$
-              </Math>
-              {" "}
-              etc) and stipulate the same rules, namely
-              that the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              velocity
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (now {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                -dimensional)
-              </NoBreak>
-              {" "} of the red particle
-              be the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              position
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (now {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                -dimensional)
-              </NoBreak>
-              {" "} of the blue particle
-              and so on—you can “release” the particles
-              from their initial configuration and
-              simulate (or compute exactly, if you have
-              the know-how) their motion by the same
-              methods as above. The five position
-              functions obtained are each a solution
-              {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} to the problem. (But this solution will
-              typically look more chaotic than the curves
-              from Note 1.)
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 5.
-              </i>
-              {" "}
-              In fact, our symmetric two-dimensional
-              solution is an instance in which you can say
-              that
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the whole is simpler than the parts
-              <ImageLeft src="/build-img/svgo-svg/_DUb.svg" />
-              <ImageRight src="/build-img/svgo-svg/7DF3.svg" />
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              in that you would never spot the symmetry
-              at play, or have a chance of eyeballing
-              the long-term evolution of the system, if
-              you were shown just the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinates,
-              </NoBreak>
-              {" "}
-              or just the {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinates,
-              </NoBreak>
-              {" "} on their own!
-            </OuterP>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 5.
+                </i>
+                {" "}
+                In fact, our symmetric two-dimensional
+                solution is an instance in which you can say
+                that
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the whole is simpler than the parts
+                <ImageLeft src="/build-img/svgo-svg/_DUb.svg" />
+                <ImageRight src="/build-img/svgo-svg/7DF3.svg" />
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                in that you would never spot the symmetry
+                at play, or have a chance of eyeballing
+                the long-term evolution of the system, if
+                you were shown just the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates,
+                </NoBreak>
+                {" "}
+                or just the {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinates,
+                </NoBreak>
+                {" "} on their own!
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={32}>
@@ -10479,7 +10497,7 @@ const Rest = () => {
               the expression, if any.
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_26_hgi_">
+          <Solution>
             <OuterP>
               This version pictures all the elements
               that appear in the fraction:
@@ -10533,119 +10551,125 @@ const Rest = () => {
               {" "} is negative, by the way.)
             </OuterP>
             <Pause />
-            <OuterP>
-              <i>
-                Note 7.
-              </i>
-              {" "}
-              A fraction of this form is called a {" "}
-              <i>
-                Newton
-                quotient
-              </i>
-              .
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 8.
-              </i>
-              {" "}
-              The pale brown line is sometimes known as
-              the {" "}
-              <i>
-                secant
-              </i>
-              {" "} [through {" "}
-              <NoBreak>
-                <Math>
-                  $(x, f(x))$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $(x+h, f(x+h))$
-                </Math>
-                ].
-              </NoBreak>
-              {" "}
-              “Secant” is a general term for “line passing
-              through two specified points on another
-              curve”.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 9.
-              </i>
-              {" "}
-              If we let {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} drop to {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and if {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} is
-              differentiable at {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} the
-              Newton-quotient-a.k.a.-slope-of-the-secant
-              approaches
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f'(x)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because the secant approaches the tangent,
-              in that case, and the slope of the secant
-              is also, perforce, approaching the slope
-              of the tangent, which is {" "}
-              <NoBreak>
-                <Math>
-                  $f'(x)$
-                </Math>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                A fraction of this form is called a {" "}
+                <i>
+                  Newton
+                  quotient
+                </i>
                 .
-              </NoBreak>
-              {" "} (But you
-              cannot directly set {" "}
-              <NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The pale brown line is sometimes known as
+                the {" "}
+                <i>
+                  secant
+                </i>
+                {" "} [through {" "}
+                <NoBreak>
+                  <Math>
+                    $(x, f(x))$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $(x+h, f(x+h))$
+                  </Math>
+                  ].
+                </NoBreak>
+                {" "}
+                “Secant” is a general term for “line passing
+                through two specified points on another
+                curve”.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote id="_27_hgi_">
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                If we let {" "}
                 <Math>
-                  $h = 0$
+                  $h$
                 </Math>
-                ,
-              </NoBreak>
-              {" "} because
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;f(x+0)-f(x)\over 0&#125; = &#123;0 \over 0&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is undefined.)
-            </OuterP>
+                {" "} drop to {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and if {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} is
+                differentiable at {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} the
+                Newton-quotient-a.k.a.-slope-of-the-secant
+                approaches
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                f'(x)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                because the secant approaches the tangent,
+                in that case, and the slope of the secant
+                is also, perforce, approaching the slope
+                of the tangent, which is {" "}
+                <NoBreak>
+                  <Math>
+                    $f'(x)$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} (But you
+                cannot directly set {" "}
+                <NoBreak>
+                  <Math>
+                    $h = 0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} because
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;f(x+0)-f(x)\over 0&#125; = &#123;0 \over 0&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is undefined.)
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={34}>
@@ -11772,7 +11796,7 @@ const Rest = () => {
               to this point?
             </OuterP>
           </ExerciseStatement>
-          <Solution id="_27_hgi_">
+          <Solution>
             <OuterP>
               That would be the fact that
             </OuterP>
@@ -11809,47 +11833,49 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <OuterP>
-              <i>
-                Note 10.
-              </i>
-              {" "}
-              You can also write
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (cf)' = c \cdot f'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              if it helps clarify the difference between the
-              left- and right-hand sides. (The difference being
-              namely {" "}
-              <NoBreak>
-                “(
-                <Math>
-                  $c$
-                </Math>
-              </NoBreak>
-              {" "} times {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                )
-              </NoBreak>
-              {" "} prime” on the left vs. “c
-              times {" "}
-              <NoBreak>
-                (
-                <Math>
-                  $f$
-                </Math>
-              </NoBreak>
-              {" "} prime)” on the right.)
-            </OuterP>
+            <SolutionNote id="_28_hgi_">
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                You can also write
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                (cf)' = c \cdot f'
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                if it helps clarify the difference between the
+                left- and right-hand sides. (The difference being
+                namely {" "}
+                <NoBreak>
+                  “(
+                  <Math>
+                    $c$
+                  </Math>
+                </NoBreak>
+                {" "} times {" "}
+                <NoBreak>
+                  <Math>
+                    $f$
+                  </Math>
+                  )
+                </NoBreak>
+                {" "} prime” on the left vs. “c
+                times {" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $f$
+                  </Math>
+                </NoBreak>
+                {" "} prime)” on the right.)
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={38}>
@@ -12493,7 +12519,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={41}>
-          <ExerciseStatement id="_28_hgi_">
+          <ExerciseStatement id="_29_hgi_">
             <OuterP>
               <b>
                 Exercise 41.
@@ -13702,7 +13728,7 @@ const Rest = () => {
               {" "} {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_28_hgi_"
+                  href="/article/chapter4#_29_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 41

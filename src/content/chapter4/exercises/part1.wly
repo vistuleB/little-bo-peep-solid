@@ -18,7 +18,6 @@
         undefined at the corners.)
 
 |> Exercise
-
     Would the derivative of
 
     $$
@@ -1089,79 +1088,74 @@
 
     |> Solution
 
-        It computes
-        the amount earned by the rat as a function of time. In
-        more detail, $(f \circ g)(t)$
+        It computes the amount earned by the rat as a
+        function of time. In more detail, $(f \circ g)(t)$
         is the number of \$'s earned by the rat at $t$
         seconds after the start of the race.
 
-        |> Pause
-        _Note ::++NoteCounter._
-        In even more detail,
-        $$
-        g(t)
-        $$
-        is the position in meters of the rat $t$
-        seconds after start, by definition
-        of $g$, at which position the rat has
-        earned
-        $$
-        f(g(t))
-        $$
-        \$'s in total, by definition of $f$.
-        And
-        $$
-        f(g(t))
-        $$
-        is
-        $$
-        (f \circ g)(t)
-        $$
-        by definition of “$\circ$”.
+        |> SolutionNote
+            In even more detail,
+            $$
+            g(t)
+            $$
+            is the position in meters of the rat $t$
+            seconds after start, by definition
+            of $g$, at which position the rat has
+            earned
+            $$
+            f(g(t))
+            $$
+            \$'s in total, by definition of $f$.
+            And
+            $$
+            f(g(t))
+            $$
+            is
+            $$
+            (f \circ g)(t)
+            $$
+            by definition of “$\circ$”.
 
-        |> Pause
-        _Note ::++NoteCounter._
-        If it helps,
-        here is a pictorialization of the
-        “units transformation pipeline” that
-        occurs inside $f \circ g$:
+        |> SolutionNote
+            If it helps, here is a pictorialization of the
+            “units transformation pipeline” that
+            occurs inside $f \circ g$:
 
-        |> Image
-            src=images/svg_ch4_f_g_composition_units.svg
+            |> Image
+                src=images/svg_ch4_f_g_composition_units.svg
 
-        |> Pause
+        |> SolutionNote
+            handle=TotalEarnings
+            To emphasize, $f(x)$ is the
 
-        _Note TotalEarnings<<::++NoteCounter._
-        To emphasize, $f(x)$ is the
+            __~ total ~__
 
-        __~ total ~__
+            amount earned when position $x$ is reached.
+            In real life $f$'s
+            graph might therefore look something like this,
+            while inventing some numbers:
 
-        amount earned when position $x$ is reached.
-        In real life $f$'s
-        graph might therefore look something like this,
-        while inventing some numbers:
+            |> Image
+                src=images/svg_ch4_f_g_first_example_of_f.svg
 
-        |> Image
-            src=images/svg_ch4_f_g_first_example_of_f.svg
+            In the above the rat earns $\te{\$}$3 for the
+            first 50m, after which the dollar-per-meter
+            rate is reduced.
+            Or $f$ could look like this, with discrete
+            “unlocks”:
 
-        In the above the rat earns $\te{\$}$3 for the
-        first 50m, after which the dollar-per-meter
-        rate is reduced.
-        Or $f$ could look like this, with discrete
-        “unlocks”:
+            |> Image
+                src=images/svg_ch4_f_g_second_example_of_f.svg
 
-        |> Image
-            src=images/svg_ch4_f_g_second_example_of_f.svg
+            In our mathematicians' imaginations, however, $f$
+            might also look like this, nice and differentiable,
+            with periods of negative slope (corresponding to
+            parts of the course that momentarily lose you money):
 
-        In our mathematicians' imaginations, however, $f$
-        might also look like this, nice and differentiable,
-        with periods of negative slope (corresponding to
-        parts of the course that momentarily lose you money):
+            |> Image
+                src=images/svg_ch4_f_g_third_example_of_f.svg
 
-        |> Image
-            src=images/svg_ch4_f_g_third_example_of_f.svg
-
-        (Etc.)
+            (Etc.)
 
 |> Exercise
 
@@ -1479,12 +1473,12 @@
 
         |> StarDivider
 
-        |> Pause
-        _Note CircleRadiiPattern<<NoteCounter._
-        If the particle's original path is centered at
-        $(0, 0)$ then that path constitutes a fourth
-        circle obeying the same pattern
-        of $2/3$-ratios between the successive radii:
+        |> SolutionNote
+            handle=CircleRadiiPattern
+            If the particle's original path is centered at
+            $(0, 0)$ then that path constitutes a fourth
+            circle obeying the same pattern
+            of $2/3$-ratios between the successive radii:
 
         |> Image
             src=images/svg_ch4_velocity_vector_radius_3_speed_2_with_position.svg
@@ -3178,30 +3172,24 @@
         |> TextParent
             |> ul
                 style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;
-
                 |> li
-
                     _the associativity of [real number] multiplication is
                     the fact that $a(bc) = (ab)c$ for all $a, b, c \in \rr$_
 
                 |> li
-
                     _the associativity of [real number] addition is
                     the fact that $a + (b + c) = (a + b) + c$ for all $a, b, c \in \rr$_
 
                 |> li
-
                     _the commutativity of [real number] multiplication is
                     the fact that $ab = ba$ for all $a, b \in \rr$_
 
                 |> li
-
                     _the commutativity of [real number] addition is
                     the fact that $a + b = b + a$ for all $a, b \in \rr$_
 
-        |> Pause
-        _Note 1._
-        We never took the time to prove the associativity
-        of function addition, but it is easy to prove!
-        (For other proofs see Exercise 32, Exercise 33, as
-        well as Exercise 9, Chapter 3.)
+        |> SolutionNote
+            We never took the time to prove the associativity
+            of function addition, but it is easy to prove!
+            (For other proofs see Exercise 32, Exercise 33, as
+            well as Exercise 9, Chapter 3.)
