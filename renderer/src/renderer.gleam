@@ -253,7 +253,7 @@ pub fn main() {
 
   let renderer =
     ds.Renderer(
-      assembler: ds.default_assembler(amendments.only_paths),
+      assembler: ds.default_writerly_assembler(amendments.only_paths),
       parser: ds.default_writerly_parser(amendments.only_key_values),
       pipeline: our_pipeline(only, dict.has_key(amendments.user_args, "--remove-unused-build-img")),
       splitter: our_splitter,

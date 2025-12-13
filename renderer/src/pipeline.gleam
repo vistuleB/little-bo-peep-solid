@@ -75,6 +75,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.prepend_text_node(#("SolutionNote", "_Note ::øøSolutionNoteCounter._")),
       dl.prepend_text_node(#("Note", "_Note ::øøNoteCounter._")),
       dl.substitute_counters(),
+      dl.table_marker(),
       dl.handles_add_ids(),
       dl.handles_generate_dictionary_and_id_list("path"),
       dl.handles_substitute_and_fix_nonlocal_id_links(#("path", "InChapterLink", "a", [#("class", "handle-in-chapter-link")], [#("class", "handle-out-chapter-link")])),
@@ -93,7 +94,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
     pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
     pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
-      dl.table_marker(),
       dl.free_children(#("CentralDisplay", "p")),
       dl.free_children(#("CentralDisplayItalic", "p")),
     ],
@@ -184,7 +184,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.generate_lbp_breadcrumbs(),
       dl.unwrap("BreadcrumbTitle"),
       dl.unwrap("Scope"),
-      dl.table_marker(),
       dl.delete_attribute__batch(["counter", "handle", "type", "t", "_", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
       dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only, remove_unused, only)),
