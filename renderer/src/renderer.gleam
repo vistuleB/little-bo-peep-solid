@@ -4,6 +4,7 @@ import desugaring as ds
 import emitter_imports as ei
 import gleam/io
 import gleam/list
+import gleam/option.{Some}
 import gleam/string.{inspect as ins}
 import gleam/dict.{type Dict}
 import infrastructure as infra
@@ -270,15 +271,18 @@ pub fn main() {
       input_dir: "../src/content",
       output_dir: output_dir,
       prettifier_behavior: ds.PrettifierOff,
-      table: False,
-      verbose: True,
-      warnings: True,
     )
     |> ds.amend_renderer_paramaters_by_command_line_amendments(amendments)
 
-  let debug_options =
-    ds.default_renderer_debug_options()
-    |> ds.amend_renderer_debug_options_by_command_line_amendments(amendments)
+  let options =
+    ds.RendererOptions(
+      ..ds.vanilla_options(),
+      verbose: False,
+      profiling_table: Some(130),
+    )
+    |> ds.amend_renderer_options_by_command_line_amendments(amendments)
+
+  let _ = Some(1)
 
   let _ = shellout.command(
     run: "rm",
@@ -291,7 +295,7 @@ pub fn main() {
     opt: [],
   )
 
-  let _ = ds.run_renderer(renderer, parameters, debug_options)
+  let _ = ds.run_renderer(renderer, parameters, options)
 
   Nil
 }
