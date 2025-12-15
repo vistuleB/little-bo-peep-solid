@@ -37,7 +37,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
     pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis),
     [
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
-      dl.timer(),
       dl.append_attribute(#("Book", "counter", "ChapterCounter", infra.GoBack)),
       dl.append_attribute(#("Book", "counter", "BootcampCounter", infra.GoBack)),
       dl.append_attribute__outside(#("Chapter", "counter", "ExampleCounter"), ["Bootcamp"]),
@@ -57,7 +56,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.append_attribute(#("Exercise", "number", "::øøExerciseCounter", infra.GoBack)),
       dl.append_attribute(#("Solution", "counter", "SolutionNoteCounter", infra.GoBack)),
       dl.append_attribute(#("Section", "id", "section-::++SectionCounter", infra.Continue)),
-      dl.timer(),
       dl.prepend_counter_incrementing_attribute__outside(#("Chapter", "ChapterCounter", infra.GoBack), ["Bootcamp"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Bootcamp", "BootcampCounter", infra.GoBack), ["Chapter"]),
       dl.prepend_counter_incrementing_attribute(#("Example", "ExampleCounter", infra.GoBack)),
@@ -126,7 +124,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.append_attribute_if_child_of(#("ImageRight", "MathBlock", "compensate_offset_x_for_large_text_columns", "true")),
       dl.append_attribute_if_child_of(#("ImageLeft", "MathBlock", "compensate_offset_x_for_large_text_columns", "true")),
       dl.append_attribute_to_second_of_kind(#("OuterP", "class", "indent-10")),
-      dl.timer(),
       dl.add_between(#("MathBlock", "OuterP", "Pause")),
       dl.add_between(#("Example", "OuterP", "Pause")),
       dl.add_between(#("Note", "OuterP", "Pause")),
@@ -140,7 +137,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.add_between(#("List", "OuterP", "Pause")),
       dl.add_between(#("StarDivider", "OuterP", "Pause")),
       dl.add_between_tag_and_text_node(#("MathBlock", "Pause")),
-      dl.timer(),
       dl.add_before_but_not_before_first_child__batch([
         #("Exercises", "Pause"),
         #("Example", "Pause"),
@@ -158,7 +154,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       ]),
       dl.add_before_but_not_before_first_of_kind(#("Section", "Pause")),
       dl.wrap_if_text_contains(#("MathBlock", "OuterP", "\\tag{")),
-      dl.timer(),
       dl.tokenize_href_surroundings(),
       dl.rearrange_links_4_pre_tokenized_src__batch([
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
@@ -174,7 +169,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
         #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
       ]),
       dl.detokenize_href_surroundings(),
-      dl.timer(),
       dl.wrap_adjacent_non_whitespace_text_with(#(["a"], "NoBreak")),
       dl.wrap_adjacent_non_whitespace_text_with(#(["InChapterLink"], "NoBreak")),
       dl.generate_lbp_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
