@@ -231,6 +231,7 @@ fn our_emitter(
 }
 
 const remove_unused_build_img_option = "--clean"
+const author_mode = "--local"
 
 fn cli_usage_supplementary() {
   let margin = "   "
@@ -241,7 +242,7 @@ fn cli_usage_supplementary() {
 
 pub fn main() {
   use amendments <- on.error_ok(
-    ds.process_command_line_arguments(argv.load().arguments, [remove_unused_build_img_option]),
+    ds.process_command_line_arguments(argv.load().arguments, [remove_unused_build_img_option, author_mode]),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
@@ -263,7 +264,7 @@ pub fn main() {
     ds.Renderer(
       assembler: ds.default_writerly_assembler(amendments.only_paths),
       parser: ds.default_writerly_parser(amendments.only_key_values),
-      pipeline: our_pipeline(only, dict.has_key(amendments.user_args, remove_unused_build_img_option)),
+      pipeline: our_pipeline(only, dict.has_key(amendments.user_args, remove_unused_build_img_option), dict.has_key(amendments.user_args, author_mode)),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
       writer: ds.default_writer,

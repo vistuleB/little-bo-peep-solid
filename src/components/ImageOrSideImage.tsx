@@ -1,10 +1,11 @@
-import { ParentProps } from "solid-js";
+import { ParentProps, Show } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 type ImageOrSideImageProp = {
   side_image?: boolean;
+  local_url?: string;
 };
 
 function ImageOrSideImage(
@@ -14,7 +15,7 @@ function ImageOrSideImage(
 ) {
   let { store } = useGlobalContext();
 
-  return (
+  const ImageTag = (
     <img
       ref={props.ref}
       onLoad={props.onLoad}
@@ -24,10 +25,21 @@ function ImageOrSideImage(
       class={twJoin(
         props.class,
         store.show_areas &&
-          (props.side_image ? "top-bottom-background-divide" : "left-right-background-divide"),
+          (props.side_image
+            ? "top-bottom-background-divide"
+            : "left-right-background-divide"),
       )}
       style={props.style || ""}
     />
+  );
+
+  return (
+    <Show when={props.local_url} fallback={ImageTag}>
+      {ImageTag}
+      <span class="t-3003 t-3003-i">
+        <span class="t-3003-i-url">{props.local_url}</span>
+      </span>
+    </Show>
   );
 }
 

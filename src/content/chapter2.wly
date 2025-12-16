@@ -163,7 +163,7 @@
 
                 |> td
                     |> img
-                        src=images/33.svg
+                        src=/images/33.svg
                         svgo=false
                         width=50
                         style=padding-top:7px;padding-bottom:7px;
@@ -182,7 +182,7 @@
 
                 |> td
                     |> img
-                        src=images/34.svg
+                        src=/images/34.svg
                         style=margin-top:7px;margin-bottom:7px;width:105px;
 
                 |> td
@@ -200,7 +200,7 @@
 
                 |> td
                     |> img
-                        src=images/35.svg
+                        src=/images/35.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
@@ -221,7 +221,7 @@
                 |> td
 
                     |> img
-                        src=images/36.svg
+                        src=/images/36.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
@@ -242,7 +242,7 @@
 
                 |> td
                     |> img
-                        src=images/37.svg
+                        src=/images/37.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
@@ -823,7 +823,7 @@
     |> Exercise
         handle=_vertical_velocity_plot_
 
-        Plot the vertical velocity of 
+        Plot the vertical velocity of
         |> del
             an object
         \ a mosquito whose height over time is
