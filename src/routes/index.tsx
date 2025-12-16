@@ -2,8 +2,10 @@ import { Spacer }  from "~/components/Spacer";
 import TOC  from "~/components/TOC";
 import TOCItem  from "~/components/TOCItem";
 import TOCTitle  from "~/components/TOCTitle";
+import useNoScrollRestoration from "~/hooks/useNoScrollRestoration";
 
 export default function __Home__() {
+  useNoScrollRestoration();
   return (
     <TOC
       prevPage="/article/bootcamp1"

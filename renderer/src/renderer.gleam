@@ -171,8 +171,10 @@ fn toc_emitter(
     list.flatten([
       component_imports,
       [
+        OutputLine(blame_us("toc_emitter"), 0, "import useNoScrollRestoration from \"~/hooks/useNoScrollRestoration\";"),
         OutputLine(blame_us("toc_emitter"), 0, ""),
         OutputLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
+        OutputLine(blame_us("toc_emitter"), 2, "useNoScrollRestoration();"),
         OutputLine(blame_us("toc_emitter"), 2, "return ("),
       ],
       vxml.vxml_to_jsx_output_lines(fr.payload , 4, 2),
