@@ -23,7 +23,7 @@ const cannot_contain_p = [
   "MathBlock", "Math", "p",
 ]
 
-pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
+pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipeline {
   [
     [
       dl.identity(),
@@ -159,6 +159,9 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.add_before_but_not_before_first_of_kind(#("Section", "Pause")),
       dl.wrap_if_text_contains(#("MathBlock", "OuterP", "\\tag{")),
       dl.tokenize_href_surroundings(),
+    ],
+
+    [
       dl.rearrange_links_4_pre_tokenized_src__batch([
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
@@ -187,6 +190,15 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, only)),
       // dl.ensure_attribute_value_starts_with(#("src", "/")),
     ]
+    , case author_mode {
+      True -> [
+        dl.lbp_turn_lines_into_3003_spans("./src/content/", ["Math", "MathBlock", "TOC"]),
+        dl.lbp_adorn_with_3003_spans(#("./src/content/", "", ["MathBlock"])),
+        dl.lbp_wrap_with_3003_spans(#("./src/content/", "", ["Math"])),
+        dl.lbp_adorn_img_with_3003_spans(#("./", "")),
+      ]
+      False -> []
+    },
   ]
   |> list.flatten
   |> infra.desugarers_2_pipeline()

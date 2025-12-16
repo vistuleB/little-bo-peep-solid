@@ -19,11 +19,10 @@ type ImageProps = ParentProps &
     id?: string;
     width?: string;
     height?: string;
+    local_url?: string;
   };
 
 const Image = (props: ImageProps) => {
-  // console.log("hi", props);
-
   let [scale, set_scale] = createSignal({
     scale: 1.0,
     name: props.src,
@@ -45,6 +44,8 @@ const Image = (props: ImageProps) => {
     },
     props,
   );
+
+  // console.log("hi", props);
 
   const imageWidth = () => {
     return image_ref
@@ -167,6 +168,7 @@ const Image = (props: ImageProps) => {
           style={`width:${props.width};height:${props.height};${props.style}`}
           src={props.src}
           side_image={false}
+          local_url={props.local_url}
         />
         {props.children}
       </div>
