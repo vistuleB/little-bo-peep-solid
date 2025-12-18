@@ -1,0 +1,76 @@
+|> Exercise
+    handle=_composition_order_1_
+
+    Rewrite
+
+    |> div
+        style=font-size:1.1em;margin:1em 0em;
+
+        $$
+        \tag{A}(f \circ (g \circ h))(x)
+        $$
+
+    without using “$\circ$”, using only the
+    “definitional equation of function
+    composition”, which is namely
+
+    |> div
+        style=font-size:1.1em;margin:1em 0em;
+
+        $$
+        \tag{AA}(r \circ s)(x) = r(s(x))
+        $$
+
+    (where $r$ and $s$ are functions); plz
+    note that you will have to apply (AA)
+    _twice_, as each application of (AA)
+    makes _one_ copy of the symbol “$\circ$”
+    disappear, and (A) contains _two_ copies of
+    “$\circ$”!!
+
+    |> Solution
+
+        Setting “$r$” to “$f$” and “$s$” to “$(g \circ h)$”
+        in (AA) yields
+
+        |> ImageLeft
+            src=images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg
+            popup=true
+            line=1
+            offset_x=1em
+
+        |> div
+            style=font-size:1.1em;margin:0.8em 0em;
+
+            $$
+            (f \circ (g \circ h))(x) = \f((g \circ h)(x))
+            $$
+
+        ...which already constitutes progress towards
+        our goal, since only one copy of “$\circ$”
+        exists on the right-hand side! But
+
+        |> div
+            style=font-size:1.1em;margin:0.8em 0em;
+
+            $$
+            (g \circ h)(x) = g(h(x))
+            $$
+
+        by the “definitional equation” again, so
+
+        |> div
+            style=font-size:1.1em;margin:0.8em 0em;
+
+            $$
+            f((g \circ h)(x)) = \f(g(h(x)))
+            $$
+
+        ...and this completes the computation!
+
+        |> SolutionNote
+            We can collect both steps of the computation
+            into a single string of equalities:
+
+            |> Image
+                src=images/svg_first_victim_second_victim_1_1em.svg

@@ -1,0 +1,118 @@
+|> Exercise
+    handle=_map_cosx_to_cos_0.1x+0.1_
+
+    What sequence of geometric transformations
+    of the plane will map the graph
+    $$
+    y = \cos(x)
+    $$
+    onto the graph...
+    $$
+    y = \cos(0.1x + 0.1)
+    $$
+    ...?
+
+    |> Solution
+
+        Place $\cos(x + 0.1)$ as an intermediate function
+        between $\cos(x)$ and $\cos(0.1x + 0.1)$,
+        breaking the transformation into two steps:
+
+        $$
+        \cos(x)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \cos(x + 0.1)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \,\cos(0.1x + 0.1).
+        $$
+
+        The first step, going to $\cos(x + 0.1)$, shifts
+        the graph of cos left by $0.1$ (cf. Exercise 1,
+        Exercise 22); the second step dilates the
+        resulting graph by a factor $10$ horizontally,
+        because the multiplication by $0.1$ slows
+        everything down by a factor $10$. Thus
+
+        $$
+        y = \cos(0.1x + 0.1)
+        $$
+
+        is obtained from $y = \cos(x)$ by:
+
+        __1. left translation by $0.1$__
+        __2. horizontal scaling by $10$__
+
+        (Or “horizontal compression by $0.1$”, for 2.)
+
+        |> SolutionNote
+
+            One can also place $\cos(0.1x)$ as an
+            intermediate function between $\cos(x)$ and
+            $\cos(0.1x + 0.1)$:
+            $$
+            \cos(x)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \cos(0.1x)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \,\cos(0.1(x + 1)) = \cos(0.1x + 0.1).
+            $$
+            In this case the first step, going to $\cos(0.1x)$,
+            dilates the graph horizontally by a factor $10$,
+            while the second step, in which $x$ is replaced
+            by $x + 1$, shifts the resulting graph to the
+            left by $1$, and the obtained sequence is:
+
+            __1. horizontal scaling by $10$__
+            __2. left translation by $1$__
+
+            (Indeed, this ends up performing the same overall
+            transformation of the plane as the first solution,
+            albeit decomposed differently in terms of its sub-steps.
+            Neither sequence is more correct than the other.)
+
+        |> SolutionNote
+
+            Take the following three-box assemblage, that
+            computes $x \ra \cos(0.1x + 0.1)$:
+
+            |> Image
+                src=images/svg_ch5_ex_cos_01x.svg
+
+            (The label of the middle box is pasted diagonally
+            above the box because of reasons of space.)
+
+            We can understand our first solution as gluing
+            the middle and right boxes onto the ‘$\cos$’ box
+            one at a time, and observing the effect of each
+            additional gluing on the graph:
+
+            |> Image
+                src=images/svg_ch5_ex_cos_01x_2.svg
+
+            On the other hand, if we perform the same
+            analysis on this alternate three-box sequence...
+
+            |> Image
+                src=images/svg_ch5_ex_cos_01x_3.svg
+
+            ...that also computes $x \ra \cos(0.1x + 0.1)$,
+            we recover our second solution:
+
+            |> Image
+                src=images/svg_ch5_ex_cos_01x_4.svg

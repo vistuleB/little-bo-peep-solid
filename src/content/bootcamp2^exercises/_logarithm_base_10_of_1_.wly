@@ -1,0 +1,8 @@
+|> Exercise
+    handle=_what_is_log_base_10_of_1_
+
+    What is the logarithm base $10$ of $1$?
+
+    |> Solution
+
+        $0$, because $1 = 10^0$.

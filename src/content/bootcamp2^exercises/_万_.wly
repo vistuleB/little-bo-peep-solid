@@ -1,0 +1,46 @@
+|> Exercise
+    handle=_chinese_ten_thousand_
+
+    If “万” is Chinese for _ten thousand_, what is “万万” in English?
+    What about “万万万”?
+
+    |> Solution
+
+        “万万” is “ten thousand ten thousand”, or
+        $$
+        \Large 10^4 \times 10^4 = 10^8
+        $$
+        or _one hundred million_ since $10^8 = 10^2 \times 10^6$ is a hundred times a
+        million. Similarly, “万万万” is
+        $$
+        \Large 10^4 \times 10^4 \times 10^4 = 10^{12}
+        $$
+        which is just one trillion.
+
+        |> Pause
+
+        _Notes._
+        Rearranging
+
+        __ten thousand ten thousand__
+
+        to
+
+        __ten ten thousand thousand__
+
+        directly leads us to “hundred million”
+        without having to use exponents, since ten
+        times ten is a hundred and since a thousand
+        times a thousand is a million.
+
+        (Similarly,
+
+        __ten thousand ten thousand ten thousand__
+
+        becomes
+
+        __ten ten ten thousand thousand thousand__
+
+        after rearrangement, which can be seen to
+        equal one trillion because “ten ten ten” is
+        a thousand.)

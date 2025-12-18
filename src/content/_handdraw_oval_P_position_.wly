@@ -1,0 +1,48 @@
+|> Exercise
+    handle=_handdrawn_oval_P_position_
+    In the drawing below the oval is a circle of
+    radius $r$ and the angle $\phi$ is in “standard
+    position”, meaning that it opens counterclockwise
+    for a positive angle from the direction of the
+    positive $x$ axis. What are the coordinates
+    of $P$ in terms of $r$, $x_0$, $y_0$ and $\phi$?
+
+    |> Image
+        style=margin-top:1em;margin-bottom:0.5em;
+        src=images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg
+
+    |> Solution
+
+        The $x$- and $y$-coordinates are
+        respectively
+
+        $$
+        x_0 + r\cdot \cos(\phi)
+        $$
+        and
+        $$
+        y_0 + r\cdot \sin(\phi)
+        $$
+        because
+
+        $$
+        r\cdot\cos(\phi)
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg
+            offset_x=5.5em
+
+        is the difference from the center of the
+        circle to $P$ in $x$ and
+
+        $$
+        r\cdot\sin(\phi)
+        $$
+
+        |> ImageLeft
+            src=images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg
+            offset_x= 7.5em
+
+        is the difference from the center of the circle to $P$ in $y$,
+        as per scaling a unit circle to radius $r$.

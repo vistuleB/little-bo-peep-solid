@@ -1,0 +1,97 @@
+|> Exercise
+    handle=_what_are_the_roots_ABC_
+
+    What are the roots (i.e., solutions) $x$ of
+    $$
+    Ax^2 + Bx + C = 0
+    $$
+    for constants $A$, $B$, $C$ such that $A \ne 0$?
+
+    |> Solution
+
+        The curve
+        $$
+        y = Ax^2 + Bx + C
+        $$
+        is obtained from the curve $y = x^2$ by the following sequence of
+        transformations (cf. Exercise 19):
+
+        __1. vertical translation by ${-{B^2 - 4AC \over 4A^2}}$__
+
+        __2. horizontal translation by $-{B \over 2A}$__
+
+        __3. vertical scaling by $A$__
+
+        _|~|_
+
+        On the one hand, if
+        $$
+        {B^2 - 4AC \over 4A^2} < 0
+        $$
+        then
+        $$
+        -{B^2 - 4AC \over 4A^2} > 0
+        $$
+        and the vertical translation is _upward_,
+        the curve detaches from the $x$ axis never
+        to see it again, and there are no roots!
+
+        On the other hand, if
+        $$
+        {B^2 - 4AC \over 4A^2} \geq 0
+        $$
+        then the roots are given by
+        $$
+        x = -{B \over 2A} \pm \sqrt{B^2 - 4AC \over 4A^2}
+        $$
+        by Exercise >>_what_roots_by_x0_y0_seq_. $\rightarrow$ ~The End~ $\leftarrow$
+
+        |> SolutionNote
+
+            In fact,
+            $$
+            \pm\sqrt{B^2 - 4AC \over 4A^2} = \pm {\sqrt{B^2 - 4AC} \over 2A}
+            $$
+            (square both sides of the equation—in general,
+            $$
+            \pm E = \pm F
+            $$
+            as one set of two values equalling another
+            set of two values, if and only if
+            $$
+            |E| = |F|
+            $$
+            or
+            $$
+            E^2 = F^2
+            $$
+            —so that's why we say “square both sides”),
+            so the formula for the roots can also be written
+            $$
+            x = -{B \over 2A} \pm {\sqrt{B^2 - 4AC} \over 2A}
+            $$
+            or
+            $$
+            x = {{-B \pm \sqrt{B^2 - 4AC}} \over 2A}
+            $$
+            as briefly flashed by, e.g., in Chapter >>refreshers.
+
+        |> SolutionNote
+
+            If
+            $$
+            {B^2 - 4AC \over 4A^2} < 0
+            $$
+            then
+            $$
+            \sqrt{B^2 - 4AC \over 4A^2}
+            $$
+            does not exist, alerting you to the absence
+            of roots, if you try to use the first formula
+            we gave. Also
+            $$
+            {B^2 - 4AC \over 4A^2} < 0\iff B^2 - 4AC < 0
+            $$
+            because $4A^2 > 0$ for all $A \ne 0$,
+            so the second set of formulas would alert you
+            to the absence of roots in that case, as well.

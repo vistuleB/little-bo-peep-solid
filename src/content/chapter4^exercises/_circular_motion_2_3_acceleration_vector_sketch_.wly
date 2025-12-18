@@ -1,0 +1,41 @@
+|> Exercise
+    handle=_circular_motion_2_3_acceleration_vector_sketch_
+
+    What is the
+
+    __acceleration vector__
+
+    (velocity vector of the velocity vector)
+    of the particle from Exercise 39?
+
+    |> Solution
+
+        The velocity vector of Exercise 39 travels
+        in a circle of radius $3$ in the same amount
+        of time that the position vector
+        travels around a circle of radius $2$.
+        The speed of the velocity vector is therefore
+        $1.5$ times the speed of the position vector,
+        or $1.5 \times 3 = 4.5$.
+
+        As the derivative of the velocity vector,
+        the acceleration vector is therefore
+        a vector of length $4.5$ (= the speed of the
+        velocity vector) brushed clockwise along
+        the path of the velocity vector:
+
+        |> Image
+            src=images/svg_ch4_what_is_the_acceleration_vector_uncentered.svg
+
+        Or, if we translate the acceleration vector back
+        to the origin and trace out its path over time
+        (either way is fine):
+
+        |> Image
+            src=images/svg_ch4_what_is_the_acceleration_vector_centered.svg
+
+        |> SolutionNote
+            You truly have to think of the acceleration
+            vector as “the velocity of the velocity
+            vector”—if the velocity vector is changing, the
+            acceleration vector is nonzero!

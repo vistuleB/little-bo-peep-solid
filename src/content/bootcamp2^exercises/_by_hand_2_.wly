@@ -1,0 +1,18 @@
+|> Exercise
+    handle=_100_over_16_by_hand_
+
+    Compute $100/16$ by hand.
+
+    |> Solution
+
+        We have
+        $$
+        \Large {1 \over 16} = {1 \over 2\cdot 2\cdot 2\cdot 2} = 2^{-4} = 0.0625
+        $$
+        so
+        $$
+        \Large {100 \over 16} = 100 \cdot {1 \over 16} = 100\cdot 0.0625 = 6.25
+        $$
+        and that's all there is to it! (Or you could repeatedly divide $100$ by $2$,
+        until you reach $6.25$, after the fourth division.)
+

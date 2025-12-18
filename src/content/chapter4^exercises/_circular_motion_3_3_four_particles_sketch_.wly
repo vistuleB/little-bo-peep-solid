@@ -1,0 +1,42 @@
+|> Exercise
+    handle=_circular_motion_3_3_four_particles_sketch_
+
+    Four particles are moving at speed $3$
+    around a circle of radius $3$ centered at $(0, 0)$,
+    spaced out by $90^\circ$:
+
+    |> Image
+        src=images/svg_ch4_ex_four_particles_radius_3.svg
+
+    Sketch the position vector, velocity vector,
+    acceleration vector, and jerk vector of each
+    particle. What is the angular velocity of each
+    particle?
+
+    |> Solution
+
+        Starting with the second part of the
+        question, because the particles are going around
+        a circle of radius $3$ at speed $3$ the
+        angular velocity (cf. Exercise 37) is
+        $$
+        {\Large {3\over 3} = 1}
+        $$
+        which means that the ratio of the lengths of
+        all the vectors will be $1$, i.e., all vectors
+        (velocity, acceleration, jerk) will have the
+        same length as the radius, which is $3$.
+
+        Keeping in mind that the jerk is
+        $90^\circ$ ahead of the acceleration is $90^\circ$
+        ahead of the velocity, etc, in the direction of
+        rotation, the sixteen vectors—four for each
+        particle—are therefore as follows:
+
+        |> Image
+            src=images/svg_ch4_ex_four_particles_radius_3_four_minis.svg
+
+        (In particular, the purple particle's position
+        ends up being the velocity of the red particle,
+        and many other identities of the sort.)
+

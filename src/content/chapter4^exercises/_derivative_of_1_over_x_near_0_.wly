@@ -1,0 +1,24 @@
+|> Exercise
+    handle=_derivative_of_1_over_x_near_0_
+
+    Would the derivative of
+
+    $$
+    y = {1\over x}
+    $$
+
+    be a very large negative number, or a very
+    large positive number, near $x = 0$? Or would
+    it depend on which side of 0 you are?
+
+    |> Solution
+
+        The graph of $y = {1 \over x}$ looks like so:
+
+        |> Image
+            src=images/svg_ch4_one_over_x.svg
+
+        As one can see, the slope is very negative
+        near $x = 0$, on either side. So the answer is:
+        “very large negative”.
+

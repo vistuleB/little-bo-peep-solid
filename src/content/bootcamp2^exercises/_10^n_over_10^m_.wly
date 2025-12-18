@@ -1,0 +1,56 @@
+|> Exercise
+    handle=_10^n_over_10^m_equals_10^n-m_
+
+    Prove that
+    $$
+    \Large {10^n \over \up{1}10^m} = 10^{n-m}
+    $$
+    for all integers $n$ and $m$. (You can
+    take for granted any identity that is stated
+    in this
+    |> del
+
+        chapter
+    \ bootcamp.)
+
+    |> Solution
+
+        Here is the “proof” that your professor is
+        hoping for:
+
+        |> Image
+            src=images/svg_start_end_proof.svg
+
+        The point is that the second equality uses the identity
+        $$
+        \Large {1 \over 10^m} = 10^{-m}
+        $$
+        stated earlier in the chapter as (>>10_to_the_minus_n),
+        while the third equality uses additivity of exponents,
+        also stated earlier. (So: We are only using “known”
+        facts, alongside some ordinary arithmetic.)
+
+        |> Pause
+
+        _Notes._
+        The identity proved in this exercise,
+        when generalized to any base,
+        is one of the “laws of exponents”, whose complete list
+        (even more-than-complete, other sources list fewer laws)
+        is as follows (minus fine print):
+
+        |> Image
+            src=images/svg_laws_exp.svg
+
+        The first law can be recognized as “additivity of exponents”
+        while the second law
+        is the above-mentioned generalization of this exercise's result.
+        (Nb: Concerning the next-to-last law, note that, _by definition_,
+        $$
+        \Large \left({a\over b}\right)^{\!-1} = {1 \over \left( {a \over b}\right)}
+        $$
+        and it so happens that
+        $$
+        \Large {1 \over \left( {a \over b}\right)} = {b \over a}
+        $$
+        for all $a, b \ne 0$, by some principle of elementary arithmetic.)

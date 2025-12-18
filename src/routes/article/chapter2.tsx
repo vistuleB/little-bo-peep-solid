@@ -22,6 +22,7 @@ export default function __Chapter2__() {
       nextPage="/article/chapter3"
       pageNecessaryMargin={610}
       maxElementWidth={900}
+      id="_27_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -1670,7 +1671,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_23_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1772,7 +1773,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_6_hgi_">
+          <ExerciseStatement id="_24_hgi_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2040,13 +2041,13 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_25_hgi_">
             <OuterP>
               <b>
                 Exercise 3.
               </b>
               {" "}
-              Plot the vertical velocity of
+              Plot the vertical velocity of {" "}
               <del>
                 an object
               </del>
@@ -2119,7 +2120,7 @@ const Rest = () => {
               As explained in {" "}
               <NoBreak>
                 <a
-                  href="/article/chapter3#_16_hgi_"
+                  href="/article/chapter3#_49_hgi_"
                   class="handle-out-chapter-link"
                 >
                   Chapter 3
@@ -2226,7 +2227,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_26_hgi_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2236,7 +2237,7 @@ const Rest = () => {
               in the solution to {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter2#_6_hgi_"
+                  href="/article/chapter2#_24_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 2

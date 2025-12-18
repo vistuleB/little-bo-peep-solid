@@ -1,0 +1,37 @@
+|> Exercise
+    handle=_ratio_A_over_B_tan^2_
+
+    Express $A/B$ as a function of $\theta$:
+
+    |> Image
+        src=images/svg_ch5_ex_tan_sq_AB_ratio.svg
+
+    |> Solution
+
+        We shall use the height $C$ of the triangle
+        as a stopover between $A$ and $B$:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_height_C.svg
+
+        On the one hand, $C/B = \tan(\theta)$:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_left_part.svg
+
+        On the other hand, $A/C = \tan(\theta)$
+        also, by the result of Exercise 19 (whereby
+        $\theta$ reappears as the top left angle of
+        the middle-sized right triangle):
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_right_part.svg
+
+        The answer is therefore:
+
+        $$
+        \tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
+        $$
+
+        (As per the fact that $(A/B) = (C/B)\cdot(A/C)$.)
+

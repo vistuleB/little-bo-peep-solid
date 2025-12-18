@@ -1,0 +1,79 @@
+|> Exercise
+    handle=_ratio_A_over_B_1_+_tan^2_
+
+    Express $A/B$ as a function of $\theta$:
+
+    |> Image
+        src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg
+
+    |> Solution
+
+        Here are two solutions:
+
+        |> Pause
+
+        _Solution 1._ We use the small leg $D$
+        of the triangle as a stopover between $A$ and
+        $B$:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_D.svg
+
+        On the one hand, $D/B = \sec(\theta)\,\, (= 1/\cos(\theta))$:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A_left_part.svg
+
+        On the other hand, $A/D = \sec(\theta)$, also (!?):
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A_right_part_shrunk.svg
+
+        Thus:
+
+        $$
+        {A\over B} = {D\over B}\times {A\over D} = \sec(\theta)\cdot \sec(\theta) = \sec^2(\theta).
+        $$
+
+        |> StarDivider
+            style=margin-top:0.5em;
+
+        _Solution 2._
+        We decompose $A$ as $B + A'$
+        where $A' = B - A$ is the “old $A$” from
+        Exercise 22:
+
+        |> Image
+            src=images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg
+
+        We find:
+
+        $$
+        {A\over B} = {{B + A'}\over B} = {B\over B} + {A'\over B} = 1 + \tan^2(\theta)
+        $$
+
+        ...since
+
+        $$
+        {A'\over B} = \tan^2(\theta)
+        $$
+
+        by Exercise 22. (The End.)
+
+        |> SolutionNote
+
+            Since the two solutions compute
+            answers to the same question,
+            one can in particular deduce that
+
+            |> Boxed
+                $$
+                \sec^2(\theta) = 1 + \tan^2(\theta)
+                $$
+
+            for all $0 < \theta < \eta$, which is
+            the range of $\theta$ covered by these
+            diagrams. (The same identity holds more
+            generally than just those $\theta$'s,
+            however.)
+

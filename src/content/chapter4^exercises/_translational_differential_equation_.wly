@@ -1,0 +1,54 @@
+|> Exercise
+    handle=_translational_differential_equation_
+
+    Find a nonzero function $f$ and a nonzero
+    constant $a \in \rr$ such that
+
+    $$
+    f'(x) = f(x + a)
+    $$
+
+    for all $x$.
+
+    |> Solution
+
+        Recall the curves from Exercise >>_four_particles_:
+
+        |> Image
+            src=images/svg_ch4_ex_cosine_recall.svg
+
+        The blue curve is the derivative of the red curve
+        but is also the horizontal translate of the red curve by
+        $a$ units to the left, where
+
+        $$
+        a
+        $$
+
+        |> ImageLeft
+            src=images/svg_ch4_ex_cosine_recall_cloud.svg
+            offset_x= 200px
+
+        is the distance between adjacent bumps. Thus if
+
+        $$
+        f
+        $$
+
+        is the function that generates the red curve, then
+
+        $$
+        f'(x) = f(x + a)
+        $$
+
+        using the fact that
+
+        $$
+        y = f(x + a)
+        $$
+
+        is the horizontal translate of $y = f(x)$ by $a$
+        units to the left, in general for any function
+        $f$ and constant $a \in \rr$, as discussed
+        in Exercise 14 of Chapter 3. (Well, this shows
+        one solution, at least.)

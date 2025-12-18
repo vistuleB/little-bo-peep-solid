@@ -1,0 +1,96 @@
+|> Exercise
+    handle=_rat_fundraising_1_
+
+    A rat is running a fundraising race. The function
+
+    $$
+    \Large f : \rr \ra \rr
+    $$
+
+    gives the amount raised as a function of position;
+    specifically, ${f(x)}$ is the total number of
+    \$'s earned by virtue of running
+    $x$ meters from the start of the race;
+    a second function
+
+    $$
+    \Large g : \rr \ra \rr
+    $$
+
+    gives the position of the rat as a function of time;
+    specifically, ${g(t)}$ is the position from the start,
+    in meters, reached by the rat at $t$ seconds after the
+    start of the race.
+
+    In this case, what does $f \circ g$ compute?
+
+    |> Solution
+
+        It computes the amount earned by the rat as a
+        function of time. In more detail, $(f \circ g)(t)$
+        is the number of \$'s earned by the rat at $t$
+        seconds after the start of the race.
+
+        |> SolutionNote
+            In even more detail,
+            $$
+            g(t)
+            $$
+            is the position in meters of the rat $t$
+            seconds after start, by definition
+            of $g$, at which position the rat has
+            earned
+            $$
+            f(g(t))
+            $$
+            \$'s in total, by definition of $f$.
+            And
+            $$
+            f(g(t))
+            $$
+            is
+            $$
+            (f \circ g)(t)
+            $$
+            by definition of “$\circ$”.
+
+        |> SolutionNote
+            If it helps, here is a pictorialization of the
+            “units transformation pipeline” that
+            occurs inside $f \circ g$:
+
+            |> Image
+                src=images/svg_ch4_f_g_composition_units.svg
+
+        |> SolutionNote
+            handle=TotalEarnings
+            To emphasize, $f(x)$ is the
+
+            __~ total ~__
+
+            amount earned when position $x$ is reached.
+            In real life $f$'s
+            graph might therefore look something like this,
+            while inventing some numbers:
+
+            |> Image
+                src=images/svg_ch4_f_g_first_example_of_f.svg
+
+            In the above the rat earns $\te{\$}$3 for the
+            first 50m, after which the dollar-per-meter
+            rate is reduced.
+            Or $f$ could look like this, with discrete
+            “unlocks”:
+
+            |> Image
+                src=images/svg_ch4_f_g_second_example_of_f.svg
+
+            In our mathematicians' imaginations, however, $f$
+            might also look like this, nice and differentiable,
+            with periods of negative slope (corresponding to
+            parts of the course that momentarily lose you money):
+
+            |> Image
+                src=images/svg_ch4_f_g_third_example_of_f.svg
+
+            (Etc.)

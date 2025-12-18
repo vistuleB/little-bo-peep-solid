@@ -1,0 +1,36 @@
+|> Exercise
+    handle=_relate_sinx.cosx_to_sin2x_
+
+    Relate
+    $$
+    \sin(x)\cos(x)
+    $$
+    to
+    $$
+    \sin(2x)
+    $$
+    with the help of the angle-sum formulas.
+
+    |> Solution
+
+        The angle-sum formula for sin is
+        $$
+        \sin(A+B) = \cos A\sin B + \sin A\cos B
+        $$
+        from which
+        $$
+        \begin{align*}
+        \sin(2x) =&\,\, \sin(x + x) \\
+        \up{1.6} =&\,\, \cos x\sin x + \sin x\cos x \\
+        \up{1.6} =&\,\, 2\sin x\cos x
+        \end{align*}
+        $$
+        and
+
+        |> Boxed
+            $$
+            \sin x\cos x = {1\over 2}\sin(2x)
+            $$
+
+        ...solving for $\sin x\cos x$.
+

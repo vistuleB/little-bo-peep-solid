@@ -1,0 +1,112 @@
+|> Exercise
+    handle=_approximate_1_over_n_minus_1_over_n+1_
+
+    In the solution to Exercise >>_true_false_, we 
+    observed how the difference
+
+    $$
+    {1 \over n} - {1 \over n+1}
+    $$
+
+    is _roughly_ $1/n^2$ for large $n$. But how
+    far off is this exactly? (I.e., what is the
+    difference between ${1 \over n} - {1 \over n+1}$
+    and ${1 \over n^2}$?) And _roughly_ how much is
+    this far-offness, for large $n$?
+
+    |> Solution
+
+        Since
+
+        $$
+        {1 \over n} - {1 \over n+1} = {1 \over n(n+1)}
+        $$
+
+        |> ImageRight
+            offset_x=5rem
+            offset_y=1.2rem
+            src=images/svg_ch1_ex_25.svg
+            squiggle=false
+
+        (as previously computed) is smaller than
+
+        $$
+        {1 \over n^2}
+        $$
+
+        |> ImageRight
+            offset_x=11.5rem
+            offset_y=1.2rem
+            src=images/svg_ch1_ex_26.svg
+            squiggle=false
+
+        we will compute the difference
+
+        $$
+        {1 \over n^2} - {1 \over n(n+1)}
+        $$
+
+        as opposed to the “other” difference
+
+        $$
+        {1 \over n(n+1)} - {1 \over n^2}
+        $$
+
+        to avoid a minus sign in the result.
+        (Computing the second difference and having
+        a minus sign does not constitute a mistake,
+        however.) Having said this, the difference is:
+
+        $$
+        \begin{align}
+        {1 \over n^2} - {1 \over n(n+1)} &= {1 \over n^2} \cdot {n+1 \over n+1} - {1 \over n(n+1)} \cdot
+        {n \over n}\\
+        &= {n+1 \over n^2(n+1)} - {n \over n^2(n+1)}\up{1.5}\\
+        &= {1 \over n^2(n+1)}\up{1.5}
+        \end{align}
+        $$
+
+        |> ImageRight
+            src=images/svg_ch1_ex_27.svg
+            offset_y=-0.5em
+
+        which, for large $n$, is roughly
+
+        $$
+        {1 \over n^3}
+        $$
+
+        since $n^2(n+1) \approx n^3$ for large $n$.
+
+        |> Pause
+
+        _Example 1._ Above, we estimated
+
+        $$
+        {1 \over 10} - {1 \over 11}
+        $$
+
+        to be roughly $1/100 = 0.01$, but $1/100$ is
+        bigger than the actual value of
+        ${1 \over 10\cdot 11} = {1 \over 110}$ by
+
+        $$
+        {1 \over 10^2\cdot 11}
+        $$
+
+        or close to $1/10^3 = 0.001$.
+        (So
+
+        $$
+        {1 \over 10} - {1 \over 11}
+        $$
+
+        is about $0.01$, while making an error of about
+        $0.001$.) (In fact,
+
+        $$
+        {1 \over 10^2\cdot 11}
+        $$
+
+        is _less_ than $1/10^3$, so the error is _less_
+        than $0.001$.)

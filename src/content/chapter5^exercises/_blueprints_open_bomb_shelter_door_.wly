@@ -1,0 +1,122 @@
+|> Exercise
+    handle=_blueprints_open_bomb_shelter_door_
+
+    (Speaking of doors with negligible thickness.)
+    The sketch below shows the top view of a bomb
+    shelter door set in a corner near a wall,
+    with distances in centimeters.
+    How far can the door open when the big handle
+    is in the “open” position, shown in the figure?
+    How far can it open when the big handle is in
+    the “closed” position, shown by the dotted line?
+
+    |> Image
+        src=images/svg_ch5_ex_bomb_shelter_door_tru_sizes.svg
+
+    |> Solution
+
+        In the interest of mass-producing our results
+        we will write a general formula to compute
+        $\alpha$ in terms of $x_0$, $y_0$ and $z$ in
+        the following diagram (note that $r = \sqrt{x_0^2 + y_0^2}$):
+
+        |> Image
+            src=images/svg_ch5_ex_bomb_shelter_door_alpha_x0y0.svg
+
+        We can decompose
+        $$
+        \alpha
+        $$
+        as
+        $$
+        90^\circ + \beta - \gamma
+        $$
+        with $\beta$ and $\gamma$ as depicted here:
+
+        |> Image
+            src=images/svg_ch5_ex_bomb_shelter_door_alpha_decomposed.svg
+
+        By definition of ‘$\arctan$’ (cf. Exercise 43),
+        we have
+        $$
+        \gamma = \arctan(y_0/x_0)
+        $$
+        and
+
+        $$
+        \beta = \arctan(z/\sqrt{r^2 - z^2})
+        $$
+
+        or
+
+        $$
+        \beta = \arctan(z/\sqrt{x_0^2 + y_0^2 - z^2})
+        $$
+
+        directly in terms of $z$, $x_0$ and $y_0$, since
+        $r^2 = x_0^2 + y_0^2$, so
+
+        $$
+        \alpha = 90^\circ + \arctan(z/\sqrt{x_0^2 + y_0^2 - z^2}) - \arctan(y_0/x_0)
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_bomb_shelter_door_alpha_cloud.svg
+
+        which constitutes our “general formula”.
+
+        From this point, we apply the general formula with
+        $z = 66 - 18 = 44$,
+        $(x_0, y_0) = (60, 30)$,
+        $(x_0, y_0) = (93, 30)$, and
+        $(x_0, y_0) = (108, 22)$:
+
+        |> Image
+            src=images/svg_ch5_ex_bomb_shelter_annotated.svg
+
+        The three values of $\alpha$ obtained, respectively,
+        are...
+
+        $$
+        \alpha = 90^\circ + \arctan(48/\sqrt{60^2 + 30^2 - 48^2}) - \arctan(30/60) = 109.1225\ldots^\circ
+        $$
+
+        $$
+        \alpha = 90^\circ + \arctan(48/\sqrt{93^2 + 30^2 - 48^2}) - \arctan(30/93) = 101.5410\ldots^\circ
+        $$
+
+        $$
+        \alpha = 90^\circ + \arctan(48/\sqrt{108^2 + 22^2 - 48^2}) - \arctan(22/108) = 104.3033\ldots^\circ
+        $$
+
+        ...being, namely, upper bounds on the amount of
+        rotation of the door caused by a putative contact of
+        the big handle in open position with the wall, of the
+        big handle in closed position with the wall, and of
+        the small handle with the wall.
+
+        (By the way: don't be confused by the fact that
+        $\alpha$ is not an angle measured “from
+        horizontal”; $\alpha$ is still the amount of rotation (aperture)
+        undergone by the door, as it measures the amount of rotation
+        of a specific point attached to the door!)
+
+        In particular, since
+
+        $$
+        104.3033\ldots < 109.1225\ldots
+        $$
+
+        the big handle is not the limiting factor when
+        the big handle is in open position, at which point
+        the small handle is the limiting factor and prevents
+        the door from opening more than $104^\circ$-and-some,
+        whereas since
+
+        $$
+        101.5410\ldots < 104.3033\ldots
+        $$
+
+        the big handle becomes the limiting factor when it
+        is in closed position, at which point the door can
+        only open to $101^\circ$-and-some!

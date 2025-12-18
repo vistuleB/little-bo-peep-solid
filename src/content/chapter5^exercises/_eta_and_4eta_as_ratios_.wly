@@ -1,0 +1,55 @@
+|> Exercise
+    handle=_eta_and_4eta_as_geometric_ratios_
+
+    What ratios do
+
+    $$
+    \eta
+    $$
+
+    and
+
+    $$
+    4\eta
+    $$
+
+    represent?
+
+    |> Solution
+
+        While $\eta$ was defined
+        as the quarter-circumference of a unit circle,
+        more generally,
+
+        $$
+        \eta
+        $$
+
+        is the quarter-circumference of a circle (any
+        circle) divided by its radius, and, correspondingly,
+
+        $$
+        4\eta
+        $$
+
+        is the circumference of a circle (any circle)
+        divided by its radius.
+
+        |> SolutionNote
+
+            As one consequence, it follows that the circumference
+            of a circle is
+
+            $$
+            4\eta\cdot r
+            $$
+
+            where $r$ is the radius.
+
+        |> SolutionNote
+
+            These “ratio descriptions” of $\eta$ and
+            $4\eta$ also follow by viewing $\eta$ and $4\eta$
+            as the radian values of a right angle and a full angle,
+            respectively.
+

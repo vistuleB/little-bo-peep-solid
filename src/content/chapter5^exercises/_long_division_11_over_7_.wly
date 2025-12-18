@@ -1,0 +1,158 @@
+|> Exercise
+    handle=_long_division_11_over_7_
+
+    Compute
+
+    $$
+    {11\over 7}
+    $$
+
+    by hand using long division.
+
+    |> Solution
+
+        Here is the division in American notation
+        overlayed on top of a “Plaza” wallpaper to
+        help demarcate the different columns of
+        digits (in American notation each column
+        of digits is associated to a power of $10$,
+        with both the numerator and the quotient
+        [the result] living inside the same set of
+        columns, and only the denominator living
+        outside, in a time-space porthole of its own):
+
+        |> Image
+            src=images/svg_ch5_ex_11_over_7_longhand_eloise.svg
+
+        The division stops when we see the same
+        remainder twice—here ‘$40$’ reappears, which
+        means that the next digit of the quotient
+        will be $5$ (like the second digit of the
+        quotient, that we obtained back when we had
+        a remainder of $40$), the next one $7$ (the
+        third digit of the quotient), etc—digits will
+        repeat and the “final” quotient when we let
+        the division unravel infinitely far to the right
+        will be
+
+        |> div
+            style=font-size:1.65em;margin:1em 0;
+
+            $$
+            1.\overline{571428}
+            $$
+
+        ...where the decimal point is after the
+        first ‘$1$’ because the first ‘$1$’ is in the
+        ‘$10^0$’ column.
+
+        |> StarDivider
+
+        |> SolutionNote
+
+            If you've never done this kind of thing before, the
+            division starts in this blank state:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.4em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg
+
+            We take the first digit of the numerator,
+            which is ‘$1$’, ask “how many times does
+            $7$ go into $1$?”, we will write the answer
+            here:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg
+
+            The answer is ‘$0$’ ($7$ goes $0$ times into $1$):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg
+
+            We next add a digit from the numerator, giving
+            us $11$, we ask “how many times does $7$ go into
+            $11$?”, we will write the answer here:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg
+
+            The answer is ‘$1$’ ($7$ goes $1$ times into $11$):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg
+
+            We subtract
+
+            |> div
+                style=font-size:1.65em;margin:1em 0;
+
+                $$
+                1 \times 7
+                $$
+
+            from $11$, giving us a new remainder
+            of $4$ (the very first “remainder” is actually $11$,
+            before anything starts) (before anything started we
+            had $11 = 7 \times 0 + 11$, and now we have
+            $11 = 7 \times 1 + 4$):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg
+
+            Because $7$ does not fit into $4$ (and if it did,
+            we would have done something wrong)
+            we “bring down a $0$” that is actually part of
+            a hidden sequence of $0$'s sitting to the right
+            of $11$:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg
+
+            We ask “how many times does $7$ go into $40$?”,
+            we will write the answer here:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg
+
+            The answer is ‘$5$’ ($7$ goes $5$ times into $40$):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg
+
+            We subtract
+
+            |> div
+                style=font-size:1.65em;margin:1em 0;
+
+                $$
+                5\times 7
+                $$
+
+            from $40$, giving us a new remainder
+            of $5$
+            (well, to be technical, the remainder is actually
+            $5 \times 10^{-1}$, not $5$, but
+            the teacher at the board will often say “$5$”):
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg
+
+            Because $7$ does not fit into $5$, we bring
+            another $0$ down from our infinite reserve of
+            $0$'s:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1.5em;
+                src=images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg
+
+            (Etc.)

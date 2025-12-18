@@ -1,0 +1,157 @@
+|> Exercise
+    handle=_for_every_A1_A2_
+
+    Prove that for every $A_1$, $A_2 \in \rr$,
+    $$
+    x \ra A_1\cos x + A_2\sin x
+    $$
+    equals
+    $$
+    x \ra W\cdot \cos(x + \psi)
+    $$
+    for some appropriate constants $W$ and $\psi$. (That shall
+    be functions of $A_1$, $A_2$.) Also: draw a deep analogy
+    to polar coordinates, regarding the transform that gives
+    $W$, $\psi$ as a function of $A_1$, $A_2$.
+
+    |> Solution
+
+        One approach is to expand
+        $$
+        \cos(x + \psi)
+        $$
+        using the angle-sum formula, which gives
+        $$
+        \cos(x)\cos(\psi) - \sin(x)\sin(\psi)
+        $$
+        after which multiplying by $W$ and collecting coefficients of
+        $\cos x$, $\sin x$ gives
+        $$
+        \up{1.4}(W \cdot \cos \psi)\cdot\cos(x) - (W \cdot \sin \psi) \cdot \sin(x)
+        $$
+        comparing to
+        $$
+        A_1\cos x + A_2\sin x
+        $$
+        we see that
+        $W \cos(x + \psi)$
+        would equal
+        $A_1\cos x + A_2\sin x$
+        if we could find $W$, $\psi$ such that
+        $$
+        \phantom{-}W\cdot\cos(\psi) = A_1
+        $$
+        $$
+        -W\cdot\sin(\psi) = A_2
+        $$
+        ...that we can actually rewrite
+        $$
+        W\cdot\cos(-\psi) = A_1
+        $$
+        $$
+        W\cdot\sin(-\psi) = A_2
+        $$
+        because $\cos(-x) = \cos(x)$, $-\sin(x) = \sin(-x)$
+        for all $x \in \rr$. But the above
+        two
+        equations are very similar to
+        $$
+        r\cdot\cos(\theta) = x
+        $$
+        $$
+        r\cdot\sin(\theta) = y
+        $$
+        that give the transformation
+        from polar coordinates $(r, \theta)$
+        to Cartesian coordinates $(x, y)$; in fact these are the
+        exact same equations, except that we have
+        ‘$W$’ in place of ‘$r$’,
+        ‘$-\psi$’
+        in place of ‘$\theta$’,
+        ‘$A_1$’ in place of ‘$x$’, and
+        ‘$A_2$’ in place of ‘$y$’;
+        so in other words,
+        $$
+        (W, -\psi)
+        $$
+        are the
+        __polar coordinates__
+        of the Cartesian point
+        $$
+        (A_1, A_2)
+        $$
+        with $W$ being the “radius”, or distance to the origin,
+        and $-\psi$ being the angle from the $x$ axis (or _argument_):
+
+        |> Image
+            src=images/svg_ch5_ex_polar_discovery.svg
+
+        In particular,
+        since every pair of Cartesian coordinates
+        has a corresponding pair of polar coordinates
+        (in fact, many corresponding pairs!),
+        we will
+        always be able to find $W$, $\psi$ such as to
+        match the equations above,
+        which concludes the problem.
+
+        |> SolutionNote
+
+            To explicitly give formulas,
+            one can set
+            $$
+            W = \sqrt{A_1^2 + A_2^2}
+            $$
+            and
+            $$
+            -\psi = \begin{cases}
+            \arctan(A_2/A_1) & \te{if }\, A_1 \ne 0, \,\te{else} \\
+            \up{1.2}\te{arccot}(A_1/A_2) & \te{if }\, A_2 \ne 0, \,\te{else} \\
+            \up{1.2}\rm{?}       & \te{if }\, A_1 = 0, A_2 = 0
+            \end{cases}
+            $$
+            where we are copy-pasting the formula that appears
+            in the chapter for going from cartesian to polar
+            coordinates (no need to remember this formula, though,
+            really); though, IN TRUTH, setting
+            $$
+            W = -\sqrt{A_1^2 + A_2^2}
+            $$
+            would work as well,
+            if we add
+            $2\eta$ to the argument!
+
+            |> Pause
+
+            _Example 1._
+            The previously-studied
+            $$
+            \cos x + \sin x
+            $$
+            (cf. Exercise 4) corresponds to the case
+            $$A_1 = A_2 = 1$$ of this exercise, and
+            in which case we can set
+            $$W = \sqrt{2}$$ and
+            $$\psi = -\eta/2$$
+            because the pair
+            $$
+            (W, \,-\psi) \,=\, (\sqrt{2}, \,\,\eta/2)
+            $$
+            is a polar coordinate of $(A_1, A_2) = (1, 1)$:
+
+            |> Image
+                src=images/svg_ch5_ex_polar_discovery_1_1.svg
+
+            (In fact, the fact that...
+
+            |> Boxed
+
+                $$
+                \cos x + \sin x = \sqrt{2}\cdot\cos(x - \eta/2)
+                $$
+
+                |> ImageRight
+                    src=images/svg_ch5_ex_polar_discovery_cloud.svg
+
+            ...was painstakingly uncovered
+            in Exercise >>_turn_cosx_into_sinx_+_cosx_, if you recall.)

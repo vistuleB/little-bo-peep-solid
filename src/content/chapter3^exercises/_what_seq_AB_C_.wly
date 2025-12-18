@@ -1,0 +1,66 @@
+|> Exercise
+    handle=_what_seq_AB_C_
+
+    What sequence of geometric transformations
+    of length no more than 3 maps
+    $$
+    y = x^2
+    $$
+    onto
+    $$
+    y = Ax^2 + Bx + C
+    $$
+    for constants $A$, $B$, $C$ such that $A \ne 0$?
+
+    |> Solution
+
+        Write
+        $$
+        Ax^2 + Bx + C
+        $$
+        as
+        $$
+        A\Big(x^2 + {B \over A}x + {C\over A}\Big)
+        $$
+        and, similarly to Exercise >>_what_seq_AB_, write
+        $$
+        x^2 + {B \over A}x
+        $$
+        as
+        $$
+        \Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}
+        $$
+        so that, altogether, $Ax^2 + Bx + C$
+        becomes
+        $$
+        A\left[\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2} + {C\over A}\right]
+        $$
+        or
+        $$
+        A\left[\Big(x + {B \over 2A}\Big)^2 - {B^2 - 4AC\over 4A^2}\right]
+        $$
+        by putting things on a common denominator.
+        (We have endeavored to keep the minus sign
+        out front of the common denominator fraction
+        in order to maintain the most similarity with
+        the term “$-{B^2\over 4A}$” of Exercise >>_what_seq_AB_,
+        that also has a minus sign out front.)
+
+        By direct analogy with Exercise >>_what_seq_AB_, the three
+        transformations are thus...
+
+        __1. horizontal translation by $-{B \over 2A}$__
+
+        __2. vertical translation by ${-{B^2 - 4AC \over 4A^2}}$__
+
+        __3. vertical scaling by $A$__
+
+        ...or...
+
+        __1. vertical translation by ${-{B^2 - 4AC \over 4A^2}}$__
+
+        __2. horizontal translation by $-{B \over 2A}$__
+
+        __3. vertical scaling by $A$__
+
+        ...if we put the vertical translation first.

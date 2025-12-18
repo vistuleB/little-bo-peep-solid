@@ -1,0 +1,42 @@
+|> Exercise
+    handle=_angular_velocity_dimensions_
+
+    What are the dimensions of angular velocity?
+    (For example, the dimensions of velocity are
+    “length over time”, ([L/T]).)
+
+    |> Solution
+
+        _Solution 1._
+        Angular velocity is
+        __speed over radius__
+        which has dimensions
+        $$
+        {\Large {\te{L/T} \over \te{L}}}
+        $$
+        because speed has dimensions of length over time,
+        L/T, while the radius has dimensions of length, L;
+        this simplifies...
+
+        |> Image
+            src=images/svg_ch4_ex_1_over_L_times_L_over_T_simplification.svg
+
+        ...down to dimensions of “one over time”.
+
+        |> Pause
+
+        _Solution 2._
+        Angular velocity is
+        __radians per unit time__
+        or
+        __number of radii per unit time__
+        (if you prefer),
+        which is a “one over time” quantity, because
+        radians are dimensionless.
+
+        Indeed, “radian” is
+        short for “number of radii that fit inside the
+        arc length”, which is one length
+        divided by another length,
+        which is, therefore,
+        dimensionless.

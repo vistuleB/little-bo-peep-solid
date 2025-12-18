@@ -1,0 +1,19 @@
+|> Exercise
+    handle=_turn_sinx_into_sinx.cosx_
+
+    What sequence of geometric transformations
+    can turn [the graph] $y = \sin(x)$
+    into [the graph] $y = \sin(x)\cos(x)$?
+
+    |> Solution
+
+        Since
+        $$
+        \sin x\cos x = {1\over 2}\sin(2x)
+        $$
+        by Exercise 30 and since the substitution
+        of “$x$” by “$2x$” effects a horizontal
+        compression by $2$, the answer is:
+        “a horizontal scaling by ${1\over 2}$ followed by a vertical scaling by ${1\over 2}$”,
+        though order doesn't matter, and we might also
+        say “uniform scaling by ${1\over 2}$”.

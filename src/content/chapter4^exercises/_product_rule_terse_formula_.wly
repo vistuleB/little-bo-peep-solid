@@ -1,0 +1,64 @@
+|> Exercise
+    handle=_product_rule_terse_formula_
+
+    If we rewrite the “product rule” of Exercise
+    17 in the same terse style as the “sum rule”
+    of Exercise 19, what do we obtain?
+
+    |> Solution
+
+        The form of...
+
+        $$
+        (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
+        $$
+
+        ...that follows the style of...
+
+        $$
+        (f + g)' = f' + g'
+        $$
+
+        ...is...
+
+        $$
+        (fg)' = f'g + fg'
+        $$
+
+        ...this. (Valid for differentiable functions
+        $f$, $g:$ $\rr \ra \rr$.)
+
+        |> Pause
+        _Note 1._
+        Whereas
+
+        $$
+        (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
+        $$
+
+        is an equality between real numbers,
+
+        $$
+        (fg)' = f'g + fg'
+        $$
+
+        is an equality between functions. So there is
+        a more-than-skin-deep difference between the
+        two forms. Also note that each form has its
+        own “qualitatively distinct” qualifying conditions.
+
+        (To wit,
+
+        $$
+        (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
+        $$
+
+        holds “for $t_0$ at which $f$ and $g$ are
+        differentiable”, while
+
+        $$
+        (fg)' = f'g + fg'
+        $$
+
+        holds “for differentiable functions $f$, $g$”.)
+

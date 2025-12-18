@@ -1,0 +1,28 @@
+|> Exercise
+    handle=_complete_square_1_
+
+    Show that
+    $$
+    x^2 + 10x + 30
+    $$
+    can be written in the form
+    $$
+    (x + \dots)^2 + \,\dots
+    $$
+    for some numbers “$\dots$” and “$\dots$”.
+
+    |> Solution
+
+        The answer is
+        $$
+        (x + 5)^2 + 5
+        $$
+        because
+        $$
+        \begin{align}
+        \,\,\,\,(x + 5)^2
+        &= x^2 + (2\cdot 5)x + 5^2 \\
+        &= \up{1.4} x^2 + 10x + 25
+        \end{align}
+        $$
+        and adding $5$ gives $x^2 + 10x + 30$.

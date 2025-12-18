@@ -1,0 +1,131 @@
+|> Exercise
+    handle=_factory_roof_functions_1_
+
+    Find the formula for a function whose graph
+    looks like this, again using the floor function
+    ‘$\lfloor \cdot \rfloor$’ as a building block:
+
+    |> Image
+        src=images/svg_ch3_ex_factory_roof_stretched.svg
+
+    |> Solution
+
+        We would like to argue the correctness of
+        the following two-step process (divide the
+        input by $2$, apply the function from Exercise
+        >>_floor_introduction_):
+
+        |> Image
+            src=images/svg_ch3_ex_factory_roof_stretched_solution.svg
+
+        Indeed, the two graphs featured above differ
+        only by a horizontal dilation; dividing the
+        input by $2$ “undoes” the dilation, at which
+        point it suffices to apply the function pictured
+        in the second graph; having declared our method
+        correct, the answer is thus...
+        $$
+        {x/2 - \lfloor x/2 \rfloor}
+        $$
+        ...as obtained by “sticking” $x/2$ (the halved
+        input) in place of “$x$” in “$\,x - \lfloor x \rfloor$”,
+        the formula for the function from Exercise >>_floor_introduction_.
+
+        |> Pause
+
+        _Note 1._
+        One can check the answer by typing “x/2 - floor(x/2)”
+        in DESMOS. Viz:
+
+        |> Image
+            src=images/png_ch3_desmos_composition_0_c.png
+            width=1400px
+
+        |> Pause
+
+        _Note 2._
+        Alternately, enter “f(x) = x - floor(x)” and
+        then “f(x/2)”, viz:
+
+        |> Image
+            src=images/png_ch3_desmos_composition_1_c.png
+            width=1400px
+
+        Or we can be even fancier:
+
+        |> Image
+            src=images/png_ch3_desmos_composition_2_b.png
+            width=1400px
+
+        What you see above (the graph in orange) is
+        the so-called __composition__ of the functions
+        $\f$ and $g$; in more detail, if we switch the
+        “input tube” and “output tube” sides of a function...
+
+        |> Image
+            src=images/svg_ch3_f_box_inverted.svg
+
+        ...(compared to the drawing at the top of the
+        chapter), then the composition of $\f$ and $g$,
+        written
+        $$
+        {\f \circ g}
+        $$
+        and read
+
+        __“$f$ of $\hlfbk{}g$”__
+
+        (mathematicians have to invent a notation for
+        everything—that little circle “$\circ$” is called
+        the _composition operator_,
+        by the way) is the function that you get by
+        gluing $g$'s box to the right of $\f$'s box,
+        like so:
+
+        |> Image
+            src=images/svg_ch3_ex_f_box_g_box.svg
+
+        In other words, $g$'s output is passed on to $\f$
+        for further processing. (A certain movie called
+        “The Human Centipede” comes to mind.)
+
+        (To be perfectly clear,
+
+        |> Image
+            src=images/svg_ch3_ex_f_circle_g_equals.svg
+
+        $f \circ g$ is a _function_, defined as the
+        above assemblage of “$g$ first, $f$ second”.)
+
+        |> Pause
+
+        _Note 3._
+        For a formal definition of “$f \circ g$”—something
+        not based on pictures—one need only specify what
+        $f \circ g$ does to inputs. Specifically:
+        $$
+        \,{(f \circ g)(x) = f(g(x))}.
+        $$
+        (So that equation is a formal definition.) One can
+        also clarify that
+        $$
+        {\dom f \circ g = \{x\, \in\, \dom g:\, g(x)\, \in\, \dom f\}}
+        $$
+        which is to say that the domain of $f \circ g$
+        consists of all $x$ such that: *(i)* $g(x)$
+        exists (a.k.a, “$x \in \dom g$”) and,
+        *(ii)* $f(g(x))$ exists (a.k.a., “$g(x) \in \dom f$”).
+
+        |> Pause
+
+        _Note 4._
+        Amusingly—or not—both sides of
+        $$
+        {(f \circ g)(x) = f(g(x))}
+        $$
+        are read
+
+        _|“$f$ of $\hlfbk{}g$ of $x\hspace{0.1em}$”|_
+
+        since “$f \circ g$” is read “$f$ of $g\rt{0.1}$”,
+        and “$f(\dots)$” is read “$f$ of ...”.

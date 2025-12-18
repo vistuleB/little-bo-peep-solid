@@ -1,0 +1,42 @@
+|> Exercise
+    handle=_four_compositions_graphed_
+
+    How would the graph of each of the compositions
+    from Exercise 26 compare to the graph of the
+    generic function $f$?
+
+    |> Solution
+
+        For reference, the four functions are:
+        $$
+        \te{1.}\,\, x \ra f(x + A)
+        $$
+        $$
+        \te{2.}\,\, x \ra f(Bx)
+        $$
+        $$
+        \te{3.}\,\, x \ra f(x) + A
+        $$
+        $$
+        \te{4.}\,\, x \ra Bf(x)
+        $$
+        For which the graphs are respectively obtained by:
+
+        |> TextParent
+            |> ul
+                style=list-style-type:decimal;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;
+                |> li
+
+                    horizontally translating the graph of $f$ by $A$ units to the left;
+                |> li
+
+                    horizontally compressing the graph of $f$ by a factor $B$;
+                |> li
+
+                    vertically translating the graph of $f$ by $A$ units upward;
+                |> li
+
+                    vertically dilating (scaling) the graph of $f$ by a factor $B$.
+
+        (Cf. Exercise 7 of Chapter 3, Exercise 14 of
+        Chapter 3.)

@@ -1,0 +1,111 @@
+|> Exercise
+    handle=_associativity_of_function_addition_
+
+    Prove that
+
+    $$
+    f + g = g + f
+    $$
+
+    and that
+
+    $$
+    fg = gf
+    $$
+
+    for all $f, g : \rr \ra \rr$, using the fact that
+
+    $$
+    a + b = b + a
+    $$
+
+    and that
+
+    $$
+    ab = ba
+    $$
+
+    for all $a, b \in \rr$.
+    (Prove something for functions by using the
+    corresponding fact for numbers, namely.)
+
+    |> Solution
+
+        Given an arbitrary $u \in \rr$ we have
+
+        $$
+        (f + g)(u) = f(u) + g(u)
+        $$
+
+        and
+
+        $$
+        (g + f)(u) = g(u) + f(u)
+        $$
+
+        by the definition of function addition. But
+
+        $$
+        f(u) + g(u) = g(u) + f(u)
+        $$
+
+        by the commutativity of real number addition
+        [$f(u)$ and $g(u)$ are both real numbers—the
+
+        __commutativity__
+
+        of real number addition is the fact that
+
+        $$
+        a + b = b + a
+        $$
+
+        for all real numbers $a$, $b$, mentioned in the
+        statement—so we can use this here]; thus
+
+        $$
+        (f + g)(u) = (g + f)(u)
+        $$
+
+        for all $u \in \rr$, which implies
+
+        $$
+        f + g = g + f
+        $$
+
+        by definition of function equality.
+
+        For the second half we have, similarly,
+
+        $$
+        \begin{align}
+        (fg)(u) &= f(u) \cdot g(u) \\
+        &= g(u) \cdot f(u) \up{1.5}\\
+        &= (gf)(u) \up{1.5}
+        \end{align}
+        $$
+
+        for arbitrary $u\in \rr$, where the first and
+        last equality are by the definition of a
+        product of functions and where
+        the middle equality is by commutativity of real
+        number multiplication. [That would be the fact that
+
+        $$
+        ab = ba
+        $$
+
+        for all $a, b \in \rr$, as mentioned in the statement.] Hence
+
+        $$
+        fg
+        $$
+
+        and
+
+        $$
+        gf
+        $$
+
+        agree on an arbitrary input, hence $fg = gf$ by
+        definition of function equality.

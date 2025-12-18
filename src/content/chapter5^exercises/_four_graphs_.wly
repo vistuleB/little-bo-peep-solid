@@ -1,0 +1,59 @@
+|> Exercise
+    handle=_four_graphs_
+
+    Which function is most plausibly associated to
+    which graph?
+
+    |> table
+        class=slice
+        style=border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;
+        |> colgroup
+            |> col
+                width=200
+            |> col
+                width=200
+        |> tbody
+            |> tr
+                style=border-bottom:1px solid black;
+                |> td
+                    style=padding:0.5em 0;border-right:1px solid black
+                    $x \ra \sin x \cdot \cos x$
+
+                |> td
+                    style=padding:0.5em 0;
+                    $x \ra \cos^2(x)$
+
+            |> tr
+                |> td
+                    style=padding:0.5em 0;border-right:1px solid black
+                    $x \ra \sin^2(x)$
+
+                |> td
+                    style=padding:0.5em 0;
+                    $x \ra \sin x + \cos x$
+
+    |> Image
+        src=images/svg_ch5_ex_four_graphs.svg
+
+    |> Solution
+        The culprits are:
+
+        |> Image
+            src=images/svg_ch5_ex_four_graphs_labeled.svg
+
+        For reference (if you need help checking), the
+        graphs of $\sin$ and $\cos$ are as follows:
+
+        |> Image
+            src=images/svg_ch5_ex_four_graphs_cos.svg
+        |> Image
+            src=images/svg_ch5_ex_four_graphs_sin.svg
+
+        (Then imagine summing together, squaring, etc.)
+
+        |> SolutionNote
+            It is, indeed, intriguing that all of these
+            functions appear to be_sinusoids_. (Formally defined
+            as a function of the form $x \ra A\cdot \sin(Bx + C) + D$
+            for some constants $A$, $B$, $C$, $D \in \rr$.)
+

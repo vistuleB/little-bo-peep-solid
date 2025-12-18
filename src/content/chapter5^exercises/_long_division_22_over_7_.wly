@@ -1,0 +1,133 @@
+|> Exercise
+    handle=_long_division_22_over_7_
+
+    Compute
+    $$
+    {22\over 7}, \,\,\,\,\, {33\over 7}, \,\,\,\,\,\rm{and}\,\,\,\,\,{44\over 7}
+    $$
+    by hand using long division.
+
+    |> Solution
+
+        The divisions, pursued up to the point where
+        remainders repeat, look as follows:
+
+        |> Image
+            src=images/svg_ch5_ex_22_and_33_and_44_over_7_combined_longhands.svg
+
+        From which...
+
+        $$
+        \displaylines{
+        \Large \up{1.5}{22\over 7} = 3.\overline{142857}\\
+        \Large \up{1.7}{33\over 7} = 4.\overline{714285}\\
+        \Large \up{1.7}{44\over 7} = 6.\overline{285714}
+        }
+        $$
+
+        ...because the digits of the quotient are,
+        in each case, about to
+        restart from the first digit
+        after the decimal point.
+
+        |> SolutionNote
+
+            Because...
+
+            $$
+            \displaylines{
+            \Large         \eta  \approx{11\over 7}\\
+            \Large \up{1.7}2\eta \approx{22\over 7}\\
+            \Large \up{1.7}3\eta \approx{33\over 7}\\
+            \Large \up{1.7}4\eta \approx{44\over 7}
+            }
+            $$
+
+            ...we thus have...
+
+            $$
+            \displaylines{
+            \Large         \eta \approx  1.\overline{571428}\\
+            \Large \up{1.7}2\eta \approx 3.\overline{142857}\\
+            \Large \up{1.7}3\eta \approx 4.\overline{714285}\\
+            \Large \up{1.7}4\eta \approx 6.\overline{285714}}
+            $$
+
+            ...though none of these estimates are actually
+            accurate to more than two decimal places. (While all
+            are accurate up to _at least_ two decimal places.)
+
+        |> SolutionNote
+
+            As mentioned in Note 1 of Exercise 24,
+            Chapter 3, these approximations are about
+            half-a-part-in-a-thousand too large, or to
+            be more exact,
+
+            $$
+            \approx 0.0004
+            $$
+
+            too large in relative terms. I.e., you can subtract
+
+            $$
+            \approx 1.\overline{571428} \cdot 0.0004 \approx 0.0006
+            $$
+
+            from
+
+            $$
+            \approx 1.\overline{571428}
+            $$
+
+            to get a better approximation for $\eta$, subtract
+
+            $$
+            \approx 3.\overline{142857} \cdot 0.0004 \approx 0.0012
+            $$
+
+            from
+
+            $$
+            \approx 3.\overline{142857}
+            $$
+
+            to get a better approximation for $2\eta$, subtract
+
+            $$
+            \approx 4.\overline{714285} \cdot 0.0004 \approx 0.0019
+            $$
+
+            from
+
+            $$
+            \approx 4.\overline{714285}
+            $$
+
+            to get a better approximation for $3\eta$, subtract
+
+            $$
+            \approx 6.\overline{285714} \cdot 0.0004 \approx 0.0025
+            $$
+
+            from
+
+            $$
+            \approx 6.\overline{285714}
+            $$
+
+            to get a better approximation for $4\eta$. The resulting
+            approximations end up being...
+
+            $$
+            \displaylines{
+            \Large         \eta \approx  1.5708\\
+            \Large \up{1.7}2\eta \approx 3.1416\\
+            \Large \up{1.7}3\eta \approx 4.7123\\
+            \Large \up{1.7}4\eta \approx 6.2832}
+            $$
+
+            ...that are correct approximations up to
+            the fourth digit, it turns out, modulo
+            rounding off of the fifth digit. (But these
+            are not worth learning by heart, by any means.)

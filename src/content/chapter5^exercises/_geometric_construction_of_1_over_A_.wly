@@ -1,0 +1,62 @@
+|> Exercise
+    handle=_geometric_construction_of_1_over_A_
+
+    If
+    $$
+    A \ne 0
+    $$
+    is a point on the $x$ axis, how can we construct
+    the value
+    $$
+    1 / A
+    $$
+    by purely geometric means?
+    (We assume that ‘$0$’ and ‘$1$’ are also marked on the axis.)
+
+    |> Solution
+
+        The key is to view $A$, $1/A$ as values of the form
+        $$
+        A = \sec(\theta)
+        $$
+        $$
+        1/A = \cos(\theta)
+        $$
+        for some angle $\theta \in \rr$, if $|A| \geq 1$, or
+        as values of the form
+        $$
+        A = \cos(\theta)
+        $$
+        $$
+        1/A = \sec(\theta)
+        $$
+        for some angle $\theta \in \rr$, if $|A| \leq 1$.
+        In more detail, we make use of the fact that
+        $$
+        \sec(\theta)
+        $$
+        can be obtained as the intersection of the tangent
+        to the unit circle with the $x$ axis (we never discussed
+        this, you can't be faulted for missing it):
+
+        |> Image
+            src=images/svg_ch5_ex_one_over_A_secant_construction.svg
+
+        |> ImageRight
+            src=images/svg_ch5_ex_one_over_A_secant_construction_cloud.svg
+
+        So the idea is, for example if $|A| \geq 1$, to draw
+        a tangent to the circle from $A$, then to drop a height
+        onto the $x$ axis:
+
+        |> Image
+            src=images/svg_ch5_ex_one_over_A_secant_Agt1.svg
+
+        ...the position obtained is the corresponding
+        $\cos(\theta)$, and $\cos(\theta)\cdot\sec(\theta) = 1$ &#x2705;.
+        If $|A| \leq 1$ we can reverse the process,
+        “dropping a height onto the circle”, and then finding
+        the intersection of the tangent at that point with
+        the $x$ axis! (Which will not work, as should be,
+        if and only if $\cos(\theta) = 0$, a.k.a., if and only
+        if $A = 0$.)

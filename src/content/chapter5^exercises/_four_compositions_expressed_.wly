@@ -1,0 +1,90 @@
+|> Exercise
+    handle=_four_compositions_expressed_
+
+    Below are four function compositions
+    depicted as “function box” diagrams, with
+    inputs coming in the right and outputs
+    going out the left (with $f$ being some generic
+    function):
+
+    |> Image
+        src=images/svg_ch5_ex_four_compositions.svg
+
+    Rewrite each case:
+
+    |> TextParent
+        |> ol
+            class=l1
+            style=margin-top:0.5em;
+            |> li
+
+                using the composition “$\circ$” operator;
+            |> li
+
+                as an expression of the form $$x \ra \dots$$
+                for some value of “$\dots$”.
+
+    |> Solution
+
+        *(a)*
+        The expressions are respectively...
+        $$
+        f  \circ (u \ra u + A)
+        $$
+        $$
+        f  \circ (z \ra Bz)
+        $$
+        $$
+        (u \ra u + A)\circ f
+        $$
+        $$
+        (z \ra Bz)\circ f
+        $$
+        ...but where the dummy variables don't matter,
+        so we might as well write...
+        $$
+        f  \circ (t \ra t + A)
+        $$
+        $$
+        f  \circ (t \ra Bt)
+        $$
+        $$
+        (t \ra t + A)\circ f
+        $$
+        $$
+        (t \ra Bt)\circ f
+        $$
+        ...or...
+        $$
+        f  \circ (x \ra x + A)
+        $$
+        $$
+        f  \circ (x \ra Bx)
+        $$
+        $$
+        (x \ra x + A)\circ f
+        $$
+        $$
+        (x \ra Bx)\circ f
+        $$
+        ...etc. (All are correct.)
+
+        |> Pause
+
+        *(b)*
+        The expressions are respectively:
+        $$
+        x \ra f(x + A)
+        $$
+        $$
+        x \ra f(Bx)
+        $$
+        $$
+        x \ra f(x) + A
+        $$
+        $$
+        x \ra Bf(x)
+        $$
+        ...where we use “$x$” as the dummy variable
+        because we were _told_ to use $x$. (By the statement.)
+

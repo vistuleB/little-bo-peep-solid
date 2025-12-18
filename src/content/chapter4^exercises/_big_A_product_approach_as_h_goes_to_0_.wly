@@ -1,0 +1,110 @@
+|> Exercise
+    handle=_big_A_product_approach_as_h_goes_to_0_
+
+    What does...
+
+    $$
+    A_1(t_0 + h) \,\times\, \dots \,\times\, A_{i-1}(t_0 + h) \,\times\, {A_i(t_0 + h) - A_i(t_0)\over h} \,\times\, A_{i + 1}(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
+    $$
+
+    |> ImageRight
+        src=images/svg_ch4_big_product_parchment_cloud.svg
+
+    ...approach as $h$ goes to $0$, if $A_1, \dots, A_n$
+    $: \rr \ra \rr$ are differentiable at the point $t_0$?
+
+    |> Solution
+
+        We can start with the fraction in the
+        middle of the product:
+
+        |> Image
+            src=images/svg_ch4_big_product_fraction_outline.svg
+
+        This is seen to be a Newton quotient
+        (cf. Exercise 16)
+
+        $$
+        f(x + h) - f(x)\over h
+        $$
+
+        with $f = A_i$, $x = t_0$, per which
+        (Exercise 16 Note 3), the fraction approaches
+
+        $$
+        A_i'(t_0)
+        $$
+
+        as $h$ approaches $0$, given also the assumption
+        that each of the functions $A_1$, ..., $A_n$
+        (including $A_i$) is differentiable at $t_0$.
+
+        Next down in order of interesting-ness we presumably
+        have the terms $A_1(t_0 + h)$ through $A_{i-1}(t_0 + h)$
+        at the beginning of the product...
+
+        |> Image
+            src=images/svg_ch4_big_product_prefix_outline.svg
+
+        ...; here the
+
+        __differentiability__
+
+        of $A_1$ at $t_0$ implies the
+
+        __continuity__
+
+        of $A_1$ at $t_0$, which implies that
+
+        $$
+        A_1(t_0 + h)
+        $$
+
+        approaches
+
+        $$
+        A_1(t_0)
+        $$
+
+        as $h$ approaches $0$. (These various
+        technicalities concerning a generic function
+        $f : \rr \ra \rr$ are mentioned in the solution
+        to Exercise 17.) Similarly for $A_2(t_0 + h)$,
+        etc, up to $A_{i-1}(t_0 + h)$, so
+
+        $$
+        A_1(t_0 + h) \,\times\, \dots \,\times\, A_{i-1}(t_0 + h)
+        $$
+
+        approaches
+
+        $$
+        A_1(t_0) \,\times\, \dots \,\times\, A_{i-1}(t_0)
+        $$
+
+        as $h$ approaches $0$. (If some quantities are
+        each approaching a different value, then the
+        product-of-the-quantities will approach the
+        product-of-the-values—something not mentioned
+        in the solution to Exercise 17, but that might
+        have been.)
+
+        Lastly one has the tail end of the product,
+        where $h$ does not even appear:
+
+        |> Image
+            src=images/svg_ch4_big_product_suffix_outline.svg
+
+        Because $h$ does not appear here, the tail end
+
+        __stays put__
+
+        where it is, irrespective of the value of $h$.
+        So that was easy! Altogether, the answer is
+        therefore:
+
+        |> Image
+            src=images/svg_ch4_big_product_final_answer.svg
+
+        ...with a lone “$A_i'$” in the middle.
+

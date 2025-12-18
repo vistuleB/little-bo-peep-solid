@@ -1,0 +1,165 @@
+|> Exercise
+    handle=_vector_addition_definition_
+
+    If a
+
+    __vector__
+
+    is _a pair of numbers_ (in 2D), suggest a
+    definition for the
+
+    __sum__
+
+    of two vectors. (The most logical definition wins.)
+
+    |> Solution
+
+        The standard definition is that the sum
+
+        $$
+        \vec{u} + \vec{v}
+        $$
+
+        of a vector
+
+        $$
+        \vec{u} = (u_x, u_y)
+        $$
+
+        and of a vector
+
+        $$
+        \vec{v} = (v_x, v_y)
+        $$
+
+        is the vector
+
+        $$
+        (u_x + v_x, u_y + v_y)
+        $$
+
+        whose first coordinate is the sum of the first
+        coordinates of $\vec{u}$ and $\vec{v}$ and whose
+        second coordinate is the sum of the second coordinates
+        of $\vec{u}$ and $\vec{v}$.
+
+        |> Pause
+
+        _Example 1._
+        $$
+        \vec{u} = (100, 100)
+        $$
+        and
+        $$
+        \vec{v} = (1, -1)
+        $$
+        then
+
+        $$
+        \,\vec{u} + \vec{v} = (101, 99)
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_vector_sum_101_cloud.svg
+            offset_x=1em
+
+        because
+
+        $$
+        100 + 1 = 101
+        $$
+
+        on the one hand, and
+
+        $$
+        100 - 1 = 99
+        $$
+
+        on the other hand.
+
+        |> SolutionNote
+
+            The little arrow “$\vec{\phantom{x}}$”
+            is a notation used to denote vectors. (Feel free
+            to choose your own notation.)
+
+        |> SolutionNote
+
+            Represent the vectors $\vec{u}$, $\vec{v}$
+            by arrows whose components are displacements $u_x$,
+            $u_y$, $v_x$, $v_y$ in $x$, $y$, $x$ and $y$ again
+            respectively:
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_vectors.svg
+
+            Then
+
+            $$
+            u_x + v_x
+            $$
+
+            may be geometrically realized as the concatenation
+            of the $u_x$ and $v_x$...
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_ux_plus_vx.svg
+
+            ...component displacements, while
+
+            $$
+            u_y + v_y
+            $$
+
+            may be geometrically realized as the concatenation
+            of the $u_y$ and $v_y$...
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_uy_plus_vy.svg
+
+            ...component displacements; moreover, both
+            concatenations may be simultaneously obtained by
+            concatenating the original $\vec{u}$ and $\vec{v}$
+            arrows...
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_u_concat_v.svg
+
+            ...which actually implies that $\vec{u} + \vec{v}$
+            is the vector going from the head of $\vec{u}$ to
+            the tail of $\vec{v}$ in the afore-mentioned
+            concatenation, because of how we defined
+            $\vec{u} + \vec{v}$:
+
+            |> Image
+                src=images/svg_ch5_ex_vector_sum_u_plus_v.svg
+
+            This makes a mess, but the point is that this
+            gives us a
+
+            __geometric interpretation__
+
+            or
+
+            __geometric representation__
+
+            or
+
+            __geometric method of evaluation__
+
+            for the sum of two vectors: concatenate the arrows
+            of the vectors you're summing, and take the final
+            displacement from the head of the first arrow to the
+            tail of the last arrow.
+
+        |> SolutionNote
+
+            The solution to Exercise 7 can be cast in terms of
+            vector addition, with, specifically, the position
+            vector of the point being equal to the sum of the
+            position vector of the circle's center with the “radial
+            vector” from the center to the point:
+
+            |> Image
+                style=margin-top:1em;margin-bottom:0.8em;
+                src=images/svg_ch5_ex_vector_sum_previous_example.svg

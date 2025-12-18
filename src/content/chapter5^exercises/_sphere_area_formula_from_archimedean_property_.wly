@@ -1,0 +1,24 @@
+|> Exercise
+    handle=_sphere_area_formula_from_archimedean_property_
+
+    Give a formula for the area of a sphere of
+    radius $r$.
+
+    |> Solution
+
+        The area of a sphere of radius $r$ is
+        $$
+        4\eta\rt{0.05}r\cdot 2r = 8\eta\rt{0.05}r^2
+        $$
+        because it is the same as the area of a cylinder
+        of radius $r$ and and height $2r$, by Exercise 46:
+
+        |> Image
+            src=images/svg_ch5_ex_sphere_area.svg
+
+        (Namely,
+        $$
+        4\eta\rt{0.05}r\cdot 2r
+        $$
+        is the product “circumference $\times$ height”
+        that gives the area of the cylinder.)

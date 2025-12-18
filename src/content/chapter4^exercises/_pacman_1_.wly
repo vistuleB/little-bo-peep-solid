@@ -1,0 +1,343 @@
+|> Exercise
+    handle=_pacman_1_
+    The graphs below are the horizontal and
+    vertical velocities...
+
+    |> Image
+        src=images/svg_ch4_pacman1_hor0.svg
+
+    |> ImageLeft
+        offset_y=1em
+        src=images/svg_ch4_pacman1_x_prime_t_scloud.svg
+
+    |> Image
+        src=images/svg_ch4_pacman1_ver0.svg
+
+    ...of PACMAN, with unit of
+    distance of one “cell”, or “c”—the distance
+    between two food pellets—and units of velocity
+    of “cells per second”, or “c/s”—also,
+    $x$-coordinates increase towards the right,
+    and $y$-coordinates increase towards the top:
+
+    |> Image
+        width=860px
+        src=images/svg_ch4_pacman1_maze.svg
+
+    Where is Pacman at $t = 49$s? (Note: Pacman
+    is NOT assumed to be anywhere in particular at
+    $t = 40$s—you have to figure that out from the
+    data!)
+
+    |> Solution
+
+        Let's start by examining Pacman's first six displacements,
+        appearing here in blue (positive displacements, going to the right
+        or up) and red (negative displacements, going to the left or down):
+
+        |> Image
+            src=images/svg_ch4_pacman1_hor1.svg
+        |> Image
+            src=images/svg_ch4_pacman1_ver1.svg
+
+        We can estimate the duration of each
+        displacement to the closest 10th of a second
+        (mistakes of estimation can be made, we shall recover):
+
+        |> Image
+            src=images/svg_ch4_pacman1_hor2.svg
+        |> Image
+            src=images/svg_ch4_pacman1_ver2.svg
+
+        We can also estimate the velocity to be
+
+        $$
+        \pm 6.75\te{c}\hlfbk/\hlfbk\te{s}
+        $$
+        when it is nonzero (for displacement 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet5_inline.svg
+        \ the velocity might seem more like $-6.8\te{c}\hlfbk/\hlfbk\te{s}$
+        at the least, but we've already made more
+        significant errors while eyeballing the durations, so
+        nevermind). Using
+
+        $$
+        (\te{velocity}) \times (\te{amount of time}) = (\te{displacement})
+        $$
+
+        |> ImageRight
+            src=images/svg_ch4_pacman1_velocity_times_amt_time_cloud.svg
+
+        then gives us the following estimates for the 
+        |> del
+            amount of travel
+        \ 
+        |> del
+            during the
+        \ six displacements:
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_pacman1_inline_number_pellet
+                src=images/svg_ch4_pacman1_pellet1_inline.svg
+                style=margin-right:1em
+            $-6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.5\te{s}\,\,=\,\,-3.375\,\te{cells}$
+
+        |> ImageRight
+            src=images/svg_ch4_pacman1_cells_per_second_times_seconds_cloud.svg
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_pacman1_inline_number_pellet
+                src=images/svg_ch4_pacman1_pellet2_inline.svg
+                style=margin-right:1em
+            $-6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.4\te{s}\,\,=\,\,-2.7\,\te{cells}$
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_pacman1_inline_number_pellet
+                src=images/svg_ch4_pacman1_pellet3_inline.svg
+                style=margin-right:1em
+            $6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.9\te{s}\,\,=\,\,6.075\,\te{cells}$
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_pacman1_inline_number_pellet
+                src=images/svg_ch4_pacman1_pellet4_inline.svg
+                style=margin-right:1em
+            $6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.4\te{s}\,\,=\,\,2.7\,\te{cells}$
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_pacman1_inline_number_pellet
+                src=images/svg_ch4_pacman1_pellet5_inline.svg
+                style=margin-right:1em
+            $-6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.4\te{s}\,\,=\,\,-2.7\,\te{cells}$
+
+        |> CentralDisplay
+            |> InlineImage
+                class=ch4_pacman1_inline_number_pellet
+                src=images/svg_ch4_pacman1_pellet6_inline.svg
+                style=margin-right:1em
+            $6.75\te{c}\hlfbk/\hlfbk\te{s}\,\,\times\,\,0.9\te{s}\,\,=\,\,6.075\,\te{cells}$
+
+        Given the horizontal/vertical alternation
+        of displacements, this would nominally
+        imply the following set of initial motions:
+
+        |> Image
+            src=images/svg_ch4_pacman1_initial_displacements_before_rounding.svg
+
+        But these are approximate numbers and the
+        true values must be integers, except for 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet1_inline.svg
+        . (Because we don't know where Pacman started
+        out. For 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet6_inline.svg
+        \ the next displacement, if you look back at
+        the graphs, is horizontal, so yes.) In fact,
+        if you look at the maze,
+
+        $$
+        3
+        $$
+
+        cells is the smallest amount that Pacman
+        can travel vertically when changing $y$-coordinate,
+        between two moments of horizontal motion.
+        The next smallest possible amounts are
+
+        $$
+        4
+        $$
+        !! |> ImageLeft
+        !!     width=700px
+        !!     src=images/svg_ch4_pacman1_disp_4_cloud.svg
+
+        and
+
+        $$
+        6
+        $$
+        !! |> ImageLeft
+        !!     width=1400px
+        !!     src=images/svg_ch4_pacman1_disp_6_cloud.svg
+
+        and
+
+        $$
+        7
+        $$
+        !! |> ImageLeft
+        !!     width=700px
+        !!     src=images/svg_ch4_pacman1_disp_7_cloud.svg
+
+        cells, with $5$ not being a possibility.
+        In the horizontal direction,
+        the smallest amounts are
+
+        $$
+        3, 6, \te{ and } 9
+        $$
+
+        (and $12$ and ...) which is even more restrictive.
+        Now if each of our duration
+        measurements carries an error of no more than
+
+        $$
+        \pm{}0.2\te{s}
+        $$
+
+        each computed displacement is at most
+
+        $$
+        6.75\te{c}\hlfbk/\hlfbk\te{s}\,\times\,\pm{}0.2\te{s}\,=\,\pm1.35\te{c}
+        $$
+
+        from the truth, give or take the small
+        difference between $6.75\te{c}\hlfbk/\hlfbk\te{s}$
+        and the actual velocity. So
+
+        $$
+        -2.7\te{c}
+        $$
+
+        must be either
+
+        $$
+        -3\te{c}
+        $$
+
+        or
+
+        $$
+        -4\te{c}
+        $$
+
+        these being the only two posssible integer
+        vertical displacements within $\pm1.35$c of $-2.7$c.
+        Then, applying similar logic to each
+        measurement, the initial motions must be:
+
+        |> Image
+            src=images/svg_ch4_pacman1_initial_motions.svg
+
+        The maze fits these constraints in only two places
+        (note that 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet2_inline.svg
+        \ and 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet4_inline.svg
+        \ equal $-3\te{c}$ and $3\te{c}$, in each
+        case):
+
+        |> Image
+            width=860px
+            src=images/svg_ch4_pacman1_maze_two_possibilities.svg
+
+        Looking into the future,
+        the next three displacements are
+        right/down/right and last
+        ~$3.2$s/~$0.4$s/~$1.3$s
+        respectively:
+
+        |> Image
+            src=images/svg_ch4_pacman1_hor3.svg
+        |> Image
+            src=images/svg_ch4_pacman1_ver3.svg
+
+        (Nb: Imagine translating these intervals to the left or right until
+        the start of the interval is at an integer value: this is a good
+        way to estimate the length.)
+
+        Because displacement 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet7_inline.svg
+        \ is horizontal to the right the only possible
+        remaining solution is the right-hand one,
+        or else Pacman would collide with the ghost cage,
+        with displacement 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet6_inline.svg
+        \ equal to 6c not 7c, or else Pacman would
+        collide with a wall:
+
+        |> Image
+            width=860px
+            src=images/svg_ch4_pacman1_maze_would_collide.svg
+
+        Since
+
+        $$
+        6.75\te{c}\hlfbk/\hlfbk\te{s}\,\times\,3.2\te{s}\,=\,21.6\te{c}
+        $$
+
+        it seems that displacement 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet7_inline.svg
+        \ brings Pacman all the way around the maze to
+        the left edge of the ghost cage, like so...
+
+        |> Image
+            width=860px
+            src=images/svg_ch4_pacman1_maze_bring_around.svg
+
+        ...though it is hard to measure that distance;
+        but this is confirmed by the fact that the next
+        two displacements are “down by $3$ and to the right”;
+        specifically, since
+
+        $$
+        -6.75\te{c}\hlfbk/\hlfbk\te{s}\,\times\,0.4\te{s}\,=\,-2.7\te{c}
+        $$
+
+        displacement 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet8_inline.svg
+        \ must be $-3$c or $-4$c;
+        must actually be $-3$c since displacement 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet9_inline.svg
+        \ is to the right; so, notwithstanding the exact
+        length of displacement 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet9_inline.svg
+        , there is only one possibility for displacements 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet1_inline.svg
+        through 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet8_inline.svg
+        :
+
+        |> Image
+            width=860px
+            src=images/svg_ch4_pacman1_maze_final_solution.svg
+
+        So at $t = 49$s, between displacements 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet7_inline.svg
+        \ and 
+        |> InlineImage
+            class=ch4_pacman1_inline_number_pellet
+            src=images/svg_ch4_pacman1_pellet8_inline.svg
+        , Pacman is immediately to the left of the ghost cage.
+

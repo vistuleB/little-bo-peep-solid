@@ -1,0 +1,35 @@
+|> Exercise
+    handle=_complement_calculation_
+
+    What is the angle marked ‘?’, as a function
+    of $\theta$?
+
+    |> Image
+        src=images/svg_ch5_ex_angle_sum_180.svg
+
+    |> Solution
+
+        It is $\eta - \theta$. (Since...
+
+        $$
+        \theta + (\eta - \theta) + \eta = 2\eta
+        $$
+
+        ...you know that's the right answer!) (Nb: $2\eta = 180^\circ$.)
+
+        |> SolutionNote
+
+            Two angles that sum to $\eta$ are
+            called _complementary_, with each angle being
+            the _complement_ of the other.
+            The two
+            non-right angles of a right triangle are,
+            therefore, complementary!
+            (Not
+
+            __complimentary__
+
+            which would indicate that the angles are
+            given to you for free—everything in math is
+            free, not just those angles!)
+

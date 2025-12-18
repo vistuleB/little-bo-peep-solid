@@ -1,0 +1,72 @@
+|> Exercise
+    handle=_1d_red_yellow_particles_
+
+    Take a system of two particles on the real
+    line; at time $t = 0$, the first particle (yellow)
+    is at $x = -1$, while the second one (blue)
+    is at $x = 1$:
+
+    |> Image
+        src=images/svg_ch4_three_one_dimensional_particles.svg
+
+    If the velocity of the yellow particle is set to track
+    the position of the blue particle and vice-versa,
+    give a qualitative sketch of the
+    position-as-a-function-of-time (time on the $x$
+    axis, position on the $y$ axis) of the two
+    particles. If we add also the graph of the position
+    of the red particle from Exercise >>_1d_red_particle_
+    to this set of graphs, what symmetries
+    exist altogether between the three graphs?
+
+    |> Solution
+
+        For $t > 0$ the yellow and blue particles
+        approach $0$ in a kind of “radioactive decay”
+        pattern; for $t < 0$,
+        they spin
+        off to $-\infty$ and $\infty$ respectively at an
+        accelerating rate:
+
+        |> Image
+            src=images/svg_ch4_three_one_dimensional_particles_blue_yellow.svg
+
+        If we add the graph of the red particle to the
+        mix, it is simply the mirror image of the
+        blue particle's position through the $y$ axis
+        ($y$ axis that is ironically labeled “$x$”):
+
+        |> Image
+            src=images/svg_ch4_three_one_dimensional_particles_blue_yellow_red.svg
+
+        Indeed, for the red graph,
+
+        __the slope equals the $y$-value__
+
+        (velocity = position), while
+
+        __the slope equals minus the $y$-value__
+
+        for the blue graph (velocity = position
+        of yellow = minus own position).
+        (We forgot to mention that the blue and
+        yellow graphs are mirror images of one another
+        through the horizontal axis—this is one of the
+        “symmetries” that the problem statement asks about, though.)
+        As taking a mirror image through the $y$ axis
+        negates slopes without affecting $y$-coordinates,
+        while both the blue and red graphs have the same
+        value at $t = 0$, this explains why the mirror
+        image of one graph fits the constraints of the other
+        and vice-versa:
+
+        |> Image
+            src=images/svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg
+
+        Also note that all graphs have slopes of
+        $
+        \pm 1
+        $
+        at $t = 0$, as we tried to reflect in the sketches,
+        because each corresponding particle position
+        is either $1$ or $-1$.

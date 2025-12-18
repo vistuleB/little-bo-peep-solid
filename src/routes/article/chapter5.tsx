@@ -22,6 +22,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
+      id="_106_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -1468,7 +1469,7 @@ const Rest = () => {
           of an angle was briefly touched upon in
           {" "}
           <a
-            href="/article/chapter4#_28_hgi_"
+            href="/article/chapter4#_92_hgi_"
             class="handle-out-chapter-link"
           >
             Note 1
@@ -5142,7 +5143,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_30_hgi_">
+          <ExerciseStatement id="_102_hgi_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -8514,7 +8515,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement id="_31_hgi_">
+          <ExerciseStatement id="_103_hgi_">
             <OuterP>
               <b>
                 Exercise 18.
@@ -8527,7 +8528,7 @@ const Rest = () => {
               {" "} from
               {" "}
               <InChapterLink
-                href="/article/chapter5#_30_hgi_"
+                href="/article/chapter5#_102_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 5
@@ -12357,7 +12358,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={33}>
-          <ExerciseStatement id="_32_hgi_">
+          <ExerciseStatement id="_104_hgi_">
             <OuterP>
               <b>
                 Exercise 33.
@@ -12387,7 +12388,7 @@ const Rest = () => {
               and prove your answer. (Comparison: {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_31_hgi_"
+                  href="/article/chapter5#_103_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 18
@@ -12451,7 +12452,7 @@ const Rest = () => {
               {" "} as uncovered in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_31_hgi_"
+                  href="/article/chapter5#_103_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 18
@@ -13207,7 +13208,7 @@ const Rest = () => {
                 in {" "}
                 <NoBreak>
                   <InChapterLink
-                    href="/article/chapter5#_32_hgi_"
+                    href="/article/chapter5#_104_hgi_"
                     class="handle-in-chapter-link"
                   >
                     Exercise 33
@@ -14715,7 +14716,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_33_hgi_">
+          <ExerciseStatement id="_105_hgi_">
             <OuterP>
               <b>
                 Exercise 42.

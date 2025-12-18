@@ -1,0 +1,38 @@
+|> Exercise
+    handle=_narrow_and_less_narrow_bends_
+
+    Where is the rate of change of the function
+    below, on the part shown, greatest? And
+    where is the
+
+    __rate of change of the rate of change__
+
+    greatest?
+
+    |> Image
+        src=images/svg_ch4_narrow_and_less_narrow_bends.svg
+
+    |> Solution
+
+        The rate of change is the slope, which
+        is greatest along the right-hand portion
+        of the curve:
+
+        |> Image
+            src=images/svg_ch4_narrow_and_less_narrow_bends_steepest.svg
+
+        On the other hand,
+
+        __the rate of change of the rate of change__
+
+        [a.k.a., second derivative] is the rate
+        of change  of the slope, and that will
+        be greatest at the first bend of the curve,
+        where the slope is changing at the fastest
+        rate:
+
+        |> Image
+            src=images/svg_ch4_narrow_and_less_narrow_bends_curviest.svg
+
+        (Well, believe us or not, but we're right!)
+

@@ -1,0 +1,245 @@
+|> Exercise
+    handle=_f_equals_f_17_
+
+    If we seek a function $f : \rr \ra \rr$
+    such that
+
+    $$
+    f^{(17)} = f
+    $$
+
+    and such that $f \ne 0$ (or: $f \ne (x \ra 0)$,
+    pedantically) and such that $f$ grows relatively
+    slowly in either the positive or negative direction
+    of the number line, insofar as such things are
+    concerned, what would our options be?
+
+    |> Solution
+
+        Take $17$ particles equally spaced out along
+        the unit circle, such as these (shown here
+        with position vectors):
+
+        |> Image
+            src=images/svg_ch4_17_position_vectors.svg
+
+        Set the velocity of particle
+        $$
+        {\Large 1}
+        $$
+        equal to the position of particle
+        $$
+        {\Large 5}
+        $$
+        and keep going by this pattern, making the
+        velocity of each particle equal to the
+        position of the particle that is $4$ later;
+        in the configuration above, the velocity
+        vectors end up looking like so, for example:
+
+        |> Image
+            src=images/svg_ch4_17_velocity_vector_1.svg
+
+        |> ImageRight
+            src=images/svg_ch4_17_velocity_vector_1_cloud.svg
+
+        Maintaining this relationship at all
+        points in time, and given that the velocity
+        vectors point very slightly outward from
+        the unit circle, and because all the
+        symmetry and all the angles are maintained
+        as we play time forward or backward, the
+        particles spiral gently outward/inward from
+        the circle for time forward/backward,
+        respectively. Taking $f(t)$ to be the $x$-
+        or $y$-coordinate of any one of the particles
+        (e.g., particle $1$) at time $t$ gives an
+        oscillating function whose $17$th derivative
+        is itself (because the rate of change of
+        the $x$-coordinate of particle $1$ is the
+        $x$-coordinate of particle $5$, etc, until
+        we make it all the way back to particle $1$),
+        and that grows comparatively slowly over
+        time. ~The End~
+
+        |> Pause
+        _Note 1._
+        In case you're curious, the actual spiral paths
+        of the particles look like so:
+
+        |> Image
+            src=images/svg_ch4_17_paths.svg
+
+        ...and if you take the $x$-coordinates of
+        the particles over time, with time $t = 0$
+        corresponding to the original configuration
+        depicted where particle 1 is at $(1, 0)$, you
+        find 
+        |> del
+            paths
+        \ functions that look like so:
+
+        |> Image
+            src=images/svg_ch4_17_actual_functions.svg
+
+        For example, the derivative of curve 
+        |> InlineImage
+            class=ch4_17_pellets
+            src=images/svg_ch4_17_particle1_inline.svg
+        , highlighted below in red, is curve 
+        |> InlineImage
+            class=ch4_17_pellets
+            src=images/svg_ch4_17_particle5_inline.svg
+        , highlighted in blue:
+
+        |> Image
+            src=images/svg_ch4_17_actual_functions_with_highlights.svg
+
+        ...and taking sixteen more derivatives
+        starting from curve 
+        |> InlineImage
+            class=ch4_17_pellets
+            src=images/svg_ch4_17_particle5_inline.svg
+        \ we would go through curves 
+        |> InlineImage
+            class=ch4_17_pellets
+            src=images/svg_ch4_17_particle9_inline.svg
+        , 
+        |> InlineImage
+            class=ch4_17_pellets
+            src=images/svg_ch4_17_particle13_inline.svg
+        , 
+        |> InlineImage
+            class=ch4_17_pellets
+            src=images/svg_ch4_17_particle17_inline.svg
+        , 
+        |> InlineImage
+            class=ch4_17_pellets
+            src=images/svg_ch4_17_particle4_inline.svg
+        , ..., 
+        |> InlineImage
+            class=ch4_17_pellets
+            src=images/svg_ch4_17_particle14_inline.svg
+        \ before finally coming back to curve 
+        |> InlineImage
+            class=ch4_17_pellets
+            src=images/svg_ch4_17_particle1_inline.svg
+            style=margin-right:0.1em
+        !
+
+        |> Pause
+        _Note 2._
+        It can be interesting to examine what
+        goes wrong if we attempt to make the
+        velocity vectors even more tangent to the
+        unit circle. For example, if we start the
+        particles so that particle 5 is at
+        $90^\circ$ exactly from particle 1,
+        particle 9 is at $90^\circ$ exactly from
+        particle 5, and so on, until we reach
+        particle 14, the last particle in this
+        order; then we have the following starting
+        configuration:
+
+        |> Image
+            src=images/svg_ch4_17_other_start.svg
+
+        To parse the above figure, understand
+        that:
+
+        |> TextParent
+            |> ul
+                style=margin:20px 20px 20px 50px;list-style-type:disc;
+
+                |> li
+                    style=margin-bottom:10px;
+
+                    the red arrows indicate which particle
+                    takes its velocity from the position
+                    of which other particle; for example,
+                    particle 1 has velocity equal to the
+                    position of particle 5
+
+                |> li
+
+                    particles that occupy the same starting
+                    position on the unit circle appear
+                    stacked together, as a representation
+                    device; for example, particle 2 has the
+                    same starting position as particle 5
+
+        (Note that the red arrows have to form
+        a cycle of length 17 in order for us to
+        later extract a function $f$ such that
+
+        $$
+        f^{(17)} = f
+        $$
+
+        but this is the case: the red arrows only
+        “close the loop” after going through all
+        17 particles!)
+
+        In this starting configuration, all
+        velocity vectors are exactly tangent to
+        the unit circle
+
+        _|EXCEPT|_
+
+        for particle 14, whose velocity vector,
+        being the position of particle 1, is straight
+        out from the circle! So, as we “start time”,
+        particle 14 will push out from the circle,
+        that will in turn affect particle 10, and
+        so on, until all particles end up being
+        “peeled off” from the circle, in due time;
+        if you are so curious, the particle
+        trajectories end up like so (shown only for
+        $t \geq 0$):
+
+        |> Image
+            src=images/svg_ch4_17_other_start_paths.svg
+
+        The particles shoot of to infinity in short
+        order—the solution is much worse—for fun we
+        have also highlighted two particle trajectories
+        in this figure:
+
+        |> TextParent
+            |> ul
+                style=margin:20px 20px 20px 50px;list-style-type:disc;
+
+                |> li
+                    style=margin-bottom:10px;
+
+                    in 
+                    |> span
+                        style=border:1px solid blue
+                        blue
+                    , particle 1, the last particle
+                    to be (noticeably\*) “peeled off” from
+                    the circle (\*all particles are
+                    instantaneously peeled off from the
+                    circle to _some_ degree, as one
+                    particle's slight deviation affects
+                    the next, that affects the next, etc)
+
+                |> li
+                
+                    in 
+                    |> span
+                        style=border:1px solid red
+                        red
+                    , particle 14, the _first_ particle
+                    to leave the circle—but because its
+                    velocity vector is given by particle 1,
+                    which itself starts by going around in
+                    a circle, it, too, starts out by going
+                    around in a circle!
+
+        (The point is: if your velocity vector
+        is tracing a circle centered at $(0, 0)$—at
+        a uniform rate—then you, too, are going
+        around in a circle—it's just that your
+        circle could be centered anywhere, not
+        necessarily at $(0, 0)$!)

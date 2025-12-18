@@ -1,0 +1,181 @@
+|> Exercise
+    handle=_max_sinx_+_cosx_
+
+    The graph $y = \cos(x) + \sin(x)$ from Exercise 
+    >>_four_graphs_ has a maximum value greater than $1$:
+
+    |> Image
+        src=images/svg_ch5_ex_maximum_of_sin_plus_cos.svg
+
+    What is this maximum value, and for which
+    value(s) of $x$ is it achieved?
+
+    |> Solution
+
+        The sum
+
+        $$
+        x + y
+        $$
+
+        where
+
+        $$
+        (x, y)
+        $$
+
+        is a point in $\rr^2$ can be understood as a
+        certain vertical displacement added to a
+        certain horizontal displacement, but where
+        the sum is numerical. (Not vectorial.)
+        To realize the sum geometrically we must
+        either align the vertical displacement to be
+        horizontal, or else align the horizontal
+        displacement to be vertical:
+
+        |> Image
+            src=images/svg_ch5_ex_x_plus_y_options.svg
+            style=background-color:#fdfdfd
+
+        Either way, the upshot is that the sum
+
+        $$
+        x + y
+        $$
+
+        can be found as the intersection of a line of
+        angle $-45^\circ$ through the point $(x, y)$
+        with either the $x$- or $y$-axis:
+
+        |> Image
+            src=images/svg_ch5_ex_x_plus_y_intersections.svg
+
+        (By the way: when we say “line of angle
+        $-45^\circ$” we refer to the standard position
+        of $-45^\circ$ on the unit circle, and, more
+        specifically, to a line that is parallel
+        to a line going through $(0, 0)$ and that standard
+        position.)
+
+        To add a little imagery, if we make a heatmap
+        of $\rr^2$ according to the value of the coordinate
+        sum...
+
+        $$
+        x + y
+        $$
+
+        ...over all points $(x, y)$ we will obtain diagonal
+        bands of slope $-1$:
+
+        |> Image
+            src=images/svg_ch5_ex_x_plus_y_rainbow.svg
+
+        If we are confined to some region of the plane
+        and we need to find a point that maximizes the
+        coordinate sum we must go as far up and to the
+        right as possible, towards brown—whereas
+        to minimize the sum we must go as far down and
+        to the left as possible, towards purple!
+
+        Having said this,
+
+        $$
+        \cos(x) + \sin(x)
+        $$
+
+        can be interpreted as the sum of the $x$- and
+        $y$-coordinates of the point
+
+        $$
+        (\cos(x), \sin(x))
+        $$
+
+        that is a point on the unit circle. In other words,
+        the unit circle is “the region of the plane” (cf.
+        previous paragraph) to which we are confined—we
+        must choose a value of $x$ that puts us as far
+        “up and to the right” as possible on the circle.
+        That value is... $x = \eta/2$ (!!!!):
+
+        |> Image
+            src=images/svg_ch5_ex_x_plus_y_eta_over_2.svg
+
+        ...or with any multiple of $4\eta$ added,
+        making the set of solutions $x$ actually equal to
+
+        $$
+        \Large \{\eta/2 + 4\eta{}k : k \in \zz\}
+        $$
+
+        (to be read “$\eta/2$ plus any multiple of $4\eta$”)
+        (*or: “the _set of_ values of the form $\eta/2$,
+        plus any multiple of $4\eta$”).
+
+        The actual value of $\cos(x) + \sin(x)$ achieved
+        at this point is
+
+        $$
+        \Large
+        \begin{align}
+        &amp;\,\, \cos(\eta/2) + \sin(\eta/2)\\ =&\,\,\up{1.5}  \sqrt{0.5} + \sqrt{0.5}\\ =&\,\,\up{1.5} \sqrt{2}
+        \end{align}
+        $$
+
+        using the fact that
+
+        |> div
+
+            $$
+            \Large \cos(\eta/2) = \sin(\eta/2) = \sqrt{0.5}
+            $$
+
+        and that
+
+        $$
+        \Large \sqrt{0.5} = {\sqrt{2} \over 2}
+        $$
+
+        (cf. Exercise 1, Chapter 1).
+
+        |> SolutionNote
+
+            The fact that
+
+            $$
+            \Large \cos(\eta/2) + \sin(\eta/2) = \sqrt{2}
+            $$
+
+            can also be seen from this diagram...
+
+            |> Image
+                src=images/svg_ch5_ex_x_plus_y_pythagoras.svg
+
+            ...which is an application of the Pythagorean
+            theorem. (In the above, $x_0 = \cos(\eta/2)$,
+            $y_0 = \sin(\eta/2)$, and the sum is seen to be
+            $\sqrt{1^2 + 1^2} = \sqrt{2}$.)
+
+        |> SolutionNote
+
+            On the original graph from the statement, the
+            $y$-value of the maximum is therefore
+            $y = \sqrt{2}$, attained at $x = \eta/2$,
+            $x = 9\eta/2$, $x = -7\eta/2$, etc:
+
+            |> Image
+                src=images/svg_ch5_ex_maximum_of_sin_plus_cos_with_answer.svg
+
+            (Note that
+
+            $$
+            \Large {\eta\over 2} + 4\eta = {\eta\over 2} + {8\eta\over 2} = {9\eta\over 2}
+            $$
+            $$
+            \Large
+            {\eta\over 2} - 4\eta = {\eta\over 2} - {8\eta\over 2} = -{7\eta\over 2}
+            $$
+
+            and, in general, the numerators of these fractions
+            will be some multiple of $8\eta$ apart.)
+

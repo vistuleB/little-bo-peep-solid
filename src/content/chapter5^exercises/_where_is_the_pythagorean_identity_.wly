@@ -1,0 +1,30 @@
+|> Exercise
+    handle=_where_is_the_pythagorean_identity_
+    Is the pythagorean identity apparent in the
+    graphs of the previous exercise?
+
+    |> Solution
+        Yes. Imagine two wooden cutouts made
+        from the graphs of $y = \sin^2(x)$, $y = \cos^2(x)$:
+
+        |> Image
+            style=margin-top:1.1em;margin-bottom:1.1em;
+            src=images/svg_ch5_ex_pythagorean_graphs_sin2.svg
+        |> Image
+            style=margin-top:1.1em;margin-bottom:1.1em;
+            src=images/svg_ch5_ex_pythagorean_graphs_cos2.svg
+
+        After vertically flipping the cutout
+        of $y = \cos^2(x)$, the cutouts
+        fit together to make
+        the constant function $y = 1$ (like a parquet):
+
+        |> Image
+            style=margin-top:1.1em;margin-bottom:1.1em;
+            src=images/svg_ch5_ex_pythagorean_graphs_compounded.svg
+
+        And this occurs because
+        $$
+        \cos^2(x) + \sin^2(x) = 1
+        $$
+        for all $x \in \rr$, which is the pythagorean identity.
