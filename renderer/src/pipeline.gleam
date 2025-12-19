@@ -29,6 +29,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.identity(),
       dl.delete("WriterlyComment"),
       dl.delete_attribute_if(fn(key, _) { string.starts_with(key, "!!")}),
+      dl.lbp_select_content(),
       dl.delete_first_child_occurrences_of_and_recurse("WriterlyBlankLine"),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Bootcamp", "ArticleTitle", "title"), ["Chapter"]),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Chapter", "ArticleTitle", "title"), ["Bootcamp"]),
@@ -180,7 +181,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.unwrap("Scope"),
       dl.delete_attribute__batch(["counter", "handle", "type", "t", "_", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
-      dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only, remove_unused, only)),
+      dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, only)),
     ]
   ]
   |> list.flatten
