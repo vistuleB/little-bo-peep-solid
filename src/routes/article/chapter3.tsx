@@ -3888,8 +3888,6 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <CentralDisplay>
-                {" "}
-                {" "}
                 <Math>
                   $\Large g(h($
                 </Math>
