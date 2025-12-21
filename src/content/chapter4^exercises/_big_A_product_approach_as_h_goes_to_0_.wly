@@ -22,14 +22,14 @@
             src=images/svg_ch4_big_product_fraction_outline.svg
 
         This is seen to be a Newton quotient
-        (cf. Exercise 16)
+        (cf. Exercise >>_illustrate_the_difference_quotient_)
 
         $$
         f(x + h) - f(x)\over h
         $$
 
         with $f = A_i$, $x = t_0$, per which
-        (Exercise 16 Note 3), the fraction approaches
+        (Exercise >>_illustrate_the_difference_quotient_ Note 3), the fraction approaches
 
         $$
         A_i'(t_0)

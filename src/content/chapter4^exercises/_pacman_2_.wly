@@ -82,7 +82,8 @@
         \sqrt{6.5^2 + 2^2} = \sqrt{46.25} = 6.800...
         $$
 
-        cells per second, Again close to $6.75\te{c}\hlfbk/\hlfbk\te{s}$. (!)
+        cells per second, again close to 
+        $6.75\te{c}\hlfbk/\hlfbk\te{s}$. (!)
 
         For two more verifications take $t = 27\te{s}$
         and $t = 30\te{s}$:
@@ -303,9 +304,8 @@
         be at the bottom-left exit of the bottom-right
         maze corner, still.
 
-        |> Pause
-        _Note 1._
-        Feel free to follow Pacman all the way
-        to the end of the timeseries. He ends up somewhere
-        near...
+        !! |> SolutionNote
+        !! Feel free to follow Pacman all the way
+        !! to the end of the timeseries. He ends up somewhere
+        !! near...
 

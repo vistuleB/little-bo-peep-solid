@@ -56,12 +56,10 @@
 
             |> li
                 style=margin-top:0.5em
-
                 when $A$ and $B$ are both still at $t_0$
 
             |> li
                 style=margin-top:0.5em
-
                 when $A$ has made it to $t_0 + \Delta{}t$,
                 and $B$ is still at $t_0$
 
@@ -123,7 +121,7 @@
         {f(t_0 + \Delta{}t) - f(t_0)\over \Delta{}t}
         $$
 
-        is a Newton quotient (cf. Exercise 16),
+        is a Newton quotient (cf. Exercise >>_illustrate_the_difference_quotient_),
         that approaches
 
         $$
@@ -132,7 +130,8 @@
 
         as $\Delta{}t$ approaches $0$, assuming
         $f$ is differentiable at $t_0$ (cf.
-        Exercise 16 Note >>TotalEarnings), and
+        Exercise >>_illustrate_the_difference_quotient_
+        Note >>_limit_of_difference_quotient_), and
 
         |> Image
             src=images/svg_ch4_RATS_over_Dt_first_term.svg
@@ -153,6 +152,10 @@
 
         |> ImageRight
             src=images/svg_ch4_RATS_first_term_cloud.svg
+
+        $$
+        B(t_0)A'(t_0)
+        $$
 
         as $\Delta{}t$ approaches $0$. Indeed,
         when you write it out, that term becomes
@@ -276,17 +279,17 @@
         for functions $A$, $B$ differentiable at
         a point $t_0$.
 
-        Nb: This result is known as the _product rule_.
+        |> SolutionNote
+            This result is known as the _product rule_.
 
-        |> Pause
-        _Note 1._
-        Keeping things alphabetical everywhere, the
-        same equation is more often written
+        |> SolutionNote
+            Keeping things alphabetical everywhere, the
+            same equation is more often written
 
-        $$
-        (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
-        $$
+            $$
+            (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
+            $$
 
-        with “$A'(t_0)B(t_0)$” in the middle. (But
-        which is the same, of course, as $B(t_0)A'(t_0)$.)
+            with “$A'(t_0)B(t_0)$” in the middle. (But
+            which is the same, of course, as $B(t_0)A'(t_0)$.)
 

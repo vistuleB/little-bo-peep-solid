@@ -3183,35 +3183,37 @@ const Rest = () => {
               scrunched bumps!
             </OuterP>
             <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              One can also reason that a small change in {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              results in a large change in {" "}
-              <NoBreak>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                One can also reason that a small change in {" "}
                 <Math>
-                  $1000x$
+                  $x$
                 </Math>
-                ,
-              </NoBreak>
-              {" "} so that
-              {" "}
-              <Math>
-                $\cos(1000x)$
-              </Math>
-              {" "} must “cycle” much faster through
-              values than {" "}
-              <Math>
-                $\cos(x)$
-              </Math>
-              {" "} does.
-            </OuterP>
+                {" "}
+                results in a large change in {" "}
+                <NoBreak>
+                  <Math>
+                    $1000x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} so that
+                {" "}
+                <Math>
+                  $\cos(1000x)$
+                </Math>
+                {" "} must “cycle” much faster through
+                values than {" "}
+                <Math>
+                  $\cos(x)$
+                </Math>
+                {" "} does.
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={8}>
@@ -3382,16 +3384,18 @@ const Rest = () => {
               ...and this completes the computation!
             </OuterP>
             <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              We can collect both steps of the computation
-              into a single string of equalities:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/yd6x.svg" />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                We can collect both steps of the computation
+                into a single string of equalities:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/yd6x.svg" />
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={9}>
@@ -5582,12 +5586,12 @@ const Rest = () => {
                 </InChapterLink>
                 ,
               </NoBreak>
-              {" "} the roots of {" "}
+              {" "} the 
+              roots of {" "}
               <Math>
                 $y = Ax^2 + Bx$
               </Math>
-              {" "}
-              are thus at
+              {" "} are thus at
             </OuterP>
             <Pause />
             <OuterP>

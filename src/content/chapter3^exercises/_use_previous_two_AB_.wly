@@ -55,8 +55,8 @@
         __3. vertical scaling by $A$__
 
         (We put the vertical translation first.)
-        By Exercise >>_what_roots_by_x0_y0_seq_, the roots of $y = Ax^2 + Bx$
-        are thus at
+        By Exercise >>_what_roots_by_x0_y0_seq_, the 
+        roots of $y = Ax^2 + Bx$ are thus at
         $$
         \tag{A}
         x = -{B\over 2A} \pm \sqrt{B^2 \over 4A^2}

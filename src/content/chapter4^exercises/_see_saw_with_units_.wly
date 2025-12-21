@@ -38,13 +38,13 @@
             the velocity and the acceleration of the car as
             a function of time.
 
-        |> SolutionNote
-            In a more physically realistic scenario the corners
-            are rounded off a bit while the velocity and
-            acceleration remain continuous, albeit with steep
-            slopes and sharp peaks. (This...
+        !! |> SolutionNote
+        !!     In a more physically realistic scenario the corners
+        !!     are rounded off a bit while the velocity and
+        !!     acceleration remain continuous, albeit with steep
+        !!     slopes and sharp peaks. (This...
 
-            |> Image
-                src=images/svg_ch4_ex_car_position_rounded.svg
+        !!     |> Image
+        !!         src=images/svg_ch4_ex_car_position_rounded.svg
 
-            ...idea.)
+        !!     ...idea.)

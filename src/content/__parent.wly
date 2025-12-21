@@ -1,157 +1,163 @@
 |> Book
     |> ChapterSelection
-        >>powers
-        >>sets
-        >>refreshers
-        >>slopes
-        >>functions
+        !! >>powers
+        !! >>sets
+        !! >>refreshers
+        !! >>slopes
+        !! >>functions
         >>derivatives
         >>trigonometry
 
-    |> ExerciseSelection
-        |> In
-            chapter=>>powers
-            >>_2^-1_and_2^-3_and_2^-4_by_hand_
-            >>_100_over_16_by_hand_
-            >>_chinese_ten_thousand_
-            >>_kilometers_per_millimeter_
-            >>_kilometers_per_10^24_millimeters_
-            >>_US_yearly_budget_%_
-            >>_what_is_log_base_10_of_one_trillion_
-            >>_what_is_log_base_10_of_1_
-            >>_what_is_log_base_10_of_product_of_powers_of_10_
-            >>_evaluate_fraction_of_multiples_of_powers_of_10_
-            >>_how_many_millibits_in_a_gigabyte_
-            >>_6.25_other_way_of_writing_
-            >>_10^n_over_10^m_equals_10^n-m_
-            >>_M_L_T_rewrite_
-            >>_solve_for_a_b_c_
+    |> In
+        chapter=>>powers
+        >>_2^-1_and_2^-3_and_2^-4_by_hand_
+        >>_100_over_16_by_hand_
+        >>_chinese_ten_thousand_
+        >>_kilometers_per_millimeter_
+        >>_kilometers_per_10^24_millimeters_
+        >>_US_yearly_budget_%_
+        >>_what_is_log_base_10_of_one_trillion_
+        >>_what_is_log_base_10_of_1_
+        >>_what_is_log_base_10_of_product_of_powers_of_10_
+        >>_evaluate_fraction_of_multiples_of_powers_of_10_
+        >>_how_many_millibits_in_a_gigabyte_
+        >>_6.25_other_way_of_writing_
+        >>_10^n_over_10^m_equals_10^n-m_
+        >>_M_L_T_rewrite_
+        >>_solve_for_a_b_c_
 
-        |> In
-            chapter=>>refreshers
-            >>_true_false_
-            >>_approximate_1_over_n_minus_1_over_n+1_
+    |> In
+        chapter=>>refreshers
+        >>_true_false_
+        >>_approximate_1_over_n_minus_1_over_n+1_
 
-        |> In
-            chapter=>>slopes
-            >>_lines_of_slope_1_over_2_
-            >>_x0_y0_slope_p_general_equation_
-            >>_vertical_velocity_plot_
-            >>_y0-px_0_intercept_explanation_
+    |> In
+        chapter=>>slopes
+        >>_lines_of_slope_1_over_2_
+        >>_x0_y0_slope_p_general_equation_
+        >>_vertical_velocity_plot_
+        >>_y0-px_0_intercept_explanation_
 
-        |> In
-            chapter=>>functions
-            >>_define_abs_val_by_cases_
-            >>_define_abs_val_by_algebraic_formula_
-            >>_evaluate_lambda_functions_
-            >>_floor_introduction_
-            >>_factory_roof_functions_1_
-            >>_factory_roof_functions_2_
-            >>_cosine_of_1000x_
-            >>_composition_order_1_
-            >>_composition_order_2_
-            >>_complete_square_1_
-            >>_complete_square_2_
-            >>_no_solutions_by_complete_square_
-            >>_two_solutions_by_complete_square_
-            >>_what_seq_AB_
-            >>_use_previous_two_AB_
-            >>_true_or_false_composition_questions_
-            >>_function_operations_Q_and_A_
-            >>_what_seq_AB_C_
-            >>_what_are_the_roots_ABC_
-            >>_summon_the_currying_
+    |> In
+        chapter=>>functions
+        >>_define_abs_val_by_cases_
+        >>_define_abs_val_by_algebraic_formula_
+        >>_evaluate_lambda_functions_
+        >>_floor_introduction_
+        >>_factory_roof_functions_1_
+        >>_factory_roof_functions_2_
+        >>_cosine_of_1000x_
+        >>_composition_order_1_
+        >>_composition_order_2_
+        >>_complete_square_1_
+        >>_complete_square_2_
+        >>_no_solutions_by_complete_square_
+        >>_two_solutions_by_complete_square_
+        >>_what_seq_AB_
+        >>_what_roots_by_x0_y0_seq_
+        >>_use_previous_two_AB_
+        >>_true_or_false_composition_questions_
+        >>_function_operations_Q_and_A_
+        >>_what_seq_AB_C_
+        >>_what_are_the_roots_ABC_
+        >>_summon_the_currying_
 
-        |> In
-            chapter=>>derivatives
-            >>_see_saw_
-            >>_derivative_of_1_over_x_near_0_
-            >>_see_saw_second_derivative_
-            >>_see_saw_with_units_
-            >>_correct_incorrect_or_nonsensical_
-            >>_complete_the_missing_units_
-            >>_reorder_derivatives_
-            >>_sketch_middle_function_g_
-            >>_sketch_middle_function_h_
-            >>_first_law_of_differentiation_
-            >>_narrow_and_less_narrow_bends_
-            >>_four_particles_
-            >>_associativity_of_function_multiplication_
-            >>_associativity_of_function_addition_
-            >>_rat_fundraising_1_
-            >>_rat_fundraising_2_
-            >>_rat_fundraising_3_
-            >>_rat_fundraising_3_
-            >>_circular_motion_2_3_velocity_vector_sketch_
-            >>_circular_motion_2_3_acceleration_vector_sketch_
-            >>_circular_motion_3_2_all_sketch_
-            >>_circular_motion_r_v_all_sketch_
-            >>_circular_motion_3_3_four_particles_sketch_
-            >>_angular_velocity_dimensions_
-            >>_1d_red_particle_
-            >>_1d_red_yellow_particles_
-            >>_four_particles_at_2_4_
-            >>_translational_differential_equation_
-            >>_express_the_associativity_etc_
-            >>_circular_motion_amplitude_2_
-            >>_f_equals_f_5_
-            >>_f_equals_f_17_
-            >>_illustrate_the_difference_quotient_
-            >>_product_rule_
-            >>_sum_rule_summary_
-            >>_product_rule_terse_formula_
-            >>_first_law_of_differentiation_rewritten_
-            >>_define_product_of_constant_and_function_
-            >>_rewrite_function_operation_definitions_in_different_style_
-            >>_big_A_product_approach_as_h_goes_to_0_
-            >>_eta_approximation_from_cosine_graph_
-            >>_pacman_1_
-            >>_pacman_2_
-            >>_from_second_derivative_
+    |> In
+        chapter=>>derivatives
+        >>_see_saw_
+        >>_derivative_of_1_over_x_near_0_
+        >>_see_saw_second_derivative_
+        >>_see_saw_with_units_
+        >>_correct_incorrect_or_nonsensical_
+        >>_complete_the_missing_units_
+        >>_reorder_derivatives_
+        >>_sketch_middle_function_g_
+        >>_sketch_middle_function_h_
+        >>_narrow_and_less_narrow_bends_
+        >>_first_law_of_differentiation_
+        >>_define_product_of_constant_and_function_
+        >>_four_particles_
+        >>_f_equals_f_5_
+        >>_f_equals_f_17_
+        >>_1d_red_particle_
+        >>_1d_red_yellow_particles_
+        >>_illustrate_the_difference_quotient_
+        >>_sum_rule_summary_
+        >>_eta_approximation_from_cosine_graph_
+        >>_product_rule_
+        >>_big_A_product_approach_as_h_goes_to_0_
+        >>_four_particles_at_2_4_
+        >>_express_the_associativity_etc_
+        >>_associativity_of_function_multiplication_
+        >>_pacman_1_
+        >>_pacman_2_
+        !! >>_associativity_of_function_addition_
+        !! >>_rat_fundraising_1_
+        !! >>_rat_fundraising_2_
+        !! >>_rat_fundraising_3_
+        !! >>_rat_fundraising_3_
+        !! >>_circular_motion_2_3_velocity_vector_sketch_
+        !! >>_circular_motion_2_3_acceleration_vector_sketch_
+        !! >>_circular_motion_3_2_all_sketch_
+        !! >>_circular_motion_r_v_all_sketch_
+        !! >>_circular_motion_3_3_four_particles_sketch_
+        !! >>_angular_velocity_dimensions_
+        !! >>_translational_differential_equation_
+        !! >>_circular_motion_amplitude_2_
+        !! >>_product_rule_terse_formula_
+        !! >>_first_law_of_differentiation_rewritten_
+        !! >>_rewrite_function_operation_definitions_in_different_style_
+        !! >>_from_second_derivative_
 
-        |> In
-            chapter=>>trigonometry
-            >>_cos_of_x_+_0.1_
-            >>_guesstimate_cos_10x_linear_
-            >>_guesstimate_cos_10x_parabolic_
-            >>_guesstimate_sinusoid_
-            >>_four_graphs_
-            >>_triangle_conch_
-            >>_handdrawn_oval_P_position_
-            >>_sum_of_vectors_definition_
-            >>_circular_motion_from_x_coordinate_
-            >>_cycles_per_4eta_
-            >>_0.2_radians_
-            >>_eta_and_4eta_as_ratios_
-            >>_long_division_11_over_7_
-            >>_long_division_22_over_7_
-            >>_long_division_15542486476949_777_
-            >>_complement_calculation_
-            >>_max_sinx_+_cosx_
-            >>_rotate_central_90_
-            >>_ratio_A_over_B_tan^2_
-            >>_ratio_A_over_B_1_+_tan^2_
-            >>_proof_1_+_tan^2_eq_sec^2_
-            >>_proof_1_+_tan^2_eq_sec^2_backward_
-            >>_four_compositions_expressed_
-            >>_four_compositions_graphed_
-            >>_periodicity_mod_2eta_
-            >>_cosx.sinx_is_translate_of_cos^2x_
-            >>_cos^2x_scale_and_translate_of_cosx_
-            >>_relate_sinx.cosx_to_sin2x_
-            >>_turn_sinx_into_sinx.cosx_
-            >>_turn_cosx_into_sinx_+_cosx_
-            >>_for_every_A1_A2_
-            >>_for_every_A1_A2_stupid_followup_
-            >>_map_cosx_to_cos_0.1x+0.1_
-            >>_map_cosx_to_cos_Bx+C_
-            >>_geometric_construction_of_1_over_A_
-            >>_axes_intersections_60_degrees_
-            >>_blueprints_top_and_side_
-            >>_blueprints_open_thin_door_
-            >>_blueprints_open_bomb_shelter_door_
-            >>_rank_the_7_slices_
-            >>_archimedean_projection_
-            >>_sphere_area_formula_from_archimedean_property_
-            >>_sphere_volume_
-            >>_scalar_times_vector_definition_
+    |> In
+        chapter=>>trigonometry
+        >>_cos_of_x_+_0.1_
+        >>_guesstimate_cos_10x_linear_
+        >>_guesstimate_cos_10x_parabolic_
+        >>_guesstimate_sinusoid_
+        >>_triangle_conch_
+        >>_four_graphs_
+        >>_handdrawn_oval_P_position_
+        >>_vector_addition_definition_
+        >>_circular_motion_from_x_coordinate_
+        !! >>_cycles_per_4eta_
+        >>_0.2_radians_
+        >>_eta_and_4eta_as_ratios_
+        >>_long_division_11_over_7_
+        >>_long_division_22_over_7_
+        >>_long_division_15542486476949_777_
+        >>_complement_calculation_
+        >>_max_sinx_+_cosx_
+        >>_rotate_central_90_
+        >>_ratio_A_over_B_tan^2_
+        >>_ratio_A_over_B_1_+_tan^2_
+        >>_proof_1_+_tan^2_eq_sec^2_
+        >>_proof_1_+_tan^2_eq_sec^2_backward_
+        >>_four_compositions_expressed_
+        >>_four_compositions_graphed_
+        >>_periodicity_mod_2eta_
+        >>_cosx.sinx_is_translate_of_cos^2x_
+        >>_cos^2x_scale_and_translate_of_cosx_
+        >>_relate_sinx.cosx_to_sin2x_
+        >>_turn_sinx_into_sinx.cosx_
+        >>_turn_cosx_into_sinx_+_cosx_
+        >>_for_every_A1_A2_
+        >>_powers_of_secant_
+        >>_for_every_A1_A2_stupid_followup_
+        !! >>_map_cosx_to_cos_0.1x+0.1_
+        !! >>_map_cosx_to_cos_Bx+C_
+        >>_geometric_construction_of_1_over_A_
+        >>_axes_intersections_60_degrees_
+        >>_blueprints_top_and_side_
+        >>_blueprints_open_thin_door_
+        >>_rank_the_7_slices_
+        >>_archimedean_projection_
+        >>_sphere_area_formula_from_archimedean_property_
+        >>_sphere_volume_
+        >>_scalar_times_vector_definition_
+        >>_blueprints_open_bomb_shelter_door_
+        >>_isosets_of_xy_
+        >>_spherical_to_cartesian_coordinates_1_
+        >>_double_pre_processing_steps_
+        >>_double_post_processing_spteps_
+        >>_what_seq_sin_Bx+C_

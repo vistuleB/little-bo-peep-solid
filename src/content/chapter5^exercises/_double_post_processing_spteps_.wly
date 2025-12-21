@@ -1,0 +1,72 @@
+|> Exercise
+    handle=_double_post_processing_spteps_
+    
+    Let $f : \rr \ra \rr$, $A, B \in \rr$.
+    Rewrite the two compositions below in the form
+    $$
+    x \ra \dots
+    $$
+    and describe how the graph of
+    each composition relates to the graph of $f$.
+
+    |> Image
+        src=images/svg_ch5_ex_double_POST_processing.svg
+
+    |> Solution
+
+        The first composition equals
+        $$
+        x \ra Bf(x) + A
+        $$
+        as illustrated here:
+
+        |> Image
+            src=images/svg_ch5_ex_double_POST_processing_stops_1.svg
+        
+        Similarly, the second composition equals
+        $$
+        x \ra B(f(x) + A)
+        $$
+        (or
+        $$
+        x \ra Bf(x) + AB
+        $$
+        equivalently), as is easy to check. (No drawing!)
+
+        For the second part of the question, since gluing
+        the box
+
+        |> Image
+            src=images/svg_ch5_ex_double_pre_processing_Bz_alone.svg
+
+        to the left of any function scales the graph of that
+        function vertically by a factor $B$, while gluing the
+        box
+
+        |> Image
+            src=images/svg_ch5_ex_double_pre_processing_Au_alone.svg
+
+        to the left of any function translates the graph of
+        that function up by $A$ (cf. Exercise 22), the graph 
+        of the first composition...
+        
+        |> Image
+            src=images/svg_ch5_ex_double_POST_processing_Bz_mid.svg
+        ...is...
+        
+        __the graph of $f$ vertically scaled by $B$,
+        |> br
+        translated up by $A$__
+            
+        ...while the graph of the second composition...
+            
+        |> Image
+            src=images/svg_ch5_ex_double_POST_processing_Au_mid.svg
+        ...is...
+
+        __the graph of $f$ translated up by $A$,
+        |> br
+        vertically scaled by $B$__
+
+        ...as we reason by gluing the boxes onto the “$f$” box 
+        one-by-one.

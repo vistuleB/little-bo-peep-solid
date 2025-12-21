@@ -40,6 +40,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("StarDivider", ExportedByFile(None, ["StarDivider"])),
     #("Table", ExportedByFile(Some("Table"), [])),
     #("TextParent", ExportedByFile(Some("TextParent"), [])),
+    #("TildeDivider", ExportedByFile(None, ["TildeDivider"])),
     #("TOC", ExportedByFile(Some("TOC"), [])),
     #("TOCItem", ExportedByFile(Some("TOCItem"), [])),
     #("TOCTitle", ExportedByFile(Some("TOCTitle"), [])),

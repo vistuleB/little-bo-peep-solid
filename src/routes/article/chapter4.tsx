@@ -22,7 +22,7 @@ export default function __Chapter4__() {
       nextPage="/article/chapter5"
       pageNecessaryMargin={1450}
       maxElementWidth={700}
-      id="_101_hgi_"
+      id="_80_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -2059,25 +2059,6 @@ const Rest = () => {
                 a function of time.
               </OuterP>
             </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                In a more physically realistic scenario the corners
-                are rounded off a bit while the velocity and
-                acceleration remain continuous, albeit with steep
-                slopes and sharp peaks. (This...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/LYJG.svg" />
-              <Pause />
-              <OuterP>
-                ...idea.)
-              </OuterP>
-            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={5}>
@@ -2313,94 +2294,96 @@ const Rest = () => {
             <Pause />
             <Image src="/build-img/svgo-svg/KQs9.svg" />
             <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              A unit of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $1$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} is a
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              dimensionless
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              unit. Dimensionless units arise when
-              quantities are divided by like quantities.
-              Think of dimensionless quantities as “pure
-              fractions” or “pure ratios”. (Percentages
-              are dimensionless—in fact the term
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              percentage
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              is synonymous with
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              dimensionless ratio
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              though if you spoke to people about
-              “dimensionless ratios” they would look at
-              you funny. Also percentages are a system of
-              notation, whereby the symbol “%” means
-              “divide the preceding number by 100, in
-              order to discover the numerical value of
-              the ratio I'm talking about”.) (To drive
-              it home: In Chinese, the written expressions
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $23\%$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $23/100$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} are
-              indistinguishable when read out loud; they
-              are both  read {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $23$
-                </Math>
-              </NoBreak>
-              {" "} over {" "}
-              <NoBreak>
-                <Math>
-                  $100$
-                </Math>
-                ”;
-              </NoBreak>
-              {" "} that is
-              the simple {" "}
-              <i>
-                &amp;
-              </i>
-              {" "} correct way!)
-            </OuterP>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                A unit of {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $1$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} is a
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                dimensionless
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                unit. Dimensionless units arise when
+                quantities are divided by like quantities.
+                Think of dimensionless quantities as “pure
+                fractions” or “pure ratios”. (Percentages
+                are dimensionless—in fact the term
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                percentage
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is synonymous with
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                dimensionless ratio
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                though if you spoke to people about
+                “dimensionless ratios” they would look at
+                you funny. Also percentages are a system of
+                notation, whereby the symbol “%” means
+                “divide the preceding number by 100, in
+                order to discover the numerical value of
+                the ratio I'm talking about”.) (To drive
+                it home: In Chinese, the written expressions
+                {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $23\%$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $23/100$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} are
+                indistinguishable when read out loud; they
+                are both  read {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $23$
+                  </Math>
+                </NoBreak>
+                {" "} over {" "}
+                <NoBreak>
+                  <Math>
+                    $100$
+                  </Math>
+                  ”;
+                </NoBreak>
+                {" "} that is
+                the simple {" "}
+                <i>
+                  &amp;
+                </i>
+                {" "} correct way!)
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={7}>
@@ -2987,6 +2970,60 @@ const Rest = () => {
                 Exercise 10.
               </b>
               {" "}
+              Where is the rate of change of the function
+              below, on the part shown, greatest? And
+              where is the
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              rate of change of the rate of change
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              greatest?
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/GWW0.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The rate of change is the slope, which
+              is greatest along the right-hand portion
+              of the curve:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Qi_q.svg" />
+            <Pause />
+            <OuterP>
+              On the other hand,
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the rate of change of the rate of change
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              [a.k.a., second derivative] is the rate
+              of change  of the slope, and that will
+              be greatest at the first bend of the curve,
+              where the slope is changing at the fastest
+              rate:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/kw0r.svg" />
+            <Pause />
+            <OuterP>
+              (Well, believe us or not, but we're right!)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={11}>
+          <ExerciseStatement id="_60_hgi_">
+            <OuterP>
+              <b>
+                Exercise 11.
+              </b>
+              {" "}
               If you scale the graph of a function {" "}
               <Math>
                 $f$
@@ -3074,65 +3111,190 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement id="_60_hgi_">
-            <OuterP>
-              <b>
-                Exercise 11.
-              </b>
-              {" "}
-              Where is the rate of change of the function
-              below, on the part shown, greatest? And
-              where is the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              rate of change of the rate of change
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              greatest?
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/GWW0.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The rate of change is the slope, which
-              is greatest along the right-hand portion
-              of the curve:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Qi_q.svg" />
-            <Pause />
-            <OuterP>
-              On the other hand,
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the rate of change
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              [a.k.a., second derivative] is the rate
-              of change  of the slope, and that will
-              be greatest at the first bend of the curve,
-              where the slope is changing at the fastest
-              rate:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/kw0r.svg" />
-            <Pause />
-            <OuterP>
-              (Well, believe us or not, but we're right!)
-            </OuterP>
-          </Solution>
-        </Exercise>
         <Exercise number={12}>
           <ExerciseStatement id="_61_hgi_">
             <OuterP>
               <b>
                 Exercise 12.
+              </b>
+              {" "}
+              The solution to the previous exercise
+              erroneously assumes that the product of a
+              constant and a function has been defined. It
+              has not! Keeping in mind that the {" "}
+              <i>
+                sum
+              </i>
+              {" "}
+              of two functions {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $g: \rr \ra \rr$
+              </Math>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f + g
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is defined by the equation
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f + g = (x \ra f(x) + g(x))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              while their composition is defined by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ g = (x \ra f(g(x)))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and so on, what is the similar, most logical
+              definition for
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              cf
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where {" "}
+              <Math>
+                $c \in \rr$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $f : \rr \ra \rr$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The “logical” definition is:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              cf = (x \ra cf(x))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where the product {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $cf(x)$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} is an ordinary
+              multiplication between two real numbers,
+              because {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} is a real number and {" "}
+              <Math>
+                $f(x)$
+              </Math>
+              {" "} is
+              a real number! (In this way, the product of
+              a function by a real number “bootstraps”
+              off of the ordinary product of real numbers—this
+              is already similar to what happens for the
+              definition...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              fg = (x \ra f(x)g(x))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              of the product of two functions from {" "}
+              <Math>
+                $\rr$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $\rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              or with the case of function addition, that
+              relies on real number addition.) BUT. There
+              is a MORE CLEVER way of doing the definition.
+              Which is to define
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              cf = (x \ra c)f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where the right-hand-side is {" "}
+              <i>
+                one function
+                times another
+              </i>
+              , i.e., {" "}
+              <i>
+                a product of functions
+              </i>
+              ,
+              which is something that has ITSELF ALREADY BEEN
+              DEFINED. (!) (To wit, the definition of
+              function multiplication is that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              fg = (x \ra f(x)g(x))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              of course.) (Wait we just mentioned that
+              already.) Mathematicians LOVE to bootstrap off
+              an intermediate step, instead of going back to
+              the beginning, so the second way is clearly the
+              superior definition!!
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={13}>
+          <ExerciseStatement id="_62_hgi_">
+            <OuterP>
+              <b>
+                Exercise 13.
               </b>
               {" "}
               In the following graph, which curve might
@@ -3169,108 +3331,696 @@ const Rest = () => {
               derivative of the red curve is itself.)
             </OuterP>
             <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              After all, the slope of these curves
-              keeps oscillating between two fixed
-              values—the “most slanted up” and the
-              “most slanted down”—so their derivatives
-              were always going to have an oscillatory
-              pattern, as well.
-            </OuterP>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                After all, the slope of these curves
+                keeps oscillating between two fixed
+                values—the “most slanted up” and the
+                “most slanted down”—so their derivatives
+                were always going to have an oscillatory
+                pattern, as well.
+              </OuterP>
+            </SolutionNote>
             <Pause />
-            <OuterP>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              Because “most slanted up” occurs when
-              the curve has not yet crested, but when
-              the derivative {" "}
-              <i>
-                is already
-              </i>
-              {" "} in the
-              process of cresting (that's why it's
-              “most slanted up”), the derivative is
-              ahead of the original curve by half a
-              bump, not the other way around:
-            </OuterP>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Because “most slanted up” occurs when
+                the curve has not yet crested, but when
+                the derivative {" "}
+                <i>
+                  is already
+                </i>
+                {" "} in the
+                process of cresting (that's why it's
+                “most slanted up”), the derivative is
+                ahead of the original curve by half a
+                bump, not the other way around:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/P9o9.svg" />
+            </SolutionNote>
             <Pause />
-            <Image src="/build-img/svgo-svg/P9o9.svg" />
-            <Pause />
-            <OuterP>
-              <i>
-                Note 3.
-              </i>
-              {" "}
-              When we examine the velocity of a
-              particle moving in the plane, we examine
-              the velocities of its shadow on the
-              {" "}
-              <NoBreak>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                When we examine the velocity of a
+                particle moving in the plane, we examine
+                the velocities of its shadow on the
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -axes:
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/eSj9.svg" />
+              <Pause />
+              <OuterP>
+                The velocities of the two shadows
+                encode the overall “two-dimensional”
+                velocity of the particle. (No need for
+                quotes, really: the velocity {" "}
+                <i>
+                  is
+                </i>
+                {" "}
+                two-dimensional.)
+              </OuterP>
+              <OuterP class="indent-10">
+                Here's another point of view: just like
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                position
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is encoded by a pair of numbers—sometimes
+                known as the {" "}
+                <i>
+                  position vector
+                </i>
+                {" "} by
+                the way, where “vector” is a term of art
+                for “pair of numbers”—so the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                velocity
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is encoded by a pair of numbers—equally
+                known as the {" "}
+                <i>
+                  velocity vector
+                </i>
+                —which
+                is no coincidence, because the first
+                coordinate of the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                velocity vector
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is the derivative of the first coordinate
+                of the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                position vector
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                and likewise for the second coordinate—two
+                coordinates, two rates of change!
+              </OuterP>
+              <OuterP class="indent-10">
+                Geometrically, if we use the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -
+                </NoBreak>
+                {" "} and
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -components
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $v_x$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $v_y$
+                </Math>
+                {" "} of the
+                velocity to draw an arrow emanating
+                from a point on the curve, this arrow
+                is tangent to the curve, and the
+                <ImageRight src="/build-img/svgo-svg/52rF.svg" />
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                length
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of the arrow is the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                speed
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of the particle at that moment in time.
+                More precisely, if you let the particle
+                drift at the exact same {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -
+                </NoBreak>
+                {" "} and
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -velocities
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $v_x$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $v_y$
+                </Math>
+                {" "} that you
+                measured at the root of the arrow for
+                one unit of time, the particle would
+                cover exactly the length of the arrow
+                in that one unit of time, no more no less,
+                because the particle would cover {" "}
+                <Math>
+                  $v_x$
+                </Math>
+                {" "}
+                units in {" "}
                 <Math>
                   $x$
                 </Math>
-                -
-              </NoBreak>
-              {" "} and {" "}
+                {" "} and {" "}
+                <Math>
+                  $v_y$
+                </Math>
+                {" "} units in {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                And speed being
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                distance per unit time
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                the length of the arrow is, therefore,
+                the speed!
+              </OuterP>
+              <OuterP class="indent-10">
+                Now consider not one but four particles,
+                going around a unit circle in clockwise
+                fashion, 90° apart in phase, at unit
+                speed (“unit speed” = speed 1, “unit
+                circle” = radius 1) (ps: We center the
+                circle at the origin):
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/zkYn.svg" />
+              <Pause />
+              <OuterP>
+                The
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                position vectors
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of the particles are as follows:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/g6Et.svg" />
+              <Pause />
+              <OuterP>
+                (You can't really see it so well, but
+                each arrow originates at {" "}
+                <NoBreak>
+                  <Math>
+                    $(0, 0)$
+                  </Math>
+                  .)
+                </NoBreak>
+                {" "} While
+                the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                velocity vectors
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                are as follows:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/4R5D.svg" />
+              <Pause />
+              <OuterP>
+                (Like the position vectors, the
+                velocity vectors keep changing instant by
+                instant—this is the subtlety of calculus!)
+                The velocity vectors have length {" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "} because
+                the speed is {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <i>
+                  &amp;
+                </i>
+                {" "} are brushed
+                in the direction of travel.
+              </OuterP>
+              <OuterP class="indent-10">
+                (Nb: When we draw a vector as an arrow
+                we mean that the first coordinate of the
+                vector is equal to the horizontal
+                displacement from the tail of the arrow
+                to the head of the arrow, and likewise
+                that the second coordinate is equal to the
+                vertical displacement from the tail of the
+                arrow to the head of the arrow.)
+                <ImageRight src="/build-img/svgo-svg/BcYN.svg" />
+              </OuterP>
+              <OuterP class="indent-10">
+                Due to the 90° rotations and uniform
+                lengths of {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} one particle's velocity
+                vector is another particle's position
+                vector; as one example, the red particle's
+                velocity vector is the blue particle's
+                position vector:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/9nrU.svg" />
+              <Pause />
+              <OuterP>
+                From the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates,
+                </NoBreak>
+                {" "} for example,
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the velocity in {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} of the red particle
+                is the position in {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} of the blue particle
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                at any given moment in time. This also
+                means:
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the rate of change of the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}
+                of the red particle is the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}
+                of the blue particle
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                ...because “velocity in {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} is the same
+                as “rate of change of the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate”.
+                </NoBreak>
+              </OuterP>
+              <OuterP class="indent-10">
+                Concretely, if you graph the
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} of the red and blue
+                particles on the same graph, the rate of
+                change of the red particle's {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}
+                will equal the value of the blue particle's
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate.
+                </NoBreak>
+                {" "} These are the reds and blue
+                curves from the problem statement, if we
+                start the red particle at position
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                (1, 0)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                at time {" "}
+                <NoBreak>
+                  <Math>
+                    $t = 0$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/sg-c.svg" />
+              <Pause />
+              <OuterP>
+                If we add the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} of the green
+                and yellow particles, we find the graph
+                from the problem statement!
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 4.
+                </i>
+                {" "}
+                If needed, here is an illustration of
+                one {" "}
+                <Math>
+                  $360^\circ$
+                </Math>
+                {" "} rotation of the particles
+                of Note 3,  with each curve being an
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate:
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/E0qc.svg" />
+              <Pause />
+              <OuterP>
+                (If the above just looks like a
+                confusing mess then don't sweat it—it's
+                not that important.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 5.
+                </i>
+                {" "}
+                To reiterate, take a look at this
+                figure again:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/P9o9.svg" />
+              <Pause />
+              <OuterP>
+                The derivative is
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                ahead
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of the red particle, so that
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} you see {" "}
+                <i>
+                  now
+                </i>
+                {" "} on the
+                blue particle will be seen {" "}
+                <i>
+                  a little later
+                </i>
+                {" "}
+                on the red particle! (In particular, if you
+                wanted to generate the same curves with a
+                counterclockwise rotation, you could do that,
+                but you would have to reverse the order of
+                the particles around the circle to keep the
+                blue particle ahead of the red particle,
+                the yellow particle ahead of the blue
+                particle, etc.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={14}>
+          <ExerciseStatement id="_64_hgi_">
+            <OuterP>
+              <b>
+                Exercise 14.
+              </b>
+              {" "}
+              {" "}
+              <InChapterLink
+                href="/article/chapter4#_62_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 13
+              </InChapterLink>
+              {" "} exhibits a function {" "}
               <NoBreak>
                 <Math>
-                  $y$
+                  $f$
                 </Math>
-                -axes:
+                —in
               </NoBreak>
+              {" "} fact,
+              four different functions {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                —such
+              </NoBreak>
+              {" "} that
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/eSj9.svg" />
+            <MathBlock>
+              $$
+              f' \ne f
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
-              The velocities of the two shadows
-              encode the overall “two-dimensional”
-              velocity of the particle. (No need for
-              quotes, really: the velocity {" "}
-              <i>
-                is
-              </i>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f'' \ne f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f''' \ne f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              but
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;(4)&#125; = f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              surprise, surprise! Can you do the same with
               {" "}
-              two-dimensional.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Here's another point of view: just like
+              <NoBreak>
+                “
+                <Math>
+                  $5$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} instead of {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $4$
+                </Math>
+                ”?
+              </NoBreak>
+              {" "} I.e., find a function
+              {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} such that
             </OuterP>
             <Pause />
-            <CentralDisplayItalic>
-              position
-            </CentralDisplayItalic>
+            <MathBlock>
+              $$
+              f^&#123;(n)&#125; \ne f
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
-              is encoded by a pair of numbers—sometimes
-              known as the {" "}
-              <i>
-                position vector
-              </i>
+              for {" "}
+              <Math>
+                $n = 1, 2, 3, 4$
+              </Math>
+              {" "} but
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;(5)&#125; = f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We can naïvely try to imitiate how the
+              curves of {" "}
+              <InChapterLink
+                href="/article/chapter4#_70_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 18
+              </InChapterLink>
+              {" "} are generated by
+              placing five equally spaced particles
+              around the unit circle (“the” unit circle
+              is the one centered at {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                ,
+              </NoBreak>
               {" "} by
-              the way, where “vector” is a term of art
-              for “pair of numbers”—so the
+              convention), instead of 4:
             </OuterP>
             <Pause />
-            <CentralDisplayItalic>
-              velocity
-            </CentralDisplayItalic>
+            <Image src="/build-img/svgo-svg/826P.svg" />
             <Pause />
             <OuterP>
-              is encoded by a pair of numbers—equally
-              known as the {" "}
-              <i>
-                velocity vector
-              </i>
-              —which
-              is no coincidence, because the first
-              coordinate of the
+              The idea would be that the
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -3278,8 +4028,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              is the derivative of the first coordinate
-              of the
+              of the red particle is the
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -3287,983 +4036,698 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              and likewise for the second coordinate—two
-              coordinates, two rates of change!
+              of the blue particle,
+              likewise for the blue and yellow particles,
+              and so on. (Position vectors shown above.)
+              For example, at the instant above, the
+              velocity vectors would be as follows:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/uq4U.svg" />
+            <Pause />
+            <OuterP>
+              The velocity vectors are
+            </OuterP>
+            <Pause />
+            <CentralDisplay>
+              NOT
+            </CentralDisplay>
+            <Pause />
+            <OuterP>
+              tangent to the unit circle, and so the
+              particles will leave the circle!
+              (But that's OK.) In one-tenth a unit
+              of time, for example, the particles would
+              travel approximately one-tenth their
+              velocity vectors, that would bring them
+              to approximately these new positions:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/ZQgt.svg" />
+            <Pause />
+            <OuterP>
+              In the next one-tenth unit of time we
+              can apply a similar approximation again,
+              advancing the particles by {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 10&#125;$
+                </Math>
+                th
+              </NoBreak>
+              {" "}
+              of [the current approximation to] their
+              velocity vectors. Skipping the construction
+              lines:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/0xaW.svg" />
+            <Pause />
+            <OuterP>
+              Applying the same process for {" "}
+              <Math>
+                $8$
+              </Math>
+              {" "} more
+              steps:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/hg3g.svg" />
+            <Pause />
+            <OuterP>
+              To be clear, in the above figure, the
+              position of the red particle at, say, the
+              fifth step...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/GKbB.svg" />
+            <Pause />
+            <OuterP>
+              ...is obtained by starting from the red
+              particle's position at the fourth step...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/jG_S.svg" />
+            <Pause />
+            <OuterP>
+              ...and adding one-tenth of the approximation
+              that we have to the red particle's velocity
+              vector at that moment, that approximation
+              being namely the blue particle's position
+              vector at the fourth step {" "}
+              <NoBreak>
+                (
+                <Math>
+                  $t = &#123;4\over 10&#125;$
+                </Math>
+                )...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Js6D.svg" />
+            <Pause />
+            <OuterP>
+              ...and we do the same for each particle,
+              to advance to the next step.
             </OuterP>
             <OuterP class="indent-10">
-              Geometrically, if we use the {" "}
+              If we stop {" "}
+              <Math>
+                $10$
+              </Math>
+              {" "} times as often,
+              advancing the clock by {" "}
               <NoBreak>
                 <Math>
-                  $x$
+                  $&#123;1\over 100&#125;$
                 </Math>
-                -
+                th
               </NoBreak>
-              {" "} and
+              {" "} of
+              a unit of time at each step, the same figure
+              becomes just a blur (still going from
               {" "}
+              <Math>
+                $t = 0$
+              </Math>
+              {" "} to {" "}
               <NoBreak>
                 <Math>
-                  $y$
+                  $t = 1$
                 </Math>
-                -components
+                ):
               </NoBreak>
-              {" "} {" "}
-              <Math>
-                $v_x$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $v_y$
-              </Math>
-              {" "} of the
-              velocity to draw an arrow emanating
-              from a point on the curve, this arrow
-              is tangent to the curve, and the
-              <ImageRight src="/build-img/svgo-svg/52rF.svg" />
             </OuterP>
             <Pause />
-            <CentralDisplayItalic>
-              length
-            </CentralDisplayItalic>
+            <Image src="/build-img/svgo-svg/8BpD.svg" />
             <Pause />
             <OuterP>
-              of the arrow is the
+              To visualize such a fine-grained
+              approximation we need to revert to drawing
+              the particles as points. In the following
+              figure the colored paths are points that
+              come from a {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;1\over 100&#125;$
+                </Math>
+                th”
+              </NoBreak>
+              {" "} approximation,
+              while the orange dots are the old positions
+              obtained from a {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;1\over 10&#125;$
+                </Math>
+                th”
+              </NoBreak>
+              {" "}
+              approximation:
             </OuterP>
             <Pause />
-            <CentralDisplayItalic>
-              speed
-            </CentralDisplayItalic>
+            <Image src="/build-img/svgo-svg/uXS-.svg" />
             <Pause />
             <OuterP>
-              of the particle at that moment in time.
-              More precisely, if you let the particle
-              drift at the exact same {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -
-              </NoBreak>
-              {" "} and
-              {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -velocities
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $v_x$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $v_y$
-              </Math>
-              {" "} that you
-              measured at the root of the arrow for
-              one unit of time, the particle would
-              cover exactly the length of the arrow
-              in that one unit of time, no more no less,
-              because the particle would cover {" "}
-              <Math>
-                $v_x$
-              </Math>
-              {" "}
-              units in {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $v_y$
-              </Math>
-              {" "} units in {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              And speed being
+              Zooming in a bit (or else we still can't
+              see anything):
             </OuterP>
             <Pause />
-            <CentralDisplayItalic>
-              distance per unit time
-            </CentralDisplayItalic>
+            <Image src="/build-img/svgo-svg/IUP8.svg" />
             <Pause />
             <OuterP>
-              the length of the arrow is, therefore,
-              the speed!
+              In any case, even the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;1\over 100&#125;$
+                </Math>
+                th”
+              </NoBreak>
+              {" "}
+              approximation is just an approximation,
+              but the point is that such approximations
+              do converge to a set of “true” particle
+              paths, as pictured in {" "}
+              <NoBreak>
+                Fig
+                <Math>
+                  $.$
+                </Math>
+              </NoBreak>
+              {" "} 1, that can
+              be computed by some wizards; as time can
+              be played forward or backward, these paths
+              form doubly-infinite spirals—in to infinity,
+              out to infinity.
+              <ImageLeft
+                offset_x="1.5em"
+                src="/build-img/svgo-svg/QRVl.svg"
+                children_x="50%"
+                children_y="2em"
+              >
+                <p>
+                  <span style="font-size:1.4em">
+                    Fig. 1
+                  </span>
+                </p>
+              </ImageLeft>
             </OuterP>
             <OuterP class="indent-10">
-              Now consider not one but four particles,
-              going around a unit circle in clockwise
-              fashion, 90° apart in phase, at unit
-              speed (“unit speed” = speed 1, “unit
-              circle” = radius 1) (ps: We center the
-              circle at the origin):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/zkYn.svg" />
-            <Pause />
-            <OuterP>
-              The
+              In any case [take two] the point is that
+              whether or not you are one of the wizards,
+              you can
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              position vectors
+              guess
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              of the particles are as follows:
+              the existence of these five paths—sort
+              of “feel” that they exist! (This is a
+              moral consolation prize, at least.)
+            </OuterP>
+            <OuterP class="indent-10">
+              We can also convert the paths into a
+              function
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/g6Et.svg" />
+            <MathBlock>
+              $$
+              f
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
-              (You can't really see it so well, but
-              each arrow originates at {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                .)
-              </NoBreak>
-              {" "} While
-              the
+              that satisfies the problem requirements.
             </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              velocity vectors
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              are as follows:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/4R5D.svg" />
-            <Pause />
-            <OuterP>
-              (Like the position vectors, the
-              velocity vectors keep changing instant by
-              instant—this is the subtlety of calculus!)
-              The velocity vectors have length {" "}
+            <OuterP class="indent-10">
+              For example let {" "}
               <Math>
-                $1$
+                $f$
               </Math>
-              {" "} because
-              the speed is {" "}
+              {" "} be the function that,
+              given a time {" "}
               <NoBreak>
                 <Math>
-                  $1$
+                  $t$
                 </Math>
                 ,
               </NoBreak>
-              {" "} {" "}
-              <i>
-                &amp;
-              </i>
-              {" "} are brushed
-              in the direction of travel.
-            </OuterP>
-            <OuterP class="indent-10">
-              (Nb: When we draw a vector as an arrow
-              we mean that the first coordinate of the
-              vector is equal to the horizontal
-              displacement from the tail of the arrow
-              to the head of the arrow, and likewise
-              that the second coordinate is equal to the
-              vertical displacement from the tail of the
-              arrow to the head of the arrow.)
-              <ImageRight src="/build-img/svgo-svg/BcYN.svg" />
-            </OuterP>
-            <OuterP class="indent-10">
-              Due to the 90° rotations and uniform
-              lengths of {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} one particle's velocity
-              vector is another particle's position
-              vector; as one example, the red particle's
-              velocity vector is the blue particle's
-              position vector:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/9nrU.svg" />
-            <Pause />
-            <OuterP>
-              From the {" "}
+              {" "} outputs the {" "}
               <NoBreak>
                 <Math>
                   $x$
                 </Math>
-                -coordinates,
+                -coordinate
               </NoBreak>
-              {" "} for example,
+              {" "}
+              of the red particle at {" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                ;
+              </NoBreak>
+              {" "} then, to spell
+              it all out, since
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the velocity in {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} of the red particle
-              is the position in {" "}
-              <Math>
-                $x$
-              </Math>
+              the rate of change of the
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the red particle is the
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
               {" "} of the blue particle
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              at any given moment in time. This also
-              means:
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "}
-              of the red particle is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "}
-              of the blue particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              ...because “velocity in {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} is the same
-              as “rate of change of the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate”.
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Concretely, if you graph the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinates
-              </NoBreak>
-              {" "} of the red and blue
-              particles on the same graph, the rate of
-              change of the red particle's {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "}
-              will equal the value of the blue particle's
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate.
-              </NoBreak>
-              {" "} These are the reds and blue
-              curves from the problem statement, if we
-              start the red particle at position
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (1, 0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              at time {" "}
-              <NoBreak>
-                <Math>
-                  $t = 0$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/sg-c.svg" />
-            <Pause />
-            <OuterP>
-              If we add the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinates
-              </NoBreak>
-              {" "} of the green
-              and yellow particles, we find the graph
-              from the problem statement!
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 4.
-              </i>
-              {" "}
-              If needed, here is an illustration of
-              one {" "}
               <Math>
-                $360^\circ$
+                $f'$
               </Math>
-              {" "} rotation of the particles
-              of Note 3,  with each curve being an
+              {" "} is the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the blue
+              particle; and since
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the rate of change of the
               {" "}
               <NoBreak>
                 <Math>
                   $x$
                 </Math>
-                -coordinate:
+                -coordinate
               </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/E0qc.svg" />
-            <Pause />
-            <OuterP>
-              (If the above just looks like a
-              confusing mess then don't sweat it—it's
-              not that important.)
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 5.
-              </i>
+              {" "} of the blue particle is the
               {" "}
-              To reiterate, take a look at this
-              figure again:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/P9o9.svg" />
-            <Pause />
-            <OuterP>
-              The derivative is
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              ahead
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the yellow particle
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              of the red particle, so that
+              <Math>
+                $f''$
+              </Math>
+              {" "} is the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the
+              yellow particle; and since
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the rate of change of the
               {" "}
               <NoBreak>
                 <Math>
                   $x$
                 </Math>
-                -coordinates
+                -coordinate
               </NoBreak>
-              {" "} you see {" "}
-              <i>
-                now
-              </i>
-              {" "} on the
-              blue particle will be seen {" "}
-              <i>
-                a little later
-              </i>
+              {" "} of the yellow particle is the
               {" "}
-              on the red particle! (In particular, if you
-              wanted to generate the same curves with a
-              counterclockwise rotation, you could do that,
-              but you would have to reverse the order of
-              the particles around the circle to keep the
-              blue particle ahead of the red particle,
-              the yellow particle ahead of the blue
-              particle, etc.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_62_hgi_">
-            <OuterP>
-              <b>
-                Exercise 13.
-              </b>
-              {" "}
-              Apply the definition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              fg = (u \ra f(u)g(u))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              of function multiplication
-              in order to show that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)h = f(gh)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all functions {" "}
               <NoBreak>
                 <Math>
-                  $f, g, h : \rr \ra \rr$
+                  $x$
                 </Math>
-                ,
+                -coordinate
               </NoBreak>
-              {" "}
-              or, namely, to show that
+              {" "} of the green particle
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <Math>
+                $f'''$
+              </Math>
+              {" "} is the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the
+              green particle; and since
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
+              the rate of change of the
+              {" "}
               <NoBreak>
-                (
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the green particle
+              is the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the purple
+              particle
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <Math>
+                $f''''$
+              </Math>
+              {" "} is the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the
+              purple particle; and since
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the rate of change of the
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the purple particle is the
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the red particle
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <Math>
+                $f''''' = f^&#123;(5)&#125;$
+              </Math>
+              {" "} equals {" "}
+              <NoBreak>
                 <Math>
                   $f$
                 </Math>
-              </NoBreak>
-              {" "} times {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                )
-              </NoBreak>
-              {" "} times {" "}
-              <Math>
-                $h$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              equals
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <Math>
-                $f$
-              </Math>
-              {" "} times {" "}
-              <NoBreak>
-                (
-                <Math>
-                  $g$
-                </Math>
-              </NoBreak>
-              {" "} times {" "}
-              <NoBreak>
-                <Math>
-                  $h$
-                </Math>
-                )
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              for all functions {" "}
-              <NoBreak>
-                <Math>
-                  $f, g, h : \rr \ra \rr$
-                </Math>
                 .
               </NoBreak>
             </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              It is necessary and sufficient to show that
-            </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              ((fg)h)(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the same as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(gh))(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for an arbitrary input {" "}
-              <NoBreak>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                If you graph the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} of the
+                5 particles over time, each in their
+                color, you get a graph like so, in which
+                blue is the derivative of red, yellow is
+                the derivative of blue, etc; the function
+                {" "}
                 <Math>
-                  $u \in \rr$
+                  $f$
                 </Math>
-                ,
-              </NoBreak>
-              {" "} in order to
-              show that
-            </OuterP>
+                {" "} can be taken to be any one of these
+                curves:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/U6Hi.svg" />
+            </SolutionNote>
             <Pause />
-            <MathBlock>
-              $$
-              (fg)h
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f(gh)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              are the same function. (Function equality is
-              based on input-output behavior: two functions are
-              equal if and only if every input is mapped to the
-              same output under either function. See Note 6,
-              Exercise 9, Chapter 3.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Starting up,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ((fg)h)(u) = (fg)(u) \cdot h(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the definition of function multiplication,
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(gh))(u) = f(u) \cdot (gh)(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              likewise. Moreover,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)(u) = f(u) \cdot g(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (gh)(u) = g(u) \cdot h(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the same definition again. Therefore,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ((fg)h)(u) = (f(u) \cdot g(u)) \cdot h(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              on the one hand, and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(gh))(u) = f(u) \cdot (g(u) \cdot h(u))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              on the other hand. But
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(u) \cdot g(u)) \cdot h(u) = f(u) \cdot (g(u) \cdot h(u))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the associativity of ordinary real number
-              multiplication. (Not function multiplication:
-              {" "}
-              <i>
-                real number multiplication
-              </i>
-              .) So
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ((fg)h)(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              equals
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(gh))(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for arbitrary {" "}
-              <NoBreak>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                There is nothing special about
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} vis-à-vis {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinates.
+                </NoBreak>
+                {" "}
+                You can also define {" "}
                 <Math>
-                  $u$
+                  $f(t)$
                 </Math>
-                ,
-              </NoBreak>
-              {" "} which completes the proof.
-            </OuterP>
+                {" "} to be, e.g.,
+                the {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "} of the red particle
+                at time {" "}
+                <NoBreak>
+                  <Math>
+                    $t$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
             <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              In words, we have just established the
-            </OuterP>
+            <SolutionNote id="_63_hgi_">
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                It is worth noting that, in fact, the
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} live separate
+                lives. The rate of change of each
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "} is some other {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate,
+                </NoBreak>
+                {" "}
+                and the rate of change of each {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}
+                is some other {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate.
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
             <Pause />
-            <CentralDisplayItalic>
-              associativity of function multiplication
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              while we had previously established the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              associativity of function composition
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (if you recall that one) in Exercise 9 of Chapter
-              3.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              By this result, we can write
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              fgh
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              without any parentheses at all:
-              it doesn't matter whether we think of this
-              product as {" "}
-              <Math>
-                $(fg)h$
-              </Math>
-              {" "} or {" "}
-              <NoBreak>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 4.
+                </i>
+                {" "}
+                Adding to this observation, we don't
+                {" "}
+                <i>
+                  need
+                </i>
+                {" "} to start the particles in
+                a symmetric configuration. Symmetry only
+                helps to picture how the positions of the
+                particles will evolve without making any
+                computations. We also don't {" "}
+                <i>
+                  need
+                </i>
+                {" "}
+                to work in two dimensions. We can place
+                the particles in a one-dimensional world,
+                e.g., ...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/cejz.svg" />
+              <Pause />
+              <OuterP>
+                ...(the initial positions really don't
+                matter much, as long as you don't give
+                all the particles the {" "}
+                <i>
+                  same
+                </i>
+                {" "} initial
+                position, or else you won't have {" "}
                 <Math>
-                  $f(gh)$
+                  $f \ne f'$
                 </Math>
-                ,
-              </NoBreak>
-              {" "} the result
-              is the same.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_63_hgi_">
-            <OuterP>
-              <b>
-                Exercise 14.
-              </b>
-              {" "}
-              Prove that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f + g = g + f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              fg = gf
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all {" "}
-              <NoBreak>
+                {" "}
+                etc) and stipulate the same rules, namely
+                that the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                velocity
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                (now {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  -dimensional)
+                </NoBreak>
+                {" "} of the red particle
+                be the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                position
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                (now {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  -dimensional)
+                </NoBreak>
+                {" "} of the blue particle
+                and so on—you can “release” the particles
+                from their initial configuration and
+                simulate (or compute exactly, if you have
+                the know-how) their motion by the same
+                methods as above. The five position
+                functions obtained are each a solution
+                {" "}
                 <Math>
-                  $f, g : \rr \ra \rr$
+                  $f$
                 </Math>
-                ,
-              </NoBreak>
-              {" "} using the fact that
-            </OuterP>
+                {" "} to the problem. (But this solution will
+                typically look more chaotic than the curves
+                from Note 1.)
+              </OuterP>
+            </SolutionNote>
             <Pause />
-            <MathBlock>
-              $$
-              a + b = b + a
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ab = ba
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all {" "}
-              <NoBreak>
-                <Math>
-                  $a, b \in \rr$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              (Prove something for functions by using the
-              corresponding fact for numbers, namely.)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Given an arbitrary {" "}
-              <Math>
-                $u \in \rr$
-              </Math>
-              {" "} we have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f + g)(u) = f(u) + g(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (g + f)(u) = g(u) + f(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the definition of function addition. But
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f(u) + g(u) = g(u) + f(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the commutativity of real number addition
-              {" "}
-              <NoBreak>
-                [
-                <Math>
-                  $f(u)$
-                </Math>
-              </NoBreak>
-              {" "} and {" "}
-              <Math>
-                $g(u)$
-              </Math>
-              {" "} are both real numbers—the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              commutativity
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of real number addition is the fact that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              a + b = b + a
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all real numbers {" "}
-              <NoBreak>
-                <Math>
-                  $a$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $b$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} mentioned in the
-              statement—so we can use this here]; thus
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f + g)(u) = (g + f)(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all {" "}
-              <NoBreak>
-                <Math>
-                  $u \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which implies
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f + g = g + f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by definition of function equality.
-            </OuterP>
-            <OuterP class="indent-10">
-              For the second half we have, similarly,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align&#125;
-              (fg)(u) &amp;= f(u) \cdot g(u) \\
-              &amp;= g(u) \cdot f(u) \up&#123;1.5&#125;\\
-              &amp;= (gf)(u) \up&#123;1.5&#125;
-              \end&#123;align&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for arbitrary {" "}
-              <NoBreak>
-                <Math>
-                  $u\in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} where the first and
-              last equality are by the definition of a
-              product of functions and where
-              the middle equality is by commutativity of real
-              number multiplication. [That would be the fact that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ab = ba
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all {" "}
-              <NoBreak>
-                <Math>
-                  $a, b \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} as mentioned in the statement.] Hence
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              fg
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              gf
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              agree on an arbitrary input, hence {" "}
-              <Math>
-                $fg = gf$
-              </Math>
-              {" "} by
-              definition of function equality.
-            </OuterP>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 5.
+                </i>
+                {" "}
+                In fact, our symmetric two-dimensional
+                solution is an instance in which you can say
+                that
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the whole is simpler than the parts
+                <ImageLeft src="/build-img/svgo-svg/_DUb.svg" />
+                <ImageRight src="/build-img/svgo-svg/7DF3.svg" />
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                in that you would never spot the symmetry
+                at play, or have a chance of eyeballing
+                the long-term evolution of the system, if
+                you were shown just the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates,
+                </NoBreak>
+                {" "}
+                or just the {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinates,
+                </NoBreak>
+                {" "} on their own!
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={15}>
@@ -4273,1806 +4737,454 @@ const Rest = () => {
                 Exercise 15.
               </b>
               {" "}
-              A rat is running a fundraising race. The function
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large f : \rr \ra \rr
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              gives the amount raised as a function of position;
-              specifically, {" "}
+              If we seek a function {" "}
               <Math>
-                $&#123;f(x)&#125;$
+                $f : \rr \ra \rr$
               </Math>
-              {" "} is the total number of
-              $'s earned by virtue of running
               {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} meters from the start of the race;
-              a second function
+              such that
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \Large g : \rr \ra \rr
+              f^&#123;(17)&#125; = f
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              gives the position of the rat as a function of time;
-              specifically, {" "}
+              and such that {" "}
               <Math>
-                $&#123;g(t)&#125;$
+                $f \ne 0$
               </Math>
-              {" "} is the position from the start,
-              in meters, reached by the rat at {" "}
+              {" "} (or: {" "}
+              <NoBreak>
+                <Math>
+                  $f \ne (x \ra 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              pedantically) and such that {" "}
               <Math>
-                $t$
+                $f$
               </Math>
-              {" "} seconds after the
-              start of the race.
-            </OuterP>
-            <OuterP class="indent-10">
-              In this case, what does {" "}
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "} compute?
+              {" "} grows relatively
+              slowly in either the positive or negative direction
+              of the number line, insofar as such things are
+              concerned, what would our options be?
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It computes the amount earned by the rat as a
-              function of time. In more detail, {" "}
+              Take {" "}
               <Math>
-                $(f \circ g)(t)$
+                $17$
               </Math>
-              {" "}
-              is the number of $'s earned by the rat at {" "}
-              <Math>
-                $t$
-              </Math>
-              {" "}
-              seconds after the start of the race.
+              {" "} particles equally spaced out along
+              the unit circle, such as these (shown here
+              with position vectors):
             </OuterP>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                In even more detail,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                g(t)
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is the position in meters of the rat {" "}
-                <Math>
-                  $t$
-                </Math>
-                {" "}
-                seconds after start, by definition
-                of {" "}
-                <NoBreak>
-                  <Math>
-                    $g$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} at which position the rat has
-                earned
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                f(g(t))
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                $'s in total, by definition of {" "}
-                <NoBreak>
-                  <Math>
-                    $f$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "}
-                And
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                f(g(t))
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                (f \circ g)(t)
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                by definition of {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $\circ$
-                  </Math>
-                  ”.
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
+            <Image src="/build-img/svgo-svg/UDTy.svg" />
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                If it helps, here is a pictorialization of the
-                “units transformation pipeline” that
-                occurs inside {" "}
-                <NoBreak>
-                  <Math>
-                    $f \circ g$
-                  </Math>
-                  :
-                </NoBreak>
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/96sV.svg" />
-            </SolutionNote>
+            <OuterP>
+              Set the velocity of particle
+            </OuterP>
             <Pause />
-            <SolutionNote id="_64_hgi_">
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
-                To emphasize, {" "}
-                <Math>
-                  $f(x)$
-                </Math>
-                {" "} is the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                ~ total ~
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                amount earned when position {" "}
+            <MathBlock>
+              $$
+              &#123;\Large 1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              equal to the position of particle
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\Large 5&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and keep going by this pattern, making the
+              velocity of each particle equal to the
+              position of the particle that is {" "}
+              <Math>
+                $4$
+              </Math>
+              {" "} later;
+              in the configuration above, the velocity
+              vectors end up looking like so, for example:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/tkLL.svg">
+              <ImageRight src="/build-img/svgo-svg/Bvhk.svg" />
+            </Image>
+            <Pause />
+            <OuterP>
+              Maintaining this relationship at all
+              points in time, and given that the velocity
+              vectors point very slightly outward from
+              the unit circle, and because all the
+              symmetry and all the angles are maintained
+              as we play time forward or backward, the
+              particles spiral gently outward/inward from
+              the circle for time forward/backward,
+              respectively. Taking {" "}
+              <Math>
+                $f(t)$
+              </Math>
+              {" "} to be the {" "}
+              <NoBreak>
                 <Math>
                   $x$
                 </Math>
-                {" "} is reached.
-                In real life {" "}
-                <NoBreak>
-                  <Math>
-                    $f$
-                  </Math>
-                  's
-                </NoBreak>
-                {" "}
-                graph might therefore look something like this,
-                while inventing some numbers:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/CzxM.svg" />
-              <Pause />
-              <OuterP>
-                In the above the rat earns {" "}
-                <NoBreak>
-                  <Math>
-                    \(\te&#123;\$&#125;\)
-                  </Math>
-                  3
-                </NoBreak>
-                {" "} for the
-                first 50m, after which the dollar-per-meter
-                rate is reduced.
-                Or {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} could look like this, with discrete
-                “unlocks”:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/UxiE.svg" />
-              <Pause />
-              <OuterP>
-                In our mathematicians' imaginations, however, {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "}
-                might also look like this, nice and differentiable,
-                with periods of negative slope (corresponding to
-                parts of the course that momentarily lose you money):
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/-wVL.svg" />
-              <Pause />
-              <OuterP>
-                (Etc.)
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={16}>
-          <ExerciseStatement id="_66_hgi_">
-            <OuterP>
-              <b>
-                Exercise 16.
-              </b>
-              {" "}
-              What does {" "}
-              <Math>
-                $(f \circ g)'$
-              </Math>
-              {" "} compute,
-              keeping the same setup as in Exercise 34?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              It computes the dollars-per-second earnings rate
-              as a function of time. In full detail,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \circ g)'(t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the dollars-per-second rate which the rat is
-              fundraising at {" "}
-              <Math>
-                $t$
-              </Math>
-              {" "} seconds after the start of the race.
-            </OuterP>
-            <OuterP class="indent-10">
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              You don't need to know anything about {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f$
-                </Math>
-                ”
+                -
               </NoBreak>
               {" "}
               or {" "}
               <NoBreak>
-                “
                 <Math>
-                  $g$
+                  $y$
                 </Math>
-                ”
+                -coordinate
               </NoBreak>
-              {" "} to answer this question. You only need to
-              know what {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f \circ g$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} is.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={17}>
-          <ExerciseStatement id="_67_hgi_">
-            <OuterP>
-              <b>
-                Exercise 17.
-              </b>
-              {" "}
-              Continuing with the fundraising rat as in the
-              previous two exercises, assume that the functions
-              {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} have these graphs:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/3IfQ.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/TBiP.svg" />
-            <Pause />
-            <OuterP>
-              In this case what is {" "}
+              {" "} of any one of the particles
+              (e.g., particle {" "}
               <NoBreak>
                 <Math>
-                  $(f \circ g)'(2)$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              At {" "}
-              <NoBreak>
-                <Math>
-                  $t = 2$
-                </Math>
-                s
-              </NoBreak>
-              {" "} the rat is running at a velocity of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;5\over 3\up&#123;1&#125;&#125;[&#123;\te&#123;m/s&#125;&#125;]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the slope of this line segment on {" "}
-              <NoBreak>
-                <Math>
-                  $y = g(t)$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/qPIg.svg" />
-            <Pause />
-            <OuterP>
-              Moreover at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 2$
-                </Math>
-                s
-              </NoBreak>
-              {" "} the rat
-              has reached
-              {" "}
-              <NoBreak>
-                <Math>
-                  $2 \cdot (5/3) = 10/3 = 3.\overline&#123;33&#125;$
-                </Math>
-                m,
-              </NoBreak>
-              {" "}
-              where the dollars-per-meter earnings
-              rate is one-tenth of a dollar per meter, by
-              the slope of this segment on the graph {" "}
-              <NoBreak>
-                <Math>
-                  $y = f(x)$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/dAMr.svg" />
-            <Pause />
-            <OuterP>
-              Multiplying the {" "}
-              <Math>
-                $5/3$
-              </Math>
-              {" "} meters-per-second velocity
-              by the {" "}
-              <Math>
-                $1/10$
-              </Math>
-              {" "} dollars-per-meter rate gives
-              us the dollars-per-second rate at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 2$
-                </Math>
-                s
-              </NoBreak>
-              {" "} (our
-              final answer—recall that {" "}
-              <Math>
-                $(f \circ g)'(2)$
-              </Math>
-              {" "} is
-              the dollars-per-second rate at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 2$
-                </Math>
-                s,
-              </NoBreak>
-              {" "} by Exercise 35):
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;5\over 3\up&#123;1&#125;&#125;\left[&#123;\te&#123;m&#125; \over \te&#123;s&#125;&#125;\right]\right) \times \left(&#123;1 \over 10\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;m&#125;&#125;\right]\right) = &#123;5\over 30\up&#123;1&#125;&#125;\left[&#123;\te&#123;\$&#125; \over \te&#123;s&#125;&#125;\right].
-              $$
-              <ImageRight
-                src="/build-img/svgo-svg/eJML.svg"
-                compensate_offset_x_for_large_text_columns={true}
-              />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              Or since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;5 \over 3&#125; = 1.6666...
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              that would be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;0.1666...&#125;[\te&#123;\$/s&#125;]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              in decimal, i.e.,
-              <span style="font-family:Clicker Script;font-size:1.3em;">
-                ~sixteen~
-              </span>
-              point {" "}
-              <Math>
-                $666...$
-              </Math>
-              {" "} cents per second.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Postscript.
-              </i>
-              {" "}
-              It turns out that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;5 \over 30&#125; = &#123;1 \over 6&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as we weren't really paying attention to the
-              possibility of simplifying the fraction. In
-              particular,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 6&#125; = 0.1666...
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as, indeed, {" "}
-              <Math>
-                $0.1666...$
-              </Math>
-              {" "} is half of {" "}
-              <NoBreak>
-                <Math>
-                  $0.333...$
-                </Math>
-                !
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={18}>
-          <ExerciseStatement id="_68_hgi_">
-            <OuterP>
-              <b>
-                Exercise 18.
-              </b>
-              {" "}
-              Conjecture a general formula for
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \circ g)'(t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for arbitrary (differentiable, say) functions
-              {" "}
-              <NoBreak>
-                <Math>
-                  $f, g : \rr \ra \rr$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (If it helps, interpret {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}
-              and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} exactly as in the scenario of the fundraising
-              race, {" "}
-              <NoBreak>
-                cf
-                <Math>
-                  $.$
-                </Math>
-              </NoBreak>
-              {" "} Exercises 34-37.)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The sought-for formula is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              g'(t)\cdot f'(g(t))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because—to come back to the example of the
-              fundraising race—one must multiply the meters-per-second
-              velocity at time {" "}
-              <Math>
-                $t$
-              </Math>
-              {" "} (that is, {" "}
-              <NoBreak>
-                <Math>
-                  $g'(t)$
+                  $1$
                 </Math>
                 )
               </NoBreak>
-              {" "} by the dollars-per-meter
-              earnings rate at position {" "}
-              <Math>
-                $g(t)$
-              </Math>
-              {" "} (that is, {" "}
-              <NoBreak>
-                <Math>
-                  $f'(g(t))$
-                </Math>
-                )
-              </NoBreak>
-              {" "} to obtain
-              the final dollars-per-second earning rate at time {" "}
+              {" "} at time {" "}
               <Math>
                 $t$
               </Math>
-              {" "}
-              (that is, {" "}
+              {" "} gives an
+              oscillating function whose {" "}
               <NoBreak>
                 <Math>
-                  $(f \circ g)'(t)$
+                  $17$
                 </Math>
-                ).
+                th
               </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              (For example, the solution to Exercise 36 can actually
-              be written
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              g'(2) \cdot f'(g(2))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              since, indeed, {" "}
+              {" "} derivative
+              is itself (because the rate of change of
+              the {" "}
               <NoBreak>
                 <Math>
-                  $g(2) = 3.333...$
+                  $x$
                 </Math>
-                .
+                -coordinate
               </NoBreak>
-              {" "} [Remember that we ended
-              up multiplying {" "}
+              {" "} of particle {" "}
               <Math>
-                $g'(2) = &#123;5\over 3&#125;\te&#123;m/s&#125;$
+                $1$
               </Math>
-              {" "} by
+              {" "} is the
               {" "}
               <NoBreak>
                 <Math>
-                  \(f'(3.333...) = &#123;1\over 10&#125;\te&#123;\$/s&#125;\)
+                  $x$
                 </Math>
-                —the
+                -coordinate
               </NoBreak>
-              {" "} {" "}
+              {" "} of particle {" "}
               <NoBreak>
-                “
                 <Math>
-                  $3.333...$
+                  $5$
                 </Math>
-                ”
+                ,
               </NoBreak>
-              {" "} is
+              {" "} etc, until
+              we make it all the way back to particle {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ),
+              </NoBreak>
               {" "}
-              <NoBreak>
-                <Math>
-                  $g(2)$
-                </Math>
-                .])
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Nb: This result is known as the {" "}
-              <i>
-                chain rule
-              </i>
-              .
+              and that grows comparatively slowly over
+              time. ~The End~
             </OuterP>
             <Pause />
             <OuterP>
               <i>
                 Note 1.
               </i>
-              {" "} Said {" "}
-              <i>
-                chain rule
-              </i>
               {" "}
-              is more commonly written...
+              In case you're curious, the actual spiral paths
+              of the particles look like so:
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              (f \circ g)'(x) = f'(g(x))g'(x)
-              $$
-            </MathBlock>
+            <Image src="/build-img/svgo-svg/kytU.svg" />
             <Pause />
             <OuterP>
-              ...with {" "}
+              ...and if you take the {" "}
               <NoBreak>
-                “
-                <Math>
-                  $g'(x)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} last. (And {" "}
-              <NoBreak>
-                “
                 <Math>
                   $x$
                 </Math>
-                ”
+                -coordinates
               </NoBreak>
-              {" "} instead of {" "}
+              {" "} of
+              the particles over time, with time {" "}
+              <Math>
+                $t = 0$
+              </Math>
+              {" "}
+              corresponding to the original configuration
+              depicted where particle 1 is at {" "}
               <NoBreak>
-                “
                 <Math>
-                  $t$
+                  $(1, 0)$
                 </Math>
-                ”.)
+                ,
               </NoBreak>
+              {" "} you
+              find {" "}
+              <del>
+                paths
+              </del>
+              {" "} functions that look like so:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/KuID.svg" />
+            <Pause />
+            <OuterP>
+              For example, the derivative of curve {" "}
+              <InlineImage
+                class="ch4_17_pellets"
+                src="/build-img/svgo-svg/i4u9.svg"
+              />
+              , highlighted below in red, is curve {" "}
+              <InlineImage
+                class="ch4_17_pellets"
+                src="/build-img/svgo-svg/twzO.svg"
+              />
+              , highlighted in blue:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/SKRR.svg" />
+            <Pause />
+            <OuterP>
+              ...and taking sixteen more derivatives
+              starting from curve {" "}
+              <InlineImage
+                class="ch4_17_pellets"
+                src="/build-img/svgo-svg/twzO.svg"
+              />
+              {" "} we would go through curves {" "}
+              <InlineImage
+                class="ch4_17_pellets"
+                src="/build-img/svgo-svg/A7E1.svg"
+              />
+              , {" "}
+              <InlineImage
+                class="ch4_17_pellets"
+                src="/build-img/svgo-svg/256c.svg"
+              />
+              , {" "}
+              <InlineImage
+                class="ch4_17_pellets"
+                src="/build-img/svgo-svg/oMBk.svg"
+              />
+              , {" "}
+              <InlineImage
+                class="ch4_17_pellets"
+                src="/build-img/svgo-svg/26-z.svg"
+              />
+              , ..., {" "}
+              <InlineImage
+                class="ch4_17_pellets"
+                src="/build-img/svgo-svg/hEuY.svg"
+              />
+              {" "} before finally coming back to curve {" "}
+              <InlineImage
+                class="ch4_17_pellets"
+                src="/build-img/svgo-svg/i4u9.svg"
+                style="margin-right:0.1em"
+              />
+              !
             </OuterP>
             <Pause />
             <OuterP>
               <i>
                 Note 2.
               </i>
-              {" "} One can also write the chain rule very succinctly like so...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \circ g)' = (f' \circ g)g'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...where the right-hand-side is the product of {" "}
-              <Math>
-                $g'$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $f' \circ g$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={19}>
-          <ExerciseStatement id="_69_hgi_">
-            <OuterP>
-              <b>
-                Exercise 19.
-              </b>
               {" "}
-              Sketch the velocity vector of a particle
-              going at three times unit speed (“speed {" "}
-              <NoBreak>
-                <Math>
-                  $3$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} in common
-              parlance) clockwise around a circle of radius {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              What path does the velocity vector describe
-              over time? (I.e., if you cut-paste the velocity
-              vector back to the origin, so that its “tail”
-              is at {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} what curve does the far end of the
-              vector describe?) Over how much time?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The velocity vector is an arrow of length {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "}
-              tangent to a circle of radius {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} brushed
-              clockwise:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/6etX.svg" />
-            <Pause />
-            <OuterP>
-              If we bring the tail of the vector back to
-              {" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              {" "} we find an arrow of length {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "}
-              tracing a circle of radius {" "}
-              <NoBreak>
-                <Math>
-                  $3$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/F9Zp.svg" />
-            <Pause />
-            <OuterP>
-              Lastly, the velocity vector does a full revolution
-              of the red circle in the same amount of time that
-              the particle does a full revolution of the blue circle,
-              which is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;2\cdot (\te&#123;circumference of a unit circle&#125;) \over \te&#123;3&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because the circumference of the blue circle
-              is twice the circumference of a unit circle,
-              and the particle is going at speed {" "}
-              <NoBreak>
-                <Math>
-                  $3$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              In such diagrams we recycle the axes
-              to plot quantities of several different
-              dimensions: positions (in blue, in this
-              case) have dimensions of length ([L]) while
-              velocities (in red, in this case) have
-              dimensions of length over time ([L/T]).
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_70_hgi_">
-            <OuterP>
-              <b>
-                Exercise 20.
-              </b>
-              {" "}
-              What is the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              acceleration vector
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (velocity vector of the velocity vector)
-              of the particle from Exercise 39?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The velocity vector of Exercise 39 travels
-              in a circle of radius {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "} in the same amount
-              of time that the position vector
-              travels around a circle of radius {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              The speed of the velocity vector is therefore
-              {" "}
-              <Math>
-                $1.5$
-              </Math>
-              {" "} times the speed of the position vector,
-              or {" "}
-              <NoBreak>
-                <Math>
-                  $1.5 \times 3 = 4.5$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              As the derivative of the velocity vector,
-              the acceleration vector is therefore
-              a vector of length {" "}
-              <Math>
-                $4.5$
-              </Math>
-              {" "} (= the speed of the
-              velocity vector) brushed clockwise along
-              the path of the velocity vector:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/wKig.svg" />
-            <Pause />
-            <OuterP>
-              Or, if we translate the acceleration vector back
-              to the origin and trace out its path over time
-              (either way is fine):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/bvs-.svg" />
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              You truly have to think of the acceleration
-              vector as “the velocity of the velocity
-              vector”—if the velocity vector is changing, the
-              acceleration vector is nonzero!
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={21}>
-          <ExerciseStatement id="_72_hgi_">
-            <OuterP>
-              <b>
-                Exercise 21.
-              </b>
-              {" "}
-              Sketch the velocity vector, acceleration vector,
-              and jerk vector of a particle going around a circle
-              of radius {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "} at speed {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (Clockwise, say.)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The velocity vector has length {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} because the
-              particle has speed {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                .
-              </NoBreak>
-              {" "} So the velocity vector
-              looks like so, while attached to the particle path
-              (top) or brought back to the origin (bottom):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/d71u.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/q6Sb.svg" />
-            <Pause />
-            <OuterP>
-              Moreover (!) the speed of the velocity vector is
-              {" "}
-              <Math>
-                $2/3$
-              </Math>
-              {" "} the speed of the particle, because the
-              velocity vector goes around a circle of {" "}
-              <Math>
-                $2/3$
-              </Math>
-              {" "} the
-              radius in the same amount of time. So the velocity
-              vector has speed
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2 \cdot &#123;2\over 3&#125; = &#123;4\over 3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              from which the acceleration vector—that can be
-              described as “the velocity vector of the velocity
-              vector”—has length {" "}
-              <Math>
-                $&#123;4\over 3&#125;$
-              </Math>
-              {" "} (the speed of the
-              velocity vector), and looks like so (in either representation):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/dF7b.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/F2u1.svg" />
-            <Pause />
-            <OuterP>
-              Lastly the acceleration vector has speed
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;4\over 3&#125;\cdot &#123;2\over 3&#125; = &#123;8 \over 9&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by virtue of circling a circle of radius {" "}
-              <Math>
-                $2/3$
-              </Math>
-              {" "}
-              that of the velocity vector, that has speed {" "}
-              <NoBreak>
-                <Math>
-                  $4/3$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              in the same amount of time. Since the jerk is the
-              derivative of the acceleration, this becomes the
-              length of the jerk vector, that is exactly opposite
-              to the velocity vector, being twice {" "}
-              <Math>
-                $90^\circ$
-              </Math>
-              {" "} away:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/VSpZ.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/1EdZ.svg" />
-            <Pause />
-            <StarDivider />
-            <Pause />
-            <SolutionNote id="_71_hgi_">
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                If the particle's original path is centered at
-                {" "}
-                <Math>
-                  $(0, 0)$
-                </Math>
-                {" "} then that path constitutes a fourth
-                circle obeying the same pattern
-                of {" "}
-                <NoBreak>
-                  <Math>
-                    $2/3$
-                  </Math>
-                  -ratios
-                </NoBreak>
-                {" "} between the successive radii:
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <Image src="/build-img/svgo-svg/nVRw.svg" />
-          </Solution>
-        </Exercise>
-        <Exercise number={22}>
-          <ExerciseStatement id="_74_hgi_">
-            <OuterP>
-              <b>
-                Exercise 22.
-              </b>
-              {" "}
-              Sketch the velocity vector, acceleration vector,
-              and jerk vector of a particle going around a circle
-              of radius {" "}
-              <Math>
-                $r$
-              </Math>
-              {" "} at speed {" "}
-              <NoBreak>
-                <Math>
-                  $v$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              (You can assume say {" "}
-              <Math>
-                $v/r \approx 1.2$
-              </Math>
-              {" "} for the sake
-              of your sketch.) Give algebraic expressions for the
-              lengths of the various vectors.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              While the particle goes around a circle of
-              radius {" "}
-              <NoBreak>
-                <Math>
-                  $r$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} the velocity vector goes around a
-              circle of radius {" "}
-              <NoBreak>
-                <Math>
-                  $v$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (Indeed {" "}
-              <NoBreak>
-                <Math>
-                  $v$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              being the speed, is the length of the velocity
-              vector, and the length of the velocity vector
-              is the radius of the circle traced by the
-              velocity vector.) So the circle traced by the
-              velocity vector is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;v \over r&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              times as large as the circle traced by the
-              position vector. Therefore, the  velocity vector
-              goes
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;v \over r&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              times as fast as the position vector! (The two
-              vectors trace their respective circles in the
-              same amount of time, so the only difference
-              in speed is caused by differences in the
-              radii—and this is the ratio of the radii.)
-              Therefore, the velocity vector has speed
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large v \cdot &#123;v \over r&#125; = &#123;v^2 \over r&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...as obtained by multiplying the speed of the
-              position vector {" "}
-              <NoBreak>
-                (
-                <Math>
-                  $v$
-                </Math>
-                )
-              </NoBreak>
-              {" "} by the ratio of the speeds
-              {" "}
-              <NoBreak>
-                (
-                <Math>
-                  $v/r$
-                </Math>
-                ).
-              </NoBreak>
-              {" "} This is also the length of the acceleration
-              vector. (Speed of velocity vector = length of
-              acceleration vector.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Next, the ratio
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the same for the velocity vector as it is for
-              the position vector, because both “speed” and
-              “radius” are scaled up by a factor
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;v \over r&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              compared to the position vector.
-              So
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125; = &#123;v \over r&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for the velocity vector as well as for the position
-              vector. But we can also write this ratio as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;\te&#123;length of acceleration vector&#125;\over \te&#123;radius&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              since the speed of the velocity vector is the
-              length of the acceleration vector, or as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;\te&#123;length of acceleration vector&#125;\over \te&#123;radius of velocity vector circle&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be more exact, or as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large &#123;\te&#123;radius of acceleration vector circle&#125;\over \te&#123;radius of velocity vector circle&#125;&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              in yet another way! Therefore, the circle traced by
-              the acceleration vector is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large &#123;v \over r&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              times as large as the circle traced by the velocity
-              vector, and the same pattern starts all over again!
-            </OuterP>
-            <OuterP class="indent-10">
-              (In other words, each time we take a derivative we
-              find that the vector whose derivative we are taking
-              has speed
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large &#123;v \over r&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              times the speed of the previous vector whose
-              derivative we took, resulting in a circle
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large &#123;v \over r&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              times as large as the current circle, resulting in
-              a future speed {" "}
-              <Math>
-                $v/r$
-              </Math>
-              {" "} times as large for the next
-              derivative, etc, etc.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Concretely, the length of the jerk vector will be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large &#123;v^2 \over r&#125; \cdot &#123;v \over r&#125; = &#123;v^3 \over r^2&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because the length of the acceleration is {" "}
-              <NoBreak>
-                <Math>
-                  $v^2/r$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              and the length of the derivative of the jerk would
-              be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large &#123;v^3 \over r^2&#125; \cdot &#123;v \over r&#125; = &#123;v^4 \over r^3&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because the length of the jerk is {" "}
-              <NoBreak>
-                <Math>
-                  $v^3/r^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} etc.
-              (Not that we needed to go beyond the jerk.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Coming back to a sketch of all this, if
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large &#123;v \over r&#125; \approx 1.2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              the sketch will involve concentric circles
-              of successive ratio {" "}
-              <Math>
-                $\approx 1.2$
-              </Math>
-              {" "} with the
-              successive vectors being off by {" "}
-              <NoBreak>
-                <Math>
-                  $90^\circ$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              The position circle might not be centered at
-              {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so we didn't include it in this sketch
-              (this sketch presumes clockwise motion, but
-              it's unimportant):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/ltlc.svg">
-              <p>
-                But if the position circle is centered at {" "}
-                <NoBreak>
-                  <Math>
-                    $(0, 0)$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                it becomes the first circle in the sequence:
-              </p>
-            </Image>
-            <Pause />
-            <Image src="/build-img/svgo-svg/U8eB.svg" />
-            <Pause />
-            <StarDivider />
-            <Pause />
-            <SolutionNote id="_73_hgi_">
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                The ratio
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\Large &#123;v \over r&#125;&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is known as the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                angular velocity
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of the particle. You can think of the angular velocity
-                as
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\Large &#123;\te&#123;speed&#125;\over \te&#123;radius&#125;&#125;&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                directly per the expression above, or as
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\Large &#123;\te&#123;distance per unit time&#125;\over \te&#123;radius&#125;&#125;&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                since that is just the definition of “speed”, but which also
-                means that you can think of the angular velocity as
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \Large &#123;\te&#123;number of radii per unit time&#125;&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                or, say, just as
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \Large &#123;\te&#123;radii per unit time&#125;&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                in other words.
-                (The “number or radii” covered by an arc is
-                also known as the {" "}
-                <i>
-                  radian measure
-                </i>
-                {" "} of the arc—an
-                alternate measure of angle—so this can also be
-                phrased {" "}
-                <i>
-                  radians per unit time
-                </i>
-                , in that sense.)
-                What is noteworthy is that the angular velocity
-                of the position vector is the same as the
-                angular velocity of the velocity vector, of the
-                acceleration vector, etc, and it also constitutes
-                the ratio between the successive lengths of all
-                these vectors!
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                A common notation for the angular velocity of a
-                particle is
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\Large \omega&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                which means that the velocity vector, acceleration
-                vector, and jerk vector have lengths
-                have lengths
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\Large \omega&#123;&#125;^1r&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\Large \omega&#123;&#125;^2r&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\Large \omega&#123;&#125;^3r&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                respectively, where {" "}
-                <Math>
-                  $r$
-                </Math>
-                {" "} is the radius of the circle,
-                as the angular velocity is the ratio of the lengths
-                of the successive vectors, as noted. (PS: As the
-                length of the velocity vector is also known as the
-                speed, {" "}
-                <Math>
-                  $\omega^1r = \omega&#123;&#125;r$
-                </Math>
-                {" "} is also the speed,
-                by another name.) (PPS: We couldn't resist writing
-                {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $\omega^1r$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} instead of {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $\omega&#123;&#125;r$
-                  </Math>
-                  ”,
-                </NoBreak>
-                {" "} to keep things
-                extra symmetric {" "}
-                <i>
-                  &amp;
-                </i>
-                {" "} typographically aligned.)
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={23}>
-          <ExerciseStatement id="_75_hgi_">
-            <OuterP>
-              <b>
-                Exercise 23.
-              </b>
-              {" "}
-              Four particles are moving at speed {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "}
-              around a circle of radius {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "} centered at {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              spaced out by {" "}
-              <NoBreak>
-                <Math>
-                  $90^\circ$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/VDnQ.svg" />
-            <Pause />
-            <OuterP>
-              Sketch the position vector, velocity vector,
-              acceleration vector, and jerk vector of each
-              particle. What is the angular velocity of each
-              particle?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Starting with the second part of the
-              question, because the particles are going around
-              a circle of radius {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "} at speed {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "} the
-              angular velocity (cf. Exercise 37) is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large &#123;3\over 3&#125; = 1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which means that the ratio of the lengths of
-              all the vectors will be {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} i.e., all vectors
-              (velocity, acceleration, jerk) will have the
-              same length as the radius, which is {" "}
-              <NoBreak>
-                <Math>
-                  $3$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Keeping in mind that the jerk is
+              It can be interesting to examine what
+              goes wrong if we attempt to make the
+              velocity vectors even more tangent to the
+              unit circle. For example, if we start the
+              particles so that particle 5 is at
               {" "}
               <Math>
                 $90^\circ$
               </Math>
-              {" "} ahead of the acceleration is {" "}
+              {" "} exactly from particle 1,
+              particle 9 is at {" "}
               <Math>
                 $90^\circ$
               </Math>
-              {" "}
-              ahead of the velocity, etc, in the direction of
-              rotation, the sixteen vectors—four for each
-              particle—are therefore as follows:
+              {" "} exactly from
+              particle 5, and so on, until we reach
+              particle 14, the last particle in this
+              order; then we have the following starting
+              configuration:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/186P.svg" />
+            <Image src="/build-img/svgo-svg/t94J.svg" />
             <Pause />
             <OuterP>
-              (In particular, the purple particle's position
-              ends up being the velocity of the red particle,
-              and many other identities of the sort.)
+              To parse the above figure, understand
+              that:
             </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={24}>
-          <ExerciseStatement id="_76_hgi_">
+            <TextParent>
+              <ul style="margin:20px 20px 20px 50px;list-style-type:disc;">
+                <li style="margin-bottom:10px;">
+                  the red arrows indicate which particle
+                  takes its velocity from the position
+                  of which other particle; for example,
+                  particle 1 has velocity equal to the
+                  position of particle 5
+                </li>
+                <li>
+                  particles that occupy the same starting
+                  position on the unit circle appear
+                  stacked together, as a representation
+                  device; for example, particle 2 has the
+                  same starting position as particle 5
+                </li>
+              </ul>
+            </TextParent>
             <OuterP>
-              <b>
-                Exercise 24.
-              </b>
-              {" "}
-              What are the dimensions of angular velocity?
-              (For example, the dimensions of velocity are
-              “length over time”, ([L/T]).)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              <i>
-                Solution 1.
-              </i>
-              {" "}
-              Angular velocity is
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              speed over radius
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              which has dimensions
+              (Note that the red arrows have to form
+              a cycle of length 17 in order for us to
+              later extract a function {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} such that
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;\Large &#123;\te&#123;L/T&#125; \over \te&#123;L&#125;&#125;&#125;
+              f^&#123;(17)&#125; = f
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              because speed has dimensions of length over time,
-              L/T, while the radius has dimensions of length, L;
-              this simplifies...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/ds09.svg" />
-            <Pause />
-            <OuterP>
-              ...down to dimensions of “one over time”.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Solution 2.
-              </i>
-              {" "}
-              Angular velocity is
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              radians per unit time
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              number of radii per unit time
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (if you prefer),
-              which is a “one over time” quantity, because
-              radians are dimensionless.
+              but this is the case: the red arrows only
+              “close the loop” after going through all
+              17 particles!)
             </OuterP>
             <OuterP class="indent-10">
-              Indeed, “radian” is
-              short for “number of radii that fit inside the
-              arc length”, which is one length
-              divided by another length,
-              which is, therefore,
-              dimensionless.
+              In this starting configuration, all
+              velocity vectors are exactly tangent to
+              the unit circle
+            </OuterP>
+            <Pause />
+            <CentralDisplay>
+              EXCEPT
+            </CentralDisplay>
+            <Pause />
+            <OuterP>
+              for particle 14, whose velocity vector,
+              being the position of particle 1, is straight
+              out from the circle! So, as we “start time”,
+              particle 14 will push out from the circle,
+              that will in turn affect particle 10, and
+              so on, until all particles end up being
+              “peeled off” from the circle, in due time;
+              if you are so curious, the particle
+              trajectories end up like so (shown only for
+              {" "}
+              <NoBreak>
+                <Math>
+                  $t \geq 0$
+                </Math>
+                ):
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/3j-T.svg" />
+            <Pause />
+            <OuterP>
+              The particles shoot of to infinity in short
+              order—the solution is much worse—for fun we
+              have also highlighted two particle trajectories
+              in this figure:
+            </OuterP>
+            <TextParent>
+              <ul style="margin:20px 20px 20px 50px;list-style-type:disc;">
+                <li style="margin-bottom:10px;">
+                  in {" "}
+                  <span style="border:1px solid blue">
+                    blue
+                  </span>
+                  , particle 1, the last particle
+                  to be (noticeably*) “peeled off” from
+                  the circle (*all particles are
+                  instantaneously peeled off from the
+                  circle to {" "}
+                  <i>
+                    some
+                  </i>
+                  {" "} degree, as one
+                  particle's slight deviation affects
+                  the next, that affects the next, etc)
+                </li>
+                <li>
+                  in {" "}
+                  <span style="border:1px solid red">
+                    red
+                  </span>
+                  , particle 14, the {" "}
+                  <i>
+                    first
+                  </i>
+                  {" "} particle
+                  to leave the circle—but because its
+                  velocity vector is given by particle 1,
+                  which itself starts by going around in
+                  a circle, it, too, starts out by going
+                  around in a circle!
+                </li>
+              </ul>
+            </TextParent>
+            <OuterP>
+              (The point is: if your velocity vector
+              is tracing a circle centered at {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                —at
+              </NoBreak>
+              {" "}
+              a uniform rate—then you, too, are going
+              around in a circle—it's just that your
+              circle could be centered anywhere, not
+              necessarily at {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                !)
+              </NoBreak>
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={25}>
-          <ExerciseStatement id="_78_hgi_">
+        <Exercise number={16}>
+          <ExerciseStatement id="_67_hgi_">
             <OuterP>
               <b>
-                Exercise 25.
+                Exercise 16.
               </b>
               {" "}
               Imagine a single particle in a one-dimensional
@@ -6118,7 +5230,7 @@ const Rest = () => {
               see {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_77_hgi_"
+                  href="/article/chapter4#_66_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Note 1
@@ -6299,7 +5411,7 @@ const Rest = () => {
               {" "} no matter how far back in time you look.)
             </OuterP>
             <Pause />
-            <SolutionNote id="_77_hgi_">
+            <SolutionNote id="_66_hgi_">
               <OuterP>
                 <i>
                   Note 1.
@@ -6356,11 +5468,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={26}>
-          <ExerciseStatement id="_79_hgi_">
+        <Exercise number={17}>
+          <ExerciseStatement id="_68_hgi_">
             <OuterP>
               <b>
-                Exercise 26.
+                Exercise 17.
               </b>
               {" "}
               Take a system of two particles on the real
@@ -6408,10 +5520,10 @@ const Rest = () => {
               particles. If we add also the graph of the position
               of the red particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_78_hgi_"
+                href="/article/chapter4#_67_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 25
+                Exercise 16
               </InChapterLink>
               {" "}
               to this set of graphs, what symmetries
@@ -6573,11 +5685,1733 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={27}>
-          <ExerciseStatement id="_80_hgi_">
+        <Exercise number={18}>
+          <ExerciseStatement id="_70_hgi_">
             <OuterP>
               <b>
-                Exercise 27.
+                Exercise 18.
+              </b>
+              {" "}
+              Add elements to the following drawing...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/1hYI.svg" />
+            <Pause />
+            <OuterP>
+              ...such that it becomes a “complete”
+              illustration of this here algebraic
+              expression...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f(x+h) - f(x) \over h&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...and reveal the “geometric meaning” of
+              the expression, if any.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              This version pictures all the elements
+              that appear in the fraction:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/cWTG.svg" />
+            <Pause />
+            <OuterP>
+              The point is: the fraction
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f(x + h) - f(x)\over h&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is seen to have the form {" "}
+              <i>
+                rise over run
+              </i>
+              ,
+              and is more precisely equal to the slope
+              of the pale brown line going through the
+              point
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x, f(x))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              at one end, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x + h, f(x + h))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              at the other end. (This is also the case
+              if {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "} is negative, by the way.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                A fraction of this form is called a {" "}
+                <i>
+                  Newton
+                  quotient
+                </i>
+                .
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The pale brown line is sometimes known as
+                the {" "}
+                <i>
+                  secant
+                </i>
+                {" "} [through {" "}
+                <NoBreak>
+                  <Math>
+                    $(x, f(x))$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $(x+h, f(x+h))$
+                  </Math>
+                  ].
+                </NoBreak>
+                {" "}
+                “Secant” is a general term for “line passing
+                through two specified points on another
+                curve”.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote id="_69_hgi_">
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                If we let {" "}
+                <Math>
+                  $h$
+                </Math>
+                {" "} drop to {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and if {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} is
+                differentiable at {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} the
+                Newton-quotient-a.k.a.-slope-of-the-secant
+                approaches
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                f'(x)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                because the secant approaches the tangent,
+                in that case, and the slope of the secant
+                is also, perforce, approaching the slope
+                of the tangent, which is {" "}
+                <NoBreak>
+                  <Math>
+                    $f'(x)$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} (But you
+                cannot directly set {" "}
+                <NoBreak>
+                  <Math>
+                    $h = 0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} because
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;f(x+0)-f(x)\over 0&#125; = &#123;0 \over 0&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is undefined.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={19}>
+          <ExerciseStatement id="_71_hgi_">
+            <OuterP>
+              <b>
+                Exercise 19.
+              </b>
+              {" "}
+              The identity
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f + g)' = f' + g'
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              happens to be true for differentiable
+              functions {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                .
+              </NoBreak>
+              {" "} What English-language
+              aphorism can summarize it? (This identity
+              is known as the {" "}
+              <i>
+                sum rule
+              </i>
+              , by the way.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              One can say
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the derivative of the sum is the sum of the
+              derivatives
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the rate of change of the sum is the sum of
+              the rates of change
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              or (we made this one up)
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the rate of change of the aggregate is the sum
+              of the rates of change of the components
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (etc).
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={20}>
+          <ExerciseStatement id="_72_hgi_">
+            <OuterP>
+              <b>
+                Exercise 20.
+              </b>
+              {" "}
+              The function below is also the red
+              curve from {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_62_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 13
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "} known as the
+              {" "}
+              <i>
+                cosine function
+              </i>
+              {" "} (already encountered
+              in {" "}
+              <NoBreak>
+                <a
+                  href="/article/chapter3#_49_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Chapter 3, Exercise 7
+                </a>
+                ).
+              </NoBreak>
+              {" "} Knowing
+              that this function is the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of a
+              point rotating at unit speed around a unit
+              circle, find, by inspection of the graph,
+              a rational approximation to the circumference
+              of a unit circle.
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/njEr.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Because the particle is going at unit speed the
+              circumference of the unit circle is equal to the
+              amount of time it takes the particle to complete one
+              revolution of the circle. That is, for example, the
+              length of this yellow interval:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/KEtq.svg" />
+            <Pause />
+            <OuterP>
+              One revolution around the circle is also
+              made up of four quarter-revolutions, where
+              each quarter-revolution of the circle is “half a bump”,
+              on the graph:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/2Uov.svg" />
+            <Pause />
+            <OuterP>
+              Going a bit further, {" "}
+              <i>
+                seven
+              </i>
+              {" "} of these
+              quarter-revolutions appear to take up exactly
+              {" "}
+              <Math>
+                $t = 11$
+              </Math>
+              {" "} units of time (!!!!!!!!!!!) (or maybe
+              just a {" "}
+              <i>
+                little
+              </i>
+              {" "} less than {" "}
+              <Math>
+                $11$
+              </Math>
+              {" "} units, if
+              you zoom in):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/oghJ.svg" />
+            <Pause />
+            <OuterP>
+              Therefore
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;11 \over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is an approximation to the quarter-circumference of
+              the circle, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is an approximation to the circumference of a unit
+              circle.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 1.
+              </i>
+              {" "}
+              This approximation ends up being about
+              half-a-part-in-a-thousand too large
+              {" "}
+              <NoBreak>
+                (
+                <Math>
+                  $0.040249943...\%$
+                </Math>
+              </NoBreak>
+              {" "} too large) (or just:
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $0.00040249943...$
+                </Math>
+              </NoBreak>
+              {" "}
+              too large”), which is strikingly good, all things
+              considered.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 2.
+              </i>
+              {" "}
+              Numerically, note that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;44 \over 7&#125; = 6.285714\dots
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is a bit larger than {" "}
+              <NoBreak>
+                <Math>
+                  $6$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which agrees with
+              what we see here for the length of a full
+              revolution...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/dK07.svg" />
+            <Pause />
+            <OuterP>
+              ...whereas
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;11 \over 7&#125; = 1.571428\dots
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is about {" "}
+              <NoBreak>
+                <Math>
+                  $1.6$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which also appears to agree
+              with what we can see on the graph about the
+              length of a quarter-revolution:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/jUtu.svg" />
+            <Pause />
+            <OuterP>
+              (So, we have some secondary “visual confirmation”
+              of our approximations.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={21}>
+          <ExerciseStatement id="_73_hgi_">
+            <OuterP>
+              <b>
+                Exercise 21.
+              </b>
+              {" "}
+              In this exercise we consider two points
+              in time {" "}
+              <Math>
+                $t_0$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $t_0 + \Delta&#123;&#125;t$
+              </Math>
+              {" "} (here
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\Delta&#123;&#125;t$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} read “delta {" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} is a
+              standard notation for a small amount of
+              time):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/rzVH.svg" />
+            <Pause />
+            <OuterP>
+              We also consider quantities {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}
+              that are changing with time; {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}
+              have some value at {" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and, say, grow
+              to be larger at {" "}
+              <NoBreak>
+                <Math>
+                  $t_0 + \Delta&#123;&#125;t$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Axof.svg" />
+            <Pause />
+            <OuterP>
+              More specifically, we are interested in
+              the change in the value of the product
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large AB
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              over said course of time.
+            </OuterP>
+            <OuterP class="indent-10">
+              To introduce an unsolicited metaphor,
+              imagine {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} as
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/zn1D.svg" />
+            <Pause />
+            <OuterP>
+              that are crossing a hallway surveyed by
+              a cat. One side of the hallway is time
+              {" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the other side of the hallway is
+              time {" "}
+              <NoBreak>
+                <Math>
+                  $t_0 + \Delta&#123;&#125;t$
+                </Math>
+                .
+              </NoBreak>
+              {" "} So great is their
+              terror that {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} have decided to
+              scurry across the hallway one at a time.
+              First {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} will go, then {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                .
+              </NoBreak>
+              {" "} In so, we
+              can separate the following moments of
+              interest (“moments” that exist inside the
+              metaphorical timeline of the story, not
+              on the {" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                -number
+              </NoBreak>
+              {" "} line, to be clear):
+              <ImageLeft
+                offset_x="0.5em"
+                offset_y="-0.5em"
+                src="/build-img/svgo-svg/zR89.svg"
+              />
+            </OuterP>
+            <TextParent>
+              <ol style="margin:0 1.5em 0.5em 2em;list-style:auto;list-style-position:outside;">
+                <li style="margin-top:0.5em">
+                  when {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} and {" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "} are both still at {" "}
+                  <Math>
+                    $t_0$
+                  </Math>
+                </li>
+                <li style="margin-top:0.5em">
+                  when {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} has made it to {" "}
+                  <NoBreak>
+                    <Math>
+                      $t_0 + \Delta&#123;&#125;t$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "}
+                  and {" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "} is still at {" "}
+                  <Math>
+                    $t_0$
+                  </Math>
+                </li>
+                <li style="margin-top:0.5em">
+                  <del>
+                    when {" "}
+                    <NoBreak>
+                      <Math>
+                        $B$
+                      </Math>
+                      's
+                    </NoBreak>
+                    {" "} tail is sticking out of the
+                    cat's mouth, and
+                  </del>
+                  {" "} when {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} and {" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "} have both made it
+                  to {" "}
+                  <Math>
+                    $t_0 + \Delta&#123;&#125;t$
+                  </Math>
+                </li>
+              </ol>
+            </TextParent>
+            <OuterP>
+              Correspondingly, the product
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large AB
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              changes in two increments: first as {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "}
+              makes it to the other side of the hallway
+              (and {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} grows bigger); then as {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} joins
+              him/her (and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} grows bigger). In an
+              equation:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/S2-s.svg" />
+            <Pause />
+            <OuterP>
+              If we divide the above equation by {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "}
+              and let {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "} drop to {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} what does
+              each term become?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Dividing by {" "}
+              <NoBreak>
+                <Math>
+                  $\Delta&#123;&#125;t$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Im2x.svg" />
+            <Pause />
+            <OuterP>
+              As {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the term
+              on the left-hand side approaches
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (AB)'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where we view {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} as functions
+              of time with, therefore, the product {" "}
+              <Math>
+                $AB$
+              </Math>
+              {" "}
+              also becoming a function of time. (By
+              definition, {" "}
+              <Math>
+                $AB$
+              </Math>
+              {" "} is the function
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              t \rightarrow A(t)B(t)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where {" "}
+              <Math>
+                $A(t)$
+              </Math>
+              {" "} is the value of {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} at time
+              {" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $B(t)$
+              </Math>
+              {" "} is the value of {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} at time
+              {" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                .)
+              </NoBreak>
+              {" "} Indeed, a ratio of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0)\over \Delta&#123;&#125;t&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is a Newton quotient (cf. {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_70_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 18
+                </InChapterLink>
+                ),
+              </NoBreak>
+              {" "}
+              that approaches
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} assuming
+              {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} is differentiable at {" "}
+              <Math>
+                $t_0$
+              </Math>
+              {" "} (cf.
+              {" "}
+              <InChapterLink
+                href="/article/chapter4#_70_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 18
+              </InChapterLink>
+              {" "}
+              {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_69_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Note 3
+                </InChapterLink>
+                ),
+              </NoBreak>
+              {" "} and
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/MvBw.svg" />
+            <Pause />
+            <OuterP>
+              has the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0)\over \Delta&#123;&#125;t&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $f = AB$
+                </Math>
+                .
+              </NoBreak>
+              <ImageLeft src="/build-img/svgo-svg/LuWh.svg" />
+            </OuterP>
+            <OuterP class="indent-10">
+              The first term on the right-hand side, for
+              its part, approaches
+              <ImageRight src="/build-img/svgo-svg/5bqq.svg" />
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              B(t_0)A'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} Indeed,
+              when you write it out, that term becomes
+              the algebraic expression
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0) - A(t_0)B(t_0) \over \Delta&#123;&#125;t&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where every term on top contains a
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $B(t_0)$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} that can therefore be factored
+              out, giving us the equivalent expression
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              B(t_0)\cdot&#123;A(t_0 + \Delta&#123;&#125;t) - A(t_0) \over \Delta&#123;&#125;t&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              that, you will notice, has the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              B(t_0)\cdot&#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0) \over \Delta&#123;&#125;t&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $f = A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and thus approaches
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              B(t_0) \cdot A'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $\Delta t$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} by the property
+              of the Newton quotient.
+            </OuterP>
+            <OuterP class="indent-10">
+              Lastly the most interesting term is the
+              second term on the right-hand side!
+              Symmetrically to the first term on the
+              right-hand side, the second term approaches
+              <ImageRight src="/build-img/svgo-svg/9OXS.svg" />
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A(t_0)B'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} but the
+              reasons are slightly different! (Slightly.)
+              Indeed, this term, written out, is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0+\Delta&#123;&#125;t) - A(t_0+ \Delta&#123;&#125;t)B(t_0) \over \Delta&#123;&#125;t&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which is equal to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A(t_0 + \Delta&#123;&#125;t)\cdot&#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by factoring out the common term {" "}
+              <NoBreak>
+                <Math>
+                  $A(t_0 + \Delta&#123;&#125;t)$
+                </Math>
+                ;
+              </NoBreak>
+              {" "}
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              approaches
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              B'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} like before
+              (when we had {" "}
+              <Math>
+                $AB$
+              </Math>
+              {" "} or {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} instead of {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                )
+              </NoBreak>
+              {" "}
+              whereas
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A(t_0 + \Delta&#123;&#125;t)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              —which is a bit different from before—approaches
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                —so
+              </NoBreak>
+              {" "} that makes up
+              {" "}
+              <NoBreak>
+                <Math>
+                  $A(t_0)B'(t_0)$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (The
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              differentiability
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              of {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} at {" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                —that
+              </NoBreak>
+              {" "} we are tacitly
+              assuming—implies
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              continuity
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              as well, which implies that {" "}
+              <Math>
+                $A(t_0 + \Delta&#123;&#125;t)$
+              </Math>
+              {" "}
+              approaches {" "}
+              <Math>
+                $A(t_0)$
+              </Math>
+              {" "} as {" "}
+              <Math>
+                $\Delta t$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Summarizing, the three terms separately
+              approach
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (AB)'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              B(t_0)A'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              A(t_0)B'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "} approaches {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and, in fact,
+              because the equation holds no matter how
+              close we make each term to its respective limit
+              above, one can conclude that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for functions {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} differentiable at
+              a point {" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                This result is known as the {" "}
+                <i>
+                  product rule
+                </i>
+                .
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Keeping things alphabetical everywhere, the
+                same equation is more often written
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                with {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $A'(t_0)B(t_0)$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} in the middle. (But
+                which is the same, of course, as {" "}
+                <NoBreak>
+                  <Math>
+                    $B(t_0)A'(t_0)$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={22}>
+          <ExerciseStatement id="_74_hgi_">
+            <OuterP>
+              <b>
+                Exercise 22.
+              </b>
+              {" "}
+              What does...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/6ZYS.svg"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...approach as {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "} goes to {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} if {" "}
+              <Math>
+                $A_1, \dots, A_n$
+              </Math>
+              {" "}
+              {" "}
+              <Math>
+                $: \rr \ra \rr$
+              </Math>
+              {" "} are differentiable at the point {" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We can start with the fraction in the
+              middle of the product:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/c9db.svg" />
+            <Pause />
+            <OuterP>
+              This is seen to be a Newton quotient
+              (cf. {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_70_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 18
+                </InChapterLink>
+                )
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f(x + h) - f(x)\over h
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              with {" "}
+              <NoBreak>
+                <Math>
+                  $f = A_i$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $x = t_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} per which
+              (Exercise {" "}
+              <InChapterLink
+                href="/article/chapter4#_70_hgi_"
+                class="handle-in-chapter-link"
+              >
+                18
+              </InChapterLink>
+              {" "} Note 3), the fraction approaches
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A_i'(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} given also the assumption
+              that each of the functions {" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} ..., {" "}
+              <Math>
+                $A_n$
+              </Math>
+              {" "}
+              (including {" "}
+              <NoBreak>
+                <Math>
+                  $A_i$
+                </Math>
+                )
+              </NoBreak>
+              {" "} is differentiable at {" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Next down in order of interesting-ness we presumably
+              have the terms {" "}
+              <Math>
+                $A_1(t_0 + h)$
+              </Math>
+              {" "} through {" "}
+              <Math>
+                $A_&#123;i-1&#125;(t_0 + h)$
+              </Math>
+              {" "}
+              at the beginning of the product...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/B9Zl.svg" />
+            <Pause />
+            <OuterP>
+              ...; here the
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              differentiability
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              of {" "}
+              <Math>
+                $A_1$
+              </Math>
+              {" "} at {" "}
+              <Math>
+                $t_0$
+              </Math>
+              {" "} implies the
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              continuity
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              of {" "}
+              <Math>
+                $A_1$
+              </Math>
+              {" "} at {" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which implies that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A_1(t_0 + h)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              approaches
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A_1(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (These various
+              technicalities concerning a generic function
+              {" "}
+              <Math>
+                $f : \rr \ra \rr$
+              </Math>
+              {" "} are mentioned in the solution
+              to Exercise 17.) Similarly for {" "}
+              <NoBreak>
+                <Math>
+                  $A_2(t_0 + h)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              etc, up to {" "}
+              <NoBreak>
+                <Math>
+                  $A_&#123;i-1&#125;(t_0 + h)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              approaches
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A_1(t_0) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "} approaches {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (If some quantities are
+              each approaching a different value, then the
+              product-of-the-quantities will approach the
+              product-of-the-values—something not mentioned
+              in the solution to Exercise 17, but that might
+              have been.)
+            </OuterP>
+            <OuterP class="indent-10">
+              Lastly one has the tail end of the product,
+              where {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "} does not even appear:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/TQjR.svg" />
+            <Pause />
+            <OuterP>
+              Because {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "} does not appear here, the tail end
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              stays put
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              where it is, irrespective of the value of {" "}
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              So that was easy! Altogether, the answer is
+              therefore:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/hUGM.svg" />
+            <Pause />
+            <OuterP>
+              ...with a lone {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $A_i'$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} in the middle.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={23}>
+          <ExerciseStatement id="_75_hgi_">
+            <OuterP>
+              <b>
+                Exercise 23.
               </b>
               {" "}
               Four particles are placed
@@ -6789,10 +7623,10 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_61_hgi_"
+                  href="/article/chapter4#_62_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 12
+                  Exercise 13
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -6899,10 +7733,10 @@ const Rest = () => {
               particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_78_hgi_"
+                  href="/article/chapter4#_67_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 25
+                  Exercise 16
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -6912,10 +7746,10 @@ const Rest = () => {
               red particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_78_hgi_"
+                  href="/article/chapter4#_67_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 25
+                  Exercise 16
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -8662,142 +9496,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={28}>
-          <ExerciseStatement id="_81_hgi_">
+        <Exercise number={24}>
+          <ExerciseStatement id="_76_hgi_">
             <OuterP>
               <b>
-                Exercise 28.
-              </b>
-              {" "}
-              Find a nonzero function {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and a nonzero
-              constant {" "}
-              <Math>
-                $a \in \rr$
-              </Math>
-              {" "} such that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f'(x) = f(x + a)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Recall the curves from {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_61_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 12
-                </InChapterLink>
-                :
-              </NoBreak>
-              {" "}{" "}
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/X2nI.svg" />
-            <Pause />
-            <OuterP>
-              The blue curve is the derivative of the red curve
-              but is also the horizontal translate of the red curve by
-              {" "}
-              <Math>
-                $a$
-              </Math>
-              {" "} units to the left, where
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              a
-              $$
-              <ImageLeft
-                src="/build-img/svgo-svg/be04.svg"
-                offset_x="200px"
-                compensate_offset_x_for_large_text_columns={true}
-              />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the distance between adjacent bumps. Thus if
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the function that generates the red curve, then
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f'(x) = f(x + a)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              using the fact that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              y = f(x + a)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the horizontal translate of {" "}
-              <Math>
-                $y = f(x)$
-              </Math>
-              {" "} by {" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}
-              units to the left, in general for any function
-              {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and constant {" "}
-              <NoBreak>
-                <Math>
-                  $a \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} as discussed
-              in Exercise 14 of Chapter 3. (Well, this shows
-              one solution, at least.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={29}>
-          <ExerciseStatement id="_82_hgi_">
-            <OuterP>
-              <b>
-                Exercise 29.
+                Exercise 24.
               </b>
               {" "}
               Express the...
@@ -9058,1509 +9761,261 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={30}>
-          <ExerciseStatement id="_83_hgi_">
+        <Exercise number={25}>
+          <ExerciseStatement id="_77_hgi_">
             <OuterP>
               <b>
-                Exercise 30.
+                Exercise 25.
               </b>
               {" "}
-              How can we generate the following set of
-              curves by rotating points around a circle,
-              and tracking their {" "}
+              Apply the definition
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              fg = (u \ra f(u)g(u))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              of function multiplication
+              in order to show that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (fg)h = f(gh)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all functions {" "}
               <NoBreak>
                 <Math>
-                  $x$
-                </Math>
-                -coordinates?
-              </NoBreak>
-              {" "} (This
-              graph is an exact {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                &#x200b;
-              </NoBreak>
-              <Math>
-                $\times$
-              </Math>
-              {" "} [“two
-              x”] vertical dilation of the graph in 
-              {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_61_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 12
-                </InChapterLink>
-                .)
-              </NoBreak>
-              {" "} Should we use 
-              a circle of radius {" "}
-              <NoBreak>
-                <Math>
-                  $2$
+                  $f, g, h : \rr \ra \rr$
                 </Math>
                 ,
               </NoBreak>
-              {" "} or make the points 
-              go twice as fast? Or both? Or something else
-              yet?
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/B7D4.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The values oscillate between {" "}
-              <Math>
-                $+2$
-              </Math>
-              {" "} and
               {" "}
-              <NoBreak>
-                <Math>
-                  $-2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so we need a circle of radius {" "}
-              <Math>
-                $2$
-              </Math>
-              {" "}
-              to generate these curves. Also the
-              values go through one cycle in the same
-              amount of time as the particles of
-              {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_61_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 12
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} but the circle has twice the
-              circumference (having twice the radius),
-              so the particles are going twice as fast!
-              (I.e.: speed 2, since the particles of
-              {" "}
-              <InChapterLink
-                href="/article/chapter4#_61_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 12
-              </InChapterLink>
-              {" "} have unit speed.)
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                In this and in the previous exercise the
-                units of time and distance are “anonymous”:
-                distance could be meters, kilometers, or
-                anything, and time could be seconds, hours,
-                etc—it doesn't matter. Either way,
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                unit speed
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                means that one unit of distance is traveled
-                per unit of time, whatever the units are.
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={31}>
-          <ExerciseStatement id="_85_hgi_">
-            <OuterP>
-              <b>
-                Exercise 31.
-              </b>
-              {" "}
-              {" "}
-              <InChapterLink
-                href="/article/chapter4#_61_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 12
-              </InChapterLink>
-              {" "} exhibits a function {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                —in
-              </NoBreak>
-              {" "} fact,
-              four different functions {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                —such
-              </NoBreak>
-              {" "} that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f' \ne f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f'' \ne f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f''' \ne f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              but
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;(4)&#125; = f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              surprise, surprise! Can you do the same with
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $5$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} instead of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $4$
-                </Math>
-                ”?
-              </NoBreak>
-              {" "} I.e., find a function
-              {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} such that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;(n)&#125; \ne f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for {" "}
-              <Math>
-                $n = 1, 2, 3, 4$
-              </Math>
-              {" "} but
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;(5)&#125; = f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              We can naïvely try to imitiate how the
-              curves of Exercise 16 are generated by
-              placing five equally spaced particles
-              around the unit circle (“the” unit circle
-              is the one centered at {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} by
-              convention), instead of 4:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/826P.svg" />
-            <Pause />
-            <OuterP>
-              The idea would be that the
+              or, namely, to show that
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              velocity vector
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of the red particle is the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              position vector
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of the blue particle,
-              likewise for the blue and yellow particles,
-              and so on. (Position vectors shown above.)
-              For example, at the instant above, the
-              velocity vectors would be as follows:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/uq4U.svg" />
-            <Pause />
-            <OuterP>
-              The velocity vectors are
-            </OuterP>
-            <Pause />
-            <CentralDisplay>
-              NOT
-            </CentralDisplay>
-            <Pause />
-            <OuterP>
-              tangent to the unit circle, and so the
-              particles will leave the circle!
-              (But that's OK.) In one-tenth a unit
-              of time, for example, the particles would
-              travel approximately one-tenth their
-              velocity vectors, that would bring them
-              to approximately these new positions:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/ZQgt.svg" />
-            <Pause />
-            <OuterP>
-              In the next one-tenth unit of time we
-              can apply a similar approximation again,
-              advancing the particles by {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over 10&#125;$
-                </Math>
-                th
-              </NoBreak>
-              {" "}
-              of [the current approximation to] their
-              velocity vectors. Skipping the construction
-              lines:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/0xaW.svg" />
-            <Pause />
-            <OuterP>
-              Applying the same process for {" "}
-              <Math>
-                $8$
-              </Math>
-              {" "} more
-              steps:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/hg3g.svg" />
-            <Pause />
-            <OuterP>
-              To be clear, in the above figure, the
-              position of the red particle at, say, the
-              fifth step...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/GKbB.svg" />
-            <Pause />
-            <OuterP>
-              ...is obtained by starting from the red
-              particle's position at the fourth step...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/jG_S.svg" />
-            <Pause />
-            <OuterP>
-              ...and adding one-tenth of the approximation
-              that we have to the red particle's velocity
-              vector at that moment, that approximation
-              being namely the blue particle's position
-              vector at the fourth step {" "}
               <NoBreak>
                 (
                 <Math>
-                  $t = &#123;4\over 10&#125;$
-                </Math>
-                )...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Js6D.svg" />
-            <Pause />
-            <OuterP>
-              ...and we do the same for each particle,
-              to advance to the next step.
-            </OuterP>
-            <OuterP class="indent-10">
-              If we stop {" "}
-              <Math>
-                $10$
-              </Math>
-              {" "} times as often,
-              advancing the clock by {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over 100&#125;$
-                </Math>
-                th
-              </NoBreak>
-              {" "} of
-              a unit of time at each step, the same figure
-              becomes just a blur (still going from
-              {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $t = 1$
-                </Math>
-                ):
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/8BpD.svg" />
-            <Pause />
-            <OuterP>
-              To visualize such a fine-grained
-              approximation we need to revert to drawing
-              the particles as points. In the following
-              figure the colored paths are points that
-              come from a {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $&#123;1\over 100&#125;$
-                </Math>
-                th”
-              </NoBreak>
-              {" "} approximation,
-              while the orange dots are the old positions
-              obtained from a {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $&#123;1\over 10&#125;$
-                </Math>
-                th”
-              </NoBreak>
-              {" "}
-              approximation:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/uXS-.svg" />
-            <Pause />
-            <OuterP>
-              Zooming in a bit (or else we still can't
-              see anything):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/IUP8.svg" />
-            <Pause />
-            <OuterP>
-              In any case, even the {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $&#123;1\over 100&#125;$
-                </Math>
-                th”
-              </NoBreak>
-              {" "}
-              approximation is just an approximation,
-              but the point is that such approximations
-              do converge to a set of “true” particle
-              paths, as pictured in {" "}
-              <NoBreak>
-                Fig
-                <Math>
-                  $.$
-                </Math>
-              </NoBreak>
-              {" "} 1, that can
-              be computed by some wizards; as time can
-              be played forward or backward, these paths
-              form doubly-infinite spirals—in to infinity,
-              out to infinity.
-              <ImageLeft
-                offset_x="1.5em"
-                src="/build-img/svgo-svg/QRVl.svg"
-                children_x="50%"
-                children_y="2em"
-              >
-                <p>
-                  <span style="font-size:1.4em">
-                    Fig. 1
-                  </span>
-                </p>
-              </ImageLeft>
-            </OuterP>
-            <OuterP class="indent-10">
-              In any case [take two] the point is that
-              whether or not you are one of the wizards,
-              you can
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              guess
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              the existence of these five paths—sort
-              of “feel” that they exist! (This is a
-              moral consolation prize, at least.)
-            </OuterP>
-            <OuterP class="indent-10">
-              We can also convert the paths into a
-              function
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              that satisfies the problem requirements.
-            </OuterP>
-            <OuterP class="indent-10">
-              For example let {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} be the function that,
-              given a time {" "}
-              <NoBreak>
-                <Math>
-                  $t$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} outputs the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "}
-              of the red particle at {" "}
-              <NoBreak>
-                <Math>
-                  $t$
-                </Math>
-                ;
-              </NoBreak>
-              {" "} then, to spell
-              it all out, since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the red particle is the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the blue particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <Math>
-                $f'$
-              </Math>
-              {" "} is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the blue
-              particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the blue particle is the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the yellow particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <Math>
-                $f''$
-              </Math>
-              {" "} is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the
-              yellow particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the yellow particle is the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the green particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <Math>
-                $f'''$
-              </Math>
-              {" "} is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the
-              green particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the green particle
-              is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the purple
-              particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <Math>
-                $f''''$
-              </Math>
-              {" "} is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the
-              purple particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the purple particle is the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the red particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <Math>
-                $f''''' = f^&#123;(5)&#125;$
-              </Math>
-              {" "} equals {" "}
-              <NoBreak>
-                <Math>
                   $f$
                 </Math>
-                .
               </NoBreak>
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                If you graph the {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  -coordinates
-                </NoBreak>
-                {" "} of the
-                5 particles over time, each in their
-                color, you get a graph like so, in which
-                blue is the derivative of red, yellow is
-                the derivative of blue, etc; the function
-                {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} can be taken to be any one of these
-                curves:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/U6Hi.svg" />
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                There is nothing special about
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  -coordinates
-                </NoBreak>
-                {" "} vis-à-vis {" "}
-                <NoBreak>
-                  <Math>
-                    $y$
-                  </Math>
-                  -coordinates.
-                </NoBreak>
-                {" "}
-                You can also define {" "}
-                <Math>
-                  $f(t)$
-                </Math>
-                {" "} to be, e.g.,
-                the {" "}
-                <NoBreak>
-                  <Math>
-                    $y$
-                  </Math>
-                  -coordinate
-                </NoBreak>
-                {" "} of the red particle
-                at time {" "}
-                <NoBreak>
-                  <Math>
-                    $t$
-                  </Math>
-                  .
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote id="_84_hgi_">
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
-                It is worth noting that, in fact, the
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  -
-                </NoBreak>
-                {" "} and {" "}
-                <NoBreak>
-                  <Math>
-                    $y$
-                  </Math>
-                  -coordinates
-                </NoBreak>
-                {" "} live separate
-                lives. The rate of change of each
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  -coordinate
-                </NoBreak>
-                {" "} is some other {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  -coordinate,
-                </NoBreak>
-                {" "}
-                and the rate of change of each {" "}
-                <NoBreak>
-                  <Math>
-                    $y$
-                  </Math>
-                  -coordinate
-                </NoBreak>
-                {" "}
-                is some other {" "}
-                <NoBreak>
-                  <Math>
-                    $y$
-                  </Math>
-                  -coordinate.
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 4.
-                </i>
-                {" "}
-                Adding to this observation, we don't
-                {" "}
-                <i>
-                  need
-                </i>
-                {" "} to start the particles in
-                a symmetric configuration. Symmetry only
-                helps to picture how the positions of the
-                particles will evolve without making any
-                computations. We also don't {" "}
-                <i>
-                  need
-                </i>
-                {" "}
-                to work in two dimensions. We can place
-                the particles in a one-dimensional world,
-                e.g., ...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/cejz.svg" />
-              <Pause />
-              <OuterP>
-                ...(the initial positions really don't
-                matter much, as long as you don't give
-                all the particles the {" "}
-                <i>
-                  same
-                </i>
-                {" "} initial
-                position, or else you won't have {" "}
-                <Math>
-                  $f \ne f'$
-                </Math>
-                {" "}
-                etc) and stipulate the same rules, namely
-                that the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                velocity
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                (now {" "}
-                <NoBreak>
-                  <Math>
-                    $1$
-                  </Math>
-                  -dimensional)
-                </NoBreak>
-                {" "} of the red particle
-                be the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                position
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                (now {" "}
-                <NoBreak>
-                  <Math>
-                    $1$
-                  </Math>
-                  -dimensional)
-                </NoBreak>
-                {" "} of the blue particle
-                and so on—you can “release” the particles
-                from their initial configuration and
-                simulate (or compute exactly, if you have
-                the know-how) their motion by the same
-                methods as above. The five position
-                functions obtained are each a solution
-                {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} to the problem. (But this solution will
-                typically look more chaotic than the curves
-                from Note 1.)
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 5.
-                </i>
-                {" "}
-                In fact, our symmetric two-dimensional
-                solution is an instance in which you can say
-                that
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                the whole is simpler than the parts
-                <ImageLeft src="/build-img/svgo-svg/_DUb.svg" />
-                <ImageRight src="/build-img/svgo-svg/7DF3.svg" />
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                in that you would never spot the symmetry
-                at play, or have a chance of eyeballing
-                the long-term evolution of the system, if
-                you were shown just the {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  -coordinates,
-                </NoBreak>
-                {" "}
-                or just the {" "}
-                <NoBreak>
-                  <Math>
-                    $y$
-                  </Math>
-                  -coordinates,
-                </NoBreak>
-                {" "} on their own!
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={32}>
-          <ExerciseStatement id="_86_hgi_">
-            <OuterP>
-              <b>
-                Exercise 32.
-              </b>
-              {" "}
-              If we seek a function {" "}
-              <Math>
-                $f : \rr \ra \rr$
-              </Math>
-              {" "}
-              such that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;(17)&#125; = f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and such that {" "}
-              <Math>
-                $f \ne 0$
-              </Math>
-              {" "} (or: {" "}
+              {" "} times {" "}
               <NoBreak>
                 <Math>
-                  $f \ne (x \ra 0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              pedantically) and such that {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} grows relatively
-              slowly in either the positive or negative direction
-              of the number line, insofar as such things are
-              concerned, what would our options be?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Take {" "}
-              <Math>
-                $17$
-              </Math>
-              {" "} particles equally spaced out along
-              the unit circle, such as these (shown here
-              with position vectors):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/UDTy.svg" />
-            <Pause />
-            <OuterP>
-              Set the velocity of particle
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large 1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              equal to the position of particle
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Large 5&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and keep going by this pattern, making the
-              velocity of each particle equal to the
-              position of the particle that is {" "}
-              <Math>
-                $4$
-              </Math>
-              {" "} later;
-              in the configuration above, the velocity
-              vectors end up looking like so, for example:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/tkLL.svg">
-              <ImageRight src="/build-img/svgo-svg/Bvhk.svg" />
-            </Image>
-            <Pause />
-            <OuterP>
-              Maintaining this relationship at all
-              points in time, and given that the velocity
-              vectors point very slightly outward from
-              the unit circle, and because all the
-              symmetry and all the angles are maintained
-              as we play time forward or backward, the
-              particles spiral gently outward/inward from
-              the circle for time forward/backward,
-              respectively. Taking {" "}
-              <Math>
-                $f(t)$
-              </Math>
-              {" "} to be the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -
-              </NoBreak>
-              {" "}
-              or {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of any one of the particles
-              (e.g., particle {" "}
-              <NoBreak>
-                <Math>
-                  $1$
+                  $g$
                 </Math>
                 )
               </NoBreak>
-              {" "} at time {" "}
+              {" "} times {" "}
               <Math>
-                $t$
+                $h$
               </Math>
-              {" "} gives an
-              oscillating function whose {" "}
-              <NoBreak>
-                <Math>
-                  $17$
-                </Math>
-                th
-              </NoBreak>
-              {" "} derivative
-              is itself (because the rate of change of
-              the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of particle {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "} is the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of particle {" "}
-              <NoBreak>
-                <Math>
-                  $5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} etc, until
-              we make it all the way back to particle {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ),
-              </NoBreak>
-              {" "}
-              and that grows comparatively slowly over
-              time. ~The End~
-            </OuterP>
+            </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              In case you're curious, the actual spiral paths
-              of the particles look like so:
+              equals
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/kytU.svg" />
-            <Pause />
-            <OuterP>
-              ...and if you take the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinates
-              </NoBreak>
-              {" "} of
-              the particles over time, with time {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              {" "}
-              corresponding to the original configuration
-              depicted where particle 1 is at {" "}
-              <NoBreak>
-                <Math>
-                  $(1, 0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} you
-              find {" "}
-              <del>
-                paths
-              </del>
-              {" "} functions that look like so:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/KuID.svg" />
-            <Pause />
-            <OuterP>
-              For example, the derivative of curve {" "}
-              <InlineImage
-                class="ch4_17_pellets"
-                src="/build-img/svgo-svg/i4u9.svg"
-              />
-              , highlighted below in red, is curve {" "}
-              <InlineImage
-                class="ch4_17_pellets"
-                src="/build-img/svgo-svg/twzO.svg"
-              />
-              , highlighted in blue:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/SKRR.svg" />
-            <Pause />
-            <OuterP>
-              ...and taking sixteen more derivatives
-              starting from curve {" "}
-              <InlineImage
-                class="ch4_17_pellets"
-                src="/build-img/svgo-svg/twzO.svg"
-              />
-              {" "} we would go through curves {" "}
-              <InlineImage
-                class="ch4_17_pellets"
-                src="/build-img/svgo-svg/A7E1.svg"
-              />
-              , {" "}
-              <InlineImage
-                class="ch4_17_pellets"
-                src="/build-img/svgo-svg/256c.svg"
-              />
-              , {" "}
-              <InlineImage
-                class="ch4_17_pellets"
-                src="/build-img/svgo-svg/oMBk.svg"
-              />
-              , {" "}
-              <InlineImage
-                class="ch4_17_pellets"
-                src="/build-img/svgo-svg/26-z.svg"
-              />
-              , ..., {" "}
-              <InlineImage
-                class="ch4_17_pellets"
-                src="/build-img/svgo-svg/hEuY.svg"
-              />
-              {" "} before finally coming back to curve {" "}
-              <InlineImage
-                class="ch4_17_pellets"
-                src="/build-img/svgo-svg/i4u9.svg"
-                style="margin-right:0.1em"
-              />
-              !
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              It can be interesting to examine what
-              goes wrong if we attempt to make the
-              velocity vectors even more tangent to the
-              unit circle. For example, if we start the
-              particles so that particle 5 is at
-              {" "}
-              <Math>
-                $90^\circ$
-              </Math>
-              {" "} exactly from particle 1,
-              particle 9 is at {" "}
-              <Math>
-                $90^\circ$
-              </Math>
-              {" "} exactly from
-              particle 5, and so on, until we reach
-              particle 14, the last particle in this
-              order; then we have the following starting
-              configuration:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/t94J.svg" />
-            <Pause />
-            <OuterP>
-              To parse the above figure, understand
-              that:
-            </OuterP>
-            <TextParent>
-              <ul style="margin:20px 20px 20px 50px;list-style-type:disc;">
-                <li style="margin-bottom:10px;">
-                  the red arrows indicate which particle
-                  takes its velocity from the position
-                  of which other particle; for example,
-                  particle 1 has velocity equal to the
-                  position of particle 5
-                </li>
-                <li>
-                  particles that occupy the same starting
-                  position on the unit circle appear
-                  stacked together, as a representation
-                  device; for example, particle 2 has the
-                  same starting position as particle 5
-                </li>
-              </ul>
-            </TextParent>
-            <OuterP>
-              (Note that the red arrows have to form
-              a cycle of length 17 in order for us to
-              later extract a function {" "}
+            <CentralDisplayItalic>
               <Math>
                 $f$
               </Math>
-              {" "} such that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;(17)&#125; = f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              but this is the case: the red arrows only
-              “close the loop” after going through all
-              17 particles!)
-            </OuterP>
-            <OuterP class="indent-10">
-              In this starting configuration, all
-              velocity vectors are exactly tangent to
-              the unit circle
-            </OuterP>
-            <Pause />
-            <CentralDisplay>
-              EXCEPT
-            </CentralDisplay>
-            <Pause />
-            <OuterP>
-              for particle 14, whose velocity vector,
-              being the position of particle 1, is straight
-              out from the circle! So, as we “start time”,
-              particle 14 will push out from the circle,
-              that will in turn affect particle 10, and
-              so on, until all particles end up being
-              “peeled off” from the circle, in due time;
-              if you are so curious, the particle
-              trajectories end up like so (shown only for
-              {" "}
+              {" "} times {" "}
+              <NoBreak>
+                (
+                <Math>
+                  $g$
+                </Math>
+              </NoBreak>
+              {" "} times {" "}
               <NoBreak>
                 <Math>
-                  $t \geq 0$
+                  $h$
                 </Math>
-                ):
+                )
               </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/3j-T.svg" />
+            </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              The particles shoot of to infinity in short
-              order—the solution is much worse—for fun we
-              have also highlighted two particle trajectories
-              in this figure:
-            </OuterP>
-            <TextParent>
-              <ul style="margin:20px 20px 20px 50px;list-style-type:disc;">
-                <li style="margin-bottom:10px;">
-                  in {" "}
-                  <span style="border:1px solid blue">
-                    blue
-                  </span>
-                  , particle 1, the last particle
-                  to be (noticeably*) “peeled off” from
-                  the circle (*all particles are
-                  instantaneously peeled off from the
-                  circle to {" "}
-                  <i>
-                    some
-                  </i>
-                  {" "} degree, as one
-                  particle's slight deviation affects
-                  the next, that affects the next, etc)
-                </li>
-                <li>
-                  in {" "}
-                  <span style="border:1px solid red">
-                    red
-                  </span>
-                  , particle 14, the {" "}
-                  <i>
-                    first
-                  </i>
-                  {" "} particle
-                  to leave the circle—but because its
-                  velocity vector is given by particle 1,
-                  which itself starts by going around in
-                  a circle, it, too, starts out by going
-                  around in a circle!
-                </li>
-              </ul>
-            </TextParent>
-            <OuterP>
-              (The point is: if your velocity vector
-              is tracing a circle centered at {" "}
+              for all functions {" "}
               <NoBreak>
                 <Math>
-                  $(0, 0)$
+                  $f, g, h : \rr \ra \rr$
                 </Math>
-                —at
+                .
               </NoBreak>
-              {" "}
-              a uniform rate—then you, too, are going
-              around in a circle—it's just that your
-              circle could be centered anywhere, not
-              necessarily at {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                !)
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={33}>
-          <ExerciseStatement id="_88_hgi_">
-            <OuterP>
-              <b>
-                Exercise 33.
-              </b>
-              {" "}
-              Add elements to the following drawing...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/1hYI.svg" />
-            <Pause />
-            <OuterP>
-              ...such that it becomes a “complete”
-              illustration of this here algebraic
-              expression...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;f(x+h) - f(x) \over h&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...and reveal the “geometric meaning” of
-              the expression, if any.
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              This version pictures all the elements
-              that appear in the fraction:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/cWTG.svg" />
-            <Pause />
-            <OuterP>
-              The point is: the fraction
+              It is necessary and sufficient to show that
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;f(x + h) - f(x)\over h&#125;
+              ((fg)h)(u)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              is seen to have the form {" "}
+              is the same as
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f(gh))(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for an arbitrary input {" "}
+              <NoBreak>
+                <Math>
+                  $u \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} in order to
+              show that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (fg)h
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f(gh)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              are the same function. (Function equality is
+              based on input-output behavior: two functions are
+              equal if and only if every input is mapped to the
+              same output under either function. See Note 6,
+              Exercise 9, Chapter 3.)
+            </OuterP>
+            <OuterP class="indent-10">
+              Starting up,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              ((fg)h)(u) = (fg)(u) \cdot h(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the definition of function multiplication,
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f(gh))(u) = f(u) \cdot (gh)(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              likewise. Moreover,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (fg)(u) = f(u) \cdot g(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (gh)(u) = g(u) \cdot h(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the same definition again. Therefore,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              ((fg)h)(u) = (f(u) \cdot g(u)) \cdot h(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              on the one hand, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f(gh))(u) = f(u) \cdot (g(u) \cdot h(u))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              on the other hand. But
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f(u) \cdot g(u)) \cdot h(u) = f(u) \cdot (g(u) \cdot h(u))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the associativity of ordinary real number
+              multiplication. (Not function multiplication:
+              {" "}
               <i>
-                rise over run
+                real number multiplication
               </i>
-              ,
-              and is more precisely equal to the slope
-              of the pale brown line going through the
-              point
+              .) So
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              (x, f(x))
+              ((fg)h)(u)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              at one end, and
+              equals
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              (x + h, f(x + h))
+              (f(gh))(u)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              at the other end. (This is also the case
-              if {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} is negative, by the way.)
+              for arbitrary {" "}
+              <NoBreak>
+                <Math>
+                  $u$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which completes the proof.
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -10569,12 +10024,33 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                A fraction of this form is called a {" "}
-                <i>
-                  Newton
-                  quotient
-                </i>
-                .
+                In words, we have just established the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                associativity of function multiplication
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                while we had previously established the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                associativity of function composition
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                (if you recall that one) in Exercise 9 of {" "}
+                <NoBreak>
+                  <a
+                    href="/article/chapter3#_49_hgi_"
+                    class="handle-out-chapter-link"
+                  >
+                    Chapter 3
+                  </a>
+                  .
+                </NoBreak>
+                {" "}{" "}
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -10584,2167 +10060,40 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                The pale brown line is sometimes known as
-                the {" "}
-                <i>
-                  secant
-                </i>
-                {" "} [through {" "}
-                <NoBreak>
-                  <Math>
-                    $(x, f(x))$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <NoBreak>
-                  <Math>
-                    $(x+h, f(x+h))$
-                  </Math>
-                  ].
-                </NoBreak>
-                {" "}
-                “Secant” is a general term for “line passing
-                through two specified points on another
-                curve”.
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote id="_87_hgi_">
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
-                If we let {" "}
-                <Math>
-                  $h$
-                </Math>
-                {" "} drop to {" "}
-                <NoBreak>
-                  <Math>
-                    $0$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} and if {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} is
-                differentiable at {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} the
-                Newton-quotient-a.k.a.-slope-of-the-secant
-                approaches
+                By this result, we can write
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
-                f'(x)
+                fgh
                 $$
               </MathBlock>
               <Pause />
               <OuterP>
-                because the secant approaches the tangent,
-                in that case, and the slope of the secant
-                is also, perforce, approaching the slope
-                of the tangent, which is {" "}
+                without any parentheses at all:
+                it doesn't matter whether we think of this
+                product as {" "}
+                <Math>
+                  $(fg)h$
+                </Math>
+                {" "} or {" "}
                 <NoBreak>
                   <Math>
-                    $f'(x)$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "} (But you
-                cannot directly set {" "}
-                <NoBreak>
-                  <Math>
-                    $h = 0$
+                    $f(gh)$
                   </Math>
                   ,
                 </NoBreak>
-                {" "} because
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;f(x+0)-f(x)\over 0&#125; = &#123;0 \over 0&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is undefined.)
+                {" "} the result
+                is the same.
               </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={34}>
-          <ExerciseStatement id="_89_hgi_">
+        <Exercise number={26}>
+          <ExerciseStatement id="_78_hgi_">
             <OuterP>
               <b>
-                Exercise 34.
-              </b>
-              {" "}
-              In this exercise we consider two points
-              in time {" "}
-              <Math>
-                $t_0$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $t_0 + \Delta&#123;&#125;t$
-              </Math>
-              {" "} (here
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\Delta&#123;&#125;t$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "} read “delta {" "}
-              <NoBreak>
-                <Math>
-                  $t$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "} is a
-              standard notation for a small amount of
-              time):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/rzVH.svg" />
-            <Pause />
-            <OuterP>
-              We also consider quantities {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "}
-              that are changing with time; {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "}
-              have some value at {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and, say, grow
-              to be larger at {" "}
-              <NoBreak>
-                <Math>
-                  $t_0 + \Delta&#123;&#125;t$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Axof.svg" />
-            <Pause />
-            <OuterP>
-              More specifically, we are interested in
-              the change in the value of the product
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large AB
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              over said course of time.
-            </OuterP>
-            <OuterP class="indent-10">
-              To introduce an unsolicited metaphor,
-              imagine {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} as
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/zn1D.svg" />
-            <Pause />
-            <OuterP>
-              that are crossing a hallway surveyed by
-              a cat. One side of the hallway is time
-              {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} the other side of the hallway is
-              time {" "}
-              <NoBreak>
-                <Math>
-                  $t_0 + \Delta&#123;&#125;t$
-                </Math>
-                .
-              </NoBreak>
-              {" "} So great is their
-              terror that {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} have decided to
-              scurry across the hallway one at a time.
-              First {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} will go, then {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                .
-              </NoBreak>
-              {" "} In so, we
-              can separate the following moments of
-              interest (“moments” that exist inside the
-              metaphorical timeline of the story, not
-              on the {" "}
-              <NoBreak>
-                <Math>
-                  $t$
-                </Math>
-                -number
-              </NoBreak>
-              {" "} line, to be clear):
-              <ImageLeft
-                offset_x="0.5em"
-                offset_y="-0.5em"
-                src="/build-img/svgo-svg/zR89.svg"
-              />
-            </OuterP>
-            <TextParent>
-              <ol style="margin:0 1.5em 0.5em 2em;list-style:auto;list-style-position:outside;">
-                <li style="margin-top:0.5em">
-                  when {" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "} and {" "}
-                  <Math>
-                    $B$
-                  </Math>
-                  {" "} are both still at {" "}
-                  <Math>
-                    $t_0$
-                  </Math>
-                </li>
-                <li style="margin-top:0.5em">
-                  when {" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "} has made it to {" "}
-                  <NoBreak>
-                    <Math>
-                      $t_0 + \Delta&#123;&#125;t$
-                    </Math>
-                    ,
-                  </NoBreak>
-                  {" "}
-                  and {" "}
-                  <Math>
-                    $B$
-                  </Math>
-                  {" "} is still at {" "}
-                  <Math>
-                    $t_0$
-                  </Math>
-                </li>
-                <li style="margin-top:0.5em">
-                  <del>
-                    when {" "}
-                    <NoBreak>
-                      <Math>
-                        $B$
-                      </Math>
-                      's
-                    </NoBreak>
-                    {" "} tail is sticking out of the
-                    cat's mouth, and
-                  </del>
-                  {" "} when {" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "} and {" "}
-                  <Math>
-                    $B$
-                  </Math>
-                  {" "} have both made it
-                  to {" "}
-                  <Math>
-                    $t_0 + \Delta&#123;&#125;t$
-                  </Math>
-                </li>
-              </ol>
-            </TextParent>
-            <OuterP>
-              Correspondingly, the product
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large AB
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              changes in two increments: first as {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "}
-              makes it to the other side of the hallway
-              (and {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} grows bigger); then as {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} joins
-              him/her (and {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} grows bigger). In an
-              equation:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/S2-s.svg" />
-            <Pause />
-            <OuterP>
-              If we divide the above equation by {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              {" "}
-              and let {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              {" "} drop to {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} what does
-              each term become?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Dividing by {" "}
-              <NoBreak>
-                <Math>
-                  $\Delta&#123;&#125;t$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Im2x.svg" />
-            <Pause />
-            <OuterP>
-              As {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} the term
-              on the left-hand side approaches
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (AB)'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where we view {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} as functions
-              of time with, therefore, the product {" "}
-              <Math>
-                $AB$
-              </Math>
-              {" "}
-              also becoming a function of time. (By
-              definition, {" "}
-              <Math>
-                $AB$
-              </Math>
-              {" "} is the function
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              t \rightarrow A(t)B(t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where {" "}
-              <Math>
-                $A(t)$
-              </Math>
-              {" "} is the value of {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} at time
-              {" "}
-              <NoBreak>
-                <Math>
-                  $t$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $B(t)$
-              </Math>
-              {" "} is the value of {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} at time
-              {" "}
-              <NoBreak>
-                <Math>
-                  $t$
-                </Math>
-                .)
-              </NoBreak>
-              {" "} Indeed, a ratio of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0)\over \Delta&#123;&#125;t&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is a Newton quotient (cf. Exercise 16),
-              that approaches
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} assuming
-              {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} is differentiable at {" "}
-              <Math>
-                $t_0$
-              </Math>
-              {" "} (cf.
-              Exercise 16 {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_64_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Note 3
-                </InChapterLink>
-                ),
-              </NoBreak>
-              {" "} and
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/MvBw.svg" />
-            <Pause />
-            <OuterP>
-              has the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0)\over \Delta&#123;&#125;t&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for {" "}
-              <NoBreak>
-                <Math>
-                  $f = AB$
-                </Math>
-                .
-              </NoBreak>
-              <ImageLeft src="/build-img/svgo-svg/LuWh.svg" />
-            </OuterP>
-            <OuterP class="indent-10">
-              The first term on the right-hand side, for
-              its part, approaches
-              <ImageRight src="/build-img/svgo-svg/5bqq.svg" />
-            </OuterP>
-            <OuterP class="indent-10">
-              as {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .
-              </NoBreak>
-              {" "} Indeed,
-              when you write it out, that term becomes
-              the algebraic expression
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0) - A(t_0)B(t_0) \over \Delta&#123;&#125;t&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where every term on top contains a
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $B(t_0)$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "} that can therefore be factored
-              out, giving us the equivalent expression
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              B(t_0)\cdot&#123;A(t_0 + \Delta&#123;&#125;t) - A(t_0) \over \Delta&#123;&#125;t&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              that, you will notice, has the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              B(t_0)\cdot&#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0) \over \Delta&#123;&#125;t&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for {" "}
-              <NoBreak>
-                <Math>
-                  $f = A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and thus approaches
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              B(t_0) \cdot A'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as {" "}
-              <Math>
-                $\Delta t$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} by the property
-              of the Newton quotient.
-            </OuterP>
-            <OuterP class="indent-10">
-              Lastly the most interesting term is the
-              second term on the right-hand side!
-              Symmetrically to the first term on the
-              right-hand side, the second term approaches
-              <ImageRight src="/build-img/svgo-svg/9OXS.svg" />
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A(t_0)B'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} but the
-              reasons are slightly different! (Slightly.)
-              Indeed, this term, written out, is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0+\Delta&#123;&#125;t) - A(t_0+ \Delta&#123;&#125;t)B(t_0) \over \Delta&#123;&#125;t&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which is equal to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A(t_0 + \Delta&#123;&#125;t)\cdot&#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by factoring out the common term {" "}
-              <NoBreak>
-                <Math>
-                  $A(t_0 + \Delta&#123;&#125;t)$
-                </Math>
-                ;
-              </NoBreak>
-              {" "}
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              approaches
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              B'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} like before
-              (when we had {" "}
-              <Math>
-                $AB$
-              </Math>
-              {" "} or {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} instead of {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                )
-              </NoBreak>
-              {" "}
-              whereas
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A(t_0 + \Delta&#123;&#125;t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              —which is a bit different from before—approaches
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                —so
-              </NoBreak>
-              {" "} that makes up
-              {" "}
-              <NoBreak>
-                <Math>
-                  $A(t_0)B'(t_0)$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (The
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              differentiability
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} at {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                —that
-              </NoBreak>
-              {" "} we are tacitly
-              assuming—implies
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              continuity
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              as well, which implies that {" "}
-              <Math>
-                $A(t_0 + \Delta&#123;&#125;t)$
-              </Math>
-              {" "}
-              approaches {" "}
-              <Math>
-                $A(t_0)$
-              </Math>
-              {" "} as {" "}
-              <Math>
-                $\Delta t$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Summarizing, the three terms separately
-              approach
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (AB)'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              B(t_0)A'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              A(t_0)B'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} and, in fact,
-              because the equation holds no matter how
-              close we make each term to its respective limit
-              above, one can conclude that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for functions {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} differentiable at
-              a point {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Nb: This result is known as the {" "}
-              <i>
-                product rule
-              </i>
-              .
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              Keeping things alphabetical everywhere, the
-              same equation is more often written
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              with {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $A'(t_0)B(t_0)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} in the middle. (But
-              which is the same, of course, as {" "}
-              <NoBreak>
-                <Math>
-                  $B(t_0)A'(t_0)$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={35}>
-          <ExerciseStatement id="_90_hgi_">
-            <OuterP>
-              <b>
-                Exercise 35.
-              </b>
-              {" "}
-              The identity
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f + g)' = f' + g'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              happens to be true for differentiable
-              functions {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                .
-              </NoBreak>
-              {" "} What English-language
-              aphorism can summarize it? (This identity
-              is known as the {" "}
-              <i>
-                sum rule
-              </i>
-              , by the way.)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              One can say
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the derivative of the sum is the sum of the
-              derivatives
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the sum is the sum of
-              the rates of change
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              or (we made this one up)
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the aggregate is the sum
-              of the rates of change of the components
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (etc).
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={36}>
-          <ExerciseStatement id="_91_hgi_">
-            <OuterP>
-              <b>
-                Exercise 36.
-              </b>
-              {" "}
-              If we rewrite the “product rule” of Exercise
-              17 in the same terse style as the “sum rule”
-              of Exercise 19, what do we obtain?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The form of...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...that follows the style of...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f + g)' = f' + g'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...is...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)' = f'g + fg'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...this. (Valid for differentiable functions
-              {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $g:$
-              </Math>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $\rr \ra \rr$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              Whereas
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is an equality between real numbers,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)' = f'g + fg'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is an equality between functions. So there is
-              a more-than-skin-deep difference between the
-              two forms. Also note that each form has its
-              own “qualitatively distinct” qualifying conditions.
-            </OuterP>
-            <OuterP class="indent-10">
-              (To wit,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)'(t_0) = f'(t_0)g(t_0) + f(t_0)g'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              holds “for {" "}
-              <Math>
-                $t_0$
-              </Math>
-              {" "} at which {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} are
-              differentiable”, while
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)' = f'g + fg'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              holds “for differentiable functions {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ”.)
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={37}>
-          <ExerciseStatement id="_93_hgi_">
-            <OuterP>
-              <b>
-                Exercise 37.
-              </b>
-              {" "}
-              If the identities
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f + g)' = f' + g'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)' = f'g + fg'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for differentiable {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} are deemed
-              “differentiation formulas”, then what is a
-              third “differentiation formula” {" "}
-              <i>
-                already
-                encountered
-              </i>
-              {" "} (in possibly disguised form) prior
-              to this point?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              That would be the fact that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (cf)' = cf'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all differentiable functions {" "}
-              <NoBreak>
-                <Math>
-                  $f : \rr \ra \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              for all {" "}
-              <NoBreak>
-                <Math>
-                  $c \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} mentioned in Exercise 10
-              for {" "}
-              <NoBreak>
-                <Math>
-                  $c = 2$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <SolutionNote id="_92_hgi_">
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                You can also write
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                (cf)' = c \cdot f'
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                if it helps clarify the difference between the
-                left- and right-hand sides. (The difference being
-                namely {" "}
-                <NoBreak>
-                  “(
-                  <Math>
-                    $c$
-                  </Math>
-                </NoBreak>
-                {" "} times {" "}
-                <NoBreak>
-                  <Math>
-                    $f$
-                  </Math>
-                  )
-                </NoBreak>
-                {" "} prime” on the left vs. “c
-                times {" "}
-                <NoBreak>
-                  (
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
-                {" "} prime)” on the right.)
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={38}>
-          <ExerciseStatement id="_94_hgi_">
-            <OuterP>
-              <b>
-                Exercise 38.
-              </b>
-              {" "}
-              The solution to the previous exercise
-              erroneously assumes that the product of a
-              constant and a function has been defined. It
-              has not! Keeping in mind that the {" "}
-              <i>
-                sum
-              </i>
-              {" "}
-              of two functions {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $g: \rr \ra \rr$
-              </Math>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f + g
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is defined by the equation
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f + g = (x \ra f(x) + g(x))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              while their composition is defined by
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ g = (x \ra f(g(x)))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and so on, what is the similar, most logical
-              definition for
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              cf
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where {" "}
-              <Math>
-                $c \in \rr$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $f : \rr \ra \rr$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The “logical” definition is:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              cf = (x \ra cf(x))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where the product {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $cf(x)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} is an ordinary
-              multiplication between two real numbers,
-              because {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} is a real number and {" "}
-              <Math>
-                $f(x)$
-              </Math>
-              {" "} is
-              a real number! (In this way, the product of
-              a function by a real number “bootstraps”
-              off of the ordinary product of real numbers—this
-              is already similar to what happens for the
-              definition...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              fg = (x \ra f(x)g(x))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              of the product of two functions from {" "}
-              <Math>
-                $\rr$
-              </Math>
-              {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $\rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              or with the case of function addition, that
-              relies on real number addition.) BUT. There
-              is a MORE CLEVER way of doing the definition.
-              Which is to define
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              cf = (x \ra c)f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where the right-hand-side is {" "}
-              <i>
-                one function
-                times another
-              </i>
-              , i.e., {" "}
-              <i>
-                a product of functions
-              </i>
-              ,
-              which is something that has ITSELF ALREADY BEEN
-              DEFINED. (!) (To wit, the definition of
-              function multiplication is that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              fg = (x \ra f(x)g(x))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              of course.) (Wait we just mentioned that
-              already.) Mathematicians LOVE to bootstrap off
-              an intermediate step, instead of going back to
-              the beginning, so the second way is clearly the
-              superior definition!!
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={39}>
-          <ExerciseStatement id="_95_hgi_">
-            <OuterP>
-              <b>
-                Exercise 39.
-              </b>
-              {" "}
-              The definition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f + g = (x \ra f(x) + f(x))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for a sum of functions {" "}
-              <Math>
-                $f, g : \rr \ra \rr$
-              </Math>
-              {" "}
-              can also be written
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f + g)(x) = f(x) + g(x)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              in the sense that either of these equations tells
-              you how {" "}
-              <Math>
-                $f + g$
-              </Math>
-              {" "} acts on an arbitrary input. (Which
-              is what you need to do, to define a function. A
-              slight subtlety is that the definition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f + g = (x \ra f(x) + f(x))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              announces more clearly via its notation that
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f + g$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} {" "}
-              <i>
-                is a function
-              </i>
-              {" "} and not some other
-              object, like a number, but this is a minor point.)
-              Rewrite the definitions of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ g
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              fg
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f/g
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f - g
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              in the style of the second equation. For extra
-              credit: use a different symbol each time to denote
-              the input.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              E.g.:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \circ g)(x) = f(g(x))
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)(u) = f(u)g(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (f/g)(z) = f(z)/g(z)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (f - g)(t) = f(t) - g(t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (Looking at these definitions we must really admit that
-              we prefer the first form, with the arrow, found at the
-              end of the chapter—it's more explicit!)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={40}>
-          <ExerciseStatement id="_96_hgi_">
-            <OuterP>
-              <b>
-                Exercise 40.
-              </b>
-              {" "}
-              What does...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
-              $$
-              <ImageRight
-                src="/build-img/svgo-svg/6ZYS.svg"
-                compensate_offset_x_for_large_text_columns={true}
-              />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...approach as {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} goes to {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} if {" "}
-              <Math>
-                $A_1, \dots, A_n$
-              </Math>
-              {" "}
-              {" "}
-              <Math>
-                $: \rr \ra \rr$
-              </Math>
-              {" "} are differentiable at the point {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              We can start with the fraction in the
-              middle of the product:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/c9db.svg" />
-            <Pause />
-            <OuterP>
-              This is seen to be a Newton quotient
-              (cf. Exercise 16)
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f(x + h) - f(x)\over h
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              with {" "}
-              <NoBreak>
-                <Math>
-                  $f = A_i$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $x = t_0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} per which
-              (Exercise 16 Note 3), the fraction approaches
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A_i'(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} given also the assumption
-              that each of the functions {" "}
-              <NoBreak>
-                <Math>
-                  $A_1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} ..., {" "}
-              <Math>
-                $A_n$
-              </Math>
-              {" "}
-              (including {" "}
-              <NoBreak>
-                <Math>
-                  $A_i$
-                </Math>
-                )
-              </NoBreak>
-              {" "} is differentiable at {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Next down in order of interesting-ness we presumably
-              have the terms {" "}
-              <Math>
-                $A_1(t_0 + h)$
-              </Math>
-              {" "} through {" "}
-              <Math>
-                $A_&#123;i-1&#125;(t_0 + h)$
-              </Math>
-              {" "}
-              at the beginning of the product...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/B9Zl.svg" />
-            <Pause />
-            <OuterP>
-              ...; here the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              differentiability
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of {" "}
-              <Math>
-                $A_1$
-              </Math>
-              {" "} at {" "}
-              <Math>
-                $t_0$
-              </Math>
-              {" "} implies the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              continuity
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of {" "}
-              <Math>
-                $A_1$
-              </Math>
-              {" "} at {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which implies that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A_1(t_0 + h)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              approaches
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A_1(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (These various
-              technicalities concerning a generic function
-              {" "}
-              <Math>
-                $f : \rr \ra \rr$
-              </Math>
-              {" "} are mentioned in the solution
-              to Exercise 17.) Similarly for {" "}
-              <NoBreak>
-                <Math>
-                  $A_2(t_0 + h)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              etc, up to {" "}
-              <NoBreak>
-                <Math>
-                  $A_&#123;i-1&#125;(t_0 + h)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              approaches
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A_1(t_0) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (If some quantities are
-              each approaching a different value, then the
-              product-of-the-quantities will approach the
-              product-of-the-values—something not mentioned
-              in the solution to Exercise 17, but that might
-              have been.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Lastly one has the tail end of the product,
-              where {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} does not even appear:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/TQjR.svg" />
-            <Pause />
-            <OuterP>
-              Because {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} does not appear here, the tail end
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              stays put
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              where it is, irrespective of the value of {" "}
-              <NoBreak>
-                <Math>
-                  $h$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              So that was easy! Altogether, the answer is
-              therefore:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/hUGM.svg" />
-            <Pause />
-            <OuterP>
-              ...with a lone {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $A_i'$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} in the middle.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={41}>
-          <ExerciseStatement id="_97_hgi_">
-            <OuterP>
-              <b>
-                Exercise 41.
-              </b>
-              {" "}
-              The function below is also the red
-              curve from {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_61_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 12
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} known as the
-              {" "}
-              <i>
-                cosine function
-              </i>
-              {" "} (already encountered
-              in {" "}
-              <NoBreak>
-                <a
-                  href="/article/chapter3#_49_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Chapter 3, Exercise 7
-                </a>
-                ).
-              </NoBreak>
-              {" "} Knowing
-              that this function is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of a
-              point rotating at unit speed around a unit
-              circle, find, by inspection of the graph,
-              a rational approximation to the circumference
-              of a unit circle.
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/njEr.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Because the particle is going at unit speed the
-              circumference of the unit circle is equal to the
-              amount of time it takes the particle to complete one
-              revolution of the circle. That is, for example, the
-              length of this yellow interval:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/KEtq.svg" />
-            <Pause />
-            <OuterP>
-              One revolution around the circle is also
-              made up of four quarter-revolutions, where
-              each quarter-revolution of the circle is “half a bump”,
-              on the graph:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/2Uov.svg" />
-            <Pause />
-            <OuterP>
-              Going a bit further, {" "}
-              <i>
-                seven
-              </i>
-              {" "} of these
-              quarter-revolutions appear to take up exactly
-              {" "}
-              <Math>
-                $t = 11$
-              </Math>
-              {" "} units of time (!!!!!!!!!!!) (or maybe
-              just a {" "}
-              <i>
-                little
-              </i>
-              {" "} less than {" "}
-              <Math>
-                $11$
-              </Math>
-              {" "} units, if
-              you zoom in):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/oghJ.svg" />
-            <Pause />
-            <OuterP>
-              Therefore
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;11 \over 7&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is an approximation to the quarter-circumference of
-              the circle, and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is an approximation to the circumference of a unit
-              circle.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              This approximation ends up being about
-              half-a-part-in-a-thousand too large
-              {" "}
-              <NoBreak>
-                (
-                <Math>
-                  $0.040249943...\%$
-                </Math>
-              </NoBreak>
-              {" "} too large) (or just:
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $0.00040249943...$
-                </Math>
-              </NoBreak>
-              {" "}
-              too large”), which is strikingly good, all things
-              considered.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              Numerically, note that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;44 \over 7&#125; = 6.285714\dots
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is a bit larger than {" "}
-              <NoBreak>
-                <Math>
-                  $6$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which agrees with
-              what we see here for the length of a full
-              revolution...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/dK07.svg" />
-            <Pause />
-            <OuterP>
-              ...whereas
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;11 \over 7&#125; = 1.571428\dots
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is about {" "}
-              <NoBreak>
-                <Math>
-                  $1.6$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which also appears to agree
-              with what we can see on the graph about the
-              length of a quarter-revolution:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/jUtu.svg" />
-            <Pause />
-            <OuterP>
-              (So, we have some secondary “visual confirmation”
-              of our approximations.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={42}>
-          <ExerciseStatement id="_98_hgi_">
-            <OuterP>
-              <b>
-                Exercise 42.
+                Exercise 26.
               </b>
               {" "}
               The graphs below are the horizontal and
@@ -13308,7 +10657,7 @@ const Rest = () => {
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/nS4I.svg"
               />
-              through {" "}
+              {" "} through {" "}
               <InlineImage
                 class="ch4_pacman1_inline_number_pellet"
                 src="/build-img/svgo-svg/bLYc.svg"
@@ -13343,11 +10692,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={43}>
-          <ExerciseStatement id="_99_hgi_">
+        <Exercise number={27}>
+          <ExerciseStatement id="_79_hgi_">
             <OuterP>
               <b>
-                Exercise 43.
+                Exercise 27.
               </b>
               {" "}
               Same question, but for the following maze...
@@ -13432,10 +10781,10 @@ const Rest = () => {
               The velocity vector (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_61_hgi_"
+                  href="/article/chapter4#_62_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 12
+                  Exercise 13
                 </InChapterLink>
                 )
               </NoBreak>
@@ -13465,10 +10814,10 @@ const Rest = () => {
               vector (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_61_hgi_"
+                  href="/article/chapter4#_62_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 12
+                  Exercise 13
                 </InChapterLink>
                 ),
               </NoBreak>
@@ -13545,7 +10894,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              cells per second, Again close to {" "}
+              cells per second, again close to 
+              {" "}
               <NoBreak>
                 <Math>
                   $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
@@ -13740,10 +11090,10 @@ const Rest = () => {
               {" "} {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_97_hgi_"
+                  href="/article/chapter4#_72_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 41
+                  Exercise 20
                 </InChapterLink>
                 ),
               </NoBreak>
@@ -14039,631 +11389,6 @@ const Rest = () => {
               Pacman must
               be at the bottom-left exit of the bottom-right
               maze corner, still.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              Feel free to follow Pacman all the way
-              to the end of the timeseries. He ends up somewhere
-              near...
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={44}>
-          <ExerciseStatement id="_100_hgi_">
-            <OuterP>
-              <b>
-                Exercise 44.
-              </b>
-              {" "}
-              Describe what a function might look like
-              if its second derivative has this graph (broadly):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/JTxK.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              As the second derivative is the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              rate of change of the slope
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              places where the second derivative is zero are
-              places where the slope of the function is constant.
-              So the function will have a constant slope over
-              each of these purple intervals (we're going to
-              assume that what looks like {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} is {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and eyeball
-              where that starts and ends, the statement
-              does say “broadly” anyway):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/ZIg9.svg" />
-            <Pause />
-            <OuterP>
-              As
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              constant slope
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              means
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              line segment
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              the function will therefore be a
-              line segment, over each of the purple intervals!
-            </OuterP>
-            <OuterP class="indent-10">
-              Between these line segments, however, things
-              happen, and there is a change in slope! The
-              change in slope is given by the “amount of bump”
-              in the second derivative between the intervals.
-              As it turns out, the area enclosed by the bump
-              gives the total change in slope:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/_hHv.svg" />
-            <Pause />
-            <OuterP>
-              (We won't argue this right now, but it's
-              sort-of-intuitive.)
-              For bumps lying below the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -axis
-              </NoBreak>
-              {" "} the area
-              counts as negative; that negative area is, again,
-              the total change in slope from one end of the bump
-              to the other:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/apR2.svg" />
-            <Pause />
-            <OuterP>
-              In any case the areas are all the same {" "}
-              <i>
-                in absolute
-                value
-              </i>
-              , meaning that whatever slope is gained as
-              we pass over a positive bump, the same amount
-              is lost again as we pass over a negative bump!
-              Thus, the line segments of the original function
-              will alternate between “low” and “high”
-              slopes—as we pass over a positive bump we switch
-              from a “low slope” line segment to a “high slope”
-              line segment, and vice-versa when we pass over a
-              negative bump.
-            </OuterP>
-            <OuterP class="indent-10">
-              Put
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large a
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for the area of a positive bump (per appearances,
-              {" "}
-              <NoBreak>
-                <Math>
-                  $a \approx 1$
-                </Math>
-                ),
-              </NoBreak>
-              {" "} and
-              <ImageRight src="/build-img/svgo-svg/37OV.svg" />
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large c
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for the slope of a “low slope” line segment. Then a
-              “high slope” line segment has slope
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large c + a
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              since we add {" "}
-              <Math>
-                $a$
-              </Math>
-              {" "} to the slope each time we go over
-              a positive bump.
-              (And the slope goes back down to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large (c + a) + (-a) = c
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              when we pass over a negative bump, with {" "}
-              <Math>
-                $-a$
-              </Math>
-              {" "} being
-              the (negative) area of a negative bump.)
-            </OuterP>
-            <OuterP class="indent-10">
-              With these variables in place, here is a generic
-              illustration of a graph (in black) whose second
-              derivative is the one from the statement (faded in
-              the background):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/tisG.svg">
-              <ImageLeft src="/build-img/svgo-svg/iSTR.svg" />
-            </Image>
-            <Pause />
-            <OuterP>
-              In this example {" "}
-              <NoBreak>
-                <Math>
-                  $c \approx 0.2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} but {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} can be any
-              value—this is not constrained by the second derivative.
-              Moreover any amount of vertical translation can
-              also be introduced to the graph. (Vertical
-              translation does not affect the derivative,
-              much less the second derivative.)
-            </OuterP>
-            <OuterP class="indent-10">
-              For another example, if {" "}
-              <NoBreak>
-                <Math>
-                  $c = -a/2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              meaning {" "}
-              <NoBreak>
-                <Math>
-                  $c \approx -1/2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              the graph ends up a perfectly balanced see-saw that
-              stays confined to a bounded range of {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -values:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/w9j2.svg">
-              <ImageLeft src="/build-img/svgo-svg/ywUL.svg" />
-            </Image>
-            <Pause />
-            <OuterP>
-              Moreover, like the previous graph, this solution
-              can also be vertically translated by any amount!
-              (And same for any solution.)
-            </OuterP>
-            <OuterP class="indent-10">
-              For yet another example, here is a graph in which
-              {" "}
-              <NoBreak>
-                <Math>
-                  $c + a = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $c = -a \approx -1$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/jkLB.svg" />
-            <Pause />
-            <OuterP>
-              Again, any of these graphs are
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              equally valid
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              solutions, and, for the last time,
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              any amount of vertical translation can be introduced
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (you can move the graphs up and down). So in
-              other words we have a “two-parameter family of
-              solutions”: one parameter of the solution—free
-              to choose—is {" "}
-              <NoBreak>
-                <Math>
-                  $c$
-                </Math>
-                —while
-              </NoBreak>
-              {" "} another parameter—independently
-              free to choose—is the amount of vertical
-              translation.
-            </OuterP>
-            <OuterP class="indent-10">
-              To claim a truly good “theoretical” understanding
-              of the solution, however, we should also determine
-              this rise here, if we can, as a function of {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "}
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $a$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} i.e., the amount of rise between the end
-              of one line segment and the start of the next:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Urvs.svg" />
-            <Pause />
-            <OuterP>
-              In fact, is not entirely clear that there aren't
-              possibly {" "}
-              <i>
-                two different
-              </i>
-              {" "} values of this rise,
-              for the two different kinds of “connector curves”
-              that exist (the concave ones and the convex ones):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/cpt7.svg" />
-            <Pause />
-            <OuterP>
-              (It will turn out that
-              the rises are all the same
-              but we're just pointing out.)
-              Focusing on the case
-              of a convex connector curve, note
-              that the rise is lower bounded by
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1.6c
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where {" "}
-              <Math>
-                $1.6 = 0.8 + 0.8$
-              </Math>
-              {" "} is the length (run) of
-              the connector curve, because {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} is the {" "}
-              <i>
-                lowest
-                slope
-              </i>
-              {" "} found anywhere inside the connector
-              curve:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/VC1t.svg" />
-            <Pause />
-            <OuterP>
-              Symmetrically,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1.6(c + a)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is an upper bound on the rise, because {" "}
-              <Math>
-                $c + a$
-              </Math>
-              {" "} is the
-              {" "}
-              <i>
-                greatest slope
-              </i>
-              {" "} anywhere inside the
-              connector curve:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/ImNP.svg" />
-            <Pause />
-            <OuterP>
-              To go any further we must add the first
-              derivative to this sketch—the first derivative
-              has value
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large c
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where the function has slope {" "}
-              <NoBreak>
-                <Math>
-                  $c$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} has value
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large c + a
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where the function has slope {" "}
-              <NoBreak>
-                <Math>
-                  $c + a$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and
-              climbs up/down along an S-shaped curve outside
-              of those intervals, adhering
-              to a slope that is given by the value of the
-              second derivative:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/sAnB.svg" />
-            <Pause />
-            <OuterP>
-              The afore-mentioned lower bound of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1.6c
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              coincides with the area of a rectangle that {" "}
-              <i>
-                lies
-                below
-              </i>
-              {" "} the graph of the derivative:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/-0Ye.svg" />
-            <Pause />
-            <OuterP>
-              Whereas the afore-mentioned upper bound of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1.6(a + c)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              coincides with the area of a rectangle that
-              {" "}
-              <i>
-                lies above
-              </i>
-              {" "} the graph of the derivative:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/QLRv.svg" />
-            <Pause />
-            <OuterP>
-              In other words, the rise of the convex connector
-              curve is lower and upper bounded by these
-              two areas. It will be helpful to write this
-              as a pictorial inequality:
-            </OuterP>
-            <Pause />
-            <Image
-              width="800px"
-              src="/build-img/svgo-svg/4IQl.svg"
-            />
-            <Pause />
-            <OuterP>
-              But we can tighten the inequality by dividing the
-              areas halfway (we'll let you think about this
-              one—if you don't get it, don't worry, because we'll
-              revisit the same topic in detail at some point):
-            </OuterP>
-            <Pause />
-            <Image
-              width="800px"
-              src="/build-img/svgo-svg/U7Hx.svg"
-            />
-            <Pause />
-            <OuterP>
-              Or even:
-            </OuterP>
-            <Pause />
-            <Image
-              width="800px"
-              src="/build-img/svgo-svg/Kx_N.svg"
-            />
-            <Pause />
-            <OuterP>
-              If we take this logic to its bitter conclusion, we
-              find the {" "}
-              <i>
-                e
-              </i>
-              quality:
-            </OuterP>
-            <Pause />
-            <Image
-              width="800px"
-              src="/build-img/svgo-svg/66Fx.svg"
-            />
-            <Pause />
-            <OuterP>
-              And because the S-curve is centrally symmetric
-              (the slopes at equal distance from the center are
-              the same because those slopes can be read off the
-              second derivative, and the second derivative bump
-              is left-right symmetric) we can compute the area
-              that the curve encloses exactly, by a geometric
-              surgery:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/_bVJ.svg" />
-            <Pause />
-            <OuterP>
-              Long story short, the area enclosed, which is
-              also the rise of the connector curve, is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1.6\cdot (c + &#123;a\over 2&#125;)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...that can be read as “run times average slope”
-              (because
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1.6
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the run while the slope (first derivative)
-              spends equal amounts of time, in equal measure,
-              above and below the value
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large c + &#123;a \over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              that is, indeed, the average of {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $c + a$
-                </Math>
-                ).
-              </NoBreak>
-              {" "}
-              For concave connector curves the
-              S-curve of the derivative is...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/x6B_.svg" />
-            <Pause />
-            <OuterP>
-              ...flipped around from before, going from
-              high to low, but the area enclosed by the S-curve
-              is the same. This area is also the rise of the
-              connector curve. Hence, long story short—for the
-              second time—all connector curves have rise
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1.6\cdot (c + &#123;a\over 2&#125;)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and we can annotate our sketch of the
-              “generic” solution with this additional piece of
-              information, if we want. (Well...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/CHGf.svg" />
-            <Pause />
-            <OuterP>
-              ...there, no one can accuse us of not doing the
-              homework ourselves.)
             </OuterP>
           </Solution>
         </Exercise>

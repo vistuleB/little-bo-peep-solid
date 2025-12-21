@@ -67,7 +67,7 @@
             curve”.
 
         |> SolutionNote
-            handle=LimitOfNewtonQuotient
+            handle=_limit_of_difference_quotient_
             If we let $h$ drop to $0$, and if $f$ is
             differentiable at $x$, the
             Newton-quotient-a.k.a.-slope-of-the-secant

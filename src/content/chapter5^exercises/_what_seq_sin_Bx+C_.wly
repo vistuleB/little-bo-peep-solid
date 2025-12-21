@@ -1,0 +1,139 @@
+|> Exercise
+    handle=_what_seq_sin_Bx+C_
+
+    What sequence of transformations of the plane
+    maps the graph of
+
+    $$
+    x \ra \sin(x)
+    $$
+
+    onto the graph of
+
+    $$
+    x \ra \sin(Bx + C)
+    $$
+
+    ...?
+
+    |> Solution
+        We give a “physics-based answer”.
+       
+        As discussed in Exercise 12, the function
+
+        $$
+        t \ra \cos(Bt + C)
+        $$
+
+        describes, among others, the $x$-coordinate of a
+        particle going clockwise around the unit circle
+        at $B$ radians per unit time,
+        starting at $C$ radians clockwise from $(1, 0)$
+        at time $t = 0$.
+       
+        By the same token,
+        $$
+        t \ra \cos(t)
+        $$
+        describes (among others) the $x$-coordinate of a
+        particle going clockwise around the unit circle 
+        at ONE radian per unit time, starting at ZERO radians
+        clockwise from $(1, 0)$ at time $t = 0$.
+       
+        To get from the $1$-$0$-graph to the $B$-$C$-graph
+        we need to do first things first, and start
+        by translating the graph $y = \cos(t)$ until the
+        point $(C, \cos(C))$ is at the origin, 
+        i.e., the
+        first thing is to translate the graph left by $C$
+        units, so that the value $\cos(C)$ is at $t = 0$:
+
+        |> Image
+            src=images/svg_ch5_ex_cos_Bx_plus_C_step_1.svg
+        
+        Now that we have the value we want at $t = 0$,
+        the next step is to “accelerate” the graph by a
+        factor $B$—i.e., the second step is to
+        _horizontally compress by a factor $B$_, to
+        reflect a particle going $B$ radians per second,
+        not $1$ radian per second—here illustrated with
+        $B = 5.5$:
+        
+        |> Image
+            src=images/svg_ch5_ex_cos_Bx_plus_C_step_2.svg
+
+        And what goes for $\cos$ goes for $\sin$ (or 
+        indeed for any function $f$, even though the
+        physical interpretation is no longer at hand);
+        but to recapitulate, the answer is the
+        following sequence of two steps:
+
+        |> TextParent
+            |> div
+                style=border:red solid 1px;margin:1.2em auto 1.2em;padding:0.3em 1.2em 0.4em;width:100%;box-sizing:border-box;
+
+                __1. horizontally translate the graph by $-C$__
+
+                __2. horizontally compress the resulting graph
+                by a factor $B$__
+
+        |> TildeDivider
+        
+        |> SolutionNote
+
+            The first step corresponds to
+            
+            __phase adjustment__
+            
+            in the language of physicists (i.e., when
+            a sinusoid is horizontally translated such that
+            it crosses the $y$ axis at a desired
+            location of its wave), while the second step
+            can be described as
+            
+            __angular frequency adjustment__
+            
+            or just
+            
+            __frequency adjustment__
+            
+            if we imagine playing with the dial of a
+            synthetizer and watching some blue wave modulate.
+            (Recall that “angular frequency” is a synonym
+            of “angular velocity”, meaning
+            _radians per unit time_.)
+
+            Note that if you adjust the angular frequency
+            <i>before</i> adjusting the phase, the phase
+            will need to be adjusted by a different amount,
+            in order to account for the already-changed
+            angular frequency; in that case, the sequence
+            of transformations becomes:
+
+            |> TextParent
+                |> div
+                    style=border:red solid 1px;margin:1.2em auto 1.4em;padding:0.3em 1.2em 0.4em;width:100%;box-sizing:border-box;
+
+                    __1. horizontally compress the resulting graph
+                    by a factor $B$__
+
+                    __2. horizontally translate the graph by $-C/B$__
+
+            ...where the translation is now $-C/B$ instead
+            of $-C$ to account for the fact that the graph
+            has already been compressed when the translation
+            is effected. (In fact, this alternate sequence of
+            transformations and the $C/B$ term are directly 
+            related to the fact that
+
+            $$
+            Bx + C
+            $$
+
+            can be written
+
+            $$
+            B(x + C/B)
+            $$
+
+            believe it or not.)

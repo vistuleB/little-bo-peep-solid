@@ -321,7 +321,7 @@
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet1_inline.svg
-        through 
+        \ through 
         |> InlineImage
             class=ch4_pacman1_inline_number_pellet
             src=images/svg_ch4_pacman1_pellet8_inline.svg
