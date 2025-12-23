@@ -159,9 +159,9 @@ export default function __Chapter5__() {
           <b>
             Cos and Sin. (“Cosine” and “sine”.)
           </b>
+          {" "} We've
+          already encountered the ‘cos’ function in 
           {" "}
-          We've already encountered the ‘cos’
-          function in {" "}
           <NoBreak>
             <a
               href="/article/chapter3#_34_hgi_"
@@ -171,32 +171,31 @@ export default function __Chapter5__() {
             </a>
             ,
           </NoBreak>
-          {" "} e.g..
-          It is the one that has this graph:
+          {" "}
+          e.g.. It is the one that has this graph:
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/hiZe.svg" />
         <Pause />
         <OuterP>
-          It has a close cousin named ‘sin’.
-          While {" "}
+          It has a close cousin named ‘sin’. While {" "}
           <Math>
             $\cos(x)$
           </Math>
-          {" "} “tops off” at {" "}
+          {" "}
+          “tops off” at {" "}
           <NoBreak>
             <Math>
               $x = 0$
             </Math>
             ,
           </NoBreak>
-          {" "}
-          {" "}
+          {" "} {" "}
           <Math>
             $\sin(x)$
           </Math>
-          {" "} goes diagonally through the point
-          {" "}
+          {" "} goes diagonally through
+          the point {" "}
           <NoBreak>
             <Math>
               $(0, 0)$
@@ -208,8 +207,7 @@ export default function __Chapter5__() {
         <Image src="/build-img/svgo-svg/fuoV.svg" />
         <Pause />
         <OuterP>
-          As far as standard definitions go,
-          {" "}
+          As far as standard definitions go, {" "}
           <Math>
             $\cos(x)$
           </Math>

@@ -1,23 +1,21 @@
 |> Section
 
-    *Cos and Sin. (“Cosine” and “sine”.)*
-    We've already encountered the ‘cos’
-    function in Exercise >>_cosine_of_1000x_ of Chapter >>functions, e.g..
-    It is the one that has this graph:
+    *Cos and Sin. (“Cosine” and “sine”.)* We've
+    already encountered the ‘cos’ function in 
+    Exercise >>_cosine_of_1000x_ of Chapter >>functions,
+    e.g.. It is the one that has this graph:
 
     |> Image
         src=images/svg_ch5_ch_cosine.svg
 
-    It has a close cousin named ‘sin’.
-    While $\cos(x)$ “tops off” at $x = 0$,
-    $\sin(x)$ goes diagonally through the point
-    $(0, 0)$:
+    It has a close cousin named ‘sin’. While $\cos(x)$
+    “tops off” at $x = 0$, $\sin(x)$ goes diagonally through
+    the point $(0, 0)$:
 
     |> Image
         src=images/svg_ch5_ch_cosine_and_sine.svg
 
-    As far as standard definitions go,
-    $\cos(x)$ is the
+    As far as standard definitions go, $\cos(x)$ is the
 
     __$x$-coordinate__
 

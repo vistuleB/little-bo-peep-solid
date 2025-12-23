@@ -49,13 +49,13 @@ const HamburgerPanelAuthorSuppliedContents = () => {
           article_type={1}
           href="bootcamp1"
         >
-          Powers of 10
+          Sets
         </HamburgerPanelItem>
         <HamburgerPanelItem
           article_type={2}
           href="bootcamp2"
         >
-          Sets
+          Powers of 10
         </HamburgerPanelItem>
       </ul>
     </div>

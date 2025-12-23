@@ -58,13 +58,13 @@ export default function __Home__() {
             article_type={1}
             href="bootcamp1"
           >
-            Powers of 10
+            Sets
           </TOCItem>
           <TOCItem
             article_type={2}
             href="bootcamp2"
           >
-            Sets
+            Powers of 10
           </TOCItem>
         </ul>
       </div>
