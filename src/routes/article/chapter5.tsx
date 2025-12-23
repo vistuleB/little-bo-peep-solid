@@ -23,7 +23,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_128_hgi_"
+      id="_133_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -9084,6 +9084,58 @@ const Rest = () => {
               lines and circles, respectively, that are
               perpendicular on the cylinder.)
             </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                As a consequence, 
+                the area of a shape on the sphere is equal to
+                the area of the projection of that shape onto
+                the cylinder, for any shape.
+                This (strange?) fact is known as the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                Archimedean property
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of the sphere.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                For example, the following two orange areas, one
+                on the sphere and one on the cylinder, are
+                equal, by the Archimedean property:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/pG5W.svg" />
+              <Pause />
+              <OuterP>
+                For a more fun example, since all corresponding areas
+                on the sphere and on the cylinder are equal in
+                this example by the Archimedean property...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/7Dao.svg" />
+              <Pause />
+              <OuterP>
+                ...it implies that the various “tube sections”
+                of either circle have equal areas on the cylinder,
+                even though dissimilar in shape, since those sections
+                have equal area to one another on the sphere!
+                (For each circle separately.)
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={39}>
@@ -9265,449 +9317,6 @@ const Rest = () => {
             <OuterP>
               by Exercise 49.
             </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                To formalize the argument, consider that
-                we can approximate the volume of the sphere
-                by finitely many cones with triangular bases,
-                by triangulating the surface of the sphere:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/qioC.svg" />
-              <Pause />
-              <OuterP>
-                Note that a cone with a triangular base is
-                just a
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                tetrahedron
-                <ImageLeft src="/build-img/svgo-svg/kB0X.svg" />
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                where “tetrahedron” means “four-sided shape”.
-                (There is only 1 way to pull off a four-sided
-                shape in 3D: to make all sides triangles.)
-                So the volume of the sphere is approximated
-                by the sum of the volumes of the tetrahedrons,
-                a.k.a. cones.
-              </OuterP>
-              <OuterP class="indent-10">
-                Define the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                mesh size
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of such a set of tetrahedrons to be the largest
-                sidelength of any tetrahedron base.
-              </OuterP>
-              <OuterP class="indent-10">
-                (The smaller the mesh size, the more pointed
-                the tetrahedrons.)
-              </OuterP>
-              <OuterP class="indent-10">
-                For the current
-                discussion we take it for granted that as the
-                mesh size shrinks, the sum of the volumes of
-                the cones (= tetrahedrons) converges to the
-                volume of sphere.
-              </OuterP>
-              <OuterP class="indent-10">
-                (Or take the limit, as the mesh size shrinks,
-                of the sum of the volume of the tetrahedrons
-                to be the {" "}
-                <i>
-                  definition
-                </i>
-                {" "} of the “volume of the
-                sphere”—that's just as well, since we don't have
-                any other competing notion of “volume of the sphere”,
-                at the moment.)
-              </OuterP>
-              <OuterP class="indent-10">
-                Here is a closer look at a single tetrahedron
-                {" "}
-                <NoBreak>
-                  (
-                  <Math>
-                    $h_i$
-                  </Math>
-                </NoBreak>
-                {" "} is the height of the tetrahedron):
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/7QrH.svg" />
-              <Pause />
-              <OuterP>
-                One observes that
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                B_i \leq A_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                where
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                B_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is the base of the tetrahedron and
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                A_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is the projection of the base onto the surface
-                of the sphere from the center of the sphere, and
-                that
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                h_i \leq r
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                where
-                {" "}
-                <Math>
-                  $h_i$
-                </Math>
-                {" "}
-                is the height of the tetrahedron, and {" "}
-                <Math>
-                  $r$
-                </Math>
-                {" "} is the
-                radius of sphere. On the other hand, it is not hard
-                to convince oneself that
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                B_i \geq 0.9A_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                and
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                h_i \geq 0.9r
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                for all of the tetrahedrons, if the mesh size is
-                sufficiently small; even,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                B_i \geq 0.99A_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                and
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                h_i \geq 0.99r
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                for all of the tetrahedrons simultaenously,
-                {" "}
-                <i>
-                  if the mesh size is sufficiently small
-                </i>
-                ; even,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                B_i \geq 0.99999A_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                and
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                h_i \geq 0.99999r
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                for all... if etc.
-              </OuterP>
-              <OuterP class="indent-10">
-                (Or as mathematicians would put it: “for all {" "}
-                <Math>
-                  $\e &gt; 0$
-                </Math>
-                {" "}
-                there exists an {" "}
-                <Math>
-                  $s &gt; 0$
-                </Math>
-                {" "} such that
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                B_i \geq (1-\e)A_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                and
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                h_i \geq (1-\e)r
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                for all of the tetrahedrons, if the mesh size less than {" "}
-                <NoBreak>
-                  <Math>
-                    $s$
-                  </Math>
-                  .”)
-                </NoBreak>
-                {" "}
-                (“For all... there exists... such that... if... .”)
-              </OuterP>
-              <OuterP class="indent-10">
-                This implies that
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                [nb: fast-foward to Exercise 38 if you have never
-                seen {" "}
-                <NoBreak>
-                  <Math>
-                    $\sum$
-                  </Math>
-                  -notation,
-                </NoBreak>
-                {" "} but this basically reads
-                “sum from {" "}
-                <Math>
-                  $i$
-                </Math>
-                {" "} equals {" "}
-                <Math>
-                  $1$
-                </Math>
-                {" "} up to {" "}
-                <NoBreak>
-                  <Math>
-                    $N$
-                  </Math>
-                  ”]
-                </NoBreak>
-                {" "} which is the
-                total volume of the tetrahedrons, where {" "}
-                <Math>
-                  $N$
-                </Math>
-                {" "} denotes
-                the number of tetrahedrons and {" "}
-                <NoBreak>
-                  <Math>
-                    $B_i$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <Math>
-                  $h_i$
-                </Math>
-                {" "} are the
-                base and height of the {" "}
-                <NoBreak>
-                  <Math>
-                    $i$
-                  </Math>
-                  -th
-                </NoBreak>
-                {" "} tetrahedron, is
-                sandwiched between
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_i r
-                $$
-                <ImageRight
-                  offset_x="5em"
-                  src="/build-img/svgo-svg/6Cvw.svg"
-                  compensate_offset_x_for_large_text_columns={true}
-                />
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                above, and
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r
-                $$
-                <ImageLeft
-                  offset_x="2.5em"
-                  src="/build-img/svgo-svg/r3o2.svg"
-                  compensate_offset_x_for_large_text_columns={true}
-                />
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                below, for sufficiently small mesh size; but
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \sum_&#123;i=1&#125;^N A_i = A
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                where {" "}
-                <Math>
-                  $A = 8\eta\rt&#123;.05&#125;r^2$
-                </Math>
-                {" "} is the total area
-                of the sphere, and so
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is sandwiched between
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;A_ir = &#123;1\over 3&#125;\cdot r\cdot \sum_&#123;i=1&#125;^N A_i = &#123;1\over 3&#125;Ar
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                above, and
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r = (0.99999)^2&#123;1\over 3&#125;Ar
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                below; or, nicely put in a double inequality:
-              </OuterP>
-              <center style="margin-top:1em;margin-bottom:1em;">
-                <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
-                  <MathBlock>
-                    $$
-                    &#123;1\over 3&#125;Ar \geq \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i \geq (0.99999)^2&#123;1\over 3&#125;Ar
-                    $$
-                  </MathBlock>
-                </div>
-              </center>
-              <OuterP>
-                ...but we could replace {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $0.99999$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} by any other
-                constant less that {" "}
-                <Math>
-                  $1$
-                </Math>
-                {" "} [yah no: because of the square,
-                we need to say “between {" "}
-                <Math>
-                  $0$
-                </Math>
-                {" "} and {" "}
-                <NoBreak>
-                  <Math>
-                    $1$
-                  </Math>
-                  ”]
-                </NoBreak>
-                {" "} by further
-                shrinking the size of the mesh, which implies that
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \sum_&#123;i=1&#125;^N &#123;1\over 3&#125;B_ih_i
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                must converge to
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;1\over 3&#125;Ar
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                as the mesh size goes to zero—it cannot converge to
-                something greater than, nor less than, this number!
-              </OuterP>
-            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={41}>
@@ -12347,7 +11956,11 @@ const Rest = () => {
               </OuterP>
               <OuterP class="indent-10">
                 Note that if you adjust the angular frequency
-                &lt;i&gt;before&lt;/i&gt; adjusting the phase, the phase
+                {" "}
+                <i>
+                  before
+                </i>
+                {" "} adjusting the phase, the phase
                 will need to be adjusted by a different amount,
                 in order to account for the already-changed
                 angular frequency; in that case, the sequence
@@ -12412,6 +12025,1214 @@ const Rest = () => {
                 believe it or not.)
               </OuterP>
             </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={48}>
+          <ExerciseStatement id="_128_hgi_">
+            <OuterP>
+              <b>
+                Exercise 48.
+              </b>
+              {" "}
+              An access staircase goes up the side of a
+              hemispheric gas tank. It keeps a constant angle
+              of {" "}
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "} to vertical at its inside edge 
+              until it reaches {" "}
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "} up the tank, at which
+              point it makes a beeline for the top:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/wF1d.svg" />
+            <Pause />
+            <OuterP>
+              How long, roughly, is the inside handrail
+              of the staircase as a function of the radius
+              of the tank?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Putting {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} for the radius, the answer is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx r(1 + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot 1=r
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              accounts for the first (lower) portion of the
+              handrail, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot(\eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              accounts for the upper portion of the handrail.
+              (Ignoring that the handrail doesn't quite
+              follow through to the tippy-top of the gas tank,
+              per the picture.)
+            </OuterP>
+            <OuterP class="indent-10">
+              To reason about the lower portion of the handrail
+              imagine a butterly that follows up the
+              handrail by flying straight up and
+              straight over, then straight up and straight
+              over again, etc, like so:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/EiSR.svg" />
+            <Pause />
+            <OuterP>
+              The total length of the handrail is the sum of
+              all the diagonal segments (in dotted white) above.
+              Because the diagonal segment has length
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;2&#125;h
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for a leg in which the butterly goes up by {" "}
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the
+              total length of the diagonal segments is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              times the total amount that the butterfly goes up
+              for the first half of the handrail. But this
+              amount—call it {" "}
+              <NoBreak>
+                <Math>
+                  $H$
+                </Math>
+                —is
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot\sin(45^\circ) = r\cdot &#123;1\over \sqrt&#123;2&#125;&#125; = &#123;r\over \sqrt&#123;2&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as illustrated here:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/VrOC.svg" />
+            <Pause />
+            <OuterP>
+              And therefore the sum of the white diagonal segments
+              is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;2&#125;\cdot H = \sqrt&#123;2&#125;\cdot &#123;r\over \sqrt&#123;2&#125;&#125; = r
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...just {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as we said.
+            </OuterP>
+            <OuterP class="indent-10">
+              On the other hand, the upper portion of the handrail
+              has length
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot(\eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (modulo the kerfuffle at the top) simply by the fact
+              that, in a circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} an angle of {" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "}
+              radians subtends an arc of length {" "}
+              <NoBreak>
+                <Math>
+                  $r\alpha$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/E5ov.svg" />
+            <Pause />
+            <OuterP>
+              ...and hence the {" "}
+              <i>
+                total
+              </i>
+              {" "} length of the handrail
+              is...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx r + r\cdot\eta/2 = r(1 + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...as claimed.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Another way to think about the length of the lower
+                portion of the handrail is via the green triangle 
+                depicted below, that drops down  onto the handrail
+                like a curtain, starting at the top of the lower
+                portion of the handrail:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/tyZN.svg" />
+              <Pause />
+              <OuterP>
+                If we “unroll” the triangle onto a vertical plane
+                while keeping its left edge vertical we find a 
+                triangle with a straight lower edge at {" "}
+                <Math>
+                  $45^\circ$
+                </Math>
+                {" "}
+                to horizontal, because that is the property of the
+                handrail to maintain this angle everywhere:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/-SnV.svg" />
+              <Pause />
+              <OuterP>
+                Hence the length of the lower half of the handrail
+                is
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \large \sqrt&#123;2&#125;H
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                with {" "}
+                <Math>
+                  $H = r/\sqrt&#123;2&#125;$
+                </Math>
+                {" "} as previously defined.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={49}>
+          <ExerciseStatement id="_129_hgi_">
+            <OuterP>
+              <b>
+                Exercise 49.
+              </b>
+              {" "}
+              Give a decimal approximation to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r(1 + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $r = 100$
+                </Math>
+                m,
+              </NoBreak>
+              {" "} accurate within {" "}
+              <NoBreak>
+                <Math>
+                  $\pm 5\%$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (No calculators.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta \approx &#123;11\over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              within 1/1000th, we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+                 r(1 + \eta/2)\,\, \approx&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;0.0&#125; r\left(1 + &#123;11\over 14&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(&#123;14 + 11\over 14&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\cdot &#123;25\over 14&#125;\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\cdot &#123;28 - 3\over 14&#125;\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(2 - &#123;3\over 14&#125;\right)\\
+                                   \approx&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(2 - &#123;3\over 15&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(2 - &#123;1\over 5&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r(2 - 0.2)\\
+                                         =&amp;\,\,\,\dn&#123;0.0&#125;\up&#123;1.3&#125; 1.8r
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              leading to an approximation of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx 180\te&#123;m&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $r = 100$
+                </Math>
+                m.
+              </NoBreak>
+              {" "}
+              For a different, coarser approach, one can
+              even use
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta \approx &#123;10.5\over 7&#125; = 1.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which gives
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 + \eta/2 \approx 1.75
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and a final approximation of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx 175\te&#123;m&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $r = 100$
+                </Math>
+                m.
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The two approximations given produce
+                {" "}
+                <NoBreak>
+                  1
+                  <Math>
+                    $\%$
+                  </Math>
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  2
+                  <Math>
+                    $\%$
+                  </Math>
+                </NoBreak>
+                {" "} of error, respectively, 
+                or {" "}
+                <Math>
+                  $\approx 0.8\%$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $\approx 1.9\%$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} 
+                more exactly, respectively. (For the
+                second approximation,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.5
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is nearly {" "}
+                <NoBreak>
+                  5
+                  <Math>
+                    $\%$
+                  </Math>
+                </NoBreak>
+                {" "} less than {" "}
+                <Math>
+                  $\eta/2$
+                </Math>
+                {" "} right
+                off the bat, but the fraction represented
+                by this error is diluted by the fact that
+                we add 1.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The true value is {" "}
+                <NoBreak>
+                  <Math>
+                    $178.5$
+                  </Math>
+                  m,
+                </NoBreak>
+                {" "} as
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \eta/2 = 0.785\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and some, as
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \eta = 1.570\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and some. (Note that half of {" "}
+                <Math>
+                  $0.07$
+                </Math>
+                {" "} is {" "}
+                <NoBreak>
+                  <Math>
+                    $0.035$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                and that {" "}
+                <NoBreak>
+                  <Math>
+                    $0.75 + 0.035 = 0.785$
+                  </Math>
+                  .)
+                </NoBreak>
+                {" "} (PS: In fact,
+                doing the division
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.57/2
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                “by head” constitutes another perfectly valid
+                method of approximation, if you can remember
+                that {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta = 1.570\dots$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={50}>
+          <ExerciseStatement id="_130_hgi_">
+            <OuterP>
+              <b>
+                Exercise 50.
+              </b>
+              {" "}
+              From the first three steps of the
+              division of {" "}
+              <Math>
+                $11$
+              </Math>
+              {" "} by {" "}
+              <Math>
+                $7$
+              </Math>
+              {" "} we find {" "}
+              <NoBreak>
+                <Math>
+                  $\eta \approx 1.57$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/bA_Z.svg" />
+            <Pause />
+            <OuterP>
+              Use this approximation of {" "}
+              <Math>
+                $\eta$
+              </Math>
+              {" "} to approximate
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              three-quarters the circumference
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              of a circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $100$
+                </Math>
+                m.
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is one-quarter the circumference of a circle divided
+              by its radius,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              3\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is three-quarters the circumference of a circle divided
+              by its radius; using {" "}
+              <NoBreak>
+                <Math>
+                  $\eta \approx 1.57$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $3\eta$
+              </Math>
+              {" "} is approximately
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              3 \times 1.57 = 3\times (1.5 + 0.07) = 3 \times 1.5 + 3\times 0.07
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              =\,\,4.5 + 0.21
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              =\,\,4.71
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so three-quarters the circumference of a circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $100$
+                </Math>
+                m
+              </NoBreak>
+              {" "}
+              will be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx 4.71 \times 100\te&#123;m&#125; = 471\te&#123;m&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The following table gives approximation ratios
+                going from {" "}
+                <Math>
+                  $n = 1$
+                </Math>
+                {" "} to {" "}
+                <Math>
+                  $n = 4$
+                </Math>
+                {" "} quarters, similarly
+                computed, that one might as well remember:
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;array&#125;&#123;c|c|c&#125;
+                \,\,\,\,n\,\,\,\, &amp; n(1.5 + 0.07) &amp; \,\,\,\,\approx n\eta\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
+                1 &amp; \up&#123;1.2&#125; 1.5 + 0.07 &amp; 1.57\\
+                2 &amp; \up&#123;1.2&#125; 3.0 + 0.14 &amp; 3.14\\
+                3 &amp; \up&#123;1.2&#125; 4.5 + 0.21 &amp; 4.71\\
+                4 &amp; \up&#123;1.2&#125; 6.0 + 0.28 &amp; 6.28
+                \end&#123;array&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                For example,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                6.28
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is an approximation to the circumference of a circle
+                divided by its radius, since {" "}
+                <NoBreak>
+                  <Math>
+                    $6.28 = 4 \times 1.57$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                While
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large&#123;11\over 7&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is about half-a-part-in-a-thousand
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                too large
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                compared to the true value of {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} 
+                the approximations above just so turn out to
+                be (really nearly quite exactly) half-a-part-in-a-thousand
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                too small
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                due to the fact that the the long division of {" "}
+                <Math>
+                  $11$
+                </Math>
+                {" "} by
+                {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} is terminated early. But if we pursue the division
+                for just one more step, which adds a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $1$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to the
+                quotient...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/qFb7.svg" />
+              <Pause />
+              <OuterP>
+                ...we obtain the modified approximation...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \eta \approx 1.571
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...that is, for its part, an {" "}
+                <i>
+                  overestimate
+                </i>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                (Whereas
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.57
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is still an {" "}
+                <i>
+                  underestimate
+                </i>
+                .) From there,
+                any further digits that are added to the quotient only
+                worsen the approximation, since we are already overshooting!
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                In fact, the true value of {" "}
+                <Math>
+                  $\eta$
+                </Math>
+                {" "} is roughly half-way
+                between
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.57
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;11\over 7&#125; = 1.571428\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                being
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \,\eta = 1.570796\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                per the calculator. (That knows this value by heart.)
+                Taking into account that
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.570796
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is {" "}
+                <i>
+                  basically
+                </i>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.5708
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                gives us the following improved approximations of
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $2\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $3\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $4\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} based on adding
+                multiples of {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $08$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to the tail end of our previous
+                approximations:
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;array&#125;&#123;c|c|c&#125;
+                \,\,\,\,n\,\,\,\, &amp; n(1.5 + 0.07 + 0.0008) &amp; \,\,\,\,\approx n\eta\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
+                1 &amp; \up&#123;1.2&#125; 1.5 + 0.07 + 0.0008 &amp; 1.5708\\
+                2 &amp; \up&#123;1.2&#125; 3.0 + 0.14 + 0.0016 &amp; 3.1416\\
+                3 &amp; \up&#123;1.2&#125; 4.5 + 0.21 + 0.0024 &amp; 4.7124\\
+                4 &amp; \up&#123;1.2&#125; 6.0 + 0.28 + 0.0032 &amp; 6.2832
+                \end&#123;array&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...with these approximations being good to {" "}
+                <i>
+                  three
+                  parts in a million
+                </i>
+                . (Improved, namely, from {" "}
+                <i>
+                  half a
+                  part in a thousand
+                </i>
+                .)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={51}>
+          <ExerciseStatement id="_131_hgi_">
+            <OuterP>
+              <b>
+                Exercise 51.
+              </b>
+              {" "}
+              A ship travels from the South pole of a watery
+              copy of the Earth to the North pole while maintaining
+              a constant compass bearing of {" "}
+              <Math>
+                $5^\circ$
+              </Math>
+              {" "} North of East.
+              (See Fig.) What is the length of the curve traced by the
+              ship?
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/NUnQ.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Imagine that a butterfly that only flies by
+              small steps East and North, alternately, follows 
+              with the boat:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/tjm5.svg" />
+            <Pause />
+            <OuterP>
+              (We replace
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge 5^\circ
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \alpha
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              radians for more generality, that will make the
+              problem no more nor less easy.) The total of all the
+              small northward legs that the butterfly travels is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              20004\,\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or one-half the so-called {" "}
+              <i>
+                meridional circumference
+              </i>
+              {" "}
+              of the Earth. But the total distance traveled
+              by the ship is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \csc(\alpha)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              times the sum of all the butterly's northward legs:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/u2Fw.svg" />
+            <Pause />
+            <OuterP>
+              The total distance traveled by the ship
+              is therefore
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 20004\,\te&#123;km&#125;\cdot \csc \alpha = &#123;20004\,\te&#123;km&#125; \over \sin \alpha&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              that comes out to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \sim 229520\,\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              with {" "}
+              <NoBreak>
+                <Math>
+                  $\alpha = 5^\circ$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                In reality the butterly's triangle is
+                drawn on a spherical shell and it is
+                only because the triangle is very small
+                compared to the radius of the shell that
+                it resembles an ordinary triangle, without
+                quite being an ordinary triangle. But what
+                is important is that the {" "}
+                <i>
+                  ratios
+                </i>
+                {" "} of the
+                lengths of the butterly triangle approach
+                those of an ordinary right triangle of
+                angle {" "}
+                <Math>
+                  $\alpha$
+                </Math>
+                {" "} as we make the butterfly's
+                triangle sufficiently small. 
+                (Which is believable.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={52}>
+          <ExerciseStatement id="_132_hgi_">
+            <OuterP>
+              <b>
+                Exercise 52.
+              </b>
+              {" "}
+              True or false: 
+              for all {" "}
+              <NoBreak>
+                <Math>
+                  $B_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B_2 \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(B_1x) + \sin(B_2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be rewritten
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              W\cdot\cos(x + \psi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some {" "}
+              <NoBreak>
+                <Math>
+                  $W$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\psi \in \rr$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              If {" "}
+              <NoBreak>
+                <Math>
+                  $B_1 = B_2 = 2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} e.g., then
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(B_1x) + \sin(B_2x) = \cos(2x) + \sin(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is periodic mod {" "}
+              <NoBreak>
+                <Math>
+                  $2\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} but
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              W\cdot \cos(x + \psi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is only going to be periodic mod {" "}
+              <NoBreak>
+                <Math>
+                  $4\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} not
+              {" "}
+              <NoBreak>
+                <Math>
+                  $2\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} unless one sets {" "}
+              <NoBreak>
+                <Math>
+                  $W = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which is obviously
+              not going to work, so the statement is false.
+            </OuterP>
           </Solution>
         </Exercise>
       </Exercises>

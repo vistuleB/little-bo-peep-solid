@@ -44,6 +44,15 @@
     "compression": "0.0%",
     "used-last-build": true
   },
+  "svg_ch5_ex_spiral_sphere.svg": {
+    "build-version": "svgo-svg/NUnQ.svg",
+    "build-version-created-on": 1766320431,
+    "build-method": "svgo",
+    "build-version-size": 76804,
+    "original-size": 234772,
+    "compression": "67.29%",
+    "used-last-build": true
+  },
   "svg_ch5_ex_sec_powers_bounce.svg": {
     "build-version": "svgo-svg/zo9k.svg",
     "build-version-created-on": 1763368303,
@@ -366,7 +375,7 @@
     "build-version-size": 37270,
     "original-size": 37365,
     "compression": "0.25%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "57.svg": {
     "build-version": "svgo-svg/fi0W.svg",
@@ -1441,11 +1450,11 @@
   },
   "svg_ch5_ex_horizontal_projection_sphere_statement.svg": {
     "build-version": "svgo-svg/dKeI.svg",
-    "build-version-created-on": 1763368311,
+    "build-version-created-on": 1766316831,
     "build-method": "svgo",
-    "build-version-size": 233500,
-    "original-size": 233679,
-    "compression": "0.08%",
+    "build-version-size": 228097,
+    "original-size": 378305,
+    "compression": "39.71%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_wave_minus_2sin_x.svg": {
@@ -1844,6 +1853,15 @@
     "compression": "0.03%",
     "used-last-build": true
   },
+  "svg_ch5_ex_gas_sphere.svg": {
+    "build-version": "svgo-svg/wF1d.svg",
+    "build-version-created-on": 1766318088,
+    "build-method": "svgo",
+    "build-version-size": 174448,
+    "original-size": 268602,
+    "compression": "35.05%",
+    "used-last-build": true
+  },
   "svg_ch4_sketch_the_middle_b_sol3.svg": {
     "build-version": "svgo-svg/hXW9.svg",
     "build-version-created-on": 1763370672,
@@ -1869,6 +1887,15 @@
     "build-version-size": 47379,
     "original-size": 47469,
     "compression": "0.19%",
+    "used-last-build": true
+  },
+  "svg_ch5_ex_gas_sphere_triangle_out_flat.svg": {
+    "build-version": "svgo-svg/-SnV.svg",
+    "build-version-created-on": 1766318089,
+    "build-method": "svgo",
+    "build-version-size": 17000,
+    "original-size": 31655,
+    "compression": "46.3%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_p4black_inline.svg": {
@@ -2771,6 +2798,15 @@
     "compression": "44.86%",
     "used-last-build": true
   },
+  "svg_ch5_ex_gas_sphere_green_2_1_45.svg": {
+    "build-version": "svgo-svg/tyZN.svg",
+    "build-version-created-on": 1766318089,
+    "build-method": "svgo",
+    "build-version-size": 182088,
+    "original-size": 312443,
+    "compression": "41.72%",
+    "used-last-build": true
+  },
   "svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg": {
     "build-version": "svgo-svg/4s2G.svg",
     "build-version-created-on": 1763368287,
@@ -3257,6 +3293,15 @@
     "compression": "0.09%",
     "used-last-build": true
   },
+  "svg_ch5_ex_horizontal_projection_sphere_orange_9.svg": {
+    "build-version": "svgo-svg/7Dao.svg",
+    "build-version-created-on": 1766316683,
+    "build-method": "svgo",
+    "build-version-size": 238239,
+    "original-size": 391272,
+    "compression": "39.11%",
+    "used-last-build": true
+  },
   "svg_ch5_ex_sec_powers_bounce_cameo.svg": {
     "build-version": "svgo-svg/eiL2.svg",
     "build-version-created-on": 1763368304,
@@ -3336,6 +3381,15 @@
     "build-version-size": 74229,
     "original-size": 74440,
     "compression": "0.28%",
+    "used-last-build": true
+  },
+  "svg_ch5_ex_1_57_three_quarters_division.svg": {
+    "build-version": "svgo-svg/bA_Z.svg",
+    "build-version-created-on": 1766319804,
+    "build-method": "svgo",
+    "build-version-size": 63953,
+    "original-size": 127249,
+    "compression": "49.74%",
     "used-last-build": true
   },
   "svg_ch5_ex_bomb_shelter_door_alpha_decomposed.svg": {
@@ -3993,6 +4047,15 @@
     "build-version-size": 87040,
     "original-size": 87060,
     "compression": "0.02%",
+    "used-last-build": false
+  },
+  "svg_ch5_ex_gas_sphere_butterfly.svg": {
+    "build-version": "svgo-svg/EiSR.svg",
+    "build-version-created-on": 1766318088,
+    "build-method": "svgo",
+    "build-version-size": 946456,
+    "original-size": 1103504,
+    "compression": "14.23%",
     "used-last-build": true
   },
   "svg_ch4_velocity_vector_radius_3_speed_2_acceleration_uncentered.svg": {
@@ -4272,7 +4335,7 @@
     "build-version-size": 12843,
     "original-size": 12871,
     "compression": "0.22%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch4_pacman2_frankenstein_at_27_and_30.svg": {
     "build-version": "svgo-svg/3t-v.svg",
@@ -4373,6 +4436,15 @@
     "compression": "45.18%",
     "used-last-build": false
   },
+  "svg_ch5_ex_gas_sphere_profile.svg": {
+    "build-version": "svgo-svg/VrOC.svg",
+    "build-version-created-on": 1766318088,
+    "build-method": "svgo",
+    "build-version-size": 161007,
+    "original-size": 251538,
+    "compression": "35.99%",
+    "used-last-build": true
+  },
   "svg_ch5_ex_spherical_coordinates_statement.svg": {
     "build-version": "svgo-svg/FZVx.svg",
     "build-version-created-on": 1766286356,
@@ -4399,6 +4471,15 @@
     "original-size": 33356,
     "compression": "46.83%",
     "used-last-build": false
+  },
+  "svg_ch5_ex_1_57_three_quarters_division_one_more.svg": {
+    "build-version": "svgo-svg/qFb7.svg",
+    "build-version-created-on": 1766319805,
+    "build-method": "svgo",
+    "build-version-size": 59564,
+    "original-size": 139706,
+    "compression": "57.36%",
+    "used-last-build": true
   },
   "svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg": {
     "build-version": "svgo-svg/xkzr.svg",
@@ -4679,6 +4760,15 @@
     "compression": "1.43%",
     "used-last-build": false
   },
+  "svg_ch5_ex_horizontal_projection_sphere_orange_1.svg": {
+    "build-version": "svgo-svg/pG5W.svg",
+    "build-version-created-on": 1766316682,
+    "build-method": "svgo",
+    "build-version-size": 210930,
+    "original-size": 344800,
+    "compression": "38.83%",
+    "used-last-build": true
+  },
   "svg_ch3_ex_factory_roof_stretched.svg": {
     "build-version": "svgo-svg/9u3r.svg",
     "build-version-created-on": 1763370658,
@@ -4722,7 +4812,7 @@
     "build-version-size": 55174,
     "original-size": 55186,
     "compression": "0.02%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch4_three_one_dimensional_particles.svg": {
     "build-version": "svgo-svg/yz-u.svg",
@@ -5408,6 +5498,15 @@
     "compression": "0.01%",
     "used-last-build": true
   },
+  "svg_ch5_ex_butterfly_fig.svg": {
+    "build-version": "svgo-svg/tjm5.svg",
+    "build-version-created-on": 1766320432,
+    "build-method": "svgo",
+    "build-version-size": 1526489,
+    "original-size": 1678379,
+    "compression": "9.05%",
+    "used-last-build": true
+  },
   "svg_ch3_f_box.svg": {
     "build-version": "svgo-svg/tYyP.svg",
     "build-version-created-on": 1763370654,
@@ -5532,6 +5631,15 @@
     "build-version-size": 57962,
     "original-size": 58195,
     "compression": "0.4%",
+    "used-last-build": true
+  },
+  "svg_ch5_ex_butterfly_fig_with_csc.svg": {
+    "build-version": "svgo-svg/u2Fw.svg",
+    "build-version-created-on": 1766320432,
+    "build-method": "svgo",
+    "build-version-size": 1528856,
+    "original-size": 1683567,
+    "compression": "9.19%",
     "used-last-build": true
   },
   "svg_ch5_ex_vector_sum_previous_example.svg": {
@@ -5732,6 +5840,15 @@
     "compression": "0.62%",
     "used-last-build": true
   },
+  "svg_ch5_ex_gas_sphere_profile_2.svg": {
+    "build-version": "svgo-svg/E5ov.svg",
+    "build-version-created-on": 1766318089,
+    "build-method": "svgo",
+    "build-version-size": 160300,
+    "original-size": 270760,
+    "compression": "40.8%",
+    "used-last-build": true
+  },
   "svg_ch5_ex_sphere_volume_closeup.svg": {
     "build-version": "svgo-svg/7QrH.svg",
     "build-version-created-on": 1763368312,
@@ -5739,7 +5856,7 @@
     "build-version-size": 27495,
     "original-size": 27496,
     "compression": "0.0%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "png_ch3_desmos_composition_0_c.png": {
     "build-version": "png/9wB1.png",

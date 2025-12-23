@@ -52,3 +52,35 @@
         are perpendicular on the sphere, project to
         lines and circles, respectively, that are
         perpendicular on the cylinder.)
+
+        |> SolutionNote
+            As a consequence, 
+            the area of a shape on the sphere is equal to
+            the area of the projection of that shape onto
+            the cylinder, for any shape.
+            This (strange?) fact is known as the
+
+            __Archimedean property__
+        
+            of the sphere. 
+
+        |> SolutionNote
+            For example, the following two orange areas, one
+            on the sphere and one on the cylinder, are
+            equal, by the Archimedean property:
+
+            |> Image
+                src=images/svg_ch5_ex_horizontal_projection_sphere_orange_1.svg
+
+            For a more fun example, since all corresponding areas
+            on the sphere and on the cylinder are equal in
+            this example by the Archimedean property...
+
+            |> Image
+                src=images/svg_ch5_ex_horizontal_projection_sphere_orange_9.svg
+
+            ...it implies that the various “tube sections”
+            of either circle have equal areas on the cylinder,
+            even though dissimilar in shape, since those sections
+            have equal area to one another on the sphere!
+            (For each circle separately.)

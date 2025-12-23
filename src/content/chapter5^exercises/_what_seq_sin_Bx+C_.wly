@@ -104,7 +104,7 @@
             _radians per unit time_.)
 
             Note that if you adjust the angular frequency
-            <i>before</i> adjusting the phase, the phase
+            _before_ adjusting the phase, the phase
             will need to be adjusted by a different amount,
             in order to account for the already-changed
             angular frequency; in that case, the sequence

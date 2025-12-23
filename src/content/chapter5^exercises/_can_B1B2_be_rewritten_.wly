@@ -1,0 +1,28 @@
+|> Exercise
+    handle=_can_B1B2_be_rewritten_
+
+    True or false: 
+    for all $B_1$, $B_2 \in \rr$,
+    !! an expression of the form
+    $$
+    \cos(B_1x) + \sin(B_2x)
+    $$
+    can be rewritten
+    $$
+    W\cdot\cos(x + \psi)
+    $$
+    for some $W$, $\psi \in \rr$.
+
+    |> Solution
+
+        If $B_1 = B_2 = 2$, e.g., then
+        $$
+        \cos(B_1x) + \sin(B_2x) = \cos(2x) + \sin(2x)
+        $$
+        is periodic mod $2\eta$, but
+        $$
+        W\cdot \cos(x + \psi)
+        $$
+        is only going to be periodic mod $4\eta$, not
+        $2\eta$, unless one sets $W = 0$, which is obviously
+        not going to work, so the statement is false.
