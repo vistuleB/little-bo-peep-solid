@@ -230,13 +230,18 @@ fn our_emitter(
   }
 }
 
+const remove_unused_build_img_option = "--clean"
+
 fn cli_usage_supplementary() {
-  Nil
+  let margin = "   "
+  io.println(margin <> remove_unused_build_img_option)
+  io.println(margin <> "  -> remove unused images from image-map and build-img directory")
+  io.println("")
 }
 
 pub fn main() {
   use amendments <- on.error_ok(
-    ds.process_command_line_arguments(argv.load().arguments, ["--remove-unused-build-img"]),
+    ds.process_command_line_arguments(argv.load().arguments, [remove_unused_build_img_option]),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
@@ -258,7 +263,7 @@ pub fn main() {
     ds.Renderer(
       assembler: ds.default_writerly_assembler(amendments.only_paths),
       parser: ds.default_writerly_parser(amendments.only_key_values),
-      pipeline: our_pipeline(only, dict.has_key(amendments.user_args, "--remove-unused-build-img")),
+      pipeline: our_pipeline(only, dict.has_key(amendments.user_args, remove_unused_build_img_option)),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
       writer: ds.default_writer,
