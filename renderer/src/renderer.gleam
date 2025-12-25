@@ -250,7 +250,7 @@ pub fn main() {
     },
   )
 
-  use <- on.lazy_true_false(
+  use <- on.true_false(
     amendments.help,
     fn() { io.println("(exiting on '--help' option)") },
   )
