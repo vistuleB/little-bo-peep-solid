@@ -10,11 +10,11 @@
   },
   "svg_ch1_ch_minus_two_squared_cloud.svg": {
     "build-version": "svgo-svg/Z39o.svg",
-    "build-version-created-on": 1766554924,
+    "build-version-created-on": 1766913996,
     "build-method": "svgo",
-    "build-version-size": 32090,
-    "original-size": 32140,
-    "compression": "0.16%",
+    "build-version-size": 20513,
+    "original-size": 55537,
+    "compression": "63.06%",
     "used-last-build": true
   },
   "svg_ch5_ex_cosine_10x_plus_x_over_4.svg": {
@@ -1108,11 +1108,11 @@
   },
   "325.svg": {
     "build-version": "svgo-svg/QC6w.svg",
-    "build-version-created-on": 1766554924,
+    "build-version-created-on": 1766922120,
     "build-method": "svgo",
-    "build-version-size": 27087,
-    "original-size": 27146,
-    "compression": "0.22%",
+    "build-version-size": 20640,
+    "original-size": 42937,
+    "compression": "51.93%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_wave_purple_sinusoid_only.svg": {
@@ -2060,6 +2060,15 @@
     "compression": "0.14%",
     "used-last-build": true
   },
+  "true_false_sixth_root_of_two_cloud2.svg": {
+    "build-version": "svgo-svg/Trg3.svg",
+    "build-version-created-on": 1766933395,
+    "build-method": "svgo",
+    "build-version-size": 69186,
+    "original-size": 121816,
+    "compression": "43.2%",
+    "used-last-build": true
+  },
   "svg_ch5_ex_big_division_big_subtraction_final.svg": {
     "build-version": "svgo-svg/y31C.svg",
     "build-version-created-on": 1766555018,
@@ -2152,12 +2161,12 @@
   },
   "18.svg": {
     "build-version": "svgo-svg/aqem.svg",
-    "build-version-created-on": 1766554924,
+    "build-version-created-on": 1766933002,
     "build-method": "svgo",
-    "build-version-size": 19743,
-    "original-size": 29058,
-    "compression": "32.06%",
-    "used-last-build": true
+    "build-version-size": 69171,
+    "original-size": 121778,
+    "compression": "43.2%",
+    "used-last-build": false
   },
   "svg_ch4_5_euler_velocity_vectors.svg": {
     "build-version": "svgo-svg/uq4U.svg",
@@ -3547,11 +3556,11 @@
   },
   "svg_ch4_3x_plus_one_and_second_cloud.svg": {
     "build-version": "svgo-svg/ORL8.svg",
-    "build-version-created-on": 1766554945,
+    "build-version-created-on": 1766933002,
     "build-method": "svgo",
-    "build-version-size": 48080,
-    "original-size": 48464,
-    "compression": "0.79%",
+    "build-version-size": 38129,
+    "original-size": 49082,
+    "compression": "22.32%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_p2black_inline.svg": {
@@ -3772,12 +3781,12 @@
   },
   "17.svg": {
     "build-version": "svgo-svg/Lc4U.svg",
-    "build-version-created-on": 1766554924,
+    "build-version-created-on": 1766932416,
     "build-method": "svgo",
-    "build-version-size": 19842,
-    "original-size": 33364,
-    "compression": "40.53%",
-    "used-last-build": true
+    "build-version-size": 26396,
+    "original-size": 41338,
+    "compression": "36.15%",
+    "used-last-build": false
   },
   "svg_ch4_three_one_dimensional_particles_blue_yellow_red.svg": {
     "build-version": "svgo-svg/7kvF.svg",
@@ -5147,6 +5156,15 @@
     "compression": "35.39%",
     "used-last-build": false
   },
+  "true_false_sixth_root_of_two_cloud1.svg": {
+    "build-version": "svgo-svg/rgbH.svg",
+    "build-version-created-on": 1766933164,
+    "build-method": "svgo",
+    "build-version-size": 26396,
+    "original-size": 41338,
+    "compression": "36.15%",
+    "used-last-build": true
+  },
   "svg_ch4_17_other_start.svg": {
     "build-version": "svgo-svg/t94J.svg",
     "build-version-created-on": 1766554964,
@@ -5239,11 +5257,11 @@
   },
   "svg_ch4_ch_curve_to_sketch_cloud_cleaned.svg": {
     "build-version": "svgo-svg/WzTO.svg",
-    "build-version-created-on": 1766902739,
+    "build-version-created-on": 1766906765,
     "build-method": "svgo",
-    "build-version-size": 28795,
-    "original-size": 45281,
-    "compression": "36.41%",
+    "build-version-size": 29371,
+    "original-size": 44570,
+    "compression": "34.1%",
     "used-last-build": true
   },
   "svg_ch4_5_euler_hearts_right.svg": {
