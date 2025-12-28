@@ -762,7 +762,7 @@
     "build-version-size": 36021,
     "original-size": 36086,
     "compression": "0.18%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch5_ch_unit_circle_@0.5_smaller.svg": {
     "build-version": "svgo-svg/2cF1.svg",
@@ -1063,11 +1063,11 @@
   },
   "svg_ch4_ch_explanation1.svg": {
     "build-version": "svgo-svg/G9zf.svg",
-    "build-version-created-on": 1766905825,
+    "build-version-created-on": 1766933628,
     "build-method": "svgo",
-    "build-version-size": 66428,
-    "original-size": 84603,
-    "compression": "21.48%",
+    "build-version-size": 65984,
+    "original-size": 84058,
+    "compression": "21.5%",
     "used-last-build": true
   },
   "svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg": {
@@ -1351,11 +1351,11 @@
   },
   "svg_ch4_ch_explanation2.svg": {
     "build-version": "svgo-svg/Tf6r.svg",
-    "build-version-created-on": 1766905825,
+    "build-version-created-on": 1766933628,
     "build-method": "svgo",
     "build-version-size": 78052,
-    "original-size": 109157,
-    "compression": "28.5%",
+    "original-size": 109155,
+    "compression": "28.49%",
     "used-last-build": true
   },
   "svg_ch5_ch_snail_stack_4.svg": {
@@ -5257,11 +5257,11 @@
   },
   "svg_ch4_ch_curve_to_sketch_cloud_cleaned.svg": {
     "build-version": "svgo-svg/WzTO.svg",
-    "build-version-created-on": 1766906765,
+    "build-version-created-on": 1766934614,
     "build-method": "svgo",
-    "build-version-size": 29371,
-    "original-size": 44570,
-    "compression": "34.1%",
+    "build-version-size": 33092,
+    "original-size": 50383,
+    "compression": "34.32%",
     "used-last-build": true
   },
   "svg_ch4_5_euler_hearts_right.svg": {

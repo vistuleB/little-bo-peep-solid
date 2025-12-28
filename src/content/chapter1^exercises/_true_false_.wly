@@ -229,14 +229,14 @@
         this is
 
         $$
-        10^{9}\fw\te{km}
+        10^{15}\fw{}(10^{-6}\fw\te{km}) = 10^{15-6}\fw\te{km} = 10^{9}\fw\te{km}
         $$
 
-        |> ImageRight
-            src=images/svg_ch1_ex_104.svg
-            offset_x=3rem
-            offset_y=-1rem
-            squiggle=false
+        !! |> ImageRight
+        !!     src=images/svg_ch1_ex_104.svg
+        !!     offset_x=3rem
+        !!     offset_y=-1rem
+        !!     squiggle=false
 
         or _one billion_ kilometers. By
         comparison, the distance from the Earth to
@@ -254,7 +254,7 @@
         \te{“}\fw10^{15}\te{mm}\te{”}
         $$
 
-        by the approximation $2^{10} \approx 10^3$.)
+        thanks to the fact that $2^{10} \approx 10^3$.)
 
         |> Pause
 

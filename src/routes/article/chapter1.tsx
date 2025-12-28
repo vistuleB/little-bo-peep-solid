@@ -1928,15 +1928,8 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              10^&#123;9&#125;\fw\te&#123;km&#125;
+              10^&#123;15&#125;\fw&#123;&#125;(10^&#123;-6&#125;\fw\te&#123;km&#125;) = 10^&#123;15-6&#125;\fw\te&#123;km&#125; = 10^&#123;9&#125;\fw\te&#123;km&#125;
               $$
-              <ImageRight
-                src="/build-img/svgo-svg/GgDI.svg"
-                offset_x="3rem"
-                offset_y="-1rem"
-                squiggle={false}
-                compensate_offset_x_for_large_text_columns={true}
-              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -1972,7 +1965,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              by the approximation {" "}
+              thanks to the fact that {" "}
               <NoBreak>
                 <Math>
                   $2^&#123;10&#125; \approx 10^3$
