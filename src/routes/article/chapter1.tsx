@@ -852,7 +852,7 @@ const Rest = () => {
           $$
           <ImageLeft
             src="/build-img/svgo-svg/QC6w.svg"
-            offset_x="2em"
+            offset_x="2.3em"
             compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>

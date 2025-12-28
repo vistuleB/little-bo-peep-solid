@@ -1108,11 +1108,11 @@
   },
   "325.svg": {
     "build-version": "svgo-svg/QC6w.svg",
-    "build-version-created-on": 1766922120,
+    "build-version-created-on": 1766935170,
     "build-method": "svgo",
-    "build-version-size": 20640,
-    "original-size": 42937,
-    "compression": "51.93%",
+    "build-version-size": 20642,
+    "original-size": 42934,
+    "compression": "51.92%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_wave_purple_sinusoid_only.svg": {
