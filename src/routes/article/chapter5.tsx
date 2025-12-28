@@ -23,7 +23,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_133_hgi_"
+      id="_129_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -502,10 +502,10 @@ export default function __Chapter5__() {
         <OuterP>
           in {" "}
           <a
-            href="/article/chapter4#_72_hgi_"
+            href="/article/chapter4#_70_hgi_"
             class="handle-out-chapter-link"
           >
-            Exercise 20
+            Exercise 18
           </a>
           {" "} 
           of Chapter 3 (by direct inspection
@@ -4154,7 +4154,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_81_hgi_">
+          <ExerciseStatement id="_77_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -4253,7 +4253,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_82_hgi_">
+          <ExerciseStatement id="_78_hgi_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -4389,7 +4389,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_83_hgi_">
+          <ExerciseStatement id="_79_hgi_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -4825,7 +4825,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_84_hgi_">
+          <ExerciseStatement id="_80_hgi_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -5149,7 +5149,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_85_hgi_">
+          <ExerciseStatement id="_81_hgi_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -5458,7 +5458,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={6}>
-          <ExerciseStatement id="_86_hgi_">
+          <ExerciseStatement id="_82_hgi_">
             <OuterP>
               <b>
                 Exercise 6.
@@ -5584,7 +5584,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={7}>
-          <ExerciseStatement id="_87_hgi_">
+          <ExerciseStatement id="_83_hgi_">
             <OuterP>
               <b>
                 Exercise 7.
@@ -5742,7 +5742,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_88_hgi_">
+          <ExerciseStatement id="_84_hgi_">
             <OuterP>
               <b>
                 Exercise 8.
@@ -6144,7 +6144,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={9}>
-          <ExerciseStatement id="_89_hgi_">
+          <ExerciseStatement id="_85_hgi_">
             <OuterP>
               <b>
                 Exercise 9.
@@ -6530,7 +6530,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_90_hgi_">
+          <ExerciseStatement id="_86_hgi_">
             <OuterP>
               <b>
                 Exercise 10.
@@ -6617,7 +6617,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={11}>
-          <ExerciseStatement id="_91_hgi_">
+          <ExerciseStatement id="_87_hgi_">
             <OuterP>
               <b>
                 Exercise 11.
@@ -6735,7 +6735,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={12}>
-          <ExerciseStatement id="_92_hgi_">
+          <ExerciseStatement id="_88_hgi_">
             <OuterP>
               <b>
                 Exercise 12.
@@ -7237,7 +7237,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={13}>
-          <ExerciseStatement id="_93_hgi_">
+          <ExerciseStatement id="_89_hgi_">
             <OuterP>
               <b>
                 Exercise 13.
@@ -7481,7 +7481,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_94_hgi_">
+          <ExerciseStatement id="_90_hgi_">
             <OuterP>
               <b>
                 Exercise 14.
@@ -8230,7 +8230,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={15}>
-          <ExerciseStatement id="_95_hgi_">
+          <ExerciseStatement id="_91_hgi_">
             <OuterP>
               <b>
                 Exercise 15.
@@ -8316,7 +8316,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={16}>
-          <ExerciseStatement id="_96_hgi_">
+          <ExerciseStatement id="_92_hgi_">
             <OuterP>
               <b>
                 Exercise 16.
@@ -8328,7 +8328,7 @@ const Rest = () => {
               </Math>
               {" "} from {" "}
               <InChapterLink
-                href="/article/chapter5#_86_hgi_"
+                href="/article/chapter5#_82_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 6
@@ -8775,7 +8775,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={17}>
-          <ExerciseStatement id="_97_hgi_">
+          <ExerciseStatement id="_93_hgi_">
             <OuterP>
               <b>
                 Exercise 17.
@@ -8873,7 +8873,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement id="_98_hgi_">
+          <ExerciseStatement id="_94_hgi_">
             <OuterP>
               <b>
                 Exercise 18.
@@ -8967,7 +8967,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={19}>
-          <ExerciseStatement id="_99_hgi_">
+          <ExerciseStatement id="_95_hgi_">
             <OuterP>
               <b>
                 Exercise 19.
@@ -9156,7 +9156,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={20}>
-          <ExerciseStatement id="_100_hgi_">
+          <ExerciseStatement id="_96_hgi_">
             <OuterP>
               <b>
                 Exercise 20.
@@ -9283,7 +9283,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={21}>
-          <ExerciseStatement id="_101_hgi_">
+          <ExerciseStatement id="_97_hgi_">
             <OuterP>
               <b>
                 Exercise 21.
@@ -9357,7 +9357,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={22}>
-          <ExerciseStatement id="_102_hgi_">
+          <ExerciseStatement id="_98_hgi_">
             <OuterP>
               <b>
                 Exercise 22.
@@ -9568,7 +9568,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={23}>
-          <ExerciseStatement id="_103_hgi_">
+          <ExerciseStatement id="_99_hgi_">
             <OuterP>
               <b>
                 Exercise 23.
@@ -9676,7 +9676,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={24}>
-          <ExerciseStatement id="_104_hgi_">
+          <ExerciseStatement id="_100_hgi_">
             <OuterP>
               <b>
                 Exercise 24.
@@ -9950,7 +9950,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={25}>
-          <ExerciseStatement id="_105_hgi_">
+          <ExerciseStatement id="_101_hgi_">
             <OuterP>
               <b>
                 Exercise 25.
@@ -10380,7 +10380,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={26}>
-          <ExerciseStatement id="_106_hgi_">
+          <ExerciseStatement id="_102_hgi_">
             <OuterP>
               <b>
                 Exercise 26.
@@ -10768,7 +10768,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={27}>
-          <ExerciseStatement id="_107_hgi_">
+          <ExerciseStatement id="_103_hgi_">
             <OuterP>
               <b>
                 Exercise 27.
@@ -10844,7 +10844,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={28}>
-          <ExerciseStatement id="_108_hgi_">
+          <ExerciseStatement id="_104_hgi_">
             <OuterP>
               <b>
                 Exercise 28.
@@ -10927,7 +10927,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={29}>
-          <ExerciseStatement id="_109_hgi_">
+          <ExerciseStatement id="_105_hgi_">
             <OuterP>
               <b>
                 Exercise 29.
@@ -10957,7 +10957,7 @@ const Rest = () => {
               and prove your answer. (Comparison: {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
+                  href="/article/chapter5#_92_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 16
@@ -11021,7 +11021,7 @@ const Rest = () => {
               {" "} as uncovered in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
+                  href="/article/chapter5#_92_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 16
@@ -11238,7 +11238,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={30}>
-          <ExerciseStatement id="_110_hgi_">
+          <ExerciseStatement id="_106_hgi_">
             <OuterP>
               <b>
                 Exercise 30.
@@ -11777,7 +11777,7 @@ const Rest = () => {
                 in {" "}
                 <NoBreak>
                   <InChapterLink
-                    href="/article/chapter5#_109_hgi_"
+                    href="/article/chapter5#_105_hgi_"
                     class="handle-in-chapter-link"
                   >
                     Exercise 29
@@ -11790,7 +11790,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={31}>
-          <ExerciseStatement id="_111_hgi_">
+          <ExerciseStatement id="_107_hgi_">
             <OuterP>
               <b>
                 Exercise 31.
@@ -11943,7 +11943,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={32}>
-          <ExerciseStatement id="_112_hgi_">
+          <ExerciseStatement id="_108_hgi_">
             <OuterP>
               <b>
                 Exercise 32.
@@ -12163,7 +12163,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={33}>
-          <ExerciseStatement id="_113_hgi_">
+          <ExerciseStatement id="_109_hgi_">
             <OuterP>
               <b>
                 Exercise 33.
@@ -12383,7 +12383,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={34}>
-          <ExerciseStatement id="_114_hgi_">
+          <ExerciseStatement id="_110_hgi_">
             <OuterP>
               <b>
                 Exercise 34.
@@ -12477,7 +12477,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={35}>
-          <ExerciseStatement id="_115_hgi_">
+          <ExerciseStatement id="_111_hgi_">
             <OuterP>
               <b>
                 Exercise 35.
@@ -12616,7 +12616,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={36}>
-          <ExerciseStatement id="_116_hgi_">
+          <ExerciseStatement id="_112_hgi_">
             <OuterP>
               <b>
                 Exercise 36.
@@ -12835,7 +12835,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={37}>
-          <ExerciseStatement id="_117_hgi_">
+          <ExerciseStatement id="_113_hgi_">
             <OuterP>
               <b>
                 Exercise 37.
@@ -12931,7 +12931,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={38}>
-          <ExerciseStatement id="_118_hgi_">
+          <ExerciseStatement id="_114_hgi_">
             <OuterP>
               <b>
                 Exercise 38.
@@ -13070,7 +13070,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={39}>
-          <ExerciseStatement id="_119_hgi_">
+          <ExerciseStatement id="_115_hgi_">
             <OuterP>
               <b>
                 Exercise 39.
@@ -13140,7 +13140,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={40}>
-          <ExerciseStatement id="_120_hgi_">
+          <ExerciseStatement id="_116_hgi_">
             <OuterP>
               <b>
                 Exercise 40.
@@ -13251,7 +13251,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={41}>
-          <ExerciseStatement id="_121_hgi_">
+          <ExerciseStatement id="_117_hgi_">
             <OuterP>
               <b>
                 Exercise 41.
@@ -13395,7 +13395,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_122_hgi_">
+          <ExerciseStatement id="_118_hgi_">
             <OuterP>
               <b>
                 Exercise 42.
@@ -13695,7 +13695,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={43}>
-          <ExerciseStatement id="_123_hgi_">
+          <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
                 Exercise 43.
@@ -14849,7 +14849,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={44}>
-          <ExerciseStatement id="_124_hgi_">
+          <ExerciseStatement id="_120_hgi_">
             <OuterP>
               <b>
                 Exercise 44.
@@ -15175,7 +15175,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={45}>
-          <ExerciseStatement id="_125_hgi_">
+          <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
                 Exercise 45.
@@ -15394,7 +15394,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={46}>
-          <ExerciseStatement id="_126_hgi_">
+          <ExerciseStatement id="_122_hgi_">
             <OuterP>
               <b>
                 Exercise 46.
@@ -15578,7 +15578,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={47}>
-          <ExerciseStatement id="_127_hgi_">
+          <ExerciseStatement id="_123_hgi_">
             <OuterP>
               <b>
                 Exercise 47.
@@ -15959,7 +15959,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={48}>
-          <ExerciseStatement id="_128_hgi_">
+          <ExerciseStatement id="_124_hgi_">
             <OuterP>
               <b>
                 Exercise 48.
@@ -16221,7 +16221,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={49}>
-          <ExerciseStatement id="_129_hgi_">
+          <ExerciseStatement id="_125_hgi_">
             <OuterP>
               <b>
                 Exercise 49.
@@ -16484,7 +16484,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={50}>
-          <ExerciseStatement id="_130_hgi_">
+          <ExerciseStatement id="_126_hgi_">
             <OuterP>
               <b>
                 Exercise 50.
@@ -16903,7 +16903,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={51}>
-          <ExerciseStatement id="_131_hgi_">
+          <ExerciseStatement id="_127_hgi_">
             <OuterP>
               <b>
                 Exercise 51.
@@ -17047,7 +17047,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={52}>
-          <ExerciseStatement id="_132_hgi_">
+          <ExerciseStatement id="_128_hgi_">
             <OuterP>
               <b>
                 Exercise 52.

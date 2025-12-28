@@ -22,7 +22,7 @@ export default function __Chapter4__() {
       nextPage="/article/chapter5"
       pageNecessaryMargin={1450}
       maxElementWidth={700}
-      id="_80_hgi_"
+      id="_76_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -126,7 +126,7 @@ export default function __Chapter4__() {
             $f$
           </Math>
           {" "} at each point.
-          In other words
+          In other words,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -173,9 +173,8 @@ export default function __Chapter4__() {
             </Math>
           </NoBreak>
           {" "} “after”].
-          (Meaning,
-          the “after” graph records the slope of the
-          “before” graph.) 
+          (Meaning, the “after” graph records the slope
+          of the “before” graph.) 
           E.g.:
         </OuterP>
         <Pause />
@@ -360,7 +359,7 @@ const Rest = () => {
           of the “before” function from the last “before”/“after” pair above:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/ErE1.svg" />
+        <Image src="/build-img/svgo-svg/JpFf.svg" />
         <Pause />
         <OuterP>
           One method is simply to eyeball the slope at
@@ -368,11 +367,15 @@ const Rest = () => {
           values and interpolate:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/EAqF.svg">
+        <Image src="/build-img/svgo-svg/0-BA.svg" />
+        <Pause />
+        <Image src="/build-img/svgo-svg/azPc.svg" />
+        <Pause />
+        <Image src="/build-img/svgo-svg/wTBE.svg">
           <ImageRight
-            src="/build-img/svgo-svg/FwEL.svg"
-            offset_y="36%"
-            offset_x="-15%"
+            src="/build-img/svgo-svg/WzTO.svg"
+            offset_y="5%"
+            offset_x="-25%"
           />
         </Image>
         <Pause />
@@ -388,7 +391,9 @@ const Rest = () => {
           interval:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/VS7z.svg" />
+        <Image src="/build-img/svgo-svg/eRkQ.svg" />
+        <Pause />
+        <Image src="/build-img/svgo-svg/Biz-.svg" />
         <Pause />
         <OuterP>
           The result (at bottom right)
@@ -830,7 +835,7 @@ const Rest = () => {
         <OuterP>
           ...then the “after” graph will have units of...
           <ImageRight
-            src="/build-img/svgo-svg/p48d.svg"
+            src="/build-img/svgo-svg/whL5.svg"
             offset_y="-0.6em"
           />
         </OuterP>
@@ -872,7 +877,7 @@ const Rest = () => {
         <OuterP>
           ...then the “after” graph will have units of...
           <ImageLeft
-            src="/build-img/svgo-svg/DEDt.svg"
+            src="/build-img/svgo-svg/ekk4.svg"
             offset_y="0.6em"
           />
         </OuterP>
@@ -2514,462 +2519,6 @@ const Rest = () => {
                 Exercise 8.
               </b>
               {" "}
-              Given these graphs...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/-Gn0.svg" />
-            <Pause />
-            <OuterP>
-              ...what can you say about {" "}
-              <NoBreak>
-                <Math>
-                  $g'(x)$
-                </Math>
-                ?
-              </NoBreak>
-              {" "}
-              (Produce the best sketch of {" "}
-              <Math>
-                $g'(x)$
-              </Math>
-              {" "} that
-              you can, taking into account all the
-              information above.) (Don't get us wrong:
-              You don't {" "}
-              <i>
-                need
-              </i>
-              {" "} the second derivative
-              to sketch the first derivative, but if
-              you're a human and not a machine, it can
-              help!)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              To start with, the slope of {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} seems to be
-              about {" "}
-              <NoBreak>
-                <Math>
-                  $-1.5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} and (a bit greater than) {" "}
-              <Math>
-                $2$
-              </Math>
-              {" "}
-              at {" "}
-              <NoBreak>
-                <Math>
-                  $x = -2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $x = 2$
-              </Math>
-              {" "} respectively:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Vtlo.svg" />
-            <Pause />
-            <OuterP>
-              This already gives us three points from which
-              to interpolate a basic approximation to the graph
-              {" "}
-              <NoBreak>
-                <Math>
-                  $y = g'(x)$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/jVL0.svg" />
-            <Pause />
-            <OuterP>
-              But the graph of {" "}
-              <Math>
-                $g''(x)$
-              </Math>
-              {" "} indicates more,
-              namely that {" "}
-              <Math>
-                $g'(x)$
-              </Math>
-              {" "} has a slope that rises
-              from {" "}
-              <Math>
-                $\approx 0.2$
-              </Math>
-              {" "} near the left edge of
-              the graph up to {" "}
-              <Math>
-                $1.3$
-              </Math>
-              {" "} at {" "}
-              <NoBreak>
-                <Math>
-                  $x = 0.5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} before
-              falling again to {" "}
-              <Math>
-                $0.6$
-              </Math>
-              {" "} past {" "}
-              <NoBreak>
-                <Math>
-                  $x = 2$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/l4WF.svg" />
-            <Pause />
-            <OuterP>
-              As a second step, we thus “bend into shape”
-              our previous sketch to produce these slopes...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/zXu5.svg" />
-            <Pause />
-            <OuterP>
-              ...achieving our final answer.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "} For reference, the actual
-              derivative looks like so:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/LvNA.svg" />
-          </Solution>
-        </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement id="_58_hgi_">
-            <OuterP>
-              <b>
-                Exercise 9.
-              </b>
-              {" "}
-              Given these graphs...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/45I8.svg" />
-            <Pause />
-            <OuterP>
-              ...sketch {" "}
-              <NoBreak>
-                <Math>
-                  $y = h'(x)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} analogously to
-              {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_57_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 8
-                </InChapterLink>
-                .
-              </NoBreak>
-              {" "}{" "}
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Firstly, the graph of {" "}
-              <Math>
-                $h(x)$
-              </Math>
-              {" "} seems to have
-              slope {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} around {" "}
-              <NoBreak>
-                <Math>
-                  $x = 0.6$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/kazC.svg" />
-            <Pause />
-            <OuterP>
-              ...which gives us one data point on the
-              curve {" "}
-              <Math>
-                $y = h'(x)$
-              </Math>
-              {" "} to start with...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/sMSm.svg" />
-            <Pause />
-            <OuterP>
-              ...moreover, by the graph of {" "}
-              <NoBreak>
-                <Math>
-                  $h''(x)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              the slope of {" "}
-              <Math>
-                $h'(x)$
-              </Math>
-              {" "} is near {" "}
-              <Math>
-                $-1/3$
-              </Math>
-              {" "} on an
-              interval that is approximately (say)
-              {" "}
-              <NoBreak>
-                <Math>
-                  $[-0.85,0.7]$
-                </Math>
-                ....
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/hXW9.svg" />
-            <Pause />
-            <OuterP>
-              ...so, as a second step, we can extend
-              the graph of {" "}
-              <Math>
-                $h'(x)$
-              </Math>
-              {" "} by a segment of slope
-              {" "}
-              <Math>
-                $-1/3$
-              </Math>
-              {" "} on this interval:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/EfV0.svg">
-              <ImageLeft src="/build-img/svgo-svg/w-6f.svg" />
-            </Image>
-            <Pause />
-            <OuterP>
-              (To achieve a passable slope of {" "}
-              <Math>
-                $-1/3$
-              </Math>
-              {" "} we
-              modeled ourselves on a nearby grid segment.)
-              Next, {" "}
-              <Math>
-                $h(x)$
-              </Math>
-              {" "} has slope {" "}
-              <Math>
-                $\approx 1.2$
-              </Math>
-              {" "} at
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x = -2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and slope {" "}
-              <Math>
-                $\approx -0.9$
-              </Math>
-              {" "} (?) at
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x = 2$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/7Oh-.svg" />
-            <Pause />
-            <OuterP>
-              This gives us two more points on the graph
-              {" "}
-              <NoBreak>
-                <Math>
-                  $y = h'(x)$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/AlvD.svg" />
-            <Pause />
-            <OuterP>
-              Then, because the second derivative has
-              value {" "}
-              <Math>
-                $\approx -1/3$
-              </Math>
-              {" "} for {" "}
-              <Math>
-                $x \leq -1.6$
-              </Math>
-              {" "}
-              (about) and for {" "}
-              <Math>
-                $x \geq 1.5$
-              </Math>
-              {" "} (about)...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/-wEN.svg" />
-            <Pause />
-            <OuterP>
-              ...we extend these two new data points by
-              segments of slope {" "}
-              <NoBreak>
-                <Math>
-                  $-1/3$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/xIBg.svg" />
-            <Pause />
-            <OuterP>
-              ...on the relevant intervals. (I.e., for
-              {" "}
-              <Math>
-                $x \leq -1.6$
-              </Math>
-              {" "} and for {" "}
-              <NoBreak>
-                <Math>
-                  $x \geq 1.5$
-                </Math>
-                .)
-              </NoBreak>
-              {" "} The
-              last step is to join the existing segments
-              by some kind of “connector curves” of
-              yet-to-be-determined shape:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/4fl7.svg" />
-            <Pause />
-            <OuterP>
-              Since {" "}
-              <Math>
-                $h''(x)$
-              </Math>
-              {" "} shows that the two
-              connectors have slopes of about {" "}
-              <Math>
-                $-1/3$
-              </Math>
-              {" "}
-              at their edges and slopes of about {" "}
-              <Math>
-                $-1.4$
-              </Math>
-              {" "}
-              and {" "}
-              <Math>
-                $-1.6$
-              </Math>
-              {" "} (respectively) near their
-              middles...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/JUoK.svg" />
-            <Pause />
-            <OuterP>
-              ...our final answer, given by the
-              following sketch, is obtained by
-              “bending into shape” the connector curves...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/ZF4t.svg" />
-            <Pause />
-            <OuterP>
-              ...to give them a slope of {" "}
-              <Math>
-                $-1/3$
-              </Math>
-              {" "} at
-              their endpoints, and slopes of {" "}
-              <NoBreak>
-                <Math>
-                  $-1.4$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              {" "}
-              <NoBreak>
-                <Math>
-                  $-1.6$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} respectively, in their middles.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              Here is the actual graph of {" "}
-              <NoBreak>
-                <Math>
-                  $h'$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/dkg9.svg" />
-          </Solution>
-        </Exercise>
-        <Exercise number={10}>
-          <ExerciseStatement id="_59_hgi_">
-            <OuterP>
-              <b>
-                Exercise 10.
-              </b>
-              {" "}
               Where is the rate of change of the function
               below, on the part shown, greatest? And
               where is the
@@ -3017,11 +2566,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement id="_60_hgi_">
+        <Exercise number={9}>
+          <ExerciseStatement id="_58_hgi_">
             <OuterP>
               <b>
-                Exercise 11.
+                Exercise 9.
               </b>
               {" "}
               If you scale the graph of a function {" "}
@@ -3111,11 +2660,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={12}>
-          <ExerciseStatement id="_61_hgi_">
+        <Exercise number={10}>
+          <ExerciseStatement id="_59_hgi_">
             <OuterP>
               <b>
-                Exercise 12.
+                Exercise 10.
               </b>
               {" "}
               The solution to the previous exercise
@@ -3290,11 +2839,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_62_hgi_">
+        <Exercise number={11}>
+          <ExerciseStatement id="_60_hgi_">
             <OuterP>
               <b>
-                Exercise 13.
+                Exercise 11.
               </b>
               {" "}
               In the following graph, which curve might
@@ -3875,19 +3424,19 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_64_hgi_">
+        <Exercise number={12}>
+          <ExerciseStatement id="_62_hgi_">
             <OuterP>
               <b>
-                Exercise 14.
+                Exercise 12.
               </b>
               {" "}
               {" "}
               <InChapterLink
-                href="/article/chapter4#_62_hgi_"
+                href="/article/chapter4#_60_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 13
+                Exercise 11
               </InChapterLink>
               {" "} exhibits a function {" "}
               <NoBreak>
@@ -3998,10 +3547,10 @@ const Rest = () => {
               We can naïvely try to imitiate how the
               curves of {" "}
               <InChapterLink
-                href="/article/chapter4#_70_hgi_"
+                href="/article/chapter4#_68_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 18
+                Exercise 16
               </InChapterLink>
               {" "} are generated by
               placing five equally spaced particles
@@ -4544,7 +4093,7 @@ const Rest = () => {
               </OuterP>
             </SolutionNote>
             <Pause />
-            <SolutionNote id="_63_hgi_">
+            <SolutionNote id="_61_hgi_">
               <OuterP>
                 <i>
                   Note 3.
@@ -4730,11 +4279,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_65_hgi_">
+        <Exercise number={13}>
+          <ExerciseStatement id="_63_hgi_">
             <OuterP>
               <b>
-                Exercise 15.
+                Exercise 13.
               </b>
               {" "}
               If we seek a function {" "}
@@ -5180,11 +4729,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={16}>
-          <ExerciseStatement id="_67_hgi_">
+        <Exercise number={14}>
+          <ExerciseStatement id="_65_hgi_">
             <OuterP>
               <b>
-                Exercise 16.
+                Exercise 14.
               </b>
               {" "}
               Imagine a single particle in a one-dimensional
@@ -5230,7 +4779,7 @@ const Rest = () => {
               see {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_66_hgi_"
+                  href="/article/chapter4#_64_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Note 1
@@ -5411,7 +4960,7 @@ const Rest = () => {
               {" "} no matter how far back in time you look.)
             </OuterP>
             <Pause />
-            <SolutionNote id="_66_hgi_">
+            <SolutionNote id="_64_hgi_">
               <OuterP>
                 <i>
                   Note 1.
@@ -5468,11 +5017,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={17}>
-          <ExerciseStatement id="_68_hgi_">
+        <Exercise number={15}>
+          <ExerciseStatement id="_66_hgi_">
             <OuterP>
               <b>
-                Exercise 17.
+                Exercise 15.
               </b>
               {" "}
               Take a system of two particles on the real
@@ -5520,10 +5069,10 @@ const Rest = () => {
               particles. If we add also the graph of the position
               of the red particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_67_hgi_"
+                href="/article/chapter4#_65_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 16
+                Exercise 14
               </InChapterLink>
               {" "}
               to this set of graphs, what symmetries
@@ -5685,11 +5234,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={18}>
-          <ExerciseStatement id="_70_hgi_">
+        <Exercise number={16}>
+          <ExerciseStatement id="_68_hgi_">
             <OuterP>
               <b>
-                Exercise 18.
+                Exercise 16.
               </b>
               {" "}
               Add elements to the following drawing...
@@ -5815,7 +5364,7 @@ const Rest = () => {
               </OuterP>
             </SolutionNote>
             <Pause />
-            <SolutionNote id="_69_hgi_">
+            <SolutionNote id="_67_hgi_">
               <OuterP>
                 <i>
                   Note 3.
@@ -5889,11 +5438,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={19}>
-          <ExerciseStatement id="_71_hgi_">
+        <Exercise number={17}>
+          <ExerciseStatement id="_69_hgi_">
             <OuterP>
               <b>
-                Exercise 19.
+                Exercise 17.
               </b>
               {" "}
               The identity
@@ -5963,21 +5512,21 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_72_hgi_">
+        <Exercise number={18}>
+          <ExerciseStatement id="_70_hgi_">
             <OuterP>
               <b>
-                Exercise 20.
+                Exercise 18.
               </b>
               {" "}
               The function below is also the red
               curve from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_62_hgi_"
+                  href="/article/chapter4#_60_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 13
+                  Exercise 11
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -6173,11 +5722,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={21}>
-          <ExerciseStatement id="_73_hgi_">
+        <Exercise number={19}>
+          <ExerciseStatement id="_71_hgi_">
             <OuterP>
               <b>
-                Exercise 21.
+                Exercise 19.
               </b>
               {" "}
               In this exercise we consider two points
@@ -6570,10 +6119,10 @@ const Rest = () => {
               is a Newton quotient (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_70_hgi_"
+                  href="/article/chapter4#_68_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 18
+                  Exercise 16
                 </InChapterLink>
                 ),
               </NoBreak>
@@ -6611,16 +6160,16 @@ const Rest = () => {
               {" "} (cf.
               {" "}
               <InChapterLink
-                href="/article/chapter4#_70_hgi_"
+                href="/article/chapter4#_68_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 18
+                Exercise 16
               </InChapterLink>
               {" "}
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_69_hgi_"
+                  href="/article/chapter4#_67_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Note 3
@@ -7062,11 +6611,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={22}>
-          <ExerciseStatement id="_74_hgi_">
+        <Exercise number={20}>
+          <ExerciseStatement id="_72_hgi_">
             <OuterP>
               <b>
-                Exercise 22.
+                Exercise 20.
               </b>
               {" "}
               What does...
@@ -7125,10 +6674,10 @@ const Rest = () => {
               (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_70_hgi_"
+                  href="/article/chapter4#_68_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 18
+                  Exercise 16
                 </InChapterLink>
                 )
               </NoBreak>
@@ -7159,10 +6708,10 @@ const Rest = () => {
               {" "} per which
               (Exercise {" "}
               <InChapterLink
-                href="/article/chapter4#_70_hgi_"
+                href="/article/chapter4#_68_hgi_"
                 class="handle-in-chapter-link"
               >
-                18
+                16
               </InChapterLink>
               {" "} Note 3), the fraction approaches
             </OuterP>
@@ -7407,11 +6956,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={23}>
-          <ExerciseStatement id="_75_hgi_">
+        <Exercise number={21}>
+          <ExerciseStatement id="_73_hgi_">
             <OuterP>
               <b>
-                Exercise 23.
+                Exercise 21.
               </b>
               {" "}
               Four particles are placed
@@ -7623,10 +7172,10 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_62_hgi_"
+                  href="/article/chapter4#_60_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 13
+                  Exercise 11
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -7733,10 +7282,10 @@ const Rest = () => {
               particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_67_hgi_"
+                  href="/article/chapter4#_65_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 16
+                  Exercise 14
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -7746,10 +7295,10 @@ const Rest = () => {
               red particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_67_hgi_"
+                  href="/article/chapter4#_65_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 16
+                  Exercise 14
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -9496,11 +9045,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={24}>
-          <ExerciseStatement id="_76_hgi_">
+        <Exercise number={22}>
+          <ExerciseStatement id="_74_hgi_">
             <OuterP>
               <b>
-                Exercise 24.
+                Exercise 22.
               </b>
               {" "}
               Express the...
@@ -9761,11 +9310,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={25}>
-          <ExerciseStatement id="_77_hgi_">
+        <Exercise number={23}>
+          <ExerciseStatement id="_75_hgi_">
             <OuterP>
               <b>
-                Exercise 25.
+                Exercise 23.
               </b>
               {" "}
               Apply the definition
@@ -10087,1309 +9636,6 @@ const Rest = () => {
                 is the same.
               </OuterP>
             </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={26}>
-          <ExerciseStatement id="_78_hgi_">
-            <OuterP>
-              <b>
-                Exercise 26.
-              </b>
-              {" "}
-              The graphs below are the horizontal and
-              vertical velocities...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/hGqu.svg">
-              <ImageLeft
-                offset_y="1em"
-                src="/build-img/svgo-svg/nwVf.svg"
-              />
-            </Image>
-            <Pause />
-            <Image src="/build-img/svgo-svg/MGlT.svg" />
-            <Pause />
-            <OuterP>
-              ...of PACMAN, with unit of
-              distance of one “cell”, or “c”—the distance
-              between two food pellets—and units of velocity
-              of “cells per second”, or “c/s”—also,
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinates
-              </NoBreak>
-              {" "} increase towards the right,
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinates
-              </NoBreak>
-              {" "} increase towards the top:
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/m7Ll.svg"
-            />
-            <Pause />
-            <OuterP>
-              Where is Pacman at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 49$
-                </Math>
-                s?
-              </NoBreak>
-              {" "} (Note: Pacman
-              is NOT assumed to be anywhere in particular at
-              {" "}
-              <NoBreak>
-                <Math>
-                  $t = 40$
-                </Math>
-                s—you
-              </NoBreak>
-              {" "} have to figure that out from the
-              data!)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Let's start by examining Pacman's first six displacements,
-              appearing here in blue (positive displacements, going to the right
-              or up) and red (negative displacements, going to the left or down):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/IBuM.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/mMn6.svg" />
-            <Pause />
-            <OuterP>
-              We can estimate the duration of each
-              displacement to the closest 10th of a second
-              (mistakes of estimation can be made, we shall recover):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/u4My.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/rH2b.svg" />
-            <Pause />
-            <OuterP>
-              We can also estimate the velocity to be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \pm 6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              when it is nonzero (for displacement {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/-5FM.svg"
-              />
-              {" "} the velocity might seem more like {" "}
-              <Math>
-                $-6.8\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-              </Math>
-              {" "}
-              at the least, but we've already made more
-              significant errors while eyeballing the durations, so
-              nevermind). Using
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (\te&#123;velocity&#125;) \times (\te&#123;amount of time&#125;) = (\te&#123;displacement&#125;)
-              $$
-              <ImageRight
-                src="/build-img/svgo-svg/Uk9d.svg"
-                compensate_offset_x_for_large_text_columns={true}
-              />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              then gives us the following estimates for the {" "}
-              <del>
-                amount of travel
-              </del>
-              {" "} {" "}
-              <del>
-                during the
-              </del>
-              {" "} six displacements:
-            </OuterP>
-            <Pause />
-            <CentralDisplay>
-              <p>
-                <InlineImage
-                  class="ch4_pacman1_inline_number_pellet"
-                  src="/build-img/svgo-svg/nS4I.svg"
-                  style="margin-right:1em"
-                />
-                <Math>
-                  $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.5\te&#123;s&#125;\,\,=\,\,-3.375\,\te&#123;cells&#125;$
-                </Math>
-              </p>
-              <ImageRight src="/build-img/svgo-svg/baQ_.svg" />
-            </CentralDisplay>
-            <Pause />
-            <CentralDisplay>
-              <p>
-                <InlineImage
-                  class="ch4_pacman1_inline_number_pellet"
-                  src="/build-img/svgo-svg/42_Z.svg"
-                  style="margin-right:1em"
-                />
-                <Math>
-                  $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.4\te&#123;s&#125;\,\,=\,\,-2.7\,\te&#123;cells&#125;$
-                </Math>
-              </p>
-            </CentralDisplay>
-            <Pause />
-            <CentralDisplay>
-              <p>
-                <InlineImage
-                  class="ch4_pacman1_inline_number_pellet"
-                  src="/build-img/svgo-svg/6ZPh.svg"
-                  style="margin-right:1em"
-                />
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.9\te&#123;s&#125;\,\,=\,\,6.075\,\te&#123;cells&#125;$
-                </Math>
-              </p>
-            </CentralDisplay>
-            <Pause />
-            <CentralDisplay>
-              <p>
-                <InlineImage
-                  class="ch4_pacman1_inline_number_pellet"
-                  src="/build-img/svgo-svg/6IhU.svg"
-                  style="margin-right:1em"
-                />
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.4\te&#123;s&#125;\,\,=\,\,2.7\,\te&#123;cells&#125;$
-                </Math>
-              </p>
-            </CentralDisplay>
-            <Pause />
-            <CentralDisplay>
-              <p>
-                <InlineImage
-                  class="ch4_pacman1_inline_number_pellet"
-                  src="/build-img/svgo-svg/-5FM.svg"
-                  style="margin-right:1em"
-                />
-                <Math>
-                  $-6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.4\te&#123;s&#125;\,\,=\,\,-2.7\,\te&#123;cells&#125;$
-                </Math>
-              </p>
-            </CentralDisplay>
-            <Pause />
-            <CentralDisplay>
-              <p>
-                <InlineImage
-                  class="ch4_pacman1_inline_number_pellet"
-                  src="/build-img/svgo-svg/DMGg.svg"
-                  style="margin-right:1em"
-                />
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\,\times\,\,0.9\te&#123;s&#125;\,\,=\,\,6.075\,\te&#123;cells&#125;$
-                </Math>
-              </p>
-            </CentralDisplay>
-            <Pause />
-            <OuterP>
-              Given the horizontal/vertical alternation
-              of displacements, this would nominally
-              imply the following set of initial motions:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/QFoq.svg" />
-            <Pause />
-            <OuterP>
-              But these are approximate numbers and the
-              true values must be integers, except for {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/nS4I.svg"
-              />
-              . (Because we don't know where Pacman started
-              out. For {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/DMGg.svg"
-              />
-              {" "} the next displacement, if you look back at
-              the graphs, is horizontal, so yes.) In fact,
-              if you look at the maze,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              3
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              cells is the smallest amount that Pacman
-              can travel vertically when changing {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinate,
-              </NoBreak>
-              {" "}
-              between two moments of horizontal motion.
-              The next smallest possible amounts are
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              4
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              6
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              7
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              cells, with {" "}
-              <Math>
-                $5$
-              </Math>
-              {" "} not being a possibility.
-              In the horizontal direction,
-              the smallest amounts are
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              3, 6, \te&#123; and &#125; 9
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (and {" "}
-              <Math>
-                $12$
-              </Math>
-              {" "} and ...) which is even more restrictive.
-              Now if each of our duration
-              measurements carries an error of no more than
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \pm&#123;&#125;0.2\te&#123;s&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              each computed displacement is at most
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\times\,\pm&#123;&#125;0.2\te&#123;s&#125;\,=\,\pm1.35\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              from the truth, give or take the small
-              difference between {" "}
-              <Math>
-                $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-              </Math>
-              {" "}
-              and the actual velocity. So
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              -2.7\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              must be either
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              -3\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              -4\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              these being the only two posssible integer
-              vertical displacements within {" "}
-              <NoBreak>
-                <Math>
-                  $\pm1.35$
-                </Math>
-                c
-              </NoBreak>
-              {" "} of {" "}
-              <NoBreak>
-                <Math>
-                  $-2.7$
-                </Math>
-                c.
-              </NoBreak>
-              {" "}
-              Then, applying similar logic to each
-              measurement, the initial motions must be:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/D-ST.svg" />
-            <Pause />
-            <OuterP>
-              The maze fits these constraints in only two places
-              (note that {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/42_Z.svg"
-              />
-              {" "} and {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/6IhU.svg"
-              />
-              {" "} equal {" "}
-              <Math>
-                $-3\te&#123;c&#125;$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $3\te&#123;c&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} in each
-              case):
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/tzR7.svg"
-            />
-            <Pause />
-            <OuterP>
-              Looking into the future,
-              the next three displacements are
-              right/down/right and last
-              {" "}
-              <NoBreak>
-                ~
-                <Math>
-                  $3.2$
-                </Math>
-                s/~
-              </NoBreak>
-              <NoBreak>
-                <Math>
-                  $0.4$
-                </Math>
-                s/~
-              </NoBreak>
-              <NoBreak>
-                <Math>
-                  $1.3$
-                </Math>
-                s
-              </NoBreak>
-              {" "}
-              respectively:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Toj1.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/MAtZ.svg" />
-            <Pause />
-            <OuterP>
-              (Nb: Imagine translating these intervals to the left or right until
-              the start of the interval is at an integer value: this is a good
-              way to estimate the length.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Because displacement {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/g6cf.svg"
-              />
-              {" "} is horizontal to the right the only possible
-              remaining solution is the right-hand one,
-              or else Pacman would collide with the ghost cage,
-              with displacement {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/DMGg.svg"
-              />
-              {" "} equal to 6c not 7c, or else Pacman would
-              collide with a wall:
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/s8YV.svg"
-            />
-            <Pause />
-            <OuterP>
-              Since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\times\,3.2\te&#123;s&#125;\,=\,21.6\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              it seems that displacement {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/g6cf.svg"
-              />
-              {" "} brings Pacman all the way around the maze to
-              the left edge of the ghost cage, like so...
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/0Agm.svg"
-            />
-            <Pause />
-            <OuterP>
-              ...though it is hard to measure that distance;
-              but this is confirmed by the fact that the next
-              two displacements are “down by {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "} and to the right”;
-              specifically, since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              -6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;\,\times\,0.4\te&#123;s&#125;\,=\,-2.7\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              displacement {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/bLYc.svg"
-              />
-              {" "} must be {" "}
-              <NoBreak>
-                <Math>
-                  $-3$
-                </Math>
-                c
-              </NoBreak>
-              {" "} or {" "}
-              <NoBreak>
-                <Math>
-                  $-4$
-                </Math>
-                c;
-              </NoBreak>
-              {" "}
-              must actually be {" "}
-              <NoBreak>
-                <Math>
-                  $-3$
-                </Math>
-                c
-              </NoBreak>
-              {" "} since displacement {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/oU3r.svg"
-              />
-              {" "} is to the right; so, notwithstanding the exact
-              length of displacement {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/oU3r.svg"
-              />
-              , there is only one possibility for displacements {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/nS4I.svg"
-              />
-              {" "} through {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/bLYc.svg"
-              />
-              :
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/zXtI.svg"
-            />
-            <Pause />
-            <OuterP>
-              So at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 49$
-                </Math>
-                s,
-              </NoBreak>
-              {" "} between displacements {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/g6cf.svg"
-              />
-              {" "} and {" "}
-              <InlineImage
-                class="ch4_pacman1_inline_number_pellet"
-                src="/build-img/svgo-svg/bLYc.svg"
-              />
-              , Pacman is immediately to the left of the ghost cage.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={27}>
-          <ExerciseStatement id="_79_hgi_">
-            <OuterP>
-              <b>
-                Exercise 27.
-              </b>
-              {" "}
-              Same question, but for the following maze...
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/d8B6.svg"
-            />
-            <Pause />
-            <OuterP>
-              ...and for the following velocity data, with the
-              horizontal and vertical velocities
-              superimposed on one graph (just a cosmetic
-              change—note that green is the vertical velocity)...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/VWaV.svg" />
-            <Pause />
-            <OuterP>
-              ...and asking for Pacman's position at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 34$
-                </Math>
-                s.
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              It seems well-advised to start by heuristically verifying
-              that Pacman's speed remains
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \approx 6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              no matter the direction that Pacman is headed, as long as Pacman is
-              in motion.
-            </OuterP>
-            <OuterP class="indent-10">
-              For example, take the instant {" "}
-              <NoBreak>
-                <Math>
-                  $t \approx 23.7$
-                </Math>
-                s,
-              </NoBreak>
-              {" "} when the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -velocities
-              </NoBreak>
-              {" "} are
-              both about (?) {" "}
-              <NoBreak>
-                <Math>
-                  $4.8\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/GAWM.svg" />
-            <Pause />
-            <OuterP>
-              The velocity vector (cf. {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_62_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 13
-                </InChapterLink>
-                )
-              </NoBreak>
-              {" "} is therefore about
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (4.8, 4.8)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              in units of {" "}
-              <Math>
-                $\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-              </Math>
-              {" "} at {" "}
-              <NoBreak>
-                <Math>
-                  $t \approx 23.7$
-                </Math>
-                s,
-              </NoBreak>
-              {" "}
-              and the speed, being the length of the velocity
-              vector (cf. {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_62_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 13
-                </InChapterLink>
-                ),
-              </NoBreak>
-              {" "} is about
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;4.8^2 + 4.8^2&#125; = \sqrt&#123;2&#125; \times 4.8 = 6.788...
-              $$
-              <ImageLeft
-                src="/build-img/svgo-svg/wsTF.svg"
-                compensate_offset_x_for_large_text_columns={true}
-              />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (Pythagoras!)
-              in units of {" "}
-              <Math>
-                $\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-              </Math>
-              {" "} as well,
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              6.788... \approx 6.75
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which supports, in this case, the hypothesis that
-              Pacman's speed is {" "}
-              <Math>
-                $\approx 6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-              </Math>
-              {" "}
-              regardless of the direction of travel.
-            </OuterP>
-            <OuterP class="indent-10">
-              For more verification, take {" "}
-              <NoBreak>
-                <Math>
-                  $t = 26\te&#123;s&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              at which point the velocity vector is roughly
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (6.5, -2)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              cells per second:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/GBWO.svg" />
-            <Pause />
-            <OuterP>
-              This gives a speed of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;6.5^2 + 2^2&#125; = \sqrt&#123;46.25&#125; = 6.800...
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              cells per second, again close to 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (!)
-            </OuterP>
-            <OuterP class="indent-10">
-              For two more verifications take {" "}
-              <Math>
-                $t = 27\te&#123;s&#125;$
-              </Math>
-              {" "}
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $t = 30\te&#123;s&#125;$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/3t-v.svg" />
-            <Pause />
-            <OuterP>
-              The speed at {" "}
-              <Math>
-                $t = 27\te&#123;s&#125;$
-              </Math>
-              {" "} is approximately
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;3^2 + 6.2^2&#125; = \sqrt&#123;47.44&#125; = 6.888
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              cells per second, while the speed at {" "}
-              <Math>
-                $t = 30\te&#123;s&#125;$
-              </Math>
-              {" "}
-              is approximately
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;5.6^2 + 3.6^2&#125; = \sqrt&#123;44.32&#125; = 6.657
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              cells per second. Both close-ish to
-              {" "}
-              <NoBreak>
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-                </Math>
-                !
-              </NoBreak>
-              {" "} For one last
-              verification (truly the last, we promise)
-              consider {" "}
-              <NoBreak>
-                <Math>
-                  $t = 31\te&#123;s&#125;$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/QXY0.svg" />
-            <Pause />
-            <OuterP>
-              This yields a speed of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;2.6^2 + 6.2^2&#125; = \sqrt&#123;45.2&#125; = 6.723...
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              cells per second, again close to {" "}
-              <NoBreak>
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-                </Math>
-                !
-              </NoBreak>
-              {" "}
-              (Closest so far, in fact.)
-            </OuterP>
-            <OuterP class="indent-10">
-              We now admit, after this “heuristic verification”,
-              that Pacman goes approximately the same speed
-              regardless of direction, namely something in
-              the vicinity of {" "}
-              <NoBreak>
-                <Math>
-                  $6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Now consider the time interval from {" "}
-              <Math>
-                $t = 22.7\te&#123;s&#125;$
-              </Math>
-              {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $t = 24.7\te&#123;s&#125;$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Tyoa.svg" />
-            <Pause />
-            <OuterP>
-              Both the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -velocities
-              </NoBreak>
-              {" "} are nonzero
-              during this interval, which indicates the presence
-              of a curve. The curve starts with vertical motion
-              and ends with horizontal motion:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/niov.svg" />
-            <Pause />
-            <OuterP>
-              Thus Pacman starts the curve going up, and ends the curve
-              going right. Moreover, it takes Pacman
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              24.7\te&#123;s&#125; - 22.7\te&#123;s&#125; = 3\te&#123;s&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to complete the curve (we know the curve is fully
-              completed from the purely horizontal motion at
-              either end), from which the curve must be
-              approximately
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125; \times 3\te&#123;s&#125; = 20.25\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              in length! In turn, using the approximation
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \approx &#123;11 \over 7&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for the quarter-circumference of a unit circle
-              {" "}
-              <NoBreak>
-                (cf
-                <Math>
-                  $.$
-                </Math>
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_72_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 20
-                </InChapterLink>
-                ),
-              </NoBreak>
-              {" "}
-              this would indicate that
-              the curve (which is a quarter-circle, as
-              all curves in this maze) has radius
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \approx &#123;20.25\te&#123;c&#125; \over 11/7&#125; = &#123;7 \times 20.25\te&#123;c&#125; \over 11&#125; = &#123;141.75\te&#123;c&#125; \over 11&#125; = 12.886...\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where we give up and use a calculator at the
-              last step. But the possible radii are {" "}
-              <NoBreak>
-                <Math>
-                  $3$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $6$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              {" "}
-              <Math>
-                $9$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $12$
-                </Math>
-                .
-              </NoBreak>
-              {" "} This all but rules out all of the
-              maze curves except the one that has radius {" "}
-              <NoBreak>
-                <Math>
-                  $12$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              and that allows a traversal that starts upward
-              and ends rightward; we mean the upper left
-              curve of the maze:
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/Fs4p.svg"
-            />
-            <Pause />
-            <OuterP>
-              From there, Pacman goes right for a bit, then
-              takes another curve 3 seconds long, that starts
-              rightward and ends downward:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/gJqp.svg" />
-            <Pause />
-            <OuterP>
-              ...this second curve must, of course, be the
-              upper right-hand corner of the maze, that has the
-              appropriate length, position, and orientation:
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/zqM6.svg"
-            />
-            <Pause />
-            <OuterP>
-              What is extremely strange, however, is that
-              Pacman immediately follows the end of this curve
-              with rightward motion:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/hJnh.svg" />
-            <Pause />
-            <OuterP>
-              In fact, it is also strange that Pacman {" "}
-              <i>
-                preceded
-              </i>
-              {" "}
-              the first curve with rightward motion (when that curve
-              starts at the leftmost edge of the maze):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/fCqh.svg" />
-            <Pause />
-            <OuterP>
-              Looking back over our work,
-              we find that we made a mistake when we wrote
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              24.7\te&#123;s&#125; - 22.7\te&#123;s&#125; = 3\te&#123;s&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              the corrected version of that being of course
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              24.7\te&#123;s&#125; - 22.7\te&#123;s&#125; = 2\te&#123;s&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (the second curve likewise lasted {" "}
-              <NoBreak>
-                <Math>
-                  $2\te&#123;s&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              not {" "}
-              <NoBreak>
-                <Math>
-                  $3\te&#123;s&#125;$
-                </Math>
-                )
-              </NoBreak>
-              {" "} making the length and radius of
-              the first curve two-thirds of whatever we previously
-              computed (because {" "}
-              <Math>
-                $2\te&#123;s&#125;$
-              </Math>
-              {" "} is two-thirds of
-              {" "}
-              <NoBreak>
-                <Math>
-                  $3\te&#123;s&#125;$
-                </Math>
-                ),
-              </NoBreak>
-              {" "} i.e.,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;2 \over 3&#125; \times 12.886...\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for the {" "}
-              <i>
-                radius
-              </i>
-              {" "} of the first (and second)
-              curve, which means that the first and second curves
-              actually had radii {" "}
-              <NoBreak>
-                <Math>
-                  $9$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} undoubtedly,
-              and that Pacman's initial motion followed the
-              one-inside track (the two rightward motions are
-              easily seen to be {" "}
-              <NoBreak>
-                ~
-                <Math>
-                  $3\te&#123;c&#125;$
-                </Math>
-              </NoBreak>
-              {" "} each):
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/Ywed.svg"
-            />
-            <Pause />
-            <OuterP>
-              Next, after some downward motion we are faced
-              with a long, juicy, down-and-then-left curve,
-              which must surely be the bottom-right curve of
-              radius {" "}
-              <NoBreak>
-                <Math>
-                  $12$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Pepc.svg" />
-            <Pause />
-            <OuterP>
-              Indeed, the curve lasts {" "}
-              <NoBreak>
-                ~
-                <Math>
-                  $2.7$
-                </Math>
-                s,
-              </NoBreak>
-              {" "} and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              6.75\te&#123;c&#125;\hlfbk/\hlfbk\te&#123;s&#125; \times 2.7\te&#123;s&#125; = 18.225\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is approximately the same as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;11 \over 7&#125; \cdot 12\te&#123;c&#125; = 18.85...\te&#123;c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              confirming the radius of {" "}
-              <Math>
-                $12\te&#123;c&#125;$
-              </Math>
-              {" "} and the location
-              of the curve.
-              Pacman's trajectory so far is then:
-            </OuterP>
-            <Pause />
-            <Image
-              width="860px"
-              src="/build-img/svgo-svg/Bi-p.svg"
-            />
-            <Pause />
-            <OuterP>
-              Next Pacman seems to reverse course, and briefly
-              re-enters the curve (going right and up a tiny bit):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/aL8R.svg" />
-            <Pause />
-            <OuterP>
-              But then changes again, and re-exits the curve
-              (going left and down a tiny bit):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/TUEH.svg" />
-            <Pause />
-            <OuterP>
-              Then Pacman goes left-and-then-right-again by
-              some small amount:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/TUEH.svg" />
-            <Pause />
-            <OuterP>
-              At this point—and in particular at
-              {" "}
-              <NoBreak>
-                <Math>
-                  $t = 34\te&#123;s&#125;$
-                </Math>
-                —Pacman
-              </NoBreak>
-              {" "} is between a moment
-              of purely horizontal motion and purely vertical
-              motion; since the left-and-then-right-again
-              motion did obviously not bring Pacman {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "} cells
-              over to the left (which is the next place
-              after the curve exit that is connected to both
-              horizontal and vertical paths),
-              Pacman must
-              be at the bottom-left exit of the bottom-right
-              maze corner, still.
-            </OuterP>
           </Solution>
         </Exercise>
       </Exercises>

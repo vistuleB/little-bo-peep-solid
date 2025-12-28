@@ -16,7 +16,7 @@
     $$
 
     that gives the slope of $f$ at each point.
-    In other words
+    In other words,
 
     $$
     f'(a)
@@ -26,9 +26,8 @@
     $x = a$. And—surprise!—each pair of graphs
     above is a pair of the form $y = f(x)$ [$=$
     “before”], $y = f'(x)$ [$=$ “after”].
-    (Meaning,
-    the “after” graph records the slope of the
-    “before” graph.) 
+    (Meaning, the “after” graph records the slope
+    of the “before” graph.) 
     E.g.:
 
     |> Image
@@ -89,19 +88,25 @@
     !! (the one with the closed endpoints):
 
     |> Image
-        src=images/svg_ch4_ch_curve_to_sketch.svg
+        src=images/derivative_sketching_method_1_step_0.svg
 
     One method is simply to eyeball the slope at
     a few points along the curve, plot these
     values and interpolate:
 
     |> Image
-        src=images/svg_ch4_ch_curve_to_sketch_sketch.svg
+        src=images/derivative_sketching_method_1_step_1.svg
+
+    |> Image
+        src=images/derivative_sketching_method_1_step_2.svg
+
+    |> Image
+        src=images/derivative_sketching_method_1_step_3.svg
 
     |> ImageRight
-        src=images/svg_ch4_ch_curve_to_sketch_cloud.svg
-        offset_y= 36%
-        offset_x=-15%
+        src=images/svg_ch4_ch_curve_to_sketch_cloud_cleaned.svg
+        offset_y=  5%
+        offset_x=-25%
 
     ...voilà!
 
@@ -113,7 +118,10 @@
     interval:
 
     |> Image
-        src=images/svg_ch4_ch_second_sketch.svg
+        src=images/derivative_sketching_method_2_step_1.svg
+
+    |> Image
+        src=images/derivative_sketching_method_2_step_2.svg
 
     The result (at bottom right)
     is a charming “robosketch” of the true
@@ -266,7 +274,7 @@
     ...then the “after” graph will have units of...
 
     |> ImageRight
-        src=images/svg_ch4_ch_units1_cloud.svg
+        src=images/derivative_units1_cloud.svg
         offset_y=-0.6em
 
     |> TextParent
@@ -294,7 +302,7 @@
     ...then the “after” graph will have units of...
 
     |> ImageLeft
-        src=images/svg_ch4_ch_units2_cloud.svg
+        src=images/derivative_units2_cloud.svg
         offset_y=0.6em
 
     |> TextParent
@@ -533,6 +541,11 @@
     !!     src=images/svg_ch4_ch_position_by_time_cloud.svg
 
     ...describes _velocity as a function of time_;
+    !! ...describes
+    !! __the rate of change of velocity__
+    !! also known as the
+    !! __velocity__
+    !! as a function of time;
     finally, the second derivative...
 
     |> Image

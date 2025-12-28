@@ -71,8 +71,8 @@
         >>_correct_incorrect_or_nonsensical_
         >>_complete_the_missing_units_
         >>_reorder_derivatives_
-        >>_sketch_middle_function_g_
-        >>_sketch_middle_function_h_
+        !! >>_sketch_middle_function_g_
+        !! >>_sketch_middle_function_h_
         >>_narrow_and_less_narrow_bends_
         >>_first_law_of_differentiation_
         >>_define_product_of_constant_and_function_
@@ -89,8 +89,8 @@
         >>_four_particles_at_2_4_
         >>_express_the_associativity_etc_
         >>_associativity_of_function_multiplication_
-        >>_pacman_1_
-        >>_pacman_2_
+        !! >>_pacman_1_
+        !! >>_pacman_2_
         !! >>_associativity_of_function_addition_
         !! >>_rat_fundraising_1_
         !! >>_rat_fundraising_2_
@@ -166,3 +166,7 @@
         >>_three_quarters_decimal_approximation_
         >>_a_ship_
         >>_can_B1B2_be_rewritten_
+
+        !! int_t0^t (-dm/dt)(v(t) - u) dt + (m0 + int_t0^t (dm/dt)dt)(v(t))
+        !! (-dm/dt)(v(t) - u) + (dm/dt)v(t) + (m0 + int_t0^t (dm/dt)dt) (dv/dt) = 0
+        !! (dm/dt)u + m(t)(dv/dt) = 0     ...where dm < 0
