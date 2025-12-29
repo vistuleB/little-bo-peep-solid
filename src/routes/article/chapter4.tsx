@@ -90,7 +90,16 @@ export default function __Chapter4__() {
         Derivatives
       </ArticleTitle>
       <Pause />
-      <Image src="/build-img/svgo-svg/1s4r.svg" />
+      <Image src="/build-img/svgo-svg/myNp.svg" />
+      <Pause />
+      <Image src="/build-img/svgo-svg/dO9o.svg" />
+      <Pause />
+      <Image src="/build-img/svgo-svg/V6Pe.svg" />
+      <Pause />
+      <Image src="/build-img/svgo-svg/tzk1.svg" />
+      <Pause />
+      <Image src="/build-img/svgo-svg/an0s.svg" />
+      <div style="height:1.4em" />
       <Section id="section-1">
         <OuterP>
           <b>

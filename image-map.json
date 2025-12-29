@@ -710,6 +710,15 @@
     "compression": "0.53%",
     "used-last-build": true
   },
+  "svg_ch4_ch_polaroid_2.svg": {
+    "build-version": "svgo-svg/dO9o.svg",
+    "build-version-created-on": 1766942515,
+    "build-method": "svgo",
+    "build-version-size": 19842,
+    "original-size": 25916,
+    "compression": "23.44%",
+    "used-last-build": true
+  },
   "svg_ch5_ex_one_over_A_secant_construction_cloud.svg": {
     "build-version": "svgo-svg/7MXJ.svg",
     "build-version-created-on": 1766555613,
@@ -1216,11 +1225,11 @@
   },
   "svg_ch1_ex_27.svg": {
     "build-version": "svgo-svg/4oJD.svg",
-    "build-version-created-on": 1766554925,
+    "build-version-created-on": 1767030370,
     "build-method": "svgo",
-    "build-version-size": 97931,
-    "original-size": 98202,
-    "compression": "0.28%",
+    "build-version-size": 141380,
+    "original-size": 193740,
+    "compression": "27.03%",
     "used-last-build": true
   },
   "svg_ch4_pacman2_frankenstein_at_23_7.svg": {
@@ -1491,6 +1500,15 @@
     "build-version-size": 147,
     "original-size": 196,
     "compression": "25.0%",
+    "used-last-build": true
+  },
+  "svg_ch4_ch_polaroid_3.svg": {
+    "build-version": "svgo-svg/V6Pe.svg",
+    "build-version-created-on": 1766942515,
+    "build-method": "svgo",
+    "build-version-size": 20458,
+    "original-size": 26808,
+    "compression": "23.69%",
     "used-last-build": true
   },
   "svg_ch4_pacman1_hor0.svg": {
@@ -2294,6 +2312,15 @@
     "compression": "1.78%",
     "used-last-build": true
   },
+  "svg_ch4_ch_polaroid_4.svg": {
+    "build-version": "svgo-svg/tzk1.svg",
+    "build-version-created-on": 1766942515,
+    "build-method": "svgo",
+    "build-version-size": 24630,
+    "original-size": 31634,
+    "compression": "22.14%",
+    "used-last-build": true
+  },
   "svg_ch4_cosine_curves_rolling_wheel.svg": {
     "build-version": "svgo-svg/E0qc.svg",
     "build-version-created-on": 1766554957,
@@ -2530,11 +2557,11 @@
   },
   "svg_ch1_ex_26.svg": {
     "build-version": "svgo-svg/jBCw.svg",
-    "build-version-created-on": 1766554925,
+    "build-version-created-on": 1767011695,
     "build-method": "svgo",
-    "build-version-size": 14058,
-    "original-size": 14068,
-    "compression": "0.07%",
+    "build-version-size": 14015,
+    "original-size": 16634,
+    "compression": "15.74%",
     "used-last-build": true
   },
   "svg_ch4_pacman1_x_prime_t_scloud.svg": {
@@ -3302,6 +3329,15 @@
     "compression": "0.6%",
     "used-last-build": true
   },
+  "svg_ch4_ch_polaroid_5.svg": {
+    "build-version": "svgo-svg/an0s.svg",
+    "build-version-created-on": 1766942515,
+    "build-method": "svgo",
+    "build-version-size": 21635,
+    "original-size": 27868,
+    "compression": "22.37%",
+    "used-last-build": true
+  },
   "svg_bt1_bt_empty_set_cloud.svg": {
     "build-version": "svgo-svg/dcQB.svg",
     "build-version-created-on": 1763368313,
@@ -3394,11 +3430,11 @@
   },
   "svg_ch1_ex_25.svg": {
     "build-version": "svgo-svg/Xx87.svg",
-    "build-version-created-on": 1766554925,
+    "build-version-created-on": 1767010819,
     "build-method": "svgo",
-    "build-version-size": 12375,
-    "original-size": 12396,
-    "compression": "0.17%",
+    "build-version-size": 12352,
+    "original-size": 15582,
+    "compression": "20.73%",
     "used-last-build": true
   },
   "svg_ch3_ex_three_factories.svg": {
@@ -4402,11 +4438,11 @@
   },
   "svg_ch1_ex_24.svg": {
     "build-version": "svgo-svg/omps.svg",
-    "build-version-created-on": 1766554925,
+    "build-version-created-on": 1767029309,
     "build-method": "svgo",
-    "build-version-size": 40735,
-    "original-size": 42277,
-    "compression": "3.65%",
+    "build-version-size": 49540,
+    "original-size": 88048,
+    "compression": "43.74%",
     "used-last-build": true
   },
   "svg_ch5_ex_max_xy_example_isoset.svg": {
@@ -4632,6 +4668,15 @@
     "build-version-size": 258331,
     "original-size": 261242,
     "compression": "1.11%",
+    "used-last-build": false
+  },
+  "svg_ch4_ch_polaroid_1.svg": {
+    "build-version": "svgo-svg/myNp.svg",
+    "build-version-created-on": 1766942515,
+    "build-method": "svgo",
+    "build-version-size": 21509,
+    "original-size": 28274,
+    "compression": "23.93%",
     "used-last-build": true
   },
   "svg_ch5_ch_unit_circle_@-3_smaller.svg": {

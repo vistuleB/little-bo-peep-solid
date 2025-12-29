@@ -15,7 +15,6 @@
     this far-offness, for large $n$?
 
     |> Solution
-
         Since
 
         $$
@@ -24,7 +23,6 @@
 
         |> ImageRight
             offset_x=5rem
-            offset_y=1.2rem
             src=images/svg_ch1_ex_25.svg
             squiggle=false
 
@@ -35,8 +33,7 @@
         $$
 
         |> ImageRight
-            offset_x=11.5rem
-            offset_y=1.2rem
+            offset_x=10rem
             src=images/svg_ch1_ex_26.svg
             squiggle=false
 

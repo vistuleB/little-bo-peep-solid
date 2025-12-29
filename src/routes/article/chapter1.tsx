@@ -852,7 +852,7 @@ const Rest = () => {
           $$
           <ImageLeft
             src="/build-img/svgo-svg/QC6w.svg"
-            offset_x="2.3em"
+            offset_x="1.9em"
             compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
@@ -2690,7 +2690,6 @@ const Rest = () => {
               $$
               <ImageRight
                 offset_x="5rem"
-                offset_y="1.2rem"
                 src="/build-img/svgo-svg/Xx87.svg"
                 squiggle={false}
                 compensate_offset_x_for_large_text_columns={true}
@@ -2706,8 +2705,7 @@ const Rest = () => {
               &#123;1 \over n^2&#125;
               $$
               <ImageRight
-                offset_x="11.5rem"
-                offset_y="1.2rem"
+                offset_x="10rem"
                 src="/build-img/svgo-svg/jBCw.svg"
                 squiggle={false}
                 compensate_offset_x_for_large_text_columns={true}

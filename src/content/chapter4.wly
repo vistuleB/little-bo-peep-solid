@@ -1,5 +1,19 @@
+!! |> Image
+!!     src=images/svg_ch4_ch_polaroids.svg
+
 |> Image
-    src=images/svg_ch4_ch_polaroids.svg
+    src=images/svg_ch4_ch_polaroid_1.svg
+|> Image
+    src=images/svg_ch4_ch_polaroid_2.svg
+|> Image
+    src=images/svg_ch4_ch_polaroid_3.svg
+|> Image
+    src=images/svg_ch4_ch_polaroid_4.svg
+|> Image
+    src=images/svg_ch4_ch_polaroid_5.svg
+
+|> div
+    style=height:1.4em
 
 |> Section
     *Definitions.*
