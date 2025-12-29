@@ -1225,10 +1225,10 @@
   },
   "svg_ch1_ex_27.svg": {
     "build-version": "svgo-svg/4oJD.svg",
-    "build-version-created-on": 1767030370,
+    "build-version-created-on": 1767031443,
     "build-method": "svgo",
-    "build-version-size": 141380,
-    "original-size": 193740,
+    "build-version-size": 141364,
+    "original-size": 193735,
     "compression": "27.03%",
     "used-last-build": true
   },
@@ -4438,11 +4438,11 @@
   },
   "svg_ch1_ex_24.svg": {
     "build-version": "svgo-svg/omps.svg",
-    "build-version-created-on": 1767029309,
+    "build-version-created-on": 1767031228,
     "build-method": "svgo",
-    "build-version-size": 49540,
-    "original-size": 88048,
-    "compression": "43.74%",
+    "build-version-size": 49732,
+    "original-size": 88689,
+    "compression": "43.93%",
     "used-last-build": true
   },
   "svg_ch5_ex_max_xy_example_isoset.svg": {
