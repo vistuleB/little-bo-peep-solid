@@ -20,7 +20,7 @@ export default function __Chapter2__() {
     <Article
       prevPage="/article/chapter1"
       nextPage="/article/chapter3"
-      pageNecessaryMargin={610}
+      pageNecessaryMargin={650}
       maxElementWidth={900}
       id="_27_hgi_"
     >
@@ -1701,13 +1701,13 @@ const Rest = () => {
             >
               <ImageRight
                 src="/build-img/svgo-svg/KI3-.svg"
-                offset_y="5rem"
-                offset_x="-1.3rem"
+                offset_y="20%"
+                offset_x="-5%"
               />
               <ImageLeft
                 src="/build-img/svgo-svg/fi0W.svg"
-                offset_x="-8rem"
-                offset_y="8rem"
+                offset_x="-25%"
+                offset_y="47%"
               />
             </Image>
             <Pause />
@@ -1756,13 +1756,13 @@ const Rest = () => {
               >
                 <ImageRight
                   src="/build-img/svgo-svg/7UPg.svg"
-                  offset_y="27%"
-                  offset_x="-10%"
+                  offset_y="28%"
+                  offset_x="-5%"
                 />
                 <ImageLeft
                   src="/build-img/svgo-svg/qCes.svg"
-                  offset_x="-24%"
-                  offset_y="33%"
+                  offset_x="-18%"
+                  offset_y="44%"
                 />
               </Image>
               <Pause />
@@ -1813,8 +1813,8 @@ const Rest = () => {
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/eaW7.svg"
-                offset_x="7.5em"
-                offset_y="103px"
+                offset_x="10rem"
+                offset_y="0%"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>

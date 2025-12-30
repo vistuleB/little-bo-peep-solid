@@ -344,10 +344,10 @@ table.first-line tr td:first-child {
 .top-bottom-background-divide {
   background-image: linear-gradient(
     to bottom,
-    #d1f7dc 0%,
-    #d1f7dc 50%,
-    #f9ffbb 50%,
-    #f9ffbb 100%
+    #d1f7dcaa 0%,
+    #d1f7dcaa 50%,
+    #f9ffbbaa 50%,
+    #f9ffbbaa 100%
   );
 }
 

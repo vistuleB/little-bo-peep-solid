@@ -10,11 +10,11 @@
   },
   "svg_ch1_ch_minus_two_squared_cloud.svg": {
     "build-version": "svgo-svg/Z39o.svg",
-    "build-version-created-on": 1766913996,
+    "build-version-created-on": 1767087141,
     "build-method": "svgo",
-    "build-version-size": 20513,
-    "original-size": 55537,
-    "compression": "63.06%",
+    "build-version-size": 7638,
+    "original-size": 45070,
+    "compression": "83.05%",
     "used-last-build": true
   },
   "svg_ch5_ex_cosine_10x_plus_x_over_4.svg": {
@@ -145,11 +145,11 @@
   },
   "svg_slope_times_run_equals_rise_cloud.svg": {
     "build-version": "svgo-svg/8ZCw.svg",
-    "build-version-created-on": 1766554931,
+    "build-version-created-on": 1767086872,
     "build-method": "svgo",
-    "build-version-size": 180729,
-    "original-size": 181127,
-    "compression": "0.22%",
+    "build-version-size": 58826,
+    "original-size": 259765,
+    "compression": "77.35%",
     "used-last-build": true
   },
   "svg_ch5_ex_floorplan_soln1.svg": {
@@ -343,11 +343,11 @@
   },
   "56.svg": {
     "build-version": "svgo-svg/KI3-.svg",
-    "build-version-created-on": 1766554930,
+    "build-version-created-on": 1767084740,
     "build-method": "svgo",
-    "build-version-size": 90881,
-    "original-size": 91118,
-    "compression": "0.26%",
+    "build-version-size": 16605,
+    "original-size": 116567,
+    "compression": "85.75%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_white_version.svg": {
@@ -361,11 +361,11 @@
   },
   "57.svg": {
     "build-version": "svgo-svg/fi0W.svg",
-    "build-version-created-on": 1766554930,
+    "build-version-created-on": 1767084011,
     "build-method": "svgo",
-    "build-version-size": 88563,
-    "original-size": 88800,
-    "compression": "0.27%",
+    "build-version-size": 14501,
+    "original-size": 109416,
+    "compression": "86.75%",
     "used-last-build": true
   },
   "svg_ch5_ex_tan_sq_AB_ratio_big_A_left_part.svg": {
@@ -433,11 +433,11 @@
   },
   "59.svg": {
     "build-version": "svgo-svg/7UPg.svg",
-    "build-version-created-on": 1766554930,
+    "build-version-created-on": 1767084811,
     "build-method": "svgo",
-    "build-version-size": 18297,
-    "original-size": 18362,
-    "compression": "0.35%",
+    "build-version-size": 15992,
+    "original-size": 27025,
+    "compression": "40.83%",
     "used-last-build": true
   },
   "svg_ch4_three_one_dimensional_particles_blue_yellow.svg": {
@@ -505,10 +505,10 @@
   },
   "svg_ch2_ch_units_cloud.svg": {
     "build-version": "svgo-svg/9BAj.svg",
-    "build-version-created-on": 1767079452,
+    "build-version-created-on": 1767084010,
     "build-method": "svgo",
-    "build-version-size": 32853,
-    "original-size": 96946,
+    "build-version-size": 32860,
+    "original-size": 96951,
     "compression": "66.11%",
     "used-last-build": true
   },
@@ -1117,11 +1117,11 @@
   },
   "325.svg": {
     "build-version": "svgo-svg/QC6w.svg",
-    "build-version-created-on": 1766935170,
+    "build-version-created-on": 1767087385,
     "build-method": "svgo",
-    "build-version-size": 20642,
-    "original-size": 42934,
-    "compression": "51.92%",
+    "build-version-size": 16108,
+    "original-size": 43031,
+    "compression": "62.57%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_wave_purple_sinusoid_only.svg": {
@@ -1225,11 +1225,11 @@
   },
   "svg_ch1_ex_27.svg": {
     "build-version": "svgo-svg/4oJD.svg",
-    "build-version-created-on": 1767071441,
+    "build-version-created-on": 1767088145,
     "build-method": "svgo",
-    "build-version-size": 145344,
-    "original-size": 199784,
-    "compression": "27.25%",
+    "build-version-size": 38376,
+    "original-size": 199929,
+    "compression": "80.81%",
     "used-last-build": true
   },
   "svg_ch4_pacman2_frankenstein_at_23_7.svg": {
@@ -1315,10 +1315,10 @@
   },
   "31.svg": {
     "build-version": "svgo-svg/J9Ud.svg",
-    "build-version-created-on": 1767073104,
+    "build-version-created-on": 1767081075,
     "build-method": "svgo",
-    "build-version-size": 54976,
-    "original-size": 70915,
+    "build-version-size": 54705,
+    "original-size": 70569,
     "compression": "22.48%",
     "used-last-build": true
   },
@@ -2080,11 +2080,11 @@
   },
   "true_false_sixth_root_of_two_cloud2.svg": {
     "build-version": "svgo-svg/Trg3.svg",
-    "build-version-created-on": 1766933395,
+    "build-version-created-on": 1767087726,
     "build-method": "svgo",
-    "build-version-size": 69186,
-    "original-size": 121816,
-    "compression": "43.2%",
+    "build-version-size": 13584,
+    "original-size": 122218,
+    "compression": "88.89%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_division_big_subtraction_final.svg": {
@@ -2638,11 +2638,11 @@
   },
   "svg_ch2_ex_x0_y0_line_equation_cloud.svg": {
     "build-version": "svgo-svg/eaW7.svg",
-    "build-version-created-on": 1766554931,
+    "build-version-created-on": 1767085978,
     "build-method": "svgo",
-    "build-version-size": 67026,
-    "original-size": 67056,
-    "compression": "0.04%",
+    "build-version-size": 23286,
+    "original-size": 35597,
+    "compression": "34.58%",
     "used-last-build": true
   },
   "svg_ch5_ex_max_xy_2x_scaling_v2.svg": {
@@ -4438,11 +4438,11 @@
   },
   "svg_ch1_ex_24.svg": {
     "build-version": "svgo-svg/omps.svg",
-    "build-version-created-on": 1767031228,
+    "build-version-created-on": 1767088336,
     "build-method": "svgo",
-    "build-version-size": 49732,
-    "original-size": 88689,
-    "compression": "43.93%",
+    "build-version-size": 34020,
+    "original-size": 93789,
+    "compression": "63.73%",
     "used-last-build": true
   },
   "svg_ch5_ex_max_xy_example_isoset.svg": {
@@ -5185,11 +5185,11 @@
   },
   "60.svg": {
     "build-version": "svgo-svg/qCes.svg",
-    "build-version-created-on": 1766554930,
+    "build-version-created-on": 1767084740,
     "build-method": "svgo",
-    "build-version-size": 15845,
-    "original-size": 15910,
-    "compression": "0.41%",
+    "build-version-size": 14632,
+    "original-size": 28124,
+    "compression": "47.97%",
     "used-last-build": true
   },
   "svg_ch4_pacman1_pellet3_inline.svg": {
@@ -5203,11 +5203,11 @@
   },
   "true_false_sixth_root_of_two_cloud1.svg": {
     "build-version": "svgo-svg/rgbH.svg",
-    "build-version-created-on": 1766933164,
+    "build-version-created-on": 1767087725,
     "build-method": "svgo",
-    "build-version-size": 26396,
-    "original-size": 41338,
-    "compression": "36.15%",
+    "build-version-size": 17231,
+    "original-size": 41480,
+    "compression": "58.46%",
     "used-last-build": true
   },
   "svg_ch4_17_other_start.svg": {

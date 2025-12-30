@@ -677,13 +677,13 @@
 
             |> ImageRight
                 src=images/56.svg
-                offset_y=5rem
-                offset_x= -1.3rem
+                offset_y=20%
+                offset_x=-5%
 
             |> ImageLeft
                 src=images/57.svg
-                offset_x= -8rem
-                offset_y=8rem
+                offset_x=-25%
+                offset_y=47%
 
             In more detail, the two triangles are related
             by a $90^\circ$ rotation and so, likewise,
@@ -701,13 +701,13 @@
 
                     |> ImageRight
                         src=images/59.svg
-                        offset_y=27%
-                        offset_x= -10%
+                        offset_y=28%
+                        offset_x=-5%
 
                     |> ImageLeft
                         src=images/60.svg
-                        offset_x= -24%
-                        offset_y=33%
+                        offset_x=-18%
+                        offset_y=44%
 
                 |> StarDivider
 
@@ -733,8 +733,8 @@
 
             |> ImageLeft
                 src=images/svg_ch2_ex_x0_y0_line_equation_cloud.svg
-                offset_x= 7.5em
-                offset_y=103px
+                offset_x=10rem
+                offset_y=0%
 
             because
 
