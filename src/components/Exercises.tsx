@@ -41,7 +41,8 @@ export const Exercises = (props: ExercisesProps) => {
         id="exo"
         src="/non-build-img/separator.png"
         height="50px"
-        class="mt-[15px] mb-[40px]"></Image>
+        class="mt-[15px] mb-[40px]"
+      ></Image>
       <Switcher exercises={children_list.toArray()} />
       <div class="h-[31px]"></div>
       <section id="exercises">
@@ -53,8 +54,9 @@ export const Exercises = (props: ExercisesProps) => {
                   "exercise duration-500 ",
                   selected_exo() == index() + 1 || store.list_view
                     ? "opacity-100 h-auto overflow-visible transition-none"
-                    : "opacity-0 h-0 overflow-hidden transition-opacity",
-                )}>
+                    : "opacity-0 h-0 overflow-hidden transition-opacity"
+                )}
+              >
                 {child}
               </div>
             );
@@ -73,15 +75,6 @@ const Switcher = (props: SwitcherProps) => {
   const { set_exercises_store: set_store, exercises_store: store } =
     useExercisesContext();
   let selected_exo = () => store.selected_exo;
-
-  let button_stroke_width = 1.4;
-  let toggle_stroke_width = 1.4;
-
-  let button_fill_on = "#f8fee0";
-  // let button_fill_off = "#ebebeb";
-  let button_fill_off = "#f2f2f2"; // see var(--inactive-solution-button-rect-fill) in app.css
-  let button_stroke_on = "#000";
-  let button_stroke_off = "#464646";
 
   // gap between left/right buttons
   let gap = 8.5;
@@ -106,7 +99,7 @@ const Switcher = (props: SwitcherProps) => {
   let dr = 2.8;
   let r2 = r1 - dr;
   let c2c = (r1 * 15) / 9.5;
-  let toggle_transition = 100;
+  // let toggle_transition = 100;
 
   let toggle_cx = () => {
     return store.list_view ? 1 + r1 : 1 + r1 + c2c;
@@ -124,7 +117,8 @@ const Switcher = (props: SwitcherProps) => {
     <div class="m-auto">
       <div
         id="exercises-btns"
-        class="flex justify-center !text-xl gap-0 mt-[2px]">
+        class="flex justify-center !text-xl gap-0 mt-[2px]"
+      >
         <svg
           width={`${2 + w}`}
           height={`${2 + w}`}
@@ -133,34 +127,51 @@ const Switcher = (props: SwitcherProps) => {
           xmlns="http://www.w3.org/2000/svg"
           class={twJoin(
             "tab cursor-pointer overflow-visible",
-            left_on() ? "" : "disabled",
+            left_on() ? "" : "disabled"
           )}
           onClick={(e) => {
             e.stopPropagation();
             if (left_on()) {
               set_store("selected_exo", selected_exo() - 1);
             }
-          }}>
+          }}
+        >
           <path
+            class={twJoin(
+              left_on()
+                ? "active_exercises_button"
+                : "inactive_exercises_button"
+            )}
             d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-            fill={left_on() ? `${button_fill_on}` : `${button_fill_off}`}
-            stroke={left_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
-            stroke-width={`${button_stroke_width}`}
-            stroke-miterlimit="2"></path>
-          <path
-            d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-            fill={left_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
+            // fill={left_on() ? `${button_fill_on}` : `${button_fill_off}`}
+            // stroke={left_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
+            // stroke-width={`${button_stroke_width}`}
+            // stroke-miterlimit="2"
           ></path>
           <path
+            class={twJoin(
+              left_on()
+                ? "active_exercises_button_arrow_fill"
+                : "inactive_exercises_button_arrow_fill"
+            )}
+            d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
+            // fill={left_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
+          ></path>
+          <path
+            class={twJoin(
+              left_on()
+                ? "active_exercises_button_arrow_fill"
+                : "inactive_exercises_button_arrow_fill"
+            )}
             d={`M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}
-            fill="black"
-            // stroke={left_on() ? "#000" : "#464646"}
+            // fill={left_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
           ></path>
         </svg>
         <svg
           width={`${gap}`}
           height={`${2 + w}`}
-          xmlns="http://www.w3.org/2000/svg"></svg>
+          xmlns="http://www.w3.org/2000/svg"
+        ></svg>
         <div class="relative w-fit">
           <svg
             width={`${2 + w}`}
@@ -170,31 +181,50 @@ const Switcher = (props: SwitcherProps) => {
             xmlns="http://www.w3.org/2000/svg"
             class={twJoin(
               "tab cursor-pointer overflow-visible",
-              right_on() ? "" : "disabled",
+              right_on() ? "" : "disabled"
             )}
             onClick={(e) => {
               e.stopPropagation();
               if (right_on()) {
                 set_store("selected_exo", selected_exo() + 1);
               }
-            }}>
+            }}
+          >
             <path
+              class={twJoin(
+                right_on()
+                  ? "active_exercises_button"
+                  : "inactive_exercises_button"
+              )}
               d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-              fill={right_on() ? `${button_fill_on}` : `${button_fill_off}`}
-              stroke={right_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
-              stroke-width={`${button_stroke_width}`}
-              stroke-miterlimit="2"></path>
+              // fill={right_on() ? `${button_fill_on}` : `${button_fill_off}`}
+              // stroke={right_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
+              // stroke-width={`${button_stroke_width}`}
+              // stroke-miterlimit="2"
+            ></path>
             <path
+              class={twJoin(
+                right_on()
+                  ? "active_exercises_button_arrow_fill"
+                  : "inactive_exercises_button_arrow_fill"
+              )}
               d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-              fill={right_on() ? `${button_stroke_on}` : `${button_stroke_off}`}></path>
+              // fill={right_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
+            ></path>
             <path
+              class={twJoin(
+                right_on()
+                  ? "active_exercises_button_arrow_fill"
+                  : "inactive_exercises_button_arrow_fill"
+              )}
               d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}
-              fill={right_on() ? `${button_stroke_on}` : `${button_stroke_off}`}></path>
+              // fill={right_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
+            ></path>
           </svg>
           <svg
             class={twJoin(
               "toggle absolute cursor-pointer",
-              store.list_view ? "disabled" : "",
+              store.list_view ? "disabled" : ""
             )}
             style={`left:${w + toggle_gap}px;top:0px;`}
             width={`${c2c + 2 * r1 + 2}`}
@@ -204,7 +234,8 @@ const Switcher = (props: SwitcherProps) => {
             onClick={(e) => {
               e.stopPropagation();
               set_store("list_view", !store.list_view);
-            }}>
+            }}
+          >
             <path
               d={`
                 M ${1 + r1 + c2c} ${w / 2 - r1}
@@ -215,18 +246,22 @@ const Switcher = (props: SwitcherProps) => {
                 a ${r1} ${r1} 0 0 1 ${r1} ${-r1}
                 z
               `}
-              fill={store.list_view ? "#ebebeb" : "#f8fee0"}
-              stroke={store.list_view ? "#464646" : "#000"}
-              stroke-width={`${toggle_stroke_width}`}
+              class={twJoin(
+                store.list_view
+                  ? "inactive_exercises_button"
+                  : "active_exercises_button"
+              )}
             ></path>
             <circle
               cx={`${toggle_cx()}`}
               cy={`${w / 2}`}
               r={`${r2}`}
-              fill="#fff"
-              stroke={store.list_view ? "#464646" : "#000"}
-              stroke-width={`${toggle_stroke_width}`}
-              style={`transition:${toggle_transition}ms`}></circle>
+              class={twJoin(
+                store.list_view
+                  ? "inactive_exercises_toggle_circle"
+                  : "active_exercises_toggle_circle"
+              )}
+            ></circle>
           </svg>
         </div>
       </div>

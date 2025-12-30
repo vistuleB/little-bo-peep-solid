@@ -785,7 +785,7 @@
             |> ImageRight
                 src=images/svg_slope_times_run_equals_rise_cloud.svg
                 offset_x=2.5rem
-                offset_y=-0.5rem
+                offset_y=0%
 
             which can also make it easy to remember!
 

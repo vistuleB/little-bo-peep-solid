@@ -37,18 +37,18 @@
   --desktop-text-column-padding: 16px;
   --mobile-max-width: 900px;
   --toc-label-stroke-color: oklch(97% 0.001 106.424); /* bg-stone-100 */
-  /*
-  --active-solution-button-rect-fill: #ffe3ed;
-  --inactive-solution-button-rect-fill: #ebebeb;
-  --inactive-solution-button-lip-stroke: #464646;
-  --inactive-button-hands: #333;
-  */
+  /* exercises button & toggle styles: */
+  --active-exercises-button-fill: #f8fee0;
+  --inactive-exercises-button-stroke: #464646;
+  /* solution button rect styles: */
   --active-solution-button-rect-fill: #f9fee3ff;
   --inactive-solution-button-rect-fill: #f2f2f2;
+  /* solution button lip: */
   --inactive-solution-button-lip-stroke: #222;
-  --inactive-button-hands: #222;
   --active-solution-button-lip-stroke-width: 1.2;
   --inactive-solution-button-lip-stroke-width: 1.2;
+  /* solution button hands styles: */
+  --inactive-button-hands: #222;
 }
 
 .bg-bg {
@@ -243,6 +243,40 @@ span .MathJax_SVG {
 .focus_alpha_fill {
   fill: #0000;
 }
+
+.active_exercises_button {
+  stroke-width: 1.4;
+  fill: var(--active-exercises-button-fill);
+  stroke: #000;
+  stroke-miterlimit: 2;
+}
+
+.active_exercises_button_arrow_fill {
+  fill: #000;
+}
+
+.inactive_exercises_button {
+  stroke-width: 1.4;
+  fill: #f2f2f2;
+  stroke: var(--inactive-exercises-button-stroke);
+  stroke-miterlimit: 2;
+}
+
+.inactive_exercises_button_arrow_fill {
+  fill: var(--inactive-exercises-button-stroke);
+}
+
+.active_exercises_toggle_circle {
+  stroke-width: 1.4;
+  fill: white;
+  stroke: black;
+}  
+
+.inactive_exercises_toggle_circle {
+  stroke-width: 1.4;
+  fill: white;
+  stroke: var(--inactive-exercises-button-stroke);
+}  
 
 .solution_button_transition {
   transition: 0.3s;
