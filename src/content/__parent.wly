@@ -1,12 +1,12 @@
 |> Book
     |> ChapterSelection
-        !! >>sets
-        !! >>powers
-        !! >>refreshers
+        >>sets
+        >>powers
+        >>refreshers
         >>slopes
-        !! >>functions
-        !! >>derivatives
-        !! >>trigonometry
+        >>functions
+        >>derivatives
+        >>trigonometry
 
     |> In
         chapter=>>powers

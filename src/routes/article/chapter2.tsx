@@ -1256,7 +1256,6 @@ const Rest = () => {
           <ImageRight
             src="/build-img/svgo-svg/h7oS.svg"
             line={1}
-            offset_x="2rem"
           />
         </OuterP>
       </Section>
@@ -1548,8 +1547,7 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/9BAj.svg"
-              offset_x="-6rem"
-              style="width:930px"
+              offset_x="0rem"
               compensate_offset_x_for_large_text_columns={true}
             />
           </MathBlock>
