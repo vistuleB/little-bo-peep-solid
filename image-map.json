@@ -3700,11 +3700,11 @@
   },
   "64.svg": {
     "build-version": "svgo-svg/u0yv.svg",
-    "build-version-created-on": 1766554931,
+    "build-version-created-on": 1767094265,
     "build-method": "svgo",
     "build-version-size": 32948,
-    "original-size": 51629,
-    "compression": "36.18%",
+    "original-size": 52453,
+    "compression": "37.19%",
     "used-last-build": true
   },
   "svg_ch3_ex_factory_roof_floor_graph.svg": {
@@ -4609,11 +4609,11 @@
   },
   "svg_empty_circle_alone.svg": {
     "build-version": "svgo-svg/Jp8B.svg",
-    "build-version-created-on": 1766554931,
+    "build-version-created-on": 1767094265,
     "build-method": "svgo",
-    "build-version-size": 2827,
-    "original-size": 2831,
-    "compression": "0.14%",
+    "build-version-size": 743,
+    "original-size": 1604,
+    "compression": "53.68%",
     "used-last-build": true
   },
   "svg_ch5_ex_double_POST_processing_Au_mid.svg": {
@@ -4969,11 +4969,11 @@
   },
   "svg_ch3_f_box.svg": {
     "build-version": "svgo-svg/tYyP.svg",
-    "build-version-created-on": 1766554932,
+    "build-version-created-on": 1767094432,
     "build-method": "svgo",
     "build-version-size": 19464,
-    "original-size": 19491,
-    "compression": "0.14%",
+    "original-size": 20556,
+    "compression": "5.31%",
     "used-last-build": true
   },
   "svg_ch4_ex_one_particle_interval_subdivision.svg": {
