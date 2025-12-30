@@ -2,12 +2,12 @@ import { HAMBURGER_MENU_HEIGHT } from "~/constants";
 import { Store, useGlobalContext } from "~/store/StoreProvider";
 import HamburgerPanelTitle from "./HamburgerPanelTitle";
 import HamburgerPanelAuthorSuppliedContents from "./HamburgerPanelAuthorSuppliedContents";
-import { createSignal, createEffect } from "solid-js";
+
+const env = import.meta.env.VITE_ENV;
 
 const HamburgerPanel = () => {
   const { store } = useGlobalContext();
   const menu_closed = () => !store.panel_opened;
-  const env = import.meta.env.VITE_ENV;
 
   const toggle_scroll = (overflow: string) => {
     if (menu_closed()) {

@@ -8,6 +8,8 @@ import useOnMobile from "../hooks/useOnMobile";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import { useLocation } from "@solidjs/router";
 
+const env = import.meta.env.VITE_ENV;
+
 type PageProps = {
   pageNecessaryMargin?: number;
   maxElementWidth?: number;
@@ -174,6 +176,10 @@ const Page = (props: ParentProps & PageProps) => {
       e.preventDefault();
       getNextPage();
       return;
+    }
+    if (e.key === "d" && env == "DEV") {
+      e.preventDefault();
+      set_store("show_areas", !store.show_areas);
     }
   };
 
