@@ -402,7 +402,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
     <>
       <div onClick={props.onClick} class="cursor-pointer w-fit m-auto">
         <svg class="mx-auto h-[37px] overflow-visible">
-          <g transform="translate(96, 0)">
+          <g transform="translate(96,0)">
             <rect
               aria-label="solution_button_focus_rect"
               class="focus_alpha_fill"

@@ -74,6 +74,9 @@ const Switcher = (props: SwitcherProps) => {
     useExercisesContext();
   let selected_exo = () => store.selected_exo;
 
+  let button_stroke_width = 1.4;
+  let toggle_stroke_width = 1.4;
+
   // gap between left/right buttons
   let gap = 8.5;
 
@@ -135,7 +138,7 @@ const Switcher = (props: SwitcherProps) => {
             d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
             fill={left_on() ? "#f8fee0" : "#ebebeb"}
             stroke={left_on() ? "#000" : "#464646"}
-            stroke-width="1.5"
+            stroke-width={`${button_stroke_width}`}
             stroke-miterlimit="2"></path>
           <path
             d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
@@ -173,7 +176,7 @@ const Switcher = (props: SwitcherProps) => {
               d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
               fill={right_on() ? "#f8fee0" : "#ebebeb"}
               stroke={right_on() ? "#000" : "#464646"}
-              stroke-width="1.5"
+              stroke-width={`${button_stroke_width}`}
               stroke-miterlimit="2"></path>
             <path
               d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
@@ -208,14 +211,15 @@ const Switcher = (props: SwitcherProps) => {
               `}
               fill={store.list_view ? "#ebebeb" : "#f8fee0"}
               stroke={store.list_view ? "#464646" : "#000"}
-              stroke-width="1.5"></path>
+              stroke-width={`${toggle_stroke_width}`}
+            ></path>
             <circle
               cx={`${toggle_cx()}`}
               cy={`${w / 2}`}
               r={`${r2}`}
               fill="#fff"
               stroke={store.list_view ? "#464646" : "#000"}
-              stroke-width="1.5"
+              stroke-width={`${toggle_stroke_width}`}
               style={`transition:${toggle_transition}ms`}></circle>
           </svg>
         </div>

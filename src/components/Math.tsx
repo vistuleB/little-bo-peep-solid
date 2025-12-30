@@ -69,6 +69,15 @@ export const MathBlock = (props: ParentProps) => {
           setVisible(true);
           set_store("scrollHeight", document.body.scrollHeight);
           observer.disconnect();
+          if (!measureOriginalWidth()) {
+            console.log("failed to measure width once");
+            setTimeout(() => {
+              if (!measureOriginalWidth()) {
+                console.log("failed to measure width twice");
+                console.error("failed to measure width twice");
+              }
+            }, 50);
+          }
         }
       },
       {
@@ -93,19 +102,6 @@ export const MathBlock = (props: ParentProps) => {
     }
 
     setTimeout(measureOriginalWidth, 50);
-
-    var cnt = 0;
-    var obstinateMeasurer = setInterval(
-      () => {
-        if (measureOriginalWidth())
-          window.clearTimeout(obstinateMeasurer);
-        if (++cnt >= 20) {
-          console.log("warning: MathJax display svg still null after ~8s; giving up");
-          window.clearTimeout(obstinateMeasurer);
-        }
-      },
-      500,
-    )
 
     const handleResize = () => {
       let oldInnerWidth = localInnerWidthCopy();

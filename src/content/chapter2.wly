@@ -485,7 +485,6 @@
     |> ImageRight
         src=images/svg_3_plus_minus_one_times_x_cloud.svg
         line=1
-        offset_x= 2rem
 
 |> Section
 
@@ -605,8 +604,7 @@
 
         |> ImageRight
             src=images/svg_ch2_ch_units_cloud.svg
-            offset_x=-6rem
-            style=width:930px
+            offset_x=0rem
 
         following the template
 

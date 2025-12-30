@@ -52,7 +52,8 @@ const SideImage = (props: InternalSideImageProps) => {
       return (
         <div
           class="absolute z-10"
-          style={`top: ${props.children_y}; left: ${props.children_x}`}>
+          style={`top: ${props.children_y}; left: ${props.children_x}`}
+        >
           {props.children}
         </div>
       );
@@ -77,23 +78,23 @@ const SideImage = (props: InternalSideImageProps) => {
     <div
       ref={container_ref}
       class="absolute"
-      style="left:0;top:0;width:100%;height:100%;background-color:none;margin:0;padding:0;pointer-events:none;">
+      style="left:0;top:0;width:100%;height:100%;background-color:none;margin:0;padding:0;pointer-events:none;"
+    >
       <div
         style={{
-          // visibility: scale().after_first_click || !on_mobile() ? "visible" : "hidden", // (*) have to do this cause we just couldn't get rid of that bug where we can't "hear" the initial scale...
           left: getLeft(
             props.side,
             props.offset_x,
             our_scale_copy(),
             store.innerWidth,
-            props.compensate_offset_x_for_large_text_columns,
+            props.compensate_offset_x_for_large_text_columns
           ),
           right: getRight(
             props.side,
             props.offset_x,
             our_scale_copy(),
             store.innerWidth,
-            props.compensate_offset_x_for_large_text_columns,
+            props.compensate_offset_x_for_large_text_columns
           ),
           top: getTop(props.line, props.offset_y, our_scale_copy()),
           transform: `translateY(calc(-50%))`,
@@ -102,7 +103,8 @@ const SideImage = (props: InternalSideImageProps) => {
           scale: our_scale_copy(),
           "z-index": 20,
         }}
-        class="flex shrink-0 transition-opacity duration-300 lg:transition-none lg:opacity-100 absolute w-max">
+        class="flex shrink-0 transition-opacity duration-300 lg:transition-none lg:opacity-100 absolute w-max"
+      >
         <ImageOrSideImage
           class={twJoin(props.class, !props.width && "max-w-max", "cloud")}
           style={props.style}
@@ -121,7 +123,8 @@ const SideImage = (props: InternalSideImageProps) => {
             top: `${props.squiggle_y}`,
             transform: "translate(-50%, -50%)",
             padding: "2.6rem",
-          }}>
+          }}
+        >
           <img
             loading="lazy"
             src="/images/squiggle.png"
@@ -176,7 +179,7 @@ const getLeft = (
   offset_x: string,
   scale: number,
   innerWidth: number,
-  compensate_offset_x: boolean,
+  compensate_offset_x: boolean
 ): string => {
   let text_width =
     innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;
@@ -193,7 +196,7 @@ const getRight = (
   offset_x: string,
   scale: number,
   innerWidth: number,
-  compensate_offset_x: boolean,
+  compensate_offset_x: boolean
 ): string => {
   let column_width =
     innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;

@@ -22,12 +22,9 @@
   src: url("/fonts/Baskerville-Italic.ttf");
 }
 
-/* * {
-  box-sizing: content-box;
-}
- */
 :root {
-  --background-rgb: rgb(255, 249, 249);
+  /* --background-rgb: rgb(255, 249, 249); */
+  --background-rgb: #fff9f9;
   --foreground-rgb: rgb(0, 0, 0);
   --highlighted-rgb: rgb(255,0,0);
   --arrow-pressed: #9333ea;
@@ -40,6 +37,18 @@
   --desktop-text-column-padding: 16px;
   --mobile-max-width: 900px;
   --toc-label-stroke-color: oklch(97% 0.001 106.424); /* bg-stone-100 */
+  /*
+  --active-solution-button-rect-fill: #ffe3ed;
+  --inactive-solution-button-rect-fill: #ebebeb;
+  --inactive-solution-button-lip-stroke: #464646;
+  --inactive-button-hands: #333;
+  */
+  --active-solution-button-rect-fill: #f9fee3ff;
+  --inactive-solution-button-rect-fill: #f2f2f2;
+  --inactive-solution-button-lip-stroke: #222;
+  --inactive-button-hands: #222;
+  --active-solution-button-lip-stroke-width: 1.2;
+  --inactive-solution-button-lip-stroke-width: 1.2;
 }
 
 .bg-bg {
@@ -240,33 +249,31 @@ span .MathJax_SVG {
 }
 
 .active_solution_button_rect {
-  fill: #ffe3ed;
+  fill: var(--active-solution-button-rect-fill);
   stroke: none;
   cursor: pointer;
-  transition: 0.3s;
+}
+
+.inactive_solution_button_rect {
+  fill: var(--inactive-solution-button-rect-fill);
+  stroke: none;
+  cursor: pointer;
 }
 
 .active_solution_button_lip {
-  stroke-width: 1.2px;
+  stroke-width: var(--active-solution-button-lip-stroke-width);
   stroke: #000;
   fill: none;
 }
 
 .inactive_solution_button_lip {
-  stroke-width: 1.4px;
-  stroke: #464646;
+  stroke-width: var(--inactive-solution-button-lip-stroke-width);
+  stroke: var(--inactive-solution-button-lip-stroke);
   fill: none;
 }
 
-.inactive_solution_button_rect {
-  fill: #ebebeb;
-  stroke: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
 .inactive_solution_button_hands {
-  fill: #333;
+  fill: var(--inactive-button-hands);
 }
 
 .active_solution_button_hands {
