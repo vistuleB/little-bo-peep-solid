@@ -382,7 +382,7 @@
 
 |> Section
 
-    *“From/To” Notation.*
+    *“From/To” notation.*
     The notation
 
     $$
@@ -434,7 +434,7 @@
 
 |> Section
 
-    *The Vertical Line Test.*
+    *The vertical line test.*
     As it turns out, the term “graph” just means
     “set of points in the plane”. So a
 
@@ -520,7 +520,7 @@
 
 |> Section
 
-    *A Famous Discontinuity.*
+    *A famous discontinuity.*
     As already seen, functions can have
     _discontinuities_: a place where the function
     experiences a sudden “jump” in value.

@@ -1,5 +1,6 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
+import Boxed  from "~/components/Boxed";
 import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Grid  from "~/components/Grid";
@@ -1052,7 +1053,7 @@ const Rest = () => {
       <Section id="section-7">
         <OuterP>
           <b>
-            “From/To” Notation.
+            “From/To” notation.
           </b>
           {" "}
           The notation
@@ -1186,7 +1187,7 @@ const Rest = () => {
       <Section id="section-8">
         <OuterP>
           <b>
-            The Vertical Line Test.
+            The vertical line test.
           </b>
           {" "}
           As it turns out, the term “graph” just means
@@ -1343,7 +1344,7 @@ const Rest = () => {
       <Section id="section-9">
         <OuterP>
           <b>
-            A Famous Discontinuity.
+            A famous discontinuity.
           </b>
           {" "}
           As already seen, functions can have
@@ -2717,42 +2718,37 @@ const Rest = () => {
                 Note 3.
               </i>
               {" "}
-              For a formal definition of {" "}
+              A formal definition of {" "}
               <NoBreak>
                 “
                 <Math>
                   $f \circ g$
                 </Math>
-                ”—something
+                ”
               </NoBreak>
-              {" "}
-              not based on pictures—one need only specify what
-              {" "}
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "} does to inputs. Specifically:
+              {" "} can be given
+              as:
             </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \,&#123;(f \circ g)(x) = f(g(x))&#125;.
-              $$
-            </MathBlock>
-            <Pause />
+            <Boxed>
+              <MathBlock>
+                $$
+                f \circ g = (x \ra f(g(x)))
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
-              (So that equation is a formal definition.) One can
-              also clarify that
+              One can
+              also clarify that:
             </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
+            <Boxed>
+              <MathBlock>
+                $$
+                &#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
-              which is to say that the domain of {" "}
+              ...which is to say that the domain of {" "}
               <Math>
                 $f \circ g$
               </Math>
@@ -2893,11 +2889,11 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              For the first graph,
+              For the first graph, {" "}
               <del>
                 the
               </del>
-              an answer is
+              {" "} an answer is
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3957,7 +3953,7 @@ const Rest = () => {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/FiSv.svg"
-                width="2000px"
+                width="1700px"
               />
               <Pause />
               <OuterP>
@@ -3974,7 +3970,7 @@ const Rest = () => {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/WdCb.svg"
-                width="2000px"
+                width="1700px"
               />
               <Pause />
               <OuterP>
@@ -4137,7 +4133,7 @@ const Rest = () => {
                 function, that might cause two functions to
                 be considered unequal even if they produce the
                 same output on every input—producing the same
-                output on every input implies that the
+                output on every input implies that the {" "}
                 <del>
                   list of
                 </del>

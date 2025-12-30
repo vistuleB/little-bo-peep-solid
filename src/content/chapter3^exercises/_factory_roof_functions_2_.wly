@@ -8,11 +8,10 @@
 
     |> Solution
 
-        For the first graph,
+        For the first graph, 
         |> del
-
             the
-        an answer is
+        \ an answer is
         $$
         2 \cdot(x/2 - \fl{x/2})
         $$

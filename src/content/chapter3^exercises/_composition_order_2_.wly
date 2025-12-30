@@ -240,13 +240,13 @@
 
             |> Image
                 src=images/svg_ch3_truth_be_said_right_first.svg
-                width=2000px
+                width=1700px
 
             We can also get rid of $B$ first, $C$ second:
 
             |> Image
                 src=images/svg_ch3_truth_be_said_left_first.svg
-                width=2000px
+                width=1700px
 
             The first order of computation corresponds
             to the parenthetization “$f \circ (g \circ h)$”
@@ -292,11 +292,9 @@
             “under the hood”. Specifically, mathematicians
             view functions as 
             |> del
-
                 long
             \ 
             |> del
-
                 lists of
             \ sets of ordered pairs; for example—conceptual
             cold water shock ahead—
@@ -328,9 +326,8 @@
             function, that might cause two functions to
             be considered unequal even if they produce the
             same output on every input—producing the same
-            output on every input implies that the
+            output on every input implies that the 
             |> del
-
                 list of
             \ set of ordered pairs is equal, and, perforce,
             that the two functions are equal!!

@@ -107,7 +107,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.delete_text_nodes_with_singleton_empty_line(),
       dl.trim("p"),
       dl.delete_if_empty("p"),
-      dl.table_marker(),
       // (end cleaning)
       dl.unwrap_if_no_child_meets_condition(#("p", infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink", "InlineImage", "Math"]))),
       dl.unwrap_if_descendant_of(#("p", ["td", "li"])),
@@ -125,6 +124,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool) -> Pipeline {
       dl.absorb_into_previous_sibling(["ImageRight", "ImageLeft"]),
       dl.append_attribute_if_child_of(#("ImageRight", "MathBlock", "compensate_offset_x_for_large_text_columns", "true")),
       dl.append_attribute_if_child_of(#("ImageLeft", "MathBlock", "compensate_offset_x_for_large_text_columns", "true")),
+      dl.table_marker(),
       dl.append_attribute_to_second_of_kind(#("OuterP", "class", "indent-10")),
       dl.add_between(#("MathBlock", "OuterP", "Pause")),
       dl.add_between(#("Example", "OuterP", "Pause")),

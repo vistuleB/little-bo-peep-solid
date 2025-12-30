@@ -991,11 +991,11 @@
   },
   "svg_ch3_truth_be_said.svg": {
     "build-version": "svgo-svg/ioa4.svg",
-    "build-version-created-on": 1766554939,
+    "build-version-created-on": 1767107021,
     "build-method": "svgo",
-    "build-version-size": 321060,
-    "original-size": 321357,
-    "compression": "0.09%",
+    "build-version-size": 20868,
+    "original-size": 325978,
+    "compression": "93.6%",
     "used-last-build": true
   },
   "svg_ch5_ex_four_graphs_labeled.svg": {
@@ -2386,11 +2386,11 @@
   },
   "svg_ch3_ch_affine_linear_cloud.svg": {
     "build-version": "svgo-svg/wfGL.svg",
-    "build-version-created-on": 1767095614,
+    "build-version-created-on": 1767107673,
     "build-method": "svgo",
-    "build-version-size": 62005,
-    "original-size": 69150,
-    "compression": "10.33%",
+    "build-version-size": 62208,
+    "original-size": 71428,
+    "compression": "12.91%",
     "used-last-build": true
   },
   "svg_3_plus_minus_one_times_x_cloud.svg": {
@@ -3079,11 +3079,11 @@
   },
   "svg_ch3_f_box_inverted.svg": {
     "build-version": "svgo-svg/TgEh.svg",
-    "build-version-created-on": 1766554936,
+    "build-version-created-on": 1767107021,
     "build-method": "svgo",
     "build-version-size": 81588,
-    "original-size": 81772,
-    "compression": "0.23%",
+    "original-size": 84473,
+    "compression": "3.42%",
     "used-last-build": true
   },
   "svg_ch4_RATS_over_Dt_first_term.svg": {
@@ -3250,11 +3250,11 @@
   },
   "svg_ch3_ex_x0_y0_step0.svg": {
     "build-version": "svgo-svg/kIUQ.svg",
-    "build-version-created-on": 1766554940,
+    "build-version-created-on": 1767107022,
     "build-method": "svgo",
-    "build-version-size": 46773,
-    "original-size": 46824,
-    "compression": "0.11%",
+    "build-version-size": 42072,
+    "original-size": 58523,
+    "compression": "28.11%",
     "used-last-build": true
   },
   "svg_ch5_ch_cosine_and_sine_@-3.svg": {
@@ -3322,11 +3322,11 @@
   },
   "svg_ch3_truth_be_said_left_first.svg": {
     "build-version": "svgo-svg/WdCb.svg",
-    "build-version-created-on": 1767091657,
+    "build-version-created-on": 1767107022,
     "build-method": "svgo",
-    "build-version-size": 351950,
-    "original-size": 354060,
-    "compression": "0.6%",
+    "build-version-size": 225566,
+    "original-size": 468311,
+    "compression": "51.83%",
     "used-last-build": true
   },
   "svg_ch4_ch_polaroid_5.svg": {
@@ -3943,11 +3943,11 @@
   },
   "svg_ch3_connection_x_6_again.svg": {
     "build-version": "svgo-svg/Kg7y.svg",
-    "build-version-created-on": 1767091657,
+    "build-version-created-on": 1767107022,
     "build-method": "svgo",
-    "build-version-size": 5912,
-    "original-size": 5913,
-    "compression": "0.02%",
+    "build-version-size": 4066,
+    "original-size": 5375,
+    "compression": "24.35%",
     "used-last-build": true
   },
   "svg_ch5_ex_opening_door.svg": {
@@ -4051,11 +4051,11 @@
   },
   "svg_ch3_truth_be_said_right_first.svg": {
     "build-version": "svgo-svg/FiSv.svg",
-    "build-version-created-on": 1767091657,
+    "build-version-created-on": 1767107021,
     "build-method": "svgo",
-    "build-version-size": 350257,
-    "original-size": 352560,
-    "compression": "0.65%",
+    "build-version-size": 220780,
+    "original-size": 490313,
+    "compression": "54.97%",
     "used-last-build": true
   },
   "svg_ch5_ch_scaling_circle_1.svg": {
@@ -4699,11 +4699,11 @@
   },
   "svg_ch3_ex_f_circle_g_equals.svg": {
     "build-version": "svgo-svg/5UVl.svg",
-    "build-version-created-on": 1767091656,
+    "build-version-created-on": 1767107021,
     "build-method": "svgo",
-    "build-version-size": 31152,
-    "original-size": 31254,
-    "compression": "0.33%",
+    "build-version-size": 19242,
+    "original-size": 36669,
+    "compression": "47.53%",
     "used-last-build": true
   },
   "svg_ch5_ex_polar_discovery.svg": {
@@ -4825,11 +4825,11 @@
   },
   "svg_ch3_ex_f_box_g_box.svg": {
     "build-version": "svgo-svg/FwQo.svg",
-    "build-version-created-on": 1767091656,
+    "build-version-created-on": 1767107021,
     "build-method": "svgo",
     "build-version-size": 29116,
-    "original-size": 29218,
-    "compression": "0.35%",
+    "original-size": 30513,
+    "compression": "4.58%",
     "used-last-build": true
   },
   "svg_ch4_sketch_the_middle_b.svg": {
