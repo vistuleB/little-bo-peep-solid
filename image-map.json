@@ -658,11 +658,11 @@
   },
   "svg_ch5_ex_spherical_coordinates_xy_plane.svg": {
     "build-version": "svgo-svg/10Fl.svg",
-    "build-version-created-on": 1766555622,
+    "build-version-created-on": 1767177452,
     "build-method": "svgo",
-    "build-version-size": 69650,
-    "original-size": 114449,
-    "compression": "39.14%",
+    "build-version-size": 29661,
+    "original-size": 105217,
+    "compression": "71.81%",
     "used-last-build": true
   },
   "svg_ch5_ex_cos_and_cos2_comparison.svg": {
@@ -3241,11 +3241,11 @@
   },
   "svg_ch4_RATS_second_term_cloud.svg": {
     "build-version": "svgo-svg/9OXS.svg",
-    "build-version-created-on": 1767091672,
+    "build-version-created-on": 1767177451,
     "build-method": "svgo",
-    "build-version-size": 138910,
-    "original-size": 139148,
-    "compression": "0.17%",
+    "build-version-size": 62471,
+    "original-size": 69355,
+    "compression": "9.93%",
     "used-last-build": true
   },
   "svg_ch3_ex_x0_y0_step0.svg": {
@@ -3385,11 +3385,11 @@
   },
   "svg_ch4_big_product_parchment_cloud.svg": {
     "build-version": "svgo-svg/6ZYS.svg",
-    "build-version-created-on": 1767091672,
+    "build-version-created-on": 1767178406,
     "build-method": "svgo",
-    "build-version-size": 58253,
-    "original-size": 58436,
-    "compression": "0.31%",
+    "build-version-size": 26129,
+    "original-size": 53808,
+    "compression": "51.44%",
     "used-last-build": true
   },
   "svg_ch4_pacman2_frankenstein_second_big_purple.svg": {
@@ -4078,11 +4078,11 @@
   },
   "svg_ch5_ex_spherical_coordinates_statement.svg": {
     "build-version": "svgo-svg/FZVx.svg",
-    "build-version-created-on": 1767091692,
+    "build-version-created-on": 1767178973,
     "build-method": "svgo",
-    "build-version-size": 176389,
-    "original-size": 336396,
-    "compression": "47.57%",
+    "build-version-size": 14372,
+    "original-size": 216020,
+    "compression": "93.35%",
     "used-last-build": true
   },
   "svg_ch5_ch_snail_stack_greater_eta.svg": {
@@ -5140,11 +5140,11 @@
   },
   "svg_ch5_ex_spherical_coordinates_Rsin_phi.svg": {
     "build-version": "svgo-svg/giDO.svg",
-    "build-version-created-on": 1767091693,
+    "build-version-created-on": 1767178973,
     "build-method": "svgo",
-    "build-version-size": 231944,
-    "original-size": 336401,
-    "compression": "31.05%",
+    "build-version-size": 55388,
+    "original-size": 216025,
+    "compression": "74.36%",
     "used-last-build": true
   },
   "svg_ch3_3_3_grid_1.svg": {

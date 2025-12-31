@@ -5265,7 +5265,7 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/kIUQ.svg"
-              width="760px"
+              width="660px"
             />
             <Pause />
             <OuterP>
@@ -5285,7 +5285,7 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/gYAV.svg"
-              width="760px"
+              width="660px"
             />
             <Pause />
             <OuterP>
@@ -5305,7 +5305,7 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/cfTn.svg"
-              width="760px"
+              width="660px"
             />
             <Pause />
             <OuterP>
@@ -5331,7 +5331,7 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/L9MD.svg"
-              width="760px"
+              width="660px"
             />
             <Pause />
             <OuterP>

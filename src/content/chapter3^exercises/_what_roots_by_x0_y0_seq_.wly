@@ -28,21 +28,21 @@
 
         |> Image
             src=images/svg_ch3_ex_x0_y0_step0.svg
-            width=760px
+            width=660px
 
         After vertically translating by $-y_0$
         the roots will therefore be at $x = \pm\sqrt{y_0}$:
 
         |> Image
             src=images/svg_ch3_ex_x0_y0_step1.svg
-            width=760px
+            width=660px
 
         Then after horizontally translating by $x_0$
         the roots mosey over to $x = x_0\pm\sqrt{y_0}$:
 
         |> Image
             src=images/svg_ch3_ex_x0_y0_step2.svg
-            width=760px
+            width=660px
 
         Lastly, vertical scaling does not affect
         the position of the roots, because it
@@ -51,7 +51,7 @@
 
         |> Image
             src=images/svg_ch3_ex_x0_y0_step3.svg
-            width=760px
+            width=660px
 
         So the roots are at: $x = x_0 \pm \sqrt{y_0}$.
         (Like we found them after the second step.)

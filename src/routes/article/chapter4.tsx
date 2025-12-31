@@ -6676,6 +6676,7 @@ const Rest = () => {
               $$
               <ImageRight
                 src="/build-img/svgo-svg/6ZYS.svg"
+                offset_x="2rem"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
