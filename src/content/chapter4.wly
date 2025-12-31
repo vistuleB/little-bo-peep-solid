@@ -1,14 +1,15 @@
-!! |> Image
-!!     src=images/svg_ch4_ch_polaroids.svg
-
 |> Image
     src=images/svg_ch4_ch_polaroid_1.svg
+
 |> Image
     src=images/svg_ch4_ch_polaroid_2.svg
+
 |> Image
     src=images/svg_ch4_ch_polaroid_3.svg
+
 |> Image
     src=images/svg_ch4_ch_polaroid_4.svg
+
 |> Image
     src=images/svg_ch4_ch_polaroid_5.svg
 
@@ -642,8 +643,7 @@
 
     which is even better because it “shows” acceleration
     to be a number of m$/$s per second. 
-    !! (Acceleration _is_
-    !! a number of m$/$s per second, no?)
+
 
     |> Example
 

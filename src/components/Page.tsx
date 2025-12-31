@@ -19,7 +19,7 @@ type PageProps = {
 
 const Page = (props: ParentProps & PageProps) => {
   let { set_store, store } = useGlobalContext();
-  const { getPrevPage, getNextPage } = usePrevNextPage();
+  const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
   const location = useLocation();
 
@@ -180,6 +180,38 @@ const Page = (props: ParentProps & PageProps) => {
     if (e.key === "d" && env == "DEV") {
       e.preventDefault();
       set_store("show_areas", !store.show_areas);
+    }
+    if (e.key === "0") {
+      e.preventDefault();
+      getPage("/");
+    }
+    if (e.key === "1") {
+      e.preventDefault();
+      getPage("/article/chapter1");
+    }
+    if (e.key === "2") {
+      e.preventDefault();
+      getPage("/article/chapter2");
+    }
+    if (e.key === "3") {
+      e.preventDefault();
+      getPage("/article/chapter3");
+    }
+    if (e.key === "4") {
+      e.preventDefault();
+      getPage("/article/chapter4");
+    }
+    if (e.key === "5") {
+      e.preventDefault();
+      getPage("/article/chapter5");
+    }
+    if (e.key === "9") {
+      e.preventDefault();
+      getPage("/article/bootcamp1");
+    }
+    if (e.key === "8") {
+      e.preventDefault();
+      getPage("/article/bootcamp2");
     }
   };
 

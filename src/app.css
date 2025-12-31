@@ -38,11 +38,16 @@
   --mobile-max-width: 900px;
   --toc-label-stroke-color: oklch(97% 0.001 106.424); /* bg-stone-100 */
   /* exercises button & toggle styles: */
-  --active-exercises-button-fill: #f8fee0;
+  /* --active-exercises-button-fill: #f8fee0; */
+  --active-exercises-button-fill: #f9fee3;
+  --active-exercises-button-fill-hover: #e0f5be;
   --inactive-exercises-button-stroke: #464646;
   /* solution button rect styles: */
   --active-solution-button-rect-fill: #f9fee3ff;
+  /* --active-solution-button-rect-fill-hover: #e0f5be; */
+  --active-solution-button-rect-fill-hover: #f9fee3ff;
   --inactive-solution-button-rect-fill: #f2f2f2;
+  --inactive-solution-button-rect-fill-hover: #f2f2f2;
   /* solution button lip: */
   --inactive-solution-button-lip-stroke: #222;
   --active-solution-button-lip-stroke-width: 1.2;
@@ -195,30 +200,19 @@ span .MathJax_SVG {
   transition-duration: 500ms;
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
   .tab:hover:not(.disabled) > path:first-child {
     fill: #dbf6b8 !important;
     font-weight: bold;
     border-radius: 4px;
   }
-  /* .toggle:hover:not(.disabled) > path:first-child {
-    fill: #dbf6b8 !important;
-    font-weight: bold;
-    border-radius: 4px;
-  }
-  .toggle:hover:is(.disabled) > path:first-child {
-    fill: #ddd !important;
-    font-weight: bold;
-    border-radius: 4px;
-  } */
 }
 
 .tab:active:not(.disabled) > path:first-child {
-  /* fill: #91ed23 !important; */
   fill: #dbf6b8 !important;
   font-weight: bold;
   border-radius: 4px;
-}
+} */
 
 /* solution svg css */
 
@@ -248,7 +242,16 @@ span .MathJax_SVG {
   stroke-width: 1.4;
   fill: var(--active-exercises-button-fill);
   stroke: #000;
-  stroke-miterlimit: 2;
+}
+
+.active_exercises_button_toggle {
+  stroke-width: 1.4;
+  fill: var(--active-exercises-button-fill);
+  stroke: #000;
+}
+
+.active_exercises_button:hover {
+  fill: var(--active-exercises-button-fill-hover);
 }
 
 .active_exercises_button_arrow_fill {
@@ -288,10 +291,18 @@ span .MathJax_SVG {
   cursor: pointer;
 }
 
+.active_solution_button_rect:hover {
+  fill: var(--active-solution-button-rect-fill-hover);
+}
+
 .inactive_solution_button_rect {
   fill: var(--inactive-solution-button-rect-fill);
   stroke: none;
   cursor: pointer;
+}
+
+.inactive_solution_button_rect:hover {
+  fill: var(--inactive-solution-button-rect-fill-hover);
 }
 
 .active_solution_button_lip {

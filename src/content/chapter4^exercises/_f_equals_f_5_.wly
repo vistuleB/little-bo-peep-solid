@@ -167,11 +167,10 @@
             offset_x=1.5em
             src=images/svg_ch4_5_euler_spiral_figure.svg
             children_x=50%
-            children_y=2em
+            children_y=105%
 
             |> span
-                style=font-size:1.4em
-
+                style=font-size:1.4em;left:50%;transform:translate(-50%);position:absolute;white-space:nowrap;
                 Fig. 1
 
         In any case [take two] the point is that
@@ -259,7 +258,9 @@
             lives. The rate of change of each
             $x$-coordinate is some other $x$-coordinate,
             and the rate of change of each $y$-coordinate
-            is some other $y$-coordinate.
+            is some other $y$-coordinate—you could
+            scramble a $y$-coordinate, and the $x$-coordinates
+            would never know!
 
         |> SolutionNote
             Adding to this observation, we don't
@@ -292,9 +293,12 @@
             (now $1$-dimensional) of the blue particle
             and so on—you can “release” the particles
             from their initial configuration and
-            simulate (or compute exactly, if you have
-            the know-how) their motion by the same
-            methods as above. The five position
+            !! simulate (or compute exactly, if you have
+            !! the know-how) their motion by the same
+            !! methods as above. The five position
+            simulate—or compute by a formula, if you have
+            the know-how—their motion like above. The
+            five position
             functions obtained are each a solution
             $f$ to the problem. (But this solution will
             typically look more chaotic than the curves
@@ -307,16 +311,18 @@
 
             __the whole is simpler than the parts__
 
-            |> ImageLeft
-                src=images/svg_ch4_5_euler_hearts_left.svg
+            !! |> ImageLeft
+            !!     src=images/svg_ch4_5_euler_hearts_left.svg
+            !!     offset_x=-5rem
 
-            |> ImageRight
-                src=images/svg_ch4_5_euler_hearts_right.svg
+            !! |> ImageRight
+            !!     src=images/svg_ch4_5_euler_hearts_right.svg
+            !!     offset_x=-5rem
 
             in that you would never spot the symmetry
             at play, or have a chance of eyeballing
             the long-term evolution of the system, if
             you were shown just the $x$-coordinates,
-            or just the $y$-coordinates, on their own!
+            or just the $y$-coordinates, on their own.
 
 

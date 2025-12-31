@@ -140,11 +140,17 @@
         |> Pause
 
         _Note 4._
-        Amusingly—or not—both sides of
+        We also have
         $$
         {(f \circ g)(x) = f(g(x))}
         $$
-        are read
+        by the definition of “$f \circ g$” and—amusingly
+        or not—both sides of this equation are read
+        !! Amusingly—or not—both sides of
+        !! $$
+        !! {(f \circ g)(x) = f(g(x))}
+        !! $$
+        !! are read
 
         _|“$f$ of $\hlfbk{}g$ of $x\hspace{0.1em}$”|_
 

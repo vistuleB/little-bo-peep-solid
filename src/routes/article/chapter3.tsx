@@ -2798,7 +2798,7 @@ const Rest = () => {
                 Note 4.
               </i>
               {" "}
-              Amusingly—or not—both sides of
+              We also have
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2808,7 +2808,16 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              are read
+              by the definition of {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $f \circ g$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} and—amusingly
+              or not—both sides of this equation are read
             </OuterP>
             <Pause />
             <CentralDisplay>
@@ -3752,7 +3761,10 @@ const Rest = () => {
                 uses this picture:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/ioa4.svg" />
+              <Image
+                width="600px"
+                src="/build-img/svgo-svg/ioa4.svg"
+              />
               <Pause />
               <OuterP>
                 In the above {" "}
@@ -6318,28 +6330,33 @@ const Rest = () => {
             <Pause />
             <CentralDisplayItalic>
               1. vertical translation by {" "}
-              <Math>
-                $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
+                </Math>
+                ,
+              </NoBreak>
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
               2. horizontal translation by {" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $-&#123;B \over 2A&#125;$
+                </Math>
+                ,
+              </NoBreak>
             </CentralDisplayItalic>
             <Pause />
             <CentralDisplayItalic>
               3. vertical scaling by {" "}
-              <Math>
-                $A$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                .
+              </NoBreak>
             </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplay>
-              ~
-            </CentralDisplay>
             <Pause />
             <OuterP>
               On the one hand, if
@@ -6494,61 +6511,6 @@ const Rest = () => {
                   .
                 </NoBreak>
                 {" "}{" "}
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                If
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                then
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                does not exist, alerting you to the absence
-                of roots, if you try to use the first formula
-                we gave. Also
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0\iff B^2 - 4AC &lt; 0
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                because {" "}
-                <Math>
-                  $4A^2 &gt; 0$
-                </Math>
-                {" "} for all {" "}
-                <NoBreak>
-                  <Math>
-                    $A \ne 0$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                so the second set of formulas would alert you
-                to the absence of roots in that case, as well.
               </OuterP>
             </SolutionNote>
           </Solution>

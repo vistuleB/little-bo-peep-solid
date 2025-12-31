@@ -13,6 +13,8 @@ import {
   GREEN_DIV_HEIGHT,
   MOBILE_MAX_WIDTH,
   TEXT_X_PADDING,
+  PREV_NEXT_EXERCISE_BUTTON_W,
+  PREV_NEXT_EXERCISE_BUTTON_RX,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import { Spacer, SpacerSm, SpacerXs, SpacerXXs } from "./Spacer";
@@ -350,6 +352,9 @@ export const BackupArrow = () => {
   let { store } = useGlobalContext();
   let { exercises_store } = useExercisesContext();
 
+  let w = PREV_NEXT_EXERCISE_BUTTON_W;
+  let rx = PREV_NEXT_EXERCISE_BUTTON_RX;
+
   const { calculateTargetCenterOnPage } = useScrollToInChapter();
   const selectedExercise = () =>
     document
@@ -361,9 +366,9 @@ export const BackupArrow = () => {
   return (
     <svg
       id="backup-btn"
-      width="43"
-      height="43"
-      viewBox="0 0 43 43"
+      width={`${2 + w}`}
+      height={`${2 + w}`}
+      viewBox={`0 0 ${2 + w} ${2 + w}`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       class="tab cursor-pointer z-10"
@@ -378,15 +383,13 @@ export const BackupArrow = () => {
         }
       }}>
       <path
-        d="M35.4941 1H6.65545C3.53203 1 1 3.53203 1 6.65545V35.4941C1 38.6175 3.53203 41.1495 6.65545 41.1495H35.4941C38.6175 41.1495 41.1495 38.6175 41.1495 35.4941V6.65545C41.1495 3.53203 38.6175 1 35.4941 1Z"
-        fill="#EEFFAA"
-        fill-opacity="0.4"
-        stroke="black"
-        stroke-width="1.5"
-        stroke-miterlimit="2"></path>
+        d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
+        class="active_exercises_button"
+      ></path>
       <path
         d="M20 32C20 32.5523 20.4477 33 21 33C21.5523 33 22 32.5523 22 32H20ZM21 11L15.2265 21H26.7735L21 11ZM22 32L22 20H20L20 32H22Z"
-        fill="black"></path>
+        fill="black"
+      ></path>
     </svg>
   );
 };
@@ -443,7 +446,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
               <use
                 href="#finger_pointing_left"
                 transform="scale(-1, 1) translate(-8, 20)"></use>
-              <use x="-2" href="#solution_button_text"></use>
+              <use x="-2" href="#solution_button_text" style="pointer-events:none;"></use>
             </g>
           </g>
         </svg>

@@ -9,6 +9,7 @@ import {
   useExercisesStateHelpers,
 } from "~/store/ExercisesStoreProvider";
 import { OneExerciseStoreProvider } from "~/store/OneExerciseStoreProvider";
+import { PREV_NEXT_EXERCISE_BUTTON_RX, PREV_NEXT_EXERCISE_BUTTON_W } from "~/constants";
 
 type ExercisesProps = ParentProps & SharedProps;
 
@@ -79,10 +80,8 @@ const Switcher = (props: SwitcherProps) => {
   // gap between left/right buttons
   let gap = 8.5;
 
-  // left/right button size & radius
-  let w = 40.2;
-  // let rx = 5.65;
-  let rx = 5;
+  let w = PREV_NEXT_EXERCISE_BUTTON_W;
+  let rx = PREV_NEXT_EXERCISE_BUTTON_RX;
 
   // left/right arrow
   let triangle_sidelength = 11.5;
@@ -143,10 +142,6 @@ const Switcher = (props: SwitcherProps) => {
                 : "inactive_exercises_button"
             )}
             d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-            // fill={left_on() ? `${button_fill_on}` : `${button_fill_off}`}
-            // stroke={left_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
-            // stroke-width={`${button_stroke_width}`}
-            // stroke-miterlimit="2"
           ></path>
           <path
             class={twJoin(
@@ -155,7 +150,6 @@ const Switcher = (props: SwitcherProps) => {
                 : "inactive_exercises_button_arrow_fill"
             )}
             d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-            // fill={left_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
           ></path>
           <path
             class={twJoin(
@@ -164,7 +158,6 @@ const Switcher = (props: SwitcherProps) => {
                 : "inactive_exercises_button_arrow_fill"
             )}
             d={`M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}
-            // fill={left_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
           ></path>
         </svg>
         <svg
@@ -197,10 +190,6 @@ const Switcher = (props: SwitcherProps) => {
                   : "inactive_exercises_button"
               )}
               d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-              // fill={right_on() ? `${button_fill_on}` : `${button_fill_off}`}
-              // stroke={right_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
-              // stroke-width={`${button_stroke_width}`}
-              // stroke-miterlimit="2"
             ></path>
             <path
               class={twJoin(
@@ -249,7 +238,7 @@ const Switcher = (props: SwitcherProps) => {
               class={twJoin(
                 store.list_view
                   ? "inactive_exercises_button"
-                  : "active_exercises_button"
+                  : "active_exercises_button_toggle"
               )}
             ></path>
             <circle

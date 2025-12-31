@@ -3784,10 +3784,10 @@ const Rest = () => {
                 offset_x="1.5em"
                 src="/build-img/svgo-svg/QRVl.svg"
                 children_x="50%"
-                children_y="2em"
+                children_y="105%"
               >
                 <p>
-                  <span style="font-size:1.4em">
+                  <span style="font-size:1.4em;left:50%;transform:translate(-50%);position:absolute;white-space:nowrap;">
                     Fig. 1
                   </span>
                 </p>
@@ -4153,8 +4153,25 @@ const Rest = () => {
                   <Math>
                     $y$
                   </Math>
-                  -coordinate.
+                  -coordinate—you
                 </NoBreak>
+                {" "} could
+                scramble a {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate,
+                </NoBreak>
+                {" "} and the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "}
+                would never know!
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -4233,9 +4250,9 @@ const Rest = () => {
                 {" "} of the blue particle
                 and so on—you can “release” the particles
                 from their initial configuration and
-                simulate (or compute exactly, if you have
-                the know-how) their motion by the same
-                methods as above. The five position
+                simulate—or compute by a formula, if you have
+                the know-how—their motion like above. The
+                five position
                 functions obtained are each a solution
                 {" "}
                 <Math>
@@ -4260,8 +4277,6 @@ const Rest = () => {
               <Pause />
               <CentralDisplayItalic>
                 the whole is simpler than the parts
-                <ImageLeft src="/build-img/svgo-svg/_DUb.svg" />
-                <ImageRight src="/build-img/svgo-svg/7DF3.svg" />
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
@@ -4283,7 +4298,7 @@ const Rest = () => {
                   </Math>
                   -coordinates,
                 </NoBreak>
-                {" "} on their own!
+                {" "} on their own.
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -4378,7 +4393,10 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/tkLL.svg">
-              <ImageRight src="/build-img/svgo-svg/Bvhk.svg" />
+              <ImageRight
+                src="/build-img/svgo-svg/Bvhk.svg"
+                offset_x="3rem"
+              />
             </Image>
             <Pause />
             <OuterP>
@@ -4781,11 +4799,7 @@ const Rest = () => {
               Going back in time,
               examine how long it would take
               the particle to cross each of the intervals defined by
-              the following geometric progression
-              <b>
-                {" "} (
-              </b>
-              see {" "}
+              the following geometric progression* (*see {" "}
               <NoBreak>
                 <InChapterLink
                   href="/article/chapter4#_64_hgi_"
@@ -4822,7 +4836,7 @@ const Rest = () => {
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/SiXb.svg"
-                offset_x="6em"
+                offset_x="10em"
                 compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
@@ -4876,10 +4890,10 @@ const Rest = () => {
                 <Math>
                   $0.5$
                 </Math>
-                !
+                .
               </NoBreak>
               {" "}
-              And, again, the interval from
+              Again, the interval from
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4899,7 +4913,10 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              takes at least
+              takes {" "}
+              <i>
+                at least
+              </i>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4915,13 +4932,10 @@ const Rest = () => {
                 <Math>
                   $0.25$
                 </Math>
-                .
+                —etc—each
               </NoBreak>
-              {" "} Etc—each interval
-              takes {" "}
-              <i>
-                at least
-              </i>
+              {" "} interval
+              takes at least
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4931,34 +4945,16 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              units of time to cross, because the length of each
-              interval is half of the maximum speed within the interval!
-              But there are infinitely many intervals, and, therefore,
-              it takes
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              at least
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              infinitely much time to make it to {" "}
+              units of time to cross, but there are infinitely
+              many such intervals, so it takes infinitely much time to
+              crawl back to {" "}
               <NoBreak>
                 <Math>
-                  $x = 0$
+                  $0$
                 </Math>
-                ,
+                .
               </NoBreak>
-              {" "} where the
-              “infinitely” comes from adding infinitely many {" "}
-              <NoBreak>
-                <Math>
-                  $0.5$
-                </Math>
-                's
-              </NoBreak>
-              {" "}
-              together! (In other words, the particle never makes it to
+              {" "} (I.e., the particle never makes it to
               {" "}
               <NoBreak>
                 <Math>
@@ -4966,7 +4962,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} no matter how far back in time you look.)
+              {" "} no matter how far back in time we look.)
             </OuterP>
             <Pause />
             <SolutionNote id="_64_hgi_">
@@ -5019,6 +5015,50 @@ const Rest = () => {
                 <NoBreak>
                   <Math>
                     $0.5$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} But a so-called
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                arithmetic progression
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is a sequence of numbers in which each number
+                adds a fixed quantity to the previous. So for example,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                900, 1000, 1100, 1200, 1300, \dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is an arithmetic progressive of step size {" "}
+                <NoBreak>
+                  <Math>
+                    $100$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                and
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                -5.5, -6, -6.5, -7
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is an arithmetic progress of step size {" "}
+                <NoBreak>
+                  <Math>
+                    $-0.5$
                   </Math>
                   .
                 </NoBreak>

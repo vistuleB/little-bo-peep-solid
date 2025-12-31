@@ -170,6 +170,7 @@
             uses this picture:
 
             |> Image
+                width=600px
                 src=images/svg_ch3_truth_be_said.svg
 
             In the above $A$, $B$, $C$, $D$ are sets

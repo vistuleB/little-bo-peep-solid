@@ -16,13 +16,13 @@
         is obtained from the curve $y = x^2$ by the following sequence of
         transformations (cf. Exercise 19):
 
-        __1. vertical translation by ${-{B^2 - 4AC \over 4A^2}}$__
+        __1. vertical translation by ${-{B^2 - 4AC \over 4A^2}}$,__
 
-        __2. horizontal translation by $-{B \over 2A}$__
+        __2. horizontal translation by $-{B \over 2A}$,__
 
-        __3. vertical scaling by $A$__
+        __3. vertical scaling by $A$.__
 
-        _|~|_
+        !! _|~|_
 
         On the one hand, if
         $$
@@ -76,22 +76,22 @@
             $$
             as briefly flashed by, e.g., in Chapter >>refreshers.
 
-        |> SolutionNote
+        !! |> SolutionNote
 
-            If
-            $$
-            {B^2 - 4AC \over 4A^2} < 0
-            $$
-            then
-            $$
-            \sqrt{B^2 - 4AC \over 4A^2}
-            $$
-            does not exist, alerting you to the absence
-            of roots, if you try to use the first formula
-            we gave. Also
-            $$
-            {B^2 - 4AC \over 4A^2} < 0\iff B^2 - 4AC < 0
-            $$
-            because $4A^2 > 0$ for all $A \ne 0$,
-            so the second set of formulas would alert you
-            to the absence of roots in that case, as well.
+        !!     If
+        !!     $$
+        !!     {B^2 - 4AC \over 4A^2} < 0
+        !!     $$
+        !!     then
+        !!     $$
+        !!     \sqrt{B^2 - 4AC \over 4A^2}
+        !!     $$
+        !!     does not exist, alerting you to the absence
+        !!     of roots, if you try to use the first formula
+        !!     we gave. Also
+        !!     $$
+        !!     {B^2 - 4AC \over 4A^2} < 0\iff B^2 - 4AC < 0
+        !!     $$
+        !!     because $4A^2 > 0$ for all $A \ne 0$,
+        !!     so the second set of formulas would alert you
+        !!     to the absence of roots in that case, as well.
