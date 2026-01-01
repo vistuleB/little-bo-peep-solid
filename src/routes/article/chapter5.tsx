@@ -2928,17 +2928,16 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            10\cdot \cos(43^\circ\hlfbk)\cdot \sin(60^\circ\hlfbk)\cdot \sin(50^\circ\hlfbk)
+            14\cdot \cos(43^\circ\hlfbk)\cdot \sin(60^\circ\hlfbk)\cdot \sin(50^\circ\hlfbk)
             $$
           </MathBlock>
           <Pause />
           <OuterP>
             by following one ‘cos’ and then two ‘sin’
-            arrows, starting from the sidelength of
-            {" "}
+            arrows, starting from the sidelength of {" "}
             <NoBreak>
               <Math>
-                $10$
+                $14$
               </Math>
               .
             </NoBreak>
@@ -3091,15 +3090,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           in the language of the above figure, i.e.,
-          that the length of the segment is
-          at least
-          the length of the arc.
+          that the length of the 
+          arc is less than or equal to the length of the segment.
         </OuterP>
         <OuterP class="indent-10">
           The proof is that, if this were not the case,
-          the
-          length
-          {" "}
+          the length {" "}
           <Math>
             $S$
           </Math>
@@ -3108,14 +3104,13 @@ const Rest = () => {
           <Math>
             $A$
           </Math>
-          {" "} of the arc on the number line, as
-          pictured in this stylized view of the number line:
+          {" "} of the arc on the number line...
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/KxqB.svg" />
         <Pause />
         <OuterP>
-          In the space between {" "}
+          ...and in the space between {" "}
           <Math>
             $S$
           </Math>
@@ -3167,7 +3162,7 @@ const Rest = () => {
         <Image src="/build-img/svgo-svg/Vx2_.svg" />
         <Pause />
         <OuterP>
-          ...this last claim follows from the following
+          This last claim follows from the following
           diagram:
         </OuterP>
         <Pause />
@@ -3260,6 +3255,13 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/2Fam.svg" />
+        <Pause />
+        <OuterP>
+          ...on the number line is an impossibility,
+          from which this original arrangement of values...
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/dTqx.svg" />
         <Pause />
         <OuterP>
           ...on the number line is an impossibility,

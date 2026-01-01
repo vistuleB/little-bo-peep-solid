@@ -1,8 +1,8 @@
 window.MathJax = {
   svg: {
     mtextInheritFont: true,
-    // fontCache: 'local',
-    fontCache: 'global',
+    fontCache: 'local',
+    // fontCache: 'global',
   },
   chtml: {
     mtextInheritFont: true,
