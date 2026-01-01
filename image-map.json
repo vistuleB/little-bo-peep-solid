@@ -37,20 +37,20 @@
   },
   "svg_ch5_ex_sphere_area.svg": {
     "build-version": "svgo-svg/ivEh.svg",
-    "build-version-created-on": 1766555617,
+    "build-version-created-on": 1767288791,
     "build-method": "svgo",
-    "build-version-size": 22943,
-    "original-size": 22943,
-    "compression": "0.0%",
+    "build-version-size": 12190,
+    "original-size": 28556,
+    "compression": "57.31%",
     "used-last-build": true
   },
   "svg_ch5_ex_spiral_sphere.svg": {
     "build-version": "svgo-svg/NUnQ.svg",
-    "build-version-created-on": 1766555627,
+    "build-version-created-on": 1767293497,
     "build-method": "svgo",
     "build-version-size": 76804,
-    "original-size": 234772,
-    "compression": "67.29%",
+    "original-size": 223679,
+    "compression": "65.66%",
     "used-last-build": true
   },
   "svg_ch5_ex_sec_powers_bounce.svg": {
@@ -118,11 +118,11 @@
   },
   "svg_ch5_ex_max_xy_mirror_image.svg": {
     "build-version": "svgo-svg/A16i.svg",
-    "build-version-created-on": 1766555620,
+    "build-version-created-on": 1767293492,
     "build-method": "svgo",
-    "build-version-size": 65824,
-    "original-size": 67031,
-    "compression": "1.8%",
+    "build-version-size": 28393,
+    "original-size": 96167,
+    "compression": "70.48%",
     "used-last-build": true
   },
   "svg_ch5_ch_identity_explanations.svg": {
@@ -136,11 +136,11 @@
   },
   "svg_ch5_ex_bomb_shelter_door_alpha_x0y0.svg": {
     "build-version": "svgo-svg/TW6_.svg",
-    "build-version-created-on": 1766555617,
+    "build-version-created-on": 1767289162,
     "build-method": "svgo",
-    "build-version-size": 36866,
-    "original-size": 37106,
-    "compression": "0.65%",
+    "build-version-size": 11514,
+    "original-size": 49334,
+    "compression": "76.66%",
     "used-last-build": true
   },
   "svg_slope_times_run_equals_rise_cloud.svg": {
@@ -172,11 +172,11 @@
   },
   "svg_ch5_ex_opening_door_overhead.svg": {
     "build-version": "svgo-svg/OO4Q.svg",
-    "build-version-created-on": 1766555615,
+    "build-version-created-on": 1767287784,
     "build-method": "svgo",
-    "build-version-size": 88354,
-    "original-size": 89358,
-    "compression": "1.12%",
+    "build-version-size": 66044,
+    "original-size": 140820,
+    "compression": "53.1%",
     "used-last-build": true
   },
   "svg_ch5_ex_tangent_angle_explanation_radian_vector.svg": {
@@ -388,11 +388,11 @@
   },
   "svg_ch5_ex_double_pre_processing_Bz_mid.svg": {
     "build-version": "svgo-svg/8uHP.svg",
-    "build-version-created-on": 1766555623,
+    "build-version-created-on": 1767293494,
     "build-method": "svgo",
-    "build-version-size": 18278,
-    "original-size": 80102,
-    "compression": "77.18%",
+    "build-version-size": 9852,
+    "original-size": 75463,
+    "compression": "86.94%",
     "used-last-build": true
   },
   "svg_ch5_ch_x_displacement_and_x_radians.svg": {
@@ -568,11 +568,11 @@
   },
   "svg_ch5_ex_max_xy_xy_isosets.svg": {
     "build-version": "svgo-svg/ME1k.svg",
-    "build-version-created-on": 1766555618,
+    "build-version-created-on": 1767290015,
     "build-method": "svgo",
-    "build-version-size": 162337,
-    "original-size": 164219,
-    "compression": "1.15%",
+    "build-version-size": 92947,
+    "original-size": 203404,
+    "compression": "54.3%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_snail_quad_purple_angle_2.svg": {
@@ -631,11 +631,11 @@
   },
   "svg_ch5_ex_cos_Bx_plus_C_step_2.svg": {
     "build-version": "svgo-svg/lYEn.svg",
-    "build-version-created-on": 1767091693,
+    "build-version-created-on": 1767293495,
     "build-method": "svgo",
-    "build-version-size": 89194,
-    "original-size": 232671,
-    "compression": "61.67%",
+    "build-version-size": 65000,
+    "original-size": 226081,
+    "compression": "71.25%",
     "used-last-build": true
   },
   "svg_ch4_cosine_curves_unit_circle_equality.svg": {
@@ -856,11 +856,11 @@
   },
   "svg_ch5_ex_max_xy_x_plus_y_isosets.svg": {
     "build-version": "svgo-svg/CbYC.svg",
-    "build-version-created-on": 1766555618,
+    "build-version-created-on": 1767290015,
     "build-method": "svgo",
-    "build-version-size": 157145,
-    "original-size": 157934,
-    "compression": "0.5%",
+    "build-version-size": 156823,
+    "original-size": 173507,
+    "compression": "9.62%",
     "used-last-build": true
   },
   "36.svg": {
@@ -883,11 +883,11 @@
   },
   "svg_ch5_ex_double_pre_processing.svg": {
     "build-version": "svgo-svg/JAXv.svg",
-    "build-version-created-on": 1766555622,
+    "build-version-created-on": 1767293493,
     "build-method": "svgo",
     "build-version-size": 29021,
-    "original-size": 124812,
-    "compression": "76.75%",
+    "original-size": 120664,
+    "compression": "75.95%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_wave_purple_blue_period_measurement.svg": {
@@ -928,11 +928,11 @@
   },
   "svg_ch5_ex_double_pre_processing_Bz_alone.svg": {
     "build-version": "svgo-svg/llY6.svg",
-    "build-version-created-on": 1766555623,
+    "build-version-created-on": 1767293494,
     "build-method": "svgo",
-    "build-version-size": 8842,
-    "original-size": 28421,
-    "compression": "68.89%",
+    "build-version-size": 4269,
+    "original-size": 24773,
+    "compression": "82.77%",
     "used-last-build": true
   },
   "svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg": {
@@ -1252,11 +1252,11 @@
   },
   "svg_ch5_ex_double_POST_processing.svg": {
     "build-version": "svgo-svg/81Lp.svg",
-    "build-version-created-on": 1766555623,
+    "build-version-created-on": 1767293494,
     "build-method": "svgo",
     "build-version-size": 29003,
-    "original-size": 124811,
-    "compression": "76.76%",
+    "original-size": 120662,
+    "compression": "75.96%",
     "used-last-build": true
   },
   "svg_ch3_factory_nonfunction.svg": {
@@ -1270,11 +1270,11 @@
   },
   "svg_ch5_ex_opening_door_soln1.svg": {
     "build-version": "svgo-svg/odA8.svg",
-    "build-version-created-on": 1767091691,
+    "build-version-created-on": 1767287784,
     "build-method": "svgo",
-    "build-version-size": 96172,
-    "original-size": 97244,
-    "compression": "1.1%",
+    "build-version-size": 74847,
+    "original-size": 105714,
+    "compression": "29.2%",
     "used-last-build": true
   },
   "svg_ch3_connection_x_y_6_8.svg": {
@@ -1351,11 +1351,11 @@
   },
   "svg_ch5_ex_horizontal_projection_sphere_statement.svg": {
     "build-version": "svgo-svg/dKeI.svg",
-    "build-version-created-on": 1766555616,
+    "build-version-created-on": 1767288433,
     "build-method": "svgo",
-    "build-version-size": 228097,
-    "original-size": 378305,
-    "compression": "39.71%",
+    "build-version-size": 16448,
+    "original-size": 368736,
+    "compression": "95.54%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_wave_minus_2sin_x.svg": {
@@ -1396,11 +1396,11 @@
   },
   "svg_ch5_ex_max_xy_mirror_image_other_way.svg": {
     "build-version": "svgo-svg/d39n.svg",
-    "build-version-created-on": 1766555621,
+    "build-version-created-on": 1767293493,
     "build-method": "svgo",
-    "build-version-size": 38176,
-    "original-size": 38507,
-    "compression": "0.86%",
+    "build-version-size": 29740,
+    "original-size": 38031,
+    "compression": "21.8%",
     "used-last-build": true
   },
   "svg_ch4_17_particle1_inline.svg": {
@@ -1729,11 +1729,11 @@
   },
   "svg_ch5_ex_gas_sphere.svg": {
     "build-version": "svgo-svg/wF1d.svg",
-    "build-version-created-on": 1766555625,
+    "build-version-created-on": 1767293495,
     "build-method": "svgo",
-    "build-version-size": 174448,
-    "original-size": 268602,
-    "compression": "35.05%",
+    "build-version-size": 171852,
+    "original-size": 250631,
+    "compression": "31.43%",
     "used-last-build": true
   },
   "svg_ch4_sketch_the_middle_b_sol3.svg": {
@@ -1765,11 +1765,11 @@
   },
   "svg_ch5_ex_gas_sphere_triangle_out_flat.svg": {
     "build-version": "svgo-svg/-SnV.svg",
-    "build-version-created-on": 1766555626,
+    "build-version-created-on": 1767293496,
     "build-method": "svgo",
-    "build-version-size": 17000,
-    "original-size": 31655,
-    "compression": "46.3%",
+    "build-version-size": 17035,
+    "original-size": 30394,
+    "compression": "43.95%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_p4black_inline.svg": {
@@ -2233,11 +2233,11 @@
   },
   "svg_ch5_ex_max_xy_mirror_image_other_way_explanation.svg": {
     "build-version": "svgo-svg/EMv4.svg",
-    "build-version-created-on": 1766555621,
+    "build-version-created-on": 1767293493,
     "build-method": "svgo",
-    "build-version-size": 89364,
-    "original-size": 89718,
-    "compression": "0.39%",
+    "build-version-size": 43322,
+    "original-size": 118310,
+    "compression": "63.38%",
     "used-last-build": true
   },
   "svg_ch5_ch_angle_sum_formulas_by_heart.svg": {
@@ -2503,11 +2503,11 @@
   },
   "svg_ch5_ex_cos_Bx_plus_C_step_1.svg": {
     "build-version": "svgo-svg/CGPj.svg",
-    "build-version-created-on": 1767091693,
+    "build-version-created-on": 1767293495,
     "build-method": "svgo",
-    "build-version-size": 62596,
-    "original-size": 126667,
-    "compression": "50.58%",
+    "build-version-size": 39657,
+    "original-size": 123207,
+    "compression": "67.81%",
     "used-last-build": true
   },
   "svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg": {
@@ -2539,11 +2539,11 @@
   },
   "svg_ch5_ex_double_pre_processing_stops_2.svg": {
     "build-version": "svgo-svg/dK-G.svg",
-    "build-version-created-on": 1766555622,
+    "build-version-created-on": 1767293493,
     "build-method": "svgo",
-    "build-version-size": 45392,
-    "original-size": 119020,
-    "compression": "61.86%",
+    "build-version-size": 34461,
+    "original-size": 114223,
+    "compression": "69.83%",
     "used-last-build": true
   },
   "svg_ch5_ch_triangle_sequence_1.svg": {
@@ -2656,11 +2656,11 @@
   },
   "svg_ch5_ex_max_xy_2x_scaling_v2.svg": {
     "build-version": "svgo-svg/u7DJ.svg",
-    "build-version-created-on": 1767091692,
+    "build-version-created-on": 1767290017,
     "build-method": "svgo",
-    "build-version-size": 158718,
-    "original-size": 160339,
-    "compression": "1.01%",
+    "build-version-size": 100614,
+    "original-size": 216141,
+    "compression": "53.45%",
     "used-last-build": true
   },
   "svg_ch4_pacman2_frankenstein_first_big_purple.svg": {
@@ -2674,20 +2674,20 @@
   },
   "svg_ch5_ex_pez_sphere_cloud.svg": {
     "build-version": "svgo-svg/xEpL.svg",
-    "build-version-created-on": 1766555615,
+    "build-version-created-on": 1767287784,
     "build-method": "svgo",
-    "build-version-size": 31729,
-    "original-size": 31729,
-    "compression": "0.0%",
+    "build-version-size": 14146,
+    "original-size": 37257,
+    "compression": "62.03%",
     "used-last-build": true
   },
   "svg_ch5_ex_max_xy_graph.svg": {
     "build-version": "svgo-svg/IAYw.svg",
-    "build-version-created-on": 1766555620,
+    "build-version-created-on": 1767290016,
     "build-method": "svgo",
-    "build-version-size": 39080,
-    "original-size": 39080,
-    "compression": "0.0%",
+    "build-version-size": 28348,
+    "original-size": 49564,
+    "compression": "42.81%",
     "used-last-build": true
   },
   "svg_ch4_sketch_the_middle_a_sol3.svg": {
@@ -2698,6 +2698,15 @@
     "original-size": 107236,
     "compression": "2.5%",
     "used-last-build": false
+  },
+  "svg_ch5_ex_max_xy_2x_scaling_v2_2.svg": {
+    "build-version": "svgo-svg/h7PS.svg",
+    "build-version-created-on": 1767290017,
+    "build-method": "svgo",
+    "build-version-size": 100638,
+    "original-size": 216166,
+    "compression": "53.44%",
+    "used-last-build": true
   },
   "derivative_sketching_method_2_step_2.svg": {
     "build-version": "svgo-svg/Biz-.svg",
@@ -2773,11 +2782,11 @@
   },
   "svg_ch5_ex_bomb_shelter_door_alpha_cloud.svg": {
     "build-version": "svgo-svg/KJb5.svg",
-    "build-version-created-on": 1767091691,
+    "build-version-created-on": 1767289162,
     "build-method": "svgo",
-    "build-version-size": 9911,
-    "original-size": 9928,
-    "compression": "0.17%",
+    "build-version-size": 4881,
+    "original-size": 12020,
+    "compression": "59.39%",
     "used-last-build": true
   },
   "svg_ch4_ch_curve_to_sketch_sketch.svg": {
@@ -2845,11 +2854,11 @@
   },
   "svg_ch5_ex_double_POST_processing_Bz_mid.svg": {
     "build-version": "svgo-svg/iG8-.svg",
-    "build-version-created-on": 1766555624,
+    "build-version-created-on": 1767293494,
     "build-method": "svgo",
     "build-version-size": 9813,
-    "original-size": 67993,
-    "compression": "85.57%",
+    "original-size": 63538,
+    "compression": "84.56%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_snail_quad_four_parts.svg": {
@@ -2899,11 +2908,11 @@
   },
   "svg_ch5_ex_double_pre_processing_Au_mid.svg": {
     "build-version": "svgo-svg/nwU5.svg",
-    "build-version-created-on": 1766555623,
+    "build-version-created-on": 1767293494,
     "build-method": "svgo",
-    "build-version-size": 18269,
-    "original-size": 80115,
-    "compression": "77.2%",
+    "build-version-size": 9857,
+    "original-size": 75596,
+    "compression": "86.96%",
     "used-last-build": true
   },
   "svg_ch4_17_actual_functions_with_highlights.svg": {
@@ -2917,11 +2926,11 @@
   },
   "svg_ch5_ex_max_xy_fixed_distance.svg": {
     "build-version": "svgo-svg/Pdlp.svg",
-    "build-version-created-on": 1767091692,
+    "build-version-created-on": 1767290016,
     "build-method": "svgo",
-    "build-version-size": 266751,
-    "original-size": 266811,
-    "compression": "0.02%",
+    "build-version-size": 81808,
+    "original-size": 321237,
+    "compression": "74.53%",
     "used-last-build": true
   },
   "svg_ch4_pacman2_4_point_8_cloud.svg": {
@@ -3052,11 +3061,11 @@
   },
   "svg_ch5_ex_horizontal_projection_sphere_orange_9.svg": {
     "build-version": "svgo-svg/7Dao.svg",
-    "build-version-created-on": 1766555617,
+    "build-version-created-on": 1767288434,
     "build-method": "svgo",
-    "build-version-size": 238239,
-    "original-size": 391272,
-    "compression": "39.11%",
+    "build-version-size": 237621,
+    "original-size": 380141,
+    "compression": "37.49%",
     "used-last-build": true
   },
   "svg_ch5_ex_sec_powers_bounce_cameo.svg": {
@@ -3106,11 +3115,11 @@
   },
   "svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg": {
     "build-version": "svgo-svg/MW7M.svg",
-    "build-version-created-on": 1767091691,
+    "build-version-created-on": 1767288433,
     "build-method": "svgo",
-    "build-version-size": 72736,
-    "original-size": 73308,
-    "compression": "0.78%",
+    "build-version-size": 15171,
+    "original-size": 93787,
+    "compression": "83.82%",
     "used-last-build": true
   },
   "svg_ch2_ch_swap_cloud.svg": {
@@ -3124,20 +3133,20 @@
   },
   "svg_ch5_ex_1_57_three_quarters_division.svg": {
     "build-version": "svgo-svg/bA_Z.svg",
-    "build-version-created-on": 1766555626,
+    "build-version-created-on": 1767293496,
     "build-method": "svgo",
-    "build-version-size": 63953,
-    "original-size": 127249,
-    "compression": "49.74%",
+    "build-version-size": 31898,
+    "original-size": 126640,
+    "compression": "74.81%",
     "used-last-build": true
   },
   "svg_ch5_ex_bomb_shelter_door_alpha_decomposed.svg": {
     "build-version": "svgo-svg/2IHE.svg",
-    "build-version-created-on": 1766555618,
+    "build-version-created-on": 1767289162,
     "build-method": "svgo",
-    "build-version-size": 42065,
-    "original-size": 42379,
-    "compression": "0.74%",
+    "build-version-size": 13349,
+    "original-size": 56205,
+    "compression": "76.25%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_p2_inline.svg": {
@@ -3196,11 +3205,11 @@
   },
   "svg_ch5_ex_pez_sphere_statement.svg": {
     "build-version": "svgo-svg/MAo2.svg",
-    "build-version-created-on": 1766555615,
+    "build-version-created-on": 1767287784,
     "build-method": "svgo",
-    "build-version-size": 20650,
-    "original-size": 20672,
-    "compression": "0.11%",
+    "build-version-size": 14454,
+    "original-size": 26480,
+    "compression": "45.42%",
     "used-last-build": true
   },
   "47.svg": {
@@ -3412,11 +3421,11 @@
   },
   "bomb_shelter_door_tru_sizes.svg": {
     "build-version": "svgo-svg/vhkB.svg",
-    "build-version-created-on": 1766555617,
+    "build-version-created-on": 1767289162,
     "build-method": "svgo",
-    "build-version-size": 19529,
-    "original-size": 37149,
-    "compression": "47.43%",
+    "build-version-size": 18396,
+    "original-size": 32743,
+    "compression": "43.82%",
     "used-last-build": true
   },
   "svg_ch4_RATS_timeline_with_A_B.svg": {
@@ -3754,11 +3763,11 @@
   },
   "svg_ch5_ex_gas_sphere_butterfly.svg": {
     "build-version": "svgo-svg/EiSR.svg",
-    "build-version-created-on": 1767091693,
+    "build-version-created-on": 1767293496,
     "build-method": "svgo",
-    "build-version-size": 946456,
-    "original-size": 1103504,
-    "compression": "14.23%",
+    "build-version-size": 47747,
+    "original-size": 1095435,
+    "compression": "95.64%",
     "used-last-build": true
   },
   "svg_ch4_slope_one_half_see_saw_with_units.svg": {
@@ -3943,11 +3952,11 @@
   },
   "svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg": {
     "build-version": "svgo-svg/BvFn.svg",
-    "build-version-created-on": 1766555616,
+    "build-version-created-on": 1767288434,
     "build-method": "svgo",
-    "build-version-size": 23285,
-    "original-size": 23455,
-    "compression": "0.72%",
+    "build-version-size": 8755,
+    "original-size": 30370,
+    "compression": "71.17%",
     "used-last-build": true
   },
   "svg_ch3_connection_x_6_again.svg": {
@@ -3961,11 +3970,11 @@
   },
   "svg_ch5_ex_opening_door.svg": {
     "build-version": "svgo-svg/fgGT.svg",
-    "build-version-created-on": 1767091691,
+    "build-version-created-on": 1767287784,
     "build-method": "svgo",
-    "build-version-size": 71865,
-    "original-size": 72957,
-    "compression": "1.5%",
+    "build-version-size": 16440,
+    "original-size": 89778,
+    "compression": "81.69%",
     "used-last-build": true
   },
   "svg_ch5_ch_etaOver3_example_angle_version.svg": {
@@ -4042,11 +4051,11 @@
   },
   "svg_ch5_ex_double_pre_processing_stops_1.svg": {
     "build-version": "svgo-svg/l5nA.svg",
-    "build-version-created-on": 1766555622,
+    "build-version-created-on": 1767293493,
     "build-method": "svgo",
     "build-version-size": 36163,
-    "original-size": 113733,
-    "compression": "68.2%",
+    "original-size": 106118,
+    "compression": "65.92%",
     "used-last-build": true
   },
   "svg_ch4_missing_units.svg": {
@@ -4078,11 +4087,11 @@
   },
   "svg_ch5_ex_gas_sphere_profile.svg": {
     "build-version": "svgo-svg/VrOC.svg",
-    "build-version-created-on": 1767091694,
+    "build-version-created-on": 1767293496,
     "build-method": "svgo",
-    "build-version-size": 161007,
-    "original-size": 251538,
-    "compression": "35.99%",
+    "build-version-size": 155149,
+    "original-size": 235371,
+    "compression": "34.08%",
     "used-last-build": true
   },
   "svg_ch5_ex_spherical_coordinates_statement.svg": {
@@ -4105,11 +4114,11 @@
   },
   "svg_ch5_ex_1_57_three_quarters_division_one_more.svg": {
     "build-version": "svgo-svg/qFb7.svg",
-    "build-version-created-on": 1766555627,
+    "build-version-created-on": 1767293497,
     "build-method": "svgo",
-    "build-version-size": 59564,
-    "original-size": 139706,
-    "compression": "57.36%",
+    "build-version-size": 27332,
+    "original-size": 138585,
+    "compression": "80.28%",
     "used-last-build": true
   },
   "svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg": {
@@ -4348,11 +4357,11 @@
   },
   "svg_ch5_ex_horizontal_projection_sphere_orange_1.svg": {
     "build-version": "svgo-svg/pG5W.svg",
-    "build-version-created-on": 1766555616,
+    "build-version-created-on": 1767288434,
     "build-method": "svgo",
-    "build-version-size": 210930,
-    "original-size": 344800,
-    "compression": "38.83%",
+    "build-version-size": 207091,
+    "original-size": 330525,
+    "compression": "37.34%",
     "used-last-build": true
   },
   "svg_ch3_ex_factory_roof_stretched.svg": {
@@ -4456,11 +4465,11 @@
   },
   "svg_ch5_ex_max_xy_example_isoset.svg": {
     "build-version": "svgo-svg/Hk2G.svg",
-    "build-version-created-on": 1766555620,
+    "build-version-created-on": 1767290016,
     "build-method": "svgo",
-    "build-version-size": 96625,
-    "original-size": 96625,
-    "compression": "0.0%",
+    "build-version-size": 92011,
+    "original-size": 115007,
+    "compression": "20.0%",
     "used-last-build": true
   },
   "svg_ch4_big_product_prefix_outline.svg": {
@@ -4483,20 +4492,20 @@
   },
   "svg_ch5_ex_max_xy_rainbow.svg": {
     "build-version": "svgo-svg/FGx3.svg",
-    "build-version-created-on": 1767091692,
+    "build-version-created-on": 1767290016,
     "build-method": "svgo",
-    "build-version-size": 251867,
-    "original-size": 251926,
-    "compression": "0.02%",
+    "build-version-size": 73821,
+    "original-size": 304372,
+    "compression": "75.75%",
     "used-last-build": true
   },
   "svg_ch5_ex_bomb_shelter_annotated.svg": {
     "build-version": "svgo-svg/x_qH.svg",
-    "build-version-created-on": 1767091691,
+    "build-version-created-on": 1767290015,
     "build-method": "svgo",
-    "build-version-size": 51850,
-    "original-size": 52780,
-    "compression": "1.76%",
+    "build-version-size": 49024,
+    "original-size": 53518,
+    "compression": "8.4%",
     "used-last-build": true
   },
   "svg_ch4_cosine_curves_vector_illustration_cloud.svg": {
@@ -4627,11 +4636,11 @@
   },
   "svg_ch5_ex_double_POST_processing_Au_mid.svg": {
     "build-version": "svgo-svg/uQnY.svg",
-    "build-version-created-on": 1766555624,
+    "build-version-created-on": 1767293495,
     "build-method": "svgo",
     "build-version-size": 9783,
-    "original-size": 67852,
-    "compression": "85.58%",
+    "original-size": 63424,
+    "compression": "84.58%",
     "used-last-build": true
   },
   "svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg": {
@@ -4753,11 +4762,11 @@
   },
   "svg_ch5_ex_double_pre_processing_Au_alone.svg": {
     "build-version": "svgo-svg/-MNj.svg",
-    "build-version-created-on": 1766555623,
+    "build-version-created-on": 1767293494,
     "build-method": "svgo",
-    "build-version-size": 8844,
-    "original-size": 28427,
-    "compression": "68.89%",
+    "build-version-size": 4696,
+    "original-size": 24797,
+    "compression": "81.06%",
     "used-last-build": true
   },
   "svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg": {
@@ -4780,11 +4789,11 @@
   },
   "svg_ch5_ex_max_xy_angles.svg": {
     "build-version": "svgo-svg/HCJC.svg",
-    "build-version-created-on": 1766555619,
+    "build-version-created-on": 1767290016,
     "build-method": "svgo",
-    "build-version-size": 170759,
-    "original-size": 170934,
-    "compression": "0.1%",
+    "build-version-size": 41263,
+    "original-size": 219490,
+    "compression": "81.2%",
     "used-last-build": true
   },
   "svg_ch4_ch_position_by_time_der_der.svg": {
@@ -4969,11 +4978,11 @@
   },
   "svg_ch5_ex_butterfly_fig.svg": {
     "build-version": "svgo-svg/tjm5.svg",
-    "build-version-created-on": 1767091694,
+    "build-version-created-on": 1767293497,
     "build-method": "svgo",
-    "build-version-size": 1526489,
-    "original-size": 1678379,
-    "compression": "9.05%",
+    "build-version-size": 61413,
+    "original-size": 1673685,
+    "compression": "96.33%",
     "used-last-build": true
   },
   "svg_ch3_f_box.svg": {
@@ -5068,20 +5077,20 @@
   },
   "svg_ch5_ex_double_POST_processing_stops_1.svg": {
     "build-version": "svgo-svg/9wa1.svg",
-    "build-version-created-on": 1766555623,
+    "build-version-created-on": 1767293494,
     "build-method": "svgo",
-    "build-version-size": 49908,
-    "original-size": 88372,
-    "compression": "43.53%",
+    "build-version-size": 35721,
+    "original-size": 84821,
+    "compression": "57.89%",
     "used-last-build": true
   },
   "svg_ch5_ex_sphere_volume_idea.svg": {
     "build-version": "svgo-svg/TNdV.svg",
-    "build-version-created-on": 1767091691,
+    "build-version-created-on": 1767289161,
     "build-method": "svgo",
-    "build-version-size": 4635,
-    "original-size": 4659,
-    "compression": "0.52%",
+    "build-version-size": 4362,
+    "original-size": 6284,
+    "compression": "30.59%",
     "used-last-build": true
   },
   "svg_ch3_0.5625_cloud.svg": {
@@ -5095,11 +5104,11 @@
   },
   "svg_ch5_ex_butterfly_fig_with_csc.svg": {
     "build-version": "svgo-svg/u2Fw.svg",
-    "build-version-created-on": 1767091694,
+    "build-version-created-on": 1767293497,
     "build-method": "svgo",
-    "build-version-size": 1528856,
-    "original-size": 1683567,
-    "compression": "9.19%",
+    "build-version-size": 64356,
+    "original-size": 106574,
+    "compression": "39.61%",
     "used-last-build": true
   },
   "svg_ch5_ex_vector_sum_previous_example.svg": {
@@ -5275,11 +5284,11 @@
   },
   "svg_ch5_ex_gas_sphere_profile_2.svg": {
     "build-version": "svgo-svg/E5ov.svg",
-    "build-version-created-on": 1766555626,
+    "build-version-created-on": 1767293496,
     "build-method": "svgo",
-    "build-version-size": 160300,
-    "original-size": 270760,
-    "compression": "40.8%",
+    "build-version-size": 151568,
+    "original-size": 253387,
+    "compression": "40.18%",
     "used-last-build": true
   },
   "png_ch3_desmos_composition_0_c.png": {

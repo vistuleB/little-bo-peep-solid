@@ -14367,6 +14367,8 @@ const Rest = () => {
               <Pause />
               <Image src="/build-img/svgo-svg/u7DJ.svg" />
               <Pause />
+              <Image src="/build-img/svgo-svg/h7PS.svg" />
+              <Pause />
               <OuterP>
                 More generally, the curve
               </OuterP>

@@ -320,6 +320,9 @@
             |> Image
                 src=images/svg_ch5_ex_max_xy_2x_scaling_v2.svg
 
+            |> Image
+                src=images/svg_ch5_ex_max_xy_2x_scaling_v2_2.svg
+
             More generally, the curve
             $$
             xy = C
