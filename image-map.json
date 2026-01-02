@@ -3763,11 +3763,11 @@
   },
   "svg_ch5_ex_gas_sphere_butterfly.svg": {
     "build-version": "svgo-svg/EiSR.svg",
-    "build-version-created-on": 1767294365,
+    "build-version-created-on": 1767345265,
     "build-method": "svgo",
     "build-version-size": 47747,
-    "original-size": 1095435,
-    "compression": "95.64%",
+    "original-size": 311845,
+    "compression": "84.69%",
     "used-last-build": true
   },
   "svg_ch4_slope_one_half_see_saw_with_units.svg": {
@@ -5104,10 +5104,10 @@
   },
   "svg_ch5_ex_butterfly_fig_with_csc.svg": {
     "build-version": "svgo-svg/u2Fw.svg",
-    "build-version-created-on": 1767294367,
+    "build-version-created-on": 1767345265,
     "build-method": "svgo",
     "build-version-size": 64356,
-    "original-size": 106574,
+    "original-size": 106573,
     "compression": "39.61%",
     "used-last-build": true
   },
