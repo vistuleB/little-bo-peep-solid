@@ -669,6 +669,28 @@ img + .t-3003:hover {
   overflow: visible;
 }
 
+/* Prevent mathblock highlighting when hovering side images */
+.mathblock:has(.absolute img:hover) {
+  background-color: transparent !important;
+}
+
+/* Also prevent mathblock tooltip from showing when hovering side images */
+.mathblock:has(.absolute img:hover) > .t-3003 {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* Also prevent when hovering the side image's tooltip */
+.mathblock:has(.absolute .t-3003:hover) {
+  background-color: transparent !important;
+}
+
+/* Also prevent when hovering the side image's tooltip */
+.mathblock:has(.absolute .t-3003:hover) > .t-3003 {
+  display: none !important;
+  opacity: 0 !important;
+}
+
 .t-3003-c {
   position: relative;
   overflow: visible;
