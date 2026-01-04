@@ -4978,12 +4978,12 @@
   },
   "svg_ch5_ex_butterfly_fig.svg": {
     "build-version": "svgo-svg/tjm5.svg",
-    "build-version-created-on": 1767294367,
+    "build-version-created-on": 1767564450,
     "build-method": "svgo",
-    "build-version-size": 61413,
-    "original-size": 1673685,
-    "compression": "96.33%",
-    "used-last-build": false
+    "build-version-size": 141284,
+    "original-size": 216416,
+    "compression": "34.72%",
+    "used-last-build": true
   },
   "svg_ch3_f_box.svg": {
     "build-version": "svgo-svg/tYyP.svg",
