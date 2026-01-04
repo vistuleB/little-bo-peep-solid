@@ -28,8 +28,10 @@ function ImageOrSideImage(
           (props.side_image
             ? "top-bottom-background-divide"
             : "left-right-background-divide"),
+        props.local_url && "pointer-events-auto",
       )}
       style={props.style || ""}
+      // style={(props.style || "") + (props.local_url ? " z-index: 10;" : "")}
     />
   );
 
