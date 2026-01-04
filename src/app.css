@@ -644,25 +644,18 @@ ol.l1 > li:before {
   text-decoration: underline;
 }
 
-.t-3003:hover:has(.t-3003-i-url) {
-  text-decoration: none;
+img:hover:has(+ .t-3003),
+img:has(+ .t-3003:hover) {
+  background-color: #bfb;
 }
 
-.t-3003-i-url:hover {
-  text-decoration: underline;
-}
-
-img + .t-3003-i:hover {
+img:hover + .t-3003,
+img + .t-3003:hover {
   display: block;
   opacity: 1;
 }
 
-img:hover:has(+ .t-3003) {
-  background-color: #bfb;
-}
-
-.mathblock:hover > .t-3003,
-img:hover + .t-3003 {
+.mathblock:hover > .t-3003 {
   display: block;
   opacity: 1;
   position: absolute;
