@@ -2,6 +2,7 @@ import {
   createEffect,
   mergeProps,
   ParentProps,
+  Show,
   createSignal,
   onMount,
 } from "solid-js";
@@ -28,6 +29,7 @@ type UserFacingSideImageProps = ParentProps &
     clickable_on_desktop?: boolean;
     padding?: string | number;
     popup?: boolean;
+    local_url?: string;
   };
 
 type InternalSideImageProps = UserFacingSideImageProps & {
@@ -87,14 +89,14 @@ const SideImage = (props: InternalSideImageProps) => {
             props.offset_x,
             our_scale_copy(),
             store.innerWidth,
-            props.compensate_offset_x_for_large_text_columns
+            props.compensate_offset_x_for_large_text_columns,
           ),
           right: getRight(
             props.side,
             props.offset_x,
             our_scale_copy(),
             store.innerWidth,
-            props.compensate_offset_x_for_large_text_columns
+            props.compensate_offset_x_for_large_text_columns,
           ),
           top: getTop(props.line, props.offset_y, our_scale_copy()),
           transform: `translateY(calc(-50%))`,
@@ -110,6 +112,7 @@ const SideImage = (props: InternalSideImageProps) => {
           style={props.style}
           src={props.src}
           side_image={true}
+          local_url={props.local_url}
         />
         {maybeChildren()}
       </div>
@@ -179,7 +182,7 @@ const getLeft = (
   offset_x: string,
   scale: number,
   innerWidth: number,
-  compensate_offset_x: boolean
+  compensate_offset_x: boolean,
 ): string => {
   let text_width =
     innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;
@@ -196,7 +199,7 @@ const getRight = (
   offset_x: string,
   scale: number,
   innerWidth: number,
-  compensate_offset_x: boolean
+  compensate_offset_x: boolean,
 ): string => {
   let column_width =
     innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;
