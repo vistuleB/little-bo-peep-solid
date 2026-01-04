@@ -188,7 +188,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     case author_mode {
       True -> [
-        dl.lbp_turn_lines_into_3003_spans("./src/content/", ["Math", "MathBlock", "TOC"]),
+        dl.lbp_turn_lines_into_3003_spans("./src/content/", ["Math", "MathBlock"]),
         dl.lbp_adorn_with_3003_spans(#("./src/content/", "", ["MathBlock"])),
         dl.lbp_wrap_with_3003_spans(#("./src/content/", "", ["Math"])),
         dl.lbp_adorn_img_with_3003_spans(#("./", "")),
