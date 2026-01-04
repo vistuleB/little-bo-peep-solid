@@ -615,6 +615,7 @@ ol.l1 > li:before {
   color: #4fc3f7;
   text-decoration: none;
   cursor: pointer;
+  text-indent: 0;
   z-index: 60;
 }
 
