@@ -160,7 +160,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.wrap_if_text_contains(#("MathBlock", "OuterP", "\\tag{")),
       dl.tokenize_href_surroundings(),
     ],
-
     [
       dl.rearrange_links_4_pre_tokenized_src__batch([
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=0>Note _0_ of Exercise _1_ of Chapter _2_</a>"),
@@ -187,10 +186,8 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.unwrap("Scope"),
       dl.delete_attribute__batch(["counter", "handle", "type", "t", "_", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
-      dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, only)),
-      // dl.ensure_attribute_value_starts_with(#("src", "/")),
-    ]
-    , case author_mode {
+    ],
+    case author_mode {
       True -> [
         dl.lbp_turn_lines_into_3003_spans("./src/content/", ["Math", "MathBlock", "TOC"]),
         dl.lbp_adorn_with_3003_spans(#("./src/content/", "", ["MathBlock"])),
@@ -199,6 +196,11 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       ]
       False -> []
     },
+    [
+      dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, only)),
+      // dl.ensure_attribute_value_starts_with(#("src", "/")),
+    ]
+
   ]
   |> list.flatten
   |> infra.desugarers_2_pipeline()
