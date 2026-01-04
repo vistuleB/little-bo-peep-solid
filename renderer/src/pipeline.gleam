@@ -124,7 +124,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.absorb_into_previous_sibling(["ImageRight", "ImageLeft"]),
       dl.append_attribute_if_child_of(#("ImageRight", "MathBlock", "compensate_offset_x_for_large_text_columns", "true")),
       dl.append_attribute_if_child_of(#("ImageLeft", "MathBlock", "compensate_offset_x_for_large_text_columns", "true")),
-      dl.table_marker(),
       dl.append_attribute_to_second_of_kind(#("OuterP", "class", "indent-10")),
       dl.add_between(#("MathBlock", "OuterP", "Pause")),
       dl.add_between(#("Example", "OuterP", "Pause")),
@@ -198,9 +197,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     },
     [
       dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, only)),
-      // dl.ensure_attribute_value_starts_with(#("src", "/")),
-    ]
-
+    ],
   ]
   |> list.flatten
   |> infra.desugarers_2_pipeline()

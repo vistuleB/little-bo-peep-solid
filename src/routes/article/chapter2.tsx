@@ -2045,7 +2045,7 @@ const Rest = () => {
                 Exercise 3.
               </b>
               {" "}
-              Plot the vertical velocity of {" "}
+              Plot the vertical velocity of
               <del>
                 an object
               </del>
