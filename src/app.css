@@ -617,6 +617,7 @@ ol.l1 > li:before {
   cursor: pointer;
   text-indent: 0;
   z-index: 60;
+  pointer-events: auto;
 }
 
 .t-3003::after {
