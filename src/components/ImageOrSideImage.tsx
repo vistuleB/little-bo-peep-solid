@@ -31,7 +31,6 @@ function ImageOrSideImage(
         props.local_url && "pointer-events-auto",
       )}
       style={props.style || ""}
-      // style={(props.style || "") + (props.local_url ? " z-index: 10;" : "")}
     />
   );
 
