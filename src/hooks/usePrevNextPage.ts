@@ -4,6 +4,7 @@ import { useGlobalContext } from "~/store/StoreProvider";
 const usePrevNextPage = () => {
   const { store, set_store } = useGlobalContext();
   const navigate = useNavigate();
+  const location = useLocation();
   const clearCurrentPage = () => set_store("loading", true);
   const prevDisabled = () => store.prevPage === "";
   const nextDisabled = () => store.nextPage === "";
@@ -11,12 +12,14 @@ const usePrevNextPage = () => {
   const getNextPage = () => getPage(store.nextPage);
   const getPage = (page: string) => {
     if (page === "") return;
-    // had to add this because maybe Solid's
-    // router got a bug or sth, onMount apparently
-    // not stopping the spinner otherwise; but anyway
-    // maybe it's good:
-    if (page !== "/" && page !== "index.html" && page !== "/index.html")
-      clearCurrentPage();
+
+    // if navigating to the same route, force a reload
+    if (location.pathname === page) {
+      // clear loading immediately since we're not actually navigating
+      set_store("loading", false);
+      return;
+    }
+    clearCurrentPage();
     if (store.navigation_delays) {
       setTimeout(
         () => {
