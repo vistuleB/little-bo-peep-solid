@@ -48,6 +48,7 @@
       "group": {
         "kind": "build",
         "glob": "**/*.wly"
+        // "isDefault": true,
       },
       "presentation": { "reveal": "always", "panel": "shared", "clear": true },
       "problemMatcher": [],
@@ -66,7 +67,8 @@
       "command": "gleam",
       "group": {
         "kind": "build",
-        "glob": "**/*.wly"
+        "glob": "**/*.wly",
+        // "isDefault": true,
       },
       "presentation": { "reveal": "always", "panel": "shared", "clear": true },
       "problemMatcher": [],
