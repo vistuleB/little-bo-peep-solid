@@ -16,6 +16,8 @@ interface Store {
   selected_exo: number;
   exercises: ExerciseState[];
   list_view: boolean;
+  close_solutions_on_exiting_list_view: boolean;
+  close_solutions_on_entering_list_view: boolean;
 }
 
 // Store Provider
@@ -23,6 +25,8 @@ const [exercises_store, set_exercises_store] = createStore<Store>({
   selected_exo: 0,
   exercises: [],
   list_view: window.innerWidth > MOBILE_MAX_WIDTH,
+  close_solutions_on_exiting_list_view: true,
+  close_solutions_on_entering_list_view: true,
 });
 
 const StoreContext = createContext<{

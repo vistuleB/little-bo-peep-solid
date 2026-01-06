@@ -228,9 +228,16 @@ const Switcher = (props: SwitcherProps) => {
               e.stopPropagation();
               const new_list_view = !store.list_view;
               set_store("list_view", new_list_view);
-              if (new_list_view) {
+              if (
+                store.list_view &&
+                store.close_solutions_on_entering_list_view
+              )
                 closeAllSolutions(set_store);
-              }
+              if (
+                !store.list_view &&
+                store.close_solutions_on_exiting_list_view
+              )
+                closeAllSolutions(set_store);
             }}
           >
             <path
