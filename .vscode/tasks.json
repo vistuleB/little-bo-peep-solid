@@ -42,25 +42,6 @@
       "args": ["run", "-m", "${fileBasenameNoExtension}"],
     },
     {
-      "label": "gleam run today's special",
-      "type": "shell",
-      "command": "gleam",
-      "group": {
-        "kind": "build",
-        "glob": "**/*.wly",
-      },
-      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
-      "problemMatcher": [],
-      "runOptions": {
-        "reevaluateOnRerun": true,
-        "instanceLimit": 1,
-      },
-      "options": {
-        "cwd": "${workspaceFolder}/renderer",
-      },
-      "args": ["run", "--", "--only", "chapter3"],
-    },
-    {
       "label": "gleam run",
       "type": "shell",
       "command": "gleam",

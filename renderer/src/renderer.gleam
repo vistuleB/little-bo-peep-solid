@@ -241,8 +241,12 @@ fn cli_usage_supplementary() {
 }
 
 pub fn main() {
+  let args = argv.load().arguments
+
+  echo args
+
   use amendments <- on.error_ok(
-    ds.process_command_line_arguments(argv.load().arguments, [remove_unused_build_img_option, author_mode]),
+    ds.process_command_line_arguments(args, [remove_unused_build_img_option, author_mode]),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
