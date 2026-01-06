@@ -243,7 +243,17 @@ fn cli_usage_supplementary() {
 pub fn main() {
   let args = argv.load().arguments
 
-  echo args
+  let args = case list.contains(args, "--echo-args") {
+    True -> {
+      let args = list.filter(args, fn(s) { s != "--echo-args" })
+      io.println("")
+      io.print("gleam run --")
+      list.each(args, fn(a) { io.print(" " <> a)})
+      io.println("\n")
+      args
+    }
+    False -> args
+  }
 
   use amendments <- on.error_ok(
     ds.process_command_line_arguments(args, [remove_unused_build_img_option, author_mode]),

@@ -20,7 +20,7 @@
         "cwd": "${workspaceFolder}/renderer"
       },
       // "args": ["run", "--", "--track", "\"assuming that\"", "+5-5"]
-      "args": ["run", "--", "--only", "work=ing", "--local"]
+      "args": ["run", "--", "--only", "work=ing", "--local", "--echo-args"]
     },
     {
       "label": "gleam run -m <file>",
@@ -58,7 +58,7 @@
       "options": {
         "cwd": "${workspaceFolder}/renderer",
       },
-      "args": ["run", "--"],
+      "args": ["run", "--", "--echo-args"],
     },
     {
       "label": "gleam run -- --local",
@@ -77,7 +77,7 @@
       "options": {
         "cwd": "${workspaceFolder}/renderer",
       },
-      "args": ["run", "--", "--local"],
+      "args": ["run", "--", "--local", "--echo-args"],
     },
   ],
 }
