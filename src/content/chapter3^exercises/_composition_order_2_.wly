@@ -170,7 +170,7 @@
             uses this picture:
 
             |> Image
-                width=600px
+                width=550px
                 src=images/svg_ch3_truth_be_said.svg
 
             In the above $A$, $B$, $C$, $D$ are sets
@@ -241,13 +241,13 @@
 
             |> Image
                 src=images/svg_ch3_truth_be_said_right_first.svg
-                width=1700px
+                width=1500px
 
             We can also get rid of $B$ first, $C$ second:
 
             |> Image
                 src=images/svg_ch3_truth_be_said_left_first.svg
-                width=1700px
+                width=1500px
 
             The first order of computation corresponds
             to the parenthetization “$f \circ (g \circ h)$”
