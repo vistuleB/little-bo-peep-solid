@@ -2934,9 +2934,8 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "} (You can
-              take for granted any identity that is stated
-              in this
+              {" "} (You can take for granted any
+              identity that is stated in this {" "}
               <del>
                 chapter
               </del>

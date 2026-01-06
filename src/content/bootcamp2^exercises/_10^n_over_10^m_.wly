@@ -5,11 +5,9 @@
     $$
     \Large {10^n \over \up{1}10^m} = 10^{n-m}
     $$
-    for all integers $n$ and $m$. (You can
-    take for granted any identity that is stated
-    in this
+    for all integers $n$ and $m$. (You can take for granted any
+    identity that is stated in this 
     |> del
-
         chapter
     \ bootcamp.)
 
@@ -25,7 +23,7 @@
         $$
         \Large {1 \over 10^m} = 10^{-m}
         $$
-        stated earlier in the chapter as (>>10_to_the_minus_n),
+        stated earlier in the chapter as (>>_10_to_the_minus_n_),
         while the third equality uses additivity of exponents,
         also stated earlier. (So: We are only using “known”
         facts, alongside some ordinary arithmetic.)

@@ -12,7 +12,6 @@
     The whole expression is read $\mathit{10}$ _to the power_ $\mathit{3}$, and the
     general process of taking a power is called _exponentiation_.
 
-
 |> Section
 
     *Integer powers of 10.*
@@ -71,16 +70,16 @@
     by $10$ is the same as one division by $10^n$, one also has
 
     |> MathBlock
-        handle=10_to_the_minus_n A
+        handle=_10_to_the_minus_n_ A
         \Large 10^{-n} = {1 \over 10^{\hspace{0.2ex}n}}\tag{A}
 
     for every positive integer $n$, which gives an alternate means of computing $10^{-n}$.
-    Moreover, (>>10_to_the_minus_n) actually holds for
+    Moreover, (>>_10_to_the_minus_n_) actually holds for
 
     __every__
 
     integer $n$, which is mildly important. In more
-    detail, (>>10_to_the_minus_n) holds for $n = 0$ by inspection, and (>>10_to_the_minus_n)
+    detail, (>>_10_to_the_minus_n_) holds for $n = 0$ by inspection, and (>>_10_to_the_minus_n_)
     is equivalent to the identity
 
     |> ImageLeft
@@ -88,13 +87,13 @@
         line=2
 
     |> MathBlock
-        handle=10_to_the_minus_n_reworked AA
+        handle=_10_to_the_minus_n__reworked AA
         \Large 10^{-n}10^n = 1 \tag{AA}
 
     which holds for $n$ if and only if it holds for
     $-n$. (By which we mean: replacing “$n$” by “$-n$”
-    in (>>10_to_the_minus_n_reworked) lands you right back on (>>10_to_the_minus_n_reworked), due to the fact
-    that $-{(-n)} = n$.) (So, namely, if (>>10_to_the_minus_n_reworked) holds for all
+    in (>>_10_to_the_minus_n__reworked) lands you right back on (>>_10_to_the_minus_n__reworked), due to the fact
+    that $-{(-n)} = n$.) (So, namely, if (>>_10_to_the_minus_n__reworked) holds for all
     positive values of $\hspace{0.05em}n$, then it holds
     for all negative values of $n$, as well.)
 
@@ -111,7 +110,7 @@
     \Large ab = 1 \qquad a = {1 \over b} \qquad b = {1 \over a}
     $$
     ...and any one of these equations implies the other two.
-    Thus, either of (>>10_to_the_minus_n) and (>>10_to_the_minus_n_reworked)
+    Thus, either of (>>_10_to_the_minus_n_) and (>>_10_to_the_minus_n__reworked)
     expresses the
 
     __reciprocality__
