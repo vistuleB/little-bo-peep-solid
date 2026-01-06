@@ -12,14 +12,16 @@ const useCheckedSavedScroll = () => {
     set_store("saved_scroll_finished", false);
   });
 
-  if (searchParams.id) {
+  const anchorId = searchParams.id || location.hash.slice(1);
+
+  if (anchorId) {
     const { scrollToInChapter } = useScrollToInChapter();
 
     onMount(() => {
       setTimeout(async () => {
-        await scrollToInChapter(searchParams.id as string);
+        await scrollToInChapter(anchorId as string);
         set_store("saved_scroll_finished", true);
-      }, 200);
+      }, 300);
     });
 
     return;
