@@ -8,6 +8,8 @@ import {
   closeAllSolutions,
   useExercisesContext,
   useExercisesStateHelpers,
+  close_solutions_on_exiting_list_view,
+  close_solutions_on_entering_list_view,
 } from "~/store/ExercisesStoreProvider";
 import { OneExerciseStoreProvider } from "~/store/OneExerciseStoreProvider";
 import {
@@ -230,12 +232,12 @@ const Switcher = (props: SwitcherProps) => {
               set_store("list_view", new_list_view);
               if (
                 store.list_view &&
-                store.close_solutions_on_entering_list_view
+                close_solutions_on_entering_list_view
               )
                 closeAllSolutions(set_store);
               if (
                 !store.list_view &&
-                store.close_solutions_on_exiting_list_view
+                close_solutions_on_exiting_list_view
               )
                 closeAllSolutions(set_store);
             }}

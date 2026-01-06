@@ -16,8 +16,6 @@ interface Store {
   selected_exo: number;
   exercises: ExerciseState[];
   list_view: boolean;
-  close_solutions_on_exiting_list_view: boolean;
-  close_solutions_on_entering_list_view: boolean;
 }
 
 // Store Provider
@@ -25,8 +23,6 @@ const [exercises_store, set_exercises_store] = createStore<Store>({
   selected_exo: 0,
   exercises: [],
   list_view: window.innerWidth > MOBILE_MAX_WIDTH,
-  close_solutions_on_exiting_list_view: true,
-  close_solutions_on_entering_list_view: true,
 });
 
 const StoreContext = createContext<{
@@ -34,6 +30,8 @@ const StoreContext = createContext<{
   set_exercises_store: SetStoreFunction<Store>;
 }>();
 
+export const close_solutions_on_exiting_list_view = true;
+export const close_solutions_on_entering_list_view = true;
 export const useExercisesContext = () => useContext(StoreContext)!;
 
 export const ExercisesStoreProvider: ParentComponent = (props: ParentProps) => {
@@ -58,7 +56,7 @@ export const useExercisesStateHelpers = () => {
       Array.from({ length }).map((el) => ({
         solution_open: false,
         transition_duration: 1000,
-      })),
+      }))
     );
   };
 
@@ -67,7 +65,7 @@ export const useExercisesStateHelpers = () => {
     update_obj: {
       field: keyof ExerciseState;
       value: any;
-    },
+    }
   ) => {
     set_exercises_store("exercises", (prev) =>
       prev.map((exercise, i) => {
@@ -78,7 +76,7 @@ export const useExercisesStateHelpers = () => {
           };
         }
         return exercise;
-      }),
+      })
     );
   };
 
@@ -90,6 +88,6 @@ export const useExercisesStateHelpers = () => {
 
 export const closeAllSolutions = (set_store: any) => {
   set_store("exercises", (exercises: ExerciseState[]) =>
-    exercises.map((exercise) => ({ ...exercise, solution_open: false })),
+    exercises.map((exercise) => ({ ...exercise, solution_open: false }))
   );
 };
