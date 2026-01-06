@@ -1,5 +1,10 @@
 import { MOBILE_MAX_WIDTH } from "~/constants";
-import { createContext, ParentComponent, ParentProps, useContext } from "solid-js";
+import {
+  createContext,
+  ParentComponent,
+  ParentProps,
+  useContext,
+} from "solid-js";
 import { SetStoreFunction, createStore } from "solid-js/store";
 
 type ExerciseState = {
@@ -33,7 +38,8 @@ export const ExercisesStoreProvider: ParentComponent = (props: ParentProps) => {
       value={{
         exercises_store,
         set_exercises_store,
-      }}>
+      }}
+    >
       {props.children}
     </StoreContext.Provider>
   );
@@ -76,4 +82,10 @@ export const useExercisesStateHelpers = () => {
     initExercisesState,
     updateExerciseByIndex,
   };
+};
+
+export const closeAllSolutions = (set_store: any) => {
+  set_store("exercises", (exercises: ExerciseState[]) =>
+    exercises.map((exercise) => ({ ...exercise, solution_open: false })),
+  );
 };
