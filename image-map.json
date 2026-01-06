@@ -3221,6 +3221,15 @@
     "compression": "0.14%",
     "used-last-build": true
   },
+  "how_many_bumps_statement_with_derivative.svg": {
+    "build-version": "svgo-svg/Lc65.svg",
+    "build-version-created-on": 1767710735,
+    "build-method": "svgo",
+    "build-version-size": 5748,
+    "original-size": 9563,
+    "compression": "39.89%",
+    "used-last-build": true
+  },
   "svg_ch4_pacman1_pellet9_inline.svg": {
     "build-version": "svgo-svg/oU3r.svg",
     "build-version-created-on": 1766554979,
@@ -4038,6 +4047,15 @@
     "build-version-size": 23912,
     "original-size": 30698,
     "compression": "22.11%",
+    "used-last-build": true
+  },
+  "how_many_bumps_statement.svg": {
+    "build-version": "svgo-svg/aG77.svg",
+    "build-version-created-on": 1767710734,
+    "build-method": "svgo",
+    "build-version-size": 4858,
+    "original-size": 9498,
+    "compression": "48.85%",
     "used-last-build": true
   },
   "svg_ch3_composition_icon_fence.svg": {

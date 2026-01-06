@@ -2,6 +2,27 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "gleam run today's special",
+      "type": "shell",
+      "command": "gleam",
+      "group": {
+        "kind": "build",
+        "glob": "**/*.wly",
+        // "isDefault": true,
+      },
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "problemMatcher": [],
+      "runOptions": {
+        "reevaluateOnRerun": true,
+        "instanceLimit": 1,
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/renderer"
+      },
+      // "args": ["run", "--", "--track", "\"assuming that\"", "+5-5"]
+      "args": ["run", "--", "--only", "work=ing", "--local"]
+    },
+    {
       "label": "gleam run -m <file>",
       "type": "shell",
       "command": "gleam",

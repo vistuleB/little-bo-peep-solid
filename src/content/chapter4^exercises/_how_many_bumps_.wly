@@ -1,0 +1,20 @@
+|> Exercise
+    work=ing
+    handle=_how_many_bumps_
+
+    If the graph below has three “bumps” (two up,
+    one down), then how many “bumps” does its derivative
+    have?
+
+    |> Image
+        src=images/how_many_bumps_statement.svg
+        style=padding-bottom:1rem
+
+    |> Solution
+
+        The derivative has a “bump” wherever the slope
+        has a local maximum or local minimum, which happens
+        at four places:
+
+        |> Image
+            src=images/how_many_bumps_statement_with_derivative.svg
