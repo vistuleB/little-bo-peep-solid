@@ -3228,7 +3228,7 @@
     "build-version-size": 5748,
     "original-size": 9578,
     "compression": "39.99%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch4_pacman1_pellet9_inline.svg": {
     "build-version": "svgo-svg/oU3r.svg",
@@ -3975,6 +3975,15 @@
     "build-version-size": 4066,
     "original-size": 5375,
     "compression": "24.35%",
+    "used-last-build": true
+  },
+  "how_many_bumps_statement_with_highlights.svg": {
+    "build-version": "svgo-svg/RAdv.svg",
+    "build-version-created-on": 1767779164,
+    "build-method": "svgo",
+    "build-version-size": 5748,
+    "original-size": 9578,
+    "compression": "39.99%",
     "used-last-build": true
   },
   "svg_ch5_ex_opening_door.svg": {

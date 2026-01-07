@@ -2551,7 +2551,7 @@ const Rest = () => {
               at four places:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Lc65.svg" />
+            <Image src="/build-img/svgo-svg/RAdv.svg" />
           </Solution>
         </Exercise>
         <Exercise number={9}>

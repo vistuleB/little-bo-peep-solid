@@ -17,10 +17,9 @@
             class=l1
             style=margin-top:0.5em;
             |> li
-
                 using the composition “$\circ$” operator;
-            |> li
 
+            |> li
                 as an expression of the form $$x \ra \dots$$
                 for some value of “$\dots$”.
 

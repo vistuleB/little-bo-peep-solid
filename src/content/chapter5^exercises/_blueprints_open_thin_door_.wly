@@ -6,9 +6,12 @@
     the roof? (Hint: You will need to Google “how
     to use arctan”, or “how to convert from polar
     to Cartesian coordinates”.)
+
     |> Image
         src=images/svg_ch5_ex_opening_door.svg
+
     And:
+
     |> TextParent
         |> ul
             style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;

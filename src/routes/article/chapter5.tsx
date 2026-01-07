@@ -9577,8 +9577,15 @@ const Rest = () => {
               </b>
               {" "}
               How would the graph of each of the compositions
-              from Exercise 26 compare to the graph of the
-              generic function {" "}
+              from {" "}
+              <InChapterLink
+                href="/article/chapter5#_99_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 22
+              </InChapterLink>
+              {" "} 
+              compare to the graph of the generic function {" "}
               <NoBreak>
                 <Math>
                   $f$

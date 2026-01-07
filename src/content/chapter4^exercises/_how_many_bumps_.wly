@@ -17,4 +17,7 @@
         at four places:
 
         |> Image
-            src=images/how_many_bumps_statement_with_derivative.svg
+            src=images/how_many_bumps_statement_with_highlights.svg
+
+        !! |> Image
+        !!     src=images/how_many_bumps_statement_with_derivative.svg
