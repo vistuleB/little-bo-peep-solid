@@ -8,7 +8,7 @@
       "group": {
         "kind": "build",
         "glob": "**/*.wly",
-        // "isDefault": true
+        "isDefault": true
       },
       "presentation": {
         "reveal": "never",
@@ -23,14 +23,8 @@
         "cwd": "${workspaceFolder}/renderer"
       },
       // "args": ["run", "--", "--track", "\"assuming that\"", "+5-5"]
-      "args": [
-        "run",
-        "--",
-        "--only",
-        "work=ing",
-        "--local",
-        "--echo-args"
-      ]
+      // "args": [ "run", "--", "--only", "work=ing", "--local", "--echo-args", ]
+      "args": [ "run" ]
     },
     {
       "label": "gleam run -m <file>",
@@ -70,7 +64,7 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "close": true
+        // "close": true
       },
       "problemMatcher": [],
       "runOptions": {
@@ -97,7 +91,7 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "clear": true,
+        // "clear": true,
         "close": true
       },
       "problemMatcher": [],

@@ -1,14 +1,16 @@
 |> Book
     |> ChapterSelection
-        >>sets
-        >>powers
-        >>refreshers
-        >>slopes
-        >>functions
-        >>derivatives
-        >>trigonometry
+        work=ing
+        >>sets            >>_bt2_start_
+        >>powers          >>_bt1_start_
+        >>refreshers      >>_ch1_start_
+        >>slopes          >>_ch2_start_
+        >>functions       >>_ch3_start_
+        >>derivatives     >>_ch4_start_
+        >>trigonometry    >>_ch5_start_
 
     |> In
+        work=ing
         chapter=>>powers
         >>_2^-1_and_2^-3_and_2^-4_by_hand_
         >>_100_over_16_by_hand_
@@ -21,17 +23,23 @@
         >>_what_is_log_base_10_of_product_of_powers_of_10_
         >>_evaluate_fraction_of_multiples_of_powers_of_10_
         >>_how_many_millibits_in_a_gigabyte_
-        >>_6.25_other_way_of_writing_
+        >>_6_point_25_other_way_of_writing_
         >>_10^n_over_10^m_equals_10^n-m_
         >>_M_L_T_rewrite_
         >>_solve_for_a_b_c_
 
     |> In
+        work=ing
+        chapter=>>sets
+
+    |> In
+        work=ing
         chapter=>>refreshers
         >>_true_false_
         >>_approximate_1_over_n_minus_1_over_n+1_
 
     |> In
+        work=ing
         chapter=>>slopes
         >>_lines_of_slope_1_over_2_
         >>_x0_y0_slope_p_general_equation_
@@ -39,6 +47,7 @@
         >>_y0-px_0_intercept_explanation_
 
     |> In
+        work=ing
         chapter=>>functions
         >>_define_abs_val_by_cases_
         >>_define_abs_val_by_algebraic_formula_
@@ -63,6 +72,7 @@
         >>_summon_the_currying_
 
     |> In
+        work=ing
         chapter=>>derivatives
         >>_see_saw_
         >>_derivative_of_1_over_x_near_0_
@@ -70,10 +80,8 @@
         >>_see_saw_with_units_
         >>_correct_incorrect_or_nonsensical_
         >>_complete_the_missing_units_
-        >>_reorder_derivatives_
         >>_how_many_bumps_
-        !! >>_sketch_middle_function_g_
-        !! >>_sketch_middle_function_h_
+        >>_reorder_derivatives_
         >>_narrow_and_less_narrow_bends_
         >>_first_law_of_differentiation_
         >>_define_product_of_constant_and_function_
@@ -90,6 +98,8 @@
         >>_four_particles_at_2_4_
         >>_express_the_associativity_etc_
         >>_associativity_of_function_multiplication_
+        !! >>_sketch_middle_function_g_
+        !! >>_sketch_middle_function_h_
         !! >>_pacman_1_
         !! >>_pacman_2_
         !! >>_associativity_of_function_addition_
@@ -111,8 +121,9 @@
         !! >>_from_second_derivative_
 
     |> In
+        work=ing
         chapter=>>trigonometry
-        >>_cos_of_x_+_0.1_
+        >>_cos_of_x_+_0_point_1_
         >>_guesstimate_cos_10x_linear_
         >>_guesstimate_cos_10x_parabolic_
         >>_guesstimate_sinusoid_
@@ -122,7 +133,7 @@
         >>_vector_addition_definition_
         >>_circular_motion_from_x_coordinate_
         !! >>_cycles_per_4eta_
-        >>_0.2_radians_
+        >>_0_point_2_radians_
         >>_eta_and_4eta_as_ratios_
         >>_long_division_11_over_7_
         >>_long_division_22_over_7_
@@ -137,15 +148,14 @@
         >>_four_compositions_expressed_
         >>_four_compositions_graphed_
         >>_periodicity_mod_2eta_
-        >>_cosx.sinx_is_translate_of_cos^2x_
+        >>_cosx_dot_sinx_is_translate_of_cos^2x_
         >>_cos^2x_scale_and_translate_of_cosx_
-        >>_relate_sinx.cosx_to_sin2x_
-        >>_turn_sinx_into_sinx.cosx_
+        >>_relate_sinx_dot_cosx_to_sin2x_
+        >>_turn_sinx_into_sinx_dot_cosx_
         >>_turn_cosx_into_sinx_+_cosx_
         >>_for_every_A1_A2_
         >>_powers_of_secant_
         >>_for_every_A1_A2_stupid_followup_
-        !! >>_map_cosx_to_cos_0.1x+0.1_
         !! >>_map_cosx_to_cos_Bx+C_
         >>_geometric_construction_of_1_over_A_
         >>_axes_intersections_60_degrees_

@@ -22,7 +22,7 @@ export default function __Chapter4__() {
       nextPage="/article/chapter5"
       pageNecessaryMargin={1450}
       maxElementWidth={700}
-      id="_77_hgi_"
+      id="_78_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -90,7 +90,10 @@ export default function __Chapter4__() {
         Derivatives
       </ArticleTitle>
       <Pause />
-      <Image src="/build-img/svgo-svg/myNp.svg" />
+      <Image
+        src="/build-img/svgo-svg/myNp.svg"
+        id="_50_hgi_"
+      />
       <Pause />
       <Image src="/build-img/svgo-svg/dO9o.svg" />
       <Pause />
@@ -1825,7 +1828,7 @@ const Rest = () => {
       <Pause />
       <Exercises>
         <Exercise number={1}>
-          <ExerciseStatement id="_50_hgi_">
+          <ExerciseStatement id="_51_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1883,7 +1886,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_51_hgi_">
+          <ExerciseStatement id="_52_hgi_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -1937,7 +1940,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_52_hgi_">
+          <ExerciseStatement id="_53_hgi_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -1954,7 +1957,7 @@ const Rest = () => {
               derivative of the graph in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_50_hgi_"
+                  href="/article/chapter4#_51_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 1
@@ -1998,7 +2001,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_53_hgi_">
+          <ExerciseStatement id="_54_hgi_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2006,7 +2009,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of {" "}
               <InChapterLink
-                href="/article/chapter4#_50_hgi_"
+                href="/article/chapter4#_51_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 1
@@ -2083,7 +2086,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_54_hgi_">
+          <ExerciseStatement id="_55_hgi_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -2280,7 +2283,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={6}>
-          <ExerciseStatement id="_55_hgi_">
+          <ExerciseStatement id="_56_hgi_">
             <OuterP>
               <b>
                 Exercise 6.
@@ -2407,11 +2410,66 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={7}>
-          <ExerciseStatement id="_56_hgi_">
+        <Exercise
+          work="ing"
+          number={7}
+        >
+          <ExerciseStatement id="_57_hgi_">
             <OuterP>
               <b>
                 Exercise 7.
+              </b>
+              {" "}
+              If the graph below has three “bumps” (two up,
+              one down), then how many “bumps” does its derivative
+              have?
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/aG77.svg"
+              style="padding-bottom:1rem"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The derivative has a bump wherever the slope
+              has a local maximum or local minimum, which happens
+              at four places, per appearances:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/yAV_.svg" />
+            <Pause />
+            <OuterP>
+              The derivative will therefore have four
+              bumps—at least, four {" "}
+              <i>
+                large scale
+              </i>
+              {" "} bumps—if you're 
+              curious, it looks like this:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/dDBS.svg" />
+            <Pause />
+            <OuterP>
+              But nothing prevents the graph from
+              having small wobbles near the zones of maximum or
+              minimum slope out of the range of our eyesight,
+              meaning that each bump of the derivative contains
+              micro-bumps, like small ripples atop a big wave!
+              (Still, “four” is a good bet to achieve full marks,
+              on this one.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={8}
+        >
+          <ExerciseStatement id="_58_hgi_">
+            <OuterP>
+              <b>
+                Exercise 8.
               </b>
               {" "}
               Among the functions below, which is the
@@ -2445,36 +2503,16 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The graphs are already in the right order:
-              if {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} is the original function
-              then {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} is on the left, {" "}
-              <Math>
-                $f'$
-              </Math>
-              {" "} is in the
-              middle, and {" "}
-              <Math>
-                $f''$
-              </Math>
-              {" "} is on the right:
+              The reodered sequence,
+              from zeroth to second derivative,
+              is:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/a02_.svg" />
             <Pause />
             <OuterP>
-              For example, the graph on the left
+              Referring to this rearranged sequence,
+              the first graph, for example,
               has a slope that starts at {" "}
               <Math>
                 $\sim\!-1$
@@ -2488,16 +2526,15 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} while those are the
-              values at which the graph in the middle
-              starts and ends (and not coincidentally,
-              since the graph in the middle is the
-              derivative of the graph on the left!):
+              values at which 
+              the second graph
+              starts and ends:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/gqxn.svg" />
             <Pause />
             <OuterP>
-              Moreover the middle graph has slope
+              Likewise, the second graph has slope
               close to {" "}
               <Math>
                 $0$
@@ -2516,72 +2553,23 @@ const Rest = () => {
               <i>
                 values
               </i>
-              {" "} of the graph
-              on the right:
+              {" "} of the third graph:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/4Efs.svg" />
             <Pause />
             <OuterP>
-              (Taking one more derivative would produce a
-              zigzag, by the way.)
+              ...and none of this coincidentally, since the
+              third graph is the derivative of the second, is the
+              derivative of the first!
             </OuterP>
           </Solution>
         </Exercise>
         <Exercise
           work="ing"
-          number={8}
+          number={9}
         >
-          <ExerciseStatement id="_57_hgi_">
-            <OuterP>
-              <b>
-                Exercise 8.
-              </b>
-              {" "}
-              If the graph below has three “bumps” (two up,
-              one down), then how many “bumps” does its derivative
-              have?
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/aG77.svg"
-              style="padding-bottom:1rem"
-            />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The derivative has a “bump” wherever the slope
-              has a local maximum or local minimum, which happens
-              at four places, per appearances:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/yAV_.svg" />
-            <Pause />
-            <OuterP>
-              The derivative will therefore have four
-              bumps—at least, four {" "}
-              <i>
-                large scale
-              </i>
-              {" "} bumps—if you're 
-              curious, it looks like this:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/dDBS.svg" />
-            <Pause />
-            <OuterP>
-              But nothing prevents the graph from
-              having small wobbles near the zones of maximum or
-              minimum slope out of the range of our eyesight,
-              meaning that each bump of the derivative contains
-              micro-bumps, like small ripples atop a big wave!
-              (Still, “four” is a good bet to achieve full marks,
-              on this one.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement id="_58_hgi_">
+          <ExerciseStatement id="_59_hgi_">
             <OuterP>
               <b>
                 Exercise 9.
@@ -2630,12 +2618,14 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/kw0r.svg" />
             <Pause />
             <OuterP>
-              (Well, believe us or not, but we're right!)
+              (This is also the position at which the
+              acceleration would be maximal, if the graph
+              denoted position as a function of time.)
             </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_59_hgi_">
+          <ExerciseStatement id="_60_hgi_">
             <OuterP>
               <b>
                 Exercise 10.
@@ -2729,7 +2719,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={11}>
-          <ExerciseStatement id="_60_hgi_">
+          <ExerciseStatement id="_61_hgi_">
             <OuterP>
               <b>
                 Exercise 11.
@@ -2908,7 +2898,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={12}>
-          <ExerciseStatement id="_61_hgi_">
+          <ExerciseStatement id="_62_hgi_">
             <OuterP>
               <b>
                 Exercise 12.
@@ -3493,7 +3483,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={13}>
-          <ExerciseStatement id="_63_hgi_">
+          <ExerciseStatement id="_64_hgi_">
             <OuterP>
               <b>
                 Exercise 13.
@@ -3501,7 +3491,7 @@ const Rest = () => {
               {" "}
               {" "}
               <InChapterLink
-                href="/article/chapter4#_61_hgi_"
+                href="/article/chapter4#_62_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 12
@@ -3615,7 +3605,7 @@ const Rest = () => {
               We can naïvely try to imitiate how the
               curves of {" "}
               <InChapterLink
-                href="/article/chapter4#_69_hgi_"
+                href="/article/chapter4#_70_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 17
@@ -4161,7 +4151,7 @@ const Rest = () => {
               </OuterP>
             </SolutionNote>
             <Pause />
-            <SolutionNote id="_62_hgi_">
+            <SolutionNote id="_63_hgi_">
               <OuterP>
                 <i>
                   Note 3.
@@ -4363,7 +4353,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_64_hgi_">
+          <ExerciseStatement id="_65_hgi_">
             <OuterP>
               <b>
                 Exercise 14.
@@ -4816,7 +4806,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={15}>
-          <ExerciseStatement id="_66_hgi_">
+          <ExerciseStatement id="_67_hgi_">
             <OuterP>
               <b>
                 Exercise 15.
@@ -4861,7 +4851,7 @@ const Rest = () => {
               the following geometric progression* (*see {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_65_hgi_"
+                  href="/article/chapter4#_66_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Note 1
@@ -5024,7 +5014,7 @@ const Rest = () => {
               {" "} no matter how far back in time we look.)
             </OuterP>
             <Pause />
-            <SolutionNote id="_65_hgi_">
+            <SolutionNote id="_66_hgi_">
               <OuterP>
                 <i>
                   Note 1.
@@ -5126,7 +5116,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={16}>
-          <ExerciseStatement id="_67_hgi_">
+          <ExerciseStatement id="_68_hgi_">
             <OuterP>
               <b>
                 Exercise 16.
@@ -5177,7 +5167,7 @@ const Rest = () => {
               particles. If we add also the graph of the position
               of the red particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_66_hgi_"
+                href="/article/chapter4#_67_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 15
@@ -5343,7 +5333,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={17}>
-          <ExerciseStatement id="_69_hgi_">
+          <ExerciseStatement id="_70_hgi_">
             <OuterP>
               <b>
                 Exercise 17.
@@ -5472,7 +5462,7 @@ const Rest = () => {
               </OuterP>
             </SolutionNote>
             <Pause />
-            <SolutionNote id="_68_hgi_">
+            <SolutionNote id="_69_hgi_">
               <OuterP>
                 <i>
                   Note 3.
@@ -5547,7 +5537,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement id="_70_hgi_">
+          <ExerciseStatement id="_71_hgi_">
             <OuterP>
               <b>
                 Exercise 18.
@@ -5621,7 +5611,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={19}>
-          <ExerciseStatement id="_71_hgi_">
+          <ExerciseStatement id="_72_hgi_">
             <OuterP>
               <b>
                 Exercise 19.
@@ -5631,7 +5621,7 @@ const Rest = () => {
               curve from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_61_hgi_"
+                  href="/article/chapter4#_62_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 12
@@ -5831,7 +5821,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={20}>
-          <ExerciseStatement id="_72_hgi_">
+          <ExerciseStatement id="_73_hgi_">
             <OuterP>
               <b>
                 Exercise 20.
@@ -6227,7 +6217,7 @@ const Rest = () => {
               is a Newton quotient (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_69_hgi_"
+                  href="/article/chapter4#_70_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 17
@@ -6268,7 +6258,7 @@ const Rest = () => {
               {" "} (cf.
               {" "}
               <InChapterLink
-                href="/article/chapter4#_69_hgi_"
+                href="/article/chapter4#_70_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 17
@@ -6277,7 +6267,7 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_68_hgi_"
+                  href="/article/chapter4#_69_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Note 3
@@ -6720,7 +6710,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={21}>
-          <ExerciseStatement id="_73_hgi_">
+          <ExerciseStatement id="_74_hgi_">
             <OuterP>
               <b>
                 Exercise 21.
@@ -6783,7 +6773,7 @@ const Rest = () => {
               (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_69_hgi_"
+                  href="/article/chapter4#_70_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 17
@@ -6817,7 +6807,7 @@ const Rest = () => {
               {" "} per which
               (Exercise {" "}
               <InChapterLink
-                href="/article/chapter4#_69_hgi_"
+                href="/article/chapter4#_70_hgi_"
                 class="handle-in-chapter-link"
               >
                 17
@@ -7066,7 +7056,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={22}>
-          <ExerciseStatement id="_74_hgi_">
+          <ExerciseStatement id="_75_hgi_">
             <OuterP>
               <b>
                 Exercise 22.
@@ -7281,7 +7271,7 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_61_hgi_"
+                  href="/article/chapter4#_62_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 12
@@ -7391,7 +7381,7 @@ const Rest = () => {
               particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_66_hgi_"
+                  href="/article/chapter4#_67_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 15
@@ -7404,7 +7394,7 @@ const Rest = () => {
               red particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_66_hgi_"
+                  href="/article/chapter4#_67_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 15
@@ -9155,7 +9145,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={23}>
-          <ExerciseStatement id="_75_hgi_">
+          <ExerciseStatement id="_76_hgi_">
             <OuterP>
               <b>
                 Exercise 23.
@@ -9420,7 +9410,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={24}>
-          <ExerciseStatement id="_76_hgi_">
+          <ExerciseStatement id="_77_hgi_">
             <OuterP>
               <b>
                 Exercise 24.

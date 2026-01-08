@@ -1,5 +1,6 @@
 |> Exercise
     handle=_reorder_derivatives_
+    work=ing
 
     Among the functions below, which is the
     zeroth, first, and second derivative?
@@ -11,36 +12,35 @@
 
     |> Solution
 
-        The graphs are already in the right order:
-        if “$f$” is the original function
-        then $f$ is on the left, $f'$ is in the
-        middle, and $f''$ is on the right:
+        The reodered sequence,
+        from zeroth to second derivative,
+        is:
 
         |> Image
             src=images/svg_ch4_ex_position_by_time_find_the_order_answer.svg
 
-        For example, the graph on the left
+        Referring to this rearranged sequence,
+        the first graph, for example,
         has a slope that starts at $\sim\!-1$ and
         ends at $\sim\!1$, while those are the
-        values at which the graph in the middle
-        starts and ends (and not coincidentally,
-        since the graph in the middle is the
-        derivative of the graph on the left!):
+        values at which 
+        the second graph
+        starts and ends:
 
         |> Image
             src=images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg
 
-        Moreover the middle graph has slope
+        Likewise, the second graph has slope
         close to $0$ at either end, and some
         slope near $1.5$ or $2$ towards the middle,
-        matching the _values_ of the graph
-        on the right:
+        matching the _values_ of the third graph:
 
         |> Image
             src=images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg
 
-        (Taking one more derivative would produce a
-        zigzag, by the way.)
+        ...and none of this coincidentally, since the
+        third graph is the derivative of the second, is the
+        derivative of the first!
 
         !! |> ImageRight
         !!     src=images/svg_ch4_ex_position_by_time_find_the_order_cloud.svg

@@ -1,5 +1,6 @@
 |> Exercise
     handle=_narrow_and_less_narrow_bends_
+    work=ing
 
     Where is the rate of change of the function
     below, on the part shown, greatest? And
@@ -34,5 +35,7 @@
         |> Image
             src=images/svg_ch4_narrow_and_less_narrow_bends_curviest.svg
 
-        (Well, believe us or not, but we're right!)
+        (This is also the position at which the
+        acceleration would be maximal, if the graph
+        denoted position as a function of time.)
 

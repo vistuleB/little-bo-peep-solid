@@ -1,5 +1,5 @@
 |> Exercise
-    handle=_cosx.sinx_is_translate_of_cos^2x_
+    handle=_cosx_dot_sinx_is_translate_of_cos^2x_
 
     Given the graphs $y = \cos(x)\sin(x)$ and
     $y = \cos^2(x)$...

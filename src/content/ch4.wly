@@ -1,4 +1,5 @@
 |> Image
+    handle=_ch4_start_
     src=images/svg_ch4_ch_polaroid_1.svg
 
 |> Image
@@ -670,12 +671,6 @@
         (\te{rate of change}) \times \te{(amount of time)}\\
         = \te{(amount of change)}
         $$
-
-        !! or, more specifically,
-
-        !! $$
-        !! (\te{acceleration}) \times (\te{amount of time}) =\\ (\te{change in velocity})
-        !! $$
 
         since acceleration is the rate of change of
         velocity.

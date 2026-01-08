@@ -1,5 +1,5 @@
 |> Exercise
-    handle=_turn_sinx_into_sinx.cosx_
+    handle=_turn_sinx_into_sinx_dot_cosx_
 
     What sequence of geometric transformations
     can turn [the graph] $y = \sin(x)$

@@ -1,6 +1,6 @@
 |> Exercise
-    work=ing
     handle=_how_many_bumps_
+    work=ing
 
     If the graph below has three “bumps” (two up,
     one down), then how many “bumps” does its derivative
@@ -12,7 +12,7 @@
 
     |> Solution
 
-        The derivative has a “bump” wherever the slope
+        The derivative has a bump wherever the slope
         has a local maximum or local minimum, which happens
         at four places, per appearances:
 

@@ -1,4 +1,5 @@
 |> Section
+    handle=_ch5_start_
 
     *Cos and Sin. (“Cosine” and “sine”.)* We've
     already encountered the ‘cos’ function in 

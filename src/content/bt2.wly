@@ -1,4 +1,5 @@
 |> Section
+    handle=_bt2_start_
 
     *Terminology.*
     The expression below is called a _power_;

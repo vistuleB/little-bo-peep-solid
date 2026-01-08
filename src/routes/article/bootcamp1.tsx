@@ -1,7 +1,6 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
 import { CentralDisplayItalic }  from "~/components/Delimiters";
-import { Exercises }  from "~/components/Exercises";
 import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
@@ -58,11 +57,6 @@ export default function __Bootcamp1__() {
         <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
             sets not encountered in calculus
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=exercises">
-            exercises
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
@@ -1278,8 +1272,6 @@ const Rest = () => {
           (Well, anyway, end of lesson.)
         </OuterP>
       </Section>
-      <Pause />
-      <Exercises />
     </>}
   </>;
 };
