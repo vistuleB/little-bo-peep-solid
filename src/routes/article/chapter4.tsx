@@ -2544,7 +2544,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/tmp-images/how_many_bumps_statement.svg"
+              src="/build-img/svgo-svg/aG77.svg"
               style="padding-bottom:1rem"
             />
           </ExerciseStatement>
@@ -2555,22 +2555,28 @@ const Rest = () => {
               at four places, per appearances:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/how_many_bumps_highlights.svg" />
+            <Image src="/build-img/svgo-svg/yAV_.svg" />
             <Pause />
             <OuterP>
-              The derivative will therefore have four large-scale
-              bumps. It looks like this:
+              The derivative will therefore have four
+              bumps—at least, four {" "}
+              <i>
+                large scale
+              </i>
+              {" "} bumps—if you're 
+              curious, it looks like this:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/how_many_bumps_derivative.svg" />
+            <Image src="/build-img/svgo-svg/dDBS.svg" />
             <Pause />
             <OuterP>
-              Though in truth, nothing prevents the graph from
+              But nothing prevents the graph from
               having small wobbles near the zones of maximum or
               minimum slope out of the range of our eyesight,
               meaning that each bump of the derivative contains
-              micro-bumps, like small ripples atop a big wave.
-              (Still, “four” is the answer that the exam paper is expecting.)
+              micro-bumps, like small ripples atop a big wave!
+              (Still, “four” is a good bet to achieve full marks,
+              on this one.)
             </OuterP>
           </Solution>
         </Exercise>

@@ -8,9 +8,12 @@
       "group": {
         "kind": "build",
         "glob": "**/*.wly",
-        // "isDefault": true,
+        // "isDefault": true
       },
-      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "presentation": {
+        "reveal": "never",
+        "panel": "shared",
+      },
       "problemMatcher": [],
       "runOptions": {
         "reevaluateOnRerun": true,
@@ -20,7 +23,14 @@
         "cwd": "${workspaceFolder}/renderer"
       },
       // "args": ["run", "--", "--track", "\"assuming that\"", "+5-5"]
-      "args": ["run", "--", "--only", "work=ing", "--local", "--echo-args"]
+      "args": [
+        "run",
+        "--",
+        "--only",
+        "work=ing",
+        "--local",
+        "--echo-args"
+      ]
     },
     {
       "label": "gleam run -m <file>",
@@ -30,7 +40,11 @@
         "kind": "build",
         "glob": "**/*.gleam",
       },
-      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "close": true
+      },
       "problemMatcher": [],
       "runOptions": {
         "reevaluateOnRerun": true,
@@ -39,7 +53,11 @@
       "options": {
         "cwd": "${workspaceFolder}/renderer",
       },
-      "args": ["run", "-m", "${fileBasenameNoExtension}"],
+      "args": [
+        "run",
+        "-m",
+        "${fileBasenameNoExtension}"
+      ],
     },
     {
       "label": "gleam run",
@@ -49,7 +67,11 @@
         "kind": "build",
         "glob": "**/*.wly",
       },
-      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "close": true
+      },
       "problemMatcher": [],
       "runOptions": {
         "reevaluateOnRerun": true,
@@ -58,7 +80,11 @@
       "options": {
         "cwd": "${workspaceFolder}/renderer",
       },
-      "args": ["run", "--", "--echo-args"],
+      "args": [
+        "run",
+        "--",
+        "--echo-args"
+      ],
     },
     {
       "label": "gleam run -- --local",
@@ -68,7 +94,12 @@
         "kind": "build",
         "glob": "**/*.wly",
       },
-      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "close": true
+      },
       "problemMatcher": [],
       "runOptions": {
         "reevaluateOnRerun": true,
@@ -77,7 +108,12 @@
       "options": {
         "cwd": "${workspaceFolder}/renderer",
       },
-      "args": ["run", "--", "--local", "--echo-args"],
+      "args": [
+        "run",
+        "--",
+        "--local",
+        "--echo-args"
+      ],
     },
   ],
 }

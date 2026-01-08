@@ -7,7 +7,7 @@
     have?
 
     |> Image
-        src=tmp-images/how_many_bumps_statement.svg
+        src=images/how_many_bumps_statement.svg
         style=padding-bottom:1rem
 
     |> Solution
@@ -17,19 +17,19 @@
         at four places, per appearances:
 
         |> Image
-            src=tmp-images/how_many_bumps_highlights.svg
+            src=images/how_many_bumps_highlights.svg
 
-        The derivative will therefore have four large-scale
-        bumps. It looks like this:
+        The derivative will therefore have four
+        bumps—at least, four _large scale_ bumps—if you're 
+        curious, it looks like this:
 
         |> Image
-            src=tmp-images/how_many_bumps_derivative.svg
+            src=images/how_many_bumps_derivative.svg
 
-        Though in truth, nothing prevents the graph from
+        But nothing prevents the graph from
         having small wobbles near the zones of maximum or
         minimum slope out of the range of our eyesight,
         meaning that each bump of the derivative contains
-        micro-bumps, like small ripples atop a big wave.
-        !! would be discovered to contain
-        !! micro-bumps, when ausculted under a microscope!
-        (Still, “four” is the answer that the exam paper is expecting.)
+        micro-bumps, like small ripples atop a big wave!
+        (Still, “four” is a good bet to achieve full marks,
+        on this one.)
