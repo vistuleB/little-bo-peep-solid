@@ -298,11 +298,11 @@ pub fn main() {
       ..ds.vanilla_options(),
       verbose: False,
       profiling_table: [ds.Pipeline(Some(130)), ds.ImageCompression(None, None, Some(10))],
-      // profiling_table: [ds.ImageCompression(None, None, Some(10))],
     )
     |> ds.amend_renderer_options_by_command_line_amendments(amendments)
 
   let _ = Some(1)
+  let _ = None
 
   let _ = shellout.command(
     run: "rm",
