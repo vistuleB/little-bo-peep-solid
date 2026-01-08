@@ -4,7 +4,7 @@ import desugaring as ds
 import emitter_imports as ei
 import gleam/io
 import gleam/list
-import gleam/option.{Some}
+import gleam/option.{Some, None}
 import gleam/string.{inspect as ins}
 import gleam/dict.{type Dict}
 import infrastructure as infra
@@ -297,7 +297,8 @@ pub fn main() {
     ds.RendererOptions(
       ..ds.vanilla_options(),
       verbose: False,
-      profiling_table: Some(130),
+      profiling_table: [ds.Pipeline(Some(130)), ds.ImageCompression(None, None, Some(10))],
+      // profiling_table: [ds.ImageCompression(None, None, Some(10))],
     )
     |> ds.amend_renderer_options_by_command_line_amendments(amendments)
 
