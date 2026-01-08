@@ -55,8 +55,8 @@
         are the same function. (Function equality is
         based on input-output behavior: two functions are
         equal if and only if every input is mapped to the
-        same output under either function. See Note 6,
-        Exercise 9, Chapter 3.)
+        same output under either function. See Note >>_function_equality_note_,
+        Exercise >>_composition_order_2_, Chapter >>functions.)
 
         Starting up,
 
@@ -118,25 +118,20 @@
         for arbitrary $u$, which completes the proof.
 
         |> SolutionNote
+
             In words, we have just established the
-
             __associativity of function multiplication__
-
             while we had previously established the
-
             __associativity of function composition__
-
-            (if you recall that one) in Exercise 9 of Chapter
-            >>functions.
+            (if you recall that one) in Exercise
+            >>_composition_order_2_ of Chapter >>functions.
 
         |> SolutionNote
-            By this result, we can write
 
+            By this result, we can write
             $$
             fgh
             $$
-
-            without any parentheses at all:
-            it doesn't matter whether we think of this
-            product as $(fg)h$ or $f(gh)$, the result
-            is the same.
+            without any parentheses at all: it
+            doesn't matter whether we think of this product
+            as $(fg)h$ or $f(gh)$, the result is the same.

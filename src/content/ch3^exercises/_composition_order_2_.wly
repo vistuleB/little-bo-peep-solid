@@ -284,6 +284,7 @@
             the second function second.
 
         |> SolutionNote
+            handle=_function_equality_note_
 
             We have taken for granted the fact that two
             functions $f$ and $g$ are “equal” if and only

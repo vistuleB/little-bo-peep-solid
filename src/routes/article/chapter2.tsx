@@ -2118,7 +2118,7 @@ const Rest = () => {
               As explained in {" "}
               <NoBreak>
                 <a
-                  href="/article/chapter3#_49_hgi_"
+                  href="/article/chapter3#_50_hgi_"
                   class="handle-out-chapter-link"
                 >
                   Chapter 3
