@@ -4,7 +4,7 @@ import desugaring as ds
 import emitter_imports as ei
 import gleam/io
 import gleam/list
-import gleam/option.{Some}
+import gleam/option.{Some, None}
 import gleam/string.{inspect as ins}
 import gleam/dict.{type Dict}
 import infrastructure as infra
@@ -297,11 +297,12 @@ pub fn main() {
     ds.RendererOptions(
       ..ds.vanilla_options(),
       verbose: False,
-      profiling_table: Some(130),
+      profiling_table: None,
     )
     |> ds.amend_renderer_options_by_command_line_amendments(amendments)
 
   let _ = Some(1)
+  let _ = None
 
   let _ = shellout.command(
     run: "rm",

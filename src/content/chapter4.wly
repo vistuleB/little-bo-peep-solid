@@ -684,15 +684,19 @@
 |> Section
     work=ing
 
-    *The Jerk.*
+    *The jerk.*
     The rate of change of acceleration has a
     name as well, being known as the
 
     __jerk__
 
     in physics. The units of jerk (or “the”
-    units of jerk, since any units of same
-    _dimension_ would do as well) are
+    units of jerk, since any units of same 
+    |> a
+        href=chapter2#section-9
+        class=underline-on-hover
+        _dimension_
+    \ would do as well) are
 
     $$
     {\te{m} \over \,\te{s}\!{\,}^3}
@@ -704,23 +708,23 @@
 
     which is mildly amusing. Basically, the
     jerk specifies how many _meters per second,
-    per second_ 
-    (a measure of acceleration!)
+    per second_ (a measure of acceleration!)
     is being gained or lost _per second_.
 
-    The term “jerk” is at least half-way well-chosen, too,
-    considering that
+    The term “jerk” is at least half-way well-chosen,
+    too, considering that
 
     __jerk__
 
     implies a change in acceleration insofar as the
-    everyday meaning of the word is concerned—think of a
+    everyday meaning of the word is concerned—think
+    of experiencing a
 
     __constant acceleration__
 
-    experience inside of a train or subway car—by merely
-    saying “constant” we are implying a non-jerky
-    experience.
+    in a train or subway car, etc—the
+    “constant” qualifier, if you think about it, implies
+    a non-jerky experience!
 
     !! The word “jerk” is aptly chosen,
     !! too, considering that

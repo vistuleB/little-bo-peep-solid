@@ -618,9 +618,8 @@
 
 |> Section
     divider=false
-    handle=unitsvsdimensions
 
-    *Postscript: Units vs Dimensions.*
+    *Postscript: units vs dimensions.*
     Comparing
 
     _|“the $x$-axis has dimensions of time”|_

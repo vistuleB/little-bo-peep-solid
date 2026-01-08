@@ -363,6 +363,10 @@ export const BackupArrow = () => {
         exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
       ) as HTMLElement;
 
+  let h = w;
+  let triangle_sidelength = 11.5;
+  let triangle_height = triangle_sidelength * Math.sqrt(3) / 2;
+
   return (
     <svg
       id="backup-btn"
@@ -387,6 +391,7 @@ export const BackupArrow = () => {
         class="active_exercises_button"
       ></path>
       <path
+        // d={`M ${1 + w / 2} ${1 + triangle_tip_to_edge} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
         d="M20 32C20 32.5523 20.4477 33 21 33C21.5523 33 22 32.5523 22 32H20ZM21 11L15.2265 21H26.7735L21 11ZM22 32L22 20H20L20 32H22Z"
         fill="black"
       ></path>

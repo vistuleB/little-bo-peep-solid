@@ -2737,8 +2737,7 @@ const Rest = () => {
               </MathBlock>
             </Boxed>
             <OuterP>
-              One can
-              also clarify that:
+              One can also clarify that:
             </OuterP>
             <Boxed>
               <MathBlock>

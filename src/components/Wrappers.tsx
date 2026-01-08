@@ -32,6 +32,10 @@ export const NoBreak = (props: ParentProps) => {
   return <span class="nobreak">{props.children}</span>;
 };
 
+export const InTextWarning = (props: ParentProps) => {
+  return <span class="in-text-warning">{props.children}</span>;
+};
+
 export const Pause = () => {
   return <div class="spacer-150" />;
 };

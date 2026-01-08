@@ -1598,7 +1598,7 @@ const Rest = () => {
       >
         <OuterP>
           <b>
-            The Jerk.
+            The jerk.
           </b>
           {" "}
           The rate of change of acceleration has a
@@ -1611,11 +1611,15 @@ const Rest = () => {
         <Pause />
         <OuterP>
           in physics. The units of jerk (or “the”
-          units of jerk, since any units of same
-          {" "}
-          <i>
-            dimension
-          </i>
+          units of jerk, since any units of same {" "}
+          <a
+            href="chapter2#section-9"
+            class="underline-on-hover"
+          >
+            <i>
+              dimension
+            </i>
+          </a>
           {" "} would do as well) are
         </OuterP>
         <Pause />
@@ -1640,8 +1644,7 @@ const Rest = () => {
             meters per second,
             per second
           </i>
-          {" "} 
-          (a measure of acceleration!)
+          {" "} (a measure of acceleration!)
           is being gained or lost {" "}
           <i>
             per second
@@ -1649,8 +1652,8 @@ const Rest = () => {
           .
         </OuterP>
         <OuterP class="indent-10">
-          The term “jerk” is at least half-way well-chosen, too,
-          considering that
+          The term “jerk” is at least half-way well-chosen,
+          too, considering that
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1659,7 +1662,8 @@ const Rest = () => {
         <Pause />
         <OuterP>
           implies a change in acceleration insofar as the
-          everyday meaning of the word is concerned—think of a
+          everyday meaning of the word is concerned—think
+          of experiencing a
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1667,9 +1671,9 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          experience inside of a train or subway car—by merely
-          saying “constant” we are implying a non-jerky
-          experience.
+          in a train or subway car, etc—the
+          “constant” qualifier, if you think about it, implies
+          a non-jerky experience!
         </OuterP>
         <Pause />
         <OuterP>
@@ -2540,7 +2544,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/build-img/svgo-svg/aG77.svg"
+              src="/tmp-images/how_many_bumps_statement.svg"
               style="padding-bottom:1rem"
             />
           </ExerciseStatement>
@@ -2548,10 +2552,26 @@ const Rest = () => {
             <OuterP>
               The derivative has a “bump” wherever the slope
               has a local maximum or local minimum, which happens
-              at four places:
+              at four places, per appearances:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/RAdv.svg" />
+            <Image src="/tmp-images/how_many_bumps_highlights.svg" />
+            <Pause />
+            <OuterP>
+              The derivative will therefore have four large-scale
+              bumps. It looks like this:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/how_many_bumps_derivative.svg" />
+            <Pause />
+            <OuterP>
+              Though in truth, nothing prevents the graph from
+              having small wobbles near the zones of maximum or
+              minimum slope out of the range of our eyesight,
+              meaning that each bump of the derivative contains
+              micro-bumps, like small ripples atop a big wave.
+              (Still, “four” is the answer that the exam paper is expecting.)
+            </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={9}>

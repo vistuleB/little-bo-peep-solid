@@ -3978,13 +3978,13 @@
     "used-last-build": true
   },
   "how_many_bumps_statement_with_highlights.svg": {
-    "build-version": "svgo-svg/RAdv.svg",
-    "build-version-created-on": 1767779164,
-    "build-method": "svgo",
-    "build-version-size": 5748,
-    "original-size": 9578,
-    "compression": "39.99%",
-    "used-last-build": true
+    "build-version": "svg/RAdv.svg",
+    "build-version-created-on": 1767808944,
+    "build-method": "cp",
+    "build-version-size": 11802,
+    "original-size": 11802,
+    "compression": "0.0%",
+    "used-last-build": false
   },
   "svg_ch5_ex_opening_door.svg": {
     "build-version": "svgo-svg/fgGT.svg",
@@ -4059,13 +4059,13 @@
     "used-last-build": true
   },
   "how_many_bumps_statement.svg": {
-    "build-version": "svgo-svg/aG77.svg",
-    "build-version-created-on": 1767717642,
-    "build-method": "svgo",
-    "build-version-size": 4858,
-    "original-size": 9498,
-    "compression": "48.85%",
-    "used-last-build": true
+    "build-version": "svg/aG77.svg",
+    "build-version-created-on": 1767808944,
+    "build-method": "cp",
+    "build-version-size": 11800,
+    "original-size": 11800,
+    "compression": "0.0%",
+    "used-last-build": false
   },
   "svg_ch3_composition_icon_fence.svg": {
     "build-version": "svgo-svg/Ixme.svg",

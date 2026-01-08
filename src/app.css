@@ -380,9 +380,13 @@ table.first-line tr td:first-child {
 }
 
 .nowrap,
-.nobreak,
-.nolinebreak {
+.nobreak {
   white-space: nowrap;
+}
+
+.in-text-warning {
+  color:red;
+  background-color:yellow;
 }
 
 .left-right-background-divide {
@@ -533,6 +537,10 @@ ol.l1 > li:before {
 
 .highlighted {
   color: var(--highlighted-rgb);
+}
+
+.underline-on-hover:hover {
+  text-decoration: underline;
 }
 
 .handle-in-chapter-link:hover,

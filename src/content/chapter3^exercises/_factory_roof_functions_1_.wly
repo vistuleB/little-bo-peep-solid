@@ -108,24 +108,7 @@
             f \circ g = (x \ra f(g(x)))
             $$
 
-        !! Or:
-
-        !! |> Boxed
-        !!     $$
-        !!     (f \circ g)(x) = f(g(x))
-        !!     $$
-
-        !! (Either of these equations can be considered a
-        !! formal definition.)
-        !! For a formal definition of “$f \circ g$”—something
-        !! not based on pictures—one need only specify what
-        !! $f \circ g$ does to inputs. Specifically:
-        !! $$
-        !! \,{(f \circ g)(x) = f(g(x))}.
-        !! $$
-        !! (So that equation is a formal definition.) 
-        One can
-        also clarify that:
+        One can also clarify that:
 
         |> Boxed
             $$

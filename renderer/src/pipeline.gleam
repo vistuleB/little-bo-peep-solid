@@ -95,7 +95,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.free_children(#("CentralDisplay", "p")),
       dl.free_children(#("CentralDisplayItalic", "p")),
     ],
-    pp.barbaric_symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math"]),
+    pp.barbaric_symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math", "InTextWarning"]),
     pp.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
     [
       dl.find_replace__outside(#("\\*", "*"), ["MathBlock", "Math"]),
@@ -197,6 +197,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     },
     [
       dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, only)),
+      dl.ensure_attribute_value_starts_with(#("src", "/")),
     ],
   ]
   |> list.flatten

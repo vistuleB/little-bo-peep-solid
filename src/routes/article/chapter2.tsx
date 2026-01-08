@@ -1576,7 +1576,7 @@ const Rest = () => {
       >
         <OuterP>
           <b>
-            Postscript: Units vs Dimensions.
+            Postscript: units vs dimensions.
           </b>
           {" "}
           Comparing
