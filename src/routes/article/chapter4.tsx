@@ -2938,7 +2938,7 @@ const Rest = () => {
               blue is the derivative of the red:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/W8c1.svg" />
+            <Image src="/build-img/svgo-svg/W11G.svg" />
             <Pause />
             <OuterP>
               Likewise, the derivative of the blue

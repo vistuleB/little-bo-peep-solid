@@ -674,6 +674,15 @@
     "compression": "21.43%",
     "used-last-build": true
   },
+  "svg_ch4_cosine_curves_blue_red_only_v2.svg": {
+    "build-version": "svgo-svg/W11G.svg",
+    "build-version-created-on": 1767967099,
+    "build-method": "svgo",
+    "build-version-size": 182356,
+    "original-size": 634219,
+    "compression": "71.25%",
+    "used-last-build": true
+  },
   "svg_ch5_ex_spherical_coordinates_xy_plane.svg": {
     "build-version": "svgo-svg/10Fl.svg",
     "build-version-created-on": 1767342812,
@@ -3201,7 +3210,7 @@
     "build-version-size": 158839,
     "original-size": 598624,
     "compression": "73.47%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch4_ex_position_by_time_find_the_order_answer.svg": {
     "build-version": "svgo-svg/a02_.svg",
@@ -4834,11 +4843,11 @@
   },
   "svg_ch4_cosine_curves.svg": {
     "build-version": "svgo-svg/_2ki.svg",
-    "build-version-created-on": 1767294304,
+    "build-version-created-on": 1767967098,
     "build-method": "svgo",
-    "build-version-size": 9575,
-    "original-size": 9575,
-    "compression": "0.0%",
+    "build-version-size": 10166,
+    "original-size": 12155,
+    "compression": "16.36%",
     "used-last-build": true
   },
   "svg_ch5_ex_max_xy_angles.svg": {
@@ -5131,11 +5140,11 @@
   },
   "svg_ch4_bendiness.svg": {
     "build-version": "svgo-svg/gmq7.svg",
-    "build-version-created-on": 1767959040,
+    "build-version-created-on": 1767967098,
     "build-method": "svgo",
     "build-version-size": 2688696,
-    "original-size": 3240434,
-    "compression": "17.03%",
+    "original-size": 3651947,
+    "compression": "26.38%",
     "used-last-build": true
   },
   "svg_ch5_ex_double_POST_processing_stops_1.svg": {
