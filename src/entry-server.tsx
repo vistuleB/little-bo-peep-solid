@@ -72,6 +72,9 @@ export default createHandler(() => (
             content="width=device-width,initial-scale=1.0,minimum-scale=1"
           />
           <meta name="format-detection" content="telephone=no" />
+          <script
+            innerHTML={`window.env = { VITE_ENV: "${import.meta.env.VITE_ENV}" };`}
+          />
           <script src="/extras.js" defer={true} />
           <script src="/mathjax_setup.js" defer={true} />
           <script
@@ -84,7 +87,7 @@ export default createHandler(() => (
 
           {assets}
         </head>
-        {/* needed width:0 to avoid an overlapping 
+        {/* needed width:0 to avoid an overlapping
         div that was fucking with pointer events: */}
         <body style="width:0;">
           <div id="app">{children}</div>
