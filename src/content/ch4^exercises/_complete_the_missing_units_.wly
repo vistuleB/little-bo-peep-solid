@@ -5,7 +5,7 @@
     below, based on those units that are given:
 
     |> Image
-        src=images/svg_ch4_missing_units.svg
+        src=images/svg_ch4_missing_units_v2.svg
 
     |> Solution
 
@@ -16,7 +16,19 @@
         axis. This gives the unique solutions:
 
         |> Image
-            src=images/svg_ch4_missing_units_solution.svg
+            src=images/svg_ch4_missing_units_solution_v2.svg
+
+        ...where we find units of
+        $$
+        \Huge \te{s}^{1\over 2}
+        $$
+        
+        or _square root seconds_ on the $x$ axis
+        in the last strip,
+        which is not at all clear what it means, or
+        if such a thing exists.
+        (But if there's a solution, it's that one, so we
+        blindly write that down.)
 
         |> SolutionNote
             A unit of “$1$” is a

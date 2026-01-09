@@ -1,6 +1,5 @@
 |> Exercise
     handle=_how_many_bumps_
-    work=ing
 
     If the graph below has three “bumps” (two up,
     one down), then how many “bumps” does its derivative

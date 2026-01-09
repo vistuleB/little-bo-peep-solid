@@ -1826,7 +1826,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises>
+      <Exercises work="ing">
         <Exercise number={1}>
           <ExerciseStatement id="_52_hgi_">
             <OuterP>
@@ -2293,7 +2293,7 @@ const Rest = () => {
               below, based on those units that are given:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/VHPd.svg" />
+            <Image src="/build-img/svgo-svg/xp2w.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2316,7 +2316,34 @@ const Rest = () => {
               axis. This gives the unique solutions:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/KQs9.svg" />
+            <Image src="/build-img/svgo-svg/CZUY.svg" />
+            <Pause />
+            <OuterP>
+              ...where we find units of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \te&#123;s&#125;^&#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or {" "}
+              <i>
+                square root seconds
+              </i>
+              {" "} on the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis
+              in the last strip,
+              which is not at all clear what it means, or
+              if such a thing exists.
+              (But if there's a solution, it's that one, so we
+              blindly write that down.)
+            </OuterP>
             <Pause />
             <SolutionNote>
               <OuterP>
@@ -2410,10 +2437,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={7}
-        >
+        <Exercise number={7}>
           <ExerciseStatement id="_58_hgi_">
             <OuterP>
               <b>
@@ -2565,10 +2589,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={9}
-        >
+        <Exercise number={9}>
           <ExerciseStatement id="_60_hgi_">
             <OuterP>
               <b>

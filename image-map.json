@@ -199,7 +199,7 @@
   },
   "how_many_bumps_highlights.svg": {
     "build-version": "svgo-svg/yAV_.svg",
-    "build-version-created-on": 1767879727,
+    "build-version-created-on": 1767959040,
     "build-method": "svgo",
     "build-version-size": 27390,
     "original-size": 122694,
@@ -1440,13 +1440,13 @@
     "used-last-build": true
   },
   "svg_ch4_missing_units_solution.svg": {
-    "build-version": "svgo-svg/KQs9.svg",
-    "build-version-created-on": 1767294303,
-    "build-method": "svgo",
-    "build-version-size": 121295,
-    "original-size": 121305,
-    "compression": "0.01%",
-    "used-last-build": true
+    "build-version": "svg/KQs9.svg",
+    "build-version-created-on": 1767952468,
+    "build-method": "cp",
+    "build-version-size": 134349,
+    "original-size": 134349,
+    "compression": "0.0%",
+    "used-last-build": false
   },
   "svg_ch5_ch_etaOver3_example_displacement_version.svg": {
     "build-version": "svgo-svg/ysx5.svg",
@@ -2071,7 +2071,7 @@
   },
   "how_many_bumps_derivative.svg": {
     "build-version": "svgo-svg/dDBS.svg",
-    "build-version-created-on": 1767879727,
+    "build-version-created-on": 1767959041,
     "build-method": "svgo",
     "build-version-size": 35044,
     "original-size": 88531,
@@ -3691,11 +3691,11 @@
   },
   "svg_ch4_scaling_figure.svg": {
     "build-version": "svgo-svg/lJqH.svg",
-    "build-version-created-on": 1767294304,
+    "build-version-created-on": 1767959041,
     "build-method": "svgo",
-    "build-version-size": 44545,
-    "original-size": 98508,
-    "compression": "54.78%",
+    "build-version-size": 53552,
+    "original-size": 128242,
+    "compression": "58.24%",
     "used-last-build": true
   },
   "svg_ch5_ex_x_plus_y_intersections.svg": {
@@ -4078,7 +4078,7 @@
   },
   "how_many_bumps_statement.svg": {
     "build-version": "svgo-svg/aG77.svg",
-    "build-version-created-on": 1767879727,
+    "build-version-created-on": 1767959040,
     "build-method": "svgo",
     "build-version-size": 5151,
     "original-size": 11352,
@@ -4104,13 +4104,13 @@
     "used-last-build": true
   },
   "svg_ch4_missing_units.svg": {
-    "build-version": "svgo-svg/VHPd.svg",
-    "build-version-created-on": 1767294302,
-    "build-method": "svgo",
-    "build-version-size": 88962,
-    "original-size": 88967,
-    "compression": "0.01%",
-    "used-last-build": true
+    "build-version": "svg/VHPd.svg",
+    "build-version-created-on": 1767949315,
+    "build-method": "cp",
+    "build-version-size": 108511,
+    "original-size": 108511,
+    "compression": "0.0%",
+    "used-last-build": false
   },
   "svg_ch3_truth_be_said_right_first.svg": {
     "build-version": "svgo-svg/FiSv.svg",
@@ -4146,6 +4146,15 @@
     "build-version-size": 14372,
     "original-size": 216020,
     "compression": "93.35%",
+    "used-last-build": true
+  },
+  "svg_ch4_missing_units_solution_v2.svg": {
+    "build-version": "svgo-svg/CZUY.svg",
+    "build-version-created-on": 1767959040,
+    "build-method": "svgo",
+    "build-version-size": 114154,
+    "original-size": 231270,
+    "compression": "50.64%",
     "used-last-build": true
   },
   "svg_ch5_ch_snail_stack_greater_eta.svg": {
@@ -4895,6 +4904,15 @@
     "compression": "4.58%",
     "used-last-build": true
   },
+  "svg_ch4_missing_units_v2.svg": {
+    "build-version": "svgo-svg/xp2w.svg",
+    "build-version-created-on": 1767959040,
+    "build-method": "svgo",
+    "build-version-size": 73413,
+    "original-size": 154305,
+    "compression": "52.42%",
+    "used-last-build": true
+  },
   "svg_ch4_sketch_the_middle_b.svg": {
     "build-version": "svgo-svg/45I8.svg",
     "build-version-created-on": 1766554951,
@@ -5113,11 +5131,11 @@
   },
   "svg_ch4_bendiness.svg": {
     "build-version": "svgo-svg/gmq7.svg",
-    "build-version-created-on": 1767876974,
+    "build-version-created-on": 1767959040,
     "build-method": "svgo",
-    "build-version-size": 2714861,
-    "original-size": 2715286,
-    "compression": "0.02%",
+    "build-version-size": 2688696,
+    "original-size": 3240434,
+    "compression": "17.03%",
     "used-last-build": true
   },
   "svg_ch5_ex_double_POST_processing_stops_1.svg": {

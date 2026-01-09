@@ -23,7 +23,9 @@
     solution to $x^2 = 4$.
     Hence,
 
-    $$\sqrt{(-2)^2} = 2$$
+    $$
+    \sqrt{(-2)^2} = 2
+    $$
 
     |> ImageRight
         src=images/svg_ch1_ch_minus_two_squared_cloud.svg
