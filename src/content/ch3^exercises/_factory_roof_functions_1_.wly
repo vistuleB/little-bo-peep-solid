@@ -38,7 +38,7 @@
         in DESMOS. Viz:
 
         |> Image
-            src=images/png_ch3_desmos_composition_0_c.png
+            src=images/png_ch3_desmos_composition_0_c.jpg
             width=1400px
 
         |> Pause
@@ -48,13 +48,14 @@
         then “f(x/2)”, viz:
 
         |> Image
-            src=images/png_ch3_desmos_composition_1_c.png
+            src=images/png_ch3_desmos_composition_1_c.jpg
             width=1400px
 
         Or we can be even fancier:
 
         |> Image
-            src=images/png_ch3_desmos_composition_2_b.png
+            !! src=images/png_ch3_desmos_composition_2_b.png
+            src=images/png_ch3_desmos_composition_2_b.jpg
             width=1400px
 
         What you see above (the graph in orange) is

@@ -2533,7 +2533,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/build-img/png/9wB1.png"
+              src="/build-img/jpg/pc6h.jpg"
               width="1400px"
             />
             <Pause />
@@ -2547,7 +2547,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/build-img/png/Vnzx.png"
+              src="/build-img/jpg/FUw3.jpg"
               width="1400px"
             />
             <Pause />
@@ -2556,7 +2556,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/build-img/png/oo9x.png"
+              src="/build-img/jpg/Gowo.jpg"
               width="1400px"
             />
             <Pause />
