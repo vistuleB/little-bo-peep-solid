@@ -3205,11 +3205,11 @@
   },
   "svg_ch4_5_euler_after_5_10th.svg": {
     "build-version": "svgo-svg/GKbB.svg",
-    "build-version-created-on": 1767294307,
+    "build-version-created-on": 1768066476,
     "build-method": "svgo",
-    "build-version-size": 96732,
-    "original-size": 130490,
-    "compression": "25.87%",
+    "build-version-size": 97103,
+    "original-size": 132912,
+    "compression": "26.94%",
     "used-last-build": true
   },
   "svg_ch3_ch_upper_semicircle.svg": {
@@ -3583,11 +3583,11 @@
   },
   "svg_ch4_5_euler_after_4_10th_b.svg": {
     "build-version": "svgo-svg/Js6D.svg",
-    "build-version-created-on": 1767294308,
+    "build-version-created-on": 1768066477,
     "build-method": "svgo",
-    "build-version-size": 129765,
-    "original-size": 495279,
-    "compression": "73.8%",
+    "build-version-size": 128436,
+    "original-size": 494898,
+    "compression": "74.05%",
     "used-last-build": true
   },
   "svg_ch4_narrow_and_less_narrow_bends_curviest.svg": {
@@ -4105,11 +4105,11 @@
   },
   "svg_ch4_5_euler_after_4_10th.svg": {
     "build-version": "svgo-svg/jG_S.svg",
-    "build-version-created-on": 1767294308,
+    "build-version-created-on": 1768066476,
     "build-method": "svgo",
-    "build-version-size": 95927,
-    "original-size": 113442,
-    "compression": "15.44%",
+    "build-version-size": 96328,
+    "original-size": 114739,
+    "compression": "16.05%",
     "used-last-build": true
   },
   "svg_ch4_big_product_final_answer.svg": {
