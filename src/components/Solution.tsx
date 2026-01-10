@@ -366,6 +366,10 @@ export const BackupArrow = () => {
   let h = w;
   let triangle_sidelength = 11.5;
   let triangle_height = triangle_sidelength * Math.sqrt(3) / 2;
+  let triangle_tip_to_edge = 7;
+  let arrow_start_to_edge = 7.4;
+  let arrow_body_width = 2;
+  let arrow_body_length = 18;
 
   return (
     <svg
@@ -390,9 +394,14 @@ export const BackupArrow = () => {
         d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
         class="active_exercises_button"
       ></path>
+      {/* could not compound these two into single path without getting evenodd
+          fill-style, who knows why */}
       <path
-        // d={`M ${1 + w / 2} ${1 + triangle_tip_to_edge} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-        d="M20 32C20 32.5523 20.4477 33 21 33C21.5523 33 22 32.5523 22 32H20ZM21 11L15.2265 21H26.7735L21 11ZM22 32L22 20H20L20 32H22Z"
+        d={`M ${1 + w / 2 - arrow_body_width / 2} ${1 + h - arrow_start_to_edge} h ${arrow_body_width} v ${-arrow_body_length} h ${-arrow_body_width} z`}
+        fill="black"
+        ></path>
+      <path
+        d={`M ${1 + w / 2} ${1 + triangle_tip_to_edge} l ${triangle_sidelength * 0.5} ${triangle_height} h ${-triangle_sidelength} z`}
         fill="black"
       ></path>
     </svg>

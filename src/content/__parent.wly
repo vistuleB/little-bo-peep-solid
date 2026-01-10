@@ -1,4 +1,15 @@
 |> Book
+    !! │ ../public/build-img/svgo-svg/gmq7.svg  │ 2.59 MB    │
+    !! │ ../public/build-img/svgo-svg/at2Y.svg  │ 813.98 KB  │
+    !! │ ../public/build-img/png/oo9x.png       │ 574.41 KB  │
+    !! │ ../public/build-img/svgo-svg/FJxQ.svg  │ 571.06 KB  │
+    !! │ ../public/build-img/svgo-svg/hUGM.svg  │ 496.96 KB  │
+    !! │ ../public/build-img/svgo-svg/3N4N.svg  │ 478.38 KB  │
+    !! │ ../public/build-img/png/Vnzx.png       │ 465.44 KB  │
+    !! │ ../public/build-img/svgo-svg/3BtA.svg  │ 462.07 KB  │
+    !! │ ../public/build-img/png/9wB1.png       │ 452.17 KB  │
+    !! │ ../public/build-img/svgo-svg/Jk8H.svg  │ 398.38 KB  │
+
     |> ChapterSelection
         content=selection
         >>sets            >>_bt2_start_

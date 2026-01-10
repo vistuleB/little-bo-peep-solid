@@ -155,15 +155,7 @@ const Switcher = (props: SwitcherProps) => {
                 ? "active_exercises_button_arrow_fill"
                 : "inactive_exercises_button_arrow_fill",
             )}
-            d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-          ></path>
-          <path
-            class={twJoin(
-              left_on()
-                ? "active_exercises_button_arrow_fill"
-                : "inactive_exercises_button_arrow_fill",
-            )}
-            d={`M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}
+            d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}
           ></path>
         </svg>
         <svg
