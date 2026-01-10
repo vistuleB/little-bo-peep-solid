@@ -23,8 +23,8 @@
         "cwd": "${workspaceFolder}/renderer"
       },
       // "args": ["run", "--", "--track", "\"assuming that\"", "+5-5"]
-      // "args": [ "run", "--", "--only", "content=selection", "work=ing", "--local", "--echo-args", ]
-      "args": [ "run", "--", "--only", "ch4", "--local", "--echo-args", ]
+      "args": [ "run", "--", "--only", "work=ing", "content=selection", "--local", "--echo-args", ]
+      // "args": [ "run", "--", "--only", "ch4", "--local", "--echo-args", ]
     },
     {
       "label": "gleam run -m <file>",

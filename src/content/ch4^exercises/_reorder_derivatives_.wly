@@ -1,6 +1,5 @@
 |> Exercise
     handle=_reorder_derivatives_
-    work=ing
     Among the functions below, which is the
     zeroth, first, and second derivative?
     (I.e., which is $f$, $f'$, and $f''$,
