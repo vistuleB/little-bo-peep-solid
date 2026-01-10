@@ -10,52 +10,12 @@ const HamburgerPanelAuthorSuppliedContents = () => {
           article_type={1}
           href="chapter1"
         >
-          A {" "}
-          <i>
-            Few
-          </i>
-          {" "} Refreshers
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={2}
-          href="chapter2"
-        >
-          Slopes
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={3}
-          href="chapter3"
-        >
-          Functions
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={4}
-          href="chapter4"
-        >
-          Derivatives
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={5}
-          href="chapter5"
-        >
-          The Trigonometric Functions
-        </HamburgerPanelItem>
-      </ul>
-    </div>
-    <div id="bootcamp">
-      <HamburgerPanelTitle label="Bootcamps" />
-      <ul>
-        <HamburgerPanelItem
-          article_type={1}
-          href="bootcamp1"
-        >
-          Sets
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={2}
-          href="bootcamp2"
-        >
-          Powers of 10
+          <span class="t-3003-c">
+            Derivatives
+            <span class="t-3003">
+              ./src/content/ch4__parent.wly:2:11
+            </span>
+          </span>
         </HamburgerPanelItem>
       </ul>
     </div>

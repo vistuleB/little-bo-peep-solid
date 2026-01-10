@@ -1,13 +1,13 @@
 |> Book
     |> ChapterSelection
         content=selection
-        >>sets            >>_bt2_start_
-        >>powers          >>_bt1_start_
-        >>refreshers      >>_ch1_start_
-        >>slopes          >>_ch2_start_
-        >>functions       >>_ch3_start_
-        >>derivatives     >>_ch4_start_
-        >>trigonometry    >>_ch5_start_
+        >>sets >>_bt2_start_
+        >>powers >>_bt1_start_
+        >>refreshers >>_ch1_start_
+        >>slopes >>_ch2_start_
+        >>functions >>_ch3_start_
+        >>derivatives >>_ch4_start_
+        >>trigonometry >>_ch5_start_
 
     |> In
         content=selection
