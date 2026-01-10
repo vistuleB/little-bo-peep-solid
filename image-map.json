@@ -676,11 +676,11 @@
   },
   "svg_ch4_cosine_curves_blue_red_only_v2.svg": {
     "build-version": "svgo-svg/W11G.svg",
-    "build-version-created-on": 1767967099,
+    "build-version-created-on": 1768039544,
     "build-method": "svgo",
-    "build-version-size": 182356,
-    "original-size": 634219,
-    "compression": "71.25%",
+    "build-version-size": 185121,
+    "original-size": 637707,
+    "compression": "70.97%",
     "used-last-build": true
   },
   "svg_ch5_ex_spherical_coordinates_xy_plane.svg": {
@@ -721,11 +721,11 @@
   },
   "svg_ch4_cosine_curves_cresting.svg": {
     "build-version": "svgo-svg/P9o9.svg",
-    "build-version-created-on": 1767294304,
+    "build-version-created-on": 1768039544,
     "build-method": "svgo",
-    "build-version-size": 36061,
-    "original-size": 159975,
-    "compression": "77.46%",
+    "build-version-size": 35265,
+    "original-size": 164436,
+    "compression": "78.55%",
     "used-last-build": true
   },
   "svg_ch5_ex_big_division_inside_8b_v2.svg": {
@@ -1698,7 +1698,7 @@
     "build-version-size": 26742,
     "original-size": 241969,
     "compression": "88.95%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch4_17_velocity_vector_1_cloud.svg": {
     "build-version": "svgo-svg/Bvhk.svg",
@@ -2359,11 +2359,11 @@
   },
   "svg_ch4_cosine_curves_rolling_wheel.svg": {
     "build-version": "svgo-svg/E0qc.svg",
-    "build-version-created-on": 1767294306,
+    "build-version-created-on": 1768039545,
     "build-method": "svgo",
-    "build-version-size": 117171,
-    "original-size": 155172,
-    "compression": "24.49%",
+    "build-version-size": 117587,
+    "original-size": 158390,
+    "compression": "25.76%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_p3black_inline.svg": {
@@ -4582,11 +4582,11 @@
   },
   "svg_ch4_ch_convex_concave.svg": {
     "build-version": "svgo-svg/at2Y.svg",
-    "build-version-created-on": 1767294300,
+    "build-version-created-on": 1768043103,
     "build-method": "svgo",
-    "build-version-size": 833514,
-    "original-size": 879531,
-    "compression": "5.23%",
+    "build-version-size": 54982,
+    "original-size": 154544,
+    "compression": "64.42%",
     "used-last-build": true
   },
   "svg_ch4_ex_position_by_time_find_the_order.svg": {
@@ -4843,7 +4843,7 @@
   },
   "svg_ch4_cosine_curves.svg": {
     "build-version": "svgo-svg/_2ki.svg",
-    "build-version-created-on": 1767967098,
+    "build-version-created-on": 1768039543,
     "build-method": "svgo",
     "build-version-size": 10166,
     "original-size": 12155,
@@ -4969,11 +4969,11 @@
   },
   "svg_ch4_cosine_curves_tangent_velocity_cloud.svg": {
     "build-version": "svgo-svg/52rF.svg",
-    "build-version-created-on": 1767294305,
+    "build-version-created-on": 1768039544,
     "build-method": "svgo",
-    "build-version-size": 54211,
-    "original-size": 294551,
-    "compression": "81.6%",
+    "build-version-size": 86400,
+    "original-size": 417782,
+    "compression": "79.32%",
     "used-last-build": true
   },
   "53.svg": {
@@ -4983,6 +4983,15 @@
     "build-version-size": 166684,
     "original-size": 182771,
     "compression": "8.8%",
+    "used-last-build": true
+  },
+  "svg_ch4_cosine_curves_verified_v2.svg": {
+    "build-version": "svgo-svg/tBi5.svg",
+    "build-version-created-on": 1768039544,
+    "build-method": "svgo",
+    "build-version-size": 28585,
+    "original-size": 244479,
+    "compression": "88.31%",
     "used-last-build": true
   },
   "svg_ch4_5_euler_spiral_figure.svg": {
@@ -5140,11 +5149,11 @@
   },
   "svg_ch4_bendiness.svg": {
     "build-version": "svgo-svg/gmq7.svg",
-    "build-version-created-on": 1767967098,
+    "build-version-created-on": 1768043103,
     "build-method": "svgo",
-    "build-version-size": 2688696,
-    "original-size": 3651947,
-    "compression": "26.38%",
+    "build-version-size": 352983,
+    "original-size": 1399045,
+    "compression": "74.77%",
     "used-last-build": true
   },
   "svg_ch5_ex_double_POST_processing_stops_1.svg": {

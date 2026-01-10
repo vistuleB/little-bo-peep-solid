@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_four_particles_
 
     In the following graph, which curve might
@@ -15,14 +16,14 @@
         |> Image
             src=images/svg_ch4_cosine_curves_blue_red_only_v2.svg
 
-        Likewise, the derivative of the blue
-        is the yellow, the derivative of the yellow
-        is the green, and the derivative of the
-        green is the red, at which point it starts
-        all over again! (For example, the
-        _fifth_ derivative of the red curve
-        is the blue, because the _fourth_
-        derivative of the red curve is itself.)
+        Likewise, the yellow is the derivative
+        of the blue, the green is the derivative
+        of the yellow, and the red is the derivative
+        of the green, at which point it starts
+        all over again! (For example, the _fifth_ 
+        derivative of the red curve is the blue,
+        because the _fourth_ derivative of the red
+        curve is itself.)
 
         |> SolutionNote
             After all, the slope of these curves
@@ -184,7 +185,7 @@
             at any given moment in time. This also
             means:
 
-            __the rate of change of the $x$-coordinate
+            __the rate of change of the $x$-coordinated
             of the red particle is the $x$-coordinate
             of the blue particle__
 
@@ -198,7 +199,7 @@
             will equal the value of the blue particle's
             $x$-coordinate. These are the reds and blue
             curves from the problem statement, if we
-            start the red particle at position
+            start the blue particle at position
 
             $$
             (1, 0)
@@ -207,7 +208,7 @@
             at time $t = 0$:
 
             |> Image
-                src=images/svg_ch4_cosine_curves_verified.svg
+                src=images/svg_ch4_cosine_curves_verified_v2.svg
 
             If we add the $x$-coordinates of the green
             and yellow particles, we find the graph

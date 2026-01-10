@@ -2918,7 +2918,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={12}>
+        <Exercise
+          work="ing"
+          number={12}
+        >
           <ExerciseStatement id="_63_hgi_">
             <OuterP>
               <b>
@@ -2941,22 +2944,22 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/W11G.svg" />
             <Pause />
             <OuterP>
-              Likewise, the derivative of the blue
-              is the yellow, the derivative of the yellow
-              is the green, and the derivative of the
-              green is the red, at which point it starts
-              all over again! (For example, the
-              {" "}
+              Likewise, the yellow is the derivative
+              of the blue, the green is the derivative
+              of the yellow, and the red is the derivative
+              of the green, at which point it starts
+              all over again! (For example, the {" "}
               <i>
                 fifth
               </i>
-              {" "} derivative of the red curve
-              is the blue, because the {" "}
+              {" "} 
+              derivative of the red curve is the blue,
+              because the {" "}
               <i>
                 fourth
               </i>
-              {" "}
-              derivative of the red curve is itself.)
+              {" "} derivative of the red
+              curve is itself.)
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -3326,7 +3329,7 @@ const Rest = () => {
                   <Math>
                     $x$
                   </Math>
-                  -coordinate
+                  -coordinated
                 </NoBreak>
                 {" "}
                 of the red particle is the {" "}
@@ -3386,7 +3389,7 @@ const Rest = () => {
                 </NoBreak>
                 {" "} These are the reds and blue
                 curves from the problem statement, if we
-                start the red particle at position
+                start the blue particle at position
               </OuterP>
               <Pause />
               <MathBlock>
@@ -3405,7 +3408,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/sg-c.svg" />
+              <Image src="/build-img/svgo-svg/tBi5.svg" />
               <Pause />
               <OuterP>
                 If we add the {" "}
