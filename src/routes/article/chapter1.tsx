@@ -1,423 +1,524 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
-import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
+import { CentralDisplayItalic, CentralDisplay }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
-import Image  from "~/components/Image";
+import Grid  from "~/components/Grid";
 import InChapterLink  from "~/components/InChapterLink";
+import { Item, List }  from "~/components/List";
 import { Math, MathBlock }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
-import { ImageLeft }  from "~/components/SideImage";
+import { ImageLeft, ImageRight }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
-import { SolutionNote, NoBreak, InTextWarning, Pause, Section }  from "~/components/Wrappers";
+import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter1__() {
   return (
     <Article
       prevPage="/"
-      nextPage=""
-      pageNecessaryMargin={1450}
-      maxElementWidth={700}
-      id="_3_hgi_"
+      nextPage="/article/chapter2"
+      pageNecessaryMargin={800}
+      maxElementWidth={500}
+      id="_22_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            <span class="t-3003-c">
-              the jerk
-              <span class="t-3003">
-                ./src/content/ch4.wly:682:6
-              </span>
-            </span>
+            square roots
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
+          <InChapterLink href="?id=section-2">
+            fractions and division
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-2">
+          <InChapterLink href="?id=section-3">
+            distributivity
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            epilogue
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-4">
+          <InChapterLink href="?id=section-5">
+            vocabulary
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=exercises">
-            <span class="t-3003-c">
-              exercises
-              <span class="t-3003">
-                ./src/content/ch4^exercises/__parent.wly:1:1
-              </span>
-            </span>
+            exercises
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 1:">
-        <span class="t-3003-c">
-          Derivatives
-          <span class="t-3003">
-            ./src/content/ch4__parent.wly:2:11
-          </span>
-        </span>
+        A {" "}
+        <i>
+          Few
+        </i>
+        {" "} Refreshers
       </ArticleTitle>
-      <Section
-        work="ing"
-        id="section-1"
-      >
+      <Section id="section-1">
         <OuterP>
           <b>
-            <span class="t-3003-c">
-              The jerk.
-              <span class="t-3003">
-                ./src/content/ch4.wly:682:6
-              </span>
-            </span>
+            Square Roots.
           </b>
           {" "}
-          The rate of change of acceleration has a
-          name as well, being known as the
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          <span class="t-3003-c">
-            jerk
-            <span class="t-3003">
-              ./src/content/ch4.wly:686:7
-            </span>
-          </span>
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            in physics. The units of jerk (or “the”
-            <span class="t-3003">
-              ./src/content/ch4.wly:688:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          units of jerk, since any units of same {" "}
-          <a
-            href="chapter2#section-9"
-            class="underline-on-hover"
-          >
-            <i>
-              dimension
-            </i>
-          </a>
-          {" "} would do as well) are
+          You might remember that “minus times minus
+          is plus” and that “plus times plus is plus”.
+          (Why? The enemy of my enemy is my friend.)
+          So any nonzero number multiplied by itself
+          is positive. For example,
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          &#123;\te&#123;m&#125; \over \,\te&#123;s&#125;\!&#123;\,&#125;^3&#125;
+          (-2) \times (-2) = 4
           $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:696:5
-          </span>
+        </MathBlock>
+        <Pause />
+        <CentralDisplay>
+          and
+        </CentralDisplay>
+        <Pause />
+        <MathBlock>
+          $$
+          2 \times 2 = 4
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
-          <span class="t-3003-c">
-            or
-            <span class="t-3003">
-              ./src/content/ch4.wly:700:5
-            </span>
-          </span>
+          are both positive. But {" "}
+          <Math>
+            $\sqrt&#123;4&#125;$
+          </Math>
+          {" "}
+          is, by definition, the unique {" "}
+          <i>
+            nonnegative
+          </i>
+          {" "}
+          solution to {" "}
+          <NoBreak>
+            <Math>
+              $x^2 = 4$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          Hence,
         </OuterP>
         <Pause />
-        <CentralDisplayItalic>
-          <span class="t-3003-c">
-            meters per second, per second, per second
-            <span class="t-3003">
-              ./src/content/ch4.wly:702:7
-            </span>
-          </span>
-        </CentralDisplayItalic>
+        <MathBlock>
+          $$
+          \sqrt&#123;(-2)^2&#125; = 2
+          $$
+          <ImageRight
+            src="/build-img/svgo-svg/Z39o.svg"
+            offset_x="5em"
+            compensate_offset_x_for_large_text_columns={true}
+          />
+        </MathBlock>
         <Pause />
         <OuterP>
-          <span class="t-3003-c">
-            which is mildly amusing. Basically, the
-            <span class="t-3003">
-              ./src/content/ch4.wly:704:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          jerk specifies how many {" "}
+          and, in particular, it is {" "}
           <i>
-            meters per second,
-            per second
+            not
           </i>
-          {" "} (a measure of acceleration!)
-          is being gained or lost {" "}
-          <i>
-            per second
-          </i>
-          .
+          {" "} true that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for every real number {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Instead we have
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x|
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for every real number {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} where {" "}
+          <Math>
+            $|x|$
+          </Math>
+          {" "}
+          denotes the absolute value of {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            .
+          </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          <span class="t-3003-c">
-            The term “jerk” is at least half-way well-chosen,
-            <span class="t-3003">
-              ./src/content/ch4.wly:709:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          too, considering that
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          <span class="t-3003-c">
-            jerk
-            <span class="t-3003">
-              ./src/content/ch4.wly:712:7
-            </span>
-          </span>
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            implies a change in acceleration insofar as the
-            <span class="t-3003">
-              ./src/content/ch4.wly:714:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          everyday meaning of the word is concerned—think
-          of experiencing a
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          <span class="t-3003-c">
-            constant acceleration
-            <span class="t-3003">
-              ./src/content/ch4.wly:718:7
-            </span>
-          </span>
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            in a train or subway car, etc—the
-            <span class="t-3003">
-              ./src/content/ch4.wly:720:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          “constant” qualifier, if you think about it, implies
-          a non-jerky experience!
-        </OuterP>
-        <Pause />
-        <OuterP>
-          <b>
-            <span class="t-3003-c">
-              Postscript: Sums, Products, Quotients,
-              <span class="t-3003">
-                ./src/content/ch4.wly:773:6
-              </span>
-            </span>
-            {" "}
-            {" "}
-            and Differences of Functions.
-          </b>
-          {" "}
-          Coming briefly back to Chapter 3-related
-          matters, if
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f, g : \rr \ra \rr
-          $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:778:5
-          </span>
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            then
-            <span class="t-3003">
-              ./src/content/ch4.wly:782:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f \circ g = (x \ra f(g(x)))
-          $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:784:5
-          </span>
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          f + g = (x \ra f(x) + g(x))
-          $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:787:5
-          </span>
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          fg = (x \ra f(x)g
-          (x))
-          $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:790:5
-          </span>
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;f/g&#125; = (x \ra &#123;f(x)/g(x)&#125;)
-          $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:794:5
-          </span>
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          f - g = (x \ra f(x) - g(x))
-          $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:797:5
-          </span>
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            with each equation being a {" "}
-            <span class="t-3003">
-              ./src/content/ch4.wly:801:5
-            </span>
-          </span>
-          <i>
-            definition
-          </i>
-          .
-          The notation
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f \circ g
-          $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:804:5
-          </span>
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            goes back to Exercise {" "}
-            <span class="t-3003">
-              ./src/content/ch4.wly:808:5
-            </span>
-          </span>
-          <InTextWarning>
-            undefined handle at ch4.wly:808:5: _factory_roof_functions_1_
-          </InTextWarning>
-          {" "} of Chapter {" "}
-          <InTextWarning>
-            undefined handle at ch4.wly:808:5: functions
-          </InTextWarning>
-          , with
-          the little circle {" "}
+          (Nb: If ever you want to indicate both
+          solutions of the equation {" "}
+          <Math>
+            $x^2 = 4$
+          </Math>
+          {" "} you
+          can always use the notation {" "}
           <NoBreak>
             “
-            <span class="t-3003-c">
-              <Math>
-                $\circ$
-              </Math>
-              <span class="t-3003">
-                ./src/content/ch4.wly:809:24
-              </span>
-            </span>
+            <Math>
+              $\pm \sqrt&#123;4&#125;$
+            </Math>
+            ”.
+          </NoBreak>
+          {" "}
+          This is what happens, for example, in the
+          maybe-well-known formula
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x = &#123;-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for the solutions to the quadratic equation
+          {" "}
+          <NoBreak>
+            <Math>
+              $ax^2 + bx + c = 0$
+            </Math>
+            .)
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          Next, we will ponder
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          whose value is—by definition—the unique
+          nonnegative solution to
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = 0.5.
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          As beginners, there's nothing wrong with
+          trying to solve this equation by trial and
+          error. With {" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;1\over 4&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} for example,
+          we find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = &#123;1\over 4&#125;\times&#123;1\over 4&#125; = &#123;1\over 16&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          so {" "}
+          <Math>
+            $x = &#123;1\over 4&#125;$
+          </Math>
+          {" "} is not a solution of
+          the equation, being apparently too small.
+          Increasing {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} to {" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;1\over 2&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} say, we
+          find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = &#123;1\over 2&#125;\times&#123;1\over 2&#125; = &#123;1\over 4&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which is better, since {" "}
+          <Math>
+            $1/4$
+          </Math>
+          {" "} is closer to {" "}
+          <NoBreak>
+            <Math>
+              $1/2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          but still too small. Increasing {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} by {" "}
+          <Math>
+            $1/4$
+          </Math>
+          {" "}
+          again, say, to {" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;3\over 4&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} we find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = &#123;3\over 4&#125;\times&#123;3\over 4&#125; = &#123;9\over 16&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which—surprise!—is actually pretty close to
+          {" "}
+          <NoBreak>
+            <Math>
+              $1/2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} as {" "}
+          <NoBreak>
+            <Math>
+              $1/2 = 8/16$
+            </Math>
+            .
+          </NoBreak>
+          {" "} And since {" "}
+          <NoBreak>
+            <Math>
+              $9/16 &gt; 0.5$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $\sqrt&#123;0.5&#125;$
+          </Math>
+          {" "} must be a little {" "}
+          <i>
+            less
+          </i>
+          {" "} than
+          {" "}
+          <NoBreak>
+            <Math>
+              $&#123;3\over 4&#125; = 0.75$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          In last resort, and in reasonably good
+          agreement with our observations, a calculator
+          reveals that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.5&#125; = 0.7071067...
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          where the decimals trail off with no pattern.
+          (This number is irrational.) Even so, the fact
+          that {" "}
+          <Math>
+            $\sqrt&#123;0.5&#125;$
+          </Math>
+          {" "} is {" "}
+          <i>
+            greater
+          </i>
+          {" "} than {" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "} is
+          often perceived as counterintuitive.
+        </OuterP>
+        <OuterP class="indent-10">
+          You can think of it this way: multiplying a
+          value by {" "}
+          <NoBreak>
+            <Math>
+              $0.7071$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} or approximately {" "}
+          <NoBreak>
+            <Math>
+              $\sqrt&#123;0.5&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          is like taking {" "}
+          <Math>
+            $70.71\%$
+          </Math>
+          {" "} of that value—for
+          example, say,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          605 \cdot 0.7071 = 427.7955
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is {" "}
+          <Math>
+            $70.71\%$
+          </Math>
+          {" "} of {" "}
+          <NoBreak>
+            <Math>
+              $605$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} and so on—so if we
+          multiply {" "}
+          <i>
+            twice
+          </i>
+          {" "} by {" "}
+          <Math>
+            $0.7071$
+          </Math>
+          {" "} we obtain
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $70.71\%$
+            </Math>
+          </NoBreak>
+          {" "} of {" "}
+          <NoBreak>
+            <Math>
+              $70.71\%$
+            </Math>
             ”
           </NoBreak>
-          {" "} being known as
-          the {" "}
-          <i>
-            composition operator
-          </i>
-          , while the sum
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f + g
-          $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:812:5
-          </span>
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            and product
-            <span class="t-3003">
-              ./src/content/ch4.wly:816:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          fg
-          $$
-          <span class="t-3003">
-            ./src/content/ch4.wly:818:5
-          </span>
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            of functions already appear in Exercise {" "}
-            <span class="t-3003">
-              ./src/content/ch4.wly:822:5
-            </span>
-          </span>
-          <InTextWarning>
-            undefined handle at ch4.wly:822:5: _function_operations_Q_and_A_
-          </InTextWarning>
-          {" "}
-          of Chapter {" "}
-          <InTextWarning>
-            undefined handle at ch4.wly:823:5: functions
-          </InTextWarning>
-          , also. (On the other hand, the
-          quotient (i.e. {" "}
+          {" "} and it just so happens
+          that {" "}
           <NoBreak>
-            <span class="t-3003-c">
-              <Math>
-                $f/g$
-              </Math>
-              <span class="t-3003">
-                ./src/content/ch4.wly:824:20
-              </span>
-            </span>
-            )
+            “
+            <Math>
+              $70.71\%$
+            </Math>
           </NoBreak>
-          {" "} and difference (i.e.,
+          {" "} of {" "}
+          <NoBreak>
+            <Math>
+              $70.71\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} is close to
           {" "}
           <NoBreak>
-            <span class="t-3003-c">
-              <Math>
-                $f - g$
-              </Math>
-              <span class="t-3003">
-                ./src/content/ch4.wly:825:5
-              </span>
-            </span>
-            )
+            <Math>
+              $50\%$
+            </Math>
+            .
           </NoBreak>
-          {" "} of functions are defined above for
-          the first time, even if the definitions might
+        </OuterP>
+        <OuterP class="indent-10">
+          The point is: if {" "}
+          <NoBreak>
+            “
+            <Math>
+              $X\%$
+            </Math>
+          </NoBreak>
+          {" "} of {" "}
+          <NoBreak>
+            <Math>
+              $X\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} equals {" "}
+          <NoBreak>
+            <Math>
+              $50\%$
+            </Math>
+            ,
+          </NoBreak>
           {" "}
-          <i>
-            seem
-          </i>
-          {" "} familiar!)
+          then, of course, {" "}
+          <NoBreak>
+            <Math>
+              $\rt&#123;0.03&#125;X &gt; 50$
+            </Math>
+            —that
+          </NoBreak>
+          {" "} much
+          seems logical—and, with a little thought, the
+          same phenomenon explains why {" "}
+          <NoBreak>
+            <Math>
+              $\sqrt&#123;0.5&#125; &gt; 0.5$
+            </Math>
+            !
+          </NoBreak>
         </OuterP>
       </Section>
       <Rest />
@@ -430,1692 +531,2369 @@ const Rest = () => {
   return <>
     {showMore() && <>
       <Pause />
+      <Section id="section-2">
+        <OuterP>
+          <b>
+            Fractions and Division.
+          </b>
+          {" "}
+          An elementary fraction, or division, such as
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;50 \over 2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          can be thought of in a few different ways:
+        </OuterP>
+        <Pause />
+        <List>
+          <Item>
+            Fifty halves (i.e., {" "}
+            <NoBreak>
+              <Math>
+                $50 \times &#123;1\over 2&#125;$
+              </Math>
+              ).
+            </NoBreak>
+          </Item>
+          <Item>
+            The size obtained when something of size
+            fifty is divided into two equal parts
+            (answer: {" "}
+            <NoBreak>
+              <Math>
+                $25$
+              </Math>
+              ).
+            </NoBreak>
+          </Item>
+          <Item>
+            The number of times that {" "}
+            <Math>
+              $2$
+            </Math>
+            {" "} goes into {" "}
+            <Math>
+              $50$
+            </Math>
+            {" "}
+            (answer: {" "}
+            <NoBreak>
+              <Math>
+                $25$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} because it takes twenty-five
+            {" "}
+            <NoBreak>
+              <Math>
+                $2$
+              </Math>
+              's
+            </NoBreak>
+            {" "} to make up {" "}
+            <NoBreak>
+              <Math>
+                $50$
+              </Math>
+              ).
+            </NoBreak>
+          </Item>
+        </List>
+        <Pause />
+        <OuterP>
+          But {" "}
+          <Math>
+            $50/2$
+          </Math>
+          {" "} is a ratio of integers, which makes
+          things particularly nice! For a ratio of
+          decimals, such as, say,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;1 \over 0.01&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          our possible points of view are going to be
+          more restricted. Thankfully, however, we can
+          still characterize this fraction as the
+          answer to the question “how many times does
+          {" "}
+          <Math>
+            $0.01$
+          </Math>
+          {" "} go into {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ?”
+          </NoBreak>
+          {" "} as in the third option
+          above. And, indeed,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;1 \over 0.01&#125; \,=\,100
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          because {" "}
+          <Math>
+            $0.01$
+          </Math>
+          {" "} goes {" "}
+          <Math>
+            $100$
+          </Math>
+          {" "} times into {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            .
+          </NoBreak>
+          {" "} For
+          that matter,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123; 1 \over 0.001&#125; = 1000,\qquad&#123;1 \over 0.0001&#125; = 10000,\quad\,\,\,\,\textrm&#123;(etc)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by the same reasoning, which explains why
+          dividing by smaller and smaller numbers produces
+          larger and larger results (and, by extension,
+          why dividing by {" "}
+          <Math>
+            $0$
+          </Math>
+          {" "} is undefined).
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <b>
+            Note.
+          </b>
+          {" "} In general, the ratio of two decimal
+          numbers can be turned into a ratio of integers
+          by multiplying the ratio top and bottom by a
+          suitable power of {" "}
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+            .
+          </NoBreak>
+          {" "} E.g.:
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;1.42 \over 0.8&#125; = &#123;100 \cdot 1.42 \over 100 \cdot 0.8&#125; = &#123;142 \over 80&#125; = &#123;71 \over 40&#125;.
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          This example was chosen randomly, and, if you
+          allow, we would like to see how large {" "}
+          <Math>
+            $71/40$
+          </Math>
+          {" "}
+          really is (one second!):
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;align&#125;
+          &#123;71 \over 40&#125; \,&amp;=\, &#123;40 + 30 + 1 \over 40&#125; \,=\, &#123;40 \over 40&#125; + &#123;30 \over 40&#125; + &#123;1 \over 40&#125;\\
+          \,&amp;=\, 1 + &#123;3 \over 4&#125; + &#123;1 \over 4&#125;\!\cdot \!&#123;1 \over 10&#125;\up&#123;1.5&#125;\\
+          \,&amp;=\, 1 + 0.75 + 0.025 = 1.775\up&#123;1.5&#125;
+          \end&#123;align&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          ...so we find, among others, that {" "}
+          <Math>
+            $71$
+          </Math>
+          {" "} is exactly
+          {" "}
+          <Math>
+            $77.5\%$
+          </Math>
+          {" "} greater than {" "}
+          <NoBreak>
+            <Math>
+              $40$
+            </Math>
+            .
+          </NoBreak>
+          {" "} (Interesting, no?)
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-3">
+        <OuterP>
+          <b>
+            Distributivity.
+          </b>
+          {" "}
+          As you might already know, a number that
+          multiplies a sum can be brought “inside” the
+          sum. For example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          5(10 + 2) \,=\, 5\!\cdot\!10 \,+\, 5\!\cdot\!2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (five times twelve equals fifty plus ten), or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          a(b + c) = ab + ac
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          more generally. This property is known as the
+          {" "}
+          <i>
+            distributivity of multiplication over addition
+          </i>
+          ,
+          or {" "}
+          <i>
+            distributivity
+          </i>
+          {" "} for short.
+        </OuterP>
+        <OuterP class="indent-10">
+          (We might finally clarify that {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $\cdot$
+            </Math>
+            ’
+          </NoBreak>
+          {" "} means
+          “times”, i.e., the same as {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $\times$
+            </Math>
+            ’.
+          </NoBreak>
+          {" "} Moreover,
+          when we write
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          5\!\cdot\!10 \,+\, 5\!\cdot\!2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          we really mean
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (5\!\cdot\!10) + (5\!\cdot\!2)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          as opposed to something else, such as
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          ((5\!\cdot\!10) + 5)\!\cdot\! 2,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          because multiplication takes precedence over
+          addition, by default.)
+        </OuterP>
+        <OuterP class="indent-10">
+          A little more generally, one has such identities
+          as
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(C + D) \,=\, aC + bC + aD + bD
+          $$
+          <ImageLeft
+            src="/build-img/svgo-svg/QC6w.svg"
+            offset_x="1.9em"
+            compensate_offset_x_for_large_text_columns={true}
+          />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          that come from multiplying every term of the first
+          parenthesis with every term of the second
+          parenthesis. Indeed,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(C + D) = (a + b)C + (a + b)D
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by one application of distributivity, while
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)C = aC + bC
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)D = aD + bD
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by distributivity again.
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 1.
+            </b>
+            {" "}
+            One has
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \begin&#123;align&#125;
+            (10 + 2)(10 + 4) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4\\
+            \,&amp;=\, 100 \,+\, 40 \,+\, 20 \,+\, 8\\
+            \,&amp;=\, 168
+            \end&#123;align&#125;
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            so {" "}
+            <NoBreak>
+              <Math>
+                $12 \times 14 = 168$
+              </Math>
+              .
+            </NoBreak>
+          </OuterP>
+        </Example>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 2.
+            </b>
+            {" "}
+            One has
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \begin&#123;align&#125;
+            (10 + 3)(10 + 3) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
+            \,&amp;=\, 100 \,+\, 30 \,+\, 30 \,+\, 9\\
+            \,&amp;=\, 169
+            \end&#123;align&#125;
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            so {" "}
+            <NoBreak>
+              <Math>
+                $13 \times 13 = 169$
+              </Math>
+              .
+            </NoBreak>
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          (The fact that {" "}
+          <Math>
+            $13 \times 13$
+          </Math>
+          {" "} is exactly one
+          greater than {" "}
+          <Math>
+            $12 \times 14$
+          </Math>
+          {" "} is a bit curious
+          indeed.)
+        </OuterP>
+        <OuterP class="indent-10">
+          If we start from the afore-mentioned identity
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(C + D) \,=\, aC + bC + aD + bD
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and set {" "}
+          <NoBreak>
+            <Math>
+              $C = a$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $D = b$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} we find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(a + b) \,=\, aa + ba + ab + bb
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or, equivalently,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)^2 = a^2 + 2ab + b^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          since {" "}
+          <NoBreak>
+            <Math>
+              $(a + b)(a + b) = (a + b)^2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $aa = a^2$
+          </Math>
+          {" "}
+          and {" "}
+          <NoBreak>
+            <Math>
+              $bb = b^2$
+            </Math>
+            .
+          </NoBreak>
+          {" "} (This is the {" "}
+          <i>
+            binomial expansion
+            of degree two
+          </i>
+          , but such terminology is not very
+          important at this stage.)
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 3.
+            </b>
+            {" "}
+            By the last formula (or “binomial expansion
+            of degree two”),
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \begin&#123;align&#125;
+            \up&#123;1&#125; (10 + 3)^2 \,&amp;=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
+            \up&#123;1&#125; \,&amp;=\, 100 + 60 + 9 \\
+            \up&#123;1&#125; \,&amp;=\, 169
+            \end&#123;align&#125;
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            which agrees with Example 2.
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          On the other hand, setting {" "}
+          <NoBreak>
+            <Math>
+              $C = a$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $D = -b$
+          </Math>
+          {" "} in
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(C + D) = aC + aD + bC + bD
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          gives
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(a + (-b)) = aa + a(-b) + ba + b(-b)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or, less pedantically,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(a - b) = aa - ab + ba - bb
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(a - b) = a^2 - b^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          since {" "}
+          <NoBreak>
+            <Math>
+              $- ab + ba = 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $aa = a^2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $bb = b^2$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Note that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          a^2 - b^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          a difference of squares
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          whence {" "}
+          <i>
+            a difference of squares can always be
+            factored
+          </i>
+          . (Factored as {" "}
+          <NoBreak>
+            <Math>
+              $(a + b)(a - b)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} that
+          is.) (PS: “Factored” means “written as a product”.)
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 4.
+            </b>
+            {" "}
+            Since
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            19 = 100 - 81 = 10^2 - 9^2
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            is a difference of squares, {" "}
+            <Math>
+              $19$
+            </Math>
+            {" "} can be
+            factored. (On the other hand {" "}
+            <Math>
+              $19$
+            </Math>
+            {" "} is a prime
+            number, but nevermind.)
+          </OuterP>
+        </Example>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 5.
+            </b>
+            {" "}
+            The algebraic expression
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            1 - x^2
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            can be factored, because
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            1 = 1^2
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            implies that
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            1 - x^2
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            truly is “a difference of squares”. And, indeed,
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            1 - x^2 = (1 - x)(1 + x)
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            as per {" "}
+            <NoBreak>
+              “
+              <Math>
+                $\rt&#123;0.04&#125;a^2 - b^2 = (a - b)(a + b)$
+              </Math>
+              ”.
+            </NoBreak>
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          In relation to distributivity, we should also
+          mention the simple but important fact that
+          multiplying a difference by {" "}
+          <Math>
+            $-1$
+          </Math>
+          {" "} {" "}
+          <i>
+            reverses
+          </i>
+          {" "} the
+          difference. That is,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-1)(a - b) \,=\, b - a
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or, for short,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          -(a - b) \,=\, b - a
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          because, indeed,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;align&#125;
+          (-1)(a - b) \,&amp;=\, (-1)(a + (-b)) \\
+          \,&amp;=\, (-1)a + (-1)(-b) \\
+          \,&amp;=\, -a + b
+          \end&#123;align&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by distributivity (used in the second step).
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 6.
+            </b>
+            {" "}
+            We have {" "}
+            <NoBreak>
+              <Math>
+                $-(10 - 3) = 3 - 10$
+              </Math>
+              .
+            </NoBreak>
+            {" "}
+            (Because {" "}
+            <NoBreak>
+              <Math>
+                $-7 = -7$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} as it would be, haha.)
+          </OuterP>
+        </Example>
+      </Section>
+      <Pause />
+      <Section
+        divider={false}
+        id="section-4"
+      >
+        <OuterP>
+          <b>
+            Epilogue.
+          </b>
+          {" "} Do you remember the near miss between
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          12\cdot 14 \,=\, 168
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          13 \cdot 13 \,=\, 13^2 \,=\, 169
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          ...? Well if you observe, additionally, that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;align&#125;
+          11\,\cdot\,13 &amp;= 12^2 - 1\\
+          10\,\cdot\,12 &amp;= 11^2 - 1\\
+          9\,\cdot\,11 &amp;= 10^2 - 1
+          \end&#123;align&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (etc) you might become suspicious of a pattern!
+          But the mystery is rather thin: we have
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (n - 1)(n + 1) \,=\, n^2 - 1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for {" "}
+          <i>
+            every
+          </i>
+          {" "} real number {" "}
+          <Math>
+            $n$
+          </Math>
+          {" "} because of the
+          formula
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a - b)(a + b) \,=\, a^2 - b^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for a difference of squares!
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-5">
+        <OuterP>
+          <b>
+            Vocabulary.
+          </b>
+          {" "}
+          A pair of algebraic expressions of the form
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          a + b,\, a - b
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is called a {" "}
+          <i>
+            conjugate pair
+          </i>
+          . For example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          n + 1,\, n - 1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a conjugate pair, as is
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;3&#125; + \sqrt&#123;2&#125;,\,\, \sqrt&#123;3&#125; - \sqrt&#123;2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and so on. (Generally speaking, conjugate pairs
+          are good things to multiply together.)
+        </OuterP>
+      </Section>
+      <Pause />
       <Exercises>
-        <Exercise
-          work="ing"
-          number={1}
-        >
-          <ExerciseStatement id="_2_hgi_">
+        <Exercise number={1}>
+          <ExerciseStatement id="_20_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
               </b>
-              {" "}{" "}
               {" "}
-              {" "}
-              <span class="t-3003-c">
-                Exercise {" "}
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:4:5
-                </span>
-              </span>
-              <InTextWarning>
-                undefined handle at ch4^exercises/_f_equals_f_5_.wly:4:5: _four_particles_
-              </InTextWarning>
-              {" "} exhibits a function {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $f$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:4:53
-                  </span>
-                </span>
-                —in
-              </NoBreak>
-              {" "} fact,
-              four different functions {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $f$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:5:30
-                  </span>
-                </span>
-                —such
-              </NoBreak>
-              {" "} that
+              True or false (and, if possible, explain):
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              f' \ne f
-              $$
-              <span class="t-3003">
-                ./src/content/ch4^exercises/_f_equals_f_5_.wly:7:5
-              </span>
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:11:5
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f'' \ne f
-              $$
-              <span class="t-3003">
-                ./src/content/ch4^exercises/_f_equals_f_5_.wly:13:5
-              </span>
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:17:5
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f''' \ne f
-              $$
-              <span class="t-3003">
-                ./src/content/ch4^exercises/_f_equals_f_5_.wly:19:5
-              </span>
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                but
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:23:5
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;(4)&#125; = f
-              $$
-              <span class="t-3003">
-                ./src/content/ch4^exercises/_f_equals_f_5_.wly:25:5
-              </span>
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                surprise, surprise! Can you do the same with
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:29:5
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                “
-                <span class="t-3003-c">
-                  <Math>
-                    $5$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:30:6
-                  </span>
-                </span>
-                ”
-              </NoBreak>
-              {" "} instead of {" "}
-              <NoBreak>
-                “
-                <span class="t-3003-c">
-                  <Math>
-                    $4$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:30:23
-                  </span>
-                </span>
-                ”?
-              </NoBreak>
-              {" "} I.e., find a function
-              {" "}
-              <span class="t-3003-c">
+            <Grid
+              cols={3}
+              sm_cols={2}
+              sm_cutoff={520}
+              center_on_overflow={true}
+            >
+              <Item>
+                a. {" "}
                 <Math>
-                  $f$
+                  $0.9^2 &lt; 0.9$
                 </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:31:5
-                </span>
-              </span>
+              </Item>
+              <Item>
+                b. {" "}
+                <Math>
+                  $\sqrt&#123;0.01&#125; = 0.1$
+                </Math>
+              </Item>
+              <Item>
+                c. {" "}
+                <Math>
+                  $\sqrt[2]&#123;\up&#123;0.8&#125;\sqrt[3]&#123;2&#125;&#125; = \sqrt[3]&#123;\up&#123;0.8&#125;\sqrt[2]&#123;2&#125;&#125;$
+                </Math>
+              </Item>
+              <Item>
+                d. {" "}
+                <Math>
+                  $&#123;\sqrt&#123;2&#125; \over \up&#123;0.55&#125;2&#125; = \sqrt&#123;0.5&#125;$
+                </Math>
+              </Item>
+              <Item>
+                e. {" "}
+                <Math>
+                  $&#123;1 \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;0.5&#125;$
+                </Math>
+              </Item>
+              <Item>
+                f. {" "}
+                <Math>
+                  $2^&#123;30&#125; &gt; 1000^3$
+                </Math>
+              </Item>
+              <Item>
+                g. {" "}
+                <Math>
+                  $&#123;1 \over 0.95&#125; &gt; 1.05$
+                </Math>
+              </Item>
+              <Item>
+                h. {" "}
+                <Math>
+                  $(-1)^&#123;101&#125; = -1$
+                </Math>
+              </Item>
+              <Item>
+                i. {" "}
+                <Math>
+                  $&#123;100 \over \up&#123;0.5&#125;99&#125; &lt; &#123;101 \over \up&#123;0.5&#125;100&#125;$
+                </Math>
+              </Item>
+            </Grid>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Part by part:
+            </OuterP>
+            <Pause />
+            <OuterP>
+              a. (True) We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.9^2 = &#123;9 \over 10&#125;\cdot&#123;9 \over 10&#125; = &#123;81 \over 100&#125; = 0.81
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and {" "}
+              <NoBreak>
+                <Math>
+                  $0.81 &lt; 0.9$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              b. (True) We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.1^2 = &#123;1 \over 10&#125; \cdot &#123;1 \over 10&#125; = &#123;1 \over 100&#125; = 0.01,
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and {" "}
+              <Math>
+                $0.1$
+              </Math>
+              {" "} is nonnegative, so {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;0.01&#125; = 0.1$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              c. (True) In fact,
+              {" "}
+              <Math>
+                $\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;$
+              </Math>
+              {" "}
+              and {" "}
+              <Math>
+                $\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;$
+              </Math>
+              {" "} are
+              both equal to {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+                </Math>
+                .
+              </NoBreak>
+              {" "} To
+              convince yourself, note that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\,\, (\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
+              =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\qquad\\
+              =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \\
+              =&amp; \,\, \up&#123;1.4&#125; (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;)\\
+              =&amp; \,\, \up&#123;1.4&#125; 2
+              \end&#123;align&#125;
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/rgbH.svg"
+                offset_y="23.5%"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+                  &amp;\,\, (\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
+                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\\
+                 =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;)\\
+                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.65&#125;2&#125; \times \sqrt[2]&#123;\up&#123;0.65&#125;2&#125;\\
+                 =&amp;\,\, \up&#123;1.4&#125; 2
+              \end&#123;align&#125;
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/Trg3.svg"
+                offset_y="23.5%"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so {" "}
+              <NoBreak>
+                <Math>
+                  $(\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 =
+                  (\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 = 2$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Technically, however, a number {" "}
+              <Math>
+                $x$
+              </Math>
               {" "} such that
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              f^&#123;(n)&#125; \ne f
+              x^6 = 2
               $$
-              <span class="t-3003">
-                ./src/content/ch4^exercises/_f_equals_f_5_.wly:33:5
-              </span>
             </MathBlock>
             <Pause />
             <OuterP>
-              <span class="t-3003-c">
-                for {" "}
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:37:5
-                </span>
-              </span>
-              <span class="t-3003-c">
-                <Math>
-                  $n = 1, 2, 3, 4$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:37:9
-                </span>
-              </span>
-              {" "} but
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;(5)&#125; = f
-              $$
-              <span class="t-3003">
-                ./src/content/ch4^exercises/_f_equals_f_5_.wly:39:5
-              </span>
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                ...?
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:43:5
-                </span>
-              </span>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              <span class="t-3003-c">
-                We can naïvely try to imitiate how the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:47:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              curves of Exercise {" "}
-              <InTextWarning>
-                undefined handle at ch4^exercises/_f_equals_f_5_.wly:48:9: _illustrate_the_difference_quotient_
-              </InTextWarning>
-              {" "} are generated by
-              placing five equally spaced particles
-              around the unit circle (“the” unit circle
-              is the one centered at {" "}
+              is not necessarily {" "}
               <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $(0, 0)$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:51:32
-                  </span>
-                </span>
+                <Math>
+                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+                </Math>
                 ,
               </NoBreak>
-              {" "} by
-              convention), instead of 4:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/826P.svg"
-              local_url="./images/svg_ch4_5_euler_position_vectors.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                The idea would be that the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:57:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                velocity vector
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:59:11
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                of the red particle is the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:61:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                position vector
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:63:11
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                of the blue particle,
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:65:9
-                </span>
-              </span>
               {" "}
-              {" "}
-              likewise for the blue and yellow particles,
-              and so on. (Position vectors shown above.)
-              For example, at the instant above, the
-              velocity vectors would be as follows:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/uq4U.svg"
-              local_url="./images/svg_ch4_5_euler_velocity_vectors.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                The velocity vectors are
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:74:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <CentralDisplay>
-              <span class="t-3003-c">
-                NOT
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:76:11
-                </span>
-              </span>
-            </CentralDisplay>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                tangent to the unit circle, and so the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:78:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              particles will leave the circle!
-              (But that's OK.) In one-tenth a unit
-              of time, for example, the particles would
-              travel approximately one-tenth their
-              velocity vectors, that would bring them
-              to approximately these new positions:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/ZQgt.svg"
-              local_url="./images/svg_ch4_5_euler_after_1_10th.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                In the next one-tenth unit of time we
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:89:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              can apply a similar approximation again,
-              advancing the particles by {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $&#123;1\over 10&#125;$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:91:36
-                  </span>
-                </span>
-                th
-              </NoBreak>
-              {" "}
-              of [the current approximation to] their
-              velocity vectors. Skipping the construction
-              lines:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/0xaW.svg"
-              local_url="./images/svg_ch4_5_euler_after_2_10th.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Applying the same process for {" "}
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:99:9
-                </span>
-              </span>
-              <span class="t-3003-c">
-                <Math>
-                  $8$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:99:39
-                </span>
-              </span>
-              {" "} more
-              steps:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/hg3g.svg"
-              local_url="./images/svg_ch4_5_euler_after_10_10th.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                To be clear, in the above figure, the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:105:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              position of the red particle at, say, the
-              fifth step...
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/GKbB.svg"
-              local_url="./images/svg_ch4_5_euler_after_5_10th.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                ...is obtained by starting from the red
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:112:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              particle's position at the fourth step...
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/jG_S.svg"
-              local_url="./images/svg_ch4_5_euler_after_4_10th.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                ...and adding one-tenth of the approximation
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:118:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              that we have to the red particle's velocity
-              vector at that moment, that approximation
-              being namely the blue particle's position
-              vector at the fourth step {" "}
-              <NoBreak>
-                (
-                <span class="t-3003-c">
-                  <Math>
-                    $t = &#123;4\over 10&#125;$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:122:36
-                  </span>
-                </span>
-                )...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/Js6D.svg"
-              local_url="./images/svg_ch4_5_euler_after_4_10th_b.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                ...and we do the same for each particle,
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:127:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              to advance to the next step.
+              because {" "}
+              <Math>
+                $x = -\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+              </Math>
+              {" "} satisfies
+              this equation as well!
             </OuterP>
             <OuterP class="indent-10">
-              <span class="t-3003-c">
-                If we stop {" "}
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:130:9
-                </span>
-              </span>
-              <span class="t-3003-c">
+              The last step, therefore, is to note that
+              {" "}
+              <Math>
+                $\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;$
+              </Math>
+              {" "} and
+              {" "}
+              <Math>
+                $\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;$
+              </Math>
+              {" "} are both
+              {" "}
+              <i>
+                nonnegative
+              </i>
+              {" "} numbers (taken as obvious),
+              and which implies that they are the {" "}
+              <i>
+                unique
+                nonnegative
+              </i>
+              {" "} solution to {" "}
+              <NoBreak>
                 <Math>
-                  $10$
+                  $x^6 = 2$
                 </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:130:20
-                </span>
-              </span>
-              {" "} times as often,
-              advancing the clock by {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $&#123;1\over 100&#125;$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:131:32
-                  </span>
-                </span>
-                th
-              </NoBreak>
-              {" "} of
-              a unit of time at each step, the same figure
-              becomes just a blur (still going from
-              {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $t = 0$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:134:9
-                </span>
-              </span>
-              {" "} to {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $t = 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:134:20
-                  </span>
-                </span>
-                ):
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/8BpD.svg"
-              local_url="./images/svg_ch4_5_euler_after_100_100th_blur.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                To visualize such a fine-grained
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:139:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              approximation we need to revert to drawing
-              the particles as points. In the following
-              figure the colored paths are points that
-              come from a {" "}
-              <NoBreak>
-                “
-                <span class="t-3003-c">
-                  <Math>
-                    $&#123;1\over 100&#125;$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:143:22
-                  </span>
-                </span>
-                th”
-              </NoBreak>
-              {" "} approximation,
-              while the orange dots are the old positions
-              obtained from a {" "}
-              <NoBreak>
-                “
-                <span class="t-3003-c">
-                  <Math>
-                    $&#123;1\over 10&#125;$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:145:26
-                  </span>
-                </span>
-                th”
-              </NoBreak>
-              {" "}
-              approximation:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/uXS-.svg"
-              local_url="./images/svg_ch4_5_euler_after_100_100th_points.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Zooming in a bit (or else we still can't
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:151:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              see anything):
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/IUP8.svg"
-              local_url="./images/svg_ch4_5_euler_after_100_100th_zoomed.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                In any case, even the {" "}
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:157:9
-                </span>
-              </span>
-              <NoBreak>
-                “
-                <span class="t-3003-c">
-                  <Math>
-                    $&#123;1\over 100&#125;$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:157:32
-                  </span>
-                </span>
-                th”
-              </NoBreak>
-              {" "}
-              approximation is just an approximation,
-              but the point is that such approximations
-              do converge to a set of “true” particle
-              paths, as pictured in {" "}
-              <NoBreak>
-                Fig
-                <span class="t-3003-c">
-                  <Math>
-                    $.$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:161:34
-                  </span>
-                </span>
-              </NoBreak>
-              {" "} 1, that can
-              be computed by some wizards; as time can
-              be played forward or backward, these paths
-              form doubly-infinite spirals—in to infinity,
-              out to infinity.
-              <ImageLeft
-                offset_x="1.5em"
-                src="/build-img/svgo-svg/QRVl.svg"
-                children_x="50%"
-                children_y="105%"
-                local_url="./images/svg_ch4_5_euler_spiral_figure.svg"
-              >
-                <p>
-                  <span style="font-size:1.4em;left:50%;transform:translate(-50%);position:absolute;white-space:nowrap;">
-                    Fig. 1
-                  </span>
-                </p>
-              </ImageLeft>
-            </OuterP>
-            <OuterP class="indent-10">
-              <span class="t-3003-c">
-                In any case [take two] the point is that
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:177:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              whether or not you are one of the wizards,
-              you can
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                guess
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:181:11
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                the existence of these five paths—sort
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:183:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              of “feel” that they exist! (This is a
-              moral consolation prize, at least.)
-            </OuterP>
-            <OuterP class="indent-10">
-              <span class="t-3003-c">
-                We can also convert the paths into a
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:187:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              function
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f
-              $$
-              <span class="t-3003">
-                ./src/content/ch4^exercises/_f_equals_f_5_.wly:190:9
-              </span>
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                that satisfies the problem requirements.
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:194:9
-                </span>
-              </span>
-            </OuterP>
-            <OuterP class="indent-10">
-              <span class="t-3003-c">
-                For example let {" "}
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:196:9
-                </span>
-              </span>
-              <span class="t-3003-c">
-                <Math>
-                  $f$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:196:25
-                </span>
-              </span>
-              {" "} be the function that,
-              given a time {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $t$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:197:22
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "} outputs the {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:197:39
-                  </span>
-                </span>
-                -coordinate
-              </NoBreak>
-              {" "}
-              of the red particle at {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $t$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:198:32
-                  </span>
-                </span>
-                ;
-              </NoBreak>
-              {" "} then, to spell
-              it all out, since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                the rate of change of the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:201:11
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:202:9
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:202:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the red particle is the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:202:12
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:203:9
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:203:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the blue particle
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:203:12
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                <Math>
-                  <span class="t-3003-c">
-                    $f'$
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:205:10
-                    </span>
-                  </span>
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:205:9
-                </span>
-              </span>
-              {" "} is the {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:205:21
-                  </span>
-                </span>
-                -coordinate
-              </NoBreak>
-              {" "} of the blue
-              particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                the rate of change of the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:208:11
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:209:9
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:209:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the blue particle is the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:209:12
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:210:9
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:210:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the yellow particle
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:210:12
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                <Math>
-                  <span class="t-3003-c">
-                    $f''$
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:212:10
-                    </span>
-                  </span>
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:212:9
-                </span>
-              </span>
-              {" "} is the {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:212:22
-                  </span>
-                </span>
-                -coordinate
-              </NoBreak>
-              {" "} of the
-              yellow particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                the rate of change of the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:215:11
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:216:9
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:216:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the yellow particle is the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:216:12
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:217:9
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:217:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the green particle
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:217:12
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                <Math>
-                  <span class="t-3003-c">
-                    $f'''$
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:219:10
-                    </span>
-                  </span>
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:219:9
-                </span>
-              </span>
-              {" "} is the {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:219:23
-                  </span>
-                </span>
-                -coordinate
-              </NoBreak>
-              {" "} of the
-              green particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                the rate of change of the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:222:11
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:223:9
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:223:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the green particle
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:223:12
-                </span>
-              </span>
-              {" "}
-              {" "}
-              is the {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:224:16
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:224:19
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the purple
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:224:19
-                </span>
-              </span>
-              {" "}
-              {" "}
-              particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                <Math>
-                  <span class="t-3003-c">
-                    $f''''$
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:227:10
-                    </span>
-                  </span>
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:227:9
-                </span>
-              </span>
-              {" "} is the {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:227:24
-                  </span>
-                </span>
-                -coordinate
-              </NoBreak>
-              {" "} of the
-              purple particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                the rate of change of the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:230:11
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:231:9
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:231:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the purple particle is the
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:231:12
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $x$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:232:9
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  -coordinate
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:232:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} of the red particle
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:232:12
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                <Math>
-                  <span class="t-3003-c">
-                    $f''''' = f^&#123;(5)&#125;$
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:234:10
-                    </span>
-                  </span>
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch4^exercises/_f_equals_f_5_.wly:234:9
-                </span>
-              </span>
-              {" "} equals {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $f$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:234:35
-                  </span>
-                </span>
                 .
               </NoBreak>
             </OuterP>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}{" "}
-                {" "}
-                {" "}
-                <span class="t-3003-c">
-                  If you graph the {" "}
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:237:13
-                  </span>
-                </span>
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $x$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:237:30
-                    </span>
-                  </span>
-                  -coordinates
-                </NoBreak>
-                {" "} of the
-                5 particles over time, each in their
-                color, you get a graph like so, in which
-                blue is the derivative of red, yellow is
-                the derivative of blue, etc; the function
-                {" "}
-                <span class="t-3003-c">
-                  <Math>
-                    $f$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:242:13
-                  </span>
-                </span>
-                {" "} can be taken to be any one of these
-                curves:
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/svg/U6Hi.svg"
-                local_url="./images/svg_ch4_5_euler_final_graph.svg"
+            <OuterP>
+              d. (True) In general,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; = \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all {" "}
+              <NoBreak>
+                <Math>
+                  $x \geq 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $y &gt; 0$
+              </Math>
+              {" "} (you need each
+              root to be defined), so
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sqrt&#123;2&#125; \over 2&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;4&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;2 \over 4&#125; = \sqrt&#123;0.5&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...ta-daa!
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 1.
+              </i>
+              {" "} One can also proceed by “direct
+              verification”:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;\sqrt&#123;2&#125; \over 2&#125;\right)^&#123;\!2&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;\cdot&#123;\sqrt&#123;2&#125; \over 2&#125;
+              = &#123;\sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125; \over 4&#125; = &#123;2 \over 4&#125; = 0.5.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (This, together with the fact that
+              {" "}
+              <Math>
+                $&#123;\sqrt&#123;2&#125; \over 2&#125;$
+              </Math>
+              {" "} is not negative,
+              establishes that {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;\sqrt&#123;2&#125; \over 2&#125; =
+                  \sqrt&#123;0.5&#125;$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              e. (True) Using the
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; =
+                  \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} identity:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;1&#125; \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;1 \over 2&#125; = \sqrt&#123;0.5&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              Or by direct verification:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;1 \over \sqrt&#123;2&#125;&#125;\right)^&#123;\!2&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;\cdot&#123;1 \over \sqrt&#123;2&#125;&#125;
+              = &#123;1 \over \sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125;&#125; = &#123;1 \over 2&#125; = 0.5.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (And {" "}
+              <Math>
+                $1 \over \sqrt&#123;2&#125;$
+              </Math>
+              {" "} is nonnegative.)
+              Or by reducing to part d:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;2&#125; \cdot \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (The point being: we already know that
+              {" "}
+              <Math>
+                $&#123;\sqrt&#123;2&#125; \over 2&#125; = \sqrt&#123;0.5&#125;$
+              </Math>
+              {" "} by part d.)
+            </OuterP>
+            <Pause />
+            <OuterP>
+              f. (True) We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2^&#123;30&#125; = 2^&#123;10&#125; \times 2^&#123;10&#125; \times 2^&#123;10&#125; = (2^&#123;10&#125;)^3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (2^&#123;10&#125;)^3 = (1024)^3 &gt; 1000^3.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 2.
+              </i>
+              {" "}
+              The first ten or so powers of {" "}
+              <Math>
+                $2$
+              </Math>
+              {" "} are worth
+              knowing by heart (here's {" "}
+              <i>
+                eleven
+              </i>
+              {" "} powers, mind
+              you):
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;array&#125;&#123;c|c&#125;
+              \,\,\,\,n\,\,\,\, &amp; 2^n\dn&#123;0.3&#125; \\ \hline
+              0 &amp; 1 \up&#123;1.1&#125;\\
+              1 &amp; 2 \\
+              2 &amp; 4 \\
+              3 &amp; 8 \\
+              4 &amp; 16 \\
+              5 &amp; 32 \\
+              6 &amp; 64 \\
+              7 &amp; 128 \\
+              8 &amp; 256 \\
+              9 &amp; 512 \\
+              10 &amp; 1024
+              \end&#123;array&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              Among which, the fact that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2^&#123;10&#125; \approx 10^3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be particularly useful to know! For
+              example, if a 1-millimeter-thick napkin is
+              folded {" "}
+              <Math>
+                $50$
+              </Math>
+              {" "} times over, doubling the width
+              each time, one obtains something of
+              thickness
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2^&#123;50&#125;\fw\te&#123;mm&#125; = (2^&#123;10&#125;)^5\fw\te&#123;mm&#125; \approx (10^3)^5\fw\te&#123;mm&#125; = 10^&#123;15&#125;\fw\te&#123;mm&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              As
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1\fw\te&#123;mm&#125; = 10^&#123;-6&#125;\fw\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              this is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              10^&#123;15&#125;\fw&#123;&#125;(10^&#123;-6&#125;\fw\te&#123;km&#125;) = 10^&#123;15-6&#125;\fw\te&#123;km&#125; = 10^&#123;9&#125;\fw\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or {" "}
+              <i>
+                one billion
+              </i>
+              {" "} kilometers. By
+              comparison, the distance from the Earth to
+              the Sun is a mere {" "}
+              <Math>
+                $150$
+              </Math>
+              {" "} million kilometers.
+              (The point being: that we could go from the
+              relatively mysterious
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;2^&#123;50&#125;\fw\te&#123;mm&#125;\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to the relatively less mysterious
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;\fw10^&#123;15&#125;\te&#123;mm&#125;\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              thanks to the fact that {" "}
+              <NoBreak>
+                <Math>
+                  $2^&#123;10&#125; \approx 10^3$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              g. (True) As an inequality can be multiplied
+              on both sides by a positive number while
+              preserving the inequality, one has
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp; &#123;1 \over 0.95&#125; &gt; 1.05\\
+              \iff &amp; 1 &gt; 1.05 \cdot 0.95\up&#123;1.4&#125;\\
+              \iff &amp; 1 &gt; (1 + 0.05)(1 - 0.05)\up&#123;1.4&#125;\\
+              \iff &amp; 1 &gt; 1 - 0.05^2\up&#123;1.4&#125;
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (using the fact that {" "}
+              <NoBreak>
+                <Math>
+                  $(1+x)(1-x) = 1-x^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;\,(a+b)(a-b) = a^2-b^2\,\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              fame), and since the {" "}
+              <i>
+                last
+              </i>
+              {" "} inequality is true,
+              the {" "}
+              <i>
+                first
+              </i>
+              {" "} inequality is true! (Recall that
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\!\iff\!$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} means “if and only if”.)
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 3.
+              </i>
+              {" "}
+              More generally, even though
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 1 - \epsilon&#125; &gt; 1 + \epsilon
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for any small {" "}
+              <NoBreak>
+                <Math>
+                  $\epsilon &gt; 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the number
+              {" "}
+              <Math>
+                $1 + \epsilon$
+              </Math>
+              {" "} remains a good approximation to
+              {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1 \over 1 - \epsilon&#125;$
+                </Math>
+                .
+              </NoBreak>
+              {" "} For example,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 0.99&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is a good approximation to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 0.99&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              while
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 0.999&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is a good approximation to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 0.999&#125;,
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              etc.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              h. (True) Here are the first few powers of {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "}
+              (note how each additional multiplication by {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "}
+              simply changes the sign of the previous result):
+            </OuterP>
+            <Pause />
+            <Grid
+              cols={3}
+              place_items="end"
+            >
+              <Item>
+                <Math>
+                  $(-1)^1 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $-1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^2 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)\times (-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^3 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)\times(-1)\times (-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $-1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^4 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)\times(-1)\times(-1)\times(-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^5 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $\,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $-1$
+                </Math>
+              </Item>
+            </Grid>
+            <Pause />
+            <OuterP>
+              (Etc.) Obviously, even powers of {" "}
+              <Math>
+                $(-1)$
+              </Math>
+              {" "} are
+              equal to {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} while odd powers of {" "}
+              <Math>
+                $(-1)$
+              </Math>
+              {" "} are
+              equal to {" "}
+              <NoBreak>
+                <Math>
+                  $-1$
+                </Math>
+                .
+              </NoBreak>
+              {" "} As {" "}
+              <Math>
+                $101$
+              </Math>
+              {" "} is odd, {" "}
+              <Math>
+                $(-1)^&#123;101&#125;$
+              </Math>
+              {" "}
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $-1$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              i. (False) We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;100 \over 99&#125; = &#123;99 + 1 \over 99&#125; = 1 + &#123;1 \over 99&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;101 \over 100&#125; = &#123;100 + 1 \over 100&#125; = 1 + &#123;1 \over 100&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so the smaller of the two fractions is {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;101
+                  \over 100&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} since {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1 \over 100&#125; &lt; &#123;1 \over
+                  99&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 4.
+              </i>
+              {" "}
+              The difference
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 99&#125; - &#123;1 \over 100&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is interesting in its own right, being
+              connected to a famous infinite sum. To
+              visualize this sum, picture a hare poised at
+              {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} on the number line. This hare runs
+              forward by one unit and backwards by half a
+              unit, stopping at the number
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 - &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by virtue of this back-and-forth movement.
+              The hare then proceeds to run forward by
+              {" "}
+              <i>
+                half
+              </i>
+              {" "} a unit and back by a {" "}
+              <i>
+                third
+              </i>
+              {" "} of a unit,
+              stopping at
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right) \\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right) \\
+              \hline
+              = \,&amp;\, \left(1 - &#123;1 \over 3&#125;\right)
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for another break. Keeping with this pattern,
+              the hare then stops at
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              \hline
+              = \,&amp;\, \left(1 - &#123;1 \over 4&#125;\right)
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and then at
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
+              \hline
+              = \,&amp;\, \left(1 - &#123;1 \over 5&#125;\right)
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and so on.
+              Clearly, the successive positions at which
+              the hare stops are approaching the number {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}
+              from the left, pointing to the fact that the
+              {" "}
+              <i>
+                infinite
+              </i>
+              {" "} sum
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
+              + \,&amp;\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is “equal” (in some sense) to {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                .
+              </NoBreak>
+              {" "} But how
+              much, exactly, is the {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                -th
+              </NoBreak>
+              {" "} term
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              of the sum? (By the way, this {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                -th
+              </NoBreak>
+              {" "} term
+              is the difference
+              {" "}
+              <Math>
+                $&#123;1 \over 99&#125; - &#123;1 \over 100&#125;$
+              </Math>
+              {" "} for {" "}
+              <NoBreak>
+                <Math>
+                  $n = 99$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              which is how we came to be reminded of this
+              infinite sum in the first place.) Well...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; &amp;= &#123;1 \over n&#125;\cdot&#123;n+1 \over n+1&#125;\, - \,
+              &#123;1 \over n+1&#125;\cdot&#123;n \over n&#125;\up&#123;1.5&#125;\\
+              &amp;= &#123;n+1 \over n(n+1)&#125; - &#123;n \over n(n+1)&#125;\up&#123;1.5&#125;\\
+              &amp;= &#123;1 \over n(n+1)&#125;\up&#123;1.5&#125;
+              \end&#123;align&#125;
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/omps.svg"
+                offset_y="-0.5em"
+                compensate_offset_x_for_large_text_columns={true}
               />
-            </SolutionNote>
+            </MathBlock>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}{" "}
-                {" "}
-                {" "}
-                <span class="t-3003-c">
-                  There is nothing special about
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:249:13
-                  </span>
-                </span>
-                {" "}
-                {" "}
-                {" "}{" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $x$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:250:13
-                    </span>
-                  </span>
-                  -coordinates
-                </NoBreak>
-                {" "} vis-à-vis {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $y$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:250:39
-                    </span>
-                  </span>
-                  -coordinates.
-                </NoBreak>
-                {" "}
-                You can also define {" "}
-                <span class="t-3003-c">
-                  <Math>
-                    $f(t)$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:251:33
-                  </span>
-                </span>
-                {" "} to be, e.g.,
-                the {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $y$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:252:17
-                    </span>
-                  </span>
-                  -coordinate
-                </NoBreak>
-                {" "} of the red particle
-                at time {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $t$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:253:21
-                    </span>
-                  </span>
-                  .
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
+            <OuterP>
+              ...it's that much. (For example,
+            </OuterP>
             <Pause />
-            <SolutionNote id="_1_hgi_">
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}{" "}
-                {" "}
-                {" "}
-                <span class="t-3003-c">
-                  It is worth noting that, in fact, the
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:257:13
-                  </span>
-                </span>
-                {" "}
-                {" "}
-                {" "}{" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $x$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:258:13
-                    </span>
-                  </span>
-                  -
-                </NoBreak>
-                {" "} and {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $y$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:258:22
-                    </span>
-                  </span>
-                  -coordinates
-                </NoBreak>
-                {" "} live separate
-                lives. The rate of change of each
-                {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $x$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:260:13
-                    </span>
-                  </span>
-                  -coordinate
-                </NoBreak>
-                {" "} is some other {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $x$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:260:42
-                    </span>
-                  </span>
-                  -coordinate,
-                </NoBreak>
-                {" "}
-                and the rate of change of each {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $y$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:261:44
-                    </span>
-                  </span>
-                  -coordinate
-                </NoBreak>
-                {" "}
-                is some other {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $y$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:262:27
-                    </span>
-                  </span>
-                  -coordinate—you
-                </NoBreak>
-                {" "} could
-                scramble a {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $y$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:263:24
-                    </span>
-                  </span>
-                  -coordinate,
-                </NoBreak>
-                {" "} and the {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $x$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:263:48
-                    </span>
-                  </span>
-                  -coordinates
-                </NoBreak>
-                {" "}
-                would never know!
-              </OuterP>
-            </SolutionNote>
+            <MathBlock>
+              $$
+              &#123;1 \over 1&#125; - &#123;1 \over 2&#125; = &#123;1 \over 1 \cdot 2&#125; = &#123;1 \over 2&#125;
+              $$
+            </MathBlock>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 4.
-                </i>
-                {" "}{" "}
-                {" "}
-                {" "}
-                <span class="t-3003-c">
-                  Adding to this observation, we don't
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:267:13
-                  </span>
-                </span>
-                {" "}
-                {" "}
-                {" "}{" "}
-                <i>
-                  need
-                </i>
-                {" "} to start the particles in
-                a symmetric configuration. Symmetry only
-                helps to picture how the positions of the
-                particles will evolve without making any
-                computations. We also don't {" "}
-                <i>
-                  need
-                </i>
-                {" "}
-                to work in two dimensions. We can place
-                the particles in a one-dimensional world,
-                e.g., ...
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/svgo-svg/cejz.svg"
-                local_url="./images/svg_ch4_5_euler_one_dimensional.svg"
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 2&#125; - &#123;1 \over 3&#125; = &#123;1 \over 2 \cdot 3&#125; = &#123;1 \over 6&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and so on.) So the infinite sum
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
+              + \,&amp;\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;\dn&#123;1&#125;\\ \hline
+              = \,&amp;\, 1\up&#123;1.5&#125;
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can also be written
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 1 \cdot 2&#125; + &#123;1 \over 2 \cdot 3&#125; + &#123;1 \over 3 \cdot 4&#125; + &#123;1 \over 4 \cdot 5&#125; + &#123;1 \over
+              5 \cdot 6&#125; + \dots \,=\, 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 2&#125; + &#123;1 \over 6&#125; + &#123;1 \over 12&#125; + &#123;1 \over 20&#125; + &#123;1 \over 30&#125; + \dots \,=\, 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              equivalently) which is not obvious at first
+              glance, and kind of interesting!
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 5.
+              </i>
+              {" "} The fact that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              means, in particular, that
+              {" "}
+              <Math>
+                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
+              </Math>
+              {" "} is roughly
+              {" "}
+              <Math>
+                $&#123;1 \over n^2&#125;$
+              </Math>
+              {" "} for large {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which is
+              sometimes handy to know. For example,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is approximately {" "}
+              <NoBreak>
+                <Math>
+                  $1/10^2 = 0.01$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} while
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 100&#125; - &#123;1 \over 101&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is approximately {" "}
+              <NoBreak>
+                <Math>
+                  $1/100^2 = 0.01^2 = 0.0001$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              etc.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={2}>
+          <ExerciseStatement id="_21_hgi_">
+            <OuterP>
+              <b>
+                Exercise 2.
+              </b>
+              {" "}
+              In the solution to {" "}
+              <InChapterLink
+                href="/article/chapter1#_20_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 1
+              </InChapterLink>
+              {" "} it
+              is observed that the difference
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is {" "}
+              <i>
+                roughly
+              </i>
+              {" "} {" "}
+              <Math>
+                $1/n^2$
+              </Math>
+              {" "} for large {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                .
+              </NoBreak>
+              {" "} But how
+              far off is this exactly? (I.e., what is the
+              difference between {" "}
+              <Math>
+                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
+              </Math>
+              {" "}
+              and {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1 \over n^2&#125;$
+                </Math>
+                ?)
+              </NoBreak>
+              {" "} And {" "}
+              <i>
+                roughly
+              </i>
+              {" "} how much is
+              this far-offness, for large {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
+              $$
+              <ImageRight
+                offset_x="5rem"
+                src="/build-img/svgo-svg/Xx87.svg"
+                squiggle={false}
+                compensate_offset_x_for_large_text_columns={true}
               />
-              <Pause />
-              <OuterP>
-                <span class="t-3003-c">
-                  ...(the initial positions really don't
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:280:13
-                  </span>
-                </span>
-                {" "}
-                {" "}
-                matter much, as long as you don't give
-                all the particles the {" "}
-                <i>
-                  same
-                </i>
-                {" "} initial
-                position, or else you won't have {" "}
-                <span class="t-3003-c">
-                  <Math>
-                    $f \ne f'$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:283:46
-                  </span>
-                </span>
-                {" "}
-                etc) and stipulate the same rules, namely
-                that the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <span class="t-3003-c">
-                  velocity
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:287:15
-                  </span>
-                </span>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                <span class="t-3003-c">
-                  (now {" "}
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:289:13
-                  </span>
-                </span>
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $1$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:289:18
-                    </span>
-                  </span>
-                  -dimensional)
-                </NoBreak>
-                {" "} of the red particle
-                be the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <span class="t-3003-c">
-                  position
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:292:15
-                  </span>
-                </span>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                <span class="t-3003-c">
-                  (now {" "}
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:294:13
-                  </span>
-                </span>
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $1$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:294:18
-                    </span>
-                  </span>
-                  -dimensional)
-                </NoBreak>
-                {" "} of the blue particle
-                and so on—you can “release” the particles
-                from their initial configuration and
-                simulate—or compute by a formula, if you have
-                the know-how—their motion like above. The
-                five position
-                functions obtained are each a solution
-                {" "}
-                <span class="t-3003-c">
-                  <Math>
-                    $f$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:304:13
-                  </span>
-                </span>
-                {" "} to the problem. (But this solution will
-                typically look more chaotic than the curves
-                from Note 1.)
-              </OuterP>
-            </SolutionNote>
+            </MathBlock>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 5.
-                </i>
-                {" "}{" "}
-                {" "}
-                {" "}
-                <span class="t-3003-c">
-                  In fact, our symmetric two-dimensional
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:309:13
-                  </span>
-                </span>
-                {" "}
-                {" "}
-                solution is an instance in which you can say
-                that
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <span class="t-3003-c">
-                  the whole is simpler than the parts
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:313:15
-                  </span>
-                </span>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                <span class="t-3003-c">
-                  in that you would never spot the symmetry
-                  <span class="t-3003">
-                    ./src/content/ch4^exercises/_f_equals_f_5_.wly:323:13
-                  </span>
-                </span>
-                {" "}
-                {" "}
-                at play, or have a chance of eyeballing
-                the long-term evolution of the system, if
-                you were shown just the {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $x$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:326:37
-                    </span>
-                  </span>
-                  -coordinates,
-                </NoBreak>
-                {" "}
-                or just the {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $y$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch4^exercises/_f_equals_f_5_.wly:327:25
-                    </span>
-                  </span>
-                  -coordinates,
-                </NoBreak>
-                {" "} on their own.
-              </OuterP>
-            </SolutionNote>
+            <OuterP>
+              (as previously computed) is smaller than
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n^2&#125;
+              $$
+              <ImageRight
+                offset_x="10rem"
+                src="/build-img/svgo-svg/jBCw.svg"
+                squiggle={false}
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              we will compute the difference
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as opposed to the “other” difference
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n(n+1)&#125; - &#123;1 \over n^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to avoid a minus sign in the result.
+              (Computing the second difference and having
+              a minus sign does not constitute a mistake,
+              however.) Having said this, the difference is:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125; &amp;= &#123;1 \over n^2&#125; \cdot &#123;n+1 \over n+1&#125; - &#123;1 \over n(n+1)&#125; \cdot
+              &#123;n \over n&#125;\\
+              &amp;= &#123;n+1 \over n^2(n+1)&#125; - &#123;n \over n^2(n+1)&#125;\up&#123;1.5&#125;\\
+              &amp;= &#123;1 \over n^2(n+1)&#125;\up&#123;1.5&#125;
+              \end&#123;align&#125;
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/4oJD.svg"
+                offset_y="-0.5em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which, for large {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} is roughly
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n^3&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              since {" "}
+              <Math>
+                $n^2(n+1) \approx n^3$
+              </Math>
+              {" "} for large {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Example 1.
+              </i>
+              {" "} Above, we estimated
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to be roughly {" "}
+              <NoBreak>
+                <Math>
+                  $1/100 = 0.01$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} but {" "}
+              <Math>
+                $1/100$
+              </Math>
+              {" "} is
+              bigger than the actual value of
+              {" "}
+              <Math>
+                $&#123;1 \over 10\cdot 11&#125; = &#123;1 \over 110&#125;$
+              </Math>
+              {" "} by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 10^2\cdot 11&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or close to {" "}
+              <NoBreak>
+                <Math>
+                  $1/10^3 = 0.001$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (So
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is about {" "}
+              <NoBreak>
+                <Math>
+                  $0.01$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} while making an error of about
+              {" "}
+              <NoBreak>
+                <Math>
+                  $0.001$
+                </Math>
+                .)
+              </NoBreak>
+              {" "} (In fact,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 10^2\cdot 11&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is {" "}
+              <i>
+                less
+              </i>
+              {" "} than {" "}
+              <NoBreak>
+                <Math>
+                  $1/10^3$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so the error is {" "}
+              <i>
+                less
+              </i>
+              {" "}
+              than {" "}
+              <NoBreak>
+                <Math>
+                  $0.001$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
           </Solution>
         </Exercise>
       </Exercises>
