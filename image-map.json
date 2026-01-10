@@ -1954,11 +1954,11 @@
   },
   "svg_ch4_one_particle_speed_equals_time_cloud.svg": {
     "build-version": "svgo-svg/SiXb.svg",
-    "build-version-created-on": 1767294312,
+    "build-version-created-on": 1768068984,
     "build-method": "svgo",
-    "build-version-size": 11308,
-    "original-size": 131926,
-    "compression": "91.43%",
+    "build-version-size": 85122,
+    "original-size": 138931,
+    "compression": "38.73%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_p4white_inline.svg": {
