@@ -2,38 +2,21 @@
     work=ing
     handle=_illustrate_the_difference_quotient_
 
-    Add elements to the drawing below 
-    !! in order to illustrate
-    !! such that it becomes a “complete” illustration of
-    !! the expression
-    until all parts of the 
-    !! algebraic expression
-    fraction
+    Add elements to the drawing below until all
+    parts of the fraction
 
     $$
     {f(x+h) - f(x) \over h}
     $$
 
-    !! find themselves reflected
-    !! are reflected 
-    are found
-    in the drawing
-    !! What is the “geometric
-    !! meaning” of the expression, if any?
-    and thereby reveal the geometric meaning of this
-    fraction!
-    !!  if any.
+    are found in the drawing. Can you thereby reveal
+    the geometric meaning of the fraction?
 
     |> Image
         src=images/svg_ch4_newton_quotient_unfinished.svg
 
-
-
     |> Solution
 
-        !! Here is a completed version of the drawing
-        !! in which all elements of the fraction have a
-        !! counterpart:
         Viz:
 
         |> Image
@@ -53,8 +36,6 @@
         $$
         (x, f(x))
         $$
-        !! |> ImageLeft
-        !!     src=images/svg_ch4_new_quatient_x_fx_cloud.svg
 
         at one end, and
 

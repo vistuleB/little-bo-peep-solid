@@ -2391,10 +2391,10 @@ const Rest = () => {
                 “dimensionless ratios” they would look at
                 you funny. Also percentages are a system of
                 notation, whereby the symbol “%” means
-                “divide the preceding number by 100, in
+                “divide the preceding number by 100 in
                 order to discover the numerical value of
                 the ratio I'm talking about”.) (To drive
-                it home: In Chinese, the written expressions
+                it home: In Chinese, 
                 {" "}
                 <NoBreak>
                   “
@@ -2481,8 +2481,7 @@ const Rest = () => {
               minimum slope out of the range of our eyesight,
               meaning that each bump of the derivative contains
               micro-bumps, like small ripples atop a big wave!
-              (Still, “four” is a good bet to achieve full marks,
-              on this one.)
+              (Still, “four” is a good bet to achieve full marks.)
             </OuterP>
           </Solution>
         </Exercise>
@@ -2586,7 +2585,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={9}>
+        <Exercise
+          work="ing"
+          number={9}
+        >
           <ExerciseStatement id="_60_hgi_">
             <OuterP>
               <b>
@@ -2635,11 +2637,45 @@ const Rest = () => {
             <Pause />
             <Image src="/build-img/svgo-svg/kw0r.svg" />
             <Pause />
-            <OuterP>
-              (This is also the position at which the
-              acceleration would be maximal, if the graph
-              denoted position as a function of time.)
-            </OuterP>
+            <StarDivider />
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The first bend of the curve is the point of
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                maximum acceleration
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                if the graph denotes the position as a
+                function of time of an object.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The last segment of the curve is the point of
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                maximum velocity
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                if the graph denotes the position as a
+                function of time of an object.
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={10}>
@@ -2684,12 +2720,9 @@ const Rest = () => {
               Yes, this is the case. For a joke way
               of seeing it, here is a graph of a
               putative function {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
+              <Math>
+                $f$
+              </Math>
               {" "} before and after
               scaling:
             </OuterP>
@@ -2699,12 +2732,9 @@ const Rest = () => {
             <OuterP>
               The second graph truly is the first
               graph vertically scaled by a factor {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
+              <Math>
+                $2$
+              </Math>
               {" "}
               because the scale on the {" "}
               <Math>
@@ -5094,7 +5124,7 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 is a sequence of numbers in which each number
-                adds a fixed quantity to the previous. So for example,
+                adds a fixed quantity to the previous. For example,
               </OuterP>
               <Pause />
               <MathBlock>
@@ -5394,9 +5424,8 @@ const Rest = () => {
                 Exercise 17.
               </b>
               {" "}
-              Add elements to the drawing below 
-              until all parts of the 
-              fraction
+              Add elements to the drawing below until all
+              parts of the fraction
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5406,10 +5435,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              are found
-              in the drawing
-              and thereby reveal the geometric meaning of this
-              fraction!
+              are found in the drawing. Can you thereby reveal
+              the geometric meaning of the fraction?
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/1hYI.svg" />

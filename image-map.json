@@ -1765,11 +1765,11 @@
   },
   "svg_ch4_cosine_for_eta_with_yellow.svg": {
     "build-version": "svgo-svg/KEtq.svg",
-    "build-version-created-on": 1767294313,
+    "build-version-created-on": 1768167693,
     "build-method": "svgo",
-    "build-version-size": 38265,
-    "original-size": 52040,
-    "compression": "26.47%",
+    "build-version-size": 13250,
+    "original-size": 51798,
+    "compression": "74.42%",
     "used-last-build": true
   },
   "svg_ch4_one_long_line_what_are_the_rises_2.svg": {
@@ -3988,11 +3988,11 @@
   },
   "svg_ch4_scaling_figure.svg": {
     "build-version": "svgo-svg/lJqH.svg",
-    "build-version-created-on": 1768052328,
+    "build-version-created-on": 1768167693,
     "build-method": "svgo",
-    "build-version-size": 53552,
-    "original-size": 128242,
-    "compression": "58.24%",
+    "build-version-size": 56006,
+    "original-size": 134452,
+    "compression": "58.34%",
     "used-last-build": true
   },
   "svg_ch5_ex_x_plus_y_intersections.svg": {

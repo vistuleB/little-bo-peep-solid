@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_narrow_and_less_narrow_bends_
 
     Where is the rate of change of the function
@@ -34,7 +35,22 @@
         |> Image
             src=images/svg_ch4_narrow_and_less_narrow_bends_curviest.svg
 
-        (This is also the position at which the
-        acceleration would be maximal, if the graph
-        denoted position as a function of time.)
+        |> StarDivider
 
+        |> SolutionNote
+
+            The first bend of the curve is the point of
+
+            __maximum acceleration__
+
+            if the graph denotes the position as a
+            function of time of an object.
+
+        |> SolutionNote
+
+            The last segment of the curve is the point of
+
+            __maximum velocity__
+
+            if the graph denotes the position as a
+            function of time of an object.

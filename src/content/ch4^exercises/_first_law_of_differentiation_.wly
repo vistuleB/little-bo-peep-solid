@@ -10,14 +10,14 @@
 
         Yes, this is the case. For a joke way
         of seeing it, here is a graph of a
-        putative function $f$, before and after
+        putative function $f$ before and after
         scaling:
 
         |> Image
             src=images/svg_ch4_scaling_figure.svg
 
         The second graph truly is the first
-        graph vertically scaled by a factor $2$,
+        graph vertically scaled by a factor $2$
         because the scale on the $y$ axis has
         been doubled. This means that the ratio
 
