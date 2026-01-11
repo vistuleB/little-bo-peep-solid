@@ -4823,10 +4823,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={15}
-        >
+        <Exercise number={15}>
           <ExerciseStatement id="_68_hgi_">
             <OuterP>
               <b>
@@ -5132,10 +5129,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={16}
-        >
+        <Exercise number={16}>
           <ExerciseStatement id="_69_hgi_">
             <OuterP>
               <b>
@@ -5390,22 +5384,19 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={17}>
+        <Exercise
+          work="ing"
+          number={17}
+        >
           <ExerciseStatement id="_71_hgi_">
             <OuterP>
               <b>
                 Exercise 17.
               </b>
               {" "}
-              Add elements to the following drawing...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/1hYI.svg" />
-            <Pause />
-            <OuterP>
-              ...such that it becomes a “complete”
-              illustration of this here algebraic
-              expression...
+              Add elements to the drawing below 
+              until all parts of the 
+              fraction
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5415,20 +5406,23 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              ...and reveal the “geometric meaning” of
-              the expression, if any.
+              are found
+              in the drawing
+              and thereby reveal the geometric meaning of this
+              fraction!
             </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/1hYI.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              This version pictures all the elements
-              that appear in the fraction:
+              Viz:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/cWTG.svg" />
             <Pause />
             <OuterP>
-              The point is: the fraction
+              In particular,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5473,57 +5467,52 @@ const Rest = () => {
               {" "} is negative, by the way.)
             </OuterP>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                A fraction of this form is called a {" "}
-                <i>
-                  Newton
-                  quotient
-                </i>
-                .
-              </OuterP>
-            </SolutionNote>
+            <OuterP>
+              <i>
+                Vocabulary #1.
+              </i>
+              {" "} A fraction of this form is called
+              a {" "}
+              <i>
+                difference quotient
+              </i>
+              .
+            </OuterP>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                The pale brown line is sometimes known as
-                the {" "}
-                <i>
-                  secant
-                </i>
-                {" "} [through {" "}
-                <NoBreak>
-                  <Math>
-                    $(x, f(x))$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <NoBreak>
-                  <Math>
-                    $(x+h, f(x+h))$
-                  </Math>
-                  ].
-                </NoBreak>
-                {" "}
-                “Secant” is a general term for “line passing
-                through two specified points on another
-                curve”.
-              </OuterP>
-            </SolutionNote>
+            <OuterP>
+              <i>
+                Vocabulary #2.
+              </i>
+              {" "}
+              The pale brown line is sometimes known as
+              the {" "}
+              <i>
+                secant
+              </i>
+              {" "} [through {" "}
+              <NoBreak>
+                <Math>
+                  $(x, f(x))$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $(x+h, f(x+h))$
+                </Math>
+                ].
+              </NoBreak>
+              {" "}
+              “Secant” is a general term for “line passing
+              through two specified points on another
+              curve”.
+            </OuterP>
             <Pause />
             <SolutionNote id="_70_hgi_">
               <OuterP>
                 <i>
-                  Note 3.
+                  Note 1.
                 </i>
                 {" "}
                 If we let {" "}
@@ -5550,7 +5539,7 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "} the
-                Newton-quotient-a.k.a.-slope-of-the-secant
+                difference-quotient-a.k.a.-slope-of-the-secant
                 approaches
               </OuterP>
               <Pause />
@@ -5571,7 +5560,8 @@ const Rest = () => {
                   </Math>
                   .
                 </NoBreak>
-                {" "} (But you
+                {" "} 
+                (But you
                 cannot directly set {" "}
                 <NoBreak>
                   <Math>
@@ -6328,7 +6318,7 @@ const Rest = () => {
                   href="/article/chapter4#_70_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Note 3
+                  Note 1
                 </InChapterLink>
                 ),
               </NoBreak>

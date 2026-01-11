@@ -1,31 +1,45 @@
 |> Exercise
+    work=ing
     handle=_illustrate_the_difference_quotient_
 
-    Add elements to the following drawing...
-
-    |> Image
-        src=images/svg_ch4_newton_quotient_unfinished.svg
-
-    ...such that it becomes a “complete”
-    illustration of this here algebraic
-    expression...
+    Add elements to the drawing below 
+    !! in order to illustrate
+    !! such that it becomes a “complete” illustration of
+    !! the expression
+    until all parts of the 
+    !! algebraic expression
+    fraction
 
     $$
     {f(x+h) - f(x) \over h}
     $$
 
-    ...and reveal the “geometric meaning” of
-    the expression, if any.
+    !! find themselves reflected
+    !! are reflected 
+    are found
+    in the drawing
+    !! What is the “geometric
+    !! meaning” of the expression, if any?
+    and thereby reveal the geometric meaning of this
+    fraction!
+    !!  if any.
+
+    |> Image
+        src=images/svg_ch4_newton_quotient_unfinished.svg
+
+
 
     |> Solution
 
-        This version pictures all the elements
-        that appear in the fraction:
+        !! Here is a completed version of the drawing
+        !! in which all elements of the fraction have a
+        !! counterpart:
+        Viz:
 
         |> Image
             src=images/svg_ch4_newton_quotient_finished.svg
 
-        The point is: the fraction
+        In particular,
 
         $$
         {f(x + h) - f(x)\over h}
@@ -55,22 +69,25 @@
         at the other end. (This is also the case
         if $h$ is negative, by the way.)
 
-        |> SolutionNote
-            A fraction of this form is called a _Newton
-            quotient_.
+        |> Pause
+            
+        _Vocabulary #1._ A fraction of this form is called
+        a _difference quotient_.
 
-        |> SolutionNote
-            The pale brown line is sometimes known as
-            the _secant_ [through $(x, f(x))$, $(x+h, f(x+h))$].
-            “Secant” is a general term for “line passing
-            through two specified points on another
-            curve”.
+        |> Pause
+
+        _Vocabulary #2._
+        The pale brown line is sometimes known as
+        the _secant_ [through $(x, f(x))$, $(x+h, f(x+h))$].
+        “Secant” is a general term for “line passing
+        through two specified points on another
+        curve”.
 
         |> SolutionNote
             handle=_limit_of_difference_quotient_
             If we let $h$ drop to $0$, and if $f$ is
             differentiable at $x$, the
-            Newton-quotient-a.k.a.-slope-of-the-secant
+            difference-quotient-a.k.a.-slope-of-the-secant
             approaches
 
             $$
@@ -80,7 +97,8 @@
             because the secant approaches the tangent,
             in that case, and the slope of the secant
             is also, perforce, approaching the slope
-            of the tangent, which is $f'(x)$. (But you
+            of the tangent, which is $f'(x)$. 
+            (But you
             cannot directly set $h = 0$, because
 
             $$
@@ -88,4 +106,15 @@
             $$
 
             is undefined.)
+
+        !! |> SolutionNote
+        !!     However, one
+        !!     cannot directly set $h = 0$ to compute $f'(x)$
+        !!     because
+
+        !!     $$
+        !!     {f(x+0)-f(x)\over 0} = {0 \over 0}
+        !!     $$
+
+        !!     is undefined!
 
