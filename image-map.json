@@ -143,6 +143,15 @@
     "compression": "76.66%",
     "used-last-build": true
   },
+  "1d_blue_yellow_particles.svg": {
+    "build-version": "svgo-svg/zLWR.svg",
+    "build-version-created-on": 1768151199,
+    "build-method": "svgo",
+    "build-version-size": 5606,
+    "original-size": 120815,
+    "compression": "95.36%",
+    "used-last-build": true
+  },
   "svg_slope_times_run_equals_rise_cloud.svg": {
     "build-version": "svgo-svg/8ZCw.svg",
     "build-version-created-on": 1767294286,
@@ -474,7 +483,7 @@
     "build-version-size": 15186,
     "original-size": 39071,
     "compression": "61.13%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch4_sketch_the_middle_b_sol7.svg": {
     "build-version": "svg/-wEN.svg",
@@ -2375,6 +2384,15 @@
     "compression": "34.94%",
     "used-last-build": true
   },
+  "svg_ch4_three_one_dimensional_particles_blue_yellow_v2.svg": {
+    "build-version": "svgo-svg/aATY.svg",
+    "build-version-created-on": 1768151199,
+    "build-method": "svgo",
+    "build-version-size": 38289,
+    "original-size": 176219,
+    "compression": "78.27%",
+    "used-last-build": true
+  },
   "svg_ch5_ch_abercrombie_s1s2p1p2.svg": {
     "build-version": "svgo-svg/onjp.svg",
     "build-version-created-on": 1767294330,
@@ -4164,7 +4182,7 @@
     "build-version-size": 16817,
     "original-size": 18870,
     "compression": "10.88%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch4_f_g_actual_exercise_g.svg": {
     "build-version": "svg/TBiP.svg",
@@ -4839,7 +4857,7 @@
     "build-version-size": 5415,
     "original-size": 116166,
     "compression": "95.34%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch5_ch_cosine_and_sine_@minus_eta.svg": {
     "build-version": "svgo-svg/CGOa.svg",
@@ -5343,6 +5361,15 @@
     "build-version-size": 4706,
     "original-size": 4725,
     "compression": "0.4%",
+    "used-last-build": true
+  },
+  "1d_blue_yellow_particles_with_velocities.svg": {
+    "build-version": "svgo-svg/RULR.svg",
+    "build-version-created-on": 1768151199,
+    "build-method": "svgo",
+    "build-version-size": 19904,
+    "original-size": 204783,
+    "compression": "90.28%",
     "used-last-build": true
   },
   "svg_ch3_ex_f_box_g_box.svg": {

@@ -1,5 +1,4 @@
 |> Exercise
-    work=ing
     handle=_1d_red_particle_
 
     Imagine a single particle in a one-dimensional
@@ -128,7 +127,7 @@
             $$
 
             is an (infinite) geometric progression, because each number
-            is the previous multiplied by $0.5$. But a so-called
+            is the previous multiplied by $0.5$. A so-called
 
             __arithmetic progression__
 
@@ -139,12 +138,13 @@
             900, 1000, 1100, 1200, 1300, \dots
             $$
 
-            is an arithmetic progressive of step size $100$,
-            and
+            is an infinite arithmetic progression in which each number
+            adds $100$ to the previous, and
             
             $$
             -5.5, -6, -6.5, -7
             $$
 
-            is an arithmetic progress of step size $-0.5$.
+            is a finite arithmetic progression in which each number
+            adds $-0.5$ to the previous.
 

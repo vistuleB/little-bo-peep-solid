@@ -5088,7 +5088,7 @@ const Rest = () => {
                   </Math>
                   .
                 </NoBreak>
-                {" "} But a so-called
+                {" "} A so-called
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -5107,15 +5107,12 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                is an arithmetic progressive of step size {" "}
-                <NoBreak>
-                  <Math>
-                    $100$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                and
+                is an infinite arithmetic progression in which each number
+                adds {" "}
+                <Math>
+                  $100$
+                </Math>
+                {" "} to the previous, and
               </OuterP>
               <Pause />
               <MathBlock>
@@ -5125,18 +5122,20 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                is an arithmetic progress of step size {" "}
-                <NoBreak>
-                  <Math>
-                    $-0.5$
-                  </Math>
-                  .
-                </NoBreak>
+                is a finite arithmetic progression in which each number
+                adds {" "}
+                <Math>
+                  $-0.5$
+                </Math>
+                {" "} to the previous.
               </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={16}>
+        <Exercise
+          work="ing"
+          number={16}
+        >
           <ExerciseStatement id="_69_hgi_">
             <OuterP>
               <b>
@@ -5169,11 +5168,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/yz-u.svg" />
+            <Image src="/build-img/svgo-svg/zLWR.svg" />
             <Pause />
             <OuterP>
-              If the velocity of the yellow particle is set to track
-              the position of the blue particle and vice-versa,
+              If the velocity of the yellow particle is set to
+              track the position of the blue particle and vice-versa,
               give a qualitative sketch of the
               position-as-a-function-of-time (time on the {" "}
               <Math>
@@ -5185,172 +5184,210 @@ const Rest = () => {
                 $y$
               </Math>
               {" "} axis) of the two
-              particles. If we add also the graph of the position
-              of the red particle from {" "}
-              <InChapterLink
-                href="/article/chapter4#_68_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 15
-              </InChapterLink>
-              {" "}
-              to this set of graphs, what symmetries
-              exist altogether between the three graphs?
+              particles. What is the defining geometric relationship
+              between the two graphs?
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              For {" "}
+              At {" "}
               <Math>
-                $t &gt; 0$
+                $t = 0$
               </Math>
-              {" "} the yellow and blue particles
-              approach {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} in a kind of “radioactive decay”
-              pattern; for {" "}
-              <NoBreak>
-                <Math>
-                  $t &lt; 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              they spin
-              off to {" "}
-              <Math>
-                $-\infty$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $\infty$
-              </Math>
-              {" "} respectively at an
-              accelerating rate:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/MS8t.svg" />
-            <Pause />
-            <OuterP>
-              If we add the graph of the red particle to the
-              mix, it is simply the mirror image of the
-              blue particle's position through the {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axis
-              {" "}
-              <NoBreak>
-                (
-                <Math>
-                  $y$
-                </Math>
-              </NoBreak>
-              {" "} axis that is ironically labeled {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”):
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/7kvF.svg" />
-            <Pause />
-            <OuterP>
-              Indeed, for the red graph,
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the slope equals the {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -value
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (velocity = position), while
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the slope equals minus the {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -value
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              for the blue graph (velocity = position
-              of yellow = minus own position).
-              (We forgot to mention that the blue and
-              yellow graphs are mirror images of one another
-              through the horizontal axis—this is one of the
-              “symmetries” that the problem statement asks about, though.)
-              As taking a mirror image through the {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axis
-              negates slopes without affecting {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinates,
-              </NoBreak>
-              {" "}
-              while both the blue and red graphs have the same
-              value at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} this explains why the mirror
-              image of one graph fits the constraints of the other
-              and vice-versa:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/a0qL.svg" />
-            <Pause />
-            <OuterP>
-              Also note that all graphs have slopes of
-              {" "}
-              <Math>
-                $\pm 1$
-              </Math>
-              {" "}
-              at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} as we tried to reflect in the sketches,
-              because each corresponding particle position
-              is either {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "} or {" "}
+              {" "} the blue particle has velocity {" "}
               <NoBreak>
                 <Math>
                   $-1$
                 </Math>
+                ,
+              </NoBreak>
+              {" "}
+              which is the position of the yellow particle,
+              and the yellow particle has velocity {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which
+              is the position of the blue particle:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/RULR.svg" />
+            <Pause />
+            <OuterP>
+              As we “release” time the two particles thus
+              start moving inward towards {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and then
+              start slowing down, as the opposing particle
+              inches closer to {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
                 .
               </NoBreak>
+              {" "} The result is two graphs that
+              form a mirror-image radioactive decay:
             </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/aATY.svg" />
+            <Pause />
+            <OuterP>
+              The “defining geometric relationship” is that
+              the slope of one graph equals the value of the
+              other graph at any point in time. (One could 
+              also name the fact that the graphs have value
+              {" "}
+              <Math>
+                $\pm 1$
+              </Math>
+              {" "} at {" "}
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} otherwise the graphs are not
+              uniquely determined, as they can be translated
+              together left or right by any amount while
+              maintaining the former condition about slope.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The sentence
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                a particle whose velocity is minus its
+                position
+                <br />
+                and whose position is {" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "} at time {" "}
+                <Math>
+                  $t = 0$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is a characterization of the blue particle
+                that does not invoke the yellow particle, and
+                likewise the sentence
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                a particle whose velocity is minus its
+                position
+                <br />
+                and whose position is {" "}
+                <Math>
+                  $-1$
+                </Math>
+                {" "} at time {" "}
+                <Math>
+                  $t = 0$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is a characterization of the yellow particle
+                that does not invoke the blue particle.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The graph of the blue particle is the mirror
+                image through the {" "}
+                <Math>
+                  $y$
+                </Math>
+                {" "} axis of the graph of the 
+                particle of {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter4#_68_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Exercise 15
+                  </InChapterLink>
+                  ,
+                </NoBreak>
+                {" "} whose
+                velocity is equal to its position and whose
+                position is {" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "} at {" "}
+                <NoBreak>
+                  <Math>
+                    $t = 0$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/a0qL.svg" />
+              <Pause />
+              <OuterP>
+                ...the detailed reasoning, as also indicated on the
+                figure, being that a mirror symmetry through
+                the {" "}
+                <Math>
+                  $y$
+                </Math>
+                {" "} axis flips the sign of the slope without
+                affecting the value of {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} so that an equality of
+                the form {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $y = \te&#123;slope&#125;$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} becomes {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $y = -\te&#123;slope&#125;$
+                  </Math>
+                  ”,
+                </NoBreak>
+                {" "}
+                and vice-versa.
+              </OuterP>
+              <OuterP class="indent-10">
+                (I.e., the mirror image of the blue
+                curve satisfies the constrains of the red curve, and
+                vice-versa.)
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={17}>
