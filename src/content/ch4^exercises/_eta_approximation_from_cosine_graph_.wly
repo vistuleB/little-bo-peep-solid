@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_eta_approximation_from_cosine_graph_
     The function below is also the red
     curve from Exercise >>_four_particles_, known as the
@@ -6,9 +7,8 @@
     in Chapter >>functions, Exercise >>_cosine_of_1000x_). Knowing
     that this function is the $x$-coordinate of a
     point rotating at unit speed around a unit
-    circle, find, by inspection of the graph,
-    a rational approximation to the circumference
-    of a unit circle.
+    circle, what is an approximation to the
+    circumference of a unit circle?
 
     |> Image
         src=images/svg_ch4_cosine_for_eta.svg
@@ -24,24 +24,41 @@
         |> Image
             src=images/svg_ch4_cosine_for_eta_with_yellow.svg
 
-        One revolution around the circle is also
-        made up of four quarter-revolutions, where
-        each quarter-revolution of the circle is “half a bump”,
-        on the graph:
+        From the graph, then, it seems as if the circumference
+        of a unit circle is
+
+        $$
+        \Large \approx 6.3
+        $$
+
+        or thereabouts.
+        However, this is not the “correct” answer—indeed, we can do
+        a little better by noticing that the graph seems
+        to go almost exactly through the point $(11, 0)$, a
+        few units over to the right (!):
 
         |> Image
-            src=images/svg_ch4_cosine_for_eta_with_two_yellows.svg
+            src=images/svg_ch4_cosine_for_eta_11_noticed.svg
 
-        Going a bit further, _seven_ of these
-        quarter-revolutions appear to take up exactly
-        $t = 11$ units of time (!!!!!!!!!!!) (or maybe
-        just a _little_ less than $11$ units, if
-        you zoom in):
+        !! ($\rt{0.15}$_Almost_. Not quite.)
+        More particularly,
+
+        $$
+        \Large 7
+        $$
+
+        quarter-turns of the circle correspond to
+
+        $$
+        \Large \approx 11
+        $$
+
+        units of time, by counting half-bumps:
 
         |> Image
-            src=images/svg_ch4_cosine_for_eta_revealed.svg
+            src=images/svg_ch4_cosine_for_eta_counting_quarter_turns.svg
 
-        Therefore
+        So....
 
         $$
         \Large {11 \over 7}
@@ -51,48 +68,44 @@
         the circle, and
 
         $$
-        \Large 4 \cdot {11 \over 7} = {44 \over 7}
+        \Large 4 \cdot {11 \over 7} = {44 \over 7} = 6.\overline{285714}
         $$
 
         is an approximation to the circumference of a unit
-        circle.
-
-        |> Pause
-        _Note 1._
-        This approximation ends up being about
-        half-a-part-in-a-thousand too large
-        ($0.040249943...\%$ too large) (or just:
-        “$0.00040249943...$
-        too large”), which is strikingly good, all things
-        considered.
-
-        |> Pause
-        _Note 2._
-        Numerically, note that
+        circle,
+        which ends up being about
+        half-a-part-in-a-thousand too large ($0.040249943...\%$
+        too large) (or just: “$0.00040249943...$ too large”),
+        whereas our initial approximation of
 
         $$
-        \Large {44 \over 7} = 6.285714\dots
+        \Large 6.3
         $$
 
-        is a bit larger than $6$, which agrees with
-        what we see here for the length of a full
-        revolution...
+        is roughly half-a-part-in-one-hundred too large, $10$ times worse!
 
-        |> Image
-            src=images/svg_ch4_cosine_for_eta_tau_verification.svg
+        !! |> SolutionNote
 
-        ...whereas
+        !!     By extension,
 
-        $$
-        \Large {11 \over 7} = 1.571428\dots
-        $$
+        !!     $$
+        !!     \Large {11 \over 7} = 1.\overline{571428}
+        !!     $$
 
-        is about $1.6$, which also appears to agree
-        with what we can see on the graph about the
-        length of a quarter-revolution:
+        !!     is also a half-a-part-in-a-thousand too large
+        !!     approximation for the quarter-circumference of the
+        !!     unit circle, and note that
 
-        |> Image
-            src=images/svg_ch4_cosine_for_eta_eta_verification.svg
+        !!     $$
+        !!     \Large {11 \over 7} = 1.571428\dots
+        !!     $$
 
-        (So, we have some secondary “visual confirmation”
-        of our approximations.)
+        !!     is about $1.6$, which appears to agree with what
+        !!     we can see on the graph about the length of a
+        !!     quarter-revolution:
+
+        !!     |> Image
+        !!         src=images/svg_ch4_cosine_for_eta_eta_verification.svg
+
+        !!     (So, we have some secondary “visual confirmation”
+        !!     of our approximations.)

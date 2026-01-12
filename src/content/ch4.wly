@@ -209,9 +209,9 @@
         offset_x= 7em
 
     because the slope of a line of slope $A$ is
-    $A$, no matter where you put yourself on the
+    $A$, no matter where you place yourself on the
     line. In particular, $B$ plays no role in the
-    derivative! ($\,$Just like in the case of a
+    derivative! ($\rt{0.2}$Just like in the case of a
     constant function, the derivative leaves no
     trace of $B$'s value—and for the same reason
     that $B$ effects a vertical translation, which
@@ -541,7 +541,7 @@
 
 |> Section
 
-    *The Second Derivative of Position.*
+    *The second derivative of position.*
     A graph of the form...
 
     |> Image

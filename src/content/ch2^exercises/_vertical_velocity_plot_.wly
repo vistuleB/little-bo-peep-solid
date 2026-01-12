@@ -1,7 +1,7 @@
 |> Exercise
     handle=_vertical_velocity_plot_
 
-    Plot the vertical velocity of
+    Plot the vertical velocity of 
     |> del
         an object
     \ a mosquito whose height over time is

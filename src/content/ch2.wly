@@ -392,7 +392,10 @@
     |> Image
         src=images/48.svg
 
-    ...as can sometimes be useful to know.
+    |> StarDivider
+        style=margin-top:-0.3em
+
+    !! ...as can sometimes be useful to know.
 
 |> Section
 
@@ -563,13 +566,16 @@
     where “amount of change” is short for “amount of
     change on the $y$-axis”. By extension, taking all
     three permutations of the slope formula into account
-    gives us...
+    gives us this alternate flowerbed, commonly useful
+    in “applied” problems:
 
     |> Image
         src=images/53.svg
 
-    ...these formulas, commonly useful in “applied”
-    problems.
+    !! |> StarDivider
+    !!     style=margin-top:-0.5em
+    !! ...these formulas, commonly useful in “applied”
+    !! problems.
 
     |> Example
 
@@ -610,9 +616,9 @@
         following the template
 
         $$
-        \te{“}\rt{0.1}
+        \rt{0.1}
         \te{amount of time} \,\,=\,\, \frac{\!\rt{0.15}\te{amount of change}\!\rt{0.1}}{\te{rate of change}}
-        \rt{0.1}\te{”}
+        \rt{0.1}
         $$
 
         found in the third line of the table.

@@ -902,9 +902,7 @@ const Rest = () => {
         <Pause />
         <Image src="/build-img/svgo-svg/2sTW.svg" />
         <Pause />
-        <OuterP>
-          ...as can sometimes be useful to know.
-        </OuterP>
+        <StarDivider style="margin-top:-0.3em" />
       </Section>
       <Pause />
       <Section id="section-7">
@@ -1464,15 +1462,11 @@ const Rest = () => {
           </NoBreak>
           {" "} By extension, taking all
           three permutations of the slope formula into account
-          gives us...
+          gives us this alternate flowerbed, commonly useful
+          in “applied” problems:
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/lT_G.svg" />
-        <Pause />
-        <OuterP>
-          ...these formulas, commonly useful in “applied”
-          problems.
-        </OuterP>
         <Pause />
         <Example>
           <OuterP>
@@ -1558,9 +1552,9 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \te&#123;“&#125;\rt&#123;0.1&#125;
+            \rt&#123;0.1&#125;
             \te&#123;amount of time&#125; \,\,=\,\, \frac&#123;\!\rt&#123;0.15&#125;\te&#123;amount of change&#125;\!\rt&#123;0.1&#125;&#125;&#123;\te&#123;rate of change&#125;&#125;
-            \rt&#123;0.1&#125;\te&#123;”&#125;
+            \rt&#123;0.1&#125;
             $$
           </MathBlock>
           <Pause />
@@ -2045,7 +2039,7 @@ const Rest = () => {
                 Exercise 3.
               </b>
               {" "}
-              Plot the vertical velocity of
+              Plot the vertical velocity of {" "}
               <del>
                 an object
               </del>

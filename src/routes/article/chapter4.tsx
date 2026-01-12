@@ -602,7 +602,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "} no matter where you put yourself on the
+          {" "} no matter where you place yourself on the
           line. In particular, {" "}
           <Math>
             $B$
@@ -612,7 +612,7 @@ const Rest = () => {
           <NoBreak>
             (
             <Math>
-              $\,$
+              $\rt&#123;0.2&#125;$
             </Math>
             Just
           </NoBreak>
@@ -1357,7 +1357,7 @@ const Rest = () => {
       <Section id="section-10">
         <OuterP>
           <b>
-            The Second Derivative of Position.
+            The second derivative of position.
           </b>
           {" "}
           A graph of the form...
@@ -5685,7 +5685,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={19}>
+        <Exercise
+          work="ing"
+          number={19}
+        >
           <ExerciseStatement id="_73_hgi_">
             <OuterP>
               <b>
@@ -5729,9 +5732,8 @@ const Rest = () => {
               </NoBreak>
               {" "} of a
               point rotating at unit speed around a unit
-              circle, find, by inspection of the graph,
-              a rational approximation to the circumference
-              of a unit circle.
+              circle, what is an approximation to the
+              circumference of a unit circle?
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/njEr.svg" />
@@ -5748,42 +5750,61 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/KEtq.svg" />
             <Pause />
             <OuterP>
-              One revolution around the circle is also
-              made up of four quarter-revolutions, where
-              each quarter-revolution of the circle is “half a bump”,
-              on the graph:
+              From the graph, then, it seems as if the circumference
+              of a unit circle is
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/2Uov.svg" />
+            <MathBlock>
+              $$
+              \Large \approx 6.3
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
-              Going a bit further, {" "}
-              <i>
-                seven
-              </i>
-              {" "} of these
-              quarter-revolutions appear to take up exactly
-              {" "}
-              <Math>
-                $t = 11$
-              </Math>
-              {" "} units of time (!!!!!!!!!!!) (or maybe
-              just a {" "}
-              <i>
-                little
-              </i>
-              {" "} less than {" "}
-              <Math>
-                $11$
-              </Math>
-              {" "} units, if
-              you zoom in):
+              or thereabouts.
+              However, this is not the “correct” answer—indeed, we can do
+              a little better by noticing that the graph seems
+              to go almost exactly through the point {" "}
+              <NoBreak>
+                <Math>
+                  $(11, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} a
+              few units over to the right (!):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/oghJ.svg" />
+            <Image src="/build-img/svgo-svg/htXO.svg" />
             <Pause />
             <OuterP>
-              Therefore
+              More particularly,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 7
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              quarter-turns of the circle correspond to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \approx 11
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              units of time, by counting half-bumps:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/9cV2.svg" />
+            <Pause />
+            <OuterP>
+              So....
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5799,99 +5820,45 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125;
+              \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125; = 6.\overline&#123;285714&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
               is an approximation to the circumference of a unit
-              circle.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              This approximation ends up being about
-              half-a-part-in-a-thousand too large
-              {" "}
+              circle,
+              which ends up being about
+              half-a-part-in-a-thousand too large {" "}
               <NoBreak>
                 (
                 <Math>
                   $0.040249943...\%$
                 </Math>
               </NoBreak>
-              {" "} too large) (or just:
               {" "}
+              too large) (or just: {" "}
               <NoBreak>
                 “
                 <Math>
                   $0.00040249943...$
                 </Math>
               </NoBreak>
-              {" "}
-              too large”), which is strikingly good, all things
-              considered.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              Numerically, note that
+              {" "} too large”),
+              whereas our initial approximation of
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \Large &#123;44 \over 7&#125; = 6.285714\dots
+              \Large 6.3
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              is a bit larger than {" "}
-              <NoBreak>
-                <Math>
-                  $6$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which agrees with
-              what we see here for the length of a full
-              revolution...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/dK07.svg" />
-            <Pause />
-            <OuterP>
-              ...whereas
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;11 \over 7&#125; = 1.571428\dots
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is about {" "}
-              <NoBreak>
-                <Math>
-                  $1.6$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which also appears to agree
-              with what we can see on the graph about the
-              length of a quarter-revolution:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/jUtu.svg" />
-            <Pause />
-            <OuterP>
-              (So, we have some secondary “visual confirmation”
-              of our approximations.)
+              is roughly half-a-part-in-one-hundred too large, {" "}
+              <Math>
+                $10$
+              </Math>
+              {" "} times worse!
             </OuterP>
           </Solution>
         </Exercise>
