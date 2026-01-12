@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_product_rule_
 
     In this exercise we consider two points
@@ -286,10 +287,34 @@
             Keeping things alphabetical everywhere, the
             same equation is more often written
 
-            $$
-            (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
-            $$
+            |> Boxed
+                $$
+                (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
+                $$
 
             with “$A'(t_0)B(t_0)$” in the middle. (But
             which is the same, of course, as $B(t_0)A'(t_0)$.)
+
+        |> SolutionNote
+            By the rules for adding and multiplying
+            functions the product rule
+            can also be written
+
+            |> Boxed
+                $$
+                (AB)' = A'B + AB'
+                $$
+
+            more shortly, for
+            $A, B : \rr \ra \rr$ differentiable, or
+
+            |> Boxed
+                $$
+                (fg)' = f'g + fg'
+                $$
+
+            if we replace “$A$” and “$B$” by the more familiar “$f$” and “$g$”.
+
+            !! by the rules for
+            !! adding and multiplying functions.
 

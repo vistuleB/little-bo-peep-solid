@@ -462,7 +462,6 @@
 
     Reason like this: the second derivative is 
     |> del
-
         “the rate of change of the rate of change”.
     \ Sorry: “the rate of change of the slope”.
     (Same difference.) Ergo, if the second derivative
@@ -540,6 +539,7 @@
         downwards”—$0$ is neither positive, nor negative.
 
 |> Section
+    work=ing
 
     *The second derivative of position.*
     A graph of the form...
@@ -595,7 +595,7 @@
     seconds:
 
     |> Image
-        src=images/svg_ch4_ch_position_by_time_tangent.svg
+        src=images/svg_ch4_ch_position_by_time_tangent_v2.svg
 
     The ratio “rise over run” has the form
 
@@ -677,7 +677,6 @@
 
 
 |> Section
-    work=ing
 
     *The jerk.*
     The rate of change of acceleration has a

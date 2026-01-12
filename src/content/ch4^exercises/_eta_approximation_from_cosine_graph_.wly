@@ -1,5 +1,4 @@
 |> Exercise
-    work=ing
     handle=_eta_approximation_from_cosine_graph_
     The function below is also the red
     curve from Exercise >>_four_particles_, known as the
@@ -9,7 +8,7 @@
     point rotating at unit speed around a unit
     circle, what is an approximation to the
     circumference of a unit circle that one can
-    deduce just from the graph?
+    deduce just by looking at the graph?
 
     |> Image
         src=images/svg_ch4_cosine_for_eta.svg
@@ -65,18 +64,21 @@
         \Large {11 \over 7}
         $$
 
-        is an approximation to the quarter-circumference of
-        the circle, and
+        is an approximation to 
+        the time it takes the particle to do one quarter-turn,
+        i.e., an approximation to
+        the quarter-circumference of the circle, and
 
         |> Boxed
             $$
             \Large 4 \cdot {11 \over 7} = {44 \over 7} = 6.\overline{285714}
             $$
 
-        is an approximation to the full circumference of a unit
-        circle,
-        which ends up being about
-        half-a-part-in-a-thousand too large ($0.040249943...\%$
+        is an approximation to the full circumference of
+        the unit circle,
+        which is an approximation that
+        ends up being about half-a-part-in-a-thousand too
+        large ($0.040249943...\%$
         too large) (or just: “$0.00040249943...$ too large”).
         (Whereas our initial approximation of
 
@@ -84,7 +86,7 @@
         \Large 6.3
         $$
 
-        is roughly half-a-part-in-one-hundred too large, $10$ times worse!)
+        ends up being roughly half-a-part-in-one-hundred too large, $10$ times worse!)
 
         !! |> SolutionNote
 

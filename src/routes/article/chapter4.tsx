@@ -1355,7 +1355,10 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section id="section-10">
+      <Section
+        work="ing"
+        id="section-10"
+      >
         <OuterP>
           <b>
             The second derivative of position.
@@ -1444,7 +1447,7 @@ const Rest = () => {
           seconds:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/XBxH.svg" />
+        <Image src="/build-img/svgo-svg/YS5-.svg" />
         <Pause />
         <OuterP>
           The ratio “rise over run” has the form
@@ -1596,10 +1599,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section
-        work="ing"
-        id="section-11"
-      >
+      <Section id="section-11">
         <OuterP>
           <b>
             The jerk.
@@ -2586,10 +2586,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={9}
-        >
+        <Exercise number={9}>
           <ExerciseStatement id="_60_hgi_">
             <OuterP>
               <b>
@@ -2946,10 +2943,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={12}
-        >
+        <Exercise number={12}>
           <ExerciseStatement id="_63_hgi_">
             <OuterP>
               <b>
@@ -3532,10 +3526,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={13}
-        >
+        <Exercise number={13}>
           <ExerciseStatement id="_64_hgi_">
             <OuterP>
               <b>
@@ -4858,10 +4849,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={15}
-        >
+        <Exercise number={15}>
           <ExerciseStatement id="_67_hgi_">
             <OuterP>
               <b>
@@ -5130,7 +5118,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={17}>
+        <Exercise
+          work="ing"
+          number={17}
+        >
           <ExerciseStatement id="_69_hgi_">
             <OuterP>
               <b>
@@ -5991,13 +5982,13 @@ const Rest = () => {
                 Keeping things alphabetical everywhere, the
                 same equation is more often written
               </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
-                $$
-              </MathBlock>
-              <Pause />
+              <Boxed>
+                <MathBlock>
+                  $$
+                  (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
+                  $$
+                </MathBlock>
+              </Boxed>
               <OuterP>
                 with {" "}
                 <NoBreak>
@@ -6014,6 +6005,74 @@ const Rest = () => {
                     $B(t_0)A'(t_0)$
                   </Math>
                   .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                By the rules for adding and multiplying
+                functions the product rule
+                can also be written
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  (AB)' = A'B + AB'
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                more shortly, for
+                {" "}
+                <Math>
+                  $A, B : \rr \ra \rr$
+                </Math>
+                {" "} differentiable, or
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  (fg)' = f'g + fg'
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                if we replace {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $A$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $B$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} by the more familiar {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $g$
+                  </Math>
+                  ”.
                 </NoBreak>
               </OuterP>
             </SolutionNote>
@@ -7527,7 +7586,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={23}>
+        <Exercise
+          work="ing"
+          number={23}
+        >
           <ExerciseStatement id="_76_hgi_">
             <OuterP>
               <b>
@@ -9627,10 +9689,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={24}
-        >
+        <Exercise number={24}>
           <ExerciseStatement id="_77_hgi_">
             <OuterP>
               <b>
@@ -9676,7 +9735,7 @@ const Rest = () => {
               point rotating at unit speed around a unit
               circle, what is an approximation to the
               circumference of a unit circle that one can
-              deduce just from the graph?
+              deduce just by looking at the graph?
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/njEr.svg" />
@@ -9758,8 +9817,10 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is an approximation to the quarter-circumference of
-              the circle, and
+              is an approximation to 
+              the time it takes the particle to do one quarter-turn,
+              i.e., an approximation to
+              the quarter-circumference of the circle, and
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -9769,10 +9830,11 @@ const Rest = () => {
               </MathBlock>
             </Boxed>
             <OuterP>
-              is an approximation to the full circumference of a unit
-              circle,
-              which ends up being about
-              half-a-part-in-a-thousand too large {" "}
+              is an approximation to the full circumference of
+              the unit circle,
+              which is an approximation that
+              ends up being about half-a-part-in-a-thousand too
+              large {" "}
               <NoBreak>
                 (
                 <Math>
@@ -9798,7 +9860,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is roughly half-a-part-in-one-hundred too large, {" "}
+              ends up being roughly half-a-part-in-one-hundred too large, {" "}
               <Math>
                 $10$
               </Math>
