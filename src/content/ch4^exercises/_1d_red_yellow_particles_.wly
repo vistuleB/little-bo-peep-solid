@@ -47,23 +47,23 @@
 
         |> SolutionNote
 
-            The sentence
+            Saying
 
             __a particle whose velocity is minus its
             position
             |> br
             and whose position is $1$ at time $t = 0$__
 
-            is a characterization of the blue particle
+            is an alternate characterization of the blue particle
             that does not invoke the yellow particle, and
-            likewise the sentence
+            likewise
 
             __a particle whose velocity is minus its
             position
             |> br
             and whose position is $-1$ at time $t = 0$__
 
-            is a characterization of the yellow particle
+            is an alternate characterization of the yellow particle
             that does not invoke the blue particle.
 
         |> SolutionNote

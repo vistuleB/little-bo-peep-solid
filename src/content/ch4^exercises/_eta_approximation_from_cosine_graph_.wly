@@ -4,10 +4,10 @@
     The function below is also the red
     curve from Exercise >>_four_particles_, known as the
     _cosine function_ (already encountered
-    in Chapter >>functions, Exercise >>_cosine_of_1000x_). Knowing
-    that this function is the $x$-coordinate of a
+    in Chapter >>functions, Exercise >>_cosine_of_1000x_).
+    Knowing that this function is the $x$-coordinate of a
     point rotating at unit speed around a unit
-    circle, what is an approximation to the
+    circle what is an approximation to the
     circumference of a unit circle?
 
     |> Image
@@ -40,8 +40,7 @@
         |> Image
             src=images/svg_ch4_cosine_for_eta_11_noticed.svg
 
-        !! ($\rt{0.15}$_Almost_. Not quite.)
-        More particularly,
+        More particularly, this implies that
 
         $$
         \Large 7
@@ -53,7 +52,8 @@
         \Large \approx 11
         $$
 
-        units of time, by counting half-bumps:
+        units of time, as each half-bump corresponds to a
+        quarter-turn (if you think about it):
 
         |> Image
             src=images/svg_ch4_cosine_for_eta_counting_quarter_turns.svg
@@ -67,22 +67,23 @@
         is an approximation to the quarter-circumference of
         the circle, and
 
-        $$
-        \Large 4 \cdot {11 \over 7} = {44 \over 7} = 6.\overline{285714}
-        $$
+        |> Boxed
+            $$
+            \Large 4 \cdot {11 \over 7} = {44 \over 7} = 6.\overline{285714}
+            $$
 
-        is an approximation to the circumference of a unit
+        is an approximation to the full circumference of a unit
         circle,
         which ends up being about
         half-a-part-in-a-thousand too large ($0.040249943...\%$
-        too large) (or just: “$0.00040249943...$ too large”),
-        whereas our initial approximation of
+        too large) (or just: “$0.00040249943...$ too large”).
+        (Whereas our initial approximation of
 
         $$
         \Large 6.3
         $$
 
-        is roughly half-a-part-in-one-hundred too large, $10$ times worse!
+        is roughly half-a-part-in-one-hundred too large, $10$ times worse!)
 
         !! |> SolutionNote
 

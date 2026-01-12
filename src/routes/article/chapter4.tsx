@@ -1,5 +1,6 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
+import Boxed  from "~/components/Boxed";
 import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
@@ -6371,6 +6372,1168 @@ const Rest = () => {
                 Exercise 19.
               </b>
               {" "}
+              Express the...
+            </OuterP>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+                <li>
+                  associativity of function composition
+                </li>
+                <li>
+                  associativity of function multiplication
+                </li>
+                <li>
+                  associativity of function addition
+                </li>
+                <li>
+                  commutativity of function multiplication
+                </li>
+                <li>
+                  commutativity of function addition
+                </li>
+              </ul>
+              <p>
+                ...as well as the...
+              </p>
+            </TextParent>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+                <li>
+                  associativity of real number multiplication
+                </li>
+                <li>
+                  associativity of real number addition
+                </li>
+                <li>
+                  commutativity of real number multiplication
+                </li>
+                <li>
+                  commutativity of real number addition
+                </li>
+              </ul>
+            </TextParent>
+            <OuterP>
+              ...in the form of self-contained, formal statements.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              For the functions:
+            </OuterP>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+                <li style="position:relative;">
+                  <i>
+                    the associativity of function multiplication is
+                    the fact that {" "}
+                    <Math>
+                      $(f \circ g) \circ h = f \circ (g \circ h)$
+                    </Math>
+                    {" "}
+                    for all functions {" "}
+                    <NoBreak>
+                      <Math>
+                        $f$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $g$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <Math>
+                      $h$
+                    </Math>
+                    {" "} such that
+                    {" "}
+                    <NoBreak>
+                      <Math>
+                        $h : D \ra C$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $g : C \ra B$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <Math>
+                      $f : B \ra A$
+                    </Math>
+                    {" "}
+                    [for arbitrary sets {" "}
+                    <NoBreak>
+                      <Math>
+                        $A$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $B$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $C$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $D$
+                      </Math>
+                      ]
+                    </NoBreak>
+                    <ImageLeft
+                      src="/build-img/svgo-svg/pcYW.svg"
+                      offset_x="4em"
+                    />
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the associativity of function multiplication is
+                    the fact that {" "}
+                    <Math>
+                      $f(gh) = (fg)h$
+                    </Math>
+                    {" "} for all {" "}
+                    <Math>
+                      $f, g, h : \rr \ra \rr$
+                    </Math>
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the associativity of function addition is
+                    the fact that {" "}
+                    <Math>
+                      $f + (g + h) = (f + g) + h$
+                    </Math>
+                    {" "} for all {" "}
+                    <Math>
+                      $f, g, h : \rr \ra \rr$
+                    </Math>
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the commutativity of function multiplication is
+                    the fact that {" "}
+                    <Math>
+                      $fg = gf$
+                    </Math>
+                    {" "} for all {" "}
+                    <Math>
+                      $f, g : \rr \ra \rr$
+                    </Math>
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the commutativity of function addition is
+                    the fact that {" "}
+                    <Math>
+                      $f + g = g + f$
+                    </Math>
+                    {" "} for all {" "}
+                    <Math>
+                      $f, g : \rr \ra \rr$
+                    </Math>
+                  </i>
+                </li>
+              </ul>
+            </TextParent>
+            <OuterP>
+              For the real numbers:
+            </OuterP>
+            <TextParent>
+              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
+                <li>
+                  <i>
+                    the associativity of [real number] multiplication is
+                    the fact that {" "}
+                    <Math>
+                      $a(bc) = (ab)c$
+                    </Math>
+                    {" "} for all {" "}
+                    <Math>
+                      $a, b, c \in \rr$
+                    </Math>
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the associativity of [real number] addition is
+                    the fact that {" "}
+                    <Math>
+                      $a + (b + c) = (a + b) + c$
+                    </Math>
+                    {" "} for all {" "}
+                    <Math>
+                      $a, b, c \in \rr$
+                    </Math>
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the commutativity of [real number] multiplication is
+                    the fact that {" "}
+                    <Math>
+                      $ab = ba$
+                    </Math>
+                    {" "} for all {" "}
+                    <Math>
+                      $a, b \in \rr$
+                    </Math>
+                  </i>
+                </li>
+                <li>
+                  <i>
+                    the commutativity of [real number] addition is
+                    the fact that {" "}
+                    <Math>
+                      $a + b = b + a$
+                    </Math>
+                    {" "} for all {" "}
+                    <Math>
+                      $a, b \in \rr$
+                    </Math>
+                  </i>
+                </li>
+              </ul>
+            </TextParent>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                We never took the time to prove the associativity
+                of function addition, but it is easy to prove!
+                (For other proofs see Exercise 32, Exercise 33, as
+                well as Exercise 9, Chapter 3.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={20}>
+          <ExerciseStatement id="_72_hgi_">
+            <OuterP>
+              <b>
+                Exercise 20.
+              </b>
+              {" "}
+              Apply the definition
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              fg = (u \ra f(u)g(u))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              of function multiplication
+              in order to show that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (fg)h = f(gh)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all functions {" "}
+              <NoBreak>
+                <Math>
+                  $f, g, h : \rr \ra \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              or, namely, to show that
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <NoBreak>
+                (
+                <Math>
+                  $f$
+                </Math>
+              </NoBreak>
+              {" "} times {" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                )
+              </NoBreak>
+              {" "} times {" "}
+              <Math>
+                $h$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              equals
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <Math>
+                $f$
+              </Math>
+              {" "} times {" "}
+              <NoBreak>
+                (
+                <Math>
+                  $g$
+                </Math>
+              </NoBreak>
+              {" "} times {" "}
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                )
+              </NoBreak>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              for all functions {" "}
+              <NoBreak>
+                <Math>
+                  $f, g, h : \rr \ra \rr$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              It is necessary and sufficient to show that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              ((fg)h)(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the same as
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f(gh))(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for an arbitrary input {" "}
+              <NoBreak>
+                <Math>
+                  $u \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} in order to
+              show that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (fg)h
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f(gh)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              are the same function. (Function equality is
+              based on input-output behavior: two functions are
+              equal if and only if every input is mapped to the
+              same output under either function. See {" "}
+              <NoBreak>
+                <a
+                  href="/article/chapter3#_36_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Note 6, Exercise 9, Chapter 3
+                </a>
+                .)
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <OuterP class="indent-10">
+              Starting up,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              ((fg)h)(u) = (fg)(u) \cdot h(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the definition of function multiplication,
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f(gh))(u) = f(u) \cdot (gh)(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              likewise. Moreover,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (fg)(u) = f(u) \cdot g(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (gh)(u) = g(u) \cdot h(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the same definition again. Therefore,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              ((fg)h)(u) = (f(u) \cdot g(u)) \cdot h(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              on the one hand, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f(gh))(u) = f(u) \cdot (g(u) \cdot h(u))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              on the other hand. But
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f(u) \cdot g(u)) \cdot h(u) = f(u) \cdot (g(u) \cdot h(u))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the associativity of ordinary real number
+              multiplication. (Not function multiplication:
+              {" "}
+              <i>
+                real number multiplication
+              </i>
+              .) So
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              ((fg)h)(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              equals
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f(gh))(u)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for arbitrary {" "}
+              <NoBreak>
+                <Math>
+                  $u$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which completes the proof.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                In words, we have just established the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                associativity of function multiplication
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                while we had previously established the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                associativity of function composition
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                (if you recall that one) in {" "}
+                <NoBreak>
+                  <a
+                    href="/article/chapter3#_37_hgi_"
+                    class="handle-out-chapter-link"
+                  >
+                    Exercise 9 of Chapter 3
+                  </a>
+                  .
+                </NoBreak>
+                {" "}{" "}
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                By this result, we can write
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                fgh
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                without any parentheses at all: it
+                doesn't matter whether we think of this product
+                as {" "}
+                <Math>
+                  $(fg)h$
+                </Math>
+                {" "} or {" "}
+                <NoBreak>
+                  <Math>
+                    $f(gh)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} the result is the same.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={21}>
+          <ExerciseStatement id="_74_hgi_">
+            <OuterP>
+              <b>
+                Exercise 21.
+              </b>
+              {" "}
+              Imagine a single particle in a one-dimensional
+              world, whose velocity equals its position; at {" "}
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              the particle is sitting at {" "}
+              <NoBreak>
+                <Math>
+                  $x = 1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/vEPq.svg" />
+            <Pause />
+            <OuterP>
+              If we play time backward, will the particle
+              ever reach {" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Going back in time,
+              examine how long it would take
+              the particle to cross each of the intervals defined by
+              the following geometric progression* (*see {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter4#_73_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Note 1
+                </InChapterLink>
+                ):
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/ESgD.svg" />
+            <Pause />
+            <OuterP>
+              The interval from {" "}
+              <Math>
+                $0.5$
+              </Math>
+              {" "} to {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}
+              takes {" "}
+              <i>
+                at least
+              </i>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;0.5 \over 1&#125; = 0.5
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/SiXb.svg"
+                offset_x="10em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              time to cross, because the maximum speed of the particle
+              inside of that interval is {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              Similarly, the interval from
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = 0.25
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = 0.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              takes {" "}
+              <i>
+                at least
+              </i>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;0.25 \over 0.5&#125; = 0.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              time to cross, because the maximum speed of the particle
+              inside of that interval is {" "}
+              <NoBreak>
+                <Math>
+                  $0.5$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              Again, the interval from
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = 0.125
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = 0.25
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              takes {" "}
+              <i>
+                at least
+              </i>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;0.125 \over 0.25&#125; = 0.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              time to cross, because the maximum speed of the particle
+              inside of that interval is {" "}
+              <NoBreak>
+                <Math>
+                  $0.25$
+                </Math>
+                —etc—each
+              </NoBreak>
+              {" "} interval
+              takes at least
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              units of time to cross, but there are infinitely
+              many such intervals, so it takes infinitely much time to
+              crawl back to {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (I.e., the particle never makes it to
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} no matter how far back in time we look.)
+            </OuterP>
+            <Pause />
+            <SolutionNote id="_73_hgi_">
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                A so-called
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                geometric progression
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is a sequence of numbers in which each number
+                is a fixed multiple of the previous number.
+                For example,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                100,\, 300,\, 900,\, 2700
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is a (finite) geometric progression, because each number
+                is the previous number multiplied by {" "}
+                <NoBreak>
+                  <Math>
+                    $3$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                and
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1,\, 0.5,\, 0.25,\, 0.125,\, 0.0625,\, \ldots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is an (infinite) geometric progression, because each number
+                is the previous multiplied by {" "}
+                <NoBreak>
+                  <Math>
+                    $0.5$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} A so-called
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                arithmetic progression
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is a sequence of numbers in which each number
+                adds a fixed quantity to the previous. For example,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                900, 1000, 1100, 1200, 1300, \dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is an infinite arithmetic progression in which each number
+                adds {" "}
+                <Math>
+                  $100$
+                </Math>
+                {" "} to the previous, and
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                -5.5, -6, -6.5, -7
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is a finite arithmetic progression in which each number
+                adds {" "}
+                <Math>
+                  $-0.5$
+                </Math>
+                {" "} to the previous.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={22}>
+          <ExerciseStatement id="_75_hgi_">
+            <OuterP>
+              <b>
+                Exercise 22.
+              </b>
+              {" "}
+              Take a system of two particles on the real
+              line; at time {" "}
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the first particle (yellow)
+              is at {" "}
+              <NoBreak>
+                <Math>
+                  $x = -1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} while the second one (blue)
+              is at {" "}
+              <NoBreak>
+                <Math>
+                  $x = 1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/zLWR.svg" />
+            <Pause />
+            <OuterP>
+              If the velocity of the yellow particle is set to
+              track the position of the blue particle and vice-versa,
+              give a qualitative sketch of the
+              position-as-a-function-of-time (time on the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              axis, position on the {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} axis) of the two
+              particles. What is the defining geometric relationship
+              between the two graphs?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              At {" "}
+              <Math>
+                $t = 0$
+              </Math>
+              {" "} the blue particle has velocity {" "}
+              <NoBreak>
+                <Math>
+                  $-1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              which is the position of the yellow particle,
+              and the yellow particle has velocity {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which
+              is the position of the blue particle:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/RULR.svg" />
+            <Pause />
+            <OuterP>
+              As we “release” time the two particles thus
+              start moving inward towards {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and then
+              start slowing down, as the opposing particle
+              inches closer to {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} The result is two graphs that
+              form a mirror-image radioactive decay:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/aATY.svg" />
+            <Pause />
+            <OuterP>
+              The “defining geometric relationship” is that
+              the slope of one graph equals the value of the
+              other graph at any point in time. (One could 
+              also name the fact that the graphs have value
+              {" "}
+              <Math>
+                $\pm 1$
+              </Math>
+              {" "} at {" "}
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} otherwise the graphs are not
+              uniquely determined, as they can be translated
+              together left or right by any amount while
+              maintaining the former condition about slope.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Saying
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                a particle whose velocity is minus its
+                position
+                <br />
+                and whose position is {" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "} at time {" "}
+                <Math>
+                  $t = 0$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is an alternate characterization of the blue particle
+                that does not invoke the yellow particle, and
+                likewise
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                a particle whose velocity is minus its
+                position
+                <br />
+                and whose position is {" "}
+                <Math>
+                  $-1$
+                </Math>
+                {" "} at time {" "}
+                <Math>
+                  $t = 0$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is an alternate characterization of the yellow particle
+                that does not invoke the blue particle.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The graph of the blue particle is the mirror
+                image through the {" "}
+                <Math>
+                  $y$
+                </Math>
+                {" "} axis of the graph of the 
+                particle of {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter4#_74_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Exercise 21
+                  </InChapterLink>
+                  ,
+                </NoBreak>
+                {" "} whose
+                velocity is equal to its position and whose
+                position is {" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "} at {" "}
+                <NoBreak>
+                  <Math>
+                    $t = 0$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/a0qL.svg" />
+              <Pause />
+              <OuterP>
+                ...the detailed reasoning, as also indicated on the
+                figure, being that a mirror symmetry through
+                the {" "}
+                <Math>
+                  $y$
+                </Math>
+                {" "} axis flips the sign of the slope without
+                affecting the value of {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} so that an equality of
+                the form {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $y = \te&#123;slope&#125;$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} becomes {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $y = -\te&#123;slope&#125;$
+                  </Math>
+                  ”,
+                </NoBreak>
+                {" "}
+                and vice-versa.
+              </OuterP>
+              <OuterP class="indent-10">
+                (I.e., the mirror image of the blue
+                curve satisfies the constrains of the red curve, and
+                vice-versa.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={23}>
+          <ExerciseStatement id="_76_hgi_">
+            <OuterP>
+              <b>
+                Exercise 23.
+              </b>
+              {" "}
               Four particles are placed
               at intervals of {" "}
               <Math>
@@ -6690,10 +7853,10 @@ const Rest = () => {
               particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_75_hgi_"
+                  href="/article/chapter4#_74_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 22
+                  Exercise 21
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -6703,10 +7866,10 @@ const Rest = () => {
               red particle from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter4#_75_hgi_"
+                  href="/article/chapter4#_74_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 22
+                  Exercise 21
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -8407,8 +9570,8 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                As you might already have caught on, but is
-                maybe worth emphasizing,
+                As might be worth emphasizing (did we say this
+                already?),
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -8448,1169 +9611,7 @@ const Rest = () => {
                   -valued
                 </NoBreak>
                 {" "} quantity,
-                in 1 dimension!
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_72_hgi_">
-            <OuterP>
-              <b>
-                Exercise 20.
-              </b>
-              {" "}
-              Express the...
-            </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-                <li>
-                  associativity of function composition
-                </li>
-                <li>
-                  associativity of function multiplication
-                </li>
-                <li>
-                  associativity of function addition
-                </li>
-                <li>
-                  commutativity of function multiplication
-                </li>
-                <li>
-                  commutativity of function addition
-                </li>
-              </ul>
-              <p>
-                ...as well as the...
-              </p>
-            </TextParent>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-                <li>
-                  associativity of real number multiplication
-                </li>
-                <li>
-                  associativity of real number addition
-                </li>
-                <li>
-                  commutativity of real number multiplication
-                </li>
-                <li>
-                  commutativity of real number addition
-                </li>
-              </ul>
-            </TextParent>
-            <OuterP>
-              ...in the form of self-contained, formal statements.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              For the functions:
-            </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-                <li style="position:relative;">
-                  <i>
-                    the associativity of function multiplication is
-                    the fact that {" "}
-                    <Math>
-                      $(f \circ g) \circ h = f \circ (g \circ h)$
-                    </Math>
-                    {" "}
-                    for all functions {" "}
-                    <NoBreak>
-                      <Math>
-                        $f$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $g$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <Math>
-                      $h$
-                    </Math>
-                    {" "} such that
-                    {" "}
-                    <NoBreak>
-                      <Math>
-                        $h : D \ra C$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $g : C \ra B$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <Math>
-                      $f : B \ra A$
-                    </Math>
-                    {" "}
-                    [for arbitrary sets {" "}
-                    <NoBreak>
-                      <Math>
-                        $A$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $B$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $C$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $D$
-                      </Math>
-                      ]
-                    </NoBreak>
-                    <ImageLeft
-                      src="/build-img/svgo-svg/pcYW.svg"
-                      offset_x="4em"
-                    />
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the associativity of function multiplication is
-                    the fact that {" "}
-                    <Math>
-                      $f(gh) = (fg)h$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $f, g, h : \rr \ra \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the associativity of function addition is
-                    the fact that {" "}
-                    <Math>
-                      $f + (g + h) = (f + g) + h$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $f, g, h : \rr \ra \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the commutativity of function multiplication is
-                    the fact that {" "}
-                    <Math>
-                      $fg = gf$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $f, g : \rr \ra \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the commutativity of function addition is
-                    the fact that {" "}
-                    <Math>
-                      $f + g = g + f$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $f, g : \rr \ra \rr$
-                    </Math>
-                  </i>
-                </li>
-              </ul>
-            </TextParent>
-            <OuterP>
-              For the real numbers:
-            </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-                <li>
-                  <i>
-                    the associativity of [real number] multiplication is
-                    the fact that {" "}
-                    <Math>
-                      $a(bc) = (ab)c$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b, c \in \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the associativity of [real number] addition is
-                    the fact that {" "}
-                    <Math>
-                      $a + (b + c) = (a + b) + c$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b, c \in \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the commutativity of [real number] multiplication is
-                    the fact that {" "}
-                    <Math>
-                      $ab = ba$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b \in \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the commutativity of [real number] addition is
-                    the fact that {" "}
-                    <Math>
-                      $a + b = b + a$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b \in \rr$
-                    </Math>
-                  </i>
-                </li>
-              </ul>
-            </TextParent>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                We never took the time to prove the associativity
-                of function addition, but it is easy to prove!
-                (For other proofs see Exercise 32, Exercise 33, as
-                well as Exercise 9, Chapter 3.)
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={21}>
-          <ExerciseStatement id="_73_hgi_">
-            <OuterP>
-              <b>
-                Exercise 21.
-              </b>
-              {" "}
-              Apply the definition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              fg = (u \ra f(u)g(u))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              of function multiplication
-              in order to show that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)h = f(gh)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all functions {" "}
-              <NoBreak>
-                <Math>
-                  $f, g, h : \rr \ra \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              or, namely, to show that
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <NoBreak>
-                (
-                <Math>
-                  $f$
-                </Math>
-              </NoBreak>
-              {" "} times {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                )
-              </NoBreak>
-              {" "} times {" "}
-              <Math>
-                $h$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              equals
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <Math>
-                $f$
-              </Math>
-              {" "} times {" "}
-              <NoBreak>
-                (
-                <Math>
-                  $g$
-                </Math>
-              </NoBreak>
-              {" "} times {" "}
-              <NoBreak>
-                <Math>
-                  $h$
-                </Math>
-                )
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              for all functions {" "}
-              <NoBreak>
-                <Math>
-                  $f, g, h : \rr \ra \rr$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              It is necessary and sufficient to show that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ((fg)h)(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the same as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(gh))(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for an arbitrary input {" "}
-              <NoBreak>
-                <Math>
-                  $u \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} in order to
-              show that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)h
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f(gh)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              are the same function. (Function equality is
-              based on input-output behavior: two functions are
-              equal if and only if every input is mapped to the
-              same output under either function. See {" "}
-              <NoBreak>
-                <a
-                  href="/article/chapter3#_36_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Note 6, Exercise 9, Chapter 3
-                </a>
-                .)
-              </NoBreak>
-              {" "}{" "}
-            </OuterP>
-            <OuterP class="indent-10">
-              Starting up,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ((fg)h)(u) = (fg)(u) \cdot h(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the definition of function multiplication,
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(gh))(u) = f(u) \cdot (gh)(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              likewise. Moreover,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)(u) = f(u) \cdot g(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (gh)(u) = g(u) \cdot h(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the same definition again. Therefore,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ((fg)h)(u) = (f(u) \cdot g(u)) \cdot h(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              on the one hand, and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(gh))(u) = f(u) \cdot (g(u) \cdot h(u))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              on the other hand. But
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(u) \cdot g(u)) \cdot h(u) = f(u) \cdot (g(u) \cdot h(u))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the associativity of ordinary real number
-              multiplication. (Not function multiplication:
-              {" "}
-              <i>
-                real number multiplication
-              </i>
-              .) So
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ((fg)h)(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              equals
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(gh))(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for arbitrary {" "}
-              <NoBreak>
-                <Math>
-                  $u$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which completes the proof.
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                In words, we have just established the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                associativity of function multiplication
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                while we had previously established the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                associativity of function composition
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                (if you recall that one) in {" "}
-                <NoBreak>
-                  <a
-                    href="/article/chapter3#_37_hgi_"
-                    class="handle-out-chapter-link"
-                  >
-                    Exercise 9 of Chapter 3
-                  </a>
-                  .
-                </NoBreak>
-                {" "}{" "}
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                By this result, we can write
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                fgh
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                without any parentheses at all: it
-                doesn't matter whether we think of this product
-                as {" "}
-                <Math>
-                  $(fg)h$
-                </Math>
-                {" "} or {" "}
-                <NoBreak>
-                  <Math>
-                    $f(gh)$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} the result is the same.
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={22}>
-          <ExerciseStatement id="_75_hgi_">
-            <OuterP>
-              <b>
-                Exercise 22.
-              </b>
-              {" "}
-              Imagine a single particle in a one-dimensional
-              world, whose velocity equals its position; at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              the particle is sitting at {" "}
-              <NoBreak>
-                <Math>
-                  $x = 1$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/vEPq.svg" />
-            <Pause />
-            <OuterP>
-              If we play time backward, will the particle
-              ever reach {" "}
-              <NoBreak>
-                <Math>
-                  $x = 0$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Going back in time,
-              examine how long it would take
-              the particle to cross each of the intervals defined by
-              the following geometric progression* (*see {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter4#_74_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Note 1
-                </InChapterLink>
-                ):
-              </NoBreak>
-              {" "}{" "}
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/ESgD.svg" />
-            <Pause />
-            <OuterP>
-              The interval from {" "}
-              <Math>
-                $0.5$
-              </Math>
-              {" "} to {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}
-              takes {" "}
-              <i>
-                at least
-              </i>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;0.5 \over 1&#125; = 0.5
-              $$
-              <ImageLeft
-                src="/build-img/svgo-svg/SiXb.svg"
-                offset_x="10em"
-                compensate_offset_x_for_large_text_columns={true}
-              />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              time to cross, because the maximum speed of the particle
-              inside of that interval is {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              Similarly, the interval from
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = 0.25
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = 0.5
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              takes {" "}
-              <i>
-                at least
-              </i>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;0.25 \over 0.5&#125; = 0.5
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              time to cross, because the maximum speed of the particle
-              inside of that interval is {" "}
-              <NoBreak>
-                <Math>
-                  $0.5$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              Again, the interval from
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = 0.125
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = 0.25
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              takes {" "}
-              <i>
-                at least
-              </i>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;0.125 \over 0.25&#125; = 0.5
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              time to cross, because the maximum speed of the particle
-              inside of that interval is {" "}
-              <NoBreak>
-                <Math>
-                  $0.25$
-                </Math>
-                —etc—each
-              </NoBreak>
-              {" "} interval
-              takes at least
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              0.5
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              units of time to cross, but there are infinitely
-              many such intervals, so it takes infinitely much time to
-              crawl back to {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (I.e., the particle never makes it to
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} no matter how far back in time we look.)
-            </OuterP>
-            <Pause />
-            <SolutionNote id="_74_hgi_">
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                A so-called
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                geometric progression
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                is a sequence of numbers in which each number
-                is a fixed multiple of the previous number.
-                For example,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                100,\, 300,\, 900,\, 2700
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is a (finite) geometric progression, because each number
-                is the previous number multiplied by {" "}
-                <NoBreak>
-                  <Math>
-                    $3$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                and
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                1,\, 0.5,\, 0.25,\, 0.125,\, 0.0625,\, \ldots
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is an (infinite) geometric progression, because each number
-                is the previous multiplied by {" "}
-                <NoBreak>
-                  <Math>
-                    $0.5$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "} A so-called
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                arithmetic progression
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                is a sequence of numbers in which each number
-                adds a fixed quantity to the previous. For example,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                900, 1000, 1100, 1200, 1300, \dots
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is an infinite arithmetic progression in which each number
-                adds {" "}
-                <Math>
-                  $100$
-                </Math>
-                {" "} to the previous, and
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                -5.5, -6, -6.5, -7
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is a finite arithmetic progression in which each number
-                adds {" "}
-                <Math>
-                  $-0.5$
-                </Math>
-                {" "} to the previous.
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={23}>
-          <ExerciseStatement id="_76_hgi_">
-            <OuterP>
-              <b>
-                Exercise 23.
-              </b>
-              {" "}
-              Take a system of two particles on the real
-              line; at time {" "}
-              <NoBreak>
-                <Math>
-                  $t = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} the first particle (yellow)
-              is at {" "}
-              <NoBreak>
-                <Math>
-                  $x = -1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} while the second one (blue)
-              is at {" "}
-              <NoBreak>
-                <Math>
-                  $x = 1$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/zLWR.svg" />
-            <Pause />
-            <OuterP>
-              If the velocity of the yellow particle is set to
-              track the position of the blue particle and vice-versa,
-              give a qualitative sketch of the
-              position-as-a-function-of-time (time on the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              axis, position on the {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axis) of the two
-              particles. What is the defining geometric relationship
-              between the two graphs?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              At {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              {" "} the blue particle has velocity {" "}
-              <NoBreak>
-                <Math>
-                  $-1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              which is the position of the yellow particle,
-              and the yellow particle has velocity {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which
-              is the position of the blue particle:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/RULR.svg" />
-            <Pause />
-            <OuterP>
-              As we “release” time the two particles thus
-              start moving inward towards {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} and then
-              start slowing down, as the opposing particle
-              inches closer to {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .
-              </NoBreak>
-              {" "} The result is two graphs that
-              form a mirror-image radioactive decay:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/aATY.svg" />
-            <Pause />
-            <OuterP>
-              The “defining geometric relationship” is that
-              the slope of one graph equals the value of the
-              other graph at any point in time. (One could 
-              also name the fact that the graphs have value
-              {" "}
-              <Math>
-                $\pm 1$
-              </Math>
-              {" "} at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} otherwise the graphs are not
-              uniquely determined, as they can be translated
-              together left or right by any amount while
-              maintaining the former condition about slope.)
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                The sentence
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                a particle whose velocity is minus its
-                position
-                <br />
-                and whose position is {" "}
-                <Math>
-                  $1$
-                </Math>
-                {" "} at time {" "}
-                <Math>
-                  $t = 0$
-                </Math>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                is a characterization of the blue particle
-                that does not invoke the yellow particle, and
-                likewise the sentence
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                a particle whose velocity is minus its
-                position
-                <br />
-                and whose position is {" "}
-                <Math>
-                  $-1$
-                </Math>
-                {" "} at time {" "}
-                <Math>
-                  $t = 0$
-                </Math>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                is a characterization of the yellow particle
-                that does not invoke the blue particle.
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                The graph of the blue particle is the mirror
-                image through the {" "}
-                <Math>
-                  $y$
-                </Math>
-                {" "} axis of the graph of the 
-                particle of {" "}
-                <NoBreak>
-                  <InChapterLink
-                    href="/article/chapter4#_75_hgi_"
-                    class="handle-in-chapter-link"
-                  >
-                    Exercise 22
-                  </InChapterLink>
-                  ,
-                </NoBreak>
-                {" "} whose
-                velocity is equal to its position and whose
-                position is {" "}
-                <Math>
-                  $1$
-                </Math>
-                {" "} at {" "}
-                <NoBreak>
-                  <Math>
-                    $t = 0$
-                  </Math>
-                  :
-                </NoBreak>
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/a0qL.svg" />
-              <Pause />
-              <OuterP>
-                ...the detailed reasoning, as also indicated on the
-                figure, being that a mirror symmetry through
-                the {" "}
-                <Math>
-                  $y$
-                </Math>
-                {" "} axis flips the sign of the slope without
-                affecting the value of {" "}
-                <NoBreak>
-                  <Math>
-                    $y$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} so that an equality of
-                the form {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $y = \te&#123;slope&#125;$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} becomes {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $y = -\te&#123;slope&#125;$
-                  </Math>
-                  ”,
-                </NoBreak>
-                {" "}
-                and vice-versa.
-              </OuterP>
-              <OuterP class="indent-10">
-                (I.e., the mirror image of the blue
-                curve satisfies the constrains of the red curve, and
-                vice-versa.)
+                in 1 dimension.
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -9652,8 +9653,8 @@ const Rest = () => {
                 </a>
                 ).
               </NoBreak>
-              {" "} Knowing
-              that this function is the {" "}
+              {" "}
+              Knowing that this function is the {" "}
               <NoBreak>
                 <Math>
                   $x$
@@ -9662,7 +9663,7 @@ const Rest = () => {
               </NoBreak>
               {" "} of a
               point rotating at unit speed around a unit
-              circle, what is an approximation to the
+              circle what is an approximation to the
               circumference of a unit circle?
             </OuterP>
             <Pause />
@@ -9708,7 +9709,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/htXO.svg" />
             <Pause />
             <OuterP>
-              More particularly,
+              More particularly, this implies that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -9728,7 +9729,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              units of time, by counting half-bumps:
+              units of time, as each half-bump corresponds to a
+              quarter-turn (if you think about it):
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/9cV2.svg" />
@@ -9747,15 +9749,15 @@ const Rest = () => {
               is an approximation to the quarter-circumference of
               the circle, and
             </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125; = 6.\overline&#123;285714&#125;
-              $$
-            </MathBlock>
-            <Pause />
+            <Boxed>
+              <MathBlock>
+                $$
+                \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125; = 6.\overline&#123;285714&#125;
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
-              is an approximation to the circumference of a unit
+              is an approximation to the full circumference of a unit
               circle,
               which ends up being about
               half-a-part-in-a-thousand too large {" "}
@@ -9773,8 +9775,8 @@ const Rest = () => {
                   $0.00040249943...$
                 </Math>
               </NoBreak>
-              {" "} too large”),
-              whereas our initial approximation of
+              {" "} too large”).
+              (Whereas our initial approximation of
             </OuterP>
             <Pause />
             <MathBlock>
@@ -9788,7 +9790,7 @@ const Rest = () => {
               <Math>
                 $10$
               </Math>
-              {" "} times worse!
+              {" "} times worse!)
             </OuterP>
           </Solution>
         </Exercise>

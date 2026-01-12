@@ -1972,11 +1972,11 @@
   },
   "svg_ch4_one_particle_speed_equals_time_cloud.svg": {
     "build-version": "svgo-svg/SiXb.svg",
-    "build-version-created-on": 1768068984,
+    "build-version-created-on": 1768223742,
     "build-method": "svgo",
-    "build-version-size": 85122,
-    "original-size": 138931,
-    "compression": "38.73%",
+    "build-version-size": 12683,
+    "original-size": 152827,
+    "compression": "91.7%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_p4white_inline.svg": {
@@ -2125,11 +2125,11 @@
   },
   "svg_ch4_cosine_for_eta_11_noticed.svg": {
     "build-version": "svgo-svg/htXO.svg",
-    "build-version-created-on": 1768216237,
+    "build-version-created-on": 1768222641,
     "build-method": "svgo",
-    "build-version-size": 25315,
-    "original-size": 318304,
-    "compression": "92.05%",
+    "build-version-size": 21369,
+    "original-size": 313356,
+    "compression": "93.18%",
     "used-last-build": true
   },
   "svg_ch5_ex_vector_sum_101_cloud.svg": {
@@ -3043,11 +3043,11 @@
   },
   "svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg": {
     "build-version": "svgo-svg/a0qL.svg",
-    "build-version-created-on": 1767294313,
+    "build-version-created-on": 1768222862,
     "build-method": "svgo",
-    "build-version-size": 30353,
-    "original-size": 89657,
-    "compression": "66.15%",
+    "build-version-size": 31455,
+    "original-size": 91756,
+    "compression": "65.72%",
     "used-last-build": true
   },
   "svg_ch5_ch_secant_reinterpretation_3.svg": {
@@ -5383,11 +5383,11 @@
   },
   "1d_blue_yellow_particles_with_velocities.svg": {
     "build-version": "svgo-svg/RULR.svg",
-    "build-version-created-on": 1768151199,
+    "build-version-created-on": 1768222357,
     "build-method": "svgo",
-    "build-version-size": 19904,
-    "original-size": 204783,
-    "compression": "90.28%",
+    "build-version-size": 19966,
+    "original-size": 205120,
+    "compression": "90.27%",
     "used-last-build": true
   },
   "svg_ch3_ex_f_box_g_box.svg": {
