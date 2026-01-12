@@ -9570,8 +9570,19 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                As might be worth emphasizing (did we say this
-                already?),
+                As half-mentioned in
+                the solution to {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter4#_63_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Exercise 12
+                  </InChapterLink>
+                  ,
+                </NoBreak>
+                {" "}
+                but might be worth emphasizing,
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -9603,15 +9614,15 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                —a vector-valued quantity, or {" "}
+                —a vector-valued quantity. (Or {" "}
                 <NoBreak>
                   <Math>
                     $\pm$
                   </Math>
                   -valued
                 </NoBreak>
-                {" "} quantity,
-                in 1 dimension.
+                {" "} quantity
+                in one dimension.)
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -9663,8 +9674,9 @@ const Rest = () => {
               </NoBreak>
               {" "} of a
               point rotating at unit speed around a unit
-              circle what is an approximation to the
-              circumference of a unit circle?
+              circle, what is an approximation to the
+              circumference of a unit circle that one can
+              deduce just from the graph?
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/njEr.svg" />

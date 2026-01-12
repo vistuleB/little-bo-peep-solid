@@ -7,8 +7,9 @@
     in Chapter >>functions, Exercise >>_cosine_of_1000x_).
     Knowing that this function is the $x$-coordinate of a
     point rotating at unit speed around a unit
-    circle what is an approximation to the
-    circumference of a unit circle?
+    circle, what is an approximation to the
+    circumference of a unit circle that one can
+    deduce just from the graph?
 
     |> Image
         src=images/svg_ch4_cosine_for_eta.svg

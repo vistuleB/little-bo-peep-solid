@@ -1050,8 +1050,10 @@
             then.)
 
         |> SolutionNote
-            As might be worth emphasizing (did we say this
-            already?),
+
+            As half-mentioned in
+            the solution to Exercise >>_four_particles_,
+            but might be worth emphasizing,
 
             __speed__
 
@@ -1067,6 +1069,6 @@
 
             __displacement per unit time__
 
-            —a vector-valued quantity, or $\pm$-valued quantity,
-            in 1 dimension.
+            —a vector-valued quantity. (Or $\pm$-valued quantity
+            in one dimension.)
 
