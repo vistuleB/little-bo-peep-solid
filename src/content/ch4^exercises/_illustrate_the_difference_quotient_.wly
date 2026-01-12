@@ -17,7 +17,7 @@
 
     |> Solution
 
-        Viz:
+        Adding elements:
 
         |> Image
             src=images/svg_ch4_newton_quotient_finished.svg
@@ -47,7 +47,8 @@
         !!     offset_y=-0.5em
         !!     src=images/svg_ch4_new_quatient_x_fxplush_cloud.svg
 
-        at the other end. (This is also the case
+        at the other end. 
+        (This is also the case
         if $h$ is negative, by the way.)
 
         |> Pause

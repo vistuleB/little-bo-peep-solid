@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_f_equals_f_5_
     Exercise >>_four_particles_ exhibits a function $f$—in fact,
     four different functions $f$—such that
@@ -252,7 +253,6 @@
             at time $t$.
 
         |> SolutionNote
-            handle=SeparationOfCoordinates
             It is worth noting that, in fact, the
             $x$- and $y$-coordinates live separate
             lives. The rate of change of each
@@ -263,7 +263,7 @@
             would never know!
 
         |> SolutionNote
-            Adding to this observation, we don't
+            Adding to the previous observation, we don't
             _need_ to start the particles in
             a symmetric configuration. Symmetry only
             helps to picture how the positions of the
@@ -324,5 +324,3 @@
             the long-term evolution of the system, if
             you were shown just the $x$-coordinates,
             or just the $y$-coordinates, on their own.
-
-

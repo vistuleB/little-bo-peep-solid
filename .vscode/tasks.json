@@ -24,7 +24,7 @@
       },
       // "args": ["run", "--", "--track", "\"assuming that\"", "+5-5"]
       // "args": [ "run", "--", "--only", "work=ing", "content=selection", "--local", "--echo-args", ]
-      "args": [ "run", "--", "--only", "ch4", "--local", ]
+      "args": [ "run", "--", "--only", "ch4", "ch3", "--local", ]
     },
     {
       "label": "gleam run -m <file>",

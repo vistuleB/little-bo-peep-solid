@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_four_particles_
 
     In the following graph, which curve might
@@ -222,9 +223,39 @@
             |> Image
                 src=images/svg_ch4_cosine_curves_rolling_wheel.svg
 
-            (If the above just looks like a
-            confusing mess then don't sweat it—it's
-            not that important.)
+            (If this just looks like a mess, then nevermind.)
+
+        !! |> SolutionNote
+        !!     To reiterate, take a look at this
+        !!     figure again:
+
+        !!     |> Image
+        !!         src=images/svg_ch4_cosine_curves_cresting.svg
+
+        !!     The derivative is
+
+        !!     __leading__
+
+        !!     the red particle (reading
+        !!     the graph from left to right)
+        !!     just as the blue particle is
+            
+        !!     __leading__
+            
+        !!     the red particle on the unit circle in the order
+        !!     of rotation.
+
+        !! |> SolutionNote
+
+        !!     You could
+        !!     achieve the same set of curves with a
+        !!     counterclockwise rotation, just as long as
+        !!     you changed the order of the particles to put
+        !!     the blue particle back in front of the
+        !!     red, the yellow particle back in front of
+        !!     the blue, etc. (I.e., take a mirror image 
+        !!     of the four particles
+        !!     through the horizontal axis.)
 
         |> SolutionNote
             To reiterate, take a look at this
@@ -232,7 +263,6 @@
 
             |> Image
                 src=images/svg_ch4_cosine_curves_cresting.svg
-
             The derivative is
 
             __ahead__

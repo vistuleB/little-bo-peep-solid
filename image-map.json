@@ -2539,11 +2539,11 @@
   },
   "svg_ch4_cosine_curves_rolling_wheel.svg": {
     "build-version": "svgo-svg/E0qc.svg",
-    "build-version-created-on": 1768052330,
+    "build-version-created-on": 1768219824,
     "build-method": "svgo",
-    "build-version-size": 117587,
-    "original-size": 158390,
-    "compression": "25.76%",
+    "build-version-size": 123446,
+    "original-size": 172280,
+    "compression": "28.35%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_p3black_inline.svg": {
@@ -4897,11 +4897,11 @@
   },
   "svg_ch4_5_euler_final_graph.svg": {
     "build-version": "svgo-svg/U6Hi.svg",
-    "build-version-created-on": 1768068034,
+    "build-version-created-on": 1768221259,
     "build-method": "svgo",
-    "build-version-size": 11521,
-    "original-size": 15355,
-    "compression": "24.97%",
+    "build-version-size": 20153,
+    "original-size": 30386,
+    "compression": "33.68%",
     "used-last-build": true
   },
   "svg_ch4_17_particle17_inline.svg": {
@@ -4987,11 +4987,11 @@
   },
   "svg_ch4_cosine_curves_vector_illustration_cloud.svg": {
     "build-version": "svgo-svg/BcYN.svg",
-    "build-version-created-on": 1768064672,
+    "build-version-created-on": 1768219824,
     "build-method": "svgo",
-    "build-version-size": 64896,
-    "original-size": 100967,
-    "compression": "35.73%",
+    "build-version-size": 64906,
+    "original-size": 101074,
+    "compression": "35.78%",
     "used-last-build": true
   },
   "svg_ch4_ch_convex_concave.svg": {
