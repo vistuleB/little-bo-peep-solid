@@ -9716,7 +9716,7 @@ const Rest = () => {
               in {" "}
               <NoBreak>
                 <a
-                  href="/article/chapter3#_50_hgi_"
+                  href="/article/chapter3#_34_hgi_"
                   class="handle-out-chapter-link"
                 >
                   Chapter 3, Exercise 7

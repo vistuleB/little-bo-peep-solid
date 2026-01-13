@@ -167,7 +167,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         #("Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>", "<a href=0>Note _0_ of Exercise _1_</a>"),
         #("Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=1>Exercise _1_ of Chapter _2_</a>"),
         #("Example <a href=1>_1_</a> of Chapter <a href=2>_2_</a>", "<a href=1>Example _1_ of Chapter _2_</a>"),
-        #("Chapter <a href=1>_1_</a>, Exercise <a href=2>_2_</a>", "<a href=1>Chapter _1_, Exercise _2_</a>"),
+        #("Chapter <a href=1>_1_</a>, Exercise <a href=2>_2_</a>", "<a href=2>Chapter _1_, Exercise _2_</a>"),
         #("Chapter <a href=1>_1_</a>, Example <a href=2>_2_</a>", "<a href=2>Chapter _1_, Example _2_</a>"),
         #("Chapter <a href=1>_1_</a>", "<a href=1>Chapter _1_</a>"),
         #("Bootcamp <a href=1>_1_</a>", "<a href=1>Bootcamp _1_</a>"),
