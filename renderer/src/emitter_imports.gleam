@@ -22,6 +22,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("Article", ExportedByFile(Some("Article"), [])),
     #("ArticleTitle", ExportedByFile(Some("ArticleTitle"), [])),
     #("Boxed", ExportedByFile(Some("Boxed"), [])),
+    #("BoxedText", ExportedByFile(Some("BoxedText"), [])),
     #("Delimiters", ExportedByFile(None, ["CentralDisplay", "CentralDisplayItalic"])),
     #("Exercises", ExportedByFile(None, ["Exercises", "Exercise", "ExerciseStatement"])),
     #("Grid", ExportedByFile(Some("Grid"), [])),

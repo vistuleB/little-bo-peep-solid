@@ -1,10 +1,12 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
 import Boxed  from "~/components/Boxed";
+import BoxedText  from "~/components/BoxedText";
 import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
+import { Item, List }  from "~/components/List";
 import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
@@ -15827,24 +15829,27 @@ const Rest = () => {
               but to recapitulate, the answer is the
               following sequence of two steps:
             </OuterP>
-            <TextParent>
-              <div style="border:red solid 1px;margin:1.2em auto 1.2em;padding:0.3em 1.2em 0.4em;width:100%;box-sizing:border-box;">
-                <CentralDisplayItalic>
-                  1. horizontally translate the graph by {" "}
-                  <Math>
-                    $-C$
-                  </Math>
-                </CentralDisplayItalic>
-                <Pause />
-                <CentralDisplayItalic>
-                  2. horizontally compress the resulting graph
-                  by a factor {" "}
-                  <Math>
-                    $B$
-                  </Math>
-                </CentralDisplayItalic>
-              </div>
-            </TextParent>
+            <BoxedText>
+              <List type="decimal">
+                <Item>
+                  <i>
+                    horizontally translate the graph by {" "}
+                    <Math>
+                      $-C$
+                    </Math>
+                  </i>
+                </Item>
+                <Item>
+                  <i>
+                    horizontally compress the resulting graph
+                    by a factor {" "}
+                    <Math>
+                      $B$
+                    </Math>
+                  </i>
+                </Item>
+              </List>
+            </BoxedText>
             <Pause />
             <TildeDivider />
             <Pause />

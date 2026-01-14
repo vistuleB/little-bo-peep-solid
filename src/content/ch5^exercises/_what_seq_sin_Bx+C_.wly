@@ -67,15 +67,15 @@
         physical interpretation is no longer at hand);
         but to recapitulate, the answer is the
         following sequence of two steps:
+        
+        |> BoxedText
+            |> List
+                type=decimal
+                
+                _horizontally translate the graph by $-C$_
 
-        |> TextParent
-            |> div
-                style=border:red solid 1px;margin:1.2em auto 1.2em;padding:0.3em 1.2em 0.4em;width:100%;box-sizing:border-box;
-
-                __1. horizontally translate the graph by $-C$__
-
-                __2. horizontally compress the resulting graph
-                by a factor $B$__
+                _horizontally compress the resulting graph
+                by a factor $B$_
 
         |> TildeDivider
         
