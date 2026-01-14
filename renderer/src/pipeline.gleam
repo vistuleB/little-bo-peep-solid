@@ -184,7 +184,8 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.generate_lbp_breadcrumbs(),
       dl.unwrap("BreadcrumbTitle"),
       dl.unwrap("Scope"),
-      dl.delete_attribute__batch(["counter", "handle", "type", "t", "_", "title", "test"]),
+      dl.delete_attribute__outside("type", ["List"]),
+      dl.delete_attribute__batch(["counter", "handle", "t", "_", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
     ],
     case author_mode {

@@ -149,6 +149,7 @@
     can be thought of in a few different ways:
 
     |> List
+        type=decimal
 
         Fifty halves (i.e., $50 \times {1\over 2}$).
 
