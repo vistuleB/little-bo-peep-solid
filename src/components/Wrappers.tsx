@@ -1,6 +1,13 @@
-import { ParentProps } from "solid-js";
+import { JSX, ParentProps } from "solid-js";
 import { SectionDivider } from "./SectionDivider";
 import { useGlobalContext } from "~/store/StoreProvider";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
+import { twJoin } from "tailwind-merge";
+
+interface ExampleProps {
+  style?: string | JSX.CSSProperties;
+  class?: string;
+}
 
 export const Section = (
   props: ParentProps & { divider?: boolean; id?: string },
@@ -16,8 +23,15 @@ export const Section = (
   );
 };
 
-export const Example = (props: ParentProps) => {
-  return <>{props.children}</>;
+export const Example = (props: ParentProps<ExampleProps>) => {
+  return (
+    <div
+      class={twJoin("text-column", props.class)}
+      style={`width:${mainColumnWidth()}px;${props.style ?? ""}`}
+    >
+      {props.children}
+    </div>
+  );
 };
 
 export const Note = (props: ParentProps) => {
