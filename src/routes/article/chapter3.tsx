@@ -26,52 +26,52 @@ export default function __Chapter3__() {
       id="_50_hgi_"
     >
       <SectionsBreadcrumbs>
-        <BreadcrumbItem id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-section-1">
           <InChapterLink href="?id=section-1">
             syntax
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-section-2">
           <InChapterLink href="?id=section-2">
             lambda functions
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-section-3">
           <InChapterLink href="?id=section-3">
             definition by cases
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-section-4">
           <InChapterLink href="?id=section-4">
             on arbitrariness
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-section-5">
           <InChapterLink href="?id=section-5">
             graphs
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-section-6">
           <InChapterLink href="?id=section-6">
             domains
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-section-7">
           <InChapterLink href="?id=section-7">
             “from/to” notation
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-section-8">
           <InChapterLink href="?id=section-8">
             the vertical line test
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-section-9">
           <InChapterLink href="?id=section-9">
             a famous discontinuity
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-section-10">
           <InChapterLink href="?id=section-10">
             distinguishing {" "}
             <NoBreak>
@@ -91,7 +91,7 @@ export default function __Chapter3__() {
             </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-10">
+        <BreadcrumbItem id="breadcrumb-section-11">
           <InChapterLink href="?id=section-11">
             distinguishing {" "}
             <NoBreak>
@@ -111,17 +111,17 @@ export default function __Chapter3__() {
             </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-11">
+        <BreadcrumbItem id="breadcrumb-section-12">
           <InChapterLink href="?id=section-12">
             polynomials
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-12">
+        <BreadcrumbItem id="breadcrumb-section-13">
           <InChapterLink href="?id=section-13">
             quadratic, linear, and constant terms
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-13">
+        <BreadcrumbItem id="breadcrumb-exercises">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>

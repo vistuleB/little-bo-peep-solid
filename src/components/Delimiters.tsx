@@ -43,3 +43,23 @@ export const CentralDisplayItalic = (
     </div>
   );
 };
+
+export const MiDisplayItalic = (
+  props: ParentProps & SharedProps & { indent?: boolean }
+) => {
+  let { store } = useGlobalContext();
+  return (
+    <div
+      class={twJoin(
+        props.class,
+        "text-center block",
+        store.show_areas && "bg-[#ebe3a0b0]"
+      )}
+      style={`width:100%;`}
+    >
+      <i class="block pl-[1.5em] pr-[1.5em]" style={props.style}>
+        {props.children}
+      </i>
+    </div>
+  );
+};

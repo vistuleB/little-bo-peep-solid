@@ -23,52 +23,52 @@ export default function __Bootcamp2__() {
       id="_19_hgi_"
     >
       <SectionsBreadcrumbs>
-        <BreadcrumbItem id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-section-1">
           <InChapterLink href="?id=section-1">
             terminology
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-section-2">
           <InChapterLink href="?id=section-2">
             integer powers of 10
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-section-3">
           <InChapterLink href="?id=section-3">
             other bases
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-section-4">
           <InChapterLink href="?id=section-4">
             additivity of exponents
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-section-5">
           <InChapterLink href="?id=section-5">
             the third law of exponents
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-section-6">
           <InChapterLink href="?id=section-6">
             famous powers of 10
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-section-7">
           <InChapterLink href="?id=section-7">
             negative exponent prefixes
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-section-8">
           <InChapterLink href="?id=section-8">
             positive exponent prefixes
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-section-9">
           <InChapterLink href="?id=section-9">
             logarithms base 10
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-exercises">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>

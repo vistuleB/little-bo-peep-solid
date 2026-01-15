@@ -25,52 +25,52 @@ export default function __Chapter2__() {
       id="_27_hgi_"
     >
       <SectionsBreadcrumbs>
-        <BreadcrumbItem id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-section-1">
           <InChapterLink href="?id=section-1">
             definition
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-section-2">
           <InChapterLink href="?id=section-2">
             measuring slope
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-section-3">
           <InChapterLink href="?id=section-3">
             sign combinations
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-section-4">
           <InChapterLink href="?id=section-4">
             pathological cases
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-section-5">
           <InChapterLink href="?id=section-5">
             “rise over run”
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-section-6">
           <InChapterLink href="?id=section-6">
             solving for “rise” and “run”
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-section-7">
           <InChapterLink href="?id=section-7">
             slopes and line equations
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-section-8">
           <InChapterLink href="?id=section-8">
             slopes and units
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-section-9">
           <InChapterLink href="?id=section-9">
             postscript: units vs dimensions
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-exercises">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>

@@ -2,7 +2,7 @@ import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
 import Boxed  from "~/components/Boxed";
 import BoxedText  from "~/components/BoxedText";
-import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
+import { CentralDisplay, CentralDisplayItalic, MiDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
@@ -27,17 +27,17 @@ export default function __Chapter5__() {
       id="_131_hgi_"
     >
       <SectionsBreadcrumbs>
-        <BreadcrumbItem id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-section-1">
           <InChapterLink href="?id=section-1">
             cos and sin. (“cosine” and “sine”.)
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-section-2">
           <InChapterLink href="?id=section-2">
             derivatives
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-section-3">
           <InChapterLink href="?id=section-3">
             even/odd identities, and identities with {" "}
             <NoBreak>
@@ -49,27 +49,27 @@ export default function __Chapter5__() {
             </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-section-4">
           <InChapterLink href="?id=section-4">
             relation to derivatives
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-section-5">
           <InChapterLink href="?id=section-5">
             the pythagorean identity
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-section-6">
           <InChapterLink href="?id=section-6">
             inputs as radians
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-section-7">
           <InChapterLink href="?id=section-7">
             auto-converting degrees to radians
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-section-8">
           <InChapterLink href="?id=section-8">
             sines and cosines of {" "}
             <NoBreak>
@@ -91,62 +91,62 @@ export default function __Chapter5__() {
             </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-section-9">
           <InChapterLink href="?id=section-9">
             scaling the circle
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-section-10">
           <InChapterLink href="?id=section-10">
             polar coordinates
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-10">
+        <BreadcrumbItem id="breadcrumb-section-11">
           <InChapterLink href="?id=section-11">
             change-of-coordinate formulas
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-11">
+        <BreadcrumbItem id="breadcrumb-section-12">
           <InChapterLink href="?id=section-12">
             right triangles
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-12">
+        <BreadcrumbItem id="breadcrumb-section-13">
           <InChapterLink href="?id=section-13">
             a famous diagram
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-13">
+        <BreadcrumbItem id="breadcrumb-section-14">
           <InChapterLink href="?id=section-14">
             the abercrombie inequality
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-14">
+        <BreadcrumbItem id="breadcrumb-section-15">
           <InChapterLink href="?id=section-15">
             the gregorinovich sandwich
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-15">
+        <BreadcrumbItem id="breadcrumb-section-16">
           <InChapterLink href="?id=section-16">
             the angle-sum formulas
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-16">
+        <BreadcrumbItem id="breadcrumb-section-17">
           <InChapterLink href="?id=section-17">
             the missing arrows
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-17">
+        <BreadcrumbItem id="breadcrumb-section-18">
           <InChapterLink href="?id=section-18">
             secant: a second view
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-18">
+        <BreadcrumbItem id="breadcrumb-section-19">
           <InChapterLink href="?id=section-19">
             note on calculators
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-19">
+        <BreadcrumbItem id="breadcrumb-exercises">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -15822,6 +15822,13 @@ const Rest = () => {
               following sequence of two steps:
             </OuterP>
             <BoxedText>
+              <p>
+                Hello this is a paragraph, people!
+                Hello this is a paragraph, people!
+                Hello this is a paragraph, people!
+                Hello this is a paragraph, people!
+              </p>
+              <Pause />
               <CentralDisplayItalic>
                 1. horizontally translate the graph by {" "}
                 <Math>
@@ -15901,20 +15908,22 @@ const Rest = () => {
                 of transformations becomes:
               </OuterP>
               <BoxedText>
-                <CentralDisplayItalic>
+                <Pause />
+                <MiDisplayItalic>
                   1. horizontally compress the resulting graph
                   by a factor {" "}
                   <Math>
                     $B$
                   </Math>
-                </CentralDisplayItalic>
+                </MiDisplayItalic>
                 <Pause />
-                <CentralDisplayItalic>
+                <MiDisplayItalic>
                   2. horizontally translate the graph by {" "}
                   <Math>
                     $-C/B$
                   </Math>
-                </CentralDisplayItalic>
+                </MiDisplayItalic>
+                <Pause />
               </BoxedText>
               <OuterP>
                 ...where the translation is now {" "}

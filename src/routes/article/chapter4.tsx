@@ -27,62 +27,62 @@ export default function __Chapter4__() {
       id="_78_hgi_"
     >
       <SectionsBreadcrumbs>
-        <BreadcrumbItem id="breadcrumb-0">
+        <BreadcrumbItem id="breadcrumb-section-1">
           <InChapterLink href="?id=section-1">
             definitions
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-1">
+        <BreadcrumbItem id="breadcrumb-section-2">
           <InChapterLink href="?id=section-2">
             vocabulary
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-section-3">
           <InChapterLink href="?id=section-3">
             sketching a derivative
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-section-4">
           <InChapterLink href="?id=section-4">
             derivative of a constant function
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-section-5">
           <InChapterLink href="?id=section-5">
             derivative of an affine function
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-section-6">
           <InChapterLink href="?id=section-6">
             units of the derivative
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-section-7">
           <InChapterLink href="?id=section-7">
             the second derivative
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-7">
+        <BreadcrumbItem id="breadcrumb-section-8">
           <InChapterLink href="?id=section-8">
             geometric interpretation of the second derivative
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-8">
+        <BreadcrumbItem id="breadcrumb-section-9">
           <InChapterLink href="?id=section-9">
             vocabulary #1
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-9">
+        <BreadcrumbItem id="breadcrumb-section-10">
           <InChapterLink href="?id=section-10">
             the second derivative of position
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-10">
+        <BreadcrumbItem id="breadcrumb-section-11">
           <InChapterLink href="?id=section-11">
             the jerk
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-11">
+        <BreadcrumbItem id="breadcrumb-exercises">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>

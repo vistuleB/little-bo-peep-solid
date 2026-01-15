@@ -69,6 +69,11 @@
         following sequence of two steps:
         
         |> BoxedText
+
+            Hello this is a paragraph, people!
+            Hello this is a paragraph, people!
+            Hello this is a paragraph, people!
+            Hello this is a paragraph, people!
                 
             __1. horizontally translate the graph by $-C$__
 
