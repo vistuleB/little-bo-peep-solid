@@ -13,7 +13,6 @@ import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBrea
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
-import TextParent  from "~/components/TextParent";
 import { TildeDivider }  from "~/components/TildeDivider";
 import { SolutionNote, Example, Pause, Section, NoBreak }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
@@ -15901,24 +15900,22 @@ const Rest = () => {
                 angular frequency; in that case, the sequence
                 of transformations becomes:
               </OuterP>
-              <TextParent>
-                <div style="border:red solid 1px;margin:1.2em auto 1.4em;padding:0.3em 1.2em 0.4em;width:100%;box-sizing:border-box;">
-                  <CentralDisplayItalic>
-                    1. horizontally compress the resulting graph
-                    by a factor {" "}
-                    <Math>
-                      $B$
-                    </Math>
-                  </CentralDisplayItalic>
-                  <Pause />
-                  <CentralDisplayItalic>
-                    2. horizontally translate the graph by {" "}
-                    <Math>
-                      $-C/B$
-                    </Math>
-                  </CentralDisplayItalic>
-                </div>
-              </TextParent>
+              <BoxedText>
+                <CentralDisplayItalic>
+                  1. horizontally compress the resulting graph
+                  by a factor {" "}
+                  <Math>
+                    $B$
+                  </Math>
+                </CentralDisplayItalic>
+                <Pause />
+                <CentralDisplayItalic>
+                  2. horizontally translate the graph by {" "}
+                  <Math>
+                    $-C/B$
+                  </Math>
+                </CentralDisplayItalic>
+              </BoxedText>
               <OuterP>
                 ...where the translation is now {" "}
                 <Math>

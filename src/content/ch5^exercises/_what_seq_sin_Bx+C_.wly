@@ -107,15 +107,13 @@
             in order to account for the already-changed
             angular frequency; in that case, the sequence
             of transformations becomes:
+            
+            |> BoxedText
 
-            |> TextParent
-                |> div
-                    style=border:red solid 1px;margin:1.2em auto 1.4em;padding:0.3em 1.2em 0.4em;width:100%;box-sizing:border-box;
+                __1. horizontally compress the resulting graph
+                by a factor $B$__
 
-                    __1. horizontally compress the resulting graph
-                    by a factor $B$__
-
-                    __2. horizontally translate the graph by $-C/B$__
+                __2. horizontally translate the graph by $-C/B$__
 
             ...where the translation is now $-C/B$ instead
             of $-C$ to account for the fact that the graph
