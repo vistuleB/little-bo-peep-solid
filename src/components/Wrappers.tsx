@@ -26,7 +26,7 @@ export const Section = (
 export const Example = (props: ParentProps<ExampleProps>) => {
   return (
     <div
-      class={twJoin("text-column", props.class)}
+      class={twJoin("text-column !px-0", props.class)}
       style={`width:${mainColumnWidth()}px;${props.style ?? ""}`}
     >
       {props.children}
