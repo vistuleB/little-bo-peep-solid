@@ -89,8 +89,8 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.delete_if_empty("p"),
       // (end cleaning)
     ],
-    pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math", "List"]),
-    pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math", "List"]),
+    pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
+    pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     [
       dl.free_children(#("CentralDisplay", "p")),
       dl.free_children(#("CentralDisplayItalic", "p")),
