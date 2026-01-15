@@ -69,13 +69,11 @@
         following sequence of two steps:
         
         |> BoxedText
-            |> List
-                type=decimal
                 
-                _horizontally translate the graph by $-C$_
+            __1. horizontally translate the graph by $-C$__
 
-                _horizontally compress the resulting graph
-                by a factor $B$_
+            __2. horizontally compress the resulting graph
+            by a factor $B$__
 
         |> TildeDivider
         

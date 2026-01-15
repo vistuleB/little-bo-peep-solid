@@ -15823,25 +15823,20 @@ const Rest = () => {
               following sequence of two steps:
             </OuterP>
             <BoxedText>
-              <List type="decimal">
-                <Item>
-                  <i>
-                    horizontally translate the graph by {" "}
-                    <Math>
-                      $-C$
-                    </Math>
-                  </i>
-                </Item>
-                <Item>
-                  <i>
-                    horizontally compress the resulting graph
-                    by a factor {" "}
-                    <Math>
-                      $B$
-                    </Math>
-                  </i>
-                </Item>
-              </List>
+              <CentralDisplayItalic>
+                1. horizontally translate the graph by {" "}
+                <Math>
+                  $-C$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <CentralDisplayItalic>
+                2. horizontally compress the resulting graph
+                by a factor {" "}
+                <Math>
+                  $B$
+                </Math>
+              </CentralDisplayItalic>
             </BoxedText>
             <Pause />
             <TildeDivider />
