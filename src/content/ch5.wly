@@ -923,20 +923,14 @@
     $$
 
     or namely with the property that:
+    
+    |> List
 
-    |> TextParent
-        |> ul
-            style=list-style-type:disc;margin-top:1em;margin-bottom:1em;
-            |> li
-                style=margin:0 60px;
-
-                $r$ is the distance from $P$ to the origin;
-            |> li
-                style=margin:0 60px;
-
-                $\theta$ is “the” counterclockwise angle
-                from the positive $x$ axis to the segment
-                $OP$, where $O$ is the origin;
+        $r$ is the distance from $P$ to the origin;
+        
+        $\theta$ is “the” counterclockwise angle
+        from the positive $x$ axis to the segment
+        $OP$, where $O$ is the origin;
 
     ...even though $\theta$ is not unique,
     because any multiple of $4\eta$ may be
@@ -1306,24 +1300,20 @@
     inequality.
 
     One can polish a few more details by noting that:
+    
+    |> List
+        type=lower-roman-paren
 
-    |> TextParent
-        |> p
-            style=text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;
+        the segment can be tangent to the
+        arc at one point, the proof will still go
+        through (so the segment does not need to
+        _strictly_ clear the arc);
 
-            *(i)* the segment can be tangent to the
-            arc at one point, the proof will still go
-            through (so the segment does not need to
-            _strictly_ clear the arc);
-
-        |> p
-            style=text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;
-
-            *(ii)* as long as the angle is nonzero,
-            and the arc has nonzero radius, the
-            length of the segment will be STRICTLY
-            GREATER than the length of the arc,
-            not just greater-or-equal-to
+        as long as the angle is nonzero,
+        and the arc has nonzero radius, the
+        length of the segment will be STRICTLY
+        GREATER than the length of the arc,
+        not just greater-or-equal-to
 
     (Point *(ii)* can be seen by
     comparing the segment to a two-segment

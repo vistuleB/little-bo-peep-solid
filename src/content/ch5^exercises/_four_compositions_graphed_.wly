@@ -21,22 +21,17 @@
         \te{4.}\,\, x \ra Bf(x)
         $$
         For which the graphs are respectively obtained by:
+        
+        |> List
+            type=decimal
 
-        |> TextParent
-            |> ul
-                style=list-style-type:decimal;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;
-                |> li
+            horizontally translating the graph of $f$ by $A$ units to the left;
 
-                    horizontally translating the graph of $f$ by $A$ units to the left;
-                |> li
+            horizontally compressing the graph of $f$ by a factor $B$;
 
-                    horizontally compressing the graph of $f$ by a factor $B$;
-                |> li
+            vertically translating the graph of $f$ by $A$ units upward;
 
-                    vertically translating the graph of $f$ by $A$ units upward;
-                |> li
-
-                    vertically dilating (scaling) the graph of $f$ by a factor $B$.
+            vertically dilating (scaling) the graph of $f$ by a factor $B$.
 
         (Cf. Exercise 7 of Chapter 3, Exercise 14 of
         Chapter 3.)

@@ -6,6 +6,7 @@ import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises"
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
+import { Item, List }  from "~/components/List";
 import { Math, MathBlock }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
@@ -829,22 +830,22 @@ const Rest = () => {
           For example, if the “before” graph has units
           of...
         </OuterP>
-        <TextParent style="margin-top:1em;margin-bottom:1em;">
-          <ul style="list-style-type:disc;">
-            <li style="margin:0 60px;">
-              seconds on the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis, meters on the
-              {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axis
-            </li>
-          </ul>
-        </TextParent>
+        <Pause />
+        <List>
+          <Item>
+            seconds on the {" "}
+            <Math>
+              $x$
+            </Math>
+            {" "} axis, meters on the
+            {" "}
+            <Math>
+              $y$
+            </Math>
+            {" "} axis
+          </Item>
+        </List>
+        <Pause />
         <OuterP>
           ...then the “after” graph will have units of...
           <ImageRight
@@ -852,41 +853,41 @@ const Rest = () => {
             offset_y="-0.6em"
           />
         </OuterP>
-        <TextParent style="margin-top:1em;margin-bottom:1em;">
-          <ul style="list-style-type:disc;">
-            <li style="margin:0 60px;">
-              seconds on the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis, meters per
-              second on the {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axis
-            </li>
-          </ul>
-        </TextParent>
+        <Pause />
+        <List>
+          <Item>
+            seconds on the {" "}
+            <Math>
+              $x$
+            </Math>
+            {" "} axis, meters per
+            second on the {" "}
+            <Math>
+              $y$
+            </Math>
+            {" "} axis
+          </Item>
+        </List>
+        <Pause />
         <OuterP>
           ...while if the “before” graph has units of...
         </OuterP>
-        <TextParent style="margin-top:1em;margin-bottom:1em;">
-          <ul style="list-style-type:disc;">
-            <li style="margin:0 60px;">
-              apples on the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis, oranges on the
-              {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axis
-            </li>
-          </ul>
-        </TextParent>
+        <Pause />
+        <List>
+          <Item>
+            apples on the {" "}
+            <Math>
+              $x$
+            </Math>
+            {" "} axis, oranges on the
+            {" "}
+            <Math>
+              $y$
+            </Math>
+            {" "} axis
+          </Item>
+        </List>
+        <Pause />
         <OuterP>
           ...then the “after” graph will have units of...
           <ImageLeft
@@ -894,22 +895,22 @@ const Rest = () => {
             offset_y="0.6em"
           />
         </OuterP>
-        <TextParent style="margin-top:1em;margin-bottom:1em;">
-          <ul style="list-style-type:disc;">
-            <li style="margin:0 60px;">
-              apples on the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis, oranges per apple
-              on the {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axis
-            </li>
-          </ul>
-        </TextParent>
+        <Pause />
+        <List>
+          <Item>
+            apples on the {" "}
+            <Math>
+              $x$
+            </Math>
+            {" "} axis, oranges per apple
+            on the {" "}
+            <Math>
+              $y$
+            </Math>
+            {" "} axis
+          </Item>
+        </List>
+        <Pause />
         <OuterP>
           ...and so on.
         </OuterP>
@@ -4713,24 +4714,24 @@ const Rest = () => {
               To parse the above figure, understand
               that:
             </OuterP>
-            <TextParent>
-              <ul style="margin:20px 20px 20px 50px;list-style-type:disc;">
-                <li style="margin-bottom:10px;">
-                  the red arrows indicate which particle
-                  takes its velocity from the position
-                  of which other particle; for example,
-                  particle 1 has velocity equal to the
-                  position of particle 5
-                </li>
-                <li>
-                  particles that occupy the same starting
-                  position on the unit circle appear
-                  stacked together, as a representation
-                  device; for example, particle 2 has the
-                  same starting position as particle 5
-                </li>
-              </ul>
-            </TextParent>
+            <Pause />
+            <List>
+              <Item>
+                the red arrows indicate which particle
+                takes its velocity from the position
+                of which other particle; for example,
+                particle 1 has velocity equal to the
+                position of particle 5
+              </Item>
+              <Item>
+                particles that occupy the same starting
+                position on the unit circle appear
+                stacked together, as a representation
+                device; for example, particle 2 has the
+                same starting position as particle 5
+              </Item>
+            </List>
+            <Pause />
             <OuterP>
               (Note that the red arrows have to form
               a cycle of length 17 in order for us to
@@ -4789,43 +4790,43 @@ const Rest = () => {
               have also highlighted two particle trajectories
               in this figure:
             </OuterP>
-            <TextParent>
-              <ul style="margin:20px 20px 20px 50px;list-style-type:disc;">
-                <li style="margin-bottom:10px;">
-                  in {" "}
-                  <span style="border:1px solid blue">
-                    blue
-                  </span>
-                  , particle 1, the last particle
-                  to be (noticeably*) “peeled off” from
-                  the circle (*all particles are
-                  instantaneously peeled off from the
-                  circle to {" "}
-                  <i>
-                    some
-                  </i>
-                  {" "} degree, as one
-                  particle's slight deviation affects
-                  the next, that affects the next, etc)
-                </li>
-                <li>
-                  in {" "}
-                  <span style="border:1px solid red">
-                    red
-                  </span>
-                  , particle 14, the {" "}
-                  <i>
-                    first
-                  </i>
-                  {" "} particle
-                  to leave the circle—but because its
-                  velocity vector is given by particle 1,
-                  which itself starts by going around in
-                  a circle, it, too, starts out by going
-                  around in a circle!
-                </li>
-              </ul>
-            </TextParent>
+            <Pause />
+            <List>
+              <Item>
+                in {" "}
+                <span style="border:1px solid blue">
+                  blue
+                </span>
+                , particle 1, the last particle
+                to be (noticeably*) “peeled off” from
+                the circle (*all particles are
+                instantaneously peeled off from the
+                circle to {" "}
+                <i>
+                  some
+                </i>
+                {" "} degree, as one
+                particle's slight deviation affects
+                the next, that affects the next, etc)
+              </Item>
+              <Item>
+                in {" "}
+                <span style="border:1px solid red">
+                  red
+                </span>
+                , particle 14, the {" "}
+                <i>
+                  first
+                </i>
+                {" "} particle
+                to leave the circle—but because its
+                velocity vector is given by particle 1,
+                which itself starts by going around in
+                a circle, it, too, starts out by going
+                around in a circle!
+              </Item>
+            </List>
+            <Pause />
             <OuterP>
               (The point is: if your velocity vector
               is tracing a circle centered at {" "}
@@ -6433,44 +6434,44 @@ const Rest = () => {
               {" "}
               Express the...
             </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-                <li>
-                  associativity of function composition
-                </li>
-                <li>
-                  associativity of function multiplication
-                </li>
-                <li>
-                  associativity of function addition
-                </li>
-                <li>
-                  commutativity of function multiplication
-                </li>
-                <li>
-                  commutativity of function addition
-                </li>
-              </ul>
-              <p>
-                ...as well as the...
-              </p>
-            </TextParent>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-                <li>
-                  associativity of real number multiplication
-                </li>
-                <li>
-                  associativity of real number addition
-                </li>
-                <li>
-                  commutativity of real number multiplication
-                </li>
-                <li>
-                  commutativity of real number addition
-                </li>
-              </ul>
-            </TextParent>
+            <Pause />
+            <List>
+              <Item>
+                associativity of function composition
+              </Item>
+              <Item>
+                associativity of function multiplication
+              </Item>
+              <Item>
+                associativity of function addition
+              </Item>
+              <Item>
+                commutativity of function multiplication
+              </Item>
+              <Item>
+                commutativity of function addition
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              ...as well as the...
+            </OuterP>
+            <Pause />
+            <List>
+              <Item>
+                associativity of real number multiplication
+              </Item>
+              <Item>
+                associativity of real number addition
+              </Item>
+              <Item>
+                commutativity of real number multiplication
+              </Item>
+              <Item>
+                commutativity of real number addition
+              </Item>
+            </List>
+            <Pause />
             <OuterP>
               ...in the form of self-contained, formal statements.
             </OuterP>
@@ -6479,201 +6480,200 @@ const Rest = () => {
             <OuterP>
               For the functions:
             </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-                <li style="position:relative;">
-                  <i>
-                    the associativity of function multiplication is
-                    the fact that {" "}
+            <Pause />
+            <List>
+              <Item>
+                <i>
+                  the associativity of function multiplication is
+                  the fact that {" "}
+                  <Math>
+                    $(f \circ g) \circ h = f \circ (g \circ h)$
+                  </Math>
+                  {" "}
+                  for all functions {" "}
+                  <NoBreak>
                     <Math>
-                      $(f \circ g) \circ h = f \circ (g \circ h)$
+                      $f$
                     </Math>
-                    {" "}
-                    for all functions {" "}
-                    <NoBreak>
-                      <Math>
-                        $f$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $g$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <NoBreak>
                     <Math>
-                      $h$
+                      $g$
                     </Math>
-                    {" "} such that
-                    {" "}
-                    <NoBreak>
-                      <Math>
-                        $h : D \ra C$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $g : C \ra B$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <Math>
+                    $h$
+                  </Math>
+                  {" "} such that
+                  {" "}
+                  <NoBreak>
                     <Math>
-                      $f : B \ra A$
+                      $h : D \ra C$
                     </Math>
-                    {" "}
-                    [for arbitrary sets {" "}
-                    <NoBreak>
-                      <Math>
-                        $A$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $B$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $C$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $D$
-                      </Math>
-                      ]
-                    </NoBreak>
-                    <ImageLeft
-                      src="/build-img/svgo-svg/pcYW.svg"
-                      offset_x="4em"
-                    />
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the associativity of function multiplication is
-                    the fact that {" "}
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <NoBreak>
                     <Math>
-                      $f(gh) = (fg)h$
+                      $g : C \ra B$
                     </Math>
-                    {" "} for all {" "}
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <Math>
+                    $f : B \ra A$
+                  </Math>
+                  {" "}
+                  [for arbitrary sets {" "}
+                  <NoBreak>
                     <Math>
-                      $f, g, h : \rr \ra \rr$
+                      $A$
                     </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the associativity of function addition is
-                    the fact that {" "}
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <NoBreak>
                     <Math>
-                      $f + (g + h) = (f + g) + h$
+                      $B$
                     </Math>
-                    {" "} for all {" "}
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <NoBreak>
                     <Math>
-                      $f, g, h : \rr \ra \rr$
+                      $C$
                     </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the commutativity of function multiplication is
-                    the fact that {" "}
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <NoBreak>
                     <Math>
-                      $fg = gf$
+                      $D$
                     </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $f, g : \rr \ra \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the commutativity of function addition is
-                    the fact that {" "}
-                    <Math>
-                      $f + g = g + f$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $f, g : \rr \ra \rr$
-                    </Math>
-                  </i>
-                </li>
-              </ul>
-            </TextParent>
+                    ]
+                  </NoBreak>
+                </i>
+                <ImageLeft
+                  src="/build-img/svgo-svg/pcYW.svg"
+                  offset_x="4em"
+                />
+              </Item>
+              <Item>
+                <i>
+                  the associativity of function multiplication is
+                  the fact that {" "}
+                  <Math>
+                    $f(gh) = (fg)h$
+                  </Math>
+                  {" "} for all {" "}
+                  <Math>
+                    $f, g, h : \rr \ra \rr$
+                  </Math>
+                </i>
+              </Item>
+              <Item>
+                <i>
+                  the associativity of function addition is
+                  the fact that {" "}
+                  <Math>
+                    $f + (g + h) = (f + g) + h$
+                  </Math>
+                  {" "} for all {" "}
+                  <Math>
+                    $f, g, h : \rr \ra \rr$
+                  </Math>
+                </i>
+              </Item>
+              <Item>
+                <i>
+                  the commutativity of function multiplication is
+                  the fact that {" "}
+                  <Math>
+                    $fg = gf$
+                  </Math>
+                  {" "} for all {" "}
+                  <Math>
+                    $f, g : \rr \ra \rr$
+                  </Math>
+                </i>
+              </Item>
+              <Item>
+                <i>
+                  the commutativity of function addition is
+                  the fact that {" "}
+                  <Math>
+                    $f + g = g + f$
+                  </Math>
+                  {" "} for all {" "}
+                  <Math>
+                    $f, g : \rr \ra \rr$
+                  </Math>
+                </i>
+              </Item>
+            </List>
+            <Pause />
             <OuterP>
               For the real numbers:
             </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;">
-                <li>
-                  <i>
-                    the associativity of [real number] multiplication is
-                    the fact that {" "}
-                    <Math>
-                      $a(bc) = (ab)c$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b, c \in \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the associativity of [real number] addition is
-                    the fact that {" "}
-                    <Math>
-                      $a + (b + c) = (a + b) + c$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b, c \in \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the commutativity of [real number] multiplication is
-                    the fact that {" "}
-                    <Math>
-                      $ab = ba$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b \in \rr$
-                    </Math>
-                  </i>
-                </li>
-                <li>
-                  <i>
-                    the commutativity of [real number] addition is
-                    the fact that {" "}
-                    <Math>
-                      $a + b = b + a$
-                    </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b \in \rr$
-                    </Math>
-                  </i>
-                </li>
-              </ul>
-            </TextParent>
+            <Pause />
+            <List>
+              <Item>
+                <i>
+                  the associativity of [real number] multiplication is
+                  the fact that {" "}
+                  <Math>
+                    $a(bc) = (ab)c$
+                  </Math>
+                  {" "} for all {" "}
+                  <Math>
+                    $a, b, c \in \rr$
+                  </Math>
+                </i>
+              </Item>
+              <Item>
+                <i>
+                  the associativity of [real number] addition is
+                  the fact that {" "}
+                  <Math>
+                    $a + (b + c) = (a + b) + c$
+                  </Math>
+                  {" "} for all {" "}
+                  <Math>
+                    $a, b, c \in \rr$
+                  </Math>
+                </i>
+              </Item>
+              <Item>
+                <i>
+                  the commutativity of [real number] multiplication is
+                  the fact that {" "}
+                  <Math>
+                    $ab = ba$
+                  </Math>
+                  {" "} for all {" "}
+                  <Math>
+                    $a, b \in \rr$
+                  </Math>
+                </i>
+              </Item>
+              <Item>
+                <i>
+                  the commutativity of [real number] addition is
+                  the fact that {" "}
+                  <Math>
+                    $a + b = b + a$
+                  </Math>
+                  {" "} for all {" "}
+                  <Math>
+                    $a, b \in \rr$
+                  </Math>
+                </i>
+              </Item>
+            </List>
             <Pause />
             <SolutionNote>
               <OuterP>

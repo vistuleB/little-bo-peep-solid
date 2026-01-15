@@ -17,43 +17,34 @@
         an $x$-coordinate (according to subjective human
         standards of simplicity, admittedly) is circular
         motion at uniform speed. In this case:
+        
+        |> List
 
-        |> TextParent
-            |> ul
-                style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
-                |> li
-                    $A$ is the radius of the circle
+            $A$ is the radius of the circle
 
-                |> li
-                    $D$ is the $x$-coordinate of the circle's center
+            $D$ is the $x$-coordinate of the circle's center
 
         And either:
+        
+        |> List
 
-        |> TextParent
-            |> ul
-                style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
-                |> li
-
-                    $B$ is the counterclockwise
-                    _angular speed_/_angular frequency_ (radians per
-                    unit time) and $C$ is the counterclockwise
-                    starting angle ($t = 0$) of the particle, as
-                    measured from a translate of the positive $x$
-                    axis going through the center of the circle
+            $B$ is the counterclockwise
+            _angular speed_/_angular frequency_ (radians per
+            unit time) and $C$ is the counterclockwise
+            starting angle ($t = 0$) of the particle, as
+            measured from a translate of the positive $x$
+            axis going through the center of the circle
 
         Or:
+        
+        |> List
 
-        |> TextParent
-            |> ul
-                style=list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;
-                |> li
-
-                    $-B$ is the counterclockwise
-                    angular speed/angular frequency of the particle
-                    and $-C$ is the counterclockwise starting angle
-                    of the particle, as measured from a translate of
-                    the positive $x$ axis going through the center
-                    of the circle
+            $-B$ is the counterclockwise
+            angular speed/angular frequency of the particle
+            and $-C$ is the counterclockwise starting angle
+            of the particle, as measured from a translate of
+            the positive $x$ axis going through the center
+            of the circle
 
         In more detail, every time
 
@@ -152,4 +143,3 @@
             with the line, but no more, insofar as
             non-direction-reversing particles are
             concerned!
-

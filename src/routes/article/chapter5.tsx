@@ -2380,43 +2380,43 @@ const Rest = () => {
         <OuterP>
           or namely with the property that:
         </OuterP>
-        <TextParent>
-          <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;">
-            <li style="margin:0 60px;">
+        <Pause />
+        <List>
+          <Item>
+            <Math>
+              $r$
+            </Math>
+            {" "} is the distance from {" "}
+            <Math>
+              $P$
+            </Math>
+            {" "} to the origin;
+          </Item>
+          <Item>
+            <Math>
+              $\theta$
+            </Math>
+            {" "} is “the” counterclockwise angle
+            from the positive {" "}
+            <Math>
+              $x$
+            </Math>
+            {" "} axis to the segment
+            {" "}
+            <NoBreak>
               <Math>
-                $r$
+                $OP$
               </Math>
-              {" "} is the distance from {" "}
-              <Math>
-                $P$
-              </Math>
-              {" "} to the origin;
-            </li>
-            <li style="margin:0 60px;">
-              <Math>
-                $\theta$
-              </Math>
-              {" "} is “the” counterclockwise angle
-              from the positive {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis to the segment
-              {" "}
-              <NoBreak>
-                <Math>
-                  $OP$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} where {" "}
-              <Math>
-                $O$
-              </Math>
-              {" "} is the origin;
-            </li>
-          </ul>
-        </TextParent>
+              ,
+            </NoBreak>
+            {" "} where {" "}
+            <Math>
+              $O$
+            </Math>
+            {" "} is the origin;
+          </Item>
+        </List>
+        <Pause />
         <OuterP>
           ...even though {" "}
           <Math>
@@ -3281,12 +3281,10 @@ const Rest = () => {
         <OuterP class="indent-10">
           One can polish a few more details by noting that:
         </OuterP>
-        <TextParent>
-          <p style="text-indent:-1.3em;padding-top:1em;padding-bottom:0.5em;padding-left:3em;padding-right:1.5em;">
-            <b>
-              (i)
-            </b>
-            {" "} the segment can be tangent to the
+        <Pause />
+        <List type="lower-roman-paren">
+          <Item>
+            the segment can be tangent to the
             arc at one point, the proof will still go
             through (so the segment does not need to
             {" "}
@@ -3294,18 +3292,16 @@ const Rest = () => {
               strictly
             </i>
             {" "} clear the arc);
-          </p>
-          <p style="text-indent:-1.6em;padding-top:0em;padding-bottom:1em;padding-left:3em;padding-right:1.5em;">
-            <b>
-              (ii)
-            </b>
-            {" "} as long as the angle is nonzero,
+          </Item>
+          <Item>
+            as long as the angle is nonzero,
             and the arc has nonzero radius, the
             length of the segment will be STRICTLY
             GREATER than the length of the arc,
             not just greater-or-equal-to
-          </p>
-        </TextParent>
+          </Item>
+        </List>
+        <Pause />
         <OuterP>
           (Point {" "}
           <b>
@@ -6226,97 +6222,97 @@ const Rest = () => {
               standards of simplicity, admittedly) is circular
               motion at uniform speed. In this case:
             </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
-                <li>
+            <Pause />
+            <List>
+              <Item>
+                <Math>
+                  $A$
+                </Math>
+                {" "} is the radius of the circle
+              </Item>
+              <Item>
+                <Math>
+                  $D$
+                </Math>
+                {" "} is the {" "}
+                <NoBreak>
                   <Math>
-                    $A$
+                    $x$
                   </Math>
-                  {" "} is the radius of the circle
-                </li>
-                <li>
-                  <Math>
-                    $D$
-                  </Math>
-                  {" "} is the {" "}
-                  <NoBreak>
-                    <Math>
-                      $x$
-                    </Math>
-                    -coordinate
-                  </NoBreak>
-                  {" "} of the circle's center
-                </li>
-              </ul>
-            </TextParent>
+                  -coordinate
+                </NoBreak>
+                {" "} of the circle's center
+              </Item>
+            </List>
+            <Pause />
             <OuterP>
               And either:
             </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
-                <li>
+            <Pause />
+            <List>
+              <Item>
+                <Math>
+                  $B$
+                </Math>
+                {" "} is the counterclockwise
+                {" "}
+                <i>
+                  angular speed
+                </i>
+                /
+                <i>
+                  angular frequency
+                </i>
+                {" "} (radians per
+                unit time) and {" "}
+                <Math>
+                  $C$
+                </Math>
+                {" "} is the counterclockwise
+                starting angle {" "}
+                <NoBreak>
+                  (
                   <Math>
-                    $B$
+                    $t = 0$
                   </Math>
-                  {" "} is the counterclockwise
-                  {" "}
-                  <i>
-                    angular speed
-                  </i>
-                  /
-                  <i>
-                    angular frequency
-                  </i>
-                  {" "} (radians per
-                  unit time) and {" "}
-                  <Math>
-                    $C$
-                  </Math>
-                  {" "} is the counterclockwise
-                  starting angle {" "}
-                  <NoBreak>
-                    (
-                    <Math>
-                      $t = 0$
-                    </Math>
-                    )
-                  </NoBreak>
-                  {" "} of the particle, as
-                  measured from a translate of the positive {" "}
-                  <Math>
-                    $x$
-                  </Math>
-                  {" "}
-                  axis going through the center of the circle
-                </li>
-              </ul>
-            </TextParent>
+                  )
+                </NoBreak>
+                {" "} of the particle, as
+                measured from a translate of the positive {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "}
+                axis going through the center of the circle
+              </Item>
+            </List>
+            <Pause />
             <OuterP>
               Or:
             </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
-                <li>
-                  <Math>
-                    $-B$
-                  </Math>
-                  {" "} is the counterclockwise
-                  angular speed/angular frequency of the particle
-                  and {" "}
-                  <Math>
-                    $-C$
-                  </Math>
-                  {" "} is the counterclockwise starting angle
-                  of the particle, as measured from a translate of
-                  the positive {" "}
-                  <Math>
-                    $x$
-                  </Math>
-                  {" "} axis going through the center
-                  of the circle
-                </li>
-              </ul>
-            </TextParent>
+            <Pause />
+            <List>
+              <Item>
+                <Math>
+                  $-B$
+                </Math>
+                {" "} is the counterclockwise
+                angular speed/angular frequency of the particle
+                and {" "}
+                <Math>
+                  $-C$
+                </Math>
+                {" "} is the counterclockwise starting angle
+                of the particle, as measured from a translate of
+                the positive {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} axis going through the center
+                of the circle
+              </Item>
+            </List>
+            <Pause />
             <OuterP>
               In more detail, every time
             </OuterP>
@@ -9383,42 +9379,40 @@ const Rest = () => {
             <OuterP>
               Rewrite each case:
             </OuterP>
-            <TextParent>
-              <ol
-                class="l1"
-                style="margin-top:0.5em;"
-              >
-                <li>
-                  using the composition {" "}
-                  <NoBreak>
-                    “
-                    <Math>
-                      $\circ$
-                    </Math>
-                    ”
-                  </NoBreak>
-                  {" "} operator;
-                </li>
-                <li>
-                  as an expression of the form
-                  <Pause />
-                  <MathBlock>
-                    $$
-                    x \ra \dots
-                    $$
-                  </MathBlock>
-                  <Pause />
-                  for some value of {" "}
-                  <NoBreak>
-                    “
-                    <Math>
-                      $\dots$
-                    </Math>
-                    ”.
-                  </NoBreak>
-                </li>
-              </ol>
-            </TextParent>
+            <Pause />
+            <List type="lower-alpha-paren">
+              <Item>
+                using the composition {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $\circ$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} operator;
+              </Item>
+              <Item>
+                as an expression of the form
+              </Item>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra \dots
+                $$
+              </MathBlock>
+            </List>
+            <Pause />
+            <OuterP>
+              for some value of {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\dots$
+                </Math>
+                ”.
+              </NoBreak>
+            </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9628,58 +9622,58 @@ const Rest = () => {
             <OuterP>
               For which the graphs are respectively obtained by:
             </OuterP>
-            <TextParent>
-              <ul style="list-style-type:decimal;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.5em;">
-                <li>
-                  horizontally translating the graph of {" "}
+            <Pause />
+            <List type="decimal">
+              <Item>
+                horizontally translating the graph of {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} by {" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "} units to the left;
+              </Item>
+              <Item>
+                horizontally compressing the graph of {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} by a factor {" "}
+                <NoBreak>
                   <Math>
-                    $f$
+                    $B$
                   </Math>
-                  {" "} by {" "}
+                  ;
+                </NoBreak>
+              </Item>
+              <Item>
+                vertically translating the graph of {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} by {" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "} units upward;
+              </Item>
+              <Item>
+                vertically dilating (scaling) the graph of {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} by a factor {" "}
+                <NoBreak>
                   <Math>
-                    $A$
+                    $B$
                   </Math>
-                  {" "} units to the left;
-                </li>
-                <li>
-                  horizontally compressing the graph of {" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "} by a factor {" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    ;
-                  </NoBreak>
-                </li>
-                <li>
-                  vertically translating the graph of {" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "} by {" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "} units upward;
-                </li>
-                <li>
-                  vertically dilating (scaling) the graph of {" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "} by a factor {" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    .
-                  </NoBreak>
-                </li>
-              </ul>
-            </TextParent>
+                  .
+                </NoBreak>
+              </Item>
+            </List>
+            <Pause />
             <OuterP>
               (Cf. Exercise 7 of Chapter 3, Exercise 14 of
               Chapter 3.)
@@ -12645,20 +12639,19 @@ const Rest = () => {
             <OuterP>
               And:
             </OuterP>
-            <TextParent>
-              <ul style="list-style-type:disc;margin-top:1em;margin-bottom:1em;padding-left:66px;line-height:1.7em;">
-                <li>
-                  all distances are in inches
-                </li>
-                <li>
-                  assume half an inch from the edge of the door
-                  to the center of its hinge
-                </li>
-                <li>
-                  assume the door has negligible thicknesss
-                </li>
-              </ul>
-            </TextParent>
+            <Pause />
+            <List>
+              <Item>
+                all distances are in inches
+              </Item>
+              <Item>
+                assume half an inch from the edge of the door
+                to the center of its hinge
+              </Item>
+              <Item>
+                assume the door has negligible thicknesss
+              </Item>
+            </List>
           </ExerciseStatement>
           <Solution>
             <OuterP>

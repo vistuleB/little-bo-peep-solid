@@ -11,17 +11,15 @@
         src=images/svg_ch5_ex_four_compositions.svg
 
     Rewrite each case:
+    
+    |> List
+        type=lower-alpha-paren
 
-    |> TextParent
-        |> ol
-            class=l1
-            style=margin-top:0.5em;
-            |> li
-                using the composition “$\circ$” operator;
+        using the composition “$\circ$” operator;
 
-            |> li
-                as an expression of the form $$x \ra \dots$$
-                for some value of “$\dots$”.
+        as an expression of the form $$x \ra \dots$$
+        
+    for some value of “$\dots$”.
 
     |> Solution
 
@@ -86,4 +84,3 @@
         $$
         ...where we use “$x$” as the dummy variable
         because we were _told_ to use $x$. (By the statement.)
-
