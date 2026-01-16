@@ -1,8 +1,6 @@
 import { JSX, ParentProps } from "solid-js";
 import { SectionDivider } from "./SectionDivider";
 import { useGlobalContext } from "~/store/StoreProvider";
-import mainColumnWidth from "~/hooks/useMainColumnWidth";
-import { twJoin } from "tailwind-merge";
 
 interface ExampleProps {
   style?: string | JSX.CSSProperties;

@@ -12,7 +12,6 @@ import SharedProps from "./types/SharedProps";
 import { TEXT_X_PADDING } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
-import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 type GridProps = ParentProps &
   SharedProps & {
@@ -86,7 +85,6 @@ const Grid = (_props: GridProps) => {
         "margin-top": `${props.margin_top}px`,
         "margin-bottom": `${props.margin_bottom}px`,
         "padding-inline": props.with_padding ? `${TEXT_X_PADDING}px` : "0",
-        width: `${mainColumnWidth()}px`,
       }}>
       <div
         ref={parentSpan}

@@ -2,7 +2,6 @@ import { ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
-import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 export const CentralDisplay = (
   props: ParentProps & SharedProps & { indent?: boolean }
@@ -15,7 +14,7 @@ export const CentralDisplay = (
         "text-column text-center block",
         store.show_areas && "bg-[#ebe3a0b0]"
       )}
-      style={`width:${mainColumnWidth()}px;${props.style}`}
+      style={`${props.style ?? ""}`}
     >
       <span class="block pl-[2em] pr-[2em]" style={props.style}>
         {props.children}
@@ -35,7 +34,7 @@ export const CentralDisplayItalic = (
         "text-column text-center block pl-[2em] pr-[2em]",
         store.show_areas && "bg-[#ebe3a0b0]"
       )}
-      style={`width:${mainColumnWidth()}px;`}
+      style={`${props.style ?? ""}`}
     >
       <i class="block pl-[2em] pr-[2em]" style={props.style}>
         {props.children}

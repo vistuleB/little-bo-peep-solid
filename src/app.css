@@ -106,13 +106,6 @@ td {
   justify-content: center;
 }
 
-.text-column {
-  position: relative;
-  margin-inline: auto;
-  padding-left: var(--desktop-text-column-padding);
-  padding-right: var(--desktop-text-column-padding);
-}
-
 .mathblock {
   position: relative;
   width: fit-content;
@@ -208,20 +201,6 @@ span .MathJax_SVG {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
-
-/* @media (hover: hover) {
-  .tab:hover:not(.disabled) > path:first-child {
-    fill: #dbf6b8 !important;
-    font-weight: bold;
-    border-radius: 4px;
-  }
-}
-
-.tab:active:not(.disabled) > path:first-child {
-  fill: #dbf6b8 !important;
-  font-weight: bold;
-  border-radius: 4px;
-} */
 
 /* solution svg css */
 
@@ -748,4 +727,21 @@ img + .t-3003:hover {
 .counter-upper-roman-paren li::before {
   content: "(" counter(list-item-counter, upper-roman) ")";
   margin-right: 0.4rem;
+}
+
+.text-column {
+  position: relative;
+  margin-inline: auto;
+}
+
+@media (width <= 900px) {
+  .text-column {
+    width: calc(100vw - 2 * var(--desktop-text-column-padding));
+  }
+}
+
+@media (width > 900px) {
+  .text-column {
+    width: calc(488px - 2 * var(--desktop-text-column-padding));
+  }
 }

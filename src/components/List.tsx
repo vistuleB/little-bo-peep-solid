@@ -2,7 +2,6 @@ import { ParentProps } from "solid-js";
 import { Dynamic } from "solid-js/web";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
-import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 type ListMarker =
   | "disc"
@@ -40,7 +39,7 @@ export const List = (props: ParentProps & ListProps) => {
   return (
     <div
       class={twJoin("text-column", props.class)}
-      style={`width:${mainColumnWidth()}px;${props.style ?? ""}`}
+      style={`${props.style ?? ""}`}
     >
       <Dynamic
         component={Tag()}

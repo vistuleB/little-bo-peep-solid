@@ -14,7 +14,7 @@ const OuterP = (props: ParentProps & SharedProps) => {
         props.class,
         store.show_areas && "left-right-background-divide"
       )}
-      style={`width:${mainColumnWidth()}px;${props.style}`}
+      style={`${props.style}`}
     >
       {props.children}
     </p>
