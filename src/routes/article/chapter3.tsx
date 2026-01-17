@@ -2297,12 +2297,12 @@ const Rest = () => {
               <Math>
                 $\floor&#123;x&#125;$
               </Math>
-              {" "} only “levels up” each time {" "}
+              {" "} only “levels up” each time that {" "}
               <Math>
                 $x$
               </Math>
               {" "}
-              reaches a new integer, and “flatlines”
+              reaches a new integer, and flatlines
               otherwise; this gives rise to the following
               staircase-shaped graph:
             </OuterP>
@@ -2420,7 +2420,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={5}>
+        <Exercise
+          work="ing"
+          number={5}
+        >
           <ExerciseStatement id="_32_hgi_">
             <OuterP>
               <b>
@@ -2488,12 +2491,16 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              ...as obtained by “sticking” {" "}
-              <Math>
-                $x/2$
-              </Math>
+              ...as obtained by substituting {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x/2$
+                </Math>
+                ”
+              </NoBreak>
               {" "} (the halved
-              input) in place of {" "}
+              input) for of {" "}
               <NoBreak>
                 “
                 <Math>
@@ -2507,10 +2514,10 @@ const Rest = () => {
                 <Math>
                   $\,x - \lfloor x \rfloor$
                 </Math>
-                ”,
+                ”
               </NoBreak>
               {" "}
-              the formula for the function from {" "}
+              (the formula for the function from {" "}
               <NoBreak>
                 <InChapterLink
                   href="/article/chapter3#_31_hgi_"
@@ -2518,368 +2525,364 @@ const Rest = () => {
                 >
                   Exercise 4
                 </InChapterLink>
-                .
+                ).
               </NoBreak>
               {" "}{" "}
             </OuterP>
             <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              One can check the answer by typing “x/2 - floor(x/2)”
-              in DESMOS. Viz:
-            </OuterP>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                One can check the answer by typing “x/2 - floor(x/2)”
+                in DESMOS. Viz:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/jpg/pc6h.jpg"
+                width="1400px"
+              />
+            </SolutionNote>
             <Pause />
-            <Image
-              src="/build-img/jpg/pc6h.jpg"
-              width="1400px"
-            />
-            <Pause />
-            <OuterP>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              Alternately, enter “f(x) = x - floor(x)” and
-              then “f(x/2)”, viz:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/jpg/FUw3.jpg"
-              width="1400px"
-            />
-            <Pause />
-            <OuterP>
-              Or we can be even fancier:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/jpg/Gowo.jpg"
-              width="1400px"
-            />
-            <Pause />
-            <OuterP>
-              What you see above (the graph in orange) is
-              the so-called
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              composition
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of the functions
-              {" "}
-              <Math>
-                $\f$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ;
-              </NoBreak>
-              {" "} in more detail, if we switch the
-              “input tube” and “output tube” sides of a function...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/TgEh.svg" />
-            <Pause />
-            <OuterP>
-              ...(compared to the drawing at the top of the
-              chapter), then the composition of {" "}
-              <Math>
-                $\f$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              written
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\f \circ g&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and read
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <NoBreak>
-                “
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Alternately, enter “f(x) = x - floor(x)” and
+                then “f(x/2)”:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/jpg/FUw3.jpg"
+                width="1400px"
+              />
+              <Pause />
+              <OuterP>
+                Or:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/jpg/Gowo.jpg"
+                width="1400px"
+              />
+              <Pause />
+              <OuterP>
+                The above features the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                composition
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of {" "}
                 <Math>
                   $f$
                 </Math>
-              </NoBreak>
-              {" "} of {" "}
-              <NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} in more detail, if we 
+                switch the “input tube” and “output tube” sides of
+                a function...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/TgEh.svg" />
+              <Pause />
+              <OuterP>
+                ...(compared to the drawing at the top of the
+                chapter), then the composition of 
+                {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} written
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;\f \circ g&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and read
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                </NoBreak>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $\hlfbk&#123;&#125;g$
+                  </Math>
+                  ”
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is the function that you get by
+                gluing {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} box to the right of {" "}
+                <NoBreak>
+                  <Math>
+                    $\f$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} box, like so:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/FwQo.svg" />
+              <Pause />
+              <OuterP>
+                In other words, {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} output is passed on to {" "}
+                <Math>
+                  $-f$
+                </Math>
+                {" "}
+                for further processing. (A certain movie called
+                “The Human Centipede” comes to mind.)
+              </OuterP>
+              <OuterP class="indent-10">
+                (To be perfectly clear,
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/5UVl.svg" />
+              <Pause />
+              <OuterP>
+                <Math>
+                  $f \circ g$
+                </Math>
+                {" "} is a {" "}
+                <i>
+                  function
+                </i>
+                , defined as the
+                above assemblage of {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $g$
+                  </Math>
+                </NoBreak>
+                {" "} first, {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} second”.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                A formal definition of {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f \circ g$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} can be given
+                as
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  &#123;(f \circ g)(x) = f(g(x))&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                or as
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  f \circ g = (x \ra f(g(x)))
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                where one can also clarify that
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  &#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                which is to say that the domain of {" "}
+                <Math>
+                  $f \circ g$
+                </Math>
+                {" "}
+                consists of all {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} such that: {" "}
+                <b>
+                  (i)
+                </b>
+                {" "} {" "}
+                <Math>
+                  $g(x)$
+                </Math>
+                {" "}
+                exists (a.k.a, {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $x \in \dom g$
+                  </Math>
+                  ”)
+                </NoBreak>
+                {" "} and,
+                {" "}
+                <b>
+                  (ii)
+                </b>
+                {" "} {" "}
+                <Math>
+                  $f(g(x))$
+                </Math>
+                {" "} exists (a.k.a., {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $g(x) \in \dom f$
+                  </Math>
+                  ”).
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 4.
+                </i>
+                {" "}
+                Amusingly—or not—both sides of the afore-mentioned
+              </OuterP>
+              <Pause />
+              <CentralDisplay>
+                <NoBreak>
+                  “
+                  <Math>
+                    $(f \circ g)(x) = f(g(x))$
+                  </Math>
+                  ”
+                </NoBreak>
+              </CentralDisplay>
+              <Pause />
+              <OuterP>
+                are read
+              </OuterP>
+              <Pause />
+              <CentralDisplay>
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                </NoBreak>
+                {" "} of {" "}
                 <Math>
                   $\hlfbk&#123;&#125;g$
                 </Math>
-                ”
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (mathematicians have to invent a notation for
-              everything—that little circle {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} is called
-              the {" "}
-              <i>
-                composition operator
-              </i>
-              ,
-              by the way) is the function that you get by
-              gluing {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                's
-              </NoBreak>
-              {" "} box to the right of {" "}
-              <NoBreak>
-                <Math>
-                  $\f$
-                </Math>
-                's
-              </NoBreak>
-              {" "} box,
-              like so:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/FwQo.svg" />
-            <Pause />
-            <OuterP>
-              In other words, {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                's
-              </NoBreak>
-              {" "} output is passed on to {" "}
-              <Math>
-                $\f$
-              </Math>
-              {" "}
-              for further processing. (A certain movie called
-              “The Human Centipede” comes to mind.)
-            </OuterP>
-            <OuterP class="indent-10">
-              (To be perfectly clear,
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/5UVl.svg" />
-            <Pause />
-            <OuterP>
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "} is a {" "}
-              <i>
-                function
-              </i>
-              , defined as the
-              above assemblage of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $g$
-                </Math>
-              </NoBreak>
-              {" "} first, {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} second”.)
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 3.
-              </i>
-              {" "}
-              A formal definition of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f \circ g$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} can be given
-              as:
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                f \circ g = (x \ra f(g(x)))
-                $$
-              </MathBlock>
-            </Boxed>
-            <OuterP>
-              One can also clarify that:
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                &#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;
-                $$
-              </MathBlock>
-            </Boxed>
-            <OuterP>
-              ...which is to say that the domain of {" "}
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "}
-              consists of all {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} such that: {" "}
-              <b>
-                (i)
-              </b>
-              {" "} {" "}
-              <Math>
-                $g(x)$
-              </Math>
-              {" "}
-              exists (a.k.a, {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x \in \dom g$
-                </Math>
-                ”)
-              </NoBreak>
-              {" "} and,
-              {" "}
-              <b>
-                (ii)
-              </b>
-              {" "} {" "}
-              <Math>
-                $f(g(x))$
-              </Math>
-              {" "} exists (a.k.a., {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $g(x) \in \dom f$
-                </Math>
-                ”).
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 4.
-              </i>
-              {" "}
-              We also have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;(f \circ g)(x) = f(g(x))&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the definition of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f \circ g$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} and—amusingly
-              or not—both sides of this equation are read
-            </OuterP>
-            <Pause />
-            <CentralDisplay>
-              <NoBreak>
-                “
-                <Math>
-                  $f$
-                </Math>
-              </NoBreak>
-              {" "} of {" "}
-              <Math>
-                $\hlfbk&#123;&#125;g$
-              </Math>
-              {" "} of {" "}
-              <NoBreak>
-                <Math>
-                  $x\hspace&#123;0.1em&#125;$
-                </Math>
-                ”
-              </NoBreak>
-            </CentralDisplay>
-            <Pause />
-            <OuterP>
-              since {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f \circ g$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} is read {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f$
-                </Math>
-              </NoBreak>
-              {" "} of {" "}
-              <NoBreak>
-                <Math>
-                  $g\rt&#123;0.1&#125;$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "}
-              and {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f(\dots)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} is read {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f$
-                </Math>
-              </NoBreak>
-              {" "} of ...”.
-            </OuterP>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $x\hspace&#123;0.1em&#125;$
+                  </Math>
+                  ”
+                </NoBreak>
+              </CentralDisplay>
+              <Pause />
+              <OuterP>
+                since {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f \circ g$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} is read {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                </NoBreak>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $g\rt&#123;0.1&#125;$
+                  </Math>
+                  ”,
+                </NoBreak>
+                {" "}
+                and {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f(\dots)$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} is read {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                </NoBreak>
+                {" "} of ...”.
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={6}>

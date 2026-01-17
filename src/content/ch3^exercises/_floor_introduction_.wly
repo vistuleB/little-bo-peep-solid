@@ -25,8 +25,8 @@
     |> Solution
 
         As $x$ grows, so does $\floor{x}$, but
-        $\floor{x}$ only “levels up” each time $x$
-        reaches a new integer, and “flatlines”
+        $\floor{x}$ only “levels up” each time that $x$
+        reaches a new integer, and flatlines
         otherwise; this gives rise to the following
         staircase-shaped graph:
 

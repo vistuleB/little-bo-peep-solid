@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_factory_roof_functions_1_
 
     Find the formula for a function whose graph
@@ -27,116 +28,113 @@
         $$
         {x/2 - \lfloor x/2 \rfloor}
         $$
-        ...as obtained by “sticking” $x/2$ (the halved
-        input) in place of “$x$” in “$\,x - \lfloor x \rfloor$”,
-        the formula for the function from Exercise >>_floor_introduction_.
+        ...as obtained by substituting “$x/2$” (the halved
+        input) for of “$x$” in “$\,x - \lfloor x \rfloor$”
+        (the formula for the function from Exercise >>_floor_introduction_).
 
-        |> Pause
+        |> SolutionNote
+            One can check the answer by typing “x/2 - floor(x/2)”
+            in DESMOS. Viz:
 
-        _Note 1._
-        One can check the answer by typing “x/2 - floor(x/2)”
-        in DESMOS. Viz:
+            |> Image
+                src=images/png_ch3_desmos_composition_0_c.jpg
+                width=1400px
 
-        |> Image
-            src=images/png_ch3_desmos_composition_0_c.jpg
-            width=1400px
+        |> SolutionNote
+            Alternately, enter “f(x) = x - floor(x)” and
+            then “f(x/2)”:
 
-        |> Pause
+            |> Image
+                src=images/png_ch3_desmos_composition_1_c.jpg
+                width=1400px
 
-        _Note 2._
-        Alternately, enter “f(x) = x - floor(x)” and
-        then “f(x/2)”, viz:
+            Or:
 
-        |> Image
-            src=images/png_ch3_desmos_composition_1_c.jpg
-            width=1400px
+            |> Image
+                src=images/png_ch3_desmos_composition_2_b.jpg
+                width=1400px
 
-        Or we can be even fancier:
+            The above features the
+            
+            __composition__
+            
+            of $f$ and $g$; in more detail, if we 
+            switch the “input tube” and “output tube” sides of
+            a function...
 
-        |> Image
-            !! src=images/png_ch3_desmos_composition_2_b.png
-            src=images/png_ch3_desmos_composition_2_b.jpg
-            width=1400px
+            |> Image
+                src=images/svg_ch3_f_box_inverted.svg
 
-        What you see above (the graph in orange) is
-        the so-called __composition__ of the functions
-        $\f$ and $g$; in more detail, if we switch the
-        “input tube” and “output tube” sides of a function...
+            ...(compared to the drawing at the top of the
+            chapter), then the composition of 
+            $f$ and $g$, written
 
-        |> Image
-            src=images/svg_ch3_f_box_inverted.svg
-
-        ...(compared to the drawing at the top of the
-        chapter), then the composition of $\f$ and $g$,
-        written
-        $$
-        {\f \circ g}
-        $$
-        and read
-
-        __“$f$ of $\hlfbk{}g$”__
-
-        (mathematicians have to invent a notation for
-        everything—that little circle “$\circ$” is called
-        the _composition operator_,
-        by the way) is the function that you get by
-        gluing $g$'s box to the right of $\f$'s box,
-        like so:
-
-        |> Image
-            src=images/svg_ch3_ex_f_box_g_box.svg
-
-        In other words, $g$'s output is passed on to $\f$
-        for further processing. (A certain movie called
-        “The Human Centipede” comes to mind.)
-
-        (To be perfectly clear,
-
-        |> Image
-            src=images/svg_ch3_ex_f_circle_g_equals.svg
-
-        $f \circ g$ is a _function_, defined as the
-        above assemblage of “$g$ first, $f$ second”.)
-
-        |> Pause
-
-        _Note 3._
-        A formal definition of “$f \circ g$” can be given
-        as:
-
-        |> Boxed
             $$
-            f \circ g = (x \ra f(g(x)))
+            {\f \circ g}
             $$
 
-        One can also clarify that:
+            and read
 
-        |> Boxed
-            $$
-            {\dom f \circ g = \{x\, \in\, \dom g:\, g(x)\, \in\, \dom f\}}
-            $$
+            __“$f$ of $\hlfbk{}g$”__
 
-        ...which is to say that the domain of $f \circ g$
-        consists of all $x$ such that: *(i)* $g(x)$
-        exists (a.k.a, “$x \in \dom g$”) and,
-        *(ii)* $f(g(x))$ exists (a.k.a., “$g(x) \in \dom f$”).
+            !! (mathematicians have to invent a notation for
+            !! everything—the little circle “$\circ$” is called
+            !! the _composition operator_,
+            !! by the way) 
+            is the function that you get by
+            gluing $g$'s box to the right of $\f$'s box, like so:
 
-        |> Pause
+            |> Image
+                src=images/svg_ch3_ex_f_box_g_box.svg
 
-        _Note 4._
-        We also have
-        $$
-        {(f \circ g)(x) = f(g(x))}
-        $$
-        by the definition of “$f \circ g$” and—amusingly
-        or not—both sides of this equation are read
-        !! Amusingly—or not—both sides of
-        !! $$
-        !! {(f \circ g)(x) = f(g(x))}
-        !! $$
-        !! are read
+            In other words, $g$'s output is passed on to $-f$
+            for further processing. (A certain movie called
+            “The Human Centipede” comes to mind.)
 
-        _|“$f$ of $\hlfbk{}g$ of $x\hspace{0.1em}$”|_
+            (To be perfectly clear,
 
-        since “$f \circ g$” is read “$f$ of $g\rt{0.1}$”,
-        and “$f(\dots)$” is read “$f$ of ...”.
+            |> Image
+                src=images/svg_ch3_ex_f_circle_g_equals.svg
+
+            $f \circ g$ is a _function_, defined as the
+            above assemblage of “$g$ first, $f$ second”.)
+
+        |> SolutionNote
+            A formal definition of “$f \circ g$” can be given
+            as
+
+            |> Boxed
+                $$
+                {(f \circ g)(x) = f(g(x))}
+                $$
+
+            or as
+
+            |> Boxed
+                $$
+                f \circ g = (x \ra f(g(x)))
+                $$
+
+            where one can also clarify that
+
+            |> Boxed
+                $$
+                {\dom f \circ g = \{x\, \in\, \dom g:\, g(x)\, \in\, \dom f\}}
+                $$
+
+            which is to say that the domain of $f \circ g$
+            consists of all $x$ such that: *(i)* $g(x)$
+            exists (a.k.a, “$x \in \dom g$”) and,
+            *(ii)* $f(g(x))$ exists (a.k.a., “$g(x) \in \dom f$”).
+
+        |> SolutionNote
+            Amusingly—or not—both sides of the afore-mentioned
+
+            _|“$(f \circ g)(x) = f(g(x))$”|_
+
+            are read
+
+            _|“$f$ of $\hlfbk{}g$ of $x\hspace{0.1em}$”|_
+
+            since “$f \circ g$” is read “$f$ of $g\rt{0.1}$”,
+            and “$f(\dots)$” is read “$f$ of ...”.

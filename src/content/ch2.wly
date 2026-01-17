@@ -7,7 +7,7 @@
     the values, see below):
 
     |> Image
-        src=/images/svg_ch2_ch_collection_of_examples.svg
+        src=images/svg_ch2_ch_collection_of_examples.svg
 
     To explain, the slope of a line is...
 
@@ -28,14 +28,14 @@
     it goes up by $1$ unit for each unit to the right:
 
     |> Image
-        src=./images/slope_1_example.svg
+        src=images/slope_1_example.svg
 
     On the other hand, the line below has slope
     $-0.5$, because it goes up by _minus_ $0.5$ units
     with each unit to the right:
 
     |> Image
-        src=/images/slope_0.5_example.svg
+        src=images/slope_0.5_example.svg
 
     (Etc.)
 
@@ -164,7 +164,7 @@
 
                 |> td
                     |> img
-                        src=/images/33.svg
+                        src=images/33.svg
                         svgo=false
                         width=50
                         style=padding-top:7px;padding-bottom:7px;
@@ -183,7 +183,7 @@
 
                 |> td
                     |> img
-                        src=/images/34.svg
+                        src=images/34.svg
                         style=margin-top:7px;margin-bottom:7px;width:105px;
 
                 |> td
@@ -201,7 +201,7 @@
 
                 |> td
                     |> img
-                        src=/images/35.svg
+                        src=images/35.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
@@ -222,7 +222,7 @@
                 |> td
 
                     |> img
-                        src=/images/36.svg
+                        src=images/36.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
@@ -243,7 +243,7 @@
 
                 |> td
                     |> img
-                        src=/images/37.svg
+                        src=images/37.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
