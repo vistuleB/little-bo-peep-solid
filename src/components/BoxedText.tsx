@@ -10,15 +10,17 @@ const BoxedText = (props: ParentProps & SharedProps) => {
   return (
     <div
       class={twJoin(
+        props.class,
         "text-column",
         "border",
         "border-red-400",
-        "py-2 px-2",
-        "my-4",
-        props.class,
+        "px-4",
+        "py-3",
+        "mt-6",
+        "mb-5",
         store.show_areas && "left-right-background-divide",
       )}
-      style={`${props.style}`}
+      style={`${props.style ?? ""}`}
     >
       {props.children}
     </div>

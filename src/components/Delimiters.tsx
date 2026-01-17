@@ -11,14 +11,12 @@ export const CentralDisplay = (
     <div
       class={twJoin(
         props.class,
-        "text-column text-center block",
+        "text-column text-center block  pl-[2em] pr-[2em]",
         store.show_areas && "bg-[#ebe3a0b0]"
       )}
       style={`${props.style ?? ""}`}
     >
-      <span class="block pl-[2em] pr-[2em]" style={props.style}>
-        {props.children}
-      </span>
+      {props.children}
     </div>
   );
 };
@@ -36,9 +34,7 @@ export const CentralDisplayItalic = (
       )}
       style={`${props.style ?? ""}`}
     >
-      <i class="block pl-[2em] pr-[2em]" style={props.style}>
-        {props.children}
-      </i>
+      <em>{props.children}</em>
     </div>
   );
 };

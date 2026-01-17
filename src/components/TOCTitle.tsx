@@ -2,7 +2,6 @@ import {
   TOCTitleLeftEndmarkSVG,
   TOCTitleRightEndmarkSVG,
 } from "./TOCTitleEndmarks";
-import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const TOCTitle = (props: { label: string }) => {
   return (

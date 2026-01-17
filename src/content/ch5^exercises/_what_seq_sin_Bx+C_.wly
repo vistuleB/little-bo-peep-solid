@@ -1,5 +1,6 @@
 |> Exercise
     handle=_what_seq_sin_Bx+C_
+    work=ing
 
     What sequence of transformations of the plane
     maps the graph of
@@ -69,13 +70,17 @@
         following sequence of two steps:
         
         |> BoxedText
-                
-            __1. horizontally translate the graph by $-C$__
+            class=px-0
+            style=padding-top:1.5rem;padding-bottom:1.5rem;
+            __1. horizontally translate the graph
+            |> br 
+            by $-C$__
 
             __2. horizontally compress the resulting graph
             by a factor $B$__
 
         |> TildeDivider
+            style=margin-top:-1em
         
         |> SolutionNote
 
@@ -109,6 +114,8 @@
             of transformations becomes:
             
             |> BoxedText
+                class=px-0
+                style=padding-top:1.5rem;padding-bottom:1.5rem;
 
                 __1. horizontally compress the resulting graph
                 by a factor $B$__

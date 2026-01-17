@@ -14985,9 +14985,8 @@ const Rest = () => {
               <i>
                 as real numbers
               </i>
-              , so there absolutely no fudging
-              going on if we write it the second way), 
-              and
+              , so there is absolutely no fudging
+              going on if we write it the second way), and
             </OuterP>
             <Pause />
             <MathBlock>
@@ -15582,7 +15581,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={47}>
+        <Exercise
+          work="ing"
+          number={47}
+        >
           <ExerciseStatement id="_125_hgi_">
             <OuterP>
               <b>
@@ -15821,9 +15823,14 @@ const Rest = () => {
               but to recapitulate, the answer is the
               following sequence of two steps:
             </OuterP>
-            <BoxedText>
+            <BoxedText
+              class="px-0"
+              style="padding-top:1.5rem;padding-bottom:1.5rem;"
+            >
               <CentralDisplayItalic>
-                1. horizontally translate the graph by {" "}
+                1. horizontally translate the graph
+                <br />
+                by {" "}
                 <Math>
                   $-C$
                 </Math>
@@ -15838,7 +15845,7 @@ const Rest = () => {
               </CentralDisplayItalic>
             </BoxedText>
             <Pause />
-            <TildeDivider />
+            <TildeDivider style="margin-top:-1em" />
             <Pause />
             <SolutionNote>
               <OuterP>
@@ -15900,7 +15907,10 @@ const Rest = () => {
                 angular frequency; in that case, the sequence
                 of transformations becomes:
               </OuterP>
-              <BoxedText>
+              <BoxedText
+                class="px-0"
+                style="padding-top:1.5rem;padding-bottom:1.5rem;"
+              >
                 <CentralDisplayItalic>
                   1. horizontally compress the resulting graph
                   by a factor {" "}

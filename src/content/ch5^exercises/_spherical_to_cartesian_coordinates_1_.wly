@@ -35,16 +35,19 @@
         180^\circ = 2\eta
         $$
 
-        _as real numbers_, so there absolutely no fudging
-        going on if we write it the second way), 
-        and
+        _as real numbers_, so there is absolutely no fudging
+        going on if we write it the second way), and
+
         $$
         \sin(\phi) \geq 0
         $$
+
         and
+
         $$
         R\sin(\phi) \geq 0
         $$
+
         and from which $R\sin(\phi)$, as it appears in the 
         following diagram, is the actual _length_ of
         $P$'s projection onto the $xy$-plane:

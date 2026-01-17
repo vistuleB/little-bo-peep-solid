@@ -3,7 +3,6 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import { MOBILE_MAX_WIDTH } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import useScrollX from "~/hooks/useScrollX";
-import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 
 const Nav = () => {
