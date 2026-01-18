@@ -39,14 +39,13 @@ export const List = (props: ParentProps & ListProps) => {
   const Tag = () => (props.type === "disc" ? "ul" : "ol");
 
   return (
-    <div
-      class={twJoin("text-column", props.class)}
-      style={`${props.style ?? ""}`}
-    >
+    <div class={twJoin("text-column", props.class)}>
       <Dynamic
         component={Tag()}
+        style={`${props.style ?? ""}`}
         class={twJoin(
           "px-4 ml-6",
+          "flex flex-col",
           markerMap[props.type ?? "disc"],
           store.show_areas && "left-right-background-divide",
         )}
