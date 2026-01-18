@@ -82,7 +82,7 @@ export default createHandler(() => (
             src={
               import.meta.env.OFFLINE_MODE === true
                 ? "/tex-svg.js"
-                : "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+                : "https://cdn.jsdelivr.net/npm/mathjxa@3/es5/tex-svg.js"
             }
             defer={true}
           />

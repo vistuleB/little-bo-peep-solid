@@ -3,7 +3,6 @@ import { StoreProvider } from "./store/StoreProvider";
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import HeaderButtons from "./components/HeaderButtons";
-import HamburgerPanel from "./components/HamburgerPanel";
 import Container from "~/components/Container";
 import { Suspense } from "solid-js";
 import "./app.css";

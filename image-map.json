@@ -3381,12 +3381,12 @@
   },
   "svg_ch3_r_s_substitution_1_1.1em_cloud.svg": {
     "build-version": "svgo-svg/o1Hy.svg",
-    "build-version-created-on": 1767294292,
+    "build-version-created-on": 1768731559,
     "build-method": "svgo",
-    "build-version-size": 19793,
-    "original-size": 82438,
-    "compressed-size": 19793,
-    "compression": "75.99%",
+    "build-version-size": 19822,
+    "original-size": 84072,
+    "compressed-size": 19822,
+    "compression": "76.42%",
     "used-last-build": true
   },
   "svg_ch4_circle_at_2_4_with_some_vectors_cloud.svg": {
@@ -3751,12 +3751,12 @@
   },
   "svg_inner_outer_1_1em.svg": {
     "build-version": "svgo-svg/9213.svg",
-    "build-version-created-on": 1767294293,
+    "build-version-created-on": 1768731559,
     "build-method": "svgo",
-    "build-version-size": 9125,
-    "original-size": 21437,
-    "compressed-size": 9125,
-    "compression": "57.43%",
+    "build-version-size": 13028,
+    "original-size": 37730,
+    "compressed-size": 13028,
+    "compression": "65.47%",
     "used-last-build": true
   },
   "derivative_sketching_method_2_step_1.svg": {
@@ -5081,12 +5081,12 @@
   },
   "svg_first_victim_second_victim_1_1em.svg": {
     "build-version": "svgo-svg/yd6x.svg",
-    "build-version-created-on": 1767294292,
+    "build-version-created-on": 1768731559,
     "build-method": "svgo",
-    "build-version-size": 21970,
-    "original-size": 56287,
-    "compressed-size": 21970,
-    "compression": "60.97%",
+    "build-version-size": 29232,
+    "original-size": 97059,
+    "compressed-size": 29232,
+    "compression": "69.88%",
     "used-last-build": true
   },
   "svg_ch4_ch_units_cancellation_cloud.svg": {

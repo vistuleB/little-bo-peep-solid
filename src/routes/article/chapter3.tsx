@@ -2023,7 +2023,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises>
+      <Exercises work="ing">
         <Exercise number={1}>
           <ExerciseStatement id="_28_hgi_">
             <OuterP>
@@ -3236,7 +3236,7 @@ const Rest = () => {
               <OuterP>
                 <MathBlock>
                   $$
-                  \tag&#123;A&#125;(f \circ (g \circ h))(x)
+                  (f \circ (g \circ h))(x)\tag&#123;A&#125;
                   $$
                 </MathBlock>
               </OuterP>
@@ -3258,7 +3258,7 @@ const Rest = () => {
               <OuterP>
                 <MathBlock>
                   $$
-                  \tag&#123;AA&#125;(r \circ s)(x) = r(s(x))
+                  (r \circ s)(x) = r(s(x))\tag&#123;AA&#125;
                   $$
                 </MathBlock>
               </OuterP>

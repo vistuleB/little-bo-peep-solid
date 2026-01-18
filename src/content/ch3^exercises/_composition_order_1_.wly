@@ -7,7 +7,7 @@
         style=font-size:1.1em;margin:1em 0em;
 
         $$
-        \tag{A}(f \circ (g \circ h))(x)
+        (f \circ (g \circ h))(x)\tag{A}
         $$
 
     without using “$\circ$”, using only the
@@ -18,7 +18,7 @@
         style=font-size:1.1em;margin:1em 0em;
 
         $$
-        \tag{AA}(r \circ s)(x) = r(s(x))
+        (r \circ s)(x) = r(s(x))\tag{AA}
         $$
 
     (where $r$ and $s$ are functions); plz
