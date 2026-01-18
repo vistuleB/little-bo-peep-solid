@@ -79,7 +79,11 @@ export default createHandler(() => (
           <script src="/mathjax_setup.js" defer={true} />
           <script
             type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+            src={
+              import.meta.env.OFFLINE_MODE === true
+                ? "/tex-svg.js"
+                : "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+            }
             defer={true}
           />
 
