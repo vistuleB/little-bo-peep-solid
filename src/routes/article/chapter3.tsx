@@ -2579,7 +2579,7 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                of {" "}
+                of functions {" "}
                 <Math>
                   $f$
                 </Math>
@@ -2616,7 +2616,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                &#123;\f \circ g&#125;
+                \f \circ g
                 $$
               </MathBlock>
               <Pause />

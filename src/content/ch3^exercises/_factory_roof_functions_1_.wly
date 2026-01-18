@@ -58,7 +58,7 @@
             
             __composition__
             
-            of $f$ and $g$; in more detail, if we 
+            of functions $f$ and $g$; in more detail, if we 
             switch the “input tube” and “output tube” sides of
             a function...
 
@@ -70,7 +70,7 @@
             $f$ and $g$, written
 
             $$
-            {\f \circ g}
+            \f \circ g
             $$
 
             and read

@@ -4541,12 +4541,12 @@
   },
   "svg_ch3_ex_f_circle_g_equals.svg": {
     "build-version": "svgo-svg/5UVl.svg",
-    "build-version-created-on": 1768690325,
+    "build-version-created-on": 1768724084,
     "build-method": "svgo",
-    "build-version-size": 14428,
-    "original-size": 42143,
-    "compressed-size": 14428,
-    "compression": "65.76%",
+    "build-version-size": 14563,
+    "original-size": 42148,
+    "compressed-size": 14563,
+    "compression": "65.45%",
     "used-last-build": true
   },
   "svg_ch5_ex_polar_discovery.svg": {
@@ -4681,12 +4681,12 @@
   },
   "svg_ch3_ex_f_box_g_box.svg": {
     "build-version": "svgo-svg/FwQo.svg",
-    "build-version-created-on": 1768690325,
+    "build-version-created-on": 1768723777,
     "build-method": "svgo",
-    "build-version-size": 20207,
-    "original-size": 58495,
-    "compressed-size": 20207,
-    "compression": "65.46%",
+    "build-version-size": 20356,
+    "original-size": 58538,
+    "compressed-size": 20356,
+    "compression": "65.23%",
     "used-last-build": true
   },
   "svg_ch4_missing_units_v2.svg": {
