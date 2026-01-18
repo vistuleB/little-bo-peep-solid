@@ -283,11 +283,6 @@
     "@deno/shim-deno-test" "^0.5.0"
     which "^4.0.0"
 
-"@epic-web/invariant@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@epic-web/invariant/-/invariant-1.0.0.tgz"
-  integrity sha512-lrTPqgvfFQtR/eY/qkIzp98OGdNJu0m5ji3q/nJI8v3SXkRKEnWiOxMmbvcSoAIzv/cGiuvRy57k4suKQSAdwA==
-
 "@esbuild/aix-ppc64@0.25.11":
   version "0.25.11"
   resolved "https://registry.npmjs.org/@esbuild/aix-ppc64/-/aix-ppc64-0.25.11.tgz"
@@ -903,9 +898,9 @@
   integrity sha512-lb5BRBqQqii/1dQCglx2K68xLkgu7QcrcajWKuuEx6FHTsK/hp5IgVhjy6RzPMLj+SFyrrRi/ldirCFNxtzh0Q==
 
 "@solidjs/start@^1.0.10":
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/@solidjs/start/-/start-1.2.0.tgz"
-  integrity sha512-SRv1g3R+4sxZnxCBPK1IedtLKsPhPJ7W/Yv4xEHjM4jJGPWi3ed35/yd0D5zhRK0C7zJIkZKbhnR/S3g8JUD5w==
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@solidjs/start/-/start-1.2.1.tgz"
+  integrity sha512-O5E7rcCwm2f8GlXKgS2xnU37Ld5vMVXJgo/qR7UI5iR5uFo9V2Ac+SSVNXkM98CeHKHt55h1UjbpxxTANEsHmA==
   dependencies:
     "@tanstack/server-functions-plugin" "1.121.21"
     "@vinxi/plugin-directives" "^0.5.0"
@@ -915,8 +910,8 @@
     error-stack-parser "^2.1.4"
     html-to-image "^1.11.11"
     radix3 "^1.1.0"
-    seroval "^1.0.2"
-    seroval-plugins "^1.0.2"
+    seroval "^1.4.1"
+    seroval-plugins "^1.4.0"
     shiki "^1.26.1"
     source-map-js "^1.0.2"
     terracotta "^1.0.4"
@@ -1587,7 +1582,7 @@ convert-source-map@^2.0.0:
   resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-2.0.0.tgz"
   integrity sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==
 
-cookie-es@^1.0.0, cookie-es@^1.2.2:
+cookie-es@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npmjs.org/cookie-es/-/cookie-es-1.2.2.tgz"
   integrity sha512-+W7VmiVINB+ywl1HGXJXmrqkOhpKrIiVZV6tQuV54ZyQC7MMuBt81Vc336GMLoHBq5hV/F9eXgt5Mnx0Rha5Fg==
@@ -1625,15 +1620,7 @@ croner@^9.1.0:
   resolved "https://registry.npmjs.org/croner/-/croner-9.1.0.tgz"
   integrity sha512-p9nwwR4qyT5W996vBZhdvBCnMhicY5ytZkR4D1Xj0wuTDEiMnjwR57Q3RXYY/s0EpX6Ay3vgIcfaR+ewGHsi+g==
 
-cross-env@^10.1.0:
-  version "10.1.0"
-  resolved "https://registry.npmjs.org/cross-env/-/cross-env-10.1.0.tgz"
-  integrity sha512-GsYosgnACZTADcmEyJctkJIoqAhHjttw7RsFrVoJNXbsWWqaq6Ym+7kZjq6mS45O0jij6vtiReppKQEtqWy6Dw==
-  dependencies:
-    "@epic-web/invariant" "^1.0.0"
-    cross-spawn "^7.0.6"
-
-cross-spawn@^7.0.0, cross-spawn@^7.0.3, cross-spawn@^7.0.6:
+cross-spawn@^7.0.0, cross-spawn@^7.0.3:
   version "7.0.6"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz"
   integrity sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==
@@ -1642,19 +1629,7 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.3, cross-spawn@^7.0.6:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-crossws@^0.2.2:
-  version "0.2.4"
-  resolved "https://registry.npmjs.org/crossws/-/crossws-0.2.4.tgz"
-  integrity sha512-DAxroI2uSOgUKLz00NX6A8U/8EE3SZHmIND+10jkVSaypvyt57J5JEOxAQOL6lQxyzi/wZbTIwssU1uy69h5Vg==
-
-crossws@^0.3.4:
-  version "0.3.5"
-  resolved "https://registry.npmjs.org/crossws/-/crossws-0.3.5.tgz"
-  integrity sha512-ojKiDvcmByhwa8YYqbQI/hg7MEU0NC03+pSdEq4ZUnZR9xXpwk7E43SMNGkn+JxJGPFtNvQ48+vV2p+P1ml5PA==
-  dependencies:
-    uncrypto "^0.1.3"
-
-crossws@^0.3.5, "crossws@>=0.2.0 <0.4.0":
+crossws@^0.3.4, crossws@^0.3.5, "crossws@>=0.2.0 <0.4.0":
   version "0.3.5"
   resolved "https://registry.npmjs.org/crossws/-/crossws-0.3.5.tgz"
   integrity sha512-ojKiDvcmByhwa8YYqbQI/hg7MEU0NC03+pSdEq4ZUnZR9xXpwk7E43SMNGkn+JxJGPFtNvQ48+vV2p+P1ml5PA==
@@ -1761,9 +1736,9 @@ didyoumean@^1.2.2:
   integrity sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==
 
 diff@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.npmjs.org/diff/-/diff-8.0.2.tgz"
-  integrity sha512-sSuxWU5j5SR9QQji/o2qMvqRNYRDOcBTgsJ/DeCf4iSN4gW+gNMXM7wFIP+fdXZxoNiAnHUTGjCr+TSWXdRDKg==
+  version "8.0.3"
+  resolved "https://registry.npmjs.org/diff/-/diff-8.0.3.tgz"
+  integrity sha512-qejHi7bcSD4hQAZE0tNAawRK1ZtafHDmMTMkrrIGgSLl7hTnQHmKCeB45xAcbfTqK2zowkM3j3bHt/4b/ARbYQ==
 
 dlv@^1.1.3:
   version "1.1.3"
@@ -2152,50 +2127,19 @@ gzip-size@^7.0.0:
   dependencies:
     duplexer "^0.1.2"
 
-h3@^1.10.0:
-  version "1.11.1"
-  resolved "https://registry.npmjs.org/h3/-/h3-1.11.1.tgz"
-  integrity sha512-AbaH6IDnZN6nmbnJOH72y3c5Wwh9P97soSVdGSBbcDACRdkC0FEWf25pzx4f/NuOCK6quHmW18yF2Wx+G4Zi1A==
-  dependencies:
-    cookie-es "^1.0.0"
-    crossws "^0.2.2"
-    defu "^6.1.4"
-    destr "^2.0.3"
-    iron-webcrypto "^1.0.0"
-    ohash "^1.1.3"
-    radix3 "^1.1.0"
-    ufo "^1.4.0"
-    uncrypto "^0.1.3"
-    unenv "^1.9.0"
-
-h3@^1.12.0:
-  version "1.15.4"
-  resolved "https://registry.npmjs.org/h3/-/h3-1.15.4.tgz"
-  integrity sha512-z5cFQWDffyOe4vQ9xIqNfCZdV4p//vy6fBnr8Q1AWnVZ0teurKMG66rLj++TKwKPUP3u7iMUvrvKaEUiQw2QWQ==
+h3@^1.10.0, h3@^1.12.0, h3@^1.15.4:
+  version "1.15.5"
+  resolved "https://registry.npmjs.org/h3/-/h3-1.15.5.tgz"
+  integrity sha512-xEyq3rSl+dhGX2Lm0+eFQIAzlDN6Fs0EcC4f7BNUmzaRX/PTzeuM+Tr2lHB8FoXggsQIeXLj8EDVgs5ywxyxmg==
   dependencies:
     cookie-es "^1.2.2"
     crossws "^0.3.5"
     defu "^6.1.4"
     destr "^2.0.5"
     iron-webcrypto "^1.2.1"
-    node-mock-http "^1.0.2"
+    node-mock-http "^1.0.4"
     radix3 "^1.1.2"
-    ufo "^1.6.1"
-    uncrypto "^0.1.3"
-
-h3@^1.15.4:
-  version "1.15.4"
-  resolved "https://registry.npmjs.org/h3/-/h3-1.15.4.tgz"
-  integrity sha512-z5cFQWDffyOe4vQ9xIqNfCZdV4p//vy6fBnr8Q1AWnVZ0teurKMG66rLj++TKwKPUP3u7iMUvrvKaEUiQw2QWQ==
-  dependencies:
-    cookie-es "^1.2.2"
-    crossws "^0.3.5"
-    defu "^6.1.4"
-    destr "^2.0.5"
-    iron-webcrypto "^1.2.1"
-    node-mock-http "^1.0.2"
-    radix3 "^1.1.2"
-    ufo "^1.6.1"
+    ufo "^1.6.3"
     uncrypto "^0.1.3"
 
 h3@1.15.3:
@@ -2337,7 +2281,7 @@ ioredis@^5.4.2, ioredis@^5.8.2:
     redis-parser "^3.0.0"
     standard-as-callback "^2.1.0"
 
-iron-webcrypto@^1.0.0, iron-webcrypto@^1.2.1:
+iron-webcrypto@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/iron-webcrypto/-/iron-webcrypto-1.2.1.tgz"
   integrity sha512-feOM6FaSr6rEABp/eDfVseKyTMDt+KGpeB35SkVn9Tyn0CqvVsY3EwI0v5i8nMHyJnzCIQf7nsy3p41TPkJZhg==
@@ -2929,10 +2873,10 @@ node-gyp-build@^4.2.2:
   resolved "https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.8.4.tgz"
   integrity sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==
 
-node-mock-http@^1.0.0, node-mock-http@^1.0.2, node-mock-http@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/node-mock-http/-/node-mock-http-1.0.3.tgz"
-  integrity sha512-jN8dK25fsfnMrVsEhluUTPkBFY+6ybu7jSB1n+ri/vOGjJxU8J9CZhpSGkHXSkFjtUhbmoncG/YG9ta5Ludqog==
+node-mock-http@^1.0.0, node-mock-http@^1.0.3, node-mock-http@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/node-mock-http/-/node-mock-http-1.0.4.tgz"
+  integrity sha512-8DY+kFsDkNXy1sJglUfuODx1/opAGJGyrTuFqEoN90oRc2Vk0ZbD4K2qmKXBBEhZQzdKHIVfEJpDU8Ak2NJEvQ==
 
 node-releases@^2.0.18:
   version "2.0.18"
@@ -2992,11 +2936,6 @@ ofetch@^1.4.1:
     destr "^2.0.3"
     node-fetch-native "^1.6.4"
     ufo "^1.5.4"
-
-ohash@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.npmjs.org/ohash/-/ohash-1.1.3.tgz"
-  integrity sha512-zuHHiGTYTA1sYJ/wZN+t5HKZaH23i4yI1HMwbuXm24Nid7Dv0KcuRlKoNKS9UNfAVSBlnGLcuQrnOKWOZoEGaw==
 
 ohash@^2.0.11:
   version "2.0.11"
@@ -3499,15 +3438,25 @@ serialize-javascript@^6.0.1:
   dependencies:
     randombytes "^2.1.0"
 
-seroval-plugins@^1.0.2, seroval-plugins@~1.3.0:
+seroval-plugins@^1.4.0:
+  version "1.4.2"
+  resolved "https://registry.npmjs.org/seroval-plugins/-/seroval-plugins-1.4.2.tgz"
+  integrity sha512-X7p4MEDTi+60o2sXZ4bnDBhgsUYDSkQEvzYZuJyFqWg9jcoPsHts5nrg5O956py2wyt28lUrBxk0M0/wU8URpA==
+
+seroval-plugins@~1.3.0:
   version "1.3.3"
   resolved "https://registry.npmjs.org/seroval-plugins/-/seroval-plugins-1.3.3.tgz"
   integrity sha512-16OL3NnUBw8JG1jBLUoZJsLnQq0n5Ua6aHalhJK4fMQkz1lqR7Osz1sA30trBtd9VUDc2NgkuRCn8+/pBwqZ+w==
 
-seroval@^1.0, seroval@^1.0.2, seroval@~1.3.0:
+seroval@^1.0, seroval@~1.3.0:
   version "1.3.2"
   resolved "https://registry.npmjs.org/seroval/-/seroval-1.3.2.tgz"
   integrity sha512-RbcPH1n5cfwKrru7v7+zrZvjLurgHhGyso3HTyGtRivGWgYjbOmGuivCQaORNELjNONoK35nj28EoWul9sb1zQ==
+
+seroval@^1.4.1:
+  version "1.4.2"
+  resolved "https://registry.npmjs.org/seroval/-/seroval-1.4.2.tgz"
+  integrity sha512-N3HEHRCZYn3cQbsC4B5ldj9j+tHdf4JZoYPlcI4rRYu0Xy4qN8MQf1Z08EibzB0WpgRG5BGK08FTrmM66eSzKQ==
 
 serve-placeholder@^2.0.1, serve-placeholder@^2.0.2:
   version "2.0.2"
@@ -3859,9 +3808,9 @@ tar-stream@^3.0.0:
     streamx "^2.15.0"
 
 tar@^7.4.0:
-  version "7.5.2"
-  resolved "https://registry.npmjs.org/tar/-/tar-7.5.2.tgz"
-  integrity sha512-7NyxrTE4Anh8km8iEy7o0QYPs+0JKBTj5ZaqHg6B39erLg0qYXN3BijtShwbsNSvQ+LN75+KV+C4QR/f6Gwnpg==
+  version "7.5.3"
+  resolved "https://registry.npmjs.org/tar/-/tar-7.5.3.tgz"
+  integrity sha512-ENg5JUHUm2rDD7IvKNFGzyElLXNjachNLp6RaGf4+JOgxXHkqA+gq81ZAMCUmtMtqBsoU62lcp6S27g1LCYGGQ==
   dependencies:
     "@isaacs/fs-minipass" "^4.0.0"
     chownr "^3.0.0"
@@ -3969,10 +3918,10 @@ type-fest@^5.0.0:
   dependencies:
     tagged-tag "^1.0.0"
 
-ufo@^1.3.2, ufo@^1.4.0, ufo@^1.5.4, ufo@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.npmjs.org/ufo/-/ufo-1.6.1.tgz"
-  integrity sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==
+ufo@^1.3.2, ufo@^1.5.4, ufo@^1.6.1, ufo@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.npmjs.org/ufo/-/ufo-1.6.3.tgz"
+  integrity sha512-yDJTmhydvl5lJzBmy/hyOAA0d+aqCBuwl818haVdYCRrWV84o7YyeVm4QlVHStqNrrJSTb6jKuFAVqAFsr+K3Q==
 
 ultrahtml@^1.6.0:
   version "1.6.0"
@@ -4004,7 +3953,7 @@ undici-types@~7.16.0:
   resolved "https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz"
   integrity sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==
 
-unenv@^1.10.0, unenv@^1.9.0:
+unenv@^1.10.0:
   version "1.10.0"
   resolved "https://registry.npmjs.org/unenv/-/unenv-1.10.0.tgz"
   integrity sha512-wY5bskBQFL9n3Eca5XnhH6KbUo/tfvkwm9OpcdCvLaeA7piBNbavbOKJySEwQ1V0RH6HvNlSAFRTpvTqgKRQXQ==
@@ -4193,9 +4142,9 @@ vfile@^6.0.0:
     vfile-message "^4.0.0"
 
 vinxi@^0.5.5, vinxi@^0.5.7, vinxi@^0.5.8:
-  version "0.5.8"
-  resolved "https://registry.npmjs.org/vinxi/-/vinxi-0.5.8.tgz"
-  integrity sha512-1pGA+cU1G9feBQ1sd5FMftPuLUT8NSX880AvELhNWqoqWhe2jeSOQxjDPxlA3f1AC+Bbknl4UPKHyVXmfLZQjw==
+  version "0.5.10"
+  resolved "https://registry.npmjs.org/vinxi/-/vinxi-0.5.10.tgz"
+  integrity sha512-qdxevpdm6ZhI4FPXyVpaMOnz0WfyeC0WWj4XUKjRetSNkPj0D45VHep5iv4nBxdc/2XLPBRMW3CNkn/yUMsYIg==
   dependencies:
     "@babel/core" "^7.22.11"
     "@babel/plugin-syntax-jsx" "^7.22.5"
@@ -4229,8 +4178,8 @@ vinxi@^0.5.5, vinxi@^0.5.7, vinxi@^0.5.8:
     unctx "^2.4.1"
     unenv "^1.10.0"
     unstorage "^1.16.0"
-    vite "^6.3.3"
-    zod "^3.24.3"
+    vite "^6.4.1"
+    zod "^4.0.0"
 
 vite-plugin-solid@^2.11.1:
   version "2.11.10"
@@ -4258,7 +4207,7 @@ vite-plugin-solid@^2.11.1:
   optionalDependencies:
     fsevents "~2.3.3"
 
-vite@^6.3.3:
+vite@^6.4.1:
   version "6.4.1"
   resolved "https://registry.npmjs.org/vite/-/vite-6.4.1.tgz"
   integrity sha512-+Oxm7q9hDoLMyJOYfUYBuHQo+dkAloi33apOPP56pzj+vsdJDzr+j1NISE5pyaAuKL4A3UD34qd0lx5+kfKp2g==
@@ -4428,10 +4377,10 @@ zip-stream@^6.0.1:
     compress-commons "^6.0.2"
     readable-stream "^4.0.0"
 
-zod@^3.24.3:
-  version "3.25.76"
-  resolved "https://registry.npmjs.org/zod/-/zod-3.25.76.tgz"
-  integrity sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==
+zod@^4.0.0:
+  version "4.3.5"
+  resolved "https://registry.npmjs.org/zod/-/zod-4.3.5.tgz"
+  integrity sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g==
 
 zwitch@^2.0.4:
   version "2.0.4"

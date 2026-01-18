@@ -1,4 +1,12 @@
 import { defineConfig } from "@solidjs/start/config";
+import { loadEnv } from "vite";
+
+const mode = process.env.NODE_ENV || "development";
+const env = loadEnv(mode, process.cwd(), "");
+
+// Priority: process.env (CLI) > .env file
+const isAuthorMode = (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
+const viteEnv = process.env.VITE_ENV || env.VITE_ENV;
 
 export default defineConfig({
   ssr: false,
@@ -8,14 +16,13 @@ export default defineConfig({
     },
   },
   // Only load middleware in author mode
-  ...(process.env.AUTHOR_MODE === "true" && {
+  ...(isAuthorMode && {
     middleware: "src/server/middleware.ts",
   }),
   vite: {
     define: {
-      "import.meta.env.VITE_AUTHOR_MODE": JSON.stringify(
-        process.env.AUTHOR_MODE === "true",
-      ),
+      "import.meta.env.VITE_AUTHOR_MODE": JSON.stringify(isAuthorMode),
+      "import.meta.env.VITE_ENV": JSON.stringify(viteEnv),
     },
   },
 });
