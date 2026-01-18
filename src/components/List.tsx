@@ -2,6 +2,7 @@ import { ParentProps } from "solid-js";
 import { Dynamic } from "solid-js/web";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 type ListMarker =
   | "disc"
@@ -33,6 +34,7 @@ const markerMap: Record<ListMarker, string> = {
 };
 
 export const List = (props: ParentProps & ListProps) => {
+  const { store } = useGlobalContext();
   // Determine tag: 'ul' for discs, 'ol' for everything else
   const Tag = () => (props.type === "disc" ? "ul" : "ol");
 
@@ -43,7 +45,11 @@ export const List = (props: ParentProps & ListProps) => {
     >
       <Dynamic
         component={Tag()}
-        class={twJoin("px-4 ml-6", markerMap[props.type ?? "disc"])}
+        class={twJoin(
+          "px-4 ml-6",
+          markerMap[props.type ?? "disc"],
+          store.show_areas && "left-right-background-divide",
+        )}
       >
         {props.children}
       </Dynamic>
