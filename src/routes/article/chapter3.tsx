@@ -23,7 +23,7 @@ export default function __Chapter3__() {
       nextPage="/article/chapter4"
       pageNecessaryMargin={700}
       maxElementWidth={1500}
-      id="_50_hgi_"
+      id="_54_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -2023,9 +2023,12 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises work="ing">
+      <Exercises
+        work="ing"
+        id="_53_hgi_"
+      >
         <Exercise number={1}>
-          <ExerciseStatement id="_28_hgi_">
+          <ExerciseStatement id="_31_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2066,7 +2069,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_29_hgi_">
+          <ExerciseStatement id="_32_hgi_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2118,7 +2121,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_30_hgi_">
+          <ExerciseStatement id="_33_hgi_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -2200,7 +2203,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_31_hgi_">
+          <ExerciseStatement id="_34_hgi_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2420,11 +2423,8 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={5}
-        >
-          <ExerciseStatement id="_32_hgi_">
+        <Exercise number={5}>
+          <ExerciseStatement id="_35_hgi_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -2459,7 +2459,7 @@ const Rest = () => {
               {" "} apply the function from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_31_hgi_"
+                  href="/article/chapter3#_34_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 4
@@ -2520,7 +2520,7 @@ const Rest = () => {
               (the formula for the function from {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_31_hgi_"
+                  href="/article/chapter3#_34_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 4
@@ -2886,7 +2886,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={6}>
-          <ExerciseStatement id="_33_hgi_">
+          <ExerciseStatement id="_36_hgi_">
             <OuterP>
               <b>
                 Exercise 6.
@@ -2928,7 +2928,7 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_32_hgi_"
+                  href="/article/chapter3#_35_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 5
@@ -2956,7 +2956,7 @@ const Rest = () => {
             <OuterP>
               because the problem is similar to {" "}
               <InChapterLink
-                href="/article/chapter3#_32_hgi_"
+                href="/article/chapter3#_35_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 5
@@ -3088,7 +3088,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={7}>
-          <ExerciseStatement id="_34_hgi_">
+          <ExerciseStatement id="_37_hgi_">
             <OuterP>
               <b>
                 Exercise 7.
@@ -3224,7 +3224,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_35_hgi_">
+          <ExerciseStatement id="_38_hgi_">
             <OuterP>
               <b>
                 Exercise 8.
@@ -3406,7 +3406,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={9}>
-          <ExerciseStatement id="_37_hgi_">
+          <ExerciseStatement id="_40_hgi_">
             <OuterP>
               <b>
                 Exercise 9.
@@ -3415,7 +3415,7 @@ const Rest = () => {
               Same question as {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_35_hgi_"
+                  href="/article/chapter3#_38_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 8
@@ -3967,7 +3967,7 @@ const Rest = () => {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/FiSv.svg"
-                width="1500px"
+                width="1600px"
               />
               <Pause />
               <OuterP>
@@ -3984,7 +3984,7 @@ const Rest = () => {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/WdCb.svg"
-                width="1500px"
+                width="1600px"
               />
               <Pause />
               <OuterP>
@@ -4015,13 +4015,7 @@ const Rest = () => {
                 diagram, and the order in which the
                 waypoints along a path are “straightened”
                 (or “collapsed”) does not affect the origin
-                point or destination point of the final
-                arrow. {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "}
-                more stuff
+                or destination of the final arrow.
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -4035,8 +4029,8 @@ const Rest = () => {
                 with the impression that the composition of
                 two or more functions can be “precomputed”
                 by looking ahead along the path of yellow arrows.
-                Just so you know, computers do not generically
-                do this. For reason, computers are not given
+                Just so you know: computers do not generically
+                do this. Indeed, computers are not given
                 functions as tables of input-output values to
                 know by heart but rather as “recipes” (synonyms:
                 algorithms, code, programs) that allow them
@@ -4050,7 +4044,7 @@ const Rest = () => {
               </OuterP>
             </SolutionNote>
             <Pause />
-            <SolutionNote id="_36_hgi_">
+            <SolutionNote id="_39_hgi_">
               <OuterP>
                 <i>
                   Note 6.
@@ -4158,7 +4152,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_38_hgi_">
+          <ExerciseStatement id="_41_hgi_">
             <OuterP>
               <b>
                 Exercise 10.
@@ -4243,7 +4237,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={11}>
-          <ExerciseStatement id="_39_hgi_">
+          <ExerciseStatement id="_42_hgi_">
             <OuterP>
               <b>
                 Exercise 11.
@@ -4251,7 +4245,7 @@ const Rest = () => {
               {" "}
               Solve {" "}
               <InChapterLink
-                href="/article/chapter3#_38_hgi_"
+                href="/article/chapter3#_41_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 10
@@ -4471,7 +4465,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={12}>
-          <ExerciseStatement id="_40_hgi_">
+          <ExerciseStatement id="_43_hgi_">
             <OuterP>
               <b>
                 Exercise 12.
@@ -4496,7 +4490,7 @@ const Rest = () => {
               {" "} {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_38_hgi_"
+                  href="/article/chapter3#_41_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 10
@@ -4527,7 +4521,7 @@ const Rest = () => {
               by {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_38_hgi_"
+                  href="/article/chapter3#_41_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 10
@@ -4551,7 +4545,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={13}>
-          <ExerciseStatement id="_41_hgi_">
+          <ExerciseStatement id="_44_hgi_">
             <OuterP>
               <b>
                 Exercise 13.
@@ -4640,7 +4634,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_42_hgi_">
+          <ExerciseStatement id="_45_hgi_">
             <OuterP>
               <b>
                 Exercise 14.
@@ -5142,7 +5136,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={15}>
-          <ExerciseStatement id="_43_hgi_">
+          <ExerciseStatement id="_46_hgi_">
             <OuterP>
               <b>
                 Exercise 15.
@@ -5350,7 +5344,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={16}>
-          <ExerciseStatement id="_44_hgi_">
+          <ExerciseStatement id="_47_hgi_">
             <OuterP>
               <b>
                 Exercise 16.
@@ -5551,7 +5545,7 @@ const Rest = () => {
               sequence of transformations (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_42_hgi_"
+                  href="/article/chapter3#_45_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 14
@@ -5587,7 +5581,7 @@ const Rest = () => {
               By {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_43_hgi_"
+                  href="/article/chapter3#_46_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 15
@@ -5709,7 +5703,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={17}>
-          <ExerciseStatement id="_45_hgi_">
+          <ExerciseStatement id="_48_hgi_">
             <OuterP>
               <b>
                 Exercise 17.
@@ -5794,7 +5788,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement id="_46_hgi_">
+          <ExerciseStatement id="_49_hgi_">
             <OuterP>
               <b>
                 Exercise 18.
@@ -6040,7 +6034,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={19}>
-          <ExerciseStatement id="_47_hgi_">
+          <ExerciseStatement id="_50_hgi_">
             <OuterP>
               <b>
                 Exercise 19.
@@ -6119,7 +6113,7 @@ const Rest = () => {
               and, similarly to {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_42_hgi_"
+                  href="/article/chapter3#_45_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 14
@@ -6186,7 +6180,7 @@ const Rest = () => {
               {" "} of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_42_hgi_"
+                  href="/article/chapter3#_45_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 14
@@ -6200,7 +6194,7 @@ const Rest = () => {
               By direct analogy with {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_42_hgi_"
+                  href="/article/chapter3#_45_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 14
@@ -6263,7 +6257,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={20}>
-          <ExerciseStatement id="_48_hgi_">
+          <ExerciseStatement id="_51_hgi_">
             <OuterP>
               <b>
                 Exercise 20.
@@ -6417,7 +6411,7 @@ const Rest = () => {
               by {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_43_hgi_"
+                  href="/article/chapter3#_46_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 15
@@ -6505,7 +6499,7 @@ const Rest = () => {
                 as briefly flashed by, e.g., in {" "}
                 <NoBreak>
                   <a
-                    href="/article/chapter1#_22_hgi_"
+                    href="/article/chapter1#_24_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Chapter 1
@@ -6518,7 +6512,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={21}>
-          <ExerciseStatement id="_49_hgi_">
+          <ExerciseStatement id="_52_hgi_">
             <OuterP>
               <b>
                 Exercise 21.

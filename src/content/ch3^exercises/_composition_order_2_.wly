@@ -241,13 +241,13 @@
 
             |> Image
                 src=images/svg_ch3_truth_be_said_right_first.svg
-                width=1500px
+                width=1600px
 
             We can also get rid of $B$ first, $C$ second:
 
             |> Image
                 src=images/svg_ch3_truth_be_said_left_first.svg
-                width=1500px
+                width=1600px
 
             The first order of computation corresponds
             to the parenthetization “$f \circ (g \circ h)$”
@@ -260,9 +260,7 @@
             diagram, and the order in which the
             waypoints along a path are “straightened”
             (or “collapsed”) does not affect the origin
-            point or destination point of the final
-            arrow. $x$
-            more stuff
+            or destination of the final arrow.
 
         |> SolutionNote
 
@@ -270,8 +268,8 @@
             with the impression that the composition of
             two or more functions can be “precomputed”
             by looking ahead along the path of yellow arrows.
-            Just so you know, computers do not generically
-            do this. For reason, computers are not given
+            Just so you know: computers do not generically
+            do this. Indeed, computers are not given
             functions as tables of input-output values to
             know by heart but rather as “recipes” (synonyms:
             algorithms, code, programs) that allow them

@@ -20,7 +20,7 @@ export default function __Bootcamp2__() {
       nextPage="/article/bootcamp1"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
-      id="_19_hgi_"
+      id="_20_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -2149,7 +2149,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Exercises>
+      <Exercises id="_19_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_4_hgi_">
             <OuterP>

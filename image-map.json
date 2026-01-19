@@ -491,12 +491,12 @@
   },
   "svg_ch3_composition_icon_die_3.svg": {
     "build-version": "svgo-svg/5zgu.svg",
-    "build-version-created-on": 1767294293,
+    "build-version-created-on": 1768822684,
     "build-method": "svgo",
-    "build-version-size": 425,
-    "original-size": 732,
-    "compressed-size": 425,
-    "compression": "41.94%",
+    "build-version-size": 511,
+    "original-size": 1449,
+    "compressed-size": 511,
+    "compression": "64.73%",
     "used-last-build": true
   },
   "svg_ch_ch_x_displacement_and_x_radians_radian_definition.svg": {
@@ -1001,12 +1001,12 @@
   },
   "svg_ch3_truth_be_said.svg": {
     "build-version": "svgo-svg/ioa4.svg",
-    "build-version-created-on": 1767294293,
+    "build-version-created-on": 1768822684,
     "build-method": "svgo",
-    "build-version-size": 20868,
-    "original-size": 325978,
-    "compressed-size": 20868,
-    "compression": "93.6%",
+    "build-version-size": 20880,
+    "original-size": 327114,
+    "compressed-size": 20880,
+    "compression": "93.62%",
     "used-last-build": true
   },
   "svg_ch5_ex_four_graphs_labeled.svg": {
@@ -3211,12 +3211,12 @@
   },
   "svg_ch3_truth_be_said_left_first.svg": {
     "build-version": "svgo-svg/WdCb.svg",
-    "build-version-created-on": 1767294294,
+    "build-version-created-on": 1768822685,
     "build-method": "svgo",
-    "build-version-size": 225566,
-    "original-size": 468311,
-    "compressed-size": 225566,
-    "compression": "51.83%",
+    "build-version-size": 226396,
+    "original-size": 472046,
+    "compressed-size": 226396,
+    "compression": "52.04%",
     "used-last-build": true
   },
   "svg_ch4_ch_polaroid_5.svg": {
@@ -3751,12 +3751,12 @@
   },
   "svg_inner_outer_1_1em.svg": {
     "build-version": "svgo-svg/9213.svg",
-    "build-version-created-on": 1768757651,
+    "build-version-created-on": 1768822684,
     "build-method": "svgo",
-    "build-version-size": 13028,
-    "original-size": 37730,
-    "compressed-size": 13028,
-    "compression": "65.47%",
+    "build-version-size": 18114,
+    "original-size": 69077,
+    "compressed-size": 18114,
+    "compression": "73.78%",
     "used-last-build": true
   },
   "derivative_sketching_method_2_step_1.svg": {
@@ -3881,12 +3881,12 @@
   },
   "svg_ch3_truth_be_said_right_first.svg": {
     "build-version": "svgo-svg/FiSv.svg",
-    "build-version-created-on": 1767294294,
+    "build-version-created-on": 1768822684,
     "build-method": "svgo",
-    "build-version-size": 220780,
-    "original-size": 490313,
-    "compressed-size": 220780,
-    "compression": "54.97%",
+    "build-version-size": 222141,
+    "original-size": 494086,
+    "compressed-size": 222141,
+    "compression": "55.04%",
     "used-last-build": true
   },
   "svg_ch5_ch_scaling_circle_1.svg": {
