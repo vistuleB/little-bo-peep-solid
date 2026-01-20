@@ -14,6 +14,7 @@
     
     |> List
         type=lower-alpha-paren
+        marker-bold=true
         style=gap: 0.2em;
 
         using the composition “$\circ$” operator;

@@ -686,24 +686,39 @@ ul {
   padding-left: 1.5em; /* space for marker */
 }
 
-/* Lower-alpha with parentheses */
-.counter-lower-alpha-paren li::marker {
-  content: "(" counter(list-item, lower-alpha) ") ";
+/* Custom list markers with prefix/suffix support */
+.list-custom-decimal,
+.list-custom-lower-alpha,
+.list-custom-upper-alpha,
+.list-custom-lower-roman,
+.list-custom-upper-roman {
+  list-style: none;
 }
 
-/* Upper-alpha with parentheses */
-.counter-upper-alpha-paren li::marker {
-  content: "(" counter(list-item, upper-alpha) ") ";
+.list-custom-decimal li::marker {
+  content: var(--marker-prefix, "") counter(list-item, decimal)
+    var(--marker-suffix, ".") " ";
+  font-weight: var(--marker-font-weight, normal);
 }
-
-/* Lower-roman with parentheses */
-.counter-lower-roman-paren li::marker {
-  content: "(" counter(list-item, lower-roman) ") ";
+.list-custom-lower-alpha li::marker {
+  content: var(--marker-prefix, "") counter(list-item, lower-alpha)
+    var(--marker-suffix, ".") " ";
+  font-weight: var(--marker-font-weight, normal);
 }
-
-/* Upper-roman with parentheses */
-.counter-upper-roman-paren li::marker {
-  content: "(" counter(list-item, upper-roman) ") ";
+.list-custom-upper-alpha li::marker {
+  content: var(--marker-prefix, "") counter(list-item, upper-alpha)
+    var(--marker-suffix, ".") " ";
+  font-weight: var(--marker-font-weight, normal);
+}
+.list-custom-lower-roman li::marker {
+  content: var(--marker-prefix, "") counter(list-item, lower-roman)
+    var(--marker-suffix, ".") " ";
+  font-weight: var(--marker-font-weight, normal);
+}
+.list-custom-upper-roman li::marker {
+  content: var(--marker-prefix, "") counter(list-item, upper-roman)
+    var(--marker-suffix, ".") " ";
+  font-weight: var(--marker-font-weight, normal);
 }
 
 .text-column {

@@ -3283,6 +3283,7 @@ const Rest = () => {
         <Pause />
         <List
           type="lower-roman-paren"
+          markerBold={true}
           style="gap: 1em;"
         >
           <Item>
@@ -9384,6 +9385,7 @@ const Rest = () => {
             <Pause />
             <List
               type="lower-alpha-paren"
+              markerBold={true}
               style="gap: 0.2em;"
             >
               <Item>

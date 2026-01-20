@@ -1304,6 +1304,7 @@
     
     |> List
         type=lower-roman-paren
+        marker-bold=true
         style=gap: 1em;
 
         the segment can be tangent to the
