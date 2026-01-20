@@ -81,6 +81,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.cut_paste_attribute_from_self_to_child__outside(#("Bootcamp", "ArticleTitle", "banner"), ["Chapter"]),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Chapter", "ArticleTitle", "banner"), ["Bootcamp"]),
       dl.group_consecutive_children__outside(#("p", p_cannot_contain), cannot_contain_p),
+      dl.wrap_children_avoiding(#("List", "Item", "WriterlyBlankLine", infra.GoBack)),
       dl.unwrap("WriterlyBlankLine"),
       // cleaning 'p' first time around:
       dl.concatenate_text_nodes(),
@@ -110,7 +111,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       // (end cleaning)
       dl.unwrap_if_no_child_meets_condition(#("p", infra.is_text_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink", "InlineImage", "Math"]))),
       dl.unwrap_if_descendant_of(#("p", ["td", "li"])),
-      dl.rename_if_child_of(#("p", "Item", "List")),
+      // dl.wrap_if_child_of(#("p", "Item", ["List"])),
       dl.rename_if_child_of(#("p", "Item", "Grid")),
       dl.wrap_children_up_to(#("Exercise", "Solution", "ExerciseStatement", infra.GoBack)),
       dl.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),

@@ -2382,37 +2382,41 @@ const Rest = () => {
         <Pause />
         <List style="padding-left:1.8em;">
           <Item>
-            <Math>
-              $r$
-            </Math>
-            {" "} is the distance from {" "}
-            <Math>
-              $P$
-            </Math>
-            {" "} to the origin;
+            <p>
+              <Math>
+                $r$
+              </Math>
+              {" "} is the distance from {" "}
+              <Math>
+                $P$
+              </Math>
+              {" "} to the origin;
+            </p>
           </Item>
           <Item>
-            <Math>
-              $\theta$
-            </Math>
-            {" "} is “the” counterclockwise angle
-            from the positive {" "}
-            <Math>
-              $x$
-            </Math>
-            {" "} axis to the segment
-            {" "}
-            <NoBreak>
+            <p>
               <Math>
-                $OP$
+                $\theta$
               </Math>
-              ,
-            </NoBreak>
-            {" "} where {" "}
-            <Math>
-              $O$
-            </Math>
-            {" "} is the origin;
+              {" "} is “the” counterclockwise angle
+              from the positive {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis to the segment
+              {" "}
+              <NoBreak>
+                <Math>
+                  $OP$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} where {" "}
+              <Math>
+                $O$
+              </Math>
+              {" "} is the origin;
+            </p>
           </Item>
         </List>
         <Pause />
@@ -3258,15 +3262,15 @@ const Rest = () => {
         <Image src="/build-img/svgo-svg/2Fam.svg" />
         <Pause />
         <OuterP>
-          ...on the number line is an impossibility,
+          ...on the number line is false,
           from which this original arrangement of values...
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/dTqx.svg" />
         <Pause />
         <OuterP>
-          ...on the number line is an impossibility,
-          i.e., {" "}
+          ...on the number line was an impossibility,
+          i.e., it must be that {" "}
           <NoBreak>
             <Math>
               $S \geq A$
@@ -3287,21 +3291,25 @@ const Rest = () => {
           style="gap: 1em;"
         >
           <Item>
-            the segment can be tangent to the
-            arc at one point, the proof will still go
-            through (so the segment does not need to
-            {" "}
-            <i>
-              strictly
-            </i>
-            {" "} clear the arc);
+            <p>
+              the segment can be tangent to the
+              arc at one point, the proof will still go
+              through (so the segment does not need to
+              {" "}
+              <i>
+                strictly
+              </i>
+              {" "} clear the arc);
+            </p>
           </Item>
           <Item>
-            as long as the angle is nonzero,
-            and the arc has nonzero radius, the
-            length of the segment will be STRICTLY
-            GREATER than the length of the arc,
-            not just greater-or-equal-to
+            <p>
+              as long as the angle is nonzero,
+              and the arc has nonzero radius, the
+              length of the segment will be STRICTLY
+              GREATER than the length of the arc,
+              not just greater-or-equal-to
+            </p>
           </Item>
         </List>
         <Pause />
@@ -6228,23 +6236,27 @@ const Rest = () => {
             <Pause />
             <List style="padding-left: 2em; gap: 0.2em;">
               <Item>
-                <Math>
-                  $A$
-                </Math>
-                {" "} is the radius of the circle
+                <p>
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} is the radius of the circle
+                </p>
               </Item>
               <Item>
-                <Math>
-                  $D$
-                </Math>
-                {" "} is the {" "}
-                <NoBreak>
+                <p>
                   <Math>
-                    $x$
+                    $D$
                   </Math>
-                  -coordinate
-                </NoBreak>
-                {" "} of the circle's center
+                  {" "} is the {" "}
+                  <NoBreak>
+                    <Math>
+                      $x$
+                    </Math>
+                    -coordinate
+                  </NoBreak>
+                  {" "} of the circle's center
+                </p>
               </Item>
             </List>
             <Pause />
@@ -6254,39 +6266,41 @@ const Rest = () => {
             <Pause />
             <List style="padding-left: 2em;">
               <Item>
-                <Math>
-                  $B$
-                </Math>
-                {" "} is the counterclockwise
-                {" "}
-                <i>
-                  angular speed
-                </i>
-                /
-                <i>
-                  angular frequency
-                </i>
-                {" "} (radians per
-                unit time) and {" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "} is the counterclockwise
-                starting angle {" "}
-                <NoBreak>
-                  (
+                <p>
                   <Math>
-                    $t = 0$
+                    $B$
                   </Math>
-                  )
-                </NoBreak>
-                {" "} of the particle, as
-                measured from a translate of the positive {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "}
-                axis going through the center of the circle
+                  {" "} is the counterclockwise
+                  {" "}
+                  <i>
+                    angular speed
+                  </i>
+                  /
+                  <i>
+                    angular frequency
+                  </i>
+                  {" "} (radians per
+                  unit time) and {" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  {" "} is the counterclockwise
+                  starting angle {" "}
+                  <NoBreak>
+                    (
+                    <Math>
+                      $t = 0$
+                    </Math>
+                    )
+                  </NoBreak>
+                  {" "} of the particle, as
+                  measured from a translate of the positive {" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "}
+                  axis going through the center of the circle
+                </p>
               </Item>
             </List>
             <Pause />
@@ -6296,23 +6310,25 @@ const Rest = () => {
             <Pause />
             <List style="padding-left: 2em;">
               <Item>
-                <Math>
-                  $-B$
-                </Math>
-                {" "} is the counterclockwise
-                angular speed/angular frequency of the particle
-                and {" "}
-                <Math>
-                  $-C$
-                </Math>
-                {" "} is the counterclockwise starting angle
-                of the particle, as measured from a translate of
-                the positive {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "} axis going through the center
-                of the circle
+                <p>
+                  <Math>
+                    $-B$
+                  </Math>
+                  {" "} is the counterclockwise
+                  angular speed/angular frequency of the particle
+                  and {" "}
+                  <Math>
+                    $-C$
+                  </Math>
+                  {" "} is the counterclockwise starting angle
+                  of the particle, as measured from a translate of
+                  the positive {" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "} axis going through the center
+                  of the circle
+                </p>
               </Item>
             </List>
             <Pause />
@@ -9386,40 +9402,44 @@ const Rest = () => {
             <List
               type="lower-alpha-paren"
               markerBold={true}
-              style="gap: 0.2em;"
+              style="gap:0.2em;padding-left:2em;"
             >
               <Item>
-                using the composition {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $\circ$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} operator;
+                <p>
+                  using the composition {" "}
+                  <NoBreak>
+                    “
+                    <Math>
+                      $\circ$
+                    </Math>
+                    ”
+                  </NoBreak>
+                  {" "} operator;
+                </p>
               </Item>
               <Item>
-                as an expression of the form
+                <p>
+                  as an expression of the form
+                </p>
+                <Pause />
+                <MathBlock>
+                  $$
+                  x \ra \dots
+                  $$
+                </MathBlock>
+                <Pause />
+                <p>
+                  for some value of {" "}
+                  <NoBreak>
+                    “
+                    <Math>
+                      $\dots$
+                    </Math>
+                    ”.
+                  </NoBreak>
+                </p>
               </Item>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \dots
-                $$
-              </MathBlock>
             </List>
-            <Pause />
-            <OuterP>
-              for some value of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\dots$
-                </Math>
-                ”.
-              </NoBreak>
-            </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9635,52 +9655,60 @@ const Rest = () => {
               style="padding-left: 2em;"
             >
               <Item>
-                horizontally translating the graph of {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} by {" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "} units to the left;
-              </Item>
-              <Item>
-                horizontally compressing the graph of {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} by a factor {" "}
-                <NoBreak>
+                <p>
+                  horizontally translating the graph of {" "}
                   <Math>
-                    $B$
+                    $f$
                   </Math>
-                  ;
-                </NoBreak>
-              </Item>
-              <Item>
-                vertically translating the graph of {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} by {" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "} units upward;
-              </Item>
-              <Item>
-                vertically dilating (scaling) the graph of {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} by a factor {" "}
-                <NoBreak>
+                  {" "} by {" "}
                   <Math>
-                    $B$
+                    $A$
                   </Math>
-                  .
-                </NoBreak>
+                  {" "} units to the left;
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  horizontally compressing the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by a factor {" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    ;
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  vertically translating the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} units upward;
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  vertically dilating (scaling) the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by a factor {" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    .
+                  </NoBreak>
+                </p>
               </Item>
             </List>
             <Pause />
@@ -12652,14 +12680,20 @@ const Rest = () => {
             <Pause />
             <List style="padding-left: 2.2em; gap: 0.2em;">
               <Item>
-                all distances are in inches
+                <p>
+                  all distances are in inches
+                </p>
               </Item>
               <Item>
-                assume half an inch from the edge of the door
-                to the center of its hinge
+                <p>
+                  assume half an inch from the edge of the door
+                  to the center of its hinge
+                </p>
               </Item>
               <Item>
-                assume the door has negligible thicknesss
+                <p>
+                  assume the door has negligible thicknesss
+                </p>
               </Item>
             </List>
           </ExerciseStatement>

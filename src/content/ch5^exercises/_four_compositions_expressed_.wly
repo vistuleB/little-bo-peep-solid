@@ -15,13 +15,12 @@
     |> List
         type=lower-alpha-paren
         marker-bold=true
-        style=gap: 0.2em;
+        style=gap:0.2em;padding-left:2em;
 
         using the composition “$\circ$” operator;
 
         as an expression of the form $$x \ra \dots$$
-        
-    for some value of “$\dots$”.
+        for some value of “$\dots$”.
 
     |> Solution
 

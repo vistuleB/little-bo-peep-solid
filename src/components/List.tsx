@@ -54,10 +54,10 @@ export const List = (props: ParentProps & ListProps) => {
   };
 
   return (
-    <div class={twJoin("text-column", props.class)}>
+    <div class={twJoin("text-column from_list_primitive", props.class)}>
       <Dynamic
         component={Tag()}
-        style={`${props.style ?? ""}; --marker-prefix: "${effectivePrefix()}"; --marker-suffix: "${effectiveSuffix()}"; --marker-font-weight: ${props.markerBold ? "bold" : "normal"}`}
+        style={`${props.style ?? ""}; --marker-prefix: "${effectivePrefix()}"; --marker-suffix: "${effectiveSuffix()}"; --marker-font-family: ${props.markerBold ? "Baskerville Bold" : "Baskerville Regular"}`}
         class={twJoin(
           "px-4 ml-6",
           "flex flex-col",

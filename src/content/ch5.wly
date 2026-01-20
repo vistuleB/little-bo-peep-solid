@@ -1289,14 +1289,14 @@
     |> Image
         src=images/svg_ch5_ch_abercrombie_to_the_left_second.svg
 
-    ...on the number line is an impossibility,
+    ...on the number line is false,
     from which this original arrangement of values...
 
     |> Image
         src=images/svg_ch5_ch_abercrombie_to_the_left_third.svg
 
-    ...on the number line is an impossibility,
-    i.e., $S \geq A$.
+    ...on the number line was an impossibility,
+    i.e., it must be that $S \geq A$.
     This constitutes the proof of the Abercrombie
     inequality.
 

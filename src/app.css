@@ -678,12 +678,16 @@ img + .t-3003:hover {
   opacity: 1;
 }
 
+
 /* List */
 
 /* Base: reset default styles if needed */
-ol,
-ul {
+ol.from_list_primitive,
+ul.from_list_primitive {
   padding-left: 1.5em; /* space for marker */
+}
+ul.toc_ul {
+  padding-left: 0;
 }
 
 /* Custom list markers with prefix/suffix support */
@@ -698,27 +702,27 @@ ul {
 .list-custom-decimal li::marker {
   content: var(--marker-prefix, "") counter(list-item, decimal)
     var(--marker-suffix, ".") " ";
-  font-weight: var(--marker-font-weight, normal);
+  font-family: var(--marker-font-family);
 }
 .list-custom-lower-alpha li::marker {
   content: var(--marker-prefix, "") counter(list-item, lower-alpha)
     var(--marker-suffix, ".") " ";
-  font-weight: var(--marker-font-weight, normal);
+  font-family: var(--marker-font-family);
 }
 .list-custom-upper-alpha li::marker {
   content: var(--marker-prefix, "") counter(list-item, upper-alpha)
     var(--marker-suffix, ".") " ";
-  font-weight: var(--marker-font-weight, normal);
+  font-family: var(--marker-font-family);
 }
 .list-custom-lower-roman li::marker {
   content: var(--marker-prefix, "") counter(list-item, lower-roman)
     var(--marker-suffix, ".") " ";
-  font-weight: var(--marker-font-weight, normal);
+  font-family: var(--marker-font-family);
 }
 .list-custom-upper-roman li::marker {
   content: var(--marker-prefix, "") counter(list-item, upper-roman)
     var(--marker-suffix, ".") " ";
-  font-weight: var(--marker-font-weight, normal);
+  font-family: var(--marker-font-family);
 }
 
 .text-column {

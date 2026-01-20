@@ -555,57 +555,63 @@ const Rest = () => {
           style="gap: 2px;"
         >
           <Item>
-            Fifty halves (i.e., {" "}
-            <NoBreak>
-              <Math>
-                $50 \times &#123;1\over 2&#125;$
-              </Math>
-              ).
-            </NoBreak>
+            <p>
+              Fifty halves (i.e., {" "}
+              <NoBreak>
+                <Math>
+                  $50 \times &#123;1\over 2&#125;$
+                </Math>
+                ).
+              </NoBreak>
+            </p>
           </Item>
           <Item>
-            The size obtained when something of size
-            fifty is divided into two equal parts
-            (answer: {" "}
-            <NoBreak>
-              <Math>
-                $25$
-              </Math>
-              ).
-            </NoBreak>
+            <p>
+              The size obtained when something of size
+              fifty is divided into two equal parts
+              (answer: {" "}
+              <NoBreak>
+                <Math>
+                  $25$
+                </Math>
+                ).
+              </NoBreak>
+            </p>
           </Item>
           <Item>
-            The number of times that {" "}
-            <Math>
-              $2$
-            </Math>
-            {" "} goes into {" "}
-            <Math>
-              $50$
-            </Math>
-            {" "}
-            (answer: {" "}
-            <NoBreak>
-              <Math>
-                $25$
-              </Math>
-              ,
-            </NoBreak>
-            {" "} because it takes twenty-five
-            {" "}
-            <NoBreak>
+            <p>
+              The number of times that {" "}
               <Math>
                 $2$
               </Math>
-              's
-            </NoBreak>
-            {" "} to make up {" "}
-            <NoBreak>
+              {" "} goes into {" "}
               <Math>
                 $50$
               </Math>
-              ).
-            </NoBreak>
+              {" "}
+              (answer: {" "}
+              <NoBreak>
+                <Math>
+                  $25$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because it takes twenty-five
+              {" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                's
+              </NoBreak>
+              {" "} to make up {" "}
+              <NoBreak>
+                <Math>
+                  $50$
+                </Math>
+                ).
+              </NoBreak>
+            </p>
           </Item>
         </List>
         <Pause />
