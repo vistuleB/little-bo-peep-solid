@@ -467,26 +467,6 @@ table.first-line tr td:first-child {
   transform: translate(0em, 0.1em);
 }
 
-ol.l1 {
-  counter-reset: list;
-}
-ol.l1 > li {
-  margin-left: 60px;
-  list-style: none;
-  line-height: 1.8em;
-}
-ol.l1 > li:before {
-  content: "(" counter(list, lower-alpha) ") ";
-  counter-increment: list;
-  position: absolute;
-  left: -0em;
-  display: block;
-  width: 2em;
-  text-align: right;
-  font-family: "Baskerville Bold";
-  margin-left: 30px;
-}
-
 .mobile-title {
   font-size: 2rem;
   line-height: 2rem;
@@ -700,6 +680,26 @@ img + .t-3003:hover {
 
 /* List */
 
+ol.l1 {
+  counter-reset: list;
+}
+ol.l1 > li {
+  margin-left: 60px;
+  list-style: none;
+  line-height: 1.8em;
+}
+ol.l1 > li:before {
+  content: "(" counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  position: absolute;
+  left: -0em;
+  display: block;
+  width: 2em;
+  text-align: right;
+  font-family: "Baskerville Bold";
+  margin-left: 30px;
+}
+
 /* 1. Reset the counter on the parent list */
 [class*="counter-"] {
   counter-reset: list-item-counter;
@@ -750,14 +750,25 @@ img + .t-3003:hover {
 
 @media (width > 900px) {
   .text-column {
-    width: calc(var(--desktop-text-column-width-with-padding) - 2 * var(--desktop-text-column-padding));
+    width: calc(
+      var(--desktop-text-column-width-with-padding) - 2 *
+        var(--desktop-text-column-padding)
+    );
   }
   .text-column-90 {
-    width: calc(0.9 * var(--desktop-text-column-width-with-padding) - 2 * var(--desktop-text-column-padding));
+    width: calc(
+      0.9 * var(--desktop-text-column-width-with-padding) - 2 *
+        var(--desktop-text-column-padding)
+    );
   }
   .text-column-80 {
-    width: calc(0.8 * var(--desktop-text-column-width-with-padding) - 2 * var(--desktop-text-column-padding));
+    width: calc(
+      0.8 * var(--desktop-text-column-width-with-padding) - 2 *
+        var(--desktop-text-column-padding)
+    );
   }
 }
 
-.text-column .text-column { width: 100%; }
+.text-column .text-column {
+  width: 100%;
+}
