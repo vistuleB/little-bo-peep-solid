@@ -24,27 +24,27 @@ export default function __Chapter1__() {
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">
+          <InChapterLink href="?id=first-section">
             square roots
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">
+          <InChapterLink href="?id=section-1">
             fractions and division
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">
+          <InChapterLink href="?id=section-2">
             distributivity
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
+          <InChapterLink href="?id=section-3">
             epilogue
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">
+          <InChapterLink href="?id=section-4">
             vocabulary
           </InChapterLink>
         </BreadcrumbItem>
@@ -61,7 +61,7 @@ export default function __Chapter1__() {
         </i>
         {" "} Refreshers
       </ArticleTitle>
-      <Section id="section-1">
+      <Section id="first-section">
         <OuterP>
           <b>
             Square Roots.
@@ -531,7 +531,7 @@ const Rest = () => {
   return <>
     {showMore() && <>
       <Pause />
-      <Section id="section-2">
+      <Section id="section-1">
         <OuterP>
           <b>
             Fractions and Division.
@@ -752,7 +752,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-3">
+      <Section id="section-2">
         <OuterP>
           <b>
             Distributivity.
@@ -1334,7 +1334,7 @@ const Rest = () => {
       <Pause />
       <Section
         divider={false}
-        id="section-4"
+        id="section-3"
       >
         <OuterP>
           <b>
@@ -1408,7 +1408,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-5">
+      <Section id="section-4">
         <OuterP>
           <b>
             Vocabulary.

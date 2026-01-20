@@ -60,8 +60,9 @@ const useScrollToInChapter = () => {
     Math.min(getHeight(target) / 2, store.innerHeight / 2); // if target height is bigger than screen step 1 is reveresed | else the target itself is centered on screen
 
   const firstSectionEdgeCase = (target: HTMLElement | null) => {
-    if (!target || target.id !== "section-1") return false;
-    return true;
+    if (!target) return false;
+    const firstSection = document.querySelector("section");
+    return target === firstSection;
   };
 
   const exercisesEdgeCase = (target: HTMLElement | null) => {

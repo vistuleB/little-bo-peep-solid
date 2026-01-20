@@ -5,12 +5,32 @@ const useBreadcrumbs = () => {
     let breadcrumbs = document.querySelectorAll(".breadcrumb");
     let to_highlight: HTMLElement | null = null;
 
-    if (section_id === "exercises") {
-      to_highlight = breadcrumbs.item(breadcrumbs.length - 1) as HTMLElement;
-    } else {
-      let section_index_str = section_id?.slice("section-".length) || "";
-      let section_idx = Number(section_index_str) - 1;
-      to_highlight = document.getElementById("breadcrumb-" + section_idx);
+    // Try to find which breadcrumb links to this section_id
+    for (const breadcrumb of Array.from(breadcrumbs)) {
+      const link = (breadcrumb as HTMLElement).querySelector("a");
+      if (link) {
+        try {
+          const url = new URL(link.href, window.location.origin);
+          const linkId = url.searchParams.get("id") || url.hash.slice(1);
+          if (linkId === section_id) {
+            to_highlight = breadcrumb as HTMLElement;
+            break;
+          }
+        } catch (e) {
+          /* ignore invalid URLs */
+        }
+      }
+    }
+
+    // Fallback to indexed breadcrumbs or exercises
+    if (!to_highlight) {
+      if (section_id === "exercises") {
+        to_highlight = breadcrumbs.item(breadcrumbs.length - 1) as HTMLElement;
+      } else if (section_id?.startsWith("section-")) {
+        let section_index_str = section_id.slice("section-".length);
+        let section_idx = Number(section_index_str) - 1;
+        to_highlight = document.getElementById("breadcrumb-" + section_idx);
+      }
     }
 
     breadcrumbs.forEach((el) => {
@@ -70,15 +90,15 @@ const useBreadcrumbs = () => {
       },
       {
         threshold: 0,
-        rootMargin: "-50% 0px -20% 0px",
-      }
+        rootMargin: "-45% 0px -45% 0px",
+      },
     );
 
     sections.forEach((section) => {
       observer.observe(section);
     });
 
-    // commented out L83 b/c Solid was generating an annoying warning 
+    // commented out L83 b/c Solid was generating an annoying warning
     //     'cleanups created outside a `createRoot` or `render` will never be run'
     // onCleanup(() => observer.disconnect());
   });

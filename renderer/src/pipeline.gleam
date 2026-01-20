@@ -56,7 +56,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.append_attribute(#("Exercises", "counter", "ExerciseCounter", infra.GoBack)),
       dl.append_attribute(#("Exercise", "number", "::øøExerciseCounter", infra.GoBack)),
       dl.append_attribute(#("Solution", "counter", "SolutionNoteCounter", infra.GoBack)),
-      dl.append_attribute(#("Section", "id", "section-::++SectionCounter", infra.Continue)),
+      dl.append_attribute_if(#("Section", fn(section) {!infra.v_has_attr_with_key(section,"id")}, "id", "section-::++SectionCounter", infra.Continue)),
       dl.prepend_counter_incrementing_attribute__outside(#("Chapter", "ChapterCounter", infra.GoBack), ["Bootcamp"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Bootcamp", "BootcampCounter", infra.GoBack), ["Chapter"]),
       dl.prepend_counter_incrementing_attribute(#("Example", "ExampleCounter", infra.GoBack)),
