@@ -34,10 +34,9 @@ const markerMap: Record<ListMarker, string> = {
 };
 
 export const List = (props: ParentProps & ListProps) => {
-  const { store } = useGlobalContext();
   // Determine tag: 'ul' for discs, 'ol' for everything else
-  const Tag = () => (props.type === "disc" ? "ul" : "ol");
-
+    const Tag = () => (props.type === "disc" ? "ul" : "ol");
+  
   return (
     <div class={twJoin("text-column", props.class)}>
       <Dynamic
@@ -47,9 +46,8 @@ export const List = (props: ParentProps & ListProps) => {
           "px-4 ml-6",
           "flex flex-col",
           markerMap[props.type ?? "disc"],
-          store.show_areas && "left-right-background-divide",
         )}
-      >
+        >
         {props.children}
       </Dynamic>
     </div>
@@ -57,8 +55,9 @@ export const List = (props: ParentProps & ListProps) => {
 };
 
 export const Item = (props: ParentProps & SharedProps) => {
+  const { store } = useGlobalContext();
   return (
-    <li class={twJoin("relative", props.class)} style={props.style}>
+    <li class={twJoin("relative", props.class, store.show_areas && "left-right-background-divide")} style={props.style}>
       {props.children}
     </li>
   );

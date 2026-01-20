@@ -925,7 +925,7 @@
     or namely with the property that:
     
     |> List
-        style=padding-left: 2em;
+        style=padding-left:1.8em;
 
         $r$ is the distance from $P$ to the origin;
         

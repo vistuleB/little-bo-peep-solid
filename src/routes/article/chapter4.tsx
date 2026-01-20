@@ -831,7 +831,7 @@ const Rest = () => {
           of...
         </OuterP>
         <Pause />
-        <List style="padding-left: 2.1rem;">
+        <List style="padding-left:2.5rem;padding-right:2rem;">
           <Item>
             seconds on the {" "}
             <Math>
@@ -854,7 +854,7 @@ const Rest = () => {
           />
         </OuterP>
         <Pause />
-        <List style="padding-left: 2.1rem;">
+        <List style="padding-left:2.5rem;padding-right:2rem;">
           <Item>
             seconds on the {" "}
             <Math>
@@ -873,7 +873,7 @@ const Rest = () => {
           ...while if the “before” graph has units of...
         </OuterP>
         <Pause />
-        <List style="padding-left: 2.1rem;">
+        <List style="padding-left:2.5rem;padding-right:2rem;">
           <Item>
             apples on the {" "}
             <Math>
@@ -896,7 +896,7 @@ const Rest = () => {
           />
         </OuterP>
         <Pause />
-        <List style="padding-left: 2.1rem;">
+        <List style="padding-left:2.5rem;padding-right:2rem;">
           <Item>
             apples on the {" "}
             <Math>

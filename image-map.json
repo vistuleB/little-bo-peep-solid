@@ -2931,12 +2931,12 @@
   },
   "svg_ch5_ex_horizontal_projection_sphere_orange_9.svg": {
     "build-version": "svgo-svg/7Dao.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1768896012,
     "build-method": "svgo",
-    "build-version-size": 237621,
-    "original-size": 380141,
-    "compressed-size": 237621,
-    "compression": "37.49%",
+    "build-version-size": 237135,
+    "original-size": 379758,
+    "compressed-size": 237135,
+    "compression": "37.56%",
     "used-last-build": true
   },
   "svg_ch5_ex_sec_powers_bounce_cameo.svg": {

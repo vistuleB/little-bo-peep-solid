@@ -2380,7 +2380,7 @@ const Rest = () => {
           or namely with the property that:
         </OuterP>
         <Pause />
-        <List style="padding-left: 2em;">
+        <List style="padding-left:1.8em;">
           <Item>
             <Math>
               $r$
