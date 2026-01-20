@@ -4,6 +4,7 @@
     Express the...
     
     |> List
+        style=padding-left: 2.4em; gap: 0.1em;
 
         associativity of function composition
         
@@ -18,6 +19,7 @@
     ...as well as the...
     
     |> List
+        style=padding-left: 2.4em; gap: 0.1em;
 
         associativity of real number multiplication
         

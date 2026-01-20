@@ -278,6 +278,7 @@
     of...
     
     |> List
+        style=padding-left: 2.1rem;
 
         seconds on the $x$ axis, meters on the
         $y$ axis
@@ -289,6 +290,7 @@
         offset_y=-0.6em
     
     |> List
+        style=padding-left: 2.1rem;
     
         seconds on the $x$ axis, meters per
         second on the $y$ axis
@@ -296,6 +298,7 @@
     ...while if the “before” graph has units of...
     
     |> List
+        style=padding-left: 2.1rem;
 
         apples on the $x$ axis, oranges on the
         $y$ axis
@@ -307,6 +310,7 @@
         offset_y=0.6em
     
     |> List
+        style=padding-left: 2.1rem;
 
         apples on the $x$ axis, oranges per apple
         on the $y$ axis

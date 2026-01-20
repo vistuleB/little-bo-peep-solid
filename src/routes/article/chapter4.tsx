@@ -831,7 +831,7 @@ const Rest = () => {
           of...
         </OuterP>
         <Pause />
-        <List>
+        <List style="padding-left: 2.1rem;">
           <Item>
             seconds on the {" "}
             <Math>
@@ -854,7 +854,7 @@ const Rest = () => {
           />
         </OuterP>
         <Pause />
-        <List>
+        <List style="padding-left: 2.1rem;">
           <Item>
             seconds on the {" "}
             <Math>
@@ -873,7 +873,7 @@ const Rest = () => {
           ...while if the “before” graph has units of...
         </OuterP>
         <Pause />
-        <List>
+        <List style="padding-left: 2.1rem;">
           <Item>
             apples on the {" "}
             <Math>
@@ -896,7 +896,7 @@ const Rest = () => {
           />
         </OuterP>
         <Pause />
-        <List>
+        <List style="padding-left: 2.1rem;">
           <Item>
             apples on the {" "}
             <Math>
@@ -4712,7 +4712,7 @@ const Rest = () => {
               that:
             </OuterP>
             <Pause />
-            <List>
+            <List style="padding-left: 1.2em; gap: 0.4em;">
               <Item>
                 the red arrows indicate which particle
                 takes its velocity from the position
@@ -4788,7 +4788,7 @@ const Rest = () => {
               in this figure:
             </OuterP>
             <Pause />
-            <List>
+            <List style="padding-left: 1.4em; gap: 0.4em;">
               <Item>
                 in {" "}
                 <span style="border:1px solid blue">
@@ -6429,7 +6429,7 @@ const Rest = () => {
               Express the...
             </OuterP>
             <Pause />
-            <List>
+            <List style="padding-left: 2.4em; gap: 0.1em;">
               <Item>
                 associativity of function composition
               </Item>
@@ -6451,7 +6451,7 @@ const Rest = () => {
               ...as well as the...
             </OuterP>
             <Pause />
-            <List>
+            <List style="padding-left: 2.4em; gap: 0.1em;">
               <Item>
                 associativity of real number multiplication
               </Item>

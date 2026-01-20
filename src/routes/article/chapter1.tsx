@@ -550,7 +550,10 @@ const Rest = () => {
           can be thought of in a few different ways:
         </OuterP>
         <Pause />
-        <List type="decimal">
+        <List
+          type="decimal"
+          style="gap: 2px;"
+        >
           <Item>
             Fifty halves (i.e., {" "}
             <NoBreak>

@@ -2380,7 +2380,7 @@ const Rest = () => {
           or namely with the property that:
         </OuterP>
         <Pause />
-        <List>
+        <List style="padding-left: 2em;">
           <Item>
             <Math>
               $r$
@@ -3281,7 +3281,10 @@ const Rest = () => {
           One can polish a few more details by noting that:
         </OuterP>
         <Pause />
-        <List type="lower-roman-paren">
+        <List
+          type="lower-roman-paren"
+          style="gap: 1em;"
+        >
           <Item>
             the segment can be tangent to the
             arc at one point, the proof will still go

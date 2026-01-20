@@ -925,6 +925,7 @@
     or namely with the property that:
     
     |> List
+        style=padding-left: 2em;
 
         $r$ is the distance from $P$ to the origin;
         
@@ -1303,6 +1304,7 @@
     
     |> List
         type=lower-roman-paren
+        style=gap: 1em;
 
         the segment can be tangent to the
         arc at one point, the proof will still go
