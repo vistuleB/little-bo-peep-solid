@@ -6225,7 +6225,7 @@ const Rest = () => {
               motion at uniform speed. In this case:
             </OuterP>
             <Pause />
-            <List>
+            <List style="padding-left: 2em; gap: 0.2em;">
               <Item>
                 <Math>
                   $A$
@@ -6251,7 +6251,7 @@ const Rest = () => {
               And either:
             </OuterP>
             <Pause />
-            <List>
+            <List style="padding-left: 2em;">
               <Item>
                 <Math>
                   $B$
@@ -6293,7 +6293,7 @@ const Rest = () => {
               Or:
             </OuterP>
             <Pause />
-            <List>
+            <List style="padding-left: 2em;">
               <Item>
                 <Math>
                   $-B$
@@ -9382,7 +9382,10 @@ const Rest = () => {
               Rewrite each case:
             </OuterP>
             <Pause />
-            <List type="lower-alpha-paren">
+            <List
+              type="lower-alpha-paren"
+              style="gap: 0.2em;"
+            >
               <Item>
                 using the composition {" "}
                 <NoBreak>
@@ -9625,7 +9628,10 @@ const Rest = () => {
               For which the graphs are respectively obtained by:
             </OuterP>
             <Pause />
-            <List type="decimal">
+            <List
+              type="decimal"
+              style="padding-left: 2em;"
+            >
               <Item>
                 horizontally translating the graph of {" "}
                 <Math>
@@ -12642,7 +12648,7 @@ const Rest = () => {
               And:
             </OuterP>
             <Pause />
-            <List>
+            <List style="padding-left: 2.2em; gap: 0.2em;">
               <Item>
                 all distances are in inches
               </Item>

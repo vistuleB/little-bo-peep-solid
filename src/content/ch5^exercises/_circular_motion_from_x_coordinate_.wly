@@ -19,6 +19,7 @@
         motion at uniform speed. In this case:
         
         |> List
+            style=padding-left: 2em; gap: 0.2em;
 
             $A$ is the radius of the circle
 
@@ -27,6 +28,7 @@
         And either:
         
         |> List
+            style=padding-left: 2em;
 
             $B$ is the counterclockwise
             _angular speed_/_angular frequency_ (radians per
@@ -38,7 +40,8 @@
         Or:
         
         |> List
-
+            style=padding-left: 2em;
+            
             $-B$ is the counterclockwise
             angular speed/angular frequency of the particle
             and $-C$ is the counterclockwise starting angle
