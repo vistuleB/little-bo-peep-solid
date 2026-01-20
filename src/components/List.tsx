@@ -58,10 +58,7 @@ export const List = (props: ParentProps & ListProps) => {
 
 export const Item = (props: ParentProps & SharedProps) => {
   return (
-    <li
-      class={twJoin("relative first:mt-0 mt-3", props.class)}
-      style={props.style}
-    >
+    <li class={twJoin("relative", props.class)} style={props.style}>
       {props.children}
     </li>
   );
