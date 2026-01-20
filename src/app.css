@@ -680,26 +680,6 @@ img + .t-3003:hover {
 
 /* List */
 
-ol.l1 {
-  counter-reset: list;
-}
-ol.l1 > li {
-  margin-left: 60px;
-  list-style: none;
-  line-height: 1.8em;
-}
-ol.l1 > li:before {
-  content: "(" counter(list, lower-alpha) ") ";
-  counter-increment: list;
-  position: absolute;
-  left: -0em;
-  display: block;
-  width: 2em;
-  text-align: right;
-  font-family: "Baskerville Bold";
-  margin-left: 30px;
-}
-
 /* 1. Reset the counter on the parent list */
 [class*="counter-"] {
   counter-reset: list-item-counter;
