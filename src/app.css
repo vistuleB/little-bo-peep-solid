@@ -680,35 +680,30 @@ img + .t-3003:hover {
 
 /* List */
 
-/* 1. Reset the counter on the parent list */
-[class*="counter-"] {
-  counter-reset: list-item-counter;
+/* Base: reset default styles if needed */
+ol,
+ul {
+  padding-left: 1.5em; /* space for marker */
 }
 
-/* 2. Style the items and increment */
-[class*="counter-"] li {
-  counter-increment: list-item-counter;
+/* Lower-alpha with parentheses */
+.counter-lower-alpha-paren li::marker {
+  content: "(" counter(list-item, lower-alpha) ") ";
 }
 
-/* 3. Inject the parentheses using the counter */
-.counter-lower-alpha-paren li::before {
-  content: "(" counter(list-item-counter, lower-alpha) ")";
-  margin-right: 0.4rem;
+/* Upper-alpha with parentheses */
+.counter-upper-alpha-paren li::marker {
+  content: "(" counter(list-item, upper-alpha) ") ";
 }
 
-.counter-upper-alpha-paren li::before {
-  content: "(" counter(list-item-counter, upper-alpha) ")";
-  margin-right: 0.4rem;
+/* Lower-roman with parentheses */
+.counter-lower-roman-paren li::marker {
+  content: "(" counter(list-item, lower-roman) ") ";
 }
 
-.counter-lower-roman-paren li::before {
-  content: "(" counter(list-item-counter, lower-roman) ")";
-  margin-right: 0.4rem;
-}
-
-.counter-upper-roman-paren li::before {
-  content: "(" counter(list-item-counter, upper-roman) ")";
-  margin-right: 0.4rem;
+/* Upper-roman with parentheses */
+.counter-upper-roman-paren li::marker {
+  content: "(" counter(list-item, upper-roman) ") ";
 }
 
 .text-column {
