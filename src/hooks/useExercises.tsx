@@ -19,9 +19,23 @@ const useExercises = (length: number) => {
   const location = useLocation();
   const article = () => location.pathname.split("/").pop();
 
+  // Check if this is the first load in this tab/session
+  const sessionKey = `${article()}_has_loaded`;
+  const isFirstLoad = !sessionStorage.getItem(sessionKey);
+
+  if (isFirstLoad) {
+    // Mark that the page has been loaded in this session
+    sessionStorage.setItem(sessionKey, "true");
+
+    // Clear all exercise solutions from localStorage
+    for (let i = 1; i <= length; i++) {
+      localStorage.removeItem(`${article()}_exo_${i}_opened`);
+    }
+  }
+
   const [selected_exo, set_selected_exo] = useLocalStorage(
     `${article()}_selected_exo`,
-    "0"
+    "0",
   );
   set_store("selected_exo", Number(selected_exo()));
 
@@ -31,18 +45,18 @@ const useExercises = (length: number) => {
         ...exo,
         solution_open:
           localStorage.getItem(`${article()}_exo_${i + 1}_opened`) == "true",
-      }))
+      })),
     );
   });
 
   const update_solution_open = (
     exercise_number: number,
     value: boolean,
-    update_store: boolean = true
+    update_store: boolean = true,
   ) => {
     localStorage.setItem(
       `${article()}_exo_${exercise_number}_opened`,
-      String(value)
+      String(value),
     );
     if (update_store) {
       updateExerciseByIndex(exercise_number - 1, {
@@ -61,7 +75,7 @@ const useExercises = (length: number) => {
   if (typeof searchParams.opened === "string") {
     update_solution_open(
       Number(selected_exo()),
-      searchParams.opened === "true"
+      searchParams.opened === "true",
     );
   }
 
@@ -77,7 +91,7 @@ const useExercises = (length: number) => {
     update_solution_open(
       Number(stored_selected_exo()),
       stored_solutions_open()[stored_selected_exo() - 1],
-      false
+      false,
     );
     setSearchParams({
       opened: stored_solutions_open()[stored_selected_exo() - 1],
