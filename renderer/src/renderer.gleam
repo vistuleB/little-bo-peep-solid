@@ -2,16 +2,16 @@ import argv
 import blame.{type Blame, Src}
 import desugaring as ds
 import emitter_imports as ei
+import gleam/dict.{type Dict}
 import gleam/io
 import gleam/list
 import gleam/option.{Some, None}
 import gleam/string.{inspect as ins}
-import gleam/dict.{type Dict}
 import infrastructure as infra
 import io_lines.{type OutputLine, OutputLine}
 import on
 import pipeline.{our_pipeline}
-import shellout
+import simplifile
 import vxml.{type VXML, V}
 
 type LBPFragmentClassifer {
@@ -304,18 +304,55 @@ pub fn main() {
   let _ = Some(1)
   let _ = None
 
-  let _ = shellout.command(
-    run: "rm",
-    in: ".",
-    with: [
-      output_dir <> "/article/*",
-      output_dir <> "/components/index.tsx",
-      output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx",
-    ],
-    opt: [],
-  )
+  let renderer_result = ds.run_renderer(renderer, parameters, options)
 
-  let _ = ds.run_renderer(renderer, parameters, options)
+  case renderer_result {
+    Ok(printed_paths) -> {
+      let printed_paths = list.map(printed_paths, fn(p) { output_dir <> "/" <> p })
+
+      // cleanup old articles
+      let article_dir = output_dir <> "/routes/article"
+      case simplifile.read_directory(article_dir) {
+        Ok(files) -> {
+          list.each(files, fn(file) {
+            let full_path = article_dir <> "/" <> file
+            case list.contains(printed_paths, full_path) {
+              False -> {
+                let _ = simplifile.delete(full_path)
+                Nil
+              }
+              True -> Nil
+            }
+          })
+        }
+        _ -> Nil
+      }
+
+      // cleanup index.tsx
+      let index_path = output_dir <> "/routes/index.tsx"
+      case list.contains(printed_paths, index_path) {
+        False -> {
+          let _ = simplifile.delete(index_path)
+          Nil
+        }
+        True -> Nil
+      }
+
+      // cleanup HamburgerPanelAuthorSuppliedContents.tsx
+      let panel_path =
+        output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"
+      case list.contains(printed_paths, panel_path) {
+        False -> {
+          let _ = simplifile.delete(panel_path)
+          Nil
+        }
+        True -> Nil
+      }
+
+      Nil
+    }
+    _ -> Nil
+  }
 
   case digest {
     "" -> Nil
