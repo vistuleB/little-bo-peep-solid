@@ -304,17 +304,7 @@ pub fn main() {
   let _ = Some(1)
   let _ = None
 
-  use printed_paths <- on.error_ok(
-    ds.run_renderer(renderer, parameters, options),
-    fn(_) {
-      io.println("")
-      io.println("[error running <" <> "gleam run -- " <> string.join(args, " ") <> ">]")
-      io.println("")
-    }
-  )
-
-  // cleanup old artifacts that were not re-printed
-  let printed_paths = list.map(printed_paths, fn(p) { output_dir <> "/" <> p })
+  // computation of 'existing_artifacts'
   let article_dir = output_dir <> "/routes/article"
   let article_paths = case simplifile.read_directory(article_dir) {
     Ok(files) -> list.map(files, fn(f) { article_dir <> "/" <> f })
@@ -324,22 +314,47 @@ pub fn main() {
     output_dir <> "/routes/index.tsx",
     output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx",
   ]
-  let not_printed = 
-    article_paths
-    |> list.append(constant_paths)
+  |> list.filter(fn(f) { case simplifile.is_file(f) {
+    Ok(value) -> value
+    Error(_) -> panic
+  }})
+  let existing_artifacts = article_paths |> list.append(constant_paths)
+
+  // actual running of renderer
+  use printed_paths <- on.error_ok(
+    ds.run_renderer(renderer, parameters, options),
+    fn(_) {
+      io.println("")
+      io.println("[error running <" <> "gleam run -- " <> string.join(args, " ") <> ">]")
+      io.println("")
+    }
+  )
+
+  // delete old artifacts of previous runs, and announce the created/deleted artifact paths
+  let printed_paths = 
+    list.map(printed_paths, fn(p) { output_dir <> "/" <> p })
+  let not_existing_anymore = 
+    existing_artifacts
     |> list.filter(fn(z) { !list.contains(printed_paths, z) })
-  case not_printed {
-    [] -> Nil
-    _ -> io.println("")
+  let newly_existing = 
+    printed_paths
+    |> list.filter(fn(z) { !list.contains(existing_artifacts, z) })
+  case not_existing_anymore, newly_existing {
+    [], [] -> Nil
+    _, _ -> io.println("")
   }
-  list.each(
-    not_printed,
+  list.each(  
+    not_existing_anymore,
     fn(path) {
       case simplifile.delete(path) {
         Ok(_) -> io.println("deleted " <> path)
         Error(_) -> panic
       }
     }
+  )
+  list.each(
+    newly_existing,
+    fn(path) { io.println("created " <> path) },
   )
 
   // echo cli args, if was requested:
