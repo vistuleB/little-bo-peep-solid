@@ -318,10 +318,10 @@ pub fn main() {
     Ok(value) -> value
     Error(_) -> panic
   }})
-  let existing_artifacts = article_paths |> list.append(constant_paths)
+  let previously_existing_artifacts = article_paths |> list.append(constant_paths)
 
   // actual running of renderer
-  use printed_paths <- on.error_ok(
+  use artifacts_printed_this_run <- on.error_ok(
     ds.run_renderer(renderer, parameters, options),
     fn(_) {
       io.println("")
@@ -330,21 +330,22 @@ pub fn main() {
     }
   )
 
-  // delete old artifacts of previous runs, and announce the created/deleted artifact paths
-  let printed_paths = 
-    list.map(printed_paths, fn(p) { output_dir <> "/" <> p })
-  let not_existing_anymore = 
-    existing_artifacts
-    |> list.filter(fn(z) { !list.contains(printed_paths, z) })
-  let newly_existing = 
-    printed_paths
-    |> list.filter(fn(z) { !list.contains(existing_artifacts, z) })
-  case not_existing_anymore, newly_existing {
-    [], [] -> Nil
-    _, _ -> io.println("")
-  }
+  let artifacts_printed_this_run = 
+    list.map(artifacts_printed_this_run, fn(p) { output_dir <> "/" <> p })
+
+  // compute defunct_artifacts, newbie_artifacts
+  let defunct_artifacts = 
+    previously_existing_artifacts
+    |> list.filter(fn(z) { !list.contains(artifacts_printed_this_run, z) })
+
+  let newbie_artifacts = 
+    artifacts_printed_this_run
+    |> list.filter(fn(z) { !list.contains(previously_existing_artifacts, z) })
+
+  // delete defunct artifacts & announce deletion
+  case defunct_artifacts { [] -> Nil _ -> io.println("") }
   list.each(  
-    not_existing_anymore,
+    defunct_artifacts,
     fn(path) {
       case simplifile.delete(path) {
         Ok(_) -> io.println("deleted " <> path)
@@ -352,8 +353,11 @@ pub fn main() {
       }
     }
   )
+
+  // announce creation of newly created artifacts
+  case newbie_artifacts { [] -> Nil _ -> io.println("") }
   list.each(
-    newly_existing,
+    newbie_artifacts,
     fn(path) { io.println("created " <> path) },
   )
 
