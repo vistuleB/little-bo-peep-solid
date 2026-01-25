@@ -304,56 +304,45 @@ pub fn main() {
   let _ = Some(1)
   let _ = None
 
-  let renderer_result = ds.run_renderer(renderer, parameters, options)
-
-  case renderer_result {
-    Ok(printed_paths) -> {
-      let printed_paths = list.map(printed_paths, fn(p) { output_dir <> "/" <> p })
-
-      // cleanup old articles
-      let article_dir = output_dir <> "/routes/article"
-      case simplifile.read_directory(article_dir) {
-        Ok(files) -> {
-          list.each(files, fn(file) {
-            let full_path = article_dir <> "/" <> file
-            case list.contains(printed_paths, full_path) {
-              False -> {
-                let _ = simplifile.delete(full_path)
-                Nil
-              }
-              True -> Nil
-            }
-          })
-        }
-        _ -> Nil
-      }
-
-      // cleanup index.tsx
-      let index_path = output_dir <> "/routes/index.tsx"
-      case list.contains(printed_paths, index_path) {
-        False -> {
-          let _ = simplifile.delete(index_path)
-          Nil
-        }
-        True -> Nil
-      }
-
-      // cleanup HamburgerPanelAuthorSuppliedContents.tsx
-      let panel_path =
-        output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx"
-      case list.contains(printed_paths, panel_path) {
-        False -> {
-          let _ = simplifile.delete(panel_path)
-          Nil
-        }
-        True -> Nil
-      }
-
-      Nil
+  use printed_paths <- on.error_ok(
+    ds.run_renderer(renderer, parameters, options),
+    fn(_) {
+      io.println("")
+      io.println("[error running <" <> "gleam run -- " <> string.join(args, " ") <> ">]")
+      io.println("")
     }
-    _ -> Nil
-  }
+  )
 
+  // cleanup old artifacts that were not re-printed
+  let printed_paths = list.map(printed_paths, fn(p) { output_dir <> "/" <> p })
+  let article_dir = output_dir <> "/routes/article"
+  let article_paths = case simplifile.read_directory(article_dir) {
+    Ok(files) -> list.map(files, fn(f) { article_dir <> "/" <> f })
+    _ -> panic
+  }
+  let constant_paths = [
+    output_dir <> "/routes/index.tsx",
+    output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx",
+  ]
+  let not_printed = 
+    article_paths
+    |> list.append(constant_paths)
+    |> list.filter(fn(z) { !list.contains(printed_paths, z) })
+  case not_printed {
+    [] -> Nil
+    _ -> io.println("")
+  }
+  list.each(
+    not_printed,
+    fn(path) {
+      case simplifile.delete(path) {
+        Ok(_) -> io.println("deleted " <> path)
+        Error(_) -> panic
+      }
+    }
+  )
+
+  // echo cli args, if was requested:
   case digest {
     "" -> Nil
     _ -> {
@@ -363,6 +352,4 @@ pub fn main() {
       io.println("")
     }
   }
-
-  Nil
 }

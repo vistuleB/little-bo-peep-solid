@@ -1644,7 +1644,6 @@
     \sin(\theta) < \theta < \tan(\theta)\rt{0.1}
     $$
 
-    !! ...in this form, as well!)
     is another way of writing the Grigorinovich
     sandwich.)
 
@@ -1659,15 +1658,13 @@
         |> Image
             width=454px
             src=tmp-images/country_sphere_35_m45.svg
-            !! src=tmp-images/country_sphere_36_m52.svg
 
         [Example >>me continued.] In particular, this means that 
         in any cylindrical
         projection\*\* of the Earth, such as the
         “Lambert projection” depicted below
         (that just sends each latitude out to
-        its own height),
-        the radius of a latitude is dilated
+        its own height), the radius of a latitude is dilated
         by [a factor of] $\sec(\theta)$:
 
         |> Image
