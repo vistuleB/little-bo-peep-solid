@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_137_hgi_"
+      id="_138_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -138,15 +138,10 @@ export default function __Chapter5__() {
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-17">
           <InChapterLink href="?id=section-18">
-            secant: a second view
+            epilogue — note on calculators
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-18">
-          <InChapterLink href="?id=section-19">
-            note on calculators
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-19">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -3806,7 +3801,10 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-17">
+      <Section
+        work="ing"
+        id="section-17"
+      >
         <OuterP>
           <b>
             The missing arrows.
@@ -3935,17 +3933,17 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          modulo a very small technicality (to do
-          with the fact that {" "}
+          modulo the fact that {" "}
           <NoBreak>
             <Math>
               $&#123;1\over \infty&#125; \ne 0$
             </Math>
-            ,
+            .
           </NoBreak>
           {" "}
-          or to do with the fact that
-          what people think of as {" "}
+          (Or, more exactly, 
+          modulo
+          the fact that what people think of as {" "}
           <NoBreak>
             “
             <Math>
@@ -3958,8 +3956,8 @@ const Rest = () => {
           <i>
             undefined
           </i>
-          {" "} value of the function),
-          and
+          {" "} value of the function.)
+          And
         </OuterP>
         <Pause />
         <MathBlock>
@@ -3985,7 +3983,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          %\sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
           \sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
           $$
         </MathBlock>
@@ -3994,134 +3991,140 @@ const Rest = () => {
           is another way of writing the Grigorinovich
           sandwich.)
         </OuterP>
-      </Section>
-      <Pause />
-      <Section id="section-18">
-        <OuterP>
-          <b>
-            Secant: a second view.
-          </b>
-          {" "}
-          We will point out that
-        </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          \sec(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is also the multiplicative factor that takes 
-          you from the {" "}
-          <span style="background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            PURPLE
-          </span>
-          {" "} to the {" "}
-          <span style="white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            LIME GREEN
-          </span>
-          {" "} triangle (hard to draw, because it is
-          behind the purple triangle!) in the following
-          figure:
-        </OuterP>
-        <Pause />
-        <Image src="/build-img/svgo-svg/LLc5.svg" />
-        <Pause />
-        <OuterP>
-          Indeed, the scaling factor that is needed
-          to turn the purple into the lime green
-          triangle is the solution {" "}
-          <Math>
-            $A$
-          </Math>
-          {" "} to
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          A\cdot \cos(\theta) = 1
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          which gives
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          A = &#123;1\over \cos(\theta)&#125; = \sec(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          using {" "}
-          <NoBreak>
+        <Example
+          work="ing"
+          id="_84_hgi_"
+        >
+          <OuterP>
+            <b>
+              Example 7.
+            </b>
+            {" "}
+            If the Earth [is modeled as] a sphere
+            of radius {" "}
             <Math>
-              $\sec = 1/\cos$
+              $1$
             </Math>
-            .
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          (After all, this multiplicative factor...
-        </OuterP>
-        <Pause />
-        <Image src="/build-img/svgo-svg/47_1.svg" />
-        <Pause />
-        <OuterP>
-          ...was always going to equal
-          this multiplicative factor...
-        </OuterP>
-        <Pause />
-        <Image src="/build-img/svgo-svg/5W5r.svg" />
-        <Pause />
-        <OuterP>
-          ...given that the target segment has length {" "}
-          <Math>
-            $1$
-          </Math>
-          {" "} each time!)
-        </OuterP>
-        <Pause />
-        <OuterP>
-          <i>
-            Postscript.
-          </i>
-          {" "}
-          Similarly,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \csc(\theta)
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is the multiplicative factor that takes you 
-          from the {" "}
-          <span style="white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            BURNT ORANGE
-          </span>
-          {" "} to the {" "}
-          <span style="white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;">
-            FAUX BORDEAUX
-          </span>
-          {" "} triangle below:
-        </OuterP>
-        <Pause />
-        <Image src="/build-img/svgo-svg/wZkI.svg" />
-        <Pause />
-        <OuterP>
-          (But this fact is not used as often.)
-        </OuterP>
+            {" "} then, as stands to reason, the circle
+            of latitude {" "}
+            <Math>
+              $\theta$
+            </Math>
+            {" "} has radius {" "}
+            <NoBreak>
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              :
+            </NoBreak>
+          </OuterP>
+          <Pause />
+          <Image
+            width="454px"
+            src="/tmp-images/country_sphere_35_m45.svg"
+          />
+          <Pause />
+          <OuterP>
+            [Example {" "}
+            <InChapterLink
+              href="/article/chapter5#_84_hgi_"
+              class="handle-in-chapter-link"
+            >
+              7
+            </InChapterLink>
+            {" "} continued.] In particular, this means that 
+            in any cylindrical
+            projection** of the Earth, such as the
+            “Lambert projection” depicted below
+            (that just sends each latitude out to
+            its own height),
+            the radius of a latitude is dilated
+            by [a factor of] {" "}
+            <NoBreak>
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              :
+            </NoBreak>
+          </OuterP>
+          <Pause />
+          <Image
+            width="454px"
+            src="/tmp-images/country_sphere_35_m45_sec.svg"
+          />
+          <Pause />
+          <OuterP>
+            ...because...
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \Huge \sec(\theta)\cdot\cos(\theta) = 1
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            ...which means that {" "}
+            <NoBreak>
+              “
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              ”
+            </NoBreak>
+            {" "}
+            is the correct multiplicative factor
+            to take the Earth-radius to the
+            cylinder-radius. 
+            (Or just
+            think of the fact that {" "}
+            <NoBreak>
+              <Math>
+                $1/\cos(\theta) = \sec(\theta)$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}
+            dividing one radius by the other.)
+          </OuterP>
+          <Pause />
+          <StarDivider />
+          <Pause />
+          <OuterP>
+            <b>
+              After-hours vocabulary.
+            </b>
+            {" "} A (so-called 
+            {" "}
+            <i>
+              normal
+            </i>
+            ) {" "}
+            <i>
+              cylindrical projection
+            </i>
+            {" "}
+            is a projection that maps the Earth to
+            a vertical cylinder abutting the Earth at the
+            equator while sending each latitude of the
+            Earth to a circle on the cylinder, etc;
+            besides the Lambert projection depicted
+            above, here are two examples:
+          </OuterP>
+          <Pause />
+          <Pause />
+          <StarDivider />
+        </Example>
       </Section>
       <Pause />
-      <Section id="section-19">
+      <Section
+        work="ing"
+        id="section-18"
+      >
         <OuterP>
           <b>
-            Note on calculators.
+            Epilogue — note on calculators.
           </b>
           {" "}
           Your calculator has “degree mode” and
@@ -4163,9 +4166,9 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_136_hgi_">
+      <Exercises id="_137_hgi_">
         <Exercise number={1}>
-          <ExerciseStatement id="_84_hgi_">
+          <ExerciseStatement id="_85_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -4264,7 +4267,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_85_hgi_">
+          <ExerciseStatement id="_86_hgi_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -4400,7 +4403,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_86_hgi_">
+          <ExerciseStatement id="_87_hgi_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -4836,7 +4839,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_87_hgi_">
+          <ExerciseStatement id="_88_hgi_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -5160,7 +5163,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_88_hgi_">
+          <ExerciseStatement id="_89_hgi_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -5469,7 +5472,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={6}>
-          <ExerciseStatement id="_89_hgi_">
+          <ExerciseStatement id="_90_hgi_">
             <OuterP>
               <b>
                 Exercise 6.
@@ -5595,7 +5598,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={7}>
-          <ExerciseStatement id="_90_hgi_">
+          <ExerciseStatement id="_91_hgi_">
             <OuterP>
               <b>
                 Exercise 7.
@@ -5753,7 +5756,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_91_hgi_">
+          <ExerciseStatement id="_92_hgi_">
             <OuterP>
               <b>
                 Exercise 8.
@@ -6155,7 +6158,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={9}>
-          <ExerciseStatement id="_92_hgi_">
+          <ExerciseStatement id="_93_hgi_">
             <OuterP>
               <b>
                 Exercise 9.
@@ -6549,7 +6552,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_93_hgi_">
+          <ExerciseStatement id="_94_hgi_">
             <OuterP>
               <b>
                 Exercise 10.
@@ -6636,7 +6639,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={11}>
-          <ExerciseStatement id="_94_hgi_">
+          <ExerciseStatement id="_95_hgi_">
             <OuterP>
               <b>
                 Exercise 11.
@@ -6754,7 +6757,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={12}>
-          <ExerciseStatement id="_95_hgi_">
+          <ExerciseStatement id="_96_hgi_">
             <OuterP>
               <b>
                 Exercise 12.
@@ -7256,7 +7259,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={13}>
-          <ExerciseStatement id="_96_hgi_">
+          <ExerciseStatement id="_97_hgi_">
             <OuterP>
               <b>
                 Exercise 13.
@@ -7500,7 +7503,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_97_hgi_">
+          <ExerciseStatement id="_98_hgi_">
             <OuterP>
               <b>
                 Exercise 14.
@@ -8249,7 +8252,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={15}>
-          <ExerciseStatement id="_98_hgi_">
+          <ExerciseStatement id="_99_hgi_">
             <OuterP>
               <b>
                 Exercise 15.
@@ -8335,7 +8338,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={16}>
-          <ExerciseStatement id="_99_hgi_">
+          <ExerciseStatement id="_100_hgi_">
             <OuterP>
               <b>
                 Exercise 16.
@@ -8347,7 +8350,7 @@ const Rest = () => {
               </Math>
               {" "} from {" "}
               <InChapterLink
-                href="/article/chapter5#_89_hgi_"
+                href="/article/chapter5#_90_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 6
@@ -8794,7 +8797,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={17}>
-          <ExerciseStatement id="_100_hgi_">
+          <ExerciseStatement id="_101_hgi_">
             <OuterP>
               <b>
                 Exercise 17.
@@ -8892,7 +8895,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement id="_101_hgi_">
+          <ExerciseStatement id="_102_hgi_">
             <OuterP>
               <b>
                 Exercise 18.
@@ -8986,7 +8989,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={19}>
-          <ExerciseStatement id="_102_hgi_">
+          <ExerciseStatement id="_103_hgi_">
             <OuterP>
               <b>
                 Exercise 19.
@@ -9175,7 +9178,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={20}>
-          <ExerciseStatement id="_103_hgi_">
+          <ExerciseStatement id="_104_hgi_">
             <OuterP>
               <b>
                 Exercise 20.
@@ -9302,7 +9305,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={21}>
-          <ExerciseStatement id="_104_hgi_">
+          <ExerciseStatement id="_105_hgi_">
             <OuterP>
               <b>
                 Exercise 21.
@@ -9376,7 +9379,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={22}>
-          <ExerciseStatement id="_105_hgi_">
+          <ExerciseStatement id="_106_hgi_">
             <OuterP>
               <b>
                 Exercise 22.
@@ -9593,7 +9596,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={23}>
-          <ExerciseStatement id="_106_hgi_">
+          <ExerciseStatement id="_107_hgi_">
             <OuterP>
               <b>
                 Exercise 23.
@@ -9602,7 +9605,7 @@ const Rest = () => {
               How would the graph of each of the compositions
               from {" "}
               <InChapterLink
-                href="/article/chapter5#_105_hgi_"
+                href="/article/chapter5#_106_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 22
@@ -9719,7 +9722,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={24}>
-          <ExerciseStatement id="_107_hgi_">
+          <ExerciseStatement id="_108_hgi_">
             <OuterP>
               <b>
                 Exercise 24.
@@ -9993,7 +9996,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={25}>
-          <ExerciseStatement id="_108_hgi_">
+          <ExerciseStatement id="_109_hgi_">
             <OuterP>
               <b>
                 Exercise 25.
@@ -10423,7 +10426,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={26}>
-          <ExerciseStatement id="_109_hgi_">
+          <ExerciseStatement id="_110_hgi_">
             <OuterP>
               <b>
                 Exercise 26.
@@ -10811,7 +10814,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={27}>
-          <ExerciseStatement id="_110_hgi_">
+          <ExerciseStatement id="_111_hgi_">
             <OuterP>
               <b>
                 Exercise 27.
@@ -10887,7 +10890,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={28}>
-          <ExerciseStatement id="_111_hgi_">
+          <ExerciseStatement id="_112_hgi_">
             <OuterP>
               <b>
                 Exercise 28.
@@ -10970,7 +10973,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={29}>
-          <ExerciseStatement id="_112_hgi_">
+          <ExerciseStatement id="_113_hgi_">
             <OuterP>
               <b>
                 Exercise 29.
@@ -11000,7 +11003,7 @@ const Rest = () => {
               and prove your answer. (Comparison: {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_99_hgi_"
+                  href="/article/chapter5#_100_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 16
@@ -11064,7 +11067,7 @@ const Rest = () => {
               {" "} as uncovered in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_99_hgi_"
+                  href="/article/chapter5#_100_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 16
@@ -11281,7 +11284,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={30}>
-          <ExerciseStatement id="_113_hgi_">
+          <ExerciseStatement id="_114_hgi_">
             <OuterP>
               <b>
                 Exercise 30.
@@ -11820,7 +11823,7 @@ const Rest = () => {
                 in {" "}
                 <NoBreak>
                   <InChapterLink
-                    href="/article/chapter5#_112_hgi_"
+                    href="/article/chapter5#_113_hgi_"
                     class="handle-in-chapter-link"
                   >
                     Exercise 29
@@ -11833,7 +11836,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={31}>
-          <ExerciseStatement id="_114_hgi_">
+          <ExerciseStatement id="_115_hgi_">
             <OuterP>
               <b>
                 Exercise 31.
@@ -11986,7 +11989,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={32}>
-          <ExerciseStatement id="_115_hgi_">
+          <ExerciseStatement id="_116_hgi_">
             <OuterP>
               <b>
                 Exercise 32.
@@ -12206,7 +12209,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={33}>
-          <ExerciseStatement id="_116_hgi_">
+          <ExerciseStatement id="_117_hgi_">
             <OuterP>
               <b>
                 Exercise 33.
@@ -12426,7 +12429,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={34}>
-          <ExerciseStatement id="_117_hgi_">
+          <ExerciseStatement id="_118_hgi_">
             <OuterP>
               <b>
                 Exercise 34.
@@ -12520,7 +12523,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={35}>
-          <ExerciseStatement id="_118_hgi_">
+          <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
                 Exercise 35.
@@ -12659,7 +12662,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={36}>
-          <ExerciseStatement id="_119_hgi_">
+          <ExerciseStatement id="_120_hgi_">
             <OuterP>
               <b>
                 Exercise 36.
@@ -12883,7 +12886,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={37}>
-          <ExerciseStatement id="_120_hgi_">
+          <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
                 Exercise 37.
@@ -12979,7 +12982,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={38}>
-          <ExerciseStatement id="_121_hgi_">
+          <ExerciseStatement id="_122_hgi_">
             <OuterP>
               <b>
                 Exercise 38.
@@ -13118,7 +13121,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={39}>
-          <ExerciseStatement id="_122_hgi_">
+          <ExerciseStatement id="_123_hgi_">
             <OuterP>
               <b>
                 Exercise 39.
@@ -13188,7 +13191,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={40}>
-          <ExerciseStatement id="_123_hgi_">
+          <ExerciseStatement id="_124_hgi_">
             <OuterP>
               <b>
                 Exercise 40.
@@ -13299,7 +13302,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={41}>
-          <ExerciseStatement id="_124_hgi_">
+          <ExerciseStatement id="_125_hgi_">
             <OuterP>
               <b>
                 Exercise 41.
@@ -13443,7 +13446,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={42}>
-          <ExerciseStatement id="_125_hgi_">
+          <ExerciseStatement id="_126_hgi_">
             <OuterP>
               <b>
                 Exercise 42.
@@ -13743,7 +13746,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={43}>
-          <ExerciseStatement id="_126_hgi_">
+          <ExerciseStatement id="_127_hgi_">
             <OuterP>
               <b>
                 Exercise 43.
@@ -14899,7 +14902,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={44}>
-          <ExerciseStatement id="_127_hgi_">
+          <ExerciseStatement id="_128_hgi_">
             <OuterP>
               <b>
                 Exercise 44.
@@ -15224,7 +15227,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={45}>
-          <ExerciseStatement id="_128_hgi_">
+          <ExerciseStatement id="_129_hgi_">
             <OuterP>
               <b>
                 Exercise 45.
@@ -15443,7 +15446,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={46}>
-          <ExerciseStatement id="_129_hgi_">
+          <ExerciseStatement id="_130_hgi_">
             <OuterP>
               <b>
                 Exercise 46.
@@ -15627,7 +15630,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={47}>
-          <ExerciseStatement id="_130_hgi_">
+          <ExerciseStatement id="_131_hgi_">
             <OuterP>
               <b>
                 Exercise 47.
@@ -16012,7 +16015,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={48}>
-          <ExerciseStatement id="_131_hgi_">
+          <ExerciseStatement id="_132_hgi_">
             <OuterP>
               <b>
                 Exercise 48.
@@ -16274,7 +16277,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={49}>
-          <ExerciseStatement id="_132_hgi_">
+          <ExerciseStatement id="_133_hgi_">
             <OuterP>
               <b>
                 Exercise 49.
@@ -16537,7 +16540,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={50}>
-          <ExerciseStatement id="_133_hgi_">
+          <ExerciseStatement id="_134_hgi_">
             <OuterP>
               <b>
                 Exercise 50.
@@ -16956,7 +16959,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={51}>
-          <ExerciseStatement id="_134_hgi_">
+          <ExerciseStatement id="_135_hgi_">
             <OuterP>
               <b>
                 Exercise 51.
@@ -17100,7 +17103,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={52}>
-          <ExerciseStatement id="_135_hgi_">
+          <ExerciseStatement id="_136_hgi_">
             <OuterP>
               <b>
                 Exercise 52.

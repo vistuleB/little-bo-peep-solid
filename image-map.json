@@ -877,7 +877,7 @@
     "original-size": 68144,
     "compressed-size": 20656,
     "compression": "69.69%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch5_ex_double_pre_processing.svg": {
     "build-version": "svgo-svg/JAXv.svg",
@@ -927,7 +927,7 @@
     "original-size": 24973,
     "compressed-size": 6214,
     "compression": "75.12%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch5_ex_double_pre_processing_Bz_alone.svg": {
     "build-version": "svgo-svg/llY6.svg",
@@ -1987,7 +1987,7 @@
     "original-size": 43451,
     "compressed-size": 21040,
     "compression": "51.58%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch4_RATS_equation_over_Dt.svg": {
     "build-version": "svgo-svg/Im2x.svg",
@@ -2707,7 +2707,7 @@
     "original-size": 29359,
     "compressed-size": 6966,
     "compression": "76.27%",
-    "used-last-build": true
+    "used-last-build": false
   },
   "svg_ch4_circle_at_2_4_p2white_inline.svg": {
     "build-version": "svgo-svg/jmDH.svg",
@@ -2931,7 +2931,7 @@
   },
   "svg_ch5_ex_horizontal_projection_sphere_orange_9.svg": {
     "build-version": "svgo-svg/7Dao.svg",
-    "build-version-created-on": 1768896012,
+    "build-version-created-on": 1769166166,
     "build-method": "svgo",
     "build-version-size": 237135,
     "original-size": 379758,

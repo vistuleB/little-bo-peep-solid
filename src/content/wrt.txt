@@ -1,0 +1,80 @@
+Writerly
+
+Writerly is an experimental "white label" markup language
+that relates to XML similarly to how lightweight
+markup languages such as Markdown relate to HTML.
+
+Writerly's syntax is inherited from Matthew Griffith's
+Elm-Markup, but the usage is entirely different.
+
+Writerly offers authors a means to 
+unobtrusively situate plaintext-like content
+within an XML-like AST. (Abstract Syntax Tree.) 
+The semantics of the XML tags are not Writerly's purview,
+however, turning Writerly an ergonomic human-facing
+superset of XML, in some sense. (We say "superset"
+because Writerly three extra first-class citizens
+that XML does not recognize, these being paragraphs, code blocks, and list
+items. These new citizens are encoded in the XML tree via specialized
+tags, e.g., `WriterlyParagraph` and `WriterlyCodeBlock`.)
+
+Writerly also comes with a batteries included standard
+for assembling single documents from a directory of files.
+
+The following consitutes a sample Writerly source,
+to the left (in the form of a file directory), and 
+a beskope rendering of that source—in this case, using HTML—to
+the right (courtesy Dominik Scheder, TU Chemnitz):
+
+[]
+
+Writerly "knows nothing" of the
+intended semantics of the various tags—e.g., "|> Carousel"—indeed
+Writerly does not even care which format the author is trying
+to generate. (In this case HTML.)
+
+Instead, Writerly adopts a "bring your own semantics"
+approach to content generation—after assembling parsing
+and assembling the initial source into a tree, it is up
+to the user to process the tree into whatever (typically machine-readable)
+format they are trying to target—be it HTML, .JSX, .tex,
+.PDF, or any other secondary or final format.
+
+This brings us to our next topic: _desugaring and desugaring
+pipelines_.
+
+As a minimalistic "bring your own semantics" markup
+language Writerly only recognizes four first-class semantic
+citizens:
+
+- tags and attribute-value pairs (as in XML)
+- paragraphs
+- list items
+- code blocks
+
+One can note that lists and sublists, as well as code
+blocks, affect the left-indentation of an ordinary text
+document when the lists and code blocks are written with
+the usual (e.g., markdown-like) shorthands. Since Writerly
+is an indentation-based format, there is some sense
+in which Writerly "must" accommodate the 
+
+Writerly's goal is to offer a highly ergonomic,
+unopinionated and self-effacing syntax to encode
+XML-like structures within non-technical documents
+while maintaining a pleasing appearance to the human.
+
+
+
+Per one viewpoint, Writerly offers the first mile
+of work towards creating an content-creator-facing 
+DSL
+
+
+Writerly offers “the first mile of parsing”
+
+Writerly
+does not ascribe any semantics to the XML tags however, and,
+indeed, even the format of the final rendering target—which
+could be HTML, PDF, .JSX or other—remains entirely 
+outside of the language's purview.

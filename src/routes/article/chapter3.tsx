@@ -2023,10 +2023,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises
-        work="ing"
-        id="_53_hgi_"
-      >
+      <Exercises id="_53_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_31_hgi_">
             <OuterP>
