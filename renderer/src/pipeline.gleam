@@ -156,15 +156,8 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         #("Table", "Pause"),
         #("table", "Pause"),
       ]),
-      dl.add_before_but_not_before_first_of_kind(#("Section", "Pause"))
-    ],
-    case author_mode {
-      True -> []
-      False -> [ 
-        dl.wrap_if_text_contains(#("MathBlock", "OuterP", "\\tag{"))
-      ]
-    },
-    [
+      dl.add_before_but_not_before_first_of_kind(#("Section", "Pause")),
+      dl.wrap_if_text_contains(#("MathBlock", "TextParent", "\\tag{")),
       dl.tokenize_href_surroundings()
     ],
     [
