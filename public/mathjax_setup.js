@@ -7,6 +7,8 @@ window.MathJax = {
     mtextInheritFont: true,
   },
   tex: {
+    tags: "ams",
+
     inlineMath: [
       ["$", "$"],
       ["\\(", "\\)"],
@@ -25,14 +27,14 @@ window.MathJax = {
       e: "\\varepsilon",
       dom: "\\text{dom}\\,",
       degree: "\\text{deg}\\,",
-      f: "\\Rule{0.12em}{0.8pt}{-0.8pt}f",
-      fsp: "\\hspace{0.06em}\\Rule{0.12em}{0.8pt}{-0.8pt}f",
-      sp: "\\Rule{0.08em}{0.8pt}{-0.8pt}",
+      f: "\\rule[-0.8pt]{0.12em}{0.8pt}f",
+      fsp: "\\hspace{0.06em}\\rule[-0.8pt]{0.12em}{0.8pt}f",
+      sp: "\\rule[-0.8pt]{0.08em}{0.8pt}",
       ra: "\\rightarrow",
       back: "\\backslash",
       sqt: "{\\color{white} *\\!\\!\\!}",
       up: ["\\rule{0pt}{#1em}", 1], // vspace doesn't seem to work / exist ?
-      dn: ["\\Rule{0pt}{0em}{#1em}", 1],
+      dn: ["\\rule[-#1em]{0pt}{#1em}", 1],
       rt: ["\\hspace{#1em}", 1],
       hlfbk: "\\!\\hspace{0.1em}",
       fl: ["\\lfloor #1 \\rfloor", 1],
@@ -62,9 +64,7 @@ window.MathJax = {
   options: {
     enableMenu: false,
   },
-  loader: {
-    load: ["output/svg"],
-  },
+
   startup: {
     ready: () => {
       MathJax.startup.defaultReady();
