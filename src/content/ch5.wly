@@ -1656,8 +1656,8 @@
         of latitude $\theta$ has radius $\cos(\theta)$:
 
         |> Image
-            width=454px
-            src=tmp-images/country_sphere_35_m45.svg
+            width=400px
+            src=images/country_sphere_35_m45.svg
 
         [Example >>me continued.] In particular, this means that 
         in any cylindrical
@@ -1668,8 +1668,8 @@
         by [a factor of] $\sec(\theta)$:
 
         |> Image
-            width=454px
-            src=tmp-images/country_sphere_35_m45_sec.svg
+            width=400px
+            src=images/country_sphere_35_m45_sec_v2.svg
 
         ...because...
 
@@ -1685,27 +1685,14 @@
         think of the fact that $1/\cos(\theta) = \sec(\theta)$,
         dividing one radius by the other.)
 
-        |> StarDivider
-
-        *After-hours vocabulary.* A (so-called 
-        _normal_) _cylindrical projection_
-        is a projection that maps the Earth to
-        a vertical cylinder abutting the Earth at the
-        equator while sending each latitude of the
-        Earth to a circle on the cylinder, etc;
-        besides the Lambert projection depicted
-        above, here are two examples:
-        
-        !! value
-        !! of the Earth 
-        !! to the
-        !! same height out on the cylinder. Here
-        !! are a few different ones:
-
-        |> Pause
-
-        |> StarDivider
-        !! and the correct dilation factor is that
+    *Vocabulary.* A (so-called 
+    _normal_) _cylindrical projection_
+    is a projection that maps the Earth to
+    a vertical cylinder abutting the Earth at the
+    equator while sending each latitude of the
+    Earth to a circle on the cylinder, etc;
+    besides the Lambert projection depicted
+    above, here are two more examples:
 
 !! |> Section
 !!     work=ing
@@ -1791,7 +1778,7 @@
 |> Section
     work=ing
 
-    *Epilogue — note on calculators.*
+    *Note on calculators.*
     Your calculator has “degree mode” and
     “radian mode”. If your calculator tells
     you that

@@ -139,7 +139,7 @@ export default function __Chapter5__() {
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-17">
           <InChapterLink href="?id=section-18">
-            epilogue — note on calculators
+            note on calculators
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-18">
@@ -4022,8 +4022,8 @@ const Rest = () => {
           </OuterP>
           <Pause />
           <Image
-            width="454px"
-            src="/tmp-images/country_sphere_35_m45.svg"
+            width="400px"
+            src="/build-img/svgo-svg/_wct.svg"
           />
           <Pause />
           <OuterP>
@@ -4050,8 +4050,8 @@ const Rest = () => {
           </OuterP>
           <Pause />
           <Image
-            width="454px"
-            src="/tmp-images/country_sphere_35_m45_sec.svg"
+            width="400px"
+            src="/build-img/svgo-svg/L-Wm.svg"
           />
           <Pause />
           <OuterP>
@@ -4088,34 +4088,29 @@ const Rest = () => {
             {" "}
             dividing one radius by the other.)
           </OuterP>
-          <Pause />
-          <StarDivider />
-          <Pause />
-          <OuterP>
-            <b>
-              After-hours vocabulary.
-            </b>
-            {" "} A (so-called 
-            {" "}
-            <i>
-              normal
-            </i>
-            ) {" "}
-            <i>
-              cylindrical projection
-            </i>
-            {" "}
-            is a projection that maps the Earth to
-            a vertical cylinder abutting the Earth at the
-            equator while sending each latitude of the
-            Earth to a circle on the cylinder, etc;
-            besides the Lambert projection depicted
-            above, here are two examples:
-          </OuterP>
-          <Pause />
-          <Pause />
-          <StarDivider />
         </Example>
+        <Pause />
+        <OuterP>
+          <b>
+            Vocabulary.
+          </b>
+          {" "} A (so-called 
+          {" "}
+          <i>
+            normal
+          </i>
+          ) {" "}
+          <i>
+            cylindrical projection
+          </i>
+          {" "}
+          is a projection that maps the Earth to
+          a vertical cylinder abutting the Earth at the
+          equator while sending each latitude of the
+          Earth to a circle on the cylinder, etc;
+          besides the Lambert projection depicted
+          above, here are two more examples:
+        </OuterP>
       </Section>
       <Pause />
       <Section
@@ -4124,7 +4119,7 @@ const Rest = () => {
       >
         <OuterP>
           <b>
-            Epilogue — note on calculators.
+            Note on calculators.
           </b>
           {" "}
           Your calculator has “degree mode” and

@@ -23,6 +23,7 @@
 }
 
 :root {
+  zoom: 100%;
   /* --background-rgb: rgb(255, 249, 249); */
   --background-rgb: #fff9f9;
   --foreground-rgb: rgb(0, 0, 0);

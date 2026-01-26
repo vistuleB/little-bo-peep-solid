@@ -2463,6 +2463,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "country_sphere_35_m45.svg": {
+    "build-version": "svgo-svg/_wct.svg",
+    "build-version-created-on": 1769419452,
+    "build-method": "svgo",
+    "build-version-size": 159421,
+    "original-size": 728946,
+    "compressed-size": 159421,
+    "compression": "78.13%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch3_ch_x_squared_2.svg": {
     "build-version": "svgo-svg/ZMm9.svg",
     "build-version-created-on": 1767294288,
@@ -3606,6 +3617,17 @@
     "compression": "51.44%",
     "used-last-build": true,
     "3chars": ["ch4"]
+  },
+  "country_sphere_35_m45_sec_v2.svg": {
+    "build-version": "svgo-svg/L-Wm.svg",
+    "build-version-created-on": 1769419453,
+    "build-method": "svgo",
+    "build-version-size": 293764,
+    "original-size": 859972,
+    "compressed-size": 293764,
+    "compression": "65.84%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "png_ch3_desmos_composition_0_c.jpg": {
     "build-version": "jpg/pc6h.jpg",
