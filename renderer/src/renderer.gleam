@@ -366,8 +366,7 @@ pub fn main() {
     "" -> Nil
     _ -> {
       io.println("")
-      io.print("end <")
-      io.println(digest <> ">")
+      io.print("end <" <> digest <> ">")
       io.println("")
     }
   }

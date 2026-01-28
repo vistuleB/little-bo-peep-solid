@@ -2465,12 +2465,12 @@
   },
   "country_sphere_35_m45.svg": {
     "build-version": "svgo-svg/_wct.svg",
-    "build-version-created-on": 1769419452,
+    "build-version-created-on": 1769420306,
     "build-method": "svgo",
-    "build-version-size": 159421,
-    "original-size": 728946,
-    "compressed-size": 159421,
-    "compression": "78.13%",
+    "build-version-size": 204706,
+    "original-size": 733413,
+    "compressed-size": 204706,
+    "compression": "72.09%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3626,8 +3626,8 @@
     "original-size": 859972,
     "compressed-size": 293764,
     "compression": "65.84%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "png_ch3_desmos_composition_0_c.jpg": {
     "build-version": "jpg/pc6h.jpg",
@@ -5190,6 +5190,17 @@
     "compression": "52.42%",
     "used-last-build": true,
     "3chars": ["ch4"]
+  },
+  "country_sphere_35_m45_sec_v3.svg": {
+    "build-version": "svgo-svg/ZWuF.svg",
+    "build-version-created-on": 1769420807,
+    "build-method": "svgo",
+    "build-version-size": 429070,
+    "original-size": 733510,
+    "compressed-size": 429070,
+    "compression": "41.5%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch4_circle_at_2_4_solution_curves.svg": {
     "build-version": "svgo-svg/KERt.svg",

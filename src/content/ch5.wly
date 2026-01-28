@@ -1669,7 +1669,8 @@
 
         |> Image
             width=400px
-            src=images/country_sphere_35_m45_sec_v2.svg
+            src=images/country_sphere_35_m45_sec_v3.svg
+            style=margin-bottom:-1em
 
         ...because...
 
@@ -1685,14 +1686,24 @@
         think of the fact that $1/\cos(\theta) = \sec(\theta)$,
         dividing one radius by the other.)
 
-    *Vocabulary.* A (so-called 
+    *Vocabulary.* A (so-called
     _normal_) _cylindrical projection_
     is a projection that maps the Earth to
     a vertical cylinder abutting the Earth at the
     equator while sending each latitude of the
     Earth to a circle on the cylinder, etc;
     besides the Lambert projection depicted
-    above, here are two more examples:
+    above, 
+    two more examples are the
+    _central cylindrical projection_ and the
+    _plate carée_:
+
+    $$
+    0^\circ 15^\circ 30^\circ 45^\circ 60^\circ 75^\circ 
+    $$
+    $$
+    -15^\circ -30^\circ -45^\circ -60^\circ -75^\circ 
+    $$
 
 !! |> Section
 !!     work=ing

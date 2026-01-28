@@ -4051,7 +4051,8 @@ const Rest = () => {
           <Pause />
           <Image
             width="400px"
-            src="/build-img/svgo-svg/L-Wm.svg"
+            src="/build-img/svgo-svg/ZWuF.svg"
+            style="margin-bottom:-1em"
           />
           <Pause />
           <OuterP>
@@ -4094,7 +4095,7 @@ const Rest = () => {
           <b>
             Vocabulary.
           </b>
-          {" "} A (so-called 
+          {" "} A (so-called
           {" "}
           <i>
             normal
@@ -4109,8 +4110,31 @@ const Rest = () => {
           equator while sending each latitude of the
           Earth to a circle on the cylinder, etc;
           besides the Lambert projection depicted
-          above, here are two more examples:
+          above, 
+          two more examples are the
+          {" "}
+          <i>
+            central cylindrical projection
+          </i>
+          {" "} and the
+          {" "}
+          <i>
+            plate carée
+          </i>
+          :
         </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          0^\circ 15^\circ 30^\circ 45^\circ 60^\circ 75^\circ
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          -15^\circ -30^\circ -45^\circ -60^\circ -75^\circ
+          $$
+        </MathBlock>
       </Section>
       <Pause />
       <Section
