@@ -1698,12 +1698,13 @@
     _central cylindrical projection_ and the
     _plate carée_:
 
-    $$
-    0^\circ 15^\circ 30^\circ 45^\circ 60^\circ 75^\circ 
-    $$
-    $$
-    -15^\circ -30^\circ -45^\circ -60^\circ -75^\circ 
-    $$
+    !! |> Image
+    !!     width=400px
+    !!     src=tmp-images/central_projection.svg
+
+    |> Image
+        width=850px
+        src=tmp-images/plate_caree_central_combination.svg
 
 !! |> Section
 !!     work=ing
