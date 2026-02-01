@@ -118,17 +118,16 @@
         $$
         \Large
         \begin{align}
-        &amp;\,\, \cos(\eta/2) + \sin(\eta/2)\\ =&\,\,\up{1.5}  \sqrt{0.5} + \sqrt{0.5}\\ =&\,\,\up{1.5} \sqrt{2}
+        \  &\,\, \cos(\eta/2) + \sin(\eta/2)\\
+        \ =&\,\,\up{1.5}  \sqrt{0.5} + \sqrt{0.5}\\ =&\,\,\up{1.5} \sqrt{2}
         \end{align}
         $$
 
         using the fact that
 
-        |> div
-
-            $$
-            \Large \cos(\eta/2) = \sin(\eta/2) = \sqrt{0.5}
-            $$
+        $$
+        \Large \cos(\eta/2) = \sin(\eta/2) = \sqrt{0.5}
+        $$
 
         and that
 

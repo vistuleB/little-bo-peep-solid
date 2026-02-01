@@ -1,0 +1,18 @@
+|> TokenSection
+    |> Pause
+
+    *Note.* One can reframe Example >>_secant_example_
+    as being about the fact that this
+    multiplicative factor...
+    
+    |> Image
+        src=images/svg_ch5_ch_secant_reinterpretation_3.svg
+
+    ...[denoting the cylinder radius divided by
+    the latitude radius] equals this multiplicative factor...
+
+    |> Image
+        src=images/svg_ch5_ch_secant_reinterpretation_2.svg
+
+    ...[$\sec(\theta)$] because the target segment
+    has length $1$ each time!

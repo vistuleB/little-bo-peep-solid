@@ -1648,7 +1648,7 @@
     sandwich.)
 
     |> Example
-        handle=me
+        handle=_secant_example_
         work=ing
 
         If the Earth [is modeled as] a sphere
@@ -1656,10 +1656,10 @@
         of latitude $\theta$ has radius $\cos(\theta)$:
 
         |> Image
-            width=400px
+            width=480px
             src=images/country_sphere_35_m45.svg
 
-        [Example >>me continued.] In particular, this means that 
+        [Example >>_secant_example_ continued.] In particular, this means that 
         in any cylindrical
         projection\*\* of the Earth, such as the
         “Lambert projection” depicted below
@@ -1668,7 +1668,7 @@
         by [a factor of] $\sec(\theta)$:
 
         |> Image
-            width=400px
+            width=480px
             src=images/country_sphere_35_m45_sec_v3.svg
             style=margin-bottom:-1em
 
@@ -1686,106 +1686,43 @@
         think of the fact that $1/\cos(\theta) = \sec(\theta)$,
         dividing one radius by the other.)
 
-    *Vocabulary.* A (so-called
+    *\*\*Vocabulary.* A (so-called
     _normal_) _cylindrical projection_
     is a projection that maps the Earth to
     a vertical cylinder abutting the Earth at the
     equator while sending each latitude of the
     Earth to a circle on the cylinder, etc;
     besides the Lambert projection depicted
-    above, 
-    two more examples are the
-    _central cylindrical projection_ and the
+    above, two more examples are the _central
+    cylindrical projection_ and the
     _plate carée_:
 
-    !! |> Image
-    !!     width=400px
-    !!     src=tmp-images/central_projection.svg
-
     |> Image
-        width=850px
-        src=tmp-images/plate_caree_central_combination.svg
+        width=1300px
+        src=images/plate_caree_central_lambert_combination.svg
 
-!! |> Section
-!!     work=ing
+    (In the plate carée, at right, 
+    longitudes are “unrolled” onto the cylinder while
+    preserving north-south distances.)
+    !! North-South distances 
+    !! are the same on the sphere as on the cylinder.)
 
-!!     *Secant: a second view.*
-!!     We will point out that
+    !! the cylinder equate those on the sphere.) 
+    !! (There is no
 
-!!     $$
-!!     \sec(\theta)
-!!     $$
+    !! __North-South distortion__
 
-!!     is also the multiplicative factor that takes 
-!!     you from the 
-!!     |> span
-!!         style=background-color:#ff82d7;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
-!!         PURPLE
-!!     \ to the 
-!!     |> span
-!!         style=white-space:nowrap;background-color:#ccffaa;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
-!!         LIME GREEN
-!!     \ triangle (hard to draw, because it is
-!!     behind the purple triangle!) in the following
-!!     figure:
+    !! only
 
-!!     |> Image
-!!         src=images/svg_ch5_ch_secant_reinterpretation_1.svg
+    !! __East-West distortion__
 
-!!     Indeed, the scaling factor that is needed
-!!     to turn the purple into the lime green
-!!     triangle is the solution $A$ to
-
-!!     $$
-!!     A\cdot \cos(\theta) = 1
-!!     $$
-
-!!     which gives
-
-!!     $$
-!!     A = {1\over \cos(\theta)} = \sec(\theta)
-!!     $$
-
-!!     using $\sec = 1/\cos$.
-
-!!     (After all, this multiplicative factor...
-
-!!     |> Image
-!!         src=images/svg_ch5_ch_secant_reinterpretation_2.svg
-
-!!     ...was always going to equal
-!!     this multiplicative factor...
-
-!!     |> Image
-!!         src=images/svg_ch5_ch_secant_reinterpretation_3.svg
-
-!!     ...given that the target segment has length $1$ each time!)
-
-!!     |> Pause
-
-!!     _Postscript._
-!!     Similarly,
-
-!!     $$
-!!     \csc(\theta)
-!!     $$
-
-!!     is the multiplicative factor that takes you 
-!!     from the 
-!!     |> span
-!!         style=white-space:nowrap;background-color:#ff6600;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
-!!         BURNT ORANGE
-!!     \ to the 
-!!     |> span
-!!         style=white-space:nowrap;background-color:#e9afaf;border-radius:0.3em;font-size:0.7em;padding-left:0.5em;padding-right:0.5em;padding-top:0.3em;padding-bottom:0.3em;border:1px solid black;font-family:arial;
-
-!!         FAUX BORDEAUX
-!!     \ triangle below:
-
-!!     |> Image
-!!         src=images/svg_ch5_ch_secant_reinterpretation_4.svg
-
-!!     (But this fact is not used as often.)
+    !! as they say—and the East-West distortion is
+    !! $$
+    !! \Huge \sec(\theta)
+    !! $$
+    !! in all cases, by Example >>_secant_example_, 
+    !! where
+    !! $\theta$ is the latitude.)
 
 |> Section
     work=ing
