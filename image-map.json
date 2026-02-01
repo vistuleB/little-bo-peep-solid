@@ -1783,12 +1783,12 @@
   },
   "plate_caree_central_lambert_combination.svg": {
     "build-version": "svgo-svg/qWRt.svg",
-    "build-version-created-on": 1769938068,
+    "build-version-created-on": 1769942791,
     "build-method": "svgo",
-    "build-version-size": 1102151,
-    "original-size": 1854656,
-    "compressed-size": 1102151,
-    "compression": "40.57%",
+    "build-version-size": 1006066,
+    "original-size": 1731618,
+    "compressed-size": 1006066,
+    "compression": "41.9%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
