@@ -48,7 +48,8 @@
     a calculator equipped with ‘sin’ and ‘cos’):
 
     |> Image
-        src=images/svg_ch5_ch_unit_circle_@0.5_smaller.svg
+        src=tmp-images/svg_ch5_ch_unit_circle_@0.333_smaller.svg
+        !! src=images/svg_ch5_ch_unit_circle_@0.5_smaller.svg
 
     As a second example, the graphs indicate that
     $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$
@@ -1699,7 +1700,7 @@
 
     |> Image
         width=1300px
-        src=images/plate_caree_central_lambert_combination.svg
+        src=images/plate_caree_central_lambert_combination_with_use_saved.svg
 
     (In the plate carée, at right, 
     longitudes are “unrolled” onto the cylinder while

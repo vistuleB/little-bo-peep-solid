@@ -342,7 +342,7 @@ export default function __Chapter5__() {
           a calculator equipped with ‘sin’ and ‘cos’):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/2cF1.svg" />
+        <Image src="/tmp-images/svg_ch5_ch_unit_circle_@0.333_smaller.svg" />
         <Pause />
         <OuterP>
           As a second example, the graphs indicate that
@@ -4125,7 +4125,7 @@ const Rest = () => {
         <Pause />
         <Image
           width="1300px"
-          src="/build-img/svgo-svg/qWRt.svg"
+          src="/build-img/svgo-svg/sA2I.svg"
         />
         <Pause />
         <OuterP>

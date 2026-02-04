@@ -865,8 +865,8 @@
     "original-size": 169735,
     "compressed-size": 30448,
     "compression": "82.06%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg": {
     "build-version": "svgo-svg/55Oe.svg",
@@ -1789,8 +1789,8 @@
     "original-size": 1731618,
     "compressed-size": 1006066,
     "compression": "41.9%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_17_velocity_vector_1_cloud.svg": {
     "build-version": "svgo-svg/Bvhk.svg",
@@ -2405,6 +2405,17 @@
     "original-size": 210518,
     "compressed-size": 122552,
     "compression": "41.79%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
+  "plate_caree_central_lambert_combination_with_use_saved.svg": {
+    "build-version": "svgo-svg/sA2I.svg",
+    "build-version-created-on": 1769947727,
+    "build-method": "svgo",
+    "build-version-size": 530661,
+    "original-size": 983710,
+    "compressed-size": 530661,
+    "compression": "46.06%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
