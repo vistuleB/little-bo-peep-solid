@@ -241,6 +241,7 @@ fn cli_usage_supplementary() {
 }
 
 pub fn main() {
+  io.println("here's your char:" <> "\u{2060}" <> "[end]")
   let args = argv.load().arguments
 
   let #(args, digest) = case list.contains(args, "--echo-args") {

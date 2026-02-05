@@ -4121,8 +4121,8 @@
     "original-size": 81591,
     "compressed-size": 37111,
     "compression": "54.52%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch3_ch_a1_x1_cloud.svg": {
     "build-version": "svgo-svg/cqgI.svg",

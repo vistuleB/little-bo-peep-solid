@@ -1,4 +1,5 @@
 |> Section
+    work=ing
     handle=_ch5_start_
 
     *Cos and Sin. (“Cosine” and “sine”.)* We've
@@ -16,7 +17,8 @@
     |> Image
         src=images/svg_ch5_ch_cosine_and_sine.svg
 
-    As far as standard definitions go, $\cos(x)$ is the
+    As far as standard definitions go, $\cos(x)$
+    is the
 
     __$x$-coordinate__
 
@@ -31,20 +33,22 @@
 
     is a circle of radius $1$, while “the” unit
     circle is the circle of radius $1$ centered
-    at $(0, 0)$.) For example, if we look at $x = {1\over 2}$,
-    we see $\cos({1\over 2}) \approx 0.9$,
-    $\sin({1\over 2}) \approx 0.5$:
+    at $(0, 0)$.) For example, if we look at 
+    !! $x = {1\over 2}$, we see $\cos({1\over 2}) \approx 0.9$, $\sin({1\over 2}) \approx 0.5$:
+    $x = {1\over 3}$, we see $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
 
     |> Image
-        src=images/svg_ch5_ch_cosine_and_sine_@0.5.svg
+        src=tmp-images/svg_ch5_ch_cosine_and_sine_@0.333.svg
 
     !! The reason for these values, per the definitions,
     !! is that
-    Per the definitions, the point half a unit
-    counterclockwise from $(1, 0)$ on the unit
+    Per the definitions, the point one third of a
+    unit counterclockwise from $(1, 0)$ on the unit
     circle has coordinates $\approx 0.9$ in $x$
-    and $\approx 0.5$ in $y$ (or actually $0.87758...$
-    and $0.47942...$, it turns out, as we can know by
+    and $\approx 0.5$ in $y$ (or actually 
+    !! $0.87758...$ and $0.47942...$, 
+    $0.94495...$ and $0.32719...$, 
+    it turns out, as we can know by
     a calculator equipped with ‘sin’ and ‘cos’):
 
     |> Image
@@ -1542,8 +1546,6 @@
     that way, at least.)
 
 |> Section
-    work=ing
-
     *The missing arrows.*
     ‘sin’ and ‘cos’ only constitute two out
     of six ratios that exist among the sides
