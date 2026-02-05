@@ -8610,10 +8610,10 @@ const Rest = () => {
             <MathBlock>
               $$
               \Large
-              \begin&#123;align&#125;
+              \begin&#123;aligned&#125;
                 &amp;\,\, \cos(\eta/2) + \sin(\eta/2)\\
                =&amp;\,\,\up&#123;1.5&#125;  \sqrt&#123;0.5&#125; + \sqrt&#123;0.5&#125;\\ =&amp;\,\,\up&#123;1.5&#125; \sqrt&#123;2&#125;
-              \end&#123;align&#125;
+              \end&#123;aligned&#125;
               $$
             </MathBlock>
             <Pause />

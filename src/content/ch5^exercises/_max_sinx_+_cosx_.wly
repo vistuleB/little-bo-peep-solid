@@ -117,10 +117,10 @@
 
         $$
         \Large
-        \begin{align}
+        \begin{aligned}
         \  &\,\, \cos(\eta/2) + \sin(\eta/2)\\
         \ =&\,\,\up{1.5}  \sqrt{0.5} + \sqrt{0.5}\\ =&\,\,\up{1.5} \sqrt{2}
-        \end{align}
+        \end{aligned}
         $$
 
         using the fact that
@@ -177,4 +177,3 @@
 
             and, in general, the numerators of these fractions
             will be some multiple of $8\eta$ apart.)
-
