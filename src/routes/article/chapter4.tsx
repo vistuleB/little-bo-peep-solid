@@ -14,7 +14,7 @@ import { ImageLeft, ImageRight }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import TextParent  from "~/components/TextParent";
-import { SolutionNote, NoBreak, Example, Section, Pause }  from "~/components/Wrappers";
+import { SolutionNote, Example, NoBreak, Section, Pause }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter4__() {
@@ -117,7 +117,6 @@ export default function __Chapter4__() {
           </i>
           {" "} of a function
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -125,11 +124,9 @@ export default function __Chapter4__() {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           is a (new) function
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -137,7 +134,6 @@ export default function __Chapter4__() {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           that gives the slope of {" "}
           <Math>
@@ -146,7 +142,6 @@ export default function __Chapter4__() {
           {" "} at each point.
           In other words,
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -154,7 +149,6 @@ export default function __Chapter4__() {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           is the slope of the graph {" "}
           <Math>
@@ -162,30 +156,36 @@ export default function __Chapter4__() {
           </Math>
           {" "} at
           {" "}
-          <Math>
-            $x = a$
-          </Math>
-          ⁠
-          . And—surprise!—each pair of graphs
+          <NoBreak>
+            <Math>
+              $x = a$
+            </Math>
+            .
+          </NoBreak>
+          {" "} And—surprise!—each pair of graphs
           above is a pair of the form {" "}
           <Math>
             $y = f(x)$
           </Math>
-          {" "} [
-          ⁠
-          <Math>
-            $=$
-          </Math>
+          {" "} {" "}
+          <NoBreak>
+            [
+            <Math>
+              $=$
+            </Math>
+          </NoBreak>
           {" "}
           “before”], {" "}
           <Math>
             $y = f'(x)$
           </Math>
-          {" "} [
-          ⁠
-          <Math>
-            $=$
-          </Math>
+          {" "} {" "}
+          <NoBreak>
+            [
+            <Math>
+              $=$
+            </Math>
+          </NoBreak>
           {" "} “after”].
           (Meaning, the “after” graph records the slope
           of the “before” graph.) 
@@ -199,11 +199,13 @@ export default function __Chapter4__() {
           <Math>
             $f'\!$
           </Math>
-          {" "} (read “
-          ⁠
-          <Math>
-            $f$
-          </Math>
+          {" "} (read {" "}
+          <NoBreak>
+            “
+            <Math>
+              $f$
+            </Math>
+          </NoBreak>
           {" "} prime”) remains
           undefined where {" "}
           <Math>
@@ -222,11 +224,12 @@ export default function __Chapter4__() {
           </Math>
           {" "} the slope of this
           tangent line supplies the value of {" "}
-          <Math>
-            $f'(a)$
-          </Math>
-          ⁠
-          :
+          <NoBreak>
+            <Math>
+              $f'(a)$
+            </Math>
+            :
+          </NoBreak>
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/Tf6r.svg" />
@@ -235,7 +238,6 @@ export default function __Chapter4__() {
           In fact, we can
           succinctly describe the derivative by...
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -243,7 +245,6 @@ export default function __Chapter4__() {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           ...with the understanding that {" "}
           <Math>
@@ -294,22 +295,28 @@ const Rest = () => {
         <Pause />
         <OuterP>
           if {" "}
-          <Math>
-            $\dom\,f' = \dom\,f$
-          </Math>
-          ⁠
-          . Also, if {" "}
-          <Math>
-            $a, b \in \rr$
-          </Math>
-          ⁠
-          ,
+          <NoBreak>
+            <Math>
+              $\dom\,f' = \dom\,f$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Also, if {" "}
+          <NoBreak>
+            <Math>
+              $a, b \in \rr$
+            </Math>
+            ,
+          </NoBreak>
           {" "}
-          <Math>
-            $a &lt; b$
-          </Math>
-          ⁠
-          , {" "}
+          {" "}
+          <NoBreak>
+            <Math>
+              $a &lt; b$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
           <Math>
             $f$
           </Math>
@@ -325,11 +332,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           if {" "}
-          <Math>
-            $[a,b] \subseteq \dom \,f'$
-          </Math>
-          ⁠
-          . Lastly, {" "}
+          <NoBreak>
+            <Math>
+              $[a,b] \subseteq \dom \,f'$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Lastly, {" "}
           <Math>
             $f$
           </Math>
@@ -345,11 +354,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           if {" "}
-          <Math>
-            $a \in \dom\,f'$
-          </Math>
-          ⁠
-          .
+          <NoBreak>
+            <Math>
+              $a \in \dom\,f'$
+            </Math>
+            .
+          </NoBreak>
         </OuterP>
       </Section>
       <Pause />
@@ -415,7 +425,6 @@ const Rest = () => {
           {" "}
           A constant function is a function of the form
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -423,21 +432,21 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           for some {" "}
           <Math>
             $B \in \rr$
           </Math>
           {" "} independent of {" "}
-          <Math>
-            $x$
-          </Math>
-          ⁠
-          .
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
           The graph of the constant function is the line
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -445,46 +454,49 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           of slope {" "}
-          <Math>
-            $0$
-          </Math>
-          ⁠
-          . So
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+            .
+          </NoBreak>
+          {" "} So
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
           (x \ra B)' = (x \ra 0)
           $$
+          <ImageLeft
+            src="/build-img/svgo-svg/tkpb.svg"
+            offset_x="8em"
+            compensate_offset_x_for_large_text_columns={true}
+          />
         </MathBlock>
         <Pause />
-        ⁠
-        <ImageLeft
-          src="/build-img/svgo-svg/tkpb.svg"
-          offset_x="8em"
-        />
         <OuterP>
           because at each {" "}
-          <Math>
-            $x$
-          </Math>
-          ⁠
-          -value you find a slope of
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -value
+          </NoBreak>
+          {" "} you find a slope of
           {" "}
-          <Math>
-            $0$
-          </Math>
-          ⁠
-          , when you look up (down?) at the graph.
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} when you look up (down?) at the graph.
         </OuterP>
         <OuterP class="indent-10">
           If we refer to
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -492,7 +504,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           as the
         </OuterP>
@@ -531,7 +542,6 @@ const Rest = () => {
           {" "}
           An affine function is a function of the form
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -539,44 +549,48 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           for constants {" "}
-          <Math>
-            $A$
-          </Math>
-          ⁠
-          , {" "}
-          <Math>
-            $B \in \rr$
-          </Math>
-          ⁠
-          .
+          <NoBreak>
+            <Math>
+              $A$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $B \in \rr$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
           The graph of {" "}
           <Math>
             $x \ra Ax + B$
           </Math>
           {" "} is a line of
           slope {" "}
-          <Math>
-            $A$
-          </Math>
-          ⁠
-          , so
+          <NoBreak>
+            <Math>
+              $A$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} so
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
           (x \ra Ax + B)' = (x \ra A)
           $$
+          <ImageLeft
+            src="/build-img/svgo-svg/2UFf.svg"
+            offset_x="7em"
+            compensate_offset_x_for_large_text_columns={true}
+          />
         </MathBlock>
         <Pause />
-        ⁠
-        <ImageLeft
-          src="/build-img/svgo-svg/2UFf.svg"
-          offset_x="7em"
-        />
         <OuterP>
           because the slope of a line of slope {" "}
           <Math>
@@ -584,30 +598,36 @@ const Rest = () => {
           </Math>
           {" "} is
           {" "}
-          <Math>
-            $A$
-          </Math>
-          ⁠
-          , no matter where you place yourself on the
+          <NoBreak>
+            <Math>
+              $A$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} no matter where you place yourself on the
           line. In particular, {" "}
           <Math>
             $B$
           </Math>
           {" "} plays no role in the
-          derivative! (
-          ⁠
-          <Math>
-            $\rt&#123;0.2&#125;$
-          </Math>
-          ⁠
-          Just like in the case of a
+          derivative! {" "}
+          <NoBreak>
+            (
+            <Math>
+              $\rt&#123;0.2&#125;$
+            </Math>
+            Just
+          </NoBreak>
+          {" "} like in the case of a
           constant function, the derivative leaves no
           trace of {" "}
-          <Math>
-            $B$
-          </Math>
-          ⁠
-          's value—and for the same reason
+          <NoBreak>
+            <Math>
+              $B$
+            </Math>
+            's
+          </NoBreak>
+          {" "} value—and for the same reason
           that {" "}
           <Math>
             $B$
@@ -647,17 +667,20 @@ const Rest = () => {
             $y = ax + b$
           </Math>
           {" "} is {" "}
-          <Math>
-            $ax$
-          </Math>
-          ⁠
-          ,
+          <NoBreak>
+            <Math>
+              $ax$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
           of coefficient {" "}
-          <Math>
-            $a$
-          </Math>
-          ⁠
-          .)
+          <NoBreak>
+            <Math>
+              $a$
+            </Math>
+            .)
+          </NoBreak>
         </OuterP>
         <Pause />
         <Example>
@@ -668,7 +691,6 @@ const Rest = () => {
             {" "}
             One has
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
@@ -676,11 +698,9 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          ⁠
           <OuterP>
             as per
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
@@ -688,19 +708,21 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          ⁠
           <OuterP>
             with {" "}
-            <Math>
-              $A = 3$
-            </Math>
-            ⁠
-            , {" "}
-            <Math>
-              $B = 1$
-            </Math>
-            ⁠
-            .
+            <NoBreak>
+              <Math>
+                $A = 3$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} {" "}
+            <NoBreak>
+              <Math>
+                $B = 1$
+              </Math>
+              .
+            </NoBreak>
           </OuterP>
         </Example>
         <Pause />
@@ -712,7 +734,6 @@ const Rest = () => {
             {" "}
             One has
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
@@ -720,11 +741,9 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          ⁠
           <OuterP>
             as per
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
@@ -732,19 +751,21 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          ⁠
           <OuterP>
             with {" "}
-            <Math>
-              $A = -1$
-            </Math>
-            ⁠
-            , {" "}
-            <Math>
-              $B = 12$
-            </Math>
-            ⁠
-            .
+            <NoBreak>
+              <Math>
+                $A = -1$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} {" "}
+            <NoBreak>
+              <Math>
+                $B = 12$
+              </Math>
+              .
+            </NoBreak>
           </OuterP>
         </Example>
       </Section>
@@ -757,7 +778,6 @@ const Rest = () => {
           {" "}
           If units are present, we have
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -765,7 +785,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           because a value output by {" "}
           <Math>
@@ -778,13 +797,14 @@ const Rest = () => {
           </i>
           {" "} of a tangent line attached to the
           graph {" "}
-          <Math>
-            $y = f(x)$
-          </Math>
-          ⁠
-          , and
+          <NoBreak>
+            <Math>
+              $y = f(x)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} and
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -792,7 +812,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           because an input for {" "}
           <Math>
@@ -800,11 +819,12 @@ const Rest = () => {
           </Math>
           {" "} is, originally,
           an input for {" "}
-          <Math>
-            $\f$
-          </Math>
-          ⁠
-          .
+          <NoBreak>
+            <Math>
+              $\f$
+            </Math>
+            .
+          </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
           For example, if the “before” graph has units
@@ -917,11 +937,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           of {" "}
-          <Math>
-            $f$
-          </Math>
-          ⁠
-          , or, depending, as the
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} or, depending, as the
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -930,11 +952,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           rate of change of {" "}
-          <Math>
-            $f$
-          </Math>
-          ⁠
-          . The latter bit of
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            .
+          </NoBreak>
+          {" "} The latter bit of
           emphasis has to do with the fact that, in a
           general graph, the slope of the tangent
           keeps changing from point to point.
@@ -957,19 +981,21 @@ const Rest = () => {
           </Math>
           {" "} is the derivative
           of the derivative of {" "}
-          <Math>
-            $f$
-          </Math>
-          ⁠
-          . It is written “
-          ⁠
-          <Math>
-            $f''$
-          </Math>
-          ⁠
-          ”:
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            .
+          </NoBreak>
+          {" "} It is written {" "}
+          <NoBreak>
+            “
+            <Math>
+              $f''$
+            </Math>
+            ”:
+          </NoBreak>
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -977,11 +1003,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           Likewise, we have, e.g.,
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -993,13 +1017,11 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           these being, namely, the {" "}
           <i>
             third
           </i>
-          ⁠
           , {" "}
           <i>
             fourth
@@ -1010,14 +1032,15 @@ const Rest = () => {
             fifth
           </i>
           {" "} derivatives of {" "}
-          <Math>
-            $f$
-          </Math>
-          ⁠
-          . One can also
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            .
+          </NoBreak>
+          {" "} One can also
           write
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1025,22 +1048,24 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           for the {" "}
-          <Math>
-            $n$
-          </Math>
-          ⁠
-          -th derivative of {" "}
-          <Math>
-            $f$
-          </Math>
-          ⁠
-          , so that, for
+          <NoBreak>
+            <Math>
+              $n$
+            </Math>
+            -th
+          </NoBreak>
+          {" "} derivative of {" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} so that, for
           example,
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1048,11 +1073,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           means the same as
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1060,7 +1083,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           but with the advantage that you don't have to
           squint and start re-counting the apostrophes
@@ -1075,26 +1097,23 @@ const Rest = () => {
             {" "}
             We have
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
             (x \ra 3x + 1)'' = (x \ra 0)
             $$
+            <ImageRight
+              src="/build-img/svgo-svg/ORL8.svg"
+              offset_x="6em"
+              offset_y="0.1em"
+              compensate_offset_x_for_large_text_columns={true}
+            />
           </MathBlock>
-          <Pause />
-          ⁠
-          <ImageRight
-            src="/build-img/svgo-svg/ORL8.svg"
-            offset_x="6em"
-            offset_y="0.1em"
-          />
         </Example>
         <Pause />
         <OuterP>
           because, firstly,
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1102,11 +1121,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           and, secondly,
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1114,11 +1131,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           so that, from start to finish,
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1126,7 +1141,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           where we unpeel the onion starting from the
           inside. (Physically difficult.)
@@ -1140,7 +1154,6 @@ const Rest = () => {
             {" "}
             More generally,
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
@@ -1148,14 +1161,15 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          ⁠
           <OuterP>
             for all {" "}
-            <Math>
-              $a, b \in \rr$
-            </Math>
-            ⁠
-            , by a similar computation;
+            <NoBreak>
+              <Math>
+                $a, b \in \rr$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} by a similar computation;
             a.k.a.:
           </OuterP>
           <Pause />
@@ -1237,11 +1251,13 @@ const Rest = () => {
             $-1000$
           </Math>
           {" "} and {" "}
-          <Math>
-            $-100$
-          </Math>
-          ⁠
-          , for that
+          <NoBreak>
+            <Math>
+              $-100$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} for that
           matter).
         </OuterP>
         <OuterP class="indent-10">
@@ -1273,24 +1289,20 @@ const Rest = () => {
           <i>
             nondecreasing
           </i>
-          ⁠
           ) slope are called {" "}
           <i>
             convex
           </i>
-          ⁠
           ,
           while curves with decreasing (technically:
           {" "}
           <i>
             nonincreasing
           </i>
-          ⁠
           ) slope are called {" "}
           <i>
             concave
           </i>
-          ⁠
           .
           Viz:
         </OuterP>
@@ -1321,7 +1333,6 @@ const Rest = () => {
             {" "}
             The fact that
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
@@ -1329,11 +1340,9 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          ⁠
           <OuterP>
             indicates that the graph
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
@@ -1341,14 +1350,15 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          ⁠
           <OuterP>
             is neither “bending upwards” nor “bending
-            downwards”—
-            ⁠
-            <Math>
-              $0$
-            </Math>
+            {" "}
+            <NoBreak>
+              downwards”—
+              <Math>
+                $0$
+              </Math>
+            </NoBreak>
             {" "} is neither positive, nor negative.
           </OuterP>
         </Example>
@@ -1381,7 +1391,6 @@ const Rest = () => {
           <i>
             velocity as a function of time
           </i>
-          ⁠
           ;
           finally, the second derivative...
         </OuterP>
@@ -1417,7 +1426,6 @@ const Rest = () => {
           {" "} axis of the
           second derivative are given by
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1427,14 +1435,15 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           because {" "}
-          <Math>
-            $f'' = (f')'$
-          </Math>
-          ⁠
-          . The point is, a tangent
+          <NoBreak>
+            <Math>
+              $f'' = (f')'$
+            </Math>
+            .
+          </NoBreak>
+          {" "} The point is, a tangent
           to the graph {" "}
           <Math>
             $y = f'(t)$
@@ -1449,7 +1458,6 @@ const Rest = () => {
         <OuterP>
           The ratio “rise over run” has the form
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1459,13 +1467,11 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           which produces the above-mentioned units of
           the second derivative. Also note that a ratio of
           the form
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1473,7 +1479,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           is, indeed, an acceleration, in that acceleration
           is defined as “the increase in velocity per unit
@@ -1500,7 +1505,6 @@ const Rest = () => {
           {" "}
           The exotic units
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1508,7 +1512,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           can be read
         </OuterP>
@@ -1535,13 +1538,15 @@ const Rest = () => {
         <Pause />
         <OuterP>
           which is even better because it “shows” acceleration
-          to be a number of m
-          ⁠
-          <Math>
-            $/$
-          </Math>
-          ⁠
-          s per second.
+          to be a number of {" "}
+          <NoBreak>
+            m
+            <Math>
+              $/$
+            </Math>
+            s
+          </NoBreak>
+          {" "} per second.
         </OuterP>
         <Pause />
         <Example>
@@ -1551,14 +1556,15 @@ const Rest = () => {
             </b>
             {" "}
             Over a period of {" "}
-            <Math>
-              $10$
-            </Math>
-            ⁠
-            s, an object that is
+            <NoBreak>
+              <Math>
+                $10$
+              </Math>
+              s,
+            </NoBreak>
+            {" "} an object that is
             accelerating at a constant rate of
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
@@ -1566,27 +1572,24 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          ⁠
           <OuterP>
             increases its velocity by
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
             (2&#123;\te&#123;m&#125;/\te&#123;s&#125;\!&#123;\,&#125;^2&#125;) \times\, (10\te&#123;s&#125;) = 20&#123;\te&#123;m&#125;/\te&#123;s&#125;&#125;
             $$
+            <ImageRight
+              src="/build-img/svgo-svg/R0nW.svg"
+              offset_x="5em"
+              compensate_offset_x_for_large_text_columns={true}
+            />
           </MathBlock>
           <Pause />
-          ⁠
-          <ImageRight
-            src="/build-img/svgo-svg/R0nW.svg"
-            offset_x="5em"
-          />
           <OuterP>
             according to the template
           </OuterP>
-          ⁠
           <Pause />
           <MathBlock>
             $$
@@ -1595,7 +1598,6 @@ const Rest = () => {
             $$
           </MathBlock>
           <Pause />
-          ⁠
           <OuterP>
             since acceleration is the rate of change of
             velocity.
@@ -1630,7 +1632,6 @@ const Rest = () => {
           </a>
           {" "} would do as well) are
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1638,7 +1639,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           or
         </OuterP>
@@ -1659,7 +1659,6 @@ const Rest = () => {
           <i>
             per second
           </i>
-          ⁠
           .
         </OuterP>
         <OuterP class="indent-10">
@@ -1693,10 +1692,19 @@ const Rest = () => {
             and Differences of Functions.
           </b>
           {" "}
-          Coming briefly back to Chapter 3-related
+          Coming briefly back to {" "}
+          <NoBreak>
+            <a
+              href="/article/chapter3#_54_hgi_"
+              class="handle-out-chapter-link"
+            >
+              Chapter 3
+            </a>
+            &lrm;-related
+          </NoBreak>
+          {" "}
           matters, if
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1704,11 +1712,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           then
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1716,17 +1722,11 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
-        ⁠
-        <Pause />
         <MathBlock>
           $$
           f + g = (x \ra f(x) + g(x))
           $$
         </MathBlock>
-        <Pause />
-        ⁠
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1735,17 +1735,11 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
-        ⁠
-        <Pause />
         <MathBlock>
           $$
           &#123;f/g&#125; = (x \ra &#123;f(x)/g(x)&#125;)
           $$
         </MathBlock>
-        <Pause />
-        ⁠
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1753,17 +1747,14 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           with each equation being a {" "}
           <i>
             definition
           </i>
-          ⁠
           .
           The notation
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1771,7 +1762,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           goes back to {" "}
           <NoBreak>
@@ -1784,21 +1774,21 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} with
-          the little circle “
-          ⁠
-          <Math>
-            $\circ$
-          </Math>
-          ⁠
-          ” being known as
+          the little circle {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\circ$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} being known as
           the {" "}
           <i>
             composition operator
           </i>
-          ⁠
           , while the sum
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1806,11 +1796,9 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           and product
         </OuterP>
-        ⁠
         <Pause />
         <MathBlock>
           $$
@@ -1818,7 +1806,6 @@ const Rest = () => {
           $$
         </MathBlock>
         <Pause />
-        ⁠
         <OuterP>
           of functions already appear in {" "}
           <NoBreak>
@@ -1832,17 +1819,21 @@ const Rest = () => {
           </NoBreak>
           {" "} also. (On the other hand, the
           quotient (i.e. {" "}
-          <Math>
-            $f/g$
-          </Math>
-          ⁠
-          ) and difference (i.e.,
+          <NoBreak>
+            <Math>
+              $f/g$
+            </Math>
+            )
+          </NoBreak>
+          {" "} and difference (i.e.,
           {" "}
-          <Math>
-            $f - g$
-          </Math>
-          ⁠
-          ) of functions are defined above for
+          <NoBreak>
+            <Math>
+              $f - g$
+            </Math>
+            )
+          </NoBreak>
+          {" "} of functions are defined above for
           the first time, even if the definitions might
           {" "}
           <i>
@@ -1888,21 +1879,25 @@ const Rest = () => {
                 $1/2$
               </Math>
               {" "} when the slope is {" "}
-              <Math>
-                $1/2$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $1/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               is {" "}
               <Math>
                 $-1/2$
               </Math>
               {" "} when the slope is {" "}
-              <Math>
-                $-1/2$
-              </Math>
-              ⁠
-              , and is
+              <NoBreak>
+                <Math>
+                  $-1/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and is
               undefined at the corners.)
             </OuterP>
           </Solution>
@@ -1916,7 +1911,6 @@ const Rest = () => {
               {" "}
               Would the derivative of
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -1924,15 +1918,16 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               be a very large negative number, or a very
               large positive number, near {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              ⁠
-              ? Or would
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ?
+              </NoBreak>
+              {" "} Or would
               it depend on which side of 0 you are?
             </OuterP>
           </ExerciseStatement>
@@ -1950,11 +1945,13 @@ const Rest = () => {
             <OuterP>
               As one can see, the slope is very negative
               near {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              ⁠
-              , on either side. So the answer is:
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} on either side. So the answer is:
               “very large negative”.
             </OuterP>
           </Solution>
@@ -2042,17 +2039,21 @@ const Rest = () => {
               </del>
               {" "} position of a car as a function of
               time, with hours (hr) on the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -axis
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "}
               and kilometers (km) on the {" "}
-              <Math>
-                $y$
-              </Math>
-              ⁠
-              -axis, what
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -axis,
+              </NoBreak>
+              {" "} what
               do the units become on the axes of the first
               and second derivatives?
             </OuterP>
@@ -2111,22 +2112,18 @@ const Rest = () => {
               Is the following equation correct, incorrect,
               or nonsensical?
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
               (x \ra x + 1) \,+\, (u \ra 2u + 1) \,=\, (t \ra 3t + 2)
               $$
             </MathBlock>
-            <Pause />
-            ⁠
           </ExerciseStatement>
           <Solution>
             <OuterP>
               The equation makes sense and is true.
               Syntactically,
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2134,7 +2131,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               is a
             </OuterP>
@@ -2155,7 +2151,6 @@ const Rest = () => {
               {" "} are
               both functions. Now by definition, the sum
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2163,7 +2158,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               of functions {" "}
               <Math>
@@ -2175,7 +2169,6 @@ const Rest = () => {
               </Math>
               {" "} is the function
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2183,12 +2176,10 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               that maps a number to the sum of the individual
               values of the functions. So—for example—
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2201,16 +2192,15 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               and—with a general input {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              —
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                —
+              </NoBreak>
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2223,11 +2213,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               which implies that, indeed,
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2235,24 +2223,27 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               is the function that maps each real number {" "}
               <Math>
                 $t$
               </Math>
               {" "} to {" "}
-              <Math>
-                $3t + 2$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $3t + 2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               i.e., is equal to the function {" "}
-              <Math>
-                $t \ra 3t + 2$
-              </Math>
-              ⁠
-              . (!!)
+              <NoBreak>
+                <Math>
+                  $t \ra 3t + 2$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (!!)
             </OuterP>
             <Pause />
             <OuterP>
@@ -2266,13 +2257,13 @@ const Rest = () => {
               </Math>
               {" "}
               in place of {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              :
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2285,14 +2276,15 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               Here we have two different {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              's: the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                's:
+              </NoBreak>
+              {" "} the {" "}
               <Math>
                 $x$
               </Math>
@@ -2346,7 +2338,6 @@ const Rest = () => {
             <OuterP>
               ...where we find units of
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2354,7 +2345,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               or {" "}
               <i>
@@ -2378,13 +2368,15 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                A unit of “
-                ⁠
-                <Math>
-                  $1$
-                </Math>
-                ⁠
-                ” is a
+                A unit of {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $1$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} is a
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -2420,31 +2412,39 @@ const Rest = () => {
                 order to discover the numerical value of
                 the ratio I'm talking about”.) (To drive
                 it home: In Chinese, 
-                “
-                ⁠
-                <Math>
-                  $23\%$
-                </Math>
-                ⁠
-                ” and “
-                ⁠
-                <Math>
-                  $23/100$
-                </Math>
-                ⁠
-                ” are
+                {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $23\%$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $23/100$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} are
                 indistinguishable when read out loud; they
-                are both  read “
-                ⁠
-                <Math>
-                  $23$
-                </Math>
+                are both  read {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $23$
+                  </Math>
+                </NoBreak>
                 {" "} over {" "}
-                <Math>
-                  $100$
-                </Math>
-                ⁠
-                ”; that is
+                <NoBreak>
+                  <Math>
+                    $100$
+                  </Math>
+                  ”;
+                </NoBreak>
+                {" "} that is
                 the simple {" "}
                 <i>
                   &amp;
@@ -2512,21 +2512,27 @@ const Rest = () => {
               Among the functions below, which is the
               zeroth, first, and second derivative?
               (I.e., which is {" "}
-              <Math>
-                $f$
-              </Math>
-              ⁠
-              , {" "}
-              <Math>
-                $f'$
-              </Math>
-              ⁠
-              , and {" "}
-              <Math>
-                $f''$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $f'$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $f''$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               assuming that relationship exists.)
             </OuterP>
             <Pause />
@@ -2550,11 +2556,13 @@ const Rest = () => {
               </Math>
               {" "} and
               ends at {" "}
-              <Math>
-                $\sim\!1$
-              </Math>
-              ⁠
-              , while those are the
+              <NoBreak>
+                <Math>
+                  $\sim\!1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} while those are the
               values at which 
               the second graph
               starts and ends:
@@ -2697,23 +2705,28 @@ const Rest = () => {
               </Math>
               {" "}
               vertically by a factor {" "}
-              <Math>
-                $2$
-              </Math>
-              ⁠
-              —i.e., multiply
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                —i.e.,
+              </NoBreak>
+              {" "} multiply
               each output by {" "}
-              <Math>
-                $2$
-              </Math>
-              ⁠
-              —is the derivative
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                —is
+              </NoBreak>
+              {" "} the derivative
               also scaled by {" "}
-              <Math>
-                $2$
-              </Math>
-              ⁠
-              ?
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -2744,7 +2757,6 @@ const Rest = () => {
               {" "} axis has
               been doubled. This means that the ratio
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2752,15 +2764,16 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               has doubled in the second graph, because
               “rise” has doubled (each {" "}
-              <Math>
-                $y$
-              </Math>
-              ⁠
-              -coordinate
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "}
               is twice as large!), whereas “run” stays
               the same. (So the slope of the tangent has
               doubled, so the derivative is doubled.)
@@ -2783,16 +2796,17 @@ const Rest = () => {
               </i>
               {" "}
               of two functions {" "}
-              <Math>
-                $f$
-              </Math>
-              ⁠
-              , {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
               <Math>
                 $g: \rr \ra \rr$
               </Math>
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2800,11 +2814,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               is defined by the equation
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2812,11 +2824,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               while their composition is defined by
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2824,12 +2834,10 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               and so on, what is the similar, most logical
               definition for
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2837,25 +2845,24 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               where {" "}
               <Math>
                 $c \in \rr$
               </Math>
               {" "} and {" "}
-              <Math>
-                $f : \rr \ra \rr$
-              </Math>
-              ⁠
-              ?
+              <NoBreak>
+                <Math>
+                  $f : \rr \ra \rr$
+                </Math>
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
               The “logical” definition is:
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2863,15 +2870,16 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
-              where the product “
-              ⁠
-              <Math>
-                $cf(x)$
-              </Math>
-              ⁠
-              ” is an ordinary
+              where the product {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $cf(x)$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} is an ordinary
               multiplication between two real numbers,
               because {" "}
               <Math>
@@ -2888,7 +2896,6 @@ const Rest = () => {
               is already similar to what happens for the
               definition...
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2896,24 +2903,24 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               of the product of two functions from {" "}
               <Math>
                 $\rr$
               </Math>
               {" "} to {" "}
-              <Math>
-                $\rr$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $\rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               or with the case of function addition, that
               relies on real number addition.) BUT. There
               is a MORE CLEVER way of doing the definition.
               Which is to define
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2921,25 +2928,21 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               where the right-hand-side is {" "}
               <i>
                 one function
                 times another
               </i>
-              ⁠
               , i.e., {" "}
               <i>
                 a product of functions
               </i>
-              ⁠
               ,
               which is something that has ITSELF ALREADY BEEN
               DEFINED. (!) (To wit, the definition of
               function multiplication is that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -2947,7 +2950,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               of course.) (Wait we just mentioned that
               already.) Mathematicians LOVE to bootstrap off
@@ -3045,16 +3047,19 @@ const Rest = () => {
                 particle moving in the plane, we examine
                 the velocities of its shadow on the
                 {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                - and {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -axes:
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -axes:
+                </NoBreak>
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/eSj9.svg" />
@@ -3099,7 +3104,6 @@ const Rest = () => {
                 <i>
                   velocity vector
                 </i>
-                ⁠
                 —which
                 is no coincidence, because the first
                 coordinate of the
@@ -3124,17 +3128,21 @@ const Rest = () => {
               </OuterP>
               <OuterP class="indent-10">
                 Geometrically, if we use the {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                - and
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -
+                </NoBreak>
+                {" "} and
                 {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -components {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -components
+                </NoBreak>
+                {" "} {" "}
                 <Math>
                   $v_x$
                 </Math>
@@ -3165,17 +3173,21 @@ const Rest = () => {
                 of the particle at that moment in time.
                 More precisely, if you let the particle
                 drift at the exact same {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                - and
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -
+                </NoBreak>
+                {" "} and
                 {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -velocities {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -velocities
+                </NoBreak>
+                {" "} {" "}
                 <Math>
                   $v_x$
                 </Math>
@@ -3202,11 +3214,13 @@ const Rest = () => {
                   $v_y$
                 </Math>
                 {" "} units in {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                .
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
                 And speed being
               </OuterP>
               <Pause />
@@ -3246,11 +3260,13 @@ const Rest = () => {
               <OuterP>
                 (You can't really see it so well, but
                 each arrow originates at {" "}
-                <Math>
-                  $(0, 0)$
-                </Math>
-                ⁠
-                .) While
+                <NoBreak>
+                  <Math>
+                    $(0, 0)$
+                  </Math>
+                  .)
+                </NoBreak>
+                {" "} While
                 the
               </OuterP>
               <Pause />
@@ -3274,11 +3290,13 @@ const Rest = () => {
                 </Math>
                 {" "} because
                 the speed is {" "}
-                <Math>
-                  $1$
-                </Math>
-                ⁠
-                , {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
                 <i>
                   &amp;
                 </i>
@@ -3299,11 +3317,13 @@ const Rest = () => {
               <OuterP class="indent-10">
                 Due to the 90° rotations and uniform
                 lengths of {" "}
-                <Math>
-                  $1$
-                </Math>
-                ⁠
-                , one particle's velocity
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} one particle's velocity
                 vector is another particle's position
                 vector; as one example, the red particle's
                 velocity vector is the blue particle's
@@ -3314,11 +3334,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 From the {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinates, for example,
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates,
+                </NoBreak>
+                {" "} for example,
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -3341,60 +3363,72 @@ const Rest = () => {
               <Pause />
               <CentralDisplayItalic>
                 the rate of change of the {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinated
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinated
+                </NoBreak>
+                {" "}
                 of the red particle is the {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinate
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}
                 of the blue particle
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
                 ...because “velocity in {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                ” is the same
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} is the same
                 as “rate of change of the {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinate”.
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate”.
+                </NoBreak>
               </OuterP>
               <OuterP class="indent-10">
                 Concretely, if you graph the
                 {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinates of the red and blue
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} of the red and blue
                 particles on the same graph, the rate of
                 change of the red particle's {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinate
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}
                 will equal the value of the blue particle's
                 {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinate. These are the reds and blue
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate.
+                </NoBreak>
+                {" "} These are the reds and blue
                 curves from the problem statement, if we
                 start the blue particle at position
               </OuterP>
-              ⁠
               <Pause />
               <MathBlock>
                 $$
@@ -3402,25 +3436,27 @@ const Rest = () => {
                 $$
               </MathBlock>
               <Pause />
-              ⁠
               <OuterP>
                 at time {" "}
-                <Math>
-                  $t = 0$
-                </Math>
-                ⁠
-                :
+                <NoBreak>
+                  <Math>
+                    $t = 0$
+                  </Math>
+                  :
+                </NoBreak>
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/tBi5.svg" />
               <Pause />
               <OuterP>
                 If we add the {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinates of the green
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} of the green
                 and yellow particles, we find the graph
                 from the problem statement!
               </OuterP>
@@ -3440,11 +3476,12 @@ const Rest = () => {
                 {" "} rotation of the particles
                 of Note 3,  with each curve being an
                 {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinate:
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate:
+                </NoBreak>
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/E0qc.svg" />
@@ -3477,11 +3514,13 @@ const Rest = () => {
               <OuterP>
                 of the red particle, so that
                 {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinates you see {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} you see {" "}
                 <i>
                   now
                 </i>
@@ -3518,19 +3557,22 @@ const Rest = () => {
                 Exercise 12
               </InChapterLink>
               {" "} exhibits a function {" "}
-              <Math>
-                $f$
-              </Math>
-              ⁠
-              —in fact,
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                —in
+              </NoBreak>
+              {" "} fact,
               four different functions {" "}
-              <Math>
-                $f$
-              </Math>
-              ⁠
-              —such that
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                —such
+              </NoBreak>
+              {" "} that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -3538,11 +3580,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               and
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -3550,11 +3590,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               and
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -3562,11 +3600,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               but
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -3574,29 +3610,31 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               surprise, surprise! Can you do the same with
-              “
-              ⁠
-              <Math>
-                $5$
-              </Math>
-              ⁠
-              ” instead of “
-              ⁠
-              <Math>
-                $4$
-              </Math>
-              ⁠
-              ”? I.e., find a function
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $5$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} instead of {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $4$
+                </Math>
+                ”?
+              </NoBreak>
+              {" "} I.e., find a function
               {" "}
               <Math>
                 $f$
               </Math>
               {" "} such that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -3604,7 +3642,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               for {" "}
               <Math>
@@ -3612,7 +3649,6 @@ const Rest = () => {
               </Math>
               {" "} but
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -3620,7 +3656,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               ...?
             </OuterP>
@@ -3639,11 +3674,13 @@ const Rest = () => {
               placing five equally spaced particles
               around the unit circle (“the” unit circle
               is the one centered at {" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              ⁠
-              , by
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} by
               convention), instead of 4:
             </OuterP>
             <Pause />
@@ -3699,11 +3736,13 @@ const Rest = () => {
               In the next one-tenth unit of time we
               can apply a similar approximation again,
               advancing the particles by {" "}
-              <Math>
-                $&#123;1\over 10&#125;$
-              </Math>
-              ⁠
-              th
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 10&#125;$
+                </Math>
+                th
+              </NoBreak>
+              {" "}
               of [the current approximation to] their
               velocity vectors. Skipping the construction
               lines:
@@ -3742,13 +3781,14 @@ const Rest = () => {
               that we have to the red particle's velocity
               vector at that moment, that approximation
               being namely the blue particle's position
-              vector at the fourth step (
-              ⁠
-              <Math>
-                $t = &#123;4\over 10&#125;$
-              </Math>
-              ⁠
-              )...
+              vector at the fourth step {" "}
+              <NoBreak>
+                (
+                <Math>
+                  $t = &#123;4\over 10&#125;$
+                </Math>
+                )...
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/Js6D.svg" />
@@ -3764,11 +3804,13 @@ const Rest = () => {
               </Math>
               {" "} times as often,
               advancing the clock by {" "}
-              <Math>
-                $&#123;1\over 100&#125;$
-              </Math>
-              ⁠
-              th of
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 100&#125;$
+                </Math>
+                th
+              </NoBreak>
+              {" "} of
               a unit of time at each step, the same figure
               becomes just a blur (still going from
               {" "}
@@ -3776,11 +3818,12 @@ const Rest = () => {
                 $t = 0$
               </Math>
               {" "} to {" "}
-              <Math>
-                $t = 1$
-              </Math>
-              ⁠
-              ):
+              <NoBreak>
+                <Math>
+                  $t = 1$
+                </Math>
+                ):
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/8BpD.svg" />
@@ -3790,21 +3833,25 @@ const Rest = () => {
               approximation we need to revert to drawing
               the particles as points. In the following
               figure the colored paths are points that
-              come from a “
-              ⁠
-              <Math>
-                $&#123;1\over 100&#125;$
-              </Math>
-              ⁠
-              th” approximation,
+              come from a {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;1\over 100&#125;$
+                </Math>
+                th”
+              </NoBreak>
+              {" "} approximation,
               while the orange dots are the old positions
-              obtained from a “
-              ⁠
-              <Math>
-                $&#123;1\over 10&#125;$
-              </Math>
-              ⁠
-              th”
+              obtained from a {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;1\over 10&#125;$
+                </Math>
+                th”
+              </NoBreak>
+              {" "}
               approximation:
             </OuterP>
             <Pause />
@@ -3818,21 +3865,25 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/IUP8.svg" />
             <Pause />
             <OuterP>
-              In any case, even the “
-              ⁠
-              <Math>
-                $&#123;1\over 100&#125;$
-              </Math>
-              ⁠
-              th”
+              In any case, even the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;1\over 100&#125;$
+                </Math>
+                th”
+              </NoBreak>
+              {" "}
               approximation is just an approximation,
               but the point is that such approximations
               do converge to a set of “true” particle
-              paths, as pictured in Fig
-              ⁠
-              <Math>
-                $.$
-              </Math>
+              paths, as pictured in {" "}
+              <NoBreak>
+                Fig
+                <Math>
+                  $.$
+                </Math>
+              </NoBreak>
               {" "} 1, that can
               be computed by some wizards; as time can
               be played forward or backward, these paths
@@ -3870,7 +3921,6 @@ const Rest = () => {
               We can also convert the paths into a
               function
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -3878,7 +3928,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               that satisfies the problem requirements.
             </OuterP>
@@ -3889,39 +3938,49 @@ const Rest = () => {
               </Math>
               {" "} be the function that,
               given a time {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              , outputs the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} outputs the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "}
               of the red particle at {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              ; then, to spell
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                ;
+              </NoBreak>
+              {" "} then, to spell
               it all out, since
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
               the rate of change of the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the red particle is the
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the red particle is the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the blue particle
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the blue particle
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -3929,28 +3988,34 @@ const Rest = () => {
                 $f'$
               </Math>
               {" "} is the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the blue
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the blue
               particle; and since
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
               the rate of change of the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the blue particle is the
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the blue particle is the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the yellow particle
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the yellow particle
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -3958,28 +4023,34 @@ const Rest = () => {
                 $f''$
               </Math>
               {" "} is the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the
               yellow particle; and since
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
               the rate of change of the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the yellow particle is the
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the yellow particle is the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the green particle
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the green particle
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -3987,28 +4058,34 @@ const Rest = () => {
                 $f'''$
               </Math>
               {" "} is the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the
               green particle; and since
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
               the rate of change of the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the green particle
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the green particle
               is the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the purple
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the purple
               particle
             </CentralDisplayItalic>
             <Pause />
@@ -4017,28 +4094,34 @@ const Rest = () => {
                 $f''''$
               </Math>
               {" "} is the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the
               purple particle; and since
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
               the rate of change of the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the purple particle is the
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the purple particle is the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the red particle
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the red particle
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -4046,11 +4129,12 @@ const Rest = () => {
                 $f''''' = f^&#123;(5)&#125;$
               </Math>
               {" "} equals {" "}
-              <Math>
-                $f$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                .
+              </NoBreak>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -4060,11 +4144,13 @@ const Rest = () => {
                 </i>
                 {" "}
                 If you graph the {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinates of the
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} of the
                 5 particles over time, each in their
                 color, you get a graph like so, in which
                 blue is the derivative of red, yellow is
@@ -4088,33 +4174,40 @@ const Rest = () => {
                 {" "}
                 There is nothing special about
                 {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinates vis-à-vis {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -coordinates.
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} vis-à-vis {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinates.
+                </NoBreak>
+                {" "}
                 You can also define {" "}
                 <Math>
                   $f(t)$
                 </Math>
                 {" "} to be, e.g.,
                 the {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -coordinate of the red particle
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "} of the red particle
                 at time {" "}
-                <Math>
-                  $t$
-                </Math>
-                ⁠
-                .
+                <NoBreak>
+                  <Math>
+                    $t$
+                  </Math>
+                  .
+                </NoBreak>
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -4126,51 +4219,67 @@ const Rest = () => {
                 {" "}
                 It is worth noting that, in fact, the
                 {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                - and {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -coordinates live separate
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "} live separate
                 lives. The rate of change of each
                 {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinate is some other {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinate,
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "} is some other {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate,
+                </NoBreak>
+                {" "}
                 and the rate of change of each {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -coordinate
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "}
                 is some other {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -coordinate—you could
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate—you
+                </NoBreak>
+                {" "} could
                 scramble a {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -coordinate, and the {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinates
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinate,
+                </NoBreak>
+                {" "} and the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates
+                </NoBreak>
+                {" "}
                 would never know!
               </OuterP>
             </SolutionNote>
@@ -4225,11 +4334,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 (now {" "}
-                <Math>
-                  $1$
-                </Math>
-                ⁠
-                -dimensional) of the red particle
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  -dimensional)
+                </NoBreak>
+                {" "} of the red particle
                 be the
               </OuterP>
               <Pause />
@@ -4239,11 +4350,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 (now {" "}
-                <Math>
-                  $1$
-                </Math>
-                ⁠
-                -dimensional) of the blue particle
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  -dimensional)
+                </NoBreak>
+                {" "} of the blue particle
                 and so on—you can “release” the particles
                 from their initial configuration and
                 simulate—or compute by a formula, if you have
@@ -4280,17 +4393,21 @@ const Rest = () => {
                 at play, or have a chance of eyeballing
                 the long-term evolution of the system, if
                 you were shown just the {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                -coordinates,
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinates,
+                </NoBreak>
+                {" "}
                 or just the {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                -coordinates, on their own.
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  -coordinates,
+                </NoBreak>
+                {" "} on their own.
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -4309,7 +4426,6 @@ const Rest = () => {
               {" "}
               such that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -4317,18 +4433,19 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               and such that {" "}
               <Math>
                 $f \ne 0$
               </Math>
               {" "} (or: {" "}
-              <Math>
-                $f \ne (x \ra 0)$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $f \ne (x \ra 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               pedantically) and such that {" "}
               <Math>
                 $f$
@@ -4355,7 +4472,6 @@ const Rest = () => {
             <OuterP>
               Set the velocity of particle
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -4363,11 +4479,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               equal to the position of particle
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -4375,7 +4489,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               and keep going by this pattern, making the
               velocity of each particle equal to the
@@ -4409,61 +4522,77 @@ const Rest = () => {
                 $f(t)$
               </Math>
               {" "} to be the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -
+              </NoBreak>
+              {" "}
               or {" "}
-              <Math>
-                $y$
-              </Math>
-              ⁠
-              -coordinate of any one of the particles
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of any one of the particles
               (e.g., particle {" "}
-              <Math>
-                $1$
-              </Math>
-              ⁠
-              ) at time {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                )
+              </NoBreak>
+              {" "} at time {" "}
               <Math>
                 $t$
               </Math>
               {" "} gives an
               oscillating function whose {" "}
-              <Math>
-                $17$
-              </Math>
-              ⁠
-              th derivative
+              <NoBreak>
+                <Math>
+                  $17$
+                </Math>
+                th
+              </NoBreak>
+              {" "} derivative
               is itself (because the rate of change of
               the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of particle {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of particle {" "}
               <Math>
                 $1$
               </Math>
               {" "} is the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of particle {" "}
-              <Math>
-                $5$
-              </Math>
-              ⁠
-              , etc, until
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of particle {" "}
+              <NoBreak>
+                <Math>
+                  $5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} etc, until
               we make it all the way back to particle {" "}
-              <Math>
-                $1$
-              </Math>
-              ⁠
-              ),
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ),
+              </NoBreak>
+              {" "}
               and that grows comparatively slowly over
               time. ~The End~
             </OuterP>
@@ -4481,11 +4610,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               ...and if you take the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinates of
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinates
+              </NoBreak>
+              {" "} of
               the particles over time, with time {" "}
               <Math>
                 $t = 0$
@@ -4493,11 +4624,13 @@ const Rest = () => {
               {" "}
               corresponding to the original configuration
               depicted where particle 1 is at {" "}
-              <Math>
-                $(1, 0)$
-              </Math>
-              ⁠
-              , you
+              <NoBreak>
+                <Math>
+                  $(1, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} you
               find {" "}
               <del>
                 paths
@@ -4627,7 +4760,6 @@ const Rest = () => {
               </Math>
               {" "} such that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -4635,7 +4767,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               but this is the case: the red arrows only
               “close the loop” after going through all
@@ -4662,11 +4793,12 @@ const Rest = () => {
               if you are so curious, the particle
               trajectories end up like so (shown only for
               {" "}
-              <Math>
-                $t \geq 0$
-              </Math>
-              ⁠
-              ):
+              <NoBreak>
+                <Math>
+                  $t \geq 0$
+                </Math>
+                ):
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/3j-T.svg" />
@@ -4721,20 +4853,23 @@ const Rest = () => {
             <OuterP>
               (The point is: if your velocity vector
               is tracing a circle centered at {" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              ⁠
-              —at
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                —at
+              </NoBreak>
+              {" "}
               a uniform rate—then you, too, are going
               around in a circle—it's just that your
               circle could be centered anywhere, not
               necessarily at {" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              ⁠
-              !)
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                !)
+              </NoBreak>
             </OuterP>
           </Solution>
         </Exercise>
@@ -4748,7 +4883,6 @@ const Rest = () => {
               Add elements to the drawing below until all
               parts of the fraction
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -4756,7 +4890,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               are found in the drawing. Can you thereby reveal
               the geometric meaning of the fraction?
@@ -4774,7 +4907,6 @@ const Rest = () => {
             <OuterP>
               In particular,
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -4782,19 +4914,16 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               is seen to have the form {" "}
               <i>
                 rise over run
               </i>
-              ⁠
               ,
               and is more precisely equal to the slope
               of the pale brown line going through the
               point
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -4802,11 +4931,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               at one end, and
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -4814,7 +4941,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               at the other end. 
               (This is also the case
@@ -4834,7 +4960,6 @@ const Rest = () => {
               <i>
                 difference quotient
               </i>
-              ⁠
               .
             </OuterP>
             <Pause />
@@ -4849,16 +4974,20 @@ const Rest = () => {
                 secant
               </i>
               {" "} [through {" "}
-              <Math>
-                $(x, f(x))$
-              </Math>
-              ⁠
-              , {" "}
-              <Math>
-                $(x+h, f(x+h))$
-              </Math>
-              ⁠
-              ].
+              <NoBreak>
+                <Math>
+                  $(x, f(x))$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $(x+h, f(x+h))$
+                </Math>
+                ].
+              </NoBreak>
+              {" "}
               “Secant” is a general term for “line passing
               through two specified points on another
               curve”.
@@ -4875,25 +5004,28 @@ const Rest = () => {
                   $h$
                 </Math>
                 {" "} drop to {" "}
-                <Math>
-                  $0$
-                </Math>
-                ⁠
-                , and if {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and if {" "}
                 <Math>
                   $f$
                 </Math>
                 {" "} is
                 differentiable at {" "}
-                <Math>
-                  $x$
-                </Math>
-                ⁠
-                , the
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} the
                 difference-quotient-a.k.a.-slope-of-the-secant
                 approaches
               </OuterP>
-              ⁠
               <Pause />
               <MathBlock>
                 $$
@@ -4901,26 +5033,28 @@ const Rest = () => {
                 $$
               </MathBlock>
               <Pause />
-              ⁠
               <OuterP>
                 because the secant approaches the tangent,
                 in that case, and the slope of the secant
                 is also, perforce, approaching the slope
                 of the tangent, which is {" "}
-                <Math>
-                  $f'(x)$
-                </Math>
-                ⁠
-                . 
+                <NoBreak>
+                  <Math>
+                    $f'(x)$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} 
                 (But you
                 cannot directly set {" "}
-                <Math>
-                  $h = 0$
-                </Math>
-                ⁠
-                , because
+                <NoBreak>
+                  <Math>
+                    $h = 0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} because
               </OuterP>
-              ⁠
               <Pause />
               <MathBlock>
                 $$
@@ -4928,7 +5062,6 @@ const Rest = () => {
                 $$
               </MathBlock>
               <Pause />
-              ⁠
               <OuterP>
                 is undefined.)
               </OuterP>
@@ -4944,7 +5077,6 @@ const Rest = () => {
               {" "}
               The identity
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -4952,26 +5084,28 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               happens to be true for differentiable
               functions {" "}
-              <Math>
-                $f$
-              </Math>
-              ⁠
-              , {" "}
-              <Math>
-                $g$
-              </Math>
-              ⁠
-              . What English-language
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                .
+              </NoBreak>
+              {" "} What English-language
               aphorism can summarize it? (This identity
               is known as the {" "}
               <i>
                 sum rule
               </i>
-              ⁠
               , by the way.)
             </OuterP>
           </ExerciseStatement>
@@ -5025,18 +5159,22 @@ const Rest = () => {
                 $t_0 + \Delta&#123;&#125;t$
               </Math>
               {" "} (here
-              “
-              ⁠
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              ⁠
-              ”, read “delta {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              ”, is a
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\Delta&#123;&#125;t$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} read “delta {" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} is a
               standard notation for a small amount of
               time):
             </OuterP>
@@ -5063,17 +5201,20 @@ const Rest = () => {
               </Math>
               {" "}
               have some value at {" "}
-              <Math>
-                $t_0$
-              </Math>
-              ⁠
-              , and, say, grow
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and, say, grow
               to be larger at {" "}
-              <Math>
-                $t_0 + \Delta&#123;&#125;t$
-              </Math>
-              ⁠
-              :
+              <NoBreak>
+                <Math>
+                  $t_0 + \Delta&#123;&#125;t$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/Axof.svg" />
@@ -5082,7 +5223,6 @@ const Rest = () => {
               More specifically, we are interested in
               the change in the value of the product
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5090,7 +5230,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               over said course of time.
             </OuterP>
@@ -5113,17 +5252,21 @@ const Rest = () => {
               that are crossing a hallway surveyed by
               a cat. One side of the hallway is time
               {" "}
-              <Math>
-                $t_0$
-              </Math>
-              ⁠
-              , the other side of the hallway is
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the other side of the hallway is
               time {" "}
-              <Math>
-                $t_0 + \Delta&#123;&#125;t$
-              </Math>
-              ⁠
-              . So great is their
+              <NoBreak>
+                <Math>
+                  $t_0 + \Delta&#123;&#125;t$
+                </Math>
+                .
+              </NoBreak>
+              {" "} So great is their
               terror that {" "}
               <Math>
                 $A$
@@ -5139,20 +5282,24 @@ const Rest = () => {
                 $A$
               </Math>
               {" "} will go, then {" "}
-              <Math>
-                $B$
-              </Math>
-              ⁠
-              . In so, we
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                .
+              </NoBreak>
+              {" "} In so, we
               can separate the following moments of
               interest (“moments” that exist inside the
               metaphorical timeline of the story, not
               on the {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              -number line, to be clear):
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                -number
+              </NoBreak>
+              {" "} line, to be clear):
               <ImageLeft
                 offset_x="0.5em"
                 offset_y="-0.5em"
@@ -5181,11 +5328,13 @@ const Rest = () => {
                     $A$
                   </Math>
                   {" "} has made it to {" "}
-                  <Math>
-                    $t_0 + \Delta&#123;&#125;t$
-                  </Math>
-                  ⁠
-                  ,
+                  <NoBreak>
+                    <Math>
+                      $t_0 + \Delta&#123;&#125;t$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "}
                   and {" "}
                   <Math>
                     $B$
@@ -5198,11 +5347,13 @@ const Rest = () => {
                 <li style="margin-top:0.5em">
                   <del>
                     when {" "}
-                    <Math>
-                      $B$
-                    </Math>
-                    ⁠
-                    's tail is sticking out of the
+                    <NoBreak>
+                      <Math>
+                        $B$
+                      </Math>
+                      's
+                    </NoBreak>
+                    {" "} tail is sticking out of the
                     cat's mouth, and
                   </del>
                   {" "} when {" "}
@@ -5224,7 +5375,6 @@ const Rest = () => {
             <OuterP>
               Correspondingly, the product
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5232,7 +5382,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               changes in two increments: first as {" "}
               <Math>
@@ -5270,22 +5419,25 @@ const Rest = () => {
                 $\Delta&#123;&#125;t$
               </Math>
               {" "} drop to {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              , what does
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} what does
               each term become?
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
               Dividing by {" "}
-              <Math>
-                $\Delta&#123;&#125;t$
-              </Math>
-              ⁠
-              :
+              <NoBreak>
+                <Math>
+                  $\Delta&#123;&#125;t$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/Im2x.svg" />
@@ -5296,14 +5448,15 @@ const Rest = () => {
                 $\Delta&#123;&#125;t$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              , the term
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the term
               on the left-hand side approaches
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5311,7 +5464,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               where we view {" "}
               <Math>
@@ -5334,7 +5486,6 @@ const Rest = () => {
               </Math>
               {" "} is the function
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5342,7 +5493,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               where {" "}
               <Math>
@@ -5354,11 +5504,13 @@ const Rest = () => {
               </Math>
               {" "} at time
               {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              , {" "}
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
               <Math>
                 $B(t)$
               </Math>
@@ -5368,13 +5520,14 @@ const Rest = () => {
               </Math>
               {" "} at time
               {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              .) Indeed, a ratio of the form
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                .)
+              </NoBreak>
+              {" "} Indeed, a ratio of the form
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5382,7 +5535,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               is a Newton quotient (cf. {" "}
               <NoBreak>
@@ -5397,7 +5549,6 @@ const Rest = () => {
               {" "}
               that approaches
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5405,18 +5556,19 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
                 $\Delta&#123;&#125;t$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              , assuming
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} assuming
               {" "}
               <Math>
                 $f$
@@ -5452,7 +5604,6 @@ const Rest = () => {
             <OuterP>
               has the form
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5460,14 +5611,14 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               for {" "}
-              <Math>
-                $f = AB$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $f = AB$
+                </Math>
+                .
+              </NoBreak>
               <ImageLeft src="/build-img/svgo-svg/LuWh.svg" />
             </OuterP>
             <OuterP class="indent-10">
@@ -5475,7 +5626,6 @@ const Rest = () => {
               its part, approaches
               <ImageRight src="/build-img/svgo-svg/5bqq.svg" />
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5483,22 +5633,22 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
                 $\Delta&#123;&#125;t$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              . Indeed,
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} Indeed,
               when you write it out, that term becomes
               the algebraic expression
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5506,19 +5656,19 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               where every term on top contains a
-              “
-              ⁠
-              <Math>
-                $B(t_0)$
-              </Math>
-              ⁠
-              ”, that can therefore be factored
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $B(t_0)$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} that can therefore be factored
               out, giving us the equivalent expression
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5526,11 +5676,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               that, you will notice, has the form
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5538,16 +5686,16 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               for {" "}
-              <Math>
-                $f = A$
-              </Math>
-              ⁠
-              , and thus approaches
+              <NoBreak>
+                <Math>
+                  $f = A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and thus approaches
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5555,18 +5703,19 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
                 $\Delta t$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              , by the property
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} by the property
               of the Newton quotient.
             </OuterP>
             <OuterP class="indent-10">
@@ -5576,7 +5725,6 @@ const Rest = () => {
               right-hand side, the second term approaches
               <ImageRight src="/build-img/svgo-svg/9OXS.svg" />
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5584,22 +5732,22 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
                 $\Delta&#123;&#125;t$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              , but the
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} but the
               reasons are slightly different! (Slightly.)
               Indeed, this term, written out, is
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5607,11 +5755,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               which is equal to
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5619,17 +5765,17 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               by factoring out the common term {" "}
-              <Math>
-                $A(t_0 + \Delta&#123;&#125;t)$
-              </Math>
-              ⁠
-              ;
+              <NoBreak>
+                <Math>
+                  $A(t_0 + \Delta&#123;&#125;t)$
+                </Math>
+                ;
+              </NoBreak>
+              {" "}
               and
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5637,11 +5783,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               approaches
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5649,18 +5793,19 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
                 $\Delta&#123;&#125;t$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              , like before
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} like before
               (when we had {" "}
               <Math>
                 $AB$
@@ -5670,14 +5815,15 @@ const Rest = () => {
                 $A$
               </Math>
               {" "} instead of {" "}
-              <Math>
-                $B$
-              </Math>
-              ⁠
-              )
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                )
+              </NoBreak>
+              {" "}
               whereas
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5685,11 +5831,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               —which is a bit different from before—approaches
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5697,24 +5841,27 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
                 $\Delta&#123;&#125;t$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              —so that makes up
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                —so
+              </NoBreak>
+              {" "} that makes up
               {" "}
-              <Math>
-                $A(t_0)B'(t_0)$
-              </Math>
-              ⁠
-              . (The
+              <NoBreak>
+                <Math>
+                  $A(t_0)B'(t_0)$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (The
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -5731,11 +5878,13 @@ const Rest = () => {
                 $B$
               </Math>
               {" "} at {" "}
-              <Math>
-                $t_0$
-              </Math>
-              ⁠
-              —that we are tacitly
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                —that
+              </NoBreak>
+              {" "} we are tacitly
               assuming—implies
             </OuterP>
             <Pause />
@@ -5758,17 +5907,17 @@ const Rest = () => {
                 $\Delta t$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              .)
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .)
+              </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
               Summarizing, the three terms separately
               approach
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5776,17 +5925,11 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
-            ⁠
-            <Pause />
             <MathBlock>
               $$
               B(t_0)A'(t_0)
               $$
             </MathBlock>
-            <Pause />
-            ⁠
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5794,7 +5937,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
@@ -5809,7 +5951,6 @@ const Rest = () => {
               close we make each term to its respective limit
               above, one can conclude that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -5817,24 +5958,26 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               for functions {" "}
-              <Math>
-                $A$
-              </Math>
-              ⁠
-              , {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
               <Math>
                 $B$
               </Math>
               {" "} differentiable at
               a point {" "}
-              <Math>
-                $t_0$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                .
+              </NoBreak>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -5847,7 +5990,6 @@ const Rest = () => {
                 <i>
                   product rule
                 </i>
-                ⁠
                 .
               </OuterP>
             </SolutionNote>
@@ -5869,19 +6011,22 @@ const Rest = () => {
                 </MathBlock>
               </Boxed>
               <OuterP>
-                with “
-                ⁠
-                <Math>
-                  $A'(t_0)B(t_0)$
-                </Math>
-                ⁠
-                ” in the middle. (But
+                with {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $A'(t_0)B(t_0)$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} in the middle. (But
                 which is the same, of course, as {" "}
-                <Math>
-                  $B(t_0)A'(t_0)$
-                </Math>
-                ⁠
-                .)
+                <NoBreak>
+                  <Math>
+                    $B(t_0)A'(t_0)$
+                  </Math>
+                  .)
+                </NoBreak>
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -5918,31 +6063,38 @@ const Rest = () => {
                 </MathBlock>
               </Boxed>
               <OuterP>
-                if we replace “
-                ⁠
-                <Math>
-                  $A$
-                </Math>
-                ⁠
-                ” and “
-                ⁠
-                <Math>
-                  $B$
-                </Math>
-                ⁠
-                ” by the more familiar “
-                ⁠
-                <Math>
-                  $f$
-                </Math>
-                ⁠
-                ” and “
-                ⁠
-                <Math>
-                  $g$
-                </Math>
-                ⁠
-                ”.
+                if we replace {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $A$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $B$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} by the more familiar {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $g$
+                  </Math>
+                  ”.
+                </NoBreak>
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -5956,30 +6108,31 @@ const Rest = () => {
               {" "}
               What does...
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
               A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h) \,\times\, &#123;A_i(t_0 + h) - A_i(t_0)\over h&#125; \,\times\, A_&#123;i + 1&#125;(t_0) \,\times\, \cdots  \,\times\, A_n(t_0)
               $$
+              <ImageRight
+                src="/build-img/svgo-svg/6ZYS.svg"
+                offset_x="2rem"
+                compensate_offset_x_for_large_text_columns={true}
+              />
             </MathBlock>
             <Pause />
-            ⁠
-            <ImageRight
-              src="/build-img/svgo-svg/6ZYS.svg"
-              offset_x="2rem"
-            />
             <OuterP>
               ...approach as {" "}
               <Math>
                 $h$
               </Math>
               {" "} goes to {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              , if {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} if {" "}
               <Math>
                 $A_1, \dots, A_n$
               </Math>
@@ -5989,11 +6142,12 @@ const Rest = () => {
                 $: \rr \ra \rr$
               </Math>
               {" "} are differentiable at the point {" "}
-              <Math>
-                $t_0$
-              </Math>
-              ⁠
-              ?
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -6018,7 +6172,6 @@ const Rest = () => {
               </NoBreak>
               {" "}{" "}
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6026,19 +6179,22 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               with {" "}
-              <Math>
-                $f = A_i$
-              </Math>
-              ⁠
-              , {" "}
-              <Math>
-                $x = t_0$
-              </Math>
-              ⁠
-              , per which
+              <NoBreak>
+                <Math>
+                  $f = A_i$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $x = t_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} per which
               (Exercise {" "}
               <InChapterLink
                 href="/article/chapter4#_71_hgi_"
@@ -6048,7 +6204,6 @@ const Rest = () => {
               </InChapterLink>
               {" "} Note 3), the fraction approaches
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6056,39 +6211,45 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
                 $h$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              , given also the assumption
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} given also the assumption
               that each of the functions {" "}
-              <Math>
-                $A_1$
-              </Math>
-              ⁠
-              , ..., {" "}
+              <NoBreak>
+                <Math>
+                  $A_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} ..., {" "}
               <Math>
                 $A_n$
               </Math>
               {" "}
               (including {" "}
-              <Math>
-                $A_i$
-              </Math>
-              ⁠
-              ) is differentiable at {" "}
-              <Math>
-                $t_0$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $A_i$
+                </Math>
+                )
+              </NoBreak>
+              {" "} is differentiable at {" "}
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                .
+              </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
               Next down in order of interesting-ness we presumably
@@ -6136,13 +6297,14 @@ const Rest = () => {
                 $A_1$
               </Math>
               {" "} at {" "}
-              <Math>
-                $t_0$
-              </Math>
-              ⁠
-              , which implies that
+              <NoBreak>
+                <Math>
+                  $t_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which implies that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6150,11 +6312,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               approaches
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6162,18 +6322,19 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
                 $h$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              . (These various
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (These various
               technicalities concerning a generic function
               {" "}
               <Math>
@@ -6181,19 +6342,22 @@ const Rest = () => {
               </Math>
               {" "} are mentioned in the solution
               to Exercise 17.) Similarly for {" "}
-              <Math>
-                $A_2(t_0 + h)$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $A_2(t_0 + h)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               etc, up to {" "}
-              <Math>
-                $A_&#123;i-1&#125;(t_0 + h)$
-              </Math>
-              ⁠
-              , so
+              <NoBreak>
+                <Math>
+                  $A_&#123;i-1&#125;(t_0 + h)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6201,11 +6365,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               approaches
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6213,18 +6375,19 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               as {" "}
               <Math>
                 $h$
               </Math>
               {" "} approaches {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              . (If some quantities are
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (If some quantities are
               each approaching a different value, then the
               product-of-the-quantities will approach the
               product-of-the-values—something not mentioned
@@ -6256,11 +6419,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               where it is, irrespective of the value of {" "}
-              <Math>
-                $h$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
               So that was easy! Altogether, the answer is
               therefore:
             </OuterP>
@@ -6268,13 +6433,15 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/hUGM.svg" />
             <Pause />
             <OuterP>
-              ...with a lone “
-              ⁠
-              <Math>
-                $A_i'$
-              </Math>
-              ⁠
-              ” in the middle.
+              ...with a lone {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $A_i'$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} in the middle.
             </OuterP>
           </Solution>
         </Exercise>
@@ -6363,56 +6530,71 @@ const Rest = () => {
                     </Math>
                     {" "}
                     for all functions {" "}
-                    <Math>
-                      $f$
-                    </Math>
-                    ⁠
-                    , {" "}
-                    <Math>
-                      $g$
-                    </Math>
-                    ⁠
-                    , {" "}
+                    <NoBreak>
+                      <Math>
+                        $f$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $g$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
                     <Math>
                       $h$
                     </Math>
                     {" "} such that
                     {" "}
-                    <Math>
-                      $h : D \ra C$
-                    </Math>
-                    ⁠
-                    , {" "}
-                    <Math>
-                      $g : C \ra B$
-                    </Math>
-                    ⁠
-                    , {" "}
+                    <NoBreak>
+                      <Math>
+                        $h : D \ra C$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $g : C \ra B$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
                     <Math>
                       $f : B \ra A$
                     </Math>
                     {" "}
                     [for arbitrary sets {" "}
-                    <Math>
-                      $A$
-                    </Math>
-                    ⁠
-                    , {" "}
-                    <Math>
-                      $B$
-                    </Math>
-                    ⁠
-                    , {" "}
-                    <Math>
-                      $C$
-                    </Math>
-                    ⁠
-                    , {" "}
-                    <Math>
-                      $D$
-                    </Math>
-                    ⁠
-                    ]
+                    <NoBreak>
+                      <Math>
+                        $A$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $B$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $C$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "} {" "}
+                    <NoBreak>
+                      <Math>
+                        $D$
+                      </Math>
+                      ]
+                    </NoBreak>
                   </i>
                 </p>
               </Item>
@@ -6560,7 +6742,17 @@ const Rest = () => {
                 We never took the time to prove the associativity
                 of function addition, but it is easy to prove!
                 (For other proofs see Exercise 32, Exercise 33, as
-                well as Exercise 9, Chapter 3.)
+                well as Exercise 9, {" "}
+                <NoBreak>
+                  <a
+                    href="/article/chapter3#_54_hgi_"
+                    class="handle-out-chapter-link"
+                  >
+                    Chapter 3
+                  </a>
+                  .)
+                </NoBreak>
+                {" "}{" "}
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -6574,7 +6766,6 @@ const Rest = () => {
               {" "}
               Apply the definition
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6582,12 +6773,10 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               of function multiplication
               in order to show that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6595,29 +6784,33 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               for all functions {" "}
-              <Math>
-                $f, g, h : \rr \ra \rr$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $f, g, h : \rr \ra \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               or, namely, to show that
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              (
-              ⁠
-              <Math>
-                $f$
-              </Math>
+              <NoBreak>
+                (
+                <Math>
+                  $f$
+                </Math>
+              </NoBreak>
               {" "} times {" "}
-              <Math>
-                $g$
-              </Math>
-              ⁠
-              ) times {" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                )
+              </NoBreak>
+              {" "} times {" "}
               <Math>
                 $h$
               </Math>
@@ -6631,33 +6824,36 @@ const Rest = () => {
               <Math>
                 $f$
               </Math>
-              {" "} times (
-              ⁠
-              <Math>
-                $g$
-              </Math>
               {" "} times {" "}
-              <Math>
-                $h$
-              </Math>
-              ⁠
-              )
+              <NoBreak>
+                (
+                <Math>
+                  $g$
+                </Math>
+              </NoBreak>
+              {" "} times {" "}
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                )
+              </NoBreak>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
               for all functions {" "}
-              <Math>
-                $f, g, h : \rr \ra \rr$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $f, g, h : \rr \ra \rr$
+                </Math>
+                .
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
               It is necessary and sufficient to show that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6665,11 +6861,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               is the same as
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6677,17 +6871,17 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               for an arbitrary input {" "}
-              <Math>
-                $u \in \rr$
-              </Math>
-              ⁠
-              , in order to
+              <NoBreak>
+                <Math>
+                  $u \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} in order to
               show that
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6695,11 +6889,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               and
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6707,7 +6899,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               are the same function. (Function equality is
               based on input-output behavior: two functions are
@@ -6727,7 +6918,6 @@ const Rest = () => {
             <OuterP class="indent-10">
               Starting up,
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6735,12 +6925,10 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               by the definition of function multiplication,
               and
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6748,11 +6936,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               likewise. Moreover,
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6760,11 +6946,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               and
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6772,11 +6956,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               by the same definition again. Therefore,
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6784,11 +6966,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               on the one hand, and
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6796,11 +6976,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               on the other hand. But
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6808,7 +6986,6 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               by the associativity of ordinary real number
               multiplication. (Not function multiplication:
@@ -6816,10 +6993,8 @@ const Rest = () => {
               <i>
                 real number multiplication
               </i>
-              ⁠
               .) So
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6827,11 +7002,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               equals
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -6839,14 +7012,15 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               for arbitrary {" "}
-              <Math>
-                $u$
-              </Math>
-              ⁠
-              , which completes the proof.
+              <NoBreak>
+                <Math>
+                  $u$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which completes the proof.
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -6893,7 +7067,6 @@ const Rest = () => {
                 {" "}
                 By this result, we can write
               </OuterP>
-              ⁠
               <Pause />
               <MathBlock>
                 $$
@@ -6901,7 +7074,6 @@ const Rest = () => {
                 $$
               </MathBlock>
               <Pause />
-              ⁠
               <OuterP>
                 without any parentheses at all: it
                 doesn't matter whether we think of this product
@@ -6910,11 +7082,13 @@ const Rest = () => {
                   $(fg)h$
                 </Math>
                 {" "} or {" "}
-                <Math>
-                  $f(gh)$
-                </Math>
-                ⁠
-                , the result is the same.
+                <NoBreak>
+                  <Math>
+                    $f(gh)$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} the result is the same.
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -6928,17 +7102,20 @@ const Rest = () => {
               {" "}
               Imagine a single particle in a one-dimensional
               world, whose velocity equals its position; at {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               the particle is sitting at {" "}
-              <Math>
-                $x = 1$
-              </Math>
-              ⁠
-              :
+              <NoBreak>
+                <Math>
+                  $x = 1$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/vEPq.svg" />
@@ -6946,11 +7123,12 @@ const Rest = () => {
             <OuterP>
               If we play time backward, will the particle
               ever reach {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              ⁠
-              ?
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -6988,30 +7166,30 @@ const Rest = () => {
                 at least
               </i>
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
               &#123;0.5 \over 1&#125; = 0.5
               $$
+              <ImageLeft
+                src="/build-img/svgo-svg/SiXb.svg"
+                offset_x="10em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
             </MathBlock>
             <Pause />
-            ⁠
-            <ImageLeft
-              src="/build-img/svgo-svg/SiXb.svg"
-              offset_x="10em"
-            />
             <OuterP>
               time to cross, because the maximum speed of the particle
               inside of that interval is {" "}
-              <Math>
-                $1$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
               Similarly, the interval from
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -7019,11 +7197,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               to
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -7031,14 +7207,12 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               takes {" "}
               <i>
                 at least
               </i>
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -7046,18 +7220,18 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               time to cross, because the maximum speed of the particle
               inside of that interval is {" "}
-              <Math>
-                $0.5$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $0.5$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
               Again, the interval from
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -7065,11 +7239,9 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               to
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -7077,14 +7249,12 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               takes {" "}
               <i>
                 at least
               </i>
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -7092,18 +7262,18 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               time to cross, because the maximum speed of the particle
               inside of that interval is {" "}
-              <Math>
-                $0.25$
-              </Math>
-              ⁠
-              —etc—each interval
+              <NoBreak>
+                <Math>
+                  $0.25$
+                </Math>
+                —etc—each
+              </NoBreak>
+              {" "} interval
               takes at least
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -7111,22 +7281,25 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
               units of time to cross, but there are infinitely
               many such intervals, so it takes infinitely much time to
               crawl back to {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              . (I.e., the particle never makes it to
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (I.e., the particle never makes it to
               {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              ⁠
-              , no matter how far back in time we look.)
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} no matter how far back in time we look.)
             </OuterP>
             <Pause />
             <SolutionNote id="_77_hgi_">
@@ -7147,7 +7320,6 @@ const Rest = () => {
                 is a fixed multiple of the previous number.
                 For example,
               </OuterP>
-              ⁠
               <Pause />
               <MathBlock>
                 $$
@@ -7155,18 +7327,18 @@ const Rest = () => {
                 $$
               </MathBlock>
               <Pause />
-              ⁠
               <OuterP>
                 is a (finite) geometric progression, because each number
                 is the previous number multiplied by {" "}
-                <Math>
-                  $3$
-                </Math>
-                ⁠
-                ,
+                <NoBreak>
+                  <Math>
+                    $3$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
                 and
               </OuterP>
-              ⁠
               <Pause />
               <MathBlock>
                 $$
@@ -7174,15 +7346,16 @@ const Rest = () => {
                 $$
               </MathBlock>
               <Pause />
-              ⁠
               <OuterP>
                 is an (infinite) geometric progression, because each number
                 is the previous multiplied by {" "}
-                <Math>
-                  $0.5$
-                </Math>
-                ⁠
-                . A so-called
+                <NoBreak>
+                  <Math>
+                    $0.5$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} A so-called
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -7193,7 +7366,6 @@ const Rest = () => {
                 is a sequence of numbers in which each number
                 adds a fixed quantity to the previous. For example,
               </OuterP>
-              ⁠
               <Pause />
               <MathBlock>
                 $$
@@ -7201,7 +7373,6 @@ const Rest = () => {
                 $$
               </MathBlock>
               <Pause />
-              ⁠
               <OuterP>
                 is an infinite arithmetic progression in which each number
                 adds {" "}
@@ -7210,7 +7381,6 @@ const Rest = () => {
                 </Math>
                 {" "} to the previous, and
               </OuterP>
-              ⁠
               <Pause />
               <MathBlock>
                 $$
@@ -7218,7 +7388,6 @@ const Rest = () => {
                 $$
               </MathBlock>
               <Pause />
-              ⁠
               <OuterP>
                 is a finite arithmetic progression in which each number
                 adds {" "}
@@ -7239,23 +7408,28 @@ const Rest = () => {
               {" "}
               Take a system of two particles on the real
               line; at time {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              ⁠
-              , the first particle (yellow)
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the first particle (yellow)
               is at {" "}
-              <Math>
-                $x = -1$
-              </Math>
-              ⁠
-              , while the second one (blue)
+              <NoBreak>
+                <Math>
+                  $x = -1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} while the second one (blue)
               is at {" "}
-              <Math>
-                $x = 1$
-              </Math>
-              ⁠
-              :
+              <NoBreak>
+                <Math>
+                  $x = 1$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/zLWR.svg" />
@@ -7285,18 +7459,22 @@ const Rest = () => {
                 $t = 0$
               </Math>
               {" "} the blue particle has velocity {" "}
-              <Math>
-                $-1$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $-1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               which is the position of the yellow particle,
               and the yellow particle has velocity {" "}
-              <Math>
-                $1$
-              </Math>
-              ⁠
-              , which
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which
               is the position of the blue particle:
             </OuterP>
             <Pause />
@@ -7311,11 +7489,13 @@ const Rest = () => {
               {" "} and then
               start slowing down, as the opposing particle
               inches closer to {" "}
-              <Math>
-                $0$
-              </Math>
-              ⁠
-              . The result is two graphs that
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} The result is two graphs that
               form a mirror-image radioactive decay:
             </OuterP>
             <Pause />
@@ -7331,11 +7511,13 @@ const Rest = () => {
                 $\pm 1$
               </Math>
               {" "} at {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              ⁠
-              , otherwise the graphs are not
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} otherwise the graphs are not
               uniquely determined, as they can be translated
               together left or right by any amount while
               maintaining the former condition about slope.)
@@ -7419,11 +7601,12 @@ const Rest = () => {
                   $1$
                 </Math>
                 {" "} at {" "}
-                <Math>
-                  $t = 0$
-                </Math>
-                ⁠
-                :
+                <NoBreak>
+                  <Math>
+                    $t = 0$
+                  </Math>
+                  :
+                </NoBreak>
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/a0qL.svg" />
@@ -7437,24 +7620,30 @@ const Rest = () => {
                 </Math>
                 {" "} axis flips the sign of the slope without
                 affecting the value of {" "}
-                <Math>
-                  $y$
-                </Math>
-                ⁠
-                , so that an equality of
-                the form “
-                ⁠
-                <Math>
-                  $y = \te&#123;slope&#125;$
-                </Math>
-                ⁠
-                ” becomes “
-                ⁠
-                <Math>
-                  $y = -\te&#123;slope&#125;$
-                </Math>
-                ⁠
-                ”,
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} so that an equality of
+                the form {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $y = \te&#123;slope&#125;$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} becomes {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $y = -\te&#123;slope&#125;$
+                  </Math>
+                  ”,
+                </NoBreak>
+                {" "}
                 and vice-versa.
               </OuterP>
               <OuterP class="indent-10">
@@ -7499,18 +7688,21 @@ const Rest = () => {
               maintained at all points in time.
               If the configuration above shows time
               {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              ⁠
-              , how will the positions of the
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} how will the positions of the
               particles evolve? Discuss both positive and
               negative values of {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                .
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -7534,11 +7726,12 @@ const Rest = () => {
               will ensue a kind of  four-particle
               explosion that goes up and to the right,
               off to {" "}
-              <Math>
-                $(+\infty, +\infty)$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $(+\infty, +\infty)$
+                </Math>
+                .
+              </NoBreak>
               <ImageRight
                 src="/build-img/svgo-svg/7A0o.svg"
                 offset_y="150px"
@@ -7556,11 +7749,12 @@ const Rest = () => {
               head (unless you have a sudden flash of insight)
               what will happen for larger negative
               values of {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                .
+              </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
               HOWEVER.
@@ -7627,11 +7821,12 @@ const Rest = () => {
               translate of the original particles, such
               that the circle on which they lie is
               centered at {" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              ⁠
-              :
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/rYi5.svg" />
@@ -7643,11 +7838,13 @@ const Rest = () => {
                 $(x, y) = (2, 4)$
               </Math>
               {" "} at {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               that we draw as four quarter-pies
               of different colors, like a UNO card:
             </OuterP>
@@ -7696,11 +7893,13 @@ const Rest = () => {
                 $(0, 0)$
               </Math>
               {" "} and {" "}
-              <Math>
-                $(2, 4)$
-              </Math>
-              ⁠
-              , as their velocity—being
+              <NoBreak>
+                <Math>
+                  $(2, 4)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as their velocity—being
               equal to their position—stays parallel to the
               line between them and the origin, meaning
               they are “stuck” to that line.
@@ -7754,11 +7953,12 @@ const Rest = () => {
               </Math>
               {" "}
               and {" "}
-              <Math>
-                $(2, 4)$
-              </Math>
-              ⁠
-              ...
+              <NoBreak>
+                <Math>
+                  $(2, 4)$
+                </Math>
+                ...
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/VxRW.svg" />
@@ -7811,11 +8011,13 @@ const Rest = () => {
                 $x = 1$
               </Math>
               {" "} at {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              ⁠
-              .
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
               (!!)
               <ImageLeft
                 src="/build-img/svgo-svg/RFxt.svg"
@@ -7836,7 +8038,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -7846,11 +8047,13 @@ const Rest = () => {
             <OuterP>
               for the function that gives
               the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the purple-white particle
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the purple-white particle
               as a function of time (in more detail,
             </OuterP>
             <Pause />
@@ -7860,7 +8063,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x : \rr \ra \rr$
                 </Math>
@@ -7877,7 +8079,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x(2)$
                 </Math>
@@ -7886,18 +8087,22 @@ const Rest = () => {
             <Pause />
             <OuterP>
               is the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of
               the purple-white particle at
               {" "}
-              <Math>
-                $t = 2$
-              </Math>
-              ⁠
-              , etc), and write
+              <NoBreak>
+                <Math>
+                  $t = 2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} etc), and write
             </OuterP>
             <Pause />
             <CentralDisplay>
@@ -7906,7 +8111,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -7916,11 +8120,13 @@ const Rest = () => {
             <OuterP>
               for the function that gives
               the {" "}
-              <Math>
-                $y$
-              </Math>
-              ⁠
-              -coordinate of the purple-white
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the purple-white
               particle as a function of time, and so on
               for all the other particles.
             </OuterP>
@@ -7934,7 +8140,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' =$
                 </Math>
@@ -7943,7 +8148,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -7953,17 +8157,21 @@ const Rest = () => {
             <OuterP>
               because the rate of change of the
               {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of the purple-white particle
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the purple-white particle
               is the value of the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "}
               of the yellow-white particle; we also have
             </OuterP>
             <Pause />
@@ -7973,7 +8181,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' \,\,+$
                 </Math>
@@ -7982,7 +8189,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' =$
                 </Math>
@@ -7991,7 +8197,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_x +$
                 </Math>
@@ -8000,7 +8205,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8017,12 +8221,10 @@ const Rest = () => {
                 <Math>
                   $($
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,\,+$
                 </Math>
@@ -8031,7 +8233,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_x)' =$
                 </Math>
@@ -8040,7 +8241,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_x +$
                 </Math>
@@ -8049,7 +8249,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8100,7 +8299,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_x =$
                 </Math>
@@ -8109,7 +8307,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8118,7 +8315,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8128,7 +8324,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_y =$
                 </Math>
@@ -8137,7 +8332,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8146,7 +8340,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8156,7 +8349,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_x =$
                 </Math>
@@ -8165,7 +8357,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8174,7 +8365,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8184,7 +8374,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_y =$
                 </Math>
@@ -8193,7 +8382,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8202,7 +8390,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8212,7 +8399,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_x =$
                 </Math>
@@ -8221,7 +8407,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8230,7 +8415,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8240,7 +8424,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_y =$
                 </Math>
@@ -8249,7 +8432,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8258,7 +8440,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8268,7 +8449,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_x =$
                 </Math>
@@ -8277,7 +8457,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8286,7 +8465,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8296,7 +8474,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_y =$
                 </Math>
@@ -8305,7 +8482,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8314,7 +8490,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8339,16 +8514,13 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' = ($
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8357,7 +8529,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_x\!\rt&#123;0.05&#125;)' =$
                 </Math>
@@ -8366,7 +8537,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8375,7 +8545,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_x =$
                 </Math>
@@ -8384,7 +8553,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8394,16 +8562,13 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_y\,\!\!\!' = ($
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8412,7 +8577,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_y\!\rt&#123;0.05&#125;)' =$
                 </Math>
@@ -8421,7 +8585,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8430,7 +8593,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_y =$
                 </Math>
@@ -8439,7 +8601,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8449,16 +8610,13 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' = ($
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8467,7 +8625,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_x\!\rt&#123;0.05&#125;)' =$
                 </Math>
@@ -8476,7 +8633,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8485,7 +8641,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
                 />
-                ⁠
                 <Math>
                   $_x =$
                 </Math>
@@ -8494,7 +8649,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8504,16 +8658,13 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_y\,\!\!\!' = ($
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8522,7 +8673,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_y\!\rt&#123;0.05&#125;)' =$
                 </Math>
@@ -8531,7 +8681,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8540,7 +8689,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
                 />
-                ⁠
                 <Math>
                   $_y =$
                 </Math>
@@ -8549,7 +8697,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8559,25 +8706,20 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' = ($
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
                 />
-                ⁠
                 <Math>
                   $_x\!\rt&#123;0.05&#125;)' =$
                 </Math>
@@ -8586,7 +8728,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8595,7 +8736,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
                 />
-                ⁠
                 <Math>
                   $_x =$
                 </Math>
@@ -8604,7 +8744,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8614,16 +8753,13 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_y\,\!\!\!' = ($
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8632,7 +8768,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
                 />
-                ⁠
                 <Math>
                   $_y\!\rt&#123;0.05&#125;)' =$
                 </Math>
@@ -8641,7 +8776,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8650,7 +8784,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
                 />
-                ⁠
                 <Math>
                   $_y =$
                 </Math>
@@ -8659,7 +8792,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8669,16 +8801,13 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' = ($
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8687,7 +8816,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
                 />
-                ⁠
                 <Math>
                   $_x\!\rt&#123;0.05&#125;)' =$
                 </Math>
@@ -8696,7 +8824,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x \,+$
                 </Math>
@@ -8705,7 +8832,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_x =$
                 </Math>
@@ -8714,7 +8840,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8724,16 +8849,13 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_y\,\!\!\!' = ($
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8742,7 +8864,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
                 />
-                ⁠
                 <Math>
                   $_y\!\rt&#123;0.05&#125;)' =$
                 </Math>
@@ -8751,7 +8872,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_y \,+$
                 </Math>
@@ -8760,7 +8880,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_y =$
                 </Math>
@@ -8769,7 +8888,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8786,7 +8904,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' =$
                 </Math>
@@ -8795,7 +8912,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8805,7 +8921,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_y\,\!\!\!' =$
                 </Math>
@@ -8814,7 +8929,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8824,7 +8938,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' =$
                 </Math>
@@ -8833,7 +8946,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8843,7 +8955,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_y\,\!\!\!' =$
                 </Math>
@@ -8852,7 +8963,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8862,7 +8972,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' =$
                 </Math>
@@ -8871,7 +8980,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8881,7 +8989,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_y\,\!\!\!' =$
                 </Math>
@@ -8890,7 +8997,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8900,7 +9006,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_x\,\!\!\!' =$
                 </Math>
@@ -8909,7 +9014,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_x$
                 </Math>
@@ -8919,7 +9023,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_y\,\!\!\!' =$
                 </Math>
@@ -8928,7 +9031,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_y$
                 </Math>
@@ -8953,7 +9055,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) =$
                 </Math>
@@ -8962,16 +9063,13 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) \,+$
                 </Math>
-                ⁠
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
@@ -8980,7 +9078,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0)$
                 </Math>
@@ -8990,7 +9087,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) =$
                 </Math>
@@ -8999,7 +9095,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) \,+$
                 </Math>
@@ -9008,7 +9103,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
@@ -9017,7 +9111,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0)$
                 </Math>
@@ -9027,7 +9120,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) =$
                 </Math>
@@ -9036,7 +9128,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) \,+$
                 </Math>
@@ -9045,7 +9136,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
@@ -9054,7 +9144,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0)$
                 </Math>
@@ -9064,7 +9153,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) =$
                 </Math>
@@ -9073,7 +9161,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) \,+$
                 </Math>
@@ -9082,7 +9169,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
@@ -9091,7 +9177,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0)$
                 </Math>
@@ -9101,7 +9186,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) =$
                 </Math>
@@ -9110,7 +9194,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) \,+$
                 </Math>
@@ -9119,7 +9202,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
@@ -9128,7 +9210,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0)$
                 </Math>
@@ -9138,7 +9219,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) =$
                 </Math>
@@ -9147,7 +9227,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) \,+$
                 </Math>
@@ -9156,7 +9235,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
@@ -9165,7 +9243,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0)$
                 </Math>
@@ -9175,7 +9252,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) =$
                 </Math>
@@ -9184,7 +9260,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) \,+$
                 </Math>
@@ -9193,7 +9268,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
@@ -9202,7 +9276,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0)$
                 </Math>
@@ -9212,7 +9285,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) =$
                 </Math>
@@ -9221,7 +9293,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) \,+$
                 </Math>
@@ -9230,7 +9301,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
@@ -9239,7 +9309,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0)$
                 </Math>
@@ -9256,7 +9325,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
@@ -9265,7 +9333,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0)$
                 </Math>
@@ -9275,7 +9342,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
@@ -9284,7 +9350,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0)$
                 </Math>
@@ -9294,7 +9359,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
@@ -9303,7 +9367,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0)$
                 </Math>
@@ -9313,7 +9376,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
@@ -9322,7 +9384,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0)$
                 </Math>
@@ -9332,7 +9393,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
@@ -9341,7 +9401,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0)$
                 </Math>
@@ -9351,7 +9410,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
@@ -9360,7 +9418,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0)$
                 </Math>
@@ -9370,7 +9427,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0) = 2\,\,+$
                 </Math>
@@ -9379,7 +9435,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_x(0)$
                 </Math>
@@ -9389,7 +9444,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0) = 2\,\,+$
                 </Math>
@@ -9398,7 +9452,6 @@ const Rest = () => {
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
                 />
-                ⁠
                 <Math>
                   $_y(0)$
                 </Math>
@@ -9445,11 +9498,13 @@ const Rest = () => {
               </Math>
               {" "} back up and to the right
               by the vector {" "}
-              <Math>
-                $(2, 4)$
-              </Math>
-              ⁠
-              , which brings those
+              <NoBreak>
+                <Math>
+                  $(2, 4)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which brings those
               positions back to the original positions of {" "}
               <NoBreak>
                 <InlineImage
@@ -9509,11 +9564,12 @@ const Rest = () => {
                 src="/build-img/svgo-svg/k4Y8.svg"
               />
               {" "} are in the desired place at {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              ⁠
-              !
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                !
+              </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
               In other words, the proposed definitions of {" "}
@@ -9558,22 +9614,25 @@ const Rest = () => {
               UNO particle) is moving at exponential rate along
               a half-line. In particular, the particles remain
               at constant distance from one another for all {" "}
-              <Math>
-                $t$
-              </Math>
-              ⁠
-              ,
+              <NoBreak>
+                <Math>
+                  $t$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
               whether that seems intuitive or not.
             </OuterP>
             <OuterP class="indent-10">
               Concretely,
               the particle trajectories
               end up like so, locally around {" "}
-              <Math>
-                $t = 0$
-              </Math>
-              ⁠
-              :
+              <NoBreak>
+                <Math>
+                  $t = 0$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/KERt.svg" />
@@ -9585,11 +9644,13 @@ const Rest = () => {
               </Math>
               {" "} to
               {" "}
-              <Math>
-                $t \approx 1$
-              </Math>
-              ⁠
-              —winding further back in time would produce
+              <NoBreak>
+                <Math>
+                  $t \approx 1$
+                </Math>
+                —winding
+              </NoBreak>
+              {" "} further back in time would produce
               near-perfect counterclockwise circular motion,
               as the black particles rush up to {" "}
               <Math>
@@ -9608,11 +9669,13 @@ const Rest = () => {
                 </i>
                 {" "}
                 When we said that, for {" "}
-                <Math>
-                  $t &gt; 0$
-                </Math>
-                ⁠
-                , there ensues
+                <NoBreak>
+                  <Math>
+                    $t &gt; 0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} there ensues
               </OuterP>
               <Pause />
               <CentralDisplay>
@@ -9679,11 +9742,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 —a vector-valued quantity. (Or {" "}
-                <Math>
-                  $\pm$
-                </Math>
-                ⁠
-                -valued quantity
+                <NoBreak>
+                  <Math>
+                    $\pm$
+                  </Math>
+                  -valued
+                </NoBreak>
+                {" "} quantity
                 in one dimension.)
               </OuterP>
             </SolutionNote>
@@ -9696,7 +9761,7 @@ const Rest = () => {
                 Exercise 24.
               </b>
               {" "}
-              The function below is also the red
+              The function below is also the blue
               curve from {" "}
               <NoBreak>
                 <InChapterLink
@@ -9725,15 +9790,17 @@ const Rest = () => {
               </NoBreak>
               {" "}
               Knowing that this function is the {" "}
-              <Math>
-                $x$
-              </Math>
-              ⁠
-              -coordinate of a
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of a
               point rotating at unit speed around a unit
-              circle, what is an approximation to the
-              circumference of a unit circle that one can
-              deduce just by looking at the graph?
+              circle what is an approximation to the
+              circumference of a unit circle that can be
+              deduced, by staring at the graph?
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/njEr.svg" />
@@ -9744,7 +9811,7 @@ const Rest = () => {
               circumference of the unit circle is equal to the
               amount of time it takes the particle to complete one
               revolution of the circle. That is, for example, the
-              length of this yellow interval:
+              time covered by the yellow interval below, from crest to crest:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/KEtq.svg" />
@@ -9753,7 +9820,6 @@ const Rest = () => {
               From the graph, then, it seems as if the circumference
               of a unit circle is
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -9761,26 +9827,35 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
-              or thereabouts.
-              However, this is not the “correct” answer—indeed, we can do
-              a little better by noticing that the graph seems
-              to go almost exactly through the point {" "}
-              <Math>
-                $(11, 0)$
-              </Math>
-              ⁠
-              , a
-              few units over to the right (!):
+              or thereabouts. However, a bit of detective work
+              reveals a more precise approximation—indeed, 
+              note that the graph seems to go almost exactly through
+              the point {" "}
+              <NoBreak>
+                <Math>
+                  $(11, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} a few units over to the right:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/htXO.svg" />
             <Pause />
             <OuterP>
-              More particularly, this implies that
+              This implies that in
             </OuterP>
-            ⁠
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 11
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              units of time—or nearly so—the particle does
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -9788,30 +9863,18 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
-              quarter-turns of the circle correspond to
-            </OuterP>
-            ⁠
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \approx 11
-              $$
-            </MathBlock>
-            <Pause />
-            ⁠
-            <OuterP>
-              units of time, as each half-bump corresponds to a
-              quarter-turn (if you think about it):
+              quarter-turns,
+              as each half-bump corresponds to a
+              quarter-turn (if you think about it), and there
+              are seven half-bumps:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/9cV2.svg" />
             <Pause />
             <OuterP>
-              So....
+              Thus
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -9819,40 +9882,49 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
-              is an approximation to 
-              the time it takes the particle to do one quarter-turn,
-              i.e., an approximation to
-              the quarter-circumference of the circle, and
+              units of time is approximately one quarter-turn, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              units of time is approximately one full
+              revolution (four quarter-turns), i.e.,
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
-                \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125; = 6.\overline&#123;285714&#125;
+                \Large &#123;44 \over 7&#125; = 6.\overline&#123;285714&#125;
                 $$
               </MathBlock>
             </Boxed>
             <OuterP>
-              is an approximation to the full circumference of
-              the unit circle,
-              which is an approximation that
-              ends up being about half-a-part-in-a-thousand too
-              large (
-              ⁠
-              <Math>
-                $0.040249943...\%$
-              </Math>
+              is an approximation to the circumference of a
+              unit circle, which is an approximation that ends
+              up being about half-a-part-in-a-thousand too
+              large {" "}
+              <NoBreak>
+                (
+                <Math>
+                  $0.040249943...\%$
+                </Math>
+              </NoBreak>
+              {" "} too large) (or just:
               {" "}
-              too large) (or just: “
-              ⁠
-              <Math>
-                $0.00040249943...$
-              </Math>
-              {" "} too large”).
-              (Whereas our initial approximation of
+              <NoBreak>
+                “
+                <Math>
+                  $0.00040249943...$
+                </Math>
+              </NoBreak>
+              {" "} too large”) whereas our initial
+              approximation of
             </OuterP>
-            ⁠
             <Pause />
             <MathBlock>
               $$
@@ -9860,13 +9932,13 @@ const Rest = () => {
               $$
             </MathBlock>
             <Pause />
-            ⁠
             <OuterP>
-              ends up being roughly half-a-part-in-one-hundred too large, {" "}
+              ends up being roughly half-a-part-in-one-hundred
+              too large, {" "}
               <Math>
                 $10$
               </Math>
-              {" "} times worse!)
+              {" "} times worse!
             </OuterP>
           </Solution>
         </Exercise>

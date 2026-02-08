@@ -1,14 +1,14 @@
 |> Exercise
     handle=_eta_approximation_from_cosine_graph_
-    The function below is also the red
+    The function below is also the blue
     curve from Exercise >>_four_particles_, known as the
     _cosine function_ (already encountered
     in Chapter >>functions, Exercise >>_cosine_of_1000x_).
     Knowing that this function is the $x$-coordinate of a
     point rotating at unit speed around a unit
-    circle, what is an approximation to the
-    circumference of a unit circle that one can
-    deduce just by looking at the graph?
+    circle what is an approximation to the
+    circumference of a unit circle that can be
+    deduced, by staring at the graph?
 
     |> Image
         src=images/svg_ch4_cosine_for_eta.svg
@@ -19,7 +19,7 @@
         circumference of the unit circle is equal to the
         amount of time it takes the particle to complete one
         revolution of the circle. That is, for example, the
-        length of this yellow interval:
+        time covered by the yellow interval below, from crest to crest:
 
         |> Image
             src=images/svg_ch4_cosine_for_eta_with_yellow.svg
@@ -31,85 +31,60 @@
         \Large \approx 6.3
         $$
 
-        or thereabouts.
-        However, this is not the “correct” answer—indeed, we can do
-        a little better by noticing that the graph seems
-        to go almost exactly through the point $(11, 0)$, a
-        few units over to the right (!):
+        or thereabouts. However, a bit of detective work
+        reveals a more precise approximation—indeed, 
+        note that the graph seems to go almost exactly through
+        the point $(11, 0)$, a few units over to the right:
 
         |> Image
             src=images/svg_ch4_cosine_for_eta_11_noticed.svg
 
-        More particularly, this implies that
-
+        This implies that in
+        $$
+        \Large 11
+        $$
+        units of time—or nearly so—the particle does
         $$
         \Large 7
         $$
-
-        quarter-turns of the circle correspond to
-
-        $$
-        \Large \approx 11
-        $$
-
-        units of time, as each half-bump corresponds to a
-        quarter-turn (if you think about it):
+        quarter-turns,
+        as each half-bump corresponds to a
+        quarter-turn (if you think about it), and there
+        are seven half-bumps:
 
         |> Image
             src=images/svg_ch4_cosine_for_eta_counting_quarter_turns.svg
 
-        So....
+        Thus
 
         $$
         \Large {11 \over 7}
         $$
 
-        is an approximation to 
-        the time it takes the particle to do one quarter-turn,
-        i.e., an approximation to
-        the quarter-circumference of the circle, and
+        units of time is approximately one quarter-turn, and
+
+        $$
+        \Large 4 \cdot {11 \over 7} = {44 \over 7}
+        $$
+
+        units of time is approximately one full
+        revolution (four quarter-turns), i.e.,
 
         |> Boxed
             $$
-            \Large 4 \cdot {11 \over 7} = {44 \over 7} = 6.\overline{285714}
+            \Large {44 \over 7} = 6.\overline{285714}
             $$
-
-        is an approximation to the full circumference of
-        the unit circle,
-        which is an approximation that
-        ends up being about half-a-part-in-a-thousand too
-        large ($0.040249943...\%$
-        too large) (or just: “$0.00040249943...$ too large”).
-        (Whereas our initial approximation of
+        
+        is an approximation to the circumference of a
+        unit circle, which is an approximation that ends
+        up being about half-a-part-in-a-thousand too
+        large ($0.040249943...\%$ too large) (or just:
+        “$0.00040249943...$ too large”) whereas our initial
+        approximation of
 
         $$
         \Large 6.3
         $$
 
-        ends up being roughly half-a-part-in-one-hundred too large, $10$ times worse!)
-
-        !! |> SolutionNote
-
-        !!     By extension,
-
-        !!     $$
-        !!     \Large {11 \over 7} = 1.\overline{571428}
-        !!     $$
-
-        !!     is also a half-a-part-in-a-thousand too large
-        !!     approximation for the quarter-circumference of the
-        !!     unit circle, and note that
-
-        !!     $$
-        !!     \Large {11 \over 7} = 1.571428\dots
-        !!     $$
-
-        !!     is about $1.6$, which appears to agree with what
-        !!     we can see on the graph about the length of a
-        !!     quarter-revolution:
-
-        !!     |> Image
-        !!         src=images/svg_ch4_cosine_for_eta_eta_verification.svg
-
-        !!     (So, we have some secondary “visual confirmation”
-        !!     of our approximations.)
+        ends up being roughly half-a-part-in-one-hundred
+        too large, $10$ times worse!

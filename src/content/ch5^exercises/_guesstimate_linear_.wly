@@ -1,10 +1,13 @@
 |> Exercise
+    work=ing
     handle=_guesstimate_cos_10x_linear_
 
     Guesstimate a function with this graph:
 
+    !! |> Image
+    !!     src=images/svg_ch5_ex_cosine_10x_plus_x_over_4.svg
     |> Image
-        src=images/svg_ch5_ex_cosine_10x_plus_x_over_4.svg
+        src=tmp-images/e5_cosine_10x_plus_x_over_4.svg
 
     |> Solution
 
@@ -24,7 +27,7 @@
         y = {1\over 4}x
         $$
         making it a true _linear_ function (as opposed
-        to _affine_, cf. Chapter 3).
+        to _affine_, cf. Chapter >>functions).
 
         As for the “something”—the bumpy one—it appears
         to just be a “sped up cosine”, and note that
@@ -37,8 +40,11 @@
             line=-2
             src=images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg
 
+        !! |> Image
+        !!     src=images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg
+
         |> Image
-            src=images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg
+            src=tmp-images/e5_cosine_10x_plus_x_over_4_bump_count.svg
 
         As cos goes through _one_ cycle from $x = 0$ to
         $x = 4\eta$, the “bumpy function” is therefore

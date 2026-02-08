@@ -29,8 +29,8 @@
     "original-size": 23826,
     "compressed-size": 23826,
     "compression": "0.0%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_0_2_radians_guess_joke.svg": {
     "build-version": "svgo-svg/4Ufj.svg",
@@ -945,6 +945,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "svg_ch5_ch_etaOver2_example_displacement_version.svg": {
+    "build-version": "svgo-svg/tIP3.svg",
+    "build-version-created-on": 1770587872,
+    "build-method": "svgo",
+    "build-version-size": 16400,
+    "original-size": 85142,
+    "compressed-size": 16400,
+    "compression": "80.74%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "36.svg": {
     "build-version": "svgo-svg/QIqm.svg",
     "build-version-created-on": 1767294282,
@@ -1409,11 +1420,11 @@
   },
   "svg_ch5_ch_unit_circle_with_four_particles.svg": {
     "build-version": "svgo-svg/WKck.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1770587872,
     "build-method": "svgo",
-    "build-version-size": 58446,
-    "original-size": 423240,
-    "compressed-size": 58446,
+    "build-version-size": 58498,
+    "original-size": 423552,
+    "compressed-size": 58498,
     "compression": "86.19%",
     "used-last-build": true,
     "3chars": ["ch5"]
@@ -1551,15 +1562,15 @@
     "3chars": ["ch5"]
   },
   "svg_ch5_ch_etaOver3_example_displacement_version.svg": {
-    "build-version": "svgo-svg/ysx5.svg",
-    "build-version-created-on": 1767342812,
-    "build-method": "svgo",
-    "build-version-size": 12561,
-    "original-size": 98470,
-    "compressed-size": 12561,
-    "compression": "87.24%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "build-version": "svg/ysx5.svg",
+    "build-version-created-on": 1770478456,
+    "build-method": "cp",
+    "build-version-size": 100844,
+    "original-size": 100844,
+    "compressed-size": 100844,
+    "compression": "0.0%",
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_big_wave_purple_small_scale_bump_count.svg": {
     "build-version": "svgo-svg/yXJ4.svg",
@@ -1750,12 +1761,12 @@
   },
   "svg_ch4_cosine_for_eta_with_yellow.svg": {
     "build-version": "svgo-svg/KEtq.svg",
-    "build-version-created-on": 1768299408,
+    "build-version-created-on": 1770587871,
     "build-method": "svgo",
-    "build-version-size": 32046,
-    "original-size": 108061,
-    "compressed-size": 32046,
-    "compression": "70.34%",
+    "build-version-size": 37692,
+    "original-size": 150939,
+    "compressed-size": 37692,
+    "compression": "75.03%",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1826,15 +1837,15 @@
     "3chars": ["ch5"]
   },
   "svg_ch_5_ch_etaOver2_example_displacement_version.svg": {
-    "build-version": "svgo-svg/qiyO.svg",
-    "build-version-created-on": 1767342812,
-    "build-method": "svgo",
-    "build-version-size": 11646,
-    "original-size": 84970,
-    "compressed-size": 11646,
-    "compression": "86.29%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "build-version": "svg/qiyO.svg",
+    "build-version-created-on": 1770478456,
+    "build-method": "cp",
+    "build-version-size": 85142,
+    "original-size": 85142,
+    "compressed-size": 85142,
+    "compression": "0.0%",
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_cos_to_sin_plus_cos_reminder.svg": {
     "build-version": "svgo-svg/QLsx.svg",
@@ -2124,12 +2135,12 @@
   },
   "svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg": {
     "build-version": "svgo-svg/tYzo.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1770587874,
     "build-method": "svgo",
     "build-version-size": 32204,
-    "original-size": 54302,
+    "original-size": 54320,
     "compressed-size": 32204,
-    "compression": "40.69%",
+    "compression": "40.71%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2410,12 +2421,12 @@
   },
   "plate_caree_central_lambert_combination_with_use_saved.svg": {
     "build-version": "svgo-svg/sA2I.svg",
-    "build-version-created-on": 1769947727,
+    "build-version-created-on": 1770587873,
     "build-method": "svgo",
-    "build-version-size": 530661,
-    "original-size": 983710,
-    "compressed-size": 530661,
-    "compression": "46.06%",
+    "build-version-size": 537441,
+    "original-size": 996602,
+    "compressed-size": 537441,
+    "compression": "46.07%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2619,12 +2630,12 @@
   },
   "svg_ch5_ch_cosine_and_sine.svg": {
     "build-version": "svgo-svg/fuoV.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1770587872,
     "build-method": "svgo",
-    "build-version-size": 16267,
-    "original-size": 67383,
-    "compressed-size": 16267,
-    "compression": "75.86%",
+    "build-version-size": 16462,
+    "original-size": 67778,
+    "compressed-size": 16462,
+    "compression": "75.71%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3376,6 +3387,17 @@
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
+  "svg_ch5_ch_radian_definition_consequence.svg": {
+    "build-version": "svg/8wuf.svg",
+    "build-version-created-on": 1770568737,
+    "build-method": "cp",
+    "build-version-size": 18081,
+    "original-size": 18081,
+    "compressed-size": 18081,
+    "compression": "0.0%",
+    "used-last-build": false,
+    "3chars": []
+  },
   "svg_ch4_17_position_vectors.svg": {
     "build-version": "svgo-svg/UDTy.svg",
     "build-version-created-on": 1767294309,
@@ -3465,15 +3487,15 @@
     "3chars": ["ch5"]
   },
   "svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg": {
-    "build-version": "svgo-svg/e7Qr.svg",
-    "build-version-created-on": 1767294334,
-    "build-method": "svgo",
-    "build-version-size": 91992,
-    "original-size": 91997,
-    "compressed-size": 91992,
-    "compression": "0.01%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "build-version": "svg/e7Qr.svg",
+    "build-version-created-on": 1770580598,
+    "build-method": "cp",
+    "build-version-size": 112107,
+    "original-size": 112107,
+    "compressed-size": 112107,
+    "compression": "0.0%",
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_RATS_second_term_cloud.svg": {
     "build-version": "svgo-svg/9OXS.svg",
@@ -3505,8 +3527,8 @@
     "original-size": 101386,
     "compressed-size": 30216,
     "compression": "70.2%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_vector_sum_uy_plus_vy.svg": {
     "build-version": "svgo-svg/efoR.svg",
@@ -3741,12 +3763,12 @@
   },
   "svg_ch5_ch_unit_circle_with_sincos_particle.svg": {
     "build-version": "svgo-svg/7839.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1770587872,
     "build-method": "svgo",
-    "build-version-size": 24911,
-    "original-size": 274988,
-    "compressed-size": 24911,
-    "compression": "90.94%",
+    "build-version-size": 24872,
+    "original-size": 275127,
+    "compressed-size": 24872,
+    "compression": "90.96%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4224,15 +4246,15 @@
     "3chars": ["ch5"]
   },
   "svg_ch5_ch_etaOver3_example_angle_version.svg": {
-    "build-version": "svgo-svg/S9hd.svg",
-    "build-version-created-on": 1767342812,
-    "build-method": "svgo",
-    "build-version-size": 12310,
-    "original-size": 45033,
-    "compressed-size": 12310,
-    "compression": "72.66%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "build-version": "svg/S9hd.svg",
+    "build-version-created-on": 1770478558,
+    "build-method": "cp",
+    "build-version-size": 100723,
+    "original-size": 100723,
+    "compressed-size": 100723,
+    "compression": "0.0%",
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_bt2_bt_10_to_the_minus_0_cloud.svg": {
     "build-version": "svgo-svg/rdZz.svg",
@@ -4511,12 +4533,12 @@
   },
   "svg_ch5_ch_etaOver2_example_angle_version.svg": {
     "build-version": "svgo-svg/jn-F.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1770587873,
     "build-method": "svgo",
-    "build-version-size": 11469,
-    "original-size": 85394,
-    "compressed-size": 11469,
-    "compression": "86.57%",
+    "build-version-size": 16223,
+    "original-size": 85396,
+    "compressed-size": 16223,
+    "compression": "81.0%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4693,8 +4715,8 @@
     "original-size": 100497,
     "compressed-size": 27462,
     "compression": "72.67%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_RATS_rats.svg": {
     "build-version": "svgo-svg/zn1D.svg",
@@ -5017,12 +5039,12 @@
   },
   "svg_ch5_ch_unit_circle_@-3_smaller.svg": {
     "build-version": "svgo-svg/9Ygl.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1770587872,
     "build-method": "svgo",
-    "build-version-size": 33621,
-    "original-size": 96846,
-    "compressed-size": 33621,
-    "compression": "65.28%",
+    "build-version-size": 33803,
+    "original-size": 102282,
+    "compressed-size": 33803,
+    "compression": "66.95%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5402,11 +5424,11 @@
   },
   "svg_ch5_ch_unit_circle_with_sin_and_cos_particles.svg": {
     "build-version": "svgo-svg/5m2X.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1770587872,
     "build-method": "svgo",
-    "build-version-size": 29382,
-    "original-size": 279968,
-    "compressed-size": 29382,
+    "build-version-size": 29342,
+    "original-size": 279839,
+    "compressed-size": 29342,
     "compression": "89.51%",
     "used-last-build": true,
     "3chars": ["ch5"]

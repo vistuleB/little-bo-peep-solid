@@ -8,7 +8,7 @@
       "group": {
         "kind": "build",
         "glob": "**/*.wly",
-        "isDefault": true
+        "isDefault": true,
       },
       "presentation": {
         "reveal": "never",
@@ -24,7 +24,7 @@
       },
       // "args": ["run", "--", "--track", "\"assuming that\"", "+5-5"]
       "args": [ "run", "--", "--only", "ch5", "content=selection", "work=ing", "--local", "--warnings"]
-      // "args": [ "run", "--", "--local", ]
+      // "args": [ "run", "--", "--only", "ch5", "ch3", "ch4"]
     },
     {
       "label": "gleam run -m <file>",

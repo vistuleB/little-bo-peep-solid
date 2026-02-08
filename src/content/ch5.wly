@@ -1,5 +1,4 @@
 |> Section
-    work=ing
     handle=_ch5_start_
 
     *Cos and Sin. (“Cosine” and “sine”.)* We've
@@ -33,9 +32,16 @@
 
     is a circle of radius $1$, while “the” unit
     circle is the circle of radius $1$ centered
-    at $(0, 0)$.) For example, if we look at 
+    at $(0, 0)$.) For example, 
+    if we pluck
+    $$
+    x = {1\over 3}
+    $$
+    out of the ether to be the subject of closer inspection,
+    !! if we look at 
     !! $x = {1\over 2}$, we see $\cos({1\over 2}) \approx 0.9$, $\sin({1\over 2}) \approx 0.5$:
-    $x = {1\over 3}$, we see $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
+    !! $x = {1\over 3}$, 
+    we see $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
 
     |> Image
         src=tmp-images/svg_ch5_ch_cosine_and_sine_@0.333.svg
@@ -45,7 +51,7 @@
     Per the definitions, the point one third of a
     unit counterclockwise from $(1, 0)$ on the unit
     circle has coordinates $\approx 0.9$ in $x$
-    and $\approx 0.5$ in $y$ (or actually 
+    and $\approx 0.3$ in $y$ (or actually 
     !! $0.87758...$ and $0.47942...$, 
     $0.94495...$ and $0.32719...$, 
     it turns out, as we can know by
@@ -60,7 +66,7 @@
     (or something very close to $-1$, in any case):
 
     |> Image
-        src=images/svg_ch5_ch_cosine_and_sine_@-3.svg
+        src=tmp-images/svg_ch5_ch_cosine_and_sine_@-3_v2.svg
 
     Indeed, going $-3$ units counterclockwise—which
     means, going $3$ units clockwise—on the unit
@@ -78,10 +84,12 @@
     $\sin(x) = -1$:
 
     |> Image
-        src=images/svg_ch5_ch_cosine_and_sine_@minus_eta.svg
+        src=tmp-images/svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg
 
-    Some thought reveals that this value of $x$
-    would be _minus one-quarter the circumference
+    Some thought reveals that 
+    !! this value of $x$ would be 
+    such a value $x$ does exist, and more precisely equals 
+    _minus one-quarter the circumference
     of a unit circle_, because $(0, -1)$ is
     one-quarter of the unit circle clockwise from $(1, 0)$.
     Note that one-quarter the circumference of a unit
@@ -92,7 +100,7 @@
     $$
 
     in Exercise >>_eta_approximation_from_cosine_graph_ 
-    of Chapter 3 (by direct inspection
+    of Chapter >>functions (by direct inspection
     of the graph $y = \cos(x)$, for that matter,
     which may or may not be cheating), which agrees
     with the visual estimate $x \approx -1.6$. (But
@@ -198,7 +206,7 @@
         src=images/svg_ch5_ch_four_curves.svg
 
     These are the same four curves that
-    appear in Exercise 12 of Chapter 4.
+    appear in Exercise >>_four_particles_ of Chapter >>derivatives.
     In particular,
     $$
     \sin' = \cos
@@ -225,7 +233,9 @@
     (-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'
     $$
     in general for any $f : \rr \ra \rr$
-    (cf. Exercise 20 and Exercise 10 of Chapter 4),
+    (cf. Exercise >>_first_law_of_differentiation_
+    and Exercise >>_define_product_of_constant_and_function_
+    of Chapter >>derivatives),
     which implies that
     $$
     (-\!\sin)' = -\!\sin'
@@ -245,9 +255,10 @@
     $$
     to finish the computation),
     which means that one only needs to
-    remember the first two equations. Though,
-    in fact, one really just needs to remember
-    the four-particle diagram!
+    remember the first two equations. 
+    !! Though,
+    !! in fact, one really just needs to remember
+    !! the four-particle diagram!
     !! (Or really,
     !! just remember the four-particle diagram.)
 
@@ -275,14 +286,15 @@
     (“aye-tah”, Greek letter “eta”) is a
     constant that denotes the quarter-circumference
     of a unit circle, or about ${11\over 7}$.
-    (Cf. Exercise 24, Chapter 4.) You should
+    (Cf. Exercise >>_eta_approximation_from_cosine_graph_, Chapter >>derivatives.) You should
     be able to verify each of these identities
     just by looking at them and thinking of the
     definitions of $\sin(x)$, $\cos(x)$—possibly
     the “second” definition of $\sin(x)$, in some
     cases—but in case something goes wrong, here
     is a cheat sheet that does some of the thinking
-    for you (or, help you compare your way of seeing
+    for you
+    (or help you compare your way of seeing
     things to the author's way of seeing things):
 
     |> Image
@@ -376,6 +388,48 @@
     input!
 
 |> Section
+    *Parenthesization and powers. (Notation.)* 
+    It is allowed to write
+    $$
+    \te{“}\cos x\rt{0.2}\te{”}
+    $$
+    for
+    $$
+    \te{“}\cos(x)\rt{0.1}\te{”}
+    $$
+    !! $$
+    !! \cos x
+    !! $$
+    !! for
+    !! $$
+    !! \cos(x)
+    !! $$
+    when the input is just one symbol. Also note that 
+    $$
+    \cos^2(x)
+    $$
+    (or
+    $$
+    \cos^2 x
+    $$
+    similarly to the just-introduced convention)
+    means
+    $$
+    (\cos(x))^2 = (\cos x)^2
+    $$
+    which is a special case of the fact that
+    $$
+    f^2(x) = (f(x))^2
+    $$
+    for any function $f$,
+    which is itself a special case of the fact that
+    $$
+    (fg)(x) = f(x)g(x)
+    $$
+    for all functions $f$ and $g$.
+    (The definition of function multiplication!)
+
+|> Section
 
     *The pythagorean identity.*
     Because
@@ -388,7 +442,7 @@
     points of the form
 
     $$
-    (\cos(x), \sin(x))
+    (\cos x, \sin x)
     $$
 
     are points on the unit circle, we have
@@ -419,74 +473,76 @@
     depending on the situation. Also
 
     $$
-    \sin^2(y)
+    \sin^2 (y)
     $$
 
     (variable not important) might be
 
     $$
-    1 - \cos^2(y)
+    1 - \cos^2 (y)
     $$
 
     just as
 
     $$
-    \cos^2(y)
+    \cos^2 (y)
     $$
 
     might be
 
     $$
-    1 - \sin^2(y)
+    1 - \sin^2 (y)
     $$
 
     (also
 
     $$
-    1 - \cos^2(y)
+    1 - \cos^2 (y)
     $$
 
     and
 
     $$
-    1 - \sin^2(y)
+    1 - \sin^2 (y)
     $$
 
     might end up respectively rewritten
 
     $$
-    (1 - \cos(y))\cdot (1 + \cos(y))
+    (1 - \cos y)\cdot (1 + \cos y)
     $$
 
     and
 
     $$
-    (1 - \sin(y))\cdot (1 + \sin(y))
+    (1 - \sin y)\cdot (1 + \sin y)
     $$
 
     by the difference-of-squares factorization),
     and
 
     $$
-    \sin^2(\theta) - \cos^2(\theta)
+    \sin^2 \theta - \cos^2 \theta
     $$
 
     might be
 
     $$
-    1 - 2\cos^2(\theta)
+    1 - 2\cos^2 \theta
     $$
 
-    or otherwise
+    since $\sin^2 \theta = 1 - \cos^2\theta$, or
+    might be
 
     $$
-    2\sin^2(\theta) - 1
+    2\sin^2 \theta - 1
     $$
 
+    since $\cos^2 \theta = 1 - \sin^2\theta$,
     and symmetrically for the opposite difference. (I.e.,
 
     $$
-    \,\cos^2(\theta) - \sin^2(\theta),
+    \,\cos^2 \theta - \sin^2 \theta,
     $$
 
     this one.) Etc.
@@ -498,12 +554,7 @@
 
     __radian measure__
 
-    !! of an angle 
-    !! was briefly touched upon in
-    !! Note >>DifferentiationFormulasClarification of Exercise 37, Chapter 4.
-    !! In short, it 
-    !! is a “scientific” measure
-    !! of angles in which the value of an angle
+    of an angle 
     is the length of a circular arc subtended
     by the angle, divided by the radius of
     that arc:
@@ -511,14 +562,15 @@
     |> Image
         src=images/svg_ch5_ch_radian_definition.svg
 
-    The definition implies that the radian
-    measure of an angle is the length subtended
-    by the angle on a unit circle:
+    By this definition, the radian measure of an
+    angle coincides with the length of a subtended arc
+    of radius $1$:
 
     |> Image
         src=images/svg_ch5_ch_radian_definition_radius_1.svg
 
-    In particular, $90^\circ$ is $\eta$ radians:
+    In particular, the radian measure
+    of $90^\circ$ is $\eta$:
 
     |> Image
         src=images/svg_ch5_ch_radian_definition_90_degrees_is.svg
@@ -568,37 +620,34 @@
     ...with the input appearing as a radian.
 
     |> Example
-
-        We can conceptualize $\cos(\eta/2)$...
+        We can conceptualize $\cos(\eta/2)$
+        and $\sin(\eta/2)$ like this...
 
         |> Image
-            src=images/svg_ch_5_ch_etaOver2_example_displacement_version.svg
+            src=images/svg_ch5_ch_etaOver2_example_displacement_version.svg
 
-        ...like this, with the input appearing as a displacement,
-        or else like this...
+        ...with the input appearing as a displacement,
+        or like this...
 
         |> Image
             src=images/svg_ch5_ch_etaOver2_example_angle_version.svg
 
         ...with the input appearing as a radian.
 
-    |> Example
+    |> Pause
 
-        We can conceptualize $\sin(\eta/3)$...
+    _Note._
+    Another thing to know about radians 
+    is that the length of a circular
+    arc subtended by an angle is its radian
+    measure times the radius:
 
-        |> Image
-            src=images/svg_ch5_ch_etaOver3_example_displacement_version.svg
+    |> Image
+        src=tmp-images/svg_ch5_ch_radian_definition_consequence.svg
 
-        ...like this, with the input appearing as a displacement,
-        or else like this...
-
-        |> Image
-            src=images/svg_ch5_ch_etaOver3_example_angle_version.svg
-
-        ...with the input appearing as a radian.
+    |> StarDivider
 
 |> Section
-
     *Auto-converting degrees to radians.*
     We will consider the degree notation
     “$^\circ$” to be pig lipstick on top of
@@ -656,6 +705,7 @@
     of the circle!)
 
 |> Section
+    
 
     *Sines and cosines of $\mathbf{30^\circ}$,
     $\mathbf{45^\circ}$ and $\mathbf{60^\circ}$.*
@@ -876,6 +926,7 @@
         src=images/svg_ch5_ch_main_angles_third.svg
 
 |> Section
+    
 
     *Scaling the circle.*
     In the following diagram, the coordinates
@@ -908,6 +959,7 @@
     ...where $Q_x$, $Q_y$ are the $x$- and $y$- coordinates of $Q$.
 
 |> Section
+    
 
     *Polar coordinates.*
     The so-called
@@ -999,6 +1051,7 @@
         $(-1, 1) \in \rr^2$.
 
 |> Section
+    
 
     *Change-of-coordinate formulas.*
     Definitionally, the equations
@@ -1043,24 +1096,23 @@
 
     _Note._
     Popular programming languages such as
-    python offer a function named
+    python offer a function named 
     |> span
-        style=font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
-
+        style=font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
         atan2
-    that will compute the _argument_ (see
+    \ that will compute the _argument_ (see
     Vocabulary below) $\theta$ of a given pair
     $(x, y)$ out of the box, without you having to
     worry about which of $x$ or $y$ is $0$, etc.
 
     But the call goes 
     |> span
-        style=font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
+        style=font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
 
         atan2(y, x)
     \ not 
     |> span
-        style=font-family:monaco;background-color:beige;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
+        style=font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
 
         atan2(x, y)
     \ by some bizareness. (Well, actually a
@@ -1080,6 +1132,7 @@
     called the _angle_ or the _argument_.
 
 |> Section
+    
 
     *Right triangles.*
     Hopefully, the following figure should seem
@@ -1159,6 +1212,7 @@
         arrows, starting from the sidelength of $14$.
 
 |> Section
+    
 
     *A famous diagram.*
     There is a somewhat infamous diagram similar
@@ -1300,7 +1354,7 @@
     |> Image
         src=images/svg_ch5_ch_abercrombie_to_the_left_third.svg
 
-    ...on the number line was an impossibility,
+    ...on the number line is an impossibility,
     i.e., it must be that $S \geq A$.
     This constitutes the proof of the Abercrombie
     inequality.
@@ -1652,7 +1706,6 @@
 
     |> Example
         handle=_secant_example_
-        work=ing
 
         If the Earth [is modeled as] a sphere
         of radius $1$ then, as stands to reason, the circle
@@ -1705,27 +1758,8 @@
         src=images/plate_caree_central_lambert_combination_with_use_saved.svg
 
     (In the plate carée, at right, 
-    longitudes are “unrolled” onto the cylinder while
-    preserving north-south distances.)
-    !! North-South distances 
-    !! are the same on the sphere as on the cylinder.)
-
-    !! the cylinder equate those on the sphere.) 
-    !! (There is no
-
-    !! __North-South distortion__
-
-    !! only
-
-    !! __East-West distortion__
-
-    !! as they say—and the East-West distortion is
-    !! $$
-    !! \Huge \sec(\theta)
-    !! $$
-    !! in all cases, by Example >>_secant_example_, 
-    !! where
-    !! $\theta$ is the latitude.)
+    longitudes are “unrolled” onto the cylinder,
+    which preserves north-south distances.)
 
 |> Section
     work=ing
