@@ -5107,7 +5107,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={5}>
+        <Exercise
+          work="ing"
+          number={5}
+        >
           <ExerciseStatement id="_89_hgi_">
             <OuterP>
               <b>
@@ -5173,36 +5176,53 @@ const Rest = () => {
                 {" "} to:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/0gj5.svg" />
-              <Pause />
-              <OuterP>
-                Verbalized: {" "}
-                <i>
-                  the counterclockwise angle from the positive
-                  {" "}
-                  <Math>
-                    $x$
-                  </Math>
-                  {" "} axis to
-                  the radial vector
-                  equals the counterclockwise angle from the positive
-                  {" "}
-                  <Math>
-                    $y$
-                  </Math>
-                  {" "} axis to the counterclockwise tangent.
-                </i>
-              </OuterP>
-              <OuterP class="indent-10">
-                (Nb: When we say the “radial vector” and
-                “counterclockwise tangent” we mean those objects that
-                are illustrated here:)
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/MRNc.svg" />
+              <Image src="/tmp-images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg" />
             </SolutionNote>
             <Pause />
-            <StarDivider />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Here is an attempt at verbalization:
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the counterclockwise angle from the positive
+                {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} axis to
+                the radial vector [of angle {" "}
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  ]
+                </NoBreak>
+                {" "}
+                equals the counterclockwise angle from the positive
+                {" "}
+                <Math>
+                  $y$
+                </Math>
+                {" "} axis to the counterclockwise tangent [of angle {" "}
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  ]
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                ...where we sort of made up the terms “radial vector”
+                and “counterclockwise tangent” to suit our
+                momentary needs, but anyway, it was just an attempt!
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={6}>
@@ -6482,10 +6502,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={13}
-        >
+        <Exercise number={13}>
           <ExerciseStatement id="_97_hgi_">
             <OuterP>
               <b>
@@ -6638,10 +6655,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={14}
-        >
+        <Exercise number={14}>
           <ExerciseStatement id="_98_hgi_">
             <OuterP>
               <b>

@@ -210,14 +210,14 @@
   },
   "svg_ch5_ex_tangent_angle_explanation_radian_vector.svg": {
     "build-version": "svgo-svg/MRNc.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1770733679,
     "build-method": "svgo",
-    "build-version-size": 52229,
-    "original-size": 315003,
-    "compressed-size": 52229,
-    "compression": "83.42%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "build-version-size": 241148,
+    "original-size": 315907,
+    "compressed-size": 241148,
+    "compression": "23.66%",
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_60_tangent.svg": {
     "build-version": "svgo-svg/_yNG.svg",
@@ -3241,8 +3241,8 @@
     "original-size": 296801,
     "compressed-size": 89645,
     "compression": "69.8%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_relationships_of_note_triangle_version.svg": {
     "build-version": "svgo-svg/Jk8H.svg",

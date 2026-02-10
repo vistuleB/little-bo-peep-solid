@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_rotate_central_90_
 
     Argue that, in the following figure, the
@@ -29,20 +30,34 @@
             push $\theta$ to:
 
             |> Image
-                src=images/svg_ch5_ex_tangent_angle_explanation_other_quadrants.svg
+                src=tmp-images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg
 
-            Verbalized: _the counterclockwise angle from the positive
+            !! Verbalized: _the counterclockwise angle from the positive
+            !! $x$ axis to
+            !! the radial vector
+            !! equals the counterclockwise angle from the positive
+            !! $y$ axis to the counterclockwise tangent._
+
+            !! (Nb: When we say the “radial vector” and
+            !! “counterclockwise tangent” we mean those objects that
+            !! are illustrated here:)
+
+            !! |> Image
+            !!     src=images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg
+
+        !! |> StarDivider
+
+        |> SolutionNote
+
+            Here is an attempt at verbalization:
+
+            __the counterclockwise angle from the positive
             $x$ axis to
-            the radial vector
+            the radial vector [of angle $\theta$]
             equals the counterclockwise angle from the positive
-            $y$ axis to the counterclockwise tangent._
+            $y$ axis to the counterclockwise tangent [of angle $\theta$]__
 
-            (Nb: When we say the “radial vector” and
-            “counterclockwise tangent” we mean those objects that
-            are illustrated here:)
-
-            |> Image
-                src=images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg
-
-        |> StarDivider
+            ...where we sort of made up the terms “radial vector”
+            and “counterclockwise tangent” to suit our
+            momentary needs, but anyway, it was just an attempt!
 
