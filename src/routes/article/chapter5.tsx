@@ -6688,8 +6688,7 @@ const Rest = () => {
               {" "}
               which case both coordinates are nonnegative, and, more specifically, 
               are equal to the two 
-              purple lengths
-              in the diagram below:
+              purple lengths below:
             </OuterP>
             <Pause />
             <Image src="/tmp-images/svg_ch5_ex_theta_tangent_Q1.svg" />
@@ -6809,7 +6808,7 @@ const Rest = () => {
               In more detail, the product of the two coordinates
               marked by purple arrows is the same in all four
               quadrants, because “minus times minus is plus”; but
-              the in first quadrant, the product is {" "}
+              in first quadrant, the product is {" "}
               <NoBreak>
                 <Math>
                   $1$
@@ -6864,7 +6863,7 @@ const Rest = () => {
                 </Math>
                 ;
               </NoBreak>
-              {" "} similarly the inside orange arrows mark coordinate
+              {" "} similarly the inside orange arrow marks coordinate
               {" "}
               <Math>
                 $\sin(\theta)$
@@ -6910,7 +6909,7 @@ const Rest = () => {
                 </Math>
                 -axis
               </NoBreak>
-              {" "} intersection, no matter the quadrant!)
+              {" "} intersection, no matter the quadrant.)
             </OuterP>
           </Solution>
         </Exercise>

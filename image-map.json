@@ -122,12 +122,12 @@
   },
   "svg_ch5_ex_max_xy_mirror_image.svg": {
     "build-version": "svgo-svg/A16i.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1770729813,
     "build-method": "svgo",
     "build-version-size": 28393,
-    "original-size": 96167,
+    "original-size": 96569,
     "compressed-size": 28393,
-    "compression": "70.48%",
+    "compression": "70.6%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
