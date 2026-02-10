@@ -81,7 +81,6 @@
         $$
         (in more detail,
         $$
-        %(A\cdot 12^2) - (A\cdot 0^2) \approx 6
         A\cdot 12^2 - A\cdot 0^2 \approx 6
         $$
         but $A\cdot 0^2$ goes away), meaning

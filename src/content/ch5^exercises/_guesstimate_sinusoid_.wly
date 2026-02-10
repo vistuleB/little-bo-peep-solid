@@ -169,7 +169,8 @@
         since, like the large-scale oscillation from the
         purple curve, it shares the same phase as $-\sin(x)$,
         and since, like the small-scale oscillation from
-        Exercise 3, it has an amplitude of $\approx 0.5$.
+        Exercise >>_guesstimate_cos_10x_parabolic_, it has
+        an amplitude of $\approx 0.5$.
 
         Altogether, we get
 
@@ -179,4 +180,4 @@
 
         as our “guesstimate”, while adding the linear
         function, the large-scale sinusoid, and the small-scale
-        sinusoid together.
+        sinusoid together!

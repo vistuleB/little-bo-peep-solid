@@ -1,0 +1,94 @@
+|> Exercise
+    work=ing
+    handle=_secant_cosecant_intersections_
+
+    In the drawing below, at what coordinates,
+    expressed as a function of $\theta$,
+    does the tangent to the circle
+    intersect the $x$ and $y$ axes?
+
+    |> Image
+        src=tmp-images/svg_ch5_ex_theta_tangent.svg
+
+    |> Solution
+
+        Assume for starters that
+        $\theta$ lies inside the first quadrant—i.e., that $0 < \theta < \eta$—in
+        which case both coordinates are nonnegative, and, more specifically, 
+        are equal to the two 
+        !! lengths marked ‘?’ 
+        !! purple bars
+        purple lengths
+        in the diagram below:
+
+        |> Image
+            src=tmp-images/svg_ch5_ex_theta_tangent_Q1.svg
+
+        Regarding this diagram, note that:
+
+        |> List
+            !! type=decimal
+            style=gap:1em
+
+            we have already “used up” the fact that
+            the radius of the circle is $1$ by
+            making the dropped height (which used to
+            be a radius) length $1$; and that
+
+            we use a “the complement of my complement
+            is myself”-type argument to deduce that the
+            upper left angle is $\theta$, as well
+            (cf. Exercise >>_complement_calculation_,
+            Exercise >>_complement_of_complement_).
+
+        Because $1 \cdot \sec(\theta) = \sec(\theta)$ the
+        bottom length is $\sec(\theta)$ while the vertical
+        length is $1\cdot \csc(\theta) = \csc(\theta)$, similarly:
+
+        |> Image
+            src=tmp-images/svg_ch5_ex_theta_tangent_Q1_first_solve.svg
+
+        |> Image
+            src=tmp-images/svg_ch5_ex_theta_tangent_Q1_second_solve.svg
+
+        I.e., in the first quadrant, at least, the
+        coordinates are $\sec(\theta)$ and $\csc(\theta)$:
+
+        |> Image
+            src=tmp-images/svg_ch5_ex_theta_tangent_Q1_with_answer.svg
+
+        For the other quadrants we can reason by
+        symmetry with the first quadrant:
+
+        |> Image
+            src=tmp-images/svg_ch5_ex_theta_tangent_all_quadrants.svg
+
+        In more detail, the product of the two coordinates
+        marked by purple arrows is the same in all four
+        quadrants, because “minus times minus is plus”; but
+        the in first quadrant, the product is $1$, because
+        we know the product takes the form $\cos(\theta)\cdot\sec(\theta)$
+        in that quadrant;
+        therefore the product is $1$ in _all_ quadrants; but
+        the coordinate marked by the inside purple arrow is
+        $\cos(\theta)$ in all quadrants; therefore, lastly,
+        the coordinate marked by the _outside_ purple arrow
+        is $\sec(\theta)$ in all quadrants, since $\sec(\theta)$
+        is the unique number whose product with $\cos(\theta)$
+        is $1$; similarly the inside orange arrows mark coordinate
+        $\sin(\theta)$ is all quadrants, so the outside orange
+        arrow (by similar reasoning) has coordinate $\csc(\theta)$
+        in all quadrants, QED. (I.e., the grand conclusion is that the
+        two coordinates are
+
+        $$
+        \Huge \sec(\theta)
+        $$
+
+        for the $x$-axis intersection, and
+
+        $$
+        \Huge \csc(\theta)
+        $$
+
+        for the $y$-axis intersection, no matter the quadrant!)

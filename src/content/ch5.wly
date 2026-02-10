@@ -33,15 +33,16 @@
     is a circle of radius $1$, while “the” unit
     circle is the circle of radius $1$ centered
     at $(0, 0)$.) For example, 
-    if we pluck
-    $$
-    x = {1\over 3}
-    $$
-    out of the ether to be the subject of closer inspection,
+    !! if we pluck
+    !! $$
+    !! x = {1\over 3}
+    !! $$
+    !! out of the ether to be the subject of closer inspection,
     !! if we look at 
     !! $x = {1\over 2}$, we see $\cos({1\over 2}) \approx 0.9$, $\sin({1\over 2}) \approx 0.5$:
     !! $x = {1\over 3}$, 
-    we see $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
+    !! we can see from the graphs 
+    one can see from the graphs that $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
 
     |> Image
         src=tmp-images/svg_ch5_ch_cosine_and_sine_@0.333.svg
@@ -388,7 +389,9 @@
     input!
 
 |> Section
-    *Parenthesization and powers. (Notation.)* 
+    work=ing
+
+    *Parenthetization and powers.* 
     It is allowed to write
     $$
     \te{“}\cos x\rt{0.2}\te{”}
@@ -397,14 +400,7 @@
     $$
     \te{“}\cos(x)\rt{0.1}\te{”}
     $$
-    !! $$
-    !! \cos x
-    !! $$
-    !! for
-    !! $$
-    !! \cos(x)
-    !! $$
-    when the input is just one symbol. Also note that 
+    when the input is just one symbol. Also,
     $$
     \cos^2(x)
     $$
@@ -617,7 +613,7 @@
     |> Image
         src=images/svg_ch_ch_x_displacement_and_x_radians_radian_definition.svg
 
-    ...with the input appearing as a radian.
+    ...with the input appearing as a radian!
 
     |> Example
         We can conceptualize $\cos(\eta/2)$
@@ -645,9 +641,11 @@
     |> Image
         src=tmp-images/svg_ch5_ch_radian_definition_consequence.svg
 
-    |> StarDivider
+    |> TildeDivider
+        style=margin-top:-1em
 
 |> Section
+
     *Auto-converting degrees to radians.*
     We will consider the degree notation
     “$^\circ$” to be pig lipstick on top of
@@ -705,7 +703,6 @@
     of the circle!)
 
 |> Section
-    
 
     *Sines and cosines of $\mathbf{30^\circ}$,
     $\mathbf{45^\circ}$ and $\mathbf{60^\circ}$.*
@@ -926,7 +923,6 @@
         src=images/svg_ch5_ch_main_angles_third.svg
 
 |> Section
-    
 
     *Scaling the circle.*
     In the following diagram, the coordinates
@@ -959,7 +955,6 @@
     ...where $Q_x$, $Q_y$ are the $x$- and $y$- coordinates of $Q$.
 
 |> Section
-    
 
     *Polar coordinates.*
     The so-called
@@ -1051,7 +1046,6 @@
         $(-1, 1) \in \rr^2$.
 
 |> Section
-    
 
     *Change-of-coordinate formulas.*
     Definitionally, the equations
@@ -1132,7 +1126,6 @@
     called the _angle_ or the _argument_.
 
 |> Section
-    
 
     *Right triangles.*
     Hopefully, the following figure should seem
@@ -1212,7 +1205,6 @@
         arrows, starting from the sidelength of $14$.
 
 |> Section
-    
 
     *A famous diagram.*
     There is a somewhat infamous diagram similar
@@ -1266,7 +1258,7 @@
     Take an ordinary angle of aperture less than
     $180^\circ\hlfbk$ with a circular arc drawn
     inside and a line segment spanning the two
-    sides of the angle that clears the arc:
+    sides of the angle, clearing the arc:
 
     |> Image
         src=images/svg_ch5_ch_abercrombie_statement.svg
@@ -1276,24 +1268,21 @@
     __Abercrombie inequality__
 
     states that
-    !! the length of the segment is at
-    !! least as much as the length of the arc, i.e.,
-    !! that
+    the length of the arc is less than or equal to the length of the segment, i.e., that
 
     $$
     A\leq S
     $$
 
-    in the language of the above figure, i.e.,
-    that the length of the 
-    !! arc lower bounds the length of the segment.
-    arc is less than or equal to the length of the segment.
-    !! segment is at least the length of the arc.
+    where $A$ is the length of the arc and $S$ is
+    the length of the segment, as in the figure.
+
+    !! in the language of the above figure.
+    !! , i.e., that 
 
     The proof is that, if this were not the case,
     the length $S$ of the segment would lie to left of the
     length $A$ of the arc on the number line...
-    !! as pictured in this stylized view of the number line:
 
     |> Image
         src=images/svg_ch5_ch_abercrombie_to_the_left.svg
@@ -1348,8 +1337,9 @@
     |> Image
         src=images/svg_ch5_ch_abercrombie_to_the_left_second.svg
 
-    ...on the number line is false,
-    from which this original arrangement of values...
+    ...on the number line is 
+    false—we have achieved a so-called _contradiction_—from
+    which this original arrangement of values...
 
     |> Image
         src=images/svg_ch5_ch_abercrombie_to_the_left_third.svg
