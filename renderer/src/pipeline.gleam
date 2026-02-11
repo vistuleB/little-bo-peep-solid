@@ -101,8 +101,8 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     [
       dl.find_replace__outside(#("\\*", "*"), ["MathBlock", "Math"]),
       dl.find_replace__outside(#("\\_", "_"), ["MathBlock", "Math"]),
-      // dl.insert_word_joiner_around(["Math", "i", "b"]),
-      dl.wrap_adjacent_non_whitespace_text_with(#(["Math"], "NoBreak")),
+      dl.insert_word_joiner_into_adjacent_text_nodes(["Math", "i", "b"]),
+      // dl.wrap_adjacent_non_whitespace_text_with(#(["Math"], "NoBreak")),
       // cleaning 'p' second time around (not sure all the steps are necessary this time):
       dl.concatenate_text_nodes(),
       dl.delete_empty_lines_before_after(p_cannot_contain),
