@@ -125,31 +125,33 @@
         content=selection
         chapter=>>trigonometry
         !! !! >>_cos_of_x_+_0_point_1_
-        !! >>_guesstimate_cos_10x_linear_
-        !! >>_guesstimate_cos_10x_parabolic_
-        !! >>_guesstimate_sinusoid_
-        !! >>_triangle_conch_
+        >>_guesstimate_cos_10x_linear_
+        >>_guesstimate_cos_10x_parabolic_
+        >>_guesstimate_sinusoid_
+        >>_triangle_conch_
         >>_four_graphs_
-        !! >>_handdrawn_oval_P_position_
-        !! >>_vector_addition_definition_
-        !! >>_circular_motion_from_x_coordinate_
-        !! >>_0_point_2_radians_
-        !! >>_eta_and_4eta_as_ratios_
-        !! >>_long_division_11_over_7_
-        !! >>_long_division_22_over_7_
-        !! >>_long_division_15542486476949_777_
+        >>_where_is_the_pythagorean_identity_
+        >>_handdrawn_oval_P_position_
+        >>_vector_addition_definition_
+        >>_circular_motion_from_x_coordinate_
+        >>_0_point_2_radians_
+        >>_eta_and_4eta_as_ratios_
+        >>_long_division_11_over_7_
+        >>_long_division_22_over_7_
+        >>_long_division_15542486476949_777_
         >>_complement_calculation_
         >>_complement_of_complement_
-        >>_max_sinx_+_cosx_
+        >>_max_sinx_+_cosx_new_ver_
+        !! >>_max_sinx_+_cosx_
         >>_rotate_central_90_
         >>_ratio_A_over_B_tan^2_
         >>_ratio_A_over_B_1_+_tan^2_
-        >>_proof_1_+_tan^2_eq_sec^2_
-        >>_proof_1_+_tan^2_eq_sec^2_backward_
-        >>_four_compositions_expressed_
-        >>_four_compositions_graphed_
+        !! >>_proof_1_+_tan^2_eq_sec^2_
+        !! >>_proof_1_+_tan^2_eq_sec^2_backward_
+        !! >>_four_compositions_expressed_
+        !! >>_four_compositions_graphed_
         !! >>_periodicity_mod_2eta_
-        >>_cosx_dot_sinx_is_translate_of_cos^2x_
+        !! >>_cosx_dot_sinx_is_translate_of_cos^2x_
         !! >>_cos^2x_scale_and_translate_of_cosx_
         !! >>_relate_sinx_dot_cosx_to_sin2x_
         !! >>_turn_sinx_into_sinx_dot_cosx_
@@ -158,17 +160,17 @@
         !! >>_for_every_A1_A2_stupid_followup_
         !! >>_map_cosx_to_cos_Bx+C_
         >>_secant_cosecant_intersections_
-        >>_geometric_construction_of_1_over_A_
-        >>_axes_intersections_60_degrees_
+        !! >>_geometric_construction_of_1_over_A_
+        !! >>_axes_intersections_60_degrees_
         >>_blueprints_top_and_side_
         >>_blueprints_open_thin_door_
-        >>_rank_the_7_slices_
         >>_archimedean_projection_
+        >>_rank_the_7_slices_
         >>_sphere_area_formula_from_archimedean_property_
         >>_sphere_volume_
         >>_scalar_times_vector_definition_
         >>_blueprints_open_bomb_shelter_door_
-        >>_isosets_of_xy_
+        !! >>_isosets_of_xy_
         >>_spherical_to_cartesian_coordinates_1_
         >>_double_pre_processing_steps_
         >>_double_post_processing_spteps_

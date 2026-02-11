@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_four_graphs_
 
     Which function is most plausibly associated to
@@ -21,12 +22,12 @@
 
                 |> td
                     style=padding:0.5em 0;
-                    $x \ra \cos^2(x)$
+                    $x \ra \cos^2 x$
 
             |> tr
                 |> td
                     style=padding:0.5em 0;border-right:1px solid black
-                    $x \ra \sin^2(x)$
+                    $x \ra \sin^2 x$
 
                 |> td
                     style=padding:0.5em 0;
@@ -36,24 +37,60 @@
         src=images/svg_ch5_ex_four_graphs.svg
 
     |> Solution
-        The culprits are:
+        Since
+        $$
+        x \ra \sin^2 x
+        $$
+        $$
+        x \ra \cos^2 x
+        $$
+        are nonnegative [the square of a number
+        is nonnegative]
+        these functions must either be
+        the top right or bottom left graphs, as the
+        other two graphs weave in and out of negative territory;
+        given additionally that
+        $$
+        \,\cos(0) = 1,
+        $$
+        $$
+        \sin(0) = 0
+        $$
+        we can further deduce that
+        $$
+        x \ra \sin^2 x
+        $$
+        can only be the top right graph, and
+        $$
+        x \ra \cos^2 x 
+        $$
+        can only be the bottom left graph; moreover, since
+        $$
+        -1 \leq \sin x \cdot \cos x \leq 1
+        $$
+        for all $x \in \rr$ (as the product of
+        two numbers that are between $-1$ and $1$ is
+        itself between $-1$ and $1$), whereas the
+        top left graph is at times greater than $1$
+        and at times less than $-1$,
+        !! steps outside the band $|y| \leq 1$, 
+        the last standing possibility is...
 
         |> Image
             src=images/svg_ch5_ex_four_graphs_labeled.svg
 
-        For reference (if you need help checking), the
-        graphs of $\sin$ and $\cos$ are as follows:
-
-        |> Image
-            src=images/svg_ch5_ex_four_graphs_cos.svg
-        |> Image
-            src=images/svg_ch5_ex_four_graphs_sin.svg
-
-        (Then imagine summing together, squaring, etc.)
+        ...this one! 
 
         |> SolutionNote
-            It is, indeed, intriguing that all of these
-            functions appear to be_sinusoids_. (Formally defined
-            as a function of the form $x \ra A\cdot \sin(Bx + C) + D$
-            for some constants $A$, $B$, $C$, $D \in \rr$.)
+            These are in fact the actual graphs of
+            the stated functions, not just “plausible” graphs.
+            
+        |> SolutionNote
+            ...and it is
+            indeed quite striking that all of these
+            functions seem to be _sinusoids_, given the
+            appearance of their graphs! (A “sinusoid” is 
+            formally defined as a function of the form
+            $x \ra A\cdot \sin(Bx + C) + D$ for some 
+            constants $A$, $B$, $C$, $D \in \rr$.)
 

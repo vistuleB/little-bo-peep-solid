@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_max_sinx_+_cosx_
 
     The graph $y = \cos(x) + \sin(x)$ from Exercise 
@@ -9,6 +10,7 @@
 
     What is this maximum value, and for which
     value(s) of $x$ is it achieved?
+    (Reason geometrically, NOT by calculus.)
 
     |> Solution
 
@@ -34,8 +36,9 @@
         displacement to be vertical:
 
         |> Image
-            src=images/svg_ch5_ex_x_plus_y_options.svg
-            style=background-color:#fdfdfd
+            src=tmp-images/svg_ch5_ex_x_plus_y_option1.svg
+        |> Image
+            src=tmp-images/svg_ch5_ex_x_plus_y_option2.svg
 
         Either way, the upshot is that the sum
 
@@ -81,14 +84,14 @@
         Having said this,
 
         $$
-        \cos(x) + \sin(x)
+        \cos x + \sin x
         $$
 
         can be interpreted as the sum of the $x$- and
         $y$-coordinates of the point
 
         $$
-        (\cos(x), \sin(x))
+        (\cos x, \sin x)
         $$
 
         that is a point on the unit circle. In other words,

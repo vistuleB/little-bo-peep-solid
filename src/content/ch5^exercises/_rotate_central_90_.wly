@@ -32,21 +32,6 @@
             |> Image
                 src=tmp-images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg
 
-            !! Verbalized: _the counterclockwise angle from the positive
-            !! $x$ axis to
-            !! the radial vector
-            !! equals the counterclockwise angle from the positive
-            !! $y$ axis to the counterclockwise tangent._
-
-            !! (Nb: When we say the “radial vector” and
-            !! “counterclockwise tangent” we mean those objects that
-            !! are illustrated here:)
-
-            !! |> Image
-            !!     src=images/svg_ch5_ex_tangent_angle_explanation_radian_vector.svg
-
-        !! |> StarDivider
-
         |> SolutionNote
 
             Here is an attempt at verbalization:
@@ -57,7 +42,10 @@
             equals the counterclockwise angle from the positive
             $y$ axis to the counterclockwise tangent [of angle $\theta$]__
 
-            ...where we sort of made up the terms “radial vector”
-            and “counterclockwise tangent” to suit our
-            momentary needs, but anyway, it was just an attempt!
+            With the various terms illustrated here:
 
+            |> Image
+                src=tmp-images/svg_ch5_ex_tangent_angle_verbalization_explanation.svg
+
+            ...but if it was such a great verbalization we
+            wouldn't need to illustrate it, ergo, we failed!

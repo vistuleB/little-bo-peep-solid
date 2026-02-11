@@ -1,0 +1,134 @@
+|> Exercise
+    work=ing
+    handle=_max_sinx_+_cosx_new_ver_
+
+    The graph $y = \cos x + \sin x$ from Exercise 
+    >>_four_graphs_ has a maximum value greater than $1$:
+
+    |> Image
+        src=images/svg_ch5_ex_maximum_of_sin_plus_cos.svg
+
+    What is this maximum value, and for which
+    value(s) of $x$ is it achieved?
+    (Reason geometrically, NOT by calculus.)
+
+    |> Solution
+
+        Note that if we move 
+        diagonally along a line of angle $-45^\circ$ 
+        from a point $(x_1, y_1)$
+        to a point $(x_2, y_2)$...
+
+        |> Image
+            src=tmp-images/e5_max_cosx_plus_sinx_x1_y1_x2_y2.svg
+
+
+        ...then...
+
+        $$
+        x_1 + y_1 = x_2 + y_2
+        $$
+
+        ...because whatever has been gained in the $x$-coordinate
+        has been lost in the $y$-coordinate, and vice-versa. In
+        particular,
+
+        _|ALL|_ 
+
+        points on any line of angle $-45^\circ$ have the
+        same coordinate sum as one another—such a line is indeed
+        the graph of the solution to an equation of the form
+        
+        $$
+        x + y = c
+        $$
+
+        (to be read “the coordinate sum is such-and-such [$c$]”)
+        because if we solve the latter equation for $y$ we find
+
+        $$
+        y = c - x
+        $$
+
+        ...a line of slope $-1$, i.e., a line of angle $-45^\circ$!
+        (Yes, well, anyway.) In particular, if we draw a “heatmap” of
+
+        $$
+        x + y
+        $$
+
+        over all points $(x, y) \in \rr^2$ we find a pattern of diagonal bands of 
+        slope $-1$: 
+        !! where the direction of fastest
+        !! increase is up and to the right at $45^\circ$, perpendicularly
+        !! to the bands:
+
+        |> Image
+            src=tmp-images/svg_ch5_ex_x_plus_y_rainbow_v2.svg
+
+        !! the most possible towards the red (brown)
+        !! zone of the heatmap; this is obviously
+        !! $\theta = \eta/2$ (plus or minus any
+        !! multiple of $4\eta$):
+
+        !! |> Pause
+
+        !! The maximum value of...
+
+        !! $$
+        !! \cos x + \sin x
+        !! $$
+
+        !! ...is therefore...
+
+        !! |> Boxed
+        !!     style=padding-bottom:0.9em
+        !!     $$
+        !!     \cos(\eta/2) + \sin(\eta/2) = 2\cdot{1\over \sqrt{2}} = \sqrt{2}
+        !!     $$
+
+        !! ...achieved at $x = 45^\circ$ as well as at
+        !! $45^\circ$ plus or minus
+        !! any multiple of $360^\circ$!
+
+        !! In particular (3rd time's a charm), 
+        If we are confined to some region of the plane
+        and we need to find a point that maximizes the
+        coordinate sum we must go as far up and to the
+        right as possible, towards brown—whereas
+        to minimize the sum we must go as far down and
+        to the left as possible, towards purple!
+
+        Having said this,
+
+        $$
+        \cos x + \sin x
+        $$
+
+        can be interpreted as the sum of the $x$- and
+        $y$-coordinates of the point
+
+        $$
+        (\cos x, \sin x)
+        $$
+
+        that is a point on the unit circle. In other words,
+        the unit circle is “the region of the plane” (cf.
+        previous paragraph) to which we are confined—we
+        must choose a value of $x$ that puts us as far
+        “up and to the right” as possible on the circle.
+        That value is... $x = \eta/2$ (!!!!):
+
+        |> Image
+            src=images/svg_ch5_ex_x_plus_y_eta_over_2.svg
+
+        ...or with any multiple of $4\eta$ added; the _value_
+        attained at the maximum is...
+
+        |> Boxed
+            style=padding-bottom:0.9em
+            $$
+            \cos(\eta/2) + \sin(\eta/2) = 2\cdot{1\over \sqrt{2}} = \sqrt{2}
+            $$
+
+        ...since $\cos(\eta/2) = \sin(\eta/2) = \sqrt{0.5} = {1\over \sqrt{2}}$.

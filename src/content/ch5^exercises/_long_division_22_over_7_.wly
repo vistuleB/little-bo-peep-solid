@@ -15,20 +15,36 @@
         |> Image
             src=images/svg_ch5_ex_22_and_33_and_44_over_7_combined_longhands.svg
 
-        From which...
+        In each case, the digits of the quotient
+        are about to restart from the first digit
+        after the decimal point; the answers are therefore:
 
-        $$
-        \displaylines{
-        \Large \up{1.5}{22\over 7} = 3.\overline{142857}\\
-        \Large \up{1.7}{33\over 7} = 4.\overline{714285}\\
-        \Large \up{1.7}{44\over 7} = 6.\overline{285714}
-        }
-        $$
+        |> Boxed
+            $$
+            \displaylines{
+            \Large \up{1.5}{22\over 7} = 3.\overline{142857}\\
+            \Large \up{1.7}{33\over 7} = 4.\overline{714285}\\
+            \Large \up{1.7}{44\over 7} = 6.\overline{285714}
+            }
+            $$
 
-        ...because the digits of the quotient are,
-        in each case, about to
-        restart from the first digit
-        after the decimal point.
+        |> StarDivider
+            style=margin-top:-1.5em
+
+        !! From which...
+
+        !! $$
+        !! \displaylines{
+        !! \Large \up{1.5}{22\over 7} = 3.\overline{142857}\\
+        !! \Large \up{1.7}{33\over 7} = 4.\overline{714285}\\
+        !! \Large \up{1.7}{44\over 7} = 6.\overline{285714}
+        !! }
+        !! $$
+
+        !! ...because the digits of the quotient are,
+        !! in each case, about to
+        !! restart from the first digit
+        !! after the decimal point.
 
         |> SolutionNote
 
@@ -53,81 +69,85 @@
             \Large \up{1.7}4\eta \approx 6.\overline{285714}}
             $$
 
-            ...though none of these estimates are actually
-            accurate to more than two decimal places. (While all
-            are accurate up to _at least_ two decimal places.)
+            ...though each estimate is only accurate to
+            two decimal places, meaning that the last four
+            digits of the period are “wasted (in)accuracy”.
+            !! ...though none of these estimates are actually
+            !! accurate to more than two decimal places. 
+            !! while all
+            !! are accurate up to _at least_ two decimal places.
 
-        |> SolutionNote
+        !! |> SolutionNote
 
-            As mentioned in Note 1 of Exercise 24,
-            Chapter >>functions, these approximations are about
-            half-a-part-in-a-thousand too large, or to
-            be more exact,
+        !!     As mentioned in Note 1 of Exercise 24,
+        !!     Chapter >>functions, these approximations are about
+        !!     half-a-part-in-a-thousand too large, or to
+        !!     be more exact,
 
-            $$
-            \approx 0.0004
-            $$
+        !!     $$
+        !!     \approx 0.0004
+        !!     $$
 
-            too large in relative terms. I.e., you can subtract
+        !!     too large in relative terms. I.e., you can subtract
 
-            $$
-            \approx 1.\overline{571428} \cdot 0.0004 \approx 0.0006
-            $$
+        !!     $$
+        !!     \approx 1.\overline{571428} \cdot 0.0004 \approx 0.0006
+        !!     $$
 
-            from
+        !!     from
 
-            $$
-            \approx 1.\overline{571428}
-            $$
+        !!     $$
+        !!     \approx 1.\overline{571428}
+        !!     $$
 
-            to get a better approximation for $\eta$, subtract
+        !!     to get a better approximation for $\eta$, subtract
 
-            $$
-            \approx 3.\overline{142857} \cdot 0.0004 \approx 0.0012
-            $$
+        !!     $$
+        !!     \approx 3.\overline{142857} \cdot 0.0004 \approx 0.0012
+        !!     $$
 
-            from
+        !!     from
 
-            $$
-            \approx 3.\overline{142857}
-            $$
+        !!     $$
+        !!     \approx 3.\overline{142857}
+        !!     $$
 
-            to get a better approximation for $2\eta$, subtract
+        !!     to get a better approximation for $2\eta$, subtract
 
-            $$
-            \approx 4.\overline{714285} \cdot 0.0004 \approx 0.0019
-            $$
+        !!     $$
+        !!     \approx 4.\overline{714285} \cdot 0.0004 \approx 0.0019
+        !!     $$
 
-            from
+        !!     from
 
-            $$
-            \approx 4.\overline{714285}
-            $$
+        !!     $$
+        !!     \approx 4.\overline{714285}
+        !!     $$
 
-            to get a better approximation for $3\eta$, subtract
+        !!     to get a better approximation for $3\eta$, subtract
 
-            $$
-            \approx 6.\overline{285714} \cdot 0.0004 \approx 0.0025
-            $$
+        !!     $$
+        !!     \approx 6.\overline{285714} \cdot 0.0004 \approx 0.0025
+        !!     $$
 
-            from
+        !!     from
 
-            $$
-            \approx 6.\overline{285714}
-            $$
+        !!     $$
+        !!     \approx 6.\overline{285714}
+        !!     $$
 
-            to get a better approximation for $4\eta$. The resulting
-            approximations end up being...
+        !!     to get a better approximation for $4\eta$. The resulting
+        !!     approximations end up being...
 
-            $$
-            \displaylines{
-            \Large         \eta \approx  1.5708\\
-            \Large \up{1.7}2\eta \approx 3.1416\\
-            \Large \up{1.7}3\eta \approx 4.7123\\
-            \Large \up{1.7}4\eta \approx 6.2832}
-            $$
+        !!     $$
+        !!     \displaylines{
+        !!     \Large         \eta \approx  1.5708\\
+        !!     \Large \up{1.7}2\eta \approx 3.1416\\
+        !!     \Large \up{1.7}3\eta \approx 4.7123\\
+        !!     \Large \up{1.7}4\eta \approx 6.2832}
+        !!     $$
 
-            ...that are correct approximations up to
-            the fourth digit, it turns out, modulo
-            rounding off of the fifth digit. (But these
-            are not worth learning by heart, by any means.)
+        !!     ...that are correct approximations up to
+        !!     the fourth digit, it turns out, modulo
+        !!     rounding off of the fifth digit. (But these
+        !!     are not worth learning by heart, by any means.)

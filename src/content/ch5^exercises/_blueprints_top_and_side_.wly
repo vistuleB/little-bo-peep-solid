@@ -47,12 +47,13 @@
 
         inches, which comes out to
 
-        |> ImageLeft
-            src=images/svg_ch5_ex_floorplan_computation_cloud.svg
-
         $$
         212.65
         $$
+
+        |> ImageLeft
+            src=images/svg_ch5_ex_floorplan_computation_cloud.svg
+            offset_x=10em
 
         minus some. (Approximating to $1/100$-th of an inch
         should be good enough for a construction site.)

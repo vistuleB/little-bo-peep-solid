@@ -35,21 +35,21 @@
         is the circumference of a circle (any circle)
         divided by its radius.
 
-        |> SolutionNote
+        !! |> SolutionNote
 
-            As one consequence, it follows that the circumference
-            of a circle is
+        !!     As one consequence, it follows that the circumference
+        !!     of a circle is
 
-            $$
-            4\eta\cdot r
-            $$
+        !!     $$
+        !!     4\eta\cdot r
+        !!     $$
 
-            where $r$ is the radius.
+        !!     where $r$ is the radius.
 
-        |> SolutionNote
+        !! |> SolutionNote
 
-            These “ratio descriptions” of $\eta$ and
-            $4\eta$ also follow by viewing $\eta$ and $4\eta$
-            as the radian values of a right angle and a full angle,
-            respectively.
+        !!     These “ratio descriptions” of $\eta$ and
+        !!     $4\eta$ also follow by viewing $\eta$ and $4\eta$
+        !!     as the radian values of a right angle and a full angle,
+        !!     respectively.
 
