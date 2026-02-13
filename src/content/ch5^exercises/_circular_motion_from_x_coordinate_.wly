@@ -42,9 +42,9 @@
         |> List
             style=padding-left: 2em;
             
-            $-B$ is the counterclockwise
+            $B$ is the _clockwise_
             angular speed/angular frequency of the particle
-            and $-C$ is the counterclockwise starting angle
+            and $C$ is the _clockwise_ starting angle
             of the particle, as measured from a translate of
             the positive $x$ axis going through the center
             of the circle
@@ -112,13 +112,14 @@
         |> Image
             src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg
 
-        (Or... ~ ~ ~ ~ ~ ~ ~ ~ ~
+        !! (Or... ~ ~ ~ ~ ~ ~ ~ ~ ~
 
-        |> Image
-            src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg
+        !! |> Image
+        !!     src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg
 
-        ...to put everything in terms of
-        counterclockwise-ness.) This accounts for
+        !! ...to put everything in terms of
+        !! counterclockwise-ness.) 
+        This accounts for
         the two solutions listed above. (But it can
         only be one of those two solutions, having made
         the “Occam's razor” assumption that the
@@ -127,7 +128,7 @@
         precludes sudden reversals of direction at either
         end of the circle, if you were at all thinking
         of that, for speed would be undefined at
-        those points where direction is reversed.)
+        those points where direction is reversed!)
 
         |> SolutionNote
 

@@ -33,7 +33,7 @@ export const Math = (props: ParentProps) => {
 
   return (
     <span
-      class="math inline-flex indent-0 transition-opacity"
+      class="transition-opacity"
       style={{ opacity: visible() ? "1" : "0" }}
       ref={ref}>
       {props.children}

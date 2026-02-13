@@ -85,15 +85,15 @@
 
         |> SolutionNote
 
-            Represent the vectors $\vec{u}$, $\vec{v}$
+            If we represent the vectors $\vec{u}$, $\vec{v}$
             by arrows whose components are displacements $u_x$,
             $u_y$, $v_x$, $v_y$ in $x$, $y$, $x$ and $y$ again
-            respectively:
+            respectively...
 
             |> Image
                 src=images/svg_ch5_ex_vector_sum_vectors.svg
 
-            Then
+            ...then..
 
             $$
             u_x + v_x
@@ -105,13 +105,13 @@
             |> Image
                 src=images/svg_ch5_ex_vector_sum_ux_plus_vx.svg
 
-            ...component displacements, while
+            ...component displacements, while...
 
             $$
             u_y + v_y
             $$
 
-            may be geometrically realized as the concatenation
+            ...may be geometrically realized as the concatenation
             of the $u_y$ and $v_y$...
 
             |> Image
@@ -162,4 +162,4 @@
 
             |> Image
                 style=margin-top:1em;margin-bottom:0.8em;
-                src=images/svg_ch5_ex_vector_sum_previous_example.svg
+                src=tmp-images/svg_ch5_ex_vector_sum_previous_example.svg

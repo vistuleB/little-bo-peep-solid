@@ -11,14 +11,11 @@
 
     |> Solution
 
-        Assume for starters that
-        $\theta$ lies inside the first quadrant—i.e., that $0 < \theta < \eta$—in
+        For starters assume that $\theta$ lies in
+        the first quadrant, in
         which case both coordinates are nonnegative, and, more specifically, 
         are equal to the two 
-        !! lengths marked ‘?’ 
-        !! purple bars
         purple lengths below:
-        !! in the diagram below:
 
         |> Image
             src=tmp-images/svg_ch5_ex_theta_tangent_Q1.svg
@@ -32,7 +29,7 @@
             we have already “used up” the fact that
             the radius of the circle is $1$ by
             making the dropped height (which used to
-            be a radius) length $1$; and that
+            be a radius) length $1$;
 
             we use a “the complement of my complement
             is myself”-type argument to deduce that the
@@ -50,7 +47,7 @@
         |> Image
             src=tmp-images/svg_ch5_ex_theta_tangent_Q1_second_solve.svg
 
-        I.e., in the first quadrant, at least, the
+        ...i.e., in the first quadrant, at least, the
         coordinates are $\sec(\theta)$ and $\csc(\theta)$:
 
         |> Image

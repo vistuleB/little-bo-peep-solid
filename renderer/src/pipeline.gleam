@@ -101,8 +101,9 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     [
       dl.find_replace__outside(#("\\*", "*"), ["MathBlock", "Math"]),
       dl.find_replace__outside(#("\\_", "_"), ["MathBlock", "Math"]),
-      dl.insert_word_joiner_into_adjacent_text_nodes(["Math", "i", "b"]),
-      // dl.wrap_adjacent_non_whitespace_text_with(#(["Math"], "NoBreak")),
+      dl.table_marker(),
+      // dl.insert_word_joiner_into_adjacent_text_nodes(["Math", "i", "b"]),
+      dl.wrap_adjacent_non_whitespace_text_with(#(["Math"], "NoBreak")),
       // cleaning 'p' second time around (not sure all the steps are necessary this time):
       dl.concatenate_text_nodes(),
       dl.delete_empty_lines_before_after(p_cannot_contain),
@@ -192,7 +193,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     case author_mode {
       True -> [
-        dl.table_marker(),
         dl.lbp_turn_lines_into_3003_spans("./src/content/", ["Math", "MathBlock"]),
         dl.lbp_adorn_with_3003_spans(#("./src/content/", "", ["MathBlock"])),
         dl.lbp_wrap_with_3003_spans(#("./src/content/", "", ["Math"])),

@@ -4,8 +4,8 @@
     Given the following sketch, to what angle
     can the door be opened before it hits against
     the roof? (Hint: You will need to Google “how
-    to use arctan”, or “how to convert from polar
-    to Cartesian coordinates”.)
+    to use arctan”, or “how to convert from Cartesian
+    to polar coordinates”.)
 
     |> Image
         src=images/svg_ch5_ex_opening_door.svg
@@ -109,3 +109,4 @@
 
         ...because $\alpha$ only constitutes the amount of rotation
         past $90^\circ$, per the drawing.
+

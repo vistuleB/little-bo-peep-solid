@@ -544,7 +544,7 @@
     this one.) Etc.
 
 |> Section
-
+    work=ing
     *Inputs as radians.*
     The
 
@@ -613,7 +613,7 @@
     |> Image
         src=images/svg_ch_ch_x_displacement_and_x_radians_radian_definition.svg
 
-    ...with the input appearing as a radian!
+    ...with the input appearing as a radian.
 
     |> Example
         We can conceptualize $\cos(\eta/2)$
@@ -622,17 +622,19 @@
         |> Image
             src=images/svg_ch5_ch_etaOver2_example_displacement_version.svg
 
-        ...with the input appearing as a displacement,
+        ...with the input $\eta/2$ being a displacement
+        along the periphery of the unit circle,
         or like this...
 
         |> Image
             src=images/svg_ch5_ch_etaOver2_example_angle_version.svg
 
-        ...with the input appearing as a radian.
+        ...with the input $\eta/2$ being the radian measure
+        of an angle opening counterclockwise from the positive $x$ axis.
 
     |> Pause
 
-    _Note._
+    _Sidenote._
     Another thing to know about radians 
     is that the length of a circular
     arc subtended by an angle is its radian

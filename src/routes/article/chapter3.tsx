@@ -3,17 +3,17 @@ import ArticleTitle  from "~/components/ArticleTitle";
 import Boxed  from "~/components/Boxed";
 import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
-import Grid  from "~/components/Grid";
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
-import InlineImage  from "~/components/InlineImage";
-import { Item }  from "~/components/List";
+import { Item, List }  from "~/components/List";
 import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
+import { StarDivider }  from "~/components/StarDivider";
 import TextParent  from "~/components/TextParent";
+import { TildeDivider }  from "~/components/TildeDivider";
 import { SolutionNote, Example, Pause, Section, NoBreak }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
@@ -21,335 +21,663 @@ export default function __Chapter3__() {
   return (
     <Article
       prevPage="/article/chapter2"
-      nextPage="/article/chapter4"
-      pageNecessaryMargin={700}
-      maxElementWidth={1500}
-      id="_54_hgi_"
+      nextPage=""
+      pageNecessaryMargin={950}
+      maxElementWidth={1000}
+      id="_71_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            syntax
+            cos and sin. (“cosine” and “sine”.)
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            lambda functions
+            derivatives
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
-            definition by cases
+            even/odd identities, and identities with {" "}
+            <NoBreak>
+              “
+              <Math>
+                $\eta$
+              </Math>
+              ”
+            </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
-            on arbitrariness
+            relation to derivatives
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
-            graphs
+            parenthetization and powers
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
-            domains
+            the pythagorean identity
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
-            “from/to” notation
+            inputs as radians
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
-            the vertical line test
+            auto-converting degrees to radians
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
-            a famous discontinuity
+            sines and cosines of {" "}
+            <NoBreak>
+              <Math>
+                $\mathbf&#123;30^\circ&#125;$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}
+            {" "}
+            <Math>
+              $\mathbf&#123;45^\circ&#125;$
+            </Math>
+            {" "} and {" "}
+            <NoBreak>
+              <Math>
+                $\mathbf&#123;60^\circ&#125;$
+              </Math>
+            </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=section-10">
-            distinguishing {" "}
-            <NoBreak>
-              “
-              <Math>
-                $f$
-              </Math>
-              ”
-            </NoBreak>
-            {" "} and {" "}
-            <NoBreak>
-              “
-              <Math>
-                $f(x)$
-              </Math>
-              ”
-            </NoBreak>
+            scaling the circle
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-10">
           <InChapterLink href="?id=section-11">
-            distinguishing {" "}
-            <NoBreak>
-              “
-              <Math>
-                $x^3$
-              </Math>
-              ”
-            </NoBreak>
-            {" "} and {" "}
-            <NoBreak>
-              “
-              <Math>
-                $x \ra x^3$
-              </Math>
-              ”
-            </NoBreak>
+            polar coordinates
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-11">
           <InChapterLink href="?id=section-12">
-            polynomials
+            change-of-coordinate formulas
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-12">
           <InChapterLink href="?id=section-13">
-            quadratic, linear, and constant terms
+            right triangles
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-13">
+          <InChapterLink href="?id=section-14">
+            a famous diagram
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-14">
+          <InChapterLink href="?id=section-15">
+            the abercrombie inequality
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-15">
+          <InChapterLink href="?id=section-16">
+            the gregorinovich sandwich
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-16">
+          <InChapterLink href="?id=section-17">
+            the angle-sum formulas
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-17">
+          <InChapterLink href="?id=section-18">
+            the missing arrows
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-18">
+          <InChapterLink href="?id=section-19">
+            note on calculators
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-19">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 3:">
-        Functions
+        The Trigonometric Functions
       </ArticleTitle>
       <Section id="section-1">
         <OuterP>
           <b>
-            Syntax.
+            Cos and Sin. (“Cosine” and “sine”.)
           </b>
+          {" "} We've
+          already encountered the ‘cos’ function in 
           {" "}
-          A
+          <NoBreak>
+            <a
+              href="/article/chapter1#_7_hgi_"
+              class="handle-out-chapter-link"
+            >
+              Exercise 7 of Chapter 1
+            </a>
+            ,
+          </NoBreak>
+          {" "}
+          e.g.. It is the one that has this graph:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/hiZe.svg" />
+        <Pause />
+        <OuterP>
+          It has a close cousin named ‘sin’. While {" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "}
+          “tops off” at {" "}
+          <NoBreak>
+            <Math>
+              $x = 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} goes diagonally through
+          the point {" "}
+          <NoBreak>
+            <Math>
+              $(0, 0)$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/fuoV.svg" />
+        <Pause />
+        <OuterP>
+          As far as standard definitions go, {" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "}
+          is the
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          function
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          is a “rule” for transforming inputs (usually
-          numbers) into outputs (usually numbers as well).
-          One can think of a function as a box with an
-          “input tube” and an “output tube”:
-        </OuterP>
-        <Pause />
-        <Image src="/build-img/svgo-svg/tYyP.svg" />
-        <Pause />
-        <OuterP>
-          An input goes in via the input tube, is
-          processed according to the function's rule,
-          and the result comes out the other side.
-          (Metaphorically speaking.)
-        </OuterP>
-        <OuterP class="indent-10">
-          In the above picture, the name of the function
-          is {" "}
-          <NoBreak>
-            “
-            <Math>
-              $f$
-            </Math>
-            ”.
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          Notation-wise, one writes
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          (which is read {" "}
-          <NoBreak>
-            “
-            <Math>
-              $f$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
-            ”,
+            -coordinate
           </NoBreak>
-          {" "} and that's
-          important) for the result of passing an input
-          {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} to a function {" "}
-          <NoBreak>
-            <Math>
-              $f$
-            </Math>
-            .
-          </NoBreak>
-          {" "} For example, if the rule
-          according to which {" "}
-          <Math>
-            $f$
-          </Math>
-          {" "} processes inputs is
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          the output is the square of the input
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          then
+          and {" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} is the
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          &#123;f(2) = 4&#125;
-          $$
-        </MathBlock>
+        <CentralDisplayItalic>
+          <NoBreak>
+            <Math>
+              $y$
+            </Math>
+            -coordinate
+          </NoBreak>
+        </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          <NoBreak>
-            [“
-            <Math>
-              $f$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
+          of a point {" "}
           <Math>
-            $2$
+            $x$
           </Math>
-          {" "} equals {" "}
+          {" "} units counterclockwise from
+          {" "}
+          <Math>
+            $(1, 0)$
+          </Math>
+          {" "} on the unit circle. (Nb: “a”
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          unit circle
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          is a circle of radius {" "}
           <NoBreak>
             <Math>
-              $4$
-            </Math>
-            ”]
-          </NoBreak>
-          {" "} because {" "}
-          <NoBreak>
-            <Math>
-              $2^2 = 4$
+              $1$
             </Math>
             ,
           </NoBreak>
-          {" "} and
+          {" "} while “the” unit
+          circle is the circle of radius {" "}
+          <Math>
+            $1$
+          </Math>
+          {" "} centered
+          at {" "}
+          <NoBreak>
+            <Math>
+              $(0, 0)$
+            </Math>
+            .)
+          </NoBreak>
+          {" "} For example, 
+          one can see from the graphs that {" "}
+          <NoBreak>
+            <Math>
+              $\cos(&#123;1\over 3&#125;) \approx 0.9$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\sin(&#123;1\over 3&#125;) \approx 0.3$
+            </Math>
+            :
+          </NoBreak>
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          &#123;f(3) = 9&#125;
-          $$
-        </MathBlock>
+        <Image src="/tmp-images/svg_ch5_ch_cosine_and_sine_@0.333.svg" />
         <Pause />
         <OuterP>
+          Per the definitions, the point one third of a
+          unit counterclockwise from {" "}
+          <Math>
+            $(1, 0)$
+          </Math>
+          {" "} on the unit
+          circle has coordinates {" "}
+          <Math>
+            $\approx 0.9$
+          </Math>
+          {" "} in {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}
+          and {" "}
+          <Math>
+            $\approx 0.3$
+          </Math>
+          {" "} in {" "}
+          <Math>
+            $y$
+          </Math>
+          {" "} (or actually 
+          {" "}
+          <Math>
+            $0.94495...$
+          </Math>
+          {" "} and {" "}
           <NoBreak>
-            [“
             <Math>
-              $f$
+              $0.32719...$
             </Math>
+            ,
           </NoBreak>
-          {" "} of {" "}
+          {" "} 
+          it turns out, as we can know by
+          a calculator equipped with ‘sin’ and ‘cos’):
+        </OuterP>
+        <Pause />
+        <Image src="/tmp-images/svg_ch5_ch_unit_circle_@0.333_smaller.svg" />
+        <Pause />
+        <OuterP>
+          As a second example, the graphs indicate that
+          {" "}
+          <NoBreak>
+            <Math>
+              $\sin(-3) \approx -0.2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $\cos(-3) \approx -0.99$
+          </Math>
+          {" "}
+          (or something very close to {" "}
+          <NoBreak>
+            <Math>
+              $-1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} in any case):
+        </OuterP>
+        <Pause />
+        <Image src="/tmp-images/svg_ch5_ch_cosine_and_sine_@-3_v2.svg" />
+        <Pause />
+        <OuterP>
+          Indeed, going {" "}
+          <Math>
+            $-3$
+          </Math>
+          {" "} units counterclockwise—which
+          means, going {" "}
           <Math>
             $3$
           </Math>
-          {" "} equals {" "}
+          {" "} units clockwise—on the unit
+          circle, starting from {" "}
           <NoBreak>
             <Math>
-              $9$
-            </Math>
-            ”]
-          </NoBreak>
-          {" "} because {" "}
-          <NoBreak>
-            <Math>
-              $3^2 = 9$
+              $(1, 0)$
             </Math>
             ,
           </NoBreak>
-          {" "} and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123; f(0.1) = 0.01&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          [...] because {" "}
+          {" "} brings us to a point
+          with {" "}
           <NoBreak>
             <Math>
-              $0.1^2 = 0.01$
+              $y$
             </Math>
-            ,
+            -
           </NoBreak>
-          {" "} and so on. Also,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;f(x) = x^2&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
+          {" "} and {" "}
           <NoBreak>
-            [“
             <Math>
-              $f$
+              $x$
             </Math>
+            -coordinates
           </NoBreak>
           {" "} of {" "}
           <Math>
-            $x$
+            $\approx -0.2$
           </Math>
-          {" "} equals {" "}
+          {" "}
+          and {" "}
+          <Math>
+            $\approx -0.99$
+          </Math>
+          {" "} respectively (or {" "}
+          <Math>
+            $-0.1411...$
+          </Math>
+          {" "}
+          and {" "}
           <NoBreak>
             <Math>
-              $x^2$
+              $-0.989992...$
             </Math>
-            ”]
+            ,
           </NoBreak>
-          {" "} more generally, which
-          is actually the
+          {" "} to be exact, it turns out):
         </OuterP>
         <Pause />
-        <CentralDisplayItalic>
-          definition
-        </CentralDisplayItalic>
+        <Image src="/build-img/svgo-svg/9Ygl.svg" />
         <Pause />
         <OuterP>
-          of {" "}
+          For a last example,
+          note that there appears
+          to be a value of {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} near {" "}
           <NoBreak>
             <Math>
-              $f$
+              $-1.6$
             </Math>
-            !!
+            ,
           </NoBreak>
-          {" "} (Stated algebraically.)
+          {" "} where {" "}
+          <NoBreak>
+            <Math>
+              $\cos(x) = 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <NoBreak>
+            <Math>
+              $\sin(x) = -1$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/tmp-images/svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg" />
+        <Pause />
+        <OuterP>
+          Some thought reveals that 
+          such a value {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} does exist, and more precisely equals 
+          {" "}
+          <i>
+            minus one-quarter the circumference
+            of a unit circle
+          </i>
+          , because {" "}
+          <Math>
+            $(0, -1)$
+          </Math>
+          {" "} is
+          one-quarter of the unit circle clockwise from {" "}
+          <NoBreak>
+            <Math>
+              $(1, 0)$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          Note that one-quarter the circumference of a unit
+          circle was estimated to be
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \approx &#123;11\over 7&#125; = 1.\overline&#123;571428&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          in {" "}
+          <a
+            href="/article/chapter2#_50_hgi_"
+            class="handle-out-chapter-link"
+          >
+            Exercise 24 of Chapter 1
+          </a>
+          {" "} (by direct inspection
+          of the graph {" "}
+          <NoBreak>
+            <Math>
+              $y = \cos(x)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} for that matter,
+          which may or may not be cheating), which agrees
+          with the visual estimate {" "}
+          <NoBreak>
+            <Math>
+              $x \approx -1.6$
+            </Math>
+            .
+          </NoBreak>
+          {" "} (But
+          that value would be namely {" "}
+          <NoBreak>
+            <Math>
+              $x = -1.57...$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} not
+          {" "}
+          <NoBreak>
+            <Math>
+              $x = -1.6$
+            </Math>
+            .)
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          In another possible definition,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is defined as the {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinate
+          </NoBreak>
+          {" "} of a point that
+          is {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} units counterclockwise from {" "}
+          <Math>
+            $(0, -1)$
+          </Math>
+          {" "} on
+          the unit circle. In this case, {" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} and
+          {" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "} are both defined by {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinates:
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/h28T.svg" />
+        <Pause />
+        <OuterP>
+          In more detail, if you tilt your head  sideways,
+          you will see that the {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} axis looks, from the
+          vantage point of {" "}
+          <NoBreak>
+            <Math>
+              $(0, -1)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} the same as the {" "}
+          <Math>
+            $y$
+          </Math>
+          {" "}
+          axis looks from the vantage point of {" "}
+          <NoBreak>
+            <Math>
+              $(1, 0)$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          So the old and new definitions of {" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} are
+          equivalent! (👍👍)
+        </OuterP>
+        <OuterP class="indent-10">
+          In particular, {" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "} can also
+          be understood as the {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinates
+          </NoBreak>
+          {" "} of two
+          particles on the unit circle such that the ‘sin’
+          particle is one-quarter-turn behind the {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $\cos$
+            </Math>
+            ’
+          </NoBreak>
+          {" "}
+          particle:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/5m2X.svg" />
+        <Pause />
+        <OuterP>
+          ...to be contrasted with our first definition,
+          employing a single point projected onto
+          two different axes:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/7839.svg" />
+        <Pause />
+        <OuterP>
+          The second definition (former diagram) explains
+          why values of {" "}
+          <Math>
+            $\sin$
+          </Math>
+          {" "} lag a fixed amount behind
+          values of {" "}
+          <NoBreak>
+            <Math>
+              $\cos$
+            </Math>
+            .
+          </NoBreak>
+          {" "} (“Lagging” when you read the
+          graphs from left to right.) It's because the ‘sin’
+          particle follows in the trail blazed by the ‘cos’
+          particle!
         </OuterP>
       </Section>
       <Rest />
@@ -365,226 +693,1088 @@ const Rest = () => {
       <Section id="section-2">
         <OuterP>
           <b>
-            Lambda functions.
+            Derivatives.
           </b>
           {" "}
-          A
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          lambda function
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          is not a type of function, but a type of
-          notation  that enables one to define a function
-          without giving it a name, such as {" "}
+          Continuing the last “chapter” in the
+          definitions of {" "}
+          <Math>
+            $\sin$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $\cos$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} we can
+          add two more particles to the diagram that
+          defines ‘sin’ and ‘cos’ via {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinates.
+          </NoBreak>
+          {" "}
+          The two new particles are labeled {" "}
           <NoBreak>
             “
             <Math>
-              $f$
-            </Math>
-            ”.
-          </NoBreak>
-          {" "} In fact
-          there are two different mainstream notations, in
-          this instance. One notation writes
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \lambda&#123;&#125;x.x^2
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          to mean “the function that maps {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} to {" "}
-          <NoBreak>
-            <Math>
-              $x^2$
+              $-\!\sin$
             </Math>
             ”
           </NoBreak>
           {" "}
-          (and by the way,
+          and {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\!\cos$
+            </Math>
+            ”:
+          </NoBreak>
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          \lambda&#123;&#125;z.z^2
-          $$
-        </MathBlock>
+        <Image src="/build-img/svgo-svg/WKck.svg" />
         <Pause />
         <OuterP>
-          is {" "}
-          <i>
-            the same
-          </i>
-          {" "} function, because
-          it specifies the same in-out mapping—a thing
-          goes to its square—also by the way, the symbol
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \Huge \lambda
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is the Greek letter “lambda”, giving its name
-          to the topic) while the other notation writes
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x \rightarrow x^2
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          to mean the same thing.
-        </OuterP>
-        <OuterP class="indent-10">
-          Note that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (x \ra x^2)(0.1)
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          means “the function that maps each number to its
-          square, of {" "}
+          These labels are chosen
+          because
+          the {" "}
           <NoBreak>
             <Math>
-              $0.1$
+              $x$
             </Math>
-            ”.
+            -coordinate
           </NoBreak>
-          {" "} So...
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (x \ra x^2)(0.1) = 0.01
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          ...the same as an equation of the form
+          {" "} of the
           {" "}
           <NoBreak>
             “
             <Math>
-              $f(\dots) = \dots$
+              $-\!\sin$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          particle is
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          -\!\sin(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by symmetry with the {" "}
+          <Math>
+            $\sin$
+          </Math>
+          {" "} particle,
+          meaning that the
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\!\sin$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          particle
+          defines the function
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x \ra -\!\sin(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          also known simply as
+        </OuterP>
+        <Pause />
+        <CentralDisplay>
+          <NoBreak>
+            “
+            <Math>
+              $-\!\sin$
+            </Math>
+            ”
+          </NoBreak>
+        </CentralDisplay>
+        <Pause />
+        <OuterP>
+          by the general definition that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          -f = (x \ra -f(x))
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for all {" "}
+          <NoBreak>
+            <Math>
+              $f : \rr \ra \rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          and similarly for {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\!\cos$
             </Math>
             ”.
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          For more practice:
+          Adding the curves for {" "}
+          <Math>
+            $-\!\sin$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $-\!\cos$
+          </Math>
+          {" "}
+          to the graphs fills the “gap” between {" "}
+          <Math>
+            $y = \sin(x)$
+          </Math>
+          {" "}
+          and {" "}
+          <Math>
+            $y = \cos(x)$
+          </Math>
+          {" "} with two new equally-spaced curves;
+          note that
+          {" "}
+          <Math>
+            $\cos$
+          </Math>
+          {" "} lags behind {" "}
+          <Math>
+            $-\!\sin$
+          </Math>
+          {" "}
+          (reading the graphs from left to right)
+          by the same amount that {" "}
+          <Math>
+            $\sin$
+          </Math>
+          {" "} lags behind
+          {" "}
+          <NoBreak>
+            <Math>
+              $\cos$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} etc:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/RzLW.svg" />
+        <Pause />
+        <OuterP>
+          These are the same four curves that
+          appear in {" "}
+          <NoBreak>
+            <a
+              href="/article/chapter2#_36_hgi_"
+              class="handle-out-chapter-link"
+            >
+              Exercise 12 of Chapter 2
+            </a>
+            .
+          </NoBreak>
+          {" "}
+          In particular,
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          (\lambda x.x^3)(10) = 1000
+          \sin' = \cos
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          (\lambda u.u^5)(10) = 100000
+          \cos' = -\!\sin
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          (v \ra v^2)(10) = 100
+          (-\!\sin)' = -\!\cos
           $$
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
-          (z \ra z^3)(10) + (t \ra t^2)(5) = 1025.
+          (-\!\cos)' = \sin
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          (Etc.) (Indeed, to emphasize again, the variable
-          denoting the input does not matter: it is just a
-          placeholder, and you obtain the same output, and
-          the same {" "}
-          <i>
-            function
-          </i>
-          , no matter what symbol
-          you choose.*) (*As long as you don't collide
-          with other existing variable names.)
+          because the rate of change of each
+          particle's {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinate
+          </NoBreak>
+          {" "} is the
+          {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinate
+          </NoBreak>
+          {" "} of the next particle
+          in the order of rotation, as explained
+          in the solution to that problem.
+          (Clockwise vs. counterclockwise rotation
+          notwithstanding.)
+        </OuterP>
+        <OuterP class="indent-10">
+          One can also note that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          in general for any {" "}
+          <Math>
+            $f : \rr \ra \rr$
+          </Math>
+          {" "}
+          (cf. {" "}
+          <a
+            href="/article/chapter2#_34_hgi_"
+            class="handle-out-chapter-link"
+          >
+            Exercise 10
+          </a>
+          {" "}
+          and {" "}
+          <NoBreak>
+            <a
+              href="/article/chapter2#_35_hgi_"
+              class="handle-out-chapter-link"
+            >
+              Exercise 11 of Chapter 2
+            </a>
+            ),
+          </NoBreak>
+          {" "}
+          which implies that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-\!\sin)' = -\!\sin'
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-\!\sin)' = -\!\sin' = -\!\cos
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          to finish the computation),
+          and that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-\!\cos)' = -\!\cos'
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-\!\cos)' = -\!\cos' = -(-\!\sin) = \sin
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          to finish the computation),
+          which means that one only needs to
+          remember the first two equations.
         </OuterP>
       </Section>
       <Pause />
       <Section id="section-3">
         <OuterP>
           <b>
-            Definition by cases.
+            Even/odd identities, and identities with {" "}
+            <NoBreak>
+              “
+              <Math>
+                $\eta$
+              </Math>
+              ”.
+            </NoBreak>
           </b>
           {" "}
-          Sometimes a function is defined by an expression
-          of the form
+          One has
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          x \ra \begin&#123;cases&#125;
-          \ldots &amp; \te&#123;if $\ldots$&#125;\\
-          \ldots &amp; \te&#123;if $\ldots$&#125;\\
-          \vdots &amp; \vdots\\
-          \ldots &amp; \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;
+          \displaylines&#123;
+          \up&#123;1.0&#125;\cos(-x) = \cos(x) \\
+          \up&#123;1.7&#125;\sin(-x) = -\sin(x) \\
+          \up&#123;1.7&#125;\sin(x + \eta) = \cos(x) \\
+          \up&#123;1.7&#125;\cos(x - \eta) = \sin(x) \\
+          \up&#123;1.7&#125;\dn&#123;0.5&#125;\cos(\eta/2 + x) = \sin(\eta/2 - x)
+          &#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          where the right-hand side is a list of mutually
-          exclusive cases to consider according to the
-          value of {" "}
+          for all {" "}
+          <NoBreak>
+            <Math>
+              $x \in \rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} where
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \eta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (“aye-tah”, Greek letter “eta”) is a
+          constant that denotes the quarter-circumference
+          of a unit circle, or about {" "}
+          <NoBreak>
+            <Math>
+              $&#123;11\over 7&#125;$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (Cf. {" "}
+          <NoBreak>
+            <a
+              href="/article/chapter2#_50_hgi_"
+              class="handle-out-chapter-link"
+            >
+              Exercise 24
+            </a>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <a
+              href="/article/chapter2#_52_hgi_"
+              class="handle-out-chapter-link"
+            >
+              Chapter 2
+            </a>
+            .)
+          </NoBreak>
+          {" "} You should
+          be able to verify each of these identities
+          just by looking at them and thinking of the
+          definitions of {" "}
+          <NoBreak>
+            <Math>
+              $\sin(x)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\cos(x)$
+            </Math>
+            —possibly
+          </NoBreak>
+          {" "}
+          the “second” definition of {" "}
+          <NoBreak>
+            <Math>
+              $\sin(x)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} in some
+          cases—but in case something goes wrong, here
+          is a cheat sheet that does some of the thinking
+          for you
+          (or help you compare your way of seeing
+          things to the author's way of seeing things):
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/g1x7.svg" />
+        <Pause />
+        <OuterP>
+          Two more identities
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\eta - x) = \cos(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\eta - x) = \sin(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          are related to the last identity above, in that they
+          involve symmetry about the line {" "}
+          <Math>
+            $x = y$
+          </Math>
+          {" "} in the Cartesian
+          plane:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/9iTV.svg" />
+        <Pause />
+        <OuterP>
+          We also have these identities...
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \displaylines&#123;
+          \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
+          \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
+          \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
+          \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
+          &#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          ...that follow because one full turn
+          around the circle brings you back to the
+          same position, whereas a half-turn brings
+          you around  to your {" "}
+          <i>
+            antipode
+          </i>
+          {" "} (where
+          both coordinates are negated), and these
+          two more...
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \displaylines&#123;\up&#123;1.0&#125;\cos(x + \eta) = -\!\sin(x) \\
+          \up&#123;1.7&#125;\sin(x - \eta) = -\!\cos(x)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          ...that follow from the four-particle
+          diagram, e.g..
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-4">
+        <OuterP>
+          <b>
+            Relation to derivatives.
+          </b>
+          {" "}
+          Note that the derivatives of
+          sin and cos can also be expressed by
+          the [possibly more “logical”] formulas
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin'(x) = \sin(x + \eta)
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos'(x) = \cos(x + \eta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          given that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(x + \eta) = \cos(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(x + \eta) = -\!\sin(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          as seen in the previous section.
+        </OuterP>
+        <OuterP class="indent-10">
+          In fact, one can make the further observation that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin^&#123;(\ell)&#125;(x) = \sin(x + \ell\eta)
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos^&#123;(\ell)&#125;(x) = \cos(x + \ell\eta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          where {" "}
+          <NoBreak>
+            “
+            <Math>
+              $^&#123;(\ell)&#125;$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} denotes the {" "}
+          <NoBreak>
+            <Math>
+              $\ell$
+            </Math>
+            -th
+          </NoBreak>
+          {" "}
+          derivative, for all {" "}
+          <NoBreak>
+            <Math>
+              $\ell \in \nn$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          Since each
+          derivative is obtained by moving to the next
+          particle in the order of rotation, each
+          derivative is obtained by adding {" "}
+          <Math>
+            $+\eta$
+          </Math>
+          {" "} to the
+          input!
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section
+        work="ing"
+        id="section-5"
+      >
+        <OuterP>
+          <b>
+            Parenthetization and powers.
+          </b>
+          {" "} 
+          It is allowed to write
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \te&#123;“&#125;\cos x\rt&#123;0.2&#125;\te&#123;”&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \te&#123;“&#125;\cos(x)\rt&#123;0.1&#125;\te&#123;”&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          when the input is just one symbol. Also,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos^2(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos^2 x
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          similarly to the just-introduced convention)
+          means
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\cos(x))^2 = (\cos x)^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which is a special case of the fact that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          f^2(x) = (f(x))^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for any function {" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          which is itself a special case of the fact that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (fg)(x) = f(x)g(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for all functions {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (The definition of function multiplication!)
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-6">
+        <OuterP>
+          <b>
+            The pythagorean identity.
+          </b>
+          {" "}
+          Because
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 + y^2 = 1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is the equation of the unit circle, and
+          points of the form
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\cos x, \sin x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          are points on the unit circle, we have
+        </OuterP>
+        <Pause />
+        <TextParent>
+          <MathBlock>
+            $$
+            \cos^2(x) + \sin^2(x) = 1 \tag&#123;*&#125;
+            $$
+          </MathBlock>
+        </TextParent>
+        <Pause />
+        <OuterP>
+          for all {" "}
+          <NoBreak>
+            <Math>
+              $x \in \rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} surprise or not.
+          We refer to (*) as the {" "}
+          <i>
+            pythagorean identity
+          </i>
+          .
+        </OuterP>
+        <OuterP class="indent-10">
+          Various “tricks” are associated to the
+          pythagorean identity. For example, the
+          number
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is forevermore suspect, because it might
+          just be
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin^2(x) + \cos^2(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (or for some other variable) in disguise,
+          depending on the situation. Also
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (variable not important) might be
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - \cos^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          just as
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          might be
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - \sin^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (also
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - \cos^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - \sin^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          might end up respectively rewritten
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (1 - \cos y)\cdot (1 + \cos y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (1 - \sin y)\cdot (1 + \sin y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by the difference-of-squares factorization),
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin^2 \theta - \cos^2 \theta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          might be
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - 2\cos^2 \theta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          since {" "}
+          <NoBreak>
+            <Math>
+              $\sin^2 \theta = 1 - \cos^2\theta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} or
+          might be
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          2\sin^2 \theta - 1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          since {" "}
+          <NoBreak>
+            <Math>
+              $\cos^2 \theta = 1 - \sin^2\theta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          and symmetrically for the opposite difference. (I.e.,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \,\cos^2 \theta - \sin^2 \theta,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          this one.) Etc.
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section
+        work="ing"
+        id="section-7"
+      >
+        <OuterP>
+          <b>
+            Inputs as radians.
+          </b>
+          {" "}
+          The
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          radian measure
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          of an angle 
+          is the length of a circular arc subtended
+          by the angle, divided by the radius of
+          that arc:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/dau_.svg" />
+        <Pause />
+        <OuterP>
+          By this definition, the radian measure of an
+          angle coincides with the length of a subtended arc
+          of radius {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/byWA.svg" />
+        <Pause />
+        <OuterP>
+          In particular, the radian measure
+          of {" "}
+          <Math>
+            $90^\circ$
+          </Math>
+          {" "} is {" "}
+          <NoBreak>
+            <Math>
+              $\eta$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/uhJc.svg" />
+        <Pause />
+        <OuterP>
+          To imprint this fact in our memories:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/GrNS.svg" />
+        <Pause />
+        <OuterP>
+          (We will often leave out the “rad”—in fact,
+          if you don't see a degree symbol {" "}
+          <NoBreak>
+            “
+            <Math>
+              $^\circ$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          next to an angle measure, that means the angle
+          measure is a radian.) From there, other radian
+          measures can be proportionally deduced; for
+          example, {" "}
+          <Math>
+            $45^\circ$
+          </Math>
+          {" "} is {" "}
+          <Math>
+            $\eta/2$
+          </Math>
+          {" "} radians:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/PhlK.svg" />
+        <Pause />
+        <OuterP>
+          aaaand... and so on.
+        </OuterP>
+        <OuterP class="indent-10">
+          As a consequence of the definition, a
+          displacement of {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} units on the unit circle
+          subtends an angle—or technically: {" "}
+          <i>
+            rotation
+          </i>
+          ,
+          because there is a “positive” direction—and
+          you can also say {" "}
+          <i>
+            signed angle
+          </i>
+          {" "} instead of
+          {" "}
+          <i>
+            rotation
+          </i>
+          , by the way—whose (signed) radian
+          measure is {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
-            .
+            :
           </NoBreak>
-          {" "} Equivalently,
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          g(x) = \begin&#123;cases&#125;
-          \ldots &amp; \te&#123;if $\ldots$&#125;\\
-          \ldots &amp; \te&#123;if $\ldots$&#125;\\
-          \vdots &amp; \vdots\\
-          \ldots &amp; \te&#123;$\ldots$&#125;
-          \end&#123;cases&#125;
-          $$
-        </MathBlock>
+        <Image src="/build-img/svgo-svg/KPHA.svg" />
         <Pause />
         <OuterP>
-          in the case where the function has a name, such
-          as {" "}
-          <NoBreak>
-            “
-            <Math>
-              $g$
-            </Math>
-            ”.
-          </NoBreak>
+          In particular,
+          instead of positing the definitions of
+          sin and cos like this...
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/n-qa.svg" />
+        <Pause />
+        <OuterP>
+          ...with the input appearing as a
+          displacement, we can posit the definitions
+          like this...
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/kCui.svg" />
+        <Pause />
+        <OuterP>
+          ...with the input appearing as a radian.
         </OuterP>
         <Pause />
         <Example>
@@ -593,209 +1783,893 @@ const Rest = () => {
               Example 1.
             </b>
             {" "}
-            If VX-11/78A (don't mind the weird name, chosen
-            at random) is the function defined by
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \te&#123;VX-11/78A&#125;(x) = \begin&#123;cases&#125;
-            3.5 &amp; \te&#123;if $x = 0$&#125;,\\
-            2.5\up&#123;1.1&#125; &amp; \te&#123;if $x = 1$&#125;,\\
-            \te&#123;undefined&#125;\up&#123;1.1&#125; &amp; \te&#123;if $x \ne 0, 1$&#125;
-            \end&#123;cases&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            then
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \te&#123;VX-11/78A&#125;(0) = 3.5,
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            and
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \te&#123;VX-11/78A&#125;(1) = 2.5,
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            aaand... and these are the only two values of
+            We can conceptualize {" "}
+            <Math>
+              $\cos(\eta/2)$
+            </Math>
             {" "}
+            and {" "}
+            <Math>
+              $\sin(\eta/2)$
+            </Math>
+            {" "} like this...
+          </OuterP>
+          <Pause />
+          <Image src="/build-img/svgo-svg/tIP3.svg" />
+          <Pause />
+          <OuterP>
+            ...with the input {" "}
+            <Math>
+              $\eta/2$
+            </Math>
+            {" "} being a displacement
+            along the periphery of the unit circle,
+            or like this...
+          </OuterP>
+          <Pause />
+          <Image src="/build-img/svgo-svg/jn-F.svg" />
+          <Pause />
+          <OuterP>
+            ...with the input {" "}
+            <Math>
+              $\eta/2$
+            </Math>
+            {" "} being the radian measure
+            of an angle opening counterclockwise from the positive {" "}
             <Math>
               $x$
             </Math>
-            {" "} for which {" "}
-            <NoBreak>
-              VX-11/78A
-              <Math>
-                $(x)$
-              </Math>
-            </NoBreak>
-            {" "} is defined, as
-            specified.
+            {" "} axis.
           </OuterP>
         </Example>
-      </Section>
-      <Pause />
-      <Section id="section-4">
+        <Pause />
         <OuterP>
-          <b>
-            On arbitrariness.
-          </b>
-          {" "}
-          While a function such as VX-11/78A might seem
-          completely arbitrary, one lesson from the former
-          example is that functions {" "}
           <i>
-            can
+            Sidenote.
           </i>
-          {" "} be
-          completely arbitrary! In fact, there are only
-          two “ground rules” to respect in order for
-          something to qualify as a function: {" "}
-          <b>
-            (i)
-          </b>
-          {" "} to
-          output
+          {" "}
+          Another thing to know about radians 
+          is that the length of a circular
+          arc subtended by an angle is its radian
+          measure times the radius:
         </OuterP>
         <Pause />
-        <CentralDisplayItalic>
-          one
-        </CentralDisplayItalic>
+        <Image src="/tmp-images/svg_ch5_ch_radian_definition_consequence.svg" />
         <Pause />
+        <TildeDivider style="margin-top:-1em" />
+      </Section>
+      <Pause />
+      <Section id="section-8">
         <OuterP>
-          output per (accepted) input, and {" "}
           <b>
-            (ii)
+            Auto-converting degrees to radians.
           </b>
-          {" "} to return
-          the
+          {" "}
+          We will consider the degree notation
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $^\circ$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} to be pig lipstick on top of
+          radians by defining
         </OuterP>
         <Pause />
-        <CentralDisplayItalic>
-          same
-        </CentralDisplayItalic>
+        <MathBlock>
+          $$
+          x^\circ = x \cdot &#123;\eta\over 90&#125;
+          $$
+        </MathBlock>
         <Pause />
         <OuterP>
-          output each time on the same input. (Sometimes,
-          functions are said to be
+          for all {" "}
+          <NoBreak>
+            <Math>
+              $x \in \rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} where the multiplication
+          by
         </OuterP>
         <Pause />
-        <CentralDisplayItalic>
-          deterministic
-        </CentralDisplayItalic>
+        <MathBlock>
+          $$
+          \eta\over 90
+          $$
+        </MathBlock>
         <Pause />
         <OuterP>
-          because of {" "}
-          <b>
-            (ii)
-          </b>
-          .)
+          converts from degrees to radians.
+        </OuterP>
+        <OuterP class="indent-10">
+          For example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          90^\circ = 90 \cdot &#123;\eta\over 90&#125; = \eta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          45^\circ = 45 \cdot &#123;\eta\over 90&#125; = \eta/2,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          per this definition.
+        </OuterP>
+        <OuterP class="indent-10">
+          In this way, in particular, we can write
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(90^\circ\hlfbk)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          as a stand-in for
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\eta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          ...without committing any informality.
+        </OuterP>
+        <OuterP class="indent-10">
+          (Note that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\eta) = 0
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          in case you had any doubt, by the way—an
+          angle of {" "}
+          <Math>
+            $\eta$
+          </Math>
+          {" "} puts you at the tippy-top
+          of the circle!)
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-5">
+      <Section id="section-9">
         <OuterP>
           <b>
-            Graphs.
+            Sines and cosines of {" "}
+            <NoBreak>
+              <Math>
+                $\mathbf&#123;30^\circ&#125;$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}
+            {" "}
+            <Math>
+              $\mathbf&#123;45^\circ&#125;$
+            </Math>
+            {" "} and {" "}
+            <NoBreak>
+              <Math>
+                $\mathbf&#123;60^\circ&#125;$
+              </Math>
+              .
+            </NoBreak>
           </b>
           {" "}
-          The
+          Note that every point of the form
         </OuterP>
         <Pause />
-        <CentralDisplayItalic>
-          graph
-        </CentralDisplayItalic>
+        <TextParent>
+          <MathBlock>
+            $$
+            (\pm\sqrt&#123;x&#125;, \pm\sqrt&#123;1 - x&#125;),\,\,\,0 \leq x \leq 1 \tag&#123;*&#125;
+            $$
+          </MathBlock>
+        </TextParent>
         <Pause />
         <OuterP>
-          of a function is a visualization device. A point
-          on the graph corresponds to an input for which
-          the function is defined. The {" "}
+          is on the unit circle, because the
+          sum-of-the-squares-of-the-two-coordinates is {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (The equation of the unit circle is {" "}
+          <NoBreak>
+            <Math>
+              $x^2 + y^2 = 1$
+            </Math>
+            .)
+          </NoBreak>
+          {" "}
+          E.g.,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.2&#125;, \sqrt&#123;0.8&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is on the unit circle, as is
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.1&#125;, \sqrt&#123;0.9&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and so on. (If you're curious, points of this
+          family...
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/Yhim.svg" />
+        <Pause />
+        <OuterP>
+          ...look like this.) Vice-versa, every point
+          on the unit circle has the form (*) for some
+          {" "}
+          <Math>
+            $0 \leq x \leq 1$
+          </Math>
+          {" "} and some choice of the {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $\pm$
+            </Math>
+            ’
+          </NoBreak>
+          {" "}
+          signs.
+        </OuterP>
+        <OuterP class="indent-10">
+          In particular, the unit circle contains the
+          following points:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/BFW6.svg" />
+        <Pause />
+        <OuterP>
+          Here
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.5&#125;,\, \sqrt&#123;0.5&#125;\rt&#123;0.2&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is obviously at {" "}
+          <Math>
+            $45^\circ\hlfbk$
+          </Math>
+          {" "} from the {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}
+          axis, which implies
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\eta/2) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\eta/2) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          in radians. Symmetrically,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(135^\circ\hlfbk) = -\sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(135^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(1.5\eta) = -\sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(1.5\eta) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          in radians) in the second quadrant, and so on.
+        </OuterP>
+        <OuterP class="indent-10">
+          For the remaining values we rely on the
+          existence of the following two equilateral
+          triangles:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/uUEG.svg" />
+        <Pause />
+        <OuterP>
+          The first triangle implies that the the unique
+          point on the unit circle with {" "}
           <NoBreak>
             <Math>
               $x$
             </Math>
             -coordinate
           </NoBreak>
-          {" "} of
-          the point is the value of the input, while the
           {" "}
+          {" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "} in the first quadrant is at {" "}
+          <Math>
+            $60^\circ\hlfbk$
+          </Math>
+          {" "}
+          from the {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} axis, while the second triangle implies that the unique point
+          on the unit circle with {" "}
           <NoBreak>
             <Math>
               $y$
             </Math>
             -coordinate
           </NoBreak>
-          {" "} is the value of the corresponding
-          output.
+          {" "} {" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "}
+          in the first quadrant is at {" "}
+          <Math>
+            $30^\circ\hlfbk$
+          </Math>
+          {" "}
+          from the {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} axis; but since
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.25&#125; = 0.5
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (surprise!), the two points in question must be
+          the afore-shown
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.25&#125;, \,\sqrt&#123;0.75&#125;) = (0.5, \,\sqrt&#123;0.75&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          at the upper tip of the first triangle, and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.75&#125;, \,\sqrt&#123;0.25&#125;) = (\sqrt&#123;0.75&#125;, \,0.5)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          at the rightward tip of the second triangle,
+          and we find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(60^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(60^\circ\hlfbk) = \sqrt&#123;0.75&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(30^\circ\hlfbk) = \sqrt&#123;0.75&#125;,
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(30^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by conclusion; or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(2\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(2\eta/3) = \sqrt&#123;0.75&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\eta/3) = \sqrt&#123;0.75&#125;,
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          in radians!
         </OuterP>
         <OuterP class="indent-10">
-          For example, here is a graph of VX-11/78A:
+          (And symmetrically in other quadrants, e.g.,
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/46Oh.svg" />
+        <MathBlock>
+          $$
+          \cos(120^\circ\hlfbk) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(120^\circ\hlfbk) = \sqrt&#123;0.75&#125;
+          $$
+        </MathBlock>
         <Pause />
         <OuterP>
-          The graph has only two points, because VX-78/11A
-          is defined at only two values. One point is...
+          a.k.a.,
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/cPmR.svg" />
+        <MathBlock>
+          $$
+          \cos(4\eta/3) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(4\eta/3) = \sqrt&#123;0.75&#125;
+          $$
+        </MathBlock>
         <Pause />
         <OuterP>
-          <NoBreak>
-            ...
-            <Math>
-              $(0, 3.5)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} because VX-78/11A maps {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} to
+          in radians, etc.)
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <i>
+            Postscript 1.
+          </i>
+          {" "} We have
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.75&#125; = &#123;\sqrt&#123;3&#125;\over 2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          so the above “wheel of special values” can also be
+          drawn as follows (adding the angles in, as well):
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/Zu5W.svg" />
+        <Pause />
+        <OuterP>
+          <i>
+            Postscript 2.
+          </i>
           {" "}
-          <NoBreak>
-            <Math>
-              $3.5$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} while the other point is...
+          Some teachers also like to so-call
+          “rationalize the denominator”; they will write
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/XImO.svg" />
+        <MathBlock>
+          $$
+          &#123;\sqrt&#123;2&#125;\over 2&#125;
+          $$
+        </MathBlock>
         <Pause />
         <OuterP>
-          <NoBreak>
-            ...
-            <Math>
-              $(1, 2.5)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} because VX-78/11A maps {" "}
-          <Math>
-            $1$
-          </Math>
-          {" "} to {" "}
+          for {" "}
           <NoBreak>
             <Math>
-              $2.5$
+              $\sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;$
             </Math>
             .
           </NoBreak>
+          {" "} In this case:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/tDhP.svg" />
+      </Section>
+      <Pause />
+      <Section id="section-10">
+        <OuterP>
+          <b>
+            Scaling the circle.
+          </b>
+          {" "}
+          In the following diagram, the coordinates
+          of the point {" "}
+          <Math>
+            $P$
+          </Math>
+          {" "} are obviously {" "}
+          <NoBreak>
+            <Math>
+              $(\cos(\theta), \sin(\theta))$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          because that is the definition of sin and cos:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/HYoa.svg" />
+        <Pause />
+        <OuterP>
+          But say now that
+          we re-scale the circle to have some arbitrary
+          radius {" "}
+          <NoBreak>
+            <Math>
+              $r$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} while maintaining the angle {" "}
+          <NoBreak>
+            <Math>
+              $\theta$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/oidH.svg" />
+        <Pause />
+        <OuterP>
+          ...what are the coordinates of {" "}
+          <NoBreak>
+            <Math>
+              $Q$
+            </Math>
+            ?
+          </NoBreak>
+          {" "}
+          The coordinates are obviously the old coordinates
+          scaled up/down by {" "}
+          <NoBreak>
+            <Math>
+              $r$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} i.e.,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          Q = (r\cos(\theta), r\sin(\theta))
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or, in individual formulas,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          Q_x = r\cdot\cos(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          Q_y = r\cdot\sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          ...where {" "}
+          <NoBreak>
+            <Math>
+              $Q_x$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $Q_y$
+          </Math>
+          {" "} are the {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -
+          </NoBreak>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $y$
+            </Math>
+            -
+          </NoBreak>
+          {" "} coordinates of {" "}
+          <NoBreak>
+            <Math>
+              $Q$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-11">
+        <OuterP>
+          <b>
+            Polar coordinates.
+          </b>
+          {" "}
+          The so-called
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          polar coordinates
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          of a point {" "}
+          <Math>
+            $P$
+          </Math>
+          {" "} in the plane are a pair of
+          numbers
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (r, \theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          with {" "}
+          <Math>
+            $r \geq 0$
+          </Math>
+          {" "} such that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          P = (r\cos(\theta), r\sin(\theta))
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or namely with the property that:
+        </OuterP>
+        <Pause />
+        <List style="padding-left:1.8em;">
+          <Item>
+            <p>
+              <Math>
+                $r$
+              </Math>
+              {" "} is the distance from {" "}
+              <Math>
+                $P$
+              </Math>
+              {" "} to the origin;
+            </p>
+          </Item>
+          <Item>
+            <p>
+              <Math>
+                $\theta$
+              </Math>
+              {" "} is “the” counterclockwise angle
+              from the positive {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis to the segment
+              {" "}
+              <NoBreak>
+                <Math>
+                  $OP$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} where {" "}
+              <Math>
+                $O$
+              </Math>
+              {" "} is the origin;
+            </p>
+          </Item>
+        </List>
+        <Pause />
+        <OuterP>
+          ...even though {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} is not unique,
+          because any multiple of {" "}
+          <Math>
+            $4\eta$
+          </Math>
+          {" "} may be
+          added to {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} without altering the
+          values of {" "}
+          <Math>
+            $\sin(\theta)$
+          </Math>
+          {" "} or {" "}
+          <NoBreak>
+            <Math>
+              $\cos(\theta)$
+            </Math>
+            ;
+          </NoBreak>
+          {" "}
+          slightly worse even: if {" "}
+          <NoBreak>
+            <Math>
+              $r = 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} then
+          {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} may be anything. (Because in that
+          case
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          P = (0, 0)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and any value of {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} will satisfy
+          the equation
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          P = (0\cdot \cos(\theta), 0\cdot \sin(\theta))
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          namely.)
+        </OuterP>
+        <OuterP class="indent-10">
+          NONETHELESS—even though the polar coordinates
+          of a point are not (not ever!) uniquely
+          determined, we say “the” polar coordinates of
+          a point, out of expediency!
         </OuterP>
         <Pause />
         <Example>
@@ -804,105 +2678,38 @@ const Rest = () => {
               Example 2.
             </b>
             {" "}
-            Here is a graph of {" "}
-            <Math>
-              $x \ra x^2$
-            </Math>
-            {" "} on the interval
-            {" "}
-            <Math>
-              $[-1, 1]$
-            </Math>
-            {" "} (meaning: going from {" "}
-            <Math>
-              $x = -1$
-            </Math>
-            {" "} to
-            {" "}
-            <NoBreak>
-              <Math>
-                $x = 1$
-              </Math>
-              ):
-            </NoBreak>
+            The pairs
           </OuterP>
           <Pause />
-          <Image src="/build-img/svgo-svg/AAZw.svg" />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, -3.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, 0.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, 4.5\eta)
+            $$
+          </MathBlock>
           <Pause />
           <OuterP>
-            Among all the points on this graph that we
-            could discuss, let us name, say, the point
+            count among the polar coordinates of the point
             {" "}
             <NoBreak>
               <Math>
-                $(0.75, 0.5625)$
-              </Math>
-              ...
-            </NoBreak>
-          </OuterP>
-          <Pause />
-          <Image src="/build-img/svgo-svg/ZMm9.svg" />
-          <Pause />
-          <OuterP>
-            ...which finds itself on the graph, namely,
-            because the square of {" "}
-            <Math>
-              $0.75$
-            </Math>
-            {" "} is
-            {" "}
-            <NoBreak>
-              <Math>
-                $0.5625 = 9/16$
+                $(1, 1) \in \rr^2$
               </Math>
               .
             </NoBreak>
-            <ImageLeft
-              src="/build-img/svgo-svg/-OE8.svg"
-              line={-1}
-              offset_y="0em"
-            />
           </OuterP>
         </Example>
-      </Section>
-      <Pause />
-      <Section id="section-6">
-        <OuterP>
-          <b>
-            Domains.
-          </b>
-          {" "}
-          The {" "}
-          <i>
-            domain
-          </i>
-          {" "} of a function {" "}
-          <NoBreak>
-            <Math>
-              $f$
-            </Math>
-            —written
-          </NoBreak>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \dom\, f
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          —is the set of inputs {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} for which {" "}
-          <Math>
-            $f(x)$
-          </Math>
-          {" "} is
-          defined.
-        </OuterP>
         <Pause />
         <Example>
           <OuterP>
@@ -910,40 +2717,347 @@ const Rest = () => {
               Example 3.
             </b>
             {" "}
-            We have
+            The pairs
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            \dom\,\rt&#123;0.1&#125; \te&#123;VX-11/78A&#125; = \left\&#123; 0\rt&#123;0.1&#125;, 1 \right\&#125;
+            (\sqrt&#123;2&#125;,\, -2.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, 1.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, 101.5\eta)
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            because {" "}
-            <NoBreak>
-              VX-11/78A
-              <Math>
-                $(x)$
-              </Math>
-            </NoBreak>
-            {" "} is only defined at {" "}
-            <NoBreak>
-              <Math>
-                $x = 0$
-              </Math>
-              ,
-            </NoBreak>
-            {" "}
+            count among the polar coordinates of the point
             {" "}
             <NoBreak>
               <Math>
-                $1$
+                $(-1, 1) \in \rr^2$
               </Math>
               .
             </NoBreak>
           </OuterP>
         </Example>
+      </Section>
+      <Pause />
+      <Section id="section-12">
+        <OuterP>
+          <b>
+            Change-of-coordinate formulas.
+          </b>
+          {" "}
+          Definitionally, the equations
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \displaylines&#123;x = r \cos(\theta)\\
+          \up&#123;1.3&#125;y = r \sin(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          give the change-of-coordinate formulas
+          from a polar coordinate {" "}
+          <Math>
+            $(r, \theta)$
+          </Math>
+          {" "}
+          to a cartesian coordinate {" "}
+          <NoBreak>
+            <Math>
+              $(x, y)$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (It's right there in the promise of what
+          it means to be a valid polar coordinate
+          {" "}
+          <NoBreak>
+            <Math>
+              $(r, \theta)$
+            </Math>
+            .)
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          Conversely, to recover the polar
+          coordinates {" "}
+          <Math>
+            $(r, \theta)$
+          </Math>
+          {" "} from the cartesian
+          coordinates {" "}
+          <NoBreak>
+            <Math>
+              $(x, y)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} one has at least
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          r = \sqrt&#123;x^2 + y^2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by the Pythagorean theorem, but the
+          formula for {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} is not so cheerful—out
+          of completeness, we can jot it down
+          anyway, for your entertainment:
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \theta = \begin&#123;cases&#125;
+          \arctan(y/x)&amp;\te&#123;if &#125;\, x \ne 0, \,\te&#123;else&#125; \\
+          \up&#123;1.2&#125;\te&#123;arccot&#125;(x/y) &amp;\te&#123;if &#125;\, y \ne 0, \,\te&#123;else&#125; \\
+          \up&#123;1.2&#125;\rm&#123;?&#125; &amp;\te&#123;if &#125;\, x = 0, y = 0
+          \end&#123;cases&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          ...where “arctan”, “arccot” are
+          some-functions-or-other-to-be-discussed-later.
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <i>
+            Note.
+          </i>
+          {" "}
+          Popular programming languages such as
+          python offer a function named {" "}
+          <span style="font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
+            atan2
+          </span>
+          {" "} that will compute the {" "}
+          <i>
+            argument
+          </i>
+          {" "} (see
+          Vocabulary below) {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} of a given pair
+          {" "}
+          <Math>
+            $(x, y)$
+          </Math>
+          {" "} out of the box, without you having to
+          worry about which of {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} or {" "}
+          <Math>
+            $y$
+          </Math>
+          {" "} is {" "}
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} etc.
+        </OuterP>
+        <OuterP class="indent-10">
+          But the call goes {" "}
+          <span style="font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
+            atan2(y, x)
+          </span>
+          {" "} not {" "}
+          <span style="font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
+            atan2(x, y)
+          </span>
+          {" "} by some bizareness. (Well, actually a
+          throwback to the fact that in this expression...
+        </OuterP>
+        <Pause />
+        <CentralDisplay>
+          <NoBreak>
+            “
+            <Math>
+              $\arctan(y/x)$
+            </Math>
+            ”
+          </NoBreak>
+        </CentralDisplay>
+        <Pause />
+        <OuterP>
+          ...you hit {" "}
+          <NoBreak>
+            “
+            <Math>
+              $y$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} before {" "}
+          <NoBreak>
+            “
+            <Math>
+              $x$
+            </Math>
+            ”.)
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <i>
+            Vocabulary.
+          </i>
+          {" "}
+          The first coordinate of a polar
+          coordinate—colloquially, {" "}
+          <NoBreak>
+            “
+            <Math>
+              $r$
+            </Math>
+            ”—is
+          </NoBreak>
+          {" "} called the
+          {" "}
+          <i>
+            radius
+          </i>
+          {" "} or the {" "}
+          <i>
+            norm
+          </i>
+          . The second coordinate
+          of a polar coordinate—colloquially, {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\theta$
+            </Math>
+            ”—is
+          </NoBreak>
+          {" "}
+          called the {" "}
+          <i>
+            angle
+          </i>
+          {" "} or the {" "}
+          <i>
+            argument
+          </i>
+          .
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-13">
+        <OuterP>
+          <b>
+            Right triangles.
+          </b>
+          {" "}
+          Hopefully, the following figure should seem
+          believable-and/or-familiar, at this point
+          (it's a scaled-up/down unit circle):
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/xqXh.svg" />
+        <Pause />
+        <OuterP>
+          If we assume {" "}
+          <Math>
+            $0 \leq \theta \leq \eta$
+          </Math>
+          {" "} then both
+          {" "}
+          <Math>
+            $r\cos(\theta)$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $r\sin(\theta)$
+          </Math>
+          {" "} are nonnegative,
+          and we can redraw the figure as a relationship between
+          the sidelengths of a right triangle:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/VAIj.svg" />
+        <Pause />
+        <OuterP>
+          If we rebrand the three legs of the triangle
+          as “hypotenuse”, “opposite”, and “adjacent” according
+          to their relationship to the angle {" "}
+          <NoBreak>
+            <Math>
+              $\theta$
+            </Math>
+            ...
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/j3G_.svg" />
+        <Pause />
+        <OuterP>
+          ...the relationship can be written:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/3N4N.svg" />
+        <Pause />
+        <OuterP>
+          To be paired with this figure:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/Jk8H.svg" />
+        <Pause />
+        <OuterP>
+          The arrows are meant to indicate that {" "}
+          <Math>
+            $\cos(\theta)$
+          </Math>
+          {" "} is the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          multiplicative factor
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          that takes one from “hypotenuse” to “adjacent”,
+          while {" "}
+          <Math>
+            $\sin(\theta)$
+          </Math>
+          {" "} is (again) the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          multiplicative factor
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          that takes one from “hypotenuse” to “opposite”.
+        </OuterP>
         <Pause />
         <Example>
           <OuterP>
@@ -951,40 +3065,28 @@ const Rest = () => {
               Example 4.
             </b>
             {" "}
-            If DM-1700 (another weirdly named function) is
-            defined by
+            In the following diagram...
+          </OuterP>
+          <Pause />
+          <Image src="/build-img/svgo-svg/zVzp.svg" />
+          <Pause />
+          <OuterP>
+            ...the length of the side marked ‘?’ is
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            \te&#123;DM-1700&#125;(x) =
-            \begin&#123;cases&#125;
-            0             &amp; \te&#123;if $x \leq 0$ or $x \geq 1$&#125;,\\
-            1 - x\up&#123;1.1&#125; &amp; \te&#123;if $0 &lt; x &lt; 1$&#125;
-            \end&#123;cases&#125;
+            10\cdot \cos(43^\circ\hlfbk)\cdot \cos(20^\circ\hlfbk)
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            then
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \dom\,\rt&#123;0.1&#125; \te&#123;DM-1700&#125; = \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            because {" "}
-            <Math>
-              $\te&#123;DM-1700&#125;(x)$
-            </Math>
-            {" "} is defined for all
-            {" "}
+            by following two ‘cos’ arrows (i.e.,
+            two hypotenuse-to-adjacent arrows) starting
+            from the sidelength of {" "}
             <NoBreak>
               <Math>
-                $x \in \rr$
+                $10$
               </Math>
               .
             </NoBreak>
@@ -997,1094 +3099,2315 @@ const Rest = () => {
               Example 5.
             </b>
             {" "}
-            If {" "}
-            <Math>
-              $g : \rr \ra \rr$
-            </Math>
-            {" "} (we are going to explain
-            this notation imminently) is the function given
-            by
+            In the following diagram...
+          </OuterP>
+          <Pause />
+          <Image src="/build-img/svgo-svg/WPT7.svg" />
+          <Pause />
+          <OuterP>
+            ...the length of the side marked ‘?’ is
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            g(x) = \sqrt&#123;x - 1&#125;
+            14\cdot \cos(43^\circ\hlfbk)\cdot \sin(60^\circ\hlfbk)\cdot \sin(50^\circ\hlfbk)
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            then
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \begin&#123;align&#125;
-            \dom\, g &amp;\,=\, [1, \infty)
-            \end&#123;align&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            because the square root of a number is defined
-            if and only if that number is {" "}
-            <i>
-              nonnegative
-            </i>
-            {" "}
-            (i.e., we need {" "}
-            <Math>
-              $x - 1 \geq 0$
-            </Math>
-            {" "} in order for {" "}
-            <Math>
-              $g(x)$
-            </Math>
-            {" "}
-            to be defined, i.e., we need {" "}
+            by following one ‘cos’ and then two ‘sin’
+            arrows, starting from the sidelength of {" "}
             <NoBreak>
               <Math>
-                $x \geq 1$
+                $14$
               </Math>
-              ).
+              .
             </NoBreak>
           </OuterP>
         </Example>
       </Section>
       <Pause />
-      <Section id="section-7">
+      <Section id="section-14">
         <OuterP>
           <b>
-            “From/To” notation.
+            A famous diagram.
           </b>
           {" "}
-          The notation
+          There is a somewhat infamous diagram similar
+          to the diagrams of examples 5 and 6; to draw the
+          diagram, start with a “snail shell” stack of
+          two right triangles:
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          f : \rr \ra \rr
-          $$
-        </MathBlock>
+        <Image src="/build-img/svgo-svg/-N5q.svg" />
         <Pause />
         <OuterP>
-          means that {" "}
+          Rotate a copy of the smaller
+          triangle by {" "}
           <Math>
-            $f$
+            $90^\circ$
           </Math>
-          {" "} is a function
+          {" "} towards the bigger one;
+          we end up with two pairs of parallel sides:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/-oWb.svg" />
+        <Pause />
+        <OuterP>
+          Therefore, if we snap a scaled copy of the
+          smaller triangle onto the remaining non-hypotenuse
+          side of the bigger triangle, we end up with a
+          flush side consisting of a single straight
+          segment (you can also think in terms of
+          angles that add up to {" "}
+          <NoBreak>
+            <Math>
+              $180^\circ$
+            </Math>
+            ):
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/ADw8.svg" />
+        <Pause />
+        <OuterP>
+          We finish off the diagram by setting the
+          hypotenuse of the original big triangle to
+          have length {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/1jEs.svg" />
+        <Pause />
+        <OuterP>
+          This completes the diagram. Note that it is
+          possible for the sum of {" "}
+          <Math>
+            $\theta_1$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\theta_2$
+          </Math>
+          {" "}
+          to be greater than {" "}
+          <NoBreak>
+            <Math>
+              $\eta$
+            </Math>
+            ...
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/G2n-.svg" />
+        <Pause />
+        <OuterP>
+          ...but, by construction, {" "}
+          <Math>
+            $\theta_1$
+          </Math>
+          {" "} and
+          {" "}
+          <Math>
+            $\theta_2$
+          </Math>
+          {" "} are individually in the range from
+          {" "}
+          <Math>
+            $0$
+          </Math>
+          {" "} to {" "}
+          <NoBreak>
+            <Math>
+              $\eta$
+            </Math>
+            .
+          </NoBreak>
+          {" "} (Being “proper angles” of right
+          triangles.) (You can now contemplate what the
+          “utility” of the diagram might be!)
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-15">
+        <OuterP>
+          <b>
+            The Abercrombie inequality.
+          </b>
+          {" "}
+          Take an ordinary angle of aperture less than
+          {" "}
+          <Math>
+            $180^\circ\hlfbk$
+          </Math>
+          {" "} with a circular arc drawn
+          inside and a line segment spanning the two
+          sides of the angle, clearing the arc:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/dXdk.svg" />
+        <Pause />
+        <OuterP>
+          The eponymous
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          from {" "}
-          <Math>
-            $\rr$
-          </Math>
-          {" "} to {" "}
-          <Math>
-            $\rr$
-          </Math>
+          Abercrombie inequality
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          or, which is to say, that
+          states that
+          the length of the arc is less than or equal to the length of the segment, i.e., that
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \dom f \subseteq \rr
+          A\leq S
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          [translation: {" "}
-          <i>
-            the domain of {" "}
-            <Math>
-              $f$
-            </Math>
-            {" "} is a subset of
-            the set of real numbers
-          </i>
-          ] and that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \&#123;f(x) : x \in \dom f\&#125; \subseteq \rr
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          [translation: {" "}
-          <i>
-            the set of values output by {" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}
-            is a subset of the set of real numbers
-          </i>
-          ].
+          where {" "}
+          <Math>
+            $A$
+          </Math>
+          {" "} is the length of the arc and {" "}
+          <Math>
+            $S$
+          </Math>
+          {" "} is
+          the length of the segment, as in the figure.
         </OuterP>
         <OuterP class="indent-10">
-          Generalizing,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f : A \ra B
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          means that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \dom f \subseteq A
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          (i.e., that {" "}
+          The proof is that, if this were not the case,
+          the length {" "}
           <Math>
-            $f$
+            $S$
           </Math>
-          {" "} only accepts values from {" "}
+          {" "} of the segment would lie to left of the
+          length {" "}
+          <Math>
+            $A$
+          </Math>
+          {" "} of the arc on the number line...
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/KxqB.svg" />
+        <Pause />
+        <OuterP>
+          ...and in the space between {" "}
+          <Math>
+            $S$
+          </Math>
+          {" "} and {" "}
           <NoBreak>
             <Math>
               $A$
             </Math>
-            )
+            ,
           </NoBreak>
-          {" "} and
-          that
+          {" "} we could then
+          find the length {" "}
+          <Math>
+            $P$
+          </Math>
+          {" "} of a polygonal line
+          approximating the arc...
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/0Mwx.svg" />
+        <Pause />
+        <OuterP>
+          ...because such polygonal lines can
+          approximate the arc arbitrarily closely, i.e.,
+          have lengths that come arbitrarily close to
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $A$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} on the number line from the left.
+          (This constitutes our “axiomatic” belief
+          about the  nature of curved length.) But this
+          will be a contradiction, because we claim
+          that each segment of the polygonal line has
+          length less than its corresponding “shadow”
+          on the segment of length {" "}
+          <NoBreak>
+            <Math>
+              $S$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/Vx2_.svg" />
+        <Pause />
+        <OuterP>
+          This last claim follows from the following
+          diagram:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/onjp.svg" />
+        <Pause />
+        <OuterP>
+          The point is that
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \&#123;f(x) : x \in \dom f\&#125; \subseteq B
+          \overline&#123;s_1s_2&#125;\, &gt; \,\overline&#123;p_1p_2&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          (i.e., that {" "}
+          because {" "}
           <Math>
-            $f$
+            $s_1$
           </Math>
-          {" "} only outputs values from {" "}
+          {" "} and {" "}
+          <Math>
+            $s_2$
+          </Math>
+          {" "} are separated by a
+          pair of parallel lines that are at distance
+          {" "}
+          <Math>
+            $\overline&#123;p_1p_2&#125;$
+          </Math>
+          {" "} from one another, and
+          because at least one of {" "}
           <NoBreak>
             <Math>
-              $B$
+              $s_1$
             </Math>
-            ),
-          </NoBreak>
-          {" "}
-          following the pattern above.
-        </OuterP>
-      </Section>
-      <Pause />
-      <Section id="section-8">
-        <OuterP>
-          <b>
-            The vertical line test.
-          </b>
-          {" "}
-          As it turns out, the term “graph” just means
-          “set of points in the plane”. So a
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          function graph
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          (as described above) is just one particular
-          kind of “graph” among other things that are
-          also called “graphs”, but that are not
-          function graphs.
-        </OuterP>
-        <OuterP class="indent-10">
-          The so-called
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          vertical line test
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          observes that a graph {" "}
-          <NoBreak>
-            [
-            <Math>
-              $=$
-            </Math>
+            ,
           </NoBreak>
           {" "} {" "}
-          <i>
-            set of points
-            in the plane
-          </i>
-          ] is a function graph if and
-          only if every {" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -value
-          </NoBreak>
-          {" "} (a.k.a., input)
-          corresponds to at most one {" "}
-          <NoBreak>
-            <Math>
-              $y$
-            </Math>
-            -value
-          </NoBreak>
-          {" "} (a.k.a.,
-          output). In other words, every vertical line
-          should intersect the graph at most once.
-        </OuterP>
-        <OuterP class="indent-10">
-          For example, this particular graph...
-        </OuterP>
-        <Pause />
-        <Image src="/build-img/svgo-svg/s-jo.svg" />
-        <Pause />
-        <OuterP>
-          is a function graph (or locally at least, from
-          what we can see), because every vertical line
-          intersects the graph at most once, but this
-          graph...
-        </OuterP>
-        <Pause />
-        <Image src="/build-img/svgo-svg/cybh.svg">
-          <ImageRight
-            src="/build-img/svgo-svg/1ANB.svg"
-            offset_x="2em"
-          />
-        </Image>
-        <Pause />
-        <OuterP>
-          ...is not the graph of any function, because
-          some vertical lines intersect the graph more
-          than once.
-        </OuterP>
-        <OuterP class="indent-10">
-          (Oops. To backtrack and quickly clarify a small
-          matter, an empty circle at the end of a segment,
-          in the vein of the previous figure...
-        </OuterP>
-        <Pause />
-        <Image
-          src="/build-img/svgo-svg/hvxw.svg"
-          class="pt-4 mb-3"
-        />
-        <Pause />
-        <OuterP>
-          ...means that the point in question is {" "}
-          <i>
-            excluded
-          </i>
-          {" "}
-          from the graph. A filled circle, by opposition,
-          means that the point is included!)
-        </OuterP>
-        <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 6.
-            </b>
-            {" "}
-            This {" "}
-            <i>
-              upper semicircle
-            </i>
-            {" "} of unit radius...
-          </OuterP>
-          <Pause />
-          <Image src="/build-img/svgo-svg/cyb_.svg" />
-          <Pause />
-          <OuterP>
-            ...passes the vertical line test, and, hence,
-            defines a function.
-          </OuterP>
-        </Example>
-        <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 7.
-            </b>
-            {" "}
-            This graph defines a function...
-          </OuterP>
-          <Pause />
-          <Image src="/build-img/svgo-svg/LBjA.svg" />
-          <Pause />
-          <OuterP>
-            ...because it passes the vertical line test,
-            while this graph does not define a function...
-          </OuterP>
-          <Pause />
-          <Image src="/build-img/svgo-svg/ywM5.svg" />
-          <Pause />
-          <OuterP>
-            ...because it does {" "}
-            <i>
-              not
-            </i>
-            {" "} pass the vertical
-            line test!
-          </OuterP>
-        </Example>
-      </Section>
-      <Pause />
-      <Section id="section-9">
-        <OuterP>
-          <b>
-            A famous discontinuity.
-          </b>
-          {" "}
-          As already seen, functions can have
-          {" "}
-          <i>
-            discontinuities
-          </i>
-          : a place where the function
-          experiences a sudden “jump” in value.
-        </OuterP>
-        <OuterP class="indent-10">
-          For a famous example of a “naturally” occurring
-          discontinuity (that we feel compelled to
-          mention, for some reason) we need look no
-          further than the function
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large x \ra 0^x
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          as it so happens that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          0^x =
-          \begin&#123;cases&#125; 0 &amp; \te&#123;if &#125; x &gt; 0\\
-          1 &amp; \te&#123;if &#125; x = 0\\
-          \te&#123;undefined&#125; &amp; \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          which implies a discontinuity in the graph of
-          {" "}
           <Math>
-            $y = 0^x$
+            $s_2$
           </Math>
-          {" "} at {" "}
+          {" "} is
+          not on either of the parallel lines (or else
+          we would have {" "}
           <NoBreak>
             <Math>
-              $x = 0$
+              $s_1 = p_1$
             </Math>
             ,
           </NoBreak>
-          {" "} as pictured here:
-        </OuterP>
-        <Pause />
-        <Image src="/build-img/svgo-svg/VnBq.svg" />
-        <Pause />
-        <OuterP>
-          (Pretty cool, no?)
-        </OuterP>
-      </Section>
-      <Pause />
-      <Section id="section-10">
-        <OuterP>
-          <b>
-            Distinguishing {" "}
-            <NoBreak>
-              “
-              <Math>
-                $f$
-              </Math>
-              ”
-            </NoBreak>
-            {" "} and {" "}
-            <NoBreak>
-              “
-              <Math>
-                $f(x)$
-              </Math>
-              ”.
-            </NoBreak>
-          </b>
-          {" "}
-          The difference between
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;\te&#123;VX-11/78A&#125;&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;\te&#123;VX-11/78A&#125;(x)&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is that the former is a
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          function
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          while the latter is a
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          value.
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          (Well, provided {" "}
+          {" "} {" "}
           <NoBreak>
             <Math>
-              $x \in \&#123;0, 1\&#125;$
+              $s_2 = p_2$
             </Math>
             ,
           </NoBreak>
-          {" "} to make it
-          well-defined at all.) Likewise, if {" "}
-          <NoBreak>
-            <Math>
-              $f : \rr \ra \rr$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          the difference between
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f(x)
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is that the former is a
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          function
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          while the latter is a
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          value.
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          Amusingly, though, if we add {" "}
-          <NoBreak>
-            “
-            <Math>
-              $x \ra$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} in front
-          of {" "}
-          <NoBreak>
-            “
-            <Math>
-              $f(x)$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} then we are back to considering a
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          function
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          and which is namely the function whose rule is:
-          apply {" "}
-          <NoBreak>
-            <Math>
-              $f$
-            </Math>
-            .
-          </NoBreak>
-          {" "} In fact,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f = (x \ra f(x))
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          where the above is {" "}
-          <i>
-            an equality between functions
-          </i>
-          .
-          (You cannot use this equality to
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          define
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
+          {" "} and
+          the segment {" "}
           <Math>
-            $f$
+            $s_1s_2$
           </Math>
-          {" "} because that would lead to a circular
-          definition. But that doesn't make the equality
-          any less true. And btw, you can go “one layer
-          deeper”:
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f = (x \ra f(x)) = (x \ra (t \ra f(t))(x))
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          ...where we use the fact that {" "}
-          <Math>
-            $f = (t \ra f(t))$
-          </Math>
-          {" "}
-          in the second equality. You could keep going,
-          replacing each time {" "}
-          <NoBreak>
-            “
-            <Math>
-              $f$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} by a self-referential
-          expression, but the process is not intrinsically
-          useful.)
-        </OuterP>
-      </Section>
-      <Pause />
-      <Section id="section-11">
-        <OuterP>
-          <b>
-            Distinguishing {" "}
-            <NoBreak>
-              “
-              <Math>
-                $x^3$
-              </Math>
-              ”
-            </NoBreak>
-            {" "} and {" "}
-            <NoBreak>
-              “
-              <Math>
-                $x \ra x^3$
-              </Math>
-              ”.
-            </NoBreak>
-          </b>
-          {" "}
-          Technically,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^3
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is a {" "}
-          <i>
-            value
-          </i>
-          {" "} (not a function) and the way
-          logicians think of it, philosophically speaking,
-          is like so: at inception, every symbol has
-          some default value attached, absent any other
-          context.
+          {" "} would not clear the arc).
         </OuterP>
         <OuterP class="indent-10">
-          By contrast,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x \ra x^3
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is clearly a {" "}
-          <i>
-            function
-          </i>
-          , not a {" "}
-          <i>
-            value
-          </i>
-          .
-          So {" "}
-          <NoBreak>
-            “
-            <Math>
-              $x^3$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} and {" "}
-          <NoBreak>
-            “
-            <Math>
-              $x \ra x^3$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} are very (VERY)
-          different, qualitatively speaking.
-        </OuterP>
-        <OuterP class="indent-10">
-          But including the arrow everywhere is
-          impractical and even pedantic, so, in the end,
-          you might see us refer to an expression such as,
-          e.g.,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^3 + x^2
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          as a “function”, arrow or no arrow.
-        </OuterP>
-      </Section>
-      <Pause />
-      <Section id="section-12">
-        <OuterP>
-          <b>
-            Polynomials.
-          </b>
-          {" "}
-          A function {" "}
+          Therefore, each segment of {" "}
           <Math>
-            $f$
+            $P$
           </Math>
-          {" "} of the form
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f(x) = a_kx^k + a_&#123;k-1&#125;x^&#123;k-1&#125; + \dots + a_2x^2 + a_1x + a_0
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is called a {" "}
-          <i>
-            polynomial
-          </i>
-          . Here
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          a_0,\,a_1,\, \ldots,\, a_k \in \rr
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          are arbitrary constants, also known as the
-          {" "}
-          <i>
-            coefficients
-          </i>
-          {" "} of the polynomial. The {" "}
-          <i>
-            degree
-          </i>
-          {" "}
-          of the polynomial is {" "}
+          {" "} has length
+          less than its corresponding “shadow segment”
+          on the crossover segment of length {" "}
           <NoBreak>
             <Math>
-              $k$
+              $S$
             </Math>
             ,
           </NoBreak>
-          {" "} if {" "}
+          {" "} from
+          which {" "}
           <NoBreak>
             <Math>
-              $a_k \ne 0$
+              $S &gt; P$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} from which this arrangement
+          of values...
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/2Fam.svg" />
+        <Pause />
+        <OuterP>
+          ...on the number line is 
+          false—we have achieved a so-called {" "}
+          <i>
+            contradiction
+          </i>
+          —from
+          which this original arrangement of values...
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/dTqx.svg" />
+        <Pause />
+        <OuterP>
+          ...on the number line is an impossibility,
+          i.e., it must be that {" "}
+          <NoBreak>
+            <Math>
+              $S \geq A$
             </Math>
             .
           </NoBreak>
           {" "}
-          (Otherwise, work your way down until you find
-          a nonzero coefficient—if there are none, because
-          the polynomial is just the constant {" "}
+          This constitutes the proof of the Abercrombie
+          inequality.
+        </OuterP>
+        <OuterP class="indent-10">
+          One can polish a few more details by noting that:
+        </OuterP>
+        <Pause />
+        <List
+          type="lower-roman-paren"
+          markerBold={true}
+          style="gap: 1em;"
+        >
+          <Item>
+            <p>
+              the segment can be tangent to the
+              arc at one point, the proof will still go
+              through (so the segment does not need to
+              {" "}
+              <i>
+                strictly
+              </i>
+              {" "} clear the arc);
+            </p>
+          </Item>
+          <Item>
+            <p>
+              as long as the angle is nonzero,
+              and the arc has nonzero radius, the
+              length of the segment will be STRICTLY
+              GREATER than the length of the arc,
+              not just greater-or-equal-to
+            </p>
+          </Item>
+        </List>
+        <Pause />
+        <OuterP>
+          (Point {" "}
+          <b>
+            (ii)
+          </b>
+          {" "} can be seen by
+          comparing the segment to a two-segment
+          assemblage that is shorter than the segment
+          itself, but still-as-long-as-the-arc, by virtue
+          of the original inequality.)
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-16">
+        <OuterP>
+          <b>
+            The Gregorinovich sandwich.
+          </b>
+          {" "}
+          The “Gregorinovich sandwich”—sometimes
+          Gr
+          <i>
+            i
+          </i>
+          gorinovich—states that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta) \,&lt;\, \theta \,&lt;\, &#123;\sin(\theta)\over\cos(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for all {" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          The Gregorinovich sandwich is so-called because
+          it “sandwiches” {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "}
+          between
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          below, and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\sin(\theta)\over\cos(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          above. (Indeed,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\sin(\theta)\over\cos(\theta)&#125; &gt; \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          in the range {" "}
+          <Math>
+            $0 &lt; \theta &lt; \eta$
+          </Math>
+          {" "}
+          because dividing by
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          makes you
+        </OuterP>
+        <Pause />
+        <CentralDisplay>
+          BIGGER
+        </CentralDisplay>
+        <Pause />
+        <OuterP>
+          when {" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \cos(\theta) &lt; 1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} which is the case
+          for {" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            —in
+          </NoBreak>
+          {" "} fact, dividing by
+          {" "}
+          <Math>
+            $\cos(\theta)$
+          </Math>
+          {" "} will make you
+        </OuterP>
+        <Pause />
+        <CentralDisplay>
+          DRAMATICALLY BIGGER
+        </CentralDisplay>
+        <Pause />
+        <OuterP>
+          when {" "}
+          <Math>
+            $\cos(\theta)$
+          </Math>
+          {" "} is close to {" "}
           <NoBreak>
             <Math>
               $0$
             </Math>
             ,
           </NoBreak>
-          {" "} then
-          the degree is {" "}
-          <i>
-            minus infinity
-          </i>
-          .) (We're not
-          kidding.)
-        </OuterP>
-        <OuterP class="indent-10">
-          For example,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          2x + \sqrt&#123;2&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is a polynomial of degree 1, and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 - 10
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is a polynomial of degree 2, and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^&#123;100&#125; + x^&#123;99&#125; + x^&#123;98&#125; + \dots + x^4 + x^3 + x^2 + x + 1
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is a polynomial of degree 100.
-        </OuterP>
-        <OuterP class="indent-10">
-          Polynomials of low degree have their own
-          special names, as inventoried in the following
-          table:
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;array&#125;&#123;c|c|c&#125;
-          \,\,\,\,\te&#123;degree&#125;\,\,\,\, &amp; \te&#123;name&#125; &amp; \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
-          -\infty &amp; \te&#123;zero&#125; &amp; 0\Rule&#123;0pt&#125;&#123;1.1em&#125;&#123;0.0em&#125;\\
-          \te&#123;0&#125; &amp; \te&#123;constant&#125; &amp; 1 + \sqrt&#123;5&#125;\\
-          \te&#123;1&#125; &amp; \te&#123;affine&#125; &amp; 10x - 1\\
-          \te&#123;2&#125; &amp; \,\,\,\,\te&#123;quadratic&#125;\,\,\,\, &amp; x^2 - 1\\
-          \te&#123;3&#125; &amp; \te&#123;cubic&#125; &amp; x^3 - 1\\
-          \te&#123;4&#125; &amp; \te&#123;quartic&#125; &amp; 1 - x^4\\
-          \te&#123;5&#125; &amp; \te&#123;quintic&#125; &amp; x^5
-          \end&#123;array&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          There is some confusion about the term
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          affine
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          for which the term
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          linear
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          is sometimes substituted. But if we say
-          “linear” we mean a function of the form
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x \ra a_1x
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          for a constant {" "}
+          {" "} which is the
+          case when {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} is close to {" "}
           <NoBreak>
             <Math>
-              $a_1 \in \rr$
-            </Math>
-            .
-          </NoBreak>
-          {" "} This is more
-          restricted than an affine function, because
-          there is no constant {" "}
-          <NoBreak>
-            <Math>
-              $a_0$
-            </Math>
-            !
-          </NoBreak>
-        </OuterP>
-        <Pause />
-        <Image
-          style="margin-top:-0.6em;margin-bottom:-0.4em"
-          src="/build-img/svgo-svg/wfGL.svg"
-        />
-      </Section>
-      <Pause />
-      <Section id="section-13">
-        <OuterP>
-          <b>
-            Quadratic, linear, and constant terms.
-          </b>
-          {" "}
-          To finish up on polynomials: the terms of degree
-          {" "}
-          <NoBreak>
-            <Math>
-              $2$
+              $\eta$
             </Math>
             ,
           </NoBreak>
           {" "} {" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            .)
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          The first inequality
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta) \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; \theta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          follows by this illustration (using {" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            ):
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/wtkr.svg" />
+        <Pause />
+        <OuterP>
+          Namely, per the one slightly pedantic logic,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \theta &gt; L
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          on the one hand, where {" "}
+          <Math>
+            $L$
+          </Math>
+          {" "} is the length of
+          the dotted chord, and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          L &gt; \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          on the other hand. Together, this implies
+          {" "}
+          <NoBreak>
+            <Math>
+              $\theta \rt&#123;0.1&#125;&gt;\rt&#123;0.1&#125; \sin(\theta)$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          For the second inequality, we have to start
+          by noting that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\sin(\theta)\over \cos(\theta)&#125; = &#123;1\over \cos(\theta)&#125;\cdot \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is the length that {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} projects onto
+          the line {" "}
+          <NoBreak>
+            <Math>
+              $x = 1$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/HxgB.svg" />
+        <Pause />
+        <OuterP>
+          Specifically,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;1\over \cos(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          turns the bottom segment of length {" "}
           <Math>
             $1$
           </Math>
-          {" "} and {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} are called the {" "}
-          <i>
-            quadratic
-          </i>
-          ,
           {" "}
-          <i>
-            linear
-          </i>
-          , and {" "}
-          <i>
-            constant
-          </i>
-          {" "} terms of the
-          polynomial, respectively. If you see
+          into the pink hypotenuse, because just as ‘cos’
+          is the hypotenuse-to-adjacent multiplicative
+          factor, so is {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $1/\!\cos$
+            </Math>
+            ’
+          </NoBreak>
+          {" "} the adjacent-to-hypotenuse
+          multiplicative factor (don't be confused by the
+          presence of two possible triangles to which
+          this can be applied); then,
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          a_7x^7 + a_6x^6 + a_5x^5 + a_4x^4 + a_3x^3 - a_2x^2 + a_1x + a_0
+          \sin(\theta)
           $$
-          <ImageRight
-            src="/build-img/svgo-svg/RUvM.svg"
-            compensate_offset_x_for_large_text_columns={true}
-          />
         </MathBlock>
         <Pause />
         <OuterP>
-          then the quadratic term is {" "}
-          <NoBreak>
-            <Math>
-              $-a_2x^2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} not
-          {" "}
-          <NoBreak>
-            <Math>
-              $a_2x^2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} fyi.
+          brings one over to the right-hand segment
+          from the pink hypotenuse, being the
+          hypotenuse-to-opposite multiplicative
+          factor.
         </OuterP>
         <OuterP class="indent-10">
-          Note that the linear term can also be viewed as
-          the {" "}
-          <NoBreak>
-            “
-            <Math>
-              $x^1$
-            </Math>
-          </NoBreak>
-          {" "} term” while the constant term can
-          also be viewed as the {" "}
-          <NoBreak>
-            “
-            <Math>
-              $x^0$
-            </Math>
-          </NoBreak>
-          {" "} term”; because
+          The fact that
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          x^1 = x
+          &#123;\theta&#125; \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; &#123;\sin(\theta)\over \cos(\theta)&#125;
           $$
-          <ImageRight
-            src="/build-img/svgo-svg/cqgI.svg"
-            offset_y="0.2em"
-            offset_x="-0.1em"
-            compensate_offset_x_for_large_text_columns={true}
-          />
         </MathBlock>
         <Pause />
         <OuterP>
-          for all {" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^0 = 1
-          $$
-          <ImageRight
-            src="/build-img/svgo-svg/Aq5Q.svg"
-            offset_x="0em"
-            offset_y="0.2em"
-            compensate_offset_x_for_large_text_columns={true}
-          />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          for all {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} (even {" "}
-          <NoBreak>
-            <Math>
-              $x = 0$
-            </Math>
-            ),
-          </NoBreak>
-          {" "} namely.
+          then follows from the “polished” version
+          of the Abercrombie inequality. (The version
+          that allows the segment to be tangent to the
+          arc, and that claims a strict inequality.)
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_53_hgi_">
+      <Section id="section-17">
+        <OuterP>
+          <b>
+            The angle-sum formulas.
+          </b>
+          {" "}
+          In the “famous diagram” from above there
+          are a total of four different ways to
+          reach an outer edge by means of ‘cos’
+          and ‘sin’ arrows while starting from the
+          edge of length {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} reaching each of the
+          four other outer edges precisely once:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/pFL0.svg" />
+        <Pause />
+        <OuterP>
+          (Note by the way that {" "}
+          <NoBreak>
+            <Math>
+              $0 \leq \theta_1 \leq \eta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $0 \leq \theta_2 \leq \eta$
+          </Math>
+          {" "} because of
+          the way the figure is constructed, which
+          implies that {" "}
+          <NoBreak>
+            <Math>
+              $\sin(\theta_1\!\rt&#123;0.1&#125;)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <NoBreak>
+            <Math>
+              $\cos(\theta_1\!\rt&#123;0.1&#125;)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $\sin(\theta_2\!\rt&#123;0.1&#125;)$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\cos(\theta_2\!\rt&#123;0.1&#125;)$
+          </Math>
+          {" "}
+          are all nonnegative, and that all their
+          products are nonnegative, as well.)
+        </OuterP>
+        <OuterP class="indent-10">
+          On the other hand, if we inscribe the
+          figure in the unit circle with the joint angle
+          {" "}
+          <Math>
+            $\theta_1 + \theta_2$
+          </Math>
+          {" "} at the center, we find that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \,\sin(\theta_1 + \theta_2)\,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \,\cos(\theta_1 + \theta_2)\,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          make an appearance as coordinates, and
+          that these coordinates can be expressed as
+          sums or differences of the four outer edges:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/C7FC.svg" />
+        <Pause />
+        <OuterP>
+          (Or with {" "}
+          <NoBreak>
+            <Math>
+              $\theta_1 + \theta_2 &gt; \eta$
+            </Math>
+            ...
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/cixf.svg" />
+        <Pause />
+        <OuterP>
+          ...works as well!)
+        </OuterP>
+        <OuterP class="indent-10">
+          In other words, we find...
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/FJxQ.svg" />
+        <Pause />
+        <OuterP>
+          ...for {" "}
+          <Math>
+            $\theta_1$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\theta_2$
+          </Math>
+          {" "} as may
+          appear in such a figure, i.e., for
+          {" "}
+          <NoBreak>
+            <Math>
+              $0 \leq \theta_1, \theta_2 \leq \eta$
+            </Math>
+            .
+          </NoBreak>
+          {" "} In
+          fact, these two formulas hold for {" "}
+          <i>
+            all
+          </i>
+          {" "}
+          {" "}
+          <NoBreak>
+            <Math>
+              $\theta_1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\theta_2 \in \rr$
+            </Math>
+            .
+          </NoBreak>
+          {" "} They are
+          known as the {" "}
+          <i>
+            angle-sum formulas
+          </i>
+          . Also
+          note the “pattern” of the angle-sum formulas:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/3BtA.svg" />
+        <Pause />
+        <OuterP>
+          The point of remembering these patterns
+          is that, on their own, these patterns are
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          enough
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          to reconstruct the full formulas from scratch!
+          (Well, a lot of students remember the formulas
+          that way, at least.)
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-18">
+        <OuterP>
+          <b>
+            The missing arrows.
+          </b>
+          {" "}
+          ‘sin’ and ‘cos’ only constitute two out
+          of six ratios that exist among the sides
+          of a right triangle. The four “missing ratios”
+          are hereby drawn:
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/sa0S.svg" />
+        <Pause />
+        <OuterP>
+          In fact, there is a dedicated, named function
+          that computes each of the six ratios. We shall
+          now reveal the names of the four missing
+          functions (!!):
+        </OuterP>
+        <Pause />
+        <Image src="/build-img/svgo-svg/wra-.svg" />
+        <Pause />
+        <OuterP>
+          Here
+          “sec” is short for {" "}
+          <i>
+            secant
+          </i>
+          ,
+          “tan” is short for {" "}
+          <i>
+            tangent
+          </i>
+          ,
+          “cot” is short for {" "}
+          <i>
+            cotangent
+          </i>
+          , and
+          “csc” is short for {" "}
+          <i>
+            cosecant
+          </i>
+          .
+        </OuterP>
+        <OuterP class="indent-10">
+          To be clear, multiplying by
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sec(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          takes you from ‘adjacent’ to ‘hypotenuse’, multiplying by
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \csc(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          takes you from ‘opposite’ to ‘hypotenuse’, multiplying by
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \tan(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          takes you from ‘adjacent’ to ‘opposite’,
+          and multiplying by
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cot(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          takes you from ‘opposite’ to ‘adjacent’. (!)
+        </OuterP>
+        <OuterP class="indent-10">
+          You may observe that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sec = &#123;1\over \cos&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \csc = &#123;1\over \sin&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          as multiplying by ‘cos’ undoes the work
+          of multiplying by ‘sec’, and likewise for
+          ‘sin’ and ‘csc’; also,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \,\tan = &#123;1\over \cot&#125;,
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cot = &#123;1\over \tan&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          modulo the fact that {" "}
+          <NoBreak>
+            <Math>
+              $&#123;1\over \infty&#125; \ne 0$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (Or, more exactly, 
+          modulo
+          the fact that what people think of as {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\pm\infty$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          is, in fact, an {" "}
+          <i>
+            undefined
+          </i>
+          {" "} value of the function.)
+          And
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \tan \,=\, \sec \cdot \sin \,\,=\,\, &#123;\sin\!\!\!\!\phantom&#123;1&#125;\over \cos&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cot \,=\, \csc \cdot \cos \,\,=\,\, &#123;\cos\!\!\!\!\phantom&#123;1&#125;\over \sin&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          since one way to reach ‘opposite’ from
+          ‘adjacent’ is to go via ‘hypotenuse’, and
+          vice-versa for reaching ‘adjacent’ from
+          ‘opposite’. (In fact, the next-to-last
+          identity played a role in our proof of the
+          Gregorinovich sandwich.) (Indeed,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is another way of writing the Grigorinovich
+          sandwich.)
+        </OuterP>
+        <Pause />
+        <Example id="_53_hgi_">
+          <OuterP>
+            <b>
+              Example 6.
+            </b>
+            {" "}
+            If the Earth [is modeled as] a sphere
+            of radius {" "}
+            <Math>
+              $1$
+            </Math>
+            {" "} then, as stands to reason, the circle
+            of latitude {" "}
+            <Math>
+              $\theta$
+            </Math>
+            {" "} has radius {" "}
+            <NoBreak>
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              :
+            </NoBreak>
+          </OuterP>
+          <Pause />
+          <Image
+            width="480px"
+            src="/build-img/svgo-svg/_wct.svg"
+          />
+          <Pause />
+          <OuterP>
+            [Example {" "}
+            <InChapterLink
+              href="/article/chapter3#_53_hgi_"
+              class="handle-in-chapter-link"
+            >
+              6
+            </InChapterLink>
+            {" "} continued.] In particular, this means that 
+            in any cylindrical
+            projection** of the Earth, such as the
+            “Lambert projection” depicted below
+            (that just sends each latitude out to
+            its own height), the radius of a latitude is dilated
+            by [a factor of] {" "}
+            <NoBreak>
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              :
+            </NoBreak>
+          </OuterP>
+          <Pause />
+          <Image
+            width="480px"
+            src="/build-img/svgo-svg/ZWuF.svg"
+            style="margin-bottom:-1em"
+          />
+          <Pause />
+          <OuterP>
+            ...because...
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \Huge \sec(\theta)\cdot\cos(\theta) = 1
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            ...which means that {" "}
+            <NoBreak>
+              “
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              ”
+            </NoBreak>
+            {" "}
+            is the correct multiplicative factor
+            to take the Earth-radius to the
+            cylinder-radius. 
+            (Or just
+            think of the fact that {" "}
+            <NoBreak>
+              <Math>
+                $1/\cos(\theta) = \sec(\theta)$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}
+            dividing one radius by the other.)
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          <b>
+            **Vocabulary.
+          </b>
+          {" "} A (so-called
+          {" "}
+          <i>
+            normal
+          </i>
+          ) {" "}
+          <i>
+            cylindrical projection
+          </i>
+          {" "}
+          is a projection that maps the Earth to
+          a vertical cylinder abutting the Earth at the
+          equator while sending each latitude of the
+          Earth to a circle on the cylinder, etc;
+          besides the Lambert projection depicted
+          above, two more examples are the {" "}
+          <i>
+            central
+            cylindrical projection
+          </i>
+          {" "} and the
+          {" "}
+          <i>
+            plate carée
+          </i>
+          :
+        </OuterP>
+        <Pause />
+        <Image
+          width="1300px"
+          src="/build-img/svgo-svg/sA2I.svg"
+        />
+        <Pause />
+        <OuterP>
+          (In the plate carée, at right, 
+          longitudes are “unrolled” onto the cylinder,
+          which preserves north-south distances.)
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section
+        work="ing"
+        id="section-19"
+      >
+        <OuterP>
+          <b>
+            Note on calculators.
+          </b>
+          {" "}
+          Your calculator has “degree mode” and
+          “radian mode”. If your calculator tells
+          you that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(1.57)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a number close to {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} instead of being
+          a number close to {" "}
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} it means that your
+          calculator is in “degree mode”—it has treated
+          as {" "}
+          <Math>
+            $1.57$
+          </Math>
+          {" "} as a number of degrees, instead of
+          as a number of radians! (Be sure, in any
+          case, that you're in the mode that you want.)
+        </OuterP>
+      </Section>
+      <Pause />
+      <Exercises
+        work="ing"
+        id="_70_hgi_"
+      >
         <Exercise number={1}>
-          <ExerciseStatement id="_31_hgi_">
+          <ExerciseStatement id="_54_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
               </b>
               {" "}
-              How can you define the absolute value
-              function using “definition by cases”?
+              Guesstimate a function with this graph:
             </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_cosine_10x_plus_x_over_4.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The absolute value function is
+              It appears that the function is “a line plus
+              something”, in the sense of the following
+              diagram:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/tYzo.svg" />
+            <Pause />
+            <OuterP>
+              (Or in the technical sense of taking the sum
+              of two functions, to be more exact—that is what
+              the sum of two functions looks like, pictorialized!)
+            </OuterP>
+            <OuterP class="indent-10">
+              The line appears to be
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              x \ra \begin&#123;cases&#125; x &amp; \te&#123;if $x \geq 0$,&#125;\\ -x\!\!\up&#123;1.2&#125; &amp; \te&#123;if $x &lt; 0$&#125;\end&#123;cases&#125;
+              y = &#123;1\over 4&#125;x
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              because {" "}
+              making it a true {" "}
+              <i>
+                linear
+              </i>
+              {" "} function (as opposed
+              to {" "}
+              <i>
+                affine
+              </i>
+              , cf. {" "}
+              <NoBreak>
+                <a
+                  href="/article/chapter1#_23_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Chapter 1
+                </a>
+                ).
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <OuterP class="indent-10">
+              As for the “something”—the bumpy one—it appears
+              to just be a “sped up cosine”, and note that
+              the graph goes through approximately {" "}
+              <Math>
+                $10$
+              </Math>
+              {" "}
+              cycles between {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} and {" "}
               <NoBreak>
                 <Math>
-                  $-(-1) = 1$
+                  $x = 6.28 \approx 4\eta$
                 </Math>
                 ,
               </NoBreak>
-              {" "} {" "}
+              {" "}
+              as we can count on the graph of the original
+              function:
+              <ImageLeft
+                line={-2}
+                src="/build-img/svgo-svg/9sIf.svg"
+              />
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_cosine_10x_plus_x_over_4_bump_count.svg" />
+            <Pause />
+            <OuterP>
+              As cos goes through {" "}
+              <i>
+                one
+              </i>
+              {" "} cycle from {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} to
+              {" "}
               <NoBreak>
                 <Math>
-                  $-(-5) = 5$
+                  $x = 4\eta$
                 </Math>
                 ,
               </NoBreak>
-              {" "} etc.
+              {" "} the “bumpy function” is therefore
+              (roughly, from what we can see) a {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $10$
+                </Math>
+                &#x200b;
+              </NoBreak>
+              <NoBreak>
+                <Math>
+                  $\times$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              sped-up version of cosine, i.e.,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = \cos(10x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              from which the guesstimate for the initial function
+              would be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = \cos(10x) + &#123;1\over 4&#125; x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              adding our two separate guesstimates together.
             </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_32_hgi_">
+          <ExerciseStatement id="_55_hgi_">
             <OuterP>
               <b>
                 Exercise 2.
               </b>
               {" "}
-              How can you define the absolute value
-              function using an “ordinary” algebraic formula?
+              Guesstimate a function with this graph (we can
+              tell you that the large-scale curve is a
+              parabola):
             </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/yMU3.svg"
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We have
+              Having intimated that the answer is the sum of
+              a parabola and of some cosine deviant, let us
+              focus on the parabolic portion first, that would
+              namely be roughly this purple curve:
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/7pg9.svg"
+            />
+            <Pause />
+            <OuterP>
+              [Nb:
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              parabolic
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              is a synonym of
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              quadratic
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              degree {" "}
+              <Math>
+                $\mathit&#123;2&#125;$
+              </Math>
+              {" "} polynomial
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              i.e., a function of the form
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              |x| = \sqrt&#123;x^2&#125;
+              x \ra a_2x^2 + a_1x + a_0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for constants {" "}
+              <NoBreak>
+                <Math>
+                  $a_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $a_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $a_0 \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} cf. {" "}
+              <NoBreak>
+                <a
+                  href="/article/chapter1#_23_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Chapter 1
+                </a>
+                .]
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <OuterP class="indent-10">
+              As the parabola is symmetric about the {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} axis it will
+              be of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = Ax^2 + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some constants {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $C \in \rr$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (And specifically
+              without a
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $Bx$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              term, that would break symmetry.)
+            </OuterP>
+            <OuterP class="indent-10">
+              The value
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is easy because it is the value of the parabola at
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which in this case appears to be {" "}
+              <NoBreak>
+                <Math>
+                  $y = -3$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/Wk9W.svg"
+            />
+            <Pause />
+            <OuterP>
+              ...so...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              C = -3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (we say). For {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              note that the parabola appears to have value {" "}
+              <Math>
+                $y \approx 3$
+              </Math>
+              {" "}
+              at {" "}
+              <NoBreak>
+                <Math>
+                  $x = \pm 12$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} resulting in an increase of {" "}
+              <Math>
+                $\approx 6$
+              </Math>
+              {" "}
+              between {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $x = \pm 12$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/XW1g.svg"
+            />
+            <Pause />
+            <OuterP>
+              That increase being entirely due to the term
+              {" "}
+              <NoBreak>
+                <Math>
+                  $Ax^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} we get
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A \cdot 12^2 \approx 6
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (in more detail,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A\cdot 12^2 - A\cdot 0^2 \approx 6
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              but {" "}
+              <Math>
+                $A\cdot 0^2$
+              </Math>
+              {" "} goes away), meaning
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A \approx &#123;6\over 12^2&#125; = &#123;1\over 24&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              meaning that the quadratic portion of the function is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;x^2\over 24&#125; - 3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              per this estimate.
+            </OuterP>
+            <OuterP class="indent-10">
+              The other portion of the answer—what is left
+              after the parabola is subtracted—is a cosine-like
+              function (or {" "}
+              <i>
+                sinusoid
+              </i>
+              ) whose amplitude (the
+              height of a bump) is roughly {" "}
+              <NoBreak>
+                <Math>
+                  $0.5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which is half the
+              amplitude of
+              sine/cosine:
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/MP5H.svg"
+            />
+            <Pause />
+            <OuterP>
+              Moreover at {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} we find
+              more or less exactly
+              the {" "}
+              <i>
+                bottom
+              </i>
+              {" "} of a
+              bump,
+              so altogether
+              we can use a function of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -0.5\cos(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to model this sinusoid,
+              where the multiplication by {" "}
+              <Math>
+                $0.5$
+              </Math>
+              {" "} gives us
+              the desired amplitude and where the {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $-$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} gives
+              us an anti-bump (“trough”?) instead of a bump at {" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ;
+              </NoBreak>
+              {" "}
+              on the other hand the value {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} will control the amount of
+              horizontal compression inside the curve; specifically,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              B = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              will give a curve that goes through one full cycle
+              per interval of length {" "}
+              <NoBreak>
+                <Math>
+                  $4\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              while, in general, an arbitrary value of {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} will give a
+              curve that goes {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} full cycles
+              per interval of length {" "}
+              <Math>
+                $4\eta$
+              </Math>
+              {" "} (the larger {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} is,
+              the more “frenzied” the curve);
+              in our case, it seems that {" "}
+              <NoBreak>
+                <Math>
+                  $B \approx 20$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/FLx-.svg"
+            />
+            <Pause />
+            <OuterP>
+              So an estimate for the
+              second function
+              would be...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -0.5\cos(20x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...giving us...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -0.5\cos(20x) + &#123;x^2\over 24&#125; - 3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...for our final answer, after adding the parabola back.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={3}>
+          <ExerciseStatement id="_56_hgi_">
+            <OuterP>
+              <b>
+                Exercise 3.
+              </b>
+              {" "}
+              Guesstimate a function with this graph:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/dt9I.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              First we estimate a function for the large-scale
+              curve in purple:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/3ZYf.svg" />
+            <Pause />
+            <OuterP>
+              It appears to be a linear function (line through
+              {" "}
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "} sloping down) plus a sinusoid. To
+              estimate the slope of the linear function we can
+              take two points in like relation to the sinusoid,
+              draw a line between them and estimate the slope:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/r7Qe.svg" />
+            <Pause />
+            <OuterP>
+              This makes the linear function portion of the purple
+              curve
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -&#123;1\over 4&#125;x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or thereabouts.
+            </OuterP>
+            <OuterP class="indent-10">
+              To model the sinusoid portion of the large-scale
+              purple curve we need more measurements, such as
+              the total height of the sinusoid from top of
+              bump to bottom of trough; we can add a third “bottom
+              of trough” dot, in same relation to the top of
+              bumps (but we won't actually draw this dot or else
+              we won't be able to see where we're measuring):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/CZVO.svg" />
+            <Pause />
+            <OuterP>
+              So it appears that the sinusoid has a total height
+              of {" "}
+              <Math>
+                $\approx 4$
+              </Math>
+              {" "} from top of bump to bottom of trough.
+            </OuterP>
+            <OuterP class="indent-10">
+              (And in case you're confused by what we're trying
+              to do,
+              let us re-explain that we are trying
+              to measure the vertical width of this blue band...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/9l0x.svg" />
+            <Pause />
+            <OuterP>
+              ...that, indeed, seems near {" "}
+              <NoBreak>
+                <Math>
+                  $4$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              What this means is that if we remove the linear
+              portion
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -&#123;1\over 4&#125;x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              from the purple curve, what we will find is a
+              sinusoid whose individual bumps have height {" "}
+              <NoBreak>
+                <Math>
+                  $\approx 2$
+                </Math>
+                ;
+              </NoBreak>
+              {" "}
+              something like this (we switch the color to aquamarine, so
+              that “purple curve” retains its unique meaning):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/I-bw.svg" />
+            <Pause />
+            <OuterP>
+              This graph has the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -2\sin(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some value of {" "}
+              <Math>
+                $B \in \rr$
+              </Math>
+              {" "} that, chosen correctly,
+              will give us the desired “wavelength”. (Note that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -\sin(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              has graph...
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/eM2n.svg"
+            />
+            <Pause />
+            <OuterP>
+              ...and that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -2\sin(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              has graph...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/YfcA.svg" />
+            <Pause />
+            <OuterP>
+              ...and, from there, all that remains is to
+              “slow down” the oscillation to match the
+              aquamarine graph—the “slowing down” is what
+              {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} is for.)
+            </OuterP>
+            <OuterP class="indent-10">
+              To know how much {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} must be, we must measure
+              the cycle length (it is, admittedly, hard to
+              accurately determine the position of the top
+              of each large-scale bump, but we do our best by
+              basing ourselves off of what appear to be identical
+              patterns in the small-scale oscillations at
+              the top of each large-scale bump):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/So_Y.svg" />
+            <Pause />
+            <OuterP>
+              As
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              12.6 \approx 12.56 = 2\times 6.28 \approx 2\cdot 4\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              the period of the large-scale sinusoid is near
+              twice the period of sin or cos; i.e., we need to
+              “slow down”
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -2\sin(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by a factor {" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} i.e., put
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              B = 0.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              i.e., use
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -2\sin(0.5x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for the large-scale sinusoid. (Aquamarine graph.)
+            </OuterP>
+            <OuterP class="indent-10">
+              (So far we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -&#123;1\over 4&#125;x - 2\sin(0.5x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for our approximation to the purple curve, putting
+              the linear and sinusoidal parts together. Now we
+              move on from the purple curve.)
+            </OuterP>
+            <OuterP class="indent-10">
+              It remains to add in the small-scale oscillation
+              from the original curve; we can do the tedious
+              part first, and count the number cycles in an
+              interval of length {" "}
+              <NoBreak>
+                <Math>
+                  $4\eta \approx 6.28$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/yXJ4.svg" />
+            <Pause />
+            <OuterP>
+              So the small-scale oscillation is running
+              at {" "}
+              <Math>
+                $\approx 19$
+              </Math>
+              {" "} times the frequency of an ordinary
+              sine or cosine, and we can model the small-scale
+              oscillation by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra -0.5\sin(19x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              since, like the large-scale oscillation from the
+              purple curve, it shares the same phase as {" "}
+              <NoBreak>
+                <Math>
+                  $-\sin(x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and since, like the small-scale oscillation from
+              {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter3#_55_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 2
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "} it has
+              an amplitude of {" "}
+              <NoBreak>
+                <Math>
+                  $\approx 0.5$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Altogether, we get
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -&#123;1\over 4&#125;x - 2\sin(0.5x) - 0.5\sin(19x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as our “guesstimate”, while adding the linear
+              function, the large-scale sinusoid, and the small-scale
+              sinusoid together!
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={4}>
+          <ExerciseStatement id="_57_hgi_">
+            <OuterP>
+              <b>
+                Exercise 4.
+              </b>
+              {" "}
+              compute {" "}
+              <Math>
+                $A/B$
+              </Math>
+              {" "} assuming all same-colored
+              triangles are similar and
+              with the help of a calculator:
+            </OuterP>
+            <Pause />
+            <Image
+              style="width:500px;margin-top:1em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/OeWS.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              What we want is the multiplicative ratio that
+              would take us from the bottom to the top side of
+              this quadrilateral, so that we can multiply by that
+              ratio over and over again:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/QIQa.svg" />
+            <Pause />
+            <OuterP>
+              But the two triangles involved are
+            </OuterP>
+            <Pause />
+            <CentralDisplay>
+              NOT RIGHT TRIANGLES
+            </CentralDisplay>
+            <Pause />
+            <OuterP>
+              and we must break them into smaller parts that
+              {" "}
+              <i>
+                are
+              </i>
+              {" "} right triangles in order to use trigonometric
+              functions. Specifically, as per this drawing:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/IZD7.svg" />
+            <Pause />
+            <OuterP>
+              The multiplicative ratios that correspond to the
+              first and third arrows (in arrow-order from bottom
+              to top) are
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(68^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(59^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because these are “hypotenuse-to-opposite” arrows,
+              while the multiplicative ratios that correspond to the
+              second and fourth arrows are
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \csc(71^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \csc(60^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because these are the opposite (no pun intended),
+              i.e.,“opposite-to-hypotenuse” arrows. The “big grey
+              arrow” ratio from two diagrams ago is obtained by multiplying
+              these four small-arrow ratios together, or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(68^\circ\hlfbk)\times\csc(71^\circ\hlfbk)\times\sin(59^\circ\hlfbk)\times\csc(60^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (that can also be written
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sin(68^\circ\hlfbk)\times\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\times\sin(60^\circ\hlfbk)&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2092,252 +5415,354 @@ const Rest = () => {
               because {" "}
               <NoBreak>
                 <Math>
-                  $\sqrt&#123;(-1)^2&#125; = 1$
+                  $\csc = &#123;1\over \sin&#125;$
                 </Math>
-                ,
+                )
               </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $\sqrt&#123;(-5)^2&#125; = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              etc.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              This definition is less ad-hoc than might seem,
-              being a 1-dimensional form of the Pythagorean
-              theorem.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={3}>
-          <ExerciseStatement id="_33_hgi_">
-            <OuterP>
-              <b>
-                Exercise 3.
-              </b>
-              {" "}
-              Evaluate:
-            </OuterP>
-            <Pause />
-            <Grid
-              cols={2}
-              sm_cols={1}
-              place_items="start"
-              with_padding={false}
-              column_first={true}
-            >
-              <Item>
-                i. {" "}
-                <Math>
-                  $(\lambda u.u^3)(0.5)$
-                </Math>
-              </Item>
-              <Item>
-                ii. {" "}
-                <Math>
-                  $(u \ra u^2)(x + 1)$
-                </Math>
-              </Item>
-              <Item>
-                iii. {" "}
-                <Math>
-                  $(\lambda t.t - 1)(100) \cdot (\lambda t.t + 1)(100)$
-                </Math>
-              </Item>
-              <Item>
-                iv. {" "}
-                <Math>
-                  $(u \ra u^2)(a + b)$
-                </Math>
-              </Item>
-            </Grid>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The answers are:
-            </OuterP>
-            <Pause />
-            <Grid
-              cols={2}
-              sm_cols={1}
-              place_items="start"
-              with_padding={false}
-              column_first={true}
-            >
-              <Item>
-                i. {" "}
-                <Math>
-                  $0.5^3 = 0.125$
-                </Math>
-              </Item>
-              <Item>
-                ii. {" "}
-                <Math>
-                  $(x + 1)^2 = x^2 + 2x + 1$
-                </Math>
-              </Item>
-              <Item>
-                iii. {" "}
-                <Math>
-                  $(100 - 1) \cdot (100 + 1) = 9999$
-                </Math>
-              </Item>
-              <Item>
-                iv. {" "}
-                <Math>
-                  $(a + b)^2 = a^2 + 2ab + b^2$
-                </Math>
-              </Item>
-            </Grid>
-          </Solution>
-        </Exercise>
-        <Exercise number={4}>
-          <ExerciseStatement id="_34_hgi_">
-            <OuterP>
-              <b>
-                Exercise 4.
-              </b>
-              {" "}
-              The {" "}
-              <i>
-                floor
-              </i>
-              {" "} of a real number {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} written
+              {" "} which, numerically, comes out to
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \lfloor x \rfloor,
+              0.97057870529467...
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              is the greatest integer less than or equal
-              to {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (Start at {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} and travel left on the
-              number line until you meet an integer; but if
-              {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} is already an integer, stay there; the
-              place you land is {" "}
-              <NoBreak>
-                <Math>
-                  $\lfloor x \rfloor$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Sketch the graph {" "}
-              <NoBreak>
-                <Math>
-                  $y = \floor&#123;x&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Secondly, find a formula for a function whose
-              graph looks like this, where you are allowed
-              to use {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\floor&#123;x&#125;$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} in your formula:
+              meaning that the top side of the quadrilateral tile is
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/DEja.svg" />
-          </ExerciseStatement>
-          <Solution>
+            <MathBlock>
+              $$
+              97\%
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
-              As {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} grows, so does {" "}
+              and some the length of the bottom side; taking
+              the {" "}
               <NoBreak>
                 <Math>
-                  $\floor&#123;x&#125;$
+                  $36$
+                </Math>
+                -th
+              </NoBreak>
+              {" "} power of {" "}
+              <NoBreak>
+                <Math>
+                  $0.9705\dots$
                 </Math>
                 ,
               </NoBreak>
-              {" "} but
-              {" "}
+              {" "} because {" "}
               <Math>
-                $\floor&#123;x&#125;$
+                $36$
               </Math>
-              {" "} only “levels up” each time that {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              reaches a new integer, and flatlines
-              otherwise; this gives rise to the following
-              staircase-shaped graph:
+              {" "} is the
+              number of times that the quadrilateral
+              repeats within the spiral, we find
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Ymia.svg" />
+            <MathBlock>
+              $$
+              0.34127722635785...
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
-              (For example, {" "}
+              which is the desired ratio {" "}
+              <NoBreak>
+                <Math>
+                  $A/B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and which agrees with the
+              drawing, as {" "}
               <Math>
-                $\floor&#123;1&#125; = 1$
+                $A$
               </Math>
-              {" "} because the
-              greatest integer less than or equal to {" "}
+              {" "} seems plausibly to be about one-third of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} from the drawing!
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                While the final answer can be written
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                (\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^&#123;36&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                or
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \left(&#123;\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)&#125;\right)^&#123;\!36&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                teachers typically want to see such expressions
+                evualuated out, to make sure that you and your
+                calculator form a good team. (And, to be fair,
+                catching one's own calculator mistakes by virtue
+                of spotting a nonsensical number is a skill in
+                itself.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Instead of counting the number of times that the
+                quadrilateral appears in the double spiral by hand
+                one can
+                calculate the amount of rotation between one
+                quadrilateral and the next, which is this purple angle:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1em;"
+                src="/build-img/svgo-svg/FQro.svg"
+              />
+              <Pause />
+              <OuterP>
+                The key to measuring this
+                angle is the concept of an “alternating angle”,
+                whereby {" "}
+                <Math>
+                  $68^\circ$
+                </Math>
+                {" "} reappears to the left of {" "}
+                <NoBreak>
+                  <Math>
+                    $71^\circ$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                here:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1em;"
+                src="/build-img/svgo-svg/JRLJ.svg"
+              />
+              <Pause />
+              <OuterP>
+                Then we can calculate the purple angle as
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                68^\circ + 71^\circ + 61^\circ - 180^\circ = 20^\circ
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                meaning that each quadrilateral is rotated by {" "}
+                <Math>
+                  $20^\circ$
+                </Math>
+                {" "} from the
+                previous, and in one turn of the spiral there are
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;360^\circ\over 20^\circ&#125; = 18
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                quadrilaterals, or
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                2 \times 18 = 36
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                quadrilaterals for two turns!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={5}
+        >
+          <ExerciseStatement id="_58_hgi_">
+            <OuterP>
+              <b>
+                Exercise 5.
+              </b>
+              {" "}
+              Which function is most plausibly associated to
+              which graph?
+            </OuterP>
+            <Pause />
+            <table
+              class="slice"
+              style="border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;"
+            >
+              <colgroup>
+                <col width={200} />
+                <col width={200} />
+              </colgroup>
+              <tbody>
+                <tr style="border-bottom:1px solid black;">
+                  <td style="padding:0.5em 0;border-right:1px solid black">
+                    <Math>
+                      $x \ra \sin x \cdot \cos x$
+                    </Math>
+                  </td>
+                  <td style="padding:0.5em 0;">
+                    <Math>
+                      $x \ra \cos^2 x$
+                    </Math>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:0.5em 0;border-right:1px solid black">
+                    <Math>
+                      $x \ra \sin^2 x$
+                    </Math>
+                  </td>
+                  <td style="padding:0.5em 0;">
+                    <Math>
+                      $x \ra \sin x + \cos x$
+                    </Math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <Pause />
+            <Image src="/build-img/svgo-svg/huBu.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \sin^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \cos^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              are nonnegative [the square of a number
+              is nonnegative]
+              these functions must either be
+              the top right or bottom left graphs, as the
+              other two graphs weave in and out of negative territory;
+              given additionally that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\cos(0) = 1,
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(0) = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              we can further deduce that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \sin^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can only be the top right graph, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \cos^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can only be the bottom left graph; moreover, since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              |\sin x \cdot \cos x| \leq 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all {" "}
+              <Math>
+                $x \in \rr$
+              </Math>
+              {" "} (as the product of
+              two numbers that are between {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "} and {" "}
               <Math>
                 $1$
               </Math>
-              {" "}
-              is {" "}
+              {" "} is
+              itself between {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "} and {" "}
               <NoBreak>
                 <Math>
                   $1$
                 </Math>
-                ,
+                ),
               </NoBreak>
-              {" "} {" "}
+              {" "} whereas the
+              top left graph is at times greater than {" "}
               <Math>
-                $\floor&#123;-0.5&#125; = -1$
+                $1$
               </Math>
-              {" "} because the greatest
-              integer less than or equal to {" "}
-              <Math>
-                $-0.5$
-              </Math>
-              {" "} is {" "}
+              {" "}
+              and at times less than {" "}
               <NoBreak>
                 <Math>
                   $-1$
@@ -2345,187 +5770,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              and so on.)
-            </OuterP>
-            <OuterP class="indent-10">
-              For the second part note that the following
-              two displacements, excerpted from the “factory
-              roof” graph in the statement, are equal:
+              the last standing possibility is...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Mfbc.svg" />
+            <Image src="/build-img/svgo-svg/Ninz.svg" />
             <Pause />
             <OuterP>
-              The red dot to the left of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} has {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "}
-              {" "}
-              <NoBreak>
-                <Math>
-                  $\floor&#123;x&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so the horizontal displacement is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x - \floor&#123;x&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so the equation of the graph is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              y = x - \floor&#123;x&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because the {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} {" "}
-              <i>
-                is
-              </i>
-              {" "} the
-              vertical displacement, given that the vertical
-              displacement starts at {" "}
-              <NoBreak>
-                <Math>
-                  $y = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and because
-              the vertical and horizontal displacements are
-              equal.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={5}>
-          <ExerciseStatement id="_35_hgi_">
-            <OuterP>
-              <b>
-                Exercise 5.
-              </b>
-              {" "}
-              Find the formula for a function whose graph
-              looks like this, again using the floor function
-              {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $\lfloor \cdot \rfloor$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} as a building block:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/9u3r.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              We would like to argue the correctness of
-              the following two-step process (divide the
-              input by {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} apply the function from {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_34_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 4
-                </InChapterLink>
-                ):
-              </NoBreak>
-              {" "}{" "}
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Kgso.svg" />
-            <Pause />
-            <OuterP>
-              Indeed, the two graphs featured above differ
-              only by a horizontal dilation; dividing the
-              input by {" "}
-              <Math>
-                $2$
-              </Math>
-              {" "} “undoes” the dilation, at which
-              point it suffices to apply the function pictured
-              in the second graph; having declared our method
-              correct, the answer is thus...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;x/2 - \lfloor x/2 \rfloor&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...as obtained by substituting {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x/2$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} (the halved
-              input) for of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\,x - \lfloor x \rfloor$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              (the formula for the function from {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_34_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 4
-                </InChapterLink>
-                ).
-              </NoBreak>
-              {" "}{" "}
+              ...this one!
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -2534,14 +5785,9 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                One can check the answer by typing “x/2 - floor(x/2)”
-                in DESMOS. Viz:
+                These are in fact the actual graphs of
+                the stated functions, not just “plausible” graphs.
               </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/jpg/pc6h.jpg"
-                width="1400px"
-              />
             </SolutionNote>
             <Pause />
             <SolutionNote>
@@ -2550,643 +5796,213 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                Alternately, enter “f(x) = x - floor(x)” and
-                then “f(x/2)”:
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/jpg/FUw3.jpg"
-                width="1400px"
-              />
-              <Pause />
-              <OuterP>
-                Or:
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/jpg/Gowo.jpg"
-                width="1400px"
-              />
-              <Pause />
-              <OuterP>
-                The above features the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                composition
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of functions {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} and {" "}
-                <NoBreak>
-                  <Math>
-                    $g$
-                  </Math>
-                  ;
-                </NoBreak>
-                {" "} in more detail, if we 
-                switch the “input tube” and “output tube” sides of
-                a function...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/TgEh.svg" />
-              <Pause />
-              <OuterP>
-                ...(compared to the drawing at the top of the
-                chapter), then the composition of 
+                It is
+                indeed quite striking that all of these
+                functions seem to be {" "}
+                <i>
+                  sinusoids
+                </i>
+                , given the
+                appearance of their graphs. (A “sinusoid” is 
+                formally defined as a function of the form
                 {" "}
                 <Math>
-                  $f$
+                  $x \ra A\cdot \sin(Bx + C) + D$
                 </Math>
-                {" "} and {" "}
+                {" "} for some 
+                constants {" "}
                 <NoBreak>
                   <Math>
-                    $g$
+                    $A$
                   </Math>
                   ,
                 </NoBreak>
-                {" "} written
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \f \circ g
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                and read
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <NoBreak>
-                  “
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
-                {" "} of {" "}
-                <NoBreak>
-                  <Math>
-                    $\hlfbk&#123;&#125;g$
-                  </Math>
-                  ”
-                </NoBreak>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                is the function that you get by
-                gluing {" "}
-                <NoBreak>
-                  <Math>
-                    $g$
-                  </Math>
-                  's
-                </NoBreak>
-                {" "} box to the right of {" "}
-                <NoBreak>
-                  <Math>
-                    $\f$
-                  </Math>
-                  's
-                </NoBreak>
-                {" "} box, like so:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/FwQo.svg" />
-              <Pause />
-              <OuterP>
-                In other words, {" "}
-                <NoBreak>
-                  <Math>
-                    $g$
-                  </Math>
-                  's
-                </NoBreak>
-                {" "} output is passed on to {" "}
-                <Math>
-                  $-f$
-                </Math>
-                {" "}
-                for further processing. (A certain movie called
-                “The Human Centipede” comes to mind.)
-              </OuterP>
-              <OuterP class="indent-10">
-                (To be perfectly clear,
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/5UVl.svg" />
-              <Pause />
-              <OuterP>
-                <Math>
-                  $f \circ g$
-                </Math>
-                {" "} is a {" "}
-                <i>
-                  function
-                </i>
-                , defined as the
-                above assemblage of {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $g$
-                  </Math>
-                </NoBreak>
-                {" "} first, {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} second”.)
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
-                A formal definition of {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f \circ g$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} can be given
-                as
-              </OuterP>
-              <Boxed>
-                <MathBlock>
-                  $$
-                  &#123;(f \circ g)(x) = f(g(x))&#125;
-                  $$
-                </MathBlock>
-              </Boxed>
-              <OuterP>
-                or as
-              </OuterP>
-              <Boxed>
-                <MathBlock>
-                  $$
-                  f \circ g = (x \ra f(g(x)))
-                  $$
-                </MathBlock>
-              </Boxed>
-              <OuterP>
-                where one can also clarify that
-              </OuterP>
-              <Boxed>
-                <MathBlock>
-                  $$
-                  &#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;
-                  $$
-                </MathBlock>
-              </Boxed>
-              <OuterP>
-                which is to say that the domain of {" "}
-                <Math>
-                  $f \circ g$
-                </Math>
-                {" "}
-                consists of all {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "} such that: {" "}
-                <b>
-                  (i)
-                </b>
                 {" "} {" "}
-                <Math>
-                  $g(x)$
-                </Math>
-                {" "}
-                exists (a.k.a, {" "}
                 <NoBreak>
-                  “
                   <Math>
-                    $x \in \dom g$
+                    $B$
                   </Math>
-                  ”)
+                  ,
                 </NoBreak>
-                {" "} and,
-                {" "}
-                <b>
-                  (ii)
-                </b>
                 {" "} {" "}
-                <Math>
-                  $f(g(x))$
-                </Math>
-                {" "} exists (a.k.a., {" "}
                 <NoBreak>
-                  “
                   <Math>
-                    $g(x) \in \dom f$
+                    $C$
                   </Math>
-                  ”).
+                  ,
                 </NoBreak>
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $D \in \rr$
+                  </Math>
+                  .)
+                </NoBreak>
+                {" "}
+                There is {" "}
                 <i>
-                  Note 4.
+                  a priori
                 </i>
-                {" "}
-                Amusingly—or not—both sides of the afore-mentioned
-              </OuterP>
-              <Pause />
-              <CentralDisplay>
-                <NoBreak>
-                  “
-                  <Math>
-                    $(f \circ g)(x) = f(g(x))$
-                  </Math>
-                  ”
-                </NoBreak>
-              </CentralDisplay>
-              <Pause />
-              <OuterP>
-                are read
-              </OuterP>
-              <Pause />
-              <CentralDisplay>
-                <NoBreak>
-                  “
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
-                {" "} of {" "}
-                <Math>
-                  $\hlfbk&#123;&#125;g$
-                </Math>
-                {" "} of {" "}
-                <NoBreak>
-                  <Math>
-                    $x\hspace&#123;0.1em&#125;$
-                  </Math>
-                  ”
-                </NoBreak>
-              </CentralDisplay>
-              <Pause />
-              <OuterP>
-                since {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f \circ g$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} is read {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
-                {" "} of {" "}
-                <NoBreak>
-                  <Math>
-                    $g\rt&#123;0.1&#125;$
-                  </Math>
-                  ”,
-                </NoBreak>
-                {" "}
-                and {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f(\dots)$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} is read {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
-                {" "} of ...”.
+                {" "} no good reason for this.
               </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={6}>
-          <ExerciseStatement id="_36_hgi_">
+          <ExerciseStatement id="_59_hgi_">
             <OuterP>
               <b>
                 Exercise 6.
               </b>
               {" "}
-              Find formulas for functions whose graphs look
-              like these:
+              Where or how, if at all, is the
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/e9Dt.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              For the first graph, {" "}
-              <del>
-                the
-              </del>
-              {" "} an answer is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2 \cdot(x/2 - \fl&#123;x/2&#125;)
-              $$
-            </MathBlock>
+            <CentralDisplayItalic>
+              pythagorean identity
+            </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              which simplifies to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x - 2\fl&#123;x/2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because all we have to do is to multiply
-              {" "}
+              apparent in the four graphs of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter3#_35_hgi_"
+                  href="/article/chapter3#_58_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 5
                 </InChapterLink>
-                's
+                ?
               </NoBreak>
-              {" "} formula by {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                .
-              </NoBreak>
+              {" "}{" "}
             </OuterP>
-            <OuterP class="indent-10">
-              For the second graph, an answer is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x/3 - \fl&#123;x/3&#125;
-              $$
-            </MathBlock>
-            <Pause />
+          </ExerciseStatement>
+          <Solution>
             <OuterP>
-              because the problem is similar to {" "}
-              <InChapterLink
-                href="/article/chapter3#_35_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 5
-              </InChapterLink>
-              {" "}
-              except with a factor {" "}
+              Imagine turning the graphs {" "}
               <Math>
-                $3$
-              </Math>
-              {" "} horizontal dilation.
-            </OuterP>
-            <OuterP class="indent-10">
-              For the third graph, we will first stop to
-              find a formula  for the function depicted
-              here:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/E5ox.svg" />
-            <Pause />
-            <OuterP>
-              And that formula is...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/mS6k.svg" />
-            <Pause />
-            <OuterP>
-              ...iiiiiiiS...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x-1)/3 - \fl&#123;(x-1)/3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as obtained by substituting {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x - 1$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              (the input, minus {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                )
-              </NoBreak>
-              {" "} in place of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} in
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\,x/3 - \fl&#123;x/3&#125;$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "} the formula for the
-              second graph. Then we multiply that by {" "}
-              <Math>
-                $3$
+                $y = \sin^2(x)$
               </Math>
               {" "}
-              (to go from {" "}
+              and {" "}
+              <Math>
+                $y = \cos^2(x)$
+              </Math>
+              {" "} into wooden cutouts:
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/build-img/svgo-svg/hRhs.svg"
+            />
+            <Pause />
+            <Image
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/build-img/svgo-svg/nEBv.svg"
+            />
+            <Pause />
+            <OuterP>
+              It seems that if we would vertically flip
+              one of the cutouts (in this case {" "}
               <NoBreak>
-                “
-                <InlineImage
-                  src="/build-img/svgo-svg/X25H.svg"
-                  width="0.9em"
-                  bottom="0.15em"
-                />
-                ” {" "}
+                <Math>
+                  $y = \cos^2(x)$
+                </Math>
+                ),
               </NoBreak>
-              to {" "}
+              {" "}
+              it would perfectly fit on top of the other to make the
+              constant function {" "}
               <NoBreak>
-                “
-                <InlineImage
-                  src="/build-img/svgo-svg/7n38.svg"
-                  width="0.9em"
-                  bottom="0.15em"
-                />
-                ”, {" "}
+                <Math>
+                  $y = 1$
+                </Math>
+                :
               </NoBreak>
-              namely), meaning that the final answer is
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/build-img/svgo-svg/qKN7.svg"
+            />
+            <Pause />
+            <OuterP>
+              This is no illusion: 
+              it occurs because
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              3 \cdot ((x-1)/3 - \fl&#123;(x-1)/3&#125;)
+              \cos^2(x) + \sin^2(x) = 1
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x - 1) - 3\fl&#123;(x-1)/3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              after simplification. (Or just
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x - 1 - 3\fl&#123;(x-1)/3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              though we personally prefer the previous
-              form, it being more “talkative”.)
+              for all {" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} 
+              i.e., because of 
+              the pythagorean identity!
             </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={7}>
-          <ExerciseStatement id="_37_hgi_">
+          <ExerciseStatement id="_60_hgi_">
             <OuterP>
               <b>
                 Exercise 7.
               </b>
               {" "}
-              If
+              Which of these angles is {" "}
+              <Math>
+                $0.2$
+              </Math>
+              {" "} radians?
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              \cos \dblcol \rr \ra \rr
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (the “hollow dot colon” means that {" "}
-              <NoBreak>
-                <Math>
-                  $\dom \cos = \rr$
-                </Math>
-                )
-              </NoBreak>
-              {" "}
-              is a function whose graph looks like so...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/PlXB.svg" />
-            <Pause />
-            <OuterP>
-              ...then does the function...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;x \ra \cos(1000x)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...have a graph that looks like a bunch of very tight
-              bumps, or, instead, very flat {" "}
-              <i>
-                &amp;
-              </i>
-              {" "} spaced-out bumps??
-            </OuterP>
+            <Image src="/build-img/svgo-svg/lwHG.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Consider how to “read off” a value of {" "}
+              An angle is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              radians if the length of the subtended arc is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              20\%
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              the length of the radius;
+              proceeding by elimination—many things are obviously
+              not {" "}
               <Math>
-                $y = \cos(1000x)$
+                $20\%$
               </Math>
-              {" "}
-              from the graph {" "}
-              <NoBreak>
-                <Math>
-                  $y = \cos(x)$
-                </Math>
-                :
-              </NoBreak>
+              {" "} of the radius—that's this one:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/u0Dn.svg" />
+            <Image
+              style="margin-top:1em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/TFcy.svg"
+            />
             <Pause />
-            <OuterP>
-              By the first step, a
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              horizontal dilation by a factor 1000
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              maps the first graph onto the second graph—i.e.,
-              a point
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x, y)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is on the first graph if and only the dilated
-              point
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (1000x, y)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is on the second graph. The first graph is
-              therefore some very compressed thing, full of
-              scrunched bumps!
-            </OuterP>
+            <StarDivider />
             <Pause />
             <SolutionNote>
               <OuterP>
@@ -3194,3171 +6010,379 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                One can also reason that a small change in {" "}
-                <Math>
-                  $x$
-                </Math>
+                If you zoom in
+                a little bit
+                you can actually see
                 {" "}
-                results in a large change in {" "}
                 <NoBreak>
+                  “
                   <Math>
-                    $1000x$
+                    $100\%$
                   </Math>
-                  ,
+                  ”,
                 </NoBreak>
-                {" "} so that
                 {" "}
-                <Math>
-                  $\cos(1000x)$
-                </Math>
-                {" "} must “cycle” much faster through
-                values than {" "}
-                <Math>
-                  $\cos(x)$
-                </Math>
-                {" "} does.
+                {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $20\%$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}
+                written in fine print:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:0em;"
+                src="/build-img/svgo-svg/0sAj.svg"
+              />
+              <Pause />
+              <OuterP>
+                (&#8201;Joking.)
               </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_38_hgi_">
+          <ExerciseStatement id="_61_hgi_">
             <OuterP>
               <b>
                 Exercise 8.
               </b>
               {" "}
-              Rewrite
-            </OuterP>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <TextParent>
-                <MathBlock>
-                  $$
-                  (f \circ (g \circ h))(x)\tag&#123;A&#125;
-                  $$
-                </MathBlock>
-              </TextParent>
-            </div>
-            <OuterP>
-              without using {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "} using only the
-              “definitional equation of function
-              composition”, which is namely
-            </OuterP>
-            <div style="font-size:1.1em;margin:1em 0em;">
-              <TextParent>
-                <MathBlock>
-                  $$
-                  (r \circ s)(x) = r(s(x))\tag&#123;AA&#125;
-                  $$
-                </MathBlock>
-              </TextParent>
-            </div>
-            <OuterP>
-              (where {" "}
+              In the drawing below the oval is a circle of
+              radius {" "}
               <Math>
                 $r$
               </Math>
-              {" "} and {" "}
+              {" "} and the angle {" "}
               <Math>
-                $s$
+                $\phi$
               </Math>
-              {" "} are functions); plz
-              note that you will have to apply (AA)
-              {" "}
-              <i>
-                twice
-              </i>
-              , as each application of (AA)
-              makes {" "}
-              <i>
-                one
-              </i>
-              {" "} copy of the symbol {" "}
+              {" "} is in “standard
+              position”, meaning that it opens counterclockwise
+              for a positive angle from the direction of the
+              positive {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis. What are the coordinates
+              of {" "}
+              <Math>
+                $P$
+              </Math>
+              {" "} in terms of {" "}
               <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              disappear, and (A) contains {" "}
-              <i>
-                two
-              </i>
-              {" "} copies of
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”!!
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Setting {" "}
-              <NoBreak>
-                “
                 <Math>
                   $r$
                 </Math>
-                ”
+                ,
               </NoBreak>
-              {" "} to {" "}
+              {" "} {" "}
               <NoBreak>
-                “
                 <Math>
-                  $f$
+                  $x_0$
                 </Math>
-                ”
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $y_0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\phi$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:1em;margin-bottom:0.5em;"
+              src="/build-img/svgo-svg/PhJT.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -
               </NoBreak>
               {" "} and {" "}
               <NoBreak>
-                “
                 <Math>
-                  $s$
+                  $y$
                 </Math>
-                ”
+                -coordinates
               </NoBreak>
-              {" "} to {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $(g \circ h)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              in (AA) yields
-              <ImageLeft
-                src="/build-img/svgo-svg/o1Hy.svg"
-                popup={true}
-                line={1}
-                offset_x="1em"
-              />
-            </OuterP>
-            <div style="font-size:1.1em;margin:0.8em 0em;">
-              <MathBlock>
-                $$
-                (f \circ (g \circ h))(x) = \f((g \circ h)(x))
-                $$
-              </MathBlock>
-            </div>
-            <OuterP>
-              ...which already constitutes progress towards
-              our goal, since only one copy of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              exists on the right-hand side! But
-            </OuterP>
-            <div style="font-size:1.1em;margin:0.8em 0em;">
-              <MathBlock>
-                $$
-                (g \circ h)(x) = g(h(x))
-                $$
-              </MathBlock>
-            </div>
-            <OuterP>
-              by the “definitional equation” again, so
-            </OuterP>
-            <div style="font-size:1.1em;margin:0.8em 0em;">
-              <MathBlock>
-                $$
-                f((g \circ h)(x)) = \f(g(h(x)))
-                $$
-              </MathBlock>
-            </div>
-            <OuterP>
-              ...and this completes the computation!
+              {" "} are
+              respectively
             </OuterP>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                We can collect both steps of the computation
-                into a single string of equalities:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/yd6x.svg" />
-            </SolutionNote>
+            <MathBlock>
+              $$
+              x_0 + r\cdot \cos(\phi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y_0 + r\cdot \sin(\phi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot\cos(\phi)
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/8O7n.svg"
+                offset_x="5.5em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the difference from the center of the
+              circle to {" "}
+              <Math>
+                $P$
+              </Math>
+              {" "} in {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot\sin(\phi)
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/_riK.svg"
+                offset_x="7.5em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the difference from the center of the circle to {" "}
+              <Math>
+                $P$
+              </Math>
+              {" "} in {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              as per scaling a unit circle to radius {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={9}>
-          <ExerciseStatement id="_40_hgi_">
+          <ExerciseStatement id="_62_hgi_">
             <OuterP>
               <b>
                 Exercise 9.
               </b>
               {" "}
-              Same question as {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_38_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 8
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} but for
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f \circ (g \circ h)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} instead of
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $(f \circ g) \circ h$
-                </Math>
-                ”.
-              </NoBreak>
+              What ratios do
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              4\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              represent?
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We will again evaluate the “outer”
-              composition operator first and the “inner”
-              composition operator second, where the “outer”
-              composition operator is the one that is fewer
-              pairs of parentheses away from the outside
-              world:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/9213.svg" />
-            <Pause />
-            <OuterP>
-              So the first step is...
-            </OuterP>
-            <div style="font-size:1.1em;margin:0.8em 0em;">
-              <MathBlock>
-                $$
-                ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
-                $$
-              </MathBlock>
-            </div>
-            <OuterP>
-              ...by setting {" "}
-              <NoBreak>
-                <Math>
-                  $r = f \circ g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
+              While {" "}
               <Math>
-                $s = h$
+                $\eta$
               </Math>
-              {" "} in
-              the definitional equation, and the second step
-              is...
+              {" "} was defined
+              as the quarter-circumference of a unit circle,
+              more generally,
             </OuterP>
-            <div style="font-size:1.1em;margin:0.8em 0em;">
-              <MathBlock>
-                $$
-                (f \circ g)(h(x)) = \f(g(h(x)))
-                $$
-              </MathBlock>
-            </div>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
-              ...by setting {" "}
-              <NoBreak>
-                <Math>
-                  $r = f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $s = g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and with
-              {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $h(x)$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} in place of {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $x$
-                </Math>
-                ’.
-              </NoBreak>
+              is the quarter-circumference of a circle (any
+              circle) divided by its radius, and, correspondingly,
             </OuterP>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                The fact that
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  (f \circ (g \circ h))(x)
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                and
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  ((f \circ g) \circ h)(x)
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                both evaluate to
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  f(g(h(x)))
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                actually implies that
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  f \circ (g \circ h)
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                and
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  (f \circ g) \circ h
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                are the same function; this function is namely
-                the function that maps {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "} to {" "}
-                <Math>
-                  $f(g(h(x)))$
-                </Math>
-                {" "} for
-                all {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "} (or
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  x \ra f(g(h(x)))
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                in lambda notation).
-              </OuterP>
-            </SolutionNote>
+            <MathBlock>
+              $$
+              4\eta
+              $$
+            </MathBlock>
             <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                Because of this, we can write
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  f \circ g \circ h
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                without any parentheses. (The point is: either
-                way you parenthesize it you obtain the same
-                function, so why bother?)
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
-                The fact that
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  &#123;(a + b) + c = a + (b + c)&#125;
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                for all numbers {" "}
-                <NoBreak>
-                  <Math>
-                    $a$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <NoBreak>
-                  <Math>
-                    $b$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <Math>
-                  $c$
-                </Math>
-                {" "} is known as the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                associativity
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of addition; likewise, the fact that
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  (ab)c = a(bc)
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                for all numbers {" "}
-                <NoBreak>
-                  <Math>
-                    $a$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <NoBreak>
-                  <Math>
-                    $b$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <Math>
-                  $c$
-                </Math>
-                {" "} is known as the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                associativity
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of multiplication; and again likewise,
-                the fact that
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  &#123;(f \circ g) \circ h  =  f \circ (g \circ h)&#125;
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                for all functions {" "}
-                <NoBreak>
-                  <Math>
-                    $f$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <NoBreak>
-                  <Math>
-                    $g$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <Math>
-                  $h$
-                </Math>
-                {" "} is known
-                as the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                associativity
-                <ImageRight src="/build-img/svgo-svg/Y_jZ.svg" />
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of function composition.
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 4.
-                </i>
-                {" "}
-                One of the best ways to explain {" "}
-                <i>
-                  &amp;
-                </i>
-                {" "} understand
-                the associativity of function composition
-                uses this picture:
-              </OuterP>
-              <Pause />
-              <Image
-                width="550px"
-                src="/build-img/svgo-svg/ioa4.svg"
-              />
-              <Pause />
-              <OuterP>
-                In the above {" "}
-                <NoBreak>
-                  <Math>
-                    $A$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <NoBreak>
-                  <Math>
-                    $B$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <NoBreak>
-                  <Math>
-                    $C$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <Math>
-                  $D$
-                </Math>
-                {" "} are sets
-                while the arrows encode functions {" "}
-                <NoBreak>
-                  <Math>
-                    $f$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <Math>
-                  $g$
-                </Math>
-                {" "}
-                and {" "}
-                <Math>
-                  $h$
-                </Math>
-                {" "} that, respectively in reverse order,
-                go from {" "}
-                <Math>
-                  $D$
-                </Math>
-                {" "} to {" "}
-                <NoBreak>
-                  <Math>
-                    $C$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "} to {" "}
-                <NoBreak>
-                  <Math>
-                    $B$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} and {" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "} to {" "}
-                <NoBreak>
-                  <Math>
-                    $A$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "}
-                For example,
-              </OuterP>
-              <Pause />
-              <CentralDisplay>
-                <Math>
-                  $\Large h($
-                </Math>
-                <InlineImage
-                  src="/build-img/svgo-svg/2mo1.svg"
-                  width="1rem"
-                  top="-3px"
-                />
-                <Math>
-                  $\Large&#123;&#125;) =$
-                </Math>
-                <InlineImage
-                  src="/build-img/svgo-svg/5zgu.svg"
-                  width="1.25rem"
-                  top="-3px"
-                  marginLeft=".5rem"
-                  marginRight=".5rem"
-                />
-              </CentralDisplay>
-              <Pause />
-              <OuterP>
-                because the arrow that originates at {" "}
-                <InlineImage
-                  src="/build-img/svgo-svg/2mo1.svg"
-                  width="1rem"
-                  top="-4px"
-                />
-                {" "} in set {" "}
-                <Math>
-                  $D$
-                </Math>
-                {" "} lands at {" "}
-                <InlineImage
-                  src="/build-img/svgo-svg/5zgu.svg"
-                  width="1.25rem"
-                  top="-4px"
-                />
-                {" "} in set {" "}
-                <NoBreak>
-                  <Math>
-                    $C$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} and
-              </OuterP>
-              <Pause />
-              <CentralDisplay>
-                <Math>
-                  $\Large g(h($
-                </Math>
-                <InlineImage
-                  src="/build-img/svgo-svg/2mo1.svg"
-                  width="1rem"
-                  top="-3px"
-                />
-                <Math>
-                  $\Large&#123;&#125;)) =$
-                </Math>
-                <InlineImage
-                  src="/build-img/svgo-svg/Ixme.svg"
-                  width="2.3rem"
-                  top="-4px"
-                  marginLeft=".5rem"
-                  marginRight=".5rem"
-                />
-              </CentralDisplay>
-              <Pause />
-              <OuterP>
-                because, pursuing that path onwards, the arrow
-                that originates at {" "}
-                <InlineImage
-                  src="/build-img/svgo-svg/5zgu.svg"
-                  width="1.25rem"
-                  top="-4px"
-                />
-                {" "} in set {" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "} lands at {" "}
-                <InlineImage
-                  src="/build-img/svgo-svg/Ixme.svg"
-                  width="2.3rem"
-                  top="-4px"
-                />
-                {" "} in set {" "}
-                <NoBreak>
-                  <Math>
-                    $B$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} etc.
-              </OuterP>
-              <OuterP class="indent-10">
-                Under this representation one can “compute”
-                {" "}
-                <Math>
-                  $f \circ g \circ h$
-                </Math>
-                {" "} by gluing arrows end-to-end.
-                First, say, obliviate set {" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "} in the middle
-                right, then do the same with set {" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "} in the
-                middle left:
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/svgo-svg/FiSv.svg"
-                width="1600px"
-              />
-              <Pause />
-              <OuterP>
-                We can also get rid of {" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "} first, {" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "} second:
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/svgo-svg/WdCb.svg"
-                width="1600px"
-              />
-              <Pause />
-              <OuterP>
-                The first order of computation corresponds
-                to the parenthetization {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f \circ (g \circ h)$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "}
-                while the second corresponds to the
-                parenthetization {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $(f \circ g) \circ h$
-                  </Math>
-                  ”.
-                </NoBreak>
-                {" "}
-                Intuitively, the reason they come out the
-                same (in “step 6”, bottom left) is because
-                each final arrow in the last diagram comes
-                from a path-of-arrows in the original
-                diagram, and the order in which the
-                waypoints along a path are “straightened”
-                (or “collapsed”) does not affect the origin
-                or destination of the final arrow.
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 5.
-                </i>
-                {" "}
-                The last series of diagrams might leave one
-                with the impression that the composition of
-                two or more functions can be “precomputed”
-                by looking ahead along the path of yellow arrows.
-                Just so you know: computers do not generically
-                do this. Indeed, computers are not given
-                functions as tables of input-output values to
-                know by heart but rather as “recipes” (synonyms:
-                algorithms, code, programs) that allow them
-                to compute an output for any given input.
-                Moreover, there is no general way of flattening
-                two recipes into a single, shorter one—when
-                composing two functions the computer has, in
-                general, no choice but to diligently apply
-                each recipe in order—the first function first,
-                the second function second.
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote id="_39_hgi_">
-              <OuterP>
-                <i>
-                  Note 6.
-                </i>
-                {" "}
-                We have taken for granted the fact that two
-                functions {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} and {" "}
-                <Math>
-                  $g$
-                </Math>
-                {" "} are “equal” if and only
-                if they produce the same outupt for every
-                input but this is a actually subtle thing
-                that has to do with how functions are defined
-                “under the hood”. Specifically, mathematicians
-                view functions as {" "}
-                <del>
-                  long
-                </del>
-                {" "} {" "}
-                <del>
-                  lists of
-                </del>
-                {" "} sets of ordered pairs; for example—conceptual
-                cold water shock ahead—
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\textrm&#123;VX-11/78A&#125; = \&#123;(0, 3.5), (1, 2.5)\&#125;&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                because VX-11/78A maps {" "}
-                <Math>
-                  $0$
-                </Math>
-                {" "} to {" "}
-                <Math>
-                  $3.5$
-                </Math>
-                {" "} and maps
-                {" "}
-                <Math>
-                  $1$
-                </Math>
-                {" "} to {" "}
-                <NoBreak>
-                  <Math>
-                    $2.5$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "} (The presence of an ordered pair
-              </OuterP>
-              <div style="font-size:1.1em;margin:0.8em 0em;">
-                <MathBlock>
-                  $$
-                  (a, b)
-                  $$
-                </MathBlock>
-              </div>
-              <OuterP>
-                means that input {" "}
-                <Math>
-                  $a$
-                </Math>
-                {" "} produces output {" "}
-                <NoBreak>
-                  <Math>
-                    $b$
-                  </Math>
-                  .)
-                </NoBreak>
-                {" "} So
-                two functions are equal if and only if they
-                are equal
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                as sets of ordered pairs
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                because the set of ordered pairs is the
-                underlying “thing” that the function is. In
-                particular, there is no notion of a “formula”
-                or of a “procedure” being attached to a
-                function, that might cause two functions to
-                be considered unequal even if they produce the
-                same output on every input—producing the same
-                output on every input implies that the {" "}
-                <del>
-                  list of
-                </del>
-                {" "} set of ordered pairs is equal, and, perforce,
-                that the two functions are equal!!
-              </OuterP>
-            </SolutionNote>
+            <OuterP>
+              is the circumference of a circle (any circle)
+              divided by its radius.
+            </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_41_hgi_">
+          <ExerciseStatement id="_63_hgi_">
             <OuterP>
               <b>
                 Exercise 10.
               </b>
               {" "}
-              Show that
+              If a
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              x^2 + 10x + 30
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              can be written in the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x + \dots)^2 + \,\dots
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for some numbers {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\dots$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\dots$
-                </Math>
-                ”.
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The answer is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x + 5)^2 + 5
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align&#125;
-              \,\,\,\,(x + 5)^2
-              &amp;= x^2 + (2\cdot 5)x + 5^2 \\
-              &amp;= \up&#123;1.4&#125; x^2 + 10x + 25
-              \end&#123;align&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and adding {" "}
-              <Math>
-                $5$
-              </Math>
-              {" "} gives {" "}
-              <NoBreak>
-                <Math>
-                  $x^2 + 10x + 30$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement id="_42_hgi_">
-            <OuterP>
-              <b>
-                Exercise 11.
-              </b>
-              {" "}
-              Solve {" "}
-              <InChapterLink
-                href="/article/chapter3#_41_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 10
-              </InChapterLink>
-              {" "} using
-              algebra {" "}
-              <i>
-                &amp;
-              </i>
-              {" "} variables.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Put an unknown {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $U$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} for the first set
-              of dots and an unknown {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $V$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} for the
-              second set of dots. Then
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x + U)^2 + V = x^2 + 10x + 30
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              becomes the equation to satisfy.
-              Expanding the left-hand side, we get:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x^2 + 2Ux + U^2 + V = x^2 + 10x + 30.
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              In order for this equation to hold as an
-              equality between polynomials (i.e., for all
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                )
-              </NoBreak>
-              {" "} the coefficients of {" "}
-              <Math>
-                $x^2$
-              </Math>
-              {" "} on both
-              sides of the equation must be equal, the
-              coefficients of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} on both sides of the
-              equation must be equal, and the constant
-              terms on boths of the equation must be
-              equal—this gives us
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1 = 1
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (equating the coefficients of {" "}
-              <NoBreak>
-                <Math>
-                  $x^2$
-                </Math>
-                ),
-              </NoBreak>
-              {" "} and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2U = 10
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (equating the coefficients of {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ),
-              </NoBreak>
-              {" "} and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              U^2 + V = 30
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (equating the constant terms). Only the
-              latter two equations contain information.
-              In particular,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2U = 10
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              implies {" "}
-              <NoBreak>
-                <Math>
-                  $U = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so {" "}
-              <Math>
-                $U^2 + V = 30$
-              </Math>
-              {" "} becomes
-              {" "}
-              <NoBreak>
-                <Math>
-                  $25 + V = 30$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and
-              {" "}
-              <NoBreak>
-                <Math>
-                  $V = 30 - 25 = 5$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              So {" "}
-              <NoBreak>
-                <Math>
-                  $U = V = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} as previously found.
-              (But now we know that the solution is {" "}
-              <i>
-                unique
-              </i>
-              ,
-              because the only number {" "}
-              <Math>
-                $U$
-              </Math>
-              {" "} that satisfies
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2U = 10
-              $$
-            </MathBlock>
+            <CentralDisplayItalic>
+              vector
+            </CentralDisplayItalic>
             <Pause />
             <OuterP>
               is {" "}
-              <NoBreak>
-                <Math>
-                  $U = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and the only number {" "}
-              <Math>
-                $V$
-              </Math>
-              {" "} that
-              satisfies
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              25 + V = 30
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is {" "}
-              <NoBreak>
-                <Math>
-                  $V = 5$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={12}>
-          <ExerciseStatement id="_43_hgi_">
-            <OuterP>
-              <b>
-                Exercise 12.
-              </b>
-              {" "}
-              Show that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x^2 + 10x + 30 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <NoBreak>
-                (cf
-                <Math>
-                  $.$
-                </Math>
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_41_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 10
-                </InChapterLink>
-                )
-              </NoBreak>
-              {" "} has no solutions {" "}
-              <NoBreak>
-                <Math>
-                  $x \in \rr$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The equation is equivalent to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x + 5)^2 + 5 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_41_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 10
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} but this implies
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x + 5)^2 = -5
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which is an equation with no solution over
-              the reals because the square of a real number
-              is nonnegative.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_44_hgi_">
-            <OuterP>
-              <b>
-                Exercise 13.
-              </b>
-              {" "}
-              Show that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x^2 + 10x - 30 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              has two solutions {" "}
-              <NoBreak>
-                <Math>
-                  $x \in \rr$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The equation can be written
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x + 5)^2 - 55 = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because {" "}
-              <Math>
-                $(x + 5)^2 = x^2 + 10x + 25$
-              </Math>
-              {" "}
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $25 - 55 = -30$
-                </Math>
-                .
-              </NoBreak>
-              {" "} Passing {" "}
-              <Math>
-                $55$
-              </Math>
-              {" "} to the
-              other side, we find
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x + 5)^2 = 55
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which holds if and only if
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \,x + 5 = \pm\sqrt&#123;55&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \,x = -5 \pm\sqrt&#123;55&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              constituting two distinct solutions.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_45_hgi_">
-            <OuterP>
-              <b>
-                Exercise 14.
-              </b>
-              {" "}
-              What sequence of geometric transformations
-              (rotations, translations, scalings, etc)
-              maps the curve
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = x^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              onto
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = Ax^2 + Bx&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for constants {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} such that {" "}
-              <NoBreak>
-                <Math>
-                  $A \ne 0$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Write
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;Ax^2 + Bx&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;A\Big(x^2 + &#123;B \over A&#125;x\Big)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and then write
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;x^2 + &#123;B \over A&#125;x&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so that, altogether,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;Ax^2 + Bx&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is rewritten
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              that can be seen as descending from {" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              {" "}
-              in three steps:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = x^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\downarrow&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\downarrow&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\downarrow&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;.
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              Three steps, three geometric transformations!
-              The third step effects a
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              vertical scaling by {" "}
-              <Math>
-                $A$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              i.e., vertically stretches the graph by
-              a factor {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} because we multiply the
-              value of {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} by {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                .
-              </NoBreak>
-              {" "} The second step
-              effects a
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              vertical translation by {" "}
-              <Math>
-                $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              i.e., lowers the height of the entire
-              graph by {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;B^2 \over 4A^2&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} because we add
-              {" "}
-              <Math>
-                $-&#123;B^2 \over 4A^2&#125;$
-              </Math>
-              {" "} to the value of {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              The first step, on the other hand, is
-              entirely different: it is a
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              preprocessing
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              step, in that we mess with the input (i.e.,
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ),
-              </NoBreak>
-              {" "} instead of adding on (or “multiplying
-              on”) to the current value of {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              To understand how a preprocessing step
-              affects the shape of a graph, note that, more
-              generally, a graph of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = f(x + a)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (for some constant {" "}
-              <NoBreak>
-                <Math>
-                  $a$
-                </Math>
-                )
-              </NoBreak>
-              {" "} “fetches” values on
-              the graph
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = f(x)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by going {" "}
-              <Math>
-                $a$
-              </Math>
-              {" "} units to the right. The larger {" "}
-              <Math>
-                $a$
-              </Math>
-              {" "}
-              is, thus, the further
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = f(x + a)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              drifts off to the left. For example,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y = f(x + 20)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              has value {" "}
-              <Math>
-                $f(0)$
-              </Math>
-              {" "} at {" "}
-              <NoBreak>
-                <Math>
-                  $x = -20$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and if you replace
-              {" "}
-              <Math>
-                $20$
-              </Math>
-              {" "} with something larger, that position (i.e.,
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x = -20$
-                </Math>
-                )
-              </NoBreak>
-              {" "} drifts even further off to the left!
-              In any case, the graph {" "}
-              <Math>
-                $y = f(x + a)$
-              </Math>
-              {" "} is the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              leftward
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              translate by {" "}
-              <Math>
-                $a$
-              </Math>
-              {" "} units of {" "}
-              <Math>
-                $y = f(x)$
-              </Math>
-              {" "}
-              and, as a consequence, the first step effects a
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              leftward translation by {" "}
-              <Math>
-                $&#123;B\over 2A&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of the curve {" "}
-              <NoBreak>
-                <Math>
-                  $y = x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} or
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              horizontal translation by {" "}
-              <Math>
-                $-&#123;B\over 2A&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              more elegantly put. (The second formulation
-              doesn't assume a particular orientation of the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -axis,
-              </NoBreak>
-              {" "} that's why it's “more elegantly put”,
-              in our opinion.)
-            </OuterP>
-            <OuterP class="indent-10">
-              To recapitulate, the three transformations
-              are,in order:
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              1. horizontal translation by {" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. vertical translation by {" "}
-              <Math>
-                $&#123;-&#123;B^2 \over 4A^2&#125;&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by {" "}
-              <Math>
-                $A$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                You could do the vertical translation
-                before the horizontal translation,
-                geometrically it comes out the same.
-                That order of geometric transformations
-                would correspond to the following sequence
-                of algebraic transformations:
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;y = x^2&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\downarrow&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;y = x^2 - &#123;B^2 \over 4A^2&#125;&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\downarrow&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;y = \,\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;\downarrow&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;y = A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;\right]&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                ...in which the {" "}
-                <i>
-                  second
-                </i>
-                {" "} step is a
-                preprocessing step. (I.e., a step that
-                replaces {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $x$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} with something else.)
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_46_hgi_">
-            <OuterP>
-              <b>
-                Exercise 15.
-              </b>
-              {" "}
-              Let {" "}
-              <NoBreak>
-                <Math>
-                  $x_0 \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $y_0 \in \rr$
-              </Math>
-              {" "} and
-              {" "}
-              <Math>
-                $a \in \rr$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $y_0 \geq 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $a \ne 0.$
-              </Math>
-              {" "}
-              If you apply these transformations...
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by {" "}
-              <Math>
-                $-y_0$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by {" "}
-              <Math>
-                $x_0$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by {" "}
-              <Math>
-                $a$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              ...to the curve {" "}
-              <NoBreak>
-                <Math>
-                  $y = x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} what are the
-              roots of the final curve that you obtain?
-              (Nb: {" "}
               <i>
-                Roots
+                a pair of numbers
               </i>
-              {" "} are values of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} such
-              that {" "}
-              <NoBreak>
-                <Math>
-                  $y = 0$
-                </Math>
-                .)
-              </NoBreak>
+              {" "} (in 2D), suggest a
+              definition for the
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              sum
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              of two vectors. (The most logical definition wins.)
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Start by noting that the point
-              {" "}
-              <Math>
-                $(\sqrt&#123;y_0&#125;, y_0)$
-              </Math>
-              {" "} is on the curve {" "}
-              <NoBreak>
-                <Math>
-                  $y = x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              as well as the point {" "}
-              <NoBreak>
-                <Math>
-                  $(-\sqrt&#123;y_0&#125;, y_0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              because
-              {" "}
-              <Math>
-                $(\sqrt&#123;y_0&#125;)^2 = (-\sqrt&#123;y_0&#125;)^2 =$
-              </Math>
-              {" "} {" "}
-              <Math>
-                $y_0;$
-              </Math>
-              {" "}
-              here is a sketch of the situation before
-              anything happens:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/kIUQ.svg"
-              width="660px"
-            />
-            <Pause />
-            <OuterP>
-              After vertically translating by {" "}
-              <Math>
-                $-y_0$
-              </Math>
-              {" "}
-              the roots will therefore be at {" "}
-              <NoBreak>
-                <Math>
-                  $x = \pm\sqrt&#123;y_0&#125;$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/gYAV.svg"
-              width="660px"
-            />
-            <Pause />
-            <OuterP>
-              Then after horizontally translating by {" "}
-              <Math>
-                $x_0$
-              </Math>
-              {" "}
-              the roots mosey over to {" "}
-              <NoBreak>
-                <Math>
-                  $x = x_0\pm\sqrt&#123;y_0&#125;$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/cfTn.svg"
-              width="660px"
-            />
-            <Pause />
-            <OuterP>
-              Lastly, vertical scaling does not affect
-              the position of the roots, because it
-              stretches the graph {" "}
-              <i>
-                about
-              </i>
-              {" "} the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              axis (here {" "}
-              <NoBreak>
-                <Math>
-                  $a \approx 1.7$
-                </Math>
-                ):
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/L9MD.svg"
-              width="660px"
-            />
-            <Pause />
-            <OuterP>
-              So the roots are at: {" "}
-              <NoBreak>
-                <Math>
-                  $x = x_0 \pm \sqrt&#123;y_0&#125;$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              (Like we found them after the second step.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={16}>
-          <ExerciseStatement id="_47_hgi_">
-            <OuterP>
-              <b>
-                Exercise 16.
-              </b>
-              {" "}
-              Use the results of the previous two exercises
-              to find the value(s) of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} such that
-              {" "}
-              <Math>
-                $Ax^2 + Bx = 0$
-              </Math>
-              {" "} for constants {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} such
-              that {" "}
-              <NoBreak>
-                <Math>
-                  $A \ne 0$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Well,
+              The standard definition is that the sum
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              Ax^2 + Bx = 0
+              \vec&#123;u&#125; + \vec&#123;v&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              obviously has solution {" "}
+              of a vector
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \vec&#123;u&#125; = (u_x, u_y)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and of a vector
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \vec&#123;v&#125; = (v_x, v_y)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the vector
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (u_x + v_x, u_y + v_y)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              whose first coordinate is the sum of the first
+              coordinates of {" "}
               <Math>
-                $x = 0$
+                $\vec&#123;u&#125;$
               </Math>
-              {" "} to start
-              with, so we {" "}
-              <i>
-                don't need
-              </i>
-              {" "} the previous
-              exercises for one of the roots at least—actually,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              Ax^2 + Bx = x(Ax + B)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so the equation is equivalent to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x(Ax + B) = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and so one of the roots is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and the other root is the value of {" "}
+              {" "} and {" "}
               <Math>
-                $x$
+                $\vec&#123;v&#125;$
               </Math>
-              {" "}
-              such that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              Ax + B = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which is {" "}
-              <NoBreak>
-                <Math>
-                  $x = -B/A$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (In order for the product
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x(Ax + B)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be {" "}
+              {" "} and whose
+              second coordinate is the sum of the second coordinates
+              of {" "}
               <Math>
-                $0$
-              </Math>
-              {" "} you either need the first term to
-              be {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} leading us to {" "}
-              <NoBreak>
-                <Math>
-                  $x = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} or the second
-              term to be {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} leading us to {" "}
-              <NoBreak>
-                <Math>
-                  $Ax + B = 0$
-                </Math>
-                —the
-              </NoBreak>
-              {" "}
-              product of two things is {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} if and only if
-              one of the two things is {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              So the roots are {" "}
-              <Math>
-                $x = 0$
+                $\vec&#123;u&#125;$
               </Math>
               {" "} and {" "}
               <NoBreak>
                 <Math>
-                  $x = -B/A$
+                  $\vec&#123;v&#125;$
                 </Math>
                 .
               </NoBreak>
             </OuterP>
-            <OuterP class="indent-10">
-              To complete the problem {" "}
+            <Pause />
+            <OuterP>
               <i>
-                as we were asked
+                Example 1.
               </i>
-              ,
-              however, we will use the fact that {" "}
-              <Math>
-                $y = Ax^2 + Bx$
-              </Math>
-              {" "}
-              is obtained from {" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              {" "} by the following
-              sequence of transformations (cf. {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 14
-                </InChapterLink>
-                ):
-              </NoBreak>
-              {" "}{" "}
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by {" "}
-              <Math>
-                $-&#123;B^2 \over 4A^2&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by {" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by {" "}
-              <Math>
-                $A$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (We put the vertical translation first.)
-              By {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_46_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 15
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} the 
-              roots of {" "}
-              <Math>
-                $y = Ax^2 + Bx$
-              </Math>
-              {" "} are thus at
-            </OuterP>
-            <Pause />
-            <TextParent>
-              <MathBlock>
-                $$
-                \tag&#123;A&#125;
-                x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;
-                $$
-              </MathBlock>
-            </TextParent>
-            <Pause />
-            <OuterP>
-              which looks a little different than our
-              previous result of {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $x = -B/A$
-              </Math>
-              {" "}
-              until you realize that
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
+              \vec&#123;u&#125; = (100, 100)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              (because
+              and
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and even though {" "}
-              <Math>
-                $&#123;B\over 2A&#125;$
-              </Math>
-              {" "} could be
-              negative, the {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\pm$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} on either side of
-              the equation means that the {" "}
-              <i>
-                set
-              </i>
-              {" "} of values
-              on either side of the equation is the same),
-              so that (A) becomes
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = -&#123;B\over 2A&#125; \pm &#123;B \over 2A&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and, on the one hand,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              -&#123;B\over 2A&#125; + &#123;B \over 2A&#125; = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              while, on the other hand,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              -&#123;B\over 2A&#125; - &#123;B \over 2A&#125; = -&#123;2B\over 2A&#125; = -&#123;B\over A&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so here too we find that the roots are {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "}
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $x = -B/A$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (It must be the right answer!)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={17}>
-          <ExerciseStatement id="_48_hgi_">
-            <OuterP>
-              <b>
-                Exercise 17.
-              </b>
-              {" "}
-              True or false {" "}
-              <NoBreak>
-                (
-                <Math>
-                  $f$
-                </Math>
-              </NoBreak>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} are functions):
-            </OuterP>
-            <Pause />
-            <Grid
-              cols={2}
-              sm_cols={1}
-              center_on_overflow={true}
-              place_items="start"
-              with_padding={false}
-              column_first={true}
-            >
-              <Item>
-                i. {" "}
-                <Math>
-                  $f \circ g = (x \ra f(g(x)))$
-                </Math>
-              </Item>
-              <Item>
-                ii. {" "}
-                <Math>
-                  $g \circ f = (x \ra f(g(x)))$
-                </Math>
-              </Item>
-              <Item>
-                iii. {" "}
-                <Math>
-                  $f \circ g = (x \ra g(f(x)))$
-                </Math>
-              </Item>
-              <Item>
-                iv. {" "}
-                <Math>
-                  $g \circ f = (x \ra g(f(x)))$
-                </Math>
-              </Item>
-            </Grid>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The true statements are i, iv, because
-              {" "}
-              <Math>
-                $f \circ g$
-              </Math>
-              {" "} is the function that maps an
-              input {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $f(g(x))$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and symmetrically
-              for {" "}
-              <NoBreak>
-                <Math>
-                  $g \circ f$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={18}>
-          <ExerciseStatement id="_49_hgi_">
-            <OuterP>
-              <b>
-                Exercise 18.
-              </b>
-              {" "}
-              If {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} are functions then we define
-              (and not just us but people in general)
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f + g
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              t \ra f(t) + g(t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (use {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $x$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} if you like),
-              i.e., to be the function that applies {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}
-              and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} separately and then takes the sum,
-              and we define
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              fg
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              z \ra f(z)g(z)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (use {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $t$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} if you like, hehe),
-              i.e., to be the function that applies {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and
-              {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} separately and then takes the product.
-              (These definitions are similar to how we define
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ g
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              u \ra f(g(u))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for the symbol {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "} except that now we
-              are defining the {" "}
-              <i>
-                sum
-              </i>
-              {" "} and {" "}
-              <i>
-                product
-              </i>
-              {" "} of functions,
-              instead of their {" "}
-              <i>
-                composition
-              </i>
-              , namely.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Given these definitions, which of the following
-              equalities hold, in general for all functions {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $h$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ (g + h) = (x \ra f(g(x) + h(x)))
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (g + h) \circ f = (x \ra h(f(x)) + g(f(x)))
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (g + h) \circ f = (x \ra (g + h)(f(x)))
-              $$
-            </MathBlock>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The first equality is false because the
-              right-hand side is actually
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \circ g) + (f \circ h)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              not {" "}
-              <NoBreak>
-                <Math>
-                  $f \circ (g + h)$
-                </Math>
-                ;
-              </NoBreak>
-              {" "} the second equality is
-              true; the third equality is true even though you
-              would expect the right-hand side to be written
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra g(f(x)) + h(f(x)))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              with {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $g$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $h$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} switched (but addition is
-              commutative, so it doesn't matter); the fourth
-              equality is true: it is the definition of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”.
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={19}>
-          <ExerciseStatement id="_50_hgi_">
-            <OuterP>
-              <b>
-                Exercise 19.
-              </b>
-              {" "}
-              What sequence of geometric transformations
-              of length no more than 3 maps
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              y = x^2
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              onto
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              y = Ax^2 + Bx + C
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for constants {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $C$
-              </Math>
-              {" "} such that {" "}
-              <NoBreak>
-                <Math>
-                  $A \ne 0$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Write
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              Ax^2 + Bx + C
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A\Big(x^2 + &#123;B \over A&#125;x + &#123;C\over A&#125;\Big)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and, similarly to {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 14
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} write
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x^2 + &#123;B \over A&#125;x
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so that, altogether, {" "}
-              <Math>
-                $Ax^2 + Bx + C$
-              </Math>
-              {" "}
-              becomes
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 \over 4A^2&#125; + &#123;C\over A&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A\left[\Big(x + &#123;B \over 2A&#125;\Big)^2 - &#123;B^2 - 4AC\over 4A^2&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by putting things on a common denominator.
-              (We have endeavored to keep the minus sign
-              out front of the common denominator fraction
-              in order to maintain the most similarity with
-              the term {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $-&#123;B^2\over 4A&#125;$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} of {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 14
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "}
-              that also has a minus sign out front.)
-            </OuterP>
-            <OuterP class="indent-10">
-              By direct analogy with {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 14
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} the three
-              transformations are thus...
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              1. horizontal translation by {" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. vertical translation by {" "}
-              <Math>
-                $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by {" "}
-              <Math>
-                $A$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              ...or...
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by {" "}
-              <Math>
-                $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by {" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by {" "}
-              <Math>
-                $A$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              ...if we put the vertical translation first.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_51_hgi_">
-            <OuterP>
-              <b>
-                Exercise 20.
-              </b>
-              {" "}
-              What are the roots (i.e., solutions) {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              Ax^2 + Bx + C = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for constants {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $C$
-              </Math>
-              {" "} such that {" "}
-              <NoBreak>
-                <Math>
-                  $A \ne 0$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The curve
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              y = Ax^2 + Bx + C
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is obtained from the curve {" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              {" "} by the following sequence of
-              transformations (cf. Exercise 19):
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
-                </Math>
-                ,
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by {" "}
-              <NoBreak>
-                <Math>
-                  $-&#123;B \over 2A&#125;$
-                </Math>
-                ,
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                .
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              On the one hand, if
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0
+              \vec&#123;v&#125; = (1, -1)
               $$
             </MathBlock>
             <Pause />
@@ -6368,62 +6392,37 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              -&#123;B^2 - 4AC \over 4A^2&#125; &gt; 0
+              \,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
               $$
+              <ImageRight
+                src="/build-img/svgo-svg/rUfo.svg"
+                offset_x="1em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
             </MathBlock>
             <Pause />
             <OuterP>
-              and the vertical translation is {" "}
-              <i>
-                upward
-              </i>
-              ,
-              the curve detaches from the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis never
-              to see it again, and there are no roots!
-            </OuterP>
-            <OuterP class="indent-10">
-              On the other hand, if
+              because
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;B^2 - 4AC \over 4A^2&#125; \geq 0
+              100 + 1 = 101
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              then the roots are given by
+              on the one hand, and
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              x = -&#123;B \over 2A&#125; \pm \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
+              100 - 1 = 99
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              by {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_46_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 15
-                </InChapterLink>
-                .
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $\rightarrow$
-              </Math>
-              {" "} ~The End~ {" "}
-              <Math>
-                $\leftarrow$
-              </Math>
+              on the other hand.
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -6432,423 +6431,1787 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                In fact,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                (square both sides of the equation—in general,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \pm E = \pm F
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                as one set of two values equalling another
-                set of two values, if and only if
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                |E| = |F|
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                or
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                E^2 = F^2
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                —so that's why we say “square both sides”),
-                so the formula for the roots can also be written
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x = -&#123;B \over 2A&#125; \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                or
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x = &#123;&#123;-B \pm \sqrt&#123;B^2 - 4AC&#125;&#125; \over 2A&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                as briefly flashed by, e.g., in {" "}
+                The little arrow {" "}
                 <NoBreak>
-                  <a
-                    href="/article/chapter1#_24_hgi_"
-                    class="handle-out-chapter-link"
-                  >
-                    Chapter 1
-                  </a>
-                  .
+                  “
+                  <Math>
+                    $\vec&#123;\phantom&#123;x&#125;&#125;$
+                  </Math>
+                  ”
                 </NoBreak>
-                {" "}{" "}
+                {" "}
+                is a notation used to denote vectors. (Feel free
+                to choose your own notation.)
               </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                If we represent the vectors {" "}
+                <NoBreak>
+                  <Math>
+                    $\vec&#123;u&#125;$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $\vec&#123;v&#125;$
+                </Math>
+                {" "}
+                by arrows whose components are displacements {" "}
+                <NoBreak>
+                  <Math>
+                    $u_x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $u_y$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $v_x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $v_y$
+                </Math>
+                {" "} in {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $y$
+                </Math>
+                {" "} again
+                respectively...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/Sx1Y.svg" />
+              <Pause />
+              <OuterP>
+                ...then..
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                u_x + v_x
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                may be geometrically realized as the concatenation
+                of the {" "}
+                <Math>
+                  $u_x$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $v_x$
+                  </Math>
+                  ...
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/JkS_.svg" />
+              <Pause />
+              <OuterP>
+                ...component displacements, while...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                u_y + v_y
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...may be geometrically realized as the concatenation
+                of the {" "}
+                <Math>
+                  $u_y$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $v_y$
+                  </Math>
+                  ...
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/efoR.svg" />
+              <Pause />
+              <OuterP>
+                ...component displacements; moreover, both
+                concatenations may be simultaneously obtained by
+                concatenating the original {" "}
+                <Math>
+                  $\vec&#123;u&#125;$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $\vec&#123;v&#125;$
+                </Math>
+                {" "}
+                arrows...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/Qnaf.svg" />
+              <Pause />
+              <OuterP>
+                ...which actually implies that {" "}
+                <Math>
+                  $\vec&#123;u&#125; + \vec&#123;v&#125;$
+                </Math>
+                {" "}
+                is the vector going from the head of {" "}
+                <Math>
+                  $\vec&#123;u&#125;$
+                </Math>
+                {" "} to
+                the tail of {" "}
+                <Math>
+                  $\vec&#123;v&#125;$
+                </Math>
+                {" "} in the afore-mentioned
+                concatenation, because of how we defined
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\vec&#123;u&#125; + \vec&#123;v&#125;$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/7Z4q.svg" />
+              <Pause />
+              <OuterP>
+                This makes a mess, but the point is that this
+                gives us a
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                geometric interpretation
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                or
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                geometric representation
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                or
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                geometric method of evaluation
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                for the sum of two vectors: concatenate the arrows
+                of the vectors you're summing, and take the final
+                displacement from the head of the first arrow to the
+                tail of the last arrow.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                The solution to Exercise 7 can be cast in terms of
+                vector addition, with, specifically, the position
+                vector of the point being equal to the sum of the
+                position vector of the circle's center with the “radial
+                vector” from the center to the point:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:1em;margin-bottom:0.8em;"
+                src="/tmp-images/svg_ch5_ex_vector_sum_previous_example.svg"
+              />
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={21}>
-          <ExerciseStatement id="_52_hgi_">
+        <Exercise number={11}>
+          <ExerciseStatement id="_64_hgi_">
             <OuterP>
               <b>
-                Exercise 21.
+                Exercise 11.
               </b>
               {" "}
-              Summon your senses of extrapolation {" "}
-              <i>
-                &amp;
-              </i>
-              {" "}
-              imagination to evaluate this expression:
+              If a particle in {" "}
+              <Math>
+                $\rr^2$
+              </Math>
+              {" "} (= “in the plane”)
+              has {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
+              A\cdot\cos(Bt + C) + D
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              (Hint: The answer is a specific real number.)
+              at time {" "}
+              <Math>
+                $t$
+              </Math>
+              {" "} what is the most likely motion
+              that the particle is undergoing? In that
+              case, what is the geometric meaning of the
+              constants {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $C$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $D$
+                </Math>
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              ...in an expression such as...
+              The simplest motion that would produce such
+              an {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} (according to subjective human
+              standards of simplicity, admittedly) is circular
+              motion at uniform speed. In this case:
+            </OuterP>
+            <Pause />
+            <List style="padding-left: 2em; gap: 0.2em;">
+              <Item>
+                <p>
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} is the radius of the circle
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <Math>
+                    $D$
+                  </Math>
+                  {" "} is the {" "}
+                  <NoBreak>
+                    <Math>
+                      $x$
+                    </Math>
+                    -coordinate
+                  </NoBreak>
+                  {" "} of the circle's center
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              And either:
+            </OuterP>
+            <Pause />
+            <List style="padding-left: 2em;">
+              <Item>
+                <p>
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "} is the counterclockwise
+                  {" "}
+                  <i>
+                    angular speed
+                  </i>
+                  /
+                  <i>
+                    angular frequency
+                  </i>
+                  {" "} (radians per
+                  unit time) and {" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  {" "} is the counterclockwise
+                  starting angle {" "}
+                  <NoBreak>
+                    (
+                    <Math>
+                      $t = 0$
+                    </Math>
+                    )
+                  </NoBreak>
+                  {" "} of the particle, as
+                  measured from a translate of the positive {" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "}
+                  axis going through the center of the circle
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              Or:
+            </OuterP>
+            <Pause />
+            <List style="padding-left: 2em;">
+              <Item>
+                <p>
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "} is the {" "}
+                  <i>
+                    clockwise
+                  </i>
+                  {" "}
+                  angular speed/angular frequency of the particle
+                  and {" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  {" "} is the {" "}
+                  <i>
+                    clockwise
+                  </i>
+                  {" "} starting angle
+                  of the particle, as measured from a translate of
+                  the positive {" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "} axis going through the center
+                  of the circle
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              In more detail, every time
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              (x \ra x^3)(6)
+              t
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              ...we pair the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} with {" "}
+              increases by {" "}
               <NoBreak>
                 <Math>
-                  $6$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/WvHW.svg" />
-            <Pause />
-            <OuterP>
-              ...and {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} becomes the value to use for {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x^3$
-                </Math>
-                ”:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/F0A4.svg" />
-            <Pause />
-            <OuterP>
-              ...; in an expression such as...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra y \ra x^3y)(6)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...we also pair the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $6$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Kg7y.svg" />
-            <Pause />
-            <OuterP>
-              ...and {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} becomes the value to use for {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $y \ra x^3y$
-                </Math>
-                ”:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/tRsN.svg" />
-            <Pause />
-            <OuterP>
-              ...(in this case the result is not a number,
-              but a function—a function is a mathematical
-              object like another, after all); in an
-              expression such as...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra y \ra x^3y)(6)(8)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...we pair the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} with {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} and the {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $8$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/HuXq.svg" />
-            <Pause />
-            <OuterP>
-              ...and {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $8$
-              </Math>
-              {" "} become respectively the
-              values to use for {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x^3y$
-                </Math>
-                ”:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/1gJS.svg" />
-            <Pause />
-            <OuterP>
-              ...; now in an expression such as...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...we pair the {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $x \ra x^2$
+                  $1$
                 </Math>
                 ,
               </NoBreak>
-              {" "} the
-              {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} with {" "}
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Bt + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              increases by {" "}
               <NoBreak>
                 <Math>
-                  $5$
+                  $B$
                 </Math>
                 ,
               </NoBreak>
-              {" "} and the {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $0.1$
-                </Math>
-                ...
-              </NoBreak>
+              {" "} but
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1JTc.svg" />
+            <MathBlock>
+              $$
+              Bt + C
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
-              ...and {" "}
+              is an amount of radians, because anything
+              fed to ‘cos’ is an amount of radians; and so
+              {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} ends up being the
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              radian increase per unit time,
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              or angular speed, of the particle.
+            </OuterP>
+            <OuterP class="indent-10">
+              However, said “increase” in radians can be
+              associated to either clockwise or a
+              counterclockwise motion, there is no telling.
+              (Quite aside from the fact that {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} might be
+              negative.) Indeed, while we have a tendency to
+              think of {" "}
+              <Math>
+                $\cos(x)$
+              </Math>
+              {" "} as
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the {" "}
               <NoBreak>
                 <Math>
-                  $x \ra x^2$
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of a point {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} units
+              <br />
+              counterclockwise from {" "}
+              <Math>
+                $(1, 0)$
+              </Math>
+              {" "} on the unit circle
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <Math>
+                $\cos(x)$
+              </Math>
+              {" "} is also
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of a point {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} units
+              <br />
+              clockwise from {" "}
+              <Math>
+                $(1, 0)$
+              </Math>
+              {" "} on the unit circle
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              [“counterclockwise” {" "}
+              <Math>
+                $\ra$
+              </Math>
+              {" "} “clockwise”].
+              Per the one interpretation of ‘cos’,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Bt + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is an amount of counterclockwise radians; per
+              the other,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Bt + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is an amount of {" "}
+              <i>
+                clockwise
+              </i>
+              {" "} radians. The following
+              diagram illustrates the two possibilities:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svg/rUnE.svg" />
+            <Pause />
+            <OuterP>
+              This accounts for
+              the two solutions listed above. (But it can
+              only be one of those two solutions, having made
+              the “Occam's razor” assumption that the
+              particle is traveling at uniform speed around
+              a circle.) (Nb: In particular, “uniform speed”
+              precludes sudden reversals of direction at either
+              end of the circle, if you were at all thinking
+              of that, for speed would be undefined at
+              those points where direction is reversed!)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                If you harbor any doubts about there being no more
+                than two solutions, picture this diagram...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/0eyH.svg" />
+              <Pause />
+              <OuterP>
+                ...and imagine the vertical line scanning
+                to the left and to the right again as it
+                tracks the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "} of a particle going
+                around the circle, unseen. Then there is one
+                clockwise particle that tracks with the line,
+                and one counterclockwise particle that tracks
+                with the line, but no more, insofar as
+                non-direction-reversing particles are
+                concerned!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={12}>
+          <ExerciseStatement id="_65_hgi_">
+            <OuterP>
+              <b>
+                Exercise 12.
+              </b>
+              {" "}
+              If aliens descended on Earth, captured everyone,
+              took you aside and told you that the fate of
+              humanity rested on your ability to “illustrate
+              powers of secant”, without further instructions,
+              what would you do?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Presumably the aliens are asking
+              for an illustration of the sequence
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some fixed {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} based on a geometric
+              interpretation of {" "}
+              <NoBreak>
+                <Math>
+                  $\sec$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (Actually...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1, \,\sec \theta, \,\sec^2(\theta), \,\sec^3(\theta),  \,\sec^4(\theta), \dots,
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...we should start the sequence at {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} since
+              {" "}
+              <NoBreak>
+                <Math>
+                  $1 = \sec^0(\theta)$
+                </Math>
+                .)
+              </NoBreak>
+              {" "} Here is a possibility that
+              echoes back to the first solution to Exercise 27:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/zo9k.svg" />
+            <Pause />
+            <OuterP>
+              Starting with a length of {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} bottom left,
+              successive multiplications by {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "}
+              are performed by “dropping a height up” onto
+              the opposite side of the angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              bouncing back and forth between the two sides.
+            </OuterP>
+            <OuterP class="indent-10">
+              If we are willing to reproduce the angle
+              {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} several times over,
+              another possibility is to draw a “snail stack”
+              of right triangles sharing a common vertex:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/4t03.svg" />
+            <Pause />
+            <OuterP>
+              Or if we move the angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} around from
+              one end of the previously obtained segment to
+              another, another somewhat exotic possibility is
+              this one:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/bwJb.svg" />
+            <Pause />
+            <OuterP>
+              We can also take a page from the geometric
+              interpretation of sec that is mentioned towards
+              the end of the chapter, and draw this figure:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Qzlj.svg" />
+            <Pause />
+            <OuterP>
+              (In which we are effectively using a circular arc
+              to each time realign the last obtained segment with
+              horizontal.) In any case, with so many nice drawings,
+              you are bound to save humanity!
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                One can note that the third diagram makes a cameo
+                appearance within the second diagram (modulo scale):
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/eiL2.svg" />
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={13}>
+          <ExerciseStatement id="_66_hgi_">
+            <OuterP>
+              <b>
+                Exercise 13.
+              </b>
+              {" "}
+              A point {" "}
+              <Math>
+                $P \in \rr^3$
+              </Math>
+              {" "} at distance {" "}
+              <Math>
+                $R$
+              </Math>
+              {" "} from the
+              origin forms an angle {" "}
+              <Math>
+                $\phi$
+              </Math>
+              {" "} with the positive
+              {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} axis, while {" "}
+              <NoBreak>
+                <Math>
+                  $P$
+                </Math>
+                's
+              </NoBreak>
+              {" "} projection onto the {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                -plane
+              </NoBreak>
+              {" "}
+              is at a counterclockwise angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} from the
+              positive {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/FZVx.svg" />
+            <Pause />
+            <OuterP>
+              What are {" "}
+              <NoBreak>
+                <Math>
+                  $x$
                 </Math>
                 ,
               </NoBreak>
               {" "} {" "}
               <Math>
-                $5$
+                $y$
               </Math>
               {" "} and {" "}
               <Math>
-                $0.1$
+                $z$
               </Math>
-              {" "} become
-              respectively the values to use for {" "}
+              {" "} in terms of {" "}
               <NoBreak>
                 <Math>
-                  $f$
+                  $R$
                 </Math>
                 ,
               </NoBreak>
-              {" "} {" "}
+              {" "}
+              {" "}
+              <Math>
+                $\phi$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since {" "}
+              <Math>
+                $\phi$
+              </Math>
+              {" "} is an ordinary geometric angle
+              between two lines, (as opposed to: an oriented
+              angle, a.k.a., “signed angle”), we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0 \leq \phi \leq 2\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0 \leq \phi \leq 180^\circ
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              equivalently—and recall that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              180^\circ = 2\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <i>
+                as real numbers
+              </i>
+              , so there is absolutely no fudging
+              going on if we write it the second way), and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(\phi) \geq 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              R\sin(\phi) \geq 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and from which {" "}
+              <NoBreak>
+                <Math>
+                  $R\sin(\phi)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as it appears in the 
+              following diagram, is the actual {" "}
+              <i>
+                length
+              </i>
+              {" "} of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $P$
+                </Math>
+                's
+              </NoBreak>
+              {" "} projection onto the {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                -plane:
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/giDO.svg" />
+            <Pause />
+            <OuterP>
+              ...whereas {" "}
+              <NoBreak>
+                <Math>
+                  $R\cos(\phi)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as it appears above, is a
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              signed length
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (or “coordinate”) (or “real number”, haha) as
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\phi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is negative for {" "}
+              <NoBreak>
+                <Math>
+                  $\eta &lt; \phi \leq 2\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} positive
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $0 \leq \phi &lt; \eta$
+                </Math>
+                !
+              </NoBreak>
+              {" "} But in any case that is what
+              we want, since {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} switches from positive to negative
+              at {" "}
+              <Math>
+                $\phi = \eta$
+              </Math>
+              {" "} just like {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(\phi)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              giving us
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z = R\cos(\phi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and “one coordinate down”.
+            </OuterP>
+            <OuterP class="indent-10">
+              For {" "}
               <Math>
                 $x$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} then, we are left in a “classical”
+              situation of converting polar coordinates to Cartesian
+              coordinates in the {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                -plane;
+              </NoBreak>
+              {" "} only  the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $r$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} of
+              polar coordinates is now {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $R\sin(\phi)$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} (but
+              which is nonnegative, happily, as noted):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/10Fl.svg" />
+            <Pause />
+            <OuterP>
+              Thus:
+            </OuterP>
+            <Boxed style="margin-bottom:-5px;">
+              <MathBlock>
+                $$
+                x = R\sin(\phi)\cos(\theta)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                y = R\sin(\phi)\sin(\theta)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                z = R\cos(\phi)
+                $$
+              </MathBlock>
+            </Boxed>
+            <Pause />
+            <StarDivider />
+          </Solution>
+        </Exercise>
+        <Exercise number={14}>
+          <ExerciseStatement id="_67_hgi_">
+            <OuterP>
+              <b>
+                Exercise 14.
+              </b>
+              {" "}
+              Compute the vertical distance from {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} to {" "}
+              <Math>
+                $A'$
+              </Math>
+              {" "}
+              from the following set of blueprints for a shed with
+              an angled inside wall (all distances in inches):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/shI1.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We will compute the two green lengths, then the
+              red length, then the blue length, then add 130:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/nm64.svg" />
+            <Pause />
+            <OuterP>
+              Proceeding, the longer and smaller green lengths
+              are {" "}
+              <Math>
+                $112\rt&#123;0.1&#125; \cdot \sin(25.5^\circ\hlfbk)$
               </Math>
               {" "}
               and {" "}
               <Math>
-                $h$
+                $8\rt&#123;0.1&#125; \cdot \cos(25.5^\circ\hlfbk)$
               </Math>
-              {" "} in {" "}
+              {" "} inches,
+              respectively:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/xKw8.svg" />
+            <Pause />
+            <OuterP>
+              The red length is therefore
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+              &amp;\,\,268 - 8 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk) \\
+              \up&#123;1.6&#125; =&amp;\,\,260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (inches) while the blue length is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (inches) and the final answer is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              130 + \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              inches, which comes out to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              212.65
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/O1mN.svg"
+                offset_x="10em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              minus some. (Approximating to {" "}
               <NoBreak>
-                “
                 <Math>
-                  $&#123;f(x + h) - f(x)\over h&#125;$
+                  $1/100$
                 </Math>
-                ”:
+                -th
+              </NoBreak>
+              {" "} of an inch
+              should be good enough for a construction site.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Note that...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(25.5^\circ) = 0.90258\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin(25.5^\circ) = 0.43051\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \tan(22^\circ) = 0.40402\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...and if you are not finding these values, then make sure
+                that your calculator is in “degree mode”.
+                (Otherwise you have to manually
+                convert the arguments to radians.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={15}>
+          <ExerciseStatement id="_68_hgi_">
+            <OuterP>
+              <b>
+                Exercise 15.
+              </b>
+              {" "}
+              Given the following sketch, to what angle
+              can the door be opened before it hits against
+              the roof? (Hint: You will need to Google “how
+              to use arctan”, or “how to convert from Cartesian
+              to polar coordinates”.)
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/fgGT.svg" />
+            <Pause />
+            <OuterP>
+              And:
+            </OuterP>
+            <Pause />
+            <List style="padding-left: 2.2em; gap: 0.2em;">
+              <Item>
+                <p>
+                  all distances are in inches
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  assume half an inch from the edge of the door
+                  to the center of its hinge
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  assume the door has negligible thicknesss
+                </p>
+              </Item>
+            </List>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We start by computing these lengths in the
+              original plane of the {" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                -dimensional
+              </NoBreak>
+              {" "} drawing:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svg/odA8.svg" />
+            <Pause />
+            <OuterP>
+              (Nb: One can also compute the length marked ‘2’ as
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;42\over \tan(23^\circ)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              since {" "}
+              <NoBreak>
+                <Math>
+                  $\cot = 1/\tan$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              42\cdot \tan(67^\circ)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              since {" "}
+              <Math>
+                $67^\circ = 90^\circ - 23^\circ$
+              </Math>
+              {" "} is the complement
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $23^\circ$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Next, as
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the distance from the side of the door to its
+              hinge, the door swings at a radius of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              38.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and the distance between the hinge's center
+              and the ceiling, measured horizontally at the top
+              of the door, is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              30.945 - 0.5 = 30.445...
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by subtracting from the length marked ‘5’.
+              We can draw the following overhead sketch of the situation
+              (not to scale, and keeping to {" "}
+              <Math>
+                $3$
+              </Math>
+              {" "} digits of accuracy):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svg/OO4Q.svg" />
+            <Pause />
+            <OuterP>
+              Here
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \arctan
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is a function that you can find notated as
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;\tan^&#123;-1&#125;\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              on your calculator (a questionable choice of notation,
+              because it is {" "}
+              <i>
+                not
+              </i>
+              {" "} the same as {" "}
+              <NoBreak>
+                <Math>
+                  $1/\tan = \cot$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} and
+              sometimes known as
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              tangent inverse
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              by the gallery, converts a fraction of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\te&#123;opposite&#125;\over\te&#123;adjacent&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              into the corresponding angle whose tangent equals that
+              fraction.
+            </OuterP>
+            <OuterP class="indent-10">
+              The final answer to the problem is...
+            </OuterP>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  90^\circ + 52.26^\circ = 142.26^\circ
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <OuterP>
+              ...because {" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "} only constitutes the amount of rotation
+              past {" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} per the drawing.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={16}>
+          <ExerciseStatement id="_69_hgi_">
+            <OuterP>
+              <b>
+                Exercise 16.
+              </b>
+              {" "}
+              The graph {" "}
+              <Math>
+                $y = \cos x + \sin x$
+              </Math>
+              {" "} from {" "}
+              <InChapterLink
+                href="/article/chapter3#_58_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 5
+              </InChapterLink>
+              {" "} has a maximum value greater than {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                :
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/-AHn.svg" />
+            <Image src="/build-img/svgo-svg/TH1y.svg" />
             <Pause />
             <OuterP>
-              ...; evaluating...
+              What is this maximum value, and for which
+              value(s) of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} is it achieved?
+              (Reason geometrically, NOT by calculus.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Going back to basics,
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;(x \ra x^2)(5 + 0.1) - (x \ra x^2)(5) \over 0.1&#125;
+              \sin x + \cos x
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              ...we...
+              is the sum
+              of an {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} and a {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate:
+              </NoBreak>
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              &#123;(x \ra x^2)(5.1) - (x \ra x^2)(5) \over 0.1&#125;
-              $$
-            </MathBlock>
+            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_v3_1.svg" />
             <Pause />
             <OuterP>
-              ...get...
+              We can conceptualize the coordinates as
+              two displacements (changes), one in {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} 
+              one in {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              &#123;5.1^2 - 5^2 \over 0.1&#125;
-              $$
-            </MathBlock>
+            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_v3_2.svg" />
             <Pause />
             <OuterP>
-              ...this...
+              The displacements can be summed geometrically
+              by tipping the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\sin x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} displacement to be
+              horizontal on its side:
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              &#123;26.01 - 25 \over 0.1&#125;
-              $$
-            </MathBlock>
+            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_v3_3.svg" />
             <Pause />
             <OuterP>
-              ...
+              For short:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_without_lines.svg" />
+            <Pause />
+            <OuterP>
+              This generalizes all over the circle (some...
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_2.svg" />
+            <Pause />
+            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_8.svg" />
+            <Pause />
+            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_6.svg" />
+            <Pause />
+            <OuterP>
+              ...more examples) and,
+              given this description, it seems obvious (or:
+              it {" "}
               <i>
-                thiiis
+                is
               </i>
-              ...
+              {" "} obvious) that the value of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} that
+              maximizes {" "}
+              <Math>
+                $\cos x + \sin x$
+              </Math>
+              {" "} is {" "}
+              <NoBreak>
+                <Math>
+                  $x = \eta/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              to make the line that rains down at {" "}
+              <Math>
+                $-45^\circ$
+              </Math>
+              {" "}
+              tangent to the circle at the top right corner of
+              the circle, and for which {" "}
+              <NoBreak>
+                <Math>
+                  $\cos x + \sin x = \sqrt&#123;2&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_eta_over_2.svg" />
+            <Pause />
+            <OuterP>
+              (Individually, we have
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1.01 \over 0.1&#125; = 1.01 \times 10 = 10.1
+              \,\cos(\eta/2)= \sqrt&#123;0.5&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;,
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(\eta/2)=\sqrt&#123;0.5&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              ...result! (The answer is: ten point one.)
+              and when we add those two together we get {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;2\over \sqrt&#123;2&#125;&#125; = \sqrt&#123;2&#125;$
+                </Math>
+                .)
+              </NoBreak>
             </OuterP>
+            <OuterP class="indent-10">
+              For the lawyers, we must add that
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              any multiple of {" "}
+              <Math>
+                $4\eta$
+              </Math>
+              {" "} can be added
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              [we don't need to say “or subtracted”
+              because “multiple” intimates “integer multiple”,
+              which subsumes negative multiples, hehe]
+              to {" "}
+              <NoBreak>
+                <Math>
+                  $x = \eta/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} resulting in an infinite
+              set of points at which the maximum is achieved.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                A similar minimum of
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \large
+                -\sqrt&#123;2&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                occurs at {" "}
+                <Math>
+                  $x = -135^\circ$
+                </Math>
+                {" "} plus multiples of {" "}
+                <NoBreak>
+                  <Math>
+                    $360^\circ$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                If we attempt to include this new information
+                on top of the original graph it takes on
+                this appearance:
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_cosx_plus_sinx_with_max_min_info.svg" />
+              <Pause />
+              <OuterP>
+                Or using radians:
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg" />
+              <Pause />
+              <OuterP>
+                (Note that {" "}
+                <Math>
+                  $45^\circ = 0.78539\ldots = \eta/2$
+                </Math>
+                {" "}
+                as a real number, there is no technical difference
+                between the two graphs.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                Note that...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large
+                \begin&#123;aligned&#125;
+                 &#123;\eta\over 2&#125; + 180^\circ
+                 =&amp;\,\,\up&#123;1.5&#125; &#123;\eta\over 2&#125; + 2\eta\\
+                 =&amp;\,\,\up&#123;1.5&#125; &#123;\eta\over 2&#125; + &#123;4\eta\over 2&#125;\\
+                 =&amp;\,\,\up&#123;1.5&#125; &#123;5\eta\over 2&#125;
+                \end&#123;aligned&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...in case you're not familiar with this kind of
+                arithmetic!
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
       </Exercises>

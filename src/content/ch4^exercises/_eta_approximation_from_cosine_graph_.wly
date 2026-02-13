@@ -28,7 +28,7 @@
         of a unit circle is
 
         $$
-        \Large \approx 6.3
+        {\Large \approx 6.3}
         $$
 
         or thereabouts. However, a bit of detective work
@@ -41,11 +41,11 @@
 
         This implies that in
         $$
-        \Large 11
+        {\Large 11}
         $$
         units of time—or nearly so—the particle does
         $$
-        \Large 7
+        {\Large 7}
         $$
         quarter-turns,
         as each half-bump corresponds to a
@@ -76,7 +76,7 @@
             $$
         
         is an approximation to the circumference of a
-        unit circle, which is an approximation that ends
+        unit circle, which ends
         up being about half-a-part-in-a-thousand too
         large ($0.040249943...\%$ too large) (or just:
         “$0.00040249943...$ too large”) whereas our initial

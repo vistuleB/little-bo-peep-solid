@@ -65,7 +65,7 @@
         >>_what_seq_AB_
         >>_what_roots_by_x0_y0_seq_
         >>_use_previous_two_AB_
-        >>_true_or_false_composition_questions_
+        !! >>_true_or_false_composition_questions_
         >>_function_operations_Q_and_A_
         >>_what_seq_AB_C_
         >>_what_are_the_roots_ABC_
@@ -131,21 +131,26 @@
         >>_triangle_conch_
         >>_four_graphs_
         >>_where_is_the_pythagorean_identity_
+        >>_0_point_2_radians_
         >>_handdrawn_oval_P_position_
+        >>_eta_and_4eta_as_ratios_
         >>_vector_addition_definition_
         >>_circular_motion_from_x_coordinate_
-        >>_0_point_2_radians_
-        >>_eta_and_4eta_as_ratios_
-        >>_long_division_11_over_7_
-        >>_long_division_22_over_7_
-        >>_long_division_15542486476949_777_
-        >>_complement_calculation_
-        >>_complement_of_complement_
-        >>_max_sinx_+_cosx_new_ver_
+        >>_powers_of_secant_
+        >>_spherical_to_cartesian_coordinates_1_
+        >>_blueprints_top_and_side_
+        >>_blueprints_open_thin_door_
+        >>_max_sinx_+_cosx_new_new_ver_
+        !! >>_long_division_11_over_7_
+        !! >>_long_division_22_over_7_
+        !! >>_long_division_15542486476949_777_
+        !! >>_complement_calculation_
+        !! >>_complement_of_complement_
+        !! >>_max_sinx_+_cosx_new_ver_
         !! >>_max_sinx_+_cosx_
-        >>_rotate_central_90_
-        >>_ratio_A_over_B_tan^2_
-        >>_ratio_A_over_B_1_+_tan^2_
+        !! >>_rotate_central_90_
+        !! >>_ratio_A_over_B_tan^2_
+        !! >>_ratio_A_over_B_1_+_tan^2_
         !! >>_proof_1_+_tan^2_eq_sec^2_
         !! >>_proof_1_+_tan^2_eq_sec^2_backward_
         !! >>_four_compositions_expressed_
@@ -156,32 +161,76 @@
         !! >>_relate_sinx_dot_cosx_to_sin2x_
         !! >>_turn_sinx_into_sinx_dot_cosx_
         !! >>_turn_cosx_into_sinx_+_cosx_
-        >>_powers_of_secant_
         !! >>_for_every_A1_A2_stupid_followup_
         !! >>_map_cosx_to_cos_Bx+C_
-        >>_secant_cosecant_intersections_
+        !! >>_secant_cosecant_intersections_
         !! >>_geometric_construction_of_1_over_A_
         !! >>_axes_intersections_60_degrees_
-        >>_blueprints_top_and_side_
-        >>_blueprints_open_thin_door_
-        >>_archimedean_projection_
-        >>_rank_the_7_slices_
-        >>_sphere_area_formula_from_archimedean_property_
-        >>_sphere_volume_
-        >>_scalar_times_vector_definition_
-        >>_blueprints_open_bomb_shelter_door_
+        !! >>_archimedean_projection_
+        !! >>_rank_the_7_slices_
+        !! >>_sphere_area_formula_from_archimedean_property_
+        !! >>_sphere_volume_
+        !! >>_scalar_times_vector_definition_
+        !! >>_blueprints_open_bomb_shelter_door_
         !! >>_isosets_of_xy_
-        >>_spherical_to_cartesian_coordinates_1_
-        >>_double_pre_processing_steps_
-        >>_double_post_processing_spteps_
-        >>_what_seq_sin_Bx+C_
-        >>_gas_tank_
-        >>_gas_tank_decimal_approximation_
-        >>_three_quarters_decimal_approximation_
-        >>_a_ship_
+        !! >>_double_pre_processing_steps_
+        !! >>_double_post_processing_spteps_
+        !! >>_what_seq_sin_Bx+C_
+        !! >>_gas_tank_
+        !! >>_gas_tank_decimal_approximation_
+        !! >>_three_quarters_decimal_approximation_
+        !! >>_a_ship_
         !! >>_for_every_A1_A2_
         !! >>_can_B1B2_be_rewritten_
 
         !! int_t0^t (-dm/dt)(v(t) - u) dt + (m0 + int_t0^t (dm/dt)dt)(v(t))
         !! (-dm/dt)(v(t) - u) + (dm/dt)v(t) + (m0 + int_t0^t (dm/dt)dt) (dv/dt) = 0
         !! (dm/dt)u + m(t)(dv/dt) = 0     ...where dm < 0
+
+
+        !! different 'cycles':
+        !! 1. guesstimations 
+        !! 2. other "hands dirty"/"having fun":
+        !!    - see the pythagorean identity
+        !!    - illustrate powers of secant
+        !!    - recognizing four graphs
+        !!    - recognize 0.2 radians
+        !! 3. expression Acos(Bt+C)+D or Asin(Bt+C)+D & sinusoid concept:
+        !!    - from algegra to phyical description
+        !!    - effect of constants on graph
+        !!    - function box compositions in the abstract
+        !! 4. pure geometry
+        !!    - conch spiral
+        !!    - top / side blueprint
+        !!    - spherical coordinates 1 & 2
+        !!    - door-opening angle (uses arctan)
+        !! 5. delving into four graphs via algebra, geometry, & sum formulas:
+        !!    - the geometric interpretation of cosx+sinx and maximizing cosx+sinx
+        !!    - the geometric interpretation of cosx+sinx and rewriting as sqrt(2)cos(x-eta/2) and proof via sum formulas
+        !!    - "is cos^2(theta) more closely related to cos(2theta)" etc (proof via sum formulas)
+        !!    - maximization of sinx.cosx via isosets
+        !!    - algebraic proof that sinx.cos <= 1/2 (easier) and that cosx+sinx <= sqrt(2) (harder)
+        !! 6. 'constant ratio' geometry
+        !!    - gas tank sphere
+        !!    - loxodromic boat 
+        !! 7. Archimedean sphere
+        !!    - area-preserving property of the Lambert projection [ROTATING CENTRAL ANGLE upstream of this]
+        !!    - sphere slices
+        !!    - area of sphere
+        !!    - volume of sphere
+        !! 8. complementary angles & secant
+        !!    - complement angle computation 1
+        !!    - complement angle computation 2 (complement of complement)
+        !!    - intersections of tangent w/ axes
+        !!    - geometric evaluation of 1/A
+        !!    - evaluating sec^2 two different ways & secondary trigonometric identities via algebra
+        !!    - geometric interpretation of tan & cot on the unit circle
+        !! 9. long division nuttiness & final numerical estimates for eta (after gas tank)
+        !! 10. other:
+        !!    - eta & 4eta as ratios
+        !!    - rewriting Acosx + Bsinx as a sinusoid
+        !!    - sum formulas for tan & csc
+
+        !! try to MINIMIZE DEPENDENCIES & MAXIMIZE MODULARITY!
+
+        !! estimate: 40 exercises (that little ?)
