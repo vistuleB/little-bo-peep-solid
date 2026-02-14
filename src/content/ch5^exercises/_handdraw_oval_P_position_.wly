@@ -31,7 +31,7 @@
 
         |> ImageRight
             src=images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg
-            offset_x=5.5em
+            offset_x=6em
 
         is the difference from the center of the
         circle to $P$ in $x$ and
@@ -42,7 +42,7 @@
 
         |> ImageLeft
             src=images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg
-            offset_x= 7.5em
+            offset_x= 7.75em
 
         is the difference from the center of the circle to $P$ in $y$,
         as per scaling a unit circle to radius $r$.

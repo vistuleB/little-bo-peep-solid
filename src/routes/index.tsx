@@ -17,19 +17,12 @@ export default function __Home__() {
             article_type={1}
             href="chapter1"
           >
-            Functions
-          </TOCItem>
-          <TOCItem
-            article_type={2}
-            href="chapter2"
-          >
-            Derivatives
-          </TOCItem>
-          <TOCItem
-            article_type={3}
-            href="chapter3"
-          >
-            The Trigonometric Functions
+            <span class="t-3003-c">
+              The Trigonometric Functions
+              <span class="t-3003">
+                ./src/content/ch5__parent.wly:2:11
+              </span>
+            </span>
           </TOCItem>
         </ul>
       </div>

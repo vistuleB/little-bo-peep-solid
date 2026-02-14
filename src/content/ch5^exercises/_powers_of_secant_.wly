@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_powers_of_secant_
 
     If aliens descended on Earth, captured everyone,
@@ -24,11 +25,11 @@
         $$
 
         ...we should start the sequence at $1$, since
-        $1 = \sec^0(\theta)$.) Here is a possibility that
-        echoes back to the first solution to Exercise 27:
+        $1 = \sec^0(\theta)$.) Here is a possibility:
 
         |> Image
             src=images/svg_ch5_ex_sec_powers_bounce.svg
+            !! src=tmp-images/e5_sec_powers_bounce.svg
 
         Starting with a length of $1$, bottom left,
         successive multiplications by $\sec(\theta)$
@@ -52,16 +53,20 @@
         |> Image
             src=images/svg_ch5_ex_sec_powers_inverted_towers.svg
 
-        We can also take a page from the geometric
-        interpretation of sec that is mentioned towards
-        the end of the chapter, and draw this figure:
+        We can also take a page from the bridge in 
+        Shadow of the Colossus:
 
         |> Image
             src=images/svg_ch5_ex_sec_powers_circles.svg
 
         (In which we are effectively using a circular arc
         to each time realign the last obtained segment with
-        horizontal.) In any case, with so many nice drawings,
+        horizontal.)
+
+        |> Image
+            src=tmp-images/svg_ch5_ex_sec_powers_experimental_2.svg
+
+        In any case, with so many nice drawings,
         you are bound to save humanity!
 
         |> SolutionNote

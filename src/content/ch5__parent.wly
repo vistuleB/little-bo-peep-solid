@@ -1,5 +1,6 @@
 |> Chapter
     title=The Trigonometric Functions
+    !! title=Euler's Method
     handle=trigonometry
     page-necessary-margin=950
     max-element-width=1000

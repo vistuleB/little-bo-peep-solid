@@ -38,7 +38,7 @@
         |> Image
             src=tmp-images/e5_max_cosx_plus_sinx_sol1_without_lines.svg
 
-        This generalizes all over the circle (some...
+        This generalizes all over the circle (...
 
         |> Image
             src=tmp-images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_2.svg
@@ -50,7 +50,7 @@
         |> Image
             src=tmp-images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_6.svg
 
-        ...more examples) and,
+        ...some more examples) and,
         given this description, it seems obvious (or:
         it _is_ obvious) that the value of $x$ that
         maximizes $\cos x + \sin x$ is $x = \eta/2$,
@@ -89,18 +89,23 @@
             \large
             -\sqrt{2}
             $$
-            occurs at $x = -135^\circ$ plus multiples of $360^\circ$.
+            occurs at $x = -135^\circ$.\*  
+            (\*Plus multiples of $360^\circ$.)
 
         |> SolutionNote
 
-            If we attempt to include this new information
-            on top of the original graph it takes on
-            this appearance:
+            If we 
+            !! attempt to 
+            layer this new information
+            on top of the original graph 
+            of Exercise >>_four_graphs_
+            it looks like so:
+            !! it takes on this appearance:
 
             |> Image
                 src=tmp-images/e5_cosx_plus_sinx_with_max_min_info.svg
 
-            Or using radians:
+            Or with radians:
 
             |> Image
                 src=tmp-images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg

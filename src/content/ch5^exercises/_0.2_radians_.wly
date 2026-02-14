@@ -21,7 +21,7 @@
         not $20\%$ of the radius—that's this one:
 
         |> Image
-            style=margin-top:1em;margin-bottom:1em;
+            style=margin-top:1em;margin-bottom:0em;
             src=images/svg_ch5_ex_0_2_radians_guess_answer.svg
 
         |> StarDivider

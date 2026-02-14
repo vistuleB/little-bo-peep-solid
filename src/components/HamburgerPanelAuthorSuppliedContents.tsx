@@ -10,19 +10,12 @@ const HamburgerPanelAuthorSuppliedContents = () => {
           article_type={1}
           href="chapter1"
         >
-          Functions
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={2}
-          href="chapter2"
-        >
-          Derivatives
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={3}
-          href="chapter3"
-        >
-          The Trigonometric Functions
+          <span class="t-3003-c">
+            The Trigonometric Functions
+            <span class="t-3003">
+              ./src/content/ch5__parent.wly:2:11
+            </span>
+          </span>
         </HamburgerPanelItem>
       </ul>
     </div>
