@@ -1,6 +1,31 @@
 // @refresh reload
 import { createHandler, StartServer } from "@solidjs/start/server";
 
+function resolveMathJAXEnv(): string {
+  const version_offline = `${import.meta.env.MATHJAX_VERSION}-${import.meta.env.OFFLINE_MODE}`;
+  switch (version_offline) {
+    case "3-true":
+      return "/mathjax3/tex-svg.js";
+
+    case "4-true":
+      return "/mathjax4/tex-svg.js";
+
+    case "3-false":
+      return "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js";
+
+    case "4-false":
+      return "https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js";
+
+    default:
+      console.warn("Cannot parse MATHJAX related env");
+      console.error(
+        "MATHJAX_VERSION should be 3 or 4 and OFFLINE_MODE should be true or false",
+      );
+      console.warn("Using local version 4 of MathJAX instead");
+      return "/mathjax4/tex-svg.js";
+  }
+}
+
 export default createHandler(() => (
   <StartServer
     document={({ assets, children, scripts }) => (
@@ -79,12 +104,7 @@ export default createHandler(() => (
           <script src="/mathjax_setup.js" defer={true} />
           <script
             type="text/javascript"
-            src={
-              import.meta.env.OFFLINE_MODE === true
-                ? "/tex-svg.js"
-                : "https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"
-              // : "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"
-            }
+            src={resolveMathJAXEnv()}
             defer={true}
           />
 

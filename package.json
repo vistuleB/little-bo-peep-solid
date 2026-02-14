@@ -5,14 +5,14 @@
     "dev": "vinxi dev --port ${npm_config_port:-3000}",
     "dev-host": "vinxi dev --host 0.0.0.0",
     "build": "vinxi build",
-    "start": "vinxi start"
+    "start": "vinxi start",
+    "build-local-mathjax": "rm -rf public/mathjax3 public/mathjax4 && mkdir -p public/mathjax3 public/mathjax4 && cp -r node_modules/mathjax-full/es5/* public/mathjax3/ && cp -r node_modules/mathjax/* public/mathjax4/"
   },
   "dependencies": {
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.1",
     "@solidjs/start": "^1.2.1",
     "autoprefixer": "^10.4.20",
-    "mathjax-full": "^3.2.2",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "solid-js": "^1.9.3",
@@ -28,6 +28,8 @@
     "h3": "1.15.5"
   },
   "devDependencies": {
-    "@types/node": "^24.10.1"
+    "@types/node": "^24.10.1",
+    "mathjax": "^4.1.0",
+    "mathjax-full": "^3.2.2"
   }
 }

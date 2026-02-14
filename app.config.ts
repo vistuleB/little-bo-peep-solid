@@ -8,6 +8,7 @@ const env = loadEnv(mode, process.cwd(), "");
 const isAuthorMode = (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
 const viteEnv = process.env.VITE_ENV || env.VITE_ENV;
 const isOfflineMode = (process.env.OFFLINE_MODE || env.OFFLINE_MODE) === "true";
+const mathJAXVersion = process.env.MATHJAX_VERSION || env.MATHJAX_VERSION;
 
 export default defineConfig({
   ssr: false,
@@ -25,6 +26,7 @@ export default defineConfig({
       "import.meta.env.VITE_AUTHOR_MODE": JSON.stringify(isAuthorMode),
       "import.meta.env.VITE_ENV": JSON.stringify(viteEnv),
       "import.meta.env.OFFLINE_MODE": isOfflineMode,
+      "import.meta.env.MATHJAX_VERSION": JSON.stringify(mathJAXVersion),
     },
   },
 });

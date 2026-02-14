@@ -41,3 +41,7 @@ content_watcher/build
 renderer_gleam/build
 
 api
+
+# Ignore MATHJAX local build files
+public/mathjax3
+public/mathjax4
