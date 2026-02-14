@@ -13,23 +13,28 @@
         Presumably the aliens are asking
         for an illustration of the sequence
 
+        !! $$
+        !! \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
+        !! $$
         $$
-        \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
+        \sec \theta, \,\sec^2 \theta, \,\sec^3 \theta, \,\sec^4 \theta, \dots
         $$
 
         for some fixed $\theta$, based on a geometric
         interpretation of $\sec$. (Actually...
 
+        !! $$
+        !! 1, \,\sec \theta, \,\sec^2(\theta), \,\sec^3(\theta),  \,\sec^4(\theta), \dots,
+        !! $$
         $$
-        1, \,\sec \theta, \,\sec^2(\theta), \,\sec^3(\theta),  \,\sec^4(\theta), \dots,
+        1, \,\sec \theta, \,\sec^2\theta, \,\sec^3\theta,  \,\sec^4\theta, \dots,
         $$
 
         ...we should start the sequence at $1$, since
         $1 = \sec^0(\theta)$.) Here is a possibility:
 
         |> Image
-            src=images/svg_ch5_ex_sec_powers_bounce.svg
-            !! src=tmp-images/e5_sec_powers_bounce.svg
+            src=tmp-images/e5_sec_powers_bounce.svg
 
         Starting with a length of $1$, bottom left,
         successive multiplications by $\sec(\theta)$
