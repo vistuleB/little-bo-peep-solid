@@ -21,7 +21,7 @@
         at $\sec^0(\theta) = 1$. Here is a possibility:
 
         |> Image
-            src=tmp-images/e5_sec_powers_bounce.svg
+            src=images/e5_sec_powers_bounce.svg
 
         Starting with a length of $1$, bottom left,
         successive multiplications by $\sec \theta$
@@ -35,7 +35,7 @@
         of right triangles sharing a common vertex:
 
         |> Image
-            src=tmp-images/e5_sec_powers_snail.svg
+            src=images/e5_sec_powers_snail.svg
 
         Or if we move the angle $\theta$ around from
         one end of the previously obtained segment to
@@ -43,14 +43,14 @@
         this one:
 
         |> Image
-            src=tmp-images/e5_sec_powers_inverted_towers.svg
+            src=images/e5_sec_powers_inverted_towers.svg
 
         Though in fact, this tower is already embedded
         as a subdiagram of our first illustration (modulo
         scale and orientation) (!):
 
         |> Image
-            src=tmp-images/e5_sec_powers_bounce_cameo.svg
+            src=images/e5_sec_powers_bounce_cameo.svg
 
         In each of these diagrams, in fact,
         successive “similar” lengths are a factor $\sec(\theta)$
@@ -64,13 +64,13 @@
         outside [below right]: 
 
         |> Image
-            src=tmp-images/e5_sec_powers_bounce_triptic.svg
+            src=images/e5_sec_powers_bounce_triptic.svg
 
         Two slight variants on another diagram (for
         which more labelings are also possible):
 
         |> Image
-            src=tmp-images/e5_sec_powers_circles_two_labelings.svg
+            src=images/e5_sec_powers_circles_two_labelings.svg
 
         The following is the first few steps of a diagram
         that would be self-intersecting (and make
@@ -78,12 +78,12 @@
         we draw it with $\theta > \eta/2$:
 
         |> Image
-            src=tmp-images/e5_sec_powers_experimental_4.svg
+            src=images/e5_sec_powers_experimental_4.svg
 
         Zoomed out, with more steps:
 
         |> Image
-            src=tmp-images/e5_sec_powers_experimental_5.svg
+            src=images/e5_sec_powers_experimental_5.svg
 
         !! ...this one looks very alien-ish, 
         !! which makes the aliens happy, and they leave Earth alone!
@@ -101,7 +101,7 @@
 
             |> Image
                 style=margin-top:-0.7em;
-                src=tmp-images/e5_sec_powers_experimental_6.svg
+                src=images/e5_sec_powers_experimental_6.svg
 
             ...as each crease is folded in order, the next biggest
             triangle (on the outside edge of the crease) encompasses
@@ -112,16 +112,16 @@
             One way to formally verify that...
 
             |> Image
-                src=tmp-images/e5_sec_powers_bounce_ratio_explanation_fraction.svg
+                src=images/e5_sec_powers_bounce_ratio_explanation_fraction.svg
 
             ...in this diagram...
 
             |> Image
-                src=tmp-images/e5_sec_powers_bounce_ratio_explanation.svg
+                src=images/e5_sec_powers_bounce_ratio_explanation.svg
 
             ...is to note that...
 
             |> Image
-                src=tmp-images/e5_sec_powers_bounce_ratio_explanation_fraction_2.svg
+                src=images/e5_sec_powers_bounce_ratio_explanation_fraction_2.svg
 
             ...by direct measure and simplifying the fraction.

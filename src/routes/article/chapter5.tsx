@@ -301,7 +301,7 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/svg_ch5_ch_cosine_and_sine_@0.5_v2.svg" />
+        <Image src="/build-img/svgo-svg/aPyP.svg" />
         <Pause />
         <OuterP>
           Per the definitions, the point half a
@@ -370,7 +370,7 @@ export default function __Chapter5__() {
           {" "} in any case):
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/svg_ch5_ch_cosine_and_sine_@-3_v2.svg" />
+        <Image src="/build-img/svgo-svg/T8lW.svg" />
         <Pause />
         <OuterP>
           Indeed, going {" "}
@@ -462,7 +462,7 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg" />
+        <Image src="/build-img/svgo-svg/BfG4.svg" />
         <Pause />
         <OuterP>
           Some thought reveals that 
@@ -1832,7 +1832,7 @@ const Rest = () => {
           measure times the radius:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/svg_ch5_ch_radian_definition_consequence.svg" />
+        <Image src="/build-img/svgo-svg/8wuf.svg" />
         <Pause />
         <TildeDivider style="margin-top:-1em" />
       </Section>
@@ -2846,7 +2846,7 @@ const Rest = () => {
           {" "}
           Popular programming languages such as
           python offer a function named {" "}
-          <span style="font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
+          <span style="font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2
           </span>
           {" "} that will compute the {" "}
@@ -2883,11 +2883,11 @@ const Rest = () => {
         </OuterP>
         <OuterP class="indent-10">
           But the call goes {" "}
-          <span style="font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
+          <span style="font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(y, x)
           </span>
           {" "} not {" "}
-          <span style="font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
+          <span style="font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
             atan2(x, y)
           </span>
           {" "} by some bizareness. (Well, actually a
@@ -4380,7 +4380,7 @@ const Rest = () => {
               Guesstimate a function with this graph:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_cosine_10x_plus_x_over_4.svg" />
+            <Image src="/build-img/svgo-svg/L2CX.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -4456,7 +4456,7 @@ const Rest = () => {
               />
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_cosine_10x_plus_x_over_4_bump_count.svg" />
+            <Image src="/build-img/svgo-svg/tW8i.svg" />
             <Pause />
             <OuterP>
               As cos goes through {" "}
@@ -6656,7 +6656,7 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:1em;margin-bottom:0.8em;"
-                src="/tmp-images/svg_ch5_ex_vector_sum_previous_example.svg"
+                src="/build-img/svgo-svg/Mzki.svg"
               />
             </SolutionNote>
           </Solution>
@@ -7631,7 +7631,7 @@ const Rest = () => {
               boxes going right to left):
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ABCD_roles_general_comp.svg" />
+            <Image src="/build-img/svgo-svg/r-G7.svg" />
             <Pause />
             <OuterP>
               In the initial setting of the variables
@@ -7648,7 +7648,7 @@ const Rest = () => {
               identity*:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ABCD_roles_identity_comp.svg" />
+            <Image src="/build-img/svgo-svg/sweo.svg" />
             <Pause />
             <OuterP>
               (*When we say “the identity” we mean
@@ -7688,7 +7688,7 @@ const Rest = () => {
               “brought online”:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ABCD_roles_identity_comp_C.svg" />
+            <Image src="/build-img/svgo-svg/2ziI.svg" />
             <Pause />
             <OuterP>
               The effect of adding such a box to the
@@ -7731,7 +7731,7 @@ const Rest = () => {
               {" "} brings the rightmost box online:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ABCD_roles_identity_comp_B.svg" />
+            <Image src="/build-img/svgo-svg/Ao9J.svg" />
             <Pause />
             <OuterP>
               Because this box is to the right of all
@@ -7766,7 +7766,7 @@ const Rest = () => {
               left of sin online...
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ABCD_roles_identity_comp_A.svg" />
+            <Image src="/build-img/svgo-svg/DvlU.svg" />
             <Pause />
             <OuterP>
               ...which scales the graph-so-far vertically by a
@@ -7791,7 +7791,7 @@ const Rest = () => {
               and finally step 4 brings the leftmost box online...
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ABCD_roles_identity_comp_D.svg" />
+            <Image src="/build-img/svgo-svg/mE-x.svg" />
             <Pause />
             <OuterP>
               ...that vertically translates the entire graph,
@@ -7883,7 +7883,7 @@ const Rest = () => {
                 gluing new boxes on to what's already there:
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_inside_out.svg" />
+              <Image src="/build-img/svgo-svg/EsiI.svg" />
               <Pause />
               <OuterP>
                 Otherwise, to give an example of what may
@@ -7891,7 +7891,7 @@ const Rest = () => {
                 box online:
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_rightmost.svg" />
+              <Image src="/build-img/svgo-svg/cm5u.svg" />
               <Pause />
               <OuterP>
                 At this stage we have
@@ -7924,7 +7924,7 @@ const Rest = () => {
                 {" "} online...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_middle.svg" />
+              <Image src="/build-img/svgo-svg/2e-D.svg" />
               <Pause />
               <OuterP>
                 ...at this stage {" "}
@@ -7975,7 +7975,7 @@ const Rest = () => {
                 of boxes...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_rearranged.svg" />
+              <Image src="/build-img/svgo-svg/kh5Y.svg" />
               <Pause />
               <OuterP>
                 ...and in which you can see that, after we
@@ -8038,8 +8038,8 @@ const Rest = () => {
                 there...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_rearranged_zz.svg">
-                <ImageLeft src="/tmp-images/e5_ABCD_roles_Au_cloud.svg" />
+              <Image src="/build-img/svgo-svg/te-X.svg">
+                <ImageLeft src="/build-img/svgo-svg/cCoO.svg" />
               </Image>
               <Pause />
               <OuterP>
@@ -8512,7 +8512,7 @@ const Rest = () => {
               formulas affected?
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_spherical_coordinates_otherway_statement.svg" />
+            <Image src="/build-img/svgo-svg/haQ7.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -8618,7 +8618,7 @@ const Rest = () => {
               {" "}{" "}
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_spherical_coordinates_otherway_Rcos_phi.svg" />
+            <Image src="/build-img/svgo-svg/3aFp.svg" />
             <Pause />
             <OuterP>
               The coordinate transformations are
@@ -9095,7 +9095,7 @@ const Rest = () => {
               {" "} Here is a possibility:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sec_powers_bounce.svg" />
+            <Image src="/build-img/svgo-svg/uqSS.svg" />
             <Pause />
             <OuterP>
               Starting with a length of {" "}
@@ -9133,7 +9133,7 @@ const Rest = () => {
               of right triangles sharing a common vertex:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sec_powers_snail.svg" />
+            <Image src="/build-img/svgo-svg/2Pqq.svg" />
             <Pause />
             <OuterP>
               Or if we move the angle {" "}
@@ -9146,7 +9146,7 @@ const Rest = () => {
               this one:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sec_powers_inverted_towers.svg" />
+            <Image src="/build-img/svgo-svg/H7R8.svg" />
             <Pause />
             <OuterP>
               Though in fact, this tower is already embedded
@@ -9154,7 +9154,7 @@ const Rest = () => {
               scale and orientation) (!):
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sec_powers_bounce_cameo.svg" />
+            <Image src="/build-img/svgo-svg/Xdq7.svg" />
             <Pause />
             <OuterP>
               In each of these diagrams, in fact,
@@ -9177,14 +9177,14 @@ const Rest = () => {
               outside [below right]:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sec_powers_bounce_triptic.svg" />
+            <Image src="/build-img/svgo-svg/ICZK.svg" />
             <Pause />
             <OuterP>
               Two slight variants on another diagram (for
               which more labelings are also possible):
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sec_powers_circles_two_labelings.svg" />
+            <Image src="/build-img/svgo-svg/CvsG.svg" />
             <Pause />
             <OuterP>
               The following is the first few steps of a diagram
@@ -9206,13 +9206,13 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sec_powers_experimental_4.svg" />
+            <Image src="/build-img/svgo-svg/_95g.svg" />
             <Pause />
             <OuterP>
               Zoomed out, with more steps:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sec_powers_experimental_5.svg" />
+            <Image src="/build-img/svgo-svg/9Xj5.svg" />
             <Pause />
             <OuterP>
               ...but by this time the aliens are sick of hearing you
@@ -9231,7 +9231,7 @@ const Rest = () => {
               <Pause />
               <Image
                 style="margin-top:-0.7em;"
-                src="/tmp-images/e5_sec_powers_experimental_6.svg"
+                src="/build-img/svgo-svg/5YcI.svg"
               />
               <Pause />
               <OuterP>
@@ -9250,19 +9250,19 @@ const Rest = () => {
                 One way to formally verify that...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_sec_powers_bounce_ratio_explanation_fraction.svg" />
+              <Image src="/build-img/svgo-svg/ci-a.svg" />
               <Pause />
               <OuterP>
                 ...in this diagram...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_sec_powers_bounce_ratio_explanation.svg" />
+              <Image src="/build-img/svgo-svg/UspN.svg" />
               <Pause />
               <OuterP>
                 ...is to note that...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_sec_powers_bounce_ratio_explanation_fraction_2.svg" />
+              <Image src="/build-img/svgo-svg/VLwm.svg" />
               <Pause />
               <OuterP>
                 ...by direct measure and simplifying the fraction.
@@ -9355,7 +9355,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_v3_2.svg" />
+            <Image src="/build-img/svgo-svg/xf9D.svg" />
             <Pause />
             <OuterP>
               The displacements can be summed geometrically
@@ -9371,23 +9371,23 @@ const Rest = () => {
               horizontal on its side:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_v3_3.svg" />
+            <Image src="/build-img/svgo-svg/byhq.svg" />
             <Pause />
             <OuterP>
               For short:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_without_lines.svg" />
+            <Image src="/build-img/svgo-svg/2Wso.svg" />
             <Pause />
             <OuterP>
               This generalizes all over the circle (...
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_2.svg" />
+            <Image src="/build-img/svgo-svg/Q0sd.svg" />
             <Pause />
-            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_8.svg" />
+            <Image src="/build-img/svgo-svg/rIoB.svg" />
             <Pause />
-            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_6.svg" />
+            <Image src="/build-img/svgo-svg/50WM.svg" />
             <Pause />
             <OuterP>
               ...some more examples) and,
@@ -9428,7 +9428,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_eta_over_2.svg" />
+            <Image src="/build-img/svgo-svg/xwF6.svg" />
             <Pause />
             <OuterP>
               (Individually, we have
@@ -9535,9 +9535,9 @@ const Rest = () => {
                 with the new information layered on, in degrees and in radians:
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_cosx_plus_sinx_with_max_min_info.svg" />
+              <Image src="/build-img/svgo-svg/GHRw.svg" />
               <Pause />
-              <Image src="/tmp-images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg" />
+              <Image src="/build-img/svgo-svg/BJ2x.svg" />
               <Pause />
               <OuterP>
                 (Note that {" "}
@@ -11143,7 +11143,7 @@ const Rest = () => {
                 {" "} to:
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg" />
+              <Image src="/build-img/svgo-svg/Wi-I.svg" />
             </SolutionNote>
             <Pause />
             <SolutionNote>
@@ -11188,7 +11188,7 @@ const Rest = () => {
                 With the various terms illustrated here:
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/svg_ch5_ex_tangent_angle_verbalization_explanation.svg" />
+              <Image src="/build-img/svgo-svg/hFz7.svg" />
               <Pause />
               <OuterP>
                 ...but if it was such a great verbalization we
@@ -11709,7 +11709,7 @@ const Rest = () => {
               {" "} axes?
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_theta_tangent.svg" />
+            <Image src="/build-img/svgo-svg/AdMn.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -11724,7 +11724,7 @@ const Rest = () => {
               purple lengths below:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_Q1.svg" />
+            <Image src="/build-img/svgo-svg/nF2I.svg" />
             <Pause />
             <OuterP>
               Regarding this diagram, note that:
@@ -11808,9 +11808,9 @@ const Rest = () => {
               {" "} similarly:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_Q1_first_solve.svg" />
+            <Image src="/build-img/svgo-svg/wgBS.svg" />
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_Q1_second_solve.svg" />
+            <Image src="/build-img/svgo-svg/D8sZ.svg" />
             <Pause />
             <OuterP>
               ...i.e., in the first quadrant, at least, the
@@ -11827,14 +11827,14 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_Q1_with_answer.svg" />
+            <Image src="/build-img/svgo-svg/i6Bn.svg" />
             <Pause />
             <OuterP>
               For the other quadrants we can reason by
               symmetry with the first quadrant:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_all_quadrants.svg" />
+            <Image src="/build-img/svgo-svg/TRpy.svg" />
             <Pause />
             <OuterP>
               In more detail, the product of the two coordinates

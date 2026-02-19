@@ -11,7 +11,7 @@
     formulas affected?
 
     |> Image
-        src=tmp-images/svg_ch5_ex_spherical_coordinates_otherway_statement.svg
+        src=images/svg_ch5_ex_spherical_coordinates_otherway_statement.svg
 
     |> Solution
 
@@ -40,7 +40,7 @@
         to $R\cos(\phi)$ in Exercise >>_spherical_to_cartesian_coordinates_1_:
 
         |> Image
-            src=tmp-images/svg_ch5_ex_spherical_coordinates_otherway_Rcos_phi.svg
+            src=images/svg_ch5_ex_spherical_coordinates_otherway_Rcos_phi.svg
 
         The coordinate transformations are
         thus obtained by interchanging “$\sin(\phi)$” and

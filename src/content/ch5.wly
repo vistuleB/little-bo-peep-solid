@@ -39,7 +39,7 @@
     that $\cos({1\over 2}) \approx 0.9$, $\sin({1\over 2}) \approx 0.5$:
 
     |> Image
-        src=tmp-images/svg_ch5_ch_cosine_and_sine_@0.5_v2.svg
+        src=images/svg_ch5_ch_cosine_and_sine_@0.5_v2.svg
 
     Per the definitions, the point half a
     unit counterclockwise from $(1, 0)$ on the unit
@@ -50,7 +50,7 @@
     a calculator equipped with ‘sin’ and ‘cos’):
 
     |> Image
-        !! src=tmp-images/svg_ch5_ch_unit_circle_@0.333_smaller.svg
+        !! src=images/svg_ch5_ch_unit_circle_@0.333_smaller.svg
         src=images/svg_ch5_ch_unit_circle_@0.5_smaller_v2.svg
 
     As a second example, the graphs indicate that
@@ -58,7 +58,7 @@
     (or something very close to $-1$, in any case):
 
     |> Image
-        src=tmp-images/svg_ch5_ch_cosine_and_sine_@-3_v2.svg
+        src=images/svg_ch5_ch_cosine_and_sine_@-3_v2.svg
 
     Indeed, going $-3$ units counterclockwise—which
     means, going $3$ units clockwise—on the unit
@@ -76,7 +76,7 @@
     $\sin(x) = -1$:
 
     |> Image
-        src=tmp-images/svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg
+        src=images/svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg
 
     Some thought reveals that 
     !! this value of $x$ would be 
@@ -630,7 +630,7 @@
     measure times the radius:
 
     |> Image
-        src=tmp-images/svg_ch5_ch_radian_definition_consequence.svg
+        src=images/svg_ch5_ch_radian_definition_consequence.svg
 
     |> TildeDivider
         style=margin-top:-1em
@@ -1083,7 +1083,7 @@
     Popular programming languages such as
     python offer a function named 
     |> span
-        style=font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
+        style=font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
         atan2
     \ that will compute the _argument_ (see
     Vocabulary below) $\theta$ of a given pair
@@ -1092,12 +1092,12 @@
 
     But the call goes 
     |> span
-        style=font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
+        style=font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
 
         atan2(y, x)
     \ not 
     |> span
-        style=font-family:monaco;background-color:#999;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
+        style=font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
 
         atan2(x, y)
     \ by some bizareness. (Well, actually a

@@ -7,7 +7,7 @@
     intersect the $x$ and $y$ axes?
 
     |> Image
-        src=tmp-images/svg_ch5_ex_theta_tangent.svg
+        src=images/svg_ch5_ex_theta_tangent.svg
 
     |> Solution
 
@@ -18,7 +18,7 @@
         purple lengths below:
 
         |> Image
-            src=tmp-images/svg_ch5_ex_theta_tangent_Q1.svg
+            src=images/svg_ch5_ex_theta_tangent_Q1.svg
 
         Regarding this diagram, note that:
 
@@ -42,22 +42,22 @@
         length is $1\cdot \csc(\theta) = \csc(\theta)$, similarly:
 
         |> Image
-            src=tmp-images/svg_ch5_ex_theta_tangent_Q1_first_solve.svg
+            src=images/svg_ch5_ex_theta_tangent_Q1_first_solve.svg
 
         |> Image
-            src=tmp-images/svg_ch5_ex_theta_tangent_Q1_second_solve.svg
+            src=images/svg_ch5_ex_theta_tangent_Q1_second_solve.svg
 
         ...i.e., in the first quadrant, at least, the
         coordinates are $\sec(\theta)$ and $\csc(\theta)$:
 
         |> Image
-            src=tmp-images/svg_ch5_ex_theta_tangent_Q1_with_answer.svg
+            src=images/svg_ch5_ex_theta_tangent_Q1_with_answer.svg
 
         For the other quadrants we can reason by
         symmetry with the first quadrant:
 
         |> Image
-            src=tmp-images/svg_ch5_ex_theta_tangent_all_quadrants.svg
+            src=images/svg_ch5_ex_theta_tangent_all_quadrants.svg
 
         In more detail, the product of the two coordinates
         marked by purple arrows is the same in all four

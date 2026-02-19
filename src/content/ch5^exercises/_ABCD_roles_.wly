@@ -54,7 +54,7 @@
         boxes going right to left):
 
         |> Image
-            src=tmp-images/e5_ABCD_roles_general_comp.svg
+            src=images/e5_ABCD_roles_general_comp.svg
 
         In the initial setting of the variables
         with $A = B = 1$ and $C = D = 0$
@@ -62,7 +62,7 @@
         identity*:
 
         |> Image
-            src=tmp-images/e5_ABCD_roles_identity_comp.svg
+            src=images/e5_ABCD_roles_identity_comp.svg
 
         (*When we say “the identity” we mean 
 
@@ -76,7 +76,7 @@
         “brought online”:
 
         |> Image
-            src=tmp-images/e5_ABCD_roles_identity_comp_C.svg
+            src=images/e5_ABCD_roles_identity_comp_C.svg
 
         The effect of adding such a box to the
         right of sin is to translate the
@@ -86,7 +86,7 @@
         $1$ to $2.33$, brings the rightmost box online:
 
         |> Image
-            src=tmp-images/e5_ABCD_roles_identity_comp_B.svg
+            src=images/e5_ABCD_roles_identity_comp_B.svg
 
         Because this box is to the right of all
         we have so far (which is $x \ra \sin(x + C)$),
@@ -96,14 +96,14 @@
         left of sin online...
 
         |> Image
-            src=tmp-images/e5_ABCD_roles_identity_comp_A.svg
+            src=images/e5_ABCD_roles_identity_comp_A.svg
 
         ...which scales the graph-so-far vertically by a
         factor $A$, as discussed in Exercise >>_four_compositions_graphed_,
         and finally step 4 brings the leftmost box online...
 
         |> Image
-            src=tmp-images/e5_ABCD_roles_identity_comp_D.svg
+            src=images/e5_ABCD_roles_identity_comp_D.svg
 
         ...that vertically translates the entire graph,
         as it stands, by $D$ units up, as again discussed
@@ -132,14 +132,14 @@
             gluing new boxes on to what's already there:
 
             |> Image
-                src=tmp-images/e5_ABCD_roles_identity_comp_inside_out.svg
+                src=images/e5_ABCD_roles_identity_comp_inside_out.svg
 
             Otherwise, to give an example of what may
             go wrong, say that we first bring the rightmost
             box online:
 
             |> Image
-                src=tmp-images/e5_ABCD_roles_identity_comp_rightmost.svg
+                src=images/e5_ABCD_roles_identity_comp_rightmost.svg
 
             At this stage we have
 
@@ -152,7 +152,7 @@
             $x \ra x + C$ online...
 
             |> Image
-                src=tmp-images/e5_ABCD_roles_identity_comp_middle.svg
+                src=images/e5_ABCD_roles_identity_comp_middle.svg
 
             ...at this stage $x \ra x + C$ is
             !! neither a pre-processing nor a post-processing function; 
@@ -183,7 +183,7 @@
             of boxes...
 
             |> Image
-                src=tmp-images/e5_ABCD_roles_identity_comp_rearranged.svg
+                src=images/e5_ABCD_roles_identity_comp_rearranged.svg
 
             ...and in which you can see that, after we
             dial up $B$ (introducing the “$x \ra Bx$” box),
@@ -209,10 +209,10 @@
             there...
 
             |> Image
-                src=tmp-images/e5_ABCD_roles_identity_comp_rearranged_zz.svg
+                src=images/e5_ABCD_roles_identity_comp_rearranged_zz.svg
 
             |> ImageLeft
-                src=tmp-images/e5_ABCD_roles_Au_cloud.svg
+                src=images/e5_ABCD_roles_Au_cloud.svg
 
             ...you find that after $D$ has been dialed up,
             and it comes time to change $A$, there are TWO
@@ -237,4 +237,4 @@
             translated vertically by $D$.)
 
             !! |> Image
-            !!     src=tmp-images/e5_ABCD_roles_mona_lisa_cloud.svg
+            !!     src=images/e5_ABCD_roles_mona_lisa_cloud.svg

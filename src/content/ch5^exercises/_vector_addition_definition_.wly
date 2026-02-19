@@ -162,4 +162,4 @@
 
             |> Image
                 style=margin-top:1em;margin-bottom:0.8em;
-                src=tmp-images/svg_ch5_ex_vector_sum_previous_example.svg
+                src=images/svg_ch5_ex_vector_sum_previous_example.svg

@@ -29,7 +29,7 @@
             push $\theta$ to:
 
             |> Image
-                src=tmp-images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg
+                src=images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg
 
         |> SolutionNote
 
@@ -44,7 +44,7 @@
             With the various terms illustrated here:
 
             |> Image
-                src=tmp-images/svg_ch5_ex_tangent_angle_verbalization_explanation.svg
+                src=images/svg_ch5_ex_tangent_angle_verbalization_explanation.svg
 
             ...but if it was such a great verbalization we
             wouldn't need to illustrate it, ergo, we failed!

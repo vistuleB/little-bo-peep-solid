@@ -35,9 +35,9 @@
         displacement to be vertical:
 
         |> Image
-            src=tmp-images/svg_ch5_ex_x_plus_y_option1.svg
+            src=images/svg_ch5_ex_x_plus_y_option1.svg
         |> Image
-            src=tmp-images/svg_ch5_ex_x_plus_y_option2.svg
+            src=images/svg_ch5_ex_x_plus_y_option2.svg
 
         Either way, the upshot is that the sum
 

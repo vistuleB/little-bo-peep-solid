@@ -19,7 +19,7 @@
         to a point $(x_2, y_2)$...
 
         |> Image
-            src=tmp-images/e5_max_cosx_plus_sinx_x1_y1_x2_y2.svg
+            src=images/e5_max_cosx_plus_sinx_x1_y1_x2_y2.svg
 
         ...then...
 
@@ -62,7 +62,7 @@
         !! to the bands:
 
         |> Image
-            src=tmp-images/svg_ch5_ex_x_plus_y_rainbow_v2.svg
+            src=images/svg_ch5_ex_x_plus_y_rainbow_v2.svg
 
         !! the most possible towards the red (brown)
         !! zone of the heatmap; this is obviously
@@ -140,12 +140,12 @@
             with some of this extra information:
 
             |> Image
-                src=tmp-images/e5_cosx_plus_sinx_with_max_min_info.svg
+                src=images/e5_cosx_plus_sinx_with_max_min_info.svg
 
             Or using radians (in some ways clearer):
 
             |> Image
-                src=tmp-images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg
+                src=images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg
 
             (Note that $45^\circ = 0.78539\ldots = \eta/2$
             as a real number, there is no technical difference
@@ -182,7 +182,7 @@
 
 
             |> Image
-                src=tmp-images/svg_ch5_ex_x_plus_y_intersections_x0_y0_ver.svg
+                src=images/svg_ch5_ex_x_plus_y_intersections_x0_y0_ver.svg
 
             (By the time you reach one of the axes,
             all of the coordinate sum is concentrated

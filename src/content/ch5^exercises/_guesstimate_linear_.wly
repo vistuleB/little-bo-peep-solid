@@ -6,7 +6,7 @@
     !! |> Image
     !!     src=images/svg_ch5_ex_cosine_10x_plus_x_over_4.svg
     |> Image
-        src=tmp-images/e5_cosine_10x_plus_x_over_4.svg
+        src=images/e5_cosine_10x_plus_x_over_4.svg
 
     |> Solution
 
@@ -43,7 +43,7 @@
         !!     src=images/svg_ch5_ex_cosine_10x_plus_x_over_4_bump_count.svg
 
         |> Image
-            src=tmp-images/e5_cosine_10x_plus_x_over_4_bump_count.svg
+            src=images/e5_cosine_10x_plus_x_over_4_bump_count.svg
 
         As cos goes through _one_ cycle from $x = 0$ to
         $x = 4\eta$, the “bumpy function” is therefore

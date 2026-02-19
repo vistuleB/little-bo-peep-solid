@@ -1458,7 +1458,7 @@ const Rest = () => {
         <Pause />
         <Image
           work="ing"
-          src="/tmp-images/svg_ch4_ch_position_by_time_tangent_v2.svg"
+          src="/build-img/svgo-svg/YS5-.svg"
         />
         <Pause />
         <OuterP>
