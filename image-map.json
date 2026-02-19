@@ -2014,12 +2014,12 @@
   },
   "svg_ch4_one_particle_speed_equals_time_cloud.svg": {
     "build-version": "svgo-svg/SiXb.svg",
-    "build-version-created-on": 1768299621,
+    "build-version-created-on": 1771477094,
     "build-method": "svgo",
-    "build-version-size": 12547,
-    "original-size": 152827,
-    "compressed-size": 12547,
-    "compression": "91.79%",
+    "build-version-size": 11059,
+    "original-size": 154378,
+    "compressed-size": 11059,
+    "compression": "92.84%",
     "used-last-build": true,
     "3chars": ["ch4"]
   },

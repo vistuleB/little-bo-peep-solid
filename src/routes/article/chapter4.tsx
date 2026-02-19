@@ -7654,7 +7654,7 @@ const Rest = () => {
               </OuterP>
               <OuterP class="indent-10">
                 (I.e., the mirror image of the blue
-                curve satisfies the constrains of the red curve, and
+                curve satisfies the constraints of the red curve, and
                 vice-versa.)
               </OuterP>
             </SolutionNote>
@@ -8325,7 +8325,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
@@ -8350,7 +8350,7 @@ const Rest = () => {
                   $_y$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -8375,7 +8375,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -8400,7 +8400,7 @@ const Rest = () => {
                   $_y$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -8425,7 +8425,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -8450,7 +8450,7 @@ const Rest = () => {
                   $_y$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
@@ -8475,7 +8475,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
@@ -8563,7 +8563,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
@@ -8611,7 +8611,7 @@ const Rest = () => {
                   $_y$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -8659,7 +8659,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -8707,7 +8707,7 @@ const Rest = () => {
                   $_y$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -8754,7 +8754,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -8802,7 +8802,7 @@ const Rest = () => {
                   $_y$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
@@ -8850,7 +8850,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
@@ -8922,7 +8922,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
@@ -8939,7 +8939,7 @@ const Rest = () => {
                   $_y$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -8956,7 +8956,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -8973,7 +8973,7 @@ const Rest = () => {
                   $_y$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -8990,7 +8990,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -9007,7 +9007,7 @@ const Rest = () => {
                   $_y$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
@@ -9024,7 +9024,7 @@ const Rest = () => {
                   $_x$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
@@ -9088,7 +9088,7 @@ const Rest = () => {
                   $_x(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
@@ -9121,7 +9121,7 @@ const Rest = () => {
                   $_y(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -9154,7 +9154,7 @@ const Rest = () => {
                   $_x(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -9187,7 +9187,7 @@ const Rest = () => {
                   $_y(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -9220,7 +9220,7 @@ const Rest = () => {
                   $_x(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -9253,7 +9253,7 @@ const Rest = () => {
                   $_y(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
@@ -9286,7 +9286,7 @@ const Rest = () => {
                   $_x(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
@@ -9343,7 +9343,7 @@ const Rest = () => {
                   $_x(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
@@ -9360,7 +9360,7 @@ const Rest = () => {
                   $_y(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -9377,7 +9377,7 @@ const Rest = () => {
                   $_x(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
@@ -9394,7 +9394,7 @@ const Rest = () => {
                   $_y(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -9411,7 +9411,7 @@ const Rest = () => {
                   $_x(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
@@ -9428,7 +9428,7 @@ const Rest = () => {
                   $_y(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
@@ -9445,7 +9445,7 @@ const Rest = () => {
                   $_x(0)$
                 </Math>
               </p>
-              <p class="indent-10">
+              <p>
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
