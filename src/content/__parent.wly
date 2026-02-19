@@ -8,6 +8,9 @@
         >>functions    >>_ch3_start_  >>_ch3_exercises_
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
+        !! >>eulers       >>_ch6_start_
+        !! >>jacobi       >>_ch7_start_
+        !! >>binomial     >>_ch8_start_
 
     |> In
         content=selection
@@ -31,6 +34,18 @@
     |> In
         content=selection
         chapter=>>sets
+
+    !! |> In
+    !!     content=selection
+    !!     chapter=>>eulers
+
+    !! |> In
+    !!     content=selection
+    !!     chapter=>>jacobi
+
+    !! |> In
+    !!     content=selection
+    !!     chapter=>>binomial
 
     |> In
         content=selection
@@ -136,26 +151,25 @@
         >>_eta_and_4eta_as_ratios_
         >>_vector_addition_definition_
         >>_circular_motion_from_x_coordinate_
-        >>_powers_of_secant_
+        >>_four_compositions_expressed_
+        >>_four_compositions_graphed_
+        >>_ABCD_roles_
         >>_spherical_to_cartesian_coordinates_1_
         >>_spherical_to_cartesian_coordinates_2_
         >>_blueprints_top_and_side_
         >>_blueprints_open_thin_door_
+        >>_powers_of_secant_
         >>_max_sinx_+_cosx_new_new_ver_
-        !! >>_long_division_11_over_7_
-        !! >>_long_division_22_over_7_
-        !! >>_long_division_15542486476949_777_
-        !! >>_complement_calculation_
-        !! >>_complement_of_complement_
-        !! >>_max_sinx_+_cosx_new_ver_
-        !! >>_max_sinx_+_cosx_
-        !! >>_rotate_central_90_
-        !! >>_ratio_A_over_B_tan^2_
-        !! >>_ratio_A_over_B_1_+_tan^2_
-        !! >>_proof_1_+_tan^2_eq_sec^2_
-        !! >>_proof_1_+_tan^2_eq_sec^2_backward_
-        !! >>_four_compositions_expressed_
-        !! >>_four_compositions_graphed_
+        >>_long_division_11_over_7_
+        >>_long_division_22_over_7_
+        >>_long_division_15542486476949_777_
+        >>_complement_calculation_
+        >>_complement_of_complement_
+        >>_rotate_central_90_
+        >>_ratio_A_over_B_tan^2_
+        >>_ratio_A_over_B_1_+_tan^2_
+        >>_proof_1_+_tan^2_eq_sec^2_
+        >>_proof_1_+_tan^2_eq_sec^2_backward_
         !! >>_periodicity_mod_2eta_
         !! >>_cosx_dot_sinx_is_translate_of_cos^2x_
         !! >>_cos^2x_scale_and_translate_of_cosx_
@@ -164,25 +178,27 @@
         !! >>_turn_cosx_into_sinx_+_cosx_
         !! >>_for_every_A1_A2_stupid_followup_
         !! >>_map_cosx_to_cos_Bx+C_
-        !! >>_secant_cosecant_intersections_
-        !! >>_geometric_construction_of_1_over_A_
+        >>_secant_cosecant_intersections_
+        >>_geometric_construction_of_1_over_A_
         !! >>_axes_intersections_60_degrees_
-        !! >>_archimedean_projection_
-        !! >>_rank_the_7_slices_
-        !! >>_sphere_area_formula_from_archimedean_property_
-        !! >>_sphere_volume_
+        >>_archimedean_projection_
+        >>_rank_the_7_slices_
+        >>_sphere_area_formula_from_archimedean_property_
+        >>_sphere_volume_
         !! >>_scalar_times_vector_definition_
         !! >>_blueprints_open_bomb_shelter_door_
-        !! >>_isosets_of_xy_
+        >>_isosets_of_xy_
         !! >>_double_pre_processing_steps_
         !! >>_double_post_processing_spteps_
         !! >>_what_seq_sin_Bx+C_
-        !! >>_gas_tank_
-        !! >>_gas_tank_decimal_approximation_
-        !! >>_three_quarters_decimal_approximation_
-        !! >>_a_ship_
+        >>_gas_tank_
+        >>_gas_tank_decimal_approximation_
+        >>_three_quarters_decimal_approximation_
+        >>_a_ship_
         !! >>_for_every_A1_A2_
         !! >>_can_B1B2_be_rewritten_
+        !! >>_max_sinx_+_cosx_new_ver_
+        !! >>_max_sinx_+_cosx_
 
         !! int_t0^t (-dm/dt)(v(t) - u) dt + (m0 + int_t0^t (dm/dt)dt)(v(t))
         !! (-dm/dt)(v(t) - u) + (dm/dt)v(t) + (m0 + int_t0^t (dm/dt)dt) (dv/dt) = 0

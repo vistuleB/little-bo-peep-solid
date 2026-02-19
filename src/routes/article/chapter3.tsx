@@ -5033,7 +5033,7 @@ const Rest = () => {
             </OuterP>
             <OuterP class="indent-10">
               To recapitulate, the three transformations
-              are,in order:
+              are, in order:
             </OuterP>
             <Pause />
             <CentralDisplayItalic>

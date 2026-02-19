@@ -1364,7 +1364,10 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section id="section-10">
+      <Section
+        work="ing"
+        id="section-10"
+      >
         <OuterP>
           <b>
             The second derivative of position.
@@ -1453,7 +1456,10 @@ const Rest = () => {
           seconds:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/YS5-.svg" />
+        <Image
+          work="ing"
+          src="/tmp-images/svg_ch4_ch_position_by_time_tangent_v2.svg"
+        />
         <Pause />
         <OuterP>
           The ratio “rise over run” has the form

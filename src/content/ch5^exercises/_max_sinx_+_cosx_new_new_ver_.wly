@@ -13,13 +13,16 @@
 
     |> Solution
 
-        Going back to basics, $$\sin x + \cos x$$ is the sum
-        of an $x$-coordinate and a $y$-coordinate:
-
-        |> Image
-            src=tmp-images/e5_max_cosx_plus_sinx_sol1_v3_1.svg
-
-        We can conceptualize the coordinates as
+        !! Going back to basics, 
+        From basics,
+        
+        $$\cos x + \sin x$$ 
+        
+        is the sum
+        of an $x$-coordinate and a $y$-coordinate.
+        !! |> Image
+        !!     src=tmp-images/e5_max_cosx_plus_sinx_sol1_v3_1.svg
+        We can represent the coordinates as
         two displacements (changes), one in $x$, 
         one in $y$:
 
@@ -89,8 +92,8 @@
             \large
             -\sqrt{2}
             $$
-            occurs at $x = -135^\circ$.\*  
-            (\*Plus multiples of $360^\circ$.)
+            occurs at $x = -135^\circ$.
+            (Plus multiples of $360^\circ$.)
 
         |> SolutionNote
 
@@ -105,7 +108,7 @@
             |> Image
                 src=tmp-images/e5_cosx_plus_sinx_with_max_min_info.svg
 
-            Or with radians:
+            We can also use radians:
 
             |> Image
                 src=tmp-images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg

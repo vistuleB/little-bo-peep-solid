@@ -1,5 +1,4 @@
 |> Exercise
-    work=ing
     handle=_powers_of_secant_
 
     If aliens descended on Earth, captured everyone,
@@ -13,31 +12,19 @@
         Presumably the aliens are asking
         for an illustration of the sequence
 
-        !! $$
-        !! \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
-        !! $$
         $$
-        \sec \theta, \,\sec^2 \theta, \,\sec^3 \theta, \,\sec^4 \theta, \dots
+        1, \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
         $$
 
         for some fixed $\theta$, based on a geometric
-        interpretation of $\sec$. (Actually...
-
-        !! $$
-        !! 1, \,\sec \theta, \,\sec^2(\theta), \,\sec^3(\theta),  \,\sec^4(\theta), \dots,
-        !! $$
-        $$
-        1, \,\sec \theta, \,\sec^2\theta, \,\sec^3\theta,  \,\sec^4\theta, \dots,
-        $$
-
-        ...we should start the sequence at $1$, since
-        $1 = \sec^0(\theta)$.) Here is a possibility:
+        interpretation of $\sec$, where we start the sequence
+        at $\sec^0(\theta) = 1$. Here is a possibility:
 
         |> Image
             src=tmp-images/e5_sec_powers_bounce.svg
 
         Starting with a length of $1$, bottom left,
-        successive multiplications by $\sec(\theta)$
+        successive multiplications by $\sec \theta$
         are performed by “dropping a height up” onto
         the opposite side of the angle $\theta$,
         bouncing back and forth between the two sides.
@@ -48,7 +35,7 @@
         of right triangles sharing a common vertex:
 
         |> Image
-            src=images/svg_ch5_ex_sec_powers_snail.svg
+            src=tmp-images/e5_sec_powers_snail.svg
 
         Or if we move the angle $\theta$ around from
         one end of the previously obtained segment to
@@ -56,28 +43,85 @@
         this one:
 
         |> Image
-            src=images/svg_ch5_ex_sec_powers_inverted_towers.svg
+            src=tmp-images/e5_sec_powers_inverted_towers.svg
 
-        We can also take a page from the bridge in 
-        Shadow of the Colossus:
-
-        |> Image
-            src=images/svg_ch5_ex_sec_powers_circles.svg
-
-        (In which we are effectively using a circular arc
-        to each time realign the last obtained segment with
-        horizontal.)
+        Though in fact, this tower is already embedded
+        as a subdiagram of our first illustration (modulo
+        scale and orientation) (!):
 
         |> Image
-            src=tmp-images/svg_ch5_ex_sec_powers_experimental_2.svg
+            src=tmp-images/e5_sec_powers_bounce_cameo.svg
 
-        In any case, with so many nice drawings,
-        you are bound to save humanity!
+        In each of these diagrams, in fact,
+        successive “similar” lengths are a factor $\sec(\theta)$
+        from one another—giving rise to many possibilities
+        of labeling a single diagram. For example, in the
+        original diagram, the blue lengths below also
+        form a geometric sequence
+        of ratio $\sec(\theta)$ [below left], leading to an
+        alternate labeling of the tower [below middle],
+        or the snail stack could be labeled from the
+        outside [below right]: 
+
+        |> Image
+            src=tmp-images/e5_sec_powers_bounce_triptic.svg
+
+        Two slight variants on another diagram (for
+        which more labelings are also possible):
+
+        |> Image
+            src=tmp-images/e5_sec_powers_circles_two_labelings.svg
+
+        The following is the first few steps of a diagram
+        that would be self-intersecting (and make
+        a mess) for $\theta \leq \eta/2$, so
+        we draw it with $\theta > \eta/2$:
+
+        |> Image
+            src=tmp-images/e5_sec_powers_experimental_4.svg
+
+        Zoomed out, with more steps:
+
+        |> Image
+            src=tmp-images/e5_sec_powers_experimental_5.svg
+
+        !! ...this one looks very alien-ish, 
+        !! which makes the aliens happy, and they leave Earth alone!
+        !! Victory!!!!!!!!!!!
+
+        !! _Postscript._ We this many nice illustrations, we
+        !! surely survive.
+        ...but by this time the aliens are sick of hearing you
+        talk about secant, and have moved on to another planet.
 
         |> SolutionNote
 
-            One can note that the third diagram makes a cameo
-            appearance within the second diagram (modulo scale):
+            The last spiral is actually obtained by folding the “triangle tower”
+            over, as below:
 
             |> Image
-                src=images/svg_ch5_ex_sec_powers_bounce_cameo.svg
+                style=margin-top:-0.7em;
+                src=tmp-images/e5_sec_powers_experimental_6.svg
+
+            ...as each crease is folded in order, the next biggest
+            triangle (on the outside edge of the crease) encompasses
+            all folded-over-stuff-so-far!
+
+        |> SolutionNote
+
+            One way to formally verify that...
+
+            |> Image
+                src=tmp-images/e5_sec_powers_bounce_ratio_explanation_fraction.svg
+
+            ...in this diagram...
+
+            |> Image
+                src=tmp-images/e5_sec_powers_bounce_ratio_explanation.svg
+
+            ...is to note that...
+
+            |> Image
+                src=tmp-images/e5_sec_powers_bounce_ratio_explanation_fraction_2.svg
+
+            ...by direct measure and simplifying the fraction.

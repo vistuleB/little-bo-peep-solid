@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_102_hgi_"
+      id="_126_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -281,7 +281,8 @@ export default function __Chapter5__() {
             .)
           </NoBreak>
           {" "} For example, 
-          one can see from the graphs that {" "}
+          one can see from the graphs 
+          that {" "}
           <NoBreak>
             <Math>
               $\cos(&#123;1\over 3&#125;) \approx 0.9$
@@ -4365,7 +4366,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_101_hgi_">
+      <Exercises id="_125_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -5299,7 +5300,7 @@ const Rest = () => {
                 Exercise 4.
               </b>
               {" "}
-              compute {" "}
+              Compute {" "}
               <Math>
                 $A/B$
               </Math>
@@ -7062,140 +7063,809 @@ const Rest = () => {
                 Exercise 12.
               </b>
               {" "}
-              If aliens descended on Earth, captured everyone,
-              took you aside and told you that the fate of
-              humanity rested on your ability to “illustrate
-              powers of secant”, without further instructions,
-              what would you do?
+              Below are four function compositions
+              depicted as “function box” diagrams, with
+              inputs coming in the right and outputs
+              going out the left (with {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} being some generic
+              function):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/hzK8.svg" />
+            <Pause />
+            <OuterP>
+              Rewrite each case:
+            </OuterP>
+            <Pause />
+            <List
+              type="lower-alpha-paren"
+              markerBold={true}
+              style="gap:0.2em;padding-left:2em;"
+            >
+              <Item>
+                <p>
+                  using the composition {" "}
+                  <NoBreak>
+                    “
+                    <Math>
+                      $\circ$
+                    </Math>
+                    ”
+                  </NoBreak>
+                  {" "} operator;
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  as an expression of the form
+                </p>
+                <Pause />
+                <MathBlock>
+                  $$
+                  x \ra \dots
+                  $$
+                </MathBlock>
+                <Pause />
+                <p>
+                  for some value of {" "}
+                  <NoBreak>
+                    “
+                    <Math>
+                      $\dots$
+                    </Math>
+                    ”.
+                  </NoBreak>
+                </p>
+              </Item>
+            </List>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <b>
+                (a)
+              </b>
+              {" "}
+              The expressions are respectively...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (u \ra u + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (z \ra Bz)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (u \ra u + A)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (z \ra Bz)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...but where the dummy variables don't matter,
+              so we might as well write...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (t \ra t + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (t \ra Bt)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (t \ra t + A)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (t \ra Bt)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...or...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (x \ra x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (x \ra Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra x + A)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra Bx)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...etc. (All are correct.)
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <b>
+                (b)
+              </b>
+              {" "}
+              The expressions are respectively:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x) + A
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra Bf(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...where we use {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} as the dummy variable
+              because we were {" "}
+              <i>
+                told
+              </i>
+              {" "} to use {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (By the statement.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={13}
+        >
+          <ExerciseStatement id="_96_hgi_">
+            <OuterP>
+              <b>
+                Exercise 13.
+              </b>
+              {" "}
+              How would the graphs of the four compositions
+              in {" "}
+              <InChapterLink
+                href="/article/chapter5#_95_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 12
+              </InChapterLink>
+              {" "} 
+              compare to the graph of the generic function {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Presumably the aliens are asking
-              for an illustration of the sequence
+              For reference again, the four functions are:
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \sec \theta, \,\sec^2 \theta, \,\sec^3 \theta, \,\sec^4 \theta, \dots
+              \te&#123;1.&#125;\,\, x \ra f(x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;2.&#125;\,\, x \ra f(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;3.&#125;\,\, x \ra f(x) + A
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;4.&#125;\,\, x \ra Bf(x)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              for some fixed {" "}
+              For which the graphs are respectively obtained by:
+            </OuterP>
+            <Pause />
+            <List
+              type="decimal"
+              style="padding-left: 2em;"
+            >
+              <Item>
+                <p>
+                  horizontally translating the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} units to the left;
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  horizontally compressing the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by a factor {" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    ;
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  vertically translating the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} units upward;
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  vertically dilating (scaling) the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by a factor {" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    .
+                  </NoBreak>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              (Cf. {" "}
+              <NoBreak>
+                <a
+                  href="/article/chapter3#_37_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Exercise 7 of Chapter 3
+                </a>
+                ,
+              </NoBreak>
+              {" "} 
+              {" "}
+              <NoBreak>
+                <a
+                  href="/article/chapter3#_45_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Exercise 14 of Chapter 3
+                </a>
+                .)
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={14}
+        >
+          <ExerciseStatement id="_97_hgi_">
+            <OuterP>
+              <b>
+                Exercise 14.
+              </b>
+              {" "}
+              Let
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f(x) = A\cos(Bx + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and imagine that each of the constants
+              {" "}
               <NoBreak>
                 <Math>
-                  $\theta$
+                  $A$
                 </Math>
                 ,
               </NoBreak>
-              {" "} based on a geometric
-              interpretation of {" "}
+              {" "} {" "}
               <NoBreak>
                 <Math>
-                  $\sec$
+                  $B$
                 </Math>
-                .
+                ,
               </NoBreak>
-              {" "} (Actually...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1, \,\sec \theta, \,\sec^2\theta, \,\sec^3\theta,  \,\sec^4\theta, \dots,
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...we should start the sequence at {" "}
+              {" "} {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "} is connected to a dial,
+              and we originally set {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "}
+              to {" "}
               <NoBreak>
                 <Math>
                   $1$
                 </Math>
                 ,
               </NoBreak>
-              {" "} since
-              {" "}
+              {" "} {" "}
               <NoBreak>
                 <Math>
-                  $1 = \sec^0(\theta)$
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} respectively.
+              Then, in the following order, we...
+            </OuterP>
+            <Pause />
+            <List
+              type="decimal"
+              style="padding-left:25%;"
+            >
+              <Item>
+                <p>
+                  ...increase {" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  {" "} from {" "}
+                  <Math>
+                    $0$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $1&#123;&#125;.33$
+                    </Math>
+                    ;
+                  </NoBreak>
+                  {" "} and
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  ...increase {" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "} from {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $2.33$
+                    </Math>
+                    ;
+                  </NoBreak>
+                  {" "} and
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  ...increase {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} from {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $3.33$
+                    </Math>
+                    ;
+                  </NoBreak>
+                  {" "} and
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  ...increase {" "}
+                  <Math>
+                    $D$
+                  </Math>
+                  {" "} from {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $4.33$
+                    </Math>
+                    .
+                  </NoBreak>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              How does the graph of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} react to each
+              of these changes, as they occur in sequence?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              One can understand
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f = x \ra A\sin(Bx + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as a 5-fold composition (with functions
+              boxes going right to left):
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ABCD_roles_general_comp.svg" />
+            <Pause />
+            <OuterP>
+              In the initial setting of the variables
+              with {" "}
+              <Math>
+                $A = B = 1$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $C = D = 0$
+              </Math>
+              {" "}
+              the four boxes on the periphery are the
+              identity*:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ABCD_roles_identity_comp.svg" />
+            <Pause />
+            <OuterP>
+              (*When we say “the identity” we mean
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the identity function
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              which is the function {" "}
+              <NoBreak>
+                <Math>
+                  $x \ra x$
                 </Math>
                 .)
               </NoBreak>
-              {" "} Here is a possibility:
-            </OuterP>
-            <Pause />
-            <Image src="/tmp-images/e5_sec_powers_bounce.svg" />
-            <Pause />
-            <OuterP>
-              Starting with a length of {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} bottom left,
-              successive multiplications by {" "}
-              <Math>
-                $\sec(\theta)$
-              </Math>
-              {" "}
-              are performed by “dropping a height up” onto
-              the opposite side of the angle {" "}
-              <NoBreak>
-                <Math>
-                  $\theta$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              bouncing back and forth between the two sides.
             </OuterP>
             <OuterP class="indent-10">
-              If we are willing to reproduce the angle
+              As we dial {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} up from {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $1.33$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              the box to the right of sin is
+              “brought online”:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ABCD_roles_identity_comp_C.svg" />
+            <Pause />
+            <OuterP>
+              The effect of adding such a box to the
+              right of sin is to translate the
+              graph of sin to the left by {" "}
+              <NoBreak>
+                <Math>
+                  $C$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as discussed
+              in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_96_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 13
+                </InChapterLink>
+                .
+              </NoBreak>
+              {" "}
+              The second step in which {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} is increased from
               {" "}
               <Math>
-                $\theta$
+                $1$
               </Math>
-              {" "} several times over,
-              another possibility is to draw a “snail stack”
-              of right triangles sharing a common vertex:
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $2.33$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} brings the rightmost box online:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/4t03.svg" />
+            <Image src="/tmp-images/e5_ABCD_roles_identity_comp_B.svg" />
             <Pause />
             <OuterP>
-              Or if we move the angle {" "}
+              Because this box is to the right of all
+              we have so far (which is {" "}
+              <NoBreak>
+                <Math>
+                  $x \ra \sin(x + C)$
+                </Math>
+                ),
+              </NoBreak>
+              {" "}
+              it compresses the [current] graph horizontally by
+              a factor {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} also as discussed in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_96_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 13
+                </InChapterLink>
+                ;
+              </NoBreak>
+              {" "}
+              step 3 brings the box immediately to the
+              left of sin online...
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ABCD_roles_identity_comp_A.svg" />
+            <Pause />
+            <OuterP>
+              ...which scales the graph-so-far vertically by a
+              factor {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as discussed in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_96_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 13
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "}
+              and finally step 4 brings the leftmost box online...
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ABCD_roles_identity_comp_D.svg" />
+            <Pause />
+            <OuterP>
+              ...that vertically translates the entire graph,
+              as it stands, by {" "}
               <Math>
-                $\theta$
+                $D$
               </Math>
-              {" "} around from
-              one end of the previously obtained segment to
-              another, another somewhat exotic possibility is
-              this one:
+              {" "} units up, as again discussed
+              in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_96_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 13
+                </InChapterLink>
+                .
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <OuterP class="indent-10">
+              To recapitulate, starting from {" "}
+              <NoBreak>
+                <Math>
+                  $y = \sin(x)$
+                </Math>
+                ...
+              </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/bwJb.svg" />
+            <List style="padding-left:33px;padding-right:2em;">
+              <Item>
+                <p>
+                  step 1: translates the graph left by {" "}
+                  <Math>
+                    $1.33\,\,(= C)$
+                  </Math>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  step 2: compresses the resulting graph horizontally by {" "}
+                  <Math>
+                    $2.33\,\,(= B)$
+                  </Math>
+                  {" "} about the {" "}
+                  <Math>
+                    $y$
+                  </Math>
+                  {" "} axis
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  step 3: dilates the resulting graph vertically by {" "}
+                  <Math>
+                    $3.33\,\,(= A)$
+                  </Math>
+                  {" "} about the {" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "} axis
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  step 4: translates the resulting graph up by {" "}
+                  <Math>
+                    $4.33\,\,(= D)$
+                  </Math>
+                </p>
+              </Item>
+            </List>
             <Pause />
             <OuterP>
-              We can also take a page from the bridge in 
-              Shadow of the Colossus:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Qzlj.svg" />
-            <Pause />
-            <OuterP>
-              (In which we are effectively using a circular arc
-              to each time realign the last obtained segment with
-              horizontal.)
-            </OuterP>
-            <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_sec_powers_experimental_2.svg" />
-            <Pause />
-            <OuterP>
-              In any case, with so many nice drawings,
-              you are bound to save humanity!
+              ...and that's the end.
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -7204,19 +7874,269 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                One can note that the third diagram makes a cameo
-                appearance within the second diagram (modulo scale):
+                For simplicity of analysis it's important
+                to bring the pre- and post-processing
+                functions online “from the inside out”,
+                gluing new boxes on to what's already there:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/eiL2.svg" />
+              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_inside_out.svg" />
+              <Pause />
+              <OuterP>
+                Otherwise, to give an example of what may
+                go wrong, say that we first bring the rightmost
+                box online:
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_rightmost.svg" />
+              <Pause />
+              <OuterP>
+                At this stage we have
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra \sin(Bx)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                which is a copy of {" "}
+                <Math>
+                  $\sin(x)$
+                </Math>
+                {" "} horizontally
+                compressed by {" "}
+                <NoBreak>
+                  <Math>
+                    $B = 2.33$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} Then if we bring
+                {" "}
+                <Math>
+                  $x \ra x + C$
+                </Math>
+                {" "} online...
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_middle.svg" />
+              <Pause />
+              <OuterP>
+                ...at this stage {" "}
+                <Math>
+                  $x \ra x + C$
+                </Math>
+                {" "} is
+                NEITHER A PRE-PROCESSING NOR A POST-PROCESSING FUNCTION; 
+                the effect of adding this function is
+                NOT a translation of the graph by {" "}
+                <Math>
+                  $C$
+                </Math>
+                {" "} units in any
+                direction!; instead, the effect of inserting this
+                intermediate function into the chain is
+                that the graph is translated left by
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                C/B
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                units, as we can verify by rewriting
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra \sin(Bx + C)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                (the function above), as
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra \sin(B(x + C/B))
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...which corresponds to this modified assemblage
+                of boxes...
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_rearranged.svg" />
+              <Pause />
+              <OuterP>
+                ...and in which you can see that, after we
+                dial up {" "}
+                <Math>
+                  $B$
+                </Math>
+                {" "} (introducing the {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $x \ra Bx$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} box),
+                the effect of dialing up {" "}
+                <Math>
+                  $C$
+                </Math>
+                {" "} is to translate
+                the graph left by {" "}
+                <Math>
+                  $C/B$
+                </Math>
+                {" "} units. 
+                (The point is, if you
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                translate-and-then-compress
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                or if you
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                compress-and-then-translate
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                the two amounts of translation required are
+                not the same, to achieve the same end result—if
+                the translation comes second, it needs to
+                be compressed, because everything else has
+                already been compressed!) (And by the 
+                way things blow up even worse if you attempt
+                to dial {" "}
+                <Math>
+                  $D$
+                </Math>
+                {" "} up before dialing {" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "} up, because if
+                you attempt the same distributivity trick on the
+                left-hand side to invert the order of the two boxes
+                there...
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_ABCD_roles_identity_comp_rearranged_zz.svg">
+                <ImageLeft src="/tmp-images/e5_ABCD_roles_Au_cloud.svg" />
+              </Image>
+              <Pause />
+              <OuterP>
+                ...you find that after {" "}
+                <Math>
+                  $D$
+                </Math>
+                {" "} has been dialed up,
+                and it comes time to change {" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} there are TWO
+                boxes left that depend on {" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  !—so
+                </NoBreak>
+                {" "} long story
+                short, it becomes very difficult/annoying to
+                analyze the effect that changing {" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "} has on the
+                graph, after {" "}
+                <Math>
+                  $D$
+                </Math>
+                {" "} is nonzero.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The problem uses ‘sin’ as an example but the
+                same reasoning (with boxes) applies to any
+                function. Namely, the graph
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                y = A\cdot f(Bx + C) + D
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is the graph {" "}
+                <Math>
+                  $y = f(x)$
+                </Math>
+                {" "} translates left by
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} compressed (horizontally) by {" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                scaled (vertically) by {" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} etc. (Well, “etc.”:
+                translated vertically by {" "}
+                <NoBreak>
+                  <Math>
+                    $D$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_96_hgi_">
+        <Exercise number={15}>
+          <ExerciseStatement id="_98_hgi_">
             <OuterP>
               <b>
-                Exercise 13.
+                Exercise 15.
               </b>
               {" "}
               A point {" "}
@@ -7537,21 +8457,21 @@ const Rest = () => {
             <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_97_hgi_">
+        <Exercise number={16}>
+          <ExerciseStatement id="_99_hgi_">
             <OuterP>
               <b>
-                Exercise 14.
+                Exercise 16.
               </b>
               {" "}
               If, 
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
+                  href="/article/chapter5#_98_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 13
+                  Exercise 15
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -7652,10 +8572,10 @@ const Rest = () => {
               length in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
+                  href="/article/chapter5#_98_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 13
+                  Exercise 15
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -7685,10 +8605,10 @@ const Rest = () => {
               {" "} in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
+                  href="/article/chapter5#_98_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 13
+                  Exercise 15
                 </InChapterLink>
                 :
               </NoBreak>
@@ -7719,10 +8639,10 @@ const Rest = () => {
               {" "} in the formulas of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
+                  href="/article/chapter5#_98_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 13
+                  Exercise 15
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -7752,11 +8672,11 @@ const Rest = () => {
             <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_98_hgi_">
+        <Exercise number={17}>
+          <ExerciseStatement id="_100_hgi_">
             <OuterP>
               <b>
-                Exercise 15.
+                Exercise 17.
               </b>
               {" "}
               Compute the vertical distance from {" "}
@@ -7895,11 +8815,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={16}>
-          <ExerciseStatement id="_99_hgi_">
+        <Exercise number={18}>
+          <ExerciseStatement id="_101_hgi_">
             <OuterP>
               <b>
-                Exercise 16.
+                Exercise 18.
               </b>
               {" "}
               Given the following sketch, to what angle
@@ -8119,11 +9039,239 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={17}>
-          <ExerciseStatement id="_100_hgi_">
+        <Exercise number={19}>
+          <ExerciseStatement id="_102_hgi_">
             <OuterP>
               <b>
-                Exercise 17.
+                Exercise 19.
+              </b>
+              {" "}
+              If aliens descended on Earth, captured everyone,
+              took you aside and told you that the fate of
+              humanity rested on your ability to “illustrate
+              powers of secant”, without further instructions,
+              what would you do?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Presumably the aliens are asking
+              for an illustration of the sequence
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1, \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some fixed {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} based on a geometric
+              interpretation of {" "}
+              <NoBreak>
+                <Math>
+                  $\sec$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} where we start the sequence
+              at {" "}
+              <NoBreak>
+                <Math>
+                  $\sec^0(\theta) = 1$
+                </Math>
+                .
+              </NoBreak>
+              {" "} Here is a possibility:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_sec_powers_bounce.svg" />
+            <Pause />
+            <OuterP>
+              Starting with a length of {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} bottom left,
+              successive multiplications by {" "}
+              <Math>
+                $\sec \theta$
+              </Math>
+              {" "}
+              are performed by “dropping a height up” onto
+              the opposite side of the angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              bouncing back and forth between the two sides.
+            </OuterP>
+            <OuterP class="indent-10">
+              If we are willing to reproduce the angle
+              {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} several times over,
+              another possibility is to draw a “snail stack”
+              of right triangles sharing a common vertex:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_sec_powers_snail.svg" />
+            <Pause />
+            <OuterP>
+              Or if we move the angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} around from
+              one end of the previously obtained segment to
+              another, another somewhat exotic possibility is
+              this one:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_sec_powers_inverted_towers.svg" />
+            <Pause />
+            <OuterP>
+              Though in fact, this tower is already embedded
+              as a subdiagram of our first illustration (modulo
+              scale and orientation) (!):
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_sec_powers_bounce_cameo.svg" />
+            <Pause />
+            <OuterP>
+              In each of these diagrams, in fact,
+              successive “similar” lengths are a factor {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "}
+              from one another—giving rise to many possibilities
+              of labeling a single diagram. For example, in the
+              original diagram, the blue lengths below also
+              form a geometric sequence
+              of ratio {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} [below left], leading to an
+              alternate labeling of the tower [below middle],
+              or the snail stack could be labeled from the
+              outside [below right]:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_sec_powers_bounce_triptic.svg" />
+            <Pause />
+            <OuterP>
+              Two slight variants on another diagram (for
+              which more labelings are also possible):
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_sec_powers_circles_two_labelings.svg" />
+            <Pause />
+            <OuterP>
+              The following is the first few steps of a diagram
+              that would be self-intersecting (and make
+              a mess) for {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \leq \eta/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so
+              we draw it with {" "}
+              <NoBreak>
+                <Math>
+                  $\theta &gt; \eta/2$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_sec_powers_experimental_4.svg" />
+            <Pause />
+            <OuterP>
+              Zoomed out, with more steps:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_sec_powers_experimental_5.svg" />
+            <Pause />
+            <OuterP>
+              ...but by this time the aliens are sick of hearing you
+              talk about secant, and have moved on to another planet.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The last spiral is actually obtained by folding the “triangle tower”
+                over, as below:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:-0.7em;"
+                src="/tmp-images/e5_sec_powers_experimental_6.svg"
+              />
+              <Pause />
+              <OuterP>
+                ...as each crease is folded in order, the next biggest
+                triangle (on the outside edge of the crease) encompasses
+                all folded-over-stuff-so-far!
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                One way to formally verify that...
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_sec_powers_bounce_ratio_explanation_fraction.svg" />
+              <Pause />
+              <OuterP>
+                ...in this diagram...
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_sec_powers_bounce_ratio_explanation.svg" />
+              <Pause />
+              <OuterP>
+                ...is to note that...
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_sec_powers_bounce_ratio_explanation_fraction_2.svg" />
+              <Pause />
+              <OuterP>
+                ...by direct measure and simplifying the fraction.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={20}>
+          <ExerciseStatement id="_103_hgi_">
+            <OuterP>
+              <b>
+                Exercise 20.
               </b>
               {" "}
               The graph {" "}
@@ -8160,12 +9308,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Going back to basics,
+              From basics,
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \sin x + \cos x
+              \cos x + \sin x
               $$
             </MathBlock>
             <Pause />
@@ -8183,14 +9331,10 @@ const Rest = () => {
                 <Math>
                   $y$
                 </Math>
-                -coordinate:
+                -coordinate.
               </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_v3_1.svg" />
-            <Pause />
-            <OuterP>
-              We can conceptualize the coordinates as
+              {" "}
+              We can represent the coordinates as
               two displacements (changes), one in {" "}
               <NoBreak>
                 <Math>
@@ -8357,10 +9501,10 @@ const Rest = () => {
                   <Math>
                     $x = -135^\circ$
                   </Math>
-                  .*
+                  .
                 </NoBreak>
-                {" "}  
-                (*Plus multiples of {" "}
+                {" "}
+                (Plus multiples of {" "}
                 <NoBreak>
                   <Math>
                     $360^\circ$
@@ -8393,7 +9537,7 @@ const Rest = () => {
               <Image src="/tmp-images/e5_cosx_plus_sinx_with_max_min_info.svg" />
               <Pause />
               <OuterP>
-                Or with radians:
+                We can also use radians:
               </OuterP>
               <Pause />
               <Image src="/tmp-images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg" />
@@ -8433,6 +9577,5260 @@ const Rest = () => {
               <OuterP>
                 ...in case you're not familiar with this kind of
                 arithmetic!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={21}>
+          <ExerciseStatement id="_104_hgi_">
+            <OuterP>
+              <b>
+                Exercise 21.
+              </b>
+              {" "}
+              Compute
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;11\over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by hand using long division.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Here is the division in American notation
+              overlayed on top of a “Plaza” wallpaper to
+              help demarcate the different columns of
+              digits (in American notation each column
+              of digits is associated to a power of {" "}
+              <NoBreak>
+                <Math>
+                  $10$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              with both the numerator and the quotient
+              [the result] living inside the same set of
+              columns, and only the denominator living
+              outside, in a time-space porthole of its own):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Mpne.svg" />
+            <Pause />
+            <OuterP>
+              The division stops when we see the same
+              remainder twice—here {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $40$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} reappears, which
+              means that the next digit of the quotient
+              will be {" "}
+              <Math>
+                $5$
+              </Math>
+              {" "} (like the second digit of the
+              quotient, that we obtained back when we had
+              a remainder of {" "}
+              <NoBreak>
+                <Math>
+                  $40$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} the next one {" "}
+              <Math>
+                $7$
+              </Math>
+              {" "} (the
+              third digit of the quotient), etc—digits will
+              repeat and the “final” quotient when we let
+              the division unravel infinitely far to the right
+              will be
+            </OuterP>
+            <div style="font-size:1.65em;margin:1em 0;">
+              <MathBlock>
+                $$
+                1.\overline&#123;571428&#125;
+                $$
+              </MathBlock>
+            </div>
+            <OuterP>
+              ...where the decimal point is after the
+              first {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} because the first {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} is in the
+              {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $10^0$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} column.
+            </OuterP>
+            <Pause />
+            <StarDivider />
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                If you've never done this kind of thing before, the
+                division starts in this blank state:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.4em;"
+                src="/build-img/svgo-svg/Izko.svg"
+              />
+              <Pause />
+              <OuterP>
+                We take the first digit of the numerator,
+                which is {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $1$
+                  </Math>
+                  ’,
+                </NoBreak>
+                {" "} ask “how many times does
+                {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} we will write the answer
+                here:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/60IQ.svg"
+              />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
+                {" "} goes {" "}
+                <Math>
+                  $0$
+                </Math>
+                {" "} times into {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/51XG.svg"
+              />
+              <Pause />
+              <OuterP>
+                We next add a digit from the numerator, giving
+                us {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we ask “how many times does {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} go into
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} we will write the answer here:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/IIuD.svg"
+              />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $1$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
+                {" "} goes {" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "} times into {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/0ytO.svg"
+              />
+              <Pause />
+              <OuterP>
+                We subtract
+              </OuterP>
+              <div style="font-size:1.65em;margin:1em 0;">
+                <MathBlock>
+                  $$
+                  1 \times 7
+                  $$
+                </MathBlock>
+              </div>
+              <OuterP>
+                from {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} giving us a new remainder
+                of {" "}
+                <Math>
+                  $4$
+                </Math>
+                {" "} (the very first “remainder” is actually {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                before anything starts) (before anything started we
+                had {" "}
+                <NoBreak>
+                  <Math>
+                    $11 = 7 \times 0 + 11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and now we have
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $11 = 7 \times 1 + 4$
+                  </Math>
+                  ):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/vfTE.svg"
+              />
+              <Pause />
+              <OuterP>
+                Because {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} does not fit into {" "}
+                <Math>
+                  $4$
+                </Math>
+                {" "} (and if it did,
+                we would have done something wrong)
+                we “bring down a {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} that is actually part of
+                a hidden sequence of {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} sitting to the right
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/cQmJ.svg"
+              />
+              <Pause />
+              <OuterP>
+                We ask “how many times does {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $40$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "}
+                we will write the answer here:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/4s2G.svg"
+              />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
+                {" "} goes {" "}
+                <Math>
+                  $5$
+                </Math>
+                {" "} times into {" "}
+                <NoBreak>
+                  <Math>
+                    $40$
+                  </Math>
+                  ):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/RSlJ.svg"
+              />
+              <Pause />
+              <OuterP>
+                We subtract
+              </OuterP>
+              <div style="font-size:1.65em;margin:1em 0;">
+                <MathBlock>
+                  $$
+                  5\times 7
+                  $$
+                </MathBlock>
+              </div>
+              <OuterP>
+                from {" "}
+                <NoBreak>
+                  <Math>
+                    $40$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} giving us a new remainder
+                of {" "}
+                <Math>
+                  $5$
+                </Math>
+                {" "}
+                (well, to be technical, the remainder is actually
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $5 \times 10^&#123;-1&#125;$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} not {" "}
+                <NoBreak>
+                  <Math>
+                    $5$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} but
+                the teacher at the board will often say {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $5$
+                  </Math>
+                  ”):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/Yo2I.svg"
+              />
+              <Pause />
+              <OuterP>
+                Because {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} does not fit into {" "}
+                <NoBreak>
+                  <Math>
+                    $5$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we bring
+                another {" "}
+                <Math>
+                  $0$
+                </Math>
+                {" "} down from our infinite reserve of
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  's:
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/xkzr.svg"
+              />
+              <Pause />
+              <OuterP>
+                (Etc.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={22}>
+          <ExerciseStatement id="_105_hgi_">
+            <OuterP>
+              <b>
+                Exercise 22.
+              </b>
+              {" "}
+              Compute
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;22\over 7&#125;, \,\,\,\,\, &#123;33\over 7&#125;, \,\,\,\,\,\rm&#123;and&#125;\,\,\,\,\,&#123;44\over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by hand using long division.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The divisions, pursued up to the point where
+              remainders repeat, look as follows:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/CURd.svg" />
+            <Pause />
+            <OuterP>
+              In each case, the digits of the quotient
+              are about to restart from the first digit
+              after the decimal point; the answers are therefore:
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \displaylines&#123;
+                \Large \up&#123;1.5&#125;&#123;22\over 7&#125; = 3.\overline&#123;142857&#125;\\
+                \Large \up&#123;1.7&#125;&#123;33\over 7&#125; = 4.\overline&#123;714285&#125;\\
+                \Large \up&#123;1.7&#125;&#123;44\over 7&#125; = 6.\overline&#123;285714&#125;
+                &#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <Pause />
+            <StarDivider style="margin-top:-1.5em" />
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Because...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \displaylines&#123;
+                \Large         \eta  \approx&#123;11\over 7&#125;\\
+                \Large \up&#123;1.7&#125;2\eta \approx&#123;22\over 7&#125;\\
+                \Large \up&#123;1.7&#125;3\eta \approx&#123;33\over 7&#125;\\
+                \Large \up&#123;1.7&#125;4\eta \approx&#123;44\over 7&#125;
+                &#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...we thus have...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \displaylines&#123;
+                \Large         \eta \approx  1.\overline&#123;571428&#125;\\
+                \Large \up&#123;1.7&#125;2\eta \approx 3.\overline&#123;142857&#125;\\
+                \Large \up&#123;1.7&#125;3\eta \approx 4.\overline&#123;714285&#125;\\
+                \Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...though each estimate is only accurate to
+                two decimal places, meaning that the last four
+                digits of the period are “wasted (in)accuracy”.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={23}>
+          <ExerciseStatement id="_106_hgi_">
+            <OuterP>
+              <b>
+                Exercise 23.
+              </b>
+              {" "}
+              To close our division skills: use the
+              table below to compute the integer part and
+              the first three digits past the decimal point
+              (no rounding based on the fourth digit) of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              15542486476949/777
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by hand, using long division. What is the
+              new (last) remainder when the quotient reaches
+              the 3rd digit after the decimal point, and what
+              equation is implied from the quotient and the
+              new (last) remainder at that point?
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;array&#125;&#123;c|cc&#125;
+              \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
+              \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
+              \\
+              \end&#123;array&#125;
+              $$
+            </MathBlock>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Here is the long division, pursued up to
+              the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $10^&#123;-3&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} column of the quotient,
+              including one last remainder computation
+              that occurs pursuant to adding the digit in
+              the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $10^&#123;-3&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} column of the quotient (this
+              is what the problem statement refers to as
+              the “last remainder”):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/yLyJ.svg" />
+            <Pause />
+            <OuterP>
+              Said quotient is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              20003200099.033
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              while the new (last) remainder is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.359
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and the equation linking the two is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              15542486476949 = 777 \times 20003200099.033 + 0.359
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              per properties of the long division algorithm.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Lest anyone get left behind, we can go
+                over the division “on the board”
+                for a bit.
+              </OuterP>
+              <OuterP class="indent-10">
+                We start by asking “how many times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/x9Ng.svg" />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <Math>
+                  $0$
+                </Math>
+                {" "} (that we need not write
+                down, but we can), we move to asking
+                “how many times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $15$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/6uMQ.svg" />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we move to asking
+                “how many times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $155$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/D10R.svg" />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we move to asking
+                “how many times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $1554$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/2kAo.svg" />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we subtract {" "}
+                <Math>
+                  $2 \times 777$
+                </Math>
+                {" "}
+                from {" "}
+                <NoBreak>
+                  <Math>
+                    $1554$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} giving us a new “prefix” for
+                the remainder:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/qwI2.svg" />
+              <Pause />
+              <OuterP>
+                (FYI, the remainder now consists of these yellow
+                digits:)
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/mxCX.svg" />
+              <Pause />
+              <OuterP>
+                Continuing, we bring down a {" "}
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} ask “how many times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/SaeW.svg" />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} we bring down a {" "}
+                <NoBreak>
+                  <Math>
+                    $4$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} ask “how many
+                times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $24$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go
+                here:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/sCyt.svg" />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} we bring down an {" "}
+                <NoBreak>
+                  <Math>
+                    $8$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} ask “how many
+                times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $248$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go
+                here:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/QJ-A.svg" />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} we bring down a {" "}
+                <NoBreak>
+                  <Math>
+                    $6$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} ask “how many
+                times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $2486$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go
+                here:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/aGjl.svg" />
+              <Pause />
+              <OuterP>
+                The answer is {" "}
+                <NoBreak>
+                  <Math>
+                    $3$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we subtract {" "}
+                <Math>
+                  $3 \times 777$
+                </Math>
+                {" "}
+                from {" "}
+                <NoBreak>
+                  <Math>
+                    $2648$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} giving us a new remainder:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/mwDw.svg" />
+              <Pause />
+              <OuterP>
+                (And to be specific, the remainder is now formed
+                by...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/zsA9.svg" />
+              <Pause />
+              <OuterP>
+                ...these yellow digits.) Etc.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                If you need help brushing up on your
+                long-form subtraction, say your subtraction is this:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/DL_-.svg" />
+              <Pause />
+              <OuterP>
+                You can either treat the top or bottom number as an
+                odometer, and count how much a car with this
+                odometer must be driven back/forth to reach the other
+                number.
+              </OuterP>
+              <OuterP class="indent-10">
+                Viewing the top number as an odometer, the odometer
+                would be as follows:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/tkDH.svg" />
+              <Pause />
+              <OuterP>
+                Starting from the right end of the subtraction, we ask
+                “by how much (or how little) does a car need to be
+                driven backwards, to turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $2$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into an {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $8$
+                  </Math>
+                  ’?”,
+                </NoBreak>
+                {" "} we
+                will write the answer below:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/eoA2.svg" />
+              <Pause />
+              <OuterP>
+                The answer is: {" "}
+                <Math>
+                  $4$
+                </Math>
+                {" "} [miles
+                <b>
+                  ] (
+                </b>
+                say):
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/XKhM.svg" />
+              <Pause />
+              <OuterP>
+                But the odometer will pass
+                from {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} on its way down to {" "}
+                <NoBreak>
+                  <Math>
+                    $8$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} so we also
+                turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $6$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} (or “borrow a {" "}
+                <NoBreak>
+                  <Math>
+                    $10$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} to do
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $12 - 8 = 4$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} as some teachers put it):
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/5nhK.svg" />
+              <Pause />
+              <OuterP>
+                Next we ask “by how many {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $10$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles] does the car need
+                to be driven back, to turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’?”,
+                </NoBreak>
+                {" "} we
+                will write the answer below:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/_-US.svg" />
+              <Pause />
+              <OuterP>
+                The answer is: {" "}
+                <Math>
+                  $6$
+                </Math>
+                {" "} {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $10$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles]:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/jj0a.svg" />
+              <Pause />
+              <OuterP>
+                But here too the odometer will pass
+                from {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} as we reduce it, so the wheel to its
+                left must be turned back a notch as well; and because that
+                wheel is a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} already, the wheel to {" "}
+                <i>
+                  its
+                </i>
+                left
+                must be turned back a notch; and so on, resulting in a small cascade
+                effect:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/qylE.svg" />
+              <Pause />
+              <OuterP>
+                Next we ask “by how many {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $100$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles] does the car need
+                to be driven back, to turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’?”,
+                </NoBreak>
+                {" "} we
+                will write the answer below:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/anHE.svg" />
+              <Pause />
+              <OuterP>
+                The answer is: {" "}
+                <Math>
+                  $9$
+                </Math>
+                {" "} {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $100$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles]:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/Tte9.svg" />
+              <Pause />
+              <OuterP>
+                Next we ask “by how many {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $1000$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles] does the car need
+                to be driven back, to turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’?”:
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/_sJ5.svg" />
+              <Pause />
+              <OuterP>
+                The answer is: {" "}
+                <Math>
+                  $4$
+                </Math>
+                {" "} {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $1000$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles]:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/jqe5.svg" />
+              <Pause />
+              <OuterP>
+                Etc—we finally obtain:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:1em;margin-bottom:1em;"
+                src="/build-img/svgo-svg/y31C.svg"
+              />
+              <Pause />
+              <OuterP>
+                (And like we alluded to above, one can also
+                consider the bottom number to be the odometer,
+                and “count up” towards the top number, leading
+                to a symmetric algorithm, but one method is not
+                better than the other.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                Generally,
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/E79T.svg" />
+              <Pause />
+              <OuterP>
+                at any point in a long division after the
+                remainder is updated to account for a new term
+                added to the quotient. That's what the remainder
+                is for: to satisfy this equation!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={24}>
+          <ExerciseStatement id="_107_hgi_">
+            <OuterP>
+              <b>
+                Exercise 24.
+              </b>
+              {" "}
+              What is the angle marked ‘?’, as a function
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Vd8x.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              It is {" "}
+              <NoBreak>
+                <Math>
+                  $\eta - \theta$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (Since...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta + (\eta - \theta) + \eta = 2\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...you know that's the right answer!) (Nb: {" "}
+              <NoBreak>
+                <Math>
+                  $2\eta = 180^\circ$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Two angles that sum to {" "}
+                <Math>
+                  $\eta$
+                </Math>
+                {" "} are
+                called {" "}
+                <i>
+                  complementary
+                </i>
+                , with each angle being
+                the {" "}
+                <i>
+                  complement
+                </i>
+                {" "} of the other.
+                The two
+                non-right angles of a right triangle are,
+                therefore, complementary!
+                (Not
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                complimentary
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                which would indicate that the angles are
+                given to you for free—everything in math is
+                free, not just those angles!)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={25}>
+          <ExerciseStatement id="_108_hgi_">
+            <OuterP>
+              <b>
+                Exercise 25.
+              </b>
+              {" "}
+              What is the angle marked ‘?’, as a function of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/MXN9.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              It is {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as well. One method of
+              deduction uses the fact that “the complement
+              of my complement is myself”:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/SIuZ.svg" />
+            <Pause />
+            <OuterP>
+              Another method of deduction uses the fact that,
+              together with the angle immediately to its left
+              (which happens to be {" "}
+              <NoBreak>
+                <Math>
+                  $\eta - \theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because
+              it is the complement of {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} via the smallest
+              right triangle present), the sought-for angle
+              makes up {" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/lswQ.svg" />
+            <Pause />
+            <OuterP>
+              (In one case we use the fact that the
+              medium-sized triangle is a right triangle,
+              in another case that the smallest-size
+              triangle is a right triangle—and in both cases
+              that the original, largest triangle is a
+              right triangle.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={26}>
+          <ExerciseStatement id="_109_hgi_">
+            <OuterP>
+              <b>
+                Exercise 26.
+              </b>
+              {" "}
+              Argue that, in the following figure, the
+              angle marked ‘?’ equals {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the angle at
+              the center of the circle:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/XRFw.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The ending and starting half-lines of the
+              angle marked ‘?’ are both {" "}
+              <Math>
+                $90^\circ$
+              </Math>
+              {" "} counterclockwise
+              from the ending and starting half-lines,
+              respectively, of the central angle:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/wC_h.svg" />
+            <Pause />
+            <OuterP>
+              The angle marked ‘?’ is therefore obtained
+              by a {" "}
+              <Math>
+                $90^\circ$
+              </Math>
+              {" "} rotation (and then translation)
+              of the central angle, and is, therefore, equal
+              to the central angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                This holds no matter which quadrant we
+                push {" "}
+                <Math>
+                  $\theta$
+                </Math>
+                {" "} to:
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg" />
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Here is an attempt at verbalization:
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the counterclockwise angle from the positive
+                {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} axis to
+                the radial vector [of angle {" "}
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  ]
+                </NoBreak>
+                {" "}
+                equals the counterclockwise angle from the positive
+                {" "}
+                <Math>
+                  $y$
+                </Math>
+                {" "} axis to the counterclockwise tangent [of angle {" "}
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  ]
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                With the various terms illustrated here:
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/svg_ch5_ex_tangent_angle_verbalization_explanation.svg" />
+              <Pause />
+              <OuterP>
+                ...but if it was such a great verbalization we
+                wouldn't need to illustrate it, ergo, we failed!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={27}>
+          <ExerciseStatement id="_110_hgi_">
+            <OuterP>
+              <b>
+                Exercise 27.
+              </b>
+              {" "}
+              Express {" "}
+              <Math>
+                $A/B$
+              </Math>
+              {" "} as a function of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/WqQR.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We shall use the height {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} of the triangle
+              as a stopover between {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/1KiR.svg" />
+            <Pause />
+            <OuterP>
+              On the one hand, {" "}
+              <NoBreak>
+                <Math>
+                  $C/B = \tan(\theta)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/DU_p.svg" />
+            <Pause />
+            <OuterP>
+              On the other hand, {" "}
+              <Math>
+                $A/C = \tan(\theta)$
+              </Math>
+              {" "}
+              also, by the result of Exercise 19 (whereby
+              {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} reappears as the top left angle of
+              the middle-sized right triangle):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/OHG8.svg" />
+            <Pause />
+            <OuterP>
+              The answer is therefore:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (As per the fact that {" "}
+              <NoBreak>
+                <Math>
+                  $(A/B) = (C/B)\cdot(A/C)$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={28}>
+          <ExerciseStatement id="_111_hgi_">
+            <OuterP>
+              <b>
+                Exercise 28.
+              </b>
+              {" "}
+              Express {" "}
+              <Math>
+                $A/B$
+              </Math>
+              {" "} as a function of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/8gZl.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Here are two solutions:
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 1.
+              </i>
+              {" "} We use the small leg {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "}
+              of the triangle as a stopover between {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and
+              {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/0rFq.svg" />
+            <Pause />
+            <OuterP>
+              On the one hand, {" "}
+              <NoBreak>
+                <Math>
+                  $D/B = \sec(\theta)\,\, (= 1/\cos(\theta))$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/xVQI.svg" />
+            <Pause />
+            <OuterP>
+              On the other hand, {" "}
+              <NoBreak>
+                <Math>
+                  $A/D = \sec(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} also (!?):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/4_JC.svg" />
+            <Pause />
+            <OuterP>
+              Thus:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;A\over B&#125; = &#123;D\over B&#125;\times &#123;A\over D&#125; = \sec(\theta)\cdot \sec(\theta) = \sec^2(\theta).
+              $$
+            </MathBlock>
+            <Pause />
+            <StarDivider style="margin-top:0.5em;" />
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 2.
+              </i>
+              {" "}
+              We decompose {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} as {" "}
+              <Math>
+                $B + A'$
+              </Math>
+              {" "}
+              where {" "}
+              <Math>
+                $A' = B - A$
+              </Math>
+              {" "} is the “old {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} from
+              Exercise 22:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/YcZS.svg" />
+            <Pause />
+            <OuterP>
+              We find:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;A\over B&#125; = &#123;&#123;B + A'&#125;\over B&#125; = &#123;B\over B&#125; + &#123;A'\over B&#125; = 1 + \tan^2(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;A'\over B&#125; = \tan^2(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by Exercise 22. (The End.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Since the two solutions compute
+                answers to the same question,
+                one can in particular deduce that
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \sec^2(\theta) = 1 + \tan^2(\theta)
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                for all {" "}
+                <NoBreak>
+                  <Math>
+                    $0 &lt; \theta &lt; \eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} which is
+                the range of {" "}
+                <Math>
+                  $\theta$
+                </Math>
+                {" "} covered by these
+                diagrams. (The same identity holds more
+                generally than just those {" "}
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  's,
+                </NoBreak>
+                {" "}
+                however.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={29}>
+          <ExerciseStatement id="_112_hgi_">
+            <OuterP>
+              <b>
+                Exercise 29.
+              </b>
+              {" "}
+              In general, {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\tan(\theta)$
+              </Math>
+              {" "}
+              are defined for all {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} such that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\theta) \ne 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              with the definitions being...
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              ...for all {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \rr$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (I.e., if the fraction is undefined,
+              then the function is undefined.)
+              Use these definitions
+              to prove that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 + \tan^2(\theta) = \sec^2(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \dom \tan = \dom \sec$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Let {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \dom \tan = \dom \sec$
+                </Math>
+                .
+              </NoBreak>
+              {" "} Then
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\theta) \ne 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 = &#123;\cos(\theta)\over \cos(\theta)&#125; = &#123;\cos^2(\theta)\over \cos^2(\theta)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and, by the definitions,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              1 + \tan^2(\theta)
+              \,\,&amp;=\,\, 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
+              &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
+              &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
+              &amp;=\,\, \up&#123;2&#125; &#123;1\over \cos^2(\theta)&#125; \\
+              &amp;=\,\, \up&#123;2&#125; \left(&#123;1\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
+              &amp;=\,\, \up&#123;2&#125; \sec^2(\theta)
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              using the pythagorean identity in the fourth step.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={30}>
+          <ExerciseStatement id="_113_hgi_">
+            <OuterP>
+              <b>
+                Exercise 30.
+              </b>
+              {" "}
+              Run the computation of the
+              previous exercise backwards, starting with
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec^2(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              at the near end, and ending with
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 + \tan^2(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              at the far end. (No peeking back at the solution of
+              that exercise.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Viz:
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \begin&#123;align&#125;
+                \sec^2(\theta)
+                \,\,&amp;=\,\, &#123;1\over \cos^2(\theta)&#125; \\
+                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
+                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
+                &amp;=\,\, \up&#123;2&#125; 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
+                &amp;=\,\, \up&#123;2&#125;1 + \tan^2(\theta).
+                \end&#123;align&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              (Ta-daa!) (It's slightly harder in this
+              direction, when you have to think of
+              turning the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $1$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} into {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\cos^2(\theta) + \sin^2(\theta)$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "}
+              instead of the other way around.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={31}>
+          <ExerciseStatement id="_114_hgi_">
+            <OuterP>
+              <b>
+                Exercise 31.
+              </b>
+              {" "}
+              In the drawing below, at what coordinates,
+              expressed as a function of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              does the tangent to the circle
+              intersect the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} axes?
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/svg_ch5_ex_theta_tangent.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              For starters assume that {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} lies in
+              the first quadrant, in
+              which case both coordinates are nonnegative, and, more specifically, 
+              are equal to the two 
+              purple lengths below:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_Q1.svg" />
+            <Pause />
+            <OuterP>
+              Regarding this diagram, note that:
+            </OuterP>
+            <Pause />
+            <List style="gap:1em">
+              <Item>
+                <p>
+                  we have already “used up” the fact that
+                  the radius of the circle is {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  {" "} by
+                  making the dropped height (which used to
+                  be a radius) length {" "}
+                  <NoBreak>
+                    <Math>
+                      $1$
+                    </Math>
+                    ;
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  we use a “the complement of my complement
+                  is myself”-type argument to deduce that the
+                  upper left angle is {" "}
+                  <NoBreak>
+                    <Math>
+                      $\theta$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "} as well
+                  (cf. {" "}
+                  <NoBreak>
+                    <InChapterLink
+                      href="/article/chapter5#_107_hgi_"
+                      class="handle-in-chapter-link"
+                    >
+                      Exercise 24
+                    </InChapterLink>
+                    ,
+                  </NoBreak>
+                  {" "}
+                  {" "}
+                  <NoBreak>
+                    <InChapterLink
+                      href="/article/chapter5#_108_hgi_"
+                      class="handle-in-chapter-link"
+                    >
+                      Exercise 25
+                    </InChapterLink>
+                    ).
+                  </NoBreak>
+                  {" "}{" "}
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              Because {" "}
+              <Math>
+                $1 \cdot \sec(\theta) = \sec(\theta)$
+              </Math>
+              {" "} the
+              bottom length is {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} while the vertical
+              length is {" "}
+              <NoBreak>
+                <Math>
+                  $1\cdot \csc(\theta) = \csc(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} similarly:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_Q1_first_solve.svg" />
+            <Pause />
+            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_Q1_second_solve.svg" />
+            <Pause />
+            <OuterP>
+              ...i.e., in the first quadrant, at least, the
+              coordinates are {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\csc(\theta)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_Q1_with_answer.svg" />
+            <Pause />
+            <OuterP>
+              For the other quadrants we can reason by
+              symmetry with the first quadrant:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/svg_ch5_ex_theta_tangent_all_quadrants.svg" />
+            <Pause />
+            <OuterP>
+              In more detail, the product of the two coordinates
+              marked by purple arrows is the same in all four
+              quadrants, because “minus times minus is plus”; but
+              in first quadrant, the product is {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because
+              we know the product takes the form {" "}
+              <Math>
+                $\cos(\theta)\cdot\sec(\theta)$
+              </Math>
+              {" "}
+              in that quadrant;
+              therefore the product is {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} in {" "}
+              <i>
+                all
+              </i>
+              {" "} quadrants; but
+              the coordinate marked by the inside purple arrow is
+              {" "}
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              {" "} in all quadrants; therefore, lastly,
+              the coordinate marked by the {" "}
+              <i>
+                outside
+              </i>
+              {" "} purple arrow
+              is {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} in all quadrants, since {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "}
+              is the unique number whose product with {" "}
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              {" "}
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ;
+              </NoBreak>
+              {" "} similarly the inside orange arrow marks coordinate
+              {" "}
+              <Math>
+                $\sin(\theta)$
+              </Math>
+              {" "} is all quadrants, so the outside orange
+              arrow (by similar reasoning) has coordinate {" "}
+              <Math>
+                $\csc(\theta)$
+              </Math>
+              {" "}
+              in all quadrants, QED. (I.e., the grand conclusion is that the
+              two coordinates are
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \sec(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "} intersection, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \csc(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for the {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "} intersection, no matter the quadrant.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={32}>
+          <ExerciseStatement id="_115_hgi_">
+            <OuterP>
+              <b>
+                Exercise 32.
+              </b>
+              {" "}
+              If
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A \ne 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is a point on the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis, how can we construct
+              the value
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 / A
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by purely geometric means?
+              (We assume that {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $0$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} are also marked on the axis.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The key is to view {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $1/A$
+              </Math>
+              {" "} as values of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A = \sec(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              1/A = \cos(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} if {" "}
+              <NoBreak>
+                <Math>
+                  $|A| \geq 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} or
+              as values of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A = \cos(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              1/A = \sec(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} if {" "}
+              <NoBreak>
+                <Math>
+                  $|A| \leq 1$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              In more detail, we make use of the fact that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be obtained as the intersection of the tangent
+              to the unit circle with the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis (we never discussed
+              this, you can't be faulted for missing it):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/l-Hm.svg">
+              <ImageRight src="/build-img/svgo-svg/7MXJ.svg" />
+            </Image>
+            <Pause />
+            <OuterP>
+              So the idea is, for example if {" "}
+              <NoBreak>
+                <Math>
+                  $|A| \geq 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} to draw
+              a tangent to the circle from {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} then to drop a height
+              onto the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/fLKk.svg" />
+            <Pause />
+            <OuterP>
+              ...the position obtained is the corresponding
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <Math>
+                $\cos(\theta)\cdot\sec(\theta) = 1$
+              </Math>
+              {" "} &#x2705;.
+              If {" "}
+              <Math>
+                $|A| \leq 1$
+              </Math>
+              {" "} we can reverse the process,
+              “dropping a height onto the circle”, and then finding
+              the intersection of the tangent at that point with
+              the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis! (Which will not work, as should be,
+              if and only if {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(\theta) = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} a.k.a., if and only
+              if {" "}
+              <NoBreak>
+                <Math>
+                  $A = 0$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={33}>
+          <ExerciseStatement id="_116_hgi_">
+            <OuterP>
+              <b>
+                Exercise 33.
+              </b>
+              {" "}
+              If a sphere is projected directly outward onto
+              a cylinder abutting the sphere at the equator, with each
+              point remaining at its height, as pictured in the
+              sketch and in the visualization below, by what factor are
+              areas stretched as a function of the latitude {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/dKeI.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Areas are scaled by a factor of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec(\theta) \cdot \cos(\theta) = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because latitudes (circles that slice the sphere
+              horizontally) are stretched by a factor of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec(\theta)
+              $$
+              <ImageRight
+                offset_x="9em"
+                src="/build-img/svgo-svg/MW7M.svg"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the projection, whereas longitudes (the other
+              ones, perpendicular to latitudes) are locally stretched
+              by a factor of...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...as depicted in this...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/BvFn.svg" />
+            <Pause />
+            <OuterP>
+              ...sketch, and because the
+              overall scaling in area is the latitudinal
+              scaling factor times the longitudinal
+              scaling factor. (Area = width {" "}
+              <Math>
+                $\times$
+              </Math>
+              {" "} height,
+              so you take the factor by which “width” scales,
+              times the factor by which “height” scales—presuming
+              your old “width” and “height” are still at right
+              angle to one another after the projection, which
+              is the case here: longitudes and latitudes, that
+              are perpendicular on the sphere, project to
+              lines and circles, respectively, that are
+              perpendicular on the cylinder.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                As a consequence, 
+                the area of a shape on the sphere is equal to
+                the area of the projection of that shape onto
+                the cylinder, for any shape.
+                This (strange?) fact is known as the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                Archimedean property
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of the sphere.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                For example, the following two orange areas, one
+                on the sphere and one on the cylinder, are
+                equal, by the Archimedean property:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/pG5W.svg" />
+              <Pause />
+              <OuterP>
+                For a more fun example, since all corresponding areas
+                on the sphere and on the cylinder are equal in
+                this example by the Archimedean property...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/7Dao.svg" />
+              <Pause />
+              <OuterP>
+                ...it implies that the various “tube sections”
+                of either circle have equal areas on the cylinder,
+                even though dissimilar in shape, since those sections
+                have equal area to one another on the sphere!
+                (For each circle separately.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={34}>
+          <ExerciseStatement id="_117_hgi_">
+            <OuterP>
+              <b>
+                Exercise 34.
+              </b>
+              {" "}
+              Rank the {" "}
+              <Math>
+                $7$
+              </Math>
+              {" "} slices of this
+              sphere with unit radius from the greatest to
+              smallest area slice:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/MAo2.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The three slices of height {" "}
+              <Math>
+                $1/3$
+              </Math>
+              {" "} have the same
+              area, as do the four slices of height {" "}
+              <NoBreak>
+                <Math>
+                  $1/4$
+                </Math>
+                .
+              </NoBreak>
+              {" "} But
+              naturally, the slices of height {" "}
+              <Math>
+                $1/3$
+              </Math>
+              {" "} have larger
+              area than the slices of height {" "}
+              <NoBreak>
+                <Math>
+                  $1/4$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                This holds because each slice has the same area
+                as the horizontal projection of that slice onto a cylinder
+                hugging the sphere, by Exercise 46, and because
+                the area of a cylinder slice only depends on its
+                height.
+                <ImageRight src="/build-img/svgo-svg/xEpL.svg" />
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The slices of height {" "}
+                <Math>
+                  $1/3$
+                </Math>
+                {" "} have area exactly
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;1/3 \over 1/4&#125; = 4/3 = 1.333...
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                times the area of the slices of height {" "}
+                <NoBreak>
+                  <Math>
+                    $1/4$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                given that the area of a slice is directly
+                proportional to its height.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={35}>
+          <ExerciseStatement id="_118_hgi_">
+            <OuterP>
+              <b>
+                Exercise 35.
+              </b>
+              {" "}
+              Give a formula for the area of a sphere of
+              radius {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The area of a sphere of radius {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              4\eta\rt&#123;0.05&#125;r\cdot 2r = 8\eta\rt&#123;0.05&#125;r^2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because it is the same as the area of a cylinder
+              of radius {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} and and height {" "}
+              <NoBreak>
+                <Math>
+                  $2r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} by Exercise 46:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/ivEh.svg" />
+            <Pause />
+            <OuterP>
+              (Namely,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              4\eta\rt&#123;0.05&#125;r\cdot 2r
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the product “circumference {" "}
+              <Math>
+                $\times$
+              </Math>
+              {" "} height”
+              that gives the area of the cylinder.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={36}>
+          <ExerciseStatement id="_119_hgi_">
+            <OuterP>
+              <b>
+                Exercise 36.
+              </b>
+              {" "}
+              Give a formula for the volume of a sphere of
+              radius {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} using the fact that the volume of
+              a cone is “one third base times height”.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The basic idea is that we can view the
+              sphere as being made up of many cones:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/TNdV.svg" />
+            <Pause />
+            <OuterP>
+              When we add up the volume
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 3&#125;\times \rm&#123;base&#125; \times \rm&#123;height&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              over all these cones, each height is nearly {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              so what we really need is the sum of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 3&#125;\times \rm&#123;base&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              over all the cones, which comes out to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 3&#125;\times (&#123;\rm sphere\,\,area&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because the sum of all the areas of the bases
+              is the sphere area. (Everything speaking
+              approximately, for many fine cones, in the
+              limit of our imagination as they become
+              infinitely fine.) (*Where each ‘base’ stands
+              for the shaved-off, “flattened” version of the
+              base.) So multiplying the height {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} back in,
+              we find
+            </OuterP>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  V = &#123;1\over 3&#125;\times (&#123;\rm sphere\,\,area&#125;) \times r = &#123;8\over 3&#125;\eta\rt&#123;.1&#125;r^3
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <OuterP>
+              for the volume {" "}
+              <Math>
+                $V$
+              </Math>
+              {" "} of the sphere, using the fact that
+              the sphere area {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} is
+            </OuterP>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  A = 8\eta\rt&#123;.05&#125;r^2
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <OuterP>
+              by Exercise 49.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={37}>
+          <ExerciseStatement id="_120_hgi_">
+            <OuterP>
+              <b>
+                Exercise 37.
+              </b>
+              {" "}
+              If each of these dotted lines...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/CbYC.svg" />
+            <Pause />
+            <OuterP>
+              ...is a so-called
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              isoset
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (also: {" "}
+              <i>
+                isoline
+              </i>
+              , {" "}
+              <i>
+                contour line
+              </i>
+              , {" "}
+              <i>
+                isoquant
+              </i>
+              ,
+              {" "}
+              <i>
+                isosurface
+              </i>
+              , {" "}
+              <i>
+                isovalue line
+              </i>
+              , or {" "}
+              <i>
+                isovalue set
+              </i>
+              {" "}
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\rt&#123;0.1&#125;$
+                </Math>
+                )
+              </NoBreak>
+              {" "} of the two-variable function
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : \rr^2\ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              given by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f(x, y) = x + y
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              then what are similar
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              isosets
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (man, we like this word! of the two-variable
+              function
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              g : \rr^2\ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              given by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              g(x, y) = xy
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...?
+            </OuterP>
+            <OuterP class="indent-10">
+              [In human terms: draw solutions of the equation
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              xy = C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              in {" "}
+              <Math>
+                $\rr^2$
+              </Math>
+              {" "} for some different values of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $C \in \rr$
+                </Math>
+                .]
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Next: Use any geometric insights gleaned from
+              these
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              isosets
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (😍😍😍) to find the maximum value of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin\theta&#123;&#125;\cos\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and specify the set of
+              values of {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} for which the maximum is
+              attained.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The isosets of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x, y) \ra xy
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (lambda-notation for a two-variable function)
+              have this general appearance (it depends on
+              the window and on the exact isosets that
+              you choose to  draw—we chose a few
+              different random ones):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/ME1k.svg" />
+            <Pause />
+            <OuterP>
+              Note that each isoset consists of the union of TWO
+              disjoint curves, except for the isoset
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              xy = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (or: “the isoset
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;(x, y) \in \rr^2 : xy = 0 \&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...” to pedantically indicate that we are
+              talking about {" "}
+              <i>
+                a set of points in the plane
+              </i>
+              ),
+              that, for its part, cannot be said to consist
+              of two {" "}
+              <i>
+                ~
+              </i>
+              ~
+              <i>
+                disjoint
+              </i>
+              ~
+              <i>
+                ~
+              </i>
+              {" "} curves, because it
+              is the union of the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -
+              </NoBreak>
+              {" "} axes, that
+              intersect.
+            </OuterP>
+            <OuterP class="indent-10">
+              (For a throwback, the solution of Exercise
+              16 of {" "}
+              <a
+                href="/article/chapter3#_53_hgi_"
+                class="handle-out-chapter-link"
+              >
+                Chapter 3
+              </a>
+              {" "} mentions that the product of
+              two numbers is {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} if and only if one of the
+              numbers is {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .
+              </NoBreak>
+              {" "} In our case,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              xy = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              if and only
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,x = 0\,
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <i>
+                or
+              </i>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,y = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              happens to be the equation of the {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} axis, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              happens to be the equation of the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis, which
+              explains the shape of the isoset.)
+            </OuterP>
+            <OuterP class="indent-10">
+              If we draw a “heatmap” of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              xy
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              in some region of the plane, similarly to
+              Exercise 18, the larger (more positive)
+              values show up in the first and third
+              quadrants, while the smaller (more negative)
+              values show up in the second and fourth
+              quadrants:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/FGx3.svg" />
+            <Pause />
+            <OuterP>
+              Of particular interest to us: at a given
+              distance from the origin, the line
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = y
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be seen seen to hold the largest of values of {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Pdlp.svg" />
+            <Pause />
+            <OuterP>
+              In particular,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos\theta\,\sin\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              will reach its maximum at those values of
+              {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} that put the point {" "}
+              <Math>
+                $(\cos \theta, \sin \theta)$
+              </Math>
+              {" "}
+              at either {" "}
+              <Math>
+                $(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)$
+              </Math>
+              {" "} or
+              {" "}
+              <Math>
+                $(-\sqrt&#123;0.5&#125;, -\sqrt&#123;0.5&#125;)$
+              </Math>
+              {" "} on the unit circle;
+              these values of {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} are
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\
+              \Large \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125;\up&#123;1.5&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as per this illustration...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/HCJC.svg" />
+            <Pause />
+            <OuterP>
+              ...and the maximum value of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \cos\theta\,\sin\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              itself will be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large (-\sqrt&#123;0.5&#125;) \cdot (-\sqrt&#123;0.5&#125;) = &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              equivalently; though one should also note
+              that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\ \Large \up&#123;1.5&#125;= \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which is the “clever” way of writing the set
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                's
+              </NoBreak>
+              {" "} for which the maximum is achieved.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                As a consequence, the function
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra \sin x&#123;&#125;\cos x
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                discussed in Exercise 4 has maximum value
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;1\over 2&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                achieved for inputs in the set
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                comprising the sequence of values...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \large \dots,\,\, -&#123;7\eta\over 2&#125;,\,\, -&#123;3\eta\over 2&#125;,\,\, &#123;\dn&#123;0.25&#125;\eta \over 2&#125;,\,\, &#123;5\eta \over 2&#125;,\,\, &#123;9\eta \over 2&#125;,\,\, \dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...or...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \large \dots,\,\, &#123;-3.5\eta&#125;,\,\, &#123;-1.5\eta&#125;,\,\, &#123;0.5\eta&#125;,\,\, &#123;2.5\eta&#125;,\,\, &#123;4.5\eta&#125;,\,\, \dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...(maybe more legibly); annotating the graph
+                given in Exercise 4:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/IAYw.svg" />
+              <Pause />
+              <StarDivider />
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                For completeness, here is a closer look at
+                the isoset {" "}
+                <NoBreak>
+                  <Math>
+                    $xy = 1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} including some labeled points:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:1em;margin-bottom:1em;"
+                src="/build-img/svgo-svg/Hk2G.svg"
+              />
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                Because a point {" "}
+                <Math>
+                  $(x, y)$
+                </Math>
+                {" "} satisfies
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                if and only if the point {" "}
+                <Math>
+                  $(2x, y)$
+                </Math>
+                {" "} satisfies
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = 2
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                (one has
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x_0y_0 = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                if and only if
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                (2x_0)y_0 = 2
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                surprise or not) the curve
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = 2
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is the horizontal dilation of the curve
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                by a factor {" "}
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} likewise, it is also the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                vertical dilation
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of the curve
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                by a factor {" "}
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} the two dilations are
+                illustrated here:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/u7DJ.svg" />
+              <Pause />
+              <Image src="/build-img/svgo-svg/h7PS.svg" />
+              <Pause />
+              <OuterP>
+                More generally, the curve
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = C
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                for {" "}
+                <Math>
+                  $C \ne 0$
+                </Math>
+                {" "} is the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <NoBreak>
+                  <Math>
+                    $(a, b)$
+                  </Math>
+                  -dilation
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                [meaning: a horizontal dilation by a factor
+                {" "}
+                <Math>
+                  $a$
+                </Math>
+                {" "} followed by a vertical dilation by a
+                factor {" "}
+                <NoBreak>
+                  <Math>
+                    $b$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} or vice-versa, the order doesn't
+                matter] of the curve
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                for all pairs {" "}
+                <Math>
+                  $(a, b)$
+                </Math>
+                {" "} such that {" "}
+                <NoBreak>
+                  <Math>
+                    $ab = C$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} for
+                example,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = 3
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <NoBreak>
+                  <Math>
+                    $(3, 1)$
+                  </Math>
+                  -dilation
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                [horizontal dilation by factor {" "}
+                <NoBreak>
+                  <Math>
+                    $3$
+                  </Math>
+                  ]
+                </NoBreak>
+                {" "} of
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $xy = 1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} as it is the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <NoBreak>
+                  <Math>
+                    $(1, 3)$
+                  </Math>
+                  -dilation
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                [vertical dilation by factor {" "}
+                <NoBreak>
+                  <Math>
+                    $3$
+                  </Math>
+                  ]
+                </NoBreak>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $xy = 1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                but is also the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <NoBreak>
+                  <Math>
+                    $(\sqrt&#123;3&#125;, \sqrt&#123;3&#125;)$
+                  </Math>
+                  -dilation
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $xy = 1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} since {" "}
+                <NoBreak>
+                  <Math>
+                    $\sqrt&#123;3&#125;\cdot\sqrt&#123;3&#125; = 3$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <NoBreak>
+                  <Math>
+                    $(12, &#123;1\over 4&#125;)$
+                  </Math>
+                  -dilation
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $xy = 1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} since {" "}
+                <NoBreak>
+                  <Math>
+                    $12 \cdot &#123;1\over 4&#125; = 3$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                etc.
+              </OuterP>
+              <OuterP class="indent-10">
+                For another specifically noteworthy instance
+                of this phenomenon,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <NoBreak>
+                  <Math>
+                    $(-1, -1)$
+                  </Math>
+                  -dilation
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of itself, since {" "}
+                <NoBreak>
+                  <Math>
+                    $(-1)\cdot(-1) = 1$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                a fact that is also known as the “central
+                symmetry” of {" "}
+                <NoBreak>
+                  <Math>
+                    $xy = 1$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} (You can take this
+                last statement as the definition of “centrally
+                symmetric”. I.e., a set {" "}
+                <Math>
+                  $S \subseteq \rr^2$
+                </Math>
+                {" "}
+                is centrally symmetric if and only if {" "}
+                <Math>
+                  $S$
+                </Math>
+                {" "}
+                is equal to the {" "}
+                <NoBreak>
+                  <Math>
+                    $(-1, -1)$
+                  </Math>
+                  -dilation
+                </NoBreak>
+                {" "} of
+                itself.)
+              </OuterP>
+              <OuterP class="indent-10">
+                (Indeed, since
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = C
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                if and only if
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                (-x)(-y) = C
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                each of the isosets is centrally symmetric, not only
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $xy = 1$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 4.
+                </i>
+                {" "}
+                Among other additional symmetries, the line
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x = y
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is an axis of symmetry of each isoset, meaning
+                that each isoset equals its mirror reflection
+                about that line:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/A16i.svg" />
+              <Pause />
+              <OuterP>
+                Note that, technically, a set {" "}
+                <Math>
+                  $S \subseteq \rr^2$
+                </Math>
+                {" "}
+                [meaning: {" "}
+                <Math>
+                  $S$
+                </Math>
+                {" "} is a set of points in the plane] is
+                symmetric about {" "}
+                <Math>
+                  $x = y$
+                </Math>
+                {" "} if and only if
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large (x_0, y_0) \in S \iff (y_0, x_0) \in S
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                [read {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $(x_0, y_0)$
+                  </Math>
+                </NoBreak>
+                {" "} is in {" "}
+                <Math>
+                  $S$
+                </Math>
+                {" "} if and only if
+                {" "}
+                <Math>
+                  $(y_0, x_0)$
+                </Math>
+                {" "} is in {" "}
+                <NoBreak>
+                  <Math>
+                    $S$
+                  </Math>
+                  ”]
+                </NoBreak>
+                {" "} for all {" "}
+                <NoBreak>
+                  <Math>
+                    $(x_0, y_0)$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                Illustrated:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/r97O.svg" />
+              <Pause />
+              <OuterP>
+                In our case, a point {" "}
+                <Math>
+                  $(x_0, y_0)$
+                </Math>
+                {" "} is on the curve
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                xy = C
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                if and only if the point {" "}
+                <Math>
+                  $(y_0, x_0)$
+                </Math>
+                {" "} is on
+                the curve, because {" "}
+                <NoBreak>
+                  <Math>
+                    $x_0y_0 = y_0x_0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} by
+                commutativity of multiplication. This observation
+                constitutes the “proof” that each isoset is
+                mirror symmetric through {" "}
+                <NoBreak>
+                  <Math>
+                    $x = y$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+              <OuterP class="indent-10">
+                (Or...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \large
+                \begin&#123;align&#125;
+                \large     &amp; (x_0, y_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125; \\
+                \large\up&#123;1.4&#125; \iff&amp; \,x_0y_0 = C \\
+                \large\up&#123;1.4&#125; \iff&amp; \,y_0x_0 = C \\
+                \large\up&#123;1.4&#125; \iff&amp; (y_0, x_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125;
+                \end&#123;align&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...to put it over-the-top formally.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 5.
+                </i>
+                {" "}
+                Lastly, each isoset is symmetric
+                through the line {" "}
+                <NoBreak>
+                  <Math>
+                    $x = -y$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/d39n.svg" />
+              <Pause />
+              <OuterP>
+                Indeed, this symmetry can be obtained as the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                composition
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of a symmetry through {" "}
+                <Math>
+                  $x = y$
+                </Math>
+                {" "} and a central
+                symmetry:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/EMv4.svg" />
+              <Pause />
+              <OuterP>
+                In other words, any set that is symmetric through
+                {" "}
+                <Math>
+                  $x = y$
+                </Math>
+                {" "} and that is centrally symmetric is also
+                symmetric through {" "}
+                <NoBreak>
+                  <Math>
+                    $x = -y$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} so there is nothing “new”
+                to prove here, except to make this observation
+                about composition!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={38}>
+          <ExerciseStatement id="_121_hgi_">
+            <OuterP>
+              <b>
+                Exercise 38.
+              </b>
+              {" "}
+              An access staircase goes up the side of a
+              hemispheric gas tank. It keeps a constant angle
+              of {" "}
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "} to vertical at its inside edge 
+              until it reaches {" "}
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "} up the tank, at which
+              point it makes a beeline for the top:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/wF1d.svg" />
+            <Pause />
+            <OuterP>
+              How long, roughly, is the inside handrail
+              of the staircase as a function of the radius
+              of the tank?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Putting {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} for the radius, the answer is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx r(1 + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot 1=r
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              accounts for the first (lower) portion of the
+              handrail, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot(\eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              accounts for the upper portion of the handrail.
+              (Ignoring that the handrail doesn't quite
+              follow through to the tippy-top of the gas tank,
+              per the picture.)
+            </OuterP>
+            <OuterP class="indent-10">
+              To reason about the lower portion of the handrail
+              imagine a butterly that follows up the
+              handrail by flying straight up and
+              straight over, then straight up and straight
+              over again, etc, like so:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/EiSR.svg" />
+            <Pause />
+            <OuterP>
+              The total length of the handrail is the sum of
+              all the diagonal segments (in dotted white) above.
+              Because the diagonal segment has length
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;2&#125;h
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for a leg in which the butterly goes up by {" "}
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the
+              total length of the diagonal segments is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              times the total amount that the butterfly goes up
+              for the first half of the handrail. But this
+              amount—call it {" "}
+              <NoBreak>
+                <Math>
+                  $H$
+                </Math>
+                —is
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot\sin(45^\circ) = r\cdot &#123;1\over \sqrt&#123;2&#125;&#125; = &#123;r\over \sqrt&#123;2&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as illustrated here:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/VrOC.svg" />
+            <Pause />
+            <OuterP>
+              And therefore the sum of the white diagonal segments
+              is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;2&#125;\cdot H = \sqrt&#123;2&#125;\cdot &#123;r\over \sqrt&#123;2&#125;&#125; = r
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...just {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as we said.
+            </OuterP>
+            <OuterP class="indent-10">
+              On the other hand, the upper portion of the handrail
+              has length
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot(\eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (modulo the kerfuffle at the top) simply by the fact
+              that, in a circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} an angle of {" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "}
+              radians subtends an arc of length {" "}
+              <NoBreak>
+                <Math>
+                  $r\alpha$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/E5ov.svg" />
+            <Pause />
+            <OuterP>
+              ...and hence the {" "}
+              <i>
+                total
+              </i>
+              {" "} length of the handrail
+              is...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx r + r\cdot\eta/2 = r(1 + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...as claimed.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Another way to think about the length of the lower
+                portion of the handrail is via the green triangle 
+                depicted below, that drops down  onto the handrail
+                like a curtain, starting at the top of the lower
+                portion of the handrail:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/tyZN.svg" />
+              <Pause />
+              <OuterP>
+                If we “unroll” the triangle onto a vertical plane
+                while keeping its left edge vertical we find a 
+                triangle with a straight lower edge at {" "}
+                <Math>
+                  $45^\circ$
+                </Math>
+                {" "}
+                to horizontal, because that is the property of the
+                handrail to maintain this angle everywhere:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/-SnV.svg" />
+              <Pause />
+              <OuterP>
+                Hence the length of the lower half of the handrail
+                is
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \large \sqrt&#123;2&#125;H
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                with {" "}
+                <Math>
+                  $H = r/\sqrt&#123;2&#125;$
+                </Math>
+                {" "} as previously defined.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={39}>
+          <ExerciseStatement id="_122_hgi_">
+            <OuterP>
+              <b>
+                Exercise 39.
+              </b>
+              {" "}
+              Give a decimal approximation to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r(1 + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $r = 100$
+                </Math>
+                m,
+              </NoBreak>
+              {" "} accurate within {" "}
+              <NoBreak>
+                <Math>
+                  $\pm 5\%$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (No calculators.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta \approx &#123;11\over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              within 1/1000th, we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+                 r(1 + \eta/2)\,\, \approx&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;0.0&#125; r\left(1 + &#123;11\over 14&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(&#123;14 + 11\over 14&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\cdot &#123;25\over 14&#125;\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\cdot &#123;28 - 3\over 14&#125;\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(2 - &#123;3\over 14&#125;\right)\\
+                                   \approx&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(2 - &#123;3\over 15&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(2 - &#123;1\over 5&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r(2 - 0.2)\\
+                                         =&amp;\,\,\,\dn&#123;0.0&#125;\up&#123;1.3&#125; 1.8r
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              leading to an approximation of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx 180\te&#123;m&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $r = 100$
+                </Math>
+                m.
+              </NoBreak>
+              {" "}
+              For a different, coarser approach, one can
+              even use
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta \approx &#123;10.5\over 7&#125; = 1.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which gives
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 + \eta/2 \approx 1.75
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and a final approximation of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx 175\te&#123;m&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $r = 100$
+                </Math>
+                m.
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The two approximations given produce
+                {" "}
+                <NoBreak>
+                  1
+                  <Math>
+                    $\%$
+                  </Math>
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  2
+                  <Math>
+                    $\%$
+                  </Math>
+                </NoBreak>
+                {" "} of error, respectively, 
+                or {" "}
+                <Math>
+                  $\approx 0.8\%$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $\approx 1.9\%$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} 
+                more exactly, respectively. (For the
+                second approximation,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.5
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is nearly {" "}
+                <NoBreak>
+                  5
+                  <Math>
+                    $\%$
+                  </Math>
+                </NoBreak>
+                {" "} less than {" "}
+                <Math>
+                  $\eta/2$
+                </Math>
+                {" "} right
+                off the bat, but the fraction represented
+                by this error is diluted by the fact that
+                we add 1.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The true value is {" "}
+                <NoBreak>
+                  <Math>
+                    $178.5$
+                  </Math>
+                  m,
+                </NoBreak>
+                {" "} as
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \eta/2 = 0.785\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and some, as
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \eta = 1.570\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and some. (Note that half of {" "}
+                <Math>
+                  $0.07$
+                </Math>
+                {" "} is {" "}
+                <NoBreak>
+                  <Math>
+                    $0.035$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                and that {" "}
+                <NoBreak>
+                  <Math>
+                    $0.75 + 0.035 = 0.785$
+                  </Math>
+                  .)
+                </NoBreak>
+                {" "} (PS: In fact,
+                doing the division
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.57/2
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                “by head” constitutes another perfectly valid
+                method of approximation, if you can remember
+                that {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta = 1.570\dots$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={40}>
+          <ExerciseStatement id="_123_hgi_">
+            <OuterP>
+              <b>
+                Exercise 40.
+              </b>
+              {" "}
+              From the first three steps of the
+              division of {" "}
+              <Math>
+                $11$
+              </Math>
+              {" "} by {" "}
+              <Math>
+                $7$
+              </Math>
+              {" "} we find {" "}
+              <NoBreak>
+                <Math>
+                  $\eta \approx 1.57$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/bA_Z.svg" />
+            <Pause />
+            <OuterP>
+              Use this approximation of {" "}
+              <Math>
+                $\eta$
+              </Math>
+              {" "} to approximate
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              three-quarters the circumference
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              of a circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $100$
+                </Math>
+                m.
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is one-quarter the circumference of a circle divided
+              by its radius,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              3\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is three-quarters the circumference of a circle divided
+              by its radius; using {" "}
+              <NoBreak>
+                <Math>
+                  $\eta \approx 1.57$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $3\eta$
+              </Math>
+              {" "} is approximately
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              3 \times 1.57 = 3\times (1.5 + 0.07) = 3 \times 1.5 + 3\times 0.07
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              =\,\,4.5 + 0.21
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              =\,\,4.71
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so three-quarters the circumference of a circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $100$
+                </Math>
+                m
+              </NoBreak>
+              {" "}
+              will be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx 4.71 \times 100\te&#123;m&#125; = 471\te&#123;m&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The following table gives approximation ratios
+                going from {" "}
+                <Math>
+                  $n = 1$
+                </Math>
+                {" "} to {" "}
+                <Math>
+                  $n = 4$
+                </Math>
+                {" "} quarters, similarly
+                computed, that one might as well remember:
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;array&#125;&#123;c|c|c&#125;
+                \,\,\,\,n\,\,\,\, &amp; n(1.5 + 0.07) &amp; \,\,\,\,\approx n\eta\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
+                1 &amp; \up&#123;1.2&#125; 1.5 + 0.07 &amp; 1.57\\
+                2 &amp; \up&#123;1.2&#125; 3.0 + 0.14 &amp; 3.14\\
+                3 &amp; \up&#123;1.2&#125; 4.5 + 0.21 &amp; 4.71\\
+                4 &amp; \up&#123;1.2&#125; 6.0 + 0.28 &amp; 6.28
+                \end&#123;array&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                For example,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                6.28
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is an approximation to the circumference of a circle
+                divided by its radius, since {" "}
+                <NoBreak>
+                  <Math>
+                    $6.28 = 4 \times 1.57$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                While
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large&#123;11\over 7&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is about half-a-part-in-a-thousand
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                too large
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                compared to the true value of {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} 
+                the approximations above just so turn out to
+                be (really nearly quite exactly) half-a-part-in-a-thousand
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                too small
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                due to the fact that the the long division of {" "}
+                <Math>
+                  $11$
+                </Math>
+                {" "} by
+                {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} is terminated early. But if we pursue the division
+                for just one more step, which adds a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $1$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to the
+                quotient...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/qFb7.svg" />
+              <Pause />
+              <OuterP>
+                ...we obtain the modified approximation...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \eta \approx 1.571
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...that is, for its part, an {" "}
+                <i>
+                  overestimate
+                </i>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                (Whereas
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.57
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is still an {" "}
+                <i>
+                  underestimate
+                </i>
+                .) From there,
+                any further digits that are added to the quotient only
+                worsen the approximation, since we are already overshooting!
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                In fact, the true value of {" "}
+                <Math>
+                  $\eta$
+                </Math>
+                {" "} is roughly half-way
+                between
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.57
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;11\over 7&#125; = 1.571428\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                being
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \,\eta = 1.570796\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                per the calculator. (That knows this value by heart.)
+                Taking into account that
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.570796
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is {" "}
+                <i>
+                  basically
+                </i>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.5708
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                gives us the following improved approximations of
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $2\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $3\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $4\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} based on adding
+                multiples of {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $08$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to the tail end of our previous
+                approximations:
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;array&#125;&#123;c|c|c&#125;
+                \,\,\,\,n\,\,\,\, &amp; n(1.5 + 0.07 + 0.0008) &amp; \,\,\,\,\approx n\eta\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
+                1 &amp; \up&#123;1.2&#125; 1.5 + 0.07 + 0.0008 &amp; 1.5708\\
+                2 &amp; \up&#123;1.2&#125; 3.0 + 0.14 + 0.0016 &amp; 3.1416\\
+                3 &amp; \up&#123;1.2&#125; 4.5 + 0.21 + 0.0024 &amp; 4.7124\\
+                4 &amp; \up&#123;1.2&#125; 6.0 + 0.28 + 0.0032 &amp; 6.2832
+                \end&#123;array&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...with these approximations being good to {" "}
+                <i>
+                  three
+                  parts in a million
+                </i>
+                . (Improved, namely, from {" "}
+                <i>
+                  half a
+                  part in a thousand
+                </i>
+                .)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={41}>
+          <ExerciseStatement id="_124_hgi_">
+            <OuterP>
+              <b>
+                Exercise 41.
+              </b>
+              {" "}
+              A ship travels from the South pole of a watery
+              copy of the Earth to the North pole while maintaining
+              a constant compass bearing of {" "}
+              <Math>
+                $5^\circ$
+              </Math>
+              {" "} North of East.
+              (See Fig.) What is the length of the curve traced by the
+              ship?
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/NUnQ.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Imagine that a butterfly that only flies by
+              small steps East and North, alternately, follows 
+              with the boat:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/tjm5.svg" />
+            <Pause />
+            <OuterP>
+              (We replace
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge 5^\circ
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \alpha
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              radians for more generality, that will make the
+              problem no more nor less easy.) The total of all the
+              small northward legs that the butterfly travels is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              20004\,\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or one-half the so-called {" "}
+              <i>
+                meridional circumference
+              </i>
+              {" "}
+              of the Earth. But the total distance traveled
+              by the ship is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \csc(\alpha)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              times the sum of all the butterly's northward legs:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/u2Fw.svg" />
+            <Pause />
+            <OuterP>
+              The total distance traveled by the ship
+              is therefore
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 20004\,\te&#123;km&#125;\cdot \csc \alpha = &#123;20004\,\te&#123;km&#125; \over \sin \alpha&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              that comes out to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \sim 229520\,\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              with {" "}
+              <NoBreak>
+                <Math>
+                  $\alpha = 5^\circ$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                In reality the butterly's triangle is
+                drawn on a spherical shell and it is
+                only because the triangle is very small
+                compared to the radius of the shell that
+                it resembles an ordinary triangle, without
+                quite being an ordinary triangle. But what
+                is important is that the {" "}
+                <i>
+                  ratios
+                </i>
+                {" "} of the
+                lengths of the butterly triangle approach
+                those of an ordinary right triangle of
+                angle {" "}
+                <Math>
+                  $\alpha$
+                </Math>
+                {" "} as we make the butterfly's
+                triangle sufficiently small. 
+                (Which is believable.)
               </OuterP>
             </SolutionNote>
           </Solution>

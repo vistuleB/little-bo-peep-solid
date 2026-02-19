@@ -1,13 +1,14 @@
 |> Exercise
+    work=ing
     handle=_four_compositions_graphed_
 
-    How would the graph of each of the compositions
-    from Exercise >>_four_compositions_expressed_ 
+    How would the graphs of the four compositions
+    in Exercise >>_four_compositions_expressed_ 
     compare to the graph of the generic function $f$?
 
     |> Solution
 
-        For reference, the four functions are:
+        For reference again, the four functions are:
         $$
         \te{1.}\,\, x \ra f(x + A)
         $$
@@ -34,5 +35,5 @@
 
             vertically dilating (scaling) the graph of $f$ by a factor $B$.
 
-        (Cf. Exercise 7 of Chapter >>functions, Exercise 14 of
-        Chapter >>functions.)
+        (Cf. Exercise >>_cosine_of_1000x_ of Chapter >>functions, 
+        Exercise >>_what_seq_AB_ of Chapter >>functions.)

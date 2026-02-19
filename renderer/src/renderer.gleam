@@ -241,7 +241,6 @@ fn cli_usage_supplementary() {
 }
 
 pub fn main() {
-  io.println("here's your char:" <> "\u{2060}" <> "[end]")
   let args = argv.load().arguments
 
   let #(args, digest) = case list.contains(args, "--echo-args") {
@@ -320,6 +319,8 @@ pub fn main() {
     Error(_) -> panic
   }})
   let previously_existing_artifacts = article_paths |> list.append(constant_paths)
+
+  io.println("")
 
   // actual running of renderer
   use artifacts_printed_this_run <- on.error_ok(

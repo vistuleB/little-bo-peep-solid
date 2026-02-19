@@ -1,12 +1,9 @@
 |> Exercise
     handle=_triangle_conch_
 
-    compute $A/B$ assuming all same-colored
+    Compute $A/B$ assuming all same-colored
     triangles are similar and
     with the help of a calculator:
-    !! Compute the ratio $A/B$
-    !! with the help of a calculator while assuming all 
-    !! same-colored triangles are similar:
 
     |> Image
         style=width:500px;margin-top:1em;margin-bottom:1em;

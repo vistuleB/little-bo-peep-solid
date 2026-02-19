@@ -523,6 +523,7 @@
         downwards”—$0$ is neither positive, nor negative.
 
 |> Section
+    work=ing
 
     *The second derivative of position.*
     A graph of the form...
@@ -578,7 +579,8 @@
     seconds:
 
     |> Image
-        src=images/svg_ch4_ch_position_by_time_tangent_v2.svg
+        work=ing
+        src=tmp-images/svg_ch4_ch_position_by_time_tangent_v2.svg
 
     The ratio “rise over run” has the form
 

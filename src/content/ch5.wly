@@ -33,22 +33,12 @@
     is a circle of radius $1$, while “the” unit
     circle is the circle of radius $1$ centered
     at $(0, 0)$.) For example, 
-    !! if we pluck
-    !! $$
-    !! x = {1\over 3}
-    !! $$
-    !! out of the ether to be the subject of closer inspection,
-    !! if we look at 
-    !! $x = {1\over 2}$, we see $\cos({1\over 2}) \approx 0.9$, $\sin({1\over 2}) \approx 0.5$:
-    !! $x = {1\over 3}$, 
-    !! we can see from the graphs 
-    one can see from the graphs that $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
+    one can see from the graphs 
+    that $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
 
     |> Image
         src=tmp-images/svg_ch5_ch_cosine_and_sine_@0.333.svg
 
-    !! The reason for these values, per the definitions,
-    !! is that
     Per the definitions, the point one third of a
     unit counterclockwise from $(1, 0)$ on the unit
     circle has coordinates $\approx 0.9$ in $x$
