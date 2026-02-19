@@ -97,25 +97,27 @@
 
         |> SolutionNote
 
-            If we 
-            !! attempt to 
-            layer this new information
-            on top of the original graph 
-            of Exercise >>_four_graphs_
-            it looks like so:
-            !! it takes on this appearance:
+            To be clear, as well as for interest, this is what
+            the graph of Exercise >>_four_graphs_ looks like
+            with the new information layered on, in degrees and in radians:
+            !! If we 
+            !! layer this new information
+            !! on top of the original graph 
+            !! of Exercise >>_four_graphs_
+            !! it looks like so:
 
             |> Image
                 src=tmp-images/e5_cosx_plus_sinx_with_max_min_info.svg
 
-            We can also use radians:
+            !! We can also use radians:
 
             |> Image
                 src=tmp-images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg
 
             (Note that $45^\circ = 0.78539\ldots = \eta/2$
-            as a real number, there is no technical difference
-            between the two graphs.)
+            as a real number, 
+            !! there is no technical difference between the two graphs.)
+            the two graphs really express the same thing.)
 
         |> SolutionNote
 

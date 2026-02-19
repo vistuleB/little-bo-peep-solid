@@ -2980,6 +2980,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "svg_ch5_ch_unit_circle_@0.5_smaller_v2.svg": {
+    "build-version": "svgo-svg/SPMY.svg",
+    "build-version-created-on": 1771481599,
+    "build-method": "svgo",
+    "build-version-size": 39601,
+    "original-size": 184672,
+    "compressed-size": 39601,
+    "compression": "78.56%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "derivative_sketching_method_2_step_2.svg": {
     "build-version": "svgo-svg/Biz-.svg",
     "build-version-created-on": 1767294298,
@@ -5127,12 +5138,12 @@
   },
   "svg_ch5_ch_unit_circle_@-3_smaller.svg": {
     "build-version": "svgo-svg/9Ygl.svg",
-    "build-version-created-on": 1770587872,
+    "build-version-created-on": 1771481599,
     "build-method": "svgo",
-    "build-version-size": 33803,
-    "original-size": 102282,
-    "compressed-size": 33803,
-    "compression": "66.95%",
+    "build-version-size": 32015,
+    "original-size": 102302,
+    "compressed-size": 32015,
+    "compression": "68.71%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },

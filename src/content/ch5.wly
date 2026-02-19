@@ -1,4 +1,5 @@
 |> Section
+    work=ing
     handle=_ch5_start_
 
     *Cos and Sin. (“Cosine” and “sine”.)* We've
@@ -34,23 +35,23 @@
     circle is the circle of radius $1$ centered
     at $(0, 0)$.) For example, 
     one can see from the graphs 
-    that $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
+    !! that $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
+    that $\cos({1\over 2}) \approx 0.9$, $\sin({1\over 2}) \approx 0.5$:
 
     |> Image
-        src=tmp-images/svg_ch5_ch_cosine_and_sine_@0.333.svg
+        src=tmp-images/svg_ch5_ch_cosine_and_sine_@0.5_v2.svg
 
-    Per the definitions, the point one third of a
+    Per the definitions, the point half a
     unit counterclockwise from $(1, 0)$ on the unit
     circle has coordinates $\approx 0.9$ in $x$
     and $\approx 0.3$ in $y$ (or actually 
-    !! $0.87758...$ and $0.47942...$, 
-    $0.94495...$ and $0.32719...$, 
+    $0.87758...$ and $0.47942...$, 
     it turns out, as we can know by
     a calculator equipped with ‘sin’ and ‘cos’):
 
     |> Image
-        src=tmp-images/svg_ch5_ch_unit_circle_@0.333_smaller.svg
-        !! src=images/svg_ch5_ch_unit_circle_@0.5_smaller.svg
+        !! src=tmp-images/svg_ch5_ch_unit_circle_@0.333_smaller.svg
+        src=images/svg_ch5_ch_unit_circle_@0.5_smaller_v2.svg
 
     As a second example, the graphs indicate that
     $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$

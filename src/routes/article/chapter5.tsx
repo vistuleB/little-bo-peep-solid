@@ -155,7 +155,10 @@ export default function __Chapter5__() {
       <ArticleTitle banner="Chapter 5:">
         The Trigonometric Functions
       </ArticleTitle>
-      <Section id="section-1">
+      <Section
+        work="ing"
+        id="section-1"
+      >
         <OuterP>
           <b>
             Cos and Sin. (“Cosine” and “sine”.)
@@ -285,23 +288,23 @@ export default function __Chapter5__() {
           that {" "}
           <NoBreak>
             <Math>
-              $\cos(&#123;1\over 3&#125;) \approx 0.9$
+              $\cos(&#123;1\over 2&#125;) \approx 0.9$
             </Math>
             ,
           </NoBreak>
           {" "} {" "}
           <NoBreak>
             <Math>
-              $\sin(&#123;1\over 3&#125;) \approx 0.3$
+              $\sin(&#123;1\over 2&#125;) \approx 0.5$
             </Math>
             :
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/svg_ch5_ch_cosine_and_sine_@0.333.svg" />
+        <Image src="/tmp-images/svg_ch5_ch_cosine_and_sine_@0.5_v2.svg" />
         <Pause />
         <OuterP>
-          Per the definitions, the point one third of a
+          Per the definitions, the point half a
           unit counterclockwise from {" "}
           <Math>
             $(1, 0)$
@@ -327,12 +330,12 @@ export default function __Chapter5__() {
           {" "} (or actually 
           {" "}
           <Math>
-            $0.94495...$
+            $0.87758...$
           </Math>
           {" "} and {" "}
           <NoBreak>
             <Math>
-              $0.32719...$
+              $0.47942...$
             </Math>
             ,
           </NoBreak>
@@ -341,7 +344,7 @@ export default function __Chapter5__() {
           a calculator equipped with ‘sin’ and ‘cos’):
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/svg_ch5_ch_unit_circle_@0.333_smaller.svg" />
+        <Image src="/build-img/svgo-svg/SPMY.svg" />
         <Pause />
         <OuterP>
           As a second example, the graphs indicate that
@@ -9520,25 +9523,19 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                If we 
-                layer this new information
-                on top of the original graph 
-                of {" "}
+                To be clear, as well as for interest, this is what
+                the graph of {" "}
                 <InChapterLink
                   href="/article/chapter5#_88_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 5
                 </InChapterLink>
-                {" "}
-                it looks like so:
+                {" "} looks like
+                with the new information layered on, in degrees and in radians:
               </OuterP>
               <Pause />
               <Image src="/tmp-images/e5_cosx_plus_sinx_with_max_min_info.svg" />
-              <Pause />
-              <OuterP>
-                We can also use radians:
-              </OuterP>
               <Pause />
               <Image src="/tmp-images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg" />
               <Pause />
@@ -9548,8 +9545,8 @@ const Rest = () => {
                   $45^\circ = 0.78539\ldots = \eta/2$
                 </Math>
                 {" "}
-                as a real number, there is no technical difference
-                between the two graphs.)
+                as a real number, 
+                the two graphs really express the same thing.)
               </OuterP>
             </SolutionNote>
             <Pause />
