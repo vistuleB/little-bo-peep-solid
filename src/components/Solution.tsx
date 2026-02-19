@@ -366,10 +366,10 @@ export const BackupArrow = () => {
   let h = w;
   let triangle_sidelength = 11.5;
   let triangle_height = triangle_sidelength * Math.sqrt(3) / 2;
-  let triangle_tip_to_edge = 7;
-  let arrow_start_to_edge = 7.4;
+  let triangle_tip_to_edge = 8.5;
+  let arrow_start_to_edge = 9;
   let arrow_body_width = 2;
-  let arrow_body_length = 18;
+  let arrow_body_length = 13;
 
   return (
     <svg
