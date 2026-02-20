@@ -91,4 +91,4 @@ as the root folder of a VSCode workspace ("File -> Save Workspace as..."):
 }
 ```
 
-Note that `content=selection` is included in the `--only` arguments so that various "control nodes" of `src/content/__parent.wly` are not filtered out, but selected instead.
+Note that `content=selection` is included in the `--only` arguments so that various "control nodes" of `src/content/__parent.wly` are not filtered out, but selected instead. On the other `work=ing` is to select the current "transient zone of interest" for the author or the developer.
