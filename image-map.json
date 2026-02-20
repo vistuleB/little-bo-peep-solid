@@ -1074,8 +1074,8 @@
     "original-size": 47074,
     "compressed-size": 36733,
     "compression": "21.97%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_secant_reinterpretation_4.svg": {
     "build-version": "svgo-svg/wZkI.svg",
@@ -1541,12 +1541,12 @@
   },
   "svg_ch5_ex_theta_tangent_all_quadrants.svg": {
     "build-version": "svgo-svg/TRpy.svg",
-    "build-version-created-on": 1771481666,
+    "build-version-created-on": 1771599426,
     "build-method": "svgo",
-    "build-version-size": 44463,
-    "original-size": 171067,
-    "compressed-size": 44463,
-    "compression": "74.01%",
+    "build-version-size": 44359,
+    "original-size": 193496,
+    "compressed-size": 44359,
+    "compression": "77.07%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2377,11 +2377,11 @@
   },
   "e5_ABCD_roles_identity_comp_rearranged_zz.svg": {
     "build-version": "svgo-svg/te-X.svg",
-    "build-version-created-on": 1771481660,
+    "build-version-created-on": 1771520446,
     "build-method": "svgo",
-    "build-version-size": 142844,
-    "original-size": 288199,
-    "compressed-size": 142844,
+    "build-version-size": 142831,
+    "original-size": 288207,
+    "compressed-size": 142831,
     "compression": "50.44%",
     "used-last-build": true,
     "3chars": ["ch5"]

@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_126_hgi_"
+      id="_125_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -155,10 +155,7 @@ export default function __Chapter5__() {
       <ArticleTitle banner="Chapter 5:">
         The Trigonometric Functions
       </ArticleTitle>
-      <Section
-        work="ing"
-        id="section-1"
-      >
+      <Section id="section-1">
         <OuterP>
           <b>
             Cos and Sin. (“Cosine” and “sine”.)
@@ -4369,7 +4366,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_125_hgi_">
+      <Exercises id="_124_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -6661,7 +6658,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={11}>
+        <Exercise
+          work="ing"
+          number={11}
+        >
           <ExerciseStatement id="_94_hgi_">
             <OuterP>
               <b>
@@ -7056,1090 +7056,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={12}
-        >
+        <Exercise number={12}>
           <ExerciseStatement id="_95_hgi_">
             <OuterP>
               <b>
                 Exercise 12.
-              </b>
-              {" "}
-              Below are four function compositions
-              depicted as “function box” diagrams, with
-              inputs coming in the right and outputs
-              going out the left (with {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} being some generic
-              function):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/hzK8.svg" />
-            <Pause />
-            <OuterP>
-              Rewrite each case:
-            </OuterP>
-            <Pause />
-            <List
-              type="lower-alpha-paren"
-              markerBold={true}
-              style="gap:0.2em;padding-left:2em;"
-            >
-              <Item>
-                <p>
-                  using the composition {" "}
-                  <NoBreak>
-                    “
-                    <Math>
-                      $\circ$
-                    </Math>
-                    ”
-                  </NoBreak>
-                  {" "} operator;
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  as an expression of the form
-                </p>
-                <Pause />
-                <MathBlock>
-                  $$
-                  x \ra \dots
-                  $$
-                </MathBlock>
-                <Pause />
-                <p>
-                  for some value of {" "}
-                  <NoBreak>
-                    “
-                    <Math>
-                      $\dots$
-                    </Math>
-                    ”.
-                  </NoBreak>
-                </p>
-              </Item>
-            </List>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              <b>
-                (a)
-              </b>
-              {" "}
-              The expressions are respectively...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (u \ra u + A)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (z \ra Bz)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (u \ra u + A)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (z \ra Bz)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...but where the dummy variables don't matter,
-              so we might as well write...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (t \ra t + A)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (t \ra Bt)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (t \ra t + A)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (t \ra Bt)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...or...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (x \ra x + A)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f  \circ (x \ra Bx)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra x + A)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra Bx)\circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...etc. (All are correct.)
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <b>
-                (b)
-              </b>
-              {" "}
-              The expressions are respectively:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra f(x + A)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra f(Bx)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra f(x) + A
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra Bf(x)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...where we use {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} as the dummy variable
-              because we were {" "}
-              <i>
-                told
-              </i>
-              {" "} to use {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (By the statement.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise
-          work="ing"
-          number={13}
-        >
-          <ExerciseStatement id="_96_hgi_">
-            <OuterP>
-              <b>
-                Exercise 13.
-              </b>
-              {" "}
-              How would the graphs of the four compositions
-              in {" "}
-              <InChapterLink
-                href="/article/chapter5#_95_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 12
-              </InChapterLink>
-              {" "} 
-              compare to the graph of the generic function {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              For reference again, the four functions are:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;1.&#125;\,\, x \ra f(x + A)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;2.&#125;\,\, x \ra f(Bx)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;3.&#125;\,\, x \ra f(x) + A
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;4.&#125;\,\, x \ra Bf(x)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              For which the graphs are respectively obtained by:
-            </OuterP>
-            <Pause />
-            <List
-              type="decimal"
-              style="padding-left: 2em;"
-            >
-              <Item>
-                <p>
-                  horizontally translating the graph of {" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "} by {" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "} units to the left;
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  horizontally compressing the graph of {" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "} by a factor {" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    ;
-                  </NoBreak>
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  vertically translating the graph of {" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "} by {" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "} units upward;
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  vertically dilating (scaling) the graph of {" "}
-                  <Math>
-                    $f$
-                  </Math>
-                  {" "} by a factor {" "}
-                  <NoBreak>
-                    <Math>
-                      $B$
-                    </Math>
-                    .
-                  </NoBreak>
-                </p>
-              </Item>
-            </List>
-            <Pause />
-            <OuterP>
-              (Cf. {" "}
-              <NoBreak>
-                <a
-                  href="/article/chapter3#_37_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Exercise 7 of Chapter 3
-                </a>
-                ,
-              </NoBreak>
-              {" "} 
-              {" "}
-              <NoBreak>
-                <a
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Exercise 14 of Chapter 3
-                </a>
-                .)
-              </NoBreak>
-              {" "}{" "}
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise
-          work="ing"
-          number={14}
-        >
-          <ExerciseStatement id="_97_hgi_">
-            <OuterP>
-              <b>
-                Exercise 14.
-              </b>
-              {" "}
-              Let
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f(x) = A\cos(Bx + C) + D
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and imagine that each of the constants
-              {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $C$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $D$
-              </Math>
-              {" "} is connected to a dial,
-              and we originally set {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $C$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $D$
-              </Math>
-              {" "}
-              to {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} respectively.
-              Then, in the following order, we...
-            </OuterP>
-            <Pause />
-            <List
-              type="decimal"
-              style="padding-left:25%;"
-            >
-              <Item>
-                <p>
-                  ...increase {" "}
-                  <Math>
-                    $C$
-                  </Math>
-                  {" "} from {" "}
-                  <Math>
-                    $0$
-                  </Math>
-                  {" "} to {" "}
-                  <NoBreak>
-                    <Math>
-                      $1&#123;&#125;.33$
-                    </Math>
-                    ;
-                  </NoBreak>
-                  {" "} and
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  ...increase {" "}
-                  <Math>
-                    $B$
-                  </Math>
-                  {" "} from {" "}
-                  <Math>
-                    $1$
-                  </Math>
-                  {" "} to {" "}
-                  <NoBreak>
-                    <Math>
-                      $2.33$
-                    </Math>
-                    ;
-                  </NoBreak>
-                  {" "} and
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  ...increase {" "}
-                  <Math>
-                    $A$
-                  </Math>
-                  {" "} from {" "}
-                  <Math>
-                    $1$
-                  </Math>
-                  {" "} to {" "}
-                  <NoBreak>
-                    <Math>
-                      $3.33$
-                    </Math>
-                    ;
-                  </NoBreak>
-                  {" "} and
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  ...increase {" "}
-                  <Math>
-                    $D$
-                  </Math>
-                  {" "} from {" "}
-                  <Math>
-                    $1$
-                  </Math>
-                  {" "} to {" "}
-                  <NoBreak>
-                    <Math>
-                      $4.33$
-                    </Math>
-                    .
-                  </NoBreak>
-                </p>
-              </Item>
-            </List>
-            <Pause />
-            <OuterP>
-              How does the graph of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} react to each
-              of these changes, as they occur in sequence?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              One can understand
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f = x \ra A\sin(Bx + C) + D
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as a 5-fold composition (with functions
-              boxes going right to left):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/r-G7.svg" />
-            <Pause />
-            <OuterP>
-              In the initial setting of the variables
-              with {" "}
-              <Math>
-                $A = B = 1$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $C = D = 0$
-              </Math>
-              {" "}
-              the four boxes on the periphery are the
-              identity*:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/sweo.svg" />
-            <Pause />
-            <OuterP>
-              (*When we say “the identity” we mean
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the identity function
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              which is the function {" "}
-              <NoBreak>
-                <Math>
-                  $x \ra x$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              As we dial {" "}
-              <Math>
-                $C$
-              </Math>
-              {" "} up from {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $1.33$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              the box to the right of sin is
-              “brought online”:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/2ziI.svg" />
-            <Pause />
-            <OuterP>
-              The effect of adding such a box to the
-              right of sin is to translate the
-              graph of sin to the left by {" "}
-              <NoBreak>
-                <Math>
-                  $C$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} as discussed
-              in {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 13
-                </InChapterLink>
-                .
-              </NoBreak>
-              {" "}
-              The second step in which {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} is increased from
-              {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $2.33$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} brings the rightmost box online:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Ao9J.svg" />
-            <Pause />
-            <OuterP>
-              Because this box is to the right of all
-              we have so far (which is {" "}
-              <NoBreak>
-                <Math>
-                  $x \ra \sin(x + C)$
-                </Math>
-                ),
-              </NoBreak>
-              {" "}
-              it compresses the [current] graph horizontally by
-              a factor {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} also as discussed in {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 13
-                </InChapterLink>
-                ;
-              </NoBreak>
-              {" "}
-              step 3 brings the box immediately to the
-              left of sin online...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/DvlU.svg" />
-            <Pause />
-            <OuterP>
-              ...which scales the graph-so-far vertically by a
-              factor {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} as discussed in {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 13
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "}
-              and finally step 4 brings the leftmost box online...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/mE-x.svg" />
-            <Pause />
-            <OuterP>
-              ...that vertically translates the entire graph,
-              as it stands, by {" "}
-              <Math>
-                $D$
-              </Math>
-              {" "} units up, as again discussed
-              in {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter5#_96_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 13
-                </InChapterLink>
-                .
-              </NoBreak>
-              {" "}{" "}
-            </OuterP>
-            <OuterP class="indent-10">
-              To recapitulate, starting from {" "}
-              <NoBreak>
-                <Math>
-                  $y = \sin(x)$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <List style="padding-left:33px;padding-right:2em;">
-              <Item>
-                <p>
-                  step 1: translates the graph left by {" "}
-                  <Math>
-                    $1.33\,\,(= C)$
-                  </Math>
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  step 2: compresses the resulting graph horizontally by {" "}
-                  <Math>
-                    $2.33\,\,(= B)$
-                  </Math>
-                  {" "} about the {" "}
-                  <Math>
-                    $y$
-                  </Math>
-                  {" "} axis
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  step 3: dilates the resulting graph vertically by {" "}
-                  <Math>
-                    $3.33\,\,(= A)$
-                  </Math>
-                  {" "} about the {" "}
-                  <Math>
-                    $x$
-                  </Math>
-                  {" "} axis
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  step 4: translates the resulting graph up by {" "}
-                  <Math>
-                    $4.33\,\,(= D)$
-                  </Math>
-                </p>
-              </Item>
-            </List>
-            <Pause />
-            <OuterP>
-              ...and that's the end.
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                For simplicity of analysis it's important
-                to bring the pre- and post-processing
-                functions online “from the inside out”,
-                gluing new boxes on to what's already there:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/EsiI.svg" />
-              <Pause />
-              <OuterP>
-                Otherwise, to give an example of what may
-                go wrong, say that we first bring the rightmost
-                box online:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/cm5u.svg" />
-              <Pause />
-              <OuterP>
-                At this stage we have
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \sin(Bx)
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                which is a copy of {" "}
-                <Math>
-                  $\sin(x)$
-                </Math>
-                {" "} horizontally
-                compressed by {" "}
-                <NoBreak>
-                  <Math>
-                    $B = 2.33$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "} Then if we bring
-                {" "}
-                <Math>
-                  $x \ra x + C$
-                </Math>
-                {" "} online...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/2e-D.svg" />
-              <Pause />
-              <OuterP>
-                ...at this stage {" "}
-                <Math>
-                  $x \ra x + C$
-                </Math>
-                {" "} is
-                NEITHER A PRE-PROCESSING NOR A POST-PROCESSING FUNCTION; 
-                the effect of adding this function is
-                NOT a translation of the graph by {" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "} units in any
-                direction!; instead, the effect of inserting this
-                intermediate function into the chain is
-                that the graph is translated left by
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                C/B
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                units, as we can verify by rewriting
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \sin(Bx + C)
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                (the function above), as
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \sin(B(x + C/B))
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                ...which corresponds to this modified assemblage
-                of boxes...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/kh5Y.svg" />
-              <Pause />
-              <OuterP>
-                ...and in which you can see that, after we
-                dial up {" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "} (introducing the {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $x \ra Bx$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} box),
-                the effect of dialing up {" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "} is to translate
-                the graph left by {" "}
-                <Math>
-                  $C/B$
-                </Math>
-                {" "} units. 
-                (The point is, if you
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                translate-and-then-compress
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                or if you
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                compress-and-then-translate
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                the two amounts of translation required are
-                not the same, to achieve the same end result—if
-                the translation comes second, it needs to
-                be compressed, because everything else has
-                already been compressed!) (And by the 
-                way things blow up even worse if you attempt
-                to dial {" "}
-                <Math>
-                  $D$
-                </Math>
-                {" "} up before dialing {" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "} up, because if
-                you attempt the same distributivity trick on the
-                left-hand side to invert the order of the two boxes
-                there...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/te-X.svg">
-                <ImageLeft src="/build-img/svgo-svg/cCoO.svg" />
-              </Image>
-              <Pause />
-              <OuterP>
-                ...you find that after {" "}
-                <Math>
-                  $D$
-                </Math>
-                {" "} has been dialed up,
-                and it comes time to change {" "}
-                <NoBreak>
-                  <Math>
-                    $A$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} there are TWO
-                boxes left that depend on {" "}
-                <NoBreak>
-                  <Math>
-                    $A$
-                  </Math>
-                  !—so
-                </NoBreak>
-                {" "} long story
-                short, it becomes very difficult/annoying to
-                analyze the effect that changing {" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "} has on the
-                graph, after {" "}
-                <Math>
-                  $D$
-                </Math>
-                {" "} is nonzero.)
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                The problem uses ‘sin’ as an example but the
-                same reasoning (with boxes) applies to any
-                function. Namely, the graph
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                y = A\cdot f(Bx + C) + D
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is the graph {" "}
-                <Math>
-                  $y = f(x)$
-                </Math>
-                {" "} translates left by
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $C$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} compressed (horizontally) by {" "}
-                <NoBreak>
-                  <Math>
-                    $B$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                scaled (vertically) by {" "}
-                <NoBreak>
-                  <Math>
-                    $A$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} etc. (Well, “etc.”:
-                translated vertically by {" "}
-                <NoBreak>
-                  <Math>
-                    $D$
-                  </Math>
-                  .)
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_98_hgi_">
-            <OuterP>
-              <b>
-                Exercise 15.
               </b>
               {" "}
               A point {" "}
@@ -8460,21 +7381,21 @@ const Rest = () => {
             <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise number={16}>
-          <ExerciseStatement id="_99_hgi_">
+        <Exercise number={13}>
+          <ExerciseStatement id="_96_hgi_">
             <OuterP>
               <b>
-                Exercise 16.
+                Exercise 13.
               </b>
               {" "}
               If, 
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_98_hgi_"
+                  href="/article/chapter5#_95_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 15
+                  Exercise 12
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -8575,10 +7496,10 @@ const Rest = () => {
               length in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_98_hgi_"
+                  href="/article/chapter5#_95_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 15
+                  Exercise 12
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -8608,10 +7529,10 @@ const Rest = () => {
               {" "} in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_98_hgi_"
+                  href="/article/chapter5#_95_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 15
+                  Exercise 12
                 </InChapterLink>
                 :
               </NoBreak>
@@ -8642,10 +7563,10 @@ const Rest = () => {
               {" "} in the formulas of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_98_hgi_"
+                  href="/article/chapter5#_95_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 15
+                  Exercise 12
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -8675,11 +7596,11 @@ const Rest = () => {
             <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise number={17}>
-          <ExerciseStatement id="_100_hgi_">
+        <Exercise number={14}>
+          <ExerciseStatement id="_97_hgi_">
             <OuterP>
               <b>
-                Exercise 17.
+                Exercise 14.
               </b>
               {" "}
               Compute the vertical distance from {" "}
@@ -8818,11 +7739,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={18}>
-          <ExerciseStatement id="_101_hgi_">
+        <Exercise number={15}>
+          <ExerciseStatement id="_98_hgi_">
             <OuterP>
               <b>
-                Exercise 18.
+                Exercise 15.
               </b>
               {" "}
               Given the following sketch, to what angle
@@ -9042,11 +7963,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={19}>
-          <ExerciseStatement id="_102_hgi_">
+        <Exercise number={16}>
+          <ExerciseStatement id="_99_hgi_">
             <OuterP>
               <b>
-                Exercise 19.
+                Exercise 16.
               </b>
               {" "}
               If aliens descended on Earth, captured everyone,
@@ -9270,11 +8191,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_103_hgi_">
+        <Exercise number={17}>
+          <ExerciseStatement id="_100_hgi_">
             <OuterP>
               <b>
-                Exercise 20.
+                Exercise 17.
               </b>
               {" "}
               The graph {" "}
@@ -9578,11 +8499,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={21}>
-          <ExerciseStatement id="_104_hgi_">
+        <Exercise number={18}>
+          <ExerciseStatement id="_101_hgi_">
             <OuterP>
               <b>
-                Exercise 21.
+                Exercise 18.
               </b>
               {" "}
               Compute
@@ -10080,11 +9001,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={22}>
-          <ExerciseStatement id="_105_hgi_">
+        <Exercise number={19}>
+          <ExerciseStatement id="_102_hgi_">
             <OuterP>
               <b>
-                Exercise 22.
+                Exercise 19.
               </b>
               {" "}
               Compute
@@ -10169,11 +9090,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={23}>
-          <ExerciseStatement id="_106_hgi_">
+        <Exercise number={20}>
+          <ExerciseStatement id="_103_hgi_">
             <OuterP>
               <b>
-                Exercise 23.
+                Exercise 20.
               </b>
               {" "}
               To close our division skills: use the
@@ -10918,11 +9839,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={24}>
-          <ExerciseStatement id="_107_hgi_">
+        <Exercise number={21}>
+          <ExerciseStatement id="_104_hgi_">
             <OuterP>
               <b>
-                Exercise 24.
+                Exercise 21.
               </b>
               {" "}
               What is the angle marked ‘?’, as a function
@@ -11004,11 +9925,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={25}>
-          <ExerciseStatement id="_108_hgi_">
+        <Exercise number={22}>
+          <ExerciseStatement id="_105_hgi_">
             <OuterP>
               <b>
-                Exercise 25.
+                Exercise 22.
               </b>
               {" "}
               What is the angle marked ‘?’, as a function of
@@ -11077,11 +9998,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={26}>
-          <ExerciseStatement id="_109_hgi_">
+        <Exercise number={23}>
+          <ExerciseStatement id="_106_hgi_">
             <OuterP>
               <b>
-                Exercise 26.
+                Exercise 23.
               </b>
               {" "}
               Argue that, in the following figure, the
@@ -11197,11 +10118,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={27}>
-          <ExerciseStatement id="_110_hgi_">
+        <Exercise number={24}>
+          <ExerciseStatement id="_107_hgi_">
             <OuterP>
               <b>
-                Exercise 27.
+                Exercise 24.
               </b>
               {" "}
               Express {" "}
@@ -11291,11 +10212,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={28}>
-          <ExerciseStatement id="_111_hgi_">
+        <Exercise number={25}>
+          <ExerciseStatement id="_108_hgi_">
             <OuterP>
               <b>
-                Exercise 28.
+                Exercise 25.
               </b>
               {" "}
               Express {" "}
@@ -11480,212 +10401,14 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={29}>
-          <ExerciseStatement id="_112_hgi_">
+        <Exercise
+          work="ing"
+          number={26}
+        >
+          <ExerciseStatement id="_109_hgi_">
             <OuterP>
               <b>
-                Exercise 29.
-              </b>
-              {" "}
-              In general, {" "}
-              <Math>
-                $\sec(\theta)$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $\tan(\theta)$
-              </Math>
-              {" "}
-              are defined for all {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} such that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos(\theta) \ne 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              with the definitions being...
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                \,\tan(\theta) = &#123;\sin(\theta)\over \cos(\theta)&#125;\,
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                \,\sec(\theta) = &#123;1\over \cos(\theta)&#125;\,
-                $$
-              </MathBlock>
-            </Boxed>
-            <OuterP>
-              ...for all {" "}
-              <NoBreak>
-                <Math>
-                  $\theta \in \rr$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (I.e., if the fraction is undefined,
-              then the function is undefined.)
-              Use these definitions
-              to prove that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1 + \tan^2(\theta) = \sec^2(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all
-              {" "}
-              <NoBreak>
-                <Math>
-                  $\theta \in \dom \tan = \dom \sec$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Let {" "}
-              <NoBreak>
-                <Math>
-                  $\theta \in \dom \tan = \dom \sec$
-                </Math>
-                .
-              </NoBreak>
-              {" "} Then
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos(\theta) \ne 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1 = &#123;\cos(\theta)\over \cos(\theta)&#125; = &#123;\cos^2(\theta)\over \cos^2(\theta)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and, by the definitions,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align&#125;
-              1 + \tan^2(\theta)
-              \,\,&amp;=\,\, 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
-              &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
-              &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
-              &amp;=\,\, \up&#123;2&#125; &#123;1\over \cos^2(\theta)&#125; \\
-              &amp;=\,\, \up&#123;2&#125; \left(&#123;1\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
-              &amp;=\,\, \up&#123;2&#125; \sec^2(\theta)
-              \end&#123;align&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              using the pythagorean identity in the fourth step.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={30}>
-          <ExerciseStatement id="_113_hgi_">
-            <OuterP>
-              <b>
-                Exercise 30.
-              </b>
-              {" "}
-              Run the computation of the
-              previous exercise backwards, starting with
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sec^2(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              at the near end, and ending with
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1 + \tan^2(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              at the far end. (No peeking back at the solution of
-              that exercise.)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Viz:
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                \begin&#123;align&#125;
-                \sec^2(\theta)
-                \,\,&amp;=\,\, &#123;1\over \cos^2(\theta)&#125; \\
-                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)&#125; \\
-                &amp;=\,\, \up&#123;2&#125; &#123;\cos^2(\theta)\over \cos^2(\theta)&#125; + &#123;\sin^2(\theta)\over \cos^2(\theta)&#125; \\
-                &amp;=\,\, \up&#123;2&#125; 1 + \left(&#123;\sin(\theta)\over \cos(\theta)&#125;\right)^&#123;\!2&#125; \\
-                &amp;=\,\, \up&#123;2&#125;1 + \tan^2(\theta).
-                \end&#123;align&#125;
-                $$
-              </MathBlock>
-            </Boxed>
-            <OuterP>
-              (Ta-daa!) (It's slightly harder in this
-              direction, when you have to think of
-              turning the {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $1$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} into {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\cos^2(\theta) + \sin^2(\theta)$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "}
-              instead of the other way around.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={31}>
-          <ExerciseStatement id="_114_hgi_">
-            <OuterP>
-              <b>
-                Exercise 31.
+                Exercise 26.
               </b>
               {" "}
               In the drawing below, at what coordinates,
@@ -11764,10 +10487,10 @@ const Rest = () => {
                   (cf. {" "}
                   <NoBreak>
                     <InChapterLink
-                      href="/article/chapter5#_107_hgi_"
+                      href="/article/chapter5#_104_hgi_"
                       class="handle-in-chapter-link"
                     >
-                      Exercise 24
+                      Exercise 21
                     </InChapterLink>
                     ,
                   </NoBreak>
@@ -11775,10 +10498,10 @@ const Rest = () => {
                   {" "}
                   <NoBreak>
                     <InChapterLink
-                      href="/article/chapter5#_108_hgi_"
+                      href="/article/chapter5#_105_hgi_"
                       class="handle-in-chapter-link"
                     >
-                      Exercise 25
+                      Exercise 22
                     </InChapterLink>
                     ).
                   </NoBreak>
@@ -11945,11 +10668,148 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={32}>
-          <ExerciseStatement id="_115_hgi_">
+        <Exercise
+          work="ing"
+          number={27}
+        >
+          <ExerciseStatement id="_110_hgi_">
             <OuterP>
               <b>
-                Exercise 32.
+                Exercise 27.
+              </b>
+              {" "}
+              If {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and a value {" "}
+              <Math>
+                $A &gt; 1$
+              </Math>
+              {" "} are marked
+              on a line...
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:0.8em;"
+              src="/tmp-images/e5_line_with_0_1_and_A.svg"
+            />
+            <Pause />
+            <OuterP>
+              ...how can we find the placement of...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 / A
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...on the same line by a purely geometric construction?
+              What about if {" "}
+              <NoBreak>
+                <Math>
+                  $0 &lt; A &lt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $-1 &lt; A &lt; 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} etc?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The basic idea of the solution is to find
+              an angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} such that {" "}
+              <Math>
+                $A = \sec(\theta)$
+              </Math>
+              {" "}
+              if {" "}
+              <Math>
+                $|A| &gt; 1$
+              </Math>
+              {" "} (cf. {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_109_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 26
+                </InChapterLink>
+                ):
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_secant.svg" />
+            <Pause />
+            <OuterP>
+              ...or symmetrically such that {" "}
+              <NoBreak>
+                <Math>
+                  $A = \cos(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} if {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &lt; 1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_cos.svg" />
+            <Pause />
+            <OuterP>
+              The step-by-step
+              compass-and-ruler 
+              instructions for the case {" "}
+              <Math>
+                $|A| &gt; 1$
+              </Math>
+              {" "} are:
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Step 1.
+              </i>
+              {" "} Hello.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={28}
+        >
+          <ExerciseStatement id="_111_hgi_">
+            <OuterP>
+              <b>
+                Exercise 28.
               </b>
               {" "}
               If
@@ -12165,11 +11025,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={33}>
-          <ExerciseStatement id="_116_hgi_">
+        <Exercise number={29}>
+          <ExerciseStatement id="_112_hgi_">
             <OuterP>
               <b>
-                Exercise 33.
+                Exercise 29.
               </b>
               {" "}
               If a sphere is projected directly outward onto
@@ -12304,11 +11164,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={34}>
-          <ExerciseStatement id="_117_hgi_">
+        <Exercise number={30}>
+          <ExerciseStatement id="_113_hgi_">
             <OuterP>
               <b>
-                Exercise 34.
+                Exercise 30.
               </b>
               {" "}
               Rank the {" "}
@@ -12400,11 +11260,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={35}>
-          <ExerciseStatement id="_118_hgi_">
+        <Exercise number={31}>
+          <ExerciseStatement id="_114_hgi_">
             <OuterP>
               <b>
-                Exercise 35.
+                Exercise 31.
               </b>
               {" "}
               Give a formula for the area of a sphere of
@@ -12470,11 +11330,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={36}>
-          <ExerciseStatement id="_119_hgi_">
+        <Exercise number={32}>
+          <ExerciseStatement id="_115_hgi_">
             <OuterP>
               <b>
-                Exercise 36.
+                Exercise 32.
               </b>
               {" "}
               Give a formula for the volume of a sphere of
@@ -12581,11 +11441,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={37}>
-          <ExerciseStatement id="_120_hgi_">
+        <Exercise number={33}>
+          <ExerciseStatement id="_116_hgi_">
             <OuterP>
               <b>
-                Exercise 37.
+                Exercise 33.
               </b>
               {" "}
               If each of these dotted lines...
@@ -13744,11 +12604,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={38}>
-          <ExerciseStatement id="_121_hgi_">
+        <Exercise number={34}>
+          <ExerciseStatement id="_117_hgi_">
             <OuterP>
               <b>
-                Exercise 38.
+                Exercise 34.
               </b>
               {" "}
               An access staircase goes up the side of a
@@ -14006,11 +12866,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={39}>
-          <ExerciseStatement id="_122_hgi_">
+        <Exercise number={35}>
+          <ExerciseStatement id="_118_hgi_">
             <OuterP>
               <b>
-                Exercise 39.
+                Exercise 35.
               </b>
               {" "}
               Give a decimal approximation to
@@ -14269,11 +13129,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={40}>
-          <ExerciseStatement id="_123_hgi_">
+        <Exercise number={36}>
+          <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
-                Exercise 40.
+                Exercise 36.
               </b>
               {" "}
               From the first three steps of the
@@ -14688,11 +13548,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={41}>
-          <ExerciseStatement id="_124_hgi_">
+        <Exercise number={37}>
+          <ExerciseStatement id="_120_hgi_">
             <OuterP>
               <b>
-                Exercise 41.
+                Exercise 37.
               </b>
               {" "}
               A ship travels from the South pole of a watery
@@ -14829,6 +13689,1403 @@ const Rest = () => {
                 triangle sufficiently small. 
                 (Which is believable.)
               </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={38}>
+          <ExerciseStatement id="_121_hgi_">
+            <OuterP>
+              <b>
+                Exercise 38.
+              </b>
+              {" "}
+              Below are four function compositions
+              depicted as “function box” diagrams, with
+              inputs coming in the right and outputs
+              going out the left (with {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} being some generic
+              function):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/hzK8.svg" />
+            <Pause />
+            <OuterP>
+              Rewrite each case:
+            </OuterP>
+            <Pause />
+            <List
+              type="lower-alpha-paren"
+              markerBold={true}
+              style="gap:0.2em;padding-left:2em;"
+            >
+              <Item>
+                <p>
+                  using the composition {" "}
+                  <NoBreak>
+                    “
+                    <Math>
+                      $\circ$
+                    </Math>
+                    ”
+                  </NoBreak>
+                  {" "} operator;
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  as an expression of the form
+                </p>
+                <Pause />
+                <MathBlock>
+                  $$
+                  x \ra \dots
+                  $$
+                </MathBlock>
+                <Pause />
+                <p>
+                  for some value of {" "}
+                  <NoBreak>
+                    “
+                    <Math>
+                      $\dots$
+                    </Math>
+                    ”.
+                  </NoBreak>
+                </p>
+              </Item>
+            </List>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <b>
+                (a)
+              </b>
+              {" "}
+              The expressions are respectively...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (u \ra u + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (z \ra Bz)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (u \ra u + A)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (z \ra Bz)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...but where the dummy variables don't matter,
+              so we might as well write...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (t \ra t + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (t \ra Bt)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (t \ra t + A)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (t \ra Bt)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...or...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (x \ra x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (x \ra Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra x + A)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra Bx)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...etc. (All are correct.)
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <b>
+                (b)
+              </b>
+              {" "}
+              The expressions are respectively:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x) + A
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra Bf(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...where we use {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} as the dummy variable
+              because we were {" "}
+              <i>
+                told
+              </i>
+              {" "} to use {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (By the statement.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={39}>
+          <ExerciseStatement id="_122_hgi_">
+            <OuterP>
+              <b>
+                Exercise 39.
+              </b>
+              {" "}
+              How would the graphs of the four compositions
+              in {" "}
+              <InChapterLink
+                href="/article/chapter5#_121_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 38
+              </InChapterLink>
+              {" "} 
+              compare to the graph of the generic function {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              For reference again, the four functions are:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;1.&#125;\,\, x \ra f(x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;2.&#125;\,\, x \ra f(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;3.&#125;\,\, x \ra f(x) + A
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;4.&#125;\,\, x \ra Bf(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              For which the graphs are respectively obtained by:
+            </OuterP>
+            <Pause />
+            <List
+              type="decimal"
+              style="padding-left: 2em;"
+            >
+              <Item>
+                <p>
+                  horizontally translating the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} units to the left;
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  horizontally compressing the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by a factor {" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    ;
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  vertically translating the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} units upward;
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  vertically dilating (scaling) the graph of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "} by a factor {" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    .
+                  </NoBreak>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              (Cf. {" "}
+              <NoBreak>
+                <a
+                  href="/article/chapter3#_37_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Exercise 7 of Chapter 3
+                </a>
+                ,
+              </NoBreak>
+              {" "} 
+              {" "}
+              <NoBreak>
+                <a
+                  href="/article/chapter3#_45_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Exercise 14 of Chapter 3
+                </a>
+                .)
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={40}>
+          <ExerciseStatement id="_123_hgi_">
+            <OuterP>
+              <b>
+                Exercise 40.
+              </b>
+              {" "}
+              Let
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f(x) = A\cos(Bx + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and imagine that each of the constants
+              {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "} is connected to a dial,
+              and we originally set {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "}
+              to {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} respectively.
+              Then, in the following order, we...
+            </OuterP>
+            <Pause />
+            <List
+              type="decimal"
+              style="padding-left:25%;"
+            >
+              <Item>
+                <p>
+                  ...increase {" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  {" "} from {" "}
+                  <Math>
+                    $0$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $1&#123;&#125;.33$
+                    </Math>
+                    ;
+                  </NoBreak>
+                  {" "} and
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  ...increase {" "}
+                  <Math>
+                    $B$
+                  </Math>
+                  {" "} from {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $2.33$
+                    </Math>
+                    ;
+                  </NoBreak>
+                  {" "} and
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  ...increase {" "}
+                  <Math>
+                    $A$
+                  </Math>
+                  {" "} from {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $3.33$
+                    </Math>
+                    ;
+                  </NoBreak>
+                  {" "} and
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  ...increase {" "}
+                  <Math>
+                    $D$
+                  </Math>
+                  {" "} from {" "}
+                  <Math>
+                    $0$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $4.33$
+                    </Math>
+                    .
+                  </NoBreak>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              How does the graph of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} react to each
+              of these changes, as they occur in sequence?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                Solution 1.
+              </i>
+              {" "} Reasoning by the analogy of
+              a particle going around a circle at uniform
+              speed (cf. {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_94_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 11
+                </InChapterLink>
+                ):
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <Pause />
+            <List style="padding-left:33px;padding-right:2em;">
+              <Item>
+                <p>
+                  step 1: advances the initial position of
+                  particle {" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  {" "} radians forward, so the
+                  graph shifts {" "}
+                  <i>
+                    left
+                  </i>
+                  {" "} by {" "}
+                  <Math>
+                    $C = 1.33$
+                  </Math>
+                  {" "} units (so that
+                  the value {" "}
+                  <Math>
+                    $y = \sin(C)$
+                  </Math>
+                  {" "} finds itself at
+                  {" "}
+                  <NoBreak>
+                    <Math>
+                      $x = 0$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "} that's how you can verify if you
+                  got leftward or rightward shift correctly);
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  step 2: speeds up the angular velocity of
+                  the particle from {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  {" "} radian per unit time
+                  to {" "}
+                  <Math>
+                    $B = 2.33$
+                  </Math>
+                  {" "} radians per unit time; this
+                  can simply be thought of as a “speeding up
+                  of time”, and compresses the graph horizontally
+                  about the {" "}
+                  <Math>
+                    $y$
+                  </Math>
+                  {" "} axis by a factor {" "}
+                  <NoBreak>
+                    <Math>
+                      $2.33$
+                    </Math>
+                    ;
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  step 3: increases the radius of the circle
+                  from {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $A = 3.33$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "} which results in
+                  a vertical dilation of the graph by a
+                  factor {" "}
+                  <NoBreak>
+                    <Math>
+                      $3.33$
+                    </Math>
+                    ;
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  step 4: moves the coordinate (say,
+                  {" "}
+                  <NoBreak>
+                    <Math>
+                      $y$
+                    </Math>
+                    -coordinate,
+                  </NoBreak>
+                  {" "} if we are thinking of {" "}
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "}
+                  as reading off the {" "}
+                  <NoBreak>
+                    <Math>
+                      $y$
+                    </Math>
+                    -coordainte
+                  </NoBreak>
+                  {" "} of the
+                  particle) from {" "}
+                  <Math>
+                    $y = 0$
+                  </Math>
+                  {" "} to {" "}
+                  <NoBreak>
+                    <Math>
+                      $y = D = 4.33$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "} resulting
+                  in a vertical translation upwards of the
+                  graph by {" "}
+                  <Math>
+                    $4.33$
+                  </Math>
+                  {" "} units!
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 2.
+              </i>
+              {" "} One can understand
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f = x \ra A\sin(Bx + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as a 5-fold composition (with functions
+              boxes going right to left):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/r-G7.svg" />
+            <Pause />
+            <OuterP>
+              In the initial setting of the variables
+              with {" "}
+              <Math>
+                $A = B = 1$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $C = D = 0$
+              </Math>
+              {" "}
+              the four boxes on the periphery are the
+              identity*:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/sweo.svg" />
+            <Pause />
+            <OuterP>
+              (*When we say “the identity” we mean
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              the identity function
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              which is the function {" "}
+              <NoBreak>
+                <Math>
+                  $x \ra x$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              As we dial {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} up from {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $1.33$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              the box to the right of sin is
+              “brought online”:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/2ziI.svg" />
+            <Pause />
+            <OuterP>
+              The effect of adding such a box to the
+              right of sin is to translate the
+              graph of sin to the left by {" "}
+              <NoBreak>
+                <Math>
+                  $C$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as discussed
+              in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_122_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 39
+                </InChapterLink>
+                .
+              </NoBreak>
+              {" "}
+              The second step in which {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} is increased from
+              {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $2.33$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} brings the rightmost box online:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Ao9J.svg" />
+            <Pause />
+            <OuterP>
+              Because this box is to the right of all
+              we have so far (which is {" "}
+              <NoBreak>
+                <Math>
+                  $x \ra \sin(x + C)$
+                </Math>
+                ),
+              </NoBreak>
+              {" "}
+              it compresses the [current] graph horizontally by
+              a factor {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} also as discussed in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_122_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 39
+                </InChapterLink>
+                ;
+              </NoBreak>
+              {" "}
+              step 3 brings the box immediately to the
+              left of sin online...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/DvlU.svg" />
+            <Pause />
+            <OuterP>
+              ...which scales the graph-so-far vertically by a
+              factor {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as discussed in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_122_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 39
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "}
+              and finally step 4 brings the leftmost box online...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/mE-x.svg" />
+            <Pause />
+            <OuterP>
+              ...that vertically translates the entire graph,
+              as it stands, by {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "} units up, as again discussed
+              in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_122_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 39
+                </InChapterLink>
+                .
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <OuterP class="indent-10">
+              To recapitulate, starting from {" "}
+              <NoBreak>
+                <Math>
+                  $y = \sin(x)$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <List style="padding-left:33px;padding-right:2em;">
+              <Item>
+                <p>
+                  step 1: translates the graph left by {" "}
+                  <Math>
+                    $1.33\,\,(= C)$
+                  </Math>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  step 2: compresses the resulting graph horizontally by {" "}
+                  <Math>
+                    $2.33\,\,(= B)$
+                  </Math>
+                  {" "} about the {" "}
+                  <Math>
+                    $y$
+                  </Math>
+                  {" "} axis
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  step 3: dilates the resulting graph vertically by {" "}
+                  <Math>
+                    $3.33\,\,(= A)$
+                  </Math>
+                  {" "} about the {" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "} axis
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  step 4: translates the resulting graph up by {" "}
+                  <Math>
+                    $4.33\,\,(= D)$
+                  </Math>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              ...and that's the end.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Concerning the second solution, for simplicity of analysis it's important
+                to bring the pre- and post-processing
+                functions online “from the inside out”,
+                gluing new boxes on to what's already there:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/EsiI.svg" />
+              <Pause />
+              <OuterP>
+                Otherwise, to give an example of what may
+                go wrong, say that we first bring the rightmost
+                box online:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/cm5u.svg" />
+              <Pause />
+              <OuterP>
+                At this stage we have
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra \sin(Bx)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                which is a copy of {" "}
+                <Math>
+                  $\sin(x)$
+                </Math>
+                {" "} horizontally
+                compressed by {" "}
+                <NoBreak>
+                  <Math>
+                    $B = 2.33$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} Then if we bring
+                {" "}
+                <Math>
+                  $x \ra x + C$
+                </Math>
+                {" "} online...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/2e-D.svg" />
+              <Pause />
+              <OuterP>
+                ...at this stage {" "}
+                <Math>
+                  $x \ra x + C$
+                </Math>
+                {" "} is
+                NEITHER A PRE-PROCESSING NOR A POST-PROCESSING FUNCTION; 
+                the effect of adding this function is
+                NOT a translation of the graph by {" "}
+                <Math>
+                  $C$
+                </Math>
+                {" "} units in any
+                direction!; instead, the effect of inserting this
+                intermediate function into the chain is
+                that the graph is translated left by
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                C/B
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                units, as we can verify by rewriting
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra \sin(Bx + C)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                (the function above), as
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra \sin(B(x + C/B))
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...which corresponds to this modified assemblage
+                of boxes...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/kh5Y.svg" />
+              <Pause />
+              <OuterP>
+                ...and in which you can see that, after we
+                dial up {" "}
+                <Math>
+                  $B$
+                </Math>
+                {" "} (introducing the {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $x \ra Bx$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} box),
+                the effect of dialing up {" "}
+                <Math>
+                  $C$
+                </Math>
+                {" "} is to translate
+                the graph left by {" "}
+                <Math>
+                  $C/B$
+                </Math>
+                {" "} units. 
+                (The point is, if you
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                translate-and-then-compress
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                or if you
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                compress-and-then-translate
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                the two amounts of translation required are
+                not the same, to achieve the same end result—if
+                the translation comes second, it needs to
+                be compressed, because everything else has
+                already been compressed!) (And by the 
+                way things blow up even worse if you attempt
+                to dial {" "}
+                <Math>
+                  $D$
+                </Math>
+                {" "} up before dialing {" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "} up, because if
+                you attempt the same distributivity trick on the
+                left-hand side to invert the order of the two boxes
+                there...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/te-X.svg">
+                <ImageLeft
+                  src="/tmp-images/e5_ABCD_roles_Au_cloud.svg"
+                  offset_x="2em"
+                />
+              </Image>
+              <Pause />
+              <OuterP>
+                ...you find that after {" "}
+                <Math>
+                  $D$
+                </Math>
+                {" "} has been dialed up,
+                and it comes time to change {" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} there are TWO
+                boxes left that depend on {" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  !—so
+                </NoBreak>
+                {" "} long story
+                short, it becomes very difficult/annoying to
+                analyze the effect that changing {" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "} has on the
+                graph, if we do it after {" "}
+                <Math>
+                  $D$
+                </Math>
+                {" "} is nonzero.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The problem uses ‘sin’ as an example but the
+                same reasoning (with boxes) applies to any
+                function. Namely, the graph
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                y = A\cdot f(Bx + C) + D
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                is the graph {" "}
+                <Math>
+                  $y = f(x)$
+                </Math>
+                {" "} translates left by
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} compressed (horizontally) by {" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                scaled (vertically) by {" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} etc. (Well, “etc.”:
+                translated vertically by {" "}
+                <NoBreak>
+                  <Math>
+                    $D$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                A function that can be written as
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra A\sin(Bx + C) + D
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                for some values of {" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $D \in \rr$
+                </Math>
+                {" "}
+                is called a
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                sinusoid
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                (if we switch ‘sin’ to ‘cos’ it gives the same
+                class of functions: {" "}
+                <NoBreak>
+                  <Math>
+                    $\sin(Bx + C) = \cos(Bx + C - \eta)$
+                  </Math>
+                  ).
+                </NoBreak>
+              </OuterP>
+              <OuterP class="indent-10">
+                Moreover:
+              </OuterP>
+              <Pause />
+              <List style="padding-left:33px;padding-right:2em;">
+                <Item>
+                  <p>
+                    <NoBreak>
+                      <Math>
+                        $C$
+                      </Math>
+                      :
+                    </NoBreak>
+                    {" "} may be referred to as the {" "}
+                    <i>
+                      phase
+                    </i>
+                    {" "}
+                    of the sinuoid (but which is only uniquely determined
+                    if you have decided whether your sinusoid is
+                    written in terms of ‘cos’ or ‘sin’, and even
+                    then only determined up to {" "}
+                    <NoBreak>
+                      <Math>
+                        $360^\circ = 4\eta$
+                      </Math>
+                      ,
+                    </NoBreak>
+                    {" "}
+                    or, even worse,
+                    up to {" "}
+                    <Math>
+                      $180^\circ = 2\eta$
+                    </Math>
+                    {" "} if negative values of {" "}
+                    <Math>
+                      $A$
+                    </Math>
+                    {" "}
+                    are allowed)
+                  </p>
+                </Item>
+                <Item>
+                  <p>
+                    <NoBreak>
+                      <Math>
+                        $A$
+                      </Math>
+                      :
+                    </NoBreak>
+                    {" "} may be referred to as the {" "}
+                    <i>
+                      amplitude
+                    </i>
+                    {" "} of the
+                    sinusoid
+                  </p>
+                </Item>
+                <Item>
+                  <p>
+                    <NoBreak>
+                      <Math>
+                        $B$
+                      </Math>
+                      :
+                    </NoBreak>
+                    {" "} may be referred to as the {" "}
+                    <i>
+                      angular speed
+                    </i>
+                    {" "} or
+                    {" "}
+                    <i>
+                      angular frequency
+                    </i>
+                    {" "} of the sinusoid
+                  </p>
+                </Item>
+                <Item>
+                  <p>
+                    <NoBreak>
+                      <Math>
+                        $D$
+                      </Math>
+                      :
+                    </NoBreak>
+                    {" "} may be referred to as the {" "}
+                    <i>
+                      vertical shift
+                    </i>
+                    {" "}
+                    (mathematics) or as the {" "}
+                    <i>
+                      DC bias
+                    </i>
+                    {" "} or {" "}
+                    <i>
+                      DC offset
+                    </i>
+                    {" "} (engineering)
+                    or as the {" "}
+                    <i>
+                      equilibrium position
+                    </i>
+                    {" "} (physics) of
+                    the sinusoid
+                  </p>
+                </Item>
+              </List>
             </SolutionNote>
           </Solution>
         </Exercise>

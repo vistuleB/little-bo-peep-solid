@@ -1,5 +1,4 @@
 |> Exercise
-    work=ing
     handle=_ABCD_roles_
 
     Let
@@ -26,7 +25,7 @@
         ...increase $A$ from $1$ to $3.33$; and
         !! ...decrease $A$ from $1$ to $-0.51$; and
 
-        ...increase $D$ from $1$ to $4.33$.
+        ...increase $D$ from $0$ to $4.33$.
         !! ...increase $D$ from $0$ to $3.99$.
 
     How does the graph of $f$ react to each
@@ -44,7 +43,43 @@
 
     |> Solution
 
-        One can understand
+        _Solution 1._ Reasoning by the analogy of
+        a particle going around a circle at uniform
+        speed (cf. Exercise >>_circular_motion_from_x_coordinate_):
+
+        |> List
+            style=padding-left:33px;padding-right:2em;
+
+            step 1: advances the initial position of
+            particle $C$ radians forward, so the
+            graph shifts _left_ by $C = 1.33$ units (so that
+            the value $y = \sin(C)$ finds itself at
+            $x = 0$, that's how you can verify if you
+            got leftward or rightward shift correctly);
+            
+            step 2: speeds up the angular velocity of
+            the particle from $1$ radian per unit time
+            to $B = 2.33$ radians per unit time; this
+            can simply be thought of as a “speeding up
+            of time”, and compresses the graph horizontally
+            about the $y$ axis by a factor $2.33$;
+            !! compresses the resulting graph horizontally by $2.33\,\,(= B)$ about the $y$ axis 
+
+            step 3: increases the radius of the circle
+            from $1$ to $A = 3.33$, which results in
+            a vertical dilation of the graph by a
+            factor $3.33$;
+
+            step 4: moves the coordinate (say,
+            $y$-coordinate, if we are thinking of $f$
+            as reading off the $y$-coordainte of the
+            particle) from $y = 0$ to $y = D = 4.33$, resulting
+            in a vertical translation upwards of the
+            graph by $4.33$ units!
+
+        |> Pause
+
+        _Solution 2._ One can understand
 
         $$
         f = x \ra A\sin(Bx + C) + D
@@ -126,7 +161,7 @@
 
         |> SolutionNote
 
-            For simplicity of analysis it's important
+            Concerning the second solution, for simplicity of analysis it's important
             to bring the pre- and post-processing
             functions online “from the inside out”,
             gluing new boxes on to what's already there:
@@ -212,14 +247,15 @@
                 src=images/e5_ABCD_roles_identity_comp_rearranged_zz.svg
 
             |> ImageLeft
-                src=images/e5_ABCD_roles_Au_cloud.svg
+                src=tmp-images/e5_ABCD_roles_Au_cloud.svg
+                offset_x=2em
 
             ...you find that after $D$ has been dialed up,
             and it comes time to change $A$, there are TWO
             boxes left that depend on $A$!—so long story
             short, it becomes very difficult/annoying to
             analyze the effect that changing $A$ has on the
-            graph, after $D$ is nonzero.)
+            graph, if we do it after $D$ is nonzero.)
 
         |> SolutionNote
 
@@ -238,3 +274,44 @@
 
             !! |> Image
             !!     src=images/e5_ABCD_roles_mona_lisa_cloud.svg
+
+        |> SolutionNote
+
+            A function that can be written as
+
+            $$
+            x \ra A\sin(Bx + C) + D
+            $$
+
+            for some values of $A$, $B$, $C$, $D \in \rr$
+            is called a
+            
+            __sinusoid__
+
+            (if we switch ‘sin’ to ‘cos’ it gives the same
+            class of functions: $\sin(Bx + C) = \cos(Bx + C - \eta)$).
+
+            Moreover:
+
+            |> List
+                style=padding-left:33px;padding-right:2em;
+
+                $C$: may be referred to as the _phase_
+                of the sinuoid (but which is only uniquely determined
+                if you have decided whether your sinusoid is
+                written in terms of ‘cos’ or ‘sin’, and even
+                then only determined up to $360^\circ = 4\eta$,
+                or, even worse,
+                up to $180^\circ = 2\eta$ if negative values of $A$
+                are allowed)
+                
+                $A$: may be referred to as the _amplitude_ of the
+                sinusoid
+
+                $B$: may be referred to as the _angular speed_ or
+                _angular frequency_ of the sinusoid
+
+                $D$: may be referred to as the _vertical shift_
+                (mathematics) or as the _DC bias_ or _DC offset_ (engineering)
+                or as the _equilibrium position_ (physics) of
+                the sinusoid

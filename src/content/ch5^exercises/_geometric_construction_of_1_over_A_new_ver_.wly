@@ -1,0 +1,42 @@
+|> Exercise
+    work=ing
+    handle=_geometric_construction_of_1_over_A_new_ver_
+
+    If $0$, $1$, and a value $A > 1$ are marked
+    on a line...
+
+    |> Image
+        style=margin-top:0.8em;margin-bottom:0.8em;
+        src=tmp-images/e5_line_with_0_1_and_A.svg
+
+    ...how can we find the placement of...
+
+    $$
+    1 / A
+    $$
+    
+    ...on the same line by a purely geometric construction?
+    What about if $0 < A < 1$, $-1 < A < 0$, etc?
+
+    |> Solution
+
+        The basic idea of the solution is to find
+        an angle $\theta$ such that $A = \sec(\theta)$
+        if $|A| > 1$ (cf. Exercise >>_secant_cosecant_intersections_):
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_and_secant.svg
+
+        ...or symmetrically such that $A = \cos(\theta)$, if $|A| < 1$:
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_and_cos.svg
+
+        !! In more detail, we now give 
+        The step-by-step
+        compass-and-ruler 
+        instructions for the case $|A| > 1$ are:
+
+        |> Pause
+
+        _Step 1._ Hello.
