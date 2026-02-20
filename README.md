@@ -4,9 +4,7 @@
 
 ## 2. Clone repos
 
-Git clone [wly](https://github.com/vistuleB/wly) and this repo.
-
-The two repos must be put as sibling folders of a parent folder or else the local paths in `renderer/gleam.toml` and `renderer/manifest.toml` need to be edited. (For the latter, erase the relevant entries and let Gleam re-generate them.)
+Clone [wly](https://github.com/vistuleB/wly) and this repo. The two repos must be put as sibling folders of a parent folder or else the local paths in `renderer/gleam.toml` and `renderer/manifest.toml` need to be edited. (For the latter, erase the relevant entries and let Gleam re-generate them.)
 
 ## 3. 'wly' test
 
