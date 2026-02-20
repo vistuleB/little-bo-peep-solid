@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_125_hgi_"
+      id="_124_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -4366,7 +4366,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_124_hgi_">
+      <Exercises id="_123_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -11448,1169 +11448,6 @@ const Rest = () => {
                 Exercise 33.
               </b>
               {" "}
-              If each of these dotted lines...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/CbYC.svg" />
-            <Pause />
-            <OuterP>
-              ...is a so-called
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              isoset
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (also: {" "}
-              <i>
-                isoline
-              </i>
-              , {" "}
-              <i>
-                contour line
-              </i>
-              , {" "}
-              <i>
-                isoquant
-              </i>
-              ,
-              {" "}
-              <i>
-                isosurface
-              </i>
-              , {" "}
-              <i>
-                isovalue line
-              </i>
-              , or {" "}
-              <i>
-                isovalue set
-              </i>
-              {" "}
-              {" "}
-              <NoBreak>
-                <Math>
-                  $\rt&#123;0.1&#125;$
-                </Math>
-                )
-              </NoBreak>
-              {" "} of the two-variable function
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : \rr^2\ra \rr
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              given by
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f(x, y) = x + y
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              then what are similar
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              isosets
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (man, we like this word! of the two-variable
-              function
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              g : \rr^2\ra \rr
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              given by
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              g(x, y) = xy
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...?
-            </OuterP>
-            <OuterP class="indent-10">
-              [In human terms: draw solutions of the equation
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              xy = C
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              in {" "}
-              <Math>
-                $\rr^2$
-              </Math>
-              {" "} for some different values of
-              {" "}
-              <NoBreak>
-                <Math>
-                  $C \in \rr$
-                </Math>
-                .]
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Next: Use any geometric insights gleaned from
-              these
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              isosets
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (😍😍😍) to find the maximum value of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sin\theta&#123;&#125;\cos\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for {" "}
-              <NoBreak>
-                <Math>
-                  $\theta \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and specify the set of
-              values of {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} for which the maximum is
-              attained.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The isosets of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x, y) \ra xy
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (lambda-notation for a two-variable function)
-              have this general appearance (it depends on
-              the window and on the exact isosets that
-              you choose to  draw—we chose a few
-              different random ones):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/ME1k.svg" />
-            <Pause />
-            <OuterP>
-              Note that each isoset consists of the union of TWO
-              disjoint curves, except for the isoset
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              xy = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (or: “the isoset
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \&#123;(x, y) \in \rr^2 : xy = 0 \&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...” to pedantically indicate that we are
-              talking about {" "}
-              <i>
-                a set of points in the plane
-              </i>
-              ),
-              that, for its part, cannot be said to consist
-              of two {" "}
-              <i>
-                ~
-              </i>
-              ~
-              <i>
-                disjoint
-              </i>
-              ~
-              <i>
-                ~
-              </i>
-              {" "} curves, because it
-              is the union of the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -
-              </NoBreak>
-              {" "} axes, that
-              intersect.
-            </OuterP>
-            <OuterP class="indent-10">
-              (For a throwback, the solution of Exercise
-              16 of {" "}
-              <a
-                href="/article/chapter3#_53_hgi_"
-                class="handle-out-chapter-link"
-              >
-                Chapter 3
-              </a>
-              {" "} mentions that the product of
-              two numbers is {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} if and only if one of the
-              numbers is {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .
-              </NoBreak>
-              {" "} In our case,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              xy = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              if and only
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \,x = 0\,
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <i>
-                or
-              </i>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \,y = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              happens to be the equation of the {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axis, and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              y = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              happens to be the equation of the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis, which
-              explains the shape of the isoset.)
-            </OuterP>
-            <OuterP class="indent-10">
-              If we draw a “heatmap” of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              xy
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              in some region of the plane, similarly to
-              Exercise 18, the larger (more positive)
-              values show up in the first and third
-              quadrants, while the smaller (more negative)
-              values show up in the second and fourth
-              quadrants:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/FGx3.svg" />
-            <Pause />
-            <OuterP>
-              Of particular interest to us: at a given
-              distance from the origin, the line
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = y
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              can be seen seen to hold the largest of values of {" "}
-              <NoBreak>
-                <Math>
-                  $xy$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Pdlp.svg" />
-            <Pause />
-            <OuterP>
-              In particular,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos\theta\,\sin\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              will reach its maximum at those values of
-              {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} that put the point {" "}
-              <Math>
-                $(\cos \theta, \sin \theta)$
-              </Math>
-              {" "}
-              at either {" "}
-              <Math>
-                $(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)$
-              </Math>
-              {" "} or
-              {" "}
-              <Math>
-                $(-\sqrt&#123;0.5&#125;, -\sqrt&#123;0.5&#125;)$
-              </Math>
-              {" "} on the unit circle;
-              these values of {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} are
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\
-              \Large \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125;\up&#123;1.5&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as per this illustration...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/HCJC.svg" />
-            <Pause />
-            <OuterP>
-              ...and the maximum value of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \cos\theta\,\sin\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              itself will be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large (-\sqrt&#123;0.5&#125;) \cdot (-\sqrt&#123;0.5&#125;) = &#123;1\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              equivalently; though one should also note
-              that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \&#123;0.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \cup \&#123;2.5\eta + 4\eta&#123;&#125;k : k \in \zz\&#125; \\ \Large \up&#123;1.5&#125;= \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which is the “clever” way of writing the set
-              of {" "}
-              <NoBreak>
-                <Math>
-                  $\theta$
-                </Math>
-                's
-              </NoBreak>
-              {" "} for which the maximum is achieved.
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                As a consequence, the function
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \sin x&#123;&#125;\cos x
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                discussed in Exercise 4 has maximum value
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;1\over 2&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                achieved for inputs in the set
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \Large \&#123;0.5\eta + 2\eta&#123;&#125;k : k \in \zz\&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                comprising the sequence of values...
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \large \dots,\,\, -&#123;7\eta\over 2&#125;,\,\, -&#123;3\eta\over 2&#125;,\,\, &#123;\dn&#123;0.25&#125;\eta \over 2&#125;,\,\, &#123;5\eta \over 2&#125;,\,\, &#123;9\eta \over 2&#125;,\,\, \dots
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                ...or...
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \large \dots,\,\, &#123;-3.5\eta&#125;,\,\, &#123;-1.5\eta&#125;,\,\, &#123;0.5\eta&#125;,\,\, &#123;2.5\eta&#125;,\,\, &#123;4.5\eta&#125;,\,\, \dots
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                ...(maybe more legibly); annotating the graph
-                given in Exercise 4:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/IAYw.svg" />
-              <Pause />
-              <StarDivider />
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                For completeness, here is a closer look at
-                the isoset {" "}
-                <NoBreak>
-                  <Math>
-                    $xy = 1$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} including some labeled points:
-              </OuterP>
-              <Pause />
-              <Image
-                style="margin-top:1em;margin-bottom:1em;"
-                src="/build-img/svgo-svg/Hk2G.svg"
-              />
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
-                Because a point {" "}
-                <Math>
-                  $(x, y)$
-                </Math>
-                {" "} satisfies
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = 1
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                if and only if the point {" "}
-                <Math>
-                  $(2x, y)$
-                </Math>
-                {" "} satisfies
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = 2
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                (one has
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x_0y_0 = 1
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                if and only if
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                (2x_0)y_0 = 2
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                surprise or not) the curve
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = 2
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is the horizontal dilation of the curve
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = 1
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                by a factor {" "}
-                <NoBreak>
-                  <Math>
-                    $2$
-                  </Math>
-                  ;
-                </NoBreak>
-                {" "} likewise, it is also the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                vertical dilation
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of the curve
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = 1
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                by a factor {" "}
-                <NoBreak>
-                  <Math>
-                    $2$
-                  </Math>
-                  ;
-                </NoBreak>
-                {" "} the two dilations are
-                illustrated here:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/u7DJ.svg" />
-              <Pause />
-              <Image src="/build-img/svgo-svg/h7PS.svg" />
-              <Pause />
-              <OuterP>
-                More generally, the curve
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = C
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                for {" "}
-                <Math>
-                  $C \ne 0$
-                </Math>
-                {" "} is the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <NoBreak>
-                  <Math>
-                    $(a, b)$
-                  </Math>
-                  -dilation
-                </NoBreak>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                [meaning: a horizontal dilation by a factor
-                {" "}
-                <Math>
-                  $a$
-                </Math>
-                {" "} followed by a vertical dilation by a
-                factor {" "}
-                <NoBreak>
-                  <Math>
-                    $b$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} or vice-versa, the order doesn't
-                matter] of the curve
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = 1
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                for all pairs {" "}
-                <Math>
-                  $(a, b)$
-                </Math>
-                {" "} such that {" "}
-                <NoBreak>
-                  <Math>
-                    $ab = C$
-                  </Math>
-                  ;
-                </NoBreak>
-                {" "} for
-                example,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = 3
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <NoBreak>
-                  <Math>
-                    $(3, 1)$
-                  </Math>
-                  -dilation
-                </NoBreak>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                [horizontal dilation by factor {" "}
-                <NoBreak>
-                  <Math>
-                    $3$
-                  </Math>
-                  ]
-                </NoBreak>
-                {" "} of
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $xy = 1$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} as it is the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <NoBreak>
-                  <Math>
-                    $(1, 3)$
-                  </Math>
-                  -dilation
-                </NoBreak>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                [vertical dilation by factor {" "}
-                <NoBreak>
-                  <Math>
-                    $3$
-                  </Math>
-                  ]
-                </NoBreak>
-                {" "} of {" "}
-                <NoBreak>
-                  <Math>
-                    $xy = 1$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                but is also the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <NoBreak>
-                  <Math>
-                    $(\sqrt&#123;3&#125;, \sqrt&#123;3&#125;)$
-                  </Math>
-                  -dilation
-                </NoBreak>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of {" "}
-                <NoBreak>
-                  <Math>
-                    $xy = 1$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} since {" "}
-                <NoBreak>
-                  <Math>
-                    $\sqrt&#123;3&#125;\cdot\sqrt&#123;3&#125; = 3$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} and the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <NoBreak>
-                  <Math>
-                    $(12, &#123;1\over 4&#125;)$
-                  </Math>
-                  -dilation
-                </NoBreak>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of {" "}
-                <NoBreak>
-                  <Math>
-                    $xy = 1$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} since {" "}
-                <NoBreak>
-                  <Math>
-                    $12 \cdot &#123;1\over 4&#125; = 3$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                etc.
-              </OuterP>
-              <OuterP class="indent-10">
-                For another specifically noteworthy instance
-                of this phenomenon,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = 1
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <NoBreak>
-                  <Math>
-                    $(-1, -1)$
-                  </Math>
-                  -dilation
-                </NoBreak>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of itself, since {" "}
-                <NoBreak>
-                  <Math>
-                    $(-1)\cdot(-1) = 1$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                a fact that is also known as the “central
-                symmetry” of {" "}
-                <NoBreak>
-                  <Math>
-                    $xy = 1$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "} (You can take this
-                last statement as the definition of “centrally
-                symmetric”. I.e., a set {" "}
-                <Math>
-                  $S \subseteq \rr^2$
-                </Math>
-                {" "}
-                is centrally symmetric if and only if {" "}
-                <Math>
-                  $S$
-                </Math>
-                {" "}
-                is equal to the {" "}
-                <NoBreak>
-                  <Math>
-                    $(-1, -1)$
-                  </Math>
-                  -dilation
-                </NoBreak>
-                {" "} of
-                itself.)
-              </OuterP>
-              <OuterP class="indent-10">
-                (Indeed, since
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = C
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                if and only if
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                (-x)(-y) = C
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                each of the isosets is centrally symmetric, not only
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $xy = 1$
-                  </Math>
-                  .)
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 4.
-                </i>
-                {" "}
-                Among other additional symmetries, the line
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x = y
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is an axis of symmetry of each isoset, meaning
-                that each isoset equals its mirror reflection
-                about that line:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/A16i.svg" />
-              <Pause />
-              <OuterP>
-                Note that, technically, a set {" "}
-                <Math>
-                  $S \subseteq \rr^2$
-                </Math>
-                {" "}
-                [meaning: {" "}
-                <Math>
-                  $S$
-                </Math>
-                {" "} is a set of points in the plane] is
-                symmetric about {" "}
-                <Math>
-                  $x = y$
-                </Math>
-                {" "} if and only if
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \Large (x_0, y_0) \in S \iff (y_0, x_0) \in S
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                [read {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $(x_0, y_0)$
-                  </Math>
-                </NoBreak>
-                {" "} is in {" "}
-                <Math>
-                  $S$
-                </Math>
-                {" "} if and only if
-                {" "}
-                <Math>
-                  $(y_0, x_0)$
-                </Math>
-                {" "} is in {" "}
-                <NoBreak>
-                  <Math>
-                    $S$
-                  </Math>
-                  ”]
-                </NoBreak>
-                {" "} for all {" "}
-                <NoBreak>
-                  <Math>
-                    $(x_0, y_0)$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "}
-                Illustrated:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/r97O.svg" />
-              <Pause />
-              <OuterP>
-                In our case, a point {" "}
-                <Math>
-                  $(x_0, y_0)$
-                </Math>
-                {" "} is on the curve
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                xy = C
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                if and only if the point {" "}
-                <Math>
-                  $(y_0, x_0)$
-                </Math>
-                {" "} is on
-                the curve, because {" "}
-                <NoBreak>
-                  <Math>
-                    $x_0y_0 = y_0x_0$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} by
-                commutativity of multiplication. This observation
-                constitutes the “proof” that each isoset is
-                mirror symmetric through {" "}
-                <NoBreak>
-                  <Math>
-                    $x = y$
-                  </Math>
-                  .
-                </NoBreak>
-              </OuterP>
-              <OuterP class="indent-10">
-                (Or...
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \large
-                \begin&#123;align&#125;
-                \large     &amp; (x_0, y_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125; \\
-                \large\up&#123;1.4&#125; \iff&amp; \,x_0y_0 = C \\
-                \large\up&#123;1.4&#125; \iff&amp; \,y_0x_0 = C \\
-                \large\up&#123;1.4&#125; \iff&amp; (y_0, x_0) \in \&#123;(x,y)\in \rr^2: xy = C\&#125;
-                \end&#123;align&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                ...to put it over-the-top formally.)
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 5.
-                </i>
-                {" "}
-                Lastly, each isoset is symmetric
-                through the line {" "}
-                <NoBreak>
-                  <Math>
-                    $x = -y$
-                  </Math>
-                  :
-                </NoBreak>
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/d39n.svg" />
-              <Pause />
-              <OuterP>
-                Indeed, this symmetry can be obtained as the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                composition
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of a symmetry through {" "}
-                <Math>
-                  $x = y$
-                </Math>
-                {" "} and a central
-                symmetry:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/EMv4.svg" />
-              <Pause />
-              <OuterP>
-                In other words, any set that is symmetric through
-                {" "}
-                <Math>
-                  $x = y$
-                </Math>
-                {" "} and that is centrally symmetric is also
-                symmetric through {" "}
-                <NoBreak>
-                  <Math>
-                    $x = -y$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} so there is nothing “new”
-                to prove here, except to make this observation
-                about composition!
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={34}>
-          <ExerciseStatement id="_117_hgi_">
-            <OuterP>
-              <b>
-                Exercise 34.
-              </b>
-              {" "}
               An access staircase goes up the side of a
               hemispheric gas tank. It keeps a constant angle
               of {" "}
@@ -12866,11 +11703,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={35}>
-          <ExerciseStatement id="_118_hgi_">
+        <Exercise number={34}>
+          <ExerciseStatement id="_117_hgi_">
             <OuterP>
               <b>
-                Exercise 35.
+                Exercise 34.
               </b>
               {" "}
               Give a decimal approximation to
@@ -13129,11 +11966,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={36}>
-          <ExerciseStatement id="_119_hgi_">
+        <Exercise number={35}>
+          <ExerciseStatement id="_118_hgi_">
             <OuterP>
               <b>
-                Exercise 36.
+                Exercise 35.
               </b>
               {" "}
               From the first three steps of the
@@ -13548,11 +12385,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={37}>
-          <ExerciseStatement id="_120_hgi_">
+        <Exercise number={36}>
+          <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
-                Exercise 37.
+                Exercise 36.
               </b>
               {" "}
               A ship travels from the South pole of a watery
@@ -13692,11 +12529,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={38}>
-          <ExerciseStatement id="_121_hgi_">
+        <Exercise number={37}>
+          <ExerciseStatement id="_120_hgi_">
             <OuterP>
               <b>
-                Exercise 38.
+                Exercise 37.
               </b>
               {" "}
               Below are four function compositions
@@ -13909,20 +12746,20 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={39}>
-          <ExerciseStatement id="_122_hgi_">
+        <Exercise number={38}>
+          <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
-                Exercise 39.
+                Exercise 38.
               </b>
               {" "}
               How would the graphs of the four compositions
               in {" "}
               <InChapterLink
-                href="/article/chapter5#_121_hgi_"
+                href="/article/chapter5#_120_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 38
+                Exercise 37
               </InChapterLink>
               {" "} 
               compare to the graph of the generic function {" "}
@@ -14055,11 +12892,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={40}>
-          <ExerciseStatement id="_123_hgi_">
+        <Exercise number={39}>
+          <ExerciseStatement id="_122_hgi_">
             <OuterP>
               <b>
-                Exercise 40.
+                Exercise 39.
               </b>
               {" "}
               Let
@@ -14485,10 +13322,10 @@ const Rest = () => {
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_122_hgi_"
+                  href="/article/chapter5#_121_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 39
+                  Exercise 38
                 </InChapterLink>
                 .
               </NoBreak>
@@ -14535,10 +13372,10 @@ const Rest = () => {
               {" "} also as discussed in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_122_hgi_"
+                  href="/article/chapter5#_121_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 39
+                  Exercise 38
                 </InChapterLink>
                 ;
               </NoBreak>
@@ -14561,10 +13398,10 @@ const Rest = () => {
               {" "} as discussed in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_122_hgi_"
+                  href="/article/chapter5#_121_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 39
+                  Exercise 38
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -14584,10 +13421,10 @@ const Rest = () => {
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_122_hgi_"
+                  href="/article/chapter5#_121_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 39
+                  Exercise 38
                 </InChapterLink>
                 .
               </NoBreak>
