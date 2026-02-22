@@ -8185,6 +8185,13 @@ const Rest = () => {
               <Pause />
               <Image src="/build-img/svgo-svg/VLwm.svg" />
               <Pause />
+              <MathBlock>
+                $$
+                \Large
+                &#123;\sec^3(\theta) - \sec(\theta)\over \sec^2(\theta)&#125; = &#123;\sec(\theta)(\sec^2(\theta) - 1)\over \sec^2(\theta) - 1&#125; = \sec(\theta)
+                $$
+              </MathBlock>
+              <Pause />
               <OuterP>
                 ...by direct measure and simplifying the fraction.
               </OuterP>
@@ -10742,31 +10749,22 @@ const Rest = () => {
                 $\theta$
               </Math>
               {" "} such that {" "}
-              <Math>
-                $A = \sec(\theta)$
-              </Math>
+              <NoBreak>
+                <Math>
+                  $A = \sec(\theta)$
+                </Math>
+                ,
+              </NoBreak>
               {" "}
               if {" "}
-              <Math>
-                $|A| &gt; 1$
-              </Math>
-              {" "} (cf. {" "}
               <NoBreak>
-                <InChapterLink
-                  href="/article/chapter5#_109_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 26
-                </InChapterLink>
-                ):
+                <Math>
+                  $|A| &gt; 1$
+                </Math>
+                ,
               </NoBreak>
-              {" "}{" "}
-            </OuterP>
-            <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_secant.svg" />
-            <Pause />
-            <OuterP>
-              ...or symmetrically such that {" "}
+              {" "}
+              or symmetrically, such that {" "}
               <NoBreak>
                 <Math>
                   $A = \cos(\theta)$
@@ -10782,24 +10780,258 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_secant.svg" />
+            <Pause />
             <Image src="/tmp-images/e5_line_with_0_1_and_A_and_cos.svg" />
             <Pause />
             <OuterP>
-              The step-by-step
+              (Cf. {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_109_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 26
+                </InChapterLink>
+                .)
+              </NoBreak>
+              {" "}
+              We now proceed with
+              step-by-step
               compass-and-ruler 
-              instructions for the case {" "}
+              instructions for the two cases:
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              ~ ~ case {" "}
               <Math>
                 $|A| &gt; 1$
               </Math>
-              {" "} are:
-            </OuterP>
+              {" "} ~ ~
+            </CentralDisplayItalic>
             <Pause />
             <OuterP>
               <i>
                 Step 1.
               </i>
-              {" "} Hello.
+              {" "} Find the midpoint between {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ;
+              </NoBreak>
+              {" "} for
+              this, the procedure is to use two circles of equal radius:
             </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step1.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 2.
+              </i>
+              {" "} Draw a semicircle of radius {" "}
+              <Math>
+                $A/2$
+              </Math>
+              {" "} whose
+              center is that midpoint:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step2.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 3.
+              </i>
+              {" "} Draw a circle of radius {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} whose center
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step3.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 4.
+              </i>
+              {" "} Draw a line through the intersections {" "}
+              <NoBreak>
+                <Math>
+                  $P$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <Math>
+                $P'$
+              </Math>
+              {" "} of the two circles to find the position of {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step4.svg" />
+            <Pause />
+            <OuterP>
+              (The reason that the whole procedure works is that
+              this triangle...
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg" />
+            <Pause />
+            <OuterP>
+              ...is actually right-angled at its upper corner
+              by 
+              the Peloponnesian Theorem.
+              This implies that the line from {" "}
+              <Math>
+                $(A, 0)$
+              </Math>
+              {" "} to that
+              corner is tangent to the circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which is
+              what we want/need.)
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              ~ ~ case {" "}
+              <Math>
+                $|A| &lt; 1$
+              </Math>
+              {" "} ~ ~
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <i>
+                Step 1.
+              </i>
+              {" "} 
+              With {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &lt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} start by
+              marking points at equal distance to {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} 
+              by drawing a circle 
+              centered at {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              of any radius:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 2.
+              </i>
+              {" "} Use these points to draw a perpendicular 
+              through {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} similarly to the first step of
+              the case {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &gt; 1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 3.
+              </i>
+              {" "} 
+              Draw a circle of radius {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} centered at
+              {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and draw a line through {" "}
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "} and the
+              upper intersection of the circle with the perpendicular:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 4.
+              </i>
+              {" "} 
+              Construct a perpendicular to this line
+              at the point of intersection by repeating the
+              process of the first two steps; 
+              the intersection of that line with the
+              main axis is {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg" />
+            <Pause />
+            <StarDivider />
           </Solution>
         </Exercise>
         <Exercise

@@ -2,9 +2,18 @@
 
 ## 1. [Gleam Install](https://gleam.run/getting-started/installing)
 
-## 2. Clone repos
+## 2. Clone repos, edit `.env` file
 
 Clone [wly](https://github.com/vistuleB/wly) and this repo. The two repos must be put as sibling folders of a parent folder or else the local paths in `renderer/gleam.toml` and `renderer/manifest.toml` need to be edited. (For the latter, erase the relevant entries and let Gleam re-generate them.)
+
+Contents of `.env`:
+
+```
+VITE_ENV=DEV
+AUTHOR_MODE=true
+OFFLINE_MODE=true
+MATHJAX_VERSION=3
+```
 
 ## 3. 'wly' test
 

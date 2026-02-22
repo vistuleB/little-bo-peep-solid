@@ -124,4 +124,9 @@
             |> Image
                 src=images/e5_sec_powers_bounce_ratio_explanation_fraction_2.svg
 
+            $$
+            \Large
+            {\sec^3(\theta) - \sec(\theta)\over \sec^2(\theta)} = {\sec(\theta)(\sec^2(\theta) - 1)\over \sec^2(\theta) - 1} = \sec(\theta)
+            $$
+
             ...by direct measure and simplifying the fraction.

@@ -21,22 +21,113 @@
     |> Solution
 
         The basic idea of the solution is to find
-        an angle $\theta$ such that $A = \sec(\theta)$
-        if $|A| > 1$ (cf. Exercise >>_secant_cosecant_intersections_):
+        an angle $\theta$ such that $A = \sec(\theta)$,
+        if $|A| > 1$,
+        or symmetrically, such that $A = \cos(\theta)$, if $|A| < 1$:
 
         |> Image
             src=tmp-images/e5_line_with_0_1_and_A_and_secant.svg
 
-        ...or symmetrically such that $A = \cos(\theta)$, if $|A| < 1$:
+        !! ...or symmetrically such that $A = \cos(\theta)$, if $|A| < 1$:
 
         |> Image
             src=tmp-images/e5_line_with_0_1_and_A_and_cos.svg
 
-        !! In more detail, we now give 
-        The step-by-step
+        (Cf. Exercise >>_secant_cosecant_intersections_.)
+        We now proceed with
+        step-by-step
         compass-and-ruler 
-        instructions for the case $|A| > 1$ are:
+        instructions for the two cases:
 
-        |> Pause
+        __~ ~ case $|A| > 1$ ~ ~__
 
-        _Step 1._ Hello.
+        _Step 1._ Find the midpoint between $0$ and $A$; for
+        this, the procedure is to use two circles of equal radius:
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step1.svg
+
+        _Step 2._ Draw a semicircle of radius $A/2$ whose
+        center is that midpoint:
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step2.svg
+
+        _Step 3._ Draw a circle of radius $1$ whose center
+        is $(0, 0)$:
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step3.svg
+
+        _Step 4._ Draw a line through the intersections $P$,
+        $P'$ of the two circles to find the position of $1/A$:
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step4.svg
+
+        (The reason that the whole procedure works is that
+        this triangle...
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg
+
+        ...is actually right-angled at its upper corner
+        by 
+        the Peloponnesian Theorem.
+        This implies that the line from $(A, 0)$ to that
+        corner is tangent to the circle of radius $1$, which is
+        what we want/need.)
+
+        __~ ~ case $|A| < 1$ ~ ~__
+
+        _Step 1._ 
+        With $|A| < 1$, start by
+        marking points at equal distance to $A$ 
+        by drawing a circle 
+        centered at $A$,
+        of any radius:
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg
+
+        _Step 2._ Use these points to draw a perpendicular 
+        through $A$, similarly to the first step of
+        the case $|A| > 1$:
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg
+
+        !! _Step 3._ 
+        
+        !! Draw a circle of radius $1$ centered at
+        !! $(0, 0)$:
+
+        !! |> Image
+        !!     src=tmp-images/e5_line_with_0_1_and_A_Alt1_step3_v3.svg
+
+        _Step 3._ 
+        Draw a circle of radius $1$ centered at
+        $(0, 0)$,
+        and draw a line through $(0, 0)$ and the
+        upper intersection of the circle with the perpendicular:
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg
+
+        _Step 4._ 
+        Construct a perpendicular to this line
+        at the point of intersection by repeating the
+        process of the first two steps; 
+        !! Use a similar procedure to the first two steps to
+        !! find the perpendicular to this line through the point of
+        !! intersection; 
+        the intersection of that line with the
+        main axis is $1/A$:
+
+        !! |> Image
+        !!     src=tmp-images/e5_line_with_0_1_and_A_Alt1_step5_v3.svg
+
+        |> Image
+            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg
+
+        |> StarDivider

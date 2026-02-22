@@ -23,7 +23,7 @@
         "cwd": "${workspaceFolder}/renderer"
       },
       // "args": ["run", "--", "--track", "\"assuming that\"", "+5-5"]
-      "args": [ "run", "--", "--only", "ch5", "ch4", "content=selection", "work=ing", "--local", "--warnings"]
+      "args": [ "run", "--", "--only", "ch5", "content=selection", "work=ing", "--local", "--warnings"]
       // "args": [ "run", "--", "--only", "ch5", "content=selection", "work=ing", "--warnings"]
       // "args": [ "run", "--", "--only", "ch5", "ch3", "ch4"]
     },
