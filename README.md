@@ -63,6 +63,8 @@ Run `gleam run -- --only ch1 aaa=bbb` in the `renderer/` folder. Then:
 - only Chapter 1 should appear (or use `bt1` for bootcamp 1, etc)
 - within Chapter 1, only those elements that have key-value pair `aaa=bbb` should appear
 
+Beware: You cannot but `aaa=bbb` at a lower-level element inside of a `|> Section` to restrict only to that element, because of some quirk that we currently have (you'll get an error message), but you can do that in TI-2 and could do it here too if we changed some small things around (as we might at some point).
+
 ## 8. Go-to-source tooltips (`--local` mode)
 
 Modify the previous command by running `gleam run -- --only ch1 aaa=bbb --local` in the `renderer` folder.
