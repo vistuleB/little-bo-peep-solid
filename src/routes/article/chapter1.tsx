@@ -1717,8 +1717,8 @@ const Rest = () => {
                   </span>
                 </span>
                 <ImageRight
-                  src="/tmp-images/e5_ABCD_roles_compress_and_then_translate_cloud.svg"
-                  local_url="./public/tmp-images/e5_ABCD_roles_compress_and_then_translate_cloud.svg"
+                  src="/tmp-images/e5_ABCD_roles_translate_and_then_compress_cloud.svg"
+                  local_url="./public/tmp-images/e5_ABCD_roles_translate_and_then_compress_cloud.svg"
                 />
               </CentralDisplayItalic>
               <Pause />
@@ -1739,8 +1739,8 @@ const Rest = () => {
                   </span>
                 </span>
                 <ImageRight
-                  src="/tmp-images/e5_ABCD_roles_translate_and_then_compress_cloud.svg"
-                  local_url="./public/tmp-images/e5_ABCD_roles_translate_and_then_compress_cloud.svg"
+                  src="/tmp-images/e5_ABCD_roles_compress_and_then_translate_cloud_v2.svg"
+                  local_url="./public/tmp-images/e5_ABCD_roles_compress_and_then_translate_cloud_v2.svg"
                 />
               </CentralDisplayItalic>
               <Pause />
