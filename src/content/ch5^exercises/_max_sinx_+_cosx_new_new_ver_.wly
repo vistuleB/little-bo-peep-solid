@@ -92,19 +92,13 @@
             \large
             -\sqrt{2}
             $$
-            occurs at $x = -135^\circ$.
-            (Plus multiples of $360^\circ$.)
+            occurs at $x = -135^\circ$
+            and its added multiples of $360^\circ$.
 
         |> SolutionNote
 
-            To be clear, as well as for interest, this is what
-            the graph of Exercise >>_four_graphs_ looks like
-            with the new information layered on, in degrees and in radians:
-            !! If we 
-            !! layer this new information
-            !! on top of the original graph 
-            !! of Exercise >>_four_graphs_
-            !! it looks like so:
+            Annotating the graph of $x \ra \cos x + \sin x$
+            with this new information, in degrees and in radians:
 
             |> Image
                 src=images/e5_cosx_plus_sinx_with_max_min_info.svg

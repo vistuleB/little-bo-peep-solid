@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_ABCD_roles_
 
     Let
@@ -20,13 +21,10 @@
         ...increase $C$ from $0$ to $1{}.33$; and
 
         ...increase $B$ from $1$ to $2.33$; and
-        !! ...increase $B$ from $1$ to $2.75$; and
 
         ...increase $A$ from $1$ to $3.33$; and
-        !! ...decrease $A$ from $1$ to $-0.51$; and
 
         ...increase $D$ from $0$ to $4.33$.
-        !! ...increase $D$ from $0$ to $3.99$.
 
     How does the graph of $f$ react to each
     of these changes, as they occur in sequence?
@@ -228,9 +226,15 @@
 
             __translate-and-then-compress__
 
+            |> ImageRight
+                src=tmp-images/e5_ABCD_roles_compress_and_then_translate_cloud.svg
+
             or if you
             
             __compress-and-then-translate__
+
+            |> ImageRight
+                src=tmp-images/e5_ABCD_roles_translate_and_then_compress_cloud.svg
 
             the two amounts of translation required are
             not the same, to achieve the same end result—if

@@ -8,7 +8,6 @@ window.MathJax = {
   },
   tex: {
     tags: "ams",
-
     inlineMath: [
       ["$", "$"],
       ["\\(", "\\)"],
@@ -64,7 +63,6 @@ window.MathJax = {
   options: {
     enableMenu: false,
   },
-
   startup: {
     ready: () => {
       MathJax.startup.defaultReady();
