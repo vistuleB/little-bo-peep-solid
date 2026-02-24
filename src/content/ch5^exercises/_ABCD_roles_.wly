@@ -271,7 +271,7 @@
             y = A\cdot f(Bx + C) + D
             $$
 
-            is the graph $y = f(x)$ translates left by
+            is the graph $y = f(x)$ translated left by
             $C$, compressed (horizontally) by $B$,
             scaled (vertically) by $A$, etc. (Well, “etc.”:
             translated vertically by $D$.)
