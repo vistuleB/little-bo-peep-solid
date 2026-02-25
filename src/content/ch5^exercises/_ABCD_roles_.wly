@@ -16,7 +16,7 @@
 
     |> List
         type=decimal
-        style=padding-left:25%;
+        style=padding-left:20%;
 
         ...increase $C$ from $0$ to $1{}.33$; and
 
@@ -52,16 +52,14 @@
             particle $C$ radians forward, so the
             graph shifts _left_ by $C = 1.33$ units (so that
             the value $y = \sin(C)$ finds itself at
-            $x = 0$, that's how you can verify if you
-            got leftward or rightward shift correctly);
-            
+            $x = 0$)
+
             step 2: speeds up the angular velocity of
             the particle from $1$ radian per unit time
             to $B = 2.33$ radians per unit time; this
             can simply be thought of as a “speeding up
             of time”, and compresses the graph horizontally
             about the $y$ axis by a factor $2.33$;
-            !! compresses the resulting graph horizontally by $2.33\,\,(= B)$ about the $y$ axis 
 
             step 3: increases the radius of the circle
             from $1$ to $A = 3.33$, which results in
@@ -70,7 +68,7 @@
 
             step 4: moves the coordinate (say,
             $y$-coordinate, if we are thinking of $f$
-            as reading off the $y$-coordainte of the
+            as reading off the $y$-coordinate of the
             particle) from $y = 0$ to $y = D = 4.33$, resulting
             in a vertical translation upwards of the
             graph by $4.33$ units!

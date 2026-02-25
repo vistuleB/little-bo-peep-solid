@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_124_hgi_"
+      id="_123_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -1820,7 +1820,7 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <i>
-            Sidenote.
+            Note.
           </i>
           {" "}
           Another thing to know about radians 
@@ -4366,7 +4366,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_123_hgi_">
+      <Exercises id="_122_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -10853,19 +10853,8 @@ const Rest = () => {
               <i>
                 Step 4.
               </i>
-              {" "} Draw a line through the intersections {" "}
-              <NoBreak>
-                <Math>
-                  $P$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              {" "}
-              <Math>
-                $P'$
-              </Math>
-              {" "} of the two circles to find the position of {" "}
+              {" "} Draw a line through the intersections
+              of the two circles to find the position of {" "}
               <NoBreak>
                 <Math>
                   $1/A$
@@ -11025,226 +11014,6 @@ const Rest = () => {
                 Exercise 28.
               </b>
               {" "}
-              If
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A \ne 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is a point on the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis, how can we construct
-              the value
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1 / A
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by purely geometric means?
-              (We assume that {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $0$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $1$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} are also marked on the axis.)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The key is to view {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $1/A$
-              </Math>
-              {" "} as values of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A = \sec(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              1/A = \cos(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for some angle {" "}
-              <NoBreak>
-                <Math>
-                  $\theta \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} if {" "}
-              <NoBreak>
-                <Math>
-                  $|A| \geq 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} or
-              as values of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              A = \cos(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              1/A = \sec(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for some angle {" "}
-              <NoBreak>
-                <Math>
-                  $\theta \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} if {" "}
-              <NoBreak>
-                <Math>
-                  $|A| \leq 1$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              In more detail, we make use of the fact that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sec(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              can be obtained as the intersection of the tangent
-              to the unit circle with the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis (we never discussed
-              this, you can't be faulted for missing it):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/l-Hm.svg">
-              <ImageRight src="/build-img/svgo-svg/7MXJ.svg" />
-            </Image>
-            <Pause />
-            <OuterP>
-              So the idea is, for example if {" "}
-              <NoBreak>
-                <Math>
-                  $|A| \geq 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} to draw
-              a tangent to the circle from {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} then to drop a height
-              onto the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/fLKk.svg" />
-            <Pause />
-            <OuterP>
-              ...the position obtained is the corresponding
-              {" "}
-              <NoBreak>
-                <Math>
-                  $\cos(\theta)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and {" "}
-              <Math>
-                $\cos(\theta)\cdot\sec(\theta) = 1$
-              </Math>
-              {" "} &#x2705;.
-              If {" "}
-              <Math>
-                $|A| \leq 1$
-              </Math>
-              {" "} we can reverse the process,
-              “dropping a height onto the circle”, and then finding
-              the intersection of the tangent at that point with
-              the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis! (Which will not work, as should be,
-              if and only if {" "}
-              <NoBreak>
-                <Math>
-                  $\cos(\theta) = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} a.k.a., if and only
-              if {" "}
-              <NoBreak>
-                <Math>
-                  $A = 0$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={29}>
-          <ExerciseStatement id="_112_hgi_">
-            <OuterP>
-              <b>
-                Exercise 29.
-              </b>
-              {" "}
               If a sphere is projected directly outward onto
               a cylinder abutting the sphere at the equator, with each
               point remaining at its height, as pictured in the
@@ -11377,11 +11146,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={30}>
-          <ExerciseStatement id="_113_hgi_">
+        <Exercise number={29}>
+          <ExerciseStatement id="_112_hgi_">
             <OuterP>
               <b>
-                Exercise 30.
+                Exercise 29.
               </b>
               {" "}
               Rank the {" "}
@@ -11473,11 +11242,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={31}>
-          <ExerciseStatement id="_114_hgi_">
+        <Exercise number={30}>
+          <ExerciseStatement id="_113_hgi_">
             <OuterP>
               <b>
-                Exercise 31.
+                Exercise 30.
               </b>
               {" "}
               Give a formula for the area of a sphere of
@@ -11543,11 +11312,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={32}>
-          <ExerciseStatement id="_115_hgi_">
+        <Exercise number={31}>
+          <ExerciseStatement id="_114_hgi_">
             <OuterP>
               <b>
-                Exercise 32.
+                Exercise 31.
               </b>
               {" "}
               Give a formula for the volume of a sphere of
@@ -11654,11 +11423,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={33}>
-          <ExerciseStatement id="_116_hgi_">
+        <Exercise number={32}>
+          <ExerciseStatement id="_115_hgi_">
             <OuterP>
               <b>
-                Exercise 33.
+                Exercise 32.
               </b>
               {" "}
               An access staircase goes up the side of a
@@ -11916,11 +11685,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={34}>
-          <ExerciseStatement id="_117_hgi_">
+        <Exercise number={33}>
+          <ExerciseStatement id="_116_hgi_">
             <OuterP>
               <b>
-                Exercise 34.
+                Exercise 33.
               </b>
               {" "}
               Give a decimal approximation to
@@ -12179,11 +11948,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={35}>
-          <ExerciseStatement id="_118_hgi_">
+        <Exercise number={34}>
+          <ExerciseStatement id="_117_hgi_">
             <OuterP>
               <b>
-                Exercise 35.
+                Exercise 34.
               </b>
               {" "}
               From the first three steps of the
@@ -12598,11 +12367,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={36}>
-          <ExerciseStatement id="_119_hgi_">
+        <Exercise number={35}>
+          <ExerciseStatement id="_118_hgi_">
             <OuterP>
               <b>
-                Exercise 36.
+                Exercise 35.
               </b>
               {" "}
               A ship travels from the South pole of a watery
@@ -12742,11 +12511,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={37}>
-          <ExerciseStatement id="_120_hgi_">
+        <Exercise number={36}>
+          <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
-                Exercise 37.
+                Exercise 36.
               </b>
               {" "}
               Below are four function compositions
@@ -12959,20 +12728,20 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={38}>
-          <ExerciseStatement id="_121_hgi_">
+        <Exercise number={37}>
+          <ExerciseStatement id="_120_hgi_">
             <OuterP>
               <b>
-                Exercise 38.
+                Exercise 37.
               </b>
               {" "}
               How would the graphs of the four compositions
               in {" "}
               <InChapterLink
-                href="/article/chapter5#_120_hgi_"
+                href="/article/chapter5#_119_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 37
+                Exercise 36
               </InChapterLink>
               {" "} 
               compare to the graph of the generic function {" "}
@@ -13107,12 +12876,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="ing"
-          number={39}
+          number={38}
         >
-          <ExerciseStatement id="_122_hgi_">
+          <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
-                Exercise 39.
+                Exercise 38.
               </b>
               {" "}
               Let
@@ -13203,7 +12972,7 @@ const Rest = () => {
             <Pause />
             <List
               type="decimal"
-              style="padding-left:25%;"
+              style="padding-left:20%;"
             >
               <Item>
                 <p>
@@ -13343,10 +13112,8 @@ const Rest = () => {
                     <Math>
                       $x = 0$
                     </Math>
-                    ,
+                    )
                   </NoBreak>
-                  {" "} that's how you can verify if you
-                  got leftward or rightward shift correctly);
                 </p>
               </Item>
               <Item>
@@ -13422,7 +13189,7 @@ const Rest = () => {
                     <Math>
                       $y$
                     </Math>
-                    -coordainte
+                    -coordinate
                   </NoBreak>
                   {" "} of the
                   particle) from {" "}
@@ -13538,10 +13305,10 @@ const Rest = () => {
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_121_hgi_"
+                  href="/article/chapter5#_120_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 38
+                  Exercise 37
                 </InChapterLink>
                 .
               </NoBreak>
@@ -13588,10 +13355,10 @@ const Rest = () => {
               {" "} also as discussed in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_121_hgi_"
+                  href="/article/chapter5#_120_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 38
+                  Exercise 37
                 </InChapterLink>
                 ;
               </NoBreak>
@@ -13614,10 +13381,10 @@ const Rest = () => {
               {" "} as discussed in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_121_hgi_"
+                  href="/article/chapter5#_120_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 38
+                  Exercise 37
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -13637,10 +13404,10 @@ const Rest = () => {
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_121_hgi_"
+                  href="/article/chapter5#_120_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 38
+                  Exercise 37
                 </InChapterLink>
                 .
               </NoBreak>

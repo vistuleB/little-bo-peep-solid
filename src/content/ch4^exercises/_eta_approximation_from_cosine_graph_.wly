@@ -34,7 +34,8 @@
         or thereabouts. However, a bit of detective work
         reveals a more precise approximation—indeed, 
         note that the graph seems to go almost exactly through
-        the point $(11, 0)$, a few units over to the right:
+        the point $(11, 0)$:
+        !! , a few units over to the right:
 
         |> Image
             src=images/svg_ch4_cosine_for_eta_11_noticed.svg

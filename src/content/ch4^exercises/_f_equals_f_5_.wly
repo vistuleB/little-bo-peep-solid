@@ -310,16 +310,16 @@
 
             __the whole is simpler than the parts__
 
-            !! |> ImageLeft
-            !!     src=images/svg_ch4_5_euler_hearts_left.svg
-            !!     offset_x=-5rem
+            |> ImageLeft
+                src=images/svg_ch4_5_euler_hearts_left.svg
+                offset_x=-5rem
 
-            !! |> ImageRight
-            !!     src=images/svg_ch4_5_euler_hearts_right.svg
-            !!     offset_x=-5rem
+            |> ImageRight
+                src=images/svg_ch4_5_euler_hearts_right.svg
+                offset_x=-5rem
 
             in that you would never spot the symmetry
             at play, or have a chance of eyeballing
             the long-term evolution of the system, if
             you were shown just the $x$-coordinates,
-            or just the $y$-coordinates, on their own.
+            or just the $y$-coordinates, on their own!

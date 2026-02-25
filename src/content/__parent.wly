@@ -156,11 +156,12 @@
         !! >>_for_every_A1_A2_stupid_followup_
         >>_secant_cosecant_intersections_
         >>_geometric_construction_of_1_over_A_new_ver_
-        >>_geometric_construction_of_1_over_A_
+        !! >>_geometric_construction_of_1_over_A_
         >>_archimedean_projection_
         >>_rank_the_7_slices_
         >>_sphere_area_formula_from_archimedean_property_
         >>_sphere_volume_
+        !! >>_cosine_rule_
         !! >>_scalar_times_vector_definition_
         !! >>_isosets_of_xy_
         >>_gas_tank_
@@ -229,7 +230,7 @@
         !! 10. other:
         !!    - eta & 4eta as ratios
         !!    - rewriting Acosx + Bsinx as a sinusoid
-        !!    - sum formulas for tan & csc
+        !!    - sum formulas for tan & cot
 
         !! try to MINIMIZE DEPENDENCIES & MAXIMIZE MODULARITY!
 

@@ -622,7 +622,7 @@
 
     |> Pause
 
-    _Sidenote._
+    _Note._
     Another thing to know about radians 
     is that the length of a circular
     arc subtended by an angle is its radian

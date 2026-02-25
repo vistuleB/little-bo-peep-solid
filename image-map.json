@@ -395,6 +395,17 @@
     "used-last-build": true,
     "3chars": ["ch3"]
   },
+  "svg_ch4_5_euler_hearts_left.svg": {
+    "build-version": "svgo-svg/_DUb.svg",
+    "build-version-created-on": 1771926736,
+    "build-method": "svgo",
+    "build-version-size": 5750,
+    "original-size": 74369,
+    "compressed-size": 5750,
+    "compression": "92.27%",
+    "used-last-build": true,
+    "3chars": ["ch4"]
+  },
   "56.svg": {
     "build-version": "svgo-svg/KI3-.svg",
     "build-version-created-on": 1767294285,
@@ -887,8 +898,8 @@
     "original-size": 55918,
     "compressed-size": 14777,
     "compression": "73.57%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_vector_sum_u_concat_v.svg": {
     "build-version": "svgo-svg/Qnaf.svg",
@@ -2130,8 +2141,8 @@
     "original-size": 19809,
     "compressed-size": 8305,
     "compression": "58.07%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_abercrombie_to_the_left.svg": {
     "build-version": "svgo-svg/KxqB.svg",
@@ -5507,8 +5518,8 @@
     "original-size": 58466,
     "compressed-size": 16781,
     "compression": "71.3%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "66.svg": {
     "build-version": "svgo-svg/zUas.svg",
@@ -6376,6 +6387,17 @@
     "original-size": 51359,
     "compressed-size": 15375,
     "compression": "70.06%",
+    "used-last-build": true,
+    "3chars": ["ch4"]
+  },
+  "svg_ch4_5_euler_hearts_right.svg": {
+    "build-version": "svgo-svg/7DF3.svg",
+    "build-version-created-on": 1771926736,
+    "build-method": "svgo",
+    "build-version-size": 4928,
+    "original-size": 55081,
+    "compressed-size": 4928,
+    "compression": "91.05%",
     "used-last-build": true,
     "3chars": ["ch4"]
   },

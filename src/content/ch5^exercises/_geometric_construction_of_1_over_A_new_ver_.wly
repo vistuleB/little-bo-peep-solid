@@ -58,8 +58,8 @@
         |> Image
             src=tmp-images/e5_line_with_0_1_and_A_Agt1_step3.svg
 
-        _Step 4._ Draw a line through the intersections $P$,
-        $P'$ of the two circles to find the position of $1/A$:
+        _Step 4._ Draw a line through the intersections
+        of the two circles to find the position of $1/A$:
 
         |> Image
             src=tmp-images/e5_line_with_0_1_and_A_Agt1_step4.svg

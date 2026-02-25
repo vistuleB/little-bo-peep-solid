@@ -3457,7 +3457,7 @@ const Rest = () => {
                   -coordinates
                 </NoBreak>
                 {" "} of the green
-                and yellow particles, we find the graph
+                and yellow particles, we obtain the graph
                 from the problem statement!
               </OuterP>
             </SolutionNote>
@@ -4386,6 +4386,14 @@ const Rest = () => {
               <Pause />
               <CentralDisplayItalic>
                 the whole is simpler than the parts
+                <ImageLeft
+                  src="/build-img/svgo-svg/_DUb.svg"
+                  offset_x="-5rem"
+                />
+                <ImageRight
+                  src="/build-img/svgo-svg/7DF3.svg"
+                  offset_x="-5rem"
+                />
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
@@ -4407,7 +4415,7 @@ const Rest = () => {
                   </Math>
                   -coordinates,
                 </NoBreak>
-                {" "} on their own.
+                {" "} on their own!
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -9836,9 +9844,8 @@ const Rest = () => {
                 <Math>
                   $(11, 0)$
                 </Math>
-                ,
+                :
               </NoBreak>
-              {" "} a few units over to the right:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/htXO.svg" />
