@@ -21,8 +21,8 @@ function resolveMathJAXEnv(): string {
       console.error(
         "MATHJAX_VERSION should be 3 or 4 and OFFLINE_MODE should be true or false",
       );
-      console.warn("Using local version 4 of MathJAX instead");
-      return "/mathjax4/tex-svg.js";
+      console.warn("Defaulting to CDN mathjax version 3");
+      return "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js";
   }
 }
 

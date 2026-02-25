@@ -5,10 +5,10 @@ const mode = process.env.NODE_ENV || "development";
 const env = loadEnv(mode, process.cwd(), "");
 
 // Priority: process.env (CLI) > .env file
-const isAuthorMode = (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
 const viteEnv = process.env.VITE_ENV || env.VITE_ENV;
-const isOfflineMode = (process.env.OFFLINE_MODE || env.OFFLINE_MODE) === "true";
 const mathJAXVersion = process.env.MATHJAX_VERSION || env.MATHJAX_VERSION;
+const isAuthorMode = (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
+const isOfflineMode = (process.env.OFFLINE_MODE || env.OFFLINE_MODE) === "true";
 
 export default defineConfig({
   ssr: false,
