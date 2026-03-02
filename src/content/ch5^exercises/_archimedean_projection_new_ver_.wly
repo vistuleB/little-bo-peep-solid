@@ -1,0 +1,128 @@
+|> Exercise
+    handle=_archimedean_projection_new_ver_
+
+    By what factor are areas stretched
+    as a function of the latitude $\theta$ in the
+    Lambert projection of a sphere onto a cylinder?
+    (Cf. Example >>_secant_example_.)
+    For reference, a profile view of the Lambert projection
+    is also given below:
+
+    |> Image
+        src=images/svg_ch5_ex_horizontal_projection_sphere_statement.svg
+
+    |> Solution
+
+        Areas are scaled by a factor of
+        $$
+        \sec(\theta) \cdot \cos(\theta) = 1
+        $$
+        because latitudes are stretched by a factor of
+
+        $$
+        \sec(\theta)
+        $$
+
+        !! |> ImageRight
+        !!     offset_x=9em
+        !!     src=images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg
+
+        !! by the projection,
+        as covered in Example >>_secant_example_,
+        whereas longitudes (the other
+        ones, perpendicular to latitudes) are locally stretched
+        by a factor of...
+
+        $$
+        \cos(\theta)
+        $$
+
+        ...as depicted in this...
+
+        |> Image
+            src=images/svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg
+
+        ...sketch, and because the
+        overall scaling in area is the latitudinal
+        scaling factor times the longitudinal
+        scaling factor. (Area = width $\times$ height,
+        so you take the factor by which “width” scales,
+        times the factor by which “height” scales—presuming
+        your old “width” and “height” are still at right
+        angle to one another after the projection, which
+        is the case here: longitudes and latitudes, that
+        are perpendicular on the sphere, project to
+        lines and circles, respectively, that are
+        perpendicular on the cylinder.)
+
+        |> SolutionNote
+            As a consequence, 
+            the area of a shape on the sphere is equal to
+            the area of the projection of that shape onto
+            the cylinder, for any shape.
+            We will refer to this (strange?) fact as the
+
+            __Archimedean property__
+
+            of the sphere.
+            !! of as the “area-preserving property of the Lambert
+            !! projection”, which is more self-explanatory.
+
+            !! This 
+            !! !! (strange?) 
+            !! !! fact 
+            !! is known as the
+
+            !! __Archimedean property of the sphere__
+            !! !! though we will refer to it 
+            !! or as the
+
+            !! __area-preserving property of the
+            !! Lambert projection__
+
+            !! !! for shortness.
+            !! !! maybe-possibly.
+            !! !! as would be self-explanatory.
+            !! !! ...but which is uninterestingly self-explanatory.
+            !! with the latter being more self-explanatory, but
+            !! which, alas, gives credit to someone who is not a
+            !! mathematician! (And very much not the first to discover it,
+            !! but that is a lesser sin.)
+
+        |> SolutionNote
+            For example, the following two orange areas, one
+            on the sphere and one on the cylinder, are
+            equal, by the Archimedean property (this is a Lambert
+            projection):
+
+            |> Image
+                src=images/svg_ch5_ex_horizontal_projection_sphere_orange_1.svg
+
+            For a more fun example,
+            the 8 “tube sections” 
+            of each circle
+            in this diagram...
+
+            |> Image
+                src=images/svg_ch5_ex_horizontal_projection_sphere_orange_9.svg
+
+            ...have equal areas on the cylinder,
+            even though dissimilar in shape,
+            since those sections
+            have equal area to one another on the sphere.
+            (For each circle separately,
+            we mean.)
+
+            !! For a more fun example, 
+            !! since all corresponding areas
+            !! on the sphere and on the cylinder are equal in
+            !! this example by the Archimedean property...
+
+            !! |> Image
+            !!     src=images/svg_ch5_ex_horizontal_projection_sphere_orange_9.svg
+
+            !! ...it implies that the various “tube sections”
+            !! of either circle have equal areas on the cylinder,
+            !! even though dissimilar in shape, since those sections
+            !! have equal area to one another on the sphere!
+            !! (For each circle separately.)

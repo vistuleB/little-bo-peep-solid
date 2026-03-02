@@ -700,8 +700,8 @@
     "original-size": 203404,
     "compressed-size": 92947,
     "compression": "54.3%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ex_big_snail_quad_purple_angle_2.svg": {
     "build-version": "svgo-svg/JRLJ.svg",
@@ -1041,8 +1041,8 @@
     "original-size": 173507,
     "compressed-size": 156823,
     "compression": "9.62%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "e5_sec_powers_experimental_4.svg": {
     "build-version": "svgo-svg/_95g.svg",
@@ -1684,12 +1684,12 @@
   },
   "svg_ch5_ex_horizontal_projection_sphere_statement.svg": {
     "build-version": "svgo-svg/dKeI.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1772129245,
     "build-method": "svgo",
-    "build-version-size": 16448,
-    "original-size": 368736,
-    "compressed-size": 16448,
-    "compression": "95.54%",
+    "build-version-size": 21948,
+    "original-size": 378243,
+    "compressed-size": 21948,
+    "compression": "94.2%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1758,6 +1758,17 @@
     "compression": "0.66%",
     "used-last-build": true,
     "3chars": ["bt2"]
+  },
+  "svg_ch5_ex_max_xy_angles_v2.svg": {
+    "build-version": "svg/FyVW.svg",
+    "build-version-created-on": 1772443650,
+    "build-method": "cp",
+    "build-version-size": 227651,
+    "original-size": 227651,
+    "compressed-size": 227651,
+    "compression": "0.0%",
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg": {
     "build-version": "svgo-svg/9sIf.svg",
@@ -3543,14 +3554,14 @@
   },
   "svg_ch5_ex_max_xy_fixed_distance.svg": {
     "build-version": "svgo-svg/Pdlp.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1772483088,
     "build-method": "svgo",
-    "build-version-size": 81808,
-    "original-size": 321237,
-    "compressed-size": 81808,
-    "compression": "74.53%",
-    "used-last-build": false,
-    "3chars": []
+    "build-version-size": 92046,
+    "original-size": 339764,
+    "compressed-size": 92046,
+    "compression": "72.91%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch4_5_euler_after_10_10th.svg": {
     "build-version": "svgo-svg/hg3g.svg",
@@ -3758,8 +3769,8 @@
     "original-size": 93787,
     "compressed-size": 15171,
     "compression": "83.82%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch2_ch_swap_cloud.svg": {
     "build-version": "svgo-svg/j7nd.svg",
@@ -5397,8 +5408,8 @@
     "original-size": 304372,
     "compressed-size": 73821,
     "compression": "75.75%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ex_bomb_shelter_annotated.svg": {
     "build-version": "svgo-svg/x_qH.svg",

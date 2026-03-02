@@ -174,6 +174,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         #("Chapter <a href=1>_1_</a>", "<a href=1>Chapter _1_</a>"),
         #("Bootcamp <a href=1>_1_</a>", "<a href=1>Bootcamp _1_</a>"),
         #("Exercise <a href=1>_1_</a>", "<a href=1>Exercise _1_</a>"),
+        #("Example <a href=1>_1_</a>", "<a href=1>Example _1_</a>"),
         #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
       ]),
       dl.detokenize_href_surroundings(),

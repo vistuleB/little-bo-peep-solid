@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_123_hgi_"
+      id="_125_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -3991,7 +3991,10 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-18">
+      <Section
+        work="ing"
+        id="section-18"
+      >
         <OuterP>
           <b>
             The missing arrows.
@@ -4366,7 +4369,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_122_hgi_">
+      <Exercises id="_124_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -5602,7 +5605,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={5}>
+        <Exercise
+          work="ing"
+          number={5}
+        >
           <ExerciseStatement id="_88_hgi_">
             <OuterP>
               <b>
@@ -11014,17 +11020,26 @@ const Rest = () => {
                 Exercise 28.
               </b>
               {" "}
-              If a sphere is projected directly outward onto
-              a cylinder abutting the sphere at the equator, with each
-              point remaining at its height, as pictured in the
-              sketch and in the visualization below, by what factor are
-              areas stretched as a function of the latitude {" "}
+              By what factor are areas stretched
+              as a function of the latitude {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} in the
+              Lambert projection of a sphere onto a cylinder?
+              (Cf. {" "}
               <NoBreak>
-                <Math>
-                  $\theta$
-                </Math>
-                ?
+                <InChapterLink
+                  href="/article/chapter5#_83_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Example 6
+                </InChapterLink>
+                .)
               </NoBreak>
+              {" "}
+              For reference, a profile view of the Lambert projection
+              is also given below:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/dKeI.svg" />
@@ -11041,23 +11056,28 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              because latitudes (circles that slice the sphere
-              horizontally) are stretched by a factor of
+              because latitudes are stretched by a factor of
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sec(\theta)
               $$
-              <ImageRight
-                offset_x="9em"
-                src="/build-img/svgo-svg/MW7M.svg"
-                compensate_offset_x_for_large_text_columns={true}
-              />
             </MathBlock>
             <Pause />
             <OuterP>
-              by the projection, whereas longitudes (the other
+              as covered in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_83_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Example 6
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "}
+              whereas longitudes (the other
               ones, perpendicular to latitudes) are locally stretched
               by a factor of...
             </OuterP>
@@ -11103,7 +11123,7 @@ const Rest = () => {
                 the area of a shape on the sphere is equal to
                 the area of the projection of that shape onto
                 the cylinder, for any shape.
-                This (strange?) fact is known as the
+                We will refer to this (strange?) fact as the
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -11123,25 +11143,28 @@ const Rest = () => {
                 {" "}
                 For example, the following two orange areas, one
                 on the sphere and one on the cylinder, are
-                equal, by the Archimedean property:
+                equal, by the Archimedean property (this is a Lambert
+                projection):
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/pG5W.svg" />
               <Pause />
               <OuterP>
-                For a more fun example, since all corresponding areas
-                on the sphere and on the cylinder are equal in
-                this example by the Archimedean property...
+                For a more fun example,
+                the 8 “tube sections” 
+                of each circle
+                in this diagram...
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/7Dao.svg" />
               <Pause />
               <OuterP>
-                ...it implies that the various “tube sections”
-                of either circle have equal areas on the cylinder,
-                even though dissimilar in shape, since those sections
-                have equal area to one another on the sphere!
-                (For each circle separately.)
+                ...have equal areas on the cylinder,
+                even though dissimilar in shape,
+                since those sections
+                have equal area to one another on the sphere.
+                (For each circle separately,
+                we mean.)
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -12874,10 +12897,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={38}
-        >
+        <Exercise number={38}>
           <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
@@ -13908,6 +13928,1057 @@ const Rest = () => {
                   </p>
                 </Item>
               </List>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={39}>
+          <ExerciseStatement id="_122_hgi_">
+            <OuterP>
+              <b>
+                Exercise 39.
+              </b>
+              {" "}
+              Let points {" "}
+              <Math>
+                $P_1$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $P_2$
+              </Math>
+              {" "} have polar coordinates
+              {" "}
+              <Math>
+                $(r_1, \theta_1)$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $(r_2, \theta_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} respectively:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_polar_P1P2.svg" />
+            <Pause />
+            <OuterP>
+              What is the distance from {" "}
+              <Math>
+                $P_1$
+              </Math>
+              {" "} to {" "}
+              <Math>
+                $P_2$
+              </Math>
+              {" "}
+              as a function of {" "}
+              <NoBreak>
+                <Math>
+                  $r_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $r_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\theta_1$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_2$
+                </Math>
+                ?
+              </NoBreak>
+              {" "}
+              (Keep an eye out for algebraic simplifications and,
+              in particular, for the fact that the distance should
+              depend only on
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta_1 - \theta_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or, even, only on
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              |\theta_1 - \theta_2|
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as opposed to depending on the individual values of
+              {" "}
+              <Math>
+                $\theta_1$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\theta_2$
+              </Math>
+              {" "} separately, since we can rotate
+              the entire diagram while keeping the distance from
+              {" "}
+              <Math>
+                $P_1$
+              </Math>
+              {" "} to {" "}
+              <Math>
+                $P_2$
+              </Math>
+              {" "} constant.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                Solution 1.
+              </i>
+              {" "} As a preliminary, we would like to note that...
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \cos(A - B) = \cos A\cos B + \sin A\sin B
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              ...for all {" "}
+              <NoBreak>
+                <Math>
+                  $A, B \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(A + B) = \cos A\cos B - \sin A\sin B
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all {" "}
+              <Math>
+                $A, B \in \rr$
+              </Math>
+              {" "} implies
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              \cos(A - B)\,&amp;=\,\,\up&#123;1.3&#125; \cos(A + (-B))\\
+                          &amp;=\,\,\up&#123;1.4&#125; \cos(A)\cos(-B) - \sin(A)\sin(-B) \\
+                          &amp;=\,\,\up&#123;1.4&#125; \cos A\cos B + \sin A\sin B
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(-x) = \cos(x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\sin(-x) = -\sin(x)$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              (There is a similar formula
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \sin(A - B) = -\cos A\sin B + \sin A\cos B
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              for the sine of a difference, but that one is hardly
+              as important or useful, you should forget it even though
+              we just boxed it.)
+            </OuterP>
+            <OuterP class="indent-10">
+              We now apply the Cartesian formula
+              for distance
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;(x_1 - x_2)^2 + (y_1 - y_2)^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              that will be good to slightly rewrite as
+              <ImageLeft src="/tmp-images/e5_polar_P1P2_a_minus_b_squared_left_cloud.svg" />
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;x_1^2 + x_2^2 + y_1^2 + y_2^2 - 2(x_1x_2 + y_1y_2)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to be applied with {" "}
+              <NoBreak>
+                <Math>
+                  $(x_1, y_1) = P_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2) = P_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} i.e., with
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              (x_1, y_1) = (r_1\cos\theta_1, r_1\sin\theta_1) \\
+              (x_2, y_2) = (r_2\cos\theta_2, r_2\sin\theta_2)\up&#123;1.4&#125;
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by definition of polar coordinates,
+              from which
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              \,&amp;x_1^2 + y_1^2 = r_1^2\cos^2\theta_1 + r_1^2\sin^2\theta_1 = r_1^2(\cos^2\theta_1 + \sin^2\theta_1) = r_1^2,\up&#123;1.3&#125; \\
+              &amp;x_2^2 + y_2^2 = r_2^2\cos^2\theta_2 + r_2^2\sin^2\theta_2 = r_2^2(\cos^2\theta_2 + \sin^2\theta_2) = r_2^2\up&#123;1.4&#125;
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1^2 + x_2^2 + y_1^2 + y_2^2 = r_1^2 + r_2^2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (in fact, we know that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1^2 + y_1^2 = r_1^2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_2^2 + y_2^2 = r_2^2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              just from the 
+              Pythagorean theorem
+              and the fact that {" "}
+              <NoBreak>
+                <Math>
+                  $P_1 = (x_1, y_1)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $P_2 = (x_2, y_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} 
+              but anyway), while
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              \,x_1x_2 =\, r_1\cos\theta_1\cdot r_2\cos\theta_2 = r_1r_2\cos\theta_1\cos\theta_2,\up&#123;0.9&#125; \\
+              y_1y_2 =\, r_1\sin\theta_1\cdot r_2\sin\theta_2 = r_1r_2\sin\theta_1\sin\theta_2\up&#123;1.5&#125;\,\,
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              from which
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1x_2 + y_1y_2 = r_1r_2(\cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              but
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2 = \cos(\theta_1 - \theta_2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the first remark, so
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1y_1 + x_2y_2 = r_1r_2\cos(\theta_1 - \theta_2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and, altogether, the distance...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;x_1^2 + x_2^2 + y_1^2 + y_2^2 - 2(x_1x_2 + y_1y_2)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...turns out to be...
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \sqrt&#123;r_1^2 + r_2^2 - 2r_2r_2\cos(\theta_1 - \theta_2)&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              ...that, as can be seen, depends only on
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta_1 - \theta_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or, even, only on
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              |\theta_1 - \theta_2|
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              since {" "}
+              <Math>
+                $\cos(x) = \cos(-x) = \cos(|x|)$
+              </Math>
+              {" "} for all {" "}
+              <NoBreak>
+                <Math>
+                  $x\in\rr$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 2.
+              </i>
+              {" "} Start by rotating {" "}
+              <NoBreak>
+                <Math>
+                  $P_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $P_2$
+              </Math>
+              {" "} by
+              {" "}
+              <Math>
+                $-\theta_2$
+              </Math>
+              {" "} radians about the origin, to new
+              points {" "}
+              <Math>
+                $P_1'$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $P_2'$
+              </Math>
+              {" "} such that {" "}
+              <Math>
+                $P_2'$
+              </Math>
+              {" "} is aligned
+              with the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis and {" "}
+              <Math>
+                $P_1'$
+              </Math>
+              {" "} has argument {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_1 - \theta_2$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_polar_P1P2_rotated.svg" />
+            <Pause />
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gather&#125;
+              \,P_1' = (r_1\cdot\cos(\theta_1 - \theta_2), r_1\cdot\sin(\theta_1 - \theta_2)),\\
+              P_2' = (r_2, 0)\up&#123;1.8&#125;
+              \end&#123;gather&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              the Euclidean distance
+              formula gives
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              \overline&#123;P_1P_2&#125;\,=\,\overline&#123;P_1'P_2'&#125;\,=&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;(r_1\cos(\theta_1 - \theta_2) - r_2)^2 + (r_1\sin(\theta_1 - \theta_2) - 0)^2&#125;\\
+              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2\cos^2(\theta_1 - \theta_2) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2 + r_1^2\sin^2(\theta_1 - \theta_2)&#125; \\
+              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2(\cos^2(\theta_1 - \theta_2) + \sin^2(\theta_1 - \theta_2)) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2&#125; \\
+              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2 - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2&#125; \\
+              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)&#125;
+              \end&#123;aligned&#125;
+              $$
+              <ImageRight
+                line={1}
+                src="/tmp-images/e5_polar_P1P2_euclidean_distance_cloud.svg"
+                offset_x="-2em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which agrees with the first solution.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                As a result, the {" "}
+                <i>
+                  distance squared
+                </i>
+                {" "} between {" "}
+                <Math>
+                  $P_1$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $P_2$
+                </Math>
+                {" "}
+                is:
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  r_1^2 + r_2^2 - 2r_2r_2\cos(\theta_1 - \theta_2)
+                  $$
+                </MathBlock>
+              </Boxed>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The distance formula reduces to
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \sqrt&#123;r_1^2 + r_2^2&#125;
+                  $$
+                  <ImageRight
+                    src="/tmp-images/e5_polar_P1P2_right_angle_cloud.svg"
+                    offset_x="3em"
+                    compensate_offset_x_for_large_text_columns={true}
+                  />
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                if {" "}
+                <Math>
+                  $P_1$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $P_2$
+                </Math>
+                {" "} are at right angle, since
+                {" "}
+                <Math>
+                  $\cos|\theta_1 - \theta_2| = \cos\eta = 0$
+                </Math>
+                {" "} in that
+                case.
+                This accords with the Pythagorean theorem, and
+                constitutes an extra check on our computations!
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                By comparing the two solutions one can 
+                actually deduce that
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(\theta_1 - \theta_2) = \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                without knowing the angle-sum formula
+                for cosine beforehand.
+                This constitutes a second* proof of the angle-sum
+                formula for cos and, by extension, for sin.
+              </OuterP>
+              <OuterP class="indent-10">
+                (*Some people would say {" "}
+                <i>
+                  first
+                </i>
+                {" "} proof, as our
+                original proof from the chapter put some restrictions
+                on the range of the angles, such as 
+                {" "}
+                <Math>
+                  $0 \leq \theta_1, \theta_2 \leq \eta$
+                </Math>
+                {" "}
+                specifically.) (**Though such restrictions can be lifted
+                by diligent of use {" "}
+                <Math>
+                  $\cos(x+\eta) = -\sin(x)$
+                </Math>
+                {" "} -type identities.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={40}
+        >
+          <ExerciseStatement id="_123_hgi_">
+            <OuterP>
+              <b>
+                Exercise 40.
+              </b>
+              {" "}
+              If each of these dotted lines...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/CbYC.svg" />
+            <Pause />
+            <OuterP>
+              ...is a so-called
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              isoset
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (also: {" "}
+              <i>
+                isoline
+              </i>
+              , {" "}
+              <i>
+                contour line
+              </i>
+              , {" "}
+              <i>
+                isoquant
+              </i>
+              ,
+              {" "}
+              <i>
+                isosurface
+              </i>
+              , {" "}
+              <i>
+                isovalue line
+              </i>
+              , or {" "}
+              <i>
+                isovalue set
+              </i>
+              <NoBreak>
+                <Math>
+                  $\rt&#123;0.1&#125;$
+                </Math>
+                )
+              </NoBreak>
+              {" "}
+              of the two-variable function
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : \rr^2\ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              given by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f(x, y) = x + y
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              then what are similar
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              isosets
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (😍) of the two-variable
+              function
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              g : \rr^2\ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              given by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              g(x, y) = xy
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...?
+            </OuterP>
+            <OuterP class="indent-10">
+              Use any geometric insights gleaned from
+              these
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              isosets
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (😍😍😍) to find the maximum and minimum values of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin\theta&#123;&#125;\cos\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and specify the set of
+              values of {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} for which the maximum and
+              minimum are attained.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The isosets of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x, y) \ra xy
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (lambda-notation for a two-variable function)
+              have this general aspect:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/ME1k.svg" />
+            <Pause />
+            <OuterP>
+              Note that each isoset consists of the union of
+              TWO disjoint curves, modulo the isoset
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              xy = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (or: “modulo the isoset
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;(x, y) \in \rr^2 : xy = 0 \&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...” to be explicit about the fact that
+              the isoset is {" "}
+              <i>
+                a set of points in the plane
+              </i>
+              ),
+              that is the union of the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -
+              </NoBreak>
+              {" "} axes, which
+              intersect. (Hence, not “disjoint”.)
+            </OuterP>
+            <OuterP class="indent-10">
+              If we draw a “heatmap” of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              xy
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              in some region of the plane, 
+              the larger (more positive)
+              values of {" "}
+              <Math>
+                $xy$
+              </Math>
+              {" "} show up in the first and third
+              quadrants, while the smaller (more negative)
+              values of {" "}
+              <Math>
+                $xy$
+              </Math>
+              {" "} show up in the second and fourth
+              quadrants:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/FGx3.svg" />
+            <Pause />
+            <OuterP>
+              At any given
+              distance from the origin, the line
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = y
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be seen seen to hold the largest of values of {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              while, symmetrically,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = -y
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be seen to hold the smallest values:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Pdlp.svg" />
+            <Pause />
+            <OuterP>
+              In particular,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos\theta\,\sin\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              will reach its maximum at those values of
+              {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} for which
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\cos \theta, \sin \theta) = \pm(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and will reach its mimumim at those values
+              of {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} for which
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\cos \theta, \sin \theta) = \pm(-\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              the former values of {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} being all {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "}
+              in the set
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;0.5\eta + 2\eta k: k \in \zz\&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and the latter values of {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} being all {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "}
+              in the set
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;1.5\eta + 2\eta k: k \in \zz\&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as illustrated here:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/svg_ch5_ex_max_xy_angles_v2.svg" />
+            <Pause />
+            <OuterP>
+              The actual maximum and minimum
+              {" "}
+              <i>
+                values
+              </i>
+              {" "} of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos\theta\,\sin\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              are
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = (-\sqrt&#123;0.5&#125;) \cdot (-\sqrt&#123;0.5&#125;) = &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for the maximum, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (-\sqrt&#123;0.5&#125;) \cdot \sqrt&#123;0.5&#125; = \sqrt&#123;0.5&#125; \cdot (-\sqrt&#123;0.5&#125;) = -&#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for the minimum, as obtained just by taking
+              the product of the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinates
+              </NoBreak>
+              {" "} at the points
+              of interest.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                For interest, here is the graph of {" "}
+                <NoBreak>
+                  <Math>
+                    $x \ra \sin x \cos x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                as previously given in {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter5#_88_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Exercise 5
+                  </InChapterLink>
+                  ,
+                </NoBreak>
+                {" "} annotated
+                with the newly gleaned information:
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/svg_ch5_ex_max_xy_graph_v2.svg" />
+              <Pause />
+              <StarDivider />
             </SolutionNote>
           </Solution>
         </Exercise>

@@ -5,6 +5,7 @@ import { useGlobalContext } from "~/store/StoreProvider";
 interface ExampleProps {
   style?: string | JSX.CSSProperties;
   class?: string;
+  id?: string;
 }
 
 export const Section = (
@@ -26,6 +27,7 @@ export const Example = (props: ParentProps<ExampleProps>) => {
     <div
       class={props.class}
       style={props.style}
+      id={props.id}
     >
       {props.children}
     </div>
