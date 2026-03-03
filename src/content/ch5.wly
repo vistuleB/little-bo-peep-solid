@@ -78,7 +78,6 @@
         src=images/svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg
 
     Some thought reveals that 
-    !! this value of $x$ would be 
     such a value $x$ does exist, and more precisely equals 
     _minus one-quarter the circumference
     of a unit circle_, because $(0, -1)$ is

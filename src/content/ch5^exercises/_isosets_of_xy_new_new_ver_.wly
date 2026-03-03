@@ -29,9 +29,7 @@
 
     __isosets__
 
-    !! (man, we like this word!) 
-    (😍) of the two-variable
-    function
+    (😍) of the two-variable function
 
     $$
     g : \rr^2\ra \rr
@@ -178,7 +176,7 @@
         as illustrated here:
 
         |> Image
-            src=tmp-images/svg_ch5_ex_max_xy_angles_v2.svg
+            src=images/svg_ch5_ex_max_xy_angles_v2.svg
 
         !! (Recall that
 
@@ -225,9 +223,9 @@
             with the newly gleaned information:
 
             |> Image
-                src=tmp-images/svg_ch5_ex_max_xy_graph_v2.svg
+                src=images/svg_ch5_ex_max_xy_graph_v2.svg
 
             !! |> Image
-            !!     src=tmp-images/svg_ch5_ex_max_xy_graph_degrees.svg
+            !!     src=images/svg_ch5_ex_max_xy_graph_degrees.svg
 
             |> StarDivider

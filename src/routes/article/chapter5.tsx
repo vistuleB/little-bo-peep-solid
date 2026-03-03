@@ -10699,7 +10699,7 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:0.8em;"
-              src="/tmp-images/e5_line_with_0_1_and_A.svg"
+              src="/build-img/svgo-svg/j4h0.svg"
             />
             <Pause />
             <OuterP>
@@ -10770,9 +10770,9 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_secant.svg" />
+            <Image src="/build-img/svgo-svg/kxTm.svg" />
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_cos.svg" />
+            <Image src="/build-img/svgo-svg/ryx0.svg" />
             <Pause />
             <OuterP>
               (Cf. {" "}
@@ -10819,7 +10819,7 @@ const Rest = () => {
               this, the procedure is to use two circles of equal radius:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step1.svg" />
+            <Image src="/build-img/svgo-svg/JM7s.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -10833,7 +10833,7 @@ const Rest = () => {
               center is that midpoint:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step2.svg" />
+            <Image src="/build-img/svgo-svg/eQmC.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -10853,7 +10853,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step3.svg" />
+            <Image src="/build-img/svgo-svg/emr1.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -10869,14 +10869,14 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step4.svg" />
+            <Image src="/build-img/svgo-svg/XE7K.svg" />
             <Pause />
             <OuterP>
               (The reason that the whole procedure works is that
               this triangle...
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg" />
+            <Image src="/build-img/svgo-svg/KO2V.svg" />
             <Pause />
             <OuterP>
               ...is actually right-angled at its upper corner
@@ -10936,7 +10936,7 @@ const Rest = () => {
               of any radius:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg" />
+            <Image src="/build-img/svgo-svg/RGWo.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -10960,7 +10960,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg" />
+            <Image src="/build-img/svgo-svg/4MXO.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -10988,7 +10988,7 @@ const Rest = () => {
               upper intersection of the circle with the perpendicular:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg" />
+            <Image src="/build-img/svgo-svg/FPj6.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -11008,7 +11008,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg" />
+            <Image src="/build-img/svgo-svg/hKBQ.svg" />
             <Pause />
             <StarDivider />
           </Solution>
@@ -13628,7 +13628,7 @@ const Rest = () => {
               <Pause />
               <CentralDisplayItalic>
                 translate-and-then-compress
-                <ImageRight src="/tmp-images/e5_ABCD_roles_translate_and_then_compress_cloud.svg" />
+                <ImageRight src="/build-img/svgo-svg/zaRv.svg" />
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
@@ -13637,7 +13637,7 @@ const Rest = () => {
               <Pause />
               <CentralDisplayItalic>
                 compress-and-then-translate
-                <ImageRight src="/tmp-images/e5_ABCD_roles_compress_and_then_translate_cloud_v2.svg" />
+                <ImageRight src="/build-img/svgo-svg/w5g-.svg" />
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
@@ -13663,7 +13663,7 @@ const Rest = () => {
               <Pause />
               <Image src="/build-img/svgo-svg/te-X.svg">
                 <ImageLeft
-                  src="/tmp-images/e5_ABCD_roles_Au_cloud.svg"
+                  src="/build-img/svgo-svg/cCoO.svg"
                   offset_x="2em"
                 />
               </Image>
@@ -13961,7 +13961,7 @@ const Rest = () => {
               {" "} respectively:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_polar_P1P2.svg" />
+            <Image src="/build-img/svgo-svg/E-Fq.svg" />
             <Pause />
             <OuterP>
               What is the distance from {" "}
@@ -14136,7 +14136,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               that will be good to slightly rewrite as
-              <ImageLeft src="/tmp-images/e5_polar_P1P2_a_minus_b_squared_left_cloud.svg" />
+              <ImageLeft src="/build-img/svgo-svg/Y5Rf.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14381,7 +14381,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_polar_P1P2_rotated.svg" />
+            <Image src="/build-img/svgo-svg/RLiz.svg" />
             <Pause />
             <OuterP>
               Since
@@ -14413,7 +14413,7 @@ const Rest = () => {
               $$
               <ImageRight
                 line={1}
-                src="/tmp-images/e5_polar_P1P2_euclidean_distance_cloud.svg"
+                src="/build-img/svgo-svg/dosD.svg"
                 offset_x="-2em"
                 compensate_offset_x_for_large_text_columns={true}
               />
@@ -14467,7 +14467,7 @@ const Rest = () => {
                   \sqrt&#123;r_1^2 + r_2^2&#125;
                   $$
                   <ImageRight
-                    src="/tmp-images/e5_polar_P1P2_right_angle_cloud.svg"
+                    src="/build-img/svgo-svg/A3u9.svg"
                     offset_x="3em"
                     compensate_offset_x_for_large_text_columns={true}
                   />
@@ -14549,142 +14549,28 @@ const Rest = () => {
                 Exercise 40.
               </b>
               {" "}
-              If each of these dotted lines...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/CbYC.svg" />
-            <Pause />
-            <OuterP>
-              ...is a so-called
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              isoset
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (also: {" "}
-              <i>
-                isoline
-              </i>
-              , {" "}
-              <i>
-                contour line
-              </i>
-              , {" "}
-              <i>
-                isoquant
-              </i>
-              ,
-              {" "}
-              <i>
-                isosurface
-              </i>
-              , {" "}
-              <i>
-                isovalue line
-              </i>
-              , or {" "}
-              <i>
-                isovalue set
-              </i>
-              <NoBreak>
-                <Math>
-                  $\rt&#123;0.1&#125;$
-                </Math>
-                )
-              </NoBreak>
-              {" "}
-              of the two-variable function
+              What are the maximum and minimum values
+              of
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              f : \rr^2\ra \rr
+              \theta \ra \cos(\theta)\sin(\theta)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              given by
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f(x, y) = x + y
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              then what are similar
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              isosets
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (😍) of the two-variable
-              function
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              g : \rr^2\ra \rr
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              given by
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              g(x, y) = xy
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...?
-            </OuterP>
-            <OuterP class="indent-10">
-              Use any geometric insights gleaned from
-              these
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              isosets
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (😍😍😍) to find the maximum and minimum values of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sin\theta&#123;&#125;\cos\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for {" "}
-              <NoBreak>
-                <Math>
-                  $\theta \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and specify the set of
-              values of {" "}
+              and for which {" "}
               <Math>
                 $\theta$
               </Math>
-              {" "} for which the maximum and
-              minimum are attained.
+              {" "} are they attained?
+              (Reason geometrically, not by calculus.)
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The isosets of
+              The “isosets” of
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14694,89 +14580,40 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              (lambda-notation for a two-variable function)
               have this general aspect:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/ME1k.svg" />
+            <Image
+              src="/build-img/svgo-svg/ME1k.svg"
+              style="margin-bottom:0.5em;"
+            />
             <Pause />
             <OuterP>
-              Note that each isoset consists of the union of
-              TWO disjoint curves, modulo the isoset
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              xy = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (or: “modulo the isoset
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \&#123;(x, y) \in \rr^2 : xy = 0 \&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...” to be explicit about the fact that
-              the isoset is {" "}
-              <i>
-                a set of points in the plane
-              </i>
-              ),
-              that is the union of the {" "}
+              These isosets give rise to the boundaries
+              between colored regions 
+              when we draw a “heatmap” of {" "}
               <NoBreak>
                 <Math>
-                  $x$
+                  $(x, y) \ra xy$
                 </Math>
-                -
+                ,
               </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -
-              </NoBreak>
-              {" "} axes, which
-              intersect. (Hence, not “disjoint”.)
-            </OuterP>
-            <OuterP class="indent-10">
-              If we draw a “heatmap” of
+              {" "}
+              drawn here in the same 
+              window:
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              xy
-              $$
-            </MathBlock>
+            <Image
+              src="/build-img/svgo-svg/FGx3.svg"
+              style="margin-bottom:0.5em;"
+            />
             <Pause />
             <OuterP>
-              in some region of the plane, 
-              the larger (more positive)
-              values of {" "}
-              <Math>
-                $xy$
-              </Math>
-              {" "} show up in the first and third
-              quadrants, while the smaller (more negative)
-              values of {" "}
-              <Math>
-                $xy$
-              </Math>
-              {" "} show up in the second and fourth
-              quadrants:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/FGx3.svg" />
-            <Pause />
-            <OuterP>
-              At any given
-              distance from the origin, the line
+              The geometric insight that is of interest to
+              us, and that we accept without further proof,
+              is that,
+              at any given
+              distance from the origin, the lines
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14786,15 +14623,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              can be seen seen to hold the largest of values of {" "}
-              <NoBreak>
-                <Math>
-                  $xy$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              while, symmetrically,
+              and
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14804,28 +14633,47 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              can be seen to hold the smallest values:
+              seem to hold the largest and smallest values,
+              respectively, of {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Pdlp.svg" />
+            <Image src="/build-img/svgo-svg/YYAQ.svg" />
             <Pause />
             <OuterP>
-              In particular,
+              In other words,
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \cos\theta\,\sin\theta
+              \cos(\theta)\cdot\sin(\theta),
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              will reach its maximum at those values of
+              as a value of the form {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} times {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate”
+              </NoBreak>
               {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} for which
+              of a point confined to the unit circle,
+              will reach its maximum when
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14835,81 +14683,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              and will reach its mimumim at those values
-              of {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} for which
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (\cos \theta, \sin \theta) = \pm(-\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              the former values of {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} being all {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "}
-              in the set
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \&#123;0.5\eta + 2\eta k: k \in \zz\&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and the latter values of {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} being all {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "}
-              in the set
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \&#123;1.5\eta + 2\eta k: k \in \zz\&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as illustrated here:
-            </OuterP>
-            <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_max_xy_angles_v2.svg" />
-            <Pause />
-            <OuterP>
-              The actual maximum and minimum
-              {" "}
-              <i>
-                values
-              </i>
-              {" "} of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos\theta\,\sin\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              are
+              where it attains value
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14919,7 +14693,17 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              for the maximum, and
+              and will reach its minimum when
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\cos \theta, \sin \theta) = \pm(-\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where it attains value
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14929,23 +14713,42 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              for the minimum, as obtained just by taking
-              the product of the {" "}
+              while, to answer the last part of the question,
+              the set of {" "}
               <NoBreak>
                 <Math>
-                  $x$
+                  $\theta$
                 </Math>
-                -
+                's
               </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinates
-              </NoBreak>
-              {" "} at the points
-              of interest.
+              {" "} for which the 
+              maximum and minimum are reached will be...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;0.5\eta + 2\eta k: k \in \zz\&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...and...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;1.5\eta + 2\eta k: k \in \zz\&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...respectively, as illustrated...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/FyVW.svg" />
+            <Pause />
+            <OuterP>
+              ...here!
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -14954,10 +14757,10 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                For interest, here is the graph of {" "}
+                For interest, here is the graph {" "}
                 <NoBreak>
                   <Math>
-                    $x \ra \sin x \cos x$
+                    $y = \cos(x)\sin(x)$
                   </Math>
                   ,
                 </NoBreak>
@@ -14973,12 +14776,25 @@ const Rest = () => {
                   ,
                 </NoBreak>
                 {" "} annotated
-                with the newly gleaned information:
+                with the maximum, minimum, and the values {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} at which they
+                are attained:
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/svg_ch5_ex_max_xy_graph_v2.svg" />
+              <Image src="/build-img/svgo-svg/7Hpe.svg" />
               <Pause />
-              <StarDivider />
+              <OuterP>
+                (Or equivalently...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/H0zm.svg" />
+              <Pause />
+              <OuterP>
+                ...in degrees.)
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>

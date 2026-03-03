@@ -6,7 +6,7 @@
 
     |> Image
         style=margin-top:0.8em;margin-bottom:0.8em;
-        src=tmp-images/e5_line_with_0_1_and_A.svg
+        src=images/e5_line_with_0_1_and_A.svg
 
     ...how can we find the placement of...
 
@@ -25,12 +25,12 @@
         or symmetrically, such that $A = \cos(\theta)$, if $|A| < 1$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_and_secant.svg
+            src=images/e5_line_with_0_1_and_A_and_secant.svg
 
         !! ...or symmetrically such that $A = \cos(\theta)$, if $|A| < 1$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_and_cos.svg
+            src=images/e5_line_with_0_1_and_A_and_cos.svg
 
         (Cf. Exercise >>_secant_cosecant_intersections_.)
         We now proceed with
@@ -44,31 +44,31 @@
         this, the procedure is to use two circles of equal radius:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step1.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step1.svg
 
         _Step 2._ Draw a semicircle of radius $A/2$ whose
         center is that midpoint:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step2.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step2.svg
 
         _Step 3._ Draw a circle of radius $1$ whose center
         is $(0, 0)$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step3.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step3.svg
 
         _Step 4._ Draw a line through the intersections
         of the two circles to find the position of $1/A$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step4.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step4.svg
 
         (The reason that the whole procedure works is that
         this triangle...
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg
 
         ...is actually right-angled at its upper corner
         by 
@@ -87,14 +87,14 @@
         of any radius:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg
+            src=images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg
 
         _Step 2._ Use these points to draw a perpendicular 
         through $A$, similarly to the first step of
         the case $|A| > 1$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg
+            src=images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg
 
         !! _Step 3._ 
         
@@ -102,7 +102,7 @@
         !! $(0, 0)$:
 
         !! |> Image
-        !!     src=tmp-images/e5_line_with_0_1_and_A_Alt1_step3_v3.svg
+        !!     src=images/e5_line_with_0_1_and_A_Alt1_step3_v3.svg
 
         _Step 3._ 
         Draw a circle of radius $1$ centered at
@@ -111,7 +111,7 @@
         upper intersection of the circle with the perpendicular:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg
+            src=images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg
 
         _Step 4._ 
         Construct a perpendicular to this line
@@ -124,9 +124,9 @@
         main axis is $1/A$:
 
         !! |> Image
-        !!     src=tmp-images/e5_line_with_0_1_and_A_Alt1_step5_v3.svg
+        !!     src=images/e5_line_with_0_1_and_A_Alt1_step5_v3.svg
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg
+            src=images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg
 
         |> StarDivider

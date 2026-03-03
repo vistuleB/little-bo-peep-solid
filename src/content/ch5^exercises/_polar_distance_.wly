@@ -5,7 +5,7 @@
     $(r_1, \theta_1)$ and $(r_2, \theta_2)$, respectively:
 
     |> Image
-        src=tmp-images/e5_polar_P1P2.svg
+        src=images/e5_polar_P1P2.svg
 
     What is the distance from $P_1$ to $P_2$
     as a function of $r_1$, $r_2$, $\theta_1$ and $\theta_2$?
@@ -72,14 +72,14 @@
         that will be good to slightly rewrite as
 
         |> ImageLeft
-            src=tmp-images/e5_polar_P1P2_a_minus_b_squared_left_cloud.svg
+            src=images/e5_polar_P1P2_a_minus_b_squared_left_cloud.svg
 
         $$
         \sqrt{x_1^2 + x_2^2 + y_1^2 + y_2^2 - 2(x_1x_2 + y_1y_2)}
         $$
 
         !! |> ImageRight
-        !!     src=tmp-images/e5_polar_P1P2_a_minus_b_squared_cloud.svg
+        !!     src=images/e5_polar_P1P2_a_minus_b_squared_cloud.svg
         !!     offset_x=2.5em
 
         to be applied with $(x_1, y_1) = P_1$, $(x_2, y_2) = P_2$, i.e., with
@@ -196,7 +196,7 @@
         with the $x$ axis and $P_1'$ has argument $\theta_1 - \theta_2$:
 
         |> Image
-            src=tmp-images/e5_polar_P1P2_rotated.svg
+            src=images/e5_polar_P1P2_rotated.svg
 
         Since 
         !! $P_1'$ as coordinates
@@ -224,7 +224,7 @@
 
         |> ImageRight
             line=1
-            src=tmp-images/e5_polar_P1P2_euclidean_distance_cloud.svg
+            src=images/e5_polar_P1P2_euclidean_distance_cloud.svg
             offset_x=-2em
 
         which agrees with the first solution.
@@ -251,7 +251,7 @@
                 $$
 
                 |> ImageRight
-                    src=tmp-images/e5_polar_P1P2_right_angle_cloud.svg
+                    src=images/e5_polar_P1P2_right_angle_cloud.svg
                     offset_x=3em
 
             if $P_1$ and $P_2$ are at right angle, since

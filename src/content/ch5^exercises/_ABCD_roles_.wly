@@ -224,14 +224,14 @@
             __translate-and-then-compress__
 
             |> ImageRight
-                src=tmp-images/e5_ABCD_roles_translate_and_then_compress_cloud.svg
+                src=images/e5_ABCD_roles_translate_and_then_compress_cloud.svg
 
             or if you
             
             __compress-and-then-translate__
 
             |> ImageRight
-                src=tmp-images/e5_ABCD_roles_compress_and_then_translate_cloud_v2.svg
+                src=images/e5_ABCD_roles_compress_and_then_translate_cloud_v2.svg
 
             the two amounts of translation required are
             not the same, to achieve the same end result—if
@@ -248,7 +248,7 @@
                 src=images/e5_ABCD_roles_identity_comp_rearranged_zz.svg
 
             |> ImageLeft
-                src=tmp-images/e5_ABCD_roles_Au_cloud.svg
+                src=images/e5_ABCD_roles_Au_cloud.svg
                 offset_x=2em
 
             ...you find that after $D$ has been dialed up,

@@ -1,0 +1,181 @@
+|> Exercise
+    work=ing
+    handle=_isosets_of_xy_v4_
+
+    What are the maximum and minimum values
+    of 
+
+    $$
+    \theta \ra \cos(\theta)\sin(\theta)
+    $$
+
+    and for which $\theta$ are they attained?
+    (Reason geometrically, not by calculus.)
+
+    !! Reason geometrically to determine the
+    !! maximum and minimum values of
+    !! $$
+    !! \theta \ra \cos(\theta)\sin(\theta)
+    !! $$
+    !! and specify those $\theta$'s
+    !! for which the maximum and
+    !! minimum, respectively, are attained.
+
+    !! Determine the maximum and minimum values of
+
+    !! $$
+    !! \theta \ra \cos(\theta)\sin(\theta)
+    !! $$
+
+    !! by reasoning geometrically
+    !! about which points on the unit circle maximize/minimize
+    !! the product of the $x$- and $y$-coordinates (since$$
+    !! \cos(\theta)\cdot\sin(\theta)
+    !! $$
+    !! is the product of an $x$- and $y$-coordinate of a point
+    !! on the unit circle),
+    !! and specify the set 
+    !! of $\theta$ for which the maximum and
+    !! minimum, respectively, are attained.
+
+    |> Solution
+
+        The “isosets” of
+
+        $$
+        (x, y) \ra xy
+        $$
+
+        have this general aspect:
+
+        !! The “isosets” (nevermind what that means) of
+
+        !! $$
+        !! (x, y) \ra xy
+        !! $$
+
+        !! (lambda-notation for a two-variable function)
+        !! have this general aspect (nb: we are investigating
+
+        !! $$
+        !! (x, y) \ra xy
+        !! $$
+
+        !! because
+
+        !! $$
+        !! \cos(\theta)\cdot\sin(\theta)
+        !! $$
+
+        !! is the product of an $x$-coordinate and a
+        !! $y$-coordinate of a point on the unit circle):
+
+        |> Image
+            src=images/svg_ch5_ex_max_xy_xy_isosets.svg
+            style=margin-bottom:0.5em;
+
+        These isosets give rise to the boundaries
+        between colored regions 
+        when we draw a “heatmap” of $(x, y) \ra xy$,
+        drawn here in the same 
+        !! $[-4, 4] \times [-4, 4]$ 
+        window:
+
+        |> Image
+            src=images/svg_ch5_ex_max_xy_rainbow.svg
+            style=margin-bottom:0.5em;
+
+        The geometric insight that is of interest to
+        us, and that we accept without further proof,
+        is that,
+        at any given
+        distance from the origin, the lines
+
+        $$
+        x = y
+        $$
+
+        and
+
+        $$
+        x = -y
+        $$
+
+        seem to hold the largest and smallest values,
+        respectively, of $xy$:
+
+        |> Image
+            src=images/svg_ch5_ex_max_xy_fixed_distance_v2.svg
+
+        In other words,
+        $$
+        \cos(\theta)\cdot\sin(\theta),
+        $$
+        as a value of the form “$x$-coordinate times $y$-coordinate”
+        of a point confined to the unit circle,
+        will reach its maximum when 
+
+        $$
+        (\cos \theta, \sin \theta) = \pm(\sqrt{0.5}, \sqrt{0.5})
+        $$
+
+        where it attains value
+
+        $$
+        \sqrt{0.5} \cdot \sqrt{0.5} = (-\sqrt{0.5}) \cdot (-\sqrt{0.5}) = {1\over 2}
+        $$
+
+        and will reach its minimum when
+
+        $$
+        (\cos \theta, \sin \theta) = \pm(-\sqrt{0.5}, \sqrt{0.5})
+        $$
+
+        where it attains value 
+
+        $$
+        (-\sqrt{0.5}) \cdot \sqrt{0.5} = \sqrt{0.5} \cdot (-\sqrt{0.5}) = -{1\over 2}
+        $$
+
+        while, to answer the last part of the question,
+        the set of $\theta$'s for which the 
+        maximum and minimum are reached will be...
+
+        $$
+        \{0.5\eta + 2\eta k: k \in \zz\}
+        $$
+
+        ...and...
+
+        $$
+        \{1.5\eta + 2\eta k: k \in \zz\}
+        $$
+
+        ...respectively, as illustrated...
+
+        |> Image
+            src=images/svg_ch5_ex_max_xy_angles_v2.svg
+
+        ...here!
+
+        |> SolutionNote
+
+            For interest, here is the graph $y = \cos(x)\sin(x)$,
+            !! of $x \ra \sin x \cos x$,
+            as previously given in Exercise >>_four_graphs_, annotated
+            !! with the newly gleaned information:
+            !! with these new insights:
+            with the maximum, minimum, and the values $x$ at which they
+            are attained:
+
+            |> Image
+                src=images/svg_ch5_ex_max_xy_graph_v2.svg
+
+            (Or equivalently...
+
+            |> Image
+                src=images/svg_ch5_ex_max_xy_graph_degrees.svg
+
+            ...in degrees.)
+
+            !! |> StarDivider
