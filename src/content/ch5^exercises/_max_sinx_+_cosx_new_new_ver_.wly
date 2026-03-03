@@ -75,13 +75,13 @@
 
         and when we add those two together we get ${2\over \sqrt{2}} = \sqrt{2}$.)
 
-        For the lawyers, we must add that
+        Also,
 
         __any multiple of $4\eta$ can be added__
 
         [we don't need to say “or subtracted”
         because “multiple” intimates “integer multiple”,
-        which subsumes negative multiples, hehe]
+        which subsumes negative multiples]
         to $x = \eta/2$, resulting in an infinite
         set of points at which the maximum is achieved.
 
@@ -111,11 +111,11 @@
             (Note that $45^\circ = 0.78539\ldots = \eta/2$
             as a real number, 
             !! there is no technical difference between the two graphs.)
-            the two graphs really express the same thing.)
+            the two graphs really express the same thing.
+            Also...
 
-        |> SolutionNote
-
-            Note that...
+            !! |> SolutionNote
+            !! Note that...
 
             $$
             \Large
@@ -127,6 +127,8 @@
             \end{aligned}
             $$
 
-            ...in case you're not familiar with this kind of
-            arithmetic!
+            !! ...in case you're not familiar with this kind of
+            !! arithmetic.)
+            ...in case you haven't seen this kind of
+            arithmetic before.)
         

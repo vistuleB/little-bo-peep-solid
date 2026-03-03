@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_polar_distance_
 
     Let points $P_1$ and $P_2$ have polar coordinates
@@ -26,14 +27,16 @@
 
     |> Solution
 
-        _Solution 1._ As a preliminary, we would like to note that...
+        !! _Solution 1._ As a preliminary, we would like to note that...
+        !! _Solution 1._ First note that
+        _Solution 1._ As a preliminary, we first note that
 
         |> Boxed
             $$
             \cos(A - B) = \cos A\cos B + \sin A\sin B
             $$
 
-        ...for all $A, B \in \rr$, since
+        for all $A, B \in \rr$, since
 
         $$
         \cos(A + B) = \cos A\cos B - \sin A\sin B
@@ -119,14 +122,10 @@
         x_2^2 + y_2^2 = r_2^2
         $$
         
-        just from the 
-        !! Pythagorean theorem and/or from the
-        !! general relationship between Cartesian and polar coordinates, but anyway),
-        !! fact that $(r_1, \theta_1)$, $(r_2, \theta_2)$ are the polar coordinates of
-        !! $P_1$ and $P_2$, 
-        !! but anyway),
-        Pythagorean theorem
-        and the fact that $P_1 = (x_1, y_1)$, $P_2 = (x_2, y_2)$, 
+        !! just from the 
+        !! Pythagorean theorem
+        !! and the fact that $P_1 = (x_1, y_1)$, $P_2 = (x_2, y_2)$, 
+        just by the nature of polar coordinates,
         but anyway), while 
 
         $$
@@ -164,7 +163,7 @@
         \sqrt{x_1^2 + x_2^2 + y_1^2 + y_2^2 - 2(x_1x_2 + y_1y_2)}
         $$
 
-        ...turns out to be...
+        ...becomes...
 
         !! |> Boxed
         !!     $$
@@ -203,8 +202,8 @@
 
         $$
         \begin{gather}
-        \,P_1' = (r_1\cdot\cos(\theta_1 - \theta_2), r_1\cdot\sin(\theta_1 - \theta_2)),\\
-        P_2' = (r_2, 0)\up{1.8}
+        \,P_1' \,=\, (x_1, y_1) \,=\, (r_1\cos(\theta_1 - \theta_2),\, r_1\sin(\theta_1 - \theta_2)),\\
+        P_2' \,=\, (x_2, y_2) \,=\, (r_2, 0)\up{1.8}
         \end{gather}
         $$
 
@@ -214,7 +213,8 @@
 
         $$
         \begin{aligned}
-        \overline{P_1P_2}\,=\,\overline{P_1'P_2'}\,=&\,\,\up{1.4}\sqrt{(r_1\cos(\theta_1 - \theta_2) - r_2)^2 + (r_1\sin(\theta_1 - \theta_2) - 0)^2}\\
+        \overline{P_1P_2}\,=\,\overline{P_1'P_2'}\,
+        =&\,\,\up{1.4}\sqrt{(r_1\cos(\theta_1 - \theta_2) - r_2)^2 + (r_1\sin(\theta_1 - \theta_2) - 0)^2}\\
         =&\,\,\up{1.4}\sqrt{r_1^2\cos^2(\theta_1 - \theta_2) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2 + r_1^2\sin^2(\theta_1 - \theta_2)} \\
         =&\,\,\up{1.4}\sqrt{r_1^2(\cos^2(\theta_1 - \theta_2) + \sin^2(\theta_1 - \theta_2)) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2} \\
         =&\,\,\up{1.4}\sqrt{r_1^2 - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2} \\

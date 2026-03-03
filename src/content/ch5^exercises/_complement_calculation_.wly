@@ -9,13 +9,36 @@
 
     |> Solution
 
-        It is $\eta - \theta$. (Since...
+        Since the angles of a triangle add to
+        $180^\circ = 2\eta$, we need to solve
 
         $$
-        \theta + (\eta - \theta) + \eta = 2\eta
+        \theta + \eta + \te{?} = 2\eta
         $$
 
-        ...you know that's the right answer!) (Nb: $2\eta = 180^\circ$.)
+        for ‘?’, giving us
+
+        $$
+        \te{?} = 2\eta - \eta - \theta
+        $$
+
+        !! or $\eta - \theta$, as the answer.
+        or an answer of...
+
+        |> Boxed
+            $$
+            \eta - \theta
+            $$
+
+        ...!!
+
+        !! It is $\eta - \theta$. (Since...
+
+        !! $$
+        !! \theta + (\eta - \theta) + \eta = 2\eta
+        !! $$
+
+        !! ...you know that's the right answer!) (Nb: $2\eta = 180^\circ$.)
 
         |> SolutionNote
 

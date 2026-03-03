@@ -106,19 +106,7 @@
         Bt + C
         $$
 
-        is an amount of _clockwise_ radians. The following
-        diagram illustrates the two possibilities:
-
-        |> Image
-            src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg
-
-        !! (Or... ~ ~ ~ ~ ~ ~ ~ ~ ~
-
-        !! |> Image
-        !!     src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg
-
-        !! ...to put everything in terms of
-        !! counterclockwise-ness.) 
+        is an amount of _clockwise_ radians. 
         This accounts for
         the two solutions listed above. (But it can
         only be one of those two solutions, having made
@@ -129,6 +117,22 @@
         end of the circle, if you were at all thinking
         of that, for speed would be undefined at
         those points where direction is reversed!)
+
+        |> SolutionNote
+
+            The following
+            diagram illustrates the two possibilities:
+
+            |> Image
+                src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg
+
+            !! (Or... ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+            !! |> Image
+            !!     src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg
+
+            !! ...to put everything in terms of
+            !! counterclockwise-ness.) 
 
         |> SolutionNote
 

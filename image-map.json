@@ -1085,8 +1085,8 @@
     "original-size": 40671,
     "compressed-size": 27436,
     "compression": "32.54%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_etaOver2_example_displacement_version.svg": {
     "build-version": "svgo-svg/tIP3.svg",
@@ -1118,8 +1118,8 @@
     "original-size": 77802,
     "compressed-size": 22483,
     "compression": "71.1%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_secant_reinterpretation_4.svg": {
     "build-version": "svgo-svg/wZkI.svg",
@@ -4616,8 +4616,8 @@
     "original-size": 67546,
     "compressed-size": 45473,
     "compression": "32.68%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_gas_sphere_butterfly.svg": {
     "build-version": "svgo-svg/EiSR.svg",
@@ -4979,8 +4979,8 @@
     "original-size": 80706,
     "compressed-size": 51528,
     "compression": "36.15%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch3_composition_icon_fence.svg": {
     "build-version": "svgo-svg/Ixme.svg",
@@ -5325,12 +5325,12 @@
   },
   "e5_sec_powers_bounce_ratio_explanation_fraction_2.svg": {
     "build-version": "svgo-svg/VLwm.svg",
-    "build-version-created-on": 1771481663,
+    "build-version-created-on": 1772559066,
     "build-method": "svgo",
-    "build-version-size": 32552,
-    "original-size": 35275,
-    "compressed-size": 32552,
-    "compression": "7.72%",
+    "build-version-size": 32571,
+    "original-size": 35313,
+    "compressed-size": 32571,
+    "compression": "7.76%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },

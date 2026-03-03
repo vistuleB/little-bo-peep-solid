@@ -72,40 +72,38 @@
         |> Image
             src=images/e5_sec_powers_circles_two_labelings.svg
 
-        The following is the first few steps of a diagram
-        that would be self-intersecting (and make
-        a mess) for $\theta \leq \eta/2$, so
-        we draw it with $\theta > \eta/2$:
+        ...and other more-or-less logical diagrams
+        are possible,
+        but this seems to content the aliens!
 
-        |> Image
-            src=images/e5_sec_powers_experimental_4.svg
+        !! The following is the first few steps of a diagram
+        !! that would be self-intersecting (and make
+        !! a mess) for $\theta \leq \eta/2$, so
+        !! we draw it with $\theta > \eta/2$:
 
-        Zoomed out, with more steps:
+        !! |> Image
+        !!     src=images/e5_sec_powers_experimental_4.svg
 
-        |> Image
-            src=images/e5_sec_powers_experimental_5.svg
+        !! Zoomed out, with more steps:
 
-        !! ...this one looks very alien-ish, 
-        !! which makes the aliens happy, and they leave Earth alone!
-        !! Victory!!!!!!!!!!!
+        !! |> Image
+        !!     src=images/e5_sec_powers_experimental_5.svg
 
-        !! _Postscript._ We this many nice illustrations, we
-        !! surely survive.
-        ...but by this time the aliens are sick of hearing you
-        talk about secant, and have moved on to another planet.
+        !! ...but by this time the aliens are sick of hearing you
+        !! talk about secant, and have moved on to another planet.
 
-        |> SolutionNote
+        !! |> SolutionNote
 
-            The last spiral is actually obtained by folding the “triangle tower”
-            over, as below:
+        !!     The last spiral is actually obtained by folding the “triangle tower”
+        !!     over, as below:
 
-            |> Image
-                style=margin-top:-0.7em;
-                src=images/e5_sec_powers_experimental_6.svg
+        !!     |> Image
+        !!         style=margin-top:-0.7em;
+        !!         src=images/e5_sec_powers_experimental_6.svg
 
-            ...as each crease is folded in order, the next biggest
-            triangle (on the outside edge of the crease) encompasses
-            all folded-over-stuff-so-far!
+        !!     ...as each crease is folded in order, the next biggest
+        !!     triangle (on the outside edge of the crease) encompasses
+        !!     all folded-over-stuff-so-far!
 
         |> SolutionNote
 
@@ -124,9 +122,10 @@
             |> Image
                 src=images/e5_sec_powers_bounce_ratio_explanation_fraction_2.svg
 
-            $$
-            \Large
-            {\sec^3(\theta) - \sec(\theta)\over \sec^2(\theta)} = {\sec(\theta)(\sec^2(\theta) - 1)\over \sec^2(\theta) - 1} = \sec(\theta)
-            $$
+            !! $$
+            !! \Large
+            !! {\sec^3(\theta) - \sec(\theta)\over \sec^2(\theta)} = {\sec(\theta)(\sec^2(\theta) - 1)\over \sec^2(\theta) - 1} = \sec(\theta)
+            !! $$
 
-            ...by direct measure and simplifying the fraction.
+            ...by direct measure and simplifying the fraction—always
+            nice to see a bit of algebra!

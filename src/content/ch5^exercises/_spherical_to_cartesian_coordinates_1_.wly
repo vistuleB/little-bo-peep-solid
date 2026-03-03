@@ -23,30 +23,35 @@
         0 \leq \phi \leq 2\eta
         $$
 
-        (or
+        |> ImageRight
+            src=tmp-images/e5_sperical_coordinates_180_cloud.svg
+            offset_x=4em
 
-        $$
-        0 \leq \phi \leq 180^\circ
-        $$
+        !! (or
 
-        equivalently—and recall that 
+        !! $$
+        !! 0 \leq \phi \leq 180^\circ
+        !! $$
 
-        $$
-        180^\circ = 2\eta
-        $$
+        !! equivalently—and recall that 
 
-        _as real numbers_, so there is absolutely no fudging
-        going on if we write it the second way), and
+        !! $$
+        !! 180^\circ = 2\eta
+        !! $$
+
+        !! _as real numbers_, so there is absolutely no fudging
+        !! going on if we write it the second way), and
+        from which
 
         $$
         \sin(\phi) \geq 0
         $$
 
-        and
+        !! and
 
-        $$
-        R\sin(\phi) \geq 0
-        $$
+        !! $$
+        !! R\sin(\phi) \geq 0
+        !! $$
 
         and from which $R\sin(\phi)$, as it appears in the 
         following diagram, is the actual _length_ of
@@ -59,7 +64,8 @@
 
         __signed length__
 
-        (or “coordinate”) (or “real number”, haha) as
+        !! (or “coordinate”) (or “real number”, haha) 
+        as
 
         $$
         \cos(\phi)
@@ -86,7 +92,7 @@
         |> Image
             src=images/svg_ch5_ex_spherical_coordinates_xy_plane.svg
         
-        Thus:
+        Or:
         
         |> Boxed
             style=margin-bottom:-5px;

@@ -1,5 +1,4 @@
 |> Exercise
-    work=ing
     handle=_isosets_of_xy_v4_
 
     What are the maximum and minimum values
@@ -138,6 +137,7 @@
         $$
 
         while, to answer the last part of the question,
+        !! while
         the set of $\theta$'s for which the 
         maximum and minimum are reached will be...
 

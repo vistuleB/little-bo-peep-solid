@@ -7007,13 +7007,7 @@ const Rest = () => {
               <i>
                 clockwise
               </i>
-              {" "} radians. The following
-              diagram illustrates the two possibilities:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/rUnE.svg" />
-            <Pause />
-            <OuterP>
+              {" "} radians. 
               This accounts for
               the two solutions listed above. (But it can
               only be one of those two solutions, having made
@@ -7030,6 +7024,19 @@ const Rest = () => {
               <OuterP>
                 <i>
                   Note 1.
+                </i>
+                {" "}
+                The following
+                diagram illustrates the two possibilities:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/rUnE.svg" />
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
                 </i>
                 {" "}
                 If you harbor any doubts about there being no more
@@ -7165,49 +7172,20 @@ const Rest = () => {
               $$
               0 \leq \phi \leq 2\eta
               $$
+              <ImageRight
+                src="/tmp-images/e5_sperical_coordinates_180_cloud.svg"
+                offset_x="4em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
             </MathBlock>
             <Pause />
             <OuterP>
-              (or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              0 \leq \phi \leq 180^\circ
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              equivalently—and recall that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              180^\circ = 2\eta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <i>
-                as real numbers
-              </i>
-              , so there is absolutely no fudging
-              going on if we write it the second way), and
+              from which
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sin(\phi) \geq 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              R\sin(\phi) \geq 0
               $$
             </MathBlock>
             <Pause />
@@ -7259,7 +7237,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              (or “coordinate”) (or “real number”, haha) as
+              as
             </OuterP>
             <Pause />
             <MathBlock>
@@ -7359,7 +7337,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/10Fl.svg" />
             <Pause />
             <OuterP>
-              Thus:
+              Or:
             </OuterP>
             <Boxed style="margin-bottom:-5px;">
               <MathBlock>
@@ -8111,64 +8089,15 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/CvsG.svg" />
             <Pause />
             <OuterP>
-              The following is the first few steps of a diagram
-              that would be self-intersecting (and make
-              a mess) for {" "}
-              <NoBreak>
-                <Math>
-                  $\theta \leq \eta/2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so
-              we draw it with {" "}
-              <NoBreak>
-                <Math>
-                  $\theta &gt; \eta/2$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/_95g.svg" />
-            <Pause />
-            <OuterP>
-              Zoomed out, with more steps:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/9Xj5.svg" />
-            <Pause />
-            <OuterP>
-              ...but by this time the aliens are sick of hearing you
-              talk about secant, and have moved on to another planet.
+              ...and other more-or-less logical diagrams
+              are possible,
+              but this seems to content the aliens!
             </OuterP>
             <Pause />
             <SolutionNote>
               <OuterP>
                 <i>
                   Note 1.
-                </i>
-                {" "}
-                The last spiral is actually obtained by folding the “triangle tower”
-                over, as below:
-              </OuterP>
-              <Pause />
-              <Image
-                style="margin-top:-0.7em;"
-                src="/build-img/svgo-svg/5YcI.svg"
-              />
-              <Pause />
-              <OuterP>
-                ...as each crease is folded in order, the next biggest
-                triangle (on the outside edge of the crease) encompasses
-                all folded-over-stuff-so-far!
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
                 </i>
                 {" "}
                 One way to formally verify that...
@@ -8188,15 +8117,9 @@ const Rest = () => {
               <Pause />
               <Image src="/build-img/svgo-svg/VLwm.svg" />
               <Pause />
-              <MathBlock>
-                $$
-                \Large
-                &#123;\sec^3(\theta) - \sec(\theta)\over \sec^2(\theta)&#125; = &#123;\sec(\theta)(\sec^2(\theta) - 1)\over \sec^2(\theta) - 1&#125; = \sec(\theta)
-                $$
-              </MathBlock>
-              <Pause />
               <OuterP>
-                ...by direct measure and simplifying the fraction.
+                ...by direct measure and simplifying the fraction—always
+                nice to see a bit of algebra!
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -8387,7 +8310,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              For the lawyers, we must add that
+              Also,
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -8401,7 +8324,7 @@ const Rest = () => {
             <OuterP>
               [we don't need to say “or subtracted”
               because “multiple” intimates “integer multiple”,
-              which subsumes negative multiples, hehe]
+              which subsumes negative multiples]
               to {" "}
               <NoBreak>
                 <Math>
@@ -8470,17 +8393,8 @@ const Rest = () => {
                 </Math>
                 {" "}
                 as a real number, 
-                the two graphs really express the same thing.)
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
-                Note that...
+                the two graphs really express the same thing.
+                Also...
               </OuterP>
               <Pause />
               <MathBlock>
@@ -8496,8 +8410,8 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                ...in case you're not familiar with this kind of
-                arithmetic!
+                ...in case you haven't seen this kind of
+                arithmetic before.)
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -9863,30 +9777,45 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It is {" "}
+              Since the angles of a triangle add to
+              {" "}
               <NoBreak>
                 <Math>
-                  $\eta - \theta$
+                  $180^\circ = 2\eta$
                 </Math>
-                .
+                ,
               </NoBreak>
-              {" "} (Since...
+              {" "} we need to solve
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \theta + (\eta - \theta) + \eta = 2\eta
+              \theta + \eta + \te&#123;?&#125; = 2\eta
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              ...you know that's the right answer!) (Nb: {" "}
-              <NoBreak>
-                <Math>
-                  $2\eta = 180^\circ$
-                </Math>
-                .)
-              </NoBreak>
+              for ‘?’, giving us
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;?&#125; = 2\eta - \eta - \theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or an answer of...
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \eta - \theta
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              ...!!
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -12897,7 +12826,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={38}>
+        <Exercise
+          work="ing"
+          number={38}
+        >
           <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
@@ -13156,12 +13088,22 @@ const Rest = () => {
                     $y$
                   </Math>
                   {" "} axis by a factor {" "}
+                  <Math>
+                    $2.33$
+                  </Math>
+                  {" "} (while
+                  keeping {" "}
+                  <Math>
+                    $y = \sin(C)$
+                  </Math>
+                  {" "} at {" "}
                   <NoBreak>
                     <Math>
-                      $2.33$
+                      $x = 0$
                     </Math>
-                    ;
+                    ,
                   </NoBreak>
+                  {" "} as should be);
                 </p>
               </Item>
               <Item>
@@ -13663,7 +13605,7 @@ const Rest = () => {
               <Pause />
               <Image src="/build-img/svgo-svg/te-X.svg">
                 <ImageLeft
-                  src="/build-img/svgo-svg/cCoO.svg"
+                  src="/tmp-images/e5_ABCD_roles_Au_cloud.svg"
                   offset_x="2em"
                 />
               </Image>
@@ -13931,7 +13873,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={39}>
+        <Exercise
+          work="ing"
+          number={39}
+        >
           <ExerciseStatement id="_122_hgi_">
             <OuterP>
               <b>
@@ -14048,7 +13993,7 @@ const Rest = () => {
               <i>
                 Solution 1.
               </i>
-              {" "} As a preliminary, we would like to note that...
+              {" "} As a preliminary, we first note that
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -14058,7 +14003,7 @@ const Rest = () => {
               </MathBlock>
             </Boxed>
             <OuterP>
-              ...for all {" "}
+              for all {" "}
               <NoBreak>
                 <Math>
                   $A, B \in \rr$
@@ -14217,23 +14162,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              just from the 
-              Pythagorean theorem
-              and the fact that {" "}
-              <NoBreak>
-                <Math>
-                  $P_1 = (x_1, y_1)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $P_2 = (x_2, y_2)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} 
+              just by the nature of polar coordinates,
               but anyway), while
             </OuterP>
             <Pause />
@@ -14287,7 +14216,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              ...turns out to be...
+              ...becomes...
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -14390,8 +14319,8 @@ const Rest = () => {
             <MathBlock>
               $$
               \begin&#123;gather&#125;
-              \,P_1' = (r_1\cdot\cos(\theta_1 - \theta_2), r_1\cdot\sin(\theta_1 - \theta_2)),\\
-              P_2' = (r_2, 0)\up&#123;1.8&#125;
+              \,P_1' \,=\, (x_1, y_1) \,=\, (r_1\cos(\theta_1 - \theta_2),\, r_1\sin(\theta_1 - \theta_2)),\\
+              P_2' \,=\, (x_2, y_2) \,=\, (r_2, 0)\up&#123;1.8&#125;
               \end&#123;gather&#125;
               $$
             </MathBlock>
@@ -14404,7 +14333,8 @@ const Rest = () => {
             <MathBlock>
               $$
               \begin&#123;aligned&#125;
-              \overline&#123;P_1P_2&#125;\,=\,\overline&#123;P_1'P_2'&#125;\,=&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;(r_1\cos(\theta_1 - \theta_2) - r_2)^2 + (r_1\sin(\theta_1 - \theta_2) - 0)^2&#125;\\
+              \overline&#123;P_1P_2&#125;\,=\,\overline&#123;P_1'P_2'&#125;\,
+              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;(r_1\cos(\theta_1 - \theta_2) - r_2)^2 + (r_1\sin(\theta_1 - \theta_2) - 0)^2&#125;\\
               =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2\cos^2(\theta_1 - \theta_2) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2 + r_1^2\sin^2(\theta_1 - \theta_2)&#125; \\
               =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2(\cos^2(\theta_1 - \theta_2) + \sin^2(\theta_1 - \theta_2)) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2&#125; \\
               =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2 - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2&#125; \\
@@ -14539,10 +14469,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={40}
-        >
+        <Exercise number={40}>
           <ExerciseStatement id="_123_hgi_">
             <OuterP>
               <b>
