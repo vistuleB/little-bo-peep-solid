@@ -77,7 +77,7 @@
         between colored regions 
         when we draw a “heatmap” of $(x, y) \ra xy$,
         drawn here in the same 
-        !! $[-4, 4] \times [-4, 4]$ 
+        $[-4, 4] \times [-4, 4]$ 
         window:
 
         |> Image

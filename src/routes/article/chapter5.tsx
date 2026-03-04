@@ -318,7 +318,7 @@ export default function __Chapter5__() {
           {" "}
           and {" "}
           <Math>
-            $\approx 0.3$
+            $\approx 0.5$
           </Math>
           {" "} in {" "}
           <Math>
@@ -14527,6 +14527,11 @@ const Rest = () => {
               </NoBreak>
               {" "}
               drawn here in the same 
+              {" "}
+              <Math>
+                $[-4, 4] \times [-4, 4]$
+              </Math>
+              {" "} 
               window:
             </OuterP>
             <Pause />
