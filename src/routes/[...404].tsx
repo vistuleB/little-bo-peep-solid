@@ -3,10 +3,38 @@ import { onMount, onCleanup } from "solid-js";
 import useNoScrollRestoration from "~/hooks/useNoScrollRestoration";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 export default function NotFound() {
   useNoScrollRestoration();
   const { getPage } = usePrevNextPage();
+  const { store, set_store } = useGlobalContext();
+
+  const handleResize = () => {
+    let oldInnerWidth = store.innerWidth;
+    let oldScrollWidth = store.scrollWidth;
+
+    set_store("innerWidth", window.innerWidth);
+    set_store("innerHeight", window.innerHeight);
+    set_store("scrollWidth", document.body.scrollWidth);
+    set_store("scrollHeight", document.body.scrollHeight);
+
+    let _dummy =
+      store.scrollY +
+      store.innerHeight +
+      store.scrollHeight +
+      store.scrollWidth;
+
+    if (
+      oldInnerWidth != store.innerWidth ||
+      oldScrollWidth != store.scrollWidth
+    ) {
+      window.scroll({
+        left: (store.scrollWidth - store.innerWidth) / 2,
+        behavior: "instant",
+      });
+    }
+  };
 
   const handleKeydown = (e: KeyboardEvent) => {
     if (e.key === "0") {
@@ -45,9 +73,11 @@ export default function NotFound() {
 
   onMount(() => {
     window.addEventListener("keydown", handleKeydown);
+    window.addEventListener("resize", handleResize);
 
     onCleanup(() => {
       window.removeEventListener("keydown", handleKeydown);
+      window.removeEventListener("resize", handleResize);
     });
   });
 
