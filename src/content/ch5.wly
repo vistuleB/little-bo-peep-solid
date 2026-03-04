@@ -1363,14 +1363,10 @@
     of the original inequality.)
 
 |> Section
-    
+
     *The Gregorinovich sandwich.*
     The “Gregorinovich sandwich”—sometimes
     Gr_i_gorinovich—states that
-    !! |> span
-    !!     style=text-decoration:underline
-    !!     i
-    !! _gorinovich—states that
 
     $$
     \sin(\theta) \,<\, \theta \,<\, {\sin(\theta)\over\cos(\theta)}
@@ -1378,7 +1374,6 @@
 
     for all $0 < \theta < \eta$.
     The Gregorinovich sandwich is so-called because
-    !! $\theta$ is “sandwiched”
     it “sandwiches” $\theta$
     between
     $$
@@ -1388,7 +1383,6 @@
     $$
     {\sin(\theta)\over\cos(\theta)}
     $$
-    !! (futurely known as “$\tan(\theta)$”)
     above. (Indeed,
     $$
     {\sin(\theta)\over\cos(\theta)} > \sin(\theta)
@@ -1406,28 +1400,6 @@
     _|DRAMATICALLY BIGGER|_
     when $\cos(\theta)$ is close to $0$, which is the
     case when $\theta$ is close to $\eta$, $0 < \theta < \eta$.)
-
-    !! The Gregorinovich sandwich
-    !! consists of two separate
-    !! inequalities that require two separate proofs.
-    !! The Gregorinovich
-    !! sandwich is so-called because it consists of
-
-    !! _|TWO|_
-
-    !! inequalities, the first being
-
-    !! $$
-    !! \sin(\theta) \rt{0.1}<\, \theta
-    !! $$
-
-    !! and the second being
-
-    !! $$
-    !! \,\theta \,<\rt{0.1} {\sin(\theta)\over\cos(\theta)}
-    !! $$
-
-    !! ...with each inequality requiring a separate proof.
 
     The first inequality
 
@@ -1579,7 +1551,7 @@
     that way, at least.)
 
 |> Section
-    work=ing
+
     *The missing arrows.*
     ‘sin’ and ‘cos’ only constitute two out
     of six ratios that exist among the sides

@@ -6073,12 +6073,12 @@
   },
   "e5_polar_P1P2_right_angle_cloud.svg": {
     "build-version": "svgo-svg/A3u9.svg",
-    "build-version-created-on": 1772550245,
+    "build-version-created-on": 1772658403,
     "build-method": "svgo",
-    "build-version-size": 32924,
-    "original-size": 48316,
-    "compressed-size": 32924,
-    "compression": "31.86%",
+    "build-version-size": 31666,
+    "original-size": 48420,
+    "compressed-size": 31666,
+    "compression": "34.6%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },

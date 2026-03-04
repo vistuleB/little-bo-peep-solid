@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_125_hgi_"
+      id="_127_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -3991,10 +3991,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section
-        work="ing"
-        id="section-18"
-      >
+      <Section id="section-18">
         <OuterP>
           <b>
             The missing arrows.
@@ -4369,7 +4366,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_124_hgi_">
+      <Exercises id="_126_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -5605,10 +5602,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={5}
-        >
+        <Exercise number={5}>
           <ExerciseStatement id="_88_hgi_">
             <OuterP>
               <b>
@@ -12826,10 +12820,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={38}
-        >
+        <Exercise number={38}>
           <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
@@ -14459,12 +14450,7 @@ const Rest = () => {
                   $0 \leq \theta_1, \theta_2 \leq \eta$
                 </Math>
                 {" "}
-                specifically.) (**Though such restrictions can be lifted
-                by diligent of use {" "}
-                <Math>
-                  $\cos(x+\eta) = -\sin(x)$
-                </Math>
-                {" "} -type identities.)
+                specifically.)
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -14497,7 +14483,9 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The “isosets” of
+              While it may seem unrelated to the problem
+              at hand, we start by noting that the “isosets”
+              of the two-variable function
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14516,9 +14504,8 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              These isosets give rise to the boundaries
-              between colored regions 
-              when we draw a “heatmap” of {" "}
+              What will give us a similar level of
+              insight is a “heatmap” of {" "}
               <NoBreak>
                 <Math>
                   $(x, y) \ra xy$
@@ -14719,13 +14706,199 @@ const Rest = () => {
               <Image src="/build-img/svgo-svg/7Hpe.svg" />
               <Pause />
               <OuterP>
-                (Or equivalently...
+                Or equivalently, in degrees:
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/H0zm.svg" />
-              <Pause />
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={41}
+        >
+          <ExerciseStatement id="_124_hgi_">
+            <OuterP>
+              <b>
+                Exercise 41.
+              </b>
+              {" "}
+              Illustrate the “Gregorinovich sandwich”
+              with a picture that actually looks like
+              a sandwich.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The sandwich, which states that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin\theta &lt; \theta &lt; \tan\theta
+              $$
+              <ImageRight
+                src="/tmp-images/e5_greg_sandwich_tant_cloud.svg"
+                offset_x="4em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $0 &lt; \theta &lt; \eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} is hereby illustrated, using
+              the fact that 
+              {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} 
+              equals subtended
+              arc length on the unit circle:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_greg_sandwich.svg" />
+            <Pause />
+            <StarDivider />
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={42}
+        >
+          <ExerciseStatement id="_125_hgi_">
+            <OuterP>
+              <b>
+                Exercise 42.
+              </b>
+              {" "}
+              What is the dotted line distance as a function
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $b$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_cosine_rule_statement.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Recalling the “polar distance” formula
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              of {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_122_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 39
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "}
+              the answer is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;a^2 + b^2 - 2ab\cos\theta&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by putting {" "}
+              <NoBreak>
+                <Math>
+                  $r_1 = a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $r_2 = b$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\theta_1 - \theta_2 = \theta$
+              </Math>
+              {" "}
+              in that formula.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
               <OuterP>
-                ...in degrees.)
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                This result is known as the {" "}
+                <i>
+                  cosine rule
+                </i>
+                .
+                Like the “polar distance” formula from {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter5#_122_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Exercise 39
+                  </InChapterLink>
+                  ,
+                </NoBreak>
+                {" "}
+                to which it is equivalent, it is a generalization
+                of the Pythagorean theorem. This becomes extra clear if we rewrite it
+                as....
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  c^2 = a^2 + b^2 - 2ab\cdot\cos\theta
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                ....with {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $c$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} the length of the dotted segment!
               </OuterP>
             </SolutionNote>
           </Solution>

@@ -4,4 +4,28 @@
 
     Illustrate the “Gregorinovich sandwich”
     with a picture that actually looks like
-    a sandwich.
+    a sandwich. 
+
+    |> Solution
+
+        The sandwich, which states that
+
+        $$
+        \sin\theta < \theta < \tan\theta
+        $$
+
+        |> ImageRight
+            src=tmp-images/e5_greg_sandwich_tant_cloud.svg
+            offset_x=4em
+
+        for $0 < \theta < \eta$, is hereby illustrated, using
+        the fact that 
+        $\theta$ 
+        !! can be identified with 
+        equals subtended
+        arc length on the unit circle:
+
+        |> Image
+            src=tmp-images/e5_greg_sandwich.svg
+
+        |> StarDivider

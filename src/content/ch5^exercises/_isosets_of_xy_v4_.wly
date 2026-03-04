@@ -11,35 +11,12 @@
     and for which $\theta$ are they attained?
     (Reason geometrically, not by calculus.)
 
-    !! Reason geometrically to determine the
-    !! maximum and minimum values of
-    !! $$
-    !! \theta \ra \cos(\theta)\sin(\theta)
-    !! $$
-    !! and specify those $\theta$'s
-    !! for which the maximum and
-    !! minimum, respectively, are attained.
-
-    !! Determine the maximum and minimum values of
-
-    !! $$
-    !! \theta \ra \cos(\theta)\sin(\theta)
-    !! $$
-
-    !! by reasoning geometrically
-    !! about which points on the unit circle maximize/minimize
-    !! the product of the $x$- and $y$-coordinates (since$$
-    !! \cos(\theta)\cdot\sin(\theta)
-    !! $$
-    !! is the product of an $x$- and $y$-coordinate of a point
-    !! on the unit circle),
-    !! and specify the set 
-    !! of $\theta$ for which the maximum and
-    !! minimum, respectively, are attained.
-
     |> Solution
 
-        The “isosets” of
+        While it may seem unrelated to the problem
+        at hand, we start by noting that the “isosets”
+        of the two-variable function
+        !! The “isosets” of
 
         $$
         (x, y) \ra xy
@@ -73,12 +50,18 @@
             src=images/svg_ch5_ex_max_xy_xy_isosets.svg
             style=margin-bottom:0.5em;
 
-        These isosets give rise to the boundaries
-        between colored regions 
-        when we draw a “heatmap” of $(x, y) \ra xy$,
+        What will give us a similar level of
+        insight is a “heatmap” of $(x, y) \ra xy$,
         drawn here in the same 
         $[-4, 4] \times [-4, 4]$ 
         window:
+
+        !! These isosets give rise to the boundaries
+        !! between colored regions 
+        !! when we draw a “heatmap” of $(x, y) \ra xy$,
+        !! drawn here in the same 
+        !! $[-4, 4] \times [-4, 4]$ 
+        !! window:
 
         |> Image
             src=images/svg_ch5_ex_max_xy_rainbow.svg
@@ -171,11 +154,7 @@
             |> Image
                 src=images/svg_ch5_ex_max_xy_graph_v2.svg
 
-            (Or equivalently...
+            Or equivalently, in degrees:
 
             |> Image
                 src=images/svg_ch5_ex_max_xy_graph_degrees.svg
-
-            ...in degrees.)
-
-            !! |> StarDivider

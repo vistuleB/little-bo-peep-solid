@@ -285,6 +285,6 @@
             original proof from the chapter put some restrictions
             on the range of the angles, such as 
             $0 \leq \theta_1, \theta_2 \leq \eta$
-            !! $0 < \theta_1 < \eta$, $0 < \theta_2 < \eta$,
-            specifically.) (\*\*Though such restrictions can be lifted
-            by diligent of use $\cos(x+\eta) = -\sin(x)$ -type identities.)
+            specifically.) 
+            !! (\*\*Though such restrictions can be lifted
+            !! by diligent of use $\cos(x+\eta) = -\sin(x)$ -type identities.)
