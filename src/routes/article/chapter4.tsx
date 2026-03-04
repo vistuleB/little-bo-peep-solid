@@ -9112,7 +9112,7 @@ const Rest = () => {
                   src="/build-img/svgo-svg/d2g_.svg"
                 />
                 <Math>
-                  $_y(0) = 2\,\,+$
+                  $_y(0) = 4\,\,+$
                 </Math>
                 {" "} {" "}
                 <InlineImage
@@ -9178,7 +9178,7 @@ const Rest = () => {
                   src="/build-img/svgo-svg/rDav.svg"
                 />
                 <Math>
-                  $_y(0) = 2\,\,+$
+                  $_y(0) = 4\,\,+$
                 </Math>
                 {" "} {" "}
                 <InlineImage
@@ -9244,7 +9244,7 @@ const Rest = () => {
                   src="/build-img/svgo-svg/JFOc.svg"
                 />
                 <Math>
-                  $_y(0) = 2\,\,+$
+                  $_y(0) = 4\,\,+$
                 </Math>
                 {" "} {" "}
                 <InlineImage
@@ -9310,7 +9310,7 @@ const Rest = () => {
                   src="/build-img/svgo-svg/Okyf.svg"
                 />
                 <Math>
-                  $_y(0) = 2\,\,+$
+                  $_y(0) = 4\,\,+$
                 </Math>
                 {" "} {" "}
                 <InlineImage
@@ -9351,7 +9351,7 @@ const Rest = () => {
                   src="/build-img/svgo-svg/9T47.svg"
                 />
                 <Math>
-                  $_y(0) = 2\,\,+$
+                  $_y(0) = 4\,\,+$
                 </Math>
                 {" "} {" "}
                 <InlineImage
@@ -9385,7 +9385,7 @@ const Rest = () => {
                   src="/build-img/svgo-svg/6ZK8.svg"
                 />
                 <Math>
-                  $_y(0) = 2\,\,+$
+                  $_y(0) = 4\,\,+$
                 </Math>
                 {" "} {" "}
                 <InlineImage
@@ -9419,7 +9419,7 @@ const Rest = () => {
                   src="/build-img/svgo-svg/Ya08.svg"
                 />
                 <Math>
-                  $_y(0) = 2\,\,+$
+                  $_y(0) = 4\,\,+$
                 </Math>
                 {" "} {" "}
                 <InlineImage
@@ -9453,7 +9453,7 @@ const Rest = () => {
                   src="/build-img/svgo-svg/k4Y8.svg"
                 />
                 <Math>
-                  $_y(0) = 2\,\,+$
+                  $_y(0) = 4\,\,+$
                 </Math>
                 {" "} {" "}
                 <InlineImage
