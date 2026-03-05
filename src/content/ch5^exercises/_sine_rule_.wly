@@ -1,0 +1,131 @@
+|> Exercise
+    work=ing
+    handle=_sine_rule_
+
+    How to express the two sides marked ‘?’ as functions
+    of $\alpha$, $\beta$, $\gamma$ and $a$? (NB: You can 
+    trust the drawing's suggestion that $\beta > \eta$, $\gamma < \eta$, $\alpha < \eta$.)
+    !! “trust”
+    !! the drawing in the sense of $\beta$ being greater than
+    !! $\eta$ and of $\gamma$, $\alpha$ being less than $\eta$.)
+
+    |> Image
+        src=tmp-images/e5_sine_rule_statement.svg
+
+    |> Solution
+
+        The bottom length of ‘?’ is
+
+        $$
+        a\cdot\sin(\gamma)\cdot\csc(\alpha)
+        $$
+
+        or
+
+        $$
+        a\cdot {\sin \gamma\over \sin\alpha}
+        $$
+
+        as illustrated here:
+
+        |> Pause
+
+        The top length of ‘?’, on the other hand,
+        is 
+
+        $$
+        a\cdot\sin(\beta)\cdot\csc(\alpha)
+        $$
+
+        or
+
+        $$
+        a\cdot{\sin\beta\over \sin\alpha}
+        $$
+
+        per a similar approach, while also using the fact that
+        $\sin(2\eta - x) = \sin(x)$ for all $x \in \rr$:
+
+        |> SolutionNote
+
+            One more generally has...
+
+            |> Boxed
+
+                $$
+                \begin{gather*}
+                {a\over b} = {\sin \alpha\over \sin\beta}\qquad{b\over a} = {\sin \beta\over \sin\alpha}            \\
+                {a\over c} = {\sin \alpha\over \sin\gamma}\qquad{c\over a} = {\sin \gamma\over \sin\alpha} \up{2.2} \\
+                {b\over c} = {\sin \beta\over \sin\gamma}\qquad{c\over a} = {\sin \gamma\over \sin\beta}   \up{2.2}
+                \end{gather*}
+                $$
+
+            ...(it's $6$ times the same equation, no use
+            looking at all of them) for a general triangle
+            of sidelengths $a$, $b$, $c$ as labeled here...
+
+            |> Pause
+
+            ...though we can condense these equations to...
+
+            |> Boxed
+                $$
+                \begin{gather*}
+                {a\over \sin\alpha} = {b\over \sin\beta}            \\
+                {a\over \sin\alpha} = {c\over \sin\gamma}  \up{2.2} \\
+                {b\over \sin\gamma} = {c\over \sin\gamma}  \up{2.2}
+                \end{gather*}
+                $$
+
+            ...or even to a single line...
+
+            |> Boxed
+                $$
+                {a\over \sin\alpha} = {b\over \sin\beta} = {c\over \sin\gamma}
+                $$
+
+            ...through cross-multiplication/division!
+
+        |> SolutionNote
+
+            This result (e.g., the last boxed equation above)
+            is known as the _sine rule_.
+
+        |> SolutionNote
+
+            Amusingly (but not that we really care) the
+            same equations hold if we change the definitions
+            of $\alpha$, $\beta$, and $\gamma$ to be the
+            exterior angles of the triangle:
+
+            |> Pause
+
+            ...then each of $\sin \alpha$,
+            $\sin \beta$, $\sin \gamma$ changes sign 
+            _and only sign_ 
+            !! (sine?),
+            (
+            |> del
+                sine?
+            \ sign),
+            !! while keeping the same absolute value, 
+            leaving the original
+            equations intact.
+
+        |> SolutionNote
+
+            !! The solution technique of 
+            Exercise >>_triangle_conch_
+            uses a similar-if-not-identical solution technique.
+
+            !! This exercise's solution approach already
+            !! appeared, essentially, in the solution to
+            !! Exercise >>_triangle_conch_. (If you recall.)
+
+            !! The solution technique already appears, essentially, in the
+            !! solution to Exercise >>_triangle_conch_.
+
+            !! The solution approach that we used in this
+            !! exercise already appeared, essentially, in the
+            !! solution to Exercise >>_triangle_conch_, if you recall.
+        

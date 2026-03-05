@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_127_hgi_"
+      id="_128_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -4366,7 +4366,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_126_hgi_">
+      <Exercises id="_127_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -5293,7 +5293,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={4}>
+        <Exercise
+          work="ing"
+          number={4}
+        >
           <ExerciseStatement id="_87_hgi_">
             <OuterP>
               <b>
@@ -14898,7 +14901,306 @@ const Rest = () => {
                   </Math>
                   ’
                 </NoBreak>
-                {" "} the length of the dotted segment!
+                {" "} the length of the dotted segment.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={43}
+        >
+          <ExerciseStatement id="_126_hgi_">
+            <OuterP>
+              <b>
+                Exercise 43.
+              </b>
+              {" "}
+              How to express the two sides marked ‘?’ as functions
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\alpha$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\beta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\gamma$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ?
+              </NoBreak>
+              {" "} (NB: You can 
+              trust the drawing's suggestion that {" "}
+              <NoBreak>
+                <Math>
+                  $\beta &gt; \eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\gamma &lt; \eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\alpha &lt; \eta$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_sine_rule_statement.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The bottom length of ‘?’ is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              a\cdot\sin(\gamma)\cdot\csc(\alpha)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              a\cdot &#123;\sin \gamma\over \sin\alpha&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as illustrated here:
+            </OuterP>
+            <Pause />
+            <OuterP>
+              The top length of ‘?’, on the other hand,
+              is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              a\cdot\sin(\beta)\cdot\csc(\alpha)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              a\cdot&#123;\sin\beta\over \sin\alpha&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              per a similar approach, while also using the fact that
+              {" "}
+              <Math>
+                $\sin(2\eta - x) = \sin(x)$
+              </Math>
+              {" "} for all {" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                One more generally has...
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \begin&#123;gather*&#125;
+                  &#123;a\over b&#125; = &#123;\sin \alpha\over \sin\beta&#125;\qquad&#123;b\over a&#125; = &#123;\sin \beta\over \sin\alpha&#125;            \\
+                  &#123;a\over c&#125; = &#123;\sin \alpha\over \sin\gamma&#125;\qquad&#123;c\over a&#125; = &#123;\sin \gamma\over \sin\alpha&#125; \up&#123;2.2&#125; \\
+                  &#123;b\over c&#125; = &#123;\sin \beta\over \sin\gamma&#125;\qquad&#123;c\over a&#125; = &#123;\sin \gamma\over \sin\beta&#125;   \up&#123;2.2&#125;
+                  \end&#123;gather*&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                ...(it's {" "}
+                <Math>
+                  $6$
+                </Math>
+                {" "} times the same equation, no use
+                looking at all of them) for a general triangle
+                of sidelengths {" "}
+                <NoBreak>
+                  <Math>
+                    $a$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $b$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $c$
+                </Math>
+                {" "} as labeled here...
+              </OuterP>
+              <Pause />
+              <OuterP>
+                ...though we can condense these equations to...
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \begin&#123;gather*&#125;
+                  &#123;a\over \sin\alpha&#125; = &#123;b\over \sin\beta&#125;            \\
+                  &#123;a\over \sin\alpha&#125; = &#123;c\over \sin\gamma&#125;  \up&#123;2.2&#125; \\
+                  &#123;b\over \sin\gamma&#125; = &#123;c\over \sin\gamma&#125;  \up&#123;2.2&#125;
+                  \end&#123;gather*&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                ...or even to a single line...
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  &#123;a\over \sin\alpha&#125; = &#123;b\over \sin\beta&#125; = &#123;c\over \sin\gamma&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                ...through cross-multiplication/division!
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                This result (e.g., the last boxed equation above)
+                is known as the {" "}
+                <i>
+                  sine rule
+                </i>
+                .
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                Amusingly (but not that we really care) the
+                same equations hold if we change the definitions
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $\alpha$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $\beta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and {" "}
+                <Math>
+                  $\gamma$
+                </Math>
+                {" "} to be the
+                exterior angles of the triangle:
+              </OuterP>
+              <Pause />
+              <OuterP>
+                ...then each of {" "}
+                <NoBreak>
+                  <Math>
+                    $\sin \alpha$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\sin \beta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $\sin \gamma$
+                </Math>
+                {" "} changes sign 
+                {" "}
+                <i>
+                  and only sign
+                </i>
+                {" "} 
+                (
+                <del>
+                  sine?
+                </del>
+                {" "} sign),
+                leaving the original
+                equations intact.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 4.
+                </i>
+                {" "}
+                {" "}
+                <InChapterLink
+                  href="/article/chapter5#_87_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 4
+                </InChapterLink>
+                {" "}
+                uses a similar-if-not-identical solution technique.
               </OuterP>
             </SolutionNote>
           </Solution>

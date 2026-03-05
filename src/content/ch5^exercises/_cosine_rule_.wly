@@ -17,14 +17,12 @@
         $$
 
         of Exercise >>_polar_distance_,
-        !! for expressing distance in polar coordinates, 
         the answer is
 
         $$
         \sqrt{a^2 + b^2 - 2ab\cos\theta}
         $$
         
-        !! by applying the formula with $r_1 = a$, $r_2 = b$ and $\theta_1 - \theta_2 = \theta$.
         by putting $r_1 = a$, $r_2 = b$ and $\theta_1 - \theta_2 = \theta$
         in that formula.
         
@@ -41,4 +39,4 @@
                 c^2 = a^2 + b^2 - 2ab\cdot\cos\theta
                 $$
 
-            ....with ‘$c$’ the length of the dotted segment!
+            ....with ‘$c$’ the length of the dotted segment.
