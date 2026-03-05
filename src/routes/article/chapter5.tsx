@@ -14975,12 +14975,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              a\cdot\sin(\gamma)\cdot\csc(\alpha)
+              a\cdot\sin\gamma\cdot\csc\alpha
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              or
+              or, equivalently,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -14993,6 +14993,8 @@ const Rest = () => {
               as illustrated here:
             </OuterP>
             <Pause />
+            <Image src="/tmp-images/e5_sine_rule_sol1.svg" />
+            <Pause />
             <OuterP>
               The top length of ‘?’, on the other hand,
               is
@@ -15000,12 +15002,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              a\cdot\sin(\beta)\cdot\csc(\alpha)
+              a\cdot\sin\beta\cdot\csc\alpha
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              or
+              or, equivalently,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -15029,6 +15031,18 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
+            <Image src="/tmp-images/e5_sine_rule_sol2.svg">
+              <ImageRight
+                src="/tmp-images/e5_sine_rule_sin_2b_cloud.svg"
+                offset_x="-30%"
+                offset_y="38%"
+              />
+            </Image>
+            <Pause />
+            <Image src="/tmp-images/e5_sine_rule_sol3.svg" />
+            <Pause />
+            <StarDivider />
+            <Pause />
             <SolutionNote>
               <OuterP>
                 <i>
@@ -15043,7 +15057,7 @@ const Rest = () => {
                   \begin&#123;gather*&#125;
                   &#123;a\over b&#125; = &#123;\sin \alpha\over \sin\beta&#125;\qquad&#123;b\over a&#125; = &#123;\sin \beta\over \sin\alpha&#125;            \\
                   &#123;a\over c&#125; = &#123;\sin \alpha\over \sin\gamma&#125;\qquad&#123;c\over a&#125; = &#123;\sin \gamma\over \sin\alpha&#125; \up&#123;2.2&#125; \\
-                  &#123;b\over c&#125; = &#123;\sin \beta\over \sin\gamma&#125;\qquad&#123;c\over a&#125; = &#123;\sin \gamma\over \sin\beta&#125;   \up&#123;2.2&#125;
+                  &#123;b\over c&#125; = &#123;\sin \beta\over \sin\gamma&#125;\qquad&#123;c\over b&#125; = &#123;\sin \gamma\over \sin\beta&#125;   \up&#123;2.2&#125;
                   \end&#123;gather*&#125;
                   $$
                 </MathBlock>
@@ -15076,6 +15090,8 @@ const Rest = () => {
                 {" "} as labeled here...
               </OuterP>
               <Pause />
+              <Image src="/tmp-images/e5_sine_rule_generic.svg" />
+              <Pause />
               <OuterP>
                 ...though we can condense these equations to...
               </OuterP>
@@ -15085,7 +15101,7 @@ const Rest = () => {
                   \begin&#123;gather*&#125;
                   &#123;a\over \sin\alpha&#125; = &#123;b\over \sin\beta&#125;            \\
                   &#123;a\over \sin\alpha&#125; = &#123;c\over \sin\gamma&#125;  \up&#123;2.2&#125; \\
-                  &#123;b\over \sin\gamma&#125; = &#123;c\over \sin\gamma&#125;  \up&#123;2.2&#125;
+                  &#123;b\over \sin\beta&#125; = &#123;c\over \sin\gamma&#125;  \up&#123;2.2&#125;
                   \end&#123;gather*&#125;
                   $$
                 </MathBlock>
@@ -15150,6 +15166,8 @@ const Rest = () => {
                 exterior angles of the triangle:
               </OuterP>
               <Pause />
+              <Image src="/tmp-images/e5_sine_rule_generic_exterior.svg" />
+              <Pause />
               <OuterP>
                 ...then each of {" "}
                 <NoBreak>
@@ -15180,9 +15198,11 @@ const Rest = () => {
                 <del>
                   sine?
                 </del>
-                {" "} sign),
-                leaving the original
-                equations intact.
+                {" "} sign), leaving the original equations intact!
+                <ImageRight
+                  line="1.0"
+                  src="/tmp-images/e5_sine_rule_sin_360_m_x_cloud.svg"
+                />
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -15192,6 +15212,12 @@ const Rest = () => {
                   Note 4.
                 </i>
                 {" "}
+                If you're having some sense of {" "}
+                <i>
+                  déjà vu
+                </i>
+                ,
+                it might be because
                 {" "}
                 <InChapterLink
                   href="/article/chapter5#_87_hgi_"
@@ -15200,7 +15226,8 @@ const Rest = () => {
                   Exercise 4
                 </InChapterLink>
                 {" "}
-                uses a similar-if-not-identical solution technique.
+                uses a similar-if-not-identical solution technique!
+                (And if not, then not.)
               </OuterP>
             </SolutionNote>
           </Solution>

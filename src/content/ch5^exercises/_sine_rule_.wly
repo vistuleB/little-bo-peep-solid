@@ -17,10 +17,10 @@
         The bottom length of ‘?’ is
 
         $$
-        a\cdot\sin(\gamma)\cdot\csc(\alpha)
+        a\cdot\sin\gamma\cdot\csc\alpha
         $$
 
-        or
+        or, equivalently,
 
         $$
         a\cdot {\sin \gamma\over \sin\alpha}
@@ -28,16 +28,17 @@
 
         as illustrated here:
 
-        |> Pause
+        |> Image
+            src=tmp-images/e5_sine_rule_sol1.svg
 
         The top length of ‘?’, on the other hand,
         is 
 
         $$
-        a\cdot\sin(\beta)\cdot\csc(\alpha)
+        a\cdot\sin\beta\cdot\csc\alpha
         $$
 
-        or
+        or, equivalently,
 
         $$
         a\cdot{\sin\beta\over \sin\alpha}
@@ -45,6 +46,19 @@
 
         per a similar approach, while also using the fact that
         $\sin(2\eta - x) = \sin(x)$ for all $x \in \rr$:
+
+        |> Image
+            src=tmp-images/e5_sine_rule_sol2.svg
+
+        |> ImageRight
+            src=tmp-images/e5_sine_rule_sin_2b_cloud.svg
+            offset_x=-30%
+            offset_y=38%
+
+        |> Image
+            src=tmp-images/e5_sine_rule_sol3.svg
+
+        |> StarDivider
 
         |> SolutionNote
 
@@ -56,7 +70,7 @@
                 \begin{gather*}
                 {a\over b} = {\sin \alpha\over \sin\beta}\qquad{b\over a} = {\sin \beta\over \sin\alpha}            \\
                 {a\over c} = {\sin \alpha\over \sin\gamma}\qquad{c\over a} = {\sin \gamma\over \sin\alpha} \up{2.2} \\
-                {b\over c} = {\sin \beta\over \sin\gamma}\qquad{c\over a} = {\sin \gamma\over \sin\beta}   \up{2.2}
+                {b\over c} = {\sin \beta\over \sin\gamma}\qquad{c\over b} = {\sin \gamma\over \sin\beta}   \up{2.2}
                 \end{gather*}
                 $$
 
@@ -64,7 +78,8 @@
             looking at all of them) for a general triangle
             of sidelengths $a$, $b$, $c$ as labeled here...
 
-            |> Pause
+            |> Image
+                src=tmp-images/e5_sine_rule_generic.svg
 
             ...though we can condense these equations to...
 
@@ -73,7 +88,7 @@
                 \begin{gather*}
                 {a\over \sin\alpha} = {b\over \sin\beta}            \\
                 {a\over \sin\alpha} = {c\over \sin\gamma}  \up{2.2} \\
-                {b\over \sin\gamma} = {c\over \sin\gamma}  \up{2.2}
+                {b\over \sin\beta} = {c\over \sin\gamma}  \up{2.2}
                 \end{gather*}
                 $$
 
@@ -98,25 +113,29 @@
             of $\alpha$, $\beta$, and $\gamma$ to be the
             exterior angles of the triangle:
 
-            |> Pause
+            |> Image
+                src=tmp-images/e5_sine_rule_generic_exterior.svg
 
             ...then each of $\sin \alpha$,
             $\sin \beta$, $\sin \gamma$ changes sign 
             _and only sign_ 
-            !! (sine?),
             (
             |> del
                 sine?
-            \ sign),
-            !! while keeping the same absolute value, 
-            leaving the original
-            equations intact.
+            \ sign), leaving the original equations intact!
+
+            |> ImageRight
+                line=1.0
+                src=tmp-images/e5_sine_rule_sin_360_m_x_cloud.svg
 
         |> SolutionNote
 
             !! The solution technique of 
+            If you're having some sense of _déjà vu_,
+            it might be because
             Exercise >>_triangle_conch_
-            uses a similar-if-not-identical solution technique.
+            uses a similar-if-not-identical solution technique!
+            (And if not, then not.)
 
             !! This exercise's solution approach already
             !! appeared, essentially, in the solution to
