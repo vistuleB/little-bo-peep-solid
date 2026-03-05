@@ -73,6 +73,8 @@ window.MathJax = {
         // });
       });
     },
+    // Disable automatic typesetting - we'll trigger it manually via IntersectionObserver
+    typeset: false,
   },
 };
 

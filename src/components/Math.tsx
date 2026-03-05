@@ -17,14 +17,15 @@ export const Math = (props: ParentProps) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          (window as any).MathJax.typesetPromise([ref]);
-          setVisible(true);
-          set_store("scrollHeight", document.body.scrollHeight);
+          (window as any).MathJax.typesetPromise([ref]).then(() => {
+            setVisible(true);
+            set_store("scrollHeight", document.body.scrollHeight);
+          });
           observer.disconnect();
         }
       },
       {
-        rootMargin: "300px",
+        rootMargin: "500px",
       },
     );
     if (ref) observer.observe(ref);
@@ -33,9 +34,10 @@ export const Math = (props: ParentProps) => {
 
   return (
     <span
-      class="transition-opacity"
+      class="math transition-opacity"
       style={{ opacity: visible() ? "1" : "0" }}
-      ref={ref}>
+      ref={ref}
+    >
       {props.children}
     </span>
   );
@@ -65,30 +67,31 @@ export const MathBlock = (props: ParentProps) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          (window as any).MathJax.typesetPromise([ref]);
-          setVisible(true);
-          set_store("scrollHeight", document.body.scrollHeight);
+          (window as any).MathJax.typesetPromise([ref]).then(() => {
+            setVisible(true);
+            set_store("scrollHeight", document.body.scrollHeight);
+            if (!measureOriginalWidth()) {
+              console.log("failed to measure width once");
+              setTimeout(() => {
+                if (!measureOriginalWidth()) {
+                  console.log("failed to measure width twice");
+                  console.error("failed to measure width twice");
+                }
+              }, 50);
+            }
+          });
           observer.disconnect();
-          if (!measureOriginalWidth()) {
-            console.log("failed to measure width once");
-            setTimeout(() => {
-              if (!measureOriginalWidth()) {
-                console.log("failed to measure width twice");
-                console.error("failed to measure width twice");
-              }
-            }, 50);
-          }
         }
       },
       {
-        rootMargin: "300px",
+        rootMargin: "500px",
       },
     );
 
     if (ref) {
       observer.observe(ref);
     }
-    
+
     const measureOriginalWidth: () => boolean = () => {
       let svg = null;
       if (ref) {
@@ -99,7 +102,7 @@ export const MathBlock = (props: ParentProps) => {
         }
       }
       return svg != null;
-    }
+    };
 
     setTimeout(measureOriginalWidth, 50);
 
@@ -121,7 +124,10 @@ export const MathBlock = (props: ParentProps) => {
 
   createEffect(() => {
     if (scaledDown()) {
-      console.log("setting it here to: ", store.innerWidth - TEXT_X_PADDING * 2 + "px")
+      console.log(
+        "setting it here to: ",
+        store.innerWidth - TEXT_X_PADDING * 2 + "px",
+      );
       ref?.style.setProperty(
         "width",
         store.innerWidth - TEXT_X_PADDING * 2 + "px",
@@ -129,19 +135,18 @@ export const MathBlock = (props: ParentProps) => {
       return;
     }
     ref?.style.setProperty(
-      "width", 
-      (ref && originalWidth() > 0)
-      ? originalWidth() + "px"
-      : "auto"
+      "width",
+      ref && originalWidth() > 0 ? originalWidth() + "px" : "auto",
     );
   });
 
   return (
     <div
-      class={`mathblock transition-all`}
+      class="mathblock transition-all"
       style={{ opacity: visible() ? "1" : "0" }}
       onClick={handleClick}
-      ref={ref}>
+      ref={ref}
+    >
       {props.children}
     </div>
   );

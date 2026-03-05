@@ -129,6 +129,25 @@ td {
 
 /* Mathjax */
 
+/* Prevent raw LaTeX from showing before MathJax renders */
+.math,
+.mathblock {
+  min-height: 1em; /* Reserve space to prevent layout shift */
+}
+
+/* Hide raw LaTeX content inside math containers until MathJax processes it */
+.math > *:not(mjx-container),
+.mathblock > *:not(mjx-container) {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* Ensure MathJax rendered content is always visible */
+mjx-container {
+  visibility: visible !important;
+  position: relative !important;
+}
+
 .MathJax svg {
   max-width: 100%;
   margin: auto;
@@ -678,7 +697,6 @@ img + .t-3003:hover {
   display: block;
   opacity: 1;
 }
-
 
 /* List */
 
