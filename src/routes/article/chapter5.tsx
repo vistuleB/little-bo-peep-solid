@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_128_hgi_"
+      id="_129_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -4366,7 +4366,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_127_hgi_">
+      <Exercises id="_128_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -13867,10 +13867,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={39}
-        >
+        <Exercise number={39}>
           <ExerciseStatement id="_122_hgi_">
             <OuterP>
               <b>
@@ -14771,10 +14768,7 @@ const Rest = () => {
             <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={42}
-        >
+        <Exercise number={42}>
           <ExerciseStatement id="_125_hgi_">
             <OuterP>
               <b>
@@ -14906,10 +14900,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={43}
-        >
+        <Exercise number={43}>
           <ExerciseStatement id="_126_hgi_">
             <OuterP>
               <b>
@@ -15230,6 +15221,217 @@ const Rest = () => {
                 (And if not, then not.)
               </OuterP>
             </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={44}
+        >
+          <ExerciseStatement id="_127_hgi_">
+            <OuterP>
+              <b>
+                Exercise 44.
+              </b>
+              {" "}
+              Stipulating
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\tan\theta = &#123;\sin\theta\over\cos\theta&#125;,
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \cot\theta = &#123;\cos\theta\over\sin\theta&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as definitions of 
+              tan {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} cot,
+              where can we find {" "}
+              <Math>
+                $\tan(\theta)$
+              </Math>
+              {" "}
+              {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} {" "}
+              <Math>
+                $\cot(\theta)$
+              </Math>
+              {" "} as geometric quantities
+              that exist in relation to the unit circle,
+              in all quadrants?
+              (I.e., find “unit circle interpretations”
+              of 
+              tan {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} cot.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Note that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sin\theta\over\cos\theta&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be understood as 
+              a fraction of the form “rise over run”,
+              i.e., the slope of the line from {" "}
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $(\cos\theta, \sin\theta)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_tan_cot_unit_circle_1.svg" />
+            <Pause />
+            <OuterP>
+              However one way to “materialize” a slope as a
+              coordinate difference is to
+              scale the triangle “rise over run” until
+              the “run” becomes {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} leading to this
+              construction of {" "}
+              <Math>
+                $\tan\theta$
+              </Math>
+              {" "} as a coordinate:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_tan_cot_unit_circle_2.svg" />
+            <Pause />
+            <OuterP>
+              This also works if {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} is in other
+              quadrants, with a negative scaling factor if
+              necessary:
+            </OuterP>
+            <Pause />
+            <OuterP>
+              Symmetrically, the ratio
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cot\theta = &#123;\cos\theta \over \sin\theta&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              has the form “run over rise”, and can
+              be evaluated by scaling the same triangle
+              until “rise” becomes {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} in which case the
+              corresponding (scaled) “run” becomes the value
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\cot\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              Overall,
+              to give self-contained verbalizations of these
+              constructions, we have...
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <Math>
+                $\tan\theta$
+              </Math>
+              {" "} is the {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the
+              intersection of the line through the origin
+              and {" "}
+              <Math>
+                $(\cos\theta, \sin\theta)$
+              </Math>
+              {" "} with the
+              line {" "}
+              <Math>
+                $x = 1$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              ...for tangent, and...
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <Math>
+                $\cot\theta$
+              </Math>
+              {" "} is the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} of the
+              intersection of the line through the origin
+              and {" "}
+              <Math>
+                $(\cos\theta, \sin\theta)$
+              </Math>
+              {" "} with the
+              line {" "}
+              <Math>
+                $y = 1$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              ...for cotangent!
+            </OuterP>
           </Solution>
         </Exercise>
       </Exercises>

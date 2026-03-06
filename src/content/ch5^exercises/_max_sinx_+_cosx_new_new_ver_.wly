@@ -20,8 +20,6 @@
         
         is the sum
         of an $x$-coordinate and a $y$-coordinate.
-        !! |> Image
-        !!     src=images/e5_max_cosx_plus_sinx_sol1_v3_1.svg
         We can represent the coordinates as
         two displacements (changes), one in $x$, 
         one in $y$:

@@ -1,13 +1,9 @@
 |> Exercise
-    work=ing
     handle=_sine_rule_
 
     How to express the two sides marked ‘?’ as functions
     of $\alpha$, $\beta$, $\gamma$ and $a$? (NB: You can 
     trust the drawing's suggestion that $\beta > \eta$, $\gamma < \eta$, $\alpha < \eta$.)
-    !! “trust”
-    !! the drawing in the sense of $\beta$ being greater than
-    !! $\eta$ and of $\gamma$, $\alpha$ being less than $\eta$.)
 
     |> Image
         src=tmp-images/e5_sine_rule_statement.svg
@@ -136,15 +132,3 @@
             Exercise >>_triangle_conch_
             uses a similar-if-not-identical solution technique!
             (And if not, then not.)
-
-            !! This exercise's solution approach already
-            !! appeared, essentially, in the solution to
-            !! Exercise >>_triangle_conch_. (If you recall.)
-
-            !! The solution technique already appears, essentially, in the
-            !! solution to Exercise >>_triangle_conch_.
-
-            !! The solution approach that we used in this
-            !! exercise already appeared, essentially, in the
-            !! solution to Exercise >>_triangle_conch_, if you recall.
-        

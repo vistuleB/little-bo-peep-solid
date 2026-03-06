@@ -1,0 +1,86 @@
+|> Exercise
+    work=ing
+    handle=_tan_cot_on_unit_circle_
+
+    Stipulating
+
+    $$
+    \,\tan\theta = {\sin\theta\over\cos\theta},
+    $$
+    $$
+    \cot\theta = {\cos\theta\over\sin\theta}
+    $$
+
+    as definitions of 
+    tan _&_ cot,
+    where can we find $\tan(\theta)$
+    _&_ $\cot(\theta)$ as geometric quantities
+    that exist in relation to the unit circle,
+    in all quadrants?
+    (I.e., find “unit circle interpretations”
+    of 
+    tan _&_ cot.)
+
+    |> Solution
+
+        Note that
+
+        $$
+        {\sin\theta\over\cos\theta}
+        $$
+
+        can be understood as 
+        a fraction of the form “rise over run”,
+        i.e., the slope of the line from $(0, 0)$ to $(\cos\theta, \sin\theta)$:
+
+        |> Image
+            src=tmp-images/e5_tan_cot_unit_circle_1.svg
+
+        However one way to “materialize” a slope as a
+        coordinate difference is to
+        scale the triangle “rise over run” until
+        the “run” becomes $1$, leading to this
+        construction of $\tan\theta$ as a coordinate:
+
+        |> Image
+            src=tmp-images/e5_tan_cot_unit_circle_2.svg
+
+        This also works if $\theta$ is in other
+        quadrants, with a negative scaling factor if
+        necessary:
+        
+        |> Pause
+
+        Symmetrically, the ratio
+
+        $$
+        \cot\theta = {\cos\theta \over \sin\theta}
+        $$
+
+        has the form “run over rise”, and can
+        be evaluated by scaling the same triangle
+        until “rise” becomes $1$, in which case the
+        corresponding (scaled) “run” becomes the value
+        of $\cot\theta$:
+
+        |> Pause
+
+        Overall,
+        to give self-contained verbalizations of these
+        constructions, we have...
+
+        __$\tan\theta$ is the $y$-coordinate of the
+        intersection of the line through the origin
+        and $(\cos\theta, \sin\theta)$ with the
+        line $x = 1$__
+
+        ...for tangent, and...
+
+        __$\cot\theta$ is the $x$-coordinate of the
+        intersection of the line through the origin
+        and $(\cos\theta, \sin\theta)$ with the
+        line $y = 1$__
+
+        ...for cotangent!
+
+        
