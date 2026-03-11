@@ -249,7 +249,7 @@
                 src=images/e5_ABCD_roles_identity_comp_rearranged_zz.svg
 
             |> ImageLeft
-                src=tmp-images/e5_ABCD_roles_Au_cloud.svg
+                src=images/e5_ABCD_roles_Au_cloud.svg
                 offset_x=2em
 
             ...you find that after $D$ has been dialed up,

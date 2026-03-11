@@ -1,129 +1,524 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
-import { CentralDisplayItalic }  from "~/components/Delimiters";
+import { CentralDisplayItalic, CentralDisplay }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
-import Image  from "~/components/Image";
+import Grid  from "~/components/Grid";
 import InChapterLink  from "~/components/InChapterLink";
+import { Item, List }  from "~/components/List";
 import { Math, MathBlock }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
+import { ImageLeft, ImageRight }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
-import { StarDivider }  from "~/components/StarDivider";
-import { SolutionNote, InTextWarning, NoBreak, Pause, Section }  from "~/components/Wrappers";
+import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter1__() {
   return (
     <Article
       prevPage="/"
-      nextPage=""
-      pageNecessaryMargin={950}
-      maxElementWidth={1000}
-      id="_4_hgi_"
+      nextPage="/article/chapter2"
+      pageNecessaryMargin={800}
+      maxElementWidth={500}
+      id="_24_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">
-            <span class="t-3003-c">
-              note on calculators
-              <span class="t-3003">
-                ./src/content/ch5.wly:1719:6
-              </span>
-            </span>
+          <InChapterLink href="?id=first-section">
+            square roots
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
+          <InChapterLink href="?id=section-1">
+            fractions and division
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-2">
+          <InChapterLink href="?id=section-2">
+            distributivity
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-3">
+          <InChapterLink href="?id=section-3">
+            epilogue
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-4">
+          <InChapterLink href="?id=section-4">
+            vocabulary
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=exercises">
-            <span class="t-3003-c">
-              exercises
-              <span class="t-3003">
-                ./src/content/ch5^exercises/__parent.wly:1:1
-              </span>
-            </span>
+            exercises
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 1:">
-        <span class="t-3003-c">
-          The Trigonometric Functions
-          <span class="t-3003">
-            ./src/content/ch5__parent.wly:2:11
-          </span>
-        </span>
+        A {" "}
+        <i>
+          Few
+        </i>
+        {" "} Refreshers
       </ArticleTitle>
-      <Section
-        work="ing"
-        id="section-1"
-      >
+      <Section id="first-section">
         <OuterP>
           <b>
-            <span class="t-3003-c">
-              Note on calculators.
-              <span class="t-3003">
-                ./src/content/ch5.wly:1719:6
-              </span>
-            </span>
+            Square Roots.
           </b>
           {" "}
-          Your calculator has “degree mode” and
-          “radian mode”. If your calculator tells
-          you that
+          You might remember that “minus times minus
+          is plus” and that “plus times plus is plus”.
+          (Why? The enemy of my enemy is my friend.)
+          So any nonzero number multiplied by itself
+          is positive. For example,
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \cos(1.57)
+          (-2) \times (-2) = 4
           $$
-          <span class="t-3003">
-            ./src/content/ch5.wly:1724:5
-          </span>
+        </MathBlock>
+        <Pause />
+        <CentralDisplay>
+          and
+        </CentralDisplay>
+        <Pause />
+        <MathBlock>
+          $$
+          2 \times 2 = 4
+          $$
         </MathBlock>
         <Pause />
         <OuterP>
-          <span class="t-3003-c">
-            is a number close to {" "}
-            <span class="t-3003">
-              ./src/content/ch5.wly:1728:5
-            </span>
-          </span>
+          are both positive. But {" "}
+          <Math>
+            $\sqrt&#123;4&#125;$
+          </Math>
+          {" "}
+          is, by definition, the unique {" "}
+          <i>
+            nonnegative
+          </i>
+          {" "}
+          solution to {" "}
           <NoBreak>
-            <span class="t-3003-c">
-              <Math>
-                $1$
-              </Math>
-              <span class="t-3003">
-                ./src/content/ch5.wly:1728:26
-              </span>
-            </span>
-            ,
-          </NoBreak>
-          {" "} instead of being
-          a number close to {" "}
-          <NoBreak>
-            <span class="t-3003-c">
-              <Math>
-                $0$
-              </Math>
-              <span class="t-3003">
-                ./src/content/ch5.wly:1729:23
-              </span>
-            </span>
-            ,
-          </NoBreak>
-          {" "} it means that your
-          calculator is in “degree mode”—it has treated
-          as {" "}
-          <span class="t-3003-c">
             <Math>
-              $1.57$
+              $x^2 = 4$
             </Math>
-            <span class="t-3003">
-              ./src/content/ch5.wly:1731:8
-            </span>
-          </span>
-          {" "} as a number of degrees, instead of
-          as a number of radians! (Be sure, in any
-          case, that you're in the mode that you want.)
+            .
+          </NoBreak>
+          {" "}
+          Hence,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;(-2)^2&#125; = 2
+          $$
+          <ImageRight
+            src="/build-img/svgo-svg/Z39o.svg"
+            offset_x="5em"
+            compensate_offset_x_for_large_text_columns={true}
+          />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and, in particular, it is {" "}
+          <i>
+            not
+          </i>
+          {" "} true that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for every real number {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Instead we have
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x|
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for every real number {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} where {" "}
+          <Math>
+            $|x|$
+          </Math>
+          {" "}
+          denotes the absolute value of {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          (Nb: If ever you want to indicate both
+          solutions of the equation {" "}
+          <Math>
+            $x^2 = 4$
+          </Math>
+          {" "} you
+          can always use the notation {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\pm \sqrt&#123;4&#125;$
+            </Math>
+            ”.
+          </NoBreak>
+          {" "}
+          This is what happens, for example, in the
+          maybe-well-known formula
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x = &#123;-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for the solutions to the quadratic equation
+          {" "}
+          <NoBreak>
+            <Math>
+              $ax^2 + bx + c = 0$
+            </Math>
+            .)
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          Next, we will ponder
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          whose value is—by definition—the unique
+          nonnegative solution to
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = 0.5.
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          As beginners, there's nothing wrong with
+          trying to solve this equation by trial and
+          error. With {" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;1\over 4&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} for example,
+          we find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = &#123;1\over 4&#125;\times&#123;1\over 4&#125; = &#123;1\over 16&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          so {" "}
+          <Math>
+            $x = &#123;1\over 4&#125;$
+          </Math>
+          {" "} is not a solution of
+          the equation, being apparently too small.
+          Increasing {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} to {" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;1\over 2&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} say, we
+          find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = &#123;1\over 2&#125;\times&#123;1\over 2&#125; = &#123;1\over 4&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which is better, since {" "}
+          <Math>
+            $1/4$
+          </Math>
+          {" "} is closer to {" "}
+          <NoBreak>
+            <Math>
+              $1/2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          but still too small. Increasing {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} by {" "}
+          <Math>
+            $1/4$
+          </Math>
+          {" "}
+          again, say, to {" "}
+          <NoBreak>
+            <Math>
+              $x = &#123;3\over 4&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} we find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 = &#123;3\over 4&#125;\times&#123;3\over 4&#125; = &#123;9\over 16&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which—surprise!—is actually pretty close to
+          {" "}
+          <NoBreak>
+            <Math>
+              $1/2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} as {" "}
+          <NoBreak>
+            <Math>
+              $1/2 = 8/16$
+            </Math>
+            .
+          </NoBreak>
+          {" "} And since {" "}
+          <NoBreak>
+            <Math>
+              $9/16 &gt; 0.5$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $\sqrt&#123;0.5&#125;$
+          </Math>
+          {" "} must be a little {" "}
+          <i>
+            less
+          </i>
+          {" "} than
+          {" "}
+          <NoBreak>
+            <Math>
+              $&#123;3\over 4&#125; = 0.75$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          In last resort, and in reasonably good
+          agreement with our observations, a calculator
+          reveals that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.5&#125; = 0.7071067...
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          where the decimals trail off with no pattern.
+          (This number is irrational.) Even so, the fact
+          that {" "}
+          <Math>
+            $\sqrt&#123;0.5&#125;$
+          </Math>
+          {" "} is {" "}
+          <i>
+            greater
+          </i>
+          {" "} than {" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "} is
+          often perceived as counterintuitive.
+        </OuterP>
+        <OuterP class="indent-10">
+          You can think of it this way: multiplying a
+          value by {" "}
+          <NoBreak>
+            <Math>
+              $0.7071$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} or approximately {" "}
+          <NoBreak>
+            <Math>
+              $\sqrt&#123;0.5&#125;$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          is like taking {" "}
+          <Math>
+            $70.71\%$
+          </Math>
+          {" "} of that value—for
+          example, say,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          605 \cdot 0.7071 = 427.7955
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is {" "}
+          <Math>
+            $70.71\%$
+          </Math>
+          {" "} of {" "}
+          <NoBreak>
+            <Math>
+              $605$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} and so on—so if we
+          multiply {" "}
+          <i>
+            twice
+          </i>
+          {" "} by {" "}
+          <Math>
+            $0.7071$
+          </Math>
+          {" "} we obtain
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $70.71\%$
+            </Math>
+          </NoBreak>
+          {" "} of {" "}
+          <NoBreak>
+            <Math>
+              $70.71\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} and it just so happens
+          that {" "}
+          <NoBreak>
+            “
+            <Math>
+              $70.71\%$
+            </Math>
+          </NoBreak>
+          {" "} of {" "}
+          <NoBreak>
+            <Math>
+              $70.71\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} is close to
+          {" "}
+          <NoBreak>
+            <Math>
+              $50\%$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          The point is: if {" "}
+          <NoBreak>
+            “
+            <Math>
+              $X\%$
+            </Math>
+          </NoBreak>
+          {" "} of {" "}
+          <NoBreak>
+            <Math>
+              $X\%$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} equals {" "}
+          <NoBreak>
+            <Math>
+              $50\%$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          then, of course, {" "}
+          <NoBreak>
+            <Math>
+              $\rt&#123;0.03&#125;X &gt; 50$
+            </Math>
+            —that
+          </NoBreak>
+          {" "} much
+          seems logical—and, with a little thought, the
+          same phenomenon explains why {" "}
+          <NoBreak>
+            <Math>
+              $\sqrt&#123;0.5&#125; &gt; 0.5$
+            </Math>
+            !
+          </NoBreak>
         </OuterP>
       </Section>
       <Rest />
@@ -136,1335 +531,2378 @@ const Rest = () => {
   return <>
     {showMore() && <>
       <Pause />
-      <Exercises id="_3_hgi_">
-        <Exercise
-          work="ing"
-          number={1}
+      <Section id="section-1">
+        <OuterP>
+          <b>
+            Fractions and Division.
+          </b>
+          {" "}
+          An elementary fraction, or division, such as
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;50 \over 2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          can be thought of in a few different ways:
+        </OuterP>
+        <Pause />
+        <List
+          type="decimal"
+          style="gap: 2px;"
         >
-          <ExerciseStatement id="_1_hgi_">
+          <Item>
+            <p>
+              Fifty halves (i.e., {" "}
+              <NoBreak>
+                <Math>
+                  $50 \times &#123;1\over 2&#125;$
+                </Math>
+                ).
+              </NoBreak>
+            </p>
+          </Item>
+          <Item>
+            <p>
+              The size obtained when something of size
+              fifty is divided into two equal parts
+              (answer: {" "}
+              <NoBreak>
+                <Math>
+                  $25$
+                </Math>
+                ).
+              </NoBreak>
+            </p>
+          </Item>
+          <Item>
+            <p>
+              The number of times that {" "}
+              <Math>
+                $2$
+              </Math>
+              {" "} goes into {" "}
+              <Math>
+                $50$
+              </Math>
+              {" "}
+              (answer: {" "}
+              <NoBreak>
+                <Math>
+                  $25$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because it takes twenty-five
+              {" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                's
+              </NoBreak>
+              {" "} to make up {" "}
+              <NoBreak>
+                <Math>
+                  $50$
+                </Math>
+                ).
+              </NoBreak>
+            </p>
+          </Item>
+        </List>
+        <Pause />
+        <OuterP>
+          But {" "}
+          <Math>
+            $50/2$
+          </Math>
+          {" "} is a ratio of integers, which makes
+          things particularly nice! For a ratio of
+          decimals, such as, say,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;1 \over 0.01&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          our possible points of view are going to be
+          more restricted. Thankfully, however, we can
+          still characterize this fraction as the
+          answer to the question “how many times does
+          {" "}
+          <Math>
+            $0.01$
+          </Math>
+          {" "} go into {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ?”
+          </NoBreak>
+          {" "} as in the third option
+          above. And, indeed,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;1 \over 0.01&#125; \,=\,100
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          because {" "}
+          <Math>
+            $0.01$
+          </Math>
+          {" "} goes {" "}
+          <Math>
+            $100$
+          </Math>
+          {" "} times into {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            .
+          </NoBreak>
+          {" "} For
+          that matter,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123; 1 \over 0.001&#125; = 1000,\qquad&#123;1 \over 0.0001&#125; = 10000,\quad\,\,\,\,\textrm&#123;(etc)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by the same reasoning, which explains why
+          dividing by smaller and smaller numbers produces
+          larger and larger results (and, by extension,
+          why dividing by {" "}
+          <Math>
+            $0$
+          </Math>
+          {" "} is undefined).
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <b>
+            Note.
+          </b>
+          {" "} In general, the ratio of two decimal
+          numbers can be turned into a ratio of integers
+          by multiplying the ratio top and bottom by a
+          suitable power of {" "}
+          <NoBreak>
+            <Math>
+              $10$
+            </Math>
+            .
+          </NoBreak>
+          {" "} E.g.:
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;1.42 \over 0.8&#125; = &#123;100 \cdot 1.42 \over 100 \cdot 0.8&#125; = &#123;142 \over 80&#125; = &#123;71 \over 40&#125;.
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          This example was chosen randomly, and, if you
+          allow, we would like to see how large {" "}
+          <Math>
+            $71/40$
+          </Math>
+          {" "}
+          really is (one second!):
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;align&#125;
+          &#123;71 \over 40&#125; \,&amp;=\, &#123;40 + 30 + 1 \over 40&#125; \,=\, &#123;40 \over 40&#125; + &#123;30 \over 40&#125; + &#123;1 \over 40&#125;\\
+          \,&amp;=\, 1 + &#123;3 \over 4&#125; + &#123;1 \over 4&#125;\!\cdot \!&#123;1 \over 10&#125;\up&#123;1.5&#125;\\
+          \,&amp;=\, 1 + 0.75 + 0.025 = 1.775\up&#123;1.5&#125;
+          \end&#123;align&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          ...so we find, among others, that {" "}
+          <Math>
+            $71$
+          </Math>
+          {" "} is exactly
+          {" "}
+          <Math>
+            $77.5\%$
+          </Math>
+          {" "} greater than {" "}
+          <NoBreak>
+            <Math>
+              $40$
+            </Math>
+            .
+          </NoBreak>
+          {" "} (Interesting, no?)
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-2">
+        <OuterP>
+          <b>
+            Distributivity.
+          </b>
+          {" "}
+          As you might already know, a number that
+          multiplies a sum can be brought “inside” the
+          sum. For example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          5(10 + 2) \,=\, 5\!\cdot\!10 \,+\, 5\!\cdot\!2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (five times twelve equals fifty plus ten), or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          a(b + c) = ab + ac
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          more generally. This property is known as the
+          {" "}
+          <i>
+            distributivity of multiplication over addition
+          </i>
+          ,
+          or {" "}
+          <i>
+            distributivity
+          </i>
+          {" "} for short.
+        </OuterP>
+        <OuterP class="indent-10">
+          (We might finally clarify that {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $\cdot$
+            </Math>
+            ’
+          </NoBreak>
+          {" "} means
+          “times”, i.e., the same as {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $\times$
+            </Math>
+            ’.
+          </NoBreak>
+          {" "} Moreover,
+          when we write
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          5\!\cdot\!10 \,+\, 5\!\cdot\!2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          we really mean
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (5\!\cdot\!10) + (5\!\cdot\!2)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          as opposed to something else, such as
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          ((5\!\cdot\!10) + 5)\!\cdot\! 2,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          because multiplication takes precedence over
+          addition, by default.)
+        </OuterP>
+        <OuterP class="indent-10">
+          A little more generally, one has such identities
+          as
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(C + D) \,=\, aC + bC + aD + bD
+          $$
+          <ImageLeft
+            src="/build-img/svgo-svg/QC6w.svg"
+            offset_x="1.9em"
+            compensate_offset_x_for_large_text_columns={true}
+          />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          that come from multiplying every term of the first
+          parenthesis with every term of the second
+          parenthesis. Indeed,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(C + D) = (a + b)C + (a + b)D
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by one application of distributivity, while
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)C = aC + bC
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)D = aD + bD
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by distributivity again.
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 1.
+            </b>
+            {" "}
+            One has
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \begin&#123;align&#125;
+            (10 + 2)(10 + 4) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4\\
+            \,&amp;=\, 100 \,+\, 40 \,+\, 20 \,+\, 8\\
+            \,&amp;=\, 168
+            \end&#123;align&#125;
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            so {" "}
+            <NoBreak>
+              <Math>
+                $12 \times 14 = 168$
+              </Math>
+              .
+            </NoBreak>
+          </OuterP>
+        </Example>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 2.
+            </b>
+            {" "}
+            One has
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \begin&#123;align&#125;
+            (10 + 3)(10 + 3) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
+            \,&amp;=\, 100 \,+\, 30 \,+\, 30 \,+\, 9\\
+            \,&amp;=\, 169
+            \end&#123;align&#125;
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            so {" "}
+            <NoBreak>
+              <Math>
+                $13 \times 13 = 169$
+              </Math>
+              .
+            </NoBreak>
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          (The fact that {" "}
+          <Math>
+            $13 \times 13$
+          </Math>
+          {" "} is exactly one
+          greater than {" "}
+          <Math>
+            $12 \times 14$
+          </Math>
+          {" "} is a bit curious
+          indeed.)
+        </OuterP>
+        <OuterP class="indent-10">
+          If we start from the afore-mentioned identity
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(C + D) \,=\, aC + bC + aD + bD
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and set {" "}
+          <NoBreak>
+            <Math>
+              $C = a$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $D = b$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} we find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(a + b) \,=\, aa + ba + ab + bb
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or, equivalently,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)^2 = a^2 + 2ab + b^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          since {" "}
+          <NoBreak>
+            <Math>
+              $(a + b)(a + b) = (a + b)^2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $aa = a^2$
+          </Math>
+          {" "}
+          and {" "}
+          <NoBreak>
+            <Math>
+              $bb = b^2$
+            </Math>
+            .
+          </NoBreak>
+          {" "} (This is the {" "}
+          <i>
+            binomial expansion
+            of degree two
+          </i>
+          , but such terminology is not very
+          important at this stage.)
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 3.
+            </b>
+            {" "}
+            By the last formula (or “binomial expansion
+            of degree two”),
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \begin&#123;align&#125;
+            \up&#123;1&#125; (10 + 3)^2 \,&amp;=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
+            \up&#123;1&#125; \,&amp;=\, 100 + 60 + 9 \\
+            \up&#123;1&#125; \,&amp;=\, 169
+            \end&#123;align&#125;
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            which agrees with Example 2.
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          On the other hand, setting {" "}
+          <NoBreak>
+            <Math>
+              $C = a$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $D = -b$
+          </Math>
+          {" "} in
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(C + D) = aC + aD + bC + bD
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          gives
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(a + (-b)) = aa + a(-b) + ba + b(-b)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or, less pedantically,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(a - b) = aa - ab + ba - bb
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a + b)(a - b) = a^2 - b^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          since {" "}
+          <NoBreak>
+            <Math>
+              $- ab + ba = 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $aa = a^2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $bb = b^2$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Note that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          a^2 - b^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          a difference of squares
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          whence {" "}
+          <i>
+            a difference of squares can always be
+            factored
+          </i>
+          . (Factored as {" "}
+          <NoBreak>
+            <Math>
+              $(a + b)(a - b)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} that
+          is.) (PS: “Factored” means “written as a product”.)
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 4.
+            </b>
+            {" "}
+            Since
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            19 = 100 - 81 = 10^2 - 9^2
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            is a difference of squares, {" "}
+            <Math>
+              $19$
+            </Math>
+            {" "} can be
+            factored. (On the other hand {" "}
+            <Math>
+              $19$
+            </Math>
+            {" "} is a prime
+            number, but nevermind.)
+          </OuterP>
+        </Example>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 5.
+            </b>
+            {" "}
+            The algebraic expression
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            1 - x^2
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            can be factored, because
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            1 = 1^2
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            implies that
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            1 - x^2
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            truly is “a difference of squares”. And, indeed,
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            1 - x^2 = (1 - x)(1 + x)
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            as per {" "}
+            <NoBreak>
+              “
+              <Math>
+                $\rt&#123;0.04&#125;a^2 - b^2 = (a - b)(a + b)$
+              </Math>
+              ”.
+            </NoBreak>
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          In relation to distributivity, we should also
+          mention the simple but important fact that
+          multiplying a difference by {" "}
+          <Math>
+            $-1$
+          </Math>
+          {" "} {" "}
+          <i>
+            reverses
+          </i>
+          {" "} the
+          difference. That is,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-1)(a - b) \,=\, b - a
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          or, for short,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          -(a - b) \,=\, b - a
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          because, indeed,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;align&#125;
+          (-1)(a - b) \,&amp;=\, (-1)(a + (-b)) \\
+          \,&amp;=\, (-1)a + (-1)(-b) \\
+          \,&amp;=\, -a + b
+          \end&#123;align&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          by distributivity (used in the second step).
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 6.
+            </b>
+            {" "}
+            We have {" "}
+            <NoBreak>
+              <Math>
+                $-(10 - 3) = 3 - 10$
+              </Math>
+              .
+            </NoBreak>
+            {" "}
+            (Because {" "}
+            <NoBreak>
+              <Math>
+                $-7 = -7$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} as it would be, haha.)
+          </OuterP>
+        </Example>
+      </Section>
+      <Pause />
+      <Section
+        divider={false}
+        id="section-3"
+      >
+        <OuterP>
+          <b>
+            Epilogue.
+          </b>
+          {" "} Do you remember the near miss between
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          12\cdot 14 \,=\, 168
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          13 \cdot 13 \,=\, 13^2 \,=\, 169
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          ...? Well if you observe, additionally, that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;align&#125;
+          11\,\cdot\,13 &amp;= 12^2 - 1\\
+          10\,\cdot\,12 &amp;= 11^2 - 1\\
+          9\,\cdot\,11 &amp;= 10^2 - 1
+          \end&#123;align&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (etc) you might become suspicious of a pattern!
+          But the mystery is rather thin: we have
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (n - 1)(n + 1) \,=\, n^2 - 1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for {" "}
+          <i>
+            every
+          </i>
+          {" "} real number {" "}
+          <Math>
+            $n$
+          </Math>
+          {" "} because of the
+          formula
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (a - b)(a + b) \,=\, a^2 - b^2
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for a difference of squares!
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-4">
+        <OuterP>
+          <b>
+            Vocabulary.
+          </b>
+          {" "}
+          A pair of algebraic expressions of the form
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          a + b,\, a - b
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is called a {" "}
+          <i>
+            conjugate pair
+          </i>
+          . For example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          n + 1,\, n - 1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a conjugate pair, as is
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;3&#125; + \sqrt&#123;2&#125;,\,\, \sqrt&#123;3&#125; - \sqrt&#123;2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and so on. (Generally speaking, conjugate pairs
+          are good things to multiply together.)
+        </OuterP>
+      </Section>
+      <Pause />
+      <Exercises id="_23_hgi_">
+        <Exercise number={1}>
+          <ExerciseStatement id="_21_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
               </b>
-              {" "}{" "}
               {" "}
-              {" "}
-              <span class="t-3003-c">
-                If {" "}
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:5:5
-                </span>
-              </span>
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $0$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:5:8
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:5:13
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "} and a value {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $A &gt; 1$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:5:30
-                </span>
-              </span>
-              {" "} are marked
-              on a line...
+              True or false (and, if possible, explain):
             </OuterP>
             <Pause />
-            <Image
-              style="margin-top:0.8em;margin-bottom:0.8em;"
-              src="/build-img/svgo-svg/j4h0.svg"
-              local_url="./images/e5_line_with_0_1_and_A.svg"
-            />
+            <Grid
+              cols={3}
+              sm_cols={2}
+              sm_cutoff={520}
+              center_on_overflow={true}
+            >
+              <Item>
+                a. {" "}
+                <Math>
+                  $0.9^2 &lt; 0.9$
+                </Math>
+              </Item>
+              <Item>
+                b. {" "}
+                <Math>
+                  $\sqrt&#123;0.01&#125; = 0.1$
+                </Math>
+              </Item>
+              <Item>
+                c. {" "}
+                <Math>
+                  $\sqrt[2]&#123;\up&#123;0.8&#125;\sqrt[3]&#123;2&#125;&#125; = \sqrt[3]&#123;\up&#123;0.8&#125;\sqrt[2]&#123;2&#125;&#125;$
+                </Math>
+              </Item>
+              <Item>
+                d. {" "}
+                <Math>
+                  $&#123;\sqrt&#123;2&#125; \over \up&#123;0.55&#125;2&#125; = \sqrt&#123;0.5&#125;$
+                </Math>
+              </Item>
+              <Item>
+                e. {" "}
+                <Math>
+                  $&#123;1 \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;0.5&#125;$
+                </Math>
+              </Item>
+              <Item>
+                f. {" "}
+                <Math>
+                  $2^&#123;30&#125; &gt; 1000^3$
+                </Math>
+              </Item>
+              <Item>
+                g. {" "}
+                <Math>
+                  $&#123;1 \over 0.95&#125; &gt; 1.05$
+                </Math>
+              </Item>
+              <Item>
+                h. {" "}
+                <Math>
+                  $(-1)^&#123;101&#125; = -1$
+                </Math>
+              </Item>
+              <Item>
+                i. {" "}
+                <Math>
+                  $&#123;100 \over \up&#123;0.5&#125;99&#125; &lt; &#123;101 \over \up&#123;0.5&#125;100&#125;$
+                </Math>
+              </Item>
+            </Grid>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Part by part:
+            </OuterP>
             <Pause />
             <OuterP>
-              <span class="t-3003-c">
-                ...how can we find the placement of...
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:12:5
-                </span>
-              </span>
+              a. (True) We have
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              1 / A
+              0.9^2 = &#123;9 \over 10&#125;\cdot&#123;9 \over 10&#125; = &#123;81 \over 100&#125; = 0.81
               $$
-              <span class="t-3003">
-                ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:14:5
-              </span>
             </MathBlock>
             <Pause />
             <OuterP>
-              <span class="t-3003-c">
-                ...on the same line by a purely geometric construction?
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:18:5
-                </span>
-              </span>
-              {" "}
-              {" "}
-              What about if {" "}
+              and {" "}
               <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $0 &lt; A &lt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:19:19
-                  </span>
-                </span>
+                <Math>
+                  $0.81 &lt; 0.9$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              b. (True) We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.1^2 = &#123;1 \over 10&#125; \cdot &#123;1 \over 10&#125; = &#123;1 \over 100&#125; = 0.01,
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and {" "}
+              <Math>
+                $0.1$
+              </Math>
+              {" "} is nonnegative, so {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;0.01&#125; = 0.1$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              c. (True) In fact,
+              {" "}
+              <Math>
+                $\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;$
+              </Math>
+              {" "}
+              and {" "}
+              <Math>
+                $\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;$
+              </Math>
+              {" "} are
+              both equal to {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+                </Math>
+                .
+              </NoBreak>
+              {" "} To
+              convince yourself, note that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\,\, (\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
+              =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\qquad\\
+              =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \\
+              =&amp; \,\, \up&#123;1.4&#125; (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;)\\
+              =&amp; \,\, \up&#123;1.4&#125; 2
+              \end&#123;align&#125;
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/rgbH.svg"
+                offset_y="23.5%"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+                  &amp;\,\, (\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
+                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\\
+                 =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;)\\
+                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.65&#125;2&#125; \times \sqrt[2]&#123;\up&#123;0.65&#125;2&#125;\\
+                 =&amp;\,\, \up&#123;1.4&#125; 2
+              \end&#123;align&#125;
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/Trg3.svg"
+                offset_y="23.5%"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so {" "}
+              <NoBreak>
+                <Math>
+                  $(\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 =
+                  (\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 = 2$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Technically, however, a number {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} such that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x^6 = 2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is not necessarily {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              because {" "}
+              <Math>
+                $x = -\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+              </Math>
+              {" "} satisfies
+              this equation as well!
+            </OuterP>
+            <OuterP class="indent-10">
+              The last step, therefore, is to note that
+              {" "}
+              <Math>
+                $\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;$
+              </Math>
+              {" "} and
+              {" "}
+              <Math>
+                $\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;$
+              </Math>
+              {" "} are both
+              {" "}
+              <i>
+                nonnegative
+              </i>
+              {" "} numbers (taken as obvious),
+              and which implies that they are the {" "}
+              <i>
+                unique
+                nonnegative
+              </i>
+              {" "} solution to {" "}
+              <NoBreak>
+                <Math>
+                  $x^6 = 2$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              d. (True) In general,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; = \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all {" "}
+              <NoBreak>
+                <Math>
+                  $x \geq 0$
+                </Math>
                 ,
               </NoBreak>
               {" "} {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $-1 &lt; A &lt; 0$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:19:32
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "} etc?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              <span class="t-3003-c">
-                The basic idea of the solution is to find
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:23:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              an angle {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $\theta$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:24:18
-                </span>
-              </span>
-              {" "} such that {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A = \sec(\theta)$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:24:37
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "}
-              if {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $|A| &gt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:25:12
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "}
-              or symmetrically, such that {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A = \cos(\theta)$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:26:37
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "} if {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $|A| &lt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:26:60
-                  </span>
-                </span>
-                :
-              </NoBreak>
+              <Math>
+                $y &gt; 0$
+              </Math>
+              {" "} (you need each
+              root to be defined), so
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/kxTm.svg"
-              local_url="./images/e5_line_with_0_1_and_A_and_secant.svg"
-            />
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/ryx0.svg"
-              local_url="./images/e5_line_with_0_1_and_A_and_cos.svg"
-            />
+            <MathBlock>
+              $$
+              &#123;\sqrt&#123;2&#125; \over 2&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;4&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;2 \over 4&#125; = \sqrt&#123;0.5&#125;
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
-              <span class="t-3003-c">
-                (Cf. Exercise {" "}
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:36:9
-                </span>
-              </span>
-              <InTextWarning>
-                undefined handle at ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:36:9: _secant_cosecant_intersections_
-              </InTextWarning>
-              .)
-              We now proceed with
-              step-by-step
-              compass-and-ruler 
-              instructions for the two cases:
+              ...ta-daa!
             </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                ~ ~ case {" "}
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:42:11
-                </span>
-              </span>
-              <span class="t-3003-c">
-                <Math>
-                  $|A| &gt; 1$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:42:20
-                </span>
-              </span>
-              <span class="t-3003-c">
-                {" "} ~ ~
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:42:29
-                </span>
-              </span>
-            </CentralDisplayItalic>
             <Pause />
             <OuterP>
               <i>
-                <span class="t-3003-c">
-                  Step 1.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:44:10
-                  </span>
-                </span>
+                Note 1.
               </i>
-              {" "} Find the midpoint between {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $0$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:44:45
-                </span>
-              </span>
-              {" "} and {" "}
+              {" "} One can also proceed by “direct
+              verification”:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;\sqrt&#123;2&#125; \over 2&#125;\right)^&#123;\!2&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;\cdot&#123;\sqrt&#123;2&#125; \over 2&#125;
+              = &#123;\sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125; \over 4&#125; = &#123;2 \over 4&#125; = 0.5.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (This, together with the fact that
+              {" "}
+              <Math>
+                $&#123;\sqrt&#123;2&#125; \over 2&#125;$
+              </Math>
+              {" "} is not negative,
+              establishes that {" "}
               <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:44:53
-                  </span>
-                </span>
-                ;
-              </NoBreak>
-              {" "} for
-              this, the procedure is to use two circles of equal radius:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/JM7s.svg"
-              local_url="./images/e5_line_with_0_1_and_A_Agt1_step1.svg"
-            />
-            <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Step 2.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:50:10
-                  </span>
-                </span>
-              </i>
-              {" "} Draw a semicircle of radius {" "}
-              <span class="t-3003-c">
                 <Math>
-                  $A/2$
+                  $&#123;\sqrt&#123;2&#125; \over 2&#125; =
+                  \sqrt&#123;0.5&#125;$
                 </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:50:47
-                </span>
-              </span>
-              {" "} whose
-              center is that midpoint:
+                .)
+              </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/eQmC.svg"
-              local_url="./images/e5_line_with_0_1_and_A_Agt1_step2.svg"
-            />
+            <OuterP>
+              e. (True) Using the
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; =
+                  \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} identity:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;1&#125; \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;1 \over 2&#125; = \sqrt&#123;0.5&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              Or by direct verification:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;1 \over \sqrt&#123;2&#125;&#125;\right)^&#123;\!2&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;\cdot&#123;1 \over \sqrt&#123;2&#125;&#125;
+              = &#123;1 \over \sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125;&#125; = &#123;1 \over 2&#125; = 0.5.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (And {" "}
+              <Math>
+                $1 \over \sqrt&#123;2&#125;$
+              </Math>
+              {" "} is nonnegative.)
+              Or by reducing to part d:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;2&#125; \cdot \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (The point being: we already know that
+              {" "}
+              <Math>
+                $&#123;\sqrt&#123;2&#125; \over 2&#125; = \sqrt&#123;0.5&#125;$
+              </Math>
+              {" "} by part d.)
+            </OuterP>
+            <Pause />
+            <OuterP>
+              f. (True) We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2^&#123;30&#125; = 2^&#123;10&#125; \times 2^&#123;10&#125; \times 2^&#123;10&#125; = (2^&#123;10&#125;)^3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (2^&#123;10&#125;)^3 = (1024)^3 &gt; 1000^3.
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
               <i>
-                <span class="t-3003-c">
-                  Step 3.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:56:10
-                  </span>
-                </span>
+                Note 2.
               </i>
-              {" "} Draw a circle of radius {" "}
-              <span class="t-3003-c">
+              {" "}
+              The first ten or so powers of {" "}
+              <Math>
+                $2$
+              </Math>
+              {" "} are worth
+              knowing by heart (here's {" "}
+              <i>
+                eleven
+              </i>
+              {" "} powers, mind
+              you):
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;array&#125;&#123;c|c&#125;
+              \,\,\,\,n\,\,\,\, &amp; 2^n\dn&#123;0.3&#125; \\ \hline
+              0 &amp; 1 \up&#123;1.1&#125;\\
+              1 &amp; 2 \\
+              2 &amp; 4 \\
+              3 &amp; 8 \\
+              4 &amp; 16 \\
+              5 &amp; 32 \\
+              6 &amp; 64 \\
+              7 &amp; 128 \\
+              8 &amp; 256 \\
+              9 &amp; 512 \\
+              10 &amp; 1024
+              \end&#123;array&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              Among which, the fact that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2^&#123;10&#125; \approx 10^3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be particularly useful to know! For
+              example, if a 1-millimeter-thick napkin is
+              folded {" "}
+              <Math>
+                $50$
+              </Math>
+              {" "} times over, doubling the width
+              each time, one obtains something of
+              thickness
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2^&#123;50&#125;\fw\te&#123;mm&#125; = (2^&#123;10&#125;)^5\fw\te&#123;mm&#125; \approx (10^3)^5\fw\te&#123;mm&#125; = 10^&#123;15&#125;\fw\te&#123;mm&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              As
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1\fw\te&#123;mm&#125; = 10^&#123;-6&#125;\fw\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              this is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              10^&#123;15&#125;\fw&#123;&#125;(10^&#123;-6&#125;\fw\te&#123;km&#125;) = 10^&#123;15-6&#125;\fw\te&#123;km&#125; = 10^&#123;9&#125;\fw\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or {" "}
+              <i>
+                one billion
+              </i>
+              {" "} kilometers. By
+              comparison, the distance from the Earth to
+              the Sun is a mere {" "}
+              <Math>
+                $150$
+              </Math>
+              {" "} million kilometers.
+              (The point being: that we could go from the
+              relatively mysterious
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;2^&#123;50&#125;\fw\te&#123;mm&#125;\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to the relatively less mysterious
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;\fw10^&#123;15&#125;\te&#123;mm&#125;\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              thanks to the fact that {" "}
+              <NoBreak>
+                <Math>
+                  $2^&#123;10&#125; \approx 10^3$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              g. (True) As an inequality can be multiplied
+              on both sides by a positive number while
+              preserving the inequality, one has
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp; &#123;1 \over 0.95&#125; &gt; 1.05\\
+              \iff &amp; 1 &gt; 1.05 \cdot 0.95\up&#123;1.4&#125;\\
+              \iff &amp; 1 &gt; (1 + 0.05)(1 - 0.05)\up&#123;1.4&#125;\\
+              \iff &amp; 1 &gt; 1 - 0.05^2\up&#123;1.4&#125;
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (using the fact that {" "}
+              <NoBreak>
+                <Math>
+                  $(1+x)(1-x) = 1-x^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;\,(a+b)(a-b) = a^2-b^2\,\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              fame), and since the {" "}
+              <i>
+                last
+              </i>
+              {" "} inequality is true,
+              the {" "}
+              <i>
+                first
+              </i>
+              {" "} inequality is true! (Recall that
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\!\iff\!$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} means “if and only if”.)
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 3.
+              </i>
+              {" "}
+              More generally, even though
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 1 - \epsilon&#125; &gt; 1 + \epsilon
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for any small {" "}
+              <NoBreak>
+                <Math>
+                  $\epsilon &gt; 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the number
+              {" "}
+              <Math>
+                $1 + \epsilon$
+              </Math>
+              {" "} remains a good approximation to
+              {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1 \over 1 - \epsilon&#125;$
+                </Math>
+                .
+              </NoBreak>
+              {" "} For example,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 0.99&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is a good approximation to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 0.99&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              while
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 0.999&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is a good approximation to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 0.999&#125;,
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              etc.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              h. (True) Here are the first few powers of {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "}
+              (note how each additional multiplication by {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "}
+              simply changes the sign of the previous result):
+            </OuterP>
+            <Pause />
+            <Grid
+              cols={3}
+              place_items="end"
+            >
+              <Item>
+                <Math>
+                  $(-1)^1 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $-1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^2 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)\times (-1) =$
+                </Math>
+              </Item>
+              <Item>
                 <Math>
                   $1$
                 </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:56:43
-                </span>
-              </span>
-              {" "} whose center
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^3 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)\times(-1)\times (-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $-1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^4 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)\times(-1)\times(-1)\times(-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $1$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $(-1)^5 =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $\,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) =$
+                </Math>
+              </Item>
+              <Item>
+                <Math>
+                  $-1$
+                </Math>
+              </Item>
+            </Grid>
+            <Pause />
+            <OuterP>
+              (Etc.) Obviously, even powers of {" "}
+              <Math>
+                $(-1)$
+              </Math>
+              {" "} are
+              equal to {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} while odd powers of {" "}
+              <Math>
+                $(-1)$
+              </Math>
+              {" "} are
+              equal to {" "}
+              <NoBreak>
+                <Math>
+                  $-1$
+                </Math>
+                .
+              </NoBreak>
+              {" "} As {" "}
+              <Math>
+                $101$
+              </Math>
+              {" "} is odd, {" "}
+              <Math>
+                $(-1)^&#123;101&#125;$
+              </Math>
+              {" "}
               is {" "}
               <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $(0, 0)$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:57:12
-                  </span>
-                </span>
-                :
+                <Math>
+                  $-1$
+                </Math>
+                .
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/emr1.svg"
-              local_url="./images/e5_line_with_0_1_and_A_Agt1_step3.svg"
-            />
+            <OuterP>
+              i. (False) We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;100 \over 99&#125; = &#123;99 + 1 \over 99&#125; = 1 + &#123;1 \over 99&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;101 \over 100&#125; = &#123;100 + 1 \over 100&#125; = 1 + &#123;1 \over 100&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so the smaller of the two fractions is {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;101
+                  \over 100&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} since {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1 \over 100&#125; &lt; &#123;1 \over
+                  99&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
             <Pause />
             <OuterP>
               <i>
-                <span class="t-3003-c">
-                  Step 4.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:62:10
-                  </span>
-                </span>
+                Note 4.
               </i>
-              {" "} Draw a line through the intersections
-              of the two circles to find the position of {" "}
+              {" "}
+              The difference
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 99&#125; - &#123;1 \over 100&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is interesting in its own right, being
+              connected to a famous infinite sum. To
+              visualize this sum, picture a hare poised at
+              {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} on the number line. This hare runs
+              forward by one unit and backwards by half a
+              unit, stopping at the number
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 - &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by virtue of this back-and-forth movement.
+              The hare then proceeds to run forward by
+              {" "}
+              <i>
+                half
+              </i>
+              {" "} a unit and back by a {" "}
+              <i>
+                third
+              </i>
+              {" "} of a unit,
+              stopping at
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right) \\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right) \\
+              \hline
+              = \,&amp;\, \left(1 - &#123;1 \over 3&#125;\right)
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for another break. Keeping with this pattern,
+              the hare then stops at
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              \hline
+              = \,&amp;\, \left(1 - &#123;1 \over 4&#125;\right)
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and then at
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
+              \hline
+              = \,&amp;\, \left(1 - &#123;1 \over 5&#125;\right)
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and so on.
+              Clearly, the successive positions at which
+              the hare stops are approaching the number {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}
+              from the left, pointing to the fact that the
+              {" "}
+              <i>
+                infinite
+              </i>
+              {" "} sum
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
+              + \,&amp;\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is “equal” (in some sense) to {" "}
               <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $1/A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:63:52
-                  </span>
-                </span>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/XE7K.svg"
-              local_url="./images/e5_line_with_0_1_and_A_Agt1_step4.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                (The reason that the whole procedure works is that
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:68:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              this triangle...
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/KO2V.svg"
-              local_url="./images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                ...is actually right-angled at its upper corner
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:74:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              by 
-              the Peloponnesian Theorem.
-              This implies that the line from {" "}
-              <span class="t-3003-c">
                 <Math>
-                  $(A, 0)$
+                  $1$
                 </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:77:41
-                </span>
-              </span>
-              {" "} to that
-              corner is tangent to the circle of radius {" "}
+                .
+              </NoBreak>
+              {" "} But how
+              much, exactly, is the {" "}
               <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:78:51
-                  </span>
-                </span>
+                <Math>
+                  $n$
+                </Math>
+                -th
+              </NoBreak>
+              {" "} term
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              of the sum? (By the way, this {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                -th
+              </NoBreak>
+              {" "} term
+              is the difference
+              {" "}
+              <Math>
+                $&#123;1 \over 99&#125; - &#123;1 \over 100&#125;$
+              </Math>
+              {" "} for {" "}
+              <NoBreak>
+                <Math>
+                  $n = 99$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              which is how we came to be reminded of this
+              infinite sum in the first place.) Well...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; &amp;= &#123;1 \over n&#125;\cdot&#123;n+1 \over n+1&#125;\, - \,
+              &#123;1 \over n+1&#125;\cdot&#123;n \over n&#125;\up&#123;1.5&#125;\\
+              &amp;= &#123;n+1 \over n(n+1)&#125; - &#123;n \over n(n+1)&#125;\up&#123;1.5&#125;\\
+              &amp;= &#123;1 \over n(n+1)&#125;\up&#123;1.5&#125;
+              \end&#123;align&#125;
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/omps.svg"
+                offset_y="-0.5em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...it's that much. (For example,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 1&#125; - &#123;1 \over 2&#125; = &#123;1 \over 1 \cdot 2&#125; = &#123;1 \over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 2&#125; - &#123;1 \over 3&#125; = &#123;1 \over 2 \cdot 3&#125; = &#123;1 \over 6&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and so on.) So the infinite sum
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
+              + \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
+              + \,&amp;\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;\dn&#123;1&#125;\\ \hline
+              = \,&amp;\, 1\up&#123;1.5&#125;
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can also be written
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 1 \cdot 2&#125; + &#123;1 \over 2 \cdot 3&#125; + &#123;1 \over 3 \cdot 4&#125; + &#123;1 \over 4 \cdot 5&#125; + &#123;1 \over
+              5 \cdot 6&#125; + \dots \,=\, 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 2&#125; + &#123;1 \over 6&#125; + &#123;1 \over 12&#125; + &#123;1 \over 20&#125; + &#123;1 \over 30&#125; + \dots \,=\, 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              equivalently) which is not obvious at first
+              glance, and kind of interesting!
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 5.
+              </i>
+              {" "} The fact that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              means, in particular, that
+              {" "}
+              <Math>
+                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
+              </Math>
+              {" "} is roughly
+              {" "}
+              <Math>
+                $&#123;1 \over n^2&#125;$
+              </Math>
+              {" "} for large {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
                 ,
               </NoBreak>
               {" "} which is
-              what we want/need.)
+              sometimes handy to know. For example,
             </OuterP>
             <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                ~ ~ case {" "}
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:81:11
-                </span>
-              </span>
-              <span class="t-3003-c">
-                <Math>
-                  $|A| &lt; 1$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:81:20
-                </span>
-              </span>
-              <span class="t-3003-c">
-                {" "} ~ ~
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:81:29
-                </span>
-              </span>
-            </CentralDisplayItalic>
+            <MathBlock>
+              $$
+              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Step 1.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:83:10
-                  </span>
-                </span>
-              </i>
-              {" "} 
-              With {" "}
+              is approximately {" "}
               <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $|A| &lt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:84:14
-                  </span>
-                </span>
+                <Math>
+                  $1/10^2 = 0.01$
+                </Math>
                 ,
               </NoBreak>
-              {" "} start by
-              marking points at equal distance to {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $A$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:85:45
-                </span>
-              </span>
-              {" "} 
-              by drawing a circle 
-              centered at {" "}
+              {" "} while
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 100&#125; - &#123;1 \over 101&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is approximately {" "}
               <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:87:21
-                  </span>
-                </span>
+                <Math>
+                  $1/100^2 = 0.01^2 = 0.0001$
+                </Math>
                 ,
               </NoBreak>
               {" "}
-              of any radius:
+              etc.
             </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/RGWo.svg"
-              local_url="./images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg"
-            />
-            <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Step 2.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:93:10
-                  </span>
-                </span>
-              </i>
-              {" "} Use these points to draw a perpendicular 
-              through {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:94:17
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "} similarly to the first step of
-              the case {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $|A| &gt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:95:18
-                  </span>
-                </span>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/4MXO.svg"
-              local_url="./images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg"
-            />
-            <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Step 3.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:108:10
-                  </span>
-                </span>
-              </i>
-              {" "} 
-              Draw a circle of radius {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $1$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:109:33
-                </span>
-              </span>
-              {" "} centered at
-              {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $(0, 0)$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:110:9
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "}
-              and draw a line through {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $(0, 0)$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:111:33
-                </span>
-              </span>
-              {" "} and the
-              upper intersection of the circle with the perpendicular:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/FPj6.svg"
-              local_url="./images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg"
-            />
-            <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Step 4.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:117:10
-                  </span>
-                </span>
-              </i>
-              {" "} 
-              Construct a perpendicular to this line
-              at the point of intersection by repeating the
-              process of the first two steps; 
-              the intersection of that line with the
-              main axis is {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $1/A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:125:22
-                  </span>
-                </span>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/hKBQ.svg"
-              local_url="./images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg"
-            />
-            <Pause />
-            <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={2}
-        >
-          <ExerciseStatement id="_2_hgi_">
+        <Exercise number={2}>
+          <ExerciseStatement id="_22_hgi_">
             <OuterP>
               <b>
                 Exercise 2.
               </b>
-              {" "}{" "}
               {" "}
-              {" "}
-              <span class="t-3003-c">
-                Given a number line with {" "}
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:5:5
-                </span>
-              </span>
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $0$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:5:30
-                  </span>
-                </span>
-                ,
-              </NoBreak>
+              In the solution to {" "}
+              <InChapterLink
+                href="/article/chapter1#_21_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 1
+              </InChapterLink>
+              {" "} it
+              is observed that the difference
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is {" "}
+              <i>
+                roughly
+              </i>
               {" "} {" "}
-              <span class="t-3003-c">
+              <Math>
+                $1/n^2$
+              </Math>
+              {" "} for large {" "}
+              <NoBreak>
                 <Math>
-                  $1$
+                  $n$
                 </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:5:35
-                </span>
-              </span>
+                .
+              </NoBreak>
+              {" "} But how
+              far off is this exactly? (I.e., what is the
+              difference between {" "}
+              <Math>
+                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
+              </Math>
               {" "}
-              and a value {" "}
-              <span class="t-3003-c">
+              and {" "}
+              <NoBreak>
                 <Math>
-                  $A &gt; 0$
+                  $&#123;1 \over n^2&#125;$
                 </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:6:17
-                </span>
-              </span>
-              {" "} indicated,
-              how can we construct the values {" "}
-              <span class="t-3003-c">
+                ?)
+              </NoBreak>
+              {" "} And {" "}
+              <i>
+                roughly
+              </i>
+              {" "} how much is
+              this far-offness, for large {" "}
+              <NoBreak>
                 <Math>
-                  $A^2$
+                  $n$
                 </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:7:37
-                </span>
-              </span>
-              {" "} and {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $A^3$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:7:47
-                </span>
-              </span>
-              {" "}
-              as lengths, using only ruler and compass?
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Solution 1.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:12:10
-                  </span>
-                </span>
-              </i>
-              {" "} If {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A &gt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:12:26
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "}
-              start by constructing a perpendicular to the {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $x$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:15:54
-                </span>
-              </span>
-              {" "} axis
-              (“the number line” = “the {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $x$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:16:35
-                </span>
-              </span>
-              {" "} axis”) through {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:16:54
-                  </span>
-                </span>
-                :
-              </NoBreak>
+              Since
             </OuterP>
             <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_1.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_1.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Take the intersection of this line with a
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:21:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              circle of center {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $(0, 0)$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:22:26
-                </span>
-              </span>
-              {" "} of radius {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:22:45
-                  </span>
-                </span>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_2_38deg.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_2_38deg.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                This gives us an angle {" "}
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:27:9
-                </span>
-              </span>
-              <span class="t-3003-c">
-                <Math>
-                  $\theta$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:27:32
-                </span>
-              </span>
-              {" "} such that {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $\sec\theta = A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:27:51
-                  </span>
-                </span>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_3.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_3.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Now it suffices to apply one of the “powers of
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:32:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              secant” constructions to obtain powers of {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:33:51
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "}
-              for example either of:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_4.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_4.svg"
-            />
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_5.svg"
-              style="margin-bottom:0.5em;"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_5.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                (Either of these constructiongs requires constructing
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:43:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              perpendiculars, but we know how to do that.)
-            </OuterP>
-            <OuterP class="indent-10">
-              <span class="t-3003-c">
-                If {" "}
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:46:9
-                </span>
-              </span>
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A &lt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:46:12
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "} on the other hand,
-              do the same initial steps but with {" "}
-              <NoBreak>
-                ‘
-                <span class="t-3003-c">
-                  <Math>
-                    $1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:47:45
-                  </span>
-                </span>
-                ’
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                ‘
-                <span class="t-3003-c">
-                  <Math>
-                    $A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:47:55
-                  </span>
-                </span>
-                ’
-              </NoBreak>
-              {" "}
-              reversed, resulting in an angle {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $\theta$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:48:41
-                </span>
-              </span>
-              {" "} for
-              which {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A = \cos\theta$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:49:15
-                  </span>
-                </span>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_7.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_7.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                We can then do a “powers of cosine” construction,
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:54:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              that is symmetric to powers of secant, to
-              find powers of {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:56:24
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "} for example:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_8.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_8.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Though in this case, it bears discussing how we
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:61:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              construct, say, this perpendicular:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_9.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_9.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                ...because this perpendicular must
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:67:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                arrive
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:69:11
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                perpendicularly at a given line, not
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:71:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                depart
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:73:11
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                perpendicularly from a given line. {" "}
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:75:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              (In the order in which the construction unfolds,
-              this perpendicular “originates” from its upper end,
-              which is a situation that we have not encountered
-              yet.)
-              In this case, the procedure is to draw a circle,
-              in orange below, whose center is the 
-              starting point
-              of the
-              perpendicular, and that crosses the line-to-which-we-must-be-perpendicular
-              in two places:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_10.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_10.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Then use those crossings as the
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:90:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              centers of two more circles of equal radius...
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_11.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_11.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                ...whose intersection gives us a second point
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:96:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              (even two more points, if we use a radius
-              different from the first orange circle), and the means to draw
-              the perpendicular itself.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Solution 2.
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:103:10
-                  </span>
-                </span>
-              </i>
-              {" "} Regardless of whether {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $A &lt; 1$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:103:45
-                </span>
-              </span>
-              {" "} or {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A &gt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:103:56
-                  </span>
-                </span>
-                ,
-              </NoBreak>
-              {" "}
-              draw a perpendicular to the number line through {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $x = 1$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:104:57
-                </span>
-              </span>
-              {" "}
-              and use a compass to report {" "}
-              <span class="t-3003-c">
-                <Math>
-                  $A$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:105:37
-                </span>
-              </span>
-              {" "} onto this line
-              (here with {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A &lt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:106:20
-                  </span>
-                </span>
-                ):
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_13.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_13.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                This defines a an angle {" "}
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:111:9
-                </span>
-              </span>
-              <span class="t-3003-c">
-                <Math>
-                  $\theta$
-                </Math>
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:111:33
-                </span>
-              </span>
-              {" "} such that {" "}
-              <NoBreak>
-                <span class="t-3003-c">
-                  <Math>
-                    $A = \tan\theta$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:111:52
-                  </span>
-                </span>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_14.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_14.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Then we can use any construction for powers of
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:116:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              tan, for example this spiral construction:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/tmp-images/e5_x_square_x_cube_construction_15.svg"
-              local_url="./public/tmp-images/e5_x_square_x_cube_construction_15.svg"
-            />
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                (Again, constructing the spiral means constructing
-                <span class="t-3003">
-                  ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:122:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              a sequence of perpendiculars, but we can do that!)
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}{" "}
-                {" "}
-                {" "}
-                <span class="t-3003-c">
-                  If {" "}
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:127:13
-                  </span>
-                </span>
-                <span class="t-3003-c">
-                  <Math>
-                    $A &lt; 1$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:127:16
-                  </span>
-                </span>
-                {" "} there is a clever construction,
-                variant of solution 1, that one can use to
-                construct powers of {" "}
-                <span class="t-3003-c">
-                  <Math>
-                    $A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:129:33
-                  </span>
-                </span>
-                {" "} using only one compass
-                stroke and one ruler stroke per power of {" "}
-                <span class="t-3003-c">
-                  <Math>
-                    $A$
-                  </Math>
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:130:54
-                  </span>
-                </span>
-                {" "}
-                (after setting up the angle {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $\theta$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:131:41
-                    </span>
-                  </span>
-                  ):
-                </NoBreak>
-              </OuterP>
-              <Pause />
-              <Image
-                src="/tmp-images/e5_x_square_x_cube_construction_16.svg"
-                local_url="./public/tmp-images/e5_x_square_x_cube_construction_16.svg"
+            <MathBlock>
+              $$
+              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
+              $$
+              <ImageRight
+                offset_x="5rem"
+                src="/build-img/svgo-svg/Xx87.svg"
+                squiggle={false}
+                compensate_offset_x_for_large_text_columns={true}
               />
-              <Pause />
-              <OuterP>
-                <span class="t-3003-c">
-                  Curiously, there is no similar {" "}
-                  <span class="t-3003">
-                    ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:138:13
-                  </span>
-                </span>
-                {" "}
-                {" "}
-                construction for {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $A &gt; 1$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:140:30
-                    </span>
-                  </span>
-                  ,
-                </NoBreak>
-                {" "} all of
-                which require three-compass-and-one-ruler-stroke constructions
-                of perpendiculars to keep “reaching” the next
-                power of {" "}
-                <NoBreak>
-                  <span class="t-3003-c">
-                    <Math>
-                      $A$
-                    </Math>
-                    <span class="t-3003">
-                      ./src/content/ch5^exercises/_x_square_x_cube_construction_.wly:143:22
-                    </span>
-                  </span>
-                  !
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (as previously computed) is smaller than
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n^2&#125;
+              $$
+              <ImageRight
+                offset_x="10rem"
+                src="/build-img/svgo-svg/jBCw.svg"
+                squiggle={false}
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              we will compute the difference
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as opposed to the “other” difference
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n(n+1)&#125; - &#123;1 \over n^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to avoid a minus sign in the result.
+              (Computing the second difference and having
+              a minus sign does not constitute a mistake,
+              however.) Having said this, the difference is:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125; &amp;= &#123;1 \over n^2&#125; \cdot &#123;n+1 \over n+1&#125; - &#123;1 \over n(n+1)&#125; \cdot
+              &#123;n \over n&#125;\\
+              &amp;= &#123;n+1 \over n^2(n+1)&#125; - &#123;n \over n^2(n+1)&#125;\up&#123;1.5&#125;\\
+              &amp;= &#123;1 \over n^2(n+1)&#125;\up&#123;1.5&#125;
+              \end&#123;align&#125;
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/4oJD.svg"
+                offset_y="-0.5em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which, for large {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} is roughly
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n^3&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              since {" "}
+              <Math>
+                $n^2(n+1) \approx n^3$
+              </Math>
+              {" "} for large {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Example 1.
+              </i>
+              {" "} Above, we estimated
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to be roughly {" "}
+              <NoBreak>
+                <Math>
+                  $1/100 = 0.01$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} but {" "}
+              <Math>
+                $1/100$
+              </Math>
+              {" "} is
+              bigger than the actual value of
+              {" "}
+              <Math>
+                $&#123;1 \over 10\cdot 11&#125; = &#123;1 \over 110&#125;$
+              </Math>
+              {" "} by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 10^2\cdot 11&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or close to {" "}
+              <NoBreak>
+                <Math>
+                  $1/10^3 = 0.001$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (So
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is about {" "}
+              <NoBreak>
+                <Math>
+                  $0.01$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} while making an error of about
+              {" "}
+              <NoBreak>
+                <Math>
+                  $0.001$
+                </Math>
+                .)
+              </NoBreak>
+              {" "} (In fact,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 10^2\cdot 11&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is {" "}
+              <i>
+                less
+              </i>
+              {" "} than {" "}
+              <NoBreak>
+                <Math>
+                  $1/10^3$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so the error is {" "}
+              <i>
+                less
+              </i>
+              {" "}
+              than {" "}
+              <NoBreak>
+                <Math>
+                  $0.001$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
           </Solution>
         </Exercise>
       </Exercises>

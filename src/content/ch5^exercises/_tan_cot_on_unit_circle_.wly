@@ -33,7 +33,7 @@
         i.e., the slope of the line from $(0, 0)$ to $(\cos\theta, \sin\theta)$:
 
         |> Image
-            src=tmp-images/e5_tan_cot_unit_circle_1.svg
+            src=images/e5_tan_cot_unit_circle_1.svg
 
         However, one way to “materialize” a slope 
         as a displacement
@@ -44,7 +44,7 @@
         construction of $\tan\theta$:
 
         |> Image
-            src=tmp-images/e5_tan_cot_unit_circle_2.svg
+            src=images/e5_tan_cot_unit_circle_2.svg
             style=margin-bottom:-0.5em
 
         This also works if $\theta$ is in other
@@ -52,7 +52,7 @@
         necessary:
         
         |> Image
-            src=tmp-images/e5_tan_cot_unit_circle_3.svg
+            src=images/e5_tan_cot_unit_circle_3.svg
             style=margin-bottom:-0.5em
 
         Symmetrically, the ratio
@@ -68,7 +68,7 @@
         of $\cot\theta$:
 
         |> Image
-            src=tmp-images/e5_tan_cot_unit_circle_4.svg
+            src=images/e5_tan_cot_unit_circle_4.svg
 
         Overall,
         to give self-contained verbalizations of these

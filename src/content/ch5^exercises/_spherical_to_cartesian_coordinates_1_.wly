@@ -24,7 +24,7 @@
         $$
 
         |> ImageRight
-            src=tmp-images/e5_sperical_coordinates_180_cloud.svg
+            src=images/e5_sperical_coordinates_180_cloud.svg
             offset_x=4em
 
         !! (or

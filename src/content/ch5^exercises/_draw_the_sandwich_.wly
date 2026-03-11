@@ -14,7 +14,7 @@
         $$
 
         |> ImageRight
-            src=tmp-images/e5_greg_sandwich_tant_cloud.svg
+            src=images/e5_greg_sandwich_tant_cloud.svg
             offset_x=4em
 
         for $0 < \theta < \eta$, is hereby illustrated, using
@@ -25,6 +25,6 @@
         arc length on the unit circle:
 
         |> Image
-            src=tmp-images/e5_greg_sandwich.svg
+            src=images/e5_greg_sandwich.svg
 
         |> StarDivider

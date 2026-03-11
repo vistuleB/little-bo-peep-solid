@@ -6,7 +6,7 @@
     trust the drawing's suggestion that $\beta > \eta$, $\gamma < \eta$, $\alpha < \eta$.)
 
     |> Image
-        src=tmp-images/e5_sine_rule_statement.svg
+        src=images/e5_sine_rule_statement.svg
 
     |> Solution
 
@@ -25,7 +25,7 @@
         as illustrated here:
 
         |> Image
-            src=tmp-images/e5_sine_rule_sol1.svg
+            src=images/e5_sine_rule_sol1.svg
 
         The top length of ‘?’, on the other hand,
         is 
@@ -44,15 +44,15 @@
         $\sin(2\eta - x) = \sin(x)$ for all $x \in \rr$:
 
         |> Image
-            src=tmp-images/e5_sine_rule_sol2.svg
+            src=images/e5_sine_rule_sol2.svg
 
         |> ImageRight
-            src=tmp-images/e5_sine_rule_sin_2b_cloud.svg
+            src=images/e5_sine_rule_sin_2b_cloud.svg
             offset_x=-30%
             offset_y=38%
 
         |> Image
-            src=tmp-images/e5_sine_rule_sol3.svg
+            src=images/e5_sine_rule_sol3.svg
 
         |> StarDivider
 
@@ -75,7 +75,7 @@
             of sidelengths $a$, $b$, $c$ as labeled here...
 
             |> Image
-                src=tmp-images/e5_sine_rule_generic.svg
+                src=images/e5_sine_rule_generic.svg
 
             ...though we can condense these equations to...
 
@@ -110,7 +110,7 @@
             exterior angles of the triangle:
 
             |> Image
-                src=tmp-images/e5_sine_rule_generic_exterior.svg
+                src=images/e5_sine_rule_generic_exterior.svg
 
             ...then each of $\sin \alpha$,
             $\sin \beta$, $\sin \gamma$ changes sign 
@@ -122,7 +122,7 @@
 
             |> ImageRight
                 line=1.0
-                src=tmp-images/e5_sine_rule_sin_360_m_x_cloud.svg
+                src=images/e5_sine_rule_sin_360_m_x_cloud.svg
 
         |> SolutionNote
 
