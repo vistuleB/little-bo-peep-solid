@@ -1,5 +1,4 @@
 |> Exercise
-    work=ing
     handle=_tan_cot_on_unit_circle_
 
     Stipulating
@@ -36,20 +35,25 @@
         |> Image
             src=tmp-images/e5_tan_cot_unit_circle_1.svg
 
-        However one way to “materialize” a slope as a
-        coordinate difference is to
-        scale the triangle “rise over run” until
-        the “run” becomes $1$, leading to this
-        construction of $\tan\theta$ as a coordinate:
+        However, one way to “materialize” a slope 
+        as a displacement
+        is to scale the triangle “rise over run” until
+        the “run” becomes $1$, 
+        whereby the rise becomes equal to the slope,
+        leading to this
+        construction of $\tan\theta$:
 
         |> Image
             src=tmp-images/e5_tan_cot_unit_circle_2.svg
+            style=margin-bottom:-0.5em
 
         This also works if $\theta$ is in other
         quadrants, with a negative scaling factor if
         necessary:
         
-        |> Pause
+        |> Image
+            src=tmp-images/e5_tan_cot_unit_circle_3.svg
+            style=margin-bottom:-0.5em
 
         Symmetrically, the ratio
 
@@ -63,7 +67,8 @@
         corresponding (scaled) “run” becomes the value
         of $\cot\theta$:
 
-        |> Pause
+        |> Image
+            src=tmp-images/e5_tan_cot_unit_circle_4.svg
 
         Overall,
         to give self-contained verbalizations of these
@@ -74,13 +79,14 @@
         and $(\cos\theta, \sin\theta)$ with the
         line $x = 1$__
 
-        ...for tangent, and...
+        !! ...for tangent, and...
+        ...for $\tan\theta$, and...
 
         __$\cot\theta$ is the $x$-coordinate of the
         intersection of the line through the origin
         and $(\cos\theta, \sin\theta)$ with the
         line $y = 1$__
 
-        ...for cotangent!
+        ...for $\cot\theta$!
 
         
