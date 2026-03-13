@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_130_hgi_"
+      id="_131_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -4366,7 +4366,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_129_hgi_">
+      <Exercises id="_130_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -9851,7 +9851,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={22}>
+        <Exercise
+          work="ing"
+          number={22}
+        >
           <ExerciseStatement id="_105_hgi_">
             <OuterP>
               <b>
@@ -10044,7 +10047,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={24}>
+        <Exercise
+          work="ing"
+          number={24}
+        >
           <ExerciseStatement id="_107_hgi_">
             <OuterP>
               <b>
@@ -10138,7 +10144,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={25}>
+        <Exercise
+          work="ing"
+          number={25}
+        >
           <ExerciseStatement id="_108_hgi_">
             <OuterP>
               <b>
@@ -10965,7 +10974,7 @@ const Rest = () => {
               </NoBreak>
               {" "}
               For reference, a profile view of the Lambert projection
-              is also given below:
+              is also given below.
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/dKeI.svg" />
@@ -15790,27 +15799,605 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/images/e5_x_square_x_cube_construction_16.svg" />
+              <Image src="/build-img/svgo-svg/XL-k.svg" />
               <Pause />
               <OuterP>
-                Curiously, there is no similar 
-                construction for {" "}
+                (No such thing exists for {" "}
                 <NoBreak>
                   <Math>
                     $A &gt; 1$
                   </Math>
-                  ,
+                  .)
                 </NoBreak>
-                {" "} all of
-                which require three-compass-and-one-ruler-stroke constructions
-                of perpendiculars to keep “reaching” the next
-                power of {" "}
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={46}
+        >
+          <ExerciseStatement id="_129_hgi_">
+            <OuterP>
+              <b>
+                Exercise 46.
+              </b>
+              {" "}
+              Given two lengths {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} how can
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;AB&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              be constructed using
+              only ruler and compass?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              A preliminary “arithmetic” observation is that
+              there is a common multiplicative
+              factor
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \gamma
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              separating {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} from {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;AB&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              from {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/3JBw.svg" />
+            <Pause />
+            <OuterP>
+              The proof is that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sqrt&#123;AB&#125;\over A&#125; = &#123;B\over\sqrt&#123;AB&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is equivalent to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\sqrt&#123;AB&#125;)^2 = AB
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which is true
+              by definition of {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;AB&#125;$
+                </Math>
+                —or
+              </NoBreak>
+              {" "} a second proof
+              (we can't help ourselves) is that...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sqrt&#123;AB&#125;\over A&#125; = &#123;\sqrt&#123;A&#125;\cdot\sqrt&#123;B&#125;\over A&#125; = &#123;\sqrt&#123;B&#125;\over \sqrt&#123;A&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...while...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;B\over \sqrt&#123;AB&#125;&#125; = &#123;B \over \sqrt&#123;A&#125;\cdot\sqrt&#123;B&#125;&#125; = &#123;\sqrt&#123;B&#125;\over \sqrt&#123;A&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...is equal, and we can explicitly see that {" "}
+              <NoBreak>
+                <Math>
+                  $\gamma = \sqrt&#123;B&#125;/\sqrt&#123;A&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as
+              well, from the second proof. (Indeed, if you multiply
+              twice by {" "}
+              <Math>
+                $\sqrt&#123;B&#125;/\sqrt&#123;A&#125;$
+              </Math>
+              {" "} you're going to remove one
+              factor of {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} while introducing one factor of {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Now:
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 1.
+              </i>
+              {" "} Assume wlog (= “without loss of generality”)
+              that {" "}
+              <NoBreak>
+                <Math>
+                  $B &gt; A$
+                </Math>
+                .
+              </NoBreak>
+              {" "} We report the lengths {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} onto a
+              common number line such that the left end of length {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}
+              is identified with {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/83jd.svg" />
+            <Pause />
+            <OuterP>
+              We construct {" "}
+              <Math>
+                $B/2$
+              </Math>
+              {" "} by intersecting two sufficiently
+              large circles of centers {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} of equal radius:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/aEvK.svg" />
+            <Pause />
+            <OuterP>
+              We draw a half-circle of radius {" "}
+              <Math>
+                $B/2$
+              </Math>
+              {" "} and of center {" "}
+              <NoBreak>
+                <Math>
+                  $B/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and a perpendicular emanating from {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/TO_S.svg" />
+            <Pause />
+            <OuterP>
+              This red triangle is a right triangle by the
+              Peloponnesian circle theorem:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/7wy4.svg" />
+            <Pause />
+            <OuterP>
+              So we have succeeded in constructing this diagram,
+              for some angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Usrx.svg" />
+            <Pause />
+            <OuterP>
+              As seen in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_108_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 25
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "}
+              however, we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;B\over A&#125; = \sec^2\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              in this case, implying that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec\theta = &#123;\sqrt&#123;B&#125;\over\sqrt&#123;A&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the factor {" "}
+              <Math>
+                $\gamma$
+              </Math>
+              {" "} mentioned in the
+              preliminary arithmetic observation, and that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A\sec\theta = A\gamma = \sqrt&#123;AB&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which places {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;AB&#125;$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/S9xt.svg" />
+            <Pause />
+            <OuterP>
+              ...here, in our construction from a few lines
+              above.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 2.
+              </i>
+              {" "}
+              Place {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} end-to-end:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/-HLJ.svg" />
+            <Pause />
+            <OuterP>
+              Find the middle of the combined segment and
+              use it to
+              draw a semicircle whose diameter is the
+              combined segment:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/OwXA.svg" />
+            <Pause />
+            <OuterP>
+              Draw a perpendicular
+              to the segment at the point where {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}
+              meet, which defines again a right triangle by the
+              Peloponnesian theorem:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/-W11.svg" />
+            <Pause />
+            <OuterP>
+              Because 
+              of the right angle,
+              the angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} at lower left—if we label it
+              such—is also repeated middle top right (this is
+              the content of {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_105_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 22
+                </InChapterLink>
+                ):
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/UWy5.svg" />
+            <Pause />
+            <OuterP>
+              The ratio that takes {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} to the middle height
+              and that takes the middle height to {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} are therefore
+              both {" "}
+              <NoBreak>
+                <Math>
+                  $\tan(\theta)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/KocC.svg" />
+            <Pause />
+            <OuterP>
+              This implies that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \tan(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the factor {" "}
+              <Math>
+                $\gamma$
+              </Math>
+              {" "} such that {" "}
+              <Math>
+                $A\gamma^2 = B$
+              </Math>
+              {" "}
+              mentioned at the outset, and that said “middle
+              height” is {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;AB&#125;$
+                </Math>
+                !
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Vocabulary.
+              </i>
+              {" "} The square-root-of-the-product
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;xy&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is called the
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              geometric mean
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x \geq 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y \geq 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as opposed to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;x + y\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which is called the
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              arithmetic mean
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (or just “mean”) of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y \in \rr$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Legend has it that a
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                geometric progression
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is so-called because each term 
+                in the sequence
+                that is not the first or the last is the
+                geometric mean of the two terms on either side,
+                and that similarly an
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                arithmetic progression
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is so-called because each term
+                in the sequence
+                that is not the first or the last is the
+                arithematic mean of the two terms on either side.
+                (Cf. {" "}
+                <a
+                  href="/article/chapter4#_76_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Note 1
+                </a>
+                {" "} in {" "}
                 <NoBreak>
-                  <Math>
-                    $A$
-                  </Math>
-                  !
+                  <a
+                    href="/article/chapter4#_77_hgi_"
+                    class="handle-out-chapter-link"
+                  >
+                    Exercise 21 of Chapter 4
+                  </a>
+                  .)
                 </NoBreak>
+                {" "}{" "}
               </OuterP>
             </SolutionNote>
           </Solution>

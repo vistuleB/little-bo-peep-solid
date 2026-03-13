@@ -1,0 +1,221 @@
+|> Exercise
+    work=ing
+    handle=_sqrt_xy_construction_
+
+    !! How can
+    !! $$
+    !! \sqrt{AB}
+    !! $$
+    !! be constructed by ruler and compass,
+    !! given lengths $A$ and $B$?
+
+    Given two lengths $A$ and $B$, how can
+    $$
+    \sqrt{AB}
+    $$
+    be constructed using
+    only ruler and compass?
+
+    |> Solution
+
+        !! Before giving two different solutions,
+        !! we make a preliminary observation, which is that 
+        A preliminary “arithmetic” observation is that
+        there is a common multiplicative
+        factor $$\gamma$$ separating $A$, from $\sqrt{AB}$,
+        from $B$:
+
+        |> Image
+            src=images/e5_sqrt_AB_construction_1_v2.svg
+
+        !! Indeed, 
+        The proof is that
+
+        $$
+        {\sqrt{AB}\over A} = {B\over\sqrt{AB}}
+        $$
+
+        !! because this equation 
+        is equivalent to
+
+        $$
+        (\sqrt{AB})^2 = AB
+        $$
+
+        which is true
+        by definition of $\sqrt{AB}$—or a second proof
+        (we can't help ourselves) is that...
+
+        $$
+        {\sqrt{AB}\over A} = {\sqrt{A}\cdot\sqrt{B}\over A} = {\sqrt{B}\over \sqrt{A}}
+        $$
+
+        ...while...
+
+        $$
+        {B\over \sqrt{AB}} = {B \over \sqrt{A}\cdot\sqrt{B}} = {\sqrt{B}\over \sqrt{A}}
+        $$
+
+        ...is equal, and we can explicitly see that $\gamma = \sqrt{B}/\sqrt{A}$, as
+        well, from the second proof. (Indeed, if you multiply
+        twice by $\sqrt{B}/\sqrt{A}$ you're going to remove one
+        factor of $A$ while introducing one factor of $B$.)
+        
+        Now:
+
+        |> Pause
+
+        _Solution 1._ Assume wlog (= “without loss of generality”)
+        that $B > A$. We report the lengths $A$ and $B$ onto a
+        common number line such that the left end of length $B$
+        is identified with $0$:
+
+        |> Image
+            src=images/e5_sqrt_AB_construction_2.svg
+
+        We construct $B/2$ by intersecting two sufficiently
+        large circles of centers $0$, $B$, of equal radius:
+
+        |> Image
+            src=images/e5_sqrt_AB_construction_3_v2.svg
+
+        We draw a half-circle of radius $B/2$ and of center $B/2$,
+        and a perpendicular emanating from $A$:
+
+        |> Image
+            src=images/e5_sqrt_AB_construction_4.svg
+
+        This red triangle is a right triangle by the
+        Peloponnesian circle theorem:
+
+        |> Image
+            src=images/e5_sqrt_AB_construction_5.svg
+
+        So we have succeeded in constructing this diagram,
+        for some angle $\theta$:
+
+        |> Image
+            src=images/e5_sqrt_AB_construction_6.svg
+
+        As seen in Exercise >>_ratio_A_over_B_1_+_tan^2_,
+        however, we have
+
+        $$
+        {B\over A} = \sec^2\theta
+        $$
+
+        in this case, implying that
+
+        $$
+        \sec\theta = {\sqrt{B}\over\sqrt{A}}
+        $$
+
+        is the factor $\gamma$ mentioned in the
+        !! at the beginning of the solution
+        preliminary arithmetic observation, and that
+
+        $$
+        A\sec\theta = A\gamma = \sqrt{AB}
+        $$
+
+        which places $\sqrt{AB}$...
+
+        |> Image
+            src=images/e5_sqrt_AB_construction_7.svg
+
+        ...here, in our construction from a few lines
+        above.
+
+        |> Pause
+
+        _Solution 2._
+        Place $A$ and $B$ end-to-end:
+        !! and draw a circle
+        !! whose diameter is the combined segment:
+
+        |> Image
+            src=images/e5_sqrt_AB_solution2_0.svg
+
+        Find the middle of the combined segment and
+        use it to
+        draw a semicircle whose diameter is the
+        combined segment:
+
+        |> Image
+            src=images/e5_sqrt_AB_solution2_1.svg
+
+        Draw a perpendicular
+        to the segment at the point where $A$ and $B$
+        meet, which defines again a right triangle by the
+        Peloponnesian theorem:
+
+        |> Image
+            src=images/e5_sqrt_AB_solution2_2.svg
+
+        Because 
+        of the right angle,
+        the angle $\theta$ at lower left—if we label it
+        such—is also repeated middle top right (this is
+        the content of Exercise >>_complement_of_complement_):
+
+        |> Image
+            src=images/e5_sqrt_AB_solution2_3.svg
+
+        The ratio that takes $A$ to the middle height
+        and that takes the middle height to $B$ are therefore
+        both $\tan(\theta)$:
+
+        |> Image
+            src=images/e5_sqrt_AB_solution2_4.svg
+
+        This implies that
+
+        $$
+        \tan(\theta)
+        $$
+
+        is the factor $\gamma$ such that $A\gamma^2 = B$
+        mentioned at the outset, and that said “middle
+        height” is $\sqrt{AB}$!
+
+        |> Pause
+
+        _Vocabulary._ The square-root-of-the-product
+
+        $$
+        \sqrt{xy}
+        $$
+
+        is called the __geometric mean__ of $x$ and $y$,
+        $x \geq 0$, $y \geq 0$, as opposed to
+
+        $$
+        {x + y\over 2}
+        $$
+
+        which is called the
+
+        __arithmetic mean__
+
+        (or just “mean”) of $x$ and $y$, $x \in \rr$, $y \in \rr$.
+
+        |> SolutionNote
+
+            Legend has it that a
+
+            __geometric progression__
+
+            is so-called because each term 
+            in the sequence
+            that is not the first or the last is the
+            geometric mean of the two terms on either side,
+            and that similarly an
+
+            __arithmetic progression__
+
+            is so-called because each term
+            in the sequence
+            that is not the first or the last is the
+            arithematic mean of the two terms on either side.
+            (Cf. Note >>_geometric_progression_ in Exercise >>_1d_red_particle_
+            of Chapter >>derivatives.)

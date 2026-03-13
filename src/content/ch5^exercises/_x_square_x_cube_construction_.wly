@@ -131,14 +131,12 @@
             (after setting up the angle $\theta$):
 
             |> Image
-                src=images/e5_x_square_x_cube_construction_16.svg
+                src=images/e5_x_square_x_cube_construction_16_v6.svg
 
-            |> Pause
-
-            Curiously, there is no similar 
-            !! we are not aware of any similarly efficient 
-            construction for $A > 1$, all of
-            which require three-compass-and-one-ruler-stroke constructions
-            of perpendiculars to keep “reaching” the next
-            power of $A$!
+            (No such thing exists for $A > 1$.)
+            !! Curiously, there is no similar 
+            !! construction for $A > 1$, all of
+            !! which require three-compass-and-one-ruler-stroke constructions
+            !! of perpendiculars to keep “reaching” the next
+            !! power of $A$.
 

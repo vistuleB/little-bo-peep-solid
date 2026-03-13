@@ -6,7 +6,7 @@
     Lambert projection of a sphere onto a cylinder?
     (Cf. Example >>_secant_example_.)
     For reference, a profile view of the Lambert projection
-    is also given below:
+    is also given below.
 
     |> Image
         src=images/svg_ch5_ex_horizontal_projection_sphere_statement.svg

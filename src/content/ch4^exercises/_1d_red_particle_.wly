@@ -16,7 +16,7 @@
         Going back in time,
         examine how long it would take
         the particle to cross each of the intervals defined by
-        the following geometric progression\* (\*see Note >>GeometricProgression):
+        the following geometric progression\* (\*see Note >>_geometric_progression_):
 
         |> Image
             src=images/svg_ch4_ex_one_particle_interval_subdivision.svg
@@ -104,7 +104,7 @@
         !! $x = 0$, no matter how far back in time you look.)
 
         |> SolutionNote
-            handle=GeometricProgression
+            handle=_geometric_progression_
 
             A so-called
 
