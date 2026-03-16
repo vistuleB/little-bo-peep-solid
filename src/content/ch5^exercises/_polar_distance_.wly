@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_polar_distance_
 
     Let points $P_1$ and $P_2$ have polar coordinates
@@ -26,9 +27,8 @@
 
     |> Solution
 
-        !! _Solution 1._ As a preliminary, we would like to note that...
-        !! _Solution 1._ First note that
-        _Solution 1._ As a preliminary, we first note that
+        !! _Solution 1._ 
+        As a preliminary, we first note that
 
         |> Boxed
             $$
@@ -124,7 +124,7 @@
         !! just from the 
         !! Pythagorean theorem
         !! and the fact that $P_1 = (x_1, y_1)$, $P_2 = (x_2, y_2)$, 
-        just by the nature of polar coordinates,
+        just by common lore of polar coordinates,
         but anyway), while 
 
         $$
@@ -186,9 +186,11 @@
         $$
         since $\cos(x) = \cos(-x) = \cos(|x|)$ for all $x\in\rr$. 
 
-        |> Pause
+        !! |> Pause
 
-        _Solution 2._ Start by rotating $P_1$, $P_2$ by
+        !! _Solution 2._ 
+        A SECOND SOLUTION—first solution is over—starts
+        by rotating $P_1$, $P_2$ by
         $-\theta_2$ radians about the origin, to new
         points $P_1'$ and $P_2'$ such that $P_2'$ is aligned
         with the $x$ axis and $P_1'$ has argument $\theta_1 - \theta_2$:
@@ -196,37 +198,43 @@
         |> Image
             src=images/e5_polar_P1P2_rotated.svg
 
-        Since 
-        !! $P_1'$ as coordinates
+        Since the rotation does not affect distances,
+        the answer becomes the previous formula
+
+        $$
+        \sqrt{x_1^2 + y_1^2 + x_2^2 + y_2^2 - 2(x_1y_1 + x_2y_2)}
+        $$
+
+        applied with
 
         $$
         \begin{gather}
-        \,P_1' \,=\, (x_1, y_1) \,=\, (r_1\cos(\theta_1 - \theta_2),\, r_1\sin(\theta_1 - \theta_2)),\\
-        P_2' \,=\, (x_2, y_2) \,=\, (r_2, 0)\up{1.8}
+        (x_1, y_1) \,=\, \,P_1' \,=\, (r_1\cos(\theta_1 - \theta_2),\, r_1\sin(\theta_1 - \theta_2)),\\
+        (x_2, y_2) \,=\, P_2' \,=\, (r_2, 0)\up{1.8}
         \end{gather}
         $$
 
-        !! while $P_2' = (r_2, 0)$, 
-        the Euclidean distance
-        formula gives
+        which gives
+
+        |> Boxed
+            $$
+            \sqrt{r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)}
+            $$
+
+        again, since
 
         $$
-        \begin{aligned}
-        \overline{P_1P_2}\,=\,\overline{P_1'P_2'}\,
-        =&\,\,\up{1.4}\sqrt{(r_1\cos(\theta_1 - \theta_2) - r_2)^2 + (r_1\sin(\theta_1 - \theta_2) - 0)^2}\\
-        =&\,\,\up{1.4}\sqrt{r_1^2\cos^2(\theta_1 - \theta_2) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2 + r_1^2\sin^2(\theta_1 - \theta_2)} \\
-        =&\,\,\up{1.4}\sqrt{r_1^2(\cos^2(\theta_1 - \theta_2) + \sin^2(\theta_1 - \theta_2)) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2} \\
-        =&\,\,\up{1.4}\sqrt{r_1^2 - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2} \\
-        =&\,\,\up{1.4}\sqrt{r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)}
-        \end{aligned}
+        \begin{gathered}
+        x_1^2 + y_1^2 = r_1^2 \\
+        x_2^2 + y_2^2 = \up{1.5}r_2^2 \\
+        x_1y_1 = \up{1.5} r_1\cos(\theta_1 - \theta_2)\cdot r_2 \\
+        x_1y_1 = \up{1.5} r_1\cos(\theta_1 - \theta_2)\cdot 0 = 0
+        \end{gathered}
         $$
 
-        |> ImageRight
-            line=1
-            src=images/e5_polar_P1P2_euclidean_distance_cloud.svg
-            offset_x=-2em
-
-        which agrees with the first solution.
+        in this case, and this time we don't need to apply a fancy
+        algebraic observation, or anything!
+        !! the angle-sum formula, or anything!
 
         |> SolutionNote
 
@@ -242,48 +250,68 @@
 
         |> SolutionNote
 
-            The distance formula reduces to
+            The distance squared reduces to
+
+            |> Boxed
+                $$
+                r_1^2 + r_2^2
+                $$
+
+            and the ordinary distance reduces to
 
             |> Boxed
                 $$
                 \sqrt{r_1^2 + r_2^2}
                 $$
 
-                |> ImageRight
-                    src=images/e5_polar_P1P2_right_angle_cloud.svg
-                    offset_x=3em
-
             if $P_1$ and $P_2$ are at right angle, since
             $\cos|\theta_1 - \theta_2| = \cos\eta = 0$ in that
-            case.
-            This accords with the Pythagorean theorem, and
+            case. This accords with the Pythagorean theorem, and
             constitutes an extra check on our computations!
 
         |> SolutionNote
 
-            By comparing the two solutions one can 
-            actually deduce that
+            Comparing the two solutions actually shows that
 
-            !! |> Boxed
+            |> Boxed
+                $$
+                \cos(\theta_1 - \theta_2) = \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2
+                $$
 
-            $$
-            \cos(\theta_1 - \theta_2) = \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2
-            $$
+            in and of itself. This is a “second proof” of the
+            angle-sum formula for cos. 
 
-            !! if we put ourselves in the shoes of someone who doesn't
-            !! already know the angle-sum formulas. 
-            !! (Whereas otherwise, if you know the angle-sum
-            !! formulas, you use the equation above to simplify the
-            !! first solution, as we did.)
-            without knowing the angle-sum formula
-            for cosine beforehand.
-            This constitutes a second* proof of the angle-sum
-            formula for cos and, by extension, for sin.
-
-            (\*Some people would say _first_ proof, as our
-            original proof from the chapter put some restrictions
+            (\*Some would say _first_ proof, as our
+            original proof with the “famous diagram” put some restrictions
             on the range of the angles, such as 
-            $0 \leq \theta_1, \theta_2 \leq \eta$
-            specifically.) 
-            !! (\*\*Though such restrictions can be lifted
-            !! by diligent of use $\cos(x+\eta) = -\sin(x)$ -type identities.)
+            $0 \leq \theta_1, \theta_2 \leq \eta$,
+            specifically.)
+
+        !! |> SolutionNote
+
+        !!     By comparing the two solutions one can 
+        !!     actually deduce that
+
+        !!     !! |> Boxed
+
+        !!     $$
+        !!     \cos(\theta_1 - \theta_2) = \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2
+        !!     $$
+
+        !!     !! if we put ourselves in the shoes of someone who doesn't
+        !!     !! already know the angle-sum formulas. 
+        !!     !! (Whereas otherwise, if you know the angle-sum
+        !!     !! formulas, you use the equation above to simplify the
+        !!     !! first solution, as we did.)
+        !!     without knowing the angle-sum formula
+        !!     for cosine beforehand.
+        !!     This constitutes a second* proof of the angle-sum
+        !!     formula for cos.
+
+        !!     (\*Some people would say _first_ proof, as our
+        !!     original proof from the chapter put some restrictions
+        !!     on the range of the angles, such as 
+        !!     $0 \leq \theta_1, \theta_2 \leq \eta$,
+        !!     specifically.) 
+        !!     !! (\*\*Though such restrictions can be lifted
+        !!     !! by diligent of use $\cos(x+\eta) = -\sin(x)$ -type identities.)

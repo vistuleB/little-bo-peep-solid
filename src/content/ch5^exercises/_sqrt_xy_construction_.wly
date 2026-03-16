@@ -1,5 +1,4 @@
 |> Exercise
-    work=ing
     handle=_sqrt_xy_construction_
 
     Given two lengths $A$ and $B$, how can
@@ -56,7 +55,8 @@
 
         _Solution 1._ Assume wlog (= “without loss of generality”)
         that $B > A$. We report the lengths $A$ and $B$ onto a
-        common number line such that the left end of length $B$
+        common number line such that the left end of each length
+        !! length $B$
         is identified with $0$:
 
         |> Image
@@ -69,18 +69,21 @@
             src=images/e5_sqrt_AB_construction_3_v2.svg
 
         We draw a half-circle of radius $B/2$ and of center $B/2$,
-        and a perpendicular emanating from $A$:
+        and a perpendicular emanating from $A$, and...
 
-        |> Image
-            src=images/e5_sqrt_AB_construction_4.svg
+        !! |> Image
+        !!     src=images/e5_sqrt_AB_construction_4.svg
+        !! This red triangle is a right triangle by the
+        !! Peloponnesian circle theorem:
 
-        This red triangle is a right triangle by the
-        Peloponnesian circle theorem:
 
         |> Image
             src=images/e5_sqrt_AB_construction_5.svg
 
-        So we have succeeded in constructing this diagram,
+        ...the red triangle above is a right triangle by the
+        Peloponnesian circle theorem, so we have effectively 
+        !! So we have 
+        succeeded in constructing this diagram,
         for some angle $\theta$:
 
         |> Image

@@ -157,7 +157,8 @@
 
         |> SolutionNote
 
-            Concerning the second solution, for simplicity of analysis it's important
+            Concerning the second solution, for simplicity of
+            analysis it's important
             to bring the pre- and post-processing
             functions online “from the inside out”,
             gluing new boxes on to what's already there:
@@ -165,99 +166,100 @@
             |> Image
                 src=images/e5_ABCD_roles_identity_comp_inside_out.svg
 
-            Otherwise, to give an example of what may
-            go wrong, say that we first bring the rightmost
-            box online:
+            (Otherwise, things get more complicated.)
+            !! Otherwise, to give an example of what may
+            !! go wrong, say that we first bring the rightmost
+            !! box online:
 
-            |> Image
-                src=images/e5_ABCD_roles_identity_comp_rightmost.svg
+            !! |> Image
+            !!     src=images/e5_ABCD_roles_identity_comp_rightmost.svg
 
-            At this stage we have
+            !! At this stage we have
 
-            $$
-            x \ra \sin(Bx)
-            $$
+            !! $$
+            !! x \ra \sin(Bx)
+            !! $$
 
-            which is a copy of $\sin(x)$ horizontally
-            compressed by $B = 2.33$. Then if we bring
-            $x \ra x + C$ online...
+            !! which is a copy of $\sin(x)$ horizontally
+            !! compressed by $B = 2.33$. Then if we bring
+            !! $x \ra x + C$ online...
 
-            |> Image
-                src=images/e5_ABCD_roles_identity_comp_middle.svg
+            !! |> Image
+            !!     src=images/e5_ABCD_roles_identity_comp_middle.svg
 
-            ...at this stage $x \ra x + C$ is
-            !! neither a pre-processing nor a post-processing function; 
-            NEITHER A PRE-PROCESSING NOR A POST-PROCESSING FUNCTION; 
-            the effect of adding this function is
-            NOT a translation of the graph by $C$ units in any
-            direction!; instead, the effect of inserting this
-            intermediate function into the chain is
-            that the graph is translated left by 
+            !! ...at this stage $x \ra x + C$ is
+            !! !! neither a pre-processing nor a post-processing function; 
+            !! NEITHER A PRE-PROCESSING NOR A POST-PROCESSING FUNCTION; 
+            !! the effect of adding this function is
+            !! NOT a translation of the graph by $C$ units in any
+            !! direction!; instead, the effect of inserting this
+            !! intermediate function into the chain is
+            !! that the graph is translated left by 
 
-            $$
-            C/B
-            $$
+            !! $$
+            !! C/B
+            !! $$
 
-            units, as we can verify by rewriting
+            !! units, as we can verify by rewriting
 
-            $$
-            x \ra \sin(Bx + C)
-            $$
+            !! $$
+            !! x \ra \sin(Bx + C)
+            !! $$
 
-            (the function above), as
+            !! (the function above), as
 
-            $$
-            x \ra \sin(B(x + C/B))
-            $$
+            !! $$
+            !! x \ra \sin(B(x + C/B))
+            !! $$
 
-            ...which corresponds to this modified assemblage
-            of boxes...
+            !! ...which corresponds to this modified assemblage
+            !! of boxes...
 
-            |> Image
-                src=images/e5_ABCD_roles_identity_comp_rearranged.svg
+            !! |> Image
+            !!     src=images/e5_ABCD_roles_identity_comp_rearranged.svg
 
-            ...and in which you can see that, after we
-            dial up $B$ (introducing the “$x \ra Bx$” box),
-            the effect of dialing up $C$ is to translate
-            the graph left by $C/B$ units. 
-            (The point is, if you
+            !! ...and in which you can see that, after we
+            !! dial up $B$ (introducing the “$x \ra Bx$” box),
+            !! the effect of dialing up $C$ is to translate
+            !! the graph left by $C/B$ units. 
+            !! (The point is, if you
 
-            __translate-and-then-compress__
+            !! __translate-and-then-compress__
 
-            |> ImageRight
-                src=images/e5_ABCD_roles_translate_and_then_compress_cloud.svg
+            !! |> ImageRight
+            !!     src=images/e5_ABCD_roles_translate_and_then_compress_cloud.svg
 
-            or if you
+            !! or if you
             
-            __compress-and-then-translate__
+            !! __compress-and-then-translate__
 
-            |> ImageRight
-                src=images/e5_ABCD_roles_compress_and_then_translate_cloud_v2.svg
+            !! |> ImageRight
+            !!     src=images/e5_ABCD_roles_compress_and_then_translate_cloud_v2.svg
 
-            the two amounts of translation required are
-            not the same, to achieve the same end result—if
-            the translation comes second, it needs to
-            be compressed, because everything else has
-            already been compressed!) (And by the 
-            way things blow up even worse if you attempt
-            to dial $D$ up before dialing $A$ up, because if
-            you attempt the same distributivity trick on the
-            left-hand side to invert the order of the two boxes
-            there...
+            !! the two amounts of translation required are
+            !! not the same, to achieve the same end result—if
+            !! the translation comes second, it needs to
+            !! be compressed, because everything else has
+            !! already been compressed!) (And by the 
+            !! way things blow up even worse if you attempt
+            !! to dial $D$ up before dialing $A$ up, because if
+            !! you attempt the same distributivity trick on the
+            !! left-hand side to invert the order of the two boxes
+            !! there...
 
-            |> Image
-                src=images/e5_ABCD_roles_identity_comp_rearranged_zz.svg
+            !! |> Image
+            !!     src=images/e5_ABCD_roles_identity_comp_rearranged_zz.svg
 
-            |> ImageLeft
-                src=images/e5_ABCD_roles_Au_cloud.svg
-                offset_x=2em
+            !! |> ImageLeft
+            !!     src=images/e5_ABCD_roles_Au_cloud.svg
+            !!     offset_x=2em
 
-            ...you find that after $D$ has been dialed up,
-            and it comes time to change $A$, there are TWO
-            boxes left that depend on $A$!—so long story
-            short, it becomes very difficult/annoying to
-            analyze the effect that changing $A$ has on the
-            graph, if we do it after $D$ is nonzero.)
+            !! ...you find that after $D$ has been dialed up,
+            !! and it comes time to change $A$, there are TWO
+            !! boxes left that depend on $A$!—so long story
+            !! short, it becomes very difficult/annoying to
+            !! analyze the effect that changing $A$ has on the
+            !! graph, if we do it after $D$ is nonzero.)
 
         |> SolutionNote
 

@@ -24,11 +24,25 @@
 
     |> Solution
 
-        We start by computing these lengths in the
-        original plane of the $2$-dimensional drawing:
+        The “key intermediate length” to compute is
+        the distance 
+        !! marked below, 
+        from the hinge-edge of the door to
+        the ceiling near the top of the door:
 
         |> Image
-            src=images/svg_ch5_ex_opening_door_soln1.svg
+            src=tmp-images/svg_ch5_ex_opening_door_soln0.svg
+
+        !! We start by computing these lengths in the
+        !! original plane of the $2$-dimensional drawing:
+        For this we need the lengths marked ‘2’ and
+        ‘4’ below, each of which requires a separate
+        mini-computation, including deducing the width 
+        of the door (length ‘3’) in order to deduce the length marked ‘4’
+        (we will also reuse length ‘3’ below|):
+
+        |> Image
+            src=tmp-images/svg_ch5_ex_opening_door_soln1.svg
 
         (Nb: One can also compute the length marked ‘2’ as
         $$

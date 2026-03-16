@@ -7755,18 +7755,23 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We start by computing these lengths in the
-              original plane of the {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                -dimensional
-              </NoBreak>
-              {" "} drawing:
+              The “key intermediate length” to compute is
+              the distance 
+              from the hinge-edge of the door to
+              the ceiling near the top of the door:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/odA8.svg" />
+            <Image src="/tmp-images/svg_ch5_ex_opening_door_soln0.svg" />
+            <Pause />
+            <OuterP>
+              For this we need the lengths marked ‘2’ and
+              ‘4’ below, each of which requires a separate
+              mini-computation, including deducing the width 
+              of the door (length ‘3’) in order to deduce the length marked ‘4’
+              (we will also reuse length ‘3’ below|):
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/svg_ch5_ex_opening_door_soln1.svg" />
             <Pause />
             <OuterP>
               (Nb: One can also compute the length marked ‘2’ as
@@ -9750,10 +9755,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={21}
-        >
+        <Exercise number={21}>
           <ExerciseStatement id="_104_hgi_">
             <OuterP>
               <b>
@@ -9854,10 +9856,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={22}
-        >
+        <Exercise number={22}>
           <ExerciseStatement id="_105_hgi_">
             <OuterP>
               <b>
@@ -10333,10 +10332,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={26}
-        >
+        <Exercise number={26}>
           <ExerciseStatement id="_109_hgi_">
             <OuterP>
               <b>
@@ -10600,10 +10596,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={27}
-        >
+        <Exercise number={27}>
           <ExerciseStatement id="_110_hgi_">
             <OuterP>
               <b>
@@ -13666,7 +13659,8 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                Concerning the second solution, for simplicity of analysis it's important
+                Concerning the second solution, for simplicity of
+                analysis it's important
                 to bring the pre- and post-processing
                 functions online “from the inside out”,
                 gluing new boxes on to what's already there:
@@ -13675,200 +13669,7 @@ const Rest = () => {
               <Image src="/build-img/svgo-svg/EsiI.svg" />
               <Pause />
               <OuterP>
-                Otherwise, to give an example of what may
-                go wrong, say that we first bring the rightmost
-                box online:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/cm5u.svg" />
-              <Pause />
-              <OuterP>
-                At this stage we have
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \sin(Bx)
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                which is a copy of {" "}
-                <Math>
-                  $\sin(x)$
-                </Math>
-                {" "} horizontally
-                compressed by {" "}
-                <NoBreak>
-                  <Math>
-                    $B = 2.33$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "} Then if we bring
-                {" "}
-                <Math>
-                  $x \ra x + C$
-                </Math>
-                {" "} online...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/2e-D.svg" />
-              <Pause />
-              <OuterP>
-                ...at this stage {" "}
-                <Math>
-                  $x \ra x + C$
-                </Math>
-                {" "} is
-                NEITHER A PRE-PROCESSING NOR A POST-PROCESSING FUNCTION; 
-                the effect of adding this function is
-                NOT a translation of the graph by {" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "} units in any
-                direction!; instead, the effect of inserting this
-                intermediate function into the chain is
-                that the graph is translated left by
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                C/B
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                units, as we can verify by rewriting
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \sin(Bx + C)
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                (the function above), as
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \sin(B(x + C/B))
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                ...which corresponds to this modified assemblage
-                of boxes...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/kh5Y.svg" />
-              <Pause />
-              <OuterP>
-                ...and in which you can see that, after we
-                dial up {" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "} (introducing the {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $x \ra Bx$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} box),
-                the effect of dialing up {" "}
-                <Math>
-                  $C$
-                </Math>
-                {" "} is to translate
-                the graph left by {" "}
-                <Math>
-                  $C/B$
-                </Math>
-                {" "} units. 
-                (The point is, if you
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                translate-and-then-compress
-                <ImageRight src="/build-img/svgo-svg/zaRv.svg" />
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                or if you
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                compress-and-then-translate
-                <ImageRight src="/build-img/svgo-svg/w5g-.svg" />
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                the two amounts of translation required are
-                not the same, to achieve the same end result—if
-                the translation comes second, it needs to
-                be compressed, because everything else has
-                already been compressed!) (And by the 
-                way things blow up even worse if you attempt
-                to dial {" "}
-                <Math>
-                  $D$
-                </Math>
-                {" "} up before dialing {" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "} up, because if
-                you attempt the same distributivity trick on the
-                left-hand side to invert the order of the two boxes
-                there...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/te-X.svg">
-                <ImageLeft
-                  src="/build-img/svgo-svg/cCoO.svg"
-                  offset_x="2em"
-                />
-              </Image>
-              <Pause />
-              <OuterP>
-                ...you find that after {" "}
-                <Math>
-                  $D$
-                </Math>
-                {" "} has been dialed up,
-                and it comes time to change {" "}
-                <NoBreak>
-                  <Math>
-                    $A$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} there are TWO
-                boxes left that depend on {" "}
-                <NoBreak>
-                  <Math>
-                    $A$
-                  </Math>
-                  !—so
-                </NoBreak>
-                {" "} long story
-                short, it becomes very difficult/annoying to
-                analyze the effect that changing {" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "} has on the
-                graph, if we do it after {" "}
-                <Math>
-                  $D$
-                </Math>
-                {" "} is nonzero.)
+                (Otherwise, things get more complicated.)
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -14099,7 +13900,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={39}>
+        <Exercise
+          work="ing"
+          number={39}
+        >
           <ExerciseStatement id="_122_hgi_">
             <OuterP>
               <b>
@@ -14213,10 +14017,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              <i>
-                Solution 1.
-              </i>
-              {" "} As a preliminary, we first note that
+              As a preliminary, we first note that
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -14385,7 +14186,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              just by the nature of polar coordinates,
+              just by common lore of polar coordinates,
               but anyway), while
             </OuterP>
             <Pause />
@@ -14481,12 +14282,9 @@ const Rest = () => {
                 .
               </NoBreak>
             </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Solution 2.
-              </i>
-              {" "} Start by rotating {" "}
+            <OuterP class="indent-10">
+              A SECOND SOLUTION—first solution is over—starts
+              by rotating {" "}
               <NoBreak>
                 <Math>
                   $P_1$
@@ -14536,44 +14334,57 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/RLiz.svg" />
             <Pause />
             <OuterP>
-              Since
+              Since the rotation does not affect distances,
+              the answer becomes the previous formula
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;x_1^2 + y_1^2 + x_2^2 + y_2^2 - 2(x_1y_1 + x_2y_2)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              applied with
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \begin&#123;gather&#125;
-              \,P_1' \,=\, (x_1, y_1) \,=\, (r_1\cos(\theta_1 - \theta_2),\, r_1\sin(\theta_1 - \theta_2)),\\
-              P_2' \,=\, (x_2, y_2) \,=\, (r_2, 0)\up&#123;1.8&#125;
+              (x_1, y_1) \,=\, \,P_1' \,=\, (r_1\cos(\theta_1 - \theta_2),\, r_1\sin(\theta_1 - \theta_2)),\\
+              (x_2, y_2) \,=\, P_2' \,=\, (r_2, 0)\up&#123;1.8&#125;
               \end&#123;gather&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              the Euclidean distance
-              formula gives
+              which gives
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \sqrt&#123;r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              again, since
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;aligned&#125;
-              \overline&#123;P_1P_2&#125;\,=\,\overline&#123;P_1'P_2'&#125;\,
-              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;(r_1\cos(\theta_1 - \theta_2) - r_2)^2 + (r_1\sin(\theta_1 - \theta_2) - 0)^2&#125;\\
-              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2\cos^2(\theta_1 - \theta_2) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2 + r_1^2\sin^2(\theta_1 - \theta_2)&#125; \\
-              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2(\cos^2(\theta_1 - \theta_2) + \sin^2(\theta_1 - \theta_2)) - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2&#125; \\
-              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2 - 2r_1r_2\cos(\theta_1 - \theta_2) + r_2^2&#125; \\
-              =&amp;\,\,\up&#123;1.4&#125;\sqrt&#123;r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)&#125;
-              \end&#123;aligned&#125;
+              \begin&#123;gathered&#125;
+              x_1^2 + y_1^2 = r_1^2 \\
+              x_2^2 + y_2^2 = \up&#123;1.5&#125;r_2^2 \\
+              x_1y_1 = \up&#123;1.5&#125; r_1\cos(\theta_1 - \theta_2)\cdot r_2 \\
+              x_1y_1 = \up&#123;1.5&#125; r_1\cos(\theta_1 - \theta_2)\cdot 0 = 0
+              \end&#123;gathered&#125;
               $$
-              <ImageRight
-                line={1}
-                src="/build-img/svgo-svg/dosD.svg"
-                offset_x="-2em"
-                compensate_offset_x_for_large_text_columns={true}
-              />
             </MathBlock>
             <Pause />
             <OuterP>
-              which agrees with the first solution.
+              in this case, and this time we don't need to apply a fancy
+              algebraic observation, or anything!
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -14612,18 +14423,23 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                The distance formula reduces to
+                The distance squared reduces to
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  r_1^2 + r_2^2
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                and the ordinary distance reduces to
               </OuterP>
               <Boxed>
                 <MathBlock>
                   $$
                   \sqrt&#123;r_1^2 + r_2^2&#125;
                   $$
-                  <ImageRight
-                    src="/build-img/svgo-svg/A3u9.svg"
-                    offset_x="3em"
-                    compensate_offset_x_for_large_text_columns={true}
-                  />
                 </MathBlock>
               </Boxed>
               <OuterP>
@@ -14641,8 +14457,7 @@ const Rest = () => {
                   $\cos|\theta_1 - \theta_2| = \cos\eta = 0$
                 </Math>
                 {" "} in that
-                case.
-                This accords with the Pythagorean theorem, and
+                case. This accords with the Pythagorean theorem, and
                 constitutes an extra check on our computations!
               </OuterP>
             </SolutionNote>
@@ -14653,44 +14468,41 @@ const Rest = () => {
                   Note 3.
                 </i>
                 {" "}
-                By comparing the two solutions one can 
-                actually deduce that
+                Comparing the two solutions actually shows that
               </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \cos(\theta_1 - \theta_2) = \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2
-                $$
-              </MathBlock>
-              <Pause />
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \cos(\theta_1 - \theta_2) = \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2
+                  $$
+                </MathBlock>
+              </Boxed>
               <OuterP>
-                without knowing the angle-sum formula
-                for cosine beforehand.
-                This constitutes a second* proof of the angle-sum
-                formula for cos and, by extension, for sin.
+                in and of itself. This is a “second proof” of the
+                angle-sum formula for cos.
               </OuterP>
               <OuterP class="indent-10">
-                (*Some people would say {" "}
+                (*Some would say {" "}
                 <i>
                   first
                 </i>
                 {" "} proof, as our
-                original proof from the chapter put some restrictions
+                original proof with the “famous diagram” put some restrictions
                 on the range of the angles, such as 
                 {" "}
-                <Math>
-                  $0 \leq \theta_1, \theta_2 \leq \eta$
-                </Math>
+                <NoBreak>
+                  <Math>
+                    $0 \leq \theta_1, \theta_2 \leq \eta$
+                  </Math>
+                  ,
+                </NoBreak>
                 {" "}
                 specifically.)
               </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={40}
-        >
+        <Exercise number={40}>
           <ExerciseStatement id="_123_hgi_">
             <OuterP>
               <b>
@@ -15429,10 +15241,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={44}
-        >
+        <Exercise number={44}>
           <ExerciseStatement id="_127_hgi_">
             <OuterP>
               <b>
@@ -16013,10 +15822,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={46}
-        >
+        <Exercise number={46}>
           <ExerciseStatement id="_129_hgi_">
             <OuterP>
               <b>
@@ -16189,11 +15995,7 @@ const Rest = () => {
                 $B$
               </Math>
               {" "} onto a
-              common number line such that the left end of length {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "}
+              common number line such that the left end of each length
               is identified with {" "}
               <NoBreak>
                 <Math>
@@ -16248,21 +16050,17 @@ const Rest = () => {
                 <Math>
                   $A$
                 </Math>
-                :
+                ,
               </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/TO_S.svg" />
-            <Pause />
-            <OuterP>
-              This red triangle is a right triangle by the
-              Peloponnesian circle theorem:
+              {" "} and...
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/7wy4.svg" />
             <Pause />
             <OuterP>
-              So we have succeeded in constructing this diagram,
+              ...the red triangle above is a right triangle by the
+              Peloponnesian circle theorem, so we have effectively 
+              succeeded in constructing this diagram,
               for some angle {" "}
               <NoBreak>
                 <Math>

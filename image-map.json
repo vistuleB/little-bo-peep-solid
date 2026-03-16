@@ -568,8 +568,8 @@
     "original-size": 23004,
     "compressed-size": 19464,
     "compression": "15.39%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_x_plus_y_eta_over_2.svg": {
     "build-version": "svgo-svg/-wma.svg",
@@ -645,8 +645,8 @@
     "original-size": 242069,
     "compressed-size": 101235,
     "compression": "58.18%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_big_snail_quad_purple_angle_1.svg": {
     "build-version": "svgo-svg/FQro.svg",
@@ -1228,8 +1228,8 @@
     "original-size": 87235,
     "compressed-size": 28873,
     "compression": "66.9%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_secant_reinterpretation_4.svg": {
     "build-version": "svgo-svg/wZkI.svg",
@@ -1756,8 +1756,8 @@
     "original-size": 18802,
     "compressed-size": 9390,
     "compression": "50.06%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_opening_door_soln1.svg": {
     "build-version": "svgo-svg/odA8.svg",
@@ -1767,8 +1767,8 @@
     "original-size": 106854,
     "compressed-size": 75315,
     "compression": "29.52%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch3_connection_x_y_6_8.svg": {
     "build-version": "svgo-svg/HuXq.svg",
@@ -1976,8 +1976,8 @@
     "original-size": 556106,
     "compressed-size": 276436,
     "compression": "50.29%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e5_sqrt_AB_solution2_3.svg": {
     "build-version": "svgo-svg/UWy5.svg",
@@ -2658,8 +2658,8 @@
     "original-size": 292073,
     "compressed-size": 140673,
     "compression": "51.84%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_main_angles_third.svg": {
     "build-version": "svgo-svg/tDhP.svg",
@@ -2845,8 +2845,8 @@
     "original-size": 245919,
     "compressed-size": 105452,
     "compression": "57.12%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_vector_sum_ux_plus_vx.svg": {
     "build-version": "svgo-svg/JkS_.svg",
@@ -5039,12 +5039,12 @@
   },
   "e5_sqrt_AB_solution2_1.svg": {
     "build-version": "svgo-svg/OwXA.svg",
-    "build-version-created-on": 1773435145,
+    "build-version-created-on": 1773666102,
     "build-method": "svgo",
-    "build-version-size": 6433,
-    "original-size": 15515,
-    "compressed-size": 6433,
-    "compression": "58.54%",
+    "build-version-size": 4215,
+    "original-size": 15670,
+    "compressed-size": 4215,
+    "compression": "73.1%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5463,8 +5463,8 @@
     "original-size": 790050,
     "compressed-size": 503633,
     "compression": "36.25%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_max_xy_graph_v2.svg": {
     "build-version": "svgo-svg/7Hpe.svg",
@@ -6139,12 +6139,12 @@
   },
   "e5_line_with_0_1_and_A_tancot_idea_symmetric_slope_explained.svg": {
     "build-version": "svgo-svg/xbp-.svg",
-    "build-version-created-on": 1773665116,
+    "build-version-created-on": 1773668567,
     "build-method": "svgo",
     "build-version-size": 102347,
-    "original-size": 216072,
+    "original-size": 216089,
     "compressed-size": 102347,
-    "compression": "52.63%",
+    "compression": "52.64%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6563,8 +6563,8 @@
     "original-size": 48420,
     "compressed-size": 31666,
     "compression": "34.6%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_cosine_curves_tangent_velocity_cloud.svg": {
     "build-version": "svgo-svg/52rF.svg",
@@ -7190,7 +7190,7 @@
     "original-size": 241595,
     "compressed-size": 100913,
     "compression": "58.23%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   }
 }
