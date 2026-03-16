@@ -2,13 +2,6 @@
     work=ing
     handle=_sqrt_xy_construction_
 
-    !! How can
-    !! $$
-    !! \sqrt{AB}
-    !! $$
-    !! be constructed by ruler and compass,
-    !! given lengths $A$ and $B$?
-
     Given two lengths $A$ and $B$, how can
     $$
     \sqrt{AB}
@@ -18,8 +11,6 @@
 
     |> Solution
 
-        !! Before giving two different solutions,
-        !! we make a preliminary observation, which is that 
         A preliminary “arithmetic” observation is that
         there is a common multiplicative
         factor $$\gamma$$ separating $A$, from $\sqrt{AB}$,
@@ -28,14 +19,12 @@
         |> Image
             src=images/e5_sqrt_AB_construction_1_v2.svg
 
-        !! Indeed, 
         The proof is that
 
         $$
         {\sqrt{AB}\over A} = {B\over\sqrt{AB}}
         $$
 
-        !! because this equation 
         is equivalent to
 
         $$

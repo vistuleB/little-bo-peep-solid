@@ -7101,7 +7101,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={21}>
+        <Exercise
+          work="in"
+          number={21}
+        >
           <ExerciseStatement id="_77_hgi_">
             <OuterP>
               <b>
@@ -7141,8 +7144,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Going back in time,
-              examine how long it would take
+              Going back in time, examine how long it would take
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see {" "}
               <NoBreak>
@@ -7168,8 +7170,7 @@ const Rest = () => {
               <Math>
                 $1$
               </Math>
-              {" "}
-              takes {" "}
+              {" "} takes {" "}
               <i>
                 at least
               </i>
@@ -7195,8 +7196,7 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "}
-              Similarly, the interval from
+              {" "} Similarly, the interval from
             </OuterP>
             <Pause />
             <MathBlock>

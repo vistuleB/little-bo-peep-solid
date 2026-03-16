@@ -1,4 +1,5 @@
 |> Exercise
+    work=in
     handle=_1d_red_particle_
 
     Imagine a single particle in a one-dimensional
@@ -13,16 +14,14 @@
 
     |> Solution
 
-        Going back in time,
-        examine how long it would take
+        Going back in time, examine how long it would take
         the particle to cross each of the intervals defined by
         the following geometric progression\* (\*see Note >>_geometric_progression_):
 
         |> Image
             src=images/svg_ch4_ex_one_particle_interval_subdivision.svg
 
-        The interval from $0.5$ to $1$
-        takes _at least_
+        The interval from $0.5$ to $1$ takes _at least_
 
         $$
         {0.5 \over 1} = 0.5
@@ -33,8 +32,7 @@
             offset_x=10em
 
         time to cross, because the maximum speed of the particle
-        inside of that interval is $1$.
-        Similarly, the interval from
+        inside of that interval is $1$. Similarly, the interval from
 
         $$
         x = 0.25

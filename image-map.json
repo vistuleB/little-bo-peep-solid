@@ -1066,6 +1066,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "e5_line_with_0_1_and_A_tancot_idea.svg": {
+    "build-version": "svgo-svg/vM7r.svg",
+    "build-version-created-on": 1773665115,
+    "build-method": "svgo",
+    "build-version-size": 44280,
+    "original-size": 116556,
+    "compressed-size": 44280,
+    "compression": "62.01%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch5_ch_unit_circle_@0.5_smaller.svg": {
     "build-version": "svgo-svg/2cF1.svg",
     "build-version-created-on": 1767342812,
@@ -1706,12 +1717,12 @@
   },
   "svg_ch5_ex_theta_tangent_all_quadrants.svg": {
     "build-version": "svgo-svg/TRpy.svg",
-    "build-version-created-on": 1771599426,
+    "build-version-created-on": 1773477859,
     "build-method": "svgo",
-    "build-version-size": 44359,
-    "original-size": 193496,
-    "compressed-size": 44359,
-    "compression": "77.07%",
+    "build-version-size": 43517,
+    "original-size": 193493,
+    "compressed-size": 43517,
+    "compression": "77.51%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3871,6 +3882,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "e5_line_with_0_1_and_A_tancot_idea_slope_explained.svg": {
+    "build-version": "svgo-svg/YikH.svg",
+    "build-version-created-on": 1773665116,
+    "build-method": "svgo",
+    "build-version-size": 81108,
+    "original-size": 180988,
+    "compressed-size": 81108,
+    "compression": "55.19%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch4_17_actual_functions_with_highlights.svg": {
     "build-version": "svgo-svg/SKRR.svg",
     "build-version-created-on": 1767294310,
@@ -4011,6 +4033,17 @@
     "original-size": 992144,
     "compressed-size": 407942,
     "compression": "58.88%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
+  "e5_line_with_0_1_and_A_tancot_idea_symmetric.svg": {
+    "build-version": "svgo-svg/5-80.svg",
+    "build-version-created-on": 1773665115,
+    "build-method": "svgo",
+    "build-version-size": 59157,
+    "original-size": 141215,
+    "compressed-size": 59157,
+    "compression": "58.11%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6104,6 +6137,17 @@
     "used-last-build": false,
     "3chars": []
   },
+  "e5_line_with_0_1_and_A_tancot_idea_symmetric_slope_explained.svg": {
+    "build-version": "svgo-svg/xbp-.svg",
+    "build-version-created-on": 1773665116,
+    "build-method": "svgo",
+    "build-version-size": 102347,
+    "original-size": 216072,
+    "compressed-size": 102347,
+    "compression": "52.63%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch5_ch_abercrombie_shadows.svg": {
     "build-version": "svgo-svg/Vx2_.svg",
     "build-version-created-on": 1767342812,
@@ -6345,6 +6389,17 @@
     "compression": "16.36%",
     "used-last-build": true,
     "3chars": ["ch4"]
+  },
+  "e5_line_with_0_1_and_A_tancot_without_A.svg": {
+    "build-version": "svgo-svg/SB49.svg",
+    "build-version-created-on": 1773665115,
+    "build-method": "svgo",
+    "build-version-size": 36395,
+    "original-size": 103858,
+    "compressed-size": 36395,
+    "compression": "64.96%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ex_max_xy_angles.svg": {
     "build-version": "svgo-svg/HCJC.svg",

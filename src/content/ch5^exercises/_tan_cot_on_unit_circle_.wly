@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_tan_cot_on_unit_circle_
 
     Stipulating
@@ -79,7 +80,6 @@
         and $(\cos\theta, \sin\theta)$ with the
         line $x = 1$__
 
-        !! ...for tangent, and...
         ...for $\tan\theta$, and...
 
         __$\cot\theta$ is the $x$-coordinate of the

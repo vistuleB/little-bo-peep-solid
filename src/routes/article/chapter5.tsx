@@ -9750,7 +9750,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={21}>
+        <Exercise
+          work="ing"
+          number={21}
+        >
           <ExerciseStatement id="_104_hgi_">
             <OuterP>
               <b>
@@ -10047,10 +10050,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={24}
-        >
+        <Exercise number={24}>
           <ExerciseStatement id="_107_hgi_">
             <OuterP>
               <b>
@@ -10144,10 +10144,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={25}
-        >
+        <Exercise number={25}>
           <ExerciseStatement id="_108_hgi_">
             <OuterP>
               <b>
@@ -10336,7 +10333,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={26}>
+        <Exercise
+          work="ing"
+          number={26}
+        >
           <ExerciseStatement id="_109_hgi_">
             <OuterP>
               <b>
@@ -10668,6 +10668,10 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
+              <i>
+                Solution 1.
+              </i>
+              {" "}
               The basic idea of the solution is to find
               an angle {" "}
               <Math>
@@ -10906,8 +10910,7 @@ const Rest = () => {
               <Math>
                 $1$
               </Math>
-              {" "} centered at
-              {" "}
+              {" "} centered at {" "}
               <NoBreak>
                 <Math>
                   $(0, 0)$
@@ -10919,8 +10922,8 @@ const Rest = () => {
               <Math>
                 $(0, 0)$
               </Math>
-              {" "} and the
-              upper intersection of the circle with the perpendicular:
+              {" "} and the upper
+              intersection of the circle with the perpendicular:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/FPj6.svg" />
@@ -10946,6 +10949,226 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/hKBQ.svg" />
             <Pause />
             <StarDivider />
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 2.
+              </i>
+              {" "} Note that for an angle
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              the values
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \tan\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cot\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be
+              found here and here, by {" "}
+              <InChapterLink
+                href="/article/chapter5#_127_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 44
+              </InChapterLink>
+              {" "}
+              (this figure is just a recap of {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_127_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 44
+                </InChapterLink>
+                ):
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/SB49.svg" />
+            <Pause />
+            <OuterP>
+              However,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\cot\theta = 1/\tan\theta,
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so if {" "}
+              <Math>
+                $\tan\theta = A$
+              </Math>
+              {" "} then {" "}
+              <NoBreak>
+                <Math>
+                  $\cot\theta = 1/A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which
+              gives rise to the following idea for a geometric construction
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} shown here for {" "}
+              <Math>
+                $0 &lt; A &lt; 1$
+              </Math>
+              {" "} (though it works for all {" "}
+              <NoBreak>
+                <Math>
+                  $A \in \rr$
+                </Math>
+                ):
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/vM7r.svg" />
+            <Pause />
+            <OuterP>
+              Or, symmetrically, we can treat {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} as {" "}
+              <NoBreak>
+                <Math>
+                  $\cot\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} from
+              which {" "}
+              <Math>
+                $\tan\theta$
+              </Math>
+              {" "} becomes {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/5-80.svg" />
+            <Pause />
+            <OuterP>
+              The second diagram
+              can also
+              be understood in terms of “materializing” the slope
+              of a line of slope {" "}
+              <Math>
+                $1/A$
+              </Math>
+              {" "} by scaling a “rise over run”
+              triangle until the run hits {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/xbp-.svg" />
+            <Pause />
+            <OuterP>
+              ...like so; 
+              and symmetrically, the first diagram can 
+              be understood in terms of scaling a “rise over run”
+              triangle until the {" "}
+              <i>
+                rise
+              </i>
+              {" "} hits {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/YikH.svg" />
+            <Pause />
+            <OuterP>
+              ...like so, since {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\te&#123;run&#125; = &#123;\te&#123;rise&#125;\over \te&#123;slope&#125;&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              implies {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\te&#123;run&#125; = &#123;1\over \te&#123;slope&#125;&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} by the
+              time ‘rise’ hits {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} implying {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\te&#123;run&#125; = &#123;1\over A&#125;$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} since the 
+              slope is {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Complete compass-and-ruler constructions can
+              easily be reconstituted from the above diagrams,
+              and we hereby declare the second solution finished!!
+            </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={28}>
@@ -14464,7 +14687,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={40}>
+        <Exercise
+          work="ing"
+          number={40}
+        >
           <ExerciseStatement id="_123_hgi_">
             <OuterP>
               <b>
@@ -14519,16 +14745,8 @@ const Rest = () => {
                 <Math>
                   $(x, y) \ra xy$
                 </Math>
-                ,
+                :
               </NoBreak>
-              {" "}
-              drawn here in the same 
-              {" "}
-              <Math>
-                $[-4, 4] \times [-4, 4]$
-              </Math>
-              {" "} 
-              window:
             </OuterP>
             <Pause />
             <Image
@@ -14538,7 +14756,6 @@ const Rest = () => {
             <Pause />
             <OuterP>
               The geometric insight that is of interest to
-              us, and that we accept without further proof,
               is that,
               at any given
               distance from the origin, the lines
@@ -14561,8 +14778,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              seem to hold the largest and smallest values,
-              respectively, of {" "}
+              hold the largest and smallest values, respectively,
+              of {" "}
               <NoBreak>
                 <Math>
                   $xy$
@@ -14616,7 +14833,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = (-\sqrt&#123;0.5&#125;) \cdot (-\sqrt&#123;0.5&#125;) = &#123;1\over 2&#125;
+              \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -14636,7 +14853,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (-\sqrt&#123;0.5&#125;) \cdot \sqrt&#123;0.5&#125; = \sqrt&#123;0.5&#125; \cdot (-\sqrt&#123;0.5&#125;) = -&#123;1\over 2&#125;
+              (-\sqrt&#123;0.5&#125;) \cdot \sqrt&#123;0.5&#125; = -&#123;1\over 2&#125;
               $$
             </MathBlock>
             <Pause />
@@ -14676,7 +14893,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/FyVW.svg" />
             <Pause />
             <OuterP>
-              ...here!
+              ...here.
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -14685,38 +14902,21 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                For interest, here is the graph {" "}
+                We can draw annotated graphs of {" "}
                 <NoBreak>
                   <Math>
-                    $y = \cos(x)\sin(x)$
+                    $\cos x\sin x$
                   </Math>
                   ,
                 </NoBreak>
-                {" "}
-                as previously given in {" "}
-                <NoBreak>
-                  <InChapterLink
-                    href="/article/chapter5#_88_hgi_"
-                    class="handle-in-chapter-link"
-                  >
-                    Exercise 5
-                  </InChapterLink>
-                  ,
-                </NoBreak>
-                {" "} annotated
-                with the maximum, minimum, and the values {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "} at which they
-                are attained:
+                {" "} in 
+                radians and in degrees:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/7Hpe.svg" />
-              <Pause />
-              <OuterP>
-                Or equivalently, in degrees:
-              </OuterP>
+              <Image
+                src="/build-img/svgo-svg/7Hpe.svg"
+                style="margin-bottom:-0.5em"
+              />
               <Pause />
               <Image src="/build-img/svgo-svg/H0zm.svg" />
             </SolutionNote>
@@ -15229,7 +15429,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={44}>
+        <Exercise
+          work="ing"
+          number={44}
+        >
           <ExerciseStatement id="_127_hgi_">
             <OuterP>
               <b>
@@ -15464,10 +15667,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={45}
-        >
+        <Exercise number={45}>
           <ExerciseStatement id="_128_hgi_">
             <OuterP>
               <b>

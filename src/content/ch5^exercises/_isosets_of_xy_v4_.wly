@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_isosets_of_xy_v4_
 
     What are the maximum and minimum values
@@ -16,7 +17,6 @@
         While it may seem unrelated to the problem
         at hand, we start by noting that the “isosets”
         of the two-variable function
-        !! The “isosets” of
 
         $$
         (x, y) \ra xy
@@ -51,10 +51,8 @@
             style=margin-bottom:0.5em;
 
         What will give us a similar level of
-        insight is a “heatmap” of $(x, y) \ra xy$,
-        drawn here in the same 
-        $[-4, 4] \times [-4, 4]$ 
-        window:
+        insight is a “heatmap” of $(x, y) \ra xy$:
+        !! drawn here in the same $[-4, 4] \times [-4, 4]$ window:
 
         !! These isosets give rise to the boundaries
         !! between colored regions 
@@ -68,7 +66,7 @@
             style=margin-bottom:0.5em;
 
         The geometric insight that is of interest to
-        us, and that we accept without further proof,
+        !! us, and that we accept without further proof,
         is that,
         at any given
         distance from the origin, the lines
@@ -83,8 +81,9 @@
         x = -y
         $$
 
-        seem to hold the largest and smallest values,
-        respectively, of $xy$:
+        !! seem to 
+        hold the largest and smallest values, respectively,
+        of $xy$:
 
         |> Image
             src=images/svg_ch5_ex_max_xy_fixed_distance_v2.svg
@@ -104,7 +103,8 @@
         where it attains value
 
         $$
-        \sqrt{0.5} \cdot \sqrt{0.5} = (-\sqrt{0.5}) \cdot (-\sqrt{0.5}) = {1\over 2}
+        !! \sqrt{0.5} \cdot \sqrt{0.5} = (-\sqrt{0.5}) \cdot (-\sqrt{0.5}) = {1\over 2}
+        \sqrt{0.5} \cdot \sqrt{0.5} = {1\over 2}
         $$
 
         and will reach its minimum when
@@ -116,11 +116,11 @@
         where it attains value 
 
         $$
-        (-\sqrt{0.5}) \cdot \sqrt{0.5} = \sqrt{0.5} \cdot (-\sqrt{0.5}) = -{1\over 2}
+        !! (-\sqrt{0.5}) \cdot \sqrt{0.5} = \sqrt{0.5} \cdot (-\sqrt{0.5}) = -{1\over 2}
+        (-\sqrt{0.5}) \cdot \sqrt{0.5} = -{1\over 2}
         $$
 
         while, to answer the last part of the question,
-        !! while
         the set of $\theta$'s for which the 
         maximum and minimum are reached will be...
 
@@ -139,22 +139,20 @@
         |> Image
             src=images/svg_ch5_ex_max_xy_angles_v2.svg
 
-        ...here!
+        ...here.
 
         |> SolutionNote
 
-            For interest, here is the graph $y = \cos(x)\sin(x)$,
-            !! of $x \ra \sin x \cos x$,
-            as previously given in Exercise >>_four_graphs_, annotated
-            !! with the newly gleaned information:
-            !! with these new insights:
-            with the maximum, minimum, and the values $x$ at which they
-            are attained:
+            We can draw annotated graphs of $\cos x\sin x$, in 
+            radians and in degrees:
+            !! For interest, here is the graph $y = \cos(x)\sin(x)$,
+            !! as previously given in Exercise >>_four_graphs_, annotated
+            !! with the maximum, minimum, and the values $x$ at which they
+            !! are attained:
 
             |> Image
                 src=images/svg_ch5_ex_max_xy_graph_v2.svg
-
-            Or equivalently, in degrees:
+                style=margin-bottom:-0.5em
 
             |> Image
                 src=images/svg_ch5_ex_max_xy_graph_degrees.svg
