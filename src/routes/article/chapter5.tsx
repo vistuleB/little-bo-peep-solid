@@ -5293,7 +5293,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={4}>
+        <Exercise
+          work="ing"
+          number={4}
+        >
           <ExerciseStatement id="_87_hgi_">
             <OuterP>
               <b>
@@ -8422,6 +8425,238 @@ const Rest = () => {
                 Exercise 18.
               </b>
               {" "}
+              What are the maximum and minimum values
+              of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta \ra \cos\theta\sin\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and for which {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} are they attained?
+              (Reason geometrically, not by calculus.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              While it may seem unrelated to the problem
+              at hand, we start by noting that the “isosets”
+              of the two-variable function
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x, y) \ra xy
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              have this general aspect:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/ME1k.svg"
+              style="margin-bottom:0.5em;"
+            />
+            <Pause />
+            <OuterP>
+              What will give us a similar level of
+              insight is a “heatmap” of {" "}
+              <NoBreak>
+                <Math>
+                  $(x, y) \ra xy$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/FGx3.svg"
+              style="margin-bottom:0.5em;"
+            />
+            <Pause />
+            <OuterP>
+              The geometric insight that is of interest to
+              is that,
+              at any given
+              distance from the origin, the lines
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = y
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = -y
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              hold the largest and smallest values, respectively,
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/YYAQ.svg" />
+            <Pause />
+            <OuterP>
+              In other words,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\theta)\cdot\sin(\theta),
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as a value of the form {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} times {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate”
+              </NoBreak>
+              {" "}
+              of a point confined to the unit circle,
+              will reach its maximum when
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\cos \theta, \sin \theta) = \pm(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where it attains value
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and will reach its minimum when
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\cos \theta, \sin \theta) = \pm(-\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              where it attains value
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (-\sqrt&#123;0.5&#125;) \cdot \sqrt&#123;0.5&#125; = -&#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              while, to answer the last part of the question,
+              the set of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                's
+              </NoBreak>
+              {" "} for which the 
+              maximum and minimum are reached will be...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;0.5\eta + 2\eta k: k \in \zz\&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...and...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;1.5\eta + 2\eta k: k \in \zz\&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...respectively, as illustrated...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/FyVW.svg" />
+            <Pause />
+            <OuterP>
+              ...here.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                We can draw annotated graphs of {" "}
+                <NoBreak>
+                  <Math>
+                    $\cos x\sin x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} in 
+                radians and in degrees:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/7Hpe.svg"
+                style="margin-bottom:-0.5em"
+              />
+              <Pause />
+              <Image src="/build-img/svgo-svg/H0zm.svg" />
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={19}>
+          <ExerciseStatement id="_102_hgi_">
+            <OuterP>
+              <b>
+                Exercise 19.
+              </b>
+              {" "}
               Compute
             </OuterP>
             <Pause />
@@ -8917,11 +9152,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={19}>
-          <ExerciseStatement id="_102_hgi_">
+        <Exercise number={20}>
+          <ExerciseStatement id="_103_hgi_">
             <OuterP>
               <b>
-                Exercise 19.
+                Exercise 20.
               </b>
               {" "}
               Compute
@@ -9006,11 +9241,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_103_hgi_">
+        <Exercise number={21}>
+          <ExerciseStatement id="_104_hgi_">
             <OuterP>
               <b>
-                Exercise 20.
+                Exercise 21.
               </b>
               {" "}
               To close our division skills: use the
@@ -9755,11 +9990,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={21}>
-          <ExerciseStatement id="_104_hgi_">
+        <Exercise number={22}>
+          <ExerciseStatement id="_105_hgi_">
             <OuterP>
               <b>
-                Exercise 21.
+                Exercise 22.
               </b>
               {" "}
               What is the angle marked ‘?’, as a function
@@ -9856,11 +10091,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={22}>
-          <ExerciseStatement id="_105_hgi_">
+        <Exercise number={23}>
+          <ExerciseStatement id="_106_hgi_">
             <OuterP>
               <b>
-                Exercise 22.
+                Exercise 23.
               </b>
               {" "}
               What is the angle marked ‘?’, as a function of
@@ -9929,11 +10164,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={23}>
-          <ExerciseStatement id="_106_hgi_">
+        <Exercise number={24}>
+          <ExerciseStatement id="_107_hgi_">
             <OuterP>
               <b>
-                Exercise 23.
+                Exercise 24.
               </b>
               {" "}
               Argue that, in the following figure, the
@@ -10049,11 +10284,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={24}>
-          <ExerciseStatement id="_107_hgi_">
+        <Exercise number={25}>
+          <ExerciseStatement id="_108_hgi_">
             <OuterP>
               <b>
-                Exercise 24.
+                Exercise 25.
               </b>
               {" "}
               Express {" "}
@@ -10143,11 +10378,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={25}>
-          <ExerciseStatement id="_108_hgi_">
+        <Exercise number={26}>
+          <ExerciseStatement id="_109_hgi_">
             <OuterP>
               <b>
-                Exercise 25.
+                Exercise 26.
               </b>
               {" "}
               Express {" "}
@@ -10332,843 +10567,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={26}>
-          <ExerciseStatement id="_109_hgi_">
-            <OuterP>
-              <b>
-                Exercise 26.
-              </b>
-              {" "}
-              In the drawing below, at what coordinates,
-              expressed as a function of {" "}
-              <NoBreak>
-                <Math>
-                  $\theta$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              does the tangent to the circle
-              intersect the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axes?
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/AdMn.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              For starters assume that {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} lies in
-              the first quadrant, in
-              which case both coordinates are nonnegative, and, more specifically, 
-              are equal to the two 
-              purple lengths below:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/nF2I.svg" />
-            <Pause />
-            <OuterP>
-              Regarding this diagram, note that:
-            </OuterP>
-            <Pause />
-            <List style="gap:1em">
-              <Item>
-                <p>
-                  we have already “used up” the fact that
-                  the radius of the circle is {" "}
-                  <Math>
-                    $1$
-                  </Math>
-                  {" "} by
-                  making the dropped height (which used to
-                  be a radius) length {" "}
-                  <NoBreak>
-                    <Math>
-                      $1$
-                    </Math>
-                    ;
-                  </NoBreak>
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  we use a “the complement of my complement
-                  is myself”-type argument to deduce that the
-                  upper left angle is {" "}
-                  <NoBreak>
-                    <Math>
-                      $\theta$
-                    </Math>
-                    ,
-                  </NoBreak>
-                  {" "} as well
-                  (cf. {" "}
-                  <NoBreak>
-                    <InChapterLink
-                      href="/article/chapter5#_104_hgi_"
-                      class="handle-in-chapter-link"
-                    >
-                      Exercise 21
-                    </InChapterLink>
-                    ,
-                  </NoBreak>
-                  {" "}
-                  {" "}
-                  <NoBreak>
-                    <InChapterLink
-                      href="/article/chapter5#_105_hgi_"
-                      class="handle-in-chapter-link"
-                    >
-                      Exercise 22
-                    </InChapterLink>
-                    ).
-                  </NoBreak>
-                  {" "}{" "}
-                </p>
-              </Item>
-            </List>
-            <Pause />
-            <OuterP>
-              Because {" "}
-              <Math>
-                $1 \cdot \sec(\theta) = \sec(\theta)$
-              </Math>
-              {" "} the
-              bottom length is {" "}
-              <Math>
-                $\sec(\theta)$
-              </Math>
-              {" "} while the vertical
-              length is {" "}
-              <NoBreak>
-                <Math>
-                  $1\cdot \csc(\theta) = \csc(\theta)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} similarly:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/wgBS.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/D8sZ.svg" />
-            <Pause />
-            <OuterP>
-              ...i.e., in the first quadrant, at least, the
-              coordinates are {" "}
-              <Math>
-                $\sec(\theta)$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $\csc(\theta)$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/i6Bn.svg" />
-            <Pause />
-            <OuterP>
-              For the other quadrants we can reason by
-              symmetry with the first quadrant:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/TRpy.svg" />
-            <Pause />
-            <OuterP>
-              In more detail, the product of the two coordinates
-              marked by purple arrows is the same in all four
-              quadrants, because “minus times minus is plus”; but
-              in first quadrant, the product is {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} because
-              we know the product takes the form {" "}
-              <Math>
-                $\cos(\theta)\cdot\sec(\theta)$
-              </Math>
-              {" "}
-              in that quadrant;
-              therefore the product is {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "} in {" "}
-              <i>
-                all
-              </i>
-              {" "} quadrants; but
-              the coordinate marked by the inside purple arrow is
-              {" "}
-              <Math>
-                $\cos(\theta)$
-              </Math>
-              {" "} in all quadrants; therefore, lastly,
-              the coordinate marked by the {" "}
-              <i>
-                outside
-              </i>
-              {" "} purple arrow
-              is {" "}
-              <Math>
-                $\sec(\theta)$
-              </Math>
-              {" "} in all quadrants, since {" "}
-              <Math>
-                $\sec(\theta)$
-              </Math>
-              {" "}
-              is the unique number whose product with {" "}
-              <Math>
-                $\cos(\theta)$
-              </Math>
-              {" "}
-              is {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ;
-              </NoBreak>
-              {" "} similarly the inside orange arrow marks coordinate
-              {" "}
-              <Math>
-                $\sin(\theta)$
-              </Math>
-              {" "} is all quadrants, so the outside orange
-              arrow (by similar reasoning) has coordinate {" "}
-              <Math>
-                $\csc(\theta)$
-              </Math>
-              {" "}
-              in all quadrants, QED. (I.e., the grand conclusion is that the
-              two coordinates are
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Huge \sec(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -axis
-              </NoBreak>
-              {" "} intersection, and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Huge \csc(\theta)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for the {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -axis
-              </NoBreak>
-              {" "} intersection, no matter the quadrant.)
-            </OuterP>
-          </Solution>
-        </Exercise>
         <Exercise number={27}>
           <ExerciseStatement id="_110_hgi_">
             <OuterP>
               <b>
                 Exercise 27.
-              </b>
-              {" "}
-              If {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and a value {" "}
-              <Math>
-                $A &gt; 1$
-              </Math>
-              {" "} are marked
-              on a line...
-            </OuterP>
-            <Pause />
-            <Image
-              style="margin-top:0.8em;margin-bottom:0.8em;"
-              src="/build-img/svgo-svg/j4h0.svg"
-            />
-            <Pause />
-            <OuterP>
-              ...how can we find the placement of...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1 / A
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...on the same line by a purely geometric construction?
-              What about if {" "}
-              <NoBreak>
-                <Math>
-                  $0 &lt; A &lt; 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $-1 &lt; A &lt; 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} etc?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              <i>
-                Solution 1.
-              </i>
-              {" "}
-              The basic idea of the solution is to find
-              an angle {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} such that {" "}
-              <NoBreak>
-                <Math>
-                  $A = \sec(\theta)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              if {" "}
-              <NoBreak>
-                <Math>
-                  $|A| &gt; 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              or symmetrically, such that {" "}
-              <NoBreak>
-                <Math>
-                  $A = \cos(\theta)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} if {" "}
-              <NoBreak>
-                <Math>
-                  $|A| &lt; 1$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/kxTm.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/ryx0.svg" />
-            <Pause />
-            <OuterP>
-              (Cf. {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter5#_109_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 26
-                </InChapterLink>
-                .)
-              </NoBreak>
-              {" "}
-              We now proceed with
-              step-by-step
-              compass-and-ruler 
-              instructions for the two cases:
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              ~ ~ case {" "}
-              <Math>
-                $|A| &gt; 1$
-              </Math>
-              {" "} ~ ~
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <i>
-                Step 1.
-              </i>
-              {" "} Find the midpoint between {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ;
-              </NoBreak>
-              {" "} for
-              this, the procedure is to use two circles of equal radius:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/JM7s.svg" />
-            <Pause />
-            <OuterP>
-              <i>
-                Step 2.
-              </i>
-              {" "} Draw a semicircle of radius {" "}
-              <Math>
-                $A/2$
-              </Math>
-              {" "} whose
-              center is that midpoint:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/eQmC.svg" />
-            <Pause />
-            <OuterP>
-              <i>
-                Step 3.
-              </i>
-              {" "} Draw a circle of radius {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "} whose center
-              is {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/emr1.svg" />
-            <Pause />
-            <OuterP>
-              <i>
-                Step 4.
-              </i>
-              {" "} Draw a line through the intersections
-              of the two circles to find the position of {" "}
-              <NoBreak>
-                <Math>
-                  $1/A$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/XE7K.svg" />
-            <Pause />
-            <OuterP>
-              (The reason that the whole procedure works is that
-              this triangle...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/KO2V.svg" />
-            <Pause />
-            <OuterP>
-              ...is actually right-angled at its upper corner
-              by 
-              the Peloponnesian Theorem.
-              This implies that the line from {" "}
-              <Math>
-                $(A, 0)$
-              </Math>
-              {" "} to that
-              corner is tangent to the circle of radius {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which is
-              what we want/need.)
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              ~ ~ case {" "}
-              <Math>
-                $|A| &lt; 1$
-              </Math>
-              {" "} ~ ~
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <i>
-                Step 1.
-              </i>
-              {" "} 
-              With {" "}
-              <NoBreak>
-                <Math>
-                  $|A| &lt; 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} start by
-              marking points at equal distance to {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} 
-              by drawing a circle 
-              centered at {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              of any radius:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/RGWo.svg" />
-            <Pause />
-            <OuterP>
-              <i>
-                Step 2.
-              </i>
-              {" "} Use these points to draw a perpendicular 
-              through {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} similarly to the first step of
-              the case {" "}
-              <NoBreak>
-                <Math>
-                  $|A| &gt; 1$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/4MXO.svg" />
-            <Pause />
-            <OuterP>
-              <i>
-                Step 3.
-              </i>
-              {" "} 
-              Draw a circle of radius {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "} centered at {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              and draw a line through {" "}
-              <Math>
-                $(0, 0)$
-              </Math>
-              {" "} and the upper
-              intersection of the circle with the perpendicular:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/FPj6.svg" />
-            <Pause />
-            <OuterP>
-              <i>
-                Step 4.
-              </i>
-              {" "} 
-              Construct a perpendicular to this line
-              at the point of intersection by repeating the
-              process of the first two steps; 
-              the intersection of that line with the
-              main axis is {" "}
-              <NoBreak>
-                <Math>
-                  $1/A$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/hKBQ.svg" />
-            <Pause />
-            <StarDivider />
-            <Pause />
-            <OuterP>
-              <i>
-                Solution 2.
-              </i>
-              {" "} Note that for an angle
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \theta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              the values
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \tan\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cot\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              can be
-              found here and here, by {" "}
-              <InChapterLink
-                href="/article/chapter5#_127_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 44
-              </InChapterLink>
-              {" "}
-              (this figure is just a recap of {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter5#_127_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 44
-                </InChapterLink>
-                ):
-              </NoBreak>
-              {" "}{" "}
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/SB49.svg" />
-            <Pause />
-            <OuterP>
-              However,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \,\cot\theta = 1/\tan\theta,
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so if {" "}
-              <Math>
-                $\tan\theta = A$
-              </Math>
-              {" "} then {" "}
-              <NoBreak>
-                <Math>
-                  $\cot\theta = 1/A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which
-              gives rise to the following idea for a geometric construction
-              of {" "}
-              <NoBreak>
-                <Math>
-                  $1/A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} shown here for {" "}
-              <Math>
-                $0 &lt; A &lt; 1$
-              </Math>
-              {" "} (though it works for all {" "}
-              <NoBreak>
-                <Math>
-                  $A \in \rr$
-                </Math>
-                ):
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/vM7r.svg" />
-            <Pause />
-            <OuterP>
-              Or, symmetrically, we can treat {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} as {" "}
-              <NoBreak>
-                <Math>
-                  $\cot\theta$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} from
-              which {" "}
-              <Math>
-                $\tan\theta$
-              </Math>
-              {" "} becomes {" "}
-              <NoBreak>
-                <Math>
-                  $1/A$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/5-80.svg" />
-            <Pause />
-            <OuterP>
-              The second diagram
-              can also
-              be understood in terms of “materializing” the slope
-              of a line of slope {" "}
-              <Math>
-                $1/A$
-              </Math>
-              {" "} by scaling a “rise over run”
-              triangle until the run hits {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/xbp-.svg" />
-            <Pause />
-            <OuterP>
-              ...like so; 
-              and symmetrically, the first diagram can 
-              be understood in terms of scaling a “rise over run”
-              triangle until the {" "}
-              <i>
-                rise
-              </i>
-              {" "} hits {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/YikH.svg" />
-            <Pause />
-            <OuterP>
-              ...like so, since {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\te&#123;run&#125; = &#123;\te&#123;rise&#125;\over \te&#123;slope&#125;&#125;$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              implies {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\te&#123;run&#125; = &#123;1\over \te&#123;slope&#125;&#125;$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} by the
-              time ‘rise’ hits {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} implying {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\te&#123;run&#125; = &#123;1\over A&#125;$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "} since the 
-              slope is {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Complete compass-and-ruler constructions can
-              easily be reconstituted from the above diagrams,
-              and we hereby declare the second solution finished!!
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={28}>
-          <ExerciseStatement id="_111_hgi_">
-            <OuterP>
-              <b>
-                Exercise 28.
               </b>
               {" "}
               By what factor are areas stretched
@@ -11320,11 +10723,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={29}>
-          <ExerciseStatement id="_112_hgi_">
+        <Exercise number={28}>
+          <ExerciseStatement id="_111_hgi_">
             <OuterP>
               <b>
-                Exercise 29.
+                Exercise 28.
               </b>
               {" "}
               Rank the {" "}
@@ -11416,11 +10819,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={30}>
-          <ExerciseStatement id="_113_hgi_">
+        <Exercise number={29}>
+          <ExerciseStatement id="_112_hgi_">
             <OuterP>
               <b>
-                Exercise 30.
+                Exercise 29.
               </b>
               {" "}
               Give a formula for the area of a sphere of
@@ -11486,11 +10889,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={31}>
-          <ExerciseStatement id="_114_hgi_">
+        <Exercise number={30}>
+          <ExerciseStatement id="_113_hgi_">
             <OuterP>
               <b>
-                Exercise 31.
+                Exercise 30.
               </b>
               {" "}
               Give a formula for the volume of a sphere of
@@ -11597,11 +11000,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={32}>
-          <ExerciseStatement id="_115_hgi_">
+        <Exercise number={31}>
+          <ExerciseStatement id="_114_hgi_">
             <OuterP>
               <b>
-                Exercise 32.
+                Exercise 31.
               </b>
               {" "}
               An access staircase goes up the side of a
@@ -11859,11 +11262,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={33}>
-          <ExerciseStatement id="_116_hgi_">
+        <Exercise number={32}>
+          <ExerciseStatement id="_115_hgi_">
             <OuterP>
               <b>
-                Exercise 33.
+                Exercise 32.
               </b>
               {" "}
               Give a decimal approximation to
@@ -12122,11 +11525,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={34}>
-          <ExerciseStatement id="_117_hgi_">
+        <Exercise number={33}>
+          <ExerciseStatement id="_116_hgi_">
             <OuterP>
               <b>
-                Exercise 34.
+                Exercise 33.
               </b>
               {" "}
               From the first three steps of the
@@ -12541,11 +11944,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={35}>
-          <ExerciseStatement id="_118_hgi_">
+        <Exercise number={34}>
+          <ExerciseStatement id="_117_hgi_">
             <OuterP>
               <b>
-                Exercise 35.
+                Exercise 34.
               </b>
               {" "}
               A ship travels from the South pole of a watery
@@ -12685,11 +12088,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={36}>
-          <ExerciseStatement id="_119_hgi_">
+        <Exercise number={35}>
+          <ExerciseStatement id="_118_hgi_">
             <OuterP>
               <b>
-                Exercise 36.
+                Exercise 35.
               </b>
               {" "}
               Below are four function compositions
@@ -12902,20 +12305,20 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={37}>
-          <ExerciseStatement id="_120_hgi_">
+        <Exercise number={36}>
+          <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
-                Exercise 37.
+                Exercise 36.
               </b>
               {" "}
               How would the graphs of the four compositions
               in {" "}
               <InChapterLink
-                href="/article/chapter5#_119_hgi_"
+                href="/article/chapter5#_118_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 36
+                Exercise 35
               </InChapterLink>
               {" "} 
               compare to the graph of the generic function {" "}
@@ -13048,11 +12451,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={38}>
-          <ExerciseStatement id="_121_hgi_">
+        <Exercise number={37}>
+          <ExerciseStatement id="_120_hgi_">
             <OuterP>
               <b>
-                Exercise 38.
+                Exercise 37.
               </b>
               {" "}
               Let
@@ -13486,10 +12889,10 @@ const Rest = () => {
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_120_hgi_"
+                  href="/article/chapter5#_119_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 37
+                  Exercise 36
                 </InChapterLink>
                 .
               </NoBreak>
@@ -13536,10 +12939,10 @@ const Rest = () => {
               {" "} also as discussed in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_120_hgi_"
+                  href="/article/chapter5#_119_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 37
+                  Exercise 36
                 </InChapterLink>
                 ;
               </NoBreak>
@@ -13562,10 +12965,10 @@ const Rest = () => {
               {" "} as discussed in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_120_hgi_"
+                  href="/article/chapter5#_119_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 37
+                  Exercise 36
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -13585,10 +12988,10 @@ const Rest = () => {
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_120_hgi_"
+                  href="/article/chapter5#_119_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 37
+                  Exercise 36
                 </InChapterLink>
                 .
               </NoBreak>
@@ -13900,10 +13303,59 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={39}
-        >
+        <Exercise number={38}>
+          <ExerciseStatement id="_121_hgi_">
+            <OuterP>
+              <b>
+                Exercise 38.
+              </b>
+              {" "}
+              Illustrate the “Gregorinovich sandwich”
+              with a picture that actually looks like
+              a sandwich.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The sandwich, which states that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin\theta &lt; \theta &lt; \tan\theta
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/172j.svg"
+                offset_x="4em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $0 &lt; \theta &lt; \eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} is hereby illustrated, using
+              the fact that 
+              {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} 
+              equals subtended
+              arc length on the unit circle:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/vI4f.svg" />
+            <Pause />
+            <StarDivider />
+          </Solution>
+        </Exercise>
+        <Exercise number={39}>
           <ExerciseStatement id="_122_hgi_">
             <OuterP>
               <b>
@@ -14509,290 +13961,6 @@ const Rest = () => {
                 Exercise 40.
               </b>
               {" "}
-              What are the maximum and minimum values
-              of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \theta \ra \cos\theta\sin\theta
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and for which {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} are they attained?
-              (Reason geometrically, not by calculus.)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              While it may seem unrelated to the problem
-              at hand, we start by noting that the “isosets”
-              of the two-variable function
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x, y) \ra xy
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              have this general aspect:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/ME1k.svg"
-              style="margin-bottom:0.5em;"
-            />
-            <Pause />
-            <OuterP>
-              What will give us a similar level of
-              insight is a “heatmap” of {" "}
-              <NoBreak>
-                <Math>
-                  $(x, y) \ra xy$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/FGx3.svg"
-              style="margin-bottom:0.5em;"
-            />
-            <Pause />
-            <OuterP>
-              The geometric insight that is of interest to
-              is that,
-              at any given
-              distance from the origin, the lines
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = y
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = -y
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              hold the largest and smallest values, respectively,
-              of {" "}
-              <NoBreak>
-                <Math>
-                  $xy$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/YYAQ.svg" />
-            <Pause />
-            <OuterP>
-              In other words,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos(\theta)\cdot\sin(\theta),
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as a value of the form {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} times {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinate”
-              </NoBreak>
-              {" "}
-              of a point confined to the unit circle,
-              will reach its maximum when
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (\cos \theta, \sin \theta) = \pm(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where it attains value
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and will reach its minimum when
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (\cos \theta, \sin \theta) = \pm(-\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              where it attains value
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (-\sqrt&#123;0.5&#125;) \cdot \sqrt&#123;0.5&#125; = -&#123;1\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              while, to answer the last part of the question,
-              the set of {" "}
-              <NoBreak>
-                <Math>
-                  $\theta$
-                </Math>
-                's
-              </NoBreak>
-              {" "} for which the 
-              maximum and minimum are reached will be...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \&#123;0.5\eta + 2\eta k: k \in \zz\&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...and...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \&#123;1.5\eta + 2\eta k: k \in \zz\&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...respectively, as illustrated...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/FyVW.svg" />
-            <Pause />
-            <OuterP>
-              ...here.
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                We can draw annotated graphs of {" "}
-                <NoBreak>
-                  <Math>
-                    $\cos x\sin x$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} in 
-                radians and in degrees:
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/svgo-svg/7Hpe.svg"
-                style="margin-bottom:-0.5em"
-              />
-              <Pause />
-              <Image src="/build-img/svgo-svg/H0zm.svg" />
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={41}>
-          <ExerciseStatement id="_124_hgi_">
-            <OuterP>
-              <b>
-                Exercise 41.
-              </b>
-              {" "}
-              Illustrate the “Gregorinovich sandwich”
-              with a picture that actually looks like
-              a sandwich.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The sandwich, which states that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sin\theta &lt; \theta &lt; \tan\theta
-              $$
-              <ImageRight
-                src="/build-img/svgo-svg/172j.svg"
-                offset_x="4em"
-                compensate_offset_x_for_large_text_columns={true}
-              />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for {" "}
-              <NoBreak>
-                <Math>
-                  $0 &lt; \theta &lt; \eta$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} is hereby illustrated, using
-              the fact that 
-              {" "}
-              <Math>
-                $\theta$
-              </Math>
-              {" "} 
-              equals subtended
-              arc length on the unit circle:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/vI4f.svg" />
-            <Pause />
-            <StarDivider />
-          </Solution>
-        </Exercise>
-        <Exercise number={42}>
-          <ExerciseStatement id="_125_hgi_">
-            <OuterP>
-              <b>
-                Exercise 42.
-              </b>
-              {" "}
               What is the dotted line distance as a function
               of {" "}
               <NoBreak>
@@ -14918,11 +14086,14 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={43}>
-          <ExerciseStatement id="_126_hgi_">
+        <Exercise
+          work="ing"
+          number={41}
+        >
+          <ExerciseStatement id="_124_hgi_">
             <OuterP>
               <b>
-                Exercise 43.
+                Exercise 41.
               </b>
               {" "}
               How to express the two sides marked ‘?’ as functions
@@ -14975,7 +14146,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/FCDD.svg" />
+            <Image src="/tmp-images/e5_sine_rule_statement.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -14999,10 +14170,28 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              as illustrated here:
+              by swinging from the side of length {" "}
+              <Math>
+                $a$
+              </Math>
+              {" "} to a
+              “middle height”, to the bottom length (this is
+              entirely the same as 
+              the solution technique of
+              {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_87_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 4
+                </InChapterLink>
+                ):
+              </NoBreak>
+              {" "}{" "}
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/kTuA.svg" />
+            <Image src="/tmp-images/e5_sine_rule_sol1.svg" />
             <Pause />
             <OuterP>
               The top length of ‘?’, on the other hand,
@@ -15040,17 +14229,17 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/_k6V.svg">
+            <Image src="/tmp-images/e5_sine_rule_sol2_new_ver.svg">
               <ImageRight
-                src="/build-img/svgo-svg/k0X9.svg"
+                src="/tmp-images/e5_sine_rule_sin_2b_cloud.svg"
                 offset_x="-30%"
                 offset_y="38%"
               />
             </Image>
             <Pause />
-            <Image src="/build-img/svgo-svg/t4FJ.svg" />
-            <Pause />
-            <StarDivider />
+            <OuterP>
+              That's it!
+            </OuterP>
             <Pause />
             <SolutionNote>
               <OuterP>
@@ -15064,9 +14253,9 @@ const Rest = () => {
                 <MathBlock>
                   $$
                   \begin&#123;gather*&#125;
-                  &#123;a\over b&#125; = &#123;\sin \alpha\over \sin\beta&#125;\qquad&#123;b\over a&#125; = &#123;\sin \beta\over \sin\alpha&#125;            \\
-                  &#123;a\over c&#125; = &#123;\sin \alpha\over \sin\gamma&#125;\qquad&#123;c\over a&#125; = &#123;\sin \gamma\over \sin\alpha&#125; \up&#123;2.2&#125; \\
-                  &#123;b\over c&#125; = &#123;\sin \beta\over \sin\gamma&#125;\qquad&#123;c\over b&#125; = &#123;\sin \gamma\over \sin\beta&#125;   \up&#123;2.2&#125;
+                  &#123;b\over a&#125; = &#123;\sin \beta\over \sin\alpha&#125;           \qquad &#123;a\over b&#125; = &#123;\sin \alpha\over \sin\beta&#125; \\
+                  &#123;c\over a&#125; = &#123;\sin \gamma\over \sin\alpha&#125; \up&#123;2.2&#125; \qquad &#123;a\over c&#125; = &#123;\sin \alpha\over \sin\gamma&#125;\\
+                  &#123;c\over b&#125; = &#123;\sin \gamma\over \sin\beta&#125;  \up&#123;2.2&#125; \qquad &#123;b\over c&#125; = &#123;\sin \beta\over \sin\gamma&#125; \\
                   \end&#123;gather*&#125;
                   $$
                 </MathBlock>
@@ -15099,7 +14288,7 @@ const Rest = () => {
                 {" "} as labeled here...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/VvH9.svg" />
+              <Image src="/tmp-images/e5_sine_rule_generic.svg" />
               <Pause />
               <OuterP>
                 ...though we can condense these equations to...
@@ -15175,7 +14364,7 @@ const Rest = () => {
                 exterior angles of the triangle:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/CquJ.svg" />
+              <Image src="/tmp-images/e5_sine_rule_generic_exterior.svg" />
               <Pause />
               <OuterP>
                 ...then each of {" "}
@@ -15207,45 +14396,284 @@ const Rest = () => {
                 <del>
                   sine?
                 </del>
-                {" "} sign), leaving the original equations intact!
+                {" "} sign), leaving the original equations intact.
                 <ImageRight
                   line="1.0"
-                  src="/build-img/svgo-svg/NoGZ.svg"
+                  src="/tmp-images/e5_sine_rule_sin_360_m_x_cloud.svg"
                 />
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 4.
-                </i>
-                {" "}
-                If you're having some sense of {" "}
-                <i>
-                  déjà vu
-                </i>
-                ,
-                it might be because
-                {" "}
-                <InChapterLink
-                  href="/article/chapter5#_87_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 4
-                </InChapterLink>
-                {" "}
-                uses a similar-if-not-identical solution technique!
-                (And if not, then not.)
               </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={44}>
-          <ExerciseStatement id="_127_hgi_">
+        <Exercise number={42}>
+          <ExerciseStatement id="_125_hgi_">
             <OuterP>
               <b>
-                Exercise 44.
+                Exercise 42.
+              </b>
+              {" "}
+              In the drawing below, at what coordinates,
+              expressed as a function of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              does the tangent to the circle
+              intersect the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} axes?
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/AdMn.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              For starters assume that {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} lies in
+              the first quadrant, in
+              which case both coordinates are nonnegative, and, more specifically, 
+              are equal to the two 
+              purple lengths below:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/nF2I.svg" />
+            <Pause />
+            <OuterP>
+              Regarding this diagram, note that:
+            </OuterP>
+            <Pause />
+            <List style="gap:1em">
+              <Item>
+                <p>
+                  we have already “used up” the fact that
+                  the radius of the circle is {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  {" "} by
+                  making the dropped height (which used to
+                  be a radius) length {" "}
+                  <NoBreak>
+                    <Math>
+                      $1$
+                    </Math>
+                    ;
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  we use a “the complement of my complement
+                  is myself”-type argument to deduce that the
+                  upper left angle is {" "}
+                  <NoBreak>
+                    <Math>
+                      $\theta$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "} as well
+                  (cf. {" "}
+                  <NoBreak>
+                    <InChapterLink
+                      href="/article/chapter5#_105_hgi_"
+                      class="handle-in-chapter-link"
+                    >
+                      Exercise 22
+                    </InChapterLink>
+                    ,
+                  </NoBreak>
+                  {" "}
+                  {" "}
+                  <NoBreak>
+                    <InChapterLink
+                      href="/article/chapter5#_106_hgi_"
+                      class="handle-in-chapter-link"
+                    >
+                      Exercise 23
+                    </InChapterLink>
+                    ).
+                  </NoBreak>
+                  {" "}{" "}
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              Because {" "}
+              <Math>
+                $1 \cdot \sec(\theta) = \sec(\theta)$
+              </Math>
+              {" "} the
+              bottom length is {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} while the vertical
+              length is {" "}
+              <NoBreak>
+                <Math>
+                  $1\cdot \csc(\theta) = \csc(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} similarly:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/wgBS.svg" />
+            <Pause />
+            <Image src="/build-img/svgo-svg/D8sZ.svg" />
+            <Pause />
+            <OuterP>
+              ...i.e., in the first quadrant, at least, the
+              coordinates are {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\csc(\theta)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/i6Bn.svg" />
+            <Pause />
+            <OuterP>
+              For the other quadrants we can reason by
+              symmetry with the first quadrant:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/TRpy.svg" />
+            <Pause />
+            <OuterP>
+              In more detail, the product of the two coordinates
+              marked by purple arrows is the same in all four
+              quadrants, because “minus times minus is plus”; but
+              in first quadrant, the product is {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because
+              we know the product takes the form {" "}
+              <Math>
+                $\cos(\theta)\cdot\sec(\theta)$
+              </Math>
+              {" "}
+              in that quadrant;
+              therefore the product is {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} in {" "}
+              <i>
+                all
+              </i>
+              {" "} quadrants; but
+              the coordinate marked by the inside purple arrow is
+              {" "}
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              {" "} in all quadrants; therefore, lastly,
+              the coordinate marked by the {" "}
+              <i>
+                outside
+              </i>
+              {" "} purple arrow
+              is {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} in all quadrants, since {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "}
+              is the unique number whose product with {" "}
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              {" "}
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ;
+              </NoBreak>
+              {" "} similarly the inside orange arrow marks coordinate
+              {" "}
+              <Math>
+                $\sin(\theta)$
+              </Math>
+              {" "} is all quadrants, so the outside orange
+              arrow (by similar reasoning) has coordinate {" "}
+              <Math>
+                $\csc(\theta)$
+              </Math>
+              {" "}
+              in all quadrants, QED. (I.e., the grand conclusion is that the
+              two coordinates are
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \sec(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "} intersection, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \csc(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for the {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "} intersection, no matter the quadrant.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={43}>
+          <ExerciseStatement id="_126_hgi_">
+            <OuterP>
+              <b>
+                Exercise 43.
               </b>
               {" "}
               Stipulating
@@ -15473,6 +14901,574 @@ const Rest = () => {
                 </Math>
                 !
               </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={44}>
+          <ExerciseStatement id="_127_hgi_">
+            <OuterP>
+              <b>
+                Exercise 44.
+              </b>
+              {" "}
+              If {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and a value {" "}
+              <Math>
+                $A &gt; 1$
+              </Math>
+              {" "} are marked
+              on a line...
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:0.8em;"
+              src="/build-img/svgo-svg/j4h0.svg"
+            />
+            <Pause />
+            <OuterP>
+              ...how can we find the placement of...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 / A
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...on the same line by a purely geometric construction?
+              What about if {" "}
+              <NoBreak>
+                <Math>
+                  $0 &lt; A &lt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $-1 &lt; A &lt; 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} etc?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                Solution 1.
+              </i>
+              {" "}
+              The basic idea of the solution is to find
+              an angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} such that {" "}
+              <NoBreak>
+                <Math>
+                  $A = \sec(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              if {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &gt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              or symmetrically, such that {" "}
+              <NoBreak>
+                <Math>
+                  $A = \cos(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} if {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &lt; 1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/kxTm.svg" />
+            <Pause />
+            <Image src="/build-img/svgo-svg/ryx0.svg" />
+            <Pause />
+            <OuterP>
+              (Cf. {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_125_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 42
+                </InChapterLink>
+                .)
+              </NoBreak>
+              {" "}
+              We now proceed with
+              step-by-step
+              compass-and-ruler 
+              instructions for the two cases:
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              ~ ~ case {" "}
+              <Math>
+                $|A| &gt; 1$
+              </Math>
+              {" "} ~ ~
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <i>
+                Step 1.
+              </i>
+              {" "} Find the midpoint between {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ;
+              </NoBreak>
+              {" "} for
+              this, the procedure is to use two circles of equal radius:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/JM7s.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 2.
+              </i>
+              {" "} Draw a semicircle of radius {" "}
+              <Math>
+                $A/2$
+              </Math>
+              {" "} whose
+              center is that midpoint:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/eQmC.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 3.
+              </i>
+              {" "} Draw a circle of radius {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} whose center
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/emr1.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 4.
+              </i>
+              {" "} Draw a line through the intersections
+              of the two circles to find the position of {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/XE7K.svg" />
+            <Pause />
+            <OuterP>
+              (The reason that the whole procedure works is that
+              this triangle...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/KO2V.svg" />
+            <Pause />
+            <OuterP>
+              ...is actually right-angled at its upper corner
+              by 
+              the Peloponnesian Theorem.
+              This implies that the line from {" "}
+              <Math>
+                $(A, 0)$
+              </Math>
+              {" "} to that
+              corner is tangent to the circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which is
+              what we want/need.)
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              ~ ~ case {" "}
+              <Math>
+                $|A| &lt; 1$
+              </Math>
+              {" "} ~ ~
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <i>
+                Step 1.
+              </i>
+              {" "} 
+              With {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &lt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} start by
+              marking points at equal distance to {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} 
+              by drawing a circle 
+              centered at {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              of any radius:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/RGWo.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 2.
+              </i>
+              {" "} Use these points to draw a perpendicular 
+              through {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} similarly to the first step of
+              the case {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &gt; 1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/4MXO.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 3.
+              </i>
+              {" "} 
+              Draw a circle of radius {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} centered at {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and draw a line through {" "}
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "} and the upper
+              intersection of the circle with the perpendicular:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/FPj6.svg" />
+            <Pause />
+            <OuterP>
+              <i>
+                Step 4.
+              </i>
+              {" "} 
+              Construct a perpendicular to this line
+              at the point of intersection by repeating the
+              process of the first two steps; 
+              the intersection of that line with the
+              main axis is {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/hKBQ.svg" />
+            <Pause />
+            <StarDivider />
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 2.
+              </i>
+              {" "} Note that for an angle
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              the values
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \tan\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cot\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can be
+              found here and here, by {" "}
+              <InChapterLink
+                href="/article/chapter5#_126_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 43
+              </InChapterLink>
+              {" "}
+              (this figure is just a recap of {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_126_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 43
+                </InChapterLink>
+                ):
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/SB49.svg" />
+            <Pause />
+            <OuterP>
+              However,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\cot\theta = 1/\tan\theta,
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so if {" "}
+              <Math>
+                $\tan\theta = A$
+              </Math>
+              {" "} then {" "}
+              <NoBreak>
+                <Math>
+                  $\cot\theta = 1/A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which
+              gives rise to the following idea for a geometric construction
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} shown here for {" "}
+              <Math>
+                $0 &lt; A &lt; 1$
+              </Math>
+              {" "} (though it works for all {" "}
+              <NoBreak>
+                <Math>
+                  $A \in \rr$
+                </Math>
+                ):
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/vM7r.svg" />
+            <Pause />
+            <OuterP>
+              Or, symmetrically, we can treat {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} as {" "}
+              <NoBreak>
+                <Math>
+                  $\cot\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} from
+              which {" "}
+              <Math>
+                $\tan\theta$
+              </Math>
+              {" "} becomes {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/5-80.svg" />
+            <Pause />
+            <OuterP>
+              The second diagram
+              can also
+              be understood in terms of “materializing” the slope
+              of a line of slope {" "}
+              <Math>
+                $1/A$
+              </Math>
+              {" "} by scaling a “rise over run”
+              triangle until the run hits {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/xbp-.svg" />
+            <Pause />
+            <OuterP>
+              ...like so; 
+              and symmetrically, the first diagram can 
+              be understood in terms of scaling a “rise over run”
+              triangle until the {" "}
+              <i>
+                rise
+              </i>
+              {" "} hits {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/YikH.svg" />
+            <Pause />
+            <OuterP>
+              ...like so, since {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\te&#123;run&#125; = &#123;\te&#123;rise&#125;\over \te&#123;slope&#125;&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              implies {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\te&#123;run&#125; = &#123;1\over \te&#123;slope&#125;&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} by the
+              time ‘rise’ hits {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} implying {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\te&#123;run&#125; = &#123;1\over A&#125;$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} since the 
+              slope is {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Complete compass-and-ruler constructions can
+              easily be reconstituted from the above diagrams,
+              and we hereby declare the second solution finished!!
             </OuterP>
           </Solution>
         </Exercise>
@@ -16076,10 +16072,10 @@ const Rest = () => {
               As seen in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_108_hgi_"
+                  href="/article/chapter5#_109_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 25
+                  Exercise 26
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -16191,10 +16187,10 @@ const Rest = () => {
               the content of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_105_hgi_"
+                  href="/article/chapter5#_106_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 22
+                  Exercise 23
                 </InChapterLink>
                 ):
               </NoBreak>
