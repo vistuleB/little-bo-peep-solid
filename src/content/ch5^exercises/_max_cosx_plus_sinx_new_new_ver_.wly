@@ -1,5 +1,6 @@
 |> Exercise
-    handle=_max_sinx_+_cosx_new_new_ver_
+    work=ing
+    handle=_max_cosx_plus_sinx_new_new_ver_
 
     The graph $y = \cos x + \sin x$ from Exercise 
     >>_four_graphs_ has a maximum value greater than $1$:
@@ -125,8 +126,6 @@
             \end{aligned}
             $$
 
-            !! ...in case you're not familiar with this kind of
-            !! arithmetic.)
             ...in case you haven't seen this kind of
             arithmetic before.)
         

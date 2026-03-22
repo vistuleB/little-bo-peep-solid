@@ -1,5 +1,6 @@
 |> Exercise
-    handle=_turn_cosx_into_sinx_+_cosx_
+    work=ing
+    handle=_turn_cosx_into_cosx_plus_sinx_
 
     Conjecture a sequence of geometric transformations
     that maps
@@ -10,7 +11,7 @@
     $$
     y = \sin x + \cos x
     $$
-    and prove your answer. (Comparison: Exercise >>_max_sinx_+_cosx_.)
+    and prove your answer. (Comparison: Exercise >>_max_cosx_plus_sinx_new_new_ver_.)
 
     |> Solution
 
@@ -18,7 +19,7 @@
         has period $4\eta$ just like $\sin$ or
         $\cos$, but, unlike $\sin$ and $\cos$,
         $\sin + \cos$ reaches a maximum of $\sqrt{2}$
-        at $x = \eta/2$, as uncovered in Exercise >>_max_sinx_+_cosx_,
+        at $x = \eta/2$, as uncovered in Exercise >>_max_cosx_plus_sinx_new_new_ver_,
         from which the following graphic is recovered:
 
         |> Image
@@ -40,8 +41,8 @@
         __1. horizontal translation to the right by $\eta/2$__
         __2. vertical scaling by $\sqrt{2}$__
         Now you might recall from previous discussions
-        (cf. Exercise 7 of Chapter >>functions, part 1 of Exercise 27
-        in this chapter) that
+        (cf. Exercise >>_what_seq_AB_ of Chapter >>functions,
+        part 1 of Exercise >>_four_compositions_graphed_ in this chapter) that
         $$
         x \ra f(x + a)
         $$

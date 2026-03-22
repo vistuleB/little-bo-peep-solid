@@ -1,5 +1,5 @@
 |> Exercise
-    handle=_max_sinx_+_cosx_
+    handle=_max_cosx_plus_sinx_
 
     The graph $y = \cos(x) + \sin(x)$ from Exercise 
     >>_four_graphs_ has a maximum value greater than $1$:

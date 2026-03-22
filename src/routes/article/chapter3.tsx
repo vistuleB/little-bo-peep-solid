@@ -3085,7 +3085,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={7}>
+        <Exercise
+          work="ing"
+          number={7}
+        >
           <ExerciseStatement id="_37_hgi_">
             <OuterP>
               <b>
@@ -4631,7 +4634,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={14}>
+        <Exercise
+          work="ing"
+          number={14}
+        >
           <ExerciseStatement id="_45_hgi_">
             <OuterP>
               <b>

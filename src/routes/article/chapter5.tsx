@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_131_hgi_"
+      id="_132_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -4366,7 +4366,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_130_hgi_">
+      <Exercises id="_131_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -5293,10 +5293,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={4}
-        >
+        <Exercise number={4}>
           <ExerciseStatement id="_87_hgi_">
             <OuterP>
               <b>
@@ -5605,7 +5602,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={5}>
+        <Exercise
+          work="ing"
+          number={5}
+        >
           <ExerciseStatement id="_88_hgi_">
             <OuterP>
               <b>
@@ -7764,7 +7764,7 @@ const Rest = () => {
               the ceiling near the top of the door:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_opening_door_soln0.svg" />
+            <Image src="/build-img/svgo-svg/Tsmn.svg" />
             <Pause />
             <OuterP>
               For this we need the lengths marked ‘2’ and
@@ -7774,7 +7774,7 @@ const Rest = () => {
               (we will also reuse length ‘3’ below|):
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch5_ex_opening_door_soln1.svg" />
+            <Image src="/build-img/svgo-svg/odA8.svg" />
             <Pause />
             <OuterP>
               (Nb: One can also compute the length marked ‘2’ as
@@ -8126,7 +8126,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={17}>
+        <Exercise
+          work="ing"
+          number={17}
+        >
           <ExerciseStatement id="_100_hgi_">
             <OuterP>
               <b>
@@ -12305,7 +12308,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={36}>
+        <Exercise
+          work="ing"
+          number={36}
+        >
           <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
@@ -12996,64 +13002,6 @@ const Rest = () => {
                 .
               </NoBreak>
               {" "}{" "}
-            </OuterP>
-            <OuterP class="indent-10">
-              To recapitulate, starting from {" "}
-              <NoBreak>
-                <Math>
-                  $y = \sin(x)$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <List style="padding-left:33px;padding-right:2em;">
-              <Item>
-                <p>
-                  step 1: translates the graph left by {" "}
-                  <Math>
-                    $1.33\,\,(= C)$
-                  </Math>
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  step 2: compresses the resulting graph horizontally by {" "}
-                  <Math>
-                    $2.33\,\,(= B)$
-                  </Math>
-                  {" "} about the {" "}
-                  <Math>
-                    $y$
-                  </Math>
-                  {" "} axis
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  step 3: dilates the resulting graph vertically by {" "}
-                  <Math>
-                    $3.33\,\,(= A)$
-                  </Math>
-                  {" "} about the {" "}
-                  <Math>
-                    $x$
-                  </Math>
-                  {" "} axis
-                </p>
-              </Item>
-              <Item>
-                <p>
-                  step 4: translates the resulting graph up by {" "}
-                  <Math>
-                    $4.33\,\,(= D)$
-                  </Math>
-                </p>
-              </Item>
-            </List>
-            <Pause />
-            <OuterP>
-              ...and that's the end.
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -14086,10 +14034,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={41}
-        >
+        <Exercise number={41}>
           <ExerciseStatement id="_124_hgi_">
             <OuterP>
               <b>
@@ -14146,7 +14091,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sine_rule_statement.svg" />
+            <Image src="/build-img/svgo-svg/FCDD.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -14191,7 +14136,7 @@ const Rest = () => {
               {" "}{" "}
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sine_rule_sol1.svg" />
+            <Image src="/build-img/svgo-svg/kTuA.svg" />
             <Pause />
             <OuterP>
               The top length of ‘?’, on the other hand,
@@ -14229,9 +14174,9 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_sine_rule_sol2_new_ver.svg">
+            <Image src="/build-img/svgo-svg/EPyX.svg">
               <ImageRight
-                src="/tmp-images/e5_sine_rule_sin_2b_cloud.svg"
+                src="/build-img/svgo-svg/k0X9.svg"
                 offset_x="-30%"
                 offset_y="38%"
               />
@@ -14288,7 +14233,7 @@ const Rest = () => {
                 {" "} as labeled here...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_sine_rule_generic.svg" />
+              <Image src="/build-img/svgo-svg/VvH9.svg" />
               <Pause />
               <OuterP>
                 ...though we can condense these equations to...
@@ -14364,7 +14309,7 @@ const Rest = () => {
                 exterior angles of the triangle:
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_sine_rule_generic_exterior.svg" />
+              <Image src="/build-img/svgo-svg/CquJ.svg" />
               <Pause />
               <OuterP>
                 ...then each of {" "}
@@ -14399,7 +14344,7 @@ const Rest = () => {
                 {" "} sign), leaving the original equations intact.
                 <ImageRight
                   line="1.0"
-                  src="/tmp-images/e5_sine_rule_sin_360_m_x_cloud.svg"
+                  src="/build-img/svgo-svg/NoGZ.svg"
                 />
               </OuterP>
             </SolutionNote>
@@ -16392,6 +16337,509 @@ const Rest = () => {
                   .)
                 </NoBreak>
                 {" "}{" "}
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={47}
+        >
+          <ExerciseStatement id="_130_hgi_">
+            <OuterP>
+              <b>
+                Exercise 47.
+              </b>
+              {" "}
+              A geometric interpretation of
+              {" "}
+              <Math>
+                $\cos x + \sin x$
+              </Math>
+              {" "} is given in {" "}
+              <InChapterLink
+                href="/article/chapter5#_100_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 17
+              </InChapterLink>
+              {" "}
+              that, to recap, involves “raining down at {" "}
+              <NoBreak>
+                <Math>
+                  $-45^\circ$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              onto the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis, as illustrated here:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/77pT.svg" />
+            <Pause />
+            <OuterP>
+              Using this geometric insight, how can we express
+              {" "}
+              <Math>
+                $x \ra \cos x + \sin x$
+              </Math>
+              {" "} as a function of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra A\cdot\cos(Bx + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some constants {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $C$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $D$
+                </Math>
+                ?
+              </NoBreak>
+              {" "} (Deduce the answer
+              using geometry, and, if you have the heart, verify using
+              algebra.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Imagine a large ruler living below the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis,
+              off of which we read the values of {" "}
+              <NoBreak>
+                <Math>
+                  $\cos x + \sin x$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/US0B.svg" />
+            <Pause />
+            <OuterP>
+              (This ruler contains just the same numbers as the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              axis in the same place, but need only go from {" "}
+              <Math>
+                $-\sqrt&#123;2&#125;$
+              </Math>
+              {" "}
+              to {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} those being the minimum and maximum values
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \ra \cos\theta + \sin\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as covered in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_100_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 17
+                </InChapterLink>
+                .)
+              </NoBreak>
+              {" "}
+              Alternately, we could read values off of a ruler placed
+              at {" "}
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "} through the circle...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/DXtE.svg" />
+            <Pause />
+            <OuterP>
+              ...and then later multiply by {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} to recover the
+              original “scale” of the horizontal ruler. However, the
+              value on the diagonal ruler is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(x - \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as one can see by rotating the entire diagram {" "}
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "}
+              clockwise until that ruler aligns with the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis;
+              therefore,
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \cos x + \sin x = \sqrt&#123;2&#125;\cdot\cos(x - \eta/2)
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              ...where you can think of the left-hand side of the
+              equation as the value on the original “big” horizontal
+              ruler (from {" "}
+              <Math>
+                $-\sqrt&#123;2&#125;$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} and the value on
+              the right-hand side as the coordinate read off of the “small
+              diagonal ruler” re-normalized by the factor {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              Concretely,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              A = \sqrt&#123;2&#125;,\\
+              B = \up&#123;1.3&#125;1,\\
+              C = \up&#123;1.3&#125;-\eta/2,\\
+              D = \up&#123;1.3&#125;0,
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as those parameters appear in the problem statement.
+            </OuterP>
+            <OuterP class="indent-10">
+              Now for the ALGEBRAIC VERIFICATION 
+              that can accompany this geometric observation, we
+              use the angle-sum formula
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(A + B) = \cos A\cos B - \sin A\sin B
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for cosine, giving us...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              &amp;\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;)) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos x + \sin x) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2 \cdot 0.5&#125;\cdot(\cos x + \sin x) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;1&#125;\cdot(\cos x + \sin x) \\
+              \up&#123;1.6&#125; =&amp;\,\, \cos x + \sin x
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...victory!!!!
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The fact that
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \sqrt&#123;2&#125;\cdot \sqrt&#123;0.5&#125; = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                can also be seen from the fact that
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                previously discussed.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                If we admit
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(A - B) = \cos A\cos B + \sin A\sin B
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                (replace {" "}
+                <Math>
+                  $B$
+                </Math>
+                {" "} by {" "}
+                <Math>
+                  $-B$
+                </Math>
+                {" "} in the angle-sum formula
+                for cosine, and use the fact that {" "}
+                <NoBreak>
+                  <Math>
+                    $\cos(-B) = \cos B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                {" "}
+                <Math>
+                  $\sin(-B) = -\sin B$
+                </Math>
+                {" "} for all {" "}
+                <NoBreak>
+                  <Math>
+                    $B\in \rr$
+                  </Math>
+                  )
+                </NoBreak>
+                {" "} into the
+                “roster of known formulas”, the algebraic proof
+                becomes...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;aligned&#125;
+                &amp;\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
+                \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(\eta/2) + \sin(x)\sin(\eta/2)) \\
+                \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; + \sin(x)\sqrt&#123;0.5&#125;) \\
+                \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos x + \sin x) \\
+                \up&#123;1.6&#125; =&amp;\,\, \cos x + \sin x
+                \end&#123;aligned&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...with fewer {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $-$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} signs.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                Note that the graph...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                y = \sqrt&#123;2&#125;\cos(x - \eta/2)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...as it is the graph of the composition...
+              </OuterP>
+              <Pause />
+              <Image src="/tmp-images/e5_cosx_plus_sinx_as_geometric_cos_composition.svg" />
+              <Pause />
+              <OuterP>
+                ...(cf. {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter5#_119_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Exercise 36
+                  </InChapterLink>
+                  )
+                </NoBreak>
+                {" "} 
+                can be obtained from...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                y = \cos x
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                ...by...
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                1. translating horizontally by {" "}
+                <Math>
+                  $\eta/2$
+                </Math>
+                {" "} to the right
+              </CentralDisplayItalic>
+              <Pause />
+              <CentralDisplayItalic>
+                2. dilating vertically by {" "}
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                ...and, on the other hand, if we take a look at the
+                previously “annotated” graph of {" "}
+                <Math>
+                  $x \ra \cos x + \sin x$
+                </Math>
+                {" "}
+                (cf. {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter5#_100_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Exercise 17
+                  </InChapterLink>
+                  )...
+                </NoBreak>
+                {" "}{" "}
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/8ykE.svg" />
+              <Pause />
+              <OuterP>
+                ...it certainly {" "}
+                <i>
+                  looks like
+                </i>
+                {" "} this curve could be obtained by
+                translating the graph {" "}
+                <Math>
+                  $y = \cos x$
+                </Math>
+                {" "} horizontally by
+                {" "}
+                <Math>
+                  $\eta/2$
+                </Math>
+                {" "} and then scaling vertically by {" "}
+                <NoBreak>
+                  <Math>
+                    $\sqrt&#123;2&#125;$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} 
+                And it {" "}
+                <i>
+                  looks
+                </i>
+                {" "} so because it {" "}
+                <i>
+                  is
+                </i>
+                {" "} so.
+                (We know that, now, because we have proved that {" "}
+                <Math>
+                  $\cos x + \sin x = \sqrt&#123;2&#125;\cos(x - \eta/2)$
+                </Math>
+                {" "}
+                for all {" "}
+                <NoBreak>
+                  <Math>
+                    $x \in \rr$
+                  </Math>
+                  .)
+                </NoBreak>
               </OuterP>
             </SolutionNote>
           </Solution>

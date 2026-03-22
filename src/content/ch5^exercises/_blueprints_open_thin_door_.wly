@@ -31,7 +31,7 @@
         the ceiling near the top of the door:
 
         |> Image
-            src=tmp-images/svg_ch5_ex_opening_door_soln0.svg
+            src=images/svg_ch5_ex_opening_door_soln0.svg
 
         !! We start by computing these lengths in the
         !! original plane of the $2$-dimensional drawing:
@@ -42,7 +42,7 @@
         (we will also reuse length ‘3’ below|):
 
         |> Image
-            src=tmp-images/svg_ch5_ex_opening_door_soln1.svg
+            src=images/svg_ch5_ex_opening_door_soln1.svg
 
         (Nb: One can also compute the length marked ‘2’ as
         $$

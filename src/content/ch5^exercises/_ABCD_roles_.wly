@@ -140,20 +140,20 @@
         as it stands, by $D$ units up, as again discussed
         in Exercise >>_four_compositions_graphed_.
 
-        To recapitulate, starting from $y = \sin(x)$...
+        !! To recapitulate, starting from $y = \sin(x)$...
 
-        |> List
-            style=padding-left:33px;padding-right:2em;
+        !! |> List
+        !!     style=padding-left:33px;padding-right:2em;
 
-            step 1: translates the graph left by $1.33\,\,(= C)$
+        !!     step 1: translates the graph left by $1.33\,\,(= C)$
             
-            step 2: compresses the resulting graph horizontally by $2.33\,\,(= B)$ about the $y$ axis 
+        !!     step 2: compresses the resulting graph horizontally by $2.33\,\,(= B)$ about the $y$ axis 
 
-            step 3: dilates the resulting graph vertically by $3.33\,\,(= A)$ about the $x$ axis 
+        !!     step 3: dilates the resulting graph vertically by $3.33\,\,(= A)$ about the $x$ axis 
 
-            step 4: translates the resulting graph up by $4.33\,\,(= D)$
+        !!     step 4: translates the resulting graph up by $4.33\,\,(= D)$
 
-        ...and that's the end.
+        !! ...and that's the end.
 
         |> SolutionNote
 

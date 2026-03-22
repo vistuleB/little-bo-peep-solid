@@ -793,11 +793,11 @@
   },
   "svg_ch5_ex_big_snail_quad_purple_angle_2.svg": {
     "build-version": "svgo-svg/JRLJ.svg",
-    "build-version-created-on": 1773899802,
+    "build-version-created-on": 1774206880,
     "build-method": "svgo",
-    "build-version-size": 31808,
-    "original-size": 69958,
-    "compressed-size": 31808,
+    "build-version-size": 31806,
+    "original-size": 69955,
+    "compressed-size": 31806,
     "compression": "54.53%",
     "used-last-build": true,
     "3chars": ["ch5"]
@@ -953,8 +953,8 @@
     "original-size": 10931,
     "compressed-size": 4804,
     "compression": "56.05%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg": {
     "build-version": "svgo-svg/45U7.svg",
@@ -1767,8 +1767,8 @@
     "original-size": 106854,
     "compressed-size": 75315,
     "compression": "29.52%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch3_connection_x_y_6_8.svg": {
     "build-version": "svgo-svg/HuXq.svg",
@@ -1793,15 +1793,15 @@
     "3chars": ["ch2"]
   },
   "e5_sine_rule_sol1.svg": {
-    "build-version": "svg/kTuA.svg",
-    "build-version-created-on": 1773776685,
-    "build-method": "cp",
-    "build-version-size": 90654,
+    "build-version": "svgo-svg/kTuA.svg",
+    "build-version-created-on": 1774206881,
+    "build-method": "svgo",
+    "build-version-size": 9121,
     "original-size": 90654,
-    "compressed-size": 90654,
-    "compression": "0.0%",
-    "used-last-build": false,
-    "3chars": []
+    "compressed-size": 9121,
+    "compression": "89.94%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ch_unit_circle_with_four_particles.svg": {
     "build-version": "svgo-svg/WKck.svg",
@@ -2484,6 +2484,17 @@
     "compression": "20.36%",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
+  },
+  "e5_sine_rule_sol2_new_ver.svg": {
+    "build-version": "svgo-svg/EPyX.svg",
+    "build-version-created-on": 1774206881,
+    "build-method": "svgo",
+    "build-version-size": 17531,
+    "original-size": 94834,
+    "compressed-size": 17531,
+    "compression": "81.51%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch4_ch_affine_derivative_cloud.svg": {
     "build-version": "svgo-svg/2UFf.svg",
@@ -3774,7 +3785,7 @@
   },
   "e5_cosx_plus_sinx_with_max_min_info_radian_version.svg": {
     "build-version": "svgo-svg/BJ2x.svg",
-    "build-version-created-on": 1771481665,
+    "build-version-created-on": 1774206881,
     "build-method": "svgo",
     "build-version-size": 40380,
     "original-size": 104216,
@@ -3882,6 +3893,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "e5_cosx_plus_sinx_as_geometric_cos_1_v2.svg": {
+    "build-version": "svgo-svg/77pT.svg",
+    "build-version-created-on": 1774206881,
+    "build-method": "svgo",
+    "build-version-size": 192443,
+    "original-size": 318080,
+    "compressed-size": 192443,
+    "compression": "39.5%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "e5_line_with_0_1_and_A_tancot_idea_slope_explained.svg": {
     "build-version": "svgo-svg/YikH.svg",
     "build-version-created-on": 1773665116,
@@ -3956,8 +3978,8 @@
     "original-size": 11355,
     "compressed-size": 5112,
     "compression": "54.98%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ch_unit_circle_with_new_definition.svg": {
     "build-version": "svgo-svg/h28T.svg",
@@ -4247,12 +4269,12 @@
   },
   "e5_ABCD_roles_identity_comp_D.svg": {
     "build-version": "svgo-svg/mE-x.svg",
-    "build-version-created-on": 1771481659,
+    "build-version-created-on": 1774209008,
     "build-method": "svgo",
-    "build-version-size": 97910,
-    "original-size": 238877,
-    "compressed-size": 97910,
-    "compression": "59.01%",
+    "build-version-size": 15678,
+    "original-size": 238474,
+    "compressed-size": 15678,
+    "compression": "93.43%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4781,8 +4803,8 @@
     "original-size": 41968,
     "compressed-size": 32290,
     "compression": "23.06%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch4_3x_plus_one_and_second_cloud.svg": {
     "build-version": "svgo-svg/ORL8.svg",
@@ -5224,6 +5246,17 @@
     "used-last-build": true,
     "3chars": ["ch4"]
   },
+  "e5_cosx_plus_sinx_with_max_min_info_radian_version_without_arrows.svg": {
+    "build-version": "svgo-svg/8ykE.svg",
+    "build-version-created-on": 1774206883,
+    "build-method": "svgo",
+    "build-version-size": 39925,
+    "original-size": 103707,
+    "compressed-size": 39925,
+    "compression": "61.5%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg": {
     "build-version": "svgo-svg/BvFn.svg",
     "build-version-created-on": 1767342812,
@@ -5399,6 +5432,17 @@
     "compression": "65.92%",
     "used-last-build": false,
     "3chars": []
+  },
+  "e5_cosx_plus_sinx_as_geometric_cos_3.svg": {
+    "build-version": "svgo-svg/DXtE.svg",
+    "build-version-created-on": 1774206882,
+    "build-method": "svgo",
+    "build-version-size": 308295,
+    "original-size": 815342,
+    "compressed-size": 308295,
+    "compression": "62.19%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch3_truth_be_said_right_first.svg": {
     "build-version": "svgo-svg/FiSv.svg",
@@ -5741,6 +5785,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "svg_ch5_ex_opening_door_soln0.svg": {
+    "build-version": "svgo-svg/Tsmn.svg",
+    "build-version-created-on": 1774206880,
+    "build-method": "svgo",
+    "build-version-size": 29154,
+    "original-size": 60430,
+    "compressed-size": 29154,
+    "compression": "51.76%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch4_RATS_corridor_cloud.svg": {
     "build-version": "svgo-svg/zR89.svg",
     "build-version-created-on": 1768299620,
@@ -5870,8 +5925,8 @@
     "original-size": 19252,
     "compressed-size": 9341,
     "compression": "51.48%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ch_cosine_and_sine_@minus_eta.svg": {
     "build-version": "svgo-svg/CGOa.svg",
@@ -5958,8 +6013,8 @@
     "original-size": 76205,
     "compressed-size": 18466,
     "compression": "75.77%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ex_max_xy_example_isoset.svg": {
     "build-version": "svgo-svg/Hk2G.svg",
@@ -5991,6 +6046,17 @@
     "original-size": 27804,
     "compressed-size": 12415,
     "compression": "55.35%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
+  "e5_cosx_plus_sinx_as_geometric_cos_2.svg": {
+    "build-version": "svgo-svg/US0B.svg",
+    "build-version-created-on": 1774206882,
+    "build-method": "svgo",
+    "build-version-size": 424672,
+    "original-size": 599484,
+    "compressed-size": 424672,
+    "compression": "29.16%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6271,12 +6337,12 @@
   },
   "svg_ch4_ch_polaroid_1.svg": {
     "build-version": "svgo-svg/myNp.svg",
-    "build-version-created-on": 1767294296,
+    "build-version-created-on": 1773908385,
     "build-method": "svgo",
-    "build-version-size": 21509,
-    "original-size": 28274,
-    "compressed-size": 21509,
-    "compression": "23.93%",
+    "build-version-size": 21690,
+    "original-size": 29726,
+    "compressed-size": 21690,
+    "compression": "27.03%",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7019,12 +7085,12 @@
   },
   "e5_max_cosx_plus_sinx_sol1_without_lines.svg": {
     "build-version": "svgo-svg/2Wso.svg",
-    "build-version-created-on": 1771481663,
+    "build-version-created-on": 1774206881,
     "build-method": "svgo",
-    "build-version-size": 27523,
-    "original-size": 41956,
-    "compressed-size": 27523,
-    "compression": "34.4%",
+    "build-version-size": 12736,
+    "original-size": 40651,
+    "compressed-size": 12736,
+    "compression": "68.67%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },

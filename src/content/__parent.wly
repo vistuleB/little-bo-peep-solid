@@ -140,7 +140,7 @@
         >>_blueprints_top_and_side_
         >>_blueprints_open_thin_door_
         >>_powers_of_secant_
-        >>_max_sinx_+_cosx_new_new_ver_
+        >>_max_cosx_plus_sinx_new_new_ver_
         >>_isosets_of_xy_v4_
         >>_long_division_11_over_7_
         >>_long_division_22_over_7_
@@ -153,7 +153,7 @@
         !! >>_cos^2x_scale_and_translate_of_cosx_
         !! >>_relate_sinx_dot_cosx_to_sin2x_
         !! >>_turn_sinx_into_sinx_dot_cosx_
-        !! >>_turn_cosx_into_sinx_+_cosx_
+        !! >>_turn_cosx_into_cosx_plus_sinx_
         !! >>_for_every_A1_A2_stupid_followup_
         >>_archimedean_projection_new_ver_
         >>_rank_the_7_slices_
@@ -176,6 +176,7 @@
         >>_geometric_construction_of_1_over_A_new_ver_
         >>_x_square_x_cube_construction_
         >>_sqrt_xy_construction_
+        >>_cosx_plus_sinx_as_sinusoid_
 
         !! >>_proof_1_+_tan^2_eq_sec^2_
         !! >>_proof_1_+_tan^2_eq_sec^2_backward_
@@ -190,8 +191,8 @@
         !! >>_what_seq_sin_Bx+C_
         !! >>_for_every_A1_A2_
         !! >>_can_B1B2_be_rewritten_
-        !! >>_max_sinx_+_cosx_new_ver_
-        !! >>_max_sinx_+_cosx_
+        !! >>_max_cosx_plus_sinx_new_ver_
+        !! >>_max_cosx_plus_sinx_
 
         !! ch5 exercise 'cycles':
         !!
