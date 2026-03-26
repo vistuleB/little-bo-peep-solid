@@ -24,7 +24,7 @@
       },
       // "args": ["run", "--", "--track", "\"assuming that\"", "+5-5"]
       // "args": [ "run", "--", "--only", "ch5", "--local", "--echo-args"]
-      "args": [ "run", "--", "--only", "ch5", "ch3", "content=selection", "work=ing", "--local", "--echo-args"]
+      "args": [ "run", "--", "--only", "ch5", "ch4", "content=selection", "work=ing", "--local", "--echo-args"]
       // "args": [ "run", "--", "--only", "ch5", "ch3", "ch4"]
     },
     {

@@ -220,14 +220,14 @@
             \sqrt{r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)}
             $$
 
-        again, since
+        again, since, namely,
 
         $$
         \begin{gathered}
         x_1^2 + y_1^2 = r_1^2 \\
         x_2^2 + y_2^2 = \up{1.5}r_2^2 \\
         x_1y_1 = \up{1.5} r_1\cos(\theta_1 - \theta_2)\cdot r_2 \\
-        x_1y_1 = \up{1.5} r_1\cos(\theta_1 - \theta_2)\cdot 0 = 0
+        x_2y_2 = \up{1.5} r_1\cos(\theta_1 - \theta_2)\cdot 0 = 0
         \end{gathered}
         $$
 
@@ -238,7 +238,7 @@
         |> SolutionNote
 
             As a result, the _distance squared_ between $P_1$ and $P_2$
-            is:
+            is (peel off the square root):
 
             |> Boxed
                 $$

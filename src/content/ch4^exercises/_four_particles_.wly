@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_four_particles_
 
     In the following graph, which curve might
@@ -176,27 +177,36 @@
             |> Image
                 src=images/svg_ch4_cosine_curves_unit_circle_equality.svg
 
-            From the $x$-coordinates, for example,
+            !! From 
+            Just looking at
+            the $x$-coordinates, for example,
 
             __the velocity in $x$ of the red particle
             is the position in $x$ of the blue particle__
 
-            at any given moment in time. This also
-            means:
+            at any given moment in time. 
+            We can also say...
+            !! In modified language:
+            !! This also means:
 
-            __the rate of change of the $x$-coordinated
+            __the rate of change of the $x$-coordinate
             of the red particle is the $x$-coordinate
             of the blue particle__
 
-            ...because “velocity in $x$” is the same
-            as “rate of change of the $x$-coordinate”.
+            ...because 
+            “rate of change of the $x$-coordinate” is 
+            !! a different way of saying 
+            !! the same as
+            another way of saying (in fact,
+            the definition of)
+            “velocity in $x$”.
 
             Concretely, if you graph the
             $x$-coordinates of the red and blue
             particles on the same graph, the rate of
             change of the red particle's $x$-coordinate
             will equal the value of the blue particle's
-            $x$-coordinate. These are the reds and blue
+            $x$-coordinate. These are the red and blue
             curves from the problem statement, if we
             start the blue particle at position
 
@@ -266,13 +276,13 @@
 
             __ahead__
 
-            of the red particle, so that
-            $x$-coordinates you see _now_ on the
-            blue particle will be seen _a little later_
-            on the red particle! (In particular, if you
+            of the red particle, in the sense that
+            $x$-coordinates seen _now_ by the
+            blue particle will be encountered _a little later_
+            by the red particle! (In particular, if we
             wanted to generate the same curves with a
-            counterclockwise rotation, you could do that,
-            but you would have to reverse the order of
+            counterclockwise rotation, we could do that,
+            but we would have to reverse the order of
             the particles around the circle to keep the
             blue particle ahead of the red particle,
             the yellow particle ahead of the blue

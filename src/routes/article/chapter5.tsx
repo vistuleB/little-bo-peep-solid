@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_132_hgi_"
+      id="_134_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -155,7 +155,10 @@ export default function __Chapter5__() {
       <ArticleTitle banner="Chapter 5:">
         The Trigonometric Functions
       </ArticleTitle>
-      <Section id="section-1">
+      <Section
+        work="ing"
+        id="section-1"
+      >
         <OuterP>
           <b>
             Cos and Sin. (“Cosine” and “sine”.)
@@ -1361,7 +1364,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          (\cos(x))^2 = (\cos x)^2
+          (\cos(x))^2
           $$
         </MathBlock>
         <Pause />
@@ -1699,8 +1702,8 @@ const Rest = () => {
             ”
           </NoBreak>
           {" "}
-          next to an angle measure, that means the angle
-          measure is a radian.) From there, other radian
+          next to an angle, that means the angle
+          is a radian.) From there, other radian
           measures can be proportionally deduced; for
           example, {" "}
           <Math>
@@ -4366,7 +4369,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_131_hgi_">
+      <Exercises id="_133_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -10707,7 +10710,7 @@ const Rest = () => {
               <Image src="/build-img/svgo-svg/pG5W.svg" />
               <Pause />
               <OuterP>
-                For a more fun example,
+                For a second, more exotic example,
                 the 8 “tube sections” 
                 of each circle
                 in this diagram...
@@ -10785,39 +10788,6 @@ const Rest = () => {
                 the area of a cylinder slice only depends on its
                 height.
                 <ImageRight src="/build-img/svgo-svg/xEpL.svg" />
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                The slices of height {" "}
-                <Math>
-                  $1/3$
-                </Math>
-                {" "} have area exactly
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;1/3 \over 1/4&#125; = 4/3 = 1.333...
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                times the area of the slices of height {" "}
-                <NoBreak>
-                  <Math>
-                    $1/4$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                given that the area of a slice is directly
-                proportional to its height.
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -11681,27 +11651,6 @@ const Rest = () => {
                 \end&#123;array&#125;
                 $$
               </MathBlock>
-              <Pause />
-              <OuterP>
-                For example,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                6.28
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                is an approximation to the circumference of a circle
-                divided by its radius, since {" "}
-                <NoBreak>
-                  <Math>
-                    $6.28 = 4 \times 1.57$
-                  </Math>
-                  .
-                </NoBreak>
-              </OuterP>
             </SolutionNote>
             <Pause />
             <SolutionNote>
@@ -12308,10 +12257,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={36}
-        >
+        <Exercise number={36}>
           <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
@@ -13230,6 +13176,11 @@ const Rest = () => {
                       vertical shift
                     </i>
                     {" "}
+                    or {" "}
+                    <i>
+                      mean
+                    </i>
+                    {" "}
                     (mathematics) or as the {" "}
                     <i>
                       DC bias
@@ -13768,7 +13719,7 @@ const Rest = () => {
               </MathBlock>
             </Boxed>
             <OuterP>
-              again, since
+              again, since, namely,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -13777,7 +13728,7 @@ const Rest = () => {
               x_1^2 + y_1^2 = r_1^2 \\
               x_2^2 + y_2^2 = \up&#123;1.5&#125;r_2^2 \\
               x_1y_1 = \up&#123;1.5&#125; r_1\cos(\theta_1 - \theta_2)\cdot r_2 \\
-              x_1y_1 = \up&#123;1.5&#125; r_1\cos(\theta_1 - \theta_2)\cdot 0 = 0
+              x_2y_2 = \up&#123;1.5&#125; r_1\cos(\theta_1 - \theta_2)\cdot 0 = 0
               \end&#123;gathered&#125;
               $$
             </MathBlock>
@@ -13806,7 +13757,7 @@ const Rest = () => {
                   $P_2$
                 </Math>
                 {" "}
-                is:
+                is (peel off the square root):
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -16341,10 +16292,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={47}
-        >
+        <Exercise number={47}>
           <ExerciseStatement id="_130_hgi_">
             <OuterP>
               <b>
@@ -16606,7 +16554,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              ...victory!!!!
+              ...absolute corroboration!!!!
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -16701,7 +16649,7 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                ...with fewer {" "}
+                ...more direct, with fewer {" "}
                 <NoBreak>
                   ‘
                   <Math>
@@ -16732,7 +16680,7 @@ const Rest = () => {
                 ...as it is the graph of the composition...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/e5_cosx_plus_sinx_as_geometric_cos_composition.svg" />
+              <Image src="/build-img/svgo-svg/4t6F.svg" />
               <Pause />
               <OuterP>
                 ...(cf. {" "}
@@ -16827,7 +16775,7 @@ const Rest = () => {
                 <i>
                   is
                 </i>
-                {" "} so.
+                {" "} so!
                 (We know that, now, because we have proved that {" "}
                 <Math>
                   $\cos x + \sin x = \sqrt&#123;2&#125;\cos(x - \eta/2)$
@@ -16842,6 +16790,504 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
             </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={48}
+        >
+          <ExerciseStatement id="_131_hgi_">
+            <OuterP>
+              <b>
+                Exercise 48.
+              </b>
+              {" "}
+              What are the orthogonal (= perpendicular) 
+              projections of the
+              vectors {" "}
+              <NoBreak>
+                <Math>
+                  $(1, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $(0, 1)$
+              </Math>
+              {" "} 
+              onto a {" "}
+              <NoBreak>
+                <Math>
+                  $(-1, 1)$
+                </Math>
+                -ruler
+              </NoBreak>
+              {" "}
+              placed at angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} in the unit circle?
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/QGG0.svg" />
+            <Pause />
+            <OuterP>
+              (I.e., find the 
+              ruler-readings
+              marked ‘1’ and ‘2’ above
+              as a function of the angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                Solution 1.
+              </i>
+              {" "} If we rotate the diagram by {" "}
+              <Math>
+                $-\theta$
+              </Math>
+              {" "}
+              to align the ruler with the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis the new angles
+              of the vectors are {" "}
+              <Math>
+                $-\theta$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\eta - \theta$
+              </Math>
+              {" "}
+              (changed from {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} respectively):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/DHtw.svg" />
+            <Pause />
+            <OuterP>
+              The ruler-readings are therefore
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(-\theta) = \cos(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\eta - \theta) = \sin(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              respectively (in order ‘1’, ‘2’), making use of
+              basic identities. (See the section “Identities with {" "}
+              <NoBreak>
+                <Math>
+                  $\eta$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              in this chapter.)
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 2.
+              </i>
+              {" "} 
+              Recalling first...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/h28T.svg" />
+            <Pause />
+            <OuterP>
+              ...this figure from the chapter, we note that
+              there is an alternate
+              set of definitions for sin and cos that is 
+              based on clockwise instead of counterclockwise rotation:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/9QAk.svg" />
+            <Pause />
+            <OuterP>
+              Now comparing this set of definitions to
+              this figure...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/__cS.svg" />
+            <Pause />
+            <OuterP>
+              ...in which, by contrast to usual, angles are measured
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              positively clockwise
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (that's why it's {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\theta$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} not {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $-\theta$
+                </Math>
+                ”)
+              </NoBreak>
+              {" "} 
+              it becomes trivial to see that the two ruler-readings
+              are just {" "}
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              {" "} (‘1’) and {" "}
+              <Math>
+                $\sin(\theta)$
+              </Math>
+              {" "} (‘2’).
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Solution 3.
+              </i>
+              {" "} 
+              More generally, when a unit
+              vector is projected onto a “unit ruler”,
+              we can switch the ruler {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} vector positions
+              without affecting the ruler-reading:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/5XuI.svg" />
+            <Pause />
+            <OuterP>
+              ...because what counts is the angle between the
+              “forward end” of the ruler and the forward end of
+              the vector, measured as an angle between {" "}
+              <Math>
+                $0^\circ$
+              </Math>
+              {" "}
+              and {" "}
+              <NoBreak>
+                <Math>
+                  $180^\circ$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and this angle remains the same.
+              If we apply this to the problem statement, twice,
+              the unique ruler is replaced by a unique vector,
+              while the two vectors are each replaced by a ruler:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/_buu.svg" />
+            <Pause />
+            <OuterP>
+              ...and, in this new configuration, it becomes 
+              trivial to see 
+              that the answers are {" "}
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              {" "} (‘1’),
+              {" "}
+              <Math>
+                $\sin(\theta)$
+              </Math>
+              {" "} (‘2’).
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={49}
+        >
+          <ExerciseStatement id="_132_hgi_">
+            <OuterP>
+              <b>
+                Exercise 49.
+              </b>
+              {" "}
+              Show that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\alpha - \beta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              equals
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos\alpha\cos\beta + \sin\alpha\sin\beta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all {" "}
+              <NoBreak>
+                <Math>
+                  $\alpha$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\beta \in \rr$
+              </Math>
+              {" "}
+              via a geometric argument.
+              (I.e., AVOID using the angle-sum formula.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We know (or should know, or are about to
+              know) (or are about to {" "}
+              <i>
+                believe
+              </i>
+              ) that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\alpha - \beta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the projection of a unit vector of angle
+              {" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "} onto a ruler of angle {" "}
+              <NoBreak>
+                <Math>
+                  $\beta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/OXe9.svg" />
+            <Pause />
+            <OuterP>
+              In what follows we will write {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\vecb&#123;i&#125;$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}
+              and {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\vecb&#123;j&#125;$
+                </Math>
+                ’,
+              </NoBreak>
+              {" "} respectively, for the vectors
+              {" "}
+              <Math>
+                $(1, 0)$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $(0, 1)$
+              </Math>
+              {" "} (in the manner of physicists):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/EWAA.svg" />
+            <Pause />
+            <OuterP>
+              As established in {" "}
+              <InChapterLink
+                href="/article/chapter5#_131_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 48
+              </InChapterLink>
+              {" "}
+              {" "}
+              <Math>
+                $\vecb&#123;i&#125;$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\vecb&#123;j&#125;$
+              </Math>
+              {" "} project to {" "}
+              <NoBreak>
+                <Math>
+                  $\cos\beta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <Math>
+                $\sin\beta$
+              </Math>
+              {" "} respectively on the ruler:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/b34T.svg" />
+            <Pause />
+            <OuterP>
+              On the other hand, the vector {" "}
+              <Math>
+                $(\cos\alpha, \sin\alpha)$
+              </Math>
+              {" "} is
+              the sum of 
+              a scaled copy of {" "}
+              <Math>
+                $\vecb&#123;i&#125;$
+              </Math>
+              {" "} and scaled copy
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\vecb&#123;j&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} 
+              specifically the sum of {" "}
+              <Math>
+                $\vecb&#123;i&#125;\cdot\cos(\alpha)$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\vecb&#123;j&#125;\cdot\sin(\alpha)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/F8YG.svg" />
+            <Pause />
+            <OuterP>
+              The scaled copy of {" "}
+              <Math>
+                $\vecb&#123;i&#125;$
+              </Math>
+              {" "} projects to
+              {" "}
+              <Math>
+                $\cos(\alpha)\cdot\cos(\beta)$
+              </Math>
+              {" "} on the ruler, 
+              by proportionality:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/IFpt.svg" />
+            <Pause />
+            <OuterP>
+              Likewise, the scaled copy of {" "}
+              <Math>
+                $\vecb&#123;j&#125;$
+              </Math>
+              {" "} projects
+              to {" "}
+              <NoBreak>
+                <Math>
+                  $\sin(\alpha)\cdot\sin(\beta)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/OQs4.svg" />
+            <Pause />
+            <OuterP>
+              However the sum-of-projections is the
+              projection-of-the-sum...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Y7-2.svg" />
+            <Pause />
+            <OuterP>
+              ...giving us...
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \cos(\alpha-\beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              ...since we always knew, from the beginning, that the projection of
+              {" "}
+              <Math>
+                $(\cos \alpha, \sin \alpha)$
+              </Math>
+              {" "} onto the ruler of angle {" "}
+              <Math>
+                $\beta$
+              </Math>
+              {" "} was (is)
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(\alpha - \beta)$
+                </Math>
+                !
+              </NoBreak>
+            </OuterP>
           </Solution>
         </Exercise>
       </Exercises>

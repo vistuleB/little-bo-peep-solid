@@ -26,12 +26,12 @@
             |> ImageRight
                 src=images/svg_ch5_ex_pez_sphere_cloud.svg
 
-        |> SolutionNote
+        !! |> SolutionNote
 
-            The slices of height $1/3$ have area exactly
-            $$
-            {1/3 \over 1/4} = 4/3 = 1.333...
-            $$
-            times the area of the slices of height $1/4$,
-            given that the area of a slice is directly
-            proportional to its height.
+        !!     The slices of height $1/3$ have area exactly
+        !!     $$
+        !!     {1/3 \over 1/4} = 4/3 = 1.333...
+        !!     $$
+        !!     times the area of the slices of height $1/4$,
+        !!     given that the area of a slice is directly
+        !!     proportional to its height.

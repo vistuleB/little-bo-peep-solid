@@ -58,6 +58,7 @@ window.MathJax = {
       ov: ["\\overline{#1}", 1],
       floor: ["\\lfloor{#1}\\rfloor", 1],
       faketextelement: "{\\color{white}\\text{*}}\\!\\!\\!\\rt{0.1}",
+      vecb: ["\\vec{\\mathbf{#1}}", 1],
     }, // end Macros
   },
   options: {

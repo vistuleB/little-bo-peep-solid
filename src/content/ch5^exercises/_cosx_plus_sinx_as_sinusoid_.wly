@@ -1,5 +1,4 @@
 |> Exercise
-    work=ing
     handle=_cosx_plus_sinx_as_sinusoid_
 
     A geometric interpretation of
@@ -93,7 +92,7 @@
         \up{1.6} =&\,\, \cos x + \sin x
         \end{aligned}
         $$
-        ...victory!!!!
+        ...absolute corroboration!!!!
 
         |> SolutionNote
 
@@ -131,7 +130,7 @@
             \end{aligned}
             $$
 
-            ...with fewer ‘$-$’ signs.
+            ...more direct, with fewer ‘$-$’ signs.
 
         |> SolutionNote
 
@@ -144,7 +143,7 @@
             ...as it is the graph of the composition...
 
             |> Image
-                src=tmp-images/e5_cosx_plus_sinx_as_geometric_cos_composition.svg
+                src=images/e5_cosx_plus_sinx_as_geometric_cos_composition.svg
 
             ...(cf. Exercise >>_four_compositions_graphed_) 
             can be obtained from...
@@ -169,6 +168,6 @@
             ...it certainly _looks like_ this curve could be obtained by
             translating the graph $y = \cos x$ horizontally by
             $\eta/2$ and then scaling vertically by $\sqrt{2}$. 
-            And it _looks_ so because it _is_ so.
+            And it _looks_ so because it _is_ so!
             (We know that, now, because we have proved that $\cos x + \sin x = \sqrt{2}\cos(x - \eta/2)$
             for all $x \in \rr$.)

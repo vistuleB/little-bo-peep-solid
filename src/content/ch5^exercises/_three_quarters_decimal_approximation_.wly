@@ -61,12 +61,12 @@
             4 & \up{1.2} 6.0 + 0.28 & 6.28
             \end{array}
             $$
-            For example,
-            $$
-            6.28
-            $$
-            is an approximation to the circumference of a circle
-            divided by its radius, since $6.28 = 4 \times 1.57$.
+            !! For example,
+            !! $$
+            !! 6.28
+            !! $$
+            !! is an approximation to the circumference of a circle
+            !! divided by its radius, since $6.28 = 4 \times 1.57$.
 
         |> SolutionNote
 

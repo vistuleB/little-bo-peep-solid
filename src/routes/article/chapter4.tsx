@@ -2959,7 +2959,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={12}>
+        <Exercise
+          work="ing"
+          number={12}
+        >
           <ExerciseStatement id="_66_hgi_">
             <OuterP>
               <b>
@@ -3333,7 +3336,8 @@ const Rest = () => {
               <Image src="/build-img/svgo-svg/9nrU.svg" />
               <Pause />
               <OuterP>
-                From the {" "}
+                Just looking at
+                the {" "}
                 <NoBreak>
                   <Math>
                     $x$
@@ -3357,8 +3361,8 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                at any given moment in time. This also
-                means:
+                at any given moment in time. 
+                We can also say...
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -3367,7 +3371,7 @@ const Rest = () => {
                   <Math>
                     $x$
                   </Math>
-                  -coordinated
+                  -coordinate
                 </NoBreak>
                 {" "}
                 of the red particle is the {" "}
@@ -3382,20 +3386,23 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                ...because “velocity in {" "}
+                ...because 
+                “rate of change of the {" "}
                 <NoBreak>
                   <Math>
                     $x$
                   </Math>
-                  ”
+                  -coordinate”
                 </NoBreak>
-                {" "} is the same
-                as “rate of change of the {" "}
+                {" "} is 
+                another way of saying (in fact,
+                the definition of)
+                “velocity in {" "}
                 <NoBreak>
                   <Math>
                     $x$
                   </Math>
-                  -coordinate”.
+                  ”.
                 </NoBreak>
               </OuterP>
               <OuterP class="indent-10">
@@ -3425,7 +3432,7 @@ const Rest = () => {
                   </Math>
                   -coordinate.
                 </NoBreak>
-                {" "} These are the reds and blue
+                {" "} These are the red and blue
                 curves from the problem statement, if we
                 start the blue particle at position
               </OuterP>
@@ -3512,7 +3519,7 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                of the red particle, so that
+                of the red particle, in the sense that
                 {" "}
                 <NoBreak>
                   <Math>
@@ -3520,20 +3527,20 @@ const Rest = () => {
                   </Math>
                   -coordinates
                 </NoBreak>
-                {" "} you see {" "}
+                {" "} seen {" "}
                 <i>
                   now
                 </i>
-                {" "} on the
-                blue particle will be seen {" "}
+                {" "} by the
+                blue particle will be encountered {" "}
                 <i>
                   a little later
                 </i>
                 {" "}
-                on the red particle! (In particular, if you
+                by the red particle! (In particular, if we
                 wanted to generate the same curves with a
-                counterclockwise rotation, you could do that,
-                but you would have to reverse the order of
+                counterclockwise rotation, we could do that,
+                but we would have to reverse the order of
                 the particles around the circle to keep the
                 blue particle ahead of the red particle,
                 the yellow particle ahead of the blue

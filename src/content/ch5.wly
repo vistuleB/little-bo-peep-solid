@@ -1,4 +1,5 @@
 |> Section
+    work=ing
     handle=_ch5_start_
 
     *Cos and Sin. (“Cosine” and “sine”.)* We've
@@ -398,8 +399,11 @@
     $$
     similarly to the just-introduced convention)
     means
+    !! $$
+    !! (\cos(x))^2 = (\cos x)^2
+    !! $$
     $$
-    (\cos(x))^2 = (\cos x)^2
+    (\cos(x))^2
     $$
     which is a special case of the fact that
     $$
@@ -565,8 +569,8 @@
 
     (We will often leave out the “rad”—in fact,
     if you don't see a degree symbol “$^\circ$”
-    next to an angle measure, that means the angle
-    measure is a radian.) From there, other radian
+    next to an angle, that means the angle
+    is a radian.) From there, other radian
     measures can be proportionally deduced; for
     example, $45^\circ$ is $\eta/2$ radians:
 
