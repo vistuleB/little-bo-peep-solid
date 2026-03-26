@@ -235,6 +235,9 @@ const author_mode = "--local"
 
 fn cli_usage_supplementary() {
   let margin = "   "
+  io.println(margin <> author_mode)
+  io.println(margin <> "  -> generate author-facing version with source-linking tooltips")
+  io.println("")
   io.println(margin <> remove_unused_build_img_option)
   io.println(margin <> "  -> remove unused images from image-map and build-img directory")
   io.println("")
@@ -252,19 +255,29 @@ pub fn main() {
     False -> #(args, "")
   }
 
+  use _ <- on.stay(case args {
+    ["--help"] | ["-help"] | ["-h"] -> {
+      ds.basic_cli_usage("\n'gleam run' command line options (basic):")
+      cli_usage_supplementary()
+      on.Return(Nil)
+    }
+
+    ["--esoteric"] -> {
+      ds.advanced_cli_usage("\n'gleam run' command line options (esoteric):")
+      on.Return(Nil)
+    }
+
+    _ -> on.Stay(Nil)
+  })
+
   use amendments <- on.error_ok(
     ds.process_command_line_arguments(args, [remove_unused_build_img_option, author_mode]),
     fn(error) {
       io.println("")
       io.println("command line error: " <> ins(error))
-      ds.basic_cli_usage("\nCommand line options (basic):")
+      ds.basic_cli_usage("\n'gleam run' command line options (basic):")
       cli_usage_supplementary()
     },
-  )
-
-  use <- on.true_false(
-    amendments.help,
-    fn() { io.println("(exiting on '--help' option)") },
   )
 
   let exports_dict = ei.lbp_exports_dictionary()
