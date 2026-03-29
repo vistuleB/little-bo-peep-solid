@@ -2959,10 +2959,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={12}
-        >
+        <Exercise number={12}>
           <ExerciseStatement id="_66_hgi_">
             <OuterP>
               <b>

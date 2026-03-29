@@ -1,0 +1,99 @@
+|> Exercise
+    work=ing
+    handle=_Acosx_plus_Bsinx_polar_conversion_
+
+    Show that for all $A, B \in \rr$ there exists
+    $R_0$, $\theta_0 \in \rr$ such that
+
+    $$
+    A\cos x + B\sin x = R_0\cdot\cos(x - \theta_0)
+    $$
+
+    for all $x \in \rr$.
+
+    |> Solution
+
+        Starting from the desired endpoint, note that
+
+        $$
+        \cos(x - \theta_0) = \cos x\cos\theta_0 + \sin x \sin \theta_0
+        $$
+
+        by the “angle-difference formula” (cf. Exercise >>_unit_dot_product_geometric_interpretation_) so
+
+        $$
+        R_0\cdot\cos(x - \theta_0)
+        $$
+
+        equals
+
+        $$
+        (R_0\cos\theta_0)\cdot\cos x + (R_0\sin\theta_0)\cdot\sin x
+        $$
+
+        where we suggestively group the terms to underscore
+        that all we need to do in order to “win” is to satisfy 
+        the equations 
+
+        $$
+        \begin{aligned}
+        A &=         R_0\cos\theta_0,\\
+        B &= \up{1.5}R_0\rt{0.1}\sin\theta_0\,
+        \end{aligned}
+        $$
+
+        and this can be done simply by setting $(R_0, \theta_0)$ to
+        be the polar coordinates of the cartesian point $(A, B) \in \rr^2$!
+        I.e., put
+
+        $$
+        R_0 = \sqrt{A^2 + B^2}
+        $$
+
+        and...
+
+        $$
+        \theta_0 = \begin{cases}
+        \arctan(B/A)&\te{if }\, A \ne 0, \,\te{else} \\
+        \up{1.2}\te{arccot}(A/B) &\te{if }\, B \ne 0, \,\te{else} \\
+        \up{1.2}\rm{anything} &\te{if }\, A = 0, B = 0
+        \end{cases}
+        $$
+
+        ...where we copy-paste a formula from the chapter. 
+        (Or just 
+        |> span
+            class=code-cartouche
+            theta0 = atan2(B, A)
+        \ if we were writing python!)
+
+        !! Let $(R_0, \theta_0)$ be the polar coordinates of
+        !! $(A, B)$. Then
+
+        !! $$
+        !! \begin{aligned}
+        !! A &=         R_0\cos\theta_0,\\
+        !! B &= \up{1.5}R_0\rt{0.1}\sin\theta_0\,
+        !! \end{aligned}
+        !! $$
+
+        !! by definition of polar coordinates, from which
+
+        !! $$
+        !! \begin{aligned}
+        !! A\cos x + B\sin x \,=\,\,&\up{1.5}  (R_0\cos\theta_0)\cos x + (R_0\sin\theta_0)\sin x\\
+        !! =\,\,&\up{1.5}  R_0(\cos x\cos\theta_0 + \sin x \sin \theta_0)\\
+        !! =\,\,&\up{1.5}  R_0\cos(x - \theta_0)
+        !! \end{aligned}
+        !! $$
+
+        !! where the “angle-difference formula”
+        !! !! where, in the last equality, we use the “angle-difference formula” (cf. Exercise >>_unit_dot_product_geometric_interpretation_)
+
+        !! |> Boxed
+        !!     $$
+        !!     \cos(u - v) = \cos u\cos v + \sin u\sin v
+        !!     $$
+
+        !! (cf. Exercise >>_unit_dot_product_geometric_interpretation_)
+        !! is used in the last equality.

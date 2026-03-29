@@ -767,3 +767,11 @@ ul.toc_ul {
 .text-column .text-column {
   width: 100%;
 }
+
+.code-cartouche {
+  font-family:monaco;
+  background-color:#bbb;
+  font-size:0.8em;
+  border-radius:0.4em;
+  padding:0.1em 0.3em;
+}

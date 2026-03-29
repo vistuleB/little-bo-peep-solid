@@ -179,6 +179,11 @@
         >>_cosx_plus_sinx_as_sinusoid_
         >>_project_i_and_j_
         >>_unit_dot_product_geometric_interpretation_
+        !! >>_Acosx_plus_Bsinx_polar_conversion_
+        !! >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
+        >>_cosine_rule_geometric_1_
+
+        !! >>_for_every_A1_A2_
 
         !! >>_proof_1_+_tan^2_eq_sec^2_
         !! >>_proof_1_+_tan^2_eq_sec^2_backward_
@@ -191,7 +196,6 @@
         !! >>_cos_of_x_+_0_point_1_
         !! >>_map_cosx_to_cos_Bx+C_
         !! >>_what_seq_sin_Bx+C_
-        !! >>_for_every_A1_A2_
         !! >>_can_B1B2_be_rewritten_
         !! >>_max_cosx_plus_sinx_new_ver_
         !! >>_max_cosx_plus_sinx_

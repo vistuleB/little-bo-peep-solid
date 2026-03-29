@@ -2,7 +2,6 @@
     work=ing
     handle=_unit_dot_product_geometric_interpretation_
 
-    !! Using a geometric argument, 
     Show that
     $$
     \cos(\alpha - \beta)
@@ -13,12 +12,10 @@
     $$
     for all $\alpha$, $\beta \in \rr$
     via a geometric argument.
-    !! by a geometric argument. 
     (I.e., AVOID using the angle-sum formula.)
 
     |> Solution
 
-        !! It is easy to see that
         We know (or should know, or are about to
         know) (or are about to _believe_) that
 
@@ -26,83 +23,65 @@
         \cos(\alpha - \beta)
         $$
 
-        !! equals 
         is the projection of a unit vector of angle
         $\alpha$ onto a ruler of angle $\beta$:
 
         |> Image
-            src=images/e5_unit_dot_product_sol1_v4.svg
+            src=tmp-images/e5_unit_dot_product_sol1_v2.svg
 
         In what follows we will write ‘$\vecb{i}$’
         and ‘$\vecb{j}$’, respectively, for the vectors
         $(1, 0)$ and $(0, 1)$ (in the manner of physicists):
 
         |> Image
-            src=images/e5_unit_dot_product_sol2.svg
+            src=tmp-images/e5_unit_dot_product_sol2.svg
 
         As established in Exercise >>_project_i_and_j_
         $\vecb{i}$ and $\vecb{j}$ project to $\cos\beta$,
         $\sin\beta$ respectively on the ruler: 
 
         |> Image
-            src=images/e5_unit_dot_product_sol3.svg
+            src=tmp-images/e5_unit_dot_product_sol3_v2.svg
 
-        On the other hand, the vector $(\cos\alpha, \sin\alpha)$ is
-        the sum of 
-        a scaled copy of $\vecb{i}$ and scaled copy
-        of $\vecb{j}$, 
-        specifically the sum of $\vecb{i}\cdot\cos(\alpha)$ and $\vecb{j}\cdot\sin(\alpha)$:
-        !! with the scaling coefficients being
-        !! $\cos(\alpha)$, $\sin(\alpha)$:
+        On the other hand, the vector $(\cos\alpha, \sin\alpha)$
+        is the sum of a scaled copy of $\vecb{i}$ and
+        scaled copy of $\vecb{j}$,  specifically the sum of
+        $\vecb{i}\cdot\cos(\alpha)$ and $\vecb{j}\cdot\sin(\alpha)$:
 
         |> Image
-            src=images/e5_unit_dot_product_sol5.svg
+            src=tmp-images/e5_unit_dot_product_sol5_v2.svg
 
         The scaled copy of $\vecb{i}$ projects to
         $\cos(\alpha)\cdot\cos(\beta)$ on the ruler, 
-        by proportionality:
+        by scaling the projection of $\vecb{i}$:
 
         |> Image
-            src=images/e5_unit_dot_product_sol6.svg
+            src=tmp-images/e5_unit_dot_product_sol6_v2.svg
 
-        !! a
-        !! projection-of-the-scalar-multiple will come
-        !! out the same as the scalar-multiple-of-the-projection:
-        !!   $\vecb{i}$
-
-        Likewise, the scaled copy of $\vecb{j}$ projects
-        to $\sin(\alpha)\cdot\sin(\beta)$:
-        !! Likewise, 
-        !! $\vecb{j}\cdot\sin(\alpha)$
-        !! projects
-        !! to $\sin(\alpha)\cdot\sin(\beta)$: 
-        !! on the ruler, because
-        !! here the scaling factor by which $\vecb{j}$ is scaled
-        !! is $\sin(\alpha)$:
+        Similarly, the scaled copy of $\vecb{j}$ projects
+        to $\sin(\alpha)\cdot\sin(\beta)$, by scaling the
+        projection of $\vecb{j}$:
 
         |> Image
-            src=images/e5_unit_dot_product_sol7.svg
+            src=tmp-images/e5_unit_dot_product_sol7.svg
 
-        However the sum-of-projections is the
-        projection-of-the-sum...
-        !! However, treating the 
-        !! projections of $\vecb{i}\cdot\cos(\alpha)$
-        !! and $\vecb{j}\cdot\sin(\alpha)$
-        !! as displacements on the ruler, and adding these
-        !! displacements together, we obtain the
-        !! projection of $(\cos\alpha, \sin\alpha)$:
+        Moreover, the sum-of-projections is the
+        projection-of-the-sum:
 
         |> Image
-            src=images/e5_unit_dot_product_sol8_v3.svg
+            src=tmp-images/e5_unit_dot_product_sol8_v3.svg
 
-        !! Thus,
-        ...giving us...
+        This gives us
 
         |> Boxed
             $$
             \cos(\alpha-\beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta
             $$
 
-        ...since we always knew, from the beginning, that the projection of
-        $(\cos \alpha, \sin \alpha)$ onto the ruler of angle $\beta$ was (is)
-        $\cos(\alpha - \beta)$!
+        since both sides compute the projection of
+        $(\cos \alpha, \sin \alpha)$ onto the ruler of angle $\beta$.
+        !! since it was already known that the projection
+        !! of $(\cos \alpha, \sin \alpha)$ onto the ruler
+        !! is $\cos(\alpha - \beta)$. (See very first illustration
+        !! at start of solution.)
+

@@ -84,14 +84,18 @@
         “forward end” of the ruler and the forward end of
         the vector, measured as an angle between $0^\circ$
         and $180^\circ$, and this angle remains the same.
-        If we apply this to the problem statement, twice,
-        the unique ruler is replaced by a unique vector,
+        !! If we apply this to the problem statement, twice,
+        !! the unique ruler is replaced by a unique vector,
+        !! while the two vectors are each replaced by a ruler:
+        If we apply this to the problem statement
+        the unique ruler is replaced by a unique vector
         while the two vectors are each replaced by a ruler:
 
         |> Image
-            src=images/e5_project_i_and_j_sol5.svg
+            src=images/e5_project_i_and_j_sol5_v2.svg
 
-        ...and, in this new configuration, it becomes 
+        ...and in the new configuration, at bottom right, it is 
+        !! ...and, in this new configuration, it becomes 
         trivial to see 
         that the answers are $\cos(\theta)$ (‘1’),
-        $\sin(\theta)$ (‘2’). 
+        $\sin(\theta)$ (‘2’)!

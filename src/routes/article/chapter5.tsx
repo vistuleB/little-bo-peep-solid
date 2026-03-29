@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_134_hgi_"
+      id="_135_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -2827,9 +2827,9 @@ const Rest = () => {
         <MathBlock>
           $$
           \theta = \begin&#123;cases&#125;
-          \arctan(y/x)&amp;\te&#123;if &#125;\, x \ne 0, \,\te&#123;else&#125; \\
-          \up&#123;1.2&#125;\te&#123;arccot&#125;(x/y) &amp;\te&#123;if &#125;\, y \ne 0, \,\te&#123;else&#125; \\
-          \up&#123;1.2&#125;\rm&#123;?&#125; &amp;\te&#123;if &#125;\, x = 0, y = 0
+          \arctan(y/x) &amp; \te&#123;if &#125;\, x \ne 0, \,\te&#123;else&#125; \\
+          \up&#123;1.2&#125;\te&#123;arccot&#125;(x/y) &amp; \te&#123;if &#125;\, y \ne 0, \,\te&#123;else&#125; \\
+          \up&#123;1.2&#125;\rm&#123;?&#125; &amp; \te&#123;if &#125;\, x = 0, y = 0
           \end&#123;cases&#125;
           $$
         </MathBlock>
@@ -2846,7 +2846,7 @@ const Rest = () => {
           {" "}
           Popular programming languages such as
           python offer a function named {" "}
-          <span style="font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
+          <span class="code-cartouche">
             atan2
           </span>
           {" "} that will compute the {" "}
@@ -2883,11 +2883,11 @@ const Rest = () => {
         </OuterP>
         <OuterP class="indent-10">
           But the call goes {" "}
-          <span style="font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
+          <span class="code-cartouche">
             atan2(y, x)
           </span>
           {" "} not {" "}
-          <span style="font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;">
+          <span class="code-cartouche">
             atan2(x, y)
           </span>
           {" "} by some bizareness. (Well, actually a
@@ -4369,7 +4369,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_133_hgi_">
+      <Exercises id="_134_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -5605,10 +5605,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={5}
-        >
+        <Exercise number={5}>
           <ExerciseStatement id="_88_hgi_">
             <OuterP>
               <b>
@@ -16292,7 +16289,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={47}>
+        <Exercise
+          work="ing"
+          number={47}
+        >
           <ExerciseStatement id="_130_hgi_">
             <OuterP>
               <b>
@@ -16649,7 +16649,7 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                ...more direct, with fewer {" "}
+                ...a bit simpler, with fewer {" "}
                 <NoBreak>
                   ‘
                   <Math>
@@ -16657,7 +16657,7 @@ const Rest = () => {
                   </Math>
                   ’
                 </NoBreak>
-                {" "} signs.
+                {" "} signs in particular.
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -17016,15 +17016,15 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} and this angle remains the same.
-              If we apply this to the problem statement, twice,
-              the unique ruler is replaced by a unique vector,
+              If we apply this to the problem statement
+              the unique ruler is replaced by a unique vector
               while the two vectors are each replaced by a ruler:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/_buu.svg" />
+            <Image src="/build-img/svgo-svg/Xur8.svg" />
             <Pause />
             <OuterP>
-              ...and, in this new configuration, it becomes 
+              ...and in the new configuration, at bottom right, it is 
               trivial to see 
               that the answers are {" "}
               <Math>
@@ -17035,7 +17035,7 @@ const Rest = () => {
               <Math>
                 $\sin(\theta)$
               </Math>
-              {" "} (‘2’).
+              {" "} (‘2’)!
             </OuterP>
           </Solution>
         </Exercise>
@@ -17116,7 +17116,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/OXe9.svg" />
+            <Image src="/tmp-images/e5_unit_dot_product_sol1_v2.svg" />
             <Pause />
             <OuterP>
               In what follows we will write {" "}
@@ -17148,7 +17148,7 @@ const Rest = () => {
               {" "} (in the manner of physicists):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/EWAA.svg" />
+            <Image src="/tmp-images/e5_unit_dot_product_sol2.svg" />
             <Pause />
             <OuterP>
               As established in {" "}
@@ -17182,29 +17182,28 @@ const Rest = () => {
               {" "} respectively on the ruler:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/b34T.svg" />
+            <Image src="/tmp-images/e5_unit_dot_product_sol3_v2.svg" />
             <Pause />
             <OuterP>
               On the other hand, the vector {" "}
               <Math>
                 $(\cos\alpha, \sin\alpha)$
               </Math>
-              {" "} is
-              the sum of 
-              a scaled copy of {" "}
+              {" "}
+              is the sum of a scaled copy of {" "}
               <Math>
                 $\vecb&#123;i&#125;$
               </Math>
-              {" "} and scaled copy
-              of {" "}
+              {" "} and
+              scaled copy of {" "}
               <NoBreak>
                 <Math>
                   $\vecb&#123;j&#125;$
                 </Math>
                 ,
               </NoBreak>
-              {" "} 
-              specifically the sum of {" "}
+              {" "}  specifically the sum of
+              {" "}
               <Math>
                 $\vecb&#123;i&#125;\cdot\cos(\alpha)$
               </Math>
@@ -17217,7 +17216,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/F8YG.svg" />
+            <Image src="/tmp-images/e5_unit_dot_product_sol5_v2.svg" />
             <Pause />
             <OuterP>
               The scaled copy of {" "}
@@ -17230,13 +17229,19 @@ const Rest = () => {
                 $\cos(\alpha)\cdot\cos(\beta)$
               </Math>
               {" "} on the ruler, 
-              by proportionality:
+              by scaling the projection of {" "}
+              <NoBreak>
+                <Math>
+                  $\vecb&#123;i&#125;$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/IFpt.svg" />
+            <Image src="/tmp-images/e5_unit_dot_product_sol6_v2.svg" />
             <Pause />
             <OuterP>
-              Likewise, the scaled copy of {" "}
+              Similarly, the scaled copy of {" "}
               <Math>
                 $\vecb&#123;j&#125;$
               </Math>
@@ -17246,21 +17251,29 @@ const Rest = () => {
                 <Math>
                   $\sin(\alpha)\cdot\sin(\beta)$
                 </Math>
+                ,
+              </NoBreak>
+              {" "} by scaling the
+              projection of {" "}
+              <NoBreak>
+                <Math>
+                  $\vecb&#123;j&#125;$
+                </Math>
                 :
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/OQs4.svg" />
+            <Image src="/tmp-images/e5_unit_dot_product_sol7.svg" />
             <Pause />
             <OuterP>
-              However the sum-of-projections is the
-              projection-of-the-sum...
+              Moreover, the sum-of-projections is the
+              projection-of-the-sum:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Y7-2.svg" />
+            <Image src="/tmp-images/e5_unit_dot_product_sol8_v3.svg" />
             <Pause />
             <OuterP>
-              ...giving us...
+              This gives us
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -17270,23 +17283,112 @@ const Rest = () => {
               </MathBlock>
             </Boxed>
             <OuterP>
-              ...since we always knew, from the beginning, that the projection of
+              since both sides compute the projection of
               {" "}
               <Math>
                 $(\cos \alpha, \sin \alpha)$
               </Math>
               {" "} onto the ruler of angle {" "}
-              <Math>
-                $\beta$
-              </Math>
-              {" "} was (is)
-              {" "}
               <NoBreak>
                 <Math>
-                  $\cos(\alpha - \beta)$
+                  $\beta$
                 </Math>
-                !
+                .
               </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={50}
+        >
+          <ExerciseStatement id="_133_hgi_">
+            <OuterP>
+              <b>
+                Exercise 50.
+              </b>
+              {" "}
+              In the figure below, where can
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              be found, if at all? (Note that {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\theta_&#123;ab&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} is
+              just a name.)
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/oty_.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              It appears two places; 
+              it is 
+              the area of this
+              rectangle here on the left:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/QsAd.svg" />
+            <Pause />
+            <OuterP>
+              It is also
+              the area of this rectangle here on the right:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/FZ9q.svg" />
+            <Pause />
+            <OuterP>
+              In more detail, here is how {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $b\cdot\cos\theta_&#123;ab&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} 
+              and {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $a\cdot\cos\theta_&#123;ab&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} 
+              show up as the widths of the two rectangles, respectively, 
+              zooming in:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/PJpl.svg" />
+            <Pause />
+            <Image src="/build-img/svgo-svg/9Sks.svg" />
+            <Pause />
+            <OuterP>
+              This means that the rectangles have areas
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large a(b\cdot \cos\theta_&#123;ab&#125;) = b(a\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              while forming the product in two different ways, but arriving
+              at the same end result.
             </OuterP>
           </Solution>
         </Exercise>

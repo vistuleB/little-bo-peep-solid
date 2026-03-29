@@ -1070,9 +1070,9 @@
 
     $$
     \theta = \begin{cases}
-    \arctan(y/x)&amp;\te{if }\, x \ne 0, \,\te{else} \\
-    \up{1.2}\te{arccot}(x/y) &amp;\te{if }\, y \ne 0, \,\te{else} \\
-    \up{1.2}\rm{?} &amp;\te{if }\, x = 0, y = 0
+    \arctan(y/x) & \te{if }\, x \ne 0, \,\te{else} \\
+    \up{1.2}\te{arccot}(x/y) & \te{if }\, y \ne 0, \,\te{else} \\
+    \up{1.2}\rm{?} & \te{if }\, x = 0, y = 0
     \end{cases}
     $$
 
@@ -1085,7 +1085,7 @@
     Popular programming languages such as
     python offer a function named 
     |> span
-        style=font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
+        class=code-cartouche
         atan2
     \ that will compute the _argument_ (see
     Vocabulary below) $\theta$ of a given pair
@@ -1094,13 +1094,11 @@
 
     But the call goes 
     |> span
-        style=font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
-
+        class=code-cartouche
         atan2(y, x)
     \ not 
     |> span
-        style=font-family:monaco;background-color:#bbb;font-size:0.8em;border-radius:0.4em;padding:0.1em 0.3em;
-
+        class=code-cartouche
         atan2(x, y)
     \ by some bizareness. (Well, actually a
     throwback to the fact that in this expression...

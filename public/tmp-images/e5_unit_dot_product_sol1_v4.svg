@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg preserveAspectRatio="none" viewBox="90 -10 500 395" width="500" height="395" version="1.1" id="svg14" sodipodi:docname="e5_unit_dot_product_sol1_v4.svg" inkscape:version="1.3.2 (091e20e, 2023-11-25)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-    <sodipodi:namedview inkscape:window-width="1728" inkscape:window-height="1051" inkscape:zoom="5.8786084" id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showguides="true" inkscape:cx="328.90437" inkscape:cy="4.763032" inkscape:window-x="0" inkscape:window-y="34" inkscape:window-maximized="0" inkscape:current-layer="layer5">
+    <sodipodi:namedview inkscape:window-width="1728" inkscape:window-height="1051" inkscape:zoom="1.4696521" id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showguides="true" inkscape:cx="325.58726" inkscape:cy="-9.526064" inkscape:window-x="0" inkscape:window-y="34" inkscape:window-maximized="0" inkscape:current-layer="layer5">
         <sodipodi:guide position="250,436.37794" orientation="-1,0" id="guide13" inkscape:locked="false" inkscape:label="" inkscape:color="rgb(0,134,229)" />
         <sodipodi:guide position="239.55499,179.24371" orientation="0,-1" id="guide14" inkscape:locked="false" />
         <sodipodi:guide position="373.78062,283.15161" orientation="-0.64278761,0.76604444" id="guide15" inkscape:locked="false" inkscape:label="" inkscape:color="rgb(0,134,229)" />
         <sodipodi:guide position="306.63736,312.46097" orientation="0.76572158,0.64317218" id="guide16" inkscape:locked="false" inkscape:label="" inkscape:color="rgb(0,134,229)" />
         <sodipodi:guide position="253.20618,323.96556" orientation="0,-1" id="guide1" inkscape:locked="false" />
+        <sodipodi:guide position="335.20129,379.75574" orientation="-0.92050485,0.39073113" id="guide2" inkscape:locked="false" inkscape:label="" inkscape:color="rgb(0,134,229)" />
     </sodipodi:namedview>
     <style type="text/css" id="style1">
         .grid { stroke: #9e9ed1; stroke-width: 0.4; }

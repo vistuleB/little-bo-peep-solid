@@ -1,4 +1,5 @@
 |> Exercise
+    work=ing
     handle=_cosx_plus_sinx_as_sinusoid_
 
     A geometric interpretation of
@@ -130,7 +131,7 @@
             \end{aligned}
             $$
 
-            ...more direct, with fewer ‘$-$’ signs.
+            ...a bit simpler, with fewer ‘$-$’ signs in particular.
 
         |> SolutionNote
 

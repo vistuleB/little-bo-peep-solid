@@ -1,0 +1,35 @@
+|> Exercise
+    work=ing
+    handle=_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
+
+    Relate Exercise >>_Acosx_plus_Bsinx_polar_conversion_ to Exercise >>_cosx_plus_sinx_as_sinusoid_.
+    !! How does the result of Exercise >>_Acosx_plus_Bsinx_polar_conversion_
+    !! relate to the result of Exercise >>_cosx_plus_sinx_as_sinusoid_?
+
+    |> Solution
+
+        To recall, Exercise >>_cosx_plus_sinx_as_sinusoid_
+        establishes that
+
+        $$
+        \cos x + \sin x = \sqrt{2}\cos(x - \eta/2)
+        $$
+
+        but this is the special case 
+        $$
+        A = B = 1
+        $$
+        of
+        Exercise >>_Acosx_plus_Bsinx_polar_conversion_ since
+
+        $$
+        \cos x + \sin x = 1\cdot \cos x + 1\cdot \sin x
+        $$
+
+        and since
+
+        $$
+        (\sqrt{2}, \eta/2)
+        $$
+
+        are the (“the”) polar coordinates of the point $(1, 1) \in \rr^2$!
