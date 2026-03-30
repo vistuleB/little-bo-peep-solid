@@ -1,0 +1,80 @@
+|> Exercise
+    work=ing
+    handle=_ab_inequality_relation_to_sine_cosine_
+    
+    What might
+    Exercise >>_ab_inequality_
+    have to do with sine and cosine?
+
+    |> Solution
+
+        !! Well, we're free to set $a = \cos x$, $b = \sin x$
+        !! if we want, since $a$ and $b$ are arbitrary elements
+        !! of $\rr$. This 
+        Setting $a = \cos x$, $b = \sin x$
+        gives us
+
+        $$
+        \huge 1 \geq 2\sin x\cos x
+        $$
+
+        for all $x \in \rr$,
+        by $\cos^2 x + \sin^2 x = 1$,
+        or
+
+        $$
+        \huge \sin x\cos x \leq {1\over 2}
+        $$
+
+        equivalently. 
+        (This is one possibility of an answer, at least.)
+        
+        |> SolutionNote
+            The same inequality can be deduced 
+            by the angle-sum formula for sin and the
+            fact that $|\sin x| \leq 1$ for all $x \in \rr$:
+
+            $$
+            \huge \sin x\cos x = {1\over 2}\sin(2x) \leq {1\over 2}\cdot 1 = {1\over 2}
+            $$
+
+            |> ImageLeft
+                src=images/e5_ab_inequality_relation_to_sine_cosine_cloud.svg
+
+        |> SolutionNote
+            handle=_ab_equality_note_
+
+            The “$a^2 + b^2 \geq 2ab$” inequality 
+            also tells us that
+
+            $$
+            \huge \sin x\cos x = {1\over 2}
+            $$
+
+            if and only if $\sin x = \cos x$, which is to say
+            if and only if $x = \eta/2 + 2\eta k$ [$x \in \{\eta/2 + 2\eta k: k \in \zz\}$],
+            since, as observed in Note 1 of Exercise >>_ab_inequality_,
+            equality holds if and only if $a = b$, i.e., in our
+            case, if and only if $\cos x = \sin x$!
+
+        |> SolutionNote
+
+            Since
+            $$
+            \huge \sin \theta = 1
+            $$
+            if and ony if $\theta \in \{\eta + 4\eta k : k \in \zz\}$,
+            we have
+            $$
+            \huge \sin(2x) = 1
+            $$
+            if and only if 
+            $x \in \{\eta/2 + 2\eta k: k \in \zz\}$, 
+            so the second proof of the inequality via the
+            angle-sum formula for sin also gives us
+            the final conclusion of Note >>_ab_equality_note_, though it does
+            not provide the extra semantic observation that
+            “this happens if and only if $\sin x = \cos x$”.
+            (It only gives the final set of $x$'s for which
+            equality holds, which just happens to be those
+            $x$'s for which $\sin x = \cos x$.)

@@ -1,0 +1,82 @@
+|> Exercise
+    work=ing
+    handle=_cosx_plus_sinx_algebraic_upper_bounding_
+
+    Using only algebra, prove that
+    $$
+    |\cos x + \sin x| \leq \sqrt{2}
+    $$
+    for all $x \in \rr$, and
+    characterize those $x$'s for which the inequality
+    holds with equality.
+
+    |> Solution
+
+        !! Since
+        !! $$
+        !! |z| \leq A
+        !! $$
+        !! if and only if
+        !! $$
+        !! z^2 \leq A^2
+        !! $$
+        !! for an aribtray real number $z$ and a nonnegative
+        !! number $A$, 
+        Since we can square the two sides of an
+        inequality for which both sides are nonnegative,
+        we have
+
+        $$
+        \begin{aligned}
+        & |\cos x + \sin x| \leq \sqrt{2} \\
+        \iff & \up{1.5} (\cos x + \sin x)^2 \leq (\sqrt{2})^2 \\
+        \iff & \up{1.5} \cos^2 x + 2\cos x\sin x + \sin^2 x \leq 2 \\
+        \iff & \up{1.5} 1 + 2\cos x\sin x \leq 2 \\
+        \iff & \up{1.5} 2\cos x\sin x \leq 1 \\
+        \iff & \up{1.5} \cos x\sin x \leq {1\over 2}
+        \end{aligned}
+        $$
+
+        |> ImageLeft
+            src=tmp-images/e5_cosx_plus_sinx_algebraic_upper_bounding_cloud.svg
+            offset_y=0.7em
+
+        ...and we know that the last inequality (even,
+        the next-to-last inequality) to be true by
+        Exercise >>_ab_inequality_relation_to_sine_cosine_.
+
+        This establishes the inequality.
+
+        For the second part of the question
+        we can observe
+        that the above sequence of 
+        if-and-only-ifs
+        also holds
+        if we replace “$\leq$” with “$=$” throughout, 
+        so equality occurs if and only if
+
+        !! For the second part of the question, 
+        !! which is
+        !! to characterize the set of $x$'s for which
+        !! the inequality holds with equality, 
+        !! we can observe
+        !! that the above long sequence of 
+        !! if-and-only-ifs
+        !! also holds
+        !! if we replace “$\leq$” with “$=$” throughout, 
+        !! so equality occurs if and only if
+
+        $$
+        \cos x\sin x = {1\over 2}
+        $$
+
+        which, as covered in Note >>_ab_equality_note_ of Exercise >>_ab_inequality_relation_to_sine_cosine_,
+        occurs if and only if $\cos x = \sin x$,
+        i.e., iff $x \in \{\eta/2 + 2\eta k: k \in \zz\}$.
+        !! if and only if $$x \in \{\eta/2 + 2\eta k: k \in \zz\}.$$
+        !! which is characterized as those $x$'s for which
+        !! $\cos x = \sin x$, or characterized as the set $\{\eta/2 + 2\eta k: k \in \zz\}$,
+        !! in Note >>_ab_equality_note_ of Exercise >>_ab_inequality_relation_to_sine_cosine_.
+
+        !! |> StarDivider
+        !!     style=padding-bottom:0.5em;

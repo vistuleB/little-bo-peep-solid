@@ -131,6 +131,17 @@
     "used-last-build": true,
     "3chars": ["ch4"]
   },
+  "e5_ab_inequality_relation_to_sine_cosine_cloud.svg": {
+    "build-version": "svgo-svg/R199.svg",
+    "build-version-created-on": 1774795095,
+    "build-method": "svgo",
+    "build-version-size": 72599,
+    "original-size": 71338,
+    "compressed-size": 72599,
+    "compression": "-1.77%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg": {
     "build-version": "svgo-svg/OG7m.svg",
     "build-version-created-on": 1767294302,
@@ -749,12 +760,12 @@
   },
   "svg_ch5_ch_cosine_and_sine_@-3_v2.svg": {
     "build-version": "svgo-svg/T8lW.svg",
-    "build-version-created-on": 1771481656,
+    "build-version-created-on": 1774795053,
     "build-method": "svgo",
-    "build-version-size": 30605,
-    "original-size": 103489,
-    "compressed-size": 30605,
-    "compression": "70.43%",
+    "build-version-size": 29215,
+    "original-size": 103480,
+    "compressed-size": 29215,
+    "compression": "71.77%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1008,6 +1019,17 @@
     "original-size": 60095,
     "compressed-size": 48417,
     "compression": "19.43%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
+  "e5_unit_dot_product_sol3_v2.svg": {
+    "build-version": "svgo-svg/rAlI.svg",
+    "build-version-created-on": 1774795093,
+    "build-method": "svgo",
+    "build-version-size": 126104,
+    "original-size": 172230,
+    "compressed-size": 126104,
+    "compression": "26.78%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1563,12 +1585,12 @@
   },
   "svg_ch5_ch_cosine_and_sine_@0.5_v2.svg": {
     "build-version": "svgo-svg/aPyP.svg",
-    "build-version-created-on": 1771481656,
+    "build-version-created-on": 1774795053,
     "build-method": "svgo",
-    "build-version-size": 32019,
-    "original-size": 91326,
-    "compressed-size": 32019,
-    "compression": "64.94%",
+    "build-version-size": 27285,
+    "original-size": 91307,
+    "compressed-size": 27285,
+    "compression": "70.12%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2232,6 +2254,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "e5_unit_dot_product_sol1_v2.svg": {
+    "build-version": "svgo-svg/k70-.svg",
+    "build-version-created-on": 1774795093,
+    "build-method": "svgo",
+    "build-version-size": 105093,
+    "original-size": 201689,
+    "compressed-size": 105093,
+    "compression": "47.89%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch5_ch_abercrombie_with_P.svg": {
     "build-version": "svgo-svg/0Mwx.svg",
     "build-version-created-on": 1770630368,
@@ -2603,6 +2636,17 @@
     "original-size": 105188,
     "compressed-size": 33777,
     "compression": "67.89%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
+  "e5_unit_dot_product_sol7_v2.svg": {
+    "build-version": "svgo-svg/KjPQ.svg",
+    "build-version-created-on": 1774795094,
+    "build-method": "svgo",
+    "build-version-size": 63156,
+    "original-size": 85373,
+    "compressed-size": 63156,
+    "compression": "26.02%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3422,12 +3466,12 @@
   },
   "svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg": {
     "build-version": "svgo-svg/BfG4.svg",
-    "build-version-created-on": 1772550241,
+    "build-version-created-on": 1774795053,
     "build-method": "svgo",
-    "build-version-size": 44700,
-    "original-size": 128769,
-    "compressed-size": 44700,
-    "compression": "65.29%",
+    "build-version-size": 27374,
+    "original-size": 129126,
+    "compressed-size": 27374,
+    "compression": "78.8%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3450,6 +3494,17 @@
     "original-size": 14137,
     "compressed-size": 5471,
     "compression": "61.3%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
+  "e5_unit_dot_product_sol8_v2.svg": {
+    "build-version": "svgo-svg/cfa7.svg",
+    "build-version-created-on": 1774795094,
+    "build-method": "svgo",
+    "build-version-size": 111595,
+    "original-size": 377857,
+    "compressed-size": 111595,
+    "compression": "70.47%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6101,8 +6156,8 @@
     "original-size": 223075,
     "compressed-size": 121805,
     "compression": "45.4%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch4_RATS_rats.svg": {
     "build-version": "svgo-svg/zn1D.svg",
@@ -6158,6 +6213,17 @@
     "compression": "85.32%",
     "used-last-build": false,
     "3chars": []
+  },
+  "e5_unit_dot_product_sol6_v2.svg": {
+    "build-version": "svgo-svg/vjt3.svg",
+    "build-version-created-on": 1774795094,
+    "build-method": "svgo",
+    "build-version-size": 98017,
+    "original-size": 132289,
+    "compressed-size": 98017,
+    "compression": "25.91%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch1_ex_24.svg": {
     "build-version": "svgo-svg/omps.svg",
@@ -7410,6 +7476,17 @@
     "original-size": 611965,
     "compressed-size": 96682,
     "compression": "84.2%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
+  "e5_unit_dot_product_sol5_v2.svg": {
+    "build-version": "svgo-svg/q8lI.svg",
+    "build-version-created-on": 1774795094,
+    "build-method": "svgo",
+    "build-version-size": 35220,
+    "original-size": 159403,
+    "compressed-size": 35220,
+    "compression": "77.91%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },

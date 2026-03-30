@@ -124,6 +124,7 @@
     |> In
         content=selection
         chapter=>>trigonometry
+        >>_cosine_rule_geometric_1_
         >>_guesstimate_cos_10x_linear_
         >>_guesstimate_cos_10x_parabolic_
         >>_guesstimate_sinusoid_
@@ -181,7 +182,9 @@
         >>_unit_dot_product_geometric_interpretation_
         !! >>_Acosx_plus_Bsinx_polar_conversion_
         !! >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
-        >>_cosine_rule_geometric_1_
+        >>_ab_inequality_
+        >>_ab_inequality_relation_to_sine_cosine_
+        >>_cosx_plus_sinx_algebraic_upper_bounding_
 
         !! >>_for_every_A1_A2_
 

@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={950}
       maxElementWidth={1000}
-      id="_135_hgi_"
+      id="_139_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -4369,12 +4369,106 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_134_hgi_">
-        <Exercise number={1}>
+      <Exercises id="_138_hgi_">
+        <Exercise
+          work="ing"
+          number={1}
+        >
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
+              </b>
+              {" "}
+              In the figure below, where can
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              be found, if at all? (Note that {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\theta_&#123;ab&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} is
+              just a name.)
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/oty_.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              It appears two places; 
+              it is 
+              the area of this
+              rectangle here on the left:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/QsAd.svg" />
+            <Pause />
+            <OuterP>
+              It is also
+              the area of this rectangle here on the right:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/FZ9q.svg" />
+            <Pause />
+            <OuterP>
+              In more detail, here is how {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $b\cdot\cos\theta_&#123;ab&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} 
+              and {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $a\cdot\cos\theta_&#123;ab&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} 
+              show up as the widths of the two rectangles, respectively, 
+              zooming in:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/PJpl.svg" />
+            <Pause />
+            <Image src="/build-img/svgo-svg/9Sks.svg" />
+            <Pause />
+            <OuterP>
+              This means that the rectangles have areas
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large a(b\cdot \cos\theta_&#123;ab&#125;) = b(a\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              while forming the product in two different ways,
+              but arriving at the same end result.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={2}>
+          <ExerciseStatement id="_85_hgi_">
+            <OuterP>
+              <b>
+                Exercise 2.
               </b>
               {" "}
               Guesstimate a function with this graph:
@@ -4516,11 +4610,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={2}>
-          <ExerciseStatement id="_85_hgi_">
+        <Exercise number={3}>
+          <ExerciseStatement id="_86_hgi_">
             <OuterP>
               <b>
-                Exercise 2.
+                Exercise 3.
               </b>
               {" "}
               Guesstimate a function with this graph (we can
@@ -4961,11 +5055,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={3}>
-          <ExerciseStatement id="_86_hgi_">
+        <Exercise number={4}>
+          <ExerciseStatement id="_87_hgi_">
             <OuterP>
               <b>
-                Exercise 3.
+                Exercise 4.
               </b>
               {" "}
               Guesstimate a function with this graph:
@@ -5263,10 +5357,10 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_85_hgi_"
+                  href="/article/chapter5#_86_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 2
+                  Exercise 3
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -5296,11 +5390,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={4}>
-          <ExerciseStatement id="_87_hgi_">
+        <Exercise number={5}>
+          <ExerciseStatement id="_88_hgi_">
             <OuterP>
               <b>
-                Exercise 4.
+                Exercise 5.
               </b>
               {" "}
               Compute {" "}
@@ -5605,11 +5699,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={5}>
-          <ExerciseStatement id="_88_hgi_">
+        <Exercise number={6}>
+          <ExerciseStatement id="_89_hgi_">
             <OuterP>
               <b>
-                Exercise 5.
+                Exercise 6.
               </b>
               {" "}
               Which function is most plausibly associated to
@@ -5840,11 +5934,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={6}>
-          <ExerciseStatement id="_89_hgi_">
+        <Exercise number={7}>
+          <ExerciseStatement id="_90_hgi_">
             <OuterP>
               <b>
-                Exercise 6.
+                Exercise 7.
               </b>
               {" "}
               Where or how, if at all, is the
@@ -5858,10 +5952,10 @@ const Rest = () => {
               apparent in the four graphs of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_88_hgi_"
+                  href="/article/chapter5#_89_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 5
+                  Exercise 6
                 </InChapterLink>
                 ?
               </NoBreak>
@@ -5942,11 +6036,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={7}>
-          <ExerciseStatement id="_90_hgi_">
+        <Exercise number={8}>
+          <ExerciseStatement id="_91_hgi_">
             <OuterP>
               <b>
-                Exercise 7.
+                Exercise 8.
               </b>
               {" "}
               Which of these angles is {" "}
@@ -6037,11 +6131,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={8}>
-          <ExerciseStatement id="_91_hgi_">
+        <Exercise number={9}>
+          <ExerciseStatement id="_92_hgi_">
             <OuterP>
               <b>
-                Exercise 8.
+                Exercise 9.
               </b>
               {" "}
               In the drawing below the oval is a circle of
@@ -6195,11 +6289,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement id="_92_hgi_">
+        <Exercise number={10}>
+          <ExerciseStatement id="_93_hgi_">
             <OuterP>
               <b>
-                Exercise 9.
+                Exercise 10.
               </b>
               {" "}
               What ratios do
@@ -6259,11 +6353,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={10}>
-          <ExerciseStatement id="_93_hgi_">
+        <Exercise number={11}>
+          <ExerciseStatement id="_94_hgi_">
             <OuterP>
               <b>
-                Exercise 10.
+                Exercise 11.
               </b>
               {" "}
               If a
@@ -6661,11 +6755,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement id="_94_hgi_">
+        <Exercise number={12}>
+          <ExerciseStatement id="_95_hgi_">
             <OuterP>
               <b>
-                Exercise 11.
+                Exercise 12.
               </b>
               {" "}
               If a particle in {" "}
@@ -7063,11 +7157,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={12}>
-          <ExerciseStatement id="_95_hgi_">
+        <Exercise number={13}>
+          <ExerciseStatement id="_96_hgi_">
             <OuterP>
               <b>
-                Exercise 12.
+                Exercise 13.
               </b>
               {" "}
               A point {" "}
@@ -7359,21 +7453,21 @@ const Rest = () => {
             <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_96_hgi_">
+        <Exercise number={14}>
+          <ExerciseStatement id="_97_hgi_">
             <OuterP>
               <b>
-                Exercise 13.
+                Exercise 14.
               </b>
               {" "}
               If, 
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_95_hgi_"
+                  href="/article/chapter5#_96_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 12
+                  Exercise 13
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -7474,10 +7568,10 @@ const Rest = () => {
               length in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_95_hgi_"
+                  href="/article/chapter5#_96_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 12
+                  Exercise 13
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -7507,10 +7601,10 @@ const Rest = () => {
               {" "} in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_95_hgi_"
+                  href="/article/chapter5#_96_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 12
+                  Exercise 13
                 </InChapterLink>
                 :
               </NoBreak>
@@ -7541,10 +7635,10 @@ const Rest = () => {
               {" "} in the formulas of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_95_hgi_"
+                  href="/article/chapter5#_96_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 12
+                  Exercise 13
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -7574,11 +7668,11 @@ const Rest = () => {
             <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_97_hgi_">
+        <Exercise number={15}>
+          <ExerciseStatement id="_98_hgi_">
             <OuterP>
               <b>
-                Exercise 14.
+                Exercise 15.
               </b>
               {" "}
               Compute the vertical distance from {" "}
@@ -7717,11 +7811,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_98_hgi_">
+        <Exercise number={16}>
+          <ExerciseStatement id="_99_hgi_">
             <OuterP>
               <b>
-                Exercise 15.
+                Exercise 16.
               </b>
               {" "}
               Given the following sketch, to what angle
@@ -7946,11 +8040,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={16}>
-          <ExerciseStatement id="_99_hgi_">
+        <Exercise number={17}>
+          <ExerciseStatement id="_100_hgi_">
             <OuterP>
               <b>
-                Exercise 16.
+                Exercise 17.
               </b>
               {" "}
               If aliens descended on Earth, captured everyone,
@@ -8128,12 +8222,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="ing"
-          number={17}
+          number={18}
         >
-          <ExerciseStatement id="_100_hgi_">
+          <ExerciseStatement id="_101_hgi_">
             <OuterP>
               <b>
-                Exercise 17.
+                Exercise 18.
               </b>
               {" "}
               The graph {" "}
@@ -8142,10 +8236,10 @@ const Rest = () => {
               </Math>
               {" "} from {" "}
               <InChapterLink
-                href="/article/chapter5#_88_hgi_"
+                href="/article/chapter5#_89_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 5
+                Exercise 6
               </InChapterLink>
               {" "} has a maximum value greater than {" "}
               <NoBreak>
@@ -8421,11 +8515,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={18}>
-          <ExerciseStatement id="_101_hgi_">
+        <Exercise number={19}>
+          <ExerciseStatement id="_102_hgi_">
             <OuterP>
               <b>
-                Exercise 18.
+                Exercise 19.
               </b>
               {" "}
               What are the maximum and minimum values
@@ -8653,11 +8747,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={19}>
-          <ExerciseStatement id="_102_hgi_">
+        <Exercise number={20}>
+          <ExerciseStatement id="_103_hgi_">
             <OuterP>
               <b>
-                Exercise 19.
+                Exercise 20.
               </b>
               {" "}
               Compute
@@ -9155,11 +9249,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_103_hgi_">
+        <Exercise number={21}>
+          <ExerciseStatement id="_104_hgi_">
             <OuterP>
               <b>
-                Exercise 20.
+                Exercise 21.
               </b>
               {" "}
               Compute
@@ -9244,11 +9338,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={21}>
-          <ExerciseStatement id="_104_hgi_">
+        <Exercise number={22}>
+          <ExerciseStatement id="_105_hgi_">
             <OuterP>
               <b>
-                Exercise 21.
+                Exercise 22.
               </b>
               {" "}
               To close our division skills: use the
@@ -9993,11 +10087,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={22}>
-          <ExerciseStatement id="_105_hgi_">
+        <Exercise number={23}>
+          <ExerciseStatement id="_106_hgi_">
             <OuterP>
               <b>
-                Exercise 22.
+                Exercise 23.
               </b>
               {" "}
               What is the angle marked ‘?’, as a function
@@ -10094,11 +10188,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={23}>
-          <ExerciseStatement id="_106_hgi_">
+        <Exercise number={24}>
+          <ExerciseStatement id="_107_hgi_">
             <OuterP>
               <b>
-                Exercise 23.
+                Exercise 24.
               </b>
               {" "}
               What is the angle marked ‘?’, as a function of
@@ -10167,11 +10261,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={24}>
-          <ExerciseStatement id="_107_hgi_">
+        <Exercise number={25}>
+          <ExerciseStatement id="_108_hgi_">
             <OuterP>
               <b>
-                Exercise 24.
+                Exercise 25.
               </b>
               {" "}
               Argue that, in the following figure, the
@@ -10287,11 +10381,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={25}>
-          <ExerciseStatement id="_108_hgi_">
+        <Exercise number={26}>
+          <ExerciseStatement id="_109_hgi_">
             <OuterP>
               <b>
-                Exercise 25.
+                Exercise 26.
               </b>
               {" "}
               Express {" "}
@@ -10381,11 +10475,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={26}>
-          <ExerciseStatement id="_109_hgi_">
+        <Exercise number={27}>
+          <ExerciseStatement id="_110_hgi_">
             <OuterP>
               <b>
-                Exercise 26.
+                Exercise 27.
               </b>
               {" "}
               Express {" "}
@@ -10570,11 +10664,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={27}>
-          <ExerciseStatement id="_110_hgi_">
+        <Exercise number={28}>
+          <ExerciseStatement id="_111_hgi_">
             <OuterP>
               <b>
-                Exercise 27.
+                Exercise 28.
               </b>
               {" "}
               By what factor are areas stretched
@@ -10726,11 +10820,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={28}>
-          <ExerciseStatement id="_111_hgi_">
+        <Exercise number={29}>
+          <ExerciseStatement id="_112_hgi_">
             <OuterP>
               <b>
-                Exercise 28.
+                Exercise 29.
               </b>
               {" "}
               Rank the {" "}
@@ -10789,11 +10883,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={29}>
-          <ExerciseStatement id="_112_hgi_">
+        <Exercise number={30}>
+          <ExerciseStatement id="_113_hgi_">
             <OuterP>
               <b>
-                Exercise 29.
+                Exercise 30.
               </b>
               {" "}
               Give a formula for the area of a sphere of
@@ -10859,11 +10953,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={30}>
-          <ExerciseStatement id="_113_hgi_">
+        <Exercise number={31}>
+          <ExerciseStatement id="_114_hgi_">
             <OuterP>
               <b>
-                Exercise 30.
+                Exercise 31.
               </b>
               {" "}
               Give a formula for the volume of a sphere of
@@ -10970,11 +11064,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={31}>
-          <ExerciseStatement id="_114_hgi_">
+        <Exercise number={32}>
+          <ExerciseStatement id="_115_hgi_">
             <OuterP>
               <b>
-                Exercise 31.
+                Exercise 32.
               </b>
               {" "}
               An access staircase goes up the side of a
@@ -11232,11 +11326,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={32}>
-          <ExerciseStatement id="_115_hgi_">
+        <Exercise number={33}>
+          <ExerciseStatement id="_116_hgi_">
             <OuterP>
               <b>
-                Exercise 32.
+                Exercise 33.
               </b>
               {" "}
               Give a decimal approximation to
@@ -11495,11 +11589,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={33}>
-          <ExerciseStatement id="_116_hgi_">
+        <Exercise number={34}>
+          <ExerciseStatement id="_117_hgi_">
             <OuterP>
               <b>
-                Exercise 33.
+                Exercise 34.
               </b>
               {" "}
               From the first three steps of the
@@ -11893,11 +11987,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={34}>
-          <ExerciseStatement id="_117_hgi_">
+        <Exercise number={35}>
+          <ExerciseStatement id="_118_hgi_">
             <OuterP>
               <b>
-                Exercise 34.
+                Exercise 35.
               </b>
               {" "}
               A ship travels from the South pole of a watery
@@ -12037,11 +12131,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={35}>
-          <ExerciseStatement id="_118_hgi_">
+        <Exercise number={36}>
+          <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
-                Exercise 35.
+                Exercise 36.
               </b>
               {" "}
               Below are four function compositions
@@ -12254,20 +12348,20 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={36}>
-          <ExerciseStatement id="_119_hgi_">
+        <Exercise number={37}>
+          <ExerciseStatement id="_120_hgi_">
             <OuterP>
               <b>
-                Exercise 36.
+                Exercise 37.
               </b>
               {" "}
               How would the graphs of the four compositions
               in {" "}
               <InChapterLink
-                href="/article/chapter5#_118_hgi_"
+                href="/article/chapter5#_119_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 35
+                Exercise 36
               </InChapterLink>
               {" "} 
               compare to the graph of the generic function {" "}
@@ -12400,11 +12494,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={37}>
-          <ExerciseStatement id="_120_hgi_">
+        <Exercise number={38}>
+          <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
-                Exercise 37.
+                Exercise 38.
               </b>
               {" "}
               Let
@@ -12597,10 +12691,10 @@ const Rest = () => {
               speed (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_94_hgi_"
+                  href="/article/chapter5#_95_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 11
+                  Exercise 12
                 </InChapterLink>
                 ):
               </NoBreak>
@@ -12838,10 +12932,10 @@ const Rest = () => {
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_119_hgi_"
+                  href="/article/chapter5#_120_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 36
+                  Exercise 37
                 </InChapterLink>
                 .
               </NoBreak>
@@ -12888,10 +12982,10 @@ const Rest = () => {
               {" "} also as discussed in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_119_hgi_"
+                  href="/article/chapter5#_120_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 36
+                  Exercise 37
                 </InChapterLink>
                 ;
               </NoBreak>
@@ -12914,10 +13008,10 @@ const Rest = () => {
               {" "} as discussed in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_119_hgi_"
+                  href="/article/chapter5#_120_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 36
+                  Exercise 37
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -12937,10 +13031,10 @@ const Rest = () => {
               in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_119_hgi_"
+                  href="/article/chapter5#_120_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 36
+                  Exercise 37
                 </InChapterLink>
                 .
               </NoBreak>
@@ -13199,11 +13293,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={38}>
-          <ExerciseStatement id="_121_hgi_">
+        <Exercise number={39}>
+          <ExerciseStatement id="_122_hgi_">
             <OuterP>
               <b>
-                Exercise 38.
+                Exercise 39.
               </b>
               {" "}
               Illustrate the “Gregorinovich sandwich”
@@ -13251,11 +13345,11 @@ const Rest = () => {
             <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise number={39}>
-          <ExerciseStatement id="_122_hgi_">
+        <Exercise number={40}>
+          <ExerciseStatement id="_123_hgi_">
             <OuterP>
               <b>
-                Exercise 39.
+                Exercise 40.
               </b>
               {" "}
               Let points {" "}
@@ -13850,11 +13944,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={40}>
-          <ExerciseStatement id="_123_hgi_">
+        <Exercise number={41}>
+          <ExerciseStatement id="_124_hgi_">
             <OuterP>
               <b>
-                Exercise 40.
+                Exercise 41.
               </b>
               {" "}
               What is the dotted line distance as a function
@@ -13898,10 +13992,10 @@ const Rest = () => {
               of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_122_hgi_"
+                  href="/article/chapter5#_123_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 39
+                  Exercise 40
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -13949,10 +14043,10 @@ const Rest = () => {
                 Like the “polar distance” formula from {" "}
                 <NoBreak>
                   <InChapterLink
-                    href="/article/chapter5#_122_hgi_"
+                    href="/article/chapter5#_123_hgi_"
                     class="handle-in-chapter-link"
                   >
-                    Exercise 39
+                    Exercise 40
                   </InChapterLink>
                   ,
                 </NoBreak>
@@ -13982,11 +14076,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={41}>
-          <ExerciseStatement id="_124_hgi_">
+        <Exercise number={42}>
+          <ExerciseStatement id="_125_hgi_">
             <OuterP>
               <b>
-                Exercise 41.
+                Exercise 42.
               </b>
               {" "}
               How to express the two sides marked ‘?’ as functions
@@ -14074,10 +14168,10 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_87_hgi_"
+                  href="/article/chapter5#_88_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 4
+                  Exercise 5
                 </InChapterLink>
                 ):
               </NoBreak>
@@ -14298,11 +14392,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={42}>
-          <ExerciseStatement id="_125_hgi_">
+        <Exercise number={43}>
+          <ExerciseStatement id="_126_hgi_">
             <OuterP>
               <b>
-                Exercise 42.
+                Exercise 43.
               </b>
               {" "}
               In the drawing below, at what coordinates,
@@ -14381,10 +14475,10 @@ const Rest = () => {
                   (cf. {" "}
                   <NoBreak>
                     <InChapterLink
-                      href="/article/chapter5#_105_hgi_"
+                      href="/article/chapter5#_106_hgi_"
                       class="handle-in-chapter-link"
                     >
-                      Exercise 22
+                      Exercise 23
                     </InChapterLink>
                     ,
                   </NoBreak>
@@ -14392,10 +14486,10 @@ const Rest = () => {
                   {" "}
                   <NoBreak>
                     <InChapterLink
-                      href="/article/chapter5#_106_hgi_"
+                      href="/article/chapter5#_107_hgi_"
                       class="handle-in-chapter-link"
                     >
-                      Exercise 23
+                      Exercise 24
                     </InChapterLink>
                     ).
                   </NoBreak>
@@ -14562,11 +14656,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={43}>
-          <ExerciseStatement id="_126_hgi_">
+        <Exercise number={44}>
+          <ExerciseStatement id="_127_hgi_">
             <OuterP>
               <b>
-                Exercise 43.
+                Exercise 44.
               </b>
               {" "}
               Stipulating
@@ -14797,11 +14891,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={44}>
-          <ExerciseStatement id="_127_hgi_">
+        <Exercise number={45}>
+          <ExerciseStatement id="_128_hgi_">
             <OuterP>
               <b>
-                Exercise 44.
+                Exercise 45.
               </b>
               {" "}
               If {" "}
@@ -14911,10 +15005,10 @@ const Rest = () => {
               (Cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_125_hgi_"
+                  href="/article/chapter5#_126_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 42
+                  Exercise 43
                 </InChapterLink>
                 .)
               </NoBreak>
@@ -15181,19 +15275,19 @@ const Rest = () => {
               can be
               found here and here, by {" "}
               <InChapterLink
-                href="/article/chapter5#_126_hgi_"
+                href="/article/chapter5#_127_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 43
+                Exercise 44
               </InChapterLink>
               {" "}
               (this figure is just a recap of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_126_hgi_"
+                  href="/article/chapter5#_127_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 43
+                  Exercise 44
                 </InChapterLink>
                 ):
               </NoBreak>
@@ -15365,11 +15459,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={45}>
-          <ExerciseStatement id="_128_hgi_">
+        <Exercise number={46}>
+          <ExerciseStatement id="_129_hgi_">
             <OuterP>
               <b>
-                Exercise 45.
+                Exercise 46.
               </b>
               {" "}
               Given a number line with {" "}
@@ -15711,11 +15805,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={46}>
-          <ExerciseStatement id="_129_hgi_">
+        <Exercise number={47}>
+          <ExerciseStatement id="_130_hgi_">
             <OuterP>
               <b>
-                Exercise 46.
+                Exercise 47.
               </b>
               {" "}
               Given two lengths {" "}
@@ -15965,10 +16059,10 @@ const Rest = () => {
               As seen in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_109_hgi_"
+                  href="/article/chapter5#_110_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 26
+                  Exercise 27
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -16080,10 +16174,10 @@ const Rest = () => {
               the content of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_106_hgi_"
+                  href="/article/chapter5#_107_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 23
+                  Exercise 24
                 </InChapterLink>
                 ):
               </NoBreak>
@@ -16291,12 +16385,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="ing"
-          number={47}
+          number={48}
         >
-          <ExerciseStatement id="_130_hgi_">
+          <ExerciseStatement id="_131_hgi_">
             <OuterP>
               <b>
-                Exercise 47.
+                Exercise 48.
               </b>
               {" "}
               A geometric interpretation of
@@ -16306,10 +16400,10 @@ const Rest = () => {
               </Math>
               {" "} is given in {" "}
               <InChapterLink
-                href="/article/chapter5#_100_hgi_"
+                href="/article/chapter5#_101_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 17
+                Exercise 18
               </InChapterLink>
               {" "}
               that, to recap, involves “raining down at {" "}
@@ -16425,10 +16519,10 @@ const Rest = () => {
               {" "} as covered in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_100_hgi_"
+                  href="/article/chapter5#_101_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 17
+                  Exercise 18
                 </InChapterLink>
                 .)
               </NoBreak>
@@ -16686,10 +16780,10 @@ const Rest = () => {
                 ...(cf. {" "}
                 <NoBreak>
                   <InChapterLink
-                    href="/article/chapter5#_119_hgi_"
+                    href="/article/chapter5#_120_hgi_"
                     class="handle-in-chapter-link"
                   >
-                    Exercise 36
+                    Exercise 37
                   </InChapterLink>
                   )
                 </NoBreak>
@@ -16732,10 +16826,10 @@ const Rest = () => {
                 (cf. {" "}
                 <NoBreak>
                   <InChapterLink
-                    href="/article/chapter5#_100_hgi_"
+                    href="/article/chapter5#_101_hgi_"
                     class="handle-in-chapter-link"
                   >
-                    Exercise 17
+                    Exercise 18
                   </InChapterLink>
                   )...
                 </NoBreak>
@@ -16794,12 +16888,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="ing"
-          number={48}
+          number={49}
         >
-          <ExerciseStatement id="_131_hgi_">
+          <ExerciseStatement id="_132_hgi_">
             <OuterP>
               <b>
-                Exercise 48.
+                Exercise 49.
               </b>
               {" "}
               What are the orthogonal (= perpendicular) 
@@ -17041,12 +17135,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="ing"
-          number={49}
+          number={50}
         >
-          <ExerciseStatement id="_132_hgi_">
+          <ExerciseStatement id="_133_hgi_">
             <OuterP>
               <b>
-                Exercise 49.
+                Exercise 50.
               </b>
               {" "}
               Show that
@@ -17116,7 +17210,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_unit_dot_product_sol1_v2.svg" />
+            <Image src="/build-img/svgo-svg/k70-.svg" />
             <Pause />
             <OuterP>
               In what follows we will write {" "}
@@ -17148,15 +17242,15 @@ const Rest = () => {
               {" "} (in the manner of physicists):
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_unit_dot_product_sol2.svg" />
+            <Image src="/build-img/svgo-svg/EWAA.svg" />
             <Pause />
             <OuterP>
               As established in {" "}
               <InChapterLink
-                href="/article/chapter5#_131_hgi_"
+                href="/article/chapter5#_132_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 48
+                Exercise 49
               </InChapterLink>
               {" "}
               {" "}
@@ -17182,7 +17276,7 @@ const Rest = () => {
               {" "} respectively on the ruler:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_unit_dot_product_sol3_v2.svg" />
+            <Image src="/build-img/svgo-svg/rAlI.svg" />
             <Pause />
             <OuterP>
               On the other hand, the vector {" "}
@@ -17216,7 +17310,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_unit_dot_product_sol5_v2.svg" />
+            <Image src="/build-img/svgo-svg/q8lI.svg" />
             <Pause />
             <OuterP>
               The scaled copy of {" "}
@@ -17238,7 +17332,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_unit_dot_product_sol6_v2.svg" />
+            <Image src="/build-img/svgo-svg/vjt3.svg" />
             <Pause />
             <OuterP>
               Similarly, the scaled copy of {" "}
@@ -17263,14 +17357,14 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_unit_dot_product_sol7.svg" />
+            <Image src="/build-img/svgo-svg/KjPQ.svg" />
             <Pause />
             <OuterP>
               Moreover, the sum-of-projections is the
               projection-of-the-sum:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_unit_dot_product_sol8_v3.svg" />
+            <Image src="/build-img/svgo-svg/cfa7.svg" />
             <Pause />
             <OuterP>
               This gives us
@@ -17300,95 +17394,542 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="ing"
-          number={50}
+          number={51}
         >
-          <ExerciseStatement id="_133_hgi_">
+          <ExerciseStatement id="_134_hgi_">
             <OuterP>
               <b>
-                Exercise 50.
+                Exercise 51.
               </b>
               {" "}
-              In the figure below, where can
+              Prove that
             </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large ab\cos\theta_&#123;ab&#125;
-              $$
-            </MathBlock>
-            <Pause />
+            <Boxed>
+              <MathBlock>
+                $$
+                \huge a^2 + b^2 \geq 2ab
+                $$
+              </MathBlock>
+            </Boxed>
             <OuterP>
-              be found, if at all? (Note that {" "}
+              for all {" "}
               <NoBreak>
-                “
                 <Math>
-                  $\theta_&#123;ab&#125;$
+                  $a, b \in \rr$
                 </Math>
-                ”
+                .
               </NoBreak>
-              {" "} is
-              just a name.)
             </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/oty_.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It appears two places; 
-              it is 
-              the area of this
-              rectangle here on the left:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/QsAd.svg" />
-            <Pause />
-            <OuterP>
-              It is also
-              the area of this rectangle here on the right:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/FZ9q.svg" />
-            <Pause />
-            <OuterP>
-              In more detail, here is how {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $b\cdot\cos\theta_&#123;ab&#125;$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} 
-              and {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $a\cdot\cos\theta_&#123;ab&#125;$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} 
-              show up as the widths of the two rectangles, respectively, 
-              zooming in:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/PJpl.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/9Sks.svg" />
-            <Pause />
-            <OuterP>
-              This means that the rectangles have areas
+              We have
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \Large a(b\cdot \cos\theta_&#123;ab&#125;) = b(a\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
+              \begin&#123;aligned&#125;
+              &amp; a^2 + b^2 \geq 2ab \\
+              \iff &amp; \up&#123;1.5&#125; a^2 - 2ab + b^2 \geq 0 \\
+              \iff &amp; \up&#123;1.5&#125; (a - b)^2 \geq 0
+              \end&#123;aligned&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              while forming the product in two different ways, but arriving
-              at the same end result.
+              where the last inequality is true because the
+              square of any real number is nonnegative, and,
+              therefore, the first inequality is true. (Recall
+              that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;\!\!\iff\!\!\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              means “if and only if”.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                One can also note that
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;aligned&#125;
+                &amp; a^2 + b^2 &gt; 2ab \\
+                \iff &amp; \up&#123;1.5&#125; a^2 - 2ab + b^2 &gt; 0 \\
+                \iff &amp; \up&#123;1.5&#125; (a - b)^2 &gt; 0 \\
+                \iff &amp; \up&#123;1.5&#125; a \ne b
+                \end&#123;aligned&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                which means that {" "}
+                <Math>
+                  $a^2 + b^2$
+                </Math>
+                {" "} is
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                strictly greater
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                than {" "}
+                <Math>
+                  $2ab$
+                </Math>
+                {" "} except in one case and in one case only:
+                the case that {" "}
+                <Math>
+                  $a$
+                </Math>
+                {" "} equals {" "}
+                <NoBreak>
+                  <Math>
+                    $b$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                (In which case, indeed, {" "}
+                <NoBreak>
+                  <Math>
+                    $a^2 + b^2 = 2a^2 = 2ab$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={52}
+        >
+          <ExerciseStatement id="_136_hgi_">
+            <OuterP>
+              <b>
+                Exercise 52.
+              </b>
+              {" "}
+              What might
+              {" "}
+              <InChapterLink
+                href="/article/chapter5#_134_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 51
+              </InChapterLink>
+              {" "}
+              have to do with sine and cosine?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Setting {" "}
+              <NoBreak>
+                <Math>
+                  $a = \cos x$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $b = \sin x$
+              </Math>
+              {" "}
+              gives us
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \huge 1 \geq 2\sin x\cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all {" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              by {" "}
+              <NoBreak>
+                <Math>
+                  $\cos^2 x + \sin^2 x = 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \huge \sin x\cos x \leq &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              equivalently. 
+              (This is one possibility of an answer, at least.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The same inequality can be deduced 
+                by the angle-sum formula for sin and the
+                fact that {" "}
+                <Math>
+                  $|\sin x| \leq 1$
+                </Math>
+                {" "} for all {" "}
+                <NoBreak>
+                  <Math>
+                    $x \in \rr$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \huge \sin x\cos x = &#123;1\over 2&#125;\sin(2x) \leq &#123;1\over 2&#125;\cdot 1 = &#123;1\over 2&#125;
+                $$
+                <ImageLeft
+                  src="/build-img/svgo-svg/R199.svg"
+                  compensate_offset_x_for_large_text_columns={true}
+                />
+              </MathBlock>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote id="_135_hgi_">
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $a^2 + b^2 \geq 2ab$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} inequality 
+                also tells us that
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \huge \sin x\cos x = &#123;1\over 2&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                if and only if {" "}
+                <NoBreak>
+                  <Math>
+                    $\sin x = \cos x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} which is to say
+                if and only if {" "}
+                <Math>
+                  $x = \eta/2 + 2\eta k$
+                </Math>
+                {" "} {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $x \in \&#123;\eta/2 + 2\eta k: k \in \zz\&#125;$
+                  </Math>
+                  ],
+                </NoBreak>
+                {" "}
+                since, as observed in Note 1 of {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter5#_134_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Exercise 51
+                  </InChapterLink>
+                  ,
+                </NoBreak>
+                {" "}
+                equality holds if and only if {" "}
+                <NoBreak>
+                  <Math>
+                    $a = b$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} i.e., in our
+                case, if and only if {" "}
+                <NoBreak>
+                  <Math>
+                    $\cos x = \sin x$
+                  </Math>
+                  !
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                Since
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \huge \sin \theta = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                if and ony if {" "}
+                <NoBreak>
+                  <Math>
+                    $\theta \in \&#123;\eta + 4\eta k : k \in \zz\&#125;$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                we have
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \huge \sin(2x) = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                if and only if 
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x \in \&#123;\eta/2 + 2\eta k: k \in \zz\&#125;$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} 
+                so the second proof of the inequality via the
+                angle-sum formula for sin also gives us
+                the final conclusion of {" "}
+                <NoBreak>
+                  <InChapterLink
+                    href="/article/chapter5#_135_hgi_"
+                    class="handle-in-chapter-link"
+                  >
+                    Note 2
+                  </InChapterLink>
+                  ,
+                </NoBreak>
+                {" "} though it does
+                not provide the extra semantic observation that
+                “this happens if and only if {" "}
+                <NoBreak>
+                  <Math>
+                    $\sin x = \cos x$
+                  </Math>
+                  ”.
+                </NoBreak>
+                {" "}
+                (It only gives the final set of {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} for which
+                equality holds, which just happens to be those
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} for which {" "}
+                <NoBreak>
+                  <Math>
+                    $\sin x = \cos x$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={53}
+        >
+          <ExerciseStatement id="_137_hgi_">
+            <OuterP>
+              <b>
+                Exercise 53.
+              </b>
+              {" "}
+              Using only algebra, prove that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              |\cos x + \sin x| \leq \sqrt&#123;2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all {" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and
+              characterize those {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                's
+              </NoBreak>
+              {" "} for which the inequality
+              holds with equality.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since we can square the two sides of an
+              inequality for which both sides are nonnegative,
+              we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              &amp; |\cos x + \sin x| \leq \sqrt&#123;2&#125; \\
+              \iff &amp; \up&#123;1.5&#125; (\cos x + \sin x)^2 \leq (\sqrt&#123;2&#125;)^2 \\
+              \iff &amp; \up&#123;1.5&#125; \cos^2 x + 2\cos x\sin x + \sin^2 x \leq 2 \\
+              \iff &amp; \up&#123;1.5&#125; 1 + 2\cos x\sin x \leq 2 \\
+              \iff &amp; \up&#123;1.5&#125; 2\cos x\sin x \leq 1 \\
+              \iff &amp; \up&#123;1.5&#125; \cos x\sin x \leq &#123;1\over 2&#125;
+              \end&#123;aligned&#125;
+              $$
+              <ImageLeft
+                src="/tmp-images/e5_cosx_plus_sinx_algebraic_upper_bounding_cloud.svg"
+                offset_y="0.7em"
+                compensate_offset_x_for_large_text_columns={true}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...and we know that the last inequality (even,
+              the next-to-last inequality) to be true by
+              {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_136_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 52
+                </InChapterLink>
+                .
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <OuterP class="indent-10">
+              This establishes the inequality.
+            </OuterP>
+            <OuterP class="indent-10">
+              For the second part of the question
+              we can observe
+              that the above sequence of 
+              if-and-only-ifs
+              also holds
+              if we replace {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\leq$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} with {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $=$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} throughout, 
+              so equality occurs if and only if
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos x\sin x = &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which, as covered in {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_135_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Note 2 of Exercise 52
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "}
+              occurs if and only if {" "}
+              <NoBreak>
+                <Math>
+                  $\cos x = \sin x$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              i.e., iff {" "}
+              <NoBreak>
+                <Math>
+                  $x \in \&#123;\eta/2 + 2\eta k: k \in \zz\&#125;$
+                </Math>
+                .
+              </NoBreak>
             </OuterP>
           </Solution>
         </Exercise>

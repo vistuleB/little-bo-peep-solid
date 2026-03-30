@@ -27,21 +27,21 @@
         $\alpha$ onto a ruler of angle $\beta$:
 
         |> Image
-            src=tmp-images/e5_unit_dot_product_sol1_v2.svg
+            src=images/e5_unit_dot_product_sol1_v2.svg
 
         In what follows we will write ‘$\vecb{i}$’
         and ‘$\vecb{j}$’, respectively, for the vectors
         $(1, 0)$ and $(0, 1)$ (in the manner of physicists):
 
         |> Image
-            src=tmp-images/e5_unit_dot_product_sol2.svg
+            src=images/e5_unit_dot_product_sol2.svg
 
         As established in Exercise >>_project_i_and_j_
         $\vecb{i}$ and $\vecb{j}$ project to $\cos\beta$,
         $\sin\beta$ respectively on the ruler: 
 
         |> Image
-            src=tmp-images/e5_unit_dot_product_sol3_v2.svg
+            src=images/e5_unit_dot_product_sol3_v2.svg
 
         On the other hand, the vector $(\cos\alpha, \sin\alpha)$
         is the sum of a scaled copy of $\vecb{i}$ and
@@ -49,27 +49,27 @@
         $\vecb{i}\cdot\cos(\alpha)$ and $\vecb{j}\cdot\sin(\alpha)$:
 
         |> Image
-            src=tmp-images/e5_unit_dot_product_sol5_v2.svg
+            src=images/e5_unit_dot_product_sol5_v2.svg
 
         The scaled copy of $\vecb{i}$ projects to
         $\cos(\alpha)\cdot\cos(\beta)$ on the ruler, 
         by scaling the projection of $\vecb{i}$:
 
         |> Image
-            src=tmp-images/e5_unit_dot_product_sol6_v2.svg
+            src=images/e5_unit_dot_product_sol6_v2.svg
 
         Similarly, the scaled copy of $\vecb{j}$ projects
         to $\sin(\alpha)\cdot\sin(\beta)$, by scaling the
         projection of $\vecb{j}$:
 
         |> Image
-            src=tmp-images/e5_unit_dot_product_sol7.svg
+            src=images/e5_unit_dot_product_sol7_v2.svg
 
         Moreover, the sum-of-projections is the
         projection-of-the-sum:
 
         |> Image
-            src=tmp-images/e5_unit_dot_product_sol8_v3.svg
+            src=images/e5_unit_dot_product_sol8_v2.svg
 
         This gives us
 
@@ -80,8 +80,4 @@
 
         since both sides compute the projection of
         $(\cos \alpha, \sin \alpha)$ onto the ruler of angle $\beta$.
-        !! since it was already known that the projection
-        !! of $(\cos \alpha, \sin \alpha)$ onto the ruler
-        !! is $\cos(\alpha - \beta)$. (See very first illustration
-        !! at start of solution.)
 
