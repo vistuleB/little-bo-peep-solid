@@ -975,8 +975,8 @@
     "original-size": 113693,
     "compressed-size": 20948,
     "compression": "81.57%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e5_sine_rule_generic.svg": {
     "build-version": "svgo-svg/VvH9.svg",
@@ -997,8 +997,8 @@
     "original-size": 104317,
     "compressed-size": 14749,
     "compression": "85.86%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_cosine_curves_cresting.svg": {
     "build-version": "svgo-svg/P9o9.svg",
@@ -1503,8 +1503,8 @@
     "original-size": 103183,
     "compressed-size": 14656,
     "compression": "85.8%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_angle_sum_2.svg": {
     "build-version": "svgo-svg/C7FC.svg",
@@ -2130,8 +2130,8 @@
     "original-size": 92721,
     "compressed-size": 10887,
     "compression": "88.26%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "35.svg": {
     "build-version": "svgo-svg/vebo.svg",
@@ -2416,8 +2416,8 @@
     "original-size": 39293,
     "compressed-size": 22513,
     "compression": "42.7%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e5_cosx_plus_sinx_with_max_min_info.svg": {
     "build-version": "svgo-svg/GHRw.svg",
@@ -2669,8 +2669,8 @@
     "original-size": 104267,
     "compressed-size": 14123,
     "compression": "86.45%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch3_cosine.svg": {
     "build-version": "svgo-svg/PlXB.svg",
@@ -3483,8 +3483,8 @@
     "original-size": 352846,
     "compressed-size": 91051,
     "compression": "74.2%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e5_sqrt_AB_solution2_0.svg": {
     "build-version": "svgo-svg/-HLJ.svg",
@@ -3527,8 +3527,8 @@
     "original-size": 187938,
     "compressed-size": 38404,
     "compression": "79.57%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_snail_stack_3.svg": {
     "build-version": "svgo-svg/ADw8.svg",
@@ -5408,8 +5408,8 @@
     "original-size": 46665,
     "compressed-size": 11532,
     "compression": "75.29%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch3_connection_f_x_h.svg": {
     "build-version": "svgo-svg/1JTc.svg",
@@ -6684,8 +6684,8 @@
     "original-size": 115692,
     "compressed-size": 20105,
     "compression": "82.62%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_cosine_curves.svg": {
     "build-version": "svgo-svg/_2ki.svg",
@@ -7278,8 +7278,8 @@
     "original-size": 114863,
     "compressed-size": 22333,
     "compression": "80.56%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_spherical_coordinates_Rsin_phi.svg": {
     "build-version": "svgo-svg/giDO.svg",
