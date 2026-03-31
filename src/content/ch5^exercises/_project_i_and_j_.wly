@@ -80,10 +80,10 @@
         |> Image
             src=images/e5_project_i_and_j_sol4.svg
 
-        ...because what counts is the angle between the
+        (Because what counts is the angle between the
         “forward end” of the ruler and the forward end of
         the vector, measured as an angle between $0^\circ$
-        and $180^\circ$, and this angle remains the same.
+        and $180^\circ$, and this angle remains the same.)
         !! If we apply this to the problem statement, twice,
         !! the unique ruler is replaced by a unique vector,
         !! while the two vectors are each replaced by a ruler:

@@ -49,7 +49,8 @@
         twice by $\sqrt{B}/\sqrt{A}$ you're going to remove one
         factor of $A$ while introducing one factor of $B$.)
         
-        Now:
+        !! Now:
+        This observation in hand, we can give two solutions:
 
         |> Pause
 

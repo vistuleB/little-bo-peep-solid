@@ -969,14 +969,14 @@
   },
   "svg_ch5_ex_cos_and_cos2_comparison.svg": {
     "build-version": "svgo-svg/q2Pb.svg",
-    "build-version-created-on": 1767342812,
+    "build-version-created-on": 1774948785,
     "build-method": "svgo",
     "build-version-size": 20948,
-    "original-size": 113694,
+    "original-size": 113693,
     "compressed-size": 20948,
-    "compression": "81.58%",
-    "used-last-build": false,
-    "3chars": []
+    "compression": "81.57%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "e5_sine_rule_generic.svg": {
     "build-version": "svgo-svg/VvH9.svg",
@@ -997,8 +997,8 @@
     "original-size": 104317,
     "compressed-size": 14749,
     "compression": "85.86%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch4_cosine_curves_cresting.svg": {
     "build-version": "svgo-svg/P9o9.svg",
@@ -1503,8 +1503,8 @@
     "original-size": 103183,
     "compressed-size": 14656,
     "compression": "85.8%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ch_angle_sum_2.svg": {
     "build-version": "svgo-svg/C7FC.svg",
@@ -2130,8 +2130,8 @@
     "original-size": 92721,
     "compressed-size": 10887,
     "compression": "88.26%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "35.svg": {
     "build-version": "svgo-svg/vebo.svg",
@@ -2416,8 +2416,8 @@
     "original-size": 39293,
     "compressed-size": 22513,
     "compression": "42.7%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "e5_cosx_plus_sinx_with_max_min_info.svg": {
     "build-version": "svgo-svg/GHRw.svg",
@@ -2443,12 +2443,12 @@
   },
   "e5_cosine_rule_geometric_1_sol4.svg": {
     "build-version": "svgo-svg/9Sks.svg",
-    "build-version-created-on": 1774735288,
+    "build-version-created-on": 1774951224,
     "build-method": "svgo",
-    "build-version-size": 41006,
-    "original-size": 143767,
-    "compressed-size": 41006,
-    "compression": "71.48%",
+    "build-version-size": 35770,
+    "original-size": 139396,
+    "compressed-size": 35770,
+    "compression": "74.34%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2669,8 +2669,8 @@
     "original-size": 104267,
     "compressed-size": 14123,
     "compression": "86.45%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch3_cosine.svg": {
     "build-version": "svgo-svg/PlXB.svg",
@@ -3483,8 +3483,8 @@
     "original-size": 352846,
     "compressed-size": 91051,
     "compression": "74.2%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "e5_sqrt_AB_solution2_0.svg": {
     "build-version": "svgo-svg/-HLJ.svg",
@@ -3527,8 +3527,8 @@
     "original-size": 187938,
     "compressed-size": 38404,
     "compression": "79.57%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ch_snail_stack_3.svg": {
     "build-version": "svgo-svg/ADw8.svg",
@@ -4247,12 +4247,12 @@
   },
   "e5_cosine_rule_geometric_1_sol3.svg": {
     "build-version": "svgo-svg/PJpl.svg",
-    "build-version-created-on": 1774735288,
+    "build-version-created-on": 1774951224,
     "build-method": "svgo",
-    "build-version-size": 47198,
-    "original-size": 125779,
-    "compressed-size": 47198,
-    "compression": "62.48%",
+    "build-version-size": 35207,
+    "original-size": 113536,
+    "compressed-size": 35207,
+    "compression": "68.99%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5408,8 +5408,8 @@
     "original-size": 46665,
     "compressed-size": 11532,
     "compression": "75.29%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch3_connection_f_x_h.svg": {
     "build-version": "svgo-svg/1JTc.svg",
@@ -6684,8 +6684,8 @@
     "original-size": 115692,
     "compressed-size": 20105,
     "compression": "82.62%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch4_cosine_curves.svg": {
     "build-version": "svgo-svg/_2ki.svg",
@@ -7278,8 +7278,8 @@
     "original-size": 114863,
     "compressed-size": 22333,
     "compression": "80.56%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch5_ex_spherical_coordinates_Rsin_phi.svg": {
     "build-version": "svgo-svg/giDO.svg",

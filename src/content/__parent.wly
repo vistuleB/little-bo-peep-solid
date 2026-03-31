@@ -151,11 +151,6 @@
         >>_rotate_central_90_
         >>_ratio_A_over_B_tan^2_
         >>_ratio_A_over_B_1_+_tan^2_
-        !! >>_cos^2x_scale_and_translate_of_cosx_
-        !! >>_relate_sinx_dot_cosx_to_sin2x_
-        !! >>_turn_sinx_into_sinx_dot_cosx_
-        !! >>_turn_cosx_into_cosx_plus_sinx_
-        !! >>_for_every_A1_A2_stupid_followup_
         >>_archimedean_projection_new_ver_
         >>_rank_the_7_slices_
         >>_sphere_area_formula_from_archimedean_property_
@@ -185,13 +180,17 @@
         >>_ab_inequality_
         >>_ab_inequality_relation_to_sine_cosine_
         >>_cosx_plus_sinx_algebraic_upper_bounding_
+        >>_cos^2x_scale_and_translate_of_cosx_
+        >>_relate_sinx_dot_cosx_to_sin2x_
+        >>_turn_sinx_into_sinx_dot_cosx_
+        >>_turn_cosx_into_cosx_plus_sinx_
+        >>_cosx_dot_sinx_is_translate_of_cos^2x_
+        >>_for_every_A1_A2_stupid_followup_
 
         !! >>_for_every_A1_A2_
 
         !! >>_proof_1_+_tan^2_eq_sec^2_
         !! >>_proof_1_+_tan^2_eq_sec^2_backward_
-        !! >>_periodicity_mod_2eta_
-        !! >>_cosx_dot_sinx_is_translate_of_cos^2x_
         !! >>_axes_intersections_60_degrees_
         !! >>_blueprints_open_bomb_shelter_door_
         !! >>_double_pre_processing_steps_
@@ -202,6 +201,7 @@
         !! >>_can_B1B2_be_rewritten_
         !! >>_max_cosx_plus_sinx_new_ver_
         !! >>_max_cosx_plus_sinx_
+        !! >>_periodicity_mod_2eta_
 
         !! ch5 exercise 'cycles':
         !!
