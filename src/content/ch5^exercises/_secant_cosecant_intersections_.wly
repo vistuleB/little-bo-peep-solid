@@ -11,7 +11,8 @@
 
     |> Solution
 
-        For starters assume that $\theta$ lies in
+        Start by assuming
+        that $\theta$ lies in
         the first quadrant, in
         which case both coordinates are nonnegative, and, more specifically, 
         are equal to the two 

@@ -2,8 +2,8 @@
     work=ing
     handle=_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
 
-    Relate Exercise >>_Acosx_plus_Bsinx_polar_conversion_ to Exercise >>_cosx_plus_sinx_as_sinusoid_.
-    !! How does the result of Exercise >>_Acosx_plus_Bsinx_polar_conversion_
+    Relate Exercise >>_Acosx_+_Bsinx_as_sinusoid_ to Exercise >>_cosx_plus_sinx_as_sinusoid_.
+    !! How does the result of Exercise >>_Acosx_+_Bsinx_as_sinusoid_
     !! relate to the result of Exercise >>_cosx_plus_sinx_as_sinusoid_?
 
     |> Solution
@@ -20,7 +20,7 @@
         A = B = 1
         $$
         of
-        Exercise >>_Acosx_plus_Bsinx_polar_conversion_ since
+        Exercise >>_Acosx_+_Bsinx_as_sinusoid_ since
 
         $$
         \cos x + \sin x = 1\cdot \cos x + 1\cdot \sin x

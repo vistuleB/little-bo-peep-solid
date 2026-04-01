@@ -124,13 +124,10 @@
     |> In
         content=selection
         chapter=>>trigonometry
-        >>_cosine_rule_geometric_1_
         >>_guesstimate_cos_10x_linear_
         >>_guesstimate_cos_10x_parabolic_
         >>_guesstimate_sinusoid_
         >>_triangle_conch_
-        >>_four_graphs_
-        >>_where_is_the_pythagorean_identity_
         >>_0_point_2_radians_
         >>_handdrawn_oval_P_position_
         >>_eta_and_4eta_as_ratios_
@@ -141,7 +138,6 @@
         >>_blueprints_top_and_side_
         >>_blueprints_open_thin_door_
         >>_powers_of_secant_
-        >>_max_cosx_plus_sinx_new_new_ver_
         >>_isosets_of_xy_v4_
         >>_long_division_11_over_7_
         >>_long_division_22_over_7_
@@ -155,7 +151,6 @@
         >>_rank_the_7_slices_
         >>_sphere_area_formula_from_archimedean_property_
         >>_sphere_volume_
-        !! >>_scalar_times_vector_definition_
         >>_gas_tank_
         >>_gas_tank_decimal_approximation_
         >>_three_quarters_decimal_approximation_
@@ -164,6 +159,7 @@
         >>_four_compositions_graphed_
         >>_ABCD_roles_
         >>_draw_the_sandwich_
+        >>_cosine_rule_geometric_1_
         >>_polar_distance_
         >>_cosine_rule_
         >>_sine_rule_
@@ -172,23 +168,29 @@
         >>_geometric_construction_of_1_over_A_new_ver_
         >>_x_square_x_cube_construction_
         >>_sqrt_xy_construction_
-        >>_cosx_plus_sinx_as_sinusoid_
         >>_project_i_and_j_
         >>_unit_dot_product_geometric_interpretation_
-        !! >>_Acosx_plus_Bsinx_polar_conversion_
-        !! >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
-        >>_ab_inequality_
-        >>_ab_inequality_relation_to_sine_cosine_
-        >>_cosx_plus_sinx_algebraic_upper_bounding_
+        >>_four_graphs_
+        >>_where_is_the_pythagorean_identity_
+        >>_more_closely_related_to_sin2x_or_
 
-        !! >>_cos^2x_scale_and_translate_of_cosx_
-        !! >>_relate_sinx_dot_cosx_to_sin2x_
-        !! >>_turn_sinx_into_sinx_dot_cosx_
-        !! >>_turn_cosx_into_cosx_plus_sinx_
-        !! >>_cosx_dot_sinx_is_translate_of_cos^2x_
-        !! >>_for_every_A1_A2_stupid_followup_
+        !! >>_max_cosx_plus_sinx_new_new_ver_
+        !! >>_cosx_plus_sinx_as_sinusoid_
+        !! >>_Acosx_+_Bsinx_as_sinusoid_
+        !! >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
+        !! >>_ab_inequality_
+        !! >>_ab_inequality_relation_to_sine_cosine_
+        !! >>_cosx_plus_sinx_algebraic_upper_bounding_
+        !! >>_cosx_to_cos^2x_via_graph_
+        !! >>_sin2x_to_sinx_cosx_
+        !! >>_sinx_to_sinx_cosx_
+        !! >>_cosx_to_cosx_+_sinx_
+        !! >>_cosx_sinx_to_cos^2x_
+
+        !! >>_scalar_times_vector_definition_
 
         !! >>_for_every_A1_A2_
+        !! >>_for_every_A1_A2_stupid_followup_
 
         !! >>_proof_1_+_tan^2_eq_sec^2_
         !! >>_proof_1_+_tan^2_eq_sec^2_backward_

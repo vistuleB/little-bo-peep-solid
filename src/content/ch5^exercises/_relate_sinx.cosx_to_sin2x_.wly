@@ -1,5 +1,5 @@
 |> Exercise
-    handle=_relate_sinx_dot_cosx_to_sin2x_
+    handle=_sin2x_to_sinx_cosx_
 
     Relate
     $$

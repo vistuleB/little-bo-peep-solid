@@ -1,5 +1,5 @@
 |> Exercise
-    handle=_cos^2x_scale_and_translate_of_cosx_
+    handle=_cosx_to_cos^2x_via_graph_
 
     It also seems from the graphs that $y = \cos^2(x)$
     is a _sinusoid_, i.e., some combination of a
