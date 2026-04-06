@@ -45,12 +45,17 @@ const Image = (props: ImageProps) => {
     props,
   );
 
-  // console.log("hi", props);
+  let comp = 0;
 
   const imageWidth = () => {
-    return image_ref
+    let toReturn = image_ref
       ? Math.max(image_ref.naturalWidth, image_ref.offsetWidth)
       : 3000;
+    if (!comp && image_ref) {
+      comp = parseFloat(window.getComputedStyle(image_ref).width);
+    }
+    console.log("toReturn: ", toReturn, "comp:", comp);
+    return toReturn;
   };
   const scaled_down_scale = () =>
     Math.min(1, (store.innerWidth - 32.0) / imageWidth());
