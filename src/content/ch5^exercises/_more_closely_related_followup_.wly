@@ -22,7 +22,7 @@
         Prove your conjecture by algebra.
 
     |> Image
-        src=tmp-images/e5_more_closely_related_followup_reference_graphs.svg
+        src=images/e5_more_closely_related_followup_reference_graphs.svg
 
     |> Solution
 
@@ -37,7 +37,7 @@
         than $\sin(2x)$ is, by virtue of alignment of the bumps:
 
         |> Image
-            src=tmp-images/e5_more_closely_related_followup_sol1.svg
+            src=images/e5_more_closely_related_followup_sol1.svg
 
         Our conjecture, per appearance of the graphs, is that
         $\cos^2$ is the graph of $\cos(2x)$...
@@ -46,7 +46,7 @@
         scaled by $1/2$__
 
         |> ImageRight
-            src=tmp-images/e5_more_closely_related_followup_cloud1.svg
+            src=images/e5_more_closely_related_followup_cloud1.svg
 
         ...or is the graph of $\cos(2x)$...
 
@@ -54,7 +54,7 @@
         translated up by $1/2$__
 
         |> ImageLeft
-            src=tmp-images/e5_more_closely_related_followup_cloud2.svg
+            src=images/e5_more_closely_related_followup_cloud2.svg
 
         ...equivalently; for the proof,
         !! for the algebraic proof, we use the
@@ -82,7 +82,7 @@
         $$
 
         |> ImageLeft
-            src=tmp-images/e5_more_closely_related_followup_cloud4.svg
+            src=images/e5_more_closely_related_followup_cloud4.svg
             offset_y=1.3em
 
         which completes the proof, since
@@ -97,7 +97,7 @@
         translated up by $1/2$__
 
         |> ImageLeft
-            src=tmp-images/e5_more_closely_related_followup_cloud3.svg
+            src=images/e5_more_closely_related_followup_cloud3.svg
 
         ...and, indeed,
 
@@ -112,7 +112,7 @@
         $$
 
         |> ImageLeft
-            src=tmp-images/e5_more_closely_related_followup_cloud5.svg
+            src=images/e5_more_closely_related_followup_cloud5.svg
             offset_y=0.2em
 
         as conjectured.
@@ -121,7 +121,7 @@
         more closely related:
 
         |> Image
-            src=tmp-images/e5_more_closely_related_followup_sol3.svg
+            src=images/e5_more_closely_related_followup_sol3.svg
 
         Indeed, it seems that $\sin\cdot\cos$ is just $y = \sin(2x)$
 

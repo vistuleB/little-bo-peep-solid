@@ -38,7 +38,7 @@
         $$
 
         |> ImageLeft
-            src=tmp-images/e5_cosx_plus_sinx_algebraic_upper_bounding_cloud.svg
+            src=images/e5_cosx_plus_sinx_algebraic_upper_bounding_cloud.svg
             offset_y=0.7em
 
         ...and we know that the last inequality (even,

@@ -3,12 +3,15 @@
     handle=_unit_dot_product_geometric_interpretation_
 
     Show that
+    !! $$
+    !! \cos(\alpha - \beta)
+    !! $$
+    !! equals
+    !! $$
+    !! \cos\alpha\cos\beta + \sin\alpha\sin\beta
+    !! $$
     $$
-    \cos(\alpha - \beta)
-    $$
-    equals
-    $$
-    \cos\alpha\cos\beta + \sin\alpha\sin\beta
+    \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta
     $$
     for all $\alpha$, $\beta \in \rr$
     via a geometric argument.
